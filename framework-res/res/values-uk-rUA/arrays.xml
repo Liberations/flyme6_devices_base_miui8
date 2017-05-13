@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="emailAddressTypes">
+        <item>Домашня</item>
+        <item>Робоча</item>
+        <item>Інша</item>
+        <item>Вибрати</item>
+    </string-array>
+    <string-array name="imProtocols">
+        <item>AIM</item>
+        <item>Windows Live</item>
+        <item>Yahoo</item>
+        <item>Skype</item>
+        <item>QQ</item>
+        <item>Google Talk</item>
+        <item>ICQ</item>
+        <item>Jabber</item>
+    </string-array>
+    <string-array name="organizationTypes">
+        <item>Робоча</item>
+        <item>Інша</item>
+        <item>Вибрати</item>
+    </string-array>
+    <string-array name="phoneTypes">
+        <item>Домашній</item>
+        <item>Мобільний</item>
+        <item>Робочий</item>
+        <item>Робочий факс</item>
+        <item>Домашній факс</item>
+        <item>Пейджер</item>
+        <item>Інший</item>
+        <item>Вибрати</item>
+    </string-array>
+    <string-array name="postalAddressTypes">
+        <item>Домашня</item>
+        <item>Робоча</item>
+        <item>Інша</item>
+        <item>Вибрати</item>
+    </string-array>
+    <string-array name="app_ops_labels">
+        <item>Спроба отримання доступу до місцезнаходження</item>
+        <item>Спроба отримання доступу до місцезнаходження</item>
+    </string-array>
+    <string-array name="config_locationProviderPackageNames">
+        <item>com.android.location.fused</item>
+        <item>com.google.android.gms</item>
+        <item>com.amap.android.location</item>
+    </string-array>
+    <integer-array name="maps_starting_lat_lng">
+        <item>55750449</item>
+        <item>37621136</item>
+    </integer-array>
+    <integer-array name="maps_starting_zoom">
+        <item>2</item>
+    </integer-array>
+    <string-array name="wfcOperatorErrorAlertMessages">
+        <item>"Щоб здійснювати виклики та надсилати повідомлення по Wi-Fi, необхідно спочатку звернутися до оператора зв'язку та підключити цю послугу. Після цього ви зможете знову обрати цей параметр у налаштуваннях."</item>
+    </string-array>
+    <string-array name="wfcOperatorErrorNotificationMessages">
+        <item>Вкажіть оператора та зареєструйтеся</item>
+    </string-array>
+    <string-array name="fingerprint_acquired_vendor">
+        <item>Повторіть спробу</item>
+        <item></item>
+        <item></item>
+        <item>Притисніть палець до сканеру відбитків</item>
+        <item></item>
+        <item>Притисніть палець до сканеру відбитків</item>
+        <item>Притисніть палець до сканеру відбитків</item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item>Притисніть палець до сканеру відбитків</item>
+        <item>Притисніть палець до сканеру відбитків</item>
+        <item>Система не встигла розпізнати відбиток</item>
+        <item>Перемістіть палець та повторіть спробу</item>
+        <item>Приберіть палець та притисніть до сканеру знову</item>
+        <item>Тримайте палець на сканері відбитків довше</item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item>Move your finger slightly</item>
+        <item>This fingerprint has been added, use a different finger</item>
+    </string-array>
+    <string-array name="imAddressTypes">
+        <item>Домашня</item>
+        <item>Робоча</item>
+        <item>Інша</item>
+        <item>Вибрати</item>
+    </string-array>
+</resources>

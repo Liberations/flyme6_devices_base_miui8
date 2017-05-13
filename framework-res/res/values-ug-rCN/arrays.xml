@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="emailAddressTypes">
+        <item>شەخسىي</item>
+        <item>ئىش</item>
+        <item>باشقا</item>
+        <item>ئۆزلەشتۈرۈش</item>
+    </string-array>
+    <string-array name="imProtocols">
+        <item>AIM</item>
+        <item>Windows Live</item>
+        <item>Yahoo</item>
+        <item>Skype</item>
+        <item>QQ</item>
+        <item>Google Talk</item>
+        <item>ICQ</item>
+        <item>Jabber</item>
+    </string-array>
+    <string-array name="organizationTypes">
+        <item>ئىش</item>
+        <item>باشقا</item>
+        <item>ئۆزلەشتۈرۈش</item>
+    </string-array>
+    <string-array name="phoneTypes">
+        <item>ئۆي</item>
+        <item>كۆچمە</item>
+        <item>ئىش</item>
+        <item>ئىش فاكس</item>
+        <item>ئۆي فاكس</item>
+        <item>چاقىرغۇ</item>
+        <item>باشقا</item>
+        <item>ئۆزلەشتۈرۈش</item>
+    </string-array>
+    <string-array name="postalAddressTypes">
+        <item>ئۆي</item>
+        <item>ئىش</item>
+        <item>باشقا</item>
+        <item>ئۆزلەشتۈرۈش</item>
+    </string-array>
+    <array name="wfcOperatorErrorAlertMessages" />
+    <array name="wfcOperatorErrorNotificationMessages" />
+    <array name="fingerprint_acquired_vendor" />
+    <array name="fingerprint_error_vendor" />
+    <string-array name="imAddressTypes">
+        <item>ئۆي</item>
+        <item>ئىش</item>
+        <item>باشقا</item>
+        <item>ئۆزلەشتۈرۈش</item>
+    </string-array>
+</resources>

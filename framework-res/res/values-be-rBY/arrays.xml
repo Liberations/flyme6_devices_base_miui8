@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="emailAddressTypes">
+        <item>Дамашні</item>
+        <item>Працоўны</item>
+        <item>Іншы</item>
+        <item>Абраць</item>
+    </string-array>
+    <string-array name="imProtocols">
+        <item>AIM</item>
+        <item>Windows Live</item>
+        <item>Yahoo</item>
+        <item>Skype</item>
+        <item>QQ</item>
+        <item>Google Talk</item>
+        <item>ICQ</item>
+        <item>Jabber</item>
+    </string-array>
+    <string-array name="organizationTypes">
+        <item>Працоўны</item>
+        <item>Іншае</item>
+        <item>Абраць</item>
+    </string-array>
+    <string-array name="phoneTypes">
+        <item>Дамашні</item>
+        <item>Мабільны</item>
+        <item>Працоўны</item>
+        <item>Працоўны факс</item>
+        <item>Дамашні факс</item>
+        <item>Пэйджар</item>
+        <item>Іншы</item>
+        <item>Абраць</item>
+    </string-array>
+    <string-array name="postalAddressTypes">
+        <item>Дамашні</item>
+        <item>Працоўны</item>
+        <item>Іншы</item>
+        <item>Абраць</item>
+    </string-array>
+    <string-array name="app_ops_labels">
+        <item>Спроба атрымання доступу да месцазнаходжання</item>
+        <item>Спроба атрымання доступу да месцазнаходжання</item>
+    </string-array>
+    <string-array name="config_locationProviderPackageNames">
+        <item>com.android.location.fused</item>
+        <item>com.google.android.gms</item>
+        <item>com.amap.android.location</item>
+    </string-array>
+    <integer-array name="maps_starting_lat_lng">
+        <item>55750449</item>
+        <item>37621136</item>
+    </integer-array>
+    <integer-array name="maps_starting_zoom">
+        <item>2</item>
+    </integer-array>
+    <string-array name="fingerprint_acquired_vendor">
+        <item>Паўтарыце спробу</item>
+        <item></item>
+        <item></item>
+        <item>Прыцісніце палец да сканару адбіткаў</item>
+        <item></item>
+        <item>Прыцісніце палец да сканару адбіткаў</item>
+        <item>Прыцісніце палец да сканару адбіткаў</item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item>Прыцісніце палец да сканару адбіткаў</item>
+        <item>Прыцісніце палец да сканару адбіткаў</item>
+        <item>Сістэма не паспела распазнаць адбітак</item>
+        <item>Перамясціце пале і паўтарыце спробу</item>
+        <item>Прыбярыце палец і прыцісніце да сканара яшчэ раз</item>
+        <item>Трымайце палец на сканары адбіткаў долей</item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item>Крыху перамясціце палец</item>
+        <item>Адбітак гэтага пальца дададзены. Выкарыстайце іншы палец.</item>
+    </string-array>
+    <string-array name="imAddressTypes">
+        <item>Дамашні</item>
+        <item>Працоўны</item>
+        <item>Іншы</item>
+        <item>Абраць</item>
+    </string-array>
+</resources>

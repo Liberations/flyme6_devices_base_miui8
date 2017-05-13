@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textAppearance="@style/TextAppearance.StatusBar.EventContent" android:ellipsize="end" android:id="@id/big_text" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="-2.0dip" android:maxLines="8" android:singleLine="false" android:layout_weight="1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

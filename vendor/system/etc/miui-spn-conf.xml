@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<spns version="1">
+    <!-- Providers in Chinese mainland -->
+    <spn numeric="46000,46002,46007,46008" alpha="China Mobile" short="CMCC" alpha-zh="中国移动" short-zh="移动" alpha-zh_TW="中國移動" short-zh_TW="移動" alpha-bo_CN="སྒུལ་འཕྲིན།" short-bo_CN="སྒུལ་འཕྲིན།" />
+    <spn numeric="46001,46006,46009,45407" alpha="China Unicom" short="CU" alpha-zh="中国联通" short-zh="联通" alpha-zh_TW="中國聯通" short-zh_TW="聯通" alpha-bo_CN="འབྲེལ་འཕྲིན།" short-bo_CN="འབྲེལ་འཕྲིན།" />
+    <spn numeric="46003,46005,46011" alpha="China Telecom" short="CT" alpha-zh="中国电信" short-zh="电信" alpha-zh_TW="中國電信" short-zh_TW="電信" alpha-bo_CN="གློག་འཕྲིན།" short-bo_CN="གློག་འཕྲིན།" />
+
+	<!-- Providers in Russia -->
+	<spn numeric="25001,302660,25050,25702,28300,28305,43407,43801" alpha="МТС" short="МТС" alpha-en="MTS" short-en="MTS" />
+	<spn numeric="25002" alpha="МегаФон" short="МегаФон" alpha-en="MegaFon" short-en="MegaFon" />
+	<spn numeric="25002" alpha="МегаФон" short="МегаФон" alpha-en="MegaFon" short-en="MegaFon" />
+	<spn numeric="25011" alpha="YOTA" short="YOTA" alpha-en="YOTA" short-en="YOTA" />
+	<spn numeric="25003,25017,25039" alpha="Utel" short="Utel" alpha-en="Utel" short-en="Utel" />
+	<spn numeric="25006,25009" alpha="SkyLink" short="SkyLink" alpha-en="SkyLink" short-en="SkyLink" />
+	<spn numeric="25007,25015" alpha="SMARTS" short="SMARTS" alpha-en="SMARTS" short-en="SMARTS" />
+	<spn numeric="25012" alpha="БВК" short="БВК" alpha-en="BVK" short-en="BVK" />
+	<spn numeric="25016,42901" alpha="НТК" short="НТК" alpha-en="NTC" short-en="NTC" />
+	<spn numeric="25020,21902,24007,24603,24702,24803" alpha="Tele2" short="Tele2" alpha-en="Tele2" short-en="Tele2" />
+	<spn numeric="25023,42899" alpha="Mobicom" short="Mobicom" alpha-en="Mobicom" short-en="Mobicom" />
+	<spn numeric="25032" alpha="Win" short="Win" alpha-en="Win" short-en="Win" />
+	<spn numeric="25033" alpha="Севмобайл" short="Севмобайл" alpha-en="SevMobile" short-en="SevMobile" />
+	<spn numeric="25034" alpha="Крымтелеком" short="Крымтелеком" alpha-en="KrymTelecom" short-en="KrymTelecom" />
+	<spn numeric="25060" alpha="Волна" short="Волна" alpha-en="Volna" short-en="Volna" />
+	<spn numeric="28967" alpha="Aquafon" short="Aquafon" alpha-en="Aquafon" short-en="Aquafon" />
+	<spn numeric="28988" alpha="А-мобайл" short="А-мобайл" alpha-en="A-Mobile" short-en="A-Mobile" />
+	<spn numeric="25035" alpha="Мотив" short="Мотив" alpha-en="Motiv" short-en="Motiv" />
+	<spn numeric="25037" alpha="Кодотел" short="Кодотел" alpha-en="Kodotel" short-en="Kodotel" />
+	<spn numeric="25043" alpha="Спринт" short="Спринт" alpha-en="Sprint" short-en="Sprint" />
+	<spn numeric="25061" alpha="Интертелеком" short="Интертелеком" alpha-en="Intertelecom" short-en="Intertelecom" />
+	<spn numeric="25092" alpha="ПримТелефон" short="ПримТелефон" alpha-en="PrimTelecom" short-en="PrimTelecom" />
+	<spn numeric="25099,25028,25502,28204,28301,40101,43404,43605,43701,45207,45609" alpha="Билайн" short="Билайн" alpha-en="Beeline" short-en="Beeline" />
+
+	
+    <!-- Virtual providers in Chinese mainland -->
+    <spn numeric="46001,46003" condition="alpha:小米通信" alpha="Mi Mobile" short="Mi" alpha-zh="小米移动" short-zh="小米" alpha-zh_TW="小米移動" short-zh_TW="小米" mvno="true"/>
+    <spn numeric="46000,46001,46003" condition="alpha" alpha="Alibaba" short="Alibaba" alpha-zh="阿里通信" short-zh="阿里" alpha-zh_TW="阿里通信" short-zh_TW="阿里" mvno="true"/>
+    <spn numeric="46000,46001" condition="alpha" alpha="China Mcom" short="Mcom" alpha-zh="中麦通信" short-zh="中麦" alpha-zh_TW="中麥通信" short-zh_TW="中麥" mvno="true"/>
+    <spn numeric="46000,46003" condition="alpha" alpha="Soshare Mobile" short="Soshare" alpha-zh="分享通信" short-zh="分享" alpha-zh_TW="分享通信" short-zh_TW="分享" mvno="true"/>
+
+    <!--  Providers in Taiwan -->
+    <spn numeric="46601" alpha="FarEasTone" short="FarEasTone" alpha-zh="远传电信" short-zh="远传" alpha-zh_TW="遠傳電信" short-zh_TW="遠傳" />
+    <spn numeric="46605" alpha="Gt" short="Gt" alpha-zh="Gt" short-zh="Gt" alpha-zh_TW="Gt" short-zh_TW="Gt" />
+    <spn numeric="46689" alpha="T Star" short="T Star" alpha-zh="台湾之星" short-zh="台湾之星" alpha-zh_TW="台灣之星" short-zh_TW="台灣之星" />
+    <spn numeric="46689" alpha="T Star" short="T Star" alpha-zh="台湾之星" short-zh="台湾之星" alpha-zh_TW="台灣之星" short-zh_TW="台灣之星" />
+    <spn numeric="46692" alpha="Chunghwa" short="Chunghwa" alpha-zh="中华电信" short-zh="中华" alpha-zh_TW="中華電信" short-zh_TW="中華" />
+    <spn numeric="46697" alpha="TW Mobile" short="TW Mobile" alpha-zh="台湾大哥大" short-zh="台湾大哥大" alpha-zh_TW="台灣大哥大" short-zh_TW="台灣大哥大" />
+
+    <!-- Providers in HongKong -->
+    <spn numeric="45403" alpha="3" short="3" />
+    <spn numeric="45404" alpha="3 (2G)" short="3 (2G)" />
+    <spn numeric="45406,45415,45417" alpha="SmarTone HK" short="SmarTone HK" />
+    <spn numeric="45412,45413" alpha="CMHK" short="CMHK" alpha-zh="中国移动香港" short-zh="移动香港" alpha-zh_TW="中國移動香港" short-zh_TW="移動香港" />
+    <spn numeric="45416,45419" alpha="csl." short="csl." />
+
+    <!-- Providers in Macau -->
+    <spn numeric="45500" alpha="SmarTone MAC" short="SmarTone MAC" />
+    <spn numeric="45507" alpha="China Telecom" short="CT" alpha-zh="中国电信" short-zh="电信" alpha-zh_TW="中國電信" short-zh_TW="電信" />
+
+    <!-- Providers in Vietnam -->
+    <spn numeric="45201" alpha="MobiFone" short="MobiFone" />
+
+    <!-- Providers in Singapore -->
+    <spn numeric="52501,52502" alpha="Singtel" short="Singtel" />
+    <spn numeric="52503,52504" alpha="M1" short="M1" />
+
+    <!-- Virtual Providers in Singapore -->
+    <spn numeric="52503" condition="alpha" alpha="Circles" short="Circles" mvno="true"/>
+
+    <!-- Providers in Malaysia -->
+    <spn numeric="50212,502142,502147,50217" alpha="Maxis" short="Maxis" />
+    <spn numeric="50213,50219,502145,502148" alpha="MY CELCOM" short="MY CELCOM" />
+
+    <!-- Providers in Indonesia -->
+    <spn numeric="51011" alpha="XL" short="XL" />
+    <spn numeric="51021" alpha="INDOSAT" short="INDOSAT" />
+
+    <!-- Providers in United Kingdom -->
+    <spn numeric="23430,23431,23432" alpha="T-Mobile" short="T-Mobile" />
+
+    <!-- Virtual Providers in United Kingdom -->
+    <spn numeric="23430" condition="alpha;gid1:28;imsi:2080120801xxx67xxxxx" alpha="Virgin" short="Virgin" mvno="true"/>
+
+    <!-- Providers in India -->
+    <spn numeric="40417,40441,40491" alpha="Aircel" short="Aircel" condition="numericSpn"/>
+</spns>
