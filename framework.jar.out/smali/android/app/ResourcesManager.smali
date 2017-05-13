@@ -3,6 +3,13 @@
 .source "ResourcesManager.java"
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroid/app/ResourcesManager$FlymeInjector;
+    }
+.end annotation
+
 # static fields
 .field private static final DEBUG:Z = false
 
@@ -332,6 +339,8 @@
     move-object/from16 v1, p2
 
     invoke-static {v0, v3, v1}, Landroid/content/res/Resources;->updateSystemConfiguration(Landroid/content/res/Configuration;Landroid/util/DisplayMetrics;Landroid/content/res/CompatibilityInfo;)V
+
+    invoke-static {v0}, Landroid/app/ResourcesManager$FlymeInjector;->freeCaches(I)V
 
     .line 297
     invoke-static {}, Landroid/app/ApplicationPackageManager;->configurationChanged()V
