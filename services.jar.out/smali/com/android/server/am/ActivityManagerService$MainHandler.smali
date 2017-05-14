@@ -984,6 +984,27 @@
 
     .line 1814
     .local v13, "reason":Ljava/lang/String;
+
+    invoke-static/range {p1 .. p1}, Lcom/android/server/am/ActivityManagerService$FlymeActivityManagerServiceInjector;->isFlymePackageShouldRestart(Landroid/os/Message;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_flyme_0
+
+    move-object/from16 v0, p0
+
+    iget-object v4, v0, Lcom/android/server/am/ActivityManagerService$MainHandler;->this$0:Lcom/android/server/am/ActivityManagerService;
+
+    move-object/from16 v0, p1
+
+    invoke-virtual {v4, v0}, Lcom/android/server/am/ActivityManagerService;->forceStopFlymePackageLocked(Landroid/os/Message;)V
+
+    monitor-exit v15
+
+    return-void
+
+    :cond_flyme_0
+
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/am/ActivityManagerService$MainHandler;->this$0:Lcom/android/server/am/ActivityManagerService;
@@ -1099,7 +1120,7 @@
 
     iget-object v4, v4, Lcom/android/server/am/ActivityManagerService;->mContext:Landroid/content/Context;
 
-    const v8, 0x1040386
+    const v8, #android:string@heavy_weight_notification#t
 
     const/4 v9, 0x1
 
@@ -1133,7 +1154,7 @@
 
     invoke-direct {v4, v0}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;)V
 
-    const v8, 0x1080653
+    const v8, #android:drawable@stat_sys_adb#t
 
     invoke-virtual {v4, v8}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
 
@@ -1163,7 +1184,7 @@
 
     iget-object v8, v8, Lcom/android/server/am/ActivityManagerService;->mContext:Landroid/content/Context;
 
-    const v9, 0x1060059
+    const v9, #android:color@system_notification_accent_color#t
 
     invoke-virtual {v8, v9}, Landroid/content/Context;->getColor(I)I
 
@@ -1185,7 +1206,7 @@
 
     iget-object v8, v8, Lcom/android/server/am/ActivityManagerService;->mContext:Landroid/content/Context;
 
-    const v9, 0x1040387
+    const v9, #android:string@heavy_weight_notification_detail#t
 
     invoke-virtual {v8, v9}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -1254,7 +1275,7 @@
 
     const/16 v17, 0x0
 
-    const v18, 0x1040386
+    const v18, #android:string@heavy_weight_notification#t
 
     move-object/from16 v0, v56
 
@@ -1332,7 +1353,7 @@
 
     const/4 v8, 0x0
 
-    const v9, 0x1040386
+    const v9, #android:string@heavy_weight_notification#t
 
     move-object/from16 v0, p1
 
@@ -2532,7 +2553,7 @@
 
     iget-object v4, v4, Lcom/android/server/am/ActivityManagerService;->mContext:Landroid/content/Context;
 
-    const v8, 0x104038e
+    const v8, #android:string@dump_heap_notification#t
 
     const/4 v9, 0x1
 
@@ -2627,7 +2648,7 @@
 
     invoke-direct {v4, v8}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;)V
 
-    const v8, 0x1080653
+    const v8, #android:drawable@stat_sys_adb#t
 
     invoke-virtual {v4, v8}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
 
@@ -2663,7 +2684,7 @@
 
     iget-object v8, v8, Lcom/android/server/am/ActivityManagerService;->mContext:Landroid/content/Context;
 
-    const v9, 0x1060059
+    const v9, #android:color@system_notification_accent_color#t
 
     invoke-virtual {v8, v9}, Landroid/content/Context;->getColor(I)I
 
@@ -2685,7 +2706,7 @@
 
     iget-object v8, v8, Lcom/android/server/am/ActivityManagerService;->mContext:Landroid/content/Context;
 
-    const v9, 0x104038f
+    const v9, #android:string@dump_heap_notification_detail#t
 
     invoke-virtual {v8, v9}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -2768,7 +2789,7 @@
 
     const/16 v17, 0x0
 
-    const v18, 0x104038e
+    const v18, #android:string@dump_heap_notification#t
 
     move/from16 v21, v62
 

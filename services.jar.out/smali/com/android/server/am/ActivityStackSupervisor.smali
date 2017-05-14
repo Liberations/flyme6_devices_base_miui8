@@ -9,6 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcom/android/server/am/ActivityStackSupervisor$FlymeInjector;,
         Lcom/android/server/am/ActivityStackSupervisor$VirtualActivityDisplay;,
         Lcom/android/server/am/ActivityStackSupervisor$ActivityDisplay;,
         Lcom/android/server/am/ActivityStackSupervisor$VirtualActivityContainer;,
@@ -114,6 +115,14 @@
 
 
 # instance fields
+.field mFlymeAccessControlManager:Lmeizu/security/AccessControlManager;
+
+.field mFlymePackageManagerService:Lcom/android/server/pm/FlymePackageManagerService;
+
+.field mFlymeRealPm:Lcom/android/server/pm/PackageManagerService;
+
+.field mIsIntercepted:Z
+
 .field inResumeTopActivity:Z
 
 .field public lBoostCpuParamVal:[I
@@ -539,7 +548,7 @@
 
     move-result-object v0
 
-    const v1, 0x11200a7
+    const v1, #android:bool@config_enableCpuBoostForAppLaunch#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -556,7 +565,7 @@
 
     move-result-object v0
 
-    const v1, 0x11200a8
+    const v1, #android:bool@config_disablePacking#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -578,7 +587,7 @@
 
     move-result-object v0
 
-    const v1, 0x10e009b
+    const v1, #android:integer@launchboost_timeout_param#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -595,7 +604,7 @@
 
     move-result-object v0
 
-    const v1, 0x1070047
+    const v1, #android:array@launchboost_param_value#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getIntArray(I)[I
 
@@ -618,7 +627,7 @@
 
     move-result-object v0
 
-    const v1, 0x10e009c
+    const v1, #android:integer@disablepacking_timeout_param#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -635,7 +644,7 @@
 
     move-result-object v0
 
-    const v1, 0x1070048
+    const v1, #android:array@launchboost_packing_param_value#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getIntArray(I)[I
 
@@ -12784,7 +12793,7 @@
     .param p5, "userId"    # I
 
     .prologue
-    .line 902
+    invoke-static {p1, p5}, Lcom/android/server/am/ActivityStackSupervisor$FlymeInjector;->interceptAcquireGooglePlayServiceIntent(Landroid/content/Intent;I)V
     :try_start_0
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
@@ -14493,6 +14502,25 @@
 
     .line 1218
     .local v8, "aInfo":Landroid/content/pm/ActivityInfo;
+    move-object/from16 v0, p0
+
+    move/from16 v1, p2
+
+    move-object/from16 v2, p3
+
+    move-object/from16 v4, v8
+
+    invoke-static {v0, v1, v2, v4}, Lcom/android/server/am/ActivityStackSupervisor$FlymeInjector;->changeMayInterceptPackage(Lcom/android/server/am/ActivityStackSupervisor;ILjava/lang/String;Landroid/content/pm/ActivityInfo;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_flyme_0
+
+    const/4 v0, 0x0
+
+    return v0
+
+    :cond_flyme_0
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/am/ActivityStackSupervisor;->mService:Lcom/android/server/am/ActivityManagerService;
@@ -16263,6 +16291,29 @@
     .line 1753
     .end local v30    # "e":Landroid/os/RemoteException;
     :cond_22
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p2
+
+    move-object/from16 v2, p4
+
+    move/from16 v3, p11
+
+    invoke-static {v0, v1, v2, v3}, Lcom/android/server/am/ActivityStackSupervisor$FlymeInjector;->interceptForAccessControl(Lcom/android/server/am/ActivityStackSupervisor;Landroid/content/Intent;Landroid/content/pm/ActivityInfo;I)Landroid/content/pm/ActivityInfo;
+
+    move-result-object p4
+
+    invoke-static/range {p0 .. p0}, Lcom/android/server/am/ActivityStackSupervisor$FlymeInjector;->isIntercepted(Lcom/android/server/am/ActivityStackSupervisor;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_flyme_0
+
+    const/16 p21, 0x0
+
+    :cond_flyme_0
+
     new-instance v7, Lcom/android/server/am/ActivityRecord;
 
     move-object/from16 v0, p0
@@ -16753,18 +16804,17 @@
 
     move/from16 v9, p17
 
-    .line 980
     invoke-virtual/range {v4 .. v9}, Lcom/android/server/am/ActivityStackSupervisor;->resolveActivity(Landroid/content/Intent;Ljava/lang/String;ILandroid/app/ProfilerInfo;I)Landroid/content/pm/ActivityInfo;
 
     move-result-object v5
 
-    .line 984
     .local v5, "aInfo":Landroid/content/pm/ActivityInfo;
+    
+ 
     invoke-virtual/range {p4 .. p4}, Landroid/content/Intent;->getMiuiFlags()I
 
     move-result v36
 
-    .line 985
     .local v36, "miuiFlags":I
     invoke-static {}, Lcom/android/server/am/ActivityStackSupervisorInjector;->isXSpaceActive()Z
 
@@ -21914,5 +21964,15 @@
     .end local v5    # "stackNdx":I
     .end local v6    # "stacks":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/am/ActivityStack;>;"
     :cond_8
+    return-void
+.end method
+
+.method setPackageManager(Lcom/android/server/pm/PackageManagerService;)V
+    .locals 0
+    .param p1, "pm"    # Lcom/android/server/pm/PackageManagerService;
+
+    .prologue
+    iput-object p1, p0, Lcom/android/server/am/ActivityStackSupervisor;->mFlymeRealPm:Lcom/android/server/pm/PackageManagerService;
+
     return-void
 .end method

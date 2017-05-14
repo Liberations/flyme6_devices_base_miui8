@@ -233,9 +233,8 @@
 
     move-object/from16 v0, v18
 
-    invoke-virtual {v0, v1}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
+    #invoke-virtual {v0, v1}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
 
-    .line 479
     const/16 v1, 0x40
 
     const/4 v2, 0x1
@@ -317,7 +316,7 @@
 
     iget-object v1, v1, Lcom/android/server/am/ActivityManagerService;->mContext:Landroid/content/Context;
 
-    const v2, 0x1060059
+    const v2, #android:color@system_notification_accent_color#t
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getColor(I)I
 
@@ -336,7 +335,7 @@
 
     iget-object v1, v1, Lcom/android/server/am/ActivityManagerService;->mContext:Landroid/content/Context;
 
-    const v2, 0x1040356
+    const v2, #android:string@app_running_notification_title#t
 
     const/4 v4, 0x1
 
@@ -363,7 +362,7 @@
 
     iget-object v1, v1, Lcom/android/server/am/ActivityManagerService;->mContext:Landroid/content/Context;
 
-    const v2, 0x1040357
+    const v2, #android:string@app_running_notification_text#t
 
     const/4 v4, 0x1
 
@@ -400,6 +399,7 @@
     .end local v19    # "pi":Landroid/app/PendingIntent;
     :cond_2
     :goto_1
+    goto :goto_flyme_0
     :try_start_2
     invoke-virtual {v11}, Landroid/app/Notification;->getSmallIcon()Landroid/graphics/drawable/Icon;
 
@@ -525,6 +525,14 @@
     .line 521
     .end local v16    # "e":Ljava/lang/RuntimeException;
     :cond_3
+    :goto_flyme_0
+
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/android/server/am/ServiceRecord$1;->this$0:Lcom/android/server/am/ServiceRecord;
+
+    invoke-virtual {v1, v11}, Lcom/android/server/am/ServiceRecord;->setFlymeNotification(Landroid/app/Notification;)V
+    
     const/4 v1, 0x1
 
     :try_start_3
