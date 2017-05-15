@@ -3409,9 +3409,9 @@
 
     iget-object v2, v0, Lcom/android/server/pm/PackageManagerService;->mSettings:Lcom/android/server/pm/Settings;
 
-    move-object/from16 v0, p0
+    #move-object/from16 v0, p0
 
-    invoke-static {v0, v2}, Lcom/android/server/pm/PackageManagerServiceInjector;->performPreinstallApp(Lcom/android/server/pm/PackageManagerService;Lcom/android/server/pm/Settings;)V
+    #invoke-static {v0, v2}, Lcom/android/server/pm/PackageManagerServiceInjector;->performPreinstallApp(Lcom/android/server/pm/PackageManagerService;Lcom/android/server/pm/Settings;)V
 
     .line 2228
     move-object/from16 v0, p0
@@ -7403,9 +7403,9 @@
     .end local v13    # "r1":Landroid/content/pm/ResolveInfo;
     .end local v14    # "ri":Landroid/content/pm/ResolveInfo;
     :cond_a
-    invoke-static/range {p0 .. p5}, Lcom/android/server/pm/PackageManagerService$FlymePackageManagerServiceInjector;->getResolveInfo(Lcom/android/server/pm/PackageManagerService;Landroid/content/Intent;Ljava/lang/String;ILjava/util/List;I)Landroid/content/pm/ResolveInfo;
 
     const/4 v14, 0x0
+    invoke-static/range {p0 .. p5}, Lcom/android/server/pm/PackageManagerService$FlymePackageManagerServiceInjector;->getResolveInfo(Lcom/android/server/pm/PackageManagerService;Landroid/content/Intent;Ljava/lang/String;ILjava/util/List;I)Landroid/content/pm/ResolveInfo;
     move-result-object v1
 
     goto/16 :goto_0
@@ -58788,10 +58788,10 @@
 
     move-object/from16 v0, v16
 
-    invoke-static {v2, v0}, Lcom/android/server/pm/PackageManagerServiceInjector;->checkAndRunPreInstallation(Landroid/os/Handler;Landroid/os/Message;)Z
+    #invoke-static {v2, v0}, Lcom/android/server/pm/PackageManagerServiceInjector;->checkAndRunPreInstallation(Landroid/os/Handler;Landroid/os/Message;)Z
 
-    move-result v2
-
+    #move-result v2
+    const/4 v2, 0x0
     if-eqz v2, :cond_7
 
     const-string v2, "PackageManager"

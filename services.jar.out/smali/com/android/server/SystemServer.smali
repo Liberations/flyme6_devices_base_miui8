@@ -3176,7 +3176,7 @@
 
     move-object/from16 v4, v97
 
-    move-object/from16 v5, v95
+    move-object/from16 v5, v94
 
     invoke-static {v0, v4, v5}, Lcom/android/server/SystemServer$FlymeInjector;->addFlymeServices(Lcom/android/server/SystemServer;Lcom/android/server/wm/WindowManagerService;Lcom/android/server/wallpaper/WallpaperManagerService;)V
     :try_start_3e
