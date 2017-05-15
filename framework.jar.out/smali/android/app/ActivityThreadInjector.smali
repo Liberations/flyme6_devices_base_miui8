@@ -16,8 +16,7 @@
     .locals 2
 
     .prologue
-    .line 34
-    const-string/jumbo v0, "persist.sys.handler.threshold"
+    const-string v0, "persist.sys.handler.threshold"
 
     const/16 v1, 0xbb8
 
@@ -27,7 +26,6 @@
 
     sput v0, Landroid/app/ActivityThreadInjector;->AM_LIFECYCLE_SAMPLE_THRESHOLD:I
 
-    .line 35
     sget v0, Landroid/app/ActivityThreadInjector;->AM_LIFECYCLE_SAMPLE_THRESHOLD:I
 
     if-lez v0, :cond_0
@@ -49,7 +47,6 @@
     .locals 0
 
     .prologue
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -61,17 +58,14 @@
     .param p2, "MsgWhat"    # I
 
     .prologue
-    .line 137
     sget-boolean v2, Landroid/app/ActivityThreadInjector;->mEnableLifecycleSample:Z
 
     if-nez v2, :cond_1
 
-    .line 143
     :cond_0
     :goto_0
     return-void
 
-    .line 139
     :cond_1
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
@@ -79,7 +73,6 @@
 
     sub-long v0, v2, p0
 
-    .line 140
     .local v0, "durationMs":J
     sget v2, Landroid/app/ActivityThreadInjector;->AM_LIFECYCLE_SAMPLE_THRESHOLD:I
 
@@ -89,7 +82,6 @@
 
     if-ltz v2, :cond_0
 
-    .line 141
     const/16 v2, 0x7594
 
     const/4 v3, 0x4
@@ -143,7 +135,6 @@
     .param p2, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 133
     if-eqz p2, :cond_0
 
     iget v0, p2, Landroid/os/Message;->what:I
@@ -151,10 +142,8 @@
     :goto_0
     invoke-static {p0, p1, v0}, Landroid/app/ActivityThreadInjector;->checkHandleMessageTime(JI)V
 
-    .line 134
     return-void
 
-    .line 133
     :cond_0
     const/4 v0, -0x1
 
@@ -165,7 +154,6 @@
     .locals 4
 
     .prologue
-    .line 113
     :try_start_0
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -173,7 +161,6 @@
 
     if-le v2, v3, :cond_1
 
-    .line 114
     const-string v2, "android.content.res.ResourcesImpl"
 
     const/4 v3, 0x0
@@ -182,19 +169,16 @@
 
     move-result-object v1
 
-    .line 115
     .local v1, "clasz":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
-    const-string/jumbo v2, "sCachedDrawables"
+    const-string v2, "sCachedDrawables"
 
     invoke-static {v1, v2}, Lmiui/util/ReflectionUtils;->tryFindField(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v0
 
-    .line 116
     .local v0, "cachedDrawables":Ljava/lang/reflect/Field;
     if-eqz v0, :cond_0
 
-    .line 117
     const/4 v2, 0x0
 
     invoke-virtual {v0, v2}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -205,35 +189,30 @@
 
     invoke-virtual {v2}, Landroid/util/LongSparseArray;->clear()V
 
-    .line 118
     const-string v2, "ActivityThreadInjector"
 
     const-string v3, "clearCachedDrawables."
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 130
     .end local v1    # "clasz":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :cond_0
     :goto_0
     return-void
 
-    .line 121
     .end local v0    # "cachedDrawables":Ljava/lang/reflect/Field;
     :cond_1
     const-class v2, Landroid/content/res/Resources;
 
-    const-string/jumbo v3, "sCachedDrawables"
+    const-string v3, "sCachedDrawables"
 
     invoke-static {v2, v3}, Lmiui/util/ReflectionUtils;->tryFindField(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v0
 
-    .line 122
     .restart local v0    # "cachedDrawables":Ljava/lang/reflect/Field;
     if-eqz v0, :cond_0
 
-    .line 123
     const/4 v2, 0x0
 
     invoke-virtual {v0, v2}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -244,7 +223,6 @@
 
     invoke-virtual {v2}, Landroid/util/LongSparseArray;->clear()V
 
-    .line 124
     const-string v2, "ActivityThreadInjector"
 
     const-string v3, "clearCachedDrawables."
@@ -255,7 +233,6 @@
 
     goto :goto_0
 
-    .line 127
     :catch_0
     move-exception v2
 
@@ -266,12 +243,10 @@
     .locals 1
 
     .prologue
-    .line 59
     const/4 v0, 0x0
 
     invoke-static {v0}, Lmiui/log/SystemLogSwitchesConfigManager;->enableLogSwitch(Z)V
 
-    .line 60
     return-void
 .end method
 
@@ -279,24 +254,21 @@
     .locals 5
 
     .prologue
-    .line 38
     sget-boolean v3, Lmiui/os/Build;->IS_STABLE_VERSION:Z
 
     if-eqz v3, :cond_0
 
-    .line 56
     .local v0, "isPenaltyDeath":Z
     .local v1, "threadPolicy":Landroid/os/StrictMode$ThreadPolicy$Builder;
     .local v2, "vmPolicy":Landroid/os/StrictMode$VmPolicy$Builder;
     :goto_0
     return-void
 
-    .line 41
     .end local v0    # "isPenaltyDeath":Z
     .end local v1    # "threadPolicy":Landroid/os/StrictMode$ThreadPolicy$Builder;
     .end local v2    # "vmPolicy":Landroid/os/StrictMode$VmPolicy$Builder;
     :cond_0
-    const-string/jumbo v3, "persist.sys.strictmode.visual"
+    const-string v3, "persist.sys.strictmode.visual"
 
     const/4 v4, 0x0
 
@@ -304,7 +276,6 @@
 
     move-result v0
 
-    .line 42
     .restart local v0    # "isPenaltyDeath":Z
     new-instance v3, Landroid/os/StrictMode$ThreadPolicy$Builder;
 
@@ -318,7 +289,6 @@
 
     move-result-object v1
 
-    .line 45
     .restart local v1    # "threadPolicy":Landroid/os/StrictMode$ThreadPolicy$Builder;
     new-instance v3, Landroid/os/StrictMode$VmPolicy$Builder;
 
@@ -340,17 +310,13 @@
 
     move-result-object v2
 
-    .line 50
     .restart local v2    # "vmPolicy":Landroid/os/StrictMode$VmPolicy$Builder;
     if-eqz v0, :cond_1
 
-    .line 51
     invoke-virtual {v1}, Landroid/os/StrictMode$ThreadPolicy$Builder;->penaltyDeath()Landroid/os/StrictMode$ThreadPolicy$Builder;
 
-    .line 52
     invoke-virtual {v2}, Landroid/os/StrictMode$VmPolicy$Builder;->penaltyDeath()Landroid/os/StrictMode$VmPolicy$Builder;
 
-    .line 54
     :cond_1
     invoke-virtual {v1}, Landroid/os/StrictMode$ThreadPolicy$Builder;->build()Landroid/os/StrictMode$ThreadPolicy;
 
@@ -358,7 +324,6 @@
 
     invoke-static {v3}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
 
-    .line 55
     invoke-virtual {v2}, Landroid/os/StrictMode$VmPolicy$Builder;->build()Landroid/os/StrictMode$VmPolicy;
 
     move-result-object v3
@@ -375,23 +340,18 @@
     .param p2, "info"    # Landroid/app/LoadedApk;
 
     .prologue
-    .line 73
     if-lez p1, :cond_0
 
-    .line 75
     :try_start_0
     invoke-static {p0, p2}, Landroid/app/ContextImpl;->createAppContext(Landroid/app/ActivityThread;Landroid/app/LoadedApk;)Landroid/app/ContextImpl;
 
     move-result-object v0
 
-    .line 76
     .local v0, "appContext":Landroid/content/Context;
     invoke-virtual {v0, p1}, Landroid/content/Context;->setTheme(I)V
 
-    .line 77
     move-object v1, v0
 
-    .line 78
     .local v1, "context":Landroid/content/Context;
     new-instance v2, Ljava/lang/Thread;
 
@@ -405,14 +365,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 109
     .end local v0    # "appContext":Landroid/content/Context;
     .end local v1    # "context":Landroid/content/Context;
     :cond_0
     :goto_0
     return-void
 
-    .line 105
     :catch_0
     move-exception v2
 
@@ -423,7 +381,6 @@
     .locals 0
 
     .prologue
-    .line 70
     return-void
 .end method
 
@@ -432,18 +389,15 @@
     .param p0, "data"    # Landroid/app/ActivityThread$AppBindData;
 
     .prologue
-    .line 63
     iget-object v0, p0, Landroid/app/ActivityThread$AppBindData;->appInfo:Landroid/content/pm/ApplicationInfo;
 
     iget-object v0, v0, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
     invoke-static {v0}, Lmiui/log/SystemLogSwitchesConfigManager;->updatePackageName(Ljava/lang/String;)V
 
-    .line 64
     iget-object v0, p0, Landroid/app/ActivityThread$AppBindData;->processName:Ljava/lang/String;
 
     invoke-static {v0}, Lmiui/log/SystemLogSwitchesConfigManager;->updateProgramName(Ljava/lang/String;)V
 
-    .line 65
     return-void
 .end method

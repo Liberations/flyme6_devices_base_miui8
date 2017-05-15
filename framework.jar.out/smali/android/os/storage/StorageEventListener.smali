@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -21,7 +20,6 @@
     .param p1, "disk"    # Landroid/os/storage/DiskInfo;
 
     .prologue
-    .line 54
     return-void
 .end method
 
@@ -31,7 +29,6 @@
     .param p2, "volumeCount"    # I
 
     .prologue
-    .line 51
     return-void
 .end method
 
@@ -42,7 +39,6 @@
     .param p3, "newState"    # Ljava/lang/String;
 
     .prologue
-    .line 39
     return-void
 .end method
 
@@ -51,7 +47,6 @@
     .param p1, "connected"    # Z
 
     .prologue
-    .line 30
     return-void
 .end method
 
@@ -60,7 +55,6 @@
     .param p1, "fsUuid"    # Ljava/lang/String;
 
     .prologue
-    .line 48
     return-void
 .end method
 
@@ -69,7 +63,6 @@
     .param p1, "rec"    # Landroid/os/storage/VolumeRecord;
 
     .prologue
-    .line 45
     return-void
 .end method
 
@@ -80,6 +73,5 @@
     .param p3, "newState"    # I
 
     .prologue
-    .line 42
     return-void
 .end method

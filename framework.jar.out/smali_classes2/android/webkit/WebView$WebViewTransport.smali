@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 314
     iput-object p1, p0, Landroid/webkit/WebView$WebViewTransport;->this$0:Landroid/webkit/WebView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,7 +38,6 @@
     .locals 1
 
     .prologue
-    .line 332
     monitor-enter p0
 
     :try_start_0
@@ -64,7 +62,6 @@
     .param p1, "webview"    # Landroid/webkit/WebView;
 
     .prologue
-    .line 323
     monitor-enter p0
 
     :try_start_0
@@ -72,12 +69,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 324
     monitor-exit p0
 
     return-void
 
-    .line 323
     :catchall_0
     move-exception v0
 

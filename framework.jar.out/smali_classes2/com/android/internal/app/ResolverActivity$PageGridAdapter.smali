@@ -34,15 +34,12 @@
     .param p3, "page"    # I
 
     .prologue
-    .line 1635
     iput-object p1, p0, Lcom/android/internal/app/ResolverActivity$PageGridAdapter;->this$0:Lcom/android/internal/app/ResolverActivity;
 
-    .line 1636
     const/4 v4, 0x0
 
     invoke-direct {p0, p2, v4}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;I)V
 
-    .line 1637
     # getter for: Lcom/android/internal/app/ResolverActivity;->mAdapter:Lcom/android/internal/app/ResolverActivity$ResolveListAdapter;
     invoke-static {p1}, Lcom/android/internal/app/ResolverActivity;->access$000(Lcom/android/internal/app/ResolverActivity;)Lcom/android/internal/app/ResolverActivity$ResolveListAdapter;
 
@@ -52,13 +49,11 @@
 
     move-result v0
 
-    .line 1638
     .local v0, "count":I
     add-int/lit8 v4, p3, -0x1
 
     mul-int/lit8 v3, v4, 0x8
 
-    .line 1639
     .local v3, "start":I
     add-int/lit8 v4, v3, 0x8
 
@@ -70,7 +65,6 @@
 
     move-result v1
 
-    .line 1640
     .local v1, "end":I
     move v2, v3
 
@@ -78,7 +72,6 @@
     :goto_0
     if-gt v2, v1, :cond_0
 
-    .line 1641
     # getter for: Lcom/android/internal/app/ResolverActivity;->mAdapter:Lcom/android/internal/app/ResolverActivity$ResolveListAdapter;
     invoke-static {p1}, Lcom/android/internal/app/ResolverActivity;->access$000(Lcom/android/internal/app/ResolverActivity;)Lcom/android/internal/app/ResolverActivity$ResolveListAdapter;
 
@@ -92,12 +85,10 @@
 
     invoke-virtual {p0, v4}, Lcom/android/internal/app/ResolverActivity$PageGridAdapter;->add(Ljava/lang/Object;)V
 
-    .line 1640
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 1643
     :cond_0
     return-void
 .end method
@@ -112,14 +103,12 @@
 
     const/4 v4, 0x0
 
-    .line 1667
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/android/internal/app/ResolverActivity$ViewHolder;
 
-    .line 1668
     .local v1, "holder":Lcom/android/internal/app/ResolverActivity$ViewHolder;
     iget-object v2, v1, Lcom/android/internal/app/ResolverActivity$ViewHolder;->text:Landroid/widget/TextView;
 
@@ -129,12 +118,10 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1670
     iget-object v2, v1, Lcom/android/internal/app/ResolverActivity$ViewHolder;->text2:Landroid/widget/TextView;
 
     invoke-virtual {v2, v5}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 1671
     instance-of v2, p2, Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;
 
     if-eqz v2, :cond_0
@@ -145,7 +132,6 @@
 
     if-nez v2, :cond_0
 
-    .line 1673
     new-instance v2, Lcom/android/internal/app/ResolverActivity$LoadAdapterIconTask;
 
     iget-object v3, p0, Lcom/android/internal/app/ResolverActivity$PageGridAdapter;->this$0:Lcom/android/internal/app/ResolverActivity;
@@ -156,7 +142,6 @@
 
     invoke-virtual {v2, v3}, Lcom/android/internal/app/ResolverActivity$LoadAdapterIconTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 1675
     :cond_0
     iget-object v2, v1, Lcom/android/internal/app/ResolverActivity$ViewHolder;->icon:Landroid/widget/ImageView;
 
@@ -166,26 +151,21 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 1676
     iget-object v2, v1, Lcom/android/internal/app/ResolverActivity$ViewHolder;->badge:Landroid/widget/ImageView;
 
     if-eqz v2, :cond_1
 
-    .line 1677
     invoke-virtual {p2}, Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;->getBadgeIcon()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 1678
     .local v0, "badge":Landroid/graphics/drawable/Drawable;
     if-eqz v0, :cond_2
 
-    .line 1679
     iget-object v2, v1, Lcom/android/internal/app/ResolverActivity$ViewHolder;->badge:Landroid/widget/ImageView;
 
     invoke-virtual {v2, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 1680
     iget-object v2, v1, Lcom/android/internal/app/ResolverActivity$ViewHolder;->badge:Landroid/widget/ImageView;
 
     invoke-virtual {p2}, Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;->getBadgeContentDescription()Ljava/lang/CharSequence;
@@ -194,18 +174,15 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 1681
     iget-object v2, v1, Lcom/android/internal/app/ResolverActivity$ViewHolder;->badge:Landroid/widget/ImageView;
 
     invoke-virtual {v2, v4}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1686
     .end local v0    # "badge":Landroid/graphics/drawable/Drawable;
     :cond_1
     :goto_0
     return-void
 
-    .line 1683
     .restart local v0    # "badge":Landroid/graphics/drawable/Drawable;
     :cond_2
     iget-object v2, v1, Lcom/android/internal/app/ResolverActivity$ViewHolder;->badge:Landroid/widget/ImageView;
@@ -224,10 +201,8 @@
     .param p3, "parent"    # Landroid/view/ViewGroup;
 
     .prologue
-    .line 1648
     if-nez p2, :cond_0
 
-    .line 1649
     invoke-virtual {p0}, Lcom/android/internal/app/ResolverActivity$PageGridAdapter;->getContext()Landroid/content/Context;
 
     move-result-object v3
@@ -244,7 +219,6 @@
 
     move-result-object v2
 
-    .line 1652
     .local v2, "view":Landroid/view/View;
     const v3, 0x110b0029
 
@@ -263,23 +237,19 @@
 
     invoke-virtual {v3, v4}, Lcom/android/internal/widget/MaskLayout;->setMaskColor(I)V
 
-    .line 1653
     new-instance v0, Lcom/android/internal/app/ResolverActivity$ViewHolder;
 
     invoke-direct {v0, v2}, Lcom/android/internal/app/ResolverActivity$ViewHolder;-><init>(Landroid/view/View;)V
 
-    .line 1654
     .local v0, "holder":Lcom/android/internal/app/ResolverActivity$ViewHolder;
     invoke-virtual {v2, v0}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 1657
     iget-object v3, v0, Lcom/android/internal/app/ResolverActivity$ViewHolder;->icon:Landroid/widget/ImageView;
 
     invoke-virtual {v3}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v1
 
-    .line 1658
     .local v1, "lp":Landroid/view/ViewGroup$LayoutParams;
     iget-object v3, p0, Lcom/android/internal/app/ResolverActivity$PageGridAdapter;->this$0:Lcom/android/internal/app/ResolverActivity;
 
@@ -292,7 +262,6 @@
 
     iput v3, v1, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 1662
     .end local v0    # "holder":Lcom/android/internal/app/ResolverActivity$ViewHolder;
     .end local v1    # "lp":Landroid/view/ViewGroup$LayoutParams;
     :goto_0
@@ -304,10 +273,8 @@
 
     invoke-direct {p0, v2, v3}, Lcom/android/internal/app/ResolverActivity$PageGridAdapter;->bindView(Landroid/view/View;Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;)V
 
-    .line 1663
     return-object v2
 
-    .line 1660
     .end local v2    # "view":Landroid/view/View;
     :cond_0
     move-object v2, p2

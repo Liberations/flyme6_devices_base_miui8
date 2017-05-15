@@ -81,7 +81,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 2149
     const-string v0, "content://antispam/phone_list"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -94,7 +93,6 @@
 
     sput-object v0, Lmiui/provider/ExtraTelephony$Phonelist;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 2151
     const-string v0, "content://antispam/unsynced_count"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -107,7 +105,6 @@
 
     sput-object v0, Lmiui/provider/ExtraTelephony$Phonelist;->CONTENT_URI_UNSYNCED_COUNT:Landroid/net/Uri;
 
-    .line 2153
     const-string v0, "content://antispam/synced_count"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -127,9 +124,7 @@
     .locals 0
 
     .prologue
-    .line 2147
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2178
     return-void
 .end method

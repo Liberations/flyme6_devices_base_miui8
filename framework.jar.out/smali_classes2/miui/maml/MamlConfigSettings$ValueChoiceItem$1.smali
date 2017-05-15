@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 496
     iput-object p1, p0, Lmiui/maml/MamlConfigSettings$ValueChoiceItem$1;->this$1:Lmiui/maml/MamlConfigSettings$ValueChoiceItem;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "child"    # Lorg/w3c/dom/Element;
 
     .prologue
-    .line 499
     iget-object v0, p0, Lmiui/maml/MamlConfigSettings$ValueChoiceItem$1;->this$1:Lmiui/maml/MamlConfigSettings$ValueChoiceItem;
 
     iget-object v0, v0, Lmiui/maml/MamlConfigSettings$ValueChoiceItem;->mItemsText:Ljava/util/ArrayList;
@@ -54,12 +52,11 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 500
     iget-object v0, p0, Lmiui/maml/MamlConfigSettings$ValueChoiceItem$1;->this$1:Lmiui/maml/MamlConfigSettings$ValueChoiceItem;
 
     iget-object v0, v0, Lmiui/maml/MamlConfigSettings$ValueChoiceItem;->mItemsValue:Ljava/util/ArrayList;
 
-    const-string/jumbo v1, "value"
+    const-string v1, "value"
 
     invoke-interface {p1, v1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -67,6 +64,5 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 501
     return-void
 .end method

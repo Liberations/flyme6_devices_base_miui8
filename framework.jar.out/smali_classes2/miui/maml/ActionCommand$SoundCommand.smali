@@ -41,10 +41,8 @@
     .param p2, "ele"    # Lorg/w3c/dom/Element;
 
     .prologue
-    .line 1019
     invoke-direct {p0, p1}, Lmiui/maml/ActionCommand;-><init>(Lmiui/maml/elements/ScreenElement;)V
 
-    .line 1020
     const-string v1, "sound"
 
     invoke-interface {p2, v1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -53,7 +51,6 @@
 
     iput-object v1, p0, Lmiui/maml/ActionCommand$SoundCommand;->mSound:Ljava/lang/String;
 
-    .line 1021
     const-string v1, "keepCur"
 
     invoke-interface {p2, v1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -66,7 +63,6 @@
 
     iput-boolean v1, p0, Lmiui/maml/ActionCommand$SoundCommand;->mKeepCur:Z
 
-    .line 1022
     const-string v1, "loop"
 
     invoke-interface {p2, v1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -79,7 +75,6 @@
 
     iput-boolean v1, p0, Lmiui/maml/ActionCommand$SoundCommand;->mLoop:Z
 
-    .line 1023
     const-string v1, "command"
 
     invoke-interface {p2, v1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -92,12 +87,11 @@
 
     iput-object v1, p0, Lmiui/maml/ActionCommand$SoundCommand;->mCommand:Lmiui/maml/SoundManager$Command;
 
-    .line 1024
     invoke-virtual {p0}, Lmiui/maml/ActionCommand$SoundCommand;->getVariables()Lmiui/maml/data/Variables;
 
     move-result-object v1
 
-    const-string/jumbo v2, "volume"
+    const-string v2, "volume"
 
     invoke-interface {p2, v2}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -109,19 +103,16 @@
 
     iput-object v1, p0, Lmiui/maml/ActionCommand$SoundCommand;->mVolumeExp:Lmiui/maml/data/Expression;
 
-    .line 1025
     iget-object v1, p0, Lmiui/maml/ActionCommand$SoundCommand;->mVolumeExp:Lmiui/maml/data/Expression;
 
     if-nez v1, :cond_0
 
-    .line 1026
     const-string v1, "ActionCommand"
 
     const-string v2, "invalid expression in SoundCommand"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1028
     :cond_0
     invoke-virtual {p0}, Lmiui/maml/ActionCommand$SoundCommand;->getVariables()Lmiui/maml/data/Variables;
 
@@ -139,14 +130,12 @@
 
     iput-object v1, p0, Lmiui/maml/ActionCommand$SoundCommand;->mStreamIdExp:Lmiui/maml/data/Expression;
 
-    .line 1029
     const-string v1, "streamIdVar"
 
     invoke-interface {p2, v1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1030
     .local v0, "streamIdVarName":Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -154,7 +143,6 @@
 
     if-nez v1, :cond_1
 
-    .line 1031
     new-instance v1, Lmiui/maml/data/IndexedVariable;
 
     invoke-virtual {p0}, Lmiui/maml/ActionCommand$SoundCommand;->getVariables()Lmiui/maml/data/Variables;
@@ -167,7 +155,6 @@
 
     iput-object v1, p0, Lmiui/maml/ActionCommand$SoundCommand;->mStreamIdVar:Lmiui/maml/data/IndexedVariable;
 
-    .line 1033
     :cond_1
     return-void
 .end method
@@ -178,7 +165,6 @@
     .locals 7
 
     .prologue
-    .line 1037
     sget-object v2, Lmiui/maml/ActionCommand$1;->$SwitchMap$miui$maml$SoundManager$Command:[I
 
     iget-object v3, p0, Lmiui/maml/ActionCommand$SoundCommand;->mCommand:Lmiui/maml/SoundManager$Command;
@@ -191,22 +177,18 @@
 
     packed-switch v2, :pswitch_data_0
 
-    .line 1058
     :cond_0
     :goto_0
     return-void
 
-    .line 1039
     :pswitch_0
     const/4 v1, 0x0
 
-    .line 1040
     .local v1, "volume":F
     iget-object v2, p0, Lmiui/maml/ActionCommand$SoundCommand;->mVolumeExp:Lmiui/maml/data/Expression;
 
     if-eqz v2, :cond_1
 
-    .line 1041
     iget-object v2, p0, Lmiui/maml/ActionCommand$SoundCommand;->mVolumeExp:Lmiui/maml/data/Expression;
 
     invoke-virtual {v2}, Lmiui/maml/data/Expression;->evaluate()D
@@ -215,7 +197,6 @@
 
     double-to-float v1, v2
 
-    .line 1043
     :cond_1
     invoke-virtual {p0}, Lmiui/maml/ActionCommand$SoundCommand;->getRoot()Lmiui/maml/ScreenElementRoot;
 
@@ -235,13 +216,11 @@
 
     move-result v0
 
-    .line 1044
     .local v0, "streamId":I
     iget-object v2, p0, Lmiui/maml/ActionCommand$SoundCommand;->mStreamIdVar:Lmiui/maml/data/IndexedVariable;
 
     if-eqz v2, :cond_0
 
-    .line 1045
     iget-object v2, p0, Lmiui/maml/ActionCommand$SoundCommand;->mStreamIdVar:Lmiui/maml/data/IndexedVariable;
 
     int-to-double v4, v0
@@ -250,7 +229,6 @@
 
     goto :goto_0
 
-    .line 1052
     .end local v0    # "streamId":I
     .end local v1    # "volume":F
     :pswitch_1
@@ -258,7 +236,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 1053
     iget-object v2, p0, Lmiui/maml/ActionCommand$SoundCommand;->mStreamIdExp:Lmiui/maml/data/Expression;
 
     invoke-virtual {v2}, Lmiui/maml/data/Expression;->evaluate()D
@@ -267,7 +244,6 @@
 
     double-to-int v0, v2
 
-    .line 1054
     .restart local v0    # "streamId":I
     invoke-virtual {p0}, Lmiui/maml/ActionCommand$SoundCommand;->getRoot()Lmiui/maml/ScreenElementRoot;
 
@@ -279,7 +255,6 @@
 
     goto :goto_0
 
-    .line 1037
     nop
 
     :pswitch_data_0

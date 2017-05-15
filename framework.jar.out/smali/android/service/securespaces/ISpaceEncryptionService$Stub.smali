@@ -74,15 +74,12 @@
     .locals 1
 
     .prologue
-    .line 15
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 16
     const-string v0, "android.service.securespaces.ISpaceEncryptionService"
 
     invoke-virtual {p0, p0, v0}, Landroid/service/securespaces/ISpaceEncryptionService$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 17
     return-void
 .end method
 
@@ -91,17 +88,13 @@
     .param p0, "obj"    # Landroid/os/IBinder;
 
     .prologue
-    .line 24
     if-nez p0, :cond_0
 
-    .line 25
     const/4 v0, 0x0
 
-    .line 31
     :goto_0
     return-object v0
 
-    .line 27
     :cond_0
     const-string v1, "android.service.securespaces.ISpaceEncryptionService"
 
@@ -109,7 +102,6 @@
 
     move-result-object v0
 
-    .line 28
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -117,12 +109,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 29
     check-cast v0, Landroid/service/securespaces/ISpaceEncryptionService;
 
     goto :goto_0
 
-    .line 31
     :cond_1
     new-instance v0, Landroid/service/securespaces/ISpaceEncryptionService$Stub$Proxy;
 
@@ -138,7 +128,6 @@
     .locals 0
 
     .prologue
-    .line 35
     return-object p0
 .end method
 
@@ -159,10 +148,8 @@
 
     const/4 v7, 0x1
 
-    .line 39
     sparse-switch p1, :sswitch_data_0
 
-    .line 303
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v7
@@ -170,7 +157,6 @@
     :goto_0
     return v7
 
-    .line 43
     :sswitch_0
     const-string v0, "android.service.securespaces.ISpaceEncryptionService"
 
@@ -178,87 +164,71 @@
 
     goto :goto_0
 
-    .line 48
     :sswitch_1
     const-string v0, "android.service.securespaces.ISpaceEncryptionService"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 50
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 51
     .local v1, "_arg0":I
     invoke-virtual {p0, v1}, Landroid/service/securespaces/ISpaceEncryptionService$Stub;->ecryptfsMountRemovableNonOwner(I)V
 
-    .line 52
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
-    .line 57
     .end local v1    # "_arg0":I
     :sswitch_2
     const-string v0, "android.service.securespaces.ISpaceEncryptionService"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 59
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 60
     .restart local v1    # "_arg0":I
     invoke-virtual {p0, v1}, Landroid/service/securespaces/ISpaceEncryptionService$Stub;->ecryptfsUnmountRemovableNonOwner(I)V
 
-    .line 61
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
-    .line 66
     .end local v1    # "_arg0":I
     :sswitch_3
     const-string v0, "android.service.securespaces.ISpaceEncryptionService"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 68
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 70
     .restart local v1    # "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 72
     .local v2, "_arg1":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 73
     .local v3, "_arg2":Ljava/lang/String;
     invoke-virtual {p0, v1, v2, v3}, Landroid/service/securespaces/ISpaceEncryptionService$Stub;->ecryptfsMount(IILjava/lang/String;)I
 
     move-result v6
 
-    .line 74
     .local v6, "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 75
     invoke-virtual {p3, v6}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_0
 
-    .line 80
     .end local v1    # "_arg0":I
     .end local v2    # "_arg1":I
     .end local v3    # "_arg2":Ljava/lang/String;
@@ -268,27 +238,22 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 82
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 83
     .restart local v1    # "_arg0":I
     invoke-virtual {p0, v1}, Landroid/service/securespaces/ISpaceEncryptionService$Stub;->ecryptfsUnmount(I)I
 
     move-result v6
 
-    .line 84
     .restart local v6    # "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 85
     invoke-virtual {p3, v6}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_0
 
-    .line 90
     .end local v1    # "_arg0":I
     .end local v6    # "_result":I
     :sswitch_5
@@ -296,39 +261,32 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 92
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 94
     .restart local v1    # "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 96
     .restart local v2    # "_arg1":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 97
     .restart local v3    # "_arg2":Ljava/lang/String;
     invoke-virtual {p0, v1, v2, v3}, Landroid/service/securespaces/ISpaceEncryptionService$Stub;->ecryptfsUpdate(IILjava/lang/String;)I
 
     move-result v6
 
-    .line 98
     .restart local v6    # "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 99
     invoke-virtual {p3, v6}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_0
 
-    .line 104
     .end local v1    # "_arg0":I
     .end local v2    # "_arg1":I
     .end local v3    # "_arg2":Ljava/lang/String;
@@ -338,27 +296,22 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 106
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 107
     .restart local v1    # "_arg0":I
     invoke-virtual {p0, v1}, Landroid/service/securespaces/ISpaceEncryptionService$Stub;->ecryptfsOverwrite(I)I
 
     move-result v6
 
-    .line 108
     .restart local v6    # "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 109
     invoke-virtual {p3, v6}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 114
     .end local v1    # "_arg0":I
     .end local v6    # "_result":I
     :sswitch_7
@@ -366,22 +319,18 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 116
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 117
     .restart local v1    # "_arg0":I
     invoke-virtual {p0, v1}, Landroid/service/securespaces/ISpaceEncryptionService$Stub;->needsEcryptfsMount(I)Z
 
     move-result v6
 
-    .line 118
     .local v6, "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 119
     if-eqz v6, :cond_0
 
     move v0, v7
@@ -396,7 +345,6 @@
 
     goto :goto_1
 
-    .line 124
     .end local v1    # "_arg0":I
     .end local v6    # "_result":Z
     :sswitch_8
@@ -404,14 +352,12 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 126
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 127
     sget-object v0, Landroid/content/pm/UserInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -420,18 +366,15 @@
 
     check-cast v1, Landroid/content/pm/UserInfo;
 
-    .line 132
     .local v1, "_arg0":Landroid/content/pm/UserInfo;
     :goto_2
     invoke-virtual {p0, v1}, Landroid/service/securespaces/ISpaceEncryptionService$Stub;->processEncryption(Landroid/content/pm/UserInfo;)Z
 
     move-result v6
 
-    .line 133
     .restart local v6    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 134
     if-eqz v6, :cond_1
 
     move v8, v7
@@ -441,7 +384,6 @@
 
     goto/16 :goto_0
 
-    .line 130
     .end local v1    # "_arg0":Landroid/content/pm/UserInfo;
     .end local v6    # "_result":Z
     :cond_2
@@ -450,29 +392,24 @@
     .restart local v1    # "_arg0":Landroid/content/pm/UserInfo;
     goto :goto_2
 
-    .line 139
     .end local v1    # "_arg0":Landroid/content/pm/UserInfo;
     :sswitch_9
     const-string v0, "android.service.securespaces.ISpaceEncryptionService"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 141
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 142
     .local v1, "_arg0":I
     invoke-virtual {p0, v1}, Landroid/service/securespaces/ISpaceEncryptionService$Stub;->isAuthProtected(I)Z
 
     move-result v6
 
-    .line 143
     .restart local v6    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 144
     if-eqz v6, :cond_3
 
     move v8, v7
@@ -482,7 +419,6 @@
 
     goto/16 :goto_0
 
-    .line 149
     .end local v1    # "_arg0":I
     .end local v6    # "_result":Z
     :sswitch_a
@@ -490,22 +426,18 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 151
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 152
     .restart local v1    # "_arg0":I
     invoke-virtual {p0, v1}, Landroid/service/securespaces/ISpaceEncryptionService$Stub;->needAirlockUser(I)Z
 
     move-result v6
 
-    .line 153
     .restart local v6    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 154
     if-eqz v6, :cond_4
 
     move v8, v7
@@ -515,7 +447,6 @@
 
     goto/16 :goto_0
 
-    .line 159
     .end local v1    # "_arg0":I
     .end local v6    # "_result":Z
     :sswitch_b
@@ -523,22 +454,18 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 161
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 162
     .restart local v1    # "_arg0":I
     invoke-virtual {p0, v1}, Landroid/service/securespaces/ISpaceEncryptionService$Stub;->switchUser(I)Z
 
     move-result v6
 
-    .line 163
     .restart local v6    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 164
     if-eqz v6, :cond_5
 
     move v8, v7
@@ -548,7 +475,6 @@
 
     goto/16 :goto_0
 
-    .line 169
     .end local v1    # "_arg0":I
     .end local v6    # "_result":Z
     :sswitch_c
@@ -556,51 +482,42 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 171
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 172
     .restart local v1    # "_arg0":I
     invoke-virtual {p0, v1}, Landroid/service/securespaces/ISpaceEncryptionService$Stub;->setAirlockWallpaperToUser(I)V
 
-    .line 173
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 178
     .end local v1    # "_arg0":I
     :sswitch_d
     const-string v0, "android.service.securespaces.ISpaceEncryptionService"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 180
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 182
     .local v1, "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 184
     .restart local v2    # "_arg1":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 186
     .restart local v3    # "_arg2":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 188
     .local v4, "_arg3":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
@@ -609,16 +526,13 @@
     .local v5, "_arg4":Ljava/lang/String;
     move-object v0, p0
 
-    .line 189
     invoke-virtual/range {v0 .. v5}, Landroid/service/securespaces/ISpaceEncryptionService$Stub;->setOpCreateUserData(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Z
 
     move-result v6
 
-    .line 190
     .restart local v6    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 191
     if-eqz v6, :cond_6
 
     move v8, v7
@@ -628,7 +542,6 @@
 
     goto/16 :goto_0
 
-    .line 196
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v2    # "_arg1":I
     .end local v3    # "_arg2":Ljava/lang/String;
@@ -640,34 +553,28 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 198
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 200
     .restart local v1    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 202
     .restart local v2    # "_arg1":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 203
     .restart local v3    # "_arg2":Ljava/lang/String;
     invoke-virtual {p0, v1, v2, v3}, Landroid/service/securespaces/ISpaceEncryptionService$Stub;->setOpRemove(Ljava/lang/String;ILjava/lang/String;)Z
 
     move-result v6
 
-    .line 204
     .restart local v6    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 205
     if-eqz v6, :cond_7
 
     move v8, v7
@@ -677,7 +584,6 @@
 
     goto/16 :goto_0
 
-    .line 210
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v2    # "_arg1":I
     .end local v3    # "_arg2":Ljava/lang/String;
@@ -687,40 +593,33 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 212
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 214
     .restart local v1    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 216
     .restart local v2    # "_arg1":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 218
     .restart local v3    # "_arg2":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 219
     .local v4, "_arg3":Ljava/lang/String;
     invoke-virtual {p0, v1, v2, v3, v4}, Landroid/service/securespaces/ISpaceEncryptionService$Stub;->setOpLinkNativeLibraryDir(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)Z
 
     move-result v6
 
-    .line 220
     .restart local v6    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 221
     if-eqz v6, :cond_8
 
     move v8, v7
@@ -730,7 +629,6 @@
 
     goto/16 :goto_0
 
-    .line 226
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v2    # "_arg1":I
     .end local v3    # "_arg2":Ljava/lang/String;
@@ -741,34 +639,28 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 228
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 230
     .restart local v1    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 232
     .restart local v2    # "_arg1":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 233
     .restart local v3    # "_arg2":Ljava/lang/String;
     invoke-virtual {p0, v1, v2, v3}, Landroid/service/securespaces/ISpaceEncryptionService$Stub;->setOpDeleteCacheFiles(Ljava/lang/String;ILjava/lang/String;)Z
 
     move-result v6
 
-    .line 234
     .restart local v6    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 235
     if-eqz v6, :cond_9
 
     move v8, v7
@@ -778,7 +670,6 @@
 
     goto/16 :goto_0
 
-    .line 240
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v2    # "_arg1":I
     .end local v3    # "_arg2":Ljava/lang/String;
@@ -788,34 +679,28 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 242
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 244
     .restart local v1    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 246
     .restart local v2    # "_arg1":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 247
     .restart local v3    # "_arg2":Ljava/lang/String;
     invoke-virtual {p0, v1, v2, v3}, Landroid/service/securespaces/ISpaceEncryptionService$Stub;->setOpDeleteCodeCacheFiles(Ljava/lang/String;ILjava/lang/String;)Z
 
     move-result v6
 
-    .line 248
     .restart local v6    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 249
     if-eqz v6, :cond_a
 
     move v8, v7
@@ -825,7 +710,6 @@
 
     goto/16 :goto_0
 
-    .line 254
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v2    # "_arg1":I
     .end local v3    # "_arg2":Ljava/lang/String;
@@ -835,22 +719,18 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 256
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 257
     .local v1, "_arg0":I
     invoke-virtual {p0, v1}, Landroid/service/securespaces/ISpaceEncryptionService$Stub;->setOpCreateUserConfig(I)Z
 
     move-result v6
 
-    .line 258
     .restart local v6    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 259
     if-eqz v6, :cond_b
 
     move v8, v7
@@ -860,7 +740,6 @@
 
     goto/16 :goto_0
 
-    .line 264
     .end local v1    # "_arg0":I
     .end local v6    # "_result":Z
     :sswitch_13
@@ -868,34 +747,28 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 266
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 268
     .local v1, "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 270
     .restart local v2    # "_arg1":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 271
     .restart local v3    # "_arg2":Ljava/lang/String;
     invoke-virtual {p0, v1, v2, v3}, Landroid/service/securespaces/ISpaceEncryptionService$Stub;->setOpClearUserData(Ljava/lang/String;ILjava/lang/String;)Z
 
     move-result v6
 
-    .line 272
     .restart local v6    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 273
     if-eqz v6, :cond_c
 
     move v8, v7
@@ -905,7 +778,6 @@
 
     goto/16 :goto_0
 
-    .line 278
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v2    # "_arg1":I
     .end local v3    # "_arg2":Ljava/lang/String;
@@ -915,28 +787,23 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 280
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 282
     .restart local v1    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 283
     .restart local v2    # "_arg1":I
     invoke-virtual {p0, v1, v2}, Landroid/service/securespaces/ISpaceEncryptionService$Stub;->setOpCleanUserData(Ljava/lang/String;I)Z
 
     move-result v6
 
-    .line 284
     .restart local v6    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 285
     if-eqz v6, :cond_d
 
     move v8, v7
@@ -946,7 +813,6 @@
 
     goto/16 :goto_0
 
-    .line 290
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v2    # "_arg1":I
     .end local v6    # "_result":Z
@@ -955,34 +821,28 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 292
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 294
     .restart local v1    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 296
     .restart local v2    # "_arg1":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 297
     .restart local v3    # "_arg2":Ljava/lang/String;
     invoke-virtual {p0, v1, v2, v3}, Landroid/service/securespaces/ISpaceEncryptionService$Stub;->setOpAddExcludeFromWipe(Ljava/lang/String;ILjava/lang/String;)Z
 
     move-result v6
 
-    .line 298
     .restart local v6    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 299
     if-eqz v6, :cond_e
 
     move v8, v7
@@ -992,7 +852,6 @@
 
     goto/16 :goto_0
 
-    .line 39
     nop
 
     :sswitch_data_0

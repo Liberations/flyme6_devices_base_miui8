@@ -33,17 +33,14 @@
     .param p1, "activityView"    # Landroid/app/ActivityView;
 
     .prologue
-    .line 354
     invoke-direct {p0}, Landroid/app/IActivityContainerCallback$Stub;-><init>()V
 
-    .line 355
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Landroid/app/ActivityView$ActivityContainerCallback;->mActivityViewWeakReference:Ljava/lang/ref/WeakReference;
 
-    .line 356
     return-void
 .end method
 
@@ -54,7 +51,6 @@
     .param p1, "container"    # Landroid/os/IBinder;
 
     .prologue
-    .line 366
     iget-object v3, p0, Landroid/app/ActivityView$ActivityContainerCallback;->mActivityViewWeakReference:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v3}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -63,26 +59,21 @@
 
     check-cast v0, Landroid/app/ActivityView;
 
-    .line 367
     .local v0, "activityView":Landroid/app/ActivityView;
     if-eqz v0, :cond_0
 
-    .line 368
     # getter for: Landroid/app/ActivityView;->mActivityViewCallback:Landroid/app/ActivityView$ActivityViewCallback;
     invoke-static {v0}, Landroid/app/ActivityView;->access$500(Landroid/app/ActivityView;)Landroid/app/ActivityView$ActivityViewCallback;
 
     move-result-object v1
 
-    .line 369
     .local v1, "callback":Landroid/app/ActivityView$ActivityViewCallback;
     if-eqz v1, :cond_0
 
-    .line 370
     new-instance v2, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v2, v1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    .line 372
     .local v2, "callbackRef":Ljava/lang/ref/WeakReference;, "Ljava/lang/ref/WeakReference<Landroid/app/ActivityView$ActivityViewCallback;>;"
     new-instance v3, Landroid/app/ActivityView$ActivityContainerCallback$1;
 
@@ -90,7 +81,6 @@
 
     invoke-virtual {v0, v3}, Landroid/app/ActivityView;->post(Ljava/lang/Runnable;)Z
 
-    .line 383
     .end local v1    # "callback":Landroid/app/ActivityView$ActivityViewCallback;
     .end local v2    # "callbackRef":Ljava/lang/ref/WeakReference;, "Ljava/lang/ref/WeakReference<Landroid/app/ActivityView$ActivityViewCallback;>;"
     :cond_0
@@ -103,6 +93,5 @@
     .param p2, "visible"    # Z
 
     .prologue
-    .line 362
     return-void
 .end method

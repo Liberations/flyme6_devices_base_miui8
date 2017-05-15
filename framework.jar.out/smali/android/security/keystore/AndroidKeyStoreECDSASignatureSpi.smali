@@ -29,18 +29,14 @@
     .param p1, "keymasterDigest"    # I
 
     .prologue
-    .line 145
     invoke-direct {p0}, Landroid/security/keystore/AndroidKeyStoreSignatureSpiBase;-><init>()V
 
-    .line 143
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/security/keystore/AndroidKeyStoreECDSASignatureSpi;->mGroupSizeBits:I
 
-    .line 146
     iput p1, p0, Landroid/security/keystore/AndroidKeyStoreECDSASignatureSpi;->mKeymasterDigest:I
 
-    .line 147
     return-void
 .end method
 
@@ -51,21 +47,18 @@
     .param p1, "keymasterArgs"    # Landroid/security/keymaster/KeymasterArguments;
 
     .prologue
-    .line 187
     const v0, 0x10000002
 
     const/4 v1, 0x3
 
     invoke-virtual {p1, v0, v1}, Landroid/security/keymaster/KeymasterArguments;->addEnum(II)V
 
-    .line 188
     const v0, 0x20000005
 
     iget v1, p0, Landroid/security/keystore/AndroidKeyStoreECDSASignatureSpi;->mKeymasterDigest:I
 
     invoke-virtual {p1, v0, v1}, Landroid/security/keymaster/KeymasterArguments;->addEnum(II)V
 
-    .line 189
     return-void
 .end method
 
@@ -73,7 +66,6 @@
     .locals 1
 
     .prologue
-    .line 193
     iget v0, p0, Landroid/security/keystore/AndroidKeyStoreECDSASignatureSpi;->mGroupSizeBits:I
 
     add-int/lit8 v0, v0, 0x7
@@ -87,14 +79,12 @@
     .locals 2
 
     .prologue
-    .line 197
     iget v0, p0, Landroid/security/keystore/AndroidKeyStoreECDSASignatureSpi;->mGroupSizeBits:I
 
     const/4 v1, -0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 198
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Not initialized"
@@ -103,7 +93,6 @@
 
     throw v0
 
-    .line 200
     :cond_0
     iget v0, p0, Landroid/security/keystore/AndroidKeyStoreECDSASignatureSpi;->mGroupSizeBits:I
 
@@ -124,7 +113,6 @@
 
     const/4 v6, 0x0
 
-    .line 151
     const-string v4, "EC"
 
     invoke-virtual {p1}, Landroid/security/keystore/AndroidKeyStoreKey;->getAlgorithm()Ljava/lang/String;
@@ -137,7 +125,6 @@
 
     if-nez v4, :cond_0
 
-    .line 152
     new-instance v4, Ljava/security/InvalidKeyException;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -184,13 +171,11 @@
 
     throw v4
 
-    .line 156
     :cond_0
     new-instance v1, Landroid/security/keymaster/KeyCharacteristics;
 
     invoke-direct {v1}, Landroid/security/keymaster/KeyCharacteristics;-><init>()V
 
-    .line 157
     .local v1, "keyCharacteristics":Landroid/security/keymaster/KeyCharacteristics;
     invoke-virtual {p0}, Landroid/security/keystore/AndroidKeyStoreECDSASignatureSpi;->getKeyStore()Landroid/security/KeyStore;
 
@@ -204,13 +189,11 @@
 
     move-result v0
 
-    .line 159
     .local v0, "errorCode":I
     const/4 v4, 0x1
 
     if-eq v0, v4, :cond_1
 
-    .line 160
     invoke-virtual {p0}, Landroid/security/keystore/AndroidKeyStoreECDSASignatureSpi;->getKeyStore()Landroid/security/KeyStore;
 
     move-result-object v4
@@ -225,7 +208,6 @@
 
     throw v4
 
-    .line 162
     :cond_1
     const v4, 0x30000003
 
@@ -233,13 +215,11 @@
 
     move-result-wide v2
 
-    .line 163
     .local v2, "keySizeBits":J
     cmp-long v4, v2, v8
 
     if-nez v4, :cond_2
 
-    .line 164
     new-instance v4, Ljava/security/InvalidKeyException;
 
     const-string v5, "Size of key not known"
@@ -248,7 +228,6 @@
 
     throw v4
 
-    .line 165
     :cond_2
     const-wide/32 v4, 0x7fffffff
 
@@ -256,7 +235,6 @@
 
     if-lez v4, :cond_3
 
-    .line 166
     new-instance v4, Ljava/security/InvalidKeyException;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -287,16 +265,13 @@
 
     throw v4
 
-    .line 168
     :cond_3
     long-to-int v4, v2
 
     iput v4, p0, Landroid/security/keystore/AndroidKeyStoreECDSASignatureSpi;->mGroupSizeBits:I
 
-    .line 170
     invoke-super {p0, p1}, Landroid/security/keystore/AndroidKeyStoreSignatureSpiBase;->initKey(Landroid/security/keystore/AndroidKeyStoreKey;)V
 
-    .line 171
     return-void
 .end method
 
@@ -304,15 +279,12 @@
     .locals 1
 
     .prologue
-    .line 175
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/security/keystore/AndroidKeyStoreECDSASignatureSpi;->mGroupSizeBits:I
 
-    .line 176
     invoke-super {p0}, Landroid/security/keystore/AndroidKeyStoreSignatureSpiBase;->resetAll()V
 
-    .line 177
     return-void
 .end method
 
@@ -320,9 +292,7 @@
     .locals 0
 
     .prologue
-    .line 181
     invoke-super {p0}, Landroid/security/keystore/AndroidKeyStoreSignatureSpiBase;->resetWhilePreservingInitState()V
 
-    .line 182
     return-void
 .end method

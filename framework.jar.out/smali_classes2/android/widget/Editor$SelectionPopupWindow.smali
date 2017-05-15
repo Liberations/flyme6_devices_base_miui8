@@ -26,13 +26,10 @@
     .param p2, "handleView"    # Landroid/widget/Editor$HandleView;
 
     .prologue
-    .line 4074
     iput-object p1, p0, Landroid/widget/Editor$SelectionPopupWindow;->this$0:Landroid/widget/Editor;
 
-    .line 4075
     invoke-direct {p0, p1, p2}, Landroid/widget/Editor$ActionPopupWindow;-><init>(Landroid/widget/Editor;Landroid/widget/Editor$HandleView;)V
 
-    .line 4076
     return-void
 .end method
 
@@ -42,14 +39,12 @@
     .locals 6
 
     .prologue
-    .line 4080
     new-instance v2, Landroid/animation/AnimatorSet;
 
     invoke-direct {v2}, Landroid/animation/AnimatorSet;-><init>()V
 
     iput-object v2, p0, Landroid/widget/Editor$SelectionPopupWindow;->mAnimationFadeIn:Landroid/animation/AnimatorSet;
 
-    .line 4081
     iget-object v2, p0, Landroid/widget/Editor$SelectionPopupWindow;->mContentView:Landroid/view/ViewGroup;
 
     sget-object v3, Landroid/view/View;->SCALE_X:Landroid/util/Property;
@@ -64,7 +59,6 @@
 
     move-result-object v1
 
-    .line 4083
     .local v1, "scaleAnimatorX":Landroid/animation/ObjectAnimator;
     iget-object v2, p0, Landroid/widget/Editor$SelectionPopupWindow;->mAnimationFadeIn:Landroid/animation/AnimatorSet;
 
@@ -74,14 +68,12 @@
 
     invoke-virtual {v2, v3}, Landroid/animation/AnimatorSet;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 4084
     iget-object v2, p0, Landroid/widget/Editor$SelectionPopupWindow;->mAnimationFadeIn:Landroid/animation/AnimatorSet;
 
     const-wide/16 v4, 0xc8
 
     invoke-virtual {v2, v4, v5}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
-    .line 4085
     iget-object v2, p0, Landroid/widget/Editor$SelectionPopupWindow;->mAnimationFadeIn:Landroid/animation/AnimatorSet;
 
     const/4 v3, 0x1
@@ -94,7 +86,6 @@
 
     invoke-virtual {v2, v3}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 4087
     iget-object v2, p0, Landroid/widget/Editor$SelectionPopupWindow;->this$0:Landroid/widget/Editor;
 
     # getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
@@ -112,7 +103,6 @@
 
     move-result-object v0
 
-    .line 4089
     .local v0, "animation":Landroid/view/animation/Animation;
     new-instance v2, Landroid/view/animation/LayoutAnimationController;
 
@@ -120,7 +110,6 @@
 
     iput-object v2, p0, Landroid/widget/Editor$SelectionPopupWindow;->mLayoutAnimationController:Landroid/view/animation/LayoutAnimationController;
 
-    .line 4090
     iget-object v2, p0, Landroid/widget/Editor$SelectionPopupWindow;->mLayoutAnimationController:Landroid/view/animation/LayoutAnimationController;
 
     new-instance v3, Lmiui/view/animation/CubicEaseOutInterpolator;
@@ -129,17 +118,14 @@
 
     invoke-virtual {v2, v3}, Landroid/view/animation/LayoutAnimationController;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 4091
     iget-object v2, p0, Landroid/widget/Editor$SelectionPopupWindow;->mLayoutAnimationController:Landroid/view/animation/LayoutAnimationController;
 
     const v3, 0x3d4ccccd    # 0.05f
 
     invoke-virtual {v2, v3}, Landroid/view/animation/LayoutAnimationController;->setDelay(F)V
 
-    .line 4092
     return-void
 
-    .line 4081
     :array_0
     .array-data 4
         0x3f000000    # 0.5f
@@ -153,7 +139,6 @@
     .param p2, "y"    # I
 
     .prologue
-    .line 4096
     iget-object v0, p0, Landroid/widget/Editor$SelectionPopupWindow;->mContentView:Landroid/view/ViewGroup;
 
     iget-object v1, p0, Landroid/widget/Editor$SelectionPopupWindow;->mContentView:Landroid/view/ViewGroup;
@@ -168,7 +153,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setPivotX(F)V
 
-    .line 4097
     iget-object v0, p0, Landroid/widget/Editor$SelectionPopupWindow;->mContentView:Landroid/view/ViewGroup;
 
     iget-object v1, p0, Landroid/widget/Editor$SelectionPopupWindow;->mContentView:Landroid/view/ViewGroup;
@@ -183,18 +167,15 @@
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setPivotY(F)V
 
-    .line 4099
     iget-object v0, p0, Landroid/widget/Editor$SelectionPopupWindow;->mAnimationFadeIn:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
 
-    .line 4100
     iget-object v0, p0, Landroid/widget/Editor$SelectionPopupWindow;->mMainPanel:Landroid/widget/TouchPanelLayout;
 
     iget-object v1, p0, Landroid/widget/Editor$SelectionPopupWindow;->mLayoutAnimationController:Landroid/view/animation/LayoutAnimationController;
 
     invoke-virtual {v0, v1}, Landroid/widget/TouchPanelLayout;->setLayoutAnimation(Landroid/view/animation/LayoutAnimationController;)V
 
-    .line 4101
     return-void
 .end method

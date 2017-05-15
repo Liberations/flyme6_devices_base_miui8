@@ -96,13 +96,10 @@
 
     const/4 v4, 0x1
 
-    .line 42
     sput-object v0, Lcom/miui/whetstone/client/WhetstoneClientManager;->mContext:Landroid/content/Context;
 
-    .line 44
     sput-object v0, Lcom/miui/whetstone/client/WhetstoneClientManager;->mWhetstoneAM:Lcom/miui/whetstone/server/WhetstoneActivityManagerService;
 
-    .line 46
     const-string v0, "feature_red_suport"
 
     invoke-static {v0, v4}, Lmiui/util/MiuiFeatureUtils;->isSystemFeatureSupported(Ljava/lang/String;Z)Z
@@ -111,56 +108,48 @@
 
     sput-boolean v0, Lcom/miui/whetstone/client/WhetstoneClientManager;->RED_SUPPORT:Z
 
-    .line 47
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lcom/miui/whetstone/client/WhetstoneClientManager;->mThresholds:Ljava/util/HashMap;
 
-    .line 49
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v0, Lcom/miui/whetstone/client/WhetstoneClientManager;->protectApps:Ljava/util/List;
 
-    .line 50
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     sput-object v0, Lcom/miui/whetstone/client/WhetstoneClientManager;->mProcessLocked:Ljava/util/concurrent/ConcurrentHashMap;
 
-    .line 52
     sget-object v0, Lcom/miui/whetstone/client/WhetstoneClientManager;->protectApps:Ljava/util/List;
 
     const-string v1, "com.tencent.mm"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 53
     sget-object v0, Lcom/miui/whetstone/client/WhetstoneClientManager;->protectApps:Ljava/util/List;
 
     const-string v1, "com.jeejen.family.miui"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 54
     sget-object v0, Lcom/miui/whetstone/client/WhetstoneClientManager;->protectApps:Ljava/util/List;
 
     const-string v1, "com.google.android.gms"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 58
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Lcom/miui/whetstone/client/WhetstoneClientManager;->mLock:Ljava/lang/Object;
 
-    .line 60
     const-string v0, "feature_cached_statistics_suport"
 
     invoke-static {v0, v4}, Lmiui/util/MiuiFeatureUtils;->isSystemFeatureSupported(Ljava/lang/String;Z)Z
@@ -169,19 +158,16 @@
 
     sput-boolean v0, Lcom/miui/whetstone/client/WhetstoneClientManager;->CACHAED_STATISTICS_SUPPORT:Z
 
-    .line 353
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     sput-object v0, Lcom/miui/whetstone/client/WhetstoneClientManager;->sPerformanceSet:Ljava/util/HashSet;
 
-    .line 354
     const/4 v0, 0x0
 
     sput-boolean v0, Lcom/miui/whetstone/client/WhetstoneClientManager;->sPerformanceEnable:Z
 
-    .line 356
     sget-object v0, Lcom/miui/whetstone/client/WhetstoneClientManager;->sPerformanceSet:Ljava/util/HashSet;
 
     new-instance v1, Landroid/content/ComponentName;
@@ -194,7 +180,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 358
     sget-object v0, Lcom/miui/whetstone/client/WhetstoneClientManager;->sPerformanceSet:Ljava/util/HashSet;
 
     new-instance v1, Landroid/content/ComponentName;
@@ -207,7 +192,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 360
     sget-object v0, Lcom/miui/whetstone/client/WhetstoneClientManager;->sPerformanceSet:Ljava/util/HashSet;
 
     new-instance v1, Landroid/content/ComponentName;
@@ -220,7 +204,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 417
     sget-object v0, Landroid/os/Build;->HARDWARE:Ljava/lang/String;
 
     const-string v1, "qcom"
@@ -231,7 +214,6 @@
 
     sput-boolean v0, Lcom/miui/whetstone/client/WhetstoneClientManager;->BOARD_PERFORMANCE_SUPPORT:Z
 
-    .line 504
     const-string v0, "feature_check_app_memory_suport"
 
     invoke-static {v0, v4}, Lmiui/util/MiuiFeatureUtils;->isSystemFeatureSupported(Ljava/lang/String;Z)Z
@@ -247,7 +229,6 @@
     .locals 0
 
     .prologue
-    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -257,7 +238,6 @@
     .locals 1
 
     .prologue
-    .line 311
     sget-object v0, Lcom/miui/whetstone/client/WhetstoneClientManager;->mWhetstoneAM:Lcom/miui/whetstone/server/WhetstoneActivityManagerService;
 
     if-eqz v0, :cond_0
@@ -272,7 +252,6 @@
 
     move-result v0
 
-    .line 312
     :goto_0
     return v0
 
@@ -287,7 +266,6 @@
     .param p0, "uid"    # I
 
     .prologue
-    .line 319
     sget-object v0, Lcom/miui/whetstone/client/WhetstoneClientManager;->mWhetstoneAM:Lcom/miui/whetstone/server/WhetstoneActivityManagerService;
 
     if-eqz v0, :cond_0
@@ -302,7 +280,6 @@
 
     move-result v0
 
-    .line 320
     :goto_0
     return v0
 
@@ -317,12 +294,10 @@
     .param p0, "comps"    # [Landroid/content/ComponentName;
 
     .prologue
-    .line 365
     sget-object v6, Lcom/miui/whetstone/client/WhetstoneClientManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v6
 
-    .line 366
     :try_start_0
     sget-object v5, Lcom/miui/whetstone/client/WhetstoneClientManager;->sPerformanceSet:Ljava/util/HashSet;
 
@@ -332,7 +307,6 @@
 
     check-cast v4, Ljava/util/HashSet;
 
-    .line 367
     .local v4, "pset":Ljava/util/HashSet;, "Ljava/util/HashSet<Landroid/content/ComponentName;>;"
     move-object v0, p0
 
@@ -348,29 +322,23 @@
 
     aget-object v1, v0, v2
 
-    .line 368
     .local v1, "comp":Landroid/content/ComponentName;
     invoke-virtual {v4, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 367
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 370
     .end local v1    # "comp":Landroid/content/ComponentName;
     :cond_0
     sput-object v4, Lcom/miui/whetstone/client/WhetstoneClientManager;->sPerformanceSet:Ljava/util/HashSet;
 
-    .line 371
     monitor-exit v6
 
-    .line 372
     const/4 v5, 0x1
 
     return v5
 
-    .line 371
     .end local v0    # "arr$":[Landroid/content/ComponentName;
     .end local v2    # "i$":I
     .end local v3    # "len$":I
@@ -392,17 +360,14 @@
     .param p2, "threshold"    # J
 
     .prologue
-    .line 507
     sget-boolean v4, Lcom/miui/whetstone/client/WhetstoneClientManager;->CHECK_APP_MEMORY_SUPPORT:Z
 
     if-nez v4, :cond_1
 
-    .line 526
     :cond_0
     :goto_0
     return-void
 
-    .line 510
     :cond_1
     sget-object v4, Lcom/miui/whetstone/client/WhetstoneClientManager;->mThresholds:Ljava/util/HashMap;
 
@@ -412,33 +377,27 @@
 
     check-cast v3, Ljava/lang/Integer;
 
-    .line 511
     .local v3, "valueObject":Ljava/lang/Integer;
     if-eqz v3, :cond_0
 
-    .line 514
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
     move-result v2
 
-    .line 515
     .local v2, "value":I
     long-to-int v4, p2
 
     div-int/lit16 v1, v4, 0x400
 
-    .line 516
     .local v1, "pss":I
     if-le v1, v2, :cond_0
 
     if-eqz v2, :cond_0
 
-    .line 517
     sget-object v4, Lcom/miui/whetstone/client/WhetstoneClientManager;->mService:Lcom/miui/whetstone/IWhetstoneClient;
 
     if-eqz v4, :cond_2
 
-    .line 519
     :try_start_0
     sget-object v4, Lcom/miui/whetstone/client/WhetstoneClientManager;->mService:Lcom/miui/whetstone/IWhetstoneClient;
 
@@ -446,7 +405,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 524
     :cond_2
     :goto_1
     sget-object v4, Lcom/miui/whetstone/client/WhetstoneClientManager;->mThresholds:Ljava/util/HashMap;
@@ -461,11 +419,9 @@
 
     goto :goto_0
 
-    .line 520
     :catch_0
     move-exception v0
 
-    .line 521
     .local v0, "e":Ljava/lang/Exception;
     const-string v4, "WhetstoneClientManager"
 
@@ -481,7 +437,6 @@
     .param p0, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 101
     const/4 v0, 0x0
 
     invoke-static {p0, v0}, Lcom/miui/whetstone/client/WhetstoneClientManager;->checkIfPackageIsLocked(Ljava/lang/String;I)Z
@@ -499,7 +454,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 105
     sget-object v4, Lcom/miui/whetstone/client/WhetstoneClientManager;->mProcessLocked:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -512,16 +466,13 @@
 
     check-cast v1, Ljava/util/List;
 
-    .line 106
     .local v1, "lockedApps":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     if-nez v1, :cond_1
 
-    .line 112
     :cond_0
     :goto_0
     return v3
 
-    .line 107
     :cond_1
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -541,7 +492,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 108
     .local v2, "name":Ljava/lang/String;
     invoke-virtual {p0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -549,7 +499,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 109
     const/4 v3, 0x1
 
     goto :goto_0
@@ -559,7 +508,6 @@
     .locals 2
 
     .prologue
-    .line 426
     sget-object v0, Lcom/miui/whetstone/client/WhetstoneClientManager;->sPowerProfile:Ljava/lang/String;
 
     if-nez v0, :cond_0
@@ -568,7 +516,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 427
     const-string v0, "persist.sys.aries.power_profile"
 
     const-string v1, "middle"
@@ -579,20 +526,17 @@
 
     sput-object v0, Lcom/miui/whetstone/client/WhetstoneClientManager;->sPowerProfile:Ljava/lang/String;
 
-    .line 432
     :cond_0
     sget-boolean v0, Lcom/miui/whetstone/client/WhetstoneClientManager;->BOARD_PERFORMANCE_SUPPORT:Z
 
     if-eqz v0, :cond_1
 
-    .line 433
     const-string v0, "persist.sys.aries.power_profile"
 
     const-string v1, "high"
 
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 435
     :cond_1
     return-void
 .end method
@@ -601,7 +545,6 @@
     .locals 2
 
     .prologue
-    .line 419
     sget-object v0, Lcom/miui/whetstone/client/WhetstoneClientManager;->sPowerProfile:Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -610,19 +553,16 @@
 
     if-eqz v0, :cond_0
 
-    .line 420
     const-string v0, "persist.sys.aries.power_profile"
 
     sget-object v1, Lcom/miui/whetstone/client/WhetstoneClientManager;->sPowerProfile:Ljava/lang/String;
 
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 421
     const/4 v0, 0x0
 
     sput-object v0, Lcom/miui/whetstone/client/WhetstoneClientManager;->sPowerProfile:Ljava/lang/String;
 
-    .line 423
     :cond_0
     return-void
 .end method
@@ -632,7 +572,6 @@
     .param p0, "uid"    # I
 
     .prologue
-    .line 326
     sget-object v0, Lcom/miui/whetstone/client/WhetstoneClientManager;->mWhetstoneAM:Lcom/miui/whetstone/server/WhetstoneActivityManagerService;
 
     if-eqz v0, :cond_0
@@ -647,7 +586,6 @@
 
     move-result v0
 
-    .line 327
     :goto_0
     return v0
 
@@ -661,24 +599,19 @@
     .locals 3
 
     .prologue
-    .line 126
     const-wide/16 v0, 0x0
 
-    .line 127
     .local v0, "totalMemory":J
     sget-boolean v2, Lcom/miui/whetstone/client/WhetstoneClientManager;->CACHAED_STATISTICS_SUPPORT:Z
 
     if-nez v2, :cond_0
 
-    .line 131
     :goto_0
     return-wide v0
 
-    .line 130
     :cond_0
     sget-wide v0, Lcom/miui/whetstone/client/WhetstoneClientManager;->sAndroidCachePss:J
 
-    .line 131
     goto :goto_0
 .end method
 
@@ -686,7 +619,6 @@
     .locals 1
 
     .prologue
-    .line 529
     sget-object v0, Lcom/miui/whetstone/client/WhetstoneClientManager;->mSetting:Lcom/miui/whetstone/strategy/WhetstoneSystemSetting;
 
     return-object v0
@@ -699,13 +631,10 @@
     .param p2, "whetstoneAM"    # Lcom/miui/whetstone/server/WhetstoneActivityManagerService;
 
     .prologue
-    .line 62
     sput-object p0, Lcom/miui/whetstone/client/WhetstoneClientManager;->mContext:Landroid/content/Context;
 
-    .line 63
     sput-object p1, Lcom/miui/whetstone/client/WhetstoneClientManager;->mService:Lcom/miui/whetstone/IWhetstoneClient;
 
-    .line 64
     new-instance v0, Lcom/miui/whetstone/strategy/WhetstoneSystemSetting;
 
     sget-object v1, Lcom/miui/whetstone/client/WhetstoneClientManager;->mContext:Landroid/content/Context;
@@ -714,7 +643,6 @@
 
     sput-object v0, Lcom/miui/whetstone/client/WhetstoneClientManager;->mSetting:Lcom/miui/whetstone/strategy/WhetstoneSystemSetting;
 
-    .line 65
     sget-object v0, Lcom/miui/whetstone/client/WhetstoneClientManager;->mSetting:Lcom/miui/whetstone/strategy/WhetstoneSystemSetting;
 
     invoke-static {}, Lcom/miui/whetstone/process/WtServiceControlEntry;->getInstance()Lcom/miui/whetstone/process/WtServiceControlEntry;
@@ -723,15 +651,12 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/whetstone/strategy/WhetstoneSystemSetting;->addObserver(Ljava/util/Observer;)V
 
-    .line 66
     sput-object p2, Lcom/miui/whetstone/client/WhetstoneClientManager;->mWhetstoneAM:Lcom/miui/whetstone/server/WhetstoneActivityManagerService;
 
-    .line 67
     const/4 v0, -0x1
 
     sput v0, Lcom/miui/whetstone/client/WhetstoneClientManager;->sCallingPid:I
 
-    .line 68
     return-void
 .end method
 
@@ -747,7 +672,6 @@
 
     const/4 v1, 0x0
 
-    .line 274
     sget-object v2, Lcom/miui/whetstone/client/WhetstoneClientManager;->mWhetstoneAM:Lcom/miui/whetstone/server/WhetstoneActivityManagerService;
 
     if-eqz v2, :cond_2
@@ -760,15 +684,12 @@
 
     if-eqz v2, :cond_2
 
-    .line 275
     if-nez p2, :cond_1
 
-    .line 276
     sget-object v2, Lcom/miui/whetstone/client/WhetstoneClientManager;->mWhetstoneAM:Lcom/miui/whetstone/server/WhetstoneActivityManagerService;
 
     invoke-virtual {v2, p1, v1}, Lcom/miui/whetstone/server/WhetstoneActivityManagerService;->putUidFrozenState(II)Z
 
-    .line 277
     sget-object v1, Lcom/miui/whetstone/client/WhetstoneClientManager;->mWhetstoneAM:Lcom/miui/whetstone/server/WhetstoneActivityManagerService;
 
     invoke-virtual {v1}, Lcom/miui/whetstone/server/WhetstoneActivityManagerService;->getPowerKeeperPolicy()Lcom/miui/whetstone/PowerKeeperPolicy;
@@ -777,7 +698,6 @@
 
     invoke-virtual {v1, p1}, Lcom/miui/whetstone/PowerKeeperPolicy;->notifyFrozenAppWakeUpByHighPriorityAlarm(I)V
 
-    .line 278
     const-string v1, "WhetstoneClientManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -820,12 +740,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 288
     :cond_0
     :goto_0
     return v0
 
-    .line 281
     :cond_1
     const-string v0, "WhetstoneClientManager"
 
@@ -867,10 +785,8 @@
 
     move v0, v1
 
-    .line 282
     goto :goto_0
 
-    .line 283
     :cond_2
     sget-object v2, Lcom/miui/whetstone/client/WhetstoneClientManager;->mWhetstoneAM:Lcom/miui/whetstone/server/WhetstoneActivityManagerService;
 
@@ -888,7 +804,6 @@
 
     move v0, v1
 
-    .line 286
     goto :goto_0
 .end method
 
@@ -896,7 +811,6 @@
     .locals 2
 
     .prologue
-    .line 452
     const/4 v0, 0x0
 
     const/4 v1, 0x0
@@ -913,7 +827,6 @@
     .param p0, "win"    # Landroid/view/WindowManagerPolicy$WindowState;
 
     .prologue
-    .line 448
     const/4 v0, 0x0
 
     invoke-static {p0, v0}, Lcom/miui/whetstone/client/WhetstoneClientManager;->isAnimationEnable(Landroid/view/WindowManagerPolicy$WindowState;I)Z
@@ -929,7 +842,6 @@
     .param p1, "transit"    # I
 
     .prologue
-    .line 443
     sget-boolean v0, Lcom/miui/whetstone/client/WhetstoneClientManager;->sPerformanceEnable:Z
 
     if-nez v0, :cond_0
@@ -954,7 +866,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 297
     sget-object v1, Lcom/miui/whetstone/client/WhetstoneClientManager;->mWhetstoneAM:Lcom/miui/whetstone/server/WhetstoneActivityManagerService;
 
     if-eqz v1, :cond_1
@@ -967,7 +878,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 298
     const-string v1, "WhetstoneClientManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1006,12 +916,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 304
     :cond_0
     :goto_0
     return v0
 
-    .line 300
     :cond_1
     sget-object v1, Lcom/miui/whetstone/client/WhetstoneClientManager;->mWhetstoneAM:Lcom/miui/whetstone/server/WhetstoneActivityManagerService;
 
@@ -1025,7 +933,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 304
     :cond_2
     const/4 v0, 0x1
 
@@ -1039,32 +946,26 @@
     .param p2, "callingPid"    # I
 
     .prologue
-    .line 254
     invoke-static {}, Lcom/miui/whetstone/app/WhetstoneAppManager;->isEnable()Z
 
     move-result v2
 
     if-nez v2, :cond_1
 
-    .line 255
     const/4 v1, 0x1
 
-    .line 265
     :cond_0
     :goto_0
     return v1
 
-    .line 257
     :cond_1
     const/4 v1, 0x1
 
-    .line 258
     .local v1, "ret":Z
     sget-object v2, Lcom/miui/whetstone/client/WhetstoneClientManager;->mService:Lcom/miui/whetstone/IWhetstoneClient;
 
     if-eqz v2, :cond_0
 
-    .line 260
     :try_start_0
     sget-object v2, Lcom/miui/whetstone/client/WhetstoneClientManager;->mService:Lcom/miui/whetstone/IWhetstoneClient;
 
@@ -1076,11 +977,9 @@
 
     goto :goto_0
 
-    .line 261
     :catch_0
     move-exception v0
 
-    .line 262
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "WhetstoneClientManager"
 
@@ -1096,7 +995,6 @@
     .param p0, "processName"    # Ljava/lang/String;
 
     .prologue
-    .line 80
     const/4 v0, 0x0
 
     invoke-static {p0, v0}, Lcom/miui/whetstone/client/WhetstoneClientManager;->isProtectImportantAppWithUid(Ljava/lang/String;I)Z
@@ -1116,7 +1014,6 @@
 
     const/4 v4, 0x0
 
-    .line 84
     sget-object v5, Lcom/miui/whetstone/client/WhetstoneClientManager;->protectApps:Ljava/util/List;
 
     invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -1137,7 +1034,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 85
     .local v1, "item":Ljava/lang/String;
     invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1145,12 +1041,10 @@
 
     if-eqz v5, :cond_0
 
-    .line 97
     .end local v1    # "item":Ljava/lang/String;
     :goto_0
     return v3
 
-    .line 90
     :cond_1
     sget-object v5, Lcom/miui/whetstone/client/WhetstoneClientManager;->mProcessLocked:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -1164,7 +1058,6 @@
 
     check-cast v2, Ljava/util/List;
 
-    .line 91
     .local v2, "lockedApps":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     if-eqz p0, :cond_2
 
@@ -1175,7 +1068,6 @@
 
     goto :goto_0
 
-    .line 92
     :cond_3
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1194,7 +1086,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 93
     .restart local v1    # "item":Ljava/lang/String;
     invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1208,7 +1099,6 @@
     :cond_5
     move v3, v4
 
-    .line 97
     goto :goto_0
 .end method
 
@@ -1224,19 +1114,16 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 137
     invoke-static {}, Lcom/miui/whetstone/app/WhetstoneAppManager;->isEnable()Z
 
     move-result v2
 
     if-nez v2, :cond_1
 
-    .line 156
     :cond_0
     :goto_0
     return v1
 
-    .line 140
     :cond_1
     if-eqz p1, :cond_0
 
@@ -1244,10 +1131,8 @@
 
     if-eqz p3, :cond_0
 
-    .line 144
     const/4 v1, 0x1
 
-    .line 145
     .local v1, "ret":Z
     sget-object v2, Lcom/miui/whetstone/client/WhetstoneClientManager;->mSetting:Lcom/miui/whetstone/strategy/WhetstoneSystemSetting;
 
@@ -1265,13 +1150,11 @@
 
     if-nez v2, :cond_0
 
-    .line 148
     :cond_2
     sget-object v2, Lcom/miui/whetstone/client/WhetstoneClientManager;->mService:Lcom/miui/whetstone/IWhetstoneClient;
 
     if-eqz v2, :cond_0
 
-    .line 150
     :try_start_0
     sget-object v2, Lcom/miui/whetstone/client/WhetstoneClientManager;->mService:Lcom/miui/whetstone/IWhetstoneClient;
 
@@ -1283,11 +1166,9 @@
 
     goto :goto_0
 
-    .line 151
     :catch_0
     move-exception v0
 
-    .line 152
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "WhetstoneClientManager"
 
@@ -1306,7 +1187,6 @@
     .param p3, "userId"    # I
 
     .prologue
-    .line 336
     sget-object v0, Lcom/miui/whetstone/client/WhetstoneClientManager;->mWhetstoneAM:Lcom/miui/whetstone/server/WhetstoneActivityManagerService;
 
     if-eqz v0, :cond_0
@@ -1319,7 +1199,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 337
     invoke-virtual {p0}, Landroid/content/Intent;->getPackage()Ljava/lang/String;
 
     move-result-object v0
@@ -1330,7 +1209,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 338
     const-string v0, "WhetstoneClientManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1385,10 +1263,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 340
     const/4 v0, 0x0
 
-    .line 343
     :goto_0
     return v0
 
@@ -1403,7 +1279,6 @@
     .param p0, "processName"    # Ljava/lang/String;
 
     .prologue
-    .line 71
     sget-object v2, Lcom/miui/whetstone/client/WhetstoneClientManager;->protectApps:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -1424,7 +1299,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 72
     .local v1, "item":Ljava/lang/String;
     invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1432,10 +1306,8 @@
 
     if-eqz v2, :cond_0
 
-    .line 73
     const/4 v2, 0x1
 
-    .line 76
     .end local v1    # "item":Ljava/lang/String;
     :goto_0
     return v2
@@ -1456,21 +1328,17 @@
 
     const/4 v1, 0x0
 
-    .line 388
     sget-boolean v3, Lcom/miui/whetstone/client/WhetstoneClientManager;->RED_SUPPORT:Z
 
     if-nez v3, :cond_1
 
-    .line 411
     :cond_0
     :goto_0
     return v1
 
-    .line 391
     :cond_1
     if-eqz p1, :cond_0
 
-    .line 399
     :try_start_0
     sget-object v3, Lcom/miui/whetstone/client/WhetstoneClientManager;->sPerformanceSet:Ljava/util/HashSet;
 
@@ -1480,37 +1348,30 @@
 
     if-eqz v3, :cond_2
 
-    .line 401
     const/4 v3, 0x1
 
     sput-boolean v3, Lcom/miui/whetstone/client/WhetstoneClientManager;->sPerformanceEnable:Z
 
-    .line 402
     invoke-static {}, Lcom/miui/whetstone/client/WhetstoneClientManager;->doPerformanceLam()V
 
     move v1, v2
 
-    .line 403
     goto :goto_0
 
-    .line 405
     :cond_2
     const/4 v2, 0x0
 
     sput-boolean v2, Lcom/miui/whetstone/client/WhetstoneClientManager;->sPerformanceEnable:Z
 
-    .line 406
     invoke-static {}, Lcom/miui/whetstone/client/WhetstoneClientManager;->doResumeLam()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 408
     :catch_0
     move-exception v0
 
-    .line 409
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "WhetstoneClientManager"
 
@@ -1532,12 +1393,10 @@
     .param p6, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 163
     invoke-static {p3}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v4
 
-    .line 164
     .local v4, "userId":I
     if-eqz p1, :cond_1
 
@@ -1545,7 +1404,6 @@
 
     move-result-object v5
 
-    .line 166
     .local v5, "className":Ljava/lang/String;
     :goto_0
     sget-object v0, Lcom/miui/whetstone/client/WhetstoneClientManager;->mWhetstoneAM:Lcom/miui/whetstone/server/WhetstoneActivityManagerService;
@@ -1554,7 +1412,6 @@
 
     if-eqz p0, :cond_2
 
-    .line 167
     sget-object v0, Lcom/miui/whetstone/client/WhetstoneClientManager;->mWhetstoneAM:Lcom/miui/whetstone/server/WhetstoneActivityManagerService;
 
     const/4 v3, 0x4
@@ -1581,12 +1438,10 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 172
     sget-boolean v0, Lcom/miui/whetstone/WhetstonePackageState;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 173
     const-string v0, "WhetstonePackageState"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1649,29 +1504,24 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 178
     :cond_0
     const/4 v0, 0x0
 
-    .line 186
     :goto_1
     return v0
 
-    .line 164
     .end local v5    # "className":Ljava/lang/String;
     :cond_1
     const/4 v5, 0x0
 
     goto :goto_0
 
-    .line 182
     .restart local v5    # "className":Ljava/lang/String;
     :cond_2
     sget-boolean v0, Lcom/miui/whetstone/WhetstonePackageState;->DEBUG:Z
 
     if-eqz v0, :cond_3
 
-    .line 183
     const-string v0, "WhetstonePackageState"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1734,7 +1584,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 186
     :cond_3
     const/4 v0, 0x1
 
@@ -1748,25 +1597,20 @@
     .param p2, "lastPss"    # J
 
     .prologue
-    .line 116
     sget-boolean v0, Lcom/miui/whetstone/client/WhetstoneClientManager;->CACHAED_STATISTICS_SUPPORT:Z
 
     if-nez v0, :cond_0
 
-    .line 123
     :goto_0
     return-void
 
-    .line 119
     :cond_0
     if-nez p0, :cond_1
 
-    .line 120
     const-wide/16 v0, 0x0
 
     sput-wide v0, Lcom/miui/whetstone/client/WhetstoneClientManager;->sAndroidCachePss:J
 
-    .line 122
     :cond_1
     sget-wide v0, Lcom/miui/whetstone/client/WhetstoneClientManager;->sAndroidCachePss:J
 
@@ -1782,10 +1626,8 @@
     .param p0, "pid"    # I
 
     .prologue
-    .line 350
     sput p0, Lcom/miui/whetstone/client/WhetstoneClientManager;->sCallingPid:I
 
-    .line 351
     return-void
 .end method
 
@@ -1794,18 +1636,15 @@
     .param p0, "comps"    # [Landroid/content/ComponentName;
 
     .prologue
-    .line 376
     sget-object v6, Lcom/miui/whetstone/client/WhetstoneClientManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v6
 
-    .line 377
     :try_start_0
     new-instance v4, Ljava/util/HashSet;
 
     invoke-direct {v4}, Ljava/util/HashSet;-><init>()V
 
-    .line 378
     .local v4, "pset":Ljava/util/HashSet;, "Ljava/util/HashSet<Landroid/content/ComponentName;>;"
     move-object v0, p0
 
@@ -1821,29 +1660,23 @@
 
     aget-object v1, v0, v2
 
-    .line 379
     .local v1, "comp":Landroid/content/ComponentName;
     invoke-virtual {v4, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 378
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 381
     .end local v1    # "comp":Landroid/content/ComponentName;
     :cond_0
     sput-object v4, Lcom/miui/whetstone/client/WhetstoneClientManager;->sPerformanceSet:Ljava/util/HashSet;
 
-    .line 382
     monitor-exit v6
 
-    .line 383
     const/4 v5, 0x1
 
     return v5
 
-    .line 382
     .end local v0    # "arr$":[Landroid/content/ComponentName;
     .end local v2    # "i$":I
     .end local v3    # "len$":I
@@ -1866,25 +1699,21 @@
     .end annotation
 
     .prologue
-    .line 217
     invoke-static {}, Lcom/miui/whetstone/app/WhetstoneAppManager;->isEnable()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 227
     :cond_0
     :goto_0
     return-void
 
-    .line 220
     :cond_1
     sget-object v1, Lcom/miui/whetstone/client/WhetstoneClientManager;->mService:Lcom/miui/whetstone/IWhetstoneClient;
 
     if-eqz v1, :cond_0
 
-    .line 222
     :try_start_0
     sget-object v1, Lcom/miui/whetstone/client/WhetstoneClientManager;->mService:Lcom/miui/whetstone/IWhetstoneClient;
 
@@ -1894,11 +1723,9 @@
 
     goto :goto_0
 
-    .line 223
     :catch_0
     move-exception v0
 
-    .line 224
     .local v0, "e":Ljava/lang/Exception;
     const-string v1, "WhetstoneClientManager"
 
@@ -1916,21 +1743,16 @@
     .param p2, "whileRestarting"    # Z
 
     .prologue
-    .line 231
     const/4 v5, 0x1
 
-    .line 232
     .local v5, "ret":Z
     if-nez p0, :cond_0
 
-    .line 234
     const/4 v0, 0x1
 
-    .line 249
     :goto_0
     return v0
 
-    .line 236
     :cond_0
     sget-object v0, Lcom/miui/whetstone/client/WhetstoneClientManager;->mSetting:Lcom/miui/whetstone/strategy/WhetstoneSystemSetting;
 
@@ -1954,29 +1776,23 @@
 
     move v0, v5
 
-    .line 237
     goto :goto_0
 
-    .line 239
     :cond_1
     sget-object v0, Lcom/miui/whetstone/client/WhetstoneClientManager;->mService:Lcom/miui/whetstone/IWhetstoneClient;
 
     if-eqz v0, :cond_2
 
-    .line 241
     :try_start_0
     new-instance v7, Landroid/content/Intent;
 
     invoke-direct {v7}, Landroid/content/Intent;-><init>()V
 
-    .line 242
     .local v7, "service":Landroid/content/Intent;
     invoke-virtual {v7, p0}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 243
     invoke-virtual {v7, p1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 244
     sget-object v0, Lcom/miui/whetstone/client/WhetstoneClientManager;->mService:Lcom/miui/whetstone/IWhetstoneClient;
 
     sget v1, Lcom/miui/whetstone/client/WhetstoneClientManager;->sCallingPid:I
@@ -1992,14 +1808,11 @@
     :goto_1
     move v0, v5
 
-    .line 249
     goto :goto_0
 
-    .line 245
     :catch_0
     move-exception v6
 
-    .line 246
     .local v6, "e":Ljava/lang/Exception;
     const-string v0, "WhetstoneClientManager"
 
@@ -2022,7 +1835,6 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 192
     invoke-static {}, Lcom/miui/whetstone/app/WhetstoneAppManager;->isEnable()Z
 
     move-result v3
@@ -2031,25 +1843,20 @@
 
     move v1, v2
 
-    .line 212
     :cond_0
     :goto_0
     return v1
 
-    .line 195
     :cond_1
     const/4 v1, 0x1
 
-    .line 196
     .local v1, "ret":Z
     if-nez p1, :cond_2
 
     move v1, v2
 
-    .line 198
     goto :goto_0
 
-    .line 201
     :cond_2
     sget-object v2, Lcom/miui/whetstone/client/WhetstoneClientManager;->mSetting:Lcom/miui/whetstone/strategy/WhetstoneSystemSetting;
 
@@ -2069,13 +1876,11 @@
 
     if-nez v2, :cond_0
 
-    .line 205
     :cond_3
     sget-object v2, Lcom/miui/whetstone/client/WhetstoneClientManager;->mService:Lcom/miui/whetstone/IWhetstoneClient;
 
     if-eqz v2, :cond_0
 
-    .line 207
     :try_start_0
     sget-object v2, Lcom/miui/whetstone/client/WhetstoneClientManager;->mService:Lcom/miui/whetstone/IWhetstoneClient;
 
@@ -2089,11 +1894,9 @@
 
     goto :goto_0
 
-    .line 208
     :catch_0
     move-exception v0
 
-    .line 209
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "WhetstoneClientManager"
 
@@ -2117,13 +1920,11 @@
     .end annotation
 
     .prologue
-    .line 456
     .local p0, "thresholds":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     sget-object v4, Lcom/miui/whetstone/client/WhetstoneClientManager;->mThresholds:Ljava/util/HashMap;
 
     monitor-enter v4
 
-    .line 457
     :try_start_0
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -2144,7 +1945,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 458
     .local v1, "threshold":Ljava/lang/String;
     const-string v3, "#"
 
@@ -2152,7 +1952,6 @@
 
     move-result-object v2
 
-    .line 459
     .local v2, "values":[Ljava/lang/String;
     array-length v3, v2
 
@@ -2160,7 +1959,6 @@
 
     if-ne v3, v5, :cond_0
 
-    .line 460
     sget-object v3, Lcom/miui/whetstone/client/WhetstoneClientManager;->mThresholds:Ljava/util/HashMap;
 
     const/4 v5, 0x0
@@ -2179,7 +1977,6 @@
 
     goto :goto_0
 
-    .line 462
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v1    # "threshold":Ljava/lang/String;
     .end local v2    # "values":[Ljava/lang/String;
@@ -2199,7 +1996,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 463
     return-void
 .end method
 
@@ -2209,12 +2005,10 @@
     .param p1, "locked"    # Z
 
     .prologue
-    .line 474
     const/4 v0, 0x0
 
     invoke-static {p0, p1, v0}, Lcom/miui/whetstone/client/WhetstoneClientManager;->updatePackageLockedStatus(Ljava/lang/String;ZI)V
 
-    .line 475
     return-void
 .end method
 
@@ -2225,12 +2019,10 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 478
     sget-object v4, Lcom/miui/whetstone/client/WhetstoneClientManager;->mProcessLocked:Ljava/util/concurrent/ConcurrentHashMap;
 
     monitor-enter v4
 
-    .line 479
     :try_start_0
     sget-object v3, Lcom/miui/whetstone/client/WhetstoneClientManager;->mProcessLocked:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -2244,32 +2036,25 @@
 
     check-cast v1, Ljava/util/List;
 
-    .line 480
     .local v1, "lockedApp":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/4 v0, 0x0
 
-    .line 481
     .local v0, "iterator":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     const/4 v2, 0x0
 
-    .line 482
     .local v2, "name":Ljava/lang/String;
     if-nez v1, :cond_1
 
-    .line 483
     new-instance v1, Ljava/util/ArrayList;
 
     .end local v1    # "lockedApp":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 484
     .restart local v1    # "lockedApp":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     if-eqz p1, :cond_0
 
-    .line 485
     invoke-interface {v1, p0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 486
     sget-object v3, Lcom/miui/whetstone/client/WhetstoneClientManager;->mProcessLocked:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -2278,22 +2063,17 @@
 
     invoke-virtual {v3, v5, v1}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 488
     :cond_0
     monitor-exit v4
 
-    .line 502
     :goto_0
     return-void
 
-    .line 490
     :cond_1
     if-eqz p1, :cond_3
 
-    .line 491
     invoke-interface {v1, p0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 501
     :cond_2
     monitor-exit v4
 
@@ -2311,7 +2091,6 @@
 
     throw v3
 
-    .line 493
     .restart local v0    # "iterator":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     .restart local v1    # "lockedApp":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .restart local v2    # "name":Ljava/lang/String;
@@ -2321,7 +2100,6 @@
 
     move-result-object v0
 
-    .line 494
     :cond_4
     :goto_1
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -2330,7 +2108,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 495
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
@@ -2338,7 +2115,6 @@
     .end local v2    # "name":Ljava/lang/String;
     check-cast v2, Ljava/lang/String;
 
-    .line 496
     .restart local v2    # "name":Ljava/lang/String;
     invoke-virtual {v2, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2346,7 +2122,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 497
     invoke-interface {v0}, Ljava/util/Iterator;->remove()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -2367,13 +2142,11 @@
     .end annotation
 
     .prologue
-    .line 466
     .local p0, "thresholds":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/4 v0, 0x0
 
     invoke-static {p0, v0}, Lcom/miui/whetstone/client/WhetstoneClientManager;->updateUserLockedAppList(Ljava/util/List;I)V
 
-    .line 467
     return-void
 .end method
 
@@ -2391,7 +2164,6 @@
     .end annotation
 
     .prologue
-    .line 470
     .local p0, "thresholds":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     sget-object v0, Lcom/miui/whetstone/client/WhetstoneClientManager;->mProcessLocked:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -2401,6 +2173,5 @@
 
     invoke-virtual {v0, v1, p0}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 471
     return-void
 .end method

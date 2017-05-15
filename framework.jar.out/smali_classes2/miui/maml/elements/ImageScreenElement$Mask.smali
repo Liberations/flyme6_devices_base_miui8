@@ -27,20 +27,16 @@
     .param p3, "root"    # Lmiui/maml/ScreenElementRoot;
 
     .prologue
-    .line 133
     iput-object p1, p0, Lmiui/maml/elements/ImageScreenElement$Mask;->this$0:Lmiui/maml/elements/ImageScreenElement;
 
-    .line 134
     invoke-direct {p0, p2, p3}, Lmiui/maml/elements/ImageScreenElement;-><init>(Lorg/w3c/dom/Element;Lmiui/maml/ScreenElementRoot;)V
 
-    .line 135
     const-string v1, "align"
 
     invoke-virtual {p0, p2, v1}, Lmiui/maml/elements/ImageScreenElement$Mask;->getAttr(Lorg/w3c/dom/Element;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 136
     .local v0, "align":Ljava/lang/String;
     const-string v1, "absolute"
 
@@ -50,12 +46,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 137
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lmiui/maml/elements/ImageScreenElement$Mask;->mAlignAbsolute:Z
 
-    .line 140
     :cond_0
     return-void
 .end method
@@ -67,7 +61,6 @@
     .param p1, "c"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 148
     return-void
 .end method
 
@@ -75,7 +68,6 @@
     .locals 1
 
     .prologue
-    .line 143
     iget-boolean v0, p0, Lmiui/maml/elements/ImageScreenElement$Mask;->mAlignAbsolute:Z
 
     return v0

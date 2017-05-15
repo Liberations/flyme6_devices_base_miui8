@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 454
     iput-object p1, p0, Lmiui/maml/MamlConfigSettings$StringInputItem;->this$0:Lmiui/maml/MamlConfigSettings;
 
     const/4 v0, 0x0
@@ -39,7 +38,6 @@
     .param p2, "x1"    # Lmiui/maml/MamlConfigSettings$1;
 
     .prologue
-    .line 454
     invoke-direct {p0, p1}, Lmiui/maml/MamlConfigSettings$StringInputItem;-><init>(Lmiui/maml/MamlConfigSettings;)V
 
     return-void
@@ -52,12 +50,10 @@
     .param p1, "objValue"    # Ljava/lang/Object;
 
     .prologue
-    .line 469
     move-object v0, p1
 
     check-cast v0, Ljava/lang/String;
 
-    .line 470
     .local v0, "value":Ljava/lang/String;
     iget-object v1, p0, Lmiui/maml/MamlConfigSettings$StringInputItem;->this$0:Lmiui/maml/MamlConfigSettings;
 
@@ -74,10 +70,8 @@
 
     invoke-virtual {v1, v2, v0}, Lmiui/maml/util/ConfigFile;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 471
     invoke-virtual {p0, v0}, Lmiui/maml/MamlConfigSettings$StringInputItem;->setValuePreview(Ljava/lang/String;)V
 
-    .line 472
     const/4 v1, 0x1
 
     return v1
@@ -88,7 +82,6 @@
     .param p1, "c"    # Landroid/content/Context;
 
     .prologue
-    .line 458
     new-instance v0, Landroid/preference/EditTextPreference;
 
     invoke-direct {v0, p1}, Landroid/preference/EditTextPreference;-><init>(Landroid/content/Context;)V
@@ -101,10 +94,8 @@
     .param p1, "ele"    # Lorg/w3c/dom/Element;
 
     .prologue
-    .line 477
     invoke-super {p0, p1}, Lmiui/maml/MamlConfigSettings$VariableItem;->onBuild(Lorg/w3c/dom/Element;)V
 
-    .line 478
     iget-object v0, p0, Lmiui/maml/MamlConfigSettings$StringInputItem;->mPreference:Landroid/preference/Preference;
 
     check-cast v0, Landroid/preference/EditTextPreference;
@@ -113,7 +104,6 @@
 
     invoke-virtual {v0, v1}, Landroid/preference/EditTextPreference;->setDialogTitle(Ljava/lang/CharSequence;)V
 
-    .line 479
     return-void
 .end method
 
@@ -122,16 +112,13 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 463
     iget-object v0, p0, Lmiui/maml/MamlConfigSettings$StringInputItem;->mPreference:Landroid/preference/Preference;
 
     check-cast v0, Landroid/preference/EditTextPreference;
 
     invoke-virtual {v0, p1}, Landroid/preference/EditTextPreference;->setText(Ljava/lang/String;)V
 
-    .line 464
     invoke-virtual {p0, p1}, Lmiui/maml/MamlConfigSettings$StringInputItem;->setValuePreview(Ljava/lang/String;)V
 
-    .line 465
     return-void
 .end method

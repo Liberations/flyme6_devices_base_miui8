@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 75
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,11 +37,9 @@
     .end annotation
 
     .prologue
-    .line 117
     .local p0, "purposes":Ljava/util/Collection;, "Ljava/util/Collection<Ljava/lang/Integer;>;"
     const/4 v2, 0x0
 
-    .line 118
     .local v2, "result":I
     invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
@@ -66,7 +63,6 @@
 
     move-result v1
 
-    .line 119
     .local v1, "keymasterPurpose":I
     invoke-static {v1}, Landroid/security/keystore/KeyProperties$Purpose;->fromKeymaster(I)I
 
@@ -74,10 +70,8 @@
 
     or-int/2addr v2, v3
 
-    .line 120
     goto :goto_0
 
-    .line 121
     .end local v1    # "keymasterPurpose":I
     :cond_0
     return v2
@@ -88,13 +82,11 @@
     .param p0, "purposes"    # I
 
     .prologue
-    .line 109
     # invokes: Landroid/security/keystore/KeyProperties;->getSetFlags(I)[I
     invoke-static {p0}, Landroid/security/keystore/KeyProperties;->access$000(I)[I
 
     move-result-object v1
 
-    .line 110
     .local v1, "result":[I
     const/4 v0, 0x0
 
@@ -104,7 +96,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 111
     aget v2, v1, v0
 
     invoke-static {v2}, Landroid/security/keystore/KeyProperties$Purpose;->toKeymaster(I)I
@@ -113,12 +104,10 @@
 
     aput v2, v1, v0
 
-    .line 110
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 113
     :cond_0
     return-object v1
 .end method
@@ -128,10 +117,8 @@
     .param p0, "purpose"    # I
 
     .prologue
-    .line 93
     packed-switch p0, :pswitch_data_0
 
-    .line 103
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -156,33 +143,27 @@
 
     throw v0
 
-    .line 95
     :pswitch_0
     const/4 v0, 0x1
 
-    .line 101
     :goto_0
     return v0
 
-    .line 97
     :pswitch_1
     const/4 v0, 0x2
 
     goto :goto_0
 
-    .line 99
     :pswitch_2
     const/4 v0, 0x4
 
     goto :goto_0
 
-    .line 101
     :pswitch_3
     const/16 v0, 0x8
 
     goto :goto_0
 
-    .line 93
     nop
 
     :pswitch_data_0
@@ -199,10 +180,8 @@
     .param p0, "purpose"    # I
 
     .prologue
-    .line 78
     packed-switch p0, :pswitch_data_0
 
-    .line 88
     :pswitch_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -228,33 +207,27 @@
 
     throw v0
 
-    .line 80
     :pswitch_1
     const/4 v0, 0x0
 
-    .line 86
     :goto_0
     return v0
 
-    .line 82
     :pswitch_2
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 84
     :pswitch_3
     const/4 v0, 0x2
 
     goto :goto_0
 
-    .line 86
     :pswitch_4
     const/4 v0, 0x3
 
     goto :goto_0
 
-    .line 78
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1

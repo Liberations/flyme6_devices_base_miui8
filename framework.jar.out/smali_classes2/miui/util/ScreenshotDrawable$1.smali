@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 109
     iput-object p1, p0, Lmiui/util/ScreenshotDrawable$1;->this$0:Lmiui/util/ScreenshotDrawable;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,12 +40,10 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 114
     iget-object v0, p0, Lmiui/util/ScreenshotDrawable$1;->this$0:Lmiui/util/ScreenshotDrawable;
 
     invoke-virtual {v0}, Lmiui/util/ScreenshotDrawable;->processShow()V
 
-    .line 115
     iget-object v0, p0, Lmiui/util/ScreenshotDrawable$1;->this$0:Lmiui/util/ScreenshotDrawable;
 
     # getter for: Lmiui/util/ScreenshotDrawable;->mOwnerView:Landroid/view/View;
@@ -60,7 +57,6 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
 
-    .line 116
     return-void
 .end method
 
@@ -69,6 +65,5 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 111
     return-void
 .end method

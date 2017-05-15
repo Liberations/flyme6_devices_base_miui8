@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 27
     invoke-static {}, Lmiui/telephony/TelephonyManagerEx;->getDefault()Lmiui/telephony/TelephonyManagerEx;
 
     move-result-object v0
@@ -37,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

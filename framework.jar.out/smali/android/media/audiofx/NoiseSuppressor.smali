@@ -20,7 +20,6 @@
     .end annotation
 
     .prologue
-    .line 96
     sget-object v0, Landroid/media/audiofx/NoiseSuppressor;->EFFECT_TYPE_NS:Ljava/util/UUID;
 
     sget-object v1, Landroid/media/audiofx/NoiseSuppressor;->EFFECT_TYPE_NULL:Ljava/util/UUID;
@@ -29,7 +28,6 @@
 
     invoke-direct {p0, v0, v1, v2, p1}, Landroid/media/audiofx/AudioEffect;-><init>(Ljava/util/UUID;Ljava/util/UUID;II)V
 
-    .line 97
     return-void
 .end method
 
@@ -38,10 +36,8 @@
     .param p0, "audioSession"    # I
 
     .prologue
-    .line 64
     const/4 v1, 0x0
 
-    .line 66
     .local v1, "ns":Landroid/media/audiofx/NoiseSuppressor;
     :try_start_0
     new-instance v2, Landroid/media/audiofx/NoiseSuppressor;
@@ -56,17 +52,14 @@
     .local v2, "ns":Landroid/media/audiofx/NoiseSuppressor;
     move-object v1, v2
 
-    .line 74
     .end local v2    # "ns":Landroid/media/audiofx/NoiseSuppressor;
     .restart local v1    # "ns":Landroid/media/audiofx/NoiseSuppressor;
     :goto_0
     return-object v1
 
-    .line 67
     :catch_0
     move-exception v0
 
-    .line 68
     .local v0, "e":Ljava/lang/IllegalArgumentException;
     const-string v3, "NoiseSuppressor"
 
@@ -74,7 +67,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "not implemented on this device "
+    const-string v5, "not implemented on this device "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -92,31 +85,27 @@
 
     goto :goto_0
 
-    .line 69
     .end local v0    # "e":Ljava/lang/IllegalArgumentException;
     :catch_1
     move-exception v0
 
-    .line 70
     .local v0, "e":Ljava/lang/UnsupportedOperationException;
     const-string v3, "NoiseSuppressor"
 
-    const-string/jumbo v4, "not enough resources"
+    const-string v4, "not enough resources"
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 71
     .end local v0    # "e":Ljava/lang/UnsupportedOperationException;
     :catch_2
     move-exception v0
 
-    .line 72
     .local v0, "e":Ljava/lang/RuntimeException;
     const-string v3, "NoiseSuppressor"
 
-    const-string/jumbo v4, "not enough memory"
+    const-string v4, "not enough memory"
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -127,7 +116,6 @@
     .locals 1
 
     .prologue
-    .line 52
     sget-object v0, Landroid/media/audiofx/AudioEffect;->EFFECT_TYPE_NS:Ljava/util/UUID;
 
     invoke-static {v0}, Landroid/media/audiofx/AudioEffect;->isEffectTypeAvailable(Ljava/util/UUID;)Z

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 100
     iput-object p1, p0, Lmiui/maml/elements/MusicListenerService$RCBinder;->this$0:Lmiui/maml/elements/MusicListenerService;
 
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
@@ -37,7 +36,6 @@
     .locals 1
 
     .prologue
-    .line 102
     iget-object v0, p0, Lmiui/maml/elements/MusicListenerService$RCBinder;->this$0:Lmiui/maml/elements/MusicListenerService;
 
     return-object v0

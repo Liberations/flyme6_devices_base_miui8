@@ -63,7 +63,6 @@
     .locals 1
 
     .prologue
-    .line 23
     const/4 v0, 0x0
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -81,21 +80,16 @@
     .param p2, "pathName"    # Ljava/lang/String;
 
     .prologue
-    .line 48
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 26
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/miui/whetstone/graphics/BitmapCache;->mTotalSize:I
 
-    .line 49
     iput-object p1, p0, Lcom/miui/whetstone/graphics/BitmapCache;->mContext:Landroid/content/Context;
 
-    .line 50
     invoke-direct {p0, p2}, Lcom/miui/whetstone/graphics/BitmapCache;->init(Ljava/lang/String;)V
 
-    .line 51
     return-void
 .end method
 
@@ -104,18 +98,15 @@
     .param p1, "pathName"    # Ljava/lang/String;
 
     .prologue
-    .line 54
     new-instance v1, Landroid/os/HandlerThread;
 
     const-string v2, "BitmapCacheHandler"
 
     invoke-direct {v1, v2}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
 
-    .line 55
     .local v1, "thread":Landroid/os/HandlerThread;
     invoke-virtual {v1}, Landroid/os/HandlerThread;->start()V
 
-    .line 56
     new-instance v2, Lcom/miui/whetstone/graphics/BitmapCache$DiskHandler;
 
     invoke-virtual {v1}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
@@ -126,7 +117,6 @@
 
     iput-object v2, p0, Lcom/miui/whetstone/graphics/BitmapCache;->mHandler:Lcom/miui/whetstone/graphics/BitmapCache$DiskHandler;
 
-    .line 57
     iget-object v2, p0, Lcom/miui/whetstone/graphics/BitmapCache;->mHandler:Lcom/miui/whetstone/graphics/BitmapCache$DiskHandler;
 
     const/4 v3, 0x1
@@ -147,7 +137,7 @@
 
     move-result-object v5
 
-    const-string/jumbo v6, "whetstone_thumbnails"
+    const-string v6, "whetstone_thumbnails"
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -163,13 +153,11 @@
 
     move-result-object v0
 
-    .line 58
     .local v0, "msg":Landroid/os/Message;
     iget-object v2, p0, Lcom/miui/whetstone/graphics/BitmapCache;->mHandler:Lcom/miui/whetstone/graphics/BitmapCache$DiskHandler;
 
     invoke-virtual {v2, v0}, Lcom/miui/whetstone/graphics/BitmapCache$DiskHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 60
     return-void
 .end method
 
@@ -184,7 +172,6 @@
     .end annotation
 
     .prologue
-    .line 94
     const/4 v0, 0x0
 
     invoke-static {p0, p1, v0}, Lcom/miui/whetstone/graphics/BitmapCache;->saveToFile(Landroid/graphics/Bitmap;Ljava/lang/String;Z)Z
@@ -206,13 +193,10 @@
     .end annotation
 
     .prologue
-    .line 107
     if-eqz p0, :cond_1
 
-    .line 108
     const/4 v0, 0x0
 
-    .line 110
     .local v0, "outputStream":Ljava/io/FileOutputStream;
     :try_start_0
     new-instance v1, Ljava/io/FileOutputStream;
@@ -221,7 +205,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 111
     .end local v0    # "outputStream":Ljava/io/FileOutputStream;
     .local v1, "outputStream":Ljava/io/FileOutputStream;
     if-eqz p2, :cond_0
@@ -236,18 +219,14 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 113
     invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
 
-    .line 115
     const/4 v2, 0x1
 
-    .line 117
     .end local v1    # "outputStream":Ljava/io/FileOutputStream;
     :goto_1
     return v2
 
-    .line 111
     .restart local v1    # "outputStream":Ljava/io/FileOutputStream;
     :cond_0
     :try_start_2
@@ -257,7 +236,6 @@
 
     goto :goto_0
 
-    .line 113
     .end local v1    # "outputStream":Ljava/io/FileOutputStream;
     .restart local v0    # "outputStream":Ljava/io/FileOutputStream;
     :catchall_0
@@ -268,14 +246,12 @@
 
     throw v2
 
-    .line 117
     .end local v0    # "outputStream":Ljava/io/FileOutputStream;
     :cond_1
     const/4 v2, 0x0
 
     goto :goto_1
 
-    .line 113
     .restart local v1    # "outputStream":Ljava/io/FileOutputStream;
     :catchall_1
     move-exception v2
@@ -299,7 +275,6 @@
 
     const/4 v5, 0x0
 
-    .line 123
     sget-object v2, Lcom/miui/whetstone/graphics/BitmapCache;->DEBUG:Ljava/lang/Boolean;
 
     invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
@@ -308,7 +283,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 124
     const-string v2, "WhetstoneBitmapCache"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -341,7 +315,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 126
     :cond_0
     iget v2, p0, Lcom/miui/whetstone/graphics/BitmapCache;->mTotalSize:I
 
@@ -349,7 +322,6 @@
 
     if-le v2, v3, :cond_1
 
-    .line 127
     const-string v2, "WhetstoneBitmapCache"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -374,22 +346,18 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 128
     invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v2
 
-    .line 154
     :goto_0
     return-object v2
 
-    .line 130
     :cond_1
     iget-object v2, p0, Lcom/miui/whetstone/graphics/BitmapCache;->mCache:Ljava/util/concurrent/ConcurrentHashMap;
 
     if-eqz v2, :cond_4
 
-    .line 131
     iget-object v2, p0, Lcom/miui/whetstone/graphics/BitmapCache;->mCache:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v2, p1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -398,7 +366,6 @@
 
     if-nez v2, :cond_2
 
-    .line 134
     :try_start_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -435,30 +402,25 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 144
     iget-object v2, p0, Lcom/miui/whetstone/graphics/BitmapCache;->mCache:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v2, p1, p1}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 145
     iget v2, p0, Lcom/miui/whetstone/graphics/BitmapCache;->mTotalSize:I
 
     add-int/lit8 v2, v2, 0x1
 
     iput v2, p0, Lcom/miui/whetstone/graphics/BitmapCache;->mTotalSize:I
 
-    .line 146
     invoke-static {v6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v2
 
     goto :goto_0
 
-    .line 135
     :catch_0
     move-exception v0
 
-    .line 136
     .local v0, "e":Ljava/io/IOException;
     const-string v2, "WhetstoneBitmapCache"
 
@@ -488,22 +450,18 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 137
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 138
     invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v2
 
     goto :goto_0
 
-    .line 139
     .end local v0    # "e":Ljava/io/IOException;
     :catch_1
     move-exception v1
 
-    .line 140
     .local v1, "e1":Ljava/lang/Exception;
     const-string v2, "WhetstoneBitmapCache"
 
@@ -511,17 +469,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 141
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 142
     invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v2
 
     goto :goto_0
 
-    .line 148
     .end local v1    # "e1":Ljava/lang/Exception;
     :cond_2
     sget-object v2, Lcom/miui/whetstone/graphics/BitmapCache;->DEBUG:Ljava/lang/Boolean;
@@ -532,7 +487,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 149
     const-string v2, "WhetstoneBitmapCache"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -561,7 +515,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 151
     :cond_3
     invoke-static {v6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -569,7 +522,6 @@
 
     goto/16 :goto_0
 
-    .line 154
     :cond_4
     invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -583,7 +535,6 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 158
     sget-object v1, Lcom/miui/whetstone/graphics/BitmapCache;->DEBUG:Ljava/lang/Boolean;
 
     invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
@@ -592,7 +543,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 159
     const-string v1, "WhetstoneBitmapCache"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -615,7 +565,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 161
     :cond_0
     iget-object v1, p0, Lcom/miui/whetstone/graphics/BitmapCache;->mCache:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -629,7 +578,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 162
     new-instance v0, Ljava/io/File;
 
     iget-object v2, p0, Lcom/miui/whetstone/graphics/BitmapCache;->mRootDirectory:Ljava/io/File;
@@ -644,27 +592,22 @@
 
     invoke-direct {v0, v2, v1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 163
     .local v0, "file":Ljava/io/File;
     if-eqz v0, :cond_1
 
-    .line 164
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
-    .line 166
     :cond_1
     iget-object v1, p0, Lcom/miui/whetstone/graphics/BitmapCache;->mCache:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v1, p1}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 167
     iget v1, p0, Lcom/miui/whetstone/graphics/BitmapCache;->mTotalSize:I
 
     add-int/lit8 v1, v1, -0x1
 
     iput v1, p0, Lcom/miui/whetstone/graphics/BitmapCache;->mTotalSize:I
 
-    .line 170
     .end local v0    # "file":Ljava/io/File;
     :cond_2
     return-void
@@ -675,10 +618,8 @@
     .param p1, "file"    # Ljava/io/File;
 
     .prologue
-    .line 63
     iput-object p1, p0, Lcom/miui/whetstone/graphics/BitmapCache;->mRootDirectory:Ljava/io/File;
 
-    .line 64
     new-instance v5, Ljava/util/concurrent/ConcurrentHashMap;
 
     const/16 v6, 0xa
@@ -687,18 +628,15 @@
 
     iput-object v5, p0, Lcom/miui/whetstone/graphics/BitmapCache;->mCache:Ljava/util/concurrent/ConcurrentHashMap;
 
-    .line 70
     iget-object v5, p0, Lcom/miui/whetstone/graphics/BitmapCache;->mRootDirectory:Ljava/io/File;
 
     invoke-virtual {v5}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object v1
 
-    .line 71
     .local v1, "files":[Ljava/io/File;
     if-eqz v1, :cond_0
 
-    .line 72
     move-object v0, v1
 
     .local v0, "arr$":[Ljava/io/File;
@@ -713,16 +651,13 @@
 
     aget-object v4, v0, v2
 
-    .line 73
     .local v4, "temp":Ljava/io/File;
     invoke-virtual {v4}, Ljava/io/File;->delete()Z
 
-    .line 72
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 76
     .end local v0    # "arr$":[Ljava/io/File;
     .end local v2    # "i$":I
     .end local v3    # "len$":I
@@ -732,12 +667,10 @@
 
     invoke-virtual {v5}, Ljava/util/concurrent/ConcurrentHashMap;->clear()V
 
-    .line 77
     const/4 v5, 0x0
 
     iput v5, p0, Lcom/miui/whetstone/graphics/BitmapCache;->mTotalSize:I
 
-    .line 78
     iget-object v5, p0, Lcom/miui/whetstone/graphics/BitmapCache;->mRootDirectory:Ljava/io/File;
 
     invoke-virtual {v5}, Ljava/io/File;->exists()Z
@@ -746,7 +679,6 @@
 
     if-nez v5, :cond_2
 
-    .line 79
     iget-object v5, p0, Lcom/miui/whetstone/graphics/BitmapCache;->mRootDirectory:Ljava/io/File;
 
     invoke-virtual {v5}, Ljava/io/File;->mkdirs()Z
@@ -755,7 +687,6 @@
 
     if-nez v5, :cond_1
 
-    .line 80
     const-string v5, "WhetstoneBitmapCache"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -784,12 +715,10 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 86
     :cond_1
     :goto_1
     return-void
 
-    .line 84
     :cond_2
     sget-object v5, Lcom/miui/whetstone/graphics/BitmapCache;->DEBUG:Ljava/lang/Boolean;
 
@@ -807,7 +736,6 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 173
     sget-object v2, Lcom/miui/whetstone/graphics/BitmapCache;->DEBUG:Ljava/lang/Boolean;
 
     invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
@@ -816,7 +744,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 174
     const-string v2, "WhetstoneBitmapCache"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -839,11 +766,9 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 176
     :cond_0
     const/4 v0, 0x0
 
-    .line 177
     .local v0, "bitmap":Landroid/graphics/Bitmap;
     iget-object v2, p0, Lcom/miui/whetstone/graphics/BitmapCache;->mCache:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -857,7 +782,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 178
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -894,20 +818,17 @@
 
     move-result-object v1
 
-    .line 179
     .local v1, "fileName":Ljava/lang/String;
     invoke-static {v1}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 180
     iget-object v2, p0, Lcom/miui/whetstone/graphics/BitmapCache;->mContext:Landroid/content/Context;
 
     if-eqz v2, :cond_1
 
     if-nez v0, :cond_1
 
-    .line 181
     const-string v2, "WhetstoneBitmapCache"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -936,13 +857,11 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 196
     .end local v1    # "fileName":Ljava/lang/String;
     :cond_1
     :goto_0
     return-object v0
 
-    .line 194
     :cond_2
     const-string v2, "WhetstoneBitmapCache"
 

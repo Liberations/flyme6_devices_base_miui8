@@ -27,15 +27,11 @@
     .param p2, "p"    # I
 
     .prologue
-    .line 135
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 136
     iput-object p1, p0, Landroid/app/ExtraActivityManager$PriorityComponent;->mComponent:Landroid/content/ComponentName;
 
-    .line 137
     iput p2, p0, Landroid/app/ExtraActivityManager$PriorityComponent;->mPriority:I
 
-    .line 138
     return-void
 .end method

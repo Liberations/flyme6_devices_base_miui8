@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 5107
     iput-object p1, p0, Landroid/widget/Editor$SelectionHandleView$1;->this$1:Landroid/widget/Editor$SelectionHandleView;
 
     iput p2, p0, Landroid/widget/Editor$SelectionHandleView$1;->val$locationY:I
@@ -47,7 +46,6 @@
     .prologue
     const/4 v4, -0x1
 
-    .line 5110
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object v1
@@ -58,7 +56,6 @@
 
     move-result v0
 
-    .line 5111
     .local v0, "animatedValue":F
     iget-object v1, p0, Landroid/widget/Editor$SelectionHandleView$1;->this$1:Landroid/widget/Editor$SelectionHandleView;
 
@@ -69,7 +66,6 @@
 
     if-ne v1, v4, :cond_0
 
-    .line 5112
     iget-object v1, p0, Landroid/widget/Editor$SelectionHandleView$1;->this$1:Landroid/widget/Editor$SelectionHandleView;
 
     iget v2, p0, Landroid/widget/Editor$SelectionHandleView$1;->val$locationY:I
@@ -77,7 +73,6 @@
     # setter for: Landroid/widget/Editor$SelectionHandleView;->mY:I
     invoke-static {v1, v2}, Landroid/widget/Editor$SelectionHandleView;->access$3902(Landroid/widget/Editor$SelectionHandleView;I)I
 
-    .line 5114
     :cond_0
     iget-object v1, p0, Landroid/widget/Editor$SelectionHandleView$1;->this$1:Landroid/widget/Editor$SelectionHandleView;
 
@@ -94,6 +89,5 @@
 
     invoke-virtual {v1, v2, v3, v4, v4}, Landroid/widget/Editor$AnimatePopupWindow;->update(IIII)V
 
-    .line 5115
     return-void
 .end method

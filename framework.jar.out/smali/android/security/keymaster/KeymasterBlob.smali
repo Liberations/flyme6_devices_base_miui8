@@ -28,7 +28,6 @@
     .locals 1
 
     .prologue
-    .line 31
     new-instance v0, Landroid/security/keymaster/KeymasterBlob$1;
 
     invoke-direct {v0}, Landroid/security/keymaster/KeymasterBlob$1;-><init>()V
@@ -43,17 +42,14 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 43
     invoke-virtual {p1}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/security/keymaster/KeymasterBlob;->blob:[B
 
-    .line 44
     return-void
 .end method
 
@@ -62,13 +58,10 @@
     .param p1, "blob"    # [B
 
     .prologue
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 29
     iput-object p1, p0, Landroid/security/keymaster/KeymasterBlob;->blob:[B
 
-    .line 30
     return-void
 .end method
 
@@ -78,7 +71,6 @@
     .locals 1
 
     .prologue
-    .line 48
     const/4 v0, 0x0
 
     return v0
@@ -90,11 +82,9 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 53
     iget-object v0, p0, Landroid/security/keymaster/KeymasterBlob;->blob:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByteArray([B)V
 
-    .line 54
     return-void
 .end method

@@ -31,7 +31,6 @@
     .locals 0
 
     .prologue
-    .line 244
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -42,7 +41,6 @@
     .param p1, "x0"    # Landroid/graphics/Atlas$1;
 
     .prologue
-    .line 244
     invoke-direct {p0}, Landroid/graphics/Atlas$SlicePolicy$Cell;-><init>()V
 
     return-void
@@ -54,7 +52,6 @@
     .locals 4
 
     .prologue
-    .line 255
     const-string v0, "cell[x=%d y=%d width=%d height=%d"
 
     const/4 v1, 0x4

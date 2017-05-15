@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 32
     iput-object p1, p0, Lmiui/maml/elements/MusicController$1;->this$0:Lmiui/maml/elements/MusicController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,17 +41,14 @@
     .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
-    .line 36
     instance-of v1, p2, Lmiui/maml/elements/MusicListenerService$RCBinder;
 
     if-eqz v1, :cond_0
 
     move-object v0, p2
 
-    .line 37
     check-cast v0, Lmiui/maml/elements/MusicListenerService$RCBinder;
 
-    .line 38
     .local v0, "binder":Lmiui/maml/elements/MusicListenerService$RCBinder;
     iget-object v1, p0, Lmiui/maml/elements/MusicController$1;->this$0:Lmiui/maml/elements/MusicController;
 
@@ -63,7 +59,6 @@
     # setter for: Lmiui/maml/elements/MusicController;->mRCService:Lmiui/maml/elements/MusicListenerService;
     invoke-static {v1, v2}, Lmiui/maml/elements/MusicController;->access$002(Lmiui/maml/elements/MusicController;Lmiui/maml/elements/MusicListenerService;)Lmiui/maml/elements/MusicListenerService;
 
-    .line 39
     iget-object v1, p0, Lmiui/maml/elements/MusicController$1;->this$0:Lmiui/maml/elements/MusicController;
 
     # getter for: Lmiui/maml/elements/MusicController;->mRCService:Lmiui/maml/elements/MusicListenerService;
@@ -80,7 +75,6 @@
 
     invoke-virtual {v1, v2}, Lmiui/maml/elements/MusicListenerService;->registerClientUpdateListener(Landroid/media/RemoteController$OnClientUpdateListener;)V
 
-    .line 41
     .end local v0    # "binder":Lmiui/maml/elements/MusicListenerService$RCBinder;
     :cond_0
     return-void
@@ -91,7 +85,6 @@
     .param p1, "name"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 45
     iget-object v0, p0, Lmiui/maml/elements/MusicController$1;->this$0:Lmiui/maml/elements/MusicController;
 
     # getter for: Lmiui/maml/elements/MusicController;->mRCService:Lmiui/maml/elements/MusicListenerService;
@@ -101,7 +94,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 46
     iget-object v0, p0, Lmiui/maml/elements/MusicController$1;->this$0:Lmiui/maml/elements/MusicController;
 
     # getter for: Lmiui/maml/elements/MusicController;->mRCService:Lmiui/maml/elements/MusicListenerService;
@@ -118,7 +110,6 @@
 
     invoke-virtual {v0, v1}, Lmiui/maml/elements/MusicListenerService;->unregisterClientUpdateListener(Landroid/media/RemoteController$OnClientUpdateListener;)V
 
-    .line 47
     :cond_0
     return-void
 .end method

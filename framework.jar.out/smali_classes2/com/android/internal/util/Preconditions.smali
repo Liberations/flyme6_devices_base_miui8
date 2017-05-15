@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,17 +18,14 @@
     .param p0, "expression"    # Z
 
     .prologue
-    .line 28
     if-nez p0, :cond_0
 
-    .line 29
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
 
     throw v0
 
-    .line 31
     :cond_0
     return-void
 .end method
@@ -40,14 +36,12 @@
     .param p1, "valueName"    # Ljava/lang/String;
 
     .prologue
-    .line 152
     invoke-static {p0}, Ljava/lang/Float;->isNaN(F)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 153
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -72,7 +66,6 @@
 
     throw v0
 
-    .line 154
     :cond_0
     invoke-static {p0}, Ljava/lang/Float;->isInfinite(F)Z
 
@@ -80,7 +73,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 155
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -105,7 +97,6 @@
 
     throw v0
 
-    .line 158
     :cond_1
     return p0
 .end method
@@ -126,14 +117,12 @@
 
     const/4 v3, 0x0
 
-    .line 178
     invoke-static {p0}, Ljava/lang/Float;->isNaN(F)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 179
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -158,13 +147,11 @@
 
     throw v0
 
-    .line 180
     :cond_0
     cmpg-float v0, p0, p1
 
     if-gez v0, :cond_1
 
-    .line 181
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "%s is out of range of [%f, %f] (too low)"
@@ -193,13 +180,11 @@
 
     throw v0
 
-    .line 184
     :cond_1
     cmpl-float v0, p0, p2
 
     if-lez v0, :cond_2
 
-    .line 185
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "%s is out of range of [%f, %f] (too high)"
@@ -228,7 +213,6 @@
 
     throw v0
 
-    .line 190
     :cond_2
     return p0
 .end method
@@ -249,10 +233,8 @@
 
     const/4 v3, 0x0
 
-    .line 207
     if-ge p0, p1, :cond_0
 
-    .line 208
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "%s is out of range of [%d, %d] (too low)"
@@ -281,11 +263,9 @@
 
     throw v0
 
-    .line 211
     :cond_0
     if-le p0, p2, :cond_1
 
-    .line 212
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "%s is out of range of [%d, %d] (too high)"
@@ -314,7 +294,6 @@
 
     throw v0
 
-    .line 217
     :cond_1
     return p0
 .end method
@@ -325,17 +304,14 @@
     .param p1, "errorMessage"    # Ljava/lang/String;
 
     .prologue
-    .line 99
     if-gez p0, :cond_0
 
-    .line 100
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 103
     :cond_0
     return p0
 .end method
@@ -346,21 +322,18 @@
     .param p2, "errorMessage"    # Ljava/lang/String;
 
     .prologue
-    .line 115
     const-wide/16 v0, 0x0
 
     cmp-long v0, p0, v0
 
     if-gez v0, :cond_0
 
-    .line 116
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     invoke-direct {v0, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 119
     :cond_0
     return-wide p0
 .end method
@@ -371,17 +344,14 @@
     .param p1, "errorMessage"    # Ljava/lang/String;
 
     .prologue
-    .line 131
     if-gtz p0, :cond_0
 
-    .line 132
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 135
     :cond_0
     return p0
 .end method
@@ -404,7 +374,6 @@
 
     const/4 v5, 0x0
 
-    .line 314
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -425,7 +394,6 @@
 
     invoke-static {p0, v2}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 316
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -434,10 +402,8 @@
 
     if-ge v0, v2, :cond_3
 
-    .line 317
     aget v1, p0, v0
 
-    .line 319
     .local v1, "v":F
     invoke-static {v1}, Ljava/lang/Float;->isNaN(F)Z
 
@@ -445,7 +411,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 320
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -480,13 +445,11 @@
 
     throw v2
 
-    .line 321
     :cond_0
     cmpg-float v2, v1, p1
 
     if-gez v2, :cond_1
 
-    .line 322
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string v3, "%s[%d] is out of range of [%f, %f] (too low)"
@@ -521,13 +484,11 @@
 
     throw v2
 
-    .line 325
     :cond_1
     cmpl-float v2, v1, p2
 
     if-lez v2, :cond_2
 
-    .line 326
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string v3, "%s[%d] is out of range of [%f, %f] (too high)"
@@ -562,13 +523,11 @@
 
     throw v2
 
-    .line 316
     :cond_2
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 332
     .end local v1    # "v":F
     :cond_3
     return-object p0
@@ -588,11 +547,9 @@
     .end annotation
 
     .prologue
-    .line 231
     .local p0, "value":[Ljava/lang/Object;, "[TT;"
     if-nez p0, :cond_0
 
-    .line 232
     new-instance v1, Ljava/lang/NullPointerException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -617,7 +574,6 @@
 
     throw v1
 
-    .line 235
     :cond_0
     const/4 v0, 0x0
 
@@ -627,12 +583,10 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 236
     aget-object v1, p0, v0
 
     if-nez v1, :cond_1
 
-    .line 237
     new-instance v1, Ljava/lang/NullPointerException;
 
     const-string v2, "%s[%d] must not be null"
@@ -661,13 +615,11 @@
 
     throw v1
 
-    .line 235
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 242
     :cond_2
     return-object p0
 .end method
@@ -690,11 +642,9 @@
     .end annotation
 
     .prologue
-    .line 258
     .local p0, "value":Ljava/util/Collection;, "Ljava/util/Collection<TT;>;"
     if-nez p0, :cond_0
 
-    .line 259
     new-instance v4, Ljava/lang/NullPointerException;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -719,11 +669,9 @@
 
     throw v4
 
-    .line 262
     :cond_0
     const-wide/16 v0, 0x0
 
-    .line 263
     .local v0, "ctr":J
     invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
@@ -741,11 +689,9 @@
 
     move-result-object v2
 
-    .line 264
     .local v2, "elem":Ljava/lang/Object;, "TT;"
     if-nez v2, :cond_1
 
-    .line 265
     new-instance v4, Ljava/lang/NullPointerException;
 
     const-string v5, "%s[%d] must not be null"
@@ -774,16 +720,13 @@
 
     throw v4
 
-    .line 268
     :cond_1
     const-wide/16 v4, 0x1
 
     add-long/2addr v0, v4
 
-    .line 269
     goto :goto_0
 
-    .line 271
     .end local v2    # "elem":Ljava/lang/Object;, "TT;"
     :cond_2
     return-object p0
@@ -807,11 +750,9 @@
     .end annotation
 
     .prologue
-    .line 287
     .local p0, "value":Ljava/util/Collection;, "Ljava/util/Collection<TT;>;"
     if-nez p0, :cond_0
 
-    .line 288
     new-instance v0, Ljava/lang/NullPointerException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -836,7 +777,6 @@
 
     throw v0
 
-    .line 290
     :cond_0
     invoke-interface {p0}, Ljava/util/Collection;->isEmpty()Z
 
@@ -844,7 +784,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 291
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -869,7 +808,6 @@
 
     throw v0
 
-    .line 293
     :cond_1
     return-object p0
 .end method
@@ -880,12 +818,10 @@
     .param p1, "allowedFlags"    # I
 
     .prologue
-    .line 83
     and-int v0, p0, p1
 
     if-eq v0, p0, :cond_0
 
-    .line 84
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -934,7 +870,6 @@
 
     throw v0
 
-    .line 88
     :cond_0
     return-void
 .end method
@@ -950,18 +885,15 @@
     .end annotation
 
     .prologue
-    .line 42
     .local p0, "reference":Ljava/lang/Object;, "TT;"
     if-nez p0, :cond_0
 
-    .line 43
     new-instance v0, Ljava/lang/NullPointerException;
 
     invoke-direct {v0}, Ljava/lang/NullPointerException;-><init>()V
 
     throw v0
 
-    .line 45
     :cond_0
     return-object p0
 .end method
@@ -980,11 +912,9 @@
     .end annotation
 
     .prologue
-    .line 59
     .local p0, "reference":Ljava/lang/Object;, "TT;"
     if-nez p0, :cond_0
 
-    .line 60
     new-instance v0, Ljava/lang/NullPointerException;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -995,7 +925,6 @@
 
     throw v0
 
-    .line 62
     :cond_0
     return-object p0
 .end method
@@ -1005,17 +934,14 @@
     .param p0, "expression"    # Z
 
     .prologue
-    .line 73
     if-nez p0, :cond_0
 
-    .line 74
     new-instance v0, Ljava/lang/IllegalStateException;
 
     invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
 
     throw v0
 
-    .line 76
     :cond_0
     return-void
 .end method

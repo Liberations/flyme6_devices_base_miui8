@@ -33,10 +33,8 @@
     .param p2, "lockFile"    # Ljava/lang/String;
 
     .prologue
-    .line 65
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 62
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
@@ -45,12 +43,9 @@
 
     iput-object v0, p0, Landroid/security/MiuiLockPatternUtils$MiuiLockPatternData;->mHaveNonZeroFile:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 66
     iput-object p1, p0, Landroid/security/MiuiLockPatternUtils$MiuiLockPatternData;->mTag:Ljava/lang/String;
 
-    .line 67
     iput-object p2, p0, Landroid/security/MiuiLockPatternUtils$MiuiLockPatternData;->mLockFile:Ljava/lang/String;
 
-    .line 68
     return-void
 .end method

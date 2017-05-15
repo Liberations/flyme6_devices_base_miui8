@@ -23,8 +23,7 @@
     .locals 1
 
     .prologue
-    .line 298
-    const-string/jumbo v0, "window"
+    const-string v0, "window"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -43,7 +42,6 @@
     .locals 0
 
     .prologue
-    .line 297
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

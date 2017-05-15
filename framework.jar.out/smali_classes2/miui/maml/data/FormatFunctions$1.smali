@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 43
     invoke-static {}, Lmiui/maml/data/FormatFunctions$Fun;->values()[Lmiui/maml/data/FormatFunctions$Fun;
 
     move-result-object v0

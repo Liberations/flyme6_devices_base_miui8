@@ -15,20 +15,16 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 16
     iput-object p1, p0, Lcom/miui/whetstone/utils/WhetstoneActionBuilder;->department:Ljava/lang/String;
 
-    .line 17
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
     iput-object v0, p0, Lcom/miui/whetstone/utils/WhetstoneActionBuilder;->content:Lorg/json/JSONObject;
 
-    .line 18
     return-void
 .end method
 
@@ -40,7 +36,6 @@
     .param p2, "value"    # I
 
     .prologue
-    .line 22
     :try_start_0
     iget-object v1, p0, Lcom/miui/whetstone/utils/WhetstoneActionBuilder;->content:Lorg/json/JSONObject;
 
@@ -48,15 +43,12 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 26
     :goto_0
     return-object p0
 
-    .line 23
     :catch_0
     move-exception v0
 
-    .line 24
     .local v0, "e":Lorg/json/JSONException;
     invoke-virtual {v0}, Lorg/json/JSONException;->printStackTrace()V
 
@@ -69,7 +61,6 @@
     .param p2, "value"    # J
 
     .prologue
-    .line 31
     :try_start_0
     iget-object v1, p0, Lcom/miui/whetstone/utils/WhetstoneActionBuilder;->content:Lorg/json/JSONObject;
 
@@ -77,15 +68,12 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 35
     :goto_0
     return-object p0
 
-    .line 32
     :catch_0
     move-exception v0
 
-    .line 33
     .local v0, "e":Lorg/json/JSONException;
     invoke-virtual {v0}, Lorg/json/JSONException;->printStackTrace()V
 
@@ -98,7 +86,6 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 40
     :try_start_0
     iget-object v1, p0, Lcom/miui/whetstone/utils/WhetstoneActionBuilder;->content:Lorg/json/JSONObject;
 
@@ -106,15 +93,12 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 44
     :goto_0
     return-object p0
 
-    .line 41
     :catch_0
     move-exception v0
 
-    .line 42
     .local v0, "e":Lorg/json/JSONException;
     invoke-virtual {v0}, Lorg/json/JSONException;->printStackTrace()V
 
@@ -127,7 +111,6 @@
     .param p2, "value"    # Lorg/json/JSONObject;
 
     .prologue
-    .line 49
     :try_start_0
     iget-object v1, p0, Lcom/miui/whetstone/utils/WhetstoneActionBuilder;->content:Lorg/json/JSONObject;
 
@@ -135,15 +118,12 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 53
     :goto_0
     return-object p0
 
-    .line 50
     :catch_0
     move-exception v0
 
-    .line 51
     .local v0, "e":Lorg/json/JSONException;
     invoke-virtual {v0}, Lorg/json/JSONException;->printStackTrace()V
 
@@ -154,7 +134,6 @@
     .locals 3
 
     .prologue
-    .line 57
     new-instance v0, Lcom/miui/whetstone/WhetstoneAction;
 
     iget-object v1, p0, Lcom/miui/whetstone/utils/WhetstoneActionBuilder;->department:Ljava/lang/String;

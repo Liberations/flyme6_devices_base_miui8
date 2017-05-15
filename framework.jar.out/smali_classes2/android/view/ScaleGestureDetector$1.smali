@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 492
     iput-object p1, p0, Landroid/view/ScaleGestureDetector$1;->this$0:Landroid/view/ScaleGestureDetector;
 
     invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
@@ -40,7 +39,6 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 496
     iget-object v0, p0, Landroid/view/ScaleGestureDetector$1;->this$0:Landroid/view/ScaleGestureDetector;
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
@@ -50,7 +48,6 @@
     # setter for: Landroid/view/ScaleGestureDetector;->mAnchoredScaleStartX:F
     invoke-static {v0, v1}, Landroid/view/ScaleGestureDetector;->access$002(Landroid/view/ScaleGestureDetector;F)F
 
-    .line 497
     iget-object v0, p0, Landroid/view/ScaleGestureDetector$1;->this$0:Landroid/view/ScaleGestureDetector;
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
@@ -60,12 +57,10 @@
     # setter for: Landroid/view/ScaleGestureDetector;->mAnchoredScaleStartY:F
     invoke-static {v0, v1}, Landroid/view/ScaleGestureDetector;->access$102(Landroid/view/ScaleGestureDetector;F)F
 
-    .line 498
     iget-object v0, p0, Landroid/view/ScaleGestureDetector$1;->this$0:Landroid/view/ScaleGestureDetector;
 
     # setter for: Landroid/view/ScaleGestureDetector;->mAnchoredScaleMode:I
     invoke-static {v0, v2}, Landroid/view/ScaleGestureDetector;->access$202(Landroid/view/ScaleGestureDetector;I)I
 
-    .line 499
     return v2
 .end method

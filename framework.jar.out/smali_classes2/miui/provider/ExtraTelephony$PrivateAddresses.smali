@@ -30,7 +30,6 @@
     .locals 1
 
     .prologue
-    .line 795
     const-string v0, "content://mms-sms/private-addresses"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;

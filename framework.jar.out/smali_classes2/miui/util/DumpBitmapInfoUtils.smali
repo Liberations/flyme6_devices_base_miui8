@@ -28,7 +28,6 @@
     .locals 2
 
     .prologue
-    .line 34
     const-string v0, "DumpBitmapInfo"
 
     const/4 v1, 0x1
@@ -39,19 +38,16 @@
 
     sput-boolean v0, Lmiui/util/DumpBitmapInfoUtils;->ENABLE:Z
 
-    .line 40
     sget-boolean v0, Lmiui/util/DumpBitmapInfoUtils;->ENABLE:Z
 
     if-eqz v0, :cond_0
 
-    .line 41
     new-instance v0, Ljava/util/WeakHashMap;
 
     invoke-direct {v0}, Ljava/util/WeakHashMap;-><init>()V
 
     sput-object v0, Lmiui/util/DumpBitmapInfoUtils;->sBitmapTitles:Ljava/util/WeakHashMap;
 
-    .line 43
     :cond_0
     return-void
 .end method
@@ -60,7 +56,6 @@
     .locals 0
 
     .prologue
-    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -72,37 +67,29 @@
     .param p1, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 68
     sget-boolean v32, Lmiui/util/DumpBitmapInfoUtils;->ENABLE:Z
 
     if-nez v32, :cond_1
 
-    .line 189
     :cond_0
     :goto_0
     return-void
 
-    .line 70
     :cond_1
     const/16 v17, 0x0
 
-    .line 71
     .local v17, "isDumpBitmap":Z
     const/16 v18, 0x0
 
-    .line 72
     .local v18, "isExportBitmap":Z
     const/16 v20, 0x0
 
-    .line 73
     .local v20, "isNoGC":Z
     const/16 v19, 0x0
 
-    .line 74
     .local v19, "isIncludePreload":Z
     const/16 v28, 0x0
 
-    .line 75
     .local v28, "recycleBmp":I
     move-object/from16 v5, p1
 
@@ -124,7 +111,6 @@
 
     aget-object v4, v5, v16
 
-    .line 76
     .local v4, "arg":Ljava/lang/String;
     const-string v32, "--bitmap"
 
@@ -149,7 +135,6 @@
     :cond_2
     const/16 v17, 0x1
 
-    .line 77
     :cond_3
     const-string v32, "--exportbitmap"
 
@@ -174,7 +159,6 @@
     :cond_4
     const/16 v18, 0x1
 
-    .line 78
     :cond_5
     const-string v32, "--nogc"
 
@@ -188,7 +172,6 @@
 
     const/16 v20, 0x1
 
-    .line 79
     :cond_6
     const-string v32, "--includepreload"
 
@@ -202,7 +185,6 @@
 
     const/16 v19, 0x1
 
-    .line 80
     :cond_7
     const-string v32, "--recycle:"
 
@@ -214,7 +196,6 @@
 
     if-eqz v32, :cond_8
 
-    .line 81
     const-string v32, "--recycle:0x"
 
     move-object/from16 v0, v32
@@ -225,7 +206,6 @@
 
     if-eqz v32, :cond_9
 
-    .line 82
     const-string v32, "--recycle:0x"
 
     invoke-virtual/range {v32 .. v32}, Ljava/lang/String;->length()I
@@ -244,14 +224,12 @@
 
     move-result v28
 
-    .line 75
     :cond_8
     :goto_2
     add-int/lit8 v16, v16, 0x1
 
     goto :goto_1
 
-    .line 84
     :cond_9
     const-string v32, "--recycle:"
 
@@ -273,21 +251,17 @@
 
     goto :goto_2
 
-    .line 88
     .end local v4    # "arg":Ljava/lang/String;
     :cond_a
     if-nez v17, :cond_b
 
     if-eqz v18, :cond_0
 
-    .line 90
     :cond_b
     if-nez v20, :cond_c
 
-    .line 91
     invoke-static {}, Ljava/lang/System;->gc()V
 
-    .line 95
     :cond_c
     invoke-static {}, Landroid/app/ActivityThread;->currentApplication()Landroid/app/Application;
 
@@ -317,7 +291,6 @@
 
     if-eqz v32, :cond_10
 
-    .line 98
     :cond_d
     new-instance v12, Ljava/io/File;
 
@@ -327,22 +300,18 @@
 
     invoke-direct {v12, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 103
     .local v12, "exportBitmapFolder":Ljava/io/File;
     :goto_3
     if-eqz v18, :cond_e
 
-    .line 104
     invoke-virtual {v12}, Ljava/io/File;->exists()Z
 
     move-result v32
 
     if-nez v32, :cond_11
 
-    .line 105
     invoke-virtual {v12}, Ljava/io/File;->mkdirs()Z
 
-    .line 115
     :cond_e
     :goto_4
     new-instance v14, Ljava/io/FileOutputStream;
@@ -351,7 +320,6 @@
 
     invoke-direct {v14, v0}, Ljava/io/FileOutputStream;-><init>(Ljava/io/FileDescriptor;)V
 
-    .line 116
     .local v14, "fout":Ljava/io/FileOutputStream;
     new-instance v27, Lcom/android/internal/util/FastPrintWriter;
 
@@ -359,15 +327,12 @@
 
     invoke-direct {v0, v14}, Lcom/android/internal/util/FastPrintWriter;-><init>(Ljava/io/OutputStream;)V
 
-    .line 118
     .local v27, "pw":Ljava/io/PrintWriter;
     const-wide/16 v30, 0x0
 
-    .line 119
     .local v30, "totalSize":J
     const/4 v6, 0x0
 
-    .line 122
     .local v6, "bitmapCount":I
     :try_start_0
     sget-object v33, Lmiui/util/DumpBitmapInfoUtils;->sBitmapTitles:Ljava/util/WeakHashMap;
@@ -376,13 +341,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 123
     :try_start_1
     new-instance v23, Ljava/util/ArrayList;
 
     invoke-direct/range {v23 .. v23}, Ljava/util/ArrayList;-><init>()V
 
-    .line 124
     .local v23, "listBitmapTitles":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/util/Map$Entry<Landroid/graphics/Bitmap;Ljava/lang/CharSequence;>;>;"
     sget-object v32, Lmiui/util/DumpBitmapInfoUtils;->sBitmapTitles:Ljava/util/WeakHashMap;
 
@@ -409,7 +372,6 @@
 
     check-cast v10, Ljava/util/Map$Entry;
 
-    .line 125
     .local v10, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Landroid/graphics/Bitmap;Ljava/lang/CharSequence;>;"
     new-instance v25, Ljava/util/AbstractMap$SimpleEntry;
 
@@ -417,7 +379,6 @@
 
     invoke-direct {v0, v10}, Ljava/util/AbstractMap$SimpleEntry;-><init>(Ljava/util/Map$Entry;)V
 
-    .line 126
     .local v25, "newEntry":Ljava/util/AbstractMap$SimpleEntry;, "Ljava/util/AbstractMap$SimpleEntry<Landroid/graphics/Bitmap;Ljava/lang/CharSequence;>;"
     invoke-virtual/range {v25 .. v25}, Ljava/util/AbstractMap$SimpleEntry;->getKey()Ljava/lang/Object;
 
@@ -433,7 +394,6 @@
 
     goto :goto_5
 
-    .line 128
     .end local v10    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Landroid/graphics/Bitmap;Ljava/lang/CharSequence;>;"
     .end local v16    # "i$":Ljava/util/Iterator;
     .end local v23    # "listBitmapTitles":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/util/Map$Entry<Landroid/graphics/Bitmap;Ljava/lang/CharSequence;>;>;"
@@ -450,7 +410,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 187
     :catchall_1
     move-exception v32
 
@@ -458,7 +417,6 @@
 
     throw v32
 
-    .line 100
     .end local v6    # "bitmapCount":I
     .end local v12    # "exportBitmapFolder":Ljava/io/File;
     .end local v14    # "fout":Ljava/io/FileOutputStream;
@@ -507,7 +465,6 @@
     .restart local v12    # "exportBitmapFolder":Ljava/io/File;
     goto :goto_3
 
-    .line 108
     :cond_11
     :try_start_3
     invoke-static {v12}, Llibcore/io/IoUtils;->deleteContents(Ljava/io/File;)V
@@ -516,17 +473,14 @@
 
     goto :goto_4
 
-    .line 109
     :catch_0
     move-exception v11
 
-    .line 110
     .local v11, "ex":Ljava/lang/Exception;
     invoke-virtual {v11}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_4
 
-    .line 128
     .end local v11    # "ex":Ljava/lang/Exception;
     .restart local v6    # "bitmapCount":I
     .restart local v14    # "fout":Ljava/io/FileOutputStream;
@@ -540,7 +494,6 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 130
     :try_start_5
     new-instance v32, Lmiui/util/DumpBitmapInfoUtils$1;
 
@@ -552,7 +505,6 @@
 
     invoke-static {v0, v1}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    .line 136
     const-string v32, "All big bitmaps (debug.bitmap_threshold_size = %d k):\n"
 
     const/16 v33, 0x1
@@ -581,7 +533,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
-    .line 138
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v32
@@ -594,7 +545,6 @@
 
     move-result-object v26
 
-    .line 140
     .local v26, "preloadDrawables":Landroid/util/LongSparseArray;, "Landroid/util/LongSparseArray<Landroid/graphics/drawable/Drawable$ConstantState;>;"
     invoke-virtual/range {v23 .. v23}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -614,7 +564,6 @@
 
     check-cast v8, Ljava/util/Map$Entry;
 
-    .line 141
     .local v8, "bmpTitle":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Landroid/graphics/Bitmap;Ljava/lang/CharSequence;>;"
     invoke-interface {v8}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -622,7 +571,6 @@
 
     check-cast v7, Landroid/graphics/Bitmap;
 
-    .line 142
     .local v7, "bmp":Landroid/graphics/Bitmap;
     invoke-virtual {v7}, Landroid/graphics/Bitmap;->isRecycled()Z
 
@@ -630,10 +578,8 @@
 
     if-nez v32, :cond_13
 
-    .line 144
     const/16 v21, 0x0
 
-    .line 145
     .local v21, "isPreload":Z
     const/4 v15, 0x0
 
@@ -647,7 +593,6 @@
 
     if-ge v15, v0, :cond_14
 
-    .line 146
     move-object/from16 v0, v26
 
     invoke-virtual {v0, v15}, Landroid/util/LongSparseArray;->valueAt(I)Ljava/lang/Object;
@@ -656,7 +601,6 @@
 
     check-cast v9, Landroid/graphics/drawable/Drawable$ConstantState;
 
-    .line 147
     .local v9, "c":Landroid/graphics/drawable/Drawable$ConstantState;
     invoke-static {v9}, Lmiui/util/DumpBitmapInfoUtils;->getBitmapFromDrawableState(Landroid/graphics/drawable/Drawable$ConstantState;)Landroid/graphics/Bitmap;
 
@@ -666,17 +610,14 @@
 
     if-ne v0, v7, :cond_18
 
-    .line 148
     const/16 v21, 0x1
 
-    .line 152
     .end local v9    # "c":Landroid/graphics/drawable/Drawable$ConstantState;
     :cond_14
     if-eqz v21, :cond_15
 
     if-eqz v19, :cond_13
 
-    .line 154
     :cond_15
     invoke-virtual {v7}, Landroid/graphics/Bitmap;->getByteCount()I
 
@@ -690,10 +631,8 @@
 
     add-long v30, v30, v32
 
-    .line 155
     add-int/lit8 v6, v6, 0x1
 
-    .line 157
     invoke-interface {v8}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v32
@@ -712,7 +651,6 @@
 
     move-result-object v24
 
-    .line 158
     .local v24, "msg":Ljava/lang/String;
     new-instance v32, Ljava/lang/StringBuilder;
 
@@ -744,10 +682,8 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 160
     if-eqz v18, :cond_16
 
-    .line 162
     :try_start_6
     new-instance v32, Ljava/lang/StringBuilder;
 
@@ -795,7 +731,6 @@
 
     move-result-object v13
 
-    .line 163
     .local v13, "fileName":Ljava/lang/String;
     new-instance v29, Ljava/io/FileOutputStream;
 
@@ -811,7 +746,6 @@
 
     invoke-direct {v0, v1}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
-    .line 164
     .local v29, "stream":Ljava/io/FileOutputStream;
     sget-object v32, Landroid/graphics/Bitmap$CompressFormat;->PNG:Landroid/graphics/Bitmap$CompressFormat;
 
@@ -825,13 +759,11 @@
 
     invoke-virtual {v7, v0, v1, v2}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
-    .line 165
     invoke-virtual/range {v29 .. v29}, Ljava/io/FileOutputStream;->close()V
     :try_end_6
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_1
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-    .line 172
     .end local v13    # "fileName":Ljava/lang/String;
     .end local v29    # "stream":Ljava/io/FileOutputStream;
     :cond_16
@@ -849,10 +781,8 @@
 
     if-ne v0, v1, :cond_17
 
-    .line 173
     invoke-virtual {v7}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 174
     const-string v32, "  now recycled."
 
     move-object/from16 v0, v27
@@ -861,7 +791,6 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 177
     :cond_17
     const/16 v32, 0xa
 
@@ -873,7 +802,6 @@
 
     goto/16 :goto_6
 
-    .line 145
     .end local v24    # "msg":Ljava/lang/String;
     .restart local v9    # "c":Landroid/graphics/drawable/Drawable$ConstantState;
     :cond_18
@@ -881,24 +809,20 @@
 
     goto/16 :goto_7
 
-    .line 166
     .end local v9    # "c":Landroid/graphics/drawable/Drawable$ConstantState;
     .restart local v24    # "msg":Ljava/lang/String;
     :catch_1
     move-exception v11
 
-    .line 167
     .restart local v11    # "ex":Ljava/lang/Exception;
     move-object/from16 v0, v27
 
     invoke-virtual {v11, v0}, Ljava/lang/Exception;->printStackTrace(Ljava/io/PrintWriter;)V
 
-    .line 168
     invoke-virtual {v11}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_8
 
-    .line 180
     .end local v7    # "bmp":Landroid/graphics/Bitmap;
     .end local v8    # "bmpTitle":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Landroid/graphics/Bitmap;Ljava/lang/CharSequence;>;"
     .end local v11    # "ex":Ljava/lang/Exception;
@@ -948,10 +872,8 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
-    .line 181
     if-eqz v18, :cond_1a
 
-    .line 182
     new-instance v32, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v32 .. v32}, Ljava/lang/StringBuilder;-><init>()V
@@ -986,7 +908,6 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 183
     const-string v32, "DumpBitmapInfo"
 
     new-instance v33, Ljava/lang/StringBuilder;
@@ -1013,7 +934,6 @@
 
     invoke-static/range {v32 .. v33}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 185
     :cond_1a
     const-string v32, "\n"
 
@@ -1035,7 +955,6 @@
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_1
 
-    .line 187
     invoke-virtual/range {v27 .. v27}, Ljava/io/PrintWriter;->flush()V
 
     goto/16 :goto_0
@@ -1048,10 +967,8 @@
     .param p2, "isPreload"    # Z
 
     .prologue
-    .line 240
     const-string v0, "0x%8x %,6dk %dx%d %s %s"
 
-    .line 241
     .local v0, "msgFormat":Ljava/lang/String;
     const-string v2, "0x%8x %,6dk %dx%d %s %s"
 
@@ -1153,7 +1070,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 220
     :try_start_0
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -1163,7 +1079,6 @@
 
     move-result-object v0
 
-    .line 221
     .local v0, "clsName":Ljava/lang/String;
     const-string v4, "BitmapState"
 
@@ -1173,7 +1088,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 222
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v4
@@ -1184,26 +1098,22 @@
 
     move-result-object v2
 
-    .line 223
     .local v2, "f":Ljava/lang/reflect/Field;
     const/4 v4, 0x1
 
     invoke-virtual {v2, v4}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 224
     invoke-virtual {v2, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Landroid/graphics/Bitmap;
 
-    .line 235
     .end local v0    # "clsName":Ljava/lang/String;
     .end local v2    # "f":Ljava/lang/reflect/Field;
     :goto_0
     return-object v4
 
-    .line 225
     .restart local v0    # "clsName":Ljava/lang/String;
     :cond_0
     const-string v4, "NinePatchState"
@@ -1214,7 +1124,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 226
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v4
@@ -1225,20 +1134,17 @@
 
     move-result-object v2
 
-    .line 227
     .restart local v2    # "f":Ljava/lang/reflect/Field;
     const/4 v4, 0x1
 
     invoke-virtual {v2, v4}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 228
     invoke-virtual {v2, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Landroid/graphics/NinePatch;
 
-    .line 229
     .local v3, "np":Landroid/graphics/NinePatch;
     if-nez v3, :cond_1
 
@@ -1246,7 +1152,6 @@
 
     goto :goto_0
 
-    .line 230
     :cond_1
     invoke-virtual {v3}, Landroid/graphics/NinePatch;->getBitmap()Landroid/graphics/Bitmap;
     :try_end_0
@@ -1261,21 +1166,17 @@
     :cond_2
     move-object v4, v5
 
-    .line 232
     goto :goto_0
 
-    .line 233
     .end local v0    # "clsName":Ljava/lang/String;
     :catch_0
     move-exception v1
 
-    .line 234
     .local v1, "ex":Ljava/lang/Throwable;
     invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
 
     move-object v4, v5
 
-    .line 235
     goto :goto_0
 .end method
 
@@ -1289,26 +1190,21 @@
     .prologue
     const/16 v6, 0x2d
 
-    .line 202
     invoke-static {p0, p1, p3}, Lmiui/util/DumpBitmapInfoUtils;->formatMsg(Landroid/graphics/Bitmap;Ljava/lang/CharSequence;Z)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 204
     .local v1, "msg":Ljava/lang/String;
     if-nez p2, :cond_0
 
     move-object v3, v1
 
-    .line 215
     :goto_0
     return-object v3
 
-    .line 208
     :cond_0
     const/16 v0, 0xf0
 
-    .line 209
     .local v0, "maxFileNameLen":I
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
@@ -1316,7 +1212,6 @@
 
     add-int/lit16 v2, v3, -0xf0
 
-    .line 210
     .local v2, "overLength":I
     if-lez v2, :cond_1
 
@@ -1328,7 +1223,6 @@
 
     if-le v3, v2, :cond_1
 
-    .line 211
     invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object v3
@@ -1337,12 +1231,10 @@
 
     move-result-object p1
 
-    .line 212
     invoke-static {p0, p1, p3}, Lmiui/util/DumpBitmapInfoUtils;->formatMsg(Landroid/graphics/Bitmap;Ljava/lang/CharSequence;Z)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 215
     :cond_1
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1390,7 +1282,6 @@
     .param p0, "bmp"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 192
     sget v1, Lmiui/util/DumpBitmapInfoUtils;->sCurrProcess:I
 
     invoke-static {}, Landroid/os/Process;->myPid()I
@@ -1399,7 +1290,6 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 193
     const-string v1, "debug.bitmap_threshold_size"
 
     const/16 v2, 0x64
@@ -1410,14 +1300,12 @@
 
     sput v1, Lmiui/util/DumpBitmapInfoUtils;->sBitmapThresholdSize:I
 
-    .line 194
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v1
 
     sput v1, Lmiui/util/DumpBitmapInfoUtils;->sCurrProcess:I
 
-    .line 197
     :cond_0
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -1431,7 +1319,6 @@
 
     div-int/lit16 v0, v1, 0x100
 
-    .line 198
     .local v0, "size":I
     sget v1, Lmiui/util/DumpBitmapInfoUtils;->sBitmapThresholdSize:I
 
@@ -1454,21 +1341,17 @@
     .param p1, "title"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 49
     sget-boolean v1, Lmiui/util/DumpBitmapInfoUtils;->ENABLE:Z
 
     if-nez v1, :cond_1
 
-    .line 62
     :cond_0
     :goto_0
     return-void
 
-    .line 51
     :cond_1
     if-eqz p0, :cond_0
 
-    .line 54
     :try_start_0
     invoke-static {p0}, Lmiui/util/DumpBitmapInfoUtils;->isTrackingNeeded(Landroid/graphics/Bitmap;)Z
 
@@ -1476,20 +1359,17 @@
 
     if-eqz v1, :cond_0
 
-    .line 56
     sget-object v2, Lmiui/util/DumpBitmapInfoUtils;->sBitmapTitles:Ljava/util/WeakHashMap;
 
     monitor-enter v2
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 57
     :try_start_1
     sget-object v1, Lmiui/util/DumpBitmapInfoUtils;->sBitmapTitles:Ljava/util/WeakHashMap;
 
     invoke-virtual {v1, p0, p1}, Ljava/util/WeakHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 58
     monitor-exit v2
 
     goto :goto_0
@@ -1506,11 +1386,9 @@
     :try_end_2
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 59
     :catch_0
     move-exception v0
 
-    .line 60
     .local v0, "ex":Ljava/lang/Throwable;
     invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 

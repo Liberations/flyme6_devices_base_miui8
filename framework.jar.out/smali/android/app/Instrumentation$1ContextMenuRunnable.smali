@@ -37,21 +37,16 @@
     .param p4, "_flags"    # I
 
     .prologue
-    .line 822
     iput-object p1, p0, Landroid/app/Instrumentation$1ContextMenuRunnable;->this$0:Landroid/app/Instrumentation;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 823
     iput-object p2, p0, Landroid/app/Instrumentation$1ContextMenuRunnable;->activity:Landroid/app/Activity;
 
-    .line 824
     iput p3, p0, Landroid/app/Instrumentation$1ContextMenuRunnable;->identifier:I
 
-    .line 825
     iput p4, p0, Landroid/app/Instrumentation$1ContextMenuRunnable;->flags:I
 
-    .line 826
     return-void
 .end method
 
@@ -61,14 +56,12 @@
     .locals 3
 
     .prologue
-    .line 829
     iget-object v1, p0, Landroid/app/Instrumentation$1ContextMenuRunnable;->activity:Landroid/app/Activity;
 
     invoke-virtual {v1}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
-    .line 830
     .local v0, "win":Landroid/view/Window;
     iget v1, p0, Landroid/app/Instrumentation$1ContextMenuRunnable;->identifier:I
 
@@ -80,6 +73,5 @@
 
     iput-boolean v1, p0, Landroid/app/Instrumentation$1ContextMenuRunnable;->returnValue:Z
 
-    .line 833
     return-void
 .end method

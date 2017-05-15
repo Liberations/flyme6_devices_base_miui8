@@ -51,7 +51,6 @@
     .locals 1
 
     .prologue
-    .line 1236
     new-instance v0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$Credential$1;
 
     invoke-direct {v0}, Landroid/net/wifi/passpoint/WifiPasspointDmTree$Credential$1;-><init>()V
@@ -65,31 +64,26 @@
     .locals 1
 
     .prologue
-    .line 1201
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1195
     new-instance v0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$UsernamePassword;
 
     invoke-direct {v0}, Landroid/net/wifi/passpoint/WifiPasspointDmTree$UsernamePassword;-><init>()V
 
     iput-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$Credential;->usernamePassword:Landroid/net/wifi/passpoint/WifiPasspointDmTree$UsernamePassword;
 
-    .line 1196
     new-instance v0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$DigitalCertificate;
 
     invoke-direct {v0}, Landroid/net/wifi/passpoint/WifiPasspointDmTree$DigitalCertificate;-><init>()V
 
     iput-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$Credential;->digitalCertificate:Landroid/net/wifi/passpoint/WifiPasspointDmTree$DigitalCertificate;
 
-    .line 1199
     new-instance v0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$SIM;
 
     invoke-direct {v0}, Landroid/net/wifi/passpoint/WifiPasspointDmTree$SIM;-><init>()V
 
     iput-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$Credential;->sim:Landroid/net/wifi/passpoint/WifiPasspointDmTree$SIM;
 
-    .line 1202
     return-void
 .end method
 
@@ -98,34 +92,28 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 1204
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1195
     new-instance v0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$UsernamePassword;
 
     invoke-direct {v0}, Landroid/net/wifi/passpoint/WifiPasspointDmTree$UsernamePassword;-><init>()V
 
     iput-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$Credential;->usernamePassword:Landroid/net/wifi/passpoint/WifiPasspointDmTree$UsernamePassword;
 
-    .line 1196
     new-instance v0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$DigitalCertificate;
 
     invoke-direct {v0}, Landroid/net/wifi/passpoint/WifiPasspointDmTree$DigitalCertificate;-><init>()V
 
     iput-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$Credential;->digitalCertificate:Landroid/net/wifi/passpoint/WifiPasspointDmTree$DigitalCertificate;
 
-    .line 1199
     new-instance v0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$SIM;
 
     invoke-direct {v0}, Landroid/net/wifi/passpoint/WifiPasspointDmTree$SIM;-><init>()V
 
     iput-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$Credential;->sim:Landroid/net/wifi/passpoint/WifiPasspointDmTree$SIM;
 
-    .line 1205
     invoke-virtual {p0, p1}, Landroid/net/wifi/passpoint/WifiPasspointDmTree$Credential;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 1206
     return-void
 .end method
 
@@ -135,7 +123,6 @@
     .locals 1
 
     .prologue
-    .line 1209
     const/4 v0, 0x0
 
     return v0
@@ -148,14 +135,11 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 1223
     if-nez p1, :cond_0
 
-    .line 1234
     :goto_0
     return-void
 
-    .line 1226
     :cond_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
@@ -163,14 +147,12 @@
 
     iput-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$Credential;->CreationDate:Ljava/lang/String;
 
-    .line 1227
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$Credential;->ExpirationDate:Ljava/lang/String;
 
-    .line 1228
     const-class v0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$UsernamePassword;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -185,7 +167,6 @@
 
     iput-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$Credential;->usernamePassword:Landroid/net/wifi/passpoint/WifiPasspointDmTree$UsernamePassword;
 
-    .line 1229
     const-class v0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$DigitalCertificate;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -200,14 +181,12 @@
 
     iput-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$Credential;->digitalCertificate:Landroid/net/wifi/passpoint/WifiPasspointDmTree$DigitalCertificate;
 
-    .line 1230
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$Credential;->Realm:Ljava/lang/String;
 
-    .line 1231
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -219,7 +198,6 @@
     :goto_1
     iput-boolean v0, p0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$Credential;->CheckAAAServerCertStatus:Z
 
-    .line 1232
     const-class v0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$SIM;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -236,7 +214,6 @@
 
     goto :goto_0
 
-    .line 1231
     :cond_1
     const/4 v0, 0x0
 
@@ -249,32 +226,26 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 1213
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$Credential;->CreationDate:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 1214
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$Credential;->ExpirationDate:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 1215
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$Credential;->usernamePassword:Landroid/net/wifi/passpoint/WifiPasspointDmTree$UsernamePassword;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 1216
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$Credential;->digitalCertificate:Landroid/net/wifi/passpoint/WifiPasspointDmTree$DigitalCertificate;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 1217
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$Credential;->Realm:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 1218
     iget-boolean v0, p0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$Credential;->CheckAAAServerCertStatus:Z
 
     if-eqz v0, :cond_0
@@ -284,15 +255,12 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1219
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$Credential;->sim:Landroid/net/wifi/passpoint/WifiPasspointDmTree$SIM;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 1220
     return-void
 
-    .line 1218
     :cond_0
     const/4 v0, 0x0
 

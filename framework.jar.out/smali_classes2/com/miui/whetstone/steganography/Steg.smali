@@ -24,24 +24,18 @@
 
     const/4 v1, 0x0
 
-    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 14
     iput v1, p0, Lcom/miui/whetstone/steganography/Steg;->PASS_NONE:I
 
-    .line 17
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/miui/whetstone/steganography/Steg;->PASS_SIMPLE_XOR:I
 
-    .line 19
     iput-object v2, p0, Lcom/miui/whetstone/steganography/Steg;->key:Ljava/lang/String;
 
-    .line 20
     iput v1, p0, Lcom/miui/whetstone/steganography/Steg;->passmode:I
 
-    .line 21
     iput-object v2, p0, Lcom/miui/whetstone/steganography/Steg;->inBitmap:Landroid/graphics/Bitmap;
 
     return-void
@@ -51,14 +45,12 @@
     .locals 2
 
     .prologue
-    .line 126
     iget-object v0, p0, Lcom/miui/whetstone/steganography/Steg;->inBitmap:Landroid/graphics/Bitmap;
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 127
     :goto_0
     return v0
 
@@ -91,10 +83,8 @@
     .param p1, "bitmap"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 59
     iput-object p1, p0, Lcom/miui/whetstone/steganography/Steg;->inBitmap:Landroid/graphics/Bitmap;
 
-    .line 60
     return-void
 .end method
 
@@ -103,16 +93,13 @@
     .param p0, "bitmap"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 36
     new-instance v0, Lcom/miui/whetstone/steganography/Steg;
 
     invoke-direct {v0}, Lcom/miui/whetstone/steganography/Steg;-><init>()V
 
-    .line 37
     .local v0, "steg":Lcom/miui/whetstone/steganography/Steg;
     invoke-direct {v0, p0}, Lcom/miui/whetstone/steganography/Steg;->setInputBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 38
     return-object v0
 .end method
 
@@ -121,12 +108,10 @@
     .param p0, "file"    # Ljava/io/File;
 
     .prologue
-    .line 30
     new-instance v0, Lcom/miui/whetstone/steganography/Steg;
 
     invoke-direct {v0}, Lcom/miui/whetstone/steganography/Steg;-><init>()V
 
-    .line 31
     .local v0, "steg":Lcom/miui/whetstone/steganography/Steg;
     invoke-virtual {p0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
@@ -138,7 +123,6 @@
 
     invoke-direct {v0, v1}, Lcom/miui/whetstone/steganography/Steg;->setInputBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 32
     return-object v0
 .end method
 
@@ -147,12 +131,10 @@
     .param p0, "filePath"    # Ljava/lang/String;
 
     .prologue
-    .line 24
     new-instance v0, Lcom/miui/whetstone/steganography/Steg;
 
     invoke-direct {v0}, Lcom/miui/whetstone/steganography/Steg;-><init>()V
 
-    .line 25
     .local v0, "steg":Lcom/miui/whetstone/steganography/Steg;
     invoke-static {p0}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;)Landroid/graphics/Bitmap;
 
@@ -160,7 +142,6 @@
 
     invoke-direct {v0, v1}, Lcom/miui/whetstone/steganography/Steg;->setInputBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 26
     return-object v0
 .end method
 
@@ -175,7 +156,6 @@
     .end annotation
 
     .prologue
-    .line 91
     new-instance v0, Lcom/miui/whetstone/steganography/DecodedObject;
 
     iget-object v1, p0, Lcom/miui/whetstone/steganography/Steg;->inBitmap:Landroid/graphics/Bitmap;
@@ -199,7 +179,6 @@
     .end annotation
 
     .prologue
-    .line 100
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Not implemented yet"
@@ -219,7 +198,6 @@
     .end annotation
 
     .prologue
-    .line 107
     invoke-virtual {p1}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v0
@@ -241,7 +219,6 @@
     .end annotation
 
     .prologue
-    .line 113
     array-length v0, p1
 
     invoke-direct {p0}, Lcom/miui/whetstone/steganography/Steg;->bytesAvaliableInBitmap()I
@@ -250,7 +227,6 @@
 
     if-le v0, v1, :cond_0
 
-    .line 114
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -285,7 +261,6 @@
 
     throw v0
 
-    .line 118
     :cond_0
     new-instance v0, Lcom/miui/whetstone/steganography/EncodedObject;
 
@@ -305,12 +280,10 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 68
     const/4 v0, 0x1
 
     invoke-virtual {p0, p1, v0}, Lcom/miui/whetstone/steganography/Steg;->withPassword(Ljava/lang/String;I)Lcom/miui/whetstone/steganography/Steg;
 
-    .line 69
     return-object p0
 .end method
 
@@ -320,13 +293,10 @@
     .param p2, "mode"    # I
 
     .prologue
-    .line 78
     iput-object p1, p0, Lcom/miui/whetstone/steganography/Steg;->key:Ljava/lang/String;
 
-    .line 79
     iput p2, p0, Lcom/miui/whetstone/steganography/Steg;->passmode:I
 
-    .line 83
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Not implemented yet"

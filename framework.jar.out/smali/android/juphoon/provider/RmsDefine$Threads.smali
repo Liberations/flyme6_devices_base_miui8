@@ -93,7 +93,6 @@
     .locals 1
 
     .prologue
-    .line 47
     const-string v0, "content://mms-sms/conversations/messages"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -102,7 +101,6 @@
 
     sput-object v0, Landroid/juphoon/provider/RmsDefine$Threads;->URI_DELETE_THREAD_MESSAGES:Landroid/net/Uri;
 
-    .line 48
     const-string v0, "content://mms-sms/threadPriority"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -118,7 +116,6 @@
     .locals 0
 
     .prologue
-    .line 45
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

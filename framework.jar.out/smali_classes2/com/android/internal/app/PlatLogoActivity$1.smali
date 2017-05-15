@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 80
     iput-object p1, p0, Lcom/android/internal/app/PlatLogoActivity$1;->this$0:Lcom/android/internal/app/PlatLogoActivity;
 
     iput p2, p0, Lcom/android/internal/app/PlatLogoActivity$1;->val$dp:F
@@ -43,7 +42,6 @@
     .param p2, "outline"    # Landroid/graphics/Outline;
 
     .prologue
-    .line 83
     const/high16 v1, 0x41000000    # 8.0f
 
     iget v2, p0, Lcom/android/internal/app/PlatLogoActivity$1;->val$dp:F
@@ -52,7 +50,6 @@
 
     float-to-int v0, v1
 
-    .line 84
     .local v0, "pad":I
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
@@ -68,6 +65,5 @@
 
     invoke-virtual {p2, v0, v0, v1, v2}, Landroid/graphics/Outline;->setOval(IIII)V
 
-    .line 85
     return-void
 .end method

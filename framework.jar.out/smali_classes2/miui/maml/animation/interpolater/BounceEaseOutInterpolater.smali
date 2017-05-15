@@ -11,7 +11,6 @@
     .locals 0
 
     .prologue
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,7 +23,6 @@
     .prologue
     const/high16 v4, 0x40f20000    # 7.5625f
 
-    .line 12
     float-to-double v0, p0
 
     const-wide v2, 0x3fd745d1745d1746L    # 0.36363636363636365
@@ -33,16 +31,13 @@
 
     if-gez v0, :cond_0
 
-    .line 13
     mul-float v0, v4, p0
 
     mul-float/2addr v0, p0
 
-    .line 19
     :goto_0
     return v0
 
-    .line 14
     :cond_0
     float-to-double v0, p0
 
@@ -52,7 +47,6 @@
 
     if-gez v0, :cond_1
 
-    .line 15
     float-to-double v0, p0
 
     const-wide v2, 0x3fe1745d1745d174L    # 0.5454545454545454
@@ -71,7 +65,6 @@
 
     goto :goto_0
 
-    .line 16
     :cond_1
     float-to-double v0, p0
 
@@ -81,7 +74,6 @@
 
     if-gez v0, :cond_2
 
-    .line 17
     float-to-double v0, p0
 
     const-wide v2, 0x3fea2e8ba2e8ba2fL    # 0.8181818181818182
@@ -100,7 +92,6 @@
 
     goto :goto_0
 
-    .line 19
     :cond_2
     float-to-double v0, p0
 
@@ -128,7 +119,6 @@
     .param p1, "t"    # F
 
     .prologue
-    .line 8
     invoke-static {p1}, Lmiui/maml/animation/interpolater/BounceEaseOutInterpolater;->getInterpolationImp(F)F
 
     move-result v0

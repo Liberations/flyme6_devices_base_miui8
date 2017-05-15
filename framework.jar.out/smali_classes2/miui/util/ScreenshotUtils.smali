@@ -77,14 +77,12 @@
     .locals 2
 
     .prologue
-    .line 39
     new-instance v0, Landroid/graphics/Point;
 
     invoke-direct {v0}, Landroid/graphics/Point;-><init>()V
 
     sput-object v0, Lmiui/util/ScreenshotUtils;->sSizeBuf:Landroid/graphics/Point;
 
-    .line 45
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -97,7 +95,6 @@
 
     sput v0, Lmiui/util/ScreenshotUtils;->DEFAULT_SCREEN_BLUR_RADIUS:I
 
-    .line 48
     const-string v0, "persist.sys.real_blur_black"
 
     const/4 v1, 0x0
@@ -114,7 +111,6 @@
 
     sput v0, Lmiui/util/ScreenshotUtils;->REAL_BLUR_BLACK:F
 
-    .line 49
     const-string v0, "persist.sys.real_blur_minify"
 
     const/4 v1, 0x4
@@ -125,7 +121,6 @@
 
     sput v0, Lmiui/util/ScreenshotUtils;->REAL_BLUR_MINIFY:I
 
-    .line 50
     const-string v0, "persist.sys.real_blur_radius"
 
     const/16 v1, 0x8
@@ -136,7 +131,6 @@
 
     sput v0, Lmiui/util/ScreenshotUtils;->REAL_BLUR_RADIUS:I
 
-    .line 79
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/data/system/app_screenshot"
@@ -152,7 +146,6 @@
     .locals 0
 
     .prologue
-    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -166,7 +159,6 @@
     .param p3, "x3"    # Z
 
     .prologue
-    .line 34
     invoke-static {p0, p1, p2, p3}, Lmiui/util/ScreenshotUtils;->screenShotAndSave(Ljava/lang/String;IZZ)V
 
     return-void
@@ -178,7 +170,6 @@
     .param p1, "shortComponentName"    # Ljava/lang/String;
 
     .prologue
-    .line 104
     const/4 v0, 0x1
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -187,7 +178,6 @@
 
     invoke-static {p0, p1, v0}, Lmiui/util/ScreenshotUtils;->captureActivityScreenshot(Landroid/content/Context;Ljava/lang/String;Ljava/lang/Boolean;)V
 
-    .line 105
     return-void
 .end method
 
@@ -202,10 +192,8 @@
 
     const/4 v3, 0x0
 
-    .line 108
     invoke-static {p0}, Lmiui/util/ScreenshotUtils;->initializeIfNeed(Landroid/content/Context;)V
 
-    .line 110
     sget-object v7, Lmiui/util/ScreenshotUtils;->sKeyguardManager:Landroid/app/KeyguardManager;
 
     invoke-virtual {v7}, Landroid/app/KeyguardManager;->isKeyguardLocked()Z
@@ -214,12 +202,10 @@
 
     if-eqz v7, :cond_1
 
-    .line 148
     :cond_0
     :goto_0
     return-void
 
-    .line 112
     :cond_1
     invoke-static {p0}, Lmiui/util/ScreenshotUtils;->disallowTaskManagerScreenshotMode(Landroid/content/Context;)Z
 
@@ -235,7 +221,6 @@
 
     if-nez v7, :cond_3
 
-    .line 113
     :cond_2
     invoke-static {p1, v6}, Lmiui/util/ScreenshotUtils;->getActivityScreenshotFile(Ljava/lang/String;Z)Ljava/io/File;
 
@@ -247,7 +232,6 @@
 
     if-nez v7, :cond_0
 
-    .line 114
     invoke-static {p1, v3}, Lmiui/util/ScreenshotUtils;->getActivityScreenshotFile(Ljava/lang/String;Z)Ljava/io/File;
 
     move-result-object v7
@@ -258,7 +242,6 @@
 
     if-nez v7, :cond_0
 
-    .line 117
     :cond_3
     sget-object v7, Lmiui/util/ScreenshotUtils;->sDisplay:Landroid/view/Display;
 
@@ -266,7 +249,6 @@
 
     move-result v5
 
-    .line 118
     .local v5, "rotation":I
     if-eqz v5, :cond_4
 
@@ -277,25 +259,21 @@
     :cond_4
     move v3, v6
 
-    .line 120
     .local v3, "isPort":Z
     :cond_5
     sget-object v6, Lmiui/util/ScreenshotUtils;->sHandler:Landroid/os/Handler;
 
     if-nez v6, :cond_7
 
-    .line 121
     const-class v7, Lmiui/util/ScreenshotUtils;
 
     monitor-enter v7
 
-    .line 122
     :try_start_0
     sget-object v6, Lmiui/util/ScreenshotUtils;->sHandler:Landroid/os/Handler;
 
     if-nez v6, :cond_6
 
-    .line 123
     new-instance v6, Landroid/os/HandlerThread;
 
     const-string v8, "ScreenshotUtils"
@@ -304,12 +282,10 @@
 
     sput-object v6, Lmiui/util/ScreenshotUtils;->sHandlerThread:Landroid/os/HandlerThread;
 
-    .line 124
     sget-object v6, Lmiui/util/ScreenshotUtils;->sHandlerThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v6}, Landroid/os/HandlerThread;->start()V
 
-    .line 125
     new-instance v6, Landroid/os/Handler;
 
     sget-object v8, Lmiui/util/ScreenshotUtils;->sHandlerThread:Landroid/os/HandlerThread;
@@ -322,19 +298,16 @@
 
     sput-object v6, Lmiui/util/ScreenshotUtils;->sHandler:Landroid/os/Handler;
 
-    .line 127
     :cond_6
     monitor-exit v7
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 130
     :cond_7
     const/4 v2, 0x0
 
-    .line 131
     .local v2, "hasNavigationBar":Z
-    const-string/jumbo v6, "window"
+    const-string v6, "window"
 
     invoke-static {v6}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -344,7 +317,6 @@
 
     move-result-object v4
 
-    .line 134
     .local v4, "mIWindowManager":Landroid/view/IWindowManager;
     :try_start_1
     invoke-interface {v4}, Landroid/view/IWindowManager;->hasNavigationBar()Z
@@ -353,7 +325,6 @@
 
     move-result v2
 
-    .line 138
     :goto_1
     invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -361,10 +332,8 @@
 
     if-eqz v6, :cond_8
 
-    .line 139
     move v1, v2
 
-    .line 140
     .local v1, "finalHasNavigationBar":Z
     sget-object v6, Lmiui/util/ScreenshotUtils;->sHandler:Landroid/os/Handler;
 
@@ -376,7 +345,6 @@
 
     goto :goto_0
 
-    .line 127
     .end local v1    # "finalHasNavigationBar":Z
     .end local v2    # "hasNavigationBar":Z
     .end local v4    # "mIWindowManager":Landroid/view/IWindowManager;
@@ -390,19 +358,16 @@
 
     throw v6
 
-    .line 135
     .restart local v2    # "hasNavigationBar":Z
     .restart local v4    # "mIWindowManager":Landroid/view/IWindowManager;
     :catch_0
     move-exception v0
 
-    .line 136
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_1
 
-    .line 146
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_8
     invoke-static {p1, v5, v3, v2}, Lmiui/util/ScreenshotUtils;->screenShotAndSave(Ljava/lang/String;IZZ)V
@@ -417,14 +382,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 92
     invoke-static {}, Lmiui/util/MiuiFeatureUtils;->isLiteMode()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 95
     :goto_0
     return v0
 
@@ -444,7 +407,6 @@
     .param p1, "isPort"    # Z
 
     .prologue
-    .line 227
     new-instance v1, Ljava/io/File;
 
     sget-object v2, Lmiui/util/ScreenshotUtils;->ACTIVITY_SCREENSHOT_FOLDER:Ljava/io/File;
@@ -498,15 +460,12 @@
     .prologue
     const/high16 v3, 0x3f000000    # 0.5f
 
-    .line 83
     invoke-static {p0}, Lmiui/util/ScreenshotUtils;->initializeIfNeed(Landroid/content/Context;)V
 
-    .line 85
     sget-object v1, Lmiui/util/ScreenshotUtils;->sDisplay:Landroid/view/Display;
 
     invoke-virtual {v1, p1}, Landroid/view/Display;->getRealSize(Landroid/graphics/Point;)V
 
-    .line 86
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -517,7 +476,6 @@
 
     move-result v0
 
-    .line 87
     .local v0, "scale":F
     iget v1, p1, Landroid/graphics/Point;->x:I
 
@@ -531,7 +489,6 @@
 
     iput v1, p1, Landroid/graphics/Point;->x:I
 
-    .line 88
     iget v1, p1, Landroid/graphics/Point;->y:I
 
     int-to-float v1, v1
@@ -544,7 +501,6 @@
 
     iput v1, p1, Landroid/graphics/Point;->y:I
 
-    .line 89
     return-void
 .end method
 
@@ -556,24 +512,20 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 290
     const v2, 0x3eaaaaab
 
     invoke-static {p0, v2, v3, v3, v3}, Lmiui/util/ScreenshotUtils;->getScreenshot(Landroid/content/Context;FIIZ)Landroid/graphics/Bitmap;
 
     move-result-object v1
 
-    .line 291
     .local v1, "screenshot":Landroid/graphics/Bitmap;
     invoke-static {v1, p1}, Lmiui/util/ScreenshotUtils;->getBlurBackground(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 292
     .local v0, "bluredBitmap":Landroid/graphics/Bitmap;
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 293
     return-object v0
 .end method
 
@@ -583,10 +535,8 @@
     .param p1, "cache"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 305
     if-eqz p0, :cond_0
 
-    .line 306
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -601,16 +551,13 @@
 
     move-result-object p1
 
-    .line 310
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 311
     new-instance v0, Landroid/graphics/Canvas;
 
     invoke-direct {v0, p1}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 312
     .local v0, "canvas":Landroid/graphics/Canvas;
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
@@ -624,7 +571,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Canvas;->drawColor(I)V
 
-    .line 314
     .end local v0    # "canvas":Landroid/graphics/Canvas;
     :cond_1
     return-object p1
@@ -644,36 +590,29 @@
     .end annotation
 
     .prologue
-    .line 318
     if-nez p0, :cond_0
 
-    .line 319
     sget-object v4, Lmiui/util/ScreenshotUtils;->sCacheBitmap:Ljava/lang/ref/SoftReference;
 
-    .line 326
     :goto_0
     return-object v4
 
-    .line 321
     :cond_0
     new-instance v1, Landroid/graphics/Point;
 
     invoke-direct {v1}, Landroid/graphics/Point;-><init>()V
 
-    .line 322
     .local v1, "displaySize":Landroid/graphics/Point;
     sget-object v4, Lmiui/util/ScreenshotUtils;->sDisplay:Landroid/view/Display;
 
     invoke-virtual {v4, v1}, Landroid/view/Display;->getSize(Landroid/graphics/Point;)V
 
-    .line 323
     sget-object v4, Lmiui/util/ScreenshotUtils;->sDisplay:Landroid/view/Display;
 
     invoke-virtual {v4}, Landroid/view/Display;->getRotation()I
 
     move-result v3
 
-    .line 324
     .local v3, "rotation":I
     if-eqz v3, :cond_1
 
@@ -684,14 +623,12 @@
     :cond_1
     const/4 v2, 0x1
 
-    .line 325
     .local v2, "isPort":Z
     :goto_1
     if-eqz v2, :cond_3
 
     iget v0, v1, Landroid/graphics/Point;->y:I
 
-    .line 326
     .local v0, "displayHeight":I
     :goto_2
     sget v4, Lmiui/util/ScreenshotUtils;->sScreenHeight:I
@@ -702,7 +639,6 @@
 
     goto :goto_0
 
-    .line 324
     .end local v0    # "displayHeight":I
     .end local v2    # "isPort":Z
     :cond_2
@@ -710,14 +646,12 @@
 
     goto :goto_1
 
-    .line 325
     .restart local v2    # "isPort":Z
     :cond_3
     iget v0, v1, Landroid/graphics/Point;->x:I
 
     goto :goto_2
 
-    .line 326
     .restart local v0    # "displayHeight":I
     :cond_4
     sget-object v4, Lmiui/util/ScreenshotUtils;->sCacheBitmapWithNavigationBarShow:Ljava/lang/ref/SoftReference;
@@ -732,7 +666,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 232
     const/high16 v0, 0x3f800000    # 1.0f
 
     const/4 v1, 0x1
@@ -753,10 +686,8 @@
     .param p4, "includeNavigationBar"    # Z
 
     .prologue
-    .line 236
     invoke-static {p0}, Lmiui/util/ScreenshotUtils;->initializeIfNeed(Landroid/content/Context;)V
 
-    .line 237
     sget v12, Lmiui/util/ScreenshotUtils;->sScreenWidth:I
 
     int-to-float v12, v12
@@ -769,7 +700,6 @@
 
     float-to-int v8, v12
 
-    .line 238
     .local v8, "screenshotWidth":I
     sget v12, Lmiui/util/ScreenshotUtils;->sScreenHeight:I
 
@@ -783,30 +713,25 @@
 
     float-to-int v7, v12
 
-    .line 241
     .local v7, "screenshotHeight":I
     if-nez p2, :cond_4
 
     if-nez p3, :cond_4
 
-    .line 242
     invoke-static {v8, v7}, Landroid/view/SurfaceControl;->screenshot(II)Landroid/graphics/Bitmap;
 
     move-result-object v6
 
-    .line 248
     .local v6, "screenshot":Landroid/graphics/Bitmap;
     :goto_0
     if-eqz v6, :cond_3
 
-    .line 249
     sget-object v12, Lmiui/util/ScreenshotUtils;->sDisplay:Landroid/view/Display;
 
     invoke-virtual {v12}, Landroid/view/Display;->getRotation()I
 
     move-result v3
 
-    .line 250
     .local v3, "degree":I
     if-eqz v3, :cond_0
 
@@ -817,19 +742,16 @@
     :cond_0
     const/4 v4, 0x1
 
-    .line 252
     .local v4, "isPortrait":Z
     :goto_1
     if-eqz p4, :cond_6
 
-    .line 253
     sget-object v12, Lmiui/util/ScreenshotUtils;->sDisplay:Landroid/view/Display;
 
     sget-object v13, Lmiui/util/ScreenshotUtils;->sSizeBuf:Landroid/graphics/Point;
 
     invoke-virtual {v12, v13}, Landroid/view/Display;->getRealSize(Landroid/graphics/Point;)V
 
-    .line 258
     :goto_2
     sget-object v12, Lmiui/util/ScreenshotUtils;->sSizeBuf:Landroid/graphics/Point;
 
@@ -845,7 +767,6 @@
 
     float-to-int v10, v12
 
-    .line 259
     .local v10, "targetWidth":I
     sget-object v12, Lmiui/util/ScreenshotUtils;->sSizeBuf:Landroid/graphics/Point;
 
@@ -861,7 +782,6 @@
 
     float-to-int v9, v12
 
-    .line 261
     .local v9, "targetHeight":I
     if-ne v8, v10, :cond_1
 
@@ -869,17 +789,14 @@
 
     if-eqz v3, :cond_3
 
-    .line 262
     :cond_1
     new-instance v5, Landroid/graphics/Matrix;
 
     invoke-direct {v5}, Landroid/graphics/Matrix;-><init>()V
 
-    .line 263
     .local v5, "matrix":Landroid/graphics/Matrix;
     if-eqz v3, :cond_2
 
-    .line 264
     neg-int v12, v8
 
     int-to-float v12, v12
@@ -898,7 +815,6 @@
 
     invoke-virtual {v5, v12, v13}, Landroid/graphics/Matrix;->postTranslate(FF)Z
 
-    .line 265
     mul-int/lit8 v12, v3, 0x5a
 
     rsub-int v12, v12, 0x168
@@ -907,7 +823,6 @@
 
     invoke-virtual {v5, v12}, Landroid/graphics/Matrix;->postRotate(F)Z
 
-    .line 266
     if-eqz v4, :cond_7
 
     int-to-float v12, v8
@@ -930,7 +845,6 @@
     :goto_4
     invoke-virtual {v5, v13, v12}, Landroid/graphics/Matrix;->postTranslate(FF)Z
 
-    .line 271
     :cond_2
     sget-object v12, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
@@ -938,13 +852,11 @@
 
     move-result-object v11
 
-    .line 272
     .local v11, "temp":Landroid/graphics/Bitmap;
     new-instance v2, Landroid/graphics/Canvas;
 
     invoke-direct {v2, v11}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 273
     .local v2, "canvas":Landroid/graphics/Canvas;
     new-instance v12, Landroid/graphics/Paint;
 
@@ -952,13 +864,10 @@
 
     invoke-virtual {v2, v6, v5, v12}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Matrix;Landroid/graphics/Paint;)V
 
-    .line 274
     invoke-virtual {v6}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 275
     move-object v6, v11
 
-    .line 279
     .end local v2    # "canvas":Landroid/graphics/Canvas;
     .end local v3    # "degree":I
     .end local v4    # "isPortrait":Z
@@ -969,7 +878,6 @@
     :cond_3
     return-object v6
 
-    .line 245
     .end local v6    # "screenshot":Landroid/graphics/Bitmap;
     :cond_4
     move/from16 v0, p2
@@ -983,14 +891,12 @@
     .restart local v6    # "screenshot":Landroid/graphics/Bitmap;
     goto :goto_0
 
-    .line 250
     .restart local v3    # "degree":I
     :cond_5
     const/4 v4, 0x0
 
     goto :goto_1
 
-    .line 256
     .restart local v4    # "isPortrait":Z
     :cond_6
     sget-object v12, Lmiui/util/ScreenshotUtils;->sDisplay:Landroid/view/Display;
@@ -1001,7 +907,6 @@
 
     goto :goto_2
 
-    .line 266
     .restart local v5    # "matrix":Landroid/graphics/Matrix;
     .restart local v9    # "targetHeight":I
     .restart local v10    # "targetWidth":I
@@ -1033,7 +938,6 @@
     .prologue
     const/4 v4, -0x1
 
-    .line 53
     sget-object v2, Lmiui/util/ScreenshotUtils;->ACTIVITY_SCREENSHOT_FOLDER:Ljava/io/File;
 
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
@@ -1042,7 +946,6 @@
 
     if-nez v2, :cond_0
 
-    .line 54
     sget-object v2, Lmiui/util/ScreenshotUtils;->ACTIVITY_SCREENSHOT_FOLDER:Ljava/io/File;
 
     invoke-virtual {v2}, Ljava/io/File;->mkdir()Z
@@ -1051,7 +954,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 55
     sget-object v2, Lmiui/util/ScreenshotUtils;->ACTIVITY_SCREENSHOT_FOLDER:Ljava/io/File;
 
     invoke-virtual {v2}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
@@ -1062,14 +964,12 @@
 
     invoke-static {v2, v3, v4, v4}, Landroid/os/FileUtils;->setPermissions(Ljava/lang/String;III)I
 
-    .line 60
     :cond_0
     sget-object v2, Lmiui/util/ScreenshotUtils;->sDisplay:Landroid/view/Display;
 
     if-nez v2, :cond_1
 
-    .line 61
-    const-string/jumbo v2, "window"
+    const-string v2, "window"
 
     invoke-virtual {p0, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -1083,13 +983,11 @@
 
     sput-object v2, Lmiui/util/ScreenshotUtils;->sDisplay:Landroid/view/Display;
 
-    .line 65
     :cond_1
     sget-object v2, Lmiui/util/ScreenshotUtils;->sKeyguardManager:Landroid/app/KeyguardManager;
 
     if-nez v2, :cond_2
 
-    .line 66
     const-string v2, "keyguard"
 
     invoke-virtual {p0, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -1100,20 +998,17 @@
 
     sput-object v2, Lmiui/util/ScreenshotUtils;->sKeyguardManager:Landroid/app/KeyguardManager;
 
-    .line 69
     :cond_2
     sget-object v2, Lmiui/util/ScreenshotUtils;->sDisplay:Landroid/view/Display;
 
     if-eqz v2, :cond_4
 
-    .line 70
     sget-object v2, Lmiui/util/ScreenshotUtils;->sDisplay:Landroid/view/Display;
 
     invoke-virtual {v2}, Landroid/view/Display;->getRotation()I
 
     move-result v0
 
-    .line 71
     .local v0, "degree":I
     if-eqz v0, :cond_3
 
@@ -1124,7 +1019,6 @@
     :cond_3
     const/4 v1, 0x1
 
-    .line 72
     .local v1, "isPortrait":Z
     :goto_0
     sget-object v2, Lmiui/util/ScreenshotUtils;->sDisplay:Landroid/view/Display;
@@ -1133,7 +1027,6 @@
 
     invoke-static {v2, v3}, Lmiui/util/CustomizeUtil;->getRealSize(Landroid/view/Display;Landroid/graphics/Point;)V
 
-    .line 73
     if-eqz v1, :cond_6
 
     sget-object v2, Lmiui/util/ScreenshotUtils;->sSizeBuf:Landroid/graphics/Point;
@@ -1143,7 +1036,6 @@
     :goto_1
     sput v2, Lmiui/util/ScreenshotUtils;->sScreenWidth:I
 
-    .line 74
     if-eqz v1, :cond_7
 
     sget-object v2, Lmiui/util/ScreenshotUtils;->sSizeBuf:Landroid/graphics/Point;
@@ -1153,20 +1045,17 @@
     :goto_2
     sput v2, Lmiui/util/ScreenshotUtils;->sScreenHeight:I
 
-    .line 76
     .end local v0    # "degree":I
     .end local v1    # "isPortrait":Z
     :cond_4
     return-void
 
-    .line 71
     .restart local v0    # "degree":I
     :cond_5
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 73
     .restart local v1    # "isPortrait":Z
     :cond_6
     sget-object v2, Lmiui/util/ScreenshotUtils;->sSizeBuf:Landroid/graphics/Point;
@@ -1175,7 +1064,6 @@
 
     goto :goto_1
 
-    .line 74
     :cond_7
     sget-object v2, Lmiui/util/ScreenshotUtils;->sSizeBuf:Landroid/graphics/Point;
 
@@ -1192,10 +1080,8 @@
     .param p3, "hasNavigationBar"    # Z
 
     .prologue
-    .line 156
     const/16 v9, 0x7530
 
-    .line 157
     .local v9, "maxLayer":I
     :try_start_0
     sget v15, Lmiui/util/ScreenshotUtils;->sScreenWidth:I
@@ -1212,31 +1098,26 @@
 
     move-result-object v13
 
-    .line 161
     .local v13, "screenshot":Landroid/graphics/Bitmap;
     new-instance v6, Landroid/graphics/Point;
 
     invoke-direct {v6}, Landroid/graphics/Point;-><init>()V
 
-    .line 162
     .local v6, "displaySize":Landroid/graphics/Point;
     sget-object v15, Lmiui/util/ScreenshotUtils;->sDisplay:Landroid/view/Display;
 
     invoke-virtual {v15, v6}, Landroid/view/Display;->getSize(Landroid/graphics/Point;)V
 
-    .line 163
     if-eqz p2, :cond_6
 
     iget v7, v6, Landroid/graphics/Point;->x:I
 
-    .line 164
     .local v7, "displayWidth":I
     :goto_0
     if-eqz p2, :cond_7
 
     iget v5, v6, Landroid/graphics/Point;->y:I
 
-    .line 165
     .local v5, "displayHeight":I
     :goto_1
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
@@ -1249,11 +1130,9 @@
 
     move-result v12
 
-    .line 167
     .local v12, "scale":F
     if-eqz p3, :cond_9
 
-    .line 169
     const/4 v15, 0x3
 
     move/from16 v0, p1
@@ -1266,7 +1145,6 @@
 
     if-ne v0, v15, :cond_8
 
-    .line 170
     :cond_0
     new-instance v14, Landroid/graphics/Rect;
 
@@ -1284,7 +1162,6 @@
 
     invoke-direct {v14, v15, v0, v7, v1}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 179
     .local v14, "src":Landroid/graphics/Rect;
     :goto_2
     invoke-static/range {p3 .. p3}, Lmiui/util/ScreenshotUtils;->getCacheBitmap(Z)Ljava/lang/ref/SoftReference;
@@ -1295,12 +1172,10 @@
 
     const/4 v11, 0x0
 
-    .line 180
     .local v11, "saveBitmap":Landroid/graphics/Bitmap;
     :goto_3
     if-nez v11, :cond_1
 
-    .line 181
     if-eqz p3, :cond_b
 
     move v15, v7
@@ -1343,7 +1218,6 @@
 
     move-result-object v11
 
-    .line 185
     new-instance v15, Ljava/lang/ref/SoftReference;
 
     invoke-direct {v15, v11}, Ljava/lang/ref/SoftReference;-><init>(Ljava/lang/Object;)V
@@ -1352,13 +1226,11 @@
 
     invoke-static {v15, v0}, Lmiui/util/ScreenshotUtils;->setCacheBitmap(Ljava/lang/ref/SoftReference;Z)V
 
-    .line 188
     :cond_1
     sget-object v15, Lmiui/util/ScreenshotUtils;->sPaint:Landroid/graphics/Paint;
 
     if-nez v15, :cond_2
 
-    .line 189
     new-instance v15, Landroid/graphics/Paint;
 
     const/16 v16, 0x3
@@ -1367,13 +1239,11 @@
 
     sput-object v15, Lmiui/util/ScreenshotUtils;->sPaint:Landroid/graphics/Paint;
 
-    .line 191
     :cond_2
     new-instance v3, Landroid/graphics/Canvas;
 
     invoke-direct {v3, v11}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 194
     .local v3, "canvas":Landroid/graphics/Canvas;
     const/4 v15, 0x1
 
@@ -1387,7 +1257,6 @@
 
     if-ne v0, v15, :cond_4
 
-    .line 195
     :cond_3
     const/high16 v15, 0x43340000    # 180.0f
 
@@ -1425,14 +1294,11 @@
 
     invoke-virtual {v3, v15, v0, v1}, Landroid/graphics/Canvas;->rotate(FFF)V
 
-    .line 199
     :cond_4
     invoke-virtual {v3, v12, v12}, Landroid/graphics/Canvas;->scale(FF)V
 
-    .line 200
     if-eqz v13, :cond_f
 
-    .line 201
     new-instance v15, Landroid/graphics/Rect;
 
     const/16 v16, 0x0
@@ -1459,10 +1325,8 @@
 
     invoke-virtual {v3, v13, v14, v15, v0}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
-    .line 203
     invoke-virtual {v13}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 209
     :goto_8
     new-instance v10, Ljava/io/FileOutputStream;
 
@@ -1476,7 +1340,6 @@
 
     invoke-direct {v10, v15}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
-    .line 211
     .local v10, "outStream":Ljava/io/FileOutputStream;
     sget-object v15, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
 
@@ -1486,10 +1349,8 @@
 
     invoke-virtual {v11, v15, v0, v10}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
-    .line 212
     invoke-virtual {v10}, Ljava/io/FileOutputStream;->close()V
 
-    .line 215
     if-nez p2, :cond_10
 
     const/4 v15, 0x1
@@ -1501,7 +1362,6 @@
 
     move-result-object v2
 
-    .line 216
     .local v2, "anotherFile":Ljava/io/File;
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
@@ -1509,16 +1369,13 @@
 
     if-eqz v15, :cond_5
 
-    .line 217
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
     move-result v4
 
-    .line 218
     .local v4, "delete":Z
     if-eqz v4, :cond_5
 
-    .line 219
     const-string v15, "ScreenshotUtils"
 
     new-instance v16, Ljava/lang/StringBuilder;
@@ -1545,7 +1402,6 @@
 
     invoke-static/range {v15 .. v16}, Lmiui/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 224
     .end local v2    # "anotherFile":Ljava/io/File;
     .end local v3    # "canvas":Landroid/graphics/Canvas;
     .end local v4    # "delete":Z
@@ -1559,7 +1415,6 @@
     :goto_a
     return-void
 
-    .line 163
     .restart local v6    # "displaySize":Landroid/graphics/Point;
     .restart local v13    # "screenshot":Landroid/graphics/Bitmap;
     :cond_6
@@ -1567,14 +1422,12 @@
 
     goto/16 :goto_0
 
-    .line 164
     .restart local v7    # "displayWidth":I
     :cond_7
     iget v5, v6, Landroid/graphics/Point;->x:I
 
     goto/16 :goto_1
 
-    .line 172
     .restart local v5    # "displayHeight":I
     .restart local v12    # "scale":F
     :cond_8
@@ -1591,7 +1444,6 @@
     .restart local v14    # "src":Landroid/graphics/Rect;
     goto/16 :goto_2
 
-    .line 175
     .end local v14    # "src":Landroid/graphics/Rect;
     :cond_9
     new-instance v14, Landroid/graphics/Rect;
@@ -1609,7 +1461,6 @@
     .restart local v14    # "src":Landroid/graphics/Rect;
     goto/16 :goto_2
 
-    .line 179
     :cond_a
     invoke-static/range {p3 .. p3}, Lmiui/util/ScreenshotUtils;->getCacheBitmap(Z)Ljava/lang/ref/SoftReference;
 
@@ -1625,7 +1476,6 @@
 
     goto/16 :goto_3
 
-    .line 181
     .restart local v11    # "saveBitmap":Landroid/graphics/Bitmap;
     :cond_b
     sget v15, Lmiui/util/ScreenshotUtils;->sScreenWidth:I
@@ -1637,7 +1487,6 @@
 
     goto/16 :goto_5
 
-    .line 201
     .restart local v3    # "canvas":Landroid/graphics/Canvas;
     :cond_d
     sget v7, Lmiui/util/ScreenshotUtils;->sScreenWidth:I
@@ -1650,7 +1499,6 @@
 
     goto/16 :goto_7
 
-    .line 205
     .restart local v7    # "displayWidth":I
     :cond_f
     const v15, -0x55000001
@@ -1665,7 +1513,6 @@
 
     goto/16 :goto_8
 
-    .line 221
     .end local v3    # "canvas":Landroid/graphics/Canvas;
     .end local v5    # "displayHeight":I
     .end local v6    # "displaySize":Landroid/graphics/Point;
@@ -1677,7 +1524,6 @@
     :catch_0
     move-exception v8
 
-    .line 222
     .local v8, "ex":Ljava/lang/Exception;
     const-string v15, "ScreenshotUtils"
 
@@ -1689,7 +1535,6 @@
 
     goto :goto_a
 
-    .line 215
     .end local v8    # "ex":Ljava/lang/Exception;
     .restart local v3    # "canvas":Landroid/graphics/Canvas;
     .restart local v6    # "displaySize":Landroid/graphics/Point;
@@ -1718,37 +1563,30 @@
     .end annotation
 
     .prologue
-    .line 330
     .local p0, "cacheBitmap":Ljava/lang/ref/SoftReference;, "Ljava/lang/ref/SoftReference<Landroid/graphics/Bitmap;>;"
     if-nez p1, :cond_0
 
-    .line 331
     sput-object p0, Lmiui/util/ScreenshotUtils;->sCacheBitmap:Ljava/lang/ref/SoftReference;
 
-    .line 344
     :goto_0
     return-void
 
-    .line 334
     :cond_0
     new-instance v1, Landroid/graphics/Point;
 
     invoke-direct {v1}, Landroid/graphics/Point;-><init>()V
 
-    .line 335
     .local v1, "displaySize":Landroid/graphics/Point;
     sget-object v4, Lmiui/util/ScreenshotUtils;->sDisplay:Landroid/view/Display;
 
     invoke-virtual {v4, v1}, Landroid/view/Display;->getSize(Landroid/graphics/Point;)V
 
-    .line 336
     sget-object v4, Lmiui/util/ScreenshotUtils;->sDisplay:Landroid/view/Display;
 
     invoke-virtual {v4}, Landroid/view/Display;->getRotation()I
 
     move-result v3
 
-    .line 337
     .local v3, "rotation":I
     if-eqz v3, :cond_1
 
@@ -1759,26 +1597,22 @@
     :cond_1
     const/4 v2, 0x1
 
-    .line 338
     .local v2, "isPort":Z
     :goto_1
     if-eqz v2, :cond_3
 
     iget v0, v1, Landroid/graphics/Point;->y:I
 
-    .line 339
     .local v0, "displayHeight":I
     :goto_2
     sget v4, Lmiui/util/ScreenshotUtils;->sScreenHeight:I
 
     if-ne v0, v4, :cond_4
 
-    .line 340
     sput-object p0, Lmiui/util/ScreenshotUtils;->sCacheBitmapWithNavigationBarHide:Ljava/lang/ref/SoftReference;
 
     goto :goto_0
 
-    .line 337
     .end local v0    # "displayHeight":I
     .end local v2    # "isPort":Z
     :cond_2
@@ -1786,14 +1620,12 @@
 
     goto :goto_1
 
-    .line 338
     .restart local v2    # "isPort":Z
     :cond_3
     iget v0, v1, Landroid/graphics/Point;->x:I
 
     goto :goto_2
 
-    .line 342
     .restart local v0    # "displayHeight":I
     :cond_4
     sput-object p0, Lmiui/util/ScreenshotUtils;->sCacheBitmapWithNavigationBarShow:Ljava/lang/ref/SoftReference;

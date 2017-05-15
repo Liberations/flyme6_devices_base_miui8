@@ -40,32 +40,24 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1144
     iput-object p1, p0, Lcom/miui/whetstone/PowerKeeperPolicy$Client;->this$0:Lcom/miui/whetstone/PowerKeeperPolicy;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1145
     iput-object p2, p0, Lcom/miui/whetstone/PowerKeeperPolicy$Client;->mBleScanWrapper:Landroid/bluetooth/BleScanWrapper;
 
-    .line 1146
     iput-object p3, p0, Lcom/miui/whetstone/PowerKeeperPolicy$Client;->mIBinder:Landroid/os/IBinder;
 
-    .line 1147
     iput p4, p0, Lcom/miui/whetstone/PowerKeeperPolicy$Client;->mUid:I
 
-    .line 1148
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/miui/whetstone/PowerKeeperPolicy$Client;->mDeathRecipient:Landroid/os/IBinder$DeathRecipient;
 
-    .line 1149
     iput-boolean v1, p0, Lcom/miui/whetstone/PowerKeeperPolicy$Client;->mScanning:Z
 
-    .line 1150
     iput-boolean v1, p0, Lcom/miui/whetstone/PowerKeeperPolicy$Client;->mAllowed:Z
 
-    .line 1151
     return-void
 .end method
 
@@ -74,7 +66,6 @@
     .param p0, "x0"    # Lcom/miui/whetstone/PowerKeeperPolicy$Client;
 
     .prologue
-    .line 1136
     iget v0, p0, Lcom/miui/whetstone/PowerKeeperPolicy$Client;->mUid:I
 
     return v0
@@ -88,16 +79,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1154
     iput-object v0, p0, Lcom/miui/whetstone/PowerKeeperPolicy$Client;->mBleScanWrapper:Landroid/bluetooth/BleScanWrapper;
 
-    .line 1155
     iput-object v0, p0, Lcom/miui/whetstone/PowerKeeperPolicy$Client;->mIBinder:Landroid/os/IBinder;
 
-    .line 1156
     iput-object v0, p0, Lcom/miui/whetstone/PowerKeeperPolicy$Client;->mDeathRecipient:Landroid/os/IBinder$DeathRecipient;
 
-    .line 1157
     return-void
 .end method
 
@@ -105,7 +92,6 @@
     .locals 1
 
     .prologue
-    .line 1178
     iget-boolean v0, p0, Lcom/miui/whetstone/PowerKeeperPolicy$Client;->mAllowed:Z
 
     return v0
@@ -115,7 +101,6 @@
     .locals 1
 
     .prologue
-    .line 1167
     iget-boolean v0, p0, Lcom/miui/whetstone/PowerKeeperPolicy$Client;->mScanning:Z
 
     return v0
@@ -126,7 +111,6 @@
     .param p1, "deathRecipient"    # Landroid/os/IBinder$DeathRecipient;
 
     .prologue
-    .line 1183
     :try_start_0
     iget-object v1, p0, Lcom/miui/whetstone/PowerKeeperPolicy$Client;->mIBinder:Landroid/os/IBinder;
 
@@ -134,20 +118,16 @@
 
     invoke-interface {v1, p1, v2}, Landroid/os/IBinder;->linkToDeath(Landroid/os/IBinder$DeathRecipient;I)V
 
-    .line 1184
     iput-object p1, p0, Lcom/miui/whetstone/PowerKeeperPolicy$Client;->mDeathRecipient:Landroid/os/IBinder$DeathRecipient;
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1188
     :goto_0
     return-void
 
-    .line 1185
     :catch_0
     move-exception v0
 
-    .line 1186
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "PowerKeeperPolicy"
 
@@ -181,7 +161,6 @@
     .param p1, "allowed"    # Z
 
     .prologue
-    .line 1171
     # getter for: Lcom/miui/whetstone/PowerKeeperPolicy;->DEBUG:Z
     invoke-static {}, Lcom/miui/whetstone/PowerKeeperPolicy;->access$800()Z
 
@@ -189,7 +168,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1172
     const-string v0, "PowerKeeperPolicy"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -224,11 +202,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1174
     :cond_0
     iput-boolean p1, p0, Lcom/miui/whetstone/PowerKeeperPolicy$Client;->mAllowed:Z
 
-    .line 1175
     return-void
 .end method
 
@@ -237,7 +213,6 @@
     .param p1, "scanning"    # Z
 
     .prologue
-    .line 1160
     # getter for: Lcom/miui/whetstone/PowerKeeperPolicy;->DEBUG:Z
     invoke-static {}, Lcom/miui/whetstone/PowerKeeperPolicy;->access$800()Z
 
@@ -245,7 +220,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1161
     const-string v0, "PowerKeeperPolicy"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -280,11 +254,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1163
     :cond_0
     iput-boolean p1, p0, Lcom/miui/whetstone/PowerKeeperPolicy$Client;->mScanning:Z
 
-    .line 1164
     return-void
 .end method
 
@@ -292,12 +264,10 @@
     .locals 7
 
     .prologue
-    .line 1202
     iget-boolean v4, p0, Lcom/miui/whetstone/PowerKeeperPolicy$Client;->mScanning:Z
 
     if-eqz v4, :cond_1
 
-    .line 1203
     # getter for: Lcom/miui/whetstone/PowerKeeperPolicy;->DEBUG:Z
     invoke-static {}, Lcom/miui/whetstone/PowerKeeperPolicy;->access$800()Z
 
@@ -305,7 +275,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 1204
     const-string v4, "PowerKeeperPolicy"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -336,12 +305,10 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1226
     :cond_0
     :goto_0
     return-void
 
-    .line 1209
     :cond_1
     :try_start_0
     const-string v4, "bluetooth_manager"
@@ -350,16 +317,13 @@
 
     move-result-object v0
 
-    .line 1210
     .local v0, "b":Landroid/os/IBinder;
     if-eqz v0, :cond_2
 
-    .line 1211
     invoke-static {v0}, Landroid/bluetooth/IBluetoothManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/bluetooth/IBluetoothManager;
 
     move-result-object v3
 
-    .line 1212
     .local v3, "managerService":Landroid/bluetooth/IBluetoothManager;
     invoke-interface {v3}, Landroid/bluetooth/IBluetoothManager;->getBluetoothGatt()Landroid/bluetooth/IBluetoothGatt;
     :try_end_0
@@ -367,7 +331,6 @@
 
     move-result-object v2
 
-    .line 1214
     .local v2, "gatt":Landroid/bluetooth/IBluetoothGatt;
     :try_start_1
     iget-object v4, p0, Lcom/miui/whetstone/PowerKeeperPolicy$Client;->mBleScanWrapper:Landroid/bluetooth/BleScanWrapper;
@@ -377,7 +340,6 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 1218
     :goto_1
     :try_start_2
     # getter for: Lcom/miui/whetstone/PowerKeeperPolicy;->DEBUG:Z
@@ -387,7 +349,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 1219
     const-string v4, "PowerKeeperPolicy"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -414,7 +375,6 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 1225
     .end local v0    # "b":Landroid/os/IBinder;
     .end local v2    # "gatt":Landroid/bluetooth/IBluetoothGatt;
     .end local v3    # "managerService":Landroid/bluetooth/IBluetoothManager;
@@ -426,14 +386,12 @@
 
     goto :goto_0
 
-    .line 1215
     .restart local v0    # "b":Landroid/os/IBinder;
     .restart local v2    # "gatt":Landroid/bluetooth/IBluetoothGatt;
     .restart local v3    # "managerService":Landroid/bluetooth/IBluetoothManager;
     :catch_0
     move-exception v1
 
-    .line 1216
     .local v1, "e":Landroid/os/RemoteException;
     :try_start_3
     const-string v4, "PowerKeeperPolicy"
@@ -446,7 +404,6 @@
 
     goto :goto_1
 
-    .line 1222
     .end local v0    # "b":Landroid/os/IBinder;
     .end local v1    # "e":Landroid/os/RemoteException;
     .end local v2    # "gatt":Landroid/bluetooth/IBluetoothGatt;
@@ -454,7 +411,6 @@
     :catch_1
     move-exception v1
 
-    .line 1223
     .local v1, "e":Ljava/lang/Exception;
     const-string v4, "PowerKeeperPolicy"
 
@@ -469,12 +425,10 @@
     .locals 7
 
     .prologue
-    .line 1229
     iget-boolean v4, p0, Lcom/miui/whetstone/PowerKeeperPolicy$Client;->mScanning:Z
 
     if-nez v4, :cond_1
 
-    .line 1230
     # getter for: Lcom/miui/whetstone/PowerKeeperPolicy;->DEBUG:Z
     invoke-static {}, Lcom/miui/whetstone/PowerKeeperPolicy;->access$800()Z
 
@@ -482,7 +436,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 1231
     const-string v4, "PowerKeeperPolicy"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -513,12 +466,10 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1253
     :cond_0
     :goto_0
     return-void
 
-    .line 1236
     :cond_1
     :try_start_0
     const-string v4, "bluetooth_manager"
@@ -527,16 +478,13 @@
 
     move-result-object v0
 
-    .line 1237
     .local v0, "b":Landroid/os/IBinder;
     if-eqz v0, :cond_2
 
-    .line 1238
     invoke-static {v0}, Landroid/bluetooth/IBluetoothManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/bluetooth/IBluetoothManager;
 
     move-result-object v3
 
-    .line 1239
     .local v3, "managerService":Landroid/bluetooth/IBluetoothManager;
     invoke-interface {v3}, Landroid/bluetooth/IBluetoothManager;->getBluetoothGatt()Landroid/bluetooth/IBluetoothGatt;
     :try_end_0
@@ -544,7 +492,6 @@
 
     move-result-object v2
 
-    .line 1241
     .local v2, "gatt":Landroid/bluetooth/IBluetoothGatt;
     :try_start_1
     iget-object v4, p0, Lcom/miui/whetstone/PowerKeeperPolicy$Client;->mBleScanWrapper:Landroid/bluetooth/BleScanWrapper;
@@ -554,7 +501,6 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 1245
     :goto_1
     :try_start_2
     # getter for: Lcom/miui/whetstone/PowerKeeperPolicy;->DEBUG:Z
@@ -564,7 +510,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 1246
     const-string v4, "PowerKeeperPolicy"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -591,7 +536,6 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 1252
     .end local v0    # "b":Landroid/os/IBinder;
     .end local v2    # "gatt":Landroid/bluetooth/IBluetoothGatt;
     .end local v3    # "managerService":Landroid/bluetooth/IBluetoothManager;
@@ -603,14 +547,12 @@
 
     goto :goto_0
 
-    .line 1242
     .restart local v0    # "b":Landroid/os/IBinder;
     .restart local v2    # "gatt":Landroid/bluetooth/IBluetoothGatt;
     .restart local v3    # "managerService":Landroid/bluetooth/IBluetoothManager;
     :catch_0
     move-exception v1
 
-    .line 1243
     .local v1, "e":Landroid/os/RemoteException;
     :try_start_3
     const-string v4, "PowerKeeperPolicy"
@@ -623,7 +565,6 @@
 
     goto :goto_1
 
-    .line 1249
     .end local v0    # "b":Landroid/os/IBinder;
     .end local v1    # "e":Landroid/os/RemoteException;
     .end local v2    # "gatt":Landroid/bluetooth/IBluetoothGatt;
@@ -631,7 +572,6 @@
     :catch_1
     move-exception v1
 
-    .line 1250
     .local v1, "e":Ljava/lang/Exception;
     const-string v4, "PowerKeeperPolicy"
 
@@ -646,12 +586,10 @@
     .locals 4
 
     .prologue
-    .line 1191
     iget-object v1, p0, Lcom/miui/whetstone/PowerKeeperPolicy$Client;->mDeathRecipient:Landroid/os/IBinder$DeathRecipient;
 
     if-eqz v1, :cond_0
 
-    .line 1193
     :try_start_0
     iget-object v1, p0, Lcom/miui/whetstone/PowerKeeperPolicy$Client;->mIBinder:Landroid/os/IBinder;
 
@@ -661,23 +599,19 @@
 
     invoke-interface {v1, v2, v3}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 1194
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/miui/whetstone/PowerKeeperPolicy$Client;->mDeathRecipient:Landroid/os/IBinder$DeathRecipient;
     :try_end_0
     .catch Ljava/util/NoSuchElementException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1199
     :cond_0
     :goto_0
     return-void
 
-    .line 1195
     :catch_0
     move-exception v0
 
-    .line 1196
     .local v0, "e":Ljava/util/NoSuchElementException;
     const-string v1, "PowerKeeperPolicy"
 

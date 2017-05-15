@@ -36,10 +36,8 @@
     .locals 0
 
     .prologue
-    .line 45
     invoke-direct {p0}, Ljava/lang/Number;-><init>()V
 
-    .line 46
     return-void
 .end method
 
@@ -48,13 +46,10 @@
     .param p1, "value"    # I
 
     .prologue
-    .line 54
     invoke-direct {p0}, Ljava/lang/Number;-><init>()V
 
-    .line 55
     iput p1, p0, Lorg/apache/miui/commons/lang3/mutable/MutableInt;->value:I
 
-    .line 56
     return-void
 .end method
 
@@ -63,17 +58,14 @@
     .param p1, "value"    # Ljava/lang/Number;
 
     .prologue
-    .line 65
     invoke-direct {p0}, Ljava/lang/Number;-><init>()V
 
-    .line 66
     invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
 
     move-result v0
 
     iput v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableInt;->value:I
 
-    .line 67
     return-void
 .end method
 
@@ -87,17 +79,14 @@
     .end annotation
 
     .prologue
-    .line 77
     invoke-direct {p0}, Ljava/lang/Number;-><init>()V
 
-    .line 78
     invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v0
 
     iput v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableInt;->value:I
 
-    .line 79
     return-void
 .end method
 
@@ -108,14 +97,12 @@
     .param p1, "operand"    # I
 
     .prologue
-    .line 137
     iget v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableInt;->value:I
 
     add-int/2addr v0, p1
 
     iput v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableInt;->value:I
 
-    .line 138
     return-void
 .end method
 
@@ -124,7 +111,6 @@
     .param p1, "operand"    # Ljava/lang/Number;
 
     .prologue
-    .line 148
     iget v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableInt;->value:I
 
     invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
@@ -135,7 +121,6 @@
 
     iput v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableInt;->value:I
 
-    .line 149
     return-void
 .end method
 
@@ -144,7 +129,6 @@
     .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
-    .line 29
     check-cast p1, Lorg/apache/miui/commons/lang3/mutable/MutableInt;
 
     .end local p1    # "x0":Ljava/lang/Object;
@@ -160,10 +144,8 @@
     .param p1, "other"    # Lorg/apache/miui/commons/lang3/mutable/MutableInt;
 
     .prologue
-    .line 259
     iget v0, p1, Lorg/apache/miui/commons/lang3/mutable/MutableInt;->value:I
 
-    .line 260
     .local v0, "anotherVal":I
     iget v1, p0, Lorg/apache/miui/commons/lang3/mutable/MutableInt;->value:I
 
@@ -193,14 +175,12 @@
     .locals 1
 
     .prologue
-    .line 126
     iget v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableInt;->value:I
 
     add-int/lit8 v0, v0, -0x1
 
     iput v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableInt;->value:I
 
-    .line 127
     return-void
 .end method
 
@@ -208,7 +188,6 @@
     .locals 2
 
     .prologue
-    .line 211
     iget v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableInt;->value:I
 
     int-to-double v0, v0
@@ -223,12 +202,10 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 235
     instance-of v1, p1, Lorg/apache/miui/commons/lang3/mutable/MutableInt;
 
     if-eqz v1, :cond_0
 
-    .line 236
     iget v1, p0, Lorg/apache/miui/commons/lang3/mutable/MutableInt;->value:I
 
     check-cast p1, Lorg/apache/miui/commons/lang3/mutable/MutableInt;
@@ -242,7 +219,6 @@
 
     const/4 v0, 0x1
 
-    .line 238
     :cond_0
     return v0
 .end method
@@ -251,7 +227,6 @@
     .locals 1
 
     .prologue
-    .line 201
     iget v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableInt;->value:I
 
     int-to-float v0, v0
@@ -263,7 +238,6 @@
     .locals 1
 
     .prologue
-    .line 88
     iget v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableInt;->value:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -277,7 +251,6 @@
     .locals 1
 
     .prologue
-    .line 29
     invoke-virtual {p0}, Lorg/apache/miui/commons/lang3/mutable/MutableInt;->getValue()Ljava/lang/Integer;
 
     move-result-object v0
@@ -289,7 +262,6 @@
     .locals 1
 
     .prologue
-    .line 248
     iget v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableInt;->value:I
 
     return v0
@@ -299,14 +271,12 @@
     .locals 1
 
     .prologue
-    .line 117
     iget v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableInt;->value:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableInt;->value:I
 
-    .line 118
     return-void
 .end method
 
@@ -314,7 +284,6 @@
     .locals 1
 
     .prologue
-    .line 181
     iget v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableInt;->value:I
 
     return v0
@@ -324,7 +293,6 @@
     .locals 2
 
     .prologue
-    .line 191
     iget v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableInt;->value:I
 
     int-to-long v0, v0
@@ -337,10 +305,8 @@
     .param p1, "value"    # I
 
     .prologue
-    .line 97
     iput p1, p0, Lorg/apache/miui/commons/lang3/mutable/MutableInt;->value:I
 
-    .line 98
     return-void
 .end method
 
@@ -349,14 +315,12 @@
     .param p1, "value"    # Ljava/lang/Number;
 
     .prologue
-    .line 107
     invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
 
     move-result v0
 
     iput v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableInt;->value:I
 
-    .line 108
     return-void
 .end method
 
@@ -365,7 +329,6 @@
     .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
-    .line 29
     check-cast p1, Ljava/lang/Number;
 
     .end local p1    # "x0":Ljava/lang/Object;
@@ -379,14 +342,12 @@
     .param p1, "operand"    # I
 
     .prologue
-    .line 158
     iget v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableInt;->value:I
 
     sub-int/2addr v0, p1
 
     iput v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableInt;->value:I
 
-    .line 159
     return-void
 .end method
 
@@ -395,7 +356,6 @@
     .param p1, "operand"    # Ljava/lang/Number;
 
     .prologue
-    .line 169
     iget v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableInt;->value:I
 
     invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
@@ -406,7 +366,6 @@
 
     iput v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableInt;->value:I
 
-    .line 170
     return-void
 .end method
 
@@ -414,7 +373,6 @@
     .locals 1
 
     .prologue
-    .line 221
     invoke-virtual {p0}, Lorg/apache/miui/commons/lang3/mutable/MutableInt;->intValue()I
 
     move-result v0
@@ -430,7 +388,6 @@
     .locals 1
 
     .prologue
-    .line 271
     iget v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableInt;->value:I
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;

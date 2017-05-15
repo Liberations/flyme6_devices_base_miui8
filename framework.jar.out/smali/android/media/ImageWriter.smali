@@ -46,15 +46,12 @@
     .locals 1
 
     .prologue
-    .line 811
-    const-string/jumbo v0, "media_jni"
+    const-string v0, "media_jni"
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    .line 812
     invoke-static {}, Landroid/media/ImageWriter;->nativeClassInit()V
 
-    .line 813
     return-void
 .end method
 
@@ -64,31 +61,26 @@
     .param p2, "maxImages"    # I
 
     .prologue
-    .line 121
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 77
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Landroid/media/ImageWriter;->mListenerLock:Ljava/lang/Object;
 
-    .line 87
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/media/ImageWriter;->mDequeuedImages:Ljava/util/List;
 
-    .line 122
     if-eqz p1, :cond_0
 
     const/4 v0, 0x1
 
     if-ge p2, v0, :cond_1
 
-    .line 123
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -124,11 +116,9 @@
 
     throw v0
 
-    .line 127
     :cond_1
     iput p2, p0, Landroid/media/ImageWriter;->mMaxImages:I
 
-    .line 130
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p0}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -139,7 +129,6 @@
 
     iput-wide v0, p0, Landroid/media/ImageWriter;->mNativeContext:J
 
-    .line 131
     return-void
 .end method
 
@@ -148,19 +137,16 @@
     .param p1, "image"    # Landroid/media/Image;
 
     .prologue
-    .line 562
     if-nez p1, :cond_0
 
-    .line 563
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v2, "image shouldn\'t be null"
+    const-string v2, "image shouldn\'t be null"
 
     invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 566
     :cond_0
     iget-object v1, p0, Landroid/media/ImageWriter;->mDequeuedImages:Ljava/util/List;
 
@@ -170,7 +156,6 @@
 
     if-nez v1, :cond_1
 
-    .line 567
     new-instance v1, Ljava/lang/IllegalStateException;
 
     const-string v2, "It is illegal to abort some image that is not dequeued yet"
@@ -182,16 +167,13 @@
     :cond_1
     move-object v0, p1
 
-    .line 571
     check-cast v0, Landroid/media/ImageWriter$WriterSurfaceImage;
 
-    .line 573
     .local v0, "wi":Landroid/media/ImageWriter$WriterSurfaceImage;
     iget-boolean v1, v0, Landroid/media/ImageWriter$WriterSurfaceImage;->mIsImageValid:Z
 
     if-nez v1, :cond_2
 
-    .line 574
     new-instance v1, Ljava/lang/IllegalStateException;
 
     const-string v2, "Image is invalid"
@@ -200,27 +182,22 @@
 
     throw v1
 
-    .line 583
     :cond_2
     iget-wide v2, p0, Landroid/media/ImageWriter;->mNativeContext:J
 
     invoke-direct {p0, v2, v3, p1}, Landroid/media/ImageWriter;->cancelImage(JLandroid/media/Image;)V
 
-    .line 584
     iget-object v1, p0, Landroid/media/ImageWriter;->mDequeuedImages:Ljava/util/List;
 
     invoke-interface {v1, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 585
     # invokes: Landroid/media/ImageWriter$WriterSurfaceImage;->clearSurfacePlanes()V
     invoke-static {v0}, Landroid/media/ImageWriter$WriterSurfaceImage;->access$000(Landroid/media/ImageWriter$WriterSurfaceImage;)V
 
-    .line 586
     const/4 v1, 0x0
 
     iput-boolean v1, v0, Landroid/media/ImageWriter$WriterSurfaceImage;->mIsImageValid:Z
 
-    .line 587
     return-void
 .end method
 
@@ -229,7 +206,6 @@
     .param p0, "x0"    # Landroid/media/ImageWriter;
 
     .prologue
-    .line 76
     iget-object v0, p0, Landroid/media/ImageWriter;->mListenerLock:Ljava/lang/Object;
 
     return-object v0
@@ -240,7 +216,6 @@
     .param p0, "x0"    # Landroid/media/ImageWriter;
 
     .prologue
-    .line 76
     iget-object v0, p0, Landroid/media/ImageWriter;->mListener:Landroid/media/ImageWriter$OnImageReleasedListener;
 
     return-object v0
@@ -252,7 +227,6 @@
     .param p1, "x1"    # Landroid/media/Image;
 
     .prologue
-    .line 76
     invoke-direct {p0, p1}, Landroid/media/ImageWriter;->abortImage(Landroid/media/Image;)V
 
     return-void
@@ -263,19 +237,16 @@
     .param p1, "image"    # Landroid/media/Image;
 
     .prologue
-    .line 474
     if-nez p1, :cond_0
 
-    .line 475
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v2, "image shouldn\'t be null"
+    const-string v2, "image shouldn\'t be null"
 
     invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 477
     :cond_0
     invoke-direct {p0, p1}, Landroid/media/ImageWriter;->isImageOwnedByMe(Landroid/media/Image;)Z
 
@@ -283,7 +254,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 478
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "Can not attach an image that is owned ImageWriter already"
@@ -292,7 +262,6 @@
 
     throw v1
 
-    .line 487
     :cond_1
     invoke-virtual {p1}, Landroid/media/Image;->isAttachable()Z
 
@@ -300,7 +269,6 @@
 
     if-nez v1, :cond_2
 
-    .line 488
     new-instance v1, Ljava/lang/IllegalStateException;
 
     const-string v2, "Image was not detached from last owner, or image  is not detachable"
@@ -309,13 +277,11 @@
 
     throw v1
 
-    .line 495
     :cond_2
     invoke-virtual {p1}, Landroid/media/Image;->getCropRect()Landroid/graphics/Rect;
 
     move-result-object v0
 
-    .line 496
     .local v0, "crop":Landroid/graphics/Rect;
     iget-wide v2, p0, Landroid/media/ImageWriter;->mNativeContext:J
 
@@ -343,7 +309,6 @@
 
     invoke-direct/range {v1 .. v12}, Landroid/media/ImageWriter;->nativeAttachAndQueueImage(JJIJIIII)I
 
-    .line 498
     return-void
 .end method
 
@@ -357,12 +322,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 590
     instance-of v2, p1, Landroid/media/ImageWriter$WriterSurfaceImage;
 
     if-nez v2, :cond_1
 
-    .line 598
     :cond_0
     :goto_0
     return v1
@@ -370,10 +333,8 @@
     :cond_1
     move-object v0, p1
 
-    .line 593
     check-cast v0, Landroid/media/ImageWriter$WriterSurfaceImage;
 
-    .line 594
     .local v0, "wi":Landroid/media/ImageWriter$WriterSurfaceImage;
     invoke-virtual {v0}, Landroid/media/ImageWriter$WriterSurfaceImage;->getOwner()Landroid/media/ImageWriter;
 
@@ -381,7 +342,6 @@
 
     if-ne v2, p0, :cond_0
 
-    .line 598
     const/4 v1, 0x1
 
     goto :goto_0
@@ -411,7 +371,6 @@
     .param p1, "maxImages"    # I
 
     .prologue
-    .line 115
     new-instance v0, Landroid/media/ImageWriter;
 
     invoke-direct {v0, p0, p1}, Landroid/media/ImageWriter;-><init>(Landroid/view/Surface;I)V
@@ -424,12 +383,10 @@
     .param p0, "selfRef"    # Ljava/lang/Object;
 
     .prologue
-    .line 528
     move-object v2, p0
 
     check-cast v2, Ljava/lang/ref/WeakReference;
 
-    .line 529
     .local v2, "weakSelf":Ljava/lang/ref/WeakReference;, "Ljava/lang/ref/WeakReference<Landroid/media/ImageWriter;>;"
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -437,42 +394,34 @@
 
     check-cast v1, Landroid/media/ImageWriter;
 
-    .line 530
     .local v1, "iw":Landroid/media/ImageWriter;
     if-nez v1, :cond_1
 
-    .line 541
     :cond_0
     :goto_0
     return-void
 
-    .line 535
     :cond_1
     iget-object v4, v1, Landroid/media/ImageWriter;->mListenerLock:Ljava/lang/Object;
 
     monitor-enter v4
 
-    .line 536
     :try_start_0
     iget-object v0, v1, Landroid/media/ImageWriter;->mListenerHandler:Landroid/media/ImageWriter$ListenerHandler;
 
-    .line 537
     .local v0, "handler":Landroid/os/Handler;
     monitor-exit v4
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 538
     if-eqz v0, :cond_0
 
-    .line 539
     const/4 v3, 0x0
 
     invoke-virtual {v0, v3}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
     goto :goto_0
 
-    .line 537
     .end local v0    # "handler":Landroid/os/Handler;
     :catchall_0
     move-exception v3
@@ -493,10 +442,8 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 428
     invoke-virtual {p0, v2, v2}, Landroid/media/ImageWriter;->setOnImageReleasedListener(Landroid/media/ImageWriter$OnImageReleasedListener;Landroid/os/Handler;)V
 
-    .line 429
     iget-object v2, p0, Landroid/media/ImageWriter;->mDequeuedImages:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -517,30 +464,25 @@
 
     check-cast v1, Landroid/media/Image;
 
-    .line 430
     .local v1, "image":Landroid/media/Image;
     invoke-virtual {v1}, Landroid/media/Image;->close()V
 
     goto :goto_0
 
-    .line 432
     .end local v1    # "image":Landroid/media/Image;
     :cond_0
     iget-object v2, p0, Landroid/media/ImageWriter;->mDequeuedImages:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->clear()V
 
-    .line 433
     iget-wide v2, p0, Landroid/media/ImageWriter;->mNativeContext:J
 
     invoke-direct {p0, v2, v3}, Landroid/media/ImageWriter;->nativeClose(J)V
 
-    .line 434
     const-wide/16 v2, 0x0
 
     iput-wide v2, p0, Landroid/media/ImageWriter;->mNativeContext:J
 
-    .line 435
     return-void
 .end method
 
@@ -548,14 +490,12 @@
     .locals 4
 
     .prologue
-    .line 205
     iget v1, p0, Landroid/media/ImageWriter;->mWriterFormat:I
 
     const/16 v2, 0x22
 
     if-ne v1, v2, :cond_0
 
-    .line 206
     new-instance v1, Ljava/lang/IllegalStateException;
 
     const-string v2, "PRIVATE format ImageWriter doesn\'t support this operation since the images are inaccessible to the application!"
@@ -564,7 +504,6 @@
 
     throw v1
 
-    .line 211
     :cond_0
     iget-object v1, p0, Landroid/media/ImageWriter;->mDequeuedImages:Ljava/util/List;
 
@@ -576,7 +515,6 @@
 
     if-lt v1, v2, :cond_1
 
-    .line 212
     new-instance v1, Ljava/lang/IllegalStateException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -603,29 +541,24 @@
 
     throw v1
 
-    .line 214
     :cond_1
     new-instance v0, Landroid/media/ImageWriter$WriterSurfaceImage;
 
     invoke-direct {v0, p0}, Landroid/media/ImageWriter$WriterSurfaceImage;-><init>(Landroid/media/ImageWriter;)V
 
-    .line 215
     .local v0, "newImage":Landroid/media/ImageWriter$WriterSurfaceImage;
     iget-wide v2, p0, Landroid/media/ImageWriter;->mNativeContext:J
 
     invoke-direct {p0, v2, v3, v0}, Landroid/media/ImageWriter;->nativeDequeueInputImage(JLandroid/media/Image;)V
 
-    .line 216
     iget-object v1, p0, Landroid/media/ImageWriter;->mDequeuedImages:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 217
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Landroid/media/ImageWriter$WriterSurfaceImage;->mIsImageValid:Z
 
-    .line 218
     return-object v0
 .end method
 
@@ -638,19 +571,15 @@
     .end annotation
 
     .prologue
-    .line 440
     :try_start_0
     invoke-virtual {p0}, Landroid/media/ImageWriter;->close()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 442
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    .line 444
     return-void
 
-    .line 442
     :catchall_0
     move-exception v0
 
@@ -663,7 +592,6 @@
     .locals 1
 
     .prologue
-    .line 346
     iget v0, p0, Landroid/media/ImageWriter;->mWriterFormat:I
 
     return v0
@@ -673,7 +601,6 @@
     .locals 1
 
     .prologue
-    .line 157
     iget v0, p0, Landroid/media/ImageWriter;->mMaxImages:I
 
     return v0
@@ -684,25 +611,21 @@
     .param p1, "image"    # Landroid/media/Image;
 
     .prologue
-    .line 274
     if-nez p1, :cond_0
 
-    .line 275
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v3, "image shouldn\'t be null"
+    const-string v3, "image shouldn\'t be null"
 
     invoke-direct {v2, v3}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v2
 
-    .line 277
     :cond_0
     invoke-direct/range {p0 .. p1}, Landroid/media/ImageWriter;->isImageOwnedByMe(Landroid/media/Image;)Z
 
     move-result v14
 
-    .line 278
     .local v14, "ownedByMe":Z
     if-eqz v14, :cond_1
 
@@ -714,7 +637,6 @@
 
     if-nez v2, :cond_1
 
-    .line 279
     new-instance v2, Ljava/lang/IllegalStateException;
 
     const-string v3, "Image from ImageWriter is invalid"
@@ -723,11 +645,9 @@
 
     throw v2
 
-    .line 283
     :cond_1
     if-nez v14, :cond_5
 
-    .line 284
     invoke-virtual/range {p1 .. p1}, Landroid/media/Image;->getOwner()Ljava/lang/Object;
 
     move-result-object v2
@@ -736,7 +656,6 @@
 
     if-nez v2, :cond_2
 
-    .line 285
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string v3, "Only images from ImageReader can be queued to ImageWriter, other image source is not supported yet!"
@@ -745,7 +664,6 @@
 
     throw v2
 
-    .line 289
     :cond_2
     invoke-virtual/range {p1 .. p1}, Landroid/media/Image;->getOwner()Ljava/lang/Object;
 
@@ -753,7 +671,6 @@
 
     check-cast v15, Landroid/media/ImageReader;
 
-    .line 295
     .local v15, "prevOwner":Landroid/media/ImageReader;
     invoke-virtual/range {p1 .. p1}, Landroid/media/Image;->getFormat()I
 
@@ -763,31 +680,25 @@
 
     if-ne v2, v3, :cond_4
 
-    .line 296
     move-object/from16 v0, p1
 
     invoke-virtual {v15, v0}, Landroid/media/ImageReader;->detachImage(Landroid/media/Image;)V
 
-    .line 297
     invoke-direct/range {p0 .. p1}, Landroid/media/ImageWriter;->attachAndQueueInputImage(Landroid/media/Image;)V
 
-    .line 301
     invoke-virtual/range {p1 .. p1}, Landroid/media/Image;->close()V
 
-    .line 332
     .end local v15    # "prevOwner":Landroid/media/ImageReader;
     :cond_3
     :goto_0
     return-void
 
-    .line 304
     .restart local v15    # "prevOwner":Landroid/media/ImageReader;
     :cond_4
     invoke-virtual/range {p0 .. p0}, Landroid/media/ImageWriter;->dequeueInputImage()Landroid/media/Image;
 
     move-result-object v13
 
-    .line 305
     .local v13, "inputImage":Landroid/media/Image;
     invoke-virtual/range {p1 .. p1}, Landroid/media/Image;->getTimestamp()J
 
@@ -795,28 +706,22 @@
 
     invoke-virtual {v13, v2, v3}, Landroid/media/Image;->setTimestamp(J)V
 
-    .line 306
     invoke-virtual/range {p1 .. p1}, Landroid/media/Image;->getCropRect()Landroid/graphics/Rect;
 
     move-result-object v2
 
     invoke-virtual {v13, v2}, Landroid/media/Image;->setCropRect(Landroid/graphics/Rect;)V
 
-    .line 307
     move-object/from16 v0, p1
 
     invoke-static {v0, v13}, Landroid/media/ImageUtils;->imageCopy(Landroid/media/Image;Landroid/media/Image;)V
 
-    .line 308
     invoke-virtual/range {p1 .. p1}, Landroid/media/Image;->close()V
 
-    .line 309
     move-object/from16 p1, v13
 
-    .line 310
     const/4 v14, 0x1
 
-    .line 314
     .end local v13    # "inputImage":Landroid/media/Image;
     .end local v15    # "prevOwner":Landroid/media/ImageReader;
     :cond_5
@@ -824,7 +729,6 @@
 
     move-result-object v12
 
-    .line 315
     .local v12, "crop":Landroid/graphics/Rect;
     move-object/from16 v0, p0
 
@@ -848,10 +752,8 @@
 
     invoke-direct/range {v2 .. v11}, Landroid/media/ImageWriter;->nativeQueueInputImage(JLandroid/media/Image;JIIII)V
 
-    .line 325
     if-eqz v14, :cond_3
 
-    .line 326
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/media/ImageWriter;->mDequeuedImages:Ljava/util/List;
@@ -862,15 +764,12 @@
 
     move-object/from16 v16, p1
 
-    .line 328
     check-cast v16, Landroid/media/ImageWriter$WriterSurfaceImage;
 
-    .line 329
     .local v16, "wi":Landroid/media/ImageWriter$WriterSurfaceImage;
     # invokes: Landroid/media/ImageWriter$WriterSurfaceImage;->clearSurfacePlanes()V
     invoke-static/range {v16 .. v16}, Landroid/media/ImageWriter$WriterSurfaceImage;->access$000(Landroid/media/ImageWriter$WriterSurfaceImage;)V
 
-    .line 330
     const/4 v2, 0x0
 
     move-object/from16 v0, v16
@@ -886,15 +785,12 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 396
     iget-object v2, p0, Landroid/media/ImageWriter;->mListenerLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 397
     if-eqz p1, :cond_4
 
-    .line 398
     if-eqz p2, :cond_0
 
     :try_start_0
@@ -902,21 +798,18 @@
 
     move-result-object v0
 
-    .line 399
     .local v0, "looper":Landroid/os/Looper;
     :goto_0
     if-nez v0, :cond_1
 
-    .line 400
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v3, "handler is null but the current thread is not a looper"
+    const-string v3, "handler is null but the current thread is not a looper"
 
     invoke-direct {v1, v3}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 411
     .end local v0    # "looper":Landroid/os/Looper;
     :catchall_0
     move-exception v1
@@ -927,7 +820,6 @@
 
     throw v1
 
-    .line 398
     :cond_0
     :try_start_1
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
@@ -936,7 +828,6 @@
 
     goto :goto_0
 
-    .line 403
     .restart local v0    # "looper":Landroid/os/Looper;
     :cond_1
     iget-object v1, p0, Landroid/media/ImageWriter;->mListenerHandler:Landroid/media/ImageWriter$ListenerHandler;
@@ -951,7 +842,6 @@
 
     if-eq v1, v0, :cond_3
 
-    .line 404
     :cond_2
     new-instance v1, Landroid/media/ImageWriter$ListenerHandler;
 
@@ -959,25 +849,20 @@
 
     iput-object v1, p0, Landroid/media/ImageWriter;->mListenerHandler:Landroid/media/ImageWriter$ListenerHandler;
 
-    .line 406
     :cond_3
     iput-object p1, p0, Landroid/media/ImageWriter;->mListener:Landroid/media/ImageWriter$OnImageReleasedListener;
 
-    .line 411
     .end local v0    # "looper":Landroid/os/Looper;
     :goto_1
     monitor-exit v2
 
-    .line 412
     return-void
 
-    .line 408
     :cond_4
     const/4 v1, 0x0
 
     iput-object v1, p0, Landroid/media/ImageWriter;->mListener:Landroid/media/ImageWriter$OnImageReleasedListener;
 
-    .line 409
     const/4 v1, 0x0
 
     iput-object v1, p0, Landroid/media/ImageWriter;->mListenerHandler:Landroid/media/ImageWriter$ListenerHandler;

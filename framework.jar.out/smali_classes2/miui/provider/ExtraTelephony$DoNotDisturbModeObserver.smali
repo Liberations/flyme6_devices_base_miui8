@@ -25,10 +25,8 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 1977
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 1978
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
@@ -43,7 +41,6 @@
     :cond_0
     iput-object p1, p0, Lmiui/provider/ExtraTelephony$DoNotDisturbModeObserver;->mContext:Landroid/content/Context;
 
-    .line 1980
     return-void
 .end method
 
@@ -54,10 +51,8 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 1984
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
-    .line 1985
     # getter for: Lmiui/provider/ExtraTelephony;->mQuietListeners:Ljava/util/Set;
     invoke-static {}, Lmiui/provider/ExtraTelephony;->access$000()Ljava/util/Set;
 
@@ -65,7 +60,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1986
     # getter for: Lmiui/provider/ExtraTelephony;->mQuietListeners:Ljava/util/Set;
     invoke-static {}, Lmiui/provider/ExtraTelephony;->access$000()Ljava/util/Set;
 
@@ -75,7 +69,6 @@
 
     move-result-object v0
 
-    .line 1987
     .local v0, "iterator":Ljava/util/Iterator;, "Ljava/util/Iterator<Lmiui/provider/ExtraTelephony$QuietModeEnableListener;>;"
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -84,7 +77,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1988
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
@@ -101,7 +93,6 @@
 
     goto :goto_0
 
-    .line 1991
     .end local v0    # "iterator":Ljava/util/Iterator;, "Ljava/util/Iterator<Lmiui/provider/ExtraTelephony$QuietModeEnableListener;>;"
     :cond_0
     return-void

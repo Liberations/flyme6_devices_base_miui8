@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 348
     iput-object p1, p0, Landroid/app/ExitTransitionCoordinator$10;->this$0:Landroid/app/ExitTransitionCoordinator;
 
     invoke-direct {p0, p1}, Landroid/app/ActivityTransitionCoordinator$ContinueTransitionListener;-><init>(Landroid/app/ActivityTransitionCoordinator;)V
@@ -38,15 +37,12 @@
     .param p1, "transition"    # Landroid/transition/Transition;
 
     .prologue
-    .line 351
     invoke-virtual {p1, p0}, Landroid/transition/Transition;->removeListener(Landroid/transition/Transition$TransitionListener;)Landroid/transition/Transition;
 
-    .line 352
     iget-object v0, p0, Landroid/app/ExitTransitionCoordinator$10;->this$0:Landroid/app/ExitTransitionCoordinator;
 
     invoke-virtual {v0}, Landroid/app/ExitTransitionCoordinator;->sharedElementTransitionComplete()V
 
-    .line 353
     iget-object v0, p0, Landroid/app/ExitTransitionCoordinator$10;->this$0:Landroid/app/ExitTransitionCoordinator;
 
     # getter for: Landroid/app/ExitTransitionCoordinator;->mIsHidden:Z
@@ -56,7 +52,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 354
     iget-object v0, p0, Landroid/app/ExitTransitionCoordinator$10;->this$0:Landroid/app/ExitTransitionCoordinator;
 
     iget-object v1, p0, Landroid/app/ExitTransitionCoordinator$10;->this$0:Landroid/app/ExitTransitionCoordinator;
@@ -67,7 +62,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/app/ExitTransitionCoordinator;->showViews(Ljava/util/ArrayList;Z)V
 
-    .line 356
     :cond_0
     return-void
 .end method

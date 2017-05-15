@@ -14,7 +14,6 @@
     .locals 1
 
     .prologue
-    .line 28
     sget-boolean v0, Lmiui/os/Build;->IS_CTS_BUILD:Z
 
     sput-boolean v0, Lmiui/provider/CallLog;->IS_CTS:Z
@@ -26,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -40,7 +38,6 @@
     .param p3, "addForAllUsers"    # Z
 
     .prologue
-    .line 31
     const-string v11, "CallLog"
 
     const-string v12, "addCall(): addForAllUsers=%s"
@@ -63,16 +60,13 @@
 
     invoke-static {v11, v12}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 32
     invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v5
 
-    .line 34
     .local v5, "resolver":Landroid/content/ContentResolver;
     const/4 v6, 0x0
 
-    .line 35
     .local v6, "result":Landroid/net/Uri;
     if-eqz p3, :cond_1
 
@@ -82,7 +76,6 @@
 
     if-eqz v11, :cond_1
 
-    .line 36
     const-string v11, "user"
 
     move-object/from16 v0, p0
@@ -93,13 +86,11 @@
 
     check-cast v9, Landroid/os/UserManager;
 
-    .line 37
     .local v9, "userManager":Landroid/os/UserManager;
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v3
 
-    .line 38
     .local v3, "currentUserId":I
     const-string v11, "CallLog"
 
@@ -123,20 +114,17 @@
 
     invoke-static {v11, v12}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 41
     const/4 v11, 0x1
 
     invoke-virtual {v9, v11}, Landroid/os/UserManager;->getUsers(Z)Ljava/util/List;
 
     move-result-object v10
 
-    .line 42
     .local v10, "users":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     invoke-interface {v10}, Ljava/util/List;->size()I
 
     move-result v2
 
-    .line 43
     .local v2, "count":I
     const/4 v4, 0x0
 
@@ -144,14 +132,12 @@
     :goto_0
     if-ge v4, v2, :cond_2
 
-    .line 44
     invoke-interface {v10, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v8
 
     check-cast v8, Landroid/content/pm/UserInfo;
 
-    .line 45
     .local v8, "user":Landroid/content/pm/UserInfo;
     invoke-static {v9, v8}, Lmiui/provider/CallLog;->canInsertCalllog(Landroid/os/UserManager;Landroid/content/pm/UserInfo;)Z
 
@@ -159,7 +145,6 @@
 
     if-eqz v11, :cond_0
 
-    .line 46
     const-string v11, "CallLog"
 
     const-string v12, "addCall(): insert for userId=%s"
@@ -184,7 +169,6 @@
 
     invoke-static {v11, v12}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 47
     iget v11, v8, Landroid/content/pm/UserInfo;->id:I
 
     move-object/from16 v0, p1
@@ -199,23 +183,19 @@
 
     move-result-object v7
 
-    .line 48
     .local v7, "uri":Landroid/net/Uri;
     iget v11, v8, Landroid/content/pm/UserInfo;->id:I
 
     if-ne v11, v3, :cond_0
 
-    .line 49
     move-object v6, v7
 
-    .line 43
     .end local v7    # "uri":Landroid/net/Uri;
     :cond_0
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    .line 54
     .end local v2    # "count":I
     .end local v3    # "currentUserId":I
     .end local v4    # "i":I
@@ -231,7 +211,6 @@
 
     move-result-object v6
 
-    .line 57
     :cond_2
     const-string v11, "CallLog"
 
@@ -251,7 +230,6 @@
 
     invoke-static {v11, v12}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 58
     return-object v6
 .end method
 
@@ -273,10 +251,8 @@
     .param p17, "accountHandle"    # Landroid/telecom/PhoneAccountHandle;
 
     .prologue
-    .line 65
     const/16 v24, 0x0
 
-    .line 67
     .local v24, "tm":Landroid/telecom/TelecomManager;
     :try_start_0
     invoke-static/range {p1 .. p1}, Landroid/telecom/TelecomManager;->from(Landroid/content/Context;)Landroid/telecom/TelecomManager;
@@ -285,17 +261,14 @@
 
     move-result-object v24
 
-    .line 71
     :goto_0
     const/16 v21, 0x0
 
-    .line 72
     .local v21, "accountAddress":Ljava/lang/String;
     if-eqz v24, :cond_0
 
     if-eqz p17, :cond_0
 
-    .line 73
     move-object/from16 v0, v24
 
     move-object/from16 v1, p17
@@ -304,39 +277,31 @@
 
     move-result-object v22
 
-    .line 74
     .local v22, "account":Landroid/telecom/PhoneAccount;
     if-eqz v22, :cond_0
 
-    .line 75
     invoke-virtual/range {v22 .. v22}, Landroid/telecom/PhoneAccount;->getSubscriptionAddress()Landroid/net/Uri;
 
     move-result-object v23
 
-    .line 76
     .local v23, "address":Landroid/net/Uri;
     if-eqz v23, :cond_0
 
-    .line 77
     invoke-virtual/range {v23 .. v23}, Landroid/net/Uri;->getSchemeSpecificPart()Ljava/lang/String;
 
     move-result-object v21
 
-    .line 83
     .end local v22    # "account":Landroid/telecom/PhoneAccount;
     .end local v23    # "address":Landroid/net/Uri;
     :cond_0
     const/16 v19, 0x0
 
-    .line 84
     .local v19, "accountComponentString":Ljava/lang/String;
     const/16 v20, 0x0
 
-    .line 85
     .local v20, "accountId":Ljava/lang/String;
     if-eqz p17, :cond_1
 
-    .line 86
     invoke-virtual/range {p17 .. p17}, Landroid/telecom/PhoneAccountHandle;->getComponentName()Landroid/content/ComponentName;
 
     move-result-object v2
@@ -345,7 +310,6 @@
 
     move-result-object v19
 
-    .line 87
     invoke-virtual/range {p17 .. p17}, Landroid/telecom/PhoneAccountHandle;->getId()Ljava/lang/String;
 
     move-result-object v20
@@ -377,14 +341,12 @@
 
     move/from16 v18, p16
 
-    .line 89
     invoke-static/range {v2 .. v21}, Lmiui/provider/ExtraContacts$Calls;->addCall(Lcom/android/internal/telephony/CallerInfo;Landroid/content/Context;Ljava/lang/String;IIJIIIJJJZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v2
 
     return-object v2
 
-    .line 68
     .end local v19    # "accountComponentString":Ljava/lang/String;
     .end local v20    # "accountId":Ljava/lang/String;
     .end local v21    # "accountAddress":Ljava/lang/String;
@@ -406,27 +368,22 @@
 
     const/4 v3, 0x0
 
-    .line 94
     const/4 v0, 0x0
 
-    .line 95
     .local v0, "canInsert":Z
     if-eqz p0, :cond_0
 
     if-eqz p1, :cond_0
 
-    .line 96
     invoke-virtual {p1}, Landroid/content/pm/UserInfo;->getUserHandle()Landroid/os/UserHandle;
 
     move-result-object v1
 
-    .line 97
     .local v1, "userHandle":Landroid/os/UserHandle;
     sget-boolean v4, Lmiui/provider/CallLog;->IS_CTS:Z
 
     if-eqz v4, :cond_2
 
-    .line 98
     iget v4, p1, Landroid/content/pm/UserInfo;->id:I
 
     if-eq v5, v4, :cond_1
@@ -447,7 +404,6 @@
 
     move v0, v2
 
-    .line 108
     .end local v1    # "userHandle":Landroid/os/UserHandle;
     :cond_0
     :goto_0
@@ -473,17 +429,14 @@
 
     invoke-static {v4, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 109
     return v0
 
     .restart local v1    # "userHandle":Landroid/os/UserHandle;
     :cond_1
     move v0, v3
 
-    .line 98
     goto :goto_0
 
-    .line 102
     :cond_2
     iget v4, p1, Landroid/content/pm/UserInfo;->id:I
 

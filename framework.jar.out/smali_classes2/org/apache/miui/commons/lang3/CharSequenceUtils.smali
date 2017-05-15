@@ -8,10 +8,8 @@
     .locals 0
 
     .prologue
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
     return-void
 .end method
 
@@ -22,12 +20,10 @@
     .param p2, "start"    # I
 
     .prologue
-    .line 71
     instance-of v2, p0, Ljava/lang/String;
 
     if-eqz v2, :cond_1
 
-    .line 72
     check-cast p0, Ljava/lang/String;
 
     .end local p0    # "cs":Ljava/lang/CharSequence;
@@ -35,26 +31,21 @@
 
     move-result v0
 
-    .line 83
     :cond_0
     :goto_0
     return v0
 
-    .line 74
     .restart local p0    # "cs":Ljava/lang/CharSequence;
     :cond_1
     invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
 
     move-result v1
 
-    .line 75
     .local v1, "sz":I
     if-gez p2, :cond_2
 
-    .line 76
     const/4 p2, 0x0
 
-    .line 78
     :cond_2
     move v0, p2
 
@@ -62,19 +53,16 @@
     :goto_1
     if-ge v0, v1, :cond_3
 
-    .line 79
     invoke-interface {p0, v0}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v2
 
     if-eq v2, p1, :cond_0
 
-    .line 78
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 83
     :cond_3
     const/4 v0, -0x1
 
@@ -88,7 +76,6 @@
     .param p2, "start"    # I
 
     .prologue
-    .line 96
     invoke-interface {p0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -113,12 +100,10 @@
     .prologue
     const/4 v2, -0x1
 
-    .line 118
     instance-of v3, p0, Ljava/lang/String;
 
     if-eqz v3, :cond_1
 
-    .line 119
     check-cast p0, Ljava/lang/String;
 
     .end local p0    # "cs":Ljava/lang/CharSequence;
@@ -126,35 +111,28 @@
 
     move-result v0
 
-    .line 133
     :cond_0
     :goto_0
     return v0
 
-    .line 121
     .restart local p0    # "cs":Ljava/lang/CharSequence;
     :cond_1
     invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
 
     move-result v1
 
-    .line 122
     .local v1, "sz":I
     if-gez p2, :cond_2
 
     move v0, v2
 
-    .line 123
     goto :goto_0
 
-    .line 125
     :cond_2
     if-lt p2, v1, :cond_3
 
-    .line 126
     add-int/lit8 p2, v1, -0x1
 
-    .line 128
     :cond_3
     move v0, p2
 
@@ -162,14 +140,12 @@
     :goto_1
     if-ltz v0, :cond_4
 
-    .line 129
     invoke-interface {p0, v0}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v3
 
     if-eq v3, p1, :cond_0
 
-    .line 128
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_1
@@ -177,7 +153,6 @@
     :cond_4
     move v0, v2
 
-    .line 133
     goto :goto_0
 .end method
 
@@ -188,7 +163,6 @@
     .param p2, "start"    # I
 
     .prologue
-    .line 146
     invoke-interface {p0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -214,7 +188,6 @@
     .param p5, "length"    # I
 
     .prologue
-    .line 190
     instance-of v0, p0, Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -225,7 +198,6 @@
 
     move-object v0, p0
 
-    .line 191
     check-cast v0, Ljava/lang/String;
 
     move-object v3, p3
@@ -244,7 +216,6 @@
 
     move-result v0
 
-    .line 194
     :goto_0
     return v0
 
@@ -278,7 +249,6 @@
     .param p1, "start"    # I
 
     .prologue
-    .line 57
     if-nez p0, :cond_0
 
     const/4 v0, 0x0
@@ -303,12 +273,10 @@
     .param p0, "cs"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 165
     instance-of v3, p0, Ljava/lang/String;
 
     if-eqz v3, :cond_1
 
-    .line 166
     check-cast p0, Ljava/lang/String;
 
     .end local p0    # "cs":Ljava/lang/CharSequence;
@@ -316,7 +284,6 @@
 
     move-result-object v0
 
-    .line 173
     .local v0, "array":[C
     .local v1, "i":I
     .local v2, "sz":I
@@ -324,7 +291,6 @@
     :cond_0
     return-object v0
 
-    .line 168
     .end local v0    # "array":[C
     .end local v1    # "i":I
     .end local v2    # "sz":I
@@ -333,7 +299,6 @@
 
     move-result v2
 
-    .line 169
     .restart local v2    # "sz":I
     invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
 
@@ -341,7 +306,6 @@
 
     new-array v0, v3, [C
 
-    .line 170
     .restart local v0    # "array":[C
     const/4 v1, 0x0
 
@@ -349,14 +313,12 @@
     :goto_0
     if-ge v1, v2, :cond_0
 
-    .line 171
     invoke-interface {p0, v1}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v3
 
     aput-char v3, v0, v1
 
-    .line 170
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0

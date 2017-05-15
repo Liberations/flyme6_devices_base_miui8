@@ -24,7 +24,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 235
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -51,10 +50,8 @@
 
     invoke-direct {p0, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    .line 236
     iput p1, p0, Lcom/miui/whetstone/WhetstonePackageState$UserIdNotFoundException;->mUserId:I
 
-    .line 237
     return-void
 .end method
 
@@ -64,7 +61,6 @@
     .locals 1
 
     .prologue
-    .line 240
     iget v0, p0, Lcom/miui/whetstone/WhetstonePackageState$UserIdNotFoundException;->mUserId:I
 
     return v0

@@ -24,13 +24,10 @@
     .param p1, "body"    # Ljava/lang/String;
 
     .prologue
-    .line 515
     invoke-direct {p0}, Lmiui/maml/util/net/SimpleRequest$HeaderContent;-><init>()V
 
-    .line 516
     iput-object p1, p0, Lmiui/maml/util/net/SimpleRequest$StringContent;->body:Ljava/lang/String;
 
-    .line 517
     return-void
 .end method
 
@@ -40,7 +37,6 @@
     .locals 1
 
     .prologue
-    .line 520
     iget-object v0, p0, Lmiui/maml/util/net/SimpleRequest$StringContent;->body:Ljava/lang/String;
 
     return-object v0
@@ -50,7 +46,6 @@
     .locals 2
 
     .prologue
-    .line 525
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

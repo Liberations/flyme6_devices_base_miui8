@@ -27,16 +27,12 @@
     .param p3, "version"    # I
 
     .prologue
-    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 22
     iput-wide p1, p0, Lmiui/maml/data/Variables$DoubleInfo;->mValue:D
 
-    .line 23
     iput p3, p0, Lmiui/maml/data/Variables$DoubleInfo;->mVersion:I
 
-    .line 24
     return-void
 .end method
 
@@ -47,16 +43,13 @@
     .param p1, "value"    # D
 
     .prologue
-    .line 27
     iput-wide p1, p0, Lmiui/maml/data/Variables$DoubleInfo;->mValue:D
 
-    .line 28
     iget v0, p0, Lmiui/maml/data/Variables$DoubleInfo;->mVersion:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lmiui/maml/data/Variables$DoubleInfo;->mVersion:I
 
-    .line 29
     return-void
 .end method

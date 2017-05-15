@@ -32,7 +32,6 @@
     .locals 1
 
     .prologue
-    .line 71
     new-instance v0, Landroid/net/wifi/WifiNetworkConnectionStatistics$1;
 
     invoke-direct {v0}, Landroid/net/wifi/WifiNetworkConnectionStatistics$1;-><init>()V
@@ -46,7 +45,6 @@
     .locals 0
 
     .prologue
-    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -58,16 +56,12 @@
     .param p2, "usage"    # I
 
     .prologue
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
     iput p1, p0, Landroid/net/wifi/WifiNetworkConnectionStatistics;->numConnection:I
 
-    .line 37
     iput p2, p0, Landroid/net/wifi/WifiNetworkConnectionStatistics;->numUsage:I
 
-    .line 38
     return-void
 .end method
 
@@ -76,20 +70,16 @@
     .param p1, "source"    # Landroid/net/wifi/WifiNetworkConnectionStatistics;
 
     .prologue
-    .line 53
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 54
     iget v0, p1, Landroid/net/wifi/WifiNetworkConnectionStatistics;->numConnection:I
 
     iput v0, p0, Landroid/net/wifi/WifiNetworkConnectionStatistics;->numConnection:I
 
-    .line 55
     iget v0, p1, Landroid/net/wifi/WifiNetworkConnectionStatistics;->numUsage:I
 
     iput v0, p0, Landroid/net/wifi/WifiNetworkConnectionStatistics;->numUsage:I
 
-    .line 56
     return-void
 .end method
 
@@ -99,7 +89,6 @@
     .locals 1
 
     .prologue
-    .line 60
     const/4 v0, 0x0
 
     return v0
@@ -109,12 +98,10 @@
     .locals 3
 
     .prologue
-    .line 45
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 46
     .local v0, "sbuf":Ljava/lang/StringBuilder;
     const-string v1, "c="
 
@@ -126,7 +113,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 47
     const-string v1, " u="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -137,7 +123,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 48
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -151,16 +136,13 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 66
     iget v0, p0, Landroid/net/wifi/WifiNetworkConnectionStatistics;->numConnection:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 67
     iget v0, p0, Landroid/net/wifi/WifiNetworkConnectionStatistics;->numUsage:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 68
     return-void
 .end method

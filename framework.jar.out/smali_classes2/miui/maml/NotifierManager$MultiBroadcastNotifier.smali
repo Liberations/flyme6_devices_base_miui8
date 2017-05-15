@@ -25,13 +25,10 @@
     .param p2, "intents"    # [Ljava/lang/String;
 
     .prologue
-    .line 424
     invoke-direct {p0, p1}, Lmiui/maml/NotifierManager$BroadcastNotifier;-><init>(Landroid/content/Context;)V
 
-    .line 425
     iput-object p2, p0, Lmiui/maml/NotifierManager$MultiBroadcastNotifier;->mIntents:[Ljava/lang/String;
 
-    .line 426
     return-void
 .end method
 
@@ -41,12 +38,10 @@
     .locals 5
 
     .prologue
-    .line 430
     new-instance v1, Landroid/content/IntentFilter;
 
     invoke-direct {v1}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 431
     .local v1, "filter":Landroid/content/IntentFilter;
     iget-object v0, p0, Lmiui/maml/NotifierManager$MultiBroadcastNotifier;->mIntents:[Ljava/lang/String;
 
@@ -62,16 +57,13 @@
 
     aget-object v4, v0, v2
 
-    .line 432
     .local v4, "s":Ljava/lang/String;
     invoke-virtual {v1, v4}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 431
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 434
     .end local v4    # "s":Ljava/lang/String;
     :cond_0
     return-object v1

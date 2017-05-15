@@ -13,13 +13,10 @@
     .param p1, "m"    # Lmiui/maml/data/VariableUpdaterManager;
 
     .prologue
-    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 12
     iput-object p1, p0, Lmiui/maml/data/VariableUpdater;->mVariableUpdaterManager:Lmiui/maml/data/VariableUpdaterManager;
 
-    .line 13
     return-void
 .end method
 
@@ -29,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 36
     return-void
 .end method
 
@@ -37,7 +33,6 @@
     .locals 1
 
     .prologue
-    .line 20
     invoke-virtual {p0}, Lmiui/maml/data/VariableUpdater;->getRoot()Lmiui/maml/ScreenElementRoot;
 
     move-result-object v0
@@ -53,7 +48,6 @@
     .locals 1
 
     .prologue
-    .line 16
     iget-object v0, p0, Lmiui/maml/data/VariableUpdater;->mVariableUpdaterManager:Lmiui/maml/data/VariableUpdaterManager;
 
     invoke-virtual {v0}, Lmiui/maml/data/VariableUpdaterManager;->getRoot()Lmiui/maml/ScreenElementRoot;
@@ -67,7 +61,6 @@
     .locals 0
 
     .prologue
-    .line 24
     return-void
 .end method
 
@@ -75,7 +68,6 @@
     .locals 0
 
     .prologue
-    .line 33
     return-void
 .end method
 
@@ -83,7 +75,6 @@
     .locals 0
 
     .prologue
-    .line 30
     return-void
 .end method
 
@@ -92,6 +83,5 @@
     .param p1, "currentTime"    # J
 
     .prologue
-    .line 27
     return-void
 .end method

@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 513
     iput-object p1, p0, Landroid/media/browse/MediaBrowser$7;->this$0:Landroid/media/browse/MediaBrowser;
 
     iput-object p2, p0, Landroid/media/browse/MediaBrowser$7;->val$callback:Landroid/service/media/IMediaBrowserServiceCallbacks;
@@ -52,12 +51,11 @@
     .locals 5
 
     .prologue
-    .line 518
     iget-object v2, p0, Landroid/media/browse/MediaBrowser$7;->this$0:Landroid/media/browse/MediaBrowser;
 
     iget-object v3, p0, Landroid/media/browse/MediaBrowser$7;->val$callback:Landroid/service/media/IMediaBrowserServiceCallbacks;
 
-    const-string/jumbo v4, "onLoadChildren"
+    const-string v4, "onLoadChildren"
 
     # invokes: Landroid/media/browse/MediaBrowser;->isCurrent(Landroid/service/media/IMediaBrowserServiceCallbacks;Ljava/lang/String;)Z
     invoke-static {v2, v3, v4}, Landroid/media/browse/MediaBrowser;->access$400(Landroid/media/browse/MediaBrowser;Landroid/service/media/IMediaBrowserServiceCallbacks;Ljava/lang/String;)Z
@@ -66,12 +64,10 @@
 
     if-nez v2, :cond_1
 
-    .line 542
     :cond_0
     :goto_0
     return-void
 
-    .line 522
     :cond_1
     iget-object v2, p0, Landroid/media/browse/MediaBrowser$7;->val$list:Landroid/content/pm/ParceledListSlice;
 
@@ -79,16 +75,13 @@
 
     move-result-object v0
 
-    .line 526
     .local v0, "data":Ljava/util/List;, "Ljava/util/List<Landroid/media/browse/MediaBrowser$MediaItem;>;"
     if-nez v0, :cond_2
 
-    .line 527
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
 
-    .line 531
     :cond_2
     iget-object v2, p0, Landroid/media/browse/MediaBrowser$7;->this$0:Landroid/media/browse/MediaBrowser;
 
@@ -105,11 +98,9 @@
 
     check-cast v1, Landroid/media/browse/MediaBrowser$Subscription;
 
-    .line 532
     .local v1, "subscription":Landroid/media/browse/MediaBrowser$Subscription;
     if-eqz v1, :cond_0
 
-    .line 541
     iget-object v2, v1, Landroid/media/browse/MediaBrowser$Subscription;->callback:Landroid/media/browse/MediaBrowser$SubscriptionCallback;
 
     iget-object v3, p0, Landroid/media/browse/MediaBrowser$7;->val$parentId:Ljava/lang/String;

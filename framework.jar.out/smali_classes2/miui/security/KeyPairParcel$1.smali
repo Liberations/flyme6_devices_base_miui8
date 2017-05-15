@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 23
     invoke-virtual {p0, p1}, Lmiui/security/KeyPairParcel$1;->createFromParcel(Landroid/os/Parcel;)Lmiui/security/KeyPairParcel;
 
     move-result-object v0
@@ -58,7 +56,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 25
     new-instance v0, Lmiui/security/KeyPairParcel;
 
     const/4 v1, 0x0
@@ -73,7 +70,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 23
     invoke-virtual {p0, p1}, Lmiui/security/KeyPairParcel$1;->newArray(I)[Lmiui/security/KeyPairParcel;
 
     move-result-object v0
@@ -86,7 +82,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 28
     new-array v0, p1, [Lmiui/security/KeyPairParcel;
 
     return-object v0

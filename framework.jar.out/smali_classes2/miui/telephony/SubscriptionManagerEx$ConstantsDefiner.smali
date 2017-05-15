@@ -27,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,7 +36,6 @@
     .locals 1
 
     .prologue
-    .line 58
     const v0, 0x7fffffff
 
     return v0
@@ -47,7 +45,6 @@
     .locals 1
 
     .prologue
-    .line 62
     const v0, 0x7fffffff
 
     return v0
@@ -57,7 +54,6 @@
     .locals 1
 
     .prologue
-    .line 54
     const v0, 0x7fffffff
 
     return v0
@@ -67,7 +63,6 @@
     .locals 1
 
     .prologue
-    .line 46
     const/4 v0, -0x1
 
     return v0
@@ -77,7 +72,6 @@
     .locals 1
 
     .prologue
-    .line 50
     const/4 v0, -0x1
 
     return v0
@@ -87,7 +81,6 @@
     .locals 1
 
     .prologue
-    .line 42
     const/4 v0, -0x1
 
     return v0
@@ -97,7 +90,6 @@
     .locals 1
 
     .prologue
-    .line 70
     const-string v0, "phone_id"
 
     return-object v0
@@ -107,7 +99,6 @@
     .locals 1
 
     .prologue
-    .line 74
     const-string v0, "slot_id"
 
     return-object v0
@@ -117,7 +108,6 @@
     .locals 1
 
     .prologue
-    .line 66
     const-string v0, "subscription_id"
 
     return-object v0

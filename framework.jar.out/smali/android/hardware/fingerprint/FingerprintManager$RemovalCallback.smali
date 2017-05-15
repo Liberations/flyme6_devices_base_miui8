@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 387
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,7 +33,6 @@
     .param p3, "errString"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 394
     return-void
 .end method
 
@@ -43,6 +41,5 @@
     .param p1, "fingerprint"    # Landroid/hardware/fingerprint/Fingerprint;
 
     .prologue
-    .line 400
     return-void
 .end method

@@ -45,17 +45,14 @@
     .param p1, "data"    # [B
 
     .prologue
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
     invoke-static {p1}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/miui/whetstone/Event/WhetstoneEventLog;->mBuffer:Ljava/nio/ByteBuffer;
 
-    .line 37
     iget-object v0, p0, Lcom/miui/whetstone/Event/WhetstoneEventLog;->mBuffer:Ljava/nio/ByteBuffer;
 
     invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
@@ -64,26 +61,22 @@
 
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
-    .line 38
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/miui/whetstone/Event/WhetstoneEventLog;->mLength:I
 
-    .line 39
     invoke-virtual {p0}, Lcom/miui/whetstone/Event/WhetstoneEventLog;->getData()Ljava/lang/Object;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/miui/whetstone/Event/WhetstoneEventLog;->mData:Ljava/lang/Object;
 
-    .line 40
     iget-object v0, p0, Lcom/miui/whetstone/Event/WhetstoneEventLog;->mData:Ljava/lang/Object;
 
     instance-of v0, v0, [Ljava/lang/Object;
 
     if-eqz v0, :cond_1
 
-    .line 41
     iget-object v0, p0, Lcom/miui/whetstone/Event/WhetstoneEventLog;->mData:Ljava/lang/Object;
 
     check-cast v0, [Ljava/lang/Object;
@@ -94,12 +87,10 @@
 
     iput v0, p0, Lcom/miui/whetstone/Event/WhetstoneEventLog;->mLength:I
 
-    .line 45
     :cond_0
     :goto_0
     return-void
 
-    .line 42
     :cond_1
     iget-object v0, p0, Lcom/miui/whetstone/Event/WhetstoneEventLog;->mData:Ljava/lang/Object;
 
@@ -107,7 +98,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 43
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/miui/whetstone/Event/WhetstoneEventLog;->mLength:I
@@ -119,18 +109,15 @@
     .locals 9
 
     .prologue
-    .line 156
     iget-object v6, p0, Lcom/miui/whetstone/Event/WhetstoneEventLog;->mBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v6}, Ljava/nio/ByteBuffer;->get()B
 
     move-result v5
 
-    .line 157
     .local v5, "type":B
     packed-switch v5, :pswitch_data_0
 
-    .line 184
     new-instance v6, Ljava/lang/IllegalArgumentException;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -155,7 +142,6 @@
 
     throw v6
 
-    .line 159
     :pswitch_0
     iget-object v6, p0, Lcom/miui/whetstone/Event/WhetstoneEventLog;->mBuffer:Ljava/nio/ByteBuffer;
 
@@ -167,12 +153,10 @@
 
     move-result-object v0
 
-    .line 181
     :cond_0
     :goto_0
     return-object v0
 
-    .line 162
     :pswitch_1
     iget-object v6, p0, Lcom/miui/whetstone/Event/WhetstoneEventLog;->mBuffer:Ljava/nio/ByteBuffer;
 
@@ -186,7 +170,6 @@
 
     goto :goto_0
 
-    .line 166
     :pswitch_2
     :try_start_0
     iget-object v6, p0, Lcom/miui/whetstone/Event/WhetstoneEventLog;->mBuffer:Ljava/nio/ByteBuffer;
@@ -195,7 +178,6 @@
 
     move-result v3
 
-    .line 167
     .local v3, "length":I
     iget-object v6, p0, Lcom/miui/whetstone/Event/WhetstoneEventLog;->mBuffer:Ljava/nio/ByteBuffer;
 
@@ -203,7 +185,6 @@
 
     move-result v4
 
-    .line 168
     .local v4, "start":I
     iget-object v6, p0, Lcom/miui/whetstone/Event/WhetstoneEventLog;->mBuffer:Ljava/nio/ByteBuffer;
 
@@ -211,7 +192,6 @@
 
     invoke-virtual {v6, v7}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 169
     new-instance v0, Ljava/lang/String;
 
     iget-object v6, p0, Lcom/miui/whetstone/Event/WhetstoneEventLog;->mBuffer:Ljava/nio/ByteBuffer;
@@ -228,13 +208,11 @@
 
     goto :goto_0
 
-    .line 170
     .end local v3    # "length":I
     .end local v4    # "start":I
     :catch_0
     move-exception v1
 
-    .line 171
     .local v1, "e":Ljava/io/UnsupportedEncodingException;
     const-string v6, "WhetstoneEventLog"
 
@@ -242,12 +220,10 @@
 
     invoke-static {v6, v7, v1}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 172
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 176
     .end local v1    # "e":Ljava/io/UnsupportedEncodingException;
     :pswitch_3
     iget-object v6, p0, Lcom/miui/whetstone/Event/WhetstoneEventLog;->mBuffer:Ljava/nio/ByteBuffer;
@@ -256,21 +232,17 @@
 
     move-result v3
 
-    .line 177
     .restart local v3    # "length":I
     if-gez v3, :cond_1
 
     add-int/lit16 v3, v3, 0x100
 
-    .line 178
     :cond_1
     new-array v0, v3, [Ljava/lang/Object;
 
-    .line 179
     .local v0, "array":[Ljava/lang/Object;
     iput v3, p0, Lcom/miui/whetstone/Event/WhetstoneEventLog;->mLength:I
 
-    .line 180
     const/4 v2, 0x0
 
     .local v2, "i":I
@@ -287,7 +259,6 @@
 
     goto :goto_1
 
-    .line 157
     nop
 
     :pswitch_data_0
@@ -304,14 +275,12 @@
     .param p1, "pos"    # I
 
     .prologue
-    .line 103
     if-ltz p1, :cond_0
 
     iget v1, p0, Lcom/miui/whetstone/Event/WhetstoneEventLog;->mLength:I
 
     if-lt p1, v1, :cond_1
 
-    .line 104
     :cond_0
     const-string v1, "WhetstoneEventLog"
 
@@ -335,14 +304,11 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 105
     const/4 v0, 0x0
 
-    .line 113
     :goto_0
     return-object v0
 
-    .line 108
     :cond_1
     iget-object v1, p0, Lcom/miui/whetstone/Event/WhetstoneEventLog;->mData:Ljava/lang/Object;
 
@@ -350,7 +316,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 109
     iget-object v1, p0, Lcom/miui/whetstone/Event/WhetstoneEventLog;->mData:Ljava/lang/Object;
 
     check-cast v1, [Ljava/lang/Object;
@@ -362,7 +327,6 @@
     .local v0, "temp":Ljava/lang/Object;
     goto :goto_0
 
-    .line 111
     .end local v0    # "temp":Ljava/lang/Object;
     :cond_2
     iget-object v0, p0, Lcom/miui/whetstone/Event/WhetstoneEventLog;->mData:Ljava/lang/Object;
@@ -381,29 +345,23 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 61
     const/4 v3, -0x1
 
-    .line 62
     .local v3, "start":I
     const/4 v0, -0x1
 
-    .line 63
     .local v0, "end":I
     if-eqz p1, :cond_0
 
     if-gtz p2, :cond_1
 
-    .line 85
     :cond_0
     :goto_0
     return-object v4
 
-    .line 66
     :cond_1
     const/4 v2, 0x0
 
-    .line 67
     .local v2, "n":I
     const/4 v1, 0x0
 
@@ -415,7 +373,6 @@
 
     if-ge v1, v5, :cond_0
 
-    .line 68
     invoke-interface {p1, v1}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v5
@@ -424,17 +381,14 @@
 
     if-ne v5, v6, :cond_3
 
-    .line 69
     move v3, v1
 
-    .line 67
     :cond_2
     :goto_2
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 70
     :cond_3
     invoke-interface {p1, v1}, Ljava/lang/CharSequence;->charAt(I)C
 
@@ -444,20 +398,16 @@
 
     if-ne v5, v6, :cond_4
 
-    .line 71
     move v0, v1
 
-    .line 72
     add-int/lit8 v2, v2, 0x1
 
-    .line 73
     if-ne v2, p2, :cond_0
 
     add-int/lit8 v5, v3, 0x1
 
     if-le v1, v5, :cond_0
 
-    .line 74
     add-int/lit8 v4, v3, 0x1
 
     add-int/lit8 v5, v1, -0x1
@@ -472,7 +422,6 @@
 
     goto :goto_0
 
-    .line 77
     :cond_4
     if-lez v3, :cond_2
 
@@ -488,17 +437,14 @@
 
     if-ne v0, v5, :cond_2
 
-    .line 78
     add-int/lit8 v2, v2, 0x1
 
-    .line 79
     if-ne v2, p2, :cond_5
 
     add-int/lit8 v5, v3, 0x1
 
     if-le v1, v5, :cond_5
 
-    .line 80
     add-int/lit8 v4, v3, 0x1
 
     add-int/lit8 v5, v1, -0x1
@@ -513,7 +459,6 @@
 
     goto :goto_0
 
-    .line 82
     :cond_5
     move v3, v1
 
@@ -528,7 +473,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 142
     monitor-enter p0
 
     :try_start_0
@@ -546,14 +490,12 @@
 
     invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
 
-    .line 143
     iget-object v2, p0, Lcom/miui/whetstone/Event/WhetstoneEventLog;->mBuffer:Ljava/nio/ByteBuffer;
 
     const/16 v3, 0x18
 
     invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 144
     invoke-direct {p0}, Lcom/miui/whetstone/Event/WhetstoneEventLog;->decodeObject()Ljava/lang/Object;
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
@@ -562,17 +504,14 @@
 
     move-result-object v1
 
-    .line 150
     :goto_0
     monitor-exit p0
 
     return-object v1
 
-    .line 145
     :catch_0
     move-exception v0
 
-    .line 146
     .local v0, "e":Ljava/lang/IllegalArgumentException;
     :try_start_1
     const-string v2, "WhetstoneEventLog"
@@ -605,7 +544,6 @@
 
     goto :goto_0
 
-    .line 142
     .end local v0    # "e":Ljava/lang/IllegalArgumentException;
     :catchall_0
     move-exception v1
@@ -614,11 +552,9 @@
 
     throw v1
 
-    .line 148
     :catch_1
     move-exception v0
 
-    .line 149
     .local v0, "e":Ljava/nio/BufferUnderflowException;
     :try_start_2
     const-string v2, "WhetstoneEventLog"
@@ -657,12 +593,10 @@
     .param p1, "pos"    # I
 
     .prologue
-    .line 88
     invoke-direct {p0, p1}, Lcom/miui/whetstone/Event/WhetstoneEventLog;->getObject(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 89
     .local v0, "temp":Ljava/lang/Object;
     if-eqz v0, :cond_0
 
@@ -670,10 +604,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 90
     check-cast v0, Ljava/lang/Integer;
 
-    .line 92
     .end local v0    # "temp":Ljava/lang/Object;
     :goto_0
     return-object v0
@@ -690,12 +622,10 @@
     .param p1, "pos"    # I
 
     .prologue
-    .line 95
     invoke-direct {p0, p1}, Lcom/miui/whetstone/Event/WhetstoneEventLog;->getObject(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 96
     .local v0, "temp":Ljava/lang/Object;
     if-eqz v0, :cond_0
 
@@ -703,10 +633,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 97
     check-cast v0, Ljava/lang/Long;
 
-    .line 99
     .end local v0    # "temp":Ljava/lang/Object;
     :goto_0
     return-object v0
@@ -722,7 +650,6 @@
     .locals 2
 
     .prologue
-    .line 120
     iget-object v0, p0, Lcom/miui/whetstone/Event/WhetstoneEventLog;->mBuffer:Ljava/nio/ByteBuffer;
 
     const/4 v1, 0x4
@@ -739,12 +666,10 @@
     .param p1, "pos"    # I
 
     .prologue
-    .line 52
     invoke-direct {p0, p1}, Lcom/miui/whetstone/Event/WhetstoneEventLog;->getObject(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 53
     .local v0, "temp":Ljava/lang/Object;
     if-eqz v0, :cond_0
 
@@ -752,10 +677,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 54
     check-cast v0, Ljava/lang/String;
 
-    .line 56
     .end local v0    # "temp":Ljava/lang/Object;
     :goto_0
     return-object v0
@@ -771,7 +694,6 @@
     .locals 2
 
     .prologue
-    .line 136
     iget-object v0, p0, Lcom/miui/whetstone/Event/WhetstoneEventLog;->mBuffer:Ljava/nio/ByteBuffer;
 
     const/16 v1, 0x14
@@ -787,7 +709,6 @@
     .locals 2
 
     .prologue
-    .line 125
     iget-object v0, p0, Lcom/miui/whetstone/Event/WhetstoneEventLog;->mBuffer:Ljava/nio/ByteBuffer;
 
     const/16 v1, 0x8
@@ -803,7 +724,6 @@
     .locals 4
 
     .prologue
-    .line 130
     iget-object v0, p0, Lcom/miui/whetstone/Event/WhetstoneEventLog;->mBuffer:Ljava/nio/ByteBuffer;
 
     const/16 v1, 0xc
@@ -837,7 +757,6 @@
     .locals 4
 
     .prologue
-    .line 48
     const-string v0, "WhetstoneEventLog"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -900,6 +819,5 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 50
     return-void
 .end method

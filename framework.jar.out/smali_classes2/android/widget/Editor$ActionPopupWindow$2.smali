@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 3674
     iput-object p1, p0, Landroid/widget/Editor$ActionPopupWindow$2;->this$1:Landroid/widget/Editor$ActionPopupWindow;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 3677
     iget-object v0, p0, Landroid/widget/Editor$ActionPopupWindow$2;->this$1:Landroid/widget/Editor$ActionPopupWindow;
 
     iget-object v0, v0, Landroid/widget/Editor$ActionPopupWindow;->mPopupWindow:Landroid/widget/PopupWindow;
@@ -49,6 +47,5 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Editor$AnimatePopupWindow;->dismiss(Z)V
 
-    .line 3678
     return-void
 .end method

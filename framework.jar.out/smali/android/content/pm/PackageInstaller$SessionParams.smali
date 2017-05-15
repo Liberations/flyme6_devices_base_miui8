@@ -69,7 +69,6 @@
     .locals 1
 
     .prologue
-    .line 1063
     new-instance v0, Landroid/content/pm/PackageInstaller$SessionParams$1;
 
     invoke-direct {v0}, Landroid/content/pm/PackageInstaller$SessionParams$1;-><init>()V
@@ -86,29 +85,22 @@
     .prologue
     const-wide/16 v2, -0x1
 
-    .line 904
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 871
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/content/pm/PackageInstaller$SessionParams;->mode:I
 
-    .line 875
     const/4 v0, 0x1
 
     iput v0, p0, Landroid/content/pm/PackageInstaller$SessionParams;->installLocation:I
 
-    .line 877
     iput-wide v2, p0, Landroid/content/pm/PackageInstaller$SessionParams;->sizeBytes:J
 
-    .line 885
     iput-wide v2, p0, Landroid/content/pm/PackageInstaller$SessionParams;->appIconLastModified:J
 
-    .line 905
     iput p1, p0, Landroid/content/pm/PackageInstaller$SessionParams;->mode:I
 
-    .line 906
     return-void
 .end method
 
@@ -121,61 +113,50 @@
 
     const/4 v2, 0x0
 
-    .line 909
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 871
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/content/pm/PackageInstaller$SessionParams;->mode:I
 
-    .line 875
     const/4 v0, 0x1
 
     iput v0, p0, Landroid/content/pm/PackageInstaller$SessionParams;->installLocation:I
 
-    .line 877
     iput-wide v4, p0, Landroid/content/pm/PackageInstaller$SessionParams;->sizeBytes:J
 
-    .line 885
     iput-wide v4, p0, Landroid/content/pm/PackageInstaller$SessionParams;->appIconLastModified:J
 
-    .line 910
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/content/pm/PackageInstaller$SessionParams;->mode:I
 
-    .line 911
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/content/pm/PackageInstaller$SessionParams;->installFlags:I
 
-    .line 912
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/content/pm/PackageInstaller$SessionParams;->installLocation:I
 
-    .line 913
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/content/pm/PackageInstaller$SessionParams;->sizeBytes:J
 
-    .line 914
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/content/pm/PackageInstaller$SessionParams;->appPackageName:Ljava/lang/String;
 
-    .line 915
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
 
     move-result-object v0
@@ -184,14 +165,12 @@
 
     iput-object v0, p0, Landroid/content/pm/PackageInstaller$SessionParams;->appIcon:Landroid/graphics/Bitmap;
 
-    .line 916
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/content/pm/PackageInstaller$SessionParams;->appLabel:Ljava/lang/String;
 
-    .line 917
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
 
     move-result-object v0
@@ -200,7 +179,6 @@
 
     iput-object v0, p0, Landroid/content/pm/PackageInstaller$SessionParams;->originatingUri:Landroid/net/Uri;
 
-    .line 918
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
 
     move-result-object v0
@@ -209,28 +187,24 @@
 
     iput-object v0, p0, Landroid/content/pm/PackageInstaller$SessionParams;->referrerUri:Landroid/net/Uri;
 
-    .line 919
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/content/pm/PackageInstaller$SessionParams;->abiOverride:Ljava/lang/String;
 
-    .line 920
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/content/pm/PackageInstaller$SessionParams;->volumeUuid:Ljava/lang/String;
 
-    .line 921
     invoke-virtual {p1}, Landroid/os/Parcel;->readStringArray()[Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/content/pm/PackageInstaller$SessionParams;->grantedRuntimePermissions:[Ljava/lang/String;
 
-    .line 922
     return-void
 .end method
 
@@ -240,7 +214,6 @@
     .locals 1
 
     .prologue
-    .line 1043
     const/4 v0, 0x0
 
     return v0
@@ -251,8 +224,7 @@
     .param p1, "pw"    # Lcom/android/internal/util/IndentingPrintWriter;
 
     .prologue
-    .line 1026
-    const-string/jumbo v0, "mode"
+    const-string v0, "mode"
 
     iget v1, p0, Landroid/content/pm/PackageInstaller$SessionParams;->mode:I
 
@@ -262,15 +234,13 @@
 
     invoke-virtual {p1, v0, v1}, Lcom/android/internal/util/IndentingPrintWriter;->printPair(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 1027
-    const-string/jumbo v0, "installFlags"
+    const-string v0, "installFlags"
 
     iget v1, p0, Landroid/content/pm/PackageInstaller$SessionParams;->installFlags:I
 
     invoke-virtual {p1, v0, v1}, Lcom/android/internal/util/IndentingPrintWriter;->printHexPair(Ljava/lang/String;I)V
 
-    .line 1028
-    const-string/jumbo v0, "installLocation"
+    const-string v0, "installLocation"
 
     iget v1, p0, Landroid/content/pm/PackageInstaller$SessionParams;->installLocation:I
 
@@ -280,8 +250,7 @@
 
     invoke-virtual {p1, v0, v1}, Lcom/android/internal/util/IndentingPrintWriter;->printPair(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 1029
-    const-string/jumbo v0, "sizeBytes"
+    const-string v0, "sizeBytes"
 
     iget-wide v2, p0, Landroid/content/pm/PackageInstaller$SessionParams;->sizeBytes:J
 
@@ -291,14 +260,12 @@
 
     invoke-virtual {p1, v0, v1}, Lcom/android/internal/util/IndentingPrintWriter;->printPair(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 1030
     const-string v0, "appPackageName"
 
     iget-object v1, p0, Landroid/content/pm/PackageInstaller$SessionParams;->appPackageName:Ljava/lang/String;
 
     invoke-virtual {p1, v0, v1}, Lcom/android/internal/util/IndentingPrintWriter;->printPair(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 1031
     const-string v1, "appIcon"
 
     iget-object v0, p0, Landroid/content/pm/PackageInstaller$SessionParams;->appIcon:Landroid/graphics/Bitmap;
@@ -314,55 +281,46 @@
 
     invoke-virtual {p1, v1, v0}, Lcom/android/internal/util/IndentingPrintWriter;->printPair(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 1032
     const-string v0, "appLabel"
 
     iget-object v1, p0, Landroid/content/pm/PackageInstaller$SessionParams;->appLabel:Ljava/lang/String;
 
     invoke-virtual {p1, v0, v1}, Lcom/android/internal/util/IndentingPrintWriter;->printPair(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 1033
-    const-string/jumbo v0, "originatingUri"
+    const-string v0, "originatingUri"
 
     iget-object v1, p0, Landroid/content/pm/PackageInstaller$SessionParams;->originatingUri:Landroid/net/Uri;
 
     invoke-virtual {p1, v0, v1}, Lcom/android/internal/util/IndentingPrintWriter;->printPair(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 1034
-    const-string/jumbo v0, "referrerUri"
+    const-string v0, "referrerUri"
 
     iget-object v1, p0, Landroid/content/pm/PackageInstaller$SessionParams;->referrerUri:Landroid/net/Uri;
 
     invoke-virtual {p1, v0, v1}, Lcom/android/internal/util/IndentingPrintWriter;->printPair(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 1035
     const-string v0, "abiOverride"
 
     iget-object v1, p0, Landroid/content/pm/PackageInstaller$SessionParams;->abiOverride:Ljava/lang/String;
 
     invoke-virtual {p1, v0, v1}, Lcom/android/internal/util/IndentingPrintWriter;->printPair(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 1036
-    const-string/jumbo v0, "volumeUuid"
+    const-string v0, "volumeUuid"
 
     iget-object v1, p0, Landroid/content/pm/PackageInstaller$SessionParams;->volumeUuid:Ljava/lang/String;
 
     invoke-virtual {p1, v0, v1}, Lcom/android/internal/util/IndentingPrintWriter;->printPair(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 1037
     const-string v0, "grantedRuntimePermissions"
 
     iget-object v1, p0, Landroid/content/pm/PackageInstaller$SessionParams;->grantedRuntimePermissions:[Ljava/lang/String;
 
     invoke-virtual {p1, v0, v1}, Lcom/android/internal/util/IndentingPrintWriter;->printPair(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 1038
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
-    .line 1039
     return-void
 
-    .line 1031
     :cond_0
     const/4 v0, 0x0
 
@@ -374,10 +332,8 @@
     .param p1, "appIcon"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 965
     iput-object p1, p0, Landroid/content/pm/PackageInstaller$SessionParams;->appIcon:Landroid/graphics/Bitmap;
 
-    .line 966
     return-void
 .end method
 
@@ -386,7 +342,6 @@
     .param p1, "appLabel"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 972
     if-eqz p1, :cond_0
 
     invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
@@ -396,10 +351,8 @@
     :goto_0
     iput-object v0, p0, Landroid/content/pm/PackageInstaller$SessionParams;->appLabel:Ljava/lang/String;
 
-    .line 973
     return-void
 
-    .line 972
     :cond_0
     const/4 v0, 0x0
 
@@ -411,10 +364,8 @@
     .param p1, "appPackageName"    # Ljava/lang/String;
 
     .prologue
-    .line 956
     iput-object p1, p0, Landroid/content/pm/PackageInstaller$SessionParams;->appPackageName:Ljava/lang/String;
 
-    .line 957
     return-void
 .end method
 
@@ -423,17 +374,14 @@
     .param p1, "permissions"    # [Ljava/lang/String;
 
     .prologue
-    .line 1008
     iget v0, p0, Landroid/content/pm/PackageInstaller$SessionParams;->installFlags:I
 
     or-int/lit16 v0, v0, 0x100
 
     iput v0, p0, Landroid/content/pm/PackageInstaller$SessionParams;->installFlags:I
 
-    .line 1009
     iput-object p1, p0, Landroid/content/pm/PackageInstaller$SessionParams;->grantedRuntimePermissions:[Ljava/lang/String;
 
-    .line 1010
     return-void
 .end method
 
@@ -441,21 +389,18 @@
     .locals 1
 
     .prologue
-    .line 1020
     iget v0, p0, Landroid/content/pm/PackageInstaller$SessionParams;->installFlags:I
 
     or-int/lit8 v0, v0, 0x8
 
     iput v0, p0, Landroid/content/pm/PackageInstaller$SessionParams;->installFlags:I
 
-    .line 1021
     iget v0, p0, Landroid/content/pm/PackageInstaller$SessionParams;->installFlags:I
 
     and-int/lit8 v0, v0, -0x11
 
     iput v0, p0, Landroid/content/pm/PackageInstaller$SessionParams;->installFlags:I
 
-    .line 1022
     return-void
 .end method
 
@@ -463,21 +408,18 @@
     .locals 1
 
     .prologue
-    .line 1014
     iget v0, p0, Landroid/content/pm/PackageInstaller$SessionParams;->installFlags:I
 
     or-int/lit8 v0, v0, 0x10
 
     iput v0, p0, Landroid/content/pm/PackageInstaller$SessionParams;->installFlags:I
 
-    .line 1015
     iget v0, p0, Landroid/content/pm/PackageInstaller$SessionParams;->installFlags:I
 
     and-int/lit8 v0, v0, -0x9
 
     iput v0, p0, Landroid/content/pm/PackageInstaller$SessionParams;->installFlags:I
 
-    .line 1016
     return-void
 .end method
 
@@ -486,10 +428,8 @@
     .param p1, "installLocation"    # I
 
     .prologue
-    .line 930
     iput p1, p0, Landroid/content/pm/PackageInstaller$SessionParams;->installLocation:I
 
-    .line 931
     return-void
 .end method
 
@@ -498,10 +438,8 @@
     .param p1, "originatingUri"    # Landroid/net/Uri;
 
     .prologue
-    .line 982
     iput-object p1, p0, Landroid/content/pm/PackageInstaller$SessionParams;->originatingUri:Landroid/net/Uri;
 
-    .line 983
     return-void
 .end method
 
@@ -510,10 +448,8 @@
     .param p1, "referrerUri"    # Landroid/net/Uri;
 
     .prologue
-    .line 992
     iput-object p1, p0, Landroid/content/pm/PackageInstaller$SessionParams;->referrerUri:Landroid/net/Uri;
 
-    .line 993
     return-void
 .end method
 
@@ -522,10 +458,8 @@
     .param p1, "sizeBytes"    # J
 
     .prologue
-    .line 943
     iput-wide p1, p0, Landroid/content/pm/PackageInstaller$SessionParams;->sizeBytes:J
 
-    .line 944
     return-void
 .end method
 
@@ -535,66 +469,53 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 1048
     iget v0, p0, Landroid/content/pm/PackageInstaller$SessionParams;->mode:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1049
     iget v0, p0, Landroid/content/pm/PackageInstaller$SessionParams;->installFlags:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1050
     iget v0, p0, Landroid/content/pm/PackageInstaller$SessionParams;->installLocation:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1051
     iget-wide v0, p0, Landroid/content/pm/PackageInstaller$SessionParams;->sizeBytes:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 1052
     iget-object v0, p0, Landroid/content/pm/PackageInstaller$SessionParams;->appPackageName:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 1053
     iget-object v0, p0, Landroid/content/pm/PackageInstaller$SessionParams;->appIcon:Landroid/graphics/Bitmap;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 1054
     iget-object v0, p0, Landroid/content/pm/PackageInstaller$SessionParams;->appLabel:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 1055
     iget-object v0, p0, Landroid/content/pm/PackageInstaller$SessionParams;->originatingUri:Landroid/net/Uri;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 1056
     iget-object v0, p0, Landroid/content/pm/PackageInstaller$SessionParams;->referrerUri:Landroid/net/Uri;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 1057
     iget-object v0, p0, Landroid/content/pm/PackageInstaller$SessionParams;->abiOverride:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 1058
     iget-object v0, p0, Landroid/content/pm/PackageInstaller$SessionParams;->volumeUuid:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 1059
     iget-object v0, p0, Landroid/content/pm/PackageInstaller$SessionParams;->grantedRuntimePermissions:[Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeStringArray([Ljava/lang/String;)V
 
-    .line 1060
     return-void
 .end method

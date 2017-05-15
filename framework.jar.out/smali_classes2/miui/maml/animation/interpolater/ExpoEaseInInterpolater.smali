@@ -11,7 +11,6 @@
     .locals 0
 
     .prologue
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -26,7 +25,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 8
     cmpl-float v1, p1, v0
 
     if-nez v1, :cond_0

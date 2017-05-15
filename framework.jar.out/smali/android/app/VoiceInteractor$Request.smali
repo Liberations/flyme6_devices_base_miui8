@@ -29,10 +29,8 @@
     .locals 0
 
     .prologue
-    .line 217
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 218
     return-void
 .end method
 
@@ -42,12 +40,10 @@
     .locals 4
 
     .prologue
-    .line 232
     iget-object v1, p0, Landroid/app/VoiceInteractor$Request;->mRequestInterface:Lcom/android/internal/app/IVoiceInteractorRequest;
 
     if-nez v1, :cond_0
 
-    .line 233
     new-instance v1, Ljava/lang/IllegalStateException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -78,7 +74,6 @@
 
     throw v1
 
-    .line 236
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/app/VoiceInteractor$Request;->mRequestInterface:Lcom/android/internal/app/IVoiceInteractorRequest;
@@ -87,15 +82,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 240
     :goto_0
     return-void
 
-    .line 237
     :catch_0
     move-exception v0
 
-    .line 238
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "VoiceInteractor"
 
@@ -112,19 +104,14 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 303
     iput-object v0, p0, Landroid/app/VoiceInteractor$Request;->mRequestInterface:Lcom/android/internal/app/IVoiceInteractorRequest;
 
-    .line 304
     iput-object v0, p0, Landroid/app/VoiceInteractor$Request;->mContext:Landroid/content/Context;
 
-    .line 305
     iput-object v0, p0, Landroid/app/VoiceInteractor$Request;->mActivity:Landroid/app/Activity;
 
-    .line 306
     iput-object v0, p0, Landroid/app/VoiceInteractor$Request;->mName:Ljava/lang/String;
 
-    .line 307
     return-void
 .end method
 
@@ -136,14 +123,12 @@
     .param p4, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 292
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const-string/jumbo v0, "mRequestInterface="
+    const-string v0, "mRequestInterface="
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 293
     iget-object v0, p0, Landroid/app/VoiceInteractor$Request;->mRequestInterface:Lcom/android/internal/app/IVoiceInteractorRequest;
 
     invoke-interface {v0}, Lcom/android/internal/app/IVoiceInteractorRequest;->asBinder()Landroid/os/IBinder;
@@ -152,10 +137,9 @@
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
-    .line 294
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const-string/jumbo v0, "mActivity="
+    const-string v0, "mActivity="
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -163,10 +147,9 @@
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
-    .line 295
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const-string/jumbo v0, "mName="
+    const-string v0, "mName="
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -174,7 +157,6 @@
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 296
     return-void
 .end method
 
@@ -182,7 +164,6 @@
     .locals 1
 
     .prologue
-    .line 255
     iget-object v0, p0, Landroid/app/VoiceInteractor$Request;->mActivity:Landroid/app/Activity;
 
     return-object v0
@@ -192,7 +173,6 @@
     .locals 1
 
     .prologue
-    .line 247
     iget-object v0, p0, Landroid/app/VoiceInteractor$Request;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -202,7 +182,6 @@
     .locals 1
 
     .prologue
-    .line 225
     iget-object v0, p0, Landroid/app/VoiceInteractor$Request;->mName:Ljava/lang/String;
 
     return-object v0
@@ -212,7 +191,6 @@
     .locals 1
 
     .prologue
-    .line 299
     const-string v0, "Request"
 
     return-object v0
@@ -223,7 +201,6 @@
     .param p1, "activity"    # Landroid/app/Activity;
 
     .prologue
-    .line 271
     return-void
 .end method
 
@@ -231,7 +208,6 @@
     .locals 0
 
     .prologue
-    .line 264
     return-void
 .end method
 
@@ -239,7 +215,6 @@
     .locals 0
 
     .prologue
-    .line 277
     return-void
 .end method
 
@@ -255,45 +230,37 @@
     .locals 2
 
     .prologue
-    .line 281
     new-instance v0, Ljava/lang/StringBuilder;
 
     const/16 v1, 0x80
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 282
     .local v0, "sb":Ljava/lang/StringBuilder;
     invoke-static {p0, v0}, Landroid/util/DebugUtils;->buildShortClassTag(Ljava/lang/Object;Ljava/lang/StringBuilder;)V
 
-    .line 283
     const-string v1, " "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 284
     invoke-virtual {p0}, Landroid/app/VoiceInteractor$Request;->getRequestTypeName()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 285
     const-string v1, " name="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 286
     iget-object v1, p0, Landroid/app/VoiceInteractor$Request;->mName:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 287
     const/16 v1, 0x7d
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 288
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1

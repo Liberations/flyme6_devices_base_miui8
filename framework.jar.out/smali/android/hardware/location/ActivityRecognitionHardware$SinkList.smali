@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 231
     iput-object p1, p0, Landroid/hardware/location/ActivityRecognitionHardware$SinkList;->this$0:Landroid/hardware/location/ActivityRecognitionHardware;
 
     invoke-direct {p0}, Landroid/os/RemoteCallbackList;-><init>()V
@@ -46,7 +45,6 @@
     .param p2, "x1"    # Landroid/hardware/location/ActivityRecognitionHardware$1;
 
     .prologue
-    .line 231
     invoke-direct {p0, p1}, Landroid/hardware/location/ActivityRecognitionHardware$SinkList;-><init>(Landroid/hardware/location/ActivityRecognitionHardware;)V
 
     return-void
@@ -62,7 +60,6 @@
 
     const/4 v5, 0x0
 
-    .line 249
     iget-object v2, p0, Landroid/hardware/location/ActivityRecognitionHardware$SinkList;->this$0:Landroid/hardware/location/ActivityRecognitionHardware;
 
     # getter for: Landroid/hardware/location/ActivityRecognitionHardware;->mSupportedActivitiesEnabledEvents:[[I
@@ -76,11 +73,9 @@
 
     if-eq v2, v6, :cond_0
 
-    .line 261
     :goto_0
     return-void
 
-    .line 253
     :cond_0
     iget-object v2, p0, Landroid/hardware/location/ActivityRecognitionHardware$SinkList;->this$0:Landroid/hardware/location/ActivityRecognitionHardware;
 
@@ -89,7 +84,6 @@
 
     move-result v1
 
-    .line 254
     .local v1, "result":I
     iget-object v2, p0, Landroid/hardware/location/ActivityRecognitionHardware$SinkList;->this$0:Landroid/hardware/location/ActivityRecognitionHardware;
 
@@ -102,7 +96,6 @@
 
     aput v5, v2, p2
 
-    .line 255
     const-string v2, "DisableActivityEvent: activityType=%d, eventType=%d, result=%d"
 
     const/4 v3, 0x3
@@ -133,7 +126,6 @@
 
     move-result-object v0
 
-    .line 260
     .local v0, "message":Ljava/lang/String;
     const-string v2, "ActivityRecognitionHW"
 
@@ -149,7 +141,6 @@
     .param p1, "callback"    # Landroid/hardware/location/IActivityRecognitionHardwareSink;
 
     .prologue
-    .line 234
     iget-object v3, p0, Landroid/hardware/location/ActivityRecognitionHardware$SinkList;->this$0:Landroid/hardware/location/ActivityRecognitionHardware;
 
     # getter for: Landroid/hardware/location/ActivityRecognitionHardware;->mSinks:Landroid/hardware/location/ActivityRecognitionHardware$SinkList;
@@ -161,7 +152,6 @@
 
     move-result v1
 
-    .line 235
     .local v1, "callbackCount":I
     # getter for: Landroid/hardware/location/ActivityRecognitionHardware;->DEBUG:Z
     invoke-static {}, Landroid/hardware/location/ActivityRecognitionHardware;->access$200()Z
@@ -192,15 +182,12 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 236
     :cond_0
     if-eqz v1, :cond_2
 
-    .line 246
     :cond_1
     return-void
 
-    .line 241
     :cond_2
     const/4 v0, 0x0
 
@@ -215,7 +202,6 @@
 
     if-ge v0, v3, :cond_1
 
-    .line 242
     const/4 v2, 0x0
 
     .local v2, "event":I
@@ -224,15 +210,12 @@
 
     if-ge v2, v3, :cond_3
 
-    .line 243
     invoke-direct {p0, v0, v2}, Landroid/hardware/location/ActivityRecognitionHardware$SinkList;->disableActivityEventIfEnabled(II)V
 
-    .line 242
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 241
     :cond_3
     add-int/lit8 v0, v0, 0x1
 
@@ -244,7 +227,6 @@
     .param p1, "x0"    # Landroid/os/IInterface;
 
     .prologue
-    .line 231
     check-cast p1, Landroid/hardware/location/IActivityRecognitionHardwareSink;
 
     .end local p1    # "x0":Landroid/os/IInterface;

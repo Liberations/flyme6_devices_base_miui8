@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 158
     iput-object p1, p0, Landroid/widget/Toolbar$1;->this$0:Landroid/widget/Toolbar;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "item"    # Landroid/view/MenuItem;
 
     .prologue
-    .line 161
     iget-object v0, p0, Landroid/widget/Toolbar$1;->this$0:Landroid/widget/Toolbar;
 
     # getter for: Landroid/widget/Toolbar;->mOnMenuItemClickListener:Landroid/widget/Toolbar$OnMenuItemClickListener;
@@ -51,7 +49,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 162
     iget-object v0, p0, Landroid/widget/Toolbar$1;->this$0:Landroid/widget/Toolbar;
 
     # getter for: Landroid/widget/Toolbar;->mOnMenuItemClickListener:Landroid/widget/Toolbar$OnMenuItemClickListener;
@@ -63,7 +60,6 @@
 
     move-result v0
 
-    .line 164
     :goto_0
     return v0
 

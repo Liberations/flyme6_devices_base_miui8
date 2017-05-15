@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,7 +37,6 @@
     .local p1, "fpsRange":Landroid/util/Range;, "Landroid/util/Range<Ljava/lang/Integer;>;"
     const/4 v9, 0x2
 
-    .line 147
     if-eqz p0, :cond_0
 
     invoke-interface {p0}, Ljava/util/Collection;->size()I
@@ -53,7 +51,6 @@
 
     if-le v8, v9, :cond_1
 
-    .line 148
     :cond_0
     new-instance v8, Ljava/lang/IllegalArgumentException;
 
@@ -63,15 +60,12 @@
 
     throw v8
 
-    .line 152
     :cond_1
     const/4 v1, 0x0
 
-    .line 153
     .local v1, "highSpeedSizes":Ljava/util/List;, "Ljava/util/List<Landroid/util/Size;>;"
     if-nez p1, :cond_3
 
-    .line 154
     invoke-virtual {p2}, Landroid/hardware/camera2/params/StreamConfigurationMap;->getHighSpeedVideoSizes()[Landroid/util/Size;
 
     move-result-object v8
@@ -80,7 +74,6 @@
 
     move-result-object v1
 
-    .line 166
     :goto_0
     invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
@@ -100,16 +93,13 @@
 
     check-cast v6, Landroid/view/Surface;
 
-    .line 167
     .local v6, "surface":Landroid/view/Surface;
     invoke-static {v6}, Landroid/hardware/camera2/utils/SurfaceUtils;->checkHighSpeedSurfaceFormat(Landroid/view/Surface;)V
 
-    .line 170
     invoke-static {v6}, Landroid/hardware/camera2/utils/SurfaceUtils;->getSurfaceSize(Landroid/view/Surface;)Landroid/util/Size;
 
     move-result-object v7
 
-    .line 171
     .local v7, "surfaceSize":Landroid/util/Size;
     invoke-interface {v1, v7}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
@@ -117,7 +107,6 @@
 
     if-nez v8, :cond_5
 
-    .line 172
     new-instance v8, Ljava/lang/IllegalArgumentException;
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -170,7 +159,6 @@
 
     throw v8
 
-    .line 157
     .end local v2    # "i$":Ljava/util/Iterator;
     .end local v6    # "surface":Landroid/view/Surface;
     .end local v7    # "surfaceSize":Landroid/util/Size;
@@ -179,7 +167,6 @@
 
     move-result-object v0
 
-    .line 158
     .local v0, "highSpeedFpsRanges":[Landroid/util/Range;, "[Landroid/util/Range<Ljava/lang/Integer;>;"
     invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
@@ -191,7 +178,6 @@
 
     if-nez v8, :cond_4
 
-    .line 159
     new-instance v8, Ljava/lang/IllegalArgumentException;
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -240,7 +226,6 @@
 
     throw v8
 
-    .line 163
     :cond_4
     invoke-virtual {p2, p1}, Landroid/hardware/camera2/params/StreamConfigurationMap;->getHighSpeedVideoSizesFor(Landroid/util/Range;)[Landroid/util/Size;
 
@@ -252,7 +237,6 @@
 
     goto/16 :goto_0
 
-    .line 177
     .end local v0    # "highSpeedFpsRanges":[Landroid/util/Range;, "[Landroid/util/Range<Ljava/lang/Integer;>;"
     .restart local v2    # "i$":Ljava/util/Iterator;
     .restart local v6    # "surface":Landroid/view/Surface;
@@ -270,7 +254,6 @@
 
     if-nez v8, :cond_6
 
-    .line 179
     new-instance v8, Ljava/lang/IllegalArgumentException;
 
     const-string v9, "This output surface is neither preview nor hardware video encoding surface"
@@ -279,7 +262,6 @@
 
     throw v8
 
-    .line 182
     :cond_6
     invoke-static {v6}, Landroid/hardware/camera2/utils/SurfaceUtils;->isSurfaceForPreview(Landroid/view/Surface;)Z
 
@@ -293,7 +275,6 @@
 
     if-eqz v8, :cond_2
 
-    .line 184
     new-instance v8, Ljava/lang/IllegalArgumentException;
 
     const-string v9, "This output surface can not be both preview and hardware video encoding surface"
@@ -302,7 +283,6 @@
 
     throw v8
 
-    .line 190
     .end local v6    # "surface":Landroid/view/Surface;
     .end local v7    # "surfaceSize":Landroid/util/Size;
     :cond_7
@@ -312,12 +292,10 @@
 
     if-ne v8, v9, :cond_8
 
-    .line 192
     invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object v5
 
-    .line 193
     .local v5, "iterator":Ljava/util/Iterator;, "Ljava/util/Iterator<Landroid/view/Surface;>;"
     invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -329,7 +307,6 @@
 
     move-result v3
 
-    .line 195
     .local v3, "isFirstSurfacePreview":Z
     invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -341,11 +318,9 @@
 
     move-result v4
 
-    .line 197
     .local v4, "isSecondSurfacePreview":Z
     if-ne v3, v4, :cond_8
 
-    .line 198
     new-instance v8, Ljava/lang/IllegalArgumentException;
 
     const-string v9, "The 2 output surfaces must have different type"
@@ -354,7 +329,6 @@
 
     throw v8
 
-    .line 202
     .end local v3    # "isFirstSurfacePreview":Z
     .end local v4    # "isSecondSurfacePreview":Z
     .end local v5    # "iterator":Ljava/util/Iterator;, "Ljava/util/Iterator<Landroid/view/Surface;>;"
@@ -367,20 +341,16 @@
     .param p0, "surface"    # Landroid/view/Surface;
 
     .prologue
-    .line 123
     const/4 v1, 0x1
 
-    .line 124
     .local v1, "HAL_FORMAT_RGB_START":I
     const/4 v0, 0x5
 
-    .line 125
     .local v0, "HAL_FORMAT_RGB_END":I
     invoke-static {p0}, Landroid/hardware/camera2/utils/SurfaceUtils;->getSurfaceFormat(Landroid/view/Surface;)I
 
     move-result v2
 
-    .line 126
     .local v2, "surfaceFormat":I
     const/4 v3, 0x1
 
@@ -390,16 +360,13 @@
 
     if-gt v2, v3, :cond_0
 
-    .line 128
     const/16 v2, 0x22
 
-    .line 131
     :cond_0
     const/16 v3, 0x22
 
     if-eq v2, v3, :cond_1
 
-    .line 132
     new-instance v3, Ljava/lang/IllegalArgumentException;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -436,7 +403,6 @@
 
     throw v3
 
-    .line 135
     :cond_1
     return-void
 .end method
@@ -446,7 +412,6 @@
     .param p0, "surface"    # Landroid/view/Surface;
 
     .prologue
-    .line 100
     :try_start_0
     invoke-static {p0}, Landroid/hardware/camera2/legacy/LegacyCameraDevice;->detectSurfaceDataspace(Landroid/view/Surface;)I
     :try_end_0
@@ -456,11 +421,9 @@
 
     return v1
 
-    .line 101
     :catch_0
     move-exception v0
 
-    .line 102
     .local v0, "e":Landroid/hardware/camera2/legacy/LegacyExceptionUtils$BufferQueueAbandonedException;
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
@@ -476,7 +439,6 @@
     .param p0, "surface"    # Landroid/view/Surface;
 
     .prologue
-    .line 84
     :try_start_0
     invoke-static {p0}, Landroid/hardware/camera2/legacy/LegacyCameraDevice;->detectSurfaceType(Landroid/view/Surface;)I
     :try_end_0
@@ -486,11 +448,9 @@
 
     return v1
 
-    .line 85
     :catch_0
     move-exception v0
 
-    .line 86
     .local v0, "e":Landroid/hardware/camera2/legacy/LegacyExceptionUtils$BufferQueueAbandonedException;
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
@@ -506,7 +466,6 @@
     .param p0, "surface"    # Landroid/view/Surface;
 
     .prologue
-    .line 68
     :try_start_0
     invoke-static {p0}, Landroid/hardware/camera2/legacy/LegacyCameraDevice;->getSurfaceSize(Landroid/view/Surface;)Landroid/util/Size;
     :try_end_0
@@ -516,11 +475,9 @@
 
     return-object v1
 
-    .line 69
     :catch_0
     move-exception v0
 
-    .line 70
     .local v0, "e":Landroid/hardware/camera2/legacy/LegacyExceptionUtils$BufferQueueAbandonedException;
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
@@ -536,7 +493,6 @@
     .param p0, "output"    # Landroid/view/Surface;
 
     .prologue
-    .line 112
     invoke-static {p0}, Landroid/hardware/camera2/legacy/LegacyCameraDevice;->isFlexibleConsumer(Landroid/view/Surface;)Z
 
     move-result v0
@@ -549,7 +505,6 @@
     .param p0, "surface"    # Landroid/view/Surface;
 
     .prologue
-    .line 55
     invoke-static {p0}, Landroid/hardware/camera2/legacy/LegacyCameraDevice;->isVideoEncoderConsumer(Landroid/view/Surface;)Z
 
     move-result v0
@@ -562,7 +517,6 @@
     .param p0, "surface"    # Landroid/view/Surface;
 
     .prologue
-    .line 44
     invoke-static {p0}, Landroid/hardware/camera2/legacy/LegacyCameraDevice;->isPreviewConsumer(Landroid/view/Surface;)Z
 
     move-result v0

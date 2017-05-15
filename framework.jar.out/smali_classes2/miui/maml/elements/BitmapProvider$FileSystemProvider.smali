@@ -24,10 +24,8 @@
     .param p1, "root"    # Lmiui/maml/ScreenElementRoot;
 
     .prologue
-    .line 310
     invoke-direct {p0, p1}, Lmiui/maml/elements/BitmapProvider$UriProvider;-><init>(Lmiui/maml/ScreenElementRoot;)V
 
-    .line 311
     return-void
 .end method
 
@@ -43,52 +41,42 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 317
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 318
     iget-object v2, p0, Lmiui/maml/elements/BitmapProvider$FileSystemProvider;->mVersionedBitmap:Lmiui/maml/elements/BitmapProvider$VersionedBitmap;
 
     invoke-virtual {v2, v3}, Lmiui/maml/elements/BitmapProvider$VersionedBitmap;->setBitmap(Landroid/graphics/Bitmap;)Z
 
-    .line 319
     iget-object v2, p0, Lmiui/maml/elements/BitmapProvider$FileSystemProvider;->mVersionedBitmap:Lmiui/maml/elements/BitmapProvider$VersionedBitmap;
 
-    .line 329
     :goto_0
     return-object v2
 
-    .line 322
     :cond_0
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 323
     .local v0, "file":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->toURI()Ljava/net/URI;
 
     move-result-object v1
 
-    .line 324
     .local v1, "uri":Ljava/net/URI;
     if-nez v1, :cond_1
 
-    .line 325
     iget-object v2, p0, Lmiui/maml/elements/BitmapProvider$FileSystemProvider;->mVersionedBitmap:Lmiui/maml/elements/BitmapProvider$VersionedBitmap;
 
     invoke-virtual {v2, v3}, Lmiui/maml/elements/BitmapProvider$VersionedBitmap;->setBitmap(Landroid/graphics/Bitmap;)Z
 
-    .line 326
     iget-object v2, p0, Lmiui/maml/elements/BitmapProvider$FileSystemProvider;->mVersionedBitmap:Lmiui/maml/elements/BitmapProvider$VersionedBitmap;
 
     goto :goto_0
 
-    .line 329
     :cond_1
     invoke-virtual {v1}, Ljava/net/URI;->toString()Ljava/lang/String;
 

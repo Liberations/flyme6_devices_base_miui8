@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 2167
     iput-object p1, p0, Landroid/media/MediaPlayer$1$1;->this$1:Landroid/media/MediaPlayer$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 2174
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -53,6 +51,5 @@
     .param p1, "subtitleWidget"    # Landroid/media/SubtitleTrack$RenderingWidget;
 
     .prologue
-    .line 2170
     return-void
 .end method

@@ -11,7 +11,6 @@
     .locals 0
 
     .prologue
-    .line 11
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
     return-void
@@ -22,18 +21,14 @@
     .param p0, "obj"    # Landroid/os/IBinder;
 
     .prologue
-    .line 18
     if-nez p0, :cond_1
 
-    .line 19
     const/4 v0, 0x0
 
-    .line 27
     :cond_0
     :goto_0
     return-object v0
 
-    .line 21
     :cond_1
     const-string v1, "com.miui.whetstone.IWhetstoneResult"
 
@@ -43,11 +38,9 @@
 
     check-cast v0, Lcom/miui/whetstone/IWhetstoneResult;
 
-    .line 23
     .local v0, "in":Lcom/miui/whetstone/IWhetstoneResult;
     if-nez v0, :cond_0
 
-    .line 27
     new-instance v0, Lcom/miui/whetstone/WhetstoneResultProxy;
 
     .end local v0    # "in":Lcom/miui/whetstone/IWhetstoneResult;
@@ -62,7 +55,6 @@
     .locals 0
 
     .prologue
-    .line 52
     return-object p0
 .end method
 
@@ -71,7 +63,6 @@
     .param p1, "result"    # Lcom/miui/whetstone/WhetstoneResult;
 
     .prologue
-    .line 32
     return-void
 .end method
 
@@ -88,10 +79,8 @@
     .end annotation
 
     .prologue
-    .line 37
     packed-switch p1, :pswitch_data_0
 
-    .line 47
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v1
@@ -99,13 +88,11 @@
     :goto_0
     return v1
 
-    .line 40
     :pswitch_0
     const-string v1, "com.miui.whetstone.IWhetstoneResult"
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 41
     sget-object v1, Lcom/miui/whetstone/WhetstoneResult;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v1, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -114,19 +101,15 @@
 
     check-cast v0, Lcom/miui/whetstone/WhetstoneResult;
 
-    .line 42
     .local v0, "result":Lcom/miui/whetstone/WhetstoneResult;
     invoke-virtual {p0, v0}, Lcom/miui/whetstone/WhetstoneResultBinder;->onResult(Lcom/miui/whetstone/WhetstoneResult;)V
 
-    .line 43
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 44
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 37
     nop
 
     :pswitch_data_0

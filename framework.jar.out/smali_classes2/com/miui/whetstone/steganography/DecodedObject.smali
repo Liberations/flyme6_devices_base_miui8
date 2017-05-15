@@ -13,13 +13,10 @@
     .param p1, "bytes"    # [B
 
     .prologue
-    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 15
     iput-object p1, p0, Lcom/miui/whetstone/steganography/DecodedObject;->bytes:[B
 
-    .line 16
     return-void
 .end method
 
@@ -29,7 +26,6 @@
     .locals 1
 
     .prologue
-    .line 19
     iget-object v0, p0, Lcom/miui/whetstone/steganography/DecodedObject;->bytes:[B
 
     return-object v0
@@ -40,7 +36,6 @@
     .param p1, "file"    # Ljava/io/File;
 
     .prologue
-    .line 33
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Not implemented yet"
@@ -60,7 +55,6 @@
     .end annotation
 
     .prologue
-    .line 27
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -76,7 +70,6 @@
     .locals 2
 
     .prologue
-    .line 23
     new-instance v0, Ljava/lang/String;
 
     iget-object v1, p0, Lcom/miui/whetstone/steganography/DecodedObject;->bytes:[B

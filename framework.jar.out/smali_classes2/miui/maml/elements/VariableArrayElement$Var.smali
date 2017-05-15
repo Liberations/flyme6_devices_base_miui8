@@ -37,20 +37,16 @@
     .param p3, "ele"    # Lorg/w3c/dom/Element;
 
     .prologue
-    .line 68
     iput-object p1, p0, Lmiui/maml/elements/VariableArrayElement$Var;->this$0:Lmiui/maml/elements/VariableArrayElement;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 59
     const/4 v0, -0x1
 
     iput v0, p0, Lmiui/maml/elements/VariableArrayElement$Var;->mIndex:I
 
-    .line 69
     if-eqz p3, :cond_0
 
-    .line 70
     const-string v0, "name"
 
     invoke-interface {p3, v0}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -59,7 +55,6 @@
 
     iput-object v0, p0, Lmiui/maml/elements/VariableArrayElement$Var;->mName:Ljava/lang/String;
 
-    .line 71
     const-string v0, "index"
 
     invoke-interface {p3, v0}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -72,7 +67,6 @@
 
     iput-object v0, p0, Lmiui/maml/elements/VariableArrayElement$Var;->mIndexExpression:Lmiui/maml/data/Expression;
 
-    .line 72
     const-string v0, "const"
 
     invoke-interface {p3, v0}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -85,7 +79,6 @@
 
     iput-boolean v0, p0, Lmiui/maml/elements/VariableArrayElement$Var;->mConst:Z
 
-    .line 73
     new-instance v1, Lmiui/maml/data/IndexedVariable;
 
     iget-object v2, p0, Lmiui/maml/elements/VariableArrayElement$Var;->mName:Ljava/lang/String;
@@ -107,11 +100,9 @@
 
     iput-object v1, p0, Lmiui/maml/elements/VariableArrayElement$Var;->mVar:Lmiui/maml/data/IndexedVariable;
 
-    .line 75
     :cond_0
     return-void
 
-    .line 73
     :cond_1
     const/4 v0, 0x0
 
@@ -122,17 +113,14 @@
     .locals 6
 
     .prologue
-    .line 88
     iget-object v2, p0, Lmiui/maml/elements/VariableArrayElement$Var;->mIndexExpression:Lmiui/maml/data/Expression;
 
     if-nez v2, :cond_1
 
-    .line 118
     :cond_0
     :goto_0
     return-void
 
-    .line 91
     :cond_1
     iget-object v2, p0, Lmiui/maml/elements/VariableArrayElement$Var;->mIndexExpression:Lmiui/maml/data/Expression;
 
@@ -142,7 +130,6 @@
 
     double-to-int v0, v2
 
-    .line 92
     .local v0, "index":I
     if-ltz v0, :cond_2
 
@@ -159,7 +146,6 @@
 
     if-lt v0, v2, :cond_4
 
-    .line 94
     :cond_2
     iget-object v2, p0, Lmiui/maml/elements/VariableArrayElement$Var;->this$0:Lmiui/maml/elements/VariableArrayElement;
 
@@ -169,7 +155,6 @@
 
     if-ne v2, v3, :cond_3
 
-    .line 95
     iget-object v2, p0, Lmiui/maml/elements/VariableArrayElement$Var;->mVar:Lmiui/maml/data/IndexedVariable;
 
     const/4 v3, 0x0
@@ -178,7 +163,6 @@
 
     goto :goto_0
 
-    .line 96
     :cond_3
     iget-object v2, p0, Lmiui/maml/elements/VariableArrayElement$Var;->this$0:Lmiui/maml/elements/VariableArrayElement;
 
@@ -188,7 +172,6 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 97
     iget-object v2, p0, Lmiui/maml/elements/VariableArrayElement$Var;->mVar:Lmiui/maml/data/IndexedVariable;
 
     const-wide/16 v4, 0x0
@@ -197,7 +180,6 @@
 
     goto :goto_0
 
-    .line 102
     :cond_4
     iget v2, p0, Lmiui/maml/elements/VariableArrayElement$Var;->mIndex:I
 
@@ -207,7 +189,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 107
     :cond_5
     iget-object v2, p0, Lmiui/maml/elements/VariableArrayElement$Var;->this$0:Lmiui/maml/elements/VariableArrayElement;
 
@@ -222,23 +203,19 @@
 
     check-cast v1, Lmiui/maml/elements/VariableArrayElement$Item;
 
-    .line 108
     .local v1, "item":Lmiui/maml/elements/VariableArrayElement$Item;
     iget v2, p0, Lmiui/maml/elements/VariableArrayElement$Var;->mIndex:I
 
     if-eq v2, v0, :cond_6
 
-    .line 109
     iput v0, p0, Lmiui/maml/elements/VariableArrayElement$Var;->mIndex:I
 
-    .line 110
     invoke-virtual {v1}, Lmiui/maml/elements/VariableArrayElement$Item;->isExpression()Z
 
     move-result v2
 
     iput-boolean v2, p0, Lmiui/maml/elements/VariableArrayElement$Var;->mCurrentItemIsExpression:Z
 
-    .line 113
     :cond_6
     iget-object v2, p0, Lmiui/maml/elements/VariableArrayElement$Var;->this$0:Lmiui/maml/elements/VariableArrayElement;
 
@@ -248,7 +225,6 @@
 
     if-ne v2, v3, :cond_7
 
-    .line 114
     iget-object v2, p0, Lmiui/maml/elements/VariableArrayElement$Var;->mVar:Lmiui/maml/data/IndexedVariable;
 
     invoke-virtual {v1}, Lmiui/maml/elements/VariableArrayElement$Item;->evaluateStr()Ljava/lang/String;
@@ -259,7 +235,6 @@
 
     goto :goto_0
 
-    .line 115
     :cond_7
     iget-object v2, p0, Lmiui/maml/elements/VariableArrayElement$Var;->this$0:Lmiui/maml/elements/VariableArrayElement;
 
@@ -269,7 +244,6 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 116
     iget-object v2, p0, Lmiui/maml/elements/VariableArrayElement$Var;->mVar:Lmiui/maml/data/IndexedVariable;
 
     invoke-virtual {v1}, Lmiui/maml/elements/VariableArrayElement$Item;->evaluate()Ljava/lang/Double;
@@ -287,15 +261,12 @@
     .locals 1
 
     .prologue
-    .line 83
     const/4 v0, -0x1
 
     iput v0, p0, Lmiui/maml/elements/VariableArrayElement$Var;->mIndex:I
 
-    .line 84
     invoke-direct {p0}, Lmiui/maml/elements/VariableArrayElement$Var;->update()V
 
-    .line 85
     return-void
 .end method
 
@@ -303,15 +274,12 @@
     .locals 1
 
     .prologue
-    .line 78
     iget-boolean v0, p0, Lmiui/maml/elements/VariableArrayElement$Var;->mConst:Z
 
     if-nez v0, :cond_0
 
-    .line 79
     invoke-direct {p0}, Lmiui/maml/elements/VariableArrayElement$Var;->update()V
 
-    .line 80
     :cond_0
     return-void
 .end method

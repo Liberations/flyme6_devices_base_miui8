@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,7 +18,6 @@
     .param p0, "className"    # Ljava/lang/String;
 
     .prologue
-    .line 13
     const-string v0, "com.android.providers.telephony.MmsProvider"
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z

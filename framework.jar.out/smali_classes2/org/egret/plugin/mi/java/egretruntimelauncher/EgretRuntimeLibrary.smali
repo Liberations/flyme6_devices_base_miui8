@@ -41,22 +41,16 @@
     .param p4, "sdRoot"    # Ljava/io/File;
 
     .prologue
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
     iput-object p1, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary;->library:Lorg/egret/plugin/mi/java/egretruntimelauncher/Library;
 
-    .line 33
     iput-object p2, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary;->root:Ljava/io/File;
 
-    .line 34
     iput-object p3, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary;->cacheRoot:Ljava/io/File;
 
-    .line 35
     iput-object p4, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary;->sdRoot:Ljava/io/File;
 
-    .line 36
     return-void
 .end method
 
@@ -65,7 +59,6 @@
     .param p0, "x0"    # Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary;
 
     .prologue
-    .line 15
     iget-boolean v0, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary;->isCancelling:Z
 
     return v0
@@ -76,7 +69,6 @@
     .param p0, "x0"    # Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary;
 
     .prologue
-    .line 15
     invoke-direct {p0}, Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary;->doMove()Z
 
     move-result v0
@@ -89,7 +81,6 @@
     .param p0, "x0"    # Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary;
 
     .prologue
-    .line 15
     invoke-direct {p0}, Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary;->doUnzip()V
 
     return-void
@@ -100,7 +91,6 @@
     .param p0, "x0"    # Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary;
 
     .prologue
-    .line 15
     iget-object v0, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary;->downloadListener:Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary$OnDownloadListener;
 
     return-object v0
@@ -111,7 +101,6 @@
     .param p0, "x0"    # Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary;
 
     .prologue
-    .line 15
     iget-object v0, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary;->library:Lorg/egret/plugin/mi/java/egretruntimelauncher/Library;
 
     return-object v0
@@ -121,14 +110,12 @@
     .locals 5
 
     .prologue
-    .line 54
     iget-object v3, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary;->sdRoot:Ljava/io/File;
 
     if-eqz v3, :cond_0
 
     iget-object v2, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary;->sdRoot:Ljava/io/File;
 
-    .line 55
     .local v2, "targetRoot":Ljava/io/File;
     :goto_0
     new-instance v1, Ljava/io/File;
@@ -141,13 +128,11 @@
 
     invoke-direct {v1, v2, v3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 56
     .local v1, "target":Ljava/io/File;
     new-instance v0, Lorg/egret/plugin/mi/android/util/launcher/NetClass;
 
     invoke-direct {v0}, Lorg/egret/plugin/mi/android/util/launcher/NetClass;-><init>()V
 
-    .line 57
     .local v0, "net":Lorg/egret/plugin/mi/android/util/launcher/NetClass;
     iget-object v3, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary;->library:Lorg/egret/plugin/mi/java/egretruntimelauncher/Library;
 
@@ -161,10 +146,8 @@
 
     invoke-virtual {v0, v3, v1, v4}, Lorg/egret/plugin/mi/android/util/launcher/NetClass;->writeResponseToFile(Ljava/lang/String;Ljava/io/File;Lorg/egret/plugin/mi/android/util/launcher/NetClass$OnNetListener;)V
 
-    .line 79
     return-void
 
-    .line 54
     .end local v0    # "net":Lorg/egret/plugin/mi/android/util/launcher/NetClass;
     .end local v1    # "target":Ljava/io/File;
     .end local v2    # "targetRoot":Ljava/io/File;
@@ -180,23 +163,19 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 82
     iget-boolean v1, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary;->isCancelling:Z
 
     if-eqz v1, :cond_0
 
-    .line 83
     iget-object v1, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary;->downloadListener:Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary$OnDownloadListener;
 
     const-string v2, "thread is cancelling"
 
     invoke-interface {v1, v2}, Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary$OnDownloadListener;->onError(Ljava/lang/String;)V
 
-    .line 92
     :goto_0
     return v0
 
-    .line 86
     :cond_0
     iget-object v1, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary;->sdRoot:Ljava/io/File;
 
@@ -232,7 +211,6 @@
 
     if-nez v1, :cond_1
 
-    .line 89
     iget-object v1, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary;->downloadListener:Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary$OnDownloadListener;
 
     const-string v2, "copy file error"
@@ -241,7 +219,6 @@
 
     goto :goto_0
 
-    .line 92
     :cond_1
     const/4 v0, 0x1
 
@@ -252,19 +229,16 @@
     .locals 5
 
     .prologue
-    .line 96
     iget-boolean v3, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary;->isCancelling:Z
 
     if-eqz v3, :cond_0
 
-    .line 97
     iget-object v3, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary;->downloadListener:Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary$OnDownloadListener;
 
     const-string v4, "thread is cancelling"
 
     invoke-interface {v3, v4}, Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary$OnDownloadListener;->onError(Ljava/lang/String;)V
 
-    .line 99
     :cond_0
     new-instance v0, Ljava/io/File;
 
@@ -278,7 +252,6 @@
 
     invoke-direct {v0, v3, v4}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 100
     .local v0, "cache":Ljava/io/File;
     new-instance v1, Ljava/io/File;
 
@@ -292,7 +265,6 @@
 
     invoke-direct {v1, v3, v4}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 101
     .local v1, "target":Ljava/io/File;
     iget-object v3, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary;->library:Lorg/egret/plugin/mi/java/egretruntimelauncher/Library;
 
@@ -306,20 +278,17 @@
 
     if-nez v3, :cond_1
 
-    .line 102
     iget-object v3, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary;->downloadListener:Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary$OnDownloadListener;
 
     const-string v4, "cache file md5 error"
 
     invoke-interface {v3, v4}, Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary$OnDownloadListener;->onError(Ljava/lang/String;)V
 
-    .line 104
     :cond_1
     new-instance v2, Lorg/egret/plugin/mi/android/util/launcher/ZipClass;
 
     invoke-direct {v2}, Lorg/egret/plugin/mi/android/util/launcher/ZipClass;-><init>()V
 
-    .line 105
     .local v2, "zip":Lorg/egret/plugin/mi/android/util/launcher/ZipClass;
     iget-object v3, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary;->root:Ljava/io/File;
 
@@ -329,7 +298,6 @@
 
     invoke-virtual {v2, v0, v3, v4}, Lorg/egret/plugin/mi/android/util/launcher/ZipClass;->unzip(Ljava/io/File;Ljava/io/File;Lorg/egret/plugin/mi/android/util/launcher/ZipClass$OnZipListener;)V
 
-    .line 134
     return-void
 .end method
 
@@ -340,7 +308,6 @@
     .param p1, "listener"    # Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary$OnDownloadListener;
 
     .prologue
-    .line 39
     iget-object v0, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary;->library:Lorg/egret/plugin/mi/java/egretruntimelauncher/Library;
 
     if-eqz v0, :cond_0
@@ -355,17 +322,14 @@
 
     if-nez p1, :cond_1
 
-    .line 41
     :cond_0
     const-string v0, "libray, root, cacheRoot, listener may be null"
 
     invoke-interface {p1, v0}, Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary$OnDownloadListener;->onError(Ljava/lang/String;)V
 
-    .line 45
     :goto_0
     return-void
 
-    .line 44
     :cond_1
     iput-object p1, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary;->downloadListener:Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary$OnDownloadListener;
 
@@ -376,15 +340,12 @@
     .locals 1
 
     .prologue
-    .line 49
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary;->isCancelling:Z
 
-    .line 50
     invoke-direct {p0}, Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary;->doDownload()V
 
-    .line 51
     return-void
 .end method
 
@@ -392,11 +353,9 @@
     .locals 1
 
     .prologue
-    .line 137
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary;->isCancelling:Z
 
-    .line 138
     return-void
 .end method

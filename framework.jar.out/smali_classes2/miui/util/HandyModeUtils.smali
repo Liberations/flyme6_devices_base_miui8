@@ -22,7 +22,6 @@
     .locals 2
 
     .prologue
-    .line 23
     const-string v0, "ro.miui.has_handy_mode_sf"
 
     const/4 v1, 0x0
@@ -41,24 +40,20 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 42
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
     iput-object v0, p0, Lmiui/util/HandyModeUtils;->mContext:Landroid/content/Context;
 
-    .line 43
     iget-object v0, p0, Lmiui/util/HandyModeUtils;->mContext:Landroid/content/Context;
 
     if-nez v0, :cond_0
 
     iput-object p1, p0, Lmiui/util/HandyModeUtils;->mContext:Landroid/content/Context;
 
-    .line 45
     :cond_0
     invoke-direct {p0}, Lmiui/util/HandyModeUtils;->getScreenSize()F
 
@@ -66,7 +61,6 @@
 
     iput v0, p0, Lmiui/util/HandyModeUtils;->mScreenSize:F
 
-    .line 46
     return-void
 .end method
 
@@ -75,7 +69,6 @@
     .param p1, "size"    # F
 
     .prologue
-    .line 62
     iget v0, p0, Lmiui/util/HandyModeUtils;->mScreenSize:F
 
     div-float v0, p1, v0
@@ -87,7 +80,6 @@
     .locals 2
 
     .prologue
-    .line 66
     invoke-direct {p0}, Lmiui/util/HandyModeUtils;->getScreenSize()F
 
     move-result v0
@@ -114,42 +106,35 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 31
     sget-object v0, Lmiui/util/HandyModeUtils;->sInstance:Lmiui/util/HandyModeUtils;
 
     if-nez v0, :cond_1
 
-    .line 32
     const-class v1, Lmiui/util/HandyModeUtils;
 
     monitor-enter v1
 
-    .line 33
     :try_start_0
     sget-object v0, Lmiui/util/HandyModeUtils;->sInstance:Lmiui/util/HandyModeUtils;
 
     if-nez v0, :cond_0
 
-    .line 34
     new-instance v0, Lmiui/util/HandyModeUtils;
 
     invoke-direct {v0, p0}, Lmiui/util/HandyModeUtils;-><init>(Landroid/content/Context;)V
 
     sput-object v0, Lmiui/util/HandyModeUtils;->sInstance:Lmiui/util/HandyModeUtils;
 
-    .line 36
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 38
     :cond_1
     sget-object v0, Lmiui/util/HandyModeUtils;->sInstance:Lmiui/util/HandyModeUtils;
 
     return-object v0
 
-    .line 36
     :catchall_0
     move-exception v0
 
@@ -165,10 +150,9 @@
     .locals 6
 
     .prologue
-    .line 53
     iget-object v4, p0, Lmiui/util/HandyModeUtils;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v5, "window"
+    const-string v5, "window"
 
     invoke-virtual {v4, v5}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -176,13 +160,11 @@
 
     check-cast v2, Landroid/view/WindowManager;
 
-    .line 54
     .local v2, "w":Landroid/view/WindowManager;
     new-instance v1, Landroid/util/DisplayMetrics;
 
     invoke-direct {v1}, Landroid/util/DisplayMetrics;-><init>()V
 
-    .line 55
     .local v1, "metrics":Landroid/util/DisplayMetrics;
     invoke-interface {v2}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
@@ -190,7 +172,6 @@
 
     invoke-virtual {v4, v1}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
 
-    .line 56
     iget v4, v1, Landroid/util/DisplayMetrics;->widthPixels:I
 
     int-to-float v4, v4
@@ -199,7 +180,6 @@
 
     div-float v3, v4, v5
 
-    .line 57
     .local v3, "widthInch":F
     iget v4, v1, Landroid/util/DisplayMetrics;->heightPixels:I
 
@@ -209,7 +189,6 @@
 
     div-float v0, v4, v5
 
-    .line 58
     .local v0, "heightInch":F
     mul-float v4, v3, v3
 
@@ -228,7 +207,6 @@
     .locals 1
 
     .prologue
-    .line 49
     sget-boolean v0, Lmiui/util/HandyModeUtils;->SUPPORTED:Z
 
     if-eqz v0, :cond_0
@@ -254,12 +232,10 @@
     .locals 2
 
     .prologue
-    .line 100
     invoke-virtual {p0}, Lmiui/util/HandyModeUtils;->getSize()F
 
     move-result v0
 
-    .line 101
     .local v0, "size":F
     invoke-direct {p0, v0}, Lmiui/util/HandyModeUtils;->calcScreenSizeToScale(F)F
 
@@ -272,12 +248,10 @@
     .locals 5
 
     .prologue
-    .line 93
     invoke-direct {p0}, Lmiui/util/HandyModeUtils;->getDefaultScreenSize()F
 
     move-result v0
 
-    .line 94
     .local v0, "defaultScreenSize":F
     iget-object v2, p0, Lmiui/util/HandyModeUtils;->mContext:Landroid/content/Context;
 
@@ -295,7 +269,6 @@
 
     move-result v1
 
-    .line 95
     .local v1, "size":F
     invoke-virtual {p0, v1}, Lmiui/util/HandyModeUtils;->isValidSize(F)Z
 
@@ -305,7 +278,6 @@
 
     move v1, v0
 
-    .line 96
     :cond_0
     return v1
 .end method
@@ -314,7 +286,6 @@
     .locals 2
 
     .prologue
-    .line 84
     iget-object v0, p0, Lmiui/util/HandyModeUtils;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -344,7 +315,6 @@
     .locals 1
 
     .prologue
-    .line 70
     invoke-static {}, Lmiui/util/HandyModeUtils;->isFeatureVisible()Z
 
     move-result v0
@@ -358,7 +328,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 74
     iget-object v1, p0, Lmiui/util/HandyModeUtils;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -386,7 +355,6 @@
     .param p1, "size"    # F
 
     .prologue
-    .line 105
     invoke-direct {p0, p1}, Lmiui/util/HandyModeUtils;->calcScreenSizeToScale(F)F
 
     move-result v0
@@ -413,7 +381,6 @@
     .param p1, "value"    # Z
 
     .prologue
-    .line 80
     iget-object v0, p0, Lmiui/util/HandyModeUtils;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -424,7 +391,6 @@
 
     invoke-static {v0, v1, p1}, Landroid/provider/MiuiSettings$System;->putBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
-    .line 81
     return-void
 .end method
 
@@ -433,7 +399,6 @@
     .param p1, "size"    # F
 
     .prologue
-    .line 89
     iget-object v0, p0, Lmiui/util/HandyModeUtils;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -448,6 +413,5 @@
 
     invoke-static {v0, v1, p1, v2}, Landroid/provider/Settings$System;->putFloatForUser(Landroid/content/ContentResolver;Ljava/lang/String;FI)Z
 
-    .line 90
     return-void
 .end method

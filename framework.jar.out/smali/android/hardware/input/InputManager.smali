@@ -105,34 +105,28 @@
     .param p1, "im"    # Landroid/hardware/input/IInputManager;
 
     .prologue
-    .line 210
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 70
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Landroid/hardware/input/InputManager;->mInputDevicesLock:Ljava/lang/Object;
 
-    .line 73
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/hardware/input/InputManager;->mInputDeviceListeners:Ljava/util/ArrayList;
 
-    .line 77
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Landroid/hardware/input/InputManager;->mTabletModeLock:Ljava/lang/Object;
 
-    .line 211
     iput-object p1, p0, Landroid/hardware/input/InputManager;->mIm:Landroid/hardware/input/IInputManager;
 
-    .line 212
     return-void
 .end method
 
@@ -142,7 +136,6 @@
     .param p1, "x1"    # [I
 
     .prologue
-    .line 57
     invoke-direct {p0, p1}, Landroid/hardware/input/InputManager;->onInputDevicesChanged([I)V
 
     return-void
@@ -155,7 +148,6 @@
     .param p3, "x2"    # Z
 
     .prologue
-    .line 57
     invoke-direct {p0, p1, p2, p3}, Landroid/hardware/input/InputManager;->onTabletModeChanged(JZ)V
 
     return-void
@@ -166,7 +158,6 @@
     .param p0, "x0"    # Landroid/hardware/input/InputManager;
 
     .prologue
-    .line 57
     iget-object v0, p0, Landroid/hardware/input/InputManager;->mIm:Landroid/hardware/input/IInputManager;
 
     return-object v0
@@ -178,7 +169,6 @@
     .param p1, "deviceId"    # I
 
     .prologue
-    .line 931
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -187,25 +177,20 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 932
     aget v1, p0, v0
 
     if-ne v1, p1, :cond_0
 
-    .line 933
     const/4 v1, 0x1
 
-    .line 936
     :goto_1
     return v1
 
-    .line 931
     :cond_0
     add-int/lit8 v0, v0, 0x2
 
     goto :goto_0
 
-    .line 936
     :cond_1
     const/4 v1, 0x0
 
@@ -217,14 +202,12 @@
     .param p1, "listener"    # Landroid/hardware/input/InputManager$InputDeviceListener;
 
     .prologue
-    .line 360
     iget-object v2, p0, Landroid/hardware/input/InputManager;->mInputDeviceListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
-    .line 361
     .local v1, "numListeners":I
     const/4 v0, 0x0
 
@@ -232,7 +215,6 @@
     :goto_0
     if-ge v0, v1, :cond_1
 
-    .line 362
     iget-object v2, p0, Landroid/hardware/input/InputManager;->mInputDeviceListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -245,19 +227,16 @@
 
     if-ne v2, p1, :cond_0
 
-    .line 366
     .end local v0    # "i":I
     :goto_1
     return v0
 
-    .line 361
     .restart local v0    # "i":I
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 366
     :cond_1
     const/4 v0, -0x1
 
@@ -269,14 +248,12 @@
     .param p1, "listener"    # Landroid/hardware/input/InputManager$OnTabletModeChangedListener;
 
     .prologue
-    .line 443
     iget-object v2, p0, Landroid/hardware/input/InputManager;->mOnTabletModeChangedListeners:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v0
 
-    .line 444
     .local v0, "N":I
     const/4 v1, 0x0
 
@@ -284,7 +261,6 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 445
     iget-object v2, p0, Landroid/hardware/input/InputManager;->mOnTabletModeChangedListeners:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -297,19 +273,16 @@
 
     if-ne v2, p1, :cond_0
 
-    .line 449
     .end local v1    # "i":I
     :goto_1
     return v1
 
-    .line 444
     .restart local v1    # "i":I
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 449
     :cond_1
     const/4 v1, -0x1
 
@@ -320,25 +293,21 @@
     .locals 4
 
     .prologue
-    .line 222
     const-class v2, Landroid/hardware/input/InputManager;
 
     monitor-enter v2
 
-    .line 223
     :try_start_0
     sget-object v1, Landroid/hardware/input/InputManager;->sInstance:Landroid/hardware/input/InputManager;
 
     if-nez v1, :cond_0
 
-    .line 224
-    const-string/jumbo v1, "input"
+    const-string v1, "input"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 225
     .local v0, "b":Landroid/os/IBinder;
     new-instance v1, Landroid/hardware/input/InputManager;
 
@@ -350,7 +319,6 @@
 
     sput-object v1, Landroid/hardware/input/InputManager;->sInstance:Landroid/hardware/input/InputManager;
 
-    .line 227
     :cond_0
     sget-object v1, Landroid/hardware/input/InputManager;->sInstance:Landroid/hardware/input/InputManager;
 
@@ -358,7 +326,6 @@
 
     return-object v1
 
-    .line 228
     :catchall_0
     move-exception v1
 
@@ -373,14 +340,12 @@
     .locals 4
 
     .prologue
-    .line 432
     new-instance v1, Landroid/hardware/input/InputManager$TabletModeChangedListener;
 
     const/4 v2, 0x0
 
     invoke-direct {v1, p0, v2}, Landroid/hardware/input/InputManager$TabletModeChangedListener;-><init>(Landroid/hardware/input/InputManager;Landroid/hardware/input/InputManager$1;)V
 
-    .line 434
     .local v1, "listener":Landroid/hardware/input/InputManager$TabletModeChangedListener;
     :try_start_0
     iget-object v2, p0, Landroid/hardware/input/InputManager;->mIm:Landroid/hardware/input/IInputManager;
@@ -389,24 +354,19 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 438
     iput-object v1, p0, Landroid/hardware/input/InputManager;->mTabletModeChangedListener:Landroid/hardware/input/InputManager$TabletModeChangedListener;
 
-    .line 439
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v2, p0, Landroid/hardware/input/InputManager;->mOnTabletModeChangedListeners:Ljava/util/List;
 
-    .line 440
     return-void
 
-    .line 435
     :catch_0
     move-exception v0
 
-    .line 436
     .local v0, "ex":Landroid/os/RemoteException;
     new-instance v2, Ljava/lang/RuntimeException;
 
@@ -422,12 +382,10 @@
     .param p1, "deviceIdAndGeneration"    # [I
 
     .prologue
-    .line 884
     iget-object v6, p0, Landroid/hardware/input/InputManager;->mInputDevicesLock:Ljava/lang/Object;
 
     monitor-enter v6
 
-    .line 885
     :try_start_0
     iget-object v5, p0, Landroid/hardware/input/InputManager;->mInputDevices:Landroid/util/SparseArray;
 
@@ -442,14 +400,12 @@
 
     if-lez v3, :cond_1
 
-    .line 886
     iget-object v5, p0, Landroid/hardware/input/InputManager;->mInputDevices:Landroid/util/SparseArray;
 
     invoke-virtual {v5, v3}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v1
 
-    .line 887
     .local v1, "deviceId":I
     invoke-static {p1, v1}, Landroid/hardware/input/InputManager;->containsDeviceId([II)Z
 
@@ -457,19 +413,16 @@
 
     if-nez v5, :cond_0
 
-    .line 891
     iget-object v5, p0, Landroid/hardware/input/InputManager;->mInputDevices:Landroid/util/SparseArray;
 
     invoke-virtual {v5, v3}, Landroid/util/SparseArray;->removeAt(I)V
 
-    .line 892
     const/4 v5, 0x2
 
     invoke-direct {p0, v5, v1}, Landroid/hardware/input/InputManager;->sendMessageToInputDeviceListenersLocked(II)V
 
     goto :goto_0
 
-    .line 919
     .end local v1    # "deviceId":I
     .end local v3    # "i":I
     :catchall_0
@@ -481,7 +434,6 @@
 
     throw v5
 
-    .line 896
     .restart local v3    # "i":I
     :cond_1
     const/4 v3, 0x0
@@ -492,10 +444,8 @@
 
     if-ge v3, v5, :cond_4
 
-    .line 897
     aget v1, p1, v3
 
-    .line 898
     .restart local v1    # "deviceId":I
     iget-object v5, p0, Landroid/hardware/input/InputManager;->mInputDevices:Landroid/util/SparseArray;
 
@@ -503,11 +453,9 @@
 
     move-result v4
 
-    .line 899
     .local v4, "index":I
     if-ltz v4, :cond_3
 
-    .line 900
     iget-object v5, p0, Landroid/hardware/input/InputManager;->mInputDevices:Landroid/util/SparseArray;
 
     invoke-virtual {v5, v4}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -516,16 +464,13 @@
 
     check-cast v0, Landroid/view/InputDevice;
 
-    .line 901
     .local v0, "device":Landroid/view/InputDevice;
     if-eqz v0, :cond_2
 
-    .line 902
     add-int/lit8 v5, v3, 0x1
 
     aget v2, p1, v5
 
-    .line 903
     .local v2, "generation":I
     invoke-virtual {v0}, Landroid/view/InputDevice;->getGeneration()I
 
@@ -533,19 +478,16 @@
 
     if-eq v5, v2, :cond_2
 
-    .line 907
     iget-object v5, p0, Landroid/hardware/input/InputManager;->mInputDevices:Landroid/util/SparseArray;
 
     const/4 v7, 0x0
 
     invoke-virtual {v5, v4, v7}, Landroid/util/SparseArray;->setValueAt(ILjava/lang/Object;)V
 
-    .line 908
     const/4 v5, 0x3
 
     invoke-direct {p0, v5, v1}, Landroid/hardware/input/InputManager;->sendMessageToInputDeviceListenersLocked(II)V
 
-    .line 896
     .end local v0    # "device":Landroid/view/InputDevice;
     .end local v2    # "generation":I
     :cond_2
@@ -554,7 +496,6 @@
 
     goto :goto_1
 
-    .line 915
     :cond_3
     iget-object v5, p0, Landroid/hardware/input/InputManager;->mInputDevices:Landroid/util/SparseArray;
 
@@ -562,14 +503,12 @@
 
     invoke-virtual {v5, v1, v7}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 916
     const/4 v5, 0x1
 
     invoke-direct {p0, v5, v1}, Landroid/hardware/input/InputManager;->sendMessageToInputDeviceListenersLocked(II)V
 
     goto :goto_2
 
-    .line 919
     .end local v1    # "deviceId":I
     .end local v4    # "index":I
     :cond_4
@@ -577,7 +516,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 920
     return-void
 .end method
 
@@ -587,12 +525,10 @@
     .param p3, "inTabletMode"    # Z
 
     .prologue
-    .line 945
     iget-object v4, p0, Landroid/hardware/input/InputManager;->mTabletModeLock:Ljava/lang/Object;
 
     monitor-enter v4
 
-    .line 946
     :try_start_0
     iget-object v3, p0, Landroid/hardware/input/InputManager;->mOnTabletModeChangedListeners:Ljava/util/List;
 
@@ -600,7 +536,6 @@
 
     move-result v0
 
-    .line 947
     .local v0, "N":I
     const/4 v1, 0x0
 
@@ -608,7 +543,6 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 948
     iget-object v3, p0, Landroid/hardware/input/InputManager;->mOnTabletModeChangedListeners:Ljava/util/List;
 
     invoke-interface {v3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -617,24 +551,19 @@
 
     check-cast v2, Landroid/hardware/input/InputManager$OnTabletModeChangedListenerDelegate;
 
-    .line 950
     .local v2, "listener":Landroid/hardware/input/InputManager$OnTabletModeChangedListenerDelegate;
     invoke-virtual {v2, p1, p2, p3}, Landroid/hardware/input/InputManager$OnTabletModeChangedListenerDelegate;->sendTabletModeChanged(JZ)V
 
-    .line 947
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 952
     .end local v2    # "listener":Landroid/hardware/input/InputManager$OnTabletModeChangedListenerDelegate;
     :cond_0
     monitor-exit v4
 
-    .line 953
     return-void
 
-    .line 952
     .end local v0    # "N":I
     .end local v1    # "i":I
     :catchall_0
@@ -653,17 +582,14 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 853
     iget-object v4, p0, Landroid/hardware/input/InputManager;->mInputDevicesChangedListener:Landroid/hardware/input/InputManager$InputDevicesChangedListener;
 
     if-nez v4, :cond_0
 
-    .line 854
     new-instance v3, Landroid/hardware/input/InputManager$InputDevicesChangedListener;
 
     invoke-direct {v3, p0, v6}, Landroid/hardware/input/InputManager$InputDevicesChangedListener;-><init>(Landroid/hardware/input/InputManager;Landroid/hardware/input/InputManager$1;)V
 
-    .line 856
     .local v3, "listener":Landroid/hardware/input/InputManager$InputDevicesChangedListener;
     :try_start_0
     iget-object v4, p0, Landroid/hardware/input/InputManager;->mIm:Landroid/hardware/input/IInputManager;
@@ -672,17 +598,14 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 861
     iput-object v3, p0, Landroid/hardware/input/InputManager;->mInputDevicesChangedListener:Landroid/hardware/input/InputManager$InputDevicesChangedListener;
 
-    .line 864
     .end local v3    # "listener":Landroid/hardware/input/InputManager$InputDevicesChangedListener;
     :cond_0
     iget-object v4, p0, Landroid/hardware/input/InputManager;->mInputDevices:Landroid/util/SparseArray;
 
     if-nez v4, :cond_1
 
-    .line 867
     :try_start_1
     iget-object v4, p0, Landroid/hardware/input/InputManager;->mIm:Landroid/hardware/input/IInputManager;
 
@@ -692,7 +615,6 @@
 
     move-result-object v2
 
-    .line 872
     .local v2, "ids":[I
     new-instance v4, Landroid/util/SparseArray;
 
@@ -700,7 +622,6 @@
 
     iput-object v4, p0, Landroid/hardware/input/InputManager;->mInputDevices:Landroid/util/SparseArray;
 
-    .line 873
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -709,26 +630,22 @@
 
     if-ge v1, v4, :cond_1
 
-    .line 874
     iget-object v4, p0, Landroid/hardware/input/InputManager;->mInputDevices:Landroid/util/SparseArray;
 
     aget v5, v2, v1
 
     invoke-virtual {v4, v5, v6}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 873
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 857
     .end local v1    # "i":I
     .end local v2    # "ids":[I
     .restart local v3    # "listener":Landroid/hardware/input/InputManager$InputDevicesChangedListener;
     :catch_0
     move-exception v0
 
-    .line 858
     .local v0, "ex":Landroid/os/RemoteException;
     new-instance v4, Ljava/lang/RuntimeException;
 
@@ -738,13 +655,11 @@
 
     throw v4
 
-    .line 868
     .end local v0    # "ex":Landroid/os/RemoteException;
     .end local v3    # "listener":Landroid/hardware/input/InputManager$InputDevicesChangedListener;
     :catch_1
     move-exception v0
 
-    .line 869
     .restart local v0    # "ex":Landroid/os/RemoteException;
     new-instance v4, Ljava/lang/RuntimeException;
 
@@ -754,7 +669,6 @@
 
     throw v4
 
-    .line 877
     .end local v0    # "ex":Landroid/os/RemoteException;
     :cond_1
     return-void
@@ -766,14 +680,12 @@
     .param p2, "deviceId"    # I
 
     .prologue
-    .line 923
     iget-object v3, p0, Landroid/hardware/input/InputManager;->mInputDeviceListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
     move-result v2
 
-    .line 924
     .local v2, "numListeners":I
     const/4 v0, 0x0
 
@@ -781,7 +693,6 @@
     :goto_0
     if-ge v0, v2, :cond_0
 
-    .line 925
     iget-object v3, p0, Landroid/hardware/input/InputManager;->mInputDeviceListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -790,7 +701,6 @@
 
     check-cast v1, Landroid/hardware/input/InputManager$InputDeviceListenerDelegate;
 
-    .line 926
     .local v1, "listener":Landroid/hardware/input/InputManager$InputDeviceListenerDelegate;
     const/4 v3, 0x0
 
@@ -800,12 +710,10 @@
 
     invoke-virtual {v1, v3}, Landroid/hardware/input/InputManager$InputDeviceListenerDelegate;->sendMessage(Landroid/os/Message;)Z
 
-    .line 924
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 928
     .end local v1    # "listener":Landroid/hardware/input/InputManager$InputDeviceListenerDelegate;
     :cond_0
     return-void
@@ -819,32 +727,27 @@
     .param p2, "keyboardLayoutDescriptor"    # Ljava/lang/String;
 
     .prologue
-    .line 578
     if-nez p1, :cond_0
 
-    .line 579
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v2, "inputDeviceDescriptor must not be null"
+    const-string v2, "inputDeviceDescriptor must not be null"
 
     invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 581
     :cond_0
     if-nez p2, :cond_1
 
-    .line 582
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v2, "keyboardLayoutDescriptor must not be null"
+    const-string v2, "keyboardLayoutDescriptor must not be null"
 
     invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 586
     :cond_1
     :try_start_0
     iget-object v1, p0, Landroid/hardware/input/InputManager;->mIm:Landroid/hardware/input/IInputManager;
@@ -853,15 +756,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 590
     :goto_0
     return-void
 
-    .line 587
     :catch_0
     move-exception v0
 
-    .line 588
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "InputManager"
 
@@ -878,12 +778,10 @@
     .param p2, "keyCodes"    # [I
 
     .prologue
-    .line 756
     array-length v1, p2
 
     new-array v0, v1, [Z
 
-    .line 758
     .local v0, "ret":[Z
     :try_start_0
     iget-object v1, p0, Landroid/hardware/input/InputManager;->mIm:Landroid/hardware/input/IInputManager;
@@ -894,11 +792,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 762
     :goto_0
     return-object v0
 
-    .line 759
     :catch_0
     move-exception v1
 
@@ -910,7 +806,6 @@
     .param p1, "keyCodes"    # [I
 
     .prologue
-    .line 739
     const/4 v0, -0x1
 
     invoke-virtual {p0, v0, p1}, Landroid/hardware/input/InputManager;->deviceHasKeys(I[I)[Z
@@ -925,7 +820,6 @@
     .param p1, "identifier"    # Landroid/hardware/input/InputDeviceIdentifier;
 
     .prologue
-    .line 506
     :try_start_0
     iget-object v1, p0, Landroid/hardware/input/InputManager;->mIm:Landroid/hardware/input/IInputManager;
 
@@ -935,15 +829,12 @@
 
     move-result-object v1
 
-    .line 509
     :goto_0
     return-object v1
 
-    .line 507
     :catch_0
     move-exception v0
 
-    .line 508
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "InputManager"
 
@@ -951,7 +842,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 509
     const/4 v1, 0x0
 
     goto :goto_0
@@ -962,36 +852,29 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 237
     iget-object v4, p0, Landroid/hardware/input/InputManager;->mInputDevicesLock:Ljava/lang/Object;
 
     monitor-enter v4
 
-    .line 238
     :try_start_0
     invoke-direct {p0}, Landroid/hardware/input/InputManager;->populateInputDevicesLocked()V
 
-    .line 240
     iget-object v3, p0, Landroid/hardware/input/InputManager;->mInputDevices:Landroid/util/SparseArray;
 
     invoke-virtual {v3, p1}, Landroid/util/SparseArray;->indexOfKey(I)I
 
     move-result v1
 
-    .line 241
     .local v1, "index":I
     if-gez v1, :cond_0
 
-    .line 242
     const/4 v2, 0x0
 
     monitor-exit v4
 
-    .line 256
     :goto_0
     return-object v2
 
-    .line 245
     :cond_0
     iget-object v3, p0, Landroid/hardware/input/InputManager;->mInputDevices:Landroid/util/SparseArray;
 
@@ -1003,11 +886,9 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 246
     .local v2, "inputDevice":Landroid/view/InputDevice;
     if-nez v2, :cond_1
 
-    .line 248
     :try_start_1
     iget-object v3, p0, Landroid/hardware/input/InputManager;->mIm:Landroid/hardware/input/IInputManager;
 
@@ -1018,22 +899,18 @@
 
     move-result-object v2
 
-    .line 252
     if-eqz v2, :cond_1
 
-    .line 253
     :try_start_2
     iget-object v3, p0, Landroid/hardware/input/InputManager;->mInputDevices:Landroid/util/SparseArray;
 
     invoke-virtual {v3, v1, v2}, Landroid/util/SparseArray;->setValueAt(ILjava/lang/Object;)V
 
-    .line 256
     :cond_1
     monitor-exit v4
 
     goto :goto_0
 
-    .line 257
     .end local v1    # "index":I
     .end local v2    # "inputDevice":Landroid/view/InputDevice;
     :catchall_0
@@ -1045,13 +922,11 @@
 
     throw v3
 
-    .line 249
     .restart local v1    # "index":I
     .restart local v2    # "inputDevice":Landroid/view/InputDevice;
     :catch_0
     move-exception v0
 
-    .line 250
     .local v0, "ex":Landroid/os/RemoteException;
     :try_start_3
     new-instance v3, Ljava/lang/RuntimeException;
@@ -1070,10 +945,8 @@
     .param p1, "descriptor"    # Ljava/lang/String;
 
     .prologue
-    .line 267
     if-nez p1, :cond_0
 
-    .line 268
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
     const-string v5, "descriptor must not be null."
@@ -1082,24 +955,20 @@
 
     throw v4
 
-    .line 271
     :cond_0
     iget-object v5, p0, Landroid/hardware/input/InputManager;->mInputDevicesLock:Ljava/lang/Object;
 
     monitor-enter v5
 
-    .line 272
     :try_start_0
     invoke-direct {p0}, Landroid/hardware/input/InputManager;->populateInputDevicesLocked()V
 
-    .line 274
     iget-object v4, p0, Landroid/hardware/input/InputManager;->mInputDevices:Landroid/util/SparseArray;
 
     invoke-virtual {v4}, Landroid/util/SparseArray;->size()I
 
     move-result v3
 
-    .line 275
     .local v3, "numDevices":I
     const/4 v0, 0x0
 
@@ -1107,7 +976,6 @@
     :goto_0
     if-ge v0, v3, :cond_4
 
-    .line 276
     iget-object v4, p0, Landroid/hardware/input/InputManager;->mInputDevices:Landroid/util/SparseArray;
 
     invoke-virtual {v4, v0}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -1116,11 +984,9 @@
 
     check-cast v2, Landroid/view/InputDevice;
 
-    .line 277
     .local v2, "inputDevice":Landroid/view/InputDevice;
     if-nez v2, :cond_3
 
-    .line 278
     iget-object v4, p0, Landroid/hardware/input/InputManager;->mInputDevices:Landroid/util/SparseArray;
 
     invoke-virtual {v4, v0}, Landroid/util/SparseArray;->keyAt(I)I
@@ -1129,7 +995,6 @@
 
     move-result v1
 
-    .line 280
     .local v1, "id":I
     :try_start_1
     iget-object v4, p0, Landroid/hardware/input/InputManager;->mIm:Landroid/hardware/input/IInputManager;
@@ -1141,18 +1006,15 @@
 
     move-result-object v2
 
-    .line 284
     :goto_1
     if-nez v2, :cond_2
 
-    .line 275
     .end local v1    # "id":I
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 287
     .restart local v1    # "id":I
     :cond_2
     :try_start_2
@@ -1160,7 +1022,6 @@
 
     invoke-virtual {v4, v0, v2}, Landroid/util/SparseArray;->setValueAt(ILjava/lang/Object;)V
 
-    .line 289
     .end local v1    # "id":I
     :cond_3
     invoke-virtual {v2}, Landroid/view/InputDevice;->getDescriptor()Ljava/lang/String;
@@ -1173,10 +1034,8 @@
 
     if-eqz v4, :cond_1
 
-    .line 290
     monitor-exit v5
 
-    .line 293
     .end local v2    # "inputDevice":Landroid/view/InputDevice;
     :goto_2
     return-object v2
@@ -1188,7 +1047,6 @@
 
     goto :goto_2
 
-    .line 294
     .end local v0    # "i":I
     .end local v3    # "numDevices":I
     :catchall_0
@@ -1200,7 +1058,6 @@
 
     throw v4
 
-    .line 281
     .restart local v0    # "i":I
     .restart local v1    # "id":I
     .restart local v2    # "inputDevice":Landroid/view/InputDevice;
@@ -1215,27 +1072,22 @@
     .locals 5
 
     .prologue
-    .line 302
     iget-object v4, p0, Landroid/hardware/input/InputManager;->mInputDevicesLock:Ljava/lang/Object;
 
     monitor-enter v4
 
-    .line 303
     :try_start_0
     invoke-direct {p0}, Landroid/hardware/input/InputManager;->populateInputDevicesLocked()V
 
-    .line 305
     iget-object v3, p0, Landroid/hardware/input/InputManager;->mInputDevices:Landroid/util/SparseArray;
 
     invoke-virtual {v3}, Landroid/util/SparseArray;->size()I
 
     move-result v0
 
-    .line 306
     .local v0, "count":I
     new-array v2, v0, [I
 
-    .line 307
     .local v2, "ids":[I
     const/4 v1, 0x0
 
@@ -1243,7 +1095,6 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 308
     iget-object v3, p0, Landroid/hardware/input/InputManager;->mInputDevices:Landroid/util/SparseArray;
 
     invoke-virtual {v3, v1}, Landroid/util/SparseArray;->keyAt(I)I
@@ -1252,18 +1103,15 @@
 
     aput v3, v2, v1
 
-    .line 307
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 310
     :cond_0
     monitor-exit v4
 
     return-object v2
 
-    .line 311
     .end local v0    # "count":I
     .end local v1    # "i":I
     .end local v2    # "ids":[I
@@ -1282,7 +1130,6 @@
     .param p1, "deviceId"    # I
 
     .prologue
-    .line 961
     new-instance v0, Landroid/hardware/input/InputManager$InputDeviceVibrator;
 
     invoke-direct {v0, p0, p1}, Landroid/hardware/input/InputManager$InputDeviceVibrator;-><init>(Landroid/hardware/input/InputManager;I)V
@@ -1295,19 +1142,16 @@
     .param p1, "keyboardLayoutDescriptor"    # Ljava/lang/String;
 
     .prologue
-    .line 483
     if-nez p1, :cond_0
 
-    .line 484
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v2, "keyboardLayoutDescriptor must not be null"
+    const-string v2, "keyboardLayoutDescriptor must not be null"
 
     invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 488
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/hardware/input/InputManager;->mIm:Landroid/hardware/input/IInputManager;
@@ -1318,15 +1162,12 @@
 
     move-result-object v1
 
-    .line 491
     :goto_0
     return-object v1
 
-    .line 489
     :catch_0
     move-exception v0
 
-    .line 490
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "InputManager"
 
@@ -1334,7 +1175,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 491
     const/4 v1, 0x0
 
     goto :goto_0
@@ -1344,7 +1184,6 @@
     .locals 3
 
     .prologue
-    .line 466
     :try_start_0
     iget-object v1, p0, Landroid/hardware/input/InputManager;->mIm:Landroid/hardware/input/IInputManager;
 
@@ -1354,15 +1193,12 @@
 
     move-result-object v1
 
-    .line 469
     :goto_0
     return-object v1
 
-    .line 467
     :catch_0
     move-exception v0
 
-    .line 468
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "InputManager"
 
@@ -1370,7 +1206,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 469
     const/4 v1, 0x0
 
     new-array v1, v1, [Landroid/hardware/input/KeyboardLayout;
@@ -1383,19 +1218,16 @@
     .param p1, "identifier"    # Landroid/hardware/input/InputDeviceIdentifier;
 
     .prologue
-    .line 552
     if-nez p1, :cond_0
 
-    .line 553
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v2, "inputDeviceDescriptor must not be null"
+    const-string v2, "inputDeviceDescriptor must not be null"
 
     invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 557
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/hardware/input/InputManager;->mIm:Landroid/hardware/input/IInputManager;
@@ -1406,15 +1238,12 @@
 
     move-result-object v1
 
-    .line 560
     :goto_0
     return-object v1
 
-    .line 558
     :catch_0
     move-exception v0
 
-    .line 559
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "InputManager"
 
@@ -1422,7 +1251,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 560
     const-class v1, Ljava/lang/String;
 
     invoke-static {v1}, Lcom/android/internal/util/ArrayUtils;->emptyArray(Ljava/lang/Class;)[Ljava/lang/Object;
@@ -1439,17 +1267,15 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 673
     const/4 v0, 0x0
 
-    .line 675
     .local v0, "speed":I
     :try_start_0
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    const-string/jumbo v2, "pointer_speed"
+    const-string v2, "pointer_speed"
 
     invoke-static {v1, v2}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;)I
     :try_end_0
@@ -1457,11 +1283,9 @@
 
     move-result v0
 
-    .line 679
     :goto_0
     return v0
 
-    .line 677
     :catch_0
     move-exception v1
 
@@ -1474,7 +1298,6 @@
     .param p2, "surfaceRotation"    # I
 
     .prologue
-    .line 631
     :try_start_0
     iget-object v1, p0, Landroid/hardware/input/InputManager;->mIm:Landroid/hardware/input/IInputManager;
 
@@ -1484,15 +1307,12 @@
 
     move-result-object v1
 
-    .line 634
     :goto_0
     return-object v1
 
-    .line 632
     :catch_0
     move-exception v0
 
-    .line 633
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "InputManager"
 
@@ -1500,7 +1320,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 634
     sget-object v1, Landroid/hardware/input/TouchCalibration;->IDENTITY:Landroid/hardware/input/TouchCalibration;
 
     goto :goto_0
@@ -1512,10 +1331,8 @@
     .param p2, "mode"    # I
 
     .prologue
-    .line 788
     if-nez p1, :cond_0
 
-    .line 789
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "event must not be null"
@@ -1524,7 +1341,6 @@
 
     throw v1
 
-    .line 791
     :cond_0
     if-eqz p2, :cond_1
 
@@ -1536,16 +1352,14 @@
 
     if-eq p2, v1, :cond_1
 
-    .line 794
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v2, "mode is invalid"
+    const-string v2, "mode is invalid"
 
     invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 798
     :cond_1
     :try_start_0
     iget-object v1, p0, Landroid/hardware/input/InputManager;->mIm:Landroid/hardware/input/IInputManager;
@@ -1556,15 +1370,12 @@
 
     move-result v1
 
-    .line 800
     :goto_0
     return v1
 
-    .line 799
     :catch_0
     move-exception v0
 
-    .line 800
     .local v0, "ex":Landroid/os/RemoteException;
     const/4 v1, 0x0
 
@@ -1575,7 +1386,6 @@
     .locals 3
 
     .prologue
-    .line 379
     :try_start_0
     iget-object v1, p0, Landroid/hardware/input/InputManager;->mIm:Landroid/hardware/input/IInputManager;
 
@@ -1585,15 +1395,12 @@
 
     move-result v1
 
-    .line 382
     :goto_0
     return v1
 
-    .line 380
     :catch_0
     move-exception v0
 
-    .line 381
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "InputManager"
 
@@ -1601,7 +1408,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 382
     const/4 v1, -0x1
 
     goto :goto_0
@@ -1613,35 +1419,29 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 325
     if-nez p1, :cond_0
 
-    .line 326
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v2, "listener must not be null"
+    const-string v2, "listener must not be null"
 
     invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 329
     :cond_0
     iget-object v2, p0, Landroid/hardware/input/InputManager;->mInputDevicesLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 330
     :try_start_0
     invoke-direct {p0, p1}, Landroid/hardware/input/InputManager;->findInputDeviceListenerLocked(Landroid/hardware/input/InputManager$InputDeviceListener;)I
 
     move-result v0
 
-    .line 331
     .local v0, "index":I
     if-gez v0, :cond_1
 
-    .line 332
     iget-object v1, p0, Landroid/hardware/input/InputManager;->mInputDeviceListeners:Ljava/util/ArrayList;
 
     new-instance v3, Landroid/hardware/input/InputManager$InputDeviceListenerDelegate;
@@ -1650,14 +1450,11 @@
 
     invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 334
     :cond_1
     monitor-exit v2
 
-    .line 335
     return-void
 
-    .line 334
     .end local v0    # "index":I
     :catchall_0
     move-exception v1
@@ -1675,63 +1472,51 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 396
     if-nez p1, :cond_0
 
-    .line 397
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v3, "listener must not be null"
+    const-string v3, "listener must not be null"
 
     invoke-direct {v2, v3}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v2
 
-    .line 399
     :cond_0
     iget-object v3, p0, Landroid/hardware/input/InputManager;->mTabletModeLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 400
     :try_start_0
     iget-object v2, p0, Landroid/hardware/input/InputManager;->mOnTabletModeChangedListeners:Ljava/util/List;
 
     if-nez v2, :cond_1
 
-    .line 401
     invoke-direct {p0}, Landroid/hardware/input/InputManager;->initializeTabletModeListenerLocked()V
 
-    .line 403
     :cond_1
     invoke-direct {p0, p1}, Landroid/hardware/input/InputManager;->findOnTabletModeChangedListenerLocked(Landroid/hardware/input/InputManager$OnTabletModeChangedListener;)I
 
     move-result v1
 
-    .line 404
     .local v1, "idx":I
     if-gez v1, :cond_2
 
-    .line 405
     new-instance v0, Landroid/hardware/input/InputManager$OnTabletModeChangedListenerDelegate;
 
     invoke-direct {v0, p1, p2}, Landroid/hardware/input/InputManager$OnTabletModeChangedListenerDelegate;-><init>(Landroid/hardware/input/InputManager$OnTabletModeChangedListener;Landroid/os/Handler;)V
 
-    .line 407
     .local v0, "d":Landroid/hardware/input/InputManager$OnTabletModeChangedListenerDelegate;
     iget-object v2, p0, Landroid/hardware/input/InputManager;->mOnTabletModeChangedListeners:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 409
     .end local v0    # "d":Landroid/hardware/input/InputManager$OnTabletModeChangedListenerDelegate;
     :cond_2
     monitor-exit v3
 
-    .line 410
     return-void
 
-    .line 409
     .end local v1    # "idx":I
     :catchall_0
     move-exception v2
@@ -1749,32 +1534,27 @@
     .param p2, "keyboardLayoutDescriptor"    # Ljava/lang/String;
 
     .prologue
-    .line 606
     if-nez p1, :cond_0
 
-    .line 607
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v2, "inputDeviceDescriptor must not be null"
+    const-string v2, "inputDeviceDescriptor must not be null"
 
     invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 609
     :cond_0
     if-nez p2, :cond_1
 
-    .line 610
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v2, "keyboardLayoutDescriptor must not be null"
+    const-string v2, "keyboardLayoutDescriptor must not be null"
 
     invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 614
     :cond_1
     :try_start_0
     iget-object v1, p0, Landroid/hardware/input/InputManager;->mIm:Landroid/hardware/input/IInputManager;
@@ -1783,15 +1563,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 618
     :goto_0
     return-void
 
-    .line 615
     :catch_0
     move-exception v0
 
-    .line 616
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "InputManager"
 
@@ -1808,32 +1585,27 @@
     .param p2, "keyboardLayoutDescriptor"    # Ljava/lang/String;
 
     .prologue
-    .line 528
     if-nez p1, :cond_0
 
-    .line 529
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v2, "identifier must not be null"
+    const-string v2, "identifier must not be null"
 
     invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 531
     :cond_0
     if-nez p2, :cond_1
 
-    .line 532
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v2, "keyboardLayoutDescriptor must not be null"
+    const-string v2, "keyboardLayoutDescriptor must not be null"
 
     invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 536
     :cond_1
     :try_start_0
     iget-object v1, p0, Landroid/hardware/input/InputManager;->mIm:Landroid/hardware/input/IInputManager;
@@ -1842,15 +1614,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 541
     :goto_0
     return-void
 
-    .line 538
     :catch_0
     move-exception v0
 
-    .line 539
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "InputManager"
 
@@ -1867,7 +1636,6 @@
     .param p2, "speed"    # I
 
     .prologue
-    .line 695
     const/4 v0, -0x7
 
     if-lt p2, v0, :cond_0
@@ -1876,27 +1644,24 @@
 
     if-le p2, v0, :cond_1
 
-    .line 696
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "speed out of range"
+    const-string v1, "speed out of range"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 699
     :cond_1
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    const-string/jumbo v1, "pointer_speed"
+    const-string v1, "pointer_speed"
 
     invoke-static {v0, v1, p2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 701
     return-void
 .end method
 
@@ -1907,7 +1672,6 @@
     .param p3, "calibration"    # Landroid/hardware/input/TouchCalibration;
 
     .prologue
-    .line 653
     :try_start_0
     iget-object v1, p0, Landroid/hardware/input/InputManager;->mIm:Landroid/hardware/input/IInputManager;
 
@@ -1915,15 +1679,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 657
     :goto_0
     return-void
 
-    .line 654
     :catch_0
     move-exception v0
 
-    .line 655
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "InputManager"
 
@@ -1939,10 +1700,8 @@
     .param p1, "modeOn"    # Z
 
     .prologue
-    .line 809
     if-eqz p1, :cond_0
 
-    .line 810
     :try_start_0
     iget-object v1, p0, Landroid/hardware/input/InputManager;->mIm:Landroid/hardware/input/IInputManager;
 
@@ -1950,11 +1709,9 @@
 
     invoke-interface {v1, v2}, Landroid/hardware/input/IInputManager;->switchTouchSensitiveMode(Z)V
 
-    .line 816
     :goto_0
     return-void
 
-    .line 812
     :cond_0
     iget-object v1, p0, Landroid/hardware/input/InputManager;->mIm:Landroid/hardware/input/IInputManager;
 
@@ -1966,11 +1723,9 @@
 
     goto :goto_0
 
-    .line 814
     :catch_0
     move-exception v0
 
-    .line 815
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "InputManager"
 
@@ -1986,10 +1741,8 @@
     .param p1, "modeOn"    # Z
 
     .prologue
-    .line 825
     if-eqz p1, :cond_0
 
-    .line 826
     :try_start_0
     iget-object v1, p0, Landroid/hardware/input/InputManager;->mIm:Landroid/hardware/input/IInputManager;
 
@@ -1997,11 +1750,9 @@
 
     invoke-interface {v1, v2}, Landroid/hardware/input/IInputManager;->switchTouchStylusMode(Z)V
 
-    .line 832
     :goto_0
     return-void
 
-    .line 828
     :cond_0
     iget-object v1, p0, Landroid/hardware/input/InputManager;->mIm:Landroid/hardware/input/IInputManager;
 
@@ -2013,11 +1764,9 @@
 
     goto :goto_0
 
-    .line 830
     :catch_0
     move-exception v0
 
-    .line 831
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "InputManager"
 
@@ -2033,10 +1782,8 @@
     .param p1, "modeOn"    # Z
 
     .prologue
-    .line 841
     if-eqz p1, :cond_0
 
-    .line 842
     :try_start_0
     iget-object v1, p0, Landroid/hardware/input/InputManager;->mIm:Landroid/hardware/input/IInputManager;
 
@@ -2044,11 +1791,9 @@
 
     invoke-interface {v1, v2}, Landroid/hardware/input/IInputManager;->switchTouchWakeupMode(Z)V
 
-    .line 848
     :goto_0
     return-void
 
-    .line 844
     :cond_0
     iget-object v1, p0, Landroid/hardware/input/InputManager;->mIm:Landroid/hardware/input/IInputManager;
 
@@ -2060,11 +1805,9 @@
 
     goto :goto_0
 
-    .line 846
     :catch_0
     move-exception v0
 
-    .line 847
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "InputManager"
 
@@ -2080,7 +1823,6 @@
     .param p1, "speed"    # I
 
     .prologue
-    .line 715
     const/4 v1, -0x7
 
     if-lt p1, v1, :cond_0
@@ -2089,17 +1831,15 @@
 
     if-le p1, v1, :cond_1
 
-    .line 716
     :cond_0
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v2, "speed out of range"
+    const-string v2, "speed out of range"
 
     invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 720
     :cond_1
     :try_start_0
     iget-object v1, p0, Landroid/hardware/input/InputManager;->mIm:Landroid/hardware/input/IInputManager;
@@ -2108,15 +1848,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 724
     :goto_0
     return-void
 
-    .line 721
     :catch_0
     move-exception v0
 
-    .line 722
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "InputManager"
 
@@ -2132,35 +1869,29 @@
     .param p1, "listener"    # Landroid/hardware/input/InputManager$InputDeviceListener;
 
     .prologue
-    .line 345
     if-nez p1, :cond_0
 
-    .line 346
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v3, "listener must not be null"
+    const-string v3, "listener must not be null"
 
     invoke-direct {v2, v3}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v2
 
-    .line 349
     :cond_0
     iget-object v3, p0, Landroid/hardware/input/InputManager;->mInputDevicesLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 350
     :try_start_0
     invoke-direct {p0, p1}, Landroid/hardware/input/InputManager;->findInputDeviceListenerLocked(Landroid/hardware/input/InputManager$InputDeviceListener;)I
 
     move-result v1
 
-    .line 351
     .local v1, "index":I
     if-ltz v1, :cond_1
 
-    .line 352
     iget-object v2, p0, Landroid/hardware/input/InputManager;->mInputDeviceListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -2169,26 +1900,21 @@
 
     check-cast v0, Landroid/hardware/input/InputManager$InputDeviceListenerDelegate;
 
-    .line 353
     .local v0, "d":Landroid/hardware/input/InputManager$InputDeviceListenerDelegate;
     const/4 v2, 0x0
 
     invoke-virtual {v0, v2}, Landroid/hardware/input/InputManager$InputDeviceListenerDelegate;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
-    .line 354
     iget-object v2, p0, Landroid/hardware/input/InputManager;->mInputDeviceListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 356
     .end local v0    # "d":Landroid/hardware/input/InputManager$InputDeviceListenerDelegate;
     :cond_1
     monitor-exit v3
 
-    .line 357
     return-void
 
-    .line 356
     .end local v1    # "index":I
     :catchall_0
     move-exception v2
@@ -2205,35 +1931,29 @@
     .param p1, "listener"    # Landroid/hardware/input/InputManager$OnTabletModeChangedListener;
 
     .prologue
-    .line 419
     if-nez p1, :cond_0
 
-    .line 420
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v3, "listener must not be null"
+    const-string v3, "listener must not be null"
 
     invoke-direct {v2, v3}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v2
 
-    .line 422
     :cond_0
     iget-object v3, p0, Landroid/hardware/input/InputManager;->mTabletModeLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 423
     :try_start_0
     invoke-direct {p0, p1}, Landroid/hardware/input/InputManager;->findOnTabletModeChangedListenerLocked(Landroid/hardware/input/InputManager$OnTabletModeChangedListener;)I
 
     move-result v1
 
-    .line 424
     .local v1, "idx":I
     if-ltz v1, :cond_1
 
-    .line 425
     iget-object v2, p0, Landroid/hardware/input/InputManager;->mOnTabletModeChangedListeners:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
@@ -2242,21 +1962,17 @@
 
     check-cast v0, Landroid/hardware/input/InputManager$OnTabletModeChangedListenerDelegate;
 
-    .line 426
     .local v0, "d":Landroid/hardware/input/InputManager$OnTabletModeChangedListenerDelegate;
     const/4 v2, 0x0
 
     invoke-virtual {v0, v2}, Landroid/hardware/input/InputManager$OnTabletModeChangedListenerDelegate;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
-    .line 428
     .end local v0    # "d":Landroid/hardware/input/InputManager$OnTabletModeChangedListenerDelegate;
     :cond_1
     monitor-exit v3
 
-    .line 429
     return-void
 
-    .line 428
     .end local v1    # "idx":I
     :catchall_0
     move-exception v2

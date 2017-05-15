@@ -11,10 +11,8 @@
     .locals 0
 
     .prologue
-    .line 25
     invoke-direct {p0}, Landroid/text/style/MetricAffectingSpan;-><init>()V
 
-    .line 26
     return-void
 .end method
 
@@ -23,10 +21,8 @@
     .param p1, "src"    # Landroid/os/Parcel;
 
     .prologue
-    .line 28
     invoke-direct {p0}, Landroid/text/style/MetricAffectingSpan;-><init>()V
 
-    .line 29
     return-void
 .end method
 
@@ -36,7 +32,6 @@
     .locals 1
 
     .prologue
-    .line 41
     const/4 v0, 0x0
 
     return v0
@@ -46,7 +41,6 @@
     .locals 1
 
     .prologue
-    .line 32
     invoke-virtual {p0}, Landroid/text/style/SuperscriptSpan;->getSpanTypeIdInternal()I
 
     move-result v0
@@ -58,7 +52,6 @@
     .locals 1
 
     .prologue
-    .line 37
     const/16 v0, 0xe
 
     return v0
@@ -69,7 +62,6 @@
     .param p1, "tp"    # Landroid/text/TextPaint;
 
     .prologue
-    .line 54
     iget v0, p1, Landroid/text/TextPaint;->baselineShift:I
 
     invoke-virtual {p1}, Landroid/text/TextPaint;->ascent()F
@@ -86,7 +78,6 @@
 
     iput v0, p1, Landroid/text/TextPaint;->baselineShift:I
 
-    .line 55
     return-void
 .end method
 
@@ -95,7 +86,6 @@
     .param p1, "tp"    # Landroid/text/TextPaint;
 
     .prologue
-    .line 59
     iget v0, p1, Landroid/text/TextPaint;->baselineShift:I
 
     invoke-virtual {p1}, Landroid/text/TextPaint;->ascent()F
@@ -112,7 +102,6 @@
 
     iput v0, p1, Landroid/text/TextPaint;->baselineShift:I
 
-    .line 60
     return-void
 .end method
 
@@ -122,10 +111,8 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 45
     invoke-virtual {p0, p1, p2}, Landroid/text/style/SuperscriptSpan;->writeToParcelInternal(Landroid/os/Parcel;I)V
 
-    .line 46
     return-void
 .end method
 
@@ -135,6 +122,5 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 50
     return-void
 .end method

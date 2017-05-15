@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 2507
     iput-object p1, p0, Landroid/widget/Editor$ActionPinnedPopupWindow$1;->this$1:Landroid/widget/Editor$ActionPinnedPopupWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 2510
     iget-object v0, p0, Landroid/widget/Editor$ActionPinnedPopupWindow$1;->this$1:Landroid/widget/Editor$ActionPinnedPopupWindow;
 
     iget-object v0, v0, Landroid/widget/Editor$ActionPinnedPopupWindow;->this$0:Landroid/widget/Editor;
@@ -98,13 +96,11 @@
 
     if-eqz v0, :cond_1
 
-    .line 2513
     :cond_0
     iget-object v0, p0, Landroid/widget/Editor$ActionPinnedPopupWindow$1;->this$1:Landroid/widget/Editor$ActionPinnedPopupWindow;
 
     invoke-virtual {v0}, Landroid/widget/Editor$ActionPinnedPopupWindow;->show()V
 
-    .line 2514
     iget-object v0, p0, Landroid/widget/Editor$ActionPinnedPopupWindow$1;->this$1:Landroid/widget/Editor$ActionPinnedPopupWindow;
 
     # getter for: Landroid/widget/Editor$ActionPinnedPopupWindow;->mHandleView:Landroid/widget/Editor$HandleView;
@@ -116,7 +112,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 2515
     iget-object v0, p0, Landroid/widget/Editor$ActionPinnedPopupWindow$1;->this$1:Landroid/widget/Editor$ActionPinnedPopupWindow;
 
     # getter for: Landroid/widget/Editor$ActionPinnedPopupWindow;->mHandleView:Landroid/widget/Editor$HandleView;
@@ -129,7 +124,6 @@
     # invokes: Landroid/widget/Editor$InsertionHandleView;->hideAfterDelay()V
     invoke-static {v0}, Landroid/widget/Editor$InsertionHandleView;->access$1700(Landroid/widget/Editor$InsertionHandleView;)V
 
-    .line 2518
     :cond_1
     return-void
 .end method

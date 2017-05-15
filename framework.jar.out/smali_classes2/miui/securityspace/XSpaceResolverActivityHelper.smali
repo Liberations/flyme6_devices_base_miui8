@@ -16,10 +16,8 @@
     .locals 0
 
     .prologue
-    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 33
     return-void
 .end method
 
@@ -30,7 +28,6 @@
     .param p2, "alertParams"    # Lcom/android/internal/app/AlertController$AlertParams;
 
     .prologue
-    .line 26
     if-eqz p1, :cond_0
 
     const-string v0, "miui.intent.action.ACTION_XSPACE_RESOLVER_ACTIVITY"
@@ -45,15 +42,12 @@
 
     if-nez v0, :cond_1
 
-    .line 27
     :cond_0
     const/4 v0, 0x0
 
-    .line 30
     :goto_0
     return v0
 
-    .line 29
     :cond_1
     new-instance v0, Lmiui/securityspace/XSpaceResolverActivityHelper$ResolverActivityRunner;
 
@@ -61,7 +55,6 @@
 
     invoke-virtual {v0}, Lmiui/securityspace/XSpaceResolverActivityHelper$ResolverActivityRunner;->run()V
 
-    .line 30
     const/4 v0, 0x1
 
     goto :goto_0

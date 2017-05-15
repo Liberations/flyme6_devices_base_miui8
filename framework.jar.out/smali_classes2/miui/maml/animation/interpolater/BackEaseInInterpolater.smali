@@ -15,15 +15,12 @@
     .locals 1
 
     .prologue
-    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 10
     const v0, 0x3fd9cd60
 
     iput v0, p0, Lmiui/maml/animation/interpolater/BackEaseInInterpolater;->mFactor:F
 
-    .line 11
     return-void
 .end method
 
@@ -32,13 +29,10 @@
     .param p1, "factor"    # F
 
     .prologue
-    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 14
     iput p1, p0, Lmiui/maml/animation/interpolater/BackEaseInInterpolater;->mFactor:F
 
-    .line 15
     return-void
 .end method
 
@@ -49,7 +43,6 @@
     .param p1, "t"    # F
 
     .prologue
-    .line 18
     mul-float v0, p1, p1
 
     iget v1, p0, Lmiui/maml/animation/interpolater/BackEaseInInterpolater;->mFactor:F

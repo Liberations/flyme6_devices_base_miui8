@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 58
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,7 +35,6 @@
     .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
-    .line 60
     invoke-static {p2}, Lcom/android/internal/app/IMediaContainerService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/internal/app/IMediaContainerService;
 
     move-result-object v0
@@ -44,7 +42,6 @@
     # setter for: Lmiui/provider/ExtraGuard;->gService:Lcom/android/internal/app/IMediaContainerService;
     invoke-static {v0}, Lmiui/provider/ExtraGuard;->access$002(Lcom/android/internal/app/IMediaContainerService;)Lcom/android/internal/app/IMediaContainerService;
 
-    .line 61
     return-void
 .end method
 
@@ -53,6 +50,5 @@
     .param p1, "name"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 64
     return-void
 .end method

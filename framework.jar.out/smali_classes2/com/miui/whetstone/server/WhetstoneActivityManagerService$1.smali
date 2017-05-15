@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 175
     iput-object p1, p0, Lcom/miui/whetstone/server/WhetstoneActivityManagerService$1;->this$0:Lcom/miui/whetstone/server/WhetstoneActivityManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 179
     :try_start_0
     iget-object v2, p0, Lcom/miui/whetstone/server/WhetstoneActivityManagerService$1;->this$0:Lcom/miui/whetstone/server/WhetstoneActivityManagerService;
 
@@ -50,7 +48,6 @@
 
     if-nez v2, :cond_0
 
-    .line 180
     iget-object v3, p0, Lcom/miui/whetstone/server/WhetstoneActivityManagerService$1;->this$0:Lcom/miui/whetstone/server/WhetstoneActivityManagerService;
 
     const-string v2, "power"
@@ -64,7 +61,6 @@
     # setter for: Lcom/miui/whetstone/server/WhetstoneActivityManagerService;->mPowerManager:Landroid/os/PowerManager;
     invoke-static {v3, v2}, Lcom/miui/whetstone/server/WhetstoneActivityManagerService;->access$002(Lcom/miui/whetstone/server/WhetstoneActivityManagerService;Landroid/os/PowerManager;)Landroid/os/PowerManager;
 
-    .line 182
     :cond_0
     const-class v2, Landroid/os/PowerManager;
 
@@ -99,9 +95,8 @@
 
     move-result v0
 
-    .line 183
     .local v0, "deviceIdle":Z
-    const-string/jumbo v2, "whetstone.activity"
+    const-string v2, "whetstone.activity"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -123,7 +118,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 184
     iget-object v2, p0, Lcom/miui/whetstone/server/WhetstoneActivityManagerService$1;->this$0:Lcom/miui/whetstone/server/WhetstoneActivityManagerService;
 
     # getter for: Lcom/miui/whetstone/server/WhetstoneActivityManagerService;->PowerManagerServiceInjector:Ljava/lang/Class;
@@ -151,18 +145,15 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 188
     .end local v0    # "deviceIdle":Z
     :goto_0
     return-void
 
-    .line 185
     :catch_0
     move-exception v1
 
-    .line 186
     .local v1, "e":Ljava/lang/Exception;
-    const-string/jumbo v2, "whetstone.activity"
+    const-string v2, "whetstone.activity"
 
     invoke-static {v1}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
 

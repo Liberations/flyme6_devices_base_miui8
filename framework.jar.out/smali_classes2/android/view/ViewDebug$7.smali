@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 839
     iput-object p1, p0, Landroid/view/ViewDebug$7;->val$view:Landroid/view/View;
 
     iput-object p2, p0, Landroid/view/ViewDebug$7;->val$encoder:Landroid/view/ViewHierarchyEncoder;
@@ -48,18 +47,15 @@
     .locals 2
 
     .prologue
-    .line 842
     iget-object v0, p0, Landroid/view/ViewDebug$7;->val$view:Landroid/view/View;
 
     iget-object v1, p0, Landroid/view/ViewDebug$7;->val$encoder:Landroid/view/ViewHierarchyEncoder;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->encode(Landroid/view/ViewHierarchyEncoder;)V
 
-    .line 843
     iget-object v0, p0, Landroid/view/ViewDebug$7;->val$latch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
-    .line 844
     return-void
 .end method

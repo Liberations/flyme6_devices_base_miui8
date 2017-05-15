@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 137
     iput-object p1, p0, Landroid/service/chooser/ChooserTargetService$IChooserTargetServiceWrapper;->this$0:Landroid/service/chooser/ChooserTargetService;
 
     invoke-direct {p0}, Landroid/service/chooser/IChooserTargetService$Stub;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Landroid/service/chooser/ChooserTargetService$1;
 
     .prologue
-    .line 137
     invoke-direct {p0, p1}, Landroid/service/chooser/ChooserTargetService$IChooserTargetServiceWrapper;-><init>(Landroid/service/chooser/ChooserTargetService;)V
 
     return-void
@@ -57,10 +55,8 @@
     .end annotation
 
     .prologue
-    .line 141
     const/4 v0, 0x0
 
-    .line 147
     .local v0, "targets":Ljava/util/List;, "Ljava/util/List<Landroid/service/chooser/ChooserTarget;>;"
     :try_start_0
     iget-object v1, p0, Landroid/service/chooser/ChooserTargetService$IChooserTargetServiceWrapper;->this$0:Landroid/service/chooser/ChooserTargetService;
@@ -71,13 +67,10 @@
 
     move-result-object v0
 
-    .line 149
     invoke-interface {p3, v0}, Landroid/service/chooser/IChooserTargetResult;->sendResult(Ljava/util/List;)V
 
-    .line 152
     return-void
 
-    .line 149
     :catchall_0
     move-exception v1
 

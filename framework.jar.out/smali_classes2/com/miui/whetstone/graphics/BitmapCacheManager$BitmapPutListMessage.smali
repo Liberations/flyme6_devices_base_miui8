@@ -48,16 +48,13 @@
     .end annotation
 
     .prologue
-    .line 451
     .local p2, "bitmaps":Ljava/util/concurrent/ConcurrentHashMap;, "Ljava/util/concurrent/ConcurrentHashMap<Ljava/lang/String;Lcom/miui/whetstone/graphics/BitmapCacheManager$BitmapValue;>;"
     iput-object p1, p0, Lcom/miui/whetstone/graphics/BitmapCacheManager$BitmapPutListMessage;->this$0:Lcom/miui/whetstone/graphics/BitmapCacheManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 452
     iput-object p2, p0, Lcom/miui/whetstone/graphics/BitmapCacheManager$BitmapPutListMessage;->mBitmaps:Ljava/util/concurrent/ConcurrentHashMap;
 
-    .line 453
     return-void
 .end method
 
@@ -69,7 +66,6 @@
     .prologue
     const/4 v8, 0x1
 
-    .line 456
     # getter for: Lcom/miui/whetstone/graphics/BitmapCacheManager;->DEBUG:Ljava/lang/Boolean;
     invoke-static {}, Lcom/miui/whetstone/graphics/BitmapCacheManager;->access$000()Ljava/lang/Boolean;
 
@@ -81,7 +77,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 457
     const-string v5, "WhetstoneBitmapCache"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -110,7 +105,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 459
     :cond_0
     iget-object v5, p0, Lcom/miui/whetstone/graphics/BitmapCacheManager$BitmapPutListMessage;->mBitmaps:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -122,13 +116,11 @@
 
     move-result-object v3
 
-    .line 460
     .local v3, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/util/Map$Entry<Ljava/lang/String;Lcom/miui/whetstone/graphics/BitmapCacheManager$BitmapValue;>;>;"
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 461
     .local v0, "array":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/miui/whetstone/graphics/BitmapCacheManager$BitmapValue;>;"
     :cond_1
     :goto_0
@@ -138,14 +130,12 @@
 
     if-eqz v5, :cond_2
 
-    .line 462
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/util/Map$Entry;
 
-    .line 464
     .local v2, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/miui/whetstone/graphics/BitmapCacheManager$BitmapValue;>;"
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -161,7 +151,6 @@
 
     check-cast v1, Landroid/graphics/Bitmap;
 
-    .line 465
     .local v1, "bitmap":Landroid/graphics/Bitmap;
     if-eqz v1, :cond_1
 
@@ -188,7 +177,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 466
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v5
@@ -197,7 +185,6 @@
 
     goto :goto_0
 
-    .line 469
     .end local v1    # "bitmap":Landroid/graphics/Bitmap;
     .end local v2    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/miui/whetstone/graphics/BitmapCacheManager$BitmapValue;>;"
     :cond_2
@@ -212,14 +199,12 @@
 
     if-eqz v5, :cond_3
 
-    .line 470
     const-string v5, "WhetstoneBitmapCache"
 
     const-string v6, "add cache end, "
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 473
     :cond_3
     iget-object v5, p0, Lcom/miui/whetstone/graphics/BitmapCacheManager$BitmapPutListMessage;->this$0:Lcom/miui/whetstone/graphics/BitmapCacheManager;
 
@@ -232,7 +217,6 @@
 
     move-result-object v4
 
-    .line 474
     .local v4, "msg":Landroid/os/Message;
     iget-object v5, p0, Lcom/miui/whetstone/graphics/BitmapCacheManager$BitmapPutListMessage;->this$0:Lcom/miui/whetstone/graphics/BitmapCacheManager;
 
@@ -243,7 +227,6 @@
 
     invoke-virtual {v5, v8}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 475
     iget-object v5, p0, Lcom/miui/whetstone/graphics/BitmapCacheManager$BitmapPutListMessage;->this$0:Lcom/miui/whetstone/graphics/BitmapCacheManager;
 
     # getter for: Lcom/miui/whetstone/graphics/BitmapCacheManager;->sMainHandler:Landroid/os/Handler;
@@ -253,6 +236,5 @@
 
     invoke-virtual {v5, v4}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 476
     return-void
 .end method

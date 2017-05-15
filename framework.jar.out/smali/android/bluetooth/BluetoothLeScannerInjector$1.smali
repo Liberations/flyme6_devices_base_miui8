@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 108
     iput-object p1, p0, Landroid/bluetooth/BluetoothLeScannerInjector$1;->val$callback:Landroid/bluetooth/BluetoothAdapter$LeScanCallback;
 
     invoke-direct {p0}, Landroid/bluetooth/le/ScanCallback;-><init>()V
@@ -39,20 +38,16 @@
     .param p2, "result"    # Landroid/bluetooth/le/ScanResult;
 
     .prologue
-    .line 111
     invoke-virtual {p2}, Landroid/bluetooth/le/ScanResult;->getScanRecord()Landroid/bluetooth/le/ScanRecord;
 
     move-result-object v0
 
-    .line 112
     .local v0, "scanRecord":Landroid/bluetooth/le/ScanRecord;
     if-nez v0, :cond_0
 
-    .line 117
     :goto_0
     return-void
 
-    .line 115
     :cond_0
     iget-object v1, p0, Landroid/bluetooth/BluetoothLeScannerInjector$1;->val$callback:Landroid/bluetooth/BluetoothAdapter$LeScanCallback;
 

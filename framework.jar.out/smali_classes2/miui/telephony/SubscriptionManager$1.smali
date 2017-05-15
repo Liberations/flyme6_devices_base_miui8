@@ -34,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 179
     iput-object p1, p0, Lmiui/telephony/SubscriptionManager$1;->this$0:Lmiui/telephony/SubscriptionManager;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
@@ -49,7 +48,6 @@
     .param p1, "x0"    # [Ljava/lang/Object;
 
     .prologue
-    .line 179
     check-cast p1, [Ljava/lang/Void;
 
     .end local p1    # "x0":[Ljava/lang/Object;
@@ -65,7 +63,6 @@
     .param p1, "params"    # [Ljava/lang/Void;
 
     .prologue
-    .line 182
     iget-object v0, p0, Lmiui/telephony/SubscriptionManager$1;->this$0:Lmiui/telephony/SubscriptionManager;
 
     const/4 v1, 0x1
@@ -73,7 +70,6 @@
     # invokes: Lmiui/telephony/SubscriptionManager;->ensureSubscriptionInfoCache(Z)V
     invoke-static {v0, v1}, Lmiui/telephony/SubscriptionManager;->access$000(Lmiui/telephony/SubscriptionManager;Z)V
 
-    .line 183
     const/4 v0, 0x0
 
     return-object v0
@@ -84,7 +80,6 @@
     .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
-    .line 179
     check-cast p1, Ljava/lang/Void;
 
     .end local p1    # "x0":Ljava/lang/Object;
@@ -98,7 +93,6 @@
     .param p1, "result"    # Ljava/lang/Void;
 
     .prologue
-    .line 188
     iget-object v2, p0, Lmiui/telephony/SubscriptionManager$1;->this$0:Lmiui/telephony/SubscriptionManager;
 
     # getter for: Lmiui/telephony/SubscriptionManager;->mLock:Ljava/lang/Object;
@@ -108,7 +102,6 @@
 
     monitor-enter v3
 
-    .line 189
     :try_start_0
     iget-object v2, p0, Lmiui/telephony/SubscriptionManager$1;->this$0:Lmiui/telephony/SubscriptionManager;
 
@@ -119,7 +112,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 190
     sget-boolean v2, Lmiui/telephony/PhoneDebug;->VDBG:Z
 
     if-eqz v2, :cond_0
@@ -157,7 +149,6 @@
 
     invoke-static {v2, v4}, Landroid/telephony/Rlog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 191
     :cond_0
     iget-object v2, p0, Lmiui/telephony/SubscriptionManager$1;->this$0:Lmiui/telephony/SubscriptionManager;
 
@@ -184,13 +175,11 @@
 
     check-cast v1, Lmiui/telephony/SubscriptionManager$OnSubscriptionsChangedListener;
 
-    .line 192
     .local v1, "l":Lmiui/telephony/SubscriptionManager$OnSubscriptionsChangedListener;
     invoke-interface {v1}, Lmiui/telephony/SubscriptionManager$OnSubscriptionsChangedListener;->onSubscriptionsChanged()V
 
     goto :goto_0
 
-    .line 195
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v1    # "l":Lmiui/telephony/SubscriptionManager$OnSubscriptionsChangedListener;
     :catchall_0
@@ -208,6 +197,5 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 196
     return-void
 .end method

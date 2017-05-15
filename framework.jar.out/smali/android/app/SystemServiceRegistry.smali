@@ -51,21 +51,18 @@
     .locals 3
 
     .prologue
-    .line 131
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Landroid/app/SystemServiceRegistry;->SYSTEM_SERVICE_NAMES:Ljava/util/HashMap;
 
-    .line 133
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Landroid/app/SystemServiceRegistry;->SYSTEM_SERVICE_FETCHERS:Ljava/util/HashMap;
 
-    .line 141
     const-string v0, "accessibility"
 
     const-class v1, Landroid/view/accessibility/AccessibilityManager;
@@ -76,7 +73,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 148
     const-string v0, "captioning"
 
     const-class v1, Landroid/view/accessibility/CaptioningManager;
@@ -87,7 +83,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 155
     const-string v0, "account"
 
     const-class v1, Landroid/accounts/AccountManager;
@@ -98,7 +93,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 164
     const-string v0, "activity"
 
     const-class v1, Landroid/app/ActivityManager;
@@ -109,7 +103,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 171
     const-string v0, "alarm"
 
     const-class v1, Landroid/app/AlarmManager;
@@ -120,7 +113,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 180
     const-string v0, "audio"
 
     const-class v1, Landroid/media/AudioManager;
@@ -131,8 +123,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 187
-    const-string/jumbo v0, "media_router"
+    const-string v0, "media_router"
 
     const-class v1, Landroid/media/MediaRouter;
 
@@ -142,7 +133,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 194
     const-string v0, "bluetooth"
 
     const-class v1, Landroid/bluetooth/BluetoothManager;
@@ -153,8 +143,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 201
-    const-string/jumbo v0, "hdmi_control"
+    const-string v0, "hdmi_control"
 
     const-class v1, Landroid/hardware/hdmi/HdmiControlManager;
 
@@ -164,7 +153,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 209
     const-string v0, "clipboard"
 
     const-class v1, Landroid/content/ClipboardManager;
@@ -175,7 +163,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 220
     sget-object v0, Landroid/app/SystemServiceRegistry;->SYSTEM_SERVICE_NAMES:Ljava/util/HashMap;
 
     const-class v1, Landroid/text/ClipboardManager;
@@ -184,7 +171,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 222
     const-string v0, "connectivity"
 
     const-class v1, Landroid/net/ConnectivityManager;
@@ -195,7 +181,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 231
     const-string v0, "country_detector"
 
     const-class v1, Landroid/location/CountryDetector;
@@ -206,7 +191,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 239
     const-string v0, "device_policy"
 
     const-class v1, Landroid/app/admin/DevicePolicyManager;
@@ -217,7 +201,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 246
     const-string v0, "download"
 
     const-class v1, Landroid/app/DownloadManager;
@@ -228,7 +211,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 253
     const-string v0, "batterymanager"
 
     const-class v1, Landroid/os/BatteryManager;
@@ -239,8 +221,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 260
-    const-string/jumbo v0, "nfc"
+    const-string v0, "nfc"
 
     const-class v1, Landroid/nfc/NfcManager;
 
@@ -250,7 +231,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 267
     const-string v0, "dropbox"
 
     const-class v1, Landroid/os/DropBoxManager;
@@ -261,8 +241,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 283
-    const-string/jumbo v0, "input"
+    const-string v0, "input"
 
     const-class v1, Landroid/hardware/input/InputManager;
 
@@ -272,7 +251,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 290
     const-string v0, "display"
 
     const-class v1, Landroid/hardware/display/DisplayManager;
@@ -283,8 +261,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 297
-    const-string/jumbo v0, "input_method"
+    const-string v0, "input_method"
 
     const-class v1, Landroid/view/inputmethod/InputMethodManager;
 
@@ -294,8 +271,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 304
-    const-string/jumbo v0, "textservices"
+    const-string v0, "textservices"
 
     const-class v1, Landroid/view/textservice/TextServicesManager;
 
@@ -305,8 +281,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 311
-    const-string/jumbo v0, "keyguard"
+    const-string v0, "keyguard"
 
     const-class v1, Landroid/app/KeyguardManager;
 
@@ -316,8 +291,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 318
-    const-string/jumbo v0, "layout_inflater"
+    const-string v0, "layout_inflater"
 
     const-class v1, Landroid/view/LayoutInflater;
 
@@ -327,8 +301,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 325
-    const-string/jumbo v0, "location"
+    const-string v0, "location"
 
     const-class v1, Landroid/location/LocationManager;
 
@@ -338,8 +311,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 333
-    const-string/jumbo v0, "netpolicy"
+    const-string v0, "netpolicy"
 
     const-class v1, Landroid/net/NetworkPolicyManager;
 
@@ -349,8 +321,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 341
-    const-string/jumbo v0, "notification"
+    const-string v0, "notification"
 
     const-class v1, Landroid/app/NotificationManager;
 
@@ -360,8 +331,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 357
-    const-string/jumbo v0, "servicediscovery"
+    const-string v0, "servicediscovery"
 
     const-class v1, Landroid/net/nsd/NsdManager;
 
@@ -371,8 +341,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 366
-    const-string/jumbo v0, "power"
+    const-string v0, "power"
 
     const-class v1, Landroid/os/PowerManager;
 
@@ -382,8 +351,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 379
-    const-string/jumbo v0, "search"
+    const-string v0, "search"
 
     const-class v1, Landroid/app/SearchManager;
 
@@ -393,8 +361,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 387
-    const-string/jumbo v0, "sensor"
+    const-string v0, "sensor"
 
     const-class v1, Landroid/hardware/SensorManager;
 
@@ -404,8 +371,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 395
-    const-string/jumbo v0, "statusbar"
+    const-string v0, "statusbar"
 
     const-class v1, Landroid/app/StatusBarManager;
 
@@ -415,8 +381,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 402
-    const-string/jumbo v0, "storage"
+    const-string v0, "storage"
 
     const-class v1, Landroid/os/storage/StorageManager;
 
@@ -426,8 +391,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 409
-    const-string/jumbo v0, "phone"
+    const-string v0, "phone"
 
     const-class v1, Landroid/telephony/TelephonyManager;
 
@@ -437,8 +401,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 416
-    const-string/jumbo v0, "telephony_subscription_service"
+    const-string v0, "telephony_subscription_service"
 
     const-class v1, Landroid/telephony/SubscriptionManager;
 
@@ -448,7 +411,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 423
     const-string v0, "carrier_config"
 
     const-class v1, Landroid/telephony/CarrierConfigManager;
@@ -459,8 +421,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 430
-    const-string/jumbo v0, "telecom"
+    const-string v0, "telecom"
 
     const-class v1, Landroid/telecom/TelecomManager;
 
@@ -470,8 +431,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 437
-    const-string/jumbo v0, "uimode"
+    const-string v0, "uimode"
 
     const-class v1, Landroid/app/UiModeManager;
 
@@ -481,8 +441,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 444
-    const-string/jumbo v0, "usb"
+    const-string v0, "usb"
 
     const-class v1, Landroid/hardware/usb/UsbManager;
 
@@ -492,8 +451,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 452
-    const-string/jumbo v0, "serial"
+    const-string v0, "serial"
 
     const-class v1, Landroid/hardware/SerialManager;
 
@@ -503,8 +461,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 460
-    const-string/jumbo v0, "vibrator"
+    const-string v0, "vibrator"
 
     const-class v1, Landroid/os/Vibrator;
 
@@ -514,8 +471,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 467
-    const-string/jumbo v0, "wallpaper"
+    const-string v0, "wallpaper"
 
     const-class v1, Landroid/app/WallpaperManager;
 
@@ -525,8 +481,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 475
-    const-string/jumbo v0, "wifi"
+    const-string v0, "wifi"
 
     const-class v1, Landroid/net/wifi/WifiManager;
 
@@ -536,8 +491,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 484
-    const-string/jumbo v0, "wifipasspoint"
+    const-string v0, "wifipasspoint"
 
     const-class v1, Landroid/net/wifi/passpoint/WifiPasspointManager;
 
@@ -547,8 +501,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 493
-    const-string/jumbo v0, "wifip2p"
+    const-string v0, "wifip2p"
 
     const-class v1, Landroid/net/wifi/p2p/WifiP2pManager;
 
@@ -558,8 +511,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 502
-    const-string/jumbo v0, "wifiscanner"
+    const-string v0, "wifiscanner"
 
     const-class v1, Landroid/net/wifi/WifiScanner;
 
@@ -569,8 +521,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 511
-    const-string/jumbo v0, "rttmanager"
+    const-string v0, "rttmanager"
 
     const-class v1, Landroid/net/wifi/RttManager;
 
@@ -580,7 +531,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 520
     const-string v0, "ethernet"
 
     const-class v1, Landroid/net/EthernetManager;
@@ -591,8 +541,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 529
-    const-string/jumbo v0, "window"
+    const-string v0, "window"
 
     const-class v1, Landroid/view/WindowManager;
 
@@ -602,8 +551,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 536
-    const-string/jumbo v0, "user"
+    const-string v0, "user"
 
     const-class v1, Landroid/os/UserManager;
 
@@ -613,7 +561,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 545
     const-string v0, "appops"
 
     const-class v1, Landroid/app/AppOpsManager;
@@ -624,7 +571,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 554
     const-string v0, "camera"
 
     const-class v1, Landroid/hardware/camera2/CameraManager;
@@ -635,8 +581,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 561
-    const-string/jumbo v0, "launcherapps"
+    const-string v0, "launcherapps"
 
     const-class v1, Landroid/content/pm/LauncherApps;
 
@@ -646,8 +591,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 570
-    const-string/jumbo v0, "restrictions"
+    const-string v0, "restrictions"
 
     const-class v1, Landroid/content/RestrictionsManager;
 
@@ -657,8 +601,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 579
-    const-string/jumbo v0, "print"
+    const-string v0, "print"
 
     const-class v1, Landroid/print/PrintManager;
 
@@ -668,7 +611,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 589
     const-string v0, "consumer_ir"
 
     const-class v1, Landroid/hardware/ConsumerIrManager;
@@ -679,8 +621,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 596
-    const-string/jumbo v0, "media_session"
+    const-string v0, "media_session"
 
     const-class v1, Landroid/media/session/MediaSessionManager;
 
@@ -690,8 +631,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 603
-    const-string/jumbo v0, "trust"
+    const-string v0, "trust"
 
     const-class v1, Landroid/app/trust/TrustManager;
 
@@ -701,7 +641,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 611
     const-string v0, "fingerprint"
 
     const-class v1, Landroid/hardware/fingerprint/FingerprintManager;
@@ -712,8 +651,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 620
-    const-string/jumbo v0, "tv_input"
+    const-string v0, "tv_input"
 
     const-class v1, Landroid/media/tv/TvInputManager;
 
@@ -723,8 +661,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 629
-    const-string/jumbo v0, "network_score"
+    const-string v0, "network_score"
 
     const-class v1, Landroid/net/NetworkScoreManager;
 
@@ -734,8 +671,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 636
-    const-string/jumbo v0, "usagestats"
+    const-string v0, "usagestats"
 
     const-class v1, Landroid/app/usage/UsageStatsManager;
 
@@ -745,8 +681,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 645
-    const-string/jumbo v0, "netstats"
+    const-string v0, "netstats"
 
     const-class v1, Landroid/app/usage/NetworkStatsManager;
 
@@ -756,8 +691,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 652
-    const-string/jumbo v0, "jobscheduler"
+    const-string v0, "jobscheduler"
 
     const-class v1, Landroid/app/job/JobScheduler;
 
@@ -767,8 +701,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 660
-    const-string/jumbo v0, "persistent_data_block"
+    const-string v0, "persistent_data_block"
 
     const-class v1, Landroid/service/persistentdata/PersistentDataBlockManager;
 
@@ -778,8 +711,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 675
-    const-string/jumbo v0, "media_projection"
+    const-string v0, "media_projection"
 
     const-class v1, Landroid/media/projection/MediaProjectionManager;
 
@@ -789,7 +721,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 682
     const-string v0, "appwidget"
 
     const-class v1, Landroid/appwidget/AppWidgetManager;
@@ -800,8 +731,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 690
-    const-string/jumbo v0, "midi"
+    const-string v0, "midi"
 
     const-class v1, Landroid/media/midi/MidiManager;
 
@@ -811,8 +741,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 701
-    const-string/jumbo v0, "radio"
+    const-string v0, "radio"
 
     const-class v1, Landroid/hardware/radio/RadioManager;
 
@@ -832,7 +761,6 @@
     .locals 0
 
     .prologue
-    .line 138
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -842,7 +770,6 @@
     .locals 2
 
     .prologue
-    .line 126
     sget v0, Landroid/app/SystemServiceRegistry;->sServiceCacheSize:I
 
     add-int/lit8 v1, v0, 0x1
@@ -856,7 +783,6 @@
     .locals 1
 
     .prologue
-    .line 716
     sget v0, Landroid/app/SystemServiceRegistry;->sServiceCacheSize:I
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -870,7 +796,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 723
     sget-object v1, Landroid/app/SystemServiceRegistry;->SYSTEM_SERVICE_FETCHERS:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -879,7 +804,6 @@
 
     check-cast v0, Landroid/app/SystemServiceRegistry$ServiceFetcher;
 
-    .line 724
     .local v0, "fetcher":Landroid/app/SystemServiceRegistry$ServiceFetcher;, "Landroid/app/SystemServiceRegistry$ServiceFetcher<*>;"
     if-eqz v0, :cond_0
 
@@ -908,7 +832,6 @@
     .end annotation
 
     .prologue
-    .line 731
     .local p0, "serviceClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     sget-object v0, Landroid/app/SystemServiceRegistry;->SYSTEM_SERVICE_NAMES:Ljava/util/HashMap;
 
@@ -938,19 +861,16 @@
     .end annotation
 
     .prologue
-    .line 742
     .local p1, "serviceClass":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     .local p2, "serviceFetcher":Landroid/app/SystemServiceRegistry$ServiceFetcher;, "Landroid/app/SystemServiceRegistry$ServiceFetcher<TT;>;"
     sget-object v0, Landroid/app/SystemServiceRegistry;->SYSTEM_SERVICE_NAMES:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1, p0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 743
     sget-object v0, Landroid/app/SystemServiceRegistry;->SYSTEM_SERVICE_FETCHERS:Ljava/util/HashMap;
 
     invoke-virtual {v0, p0, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 744
     return-void
 .end method
 

@@ -53,20 +53,16 @@
     .param p2, "v"    # Lmiui/maml/data/ContextVariables;
 
     .prologue
-    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 33
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lmiui/maml/elements/AttrDataBinders;->mBinders:Ljava/util/ArrayList;
 
-    .line 37
     iput-object p2, p0, Lmiui/maml/elements/AttrDataBinders;->mVars:Lmiui/maml/data/ContextVariables;
 
-    .line 39
     const-string v0, "AttrDataBinder"
 
     new-instance v1, Lmiui/maml/elements/AttrDataBinders$1;
@@ -75,7 +71,6 @@
 
     invoke-static {p1, v0, v1}, Lmiui/maml/util/Utils;->traverseXmlElementChildren(Lorg/w3c/dom/Element;Ljava/lang/String;Lmiui/maml/util/Utils$XmlTraverseListener;)V
 
-    .line 49
     return-void
 .end method
 
@@ -84,7 +79,6 @@
     .param p0, "x0"    # Lmiui/maml/elements/AttrDataBinders;
 
     .prologue
-    .line 23
     iget-object v0, p0, Lmiui/maml/elements/AttrDataBinders;->mBinders:Ljava/util/ArrayList;
 
     return-object v0
@@ -97,7 +91,6 @@
     .param p1, "s"    # Lmiui/maml/elements/ElementGroup;
 
     .prologue
-    .line 52
     iget-object v2, p0, Lmiui/maml/elements/AttrDataBinders;->mBinders:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -118,13 +111,11 @@
 
     check-cast v0, Lmiui/maml/elements/AttrDataBinders$AttrDataBinder;
 
-    .line 53
     .local v0, "b":Lmiui/maml/elements/AttrDataBinders$AttrDataBinder;
     invoke-virtual {v0, p1}, Lmiui/maml/elements/AttrDataBinders$AttrDataBinder;->bind(Lmiui/maml/elements/ElementGroup;)Z
 
     goto :goto_0
 
-    .line 55
     .end local v0    # "b":Lmiui/maml/elements/AttrDataBinders$AttrDataBinder;
     :cond_0
     return-void

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 290
     iput-object p1, p0, Landroid/widget/DayPickerPagerAdapter$1;->this$0:Landroid/widget/DayPickerPagerAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,15 +41,12 @@
     .param p2, "day"    # Ljava/util/Calendar;
 
     .prologue
-    .line 293
     if-eqz p2, :cond_0
 
-    .line 294
     iget-object v0, p0, Landroid/widget/DayPickerPagerAdapter$1;->this$0:Landroid/widget/DayPickerPagerAdapter;
 
     invoke-virtual {v0, p2}, Landroid/widget/DayPickerPagerAdapter;->setSelectedDay(Ljava/util/Calendar;)V
 
-    .line 296
     iget-object v0, p0, Landroid/widget/DayPickerPagerAdapter$1;->this$0:Landroid/widget/DayPickerPagerAdapter;
 
     # getter for: Landroid/widget/DayPickerPagerAdapter;->mOnDaySelectedListener:Landroid/widget/DayPickerPagerAdapter$OnDaySelectedListener;
@@ -60,7 +56,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 297
     iget-object v0, p0, Landroid/widget/DayPickerPagerAdapter$1;->this$0:Landroid/widget/DayPickerPagerAdapter;
 
     # getter for: Landroid/widget/DayPickerPagerAdapter;->mOnDaySelectedListener:Landroid/widget/DayPickerPagerAdapter$OnDaySelectedListener;
@@ -72,7 +67,6 @@
 
     invoke-interface {v0, v1, p2}, Landroid/widget/DayPickerPagerAdapter$OnDaySelectedListener;->onDaySelected(Landroid/widget/DayPickerPagerAdapter;Ljava/util/Calendar;)V
 
-    .line 300
     :cond_0
     return-void
 .end method

@@ -12,7 +12,6 @@
     .locals 0
 
     .prologue
-    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -25,10 +24,8 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 16
     move-object v1, p0
 
-    .line 18
     .local v1, "hookPkgInfo":Landroid/content/pm/PackageInfo;
     :try_start_0
     invoke-static {}, Lcom/miui/hybrid/hook/PkgInfoHook;->getInstance()Lcom/miui/hybrid/hook/PkgInfoHook;
@@ -41,19 +38,15 @@
 
     move-result-object v1
 
-    .line 23
     :goto_0
     return-object v1
 
-    .line 19
     :catch_0
     move-exception v0
 
-    .line 20
     .local v0, "e":Ljava/lang/Throwable;
     invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
-    .line 21
     const-string v2, "HookClient"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -85,10 +78,8 @@
     .param p1, "callingPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 28
     move-object v1, p0
 
-    .line 30
     .local v1, "redirectIntent":Landroid/content/Intent;
     :try_start_0
     invoke-static {}, Lcom/miui/hybrid/hook/IntentHook;->getInstance()Lcom/miui/hybrid/hook/IntentHook;
@@ -101,19 +92,15 @@
 
     move-result-object v1
 
-    .line 35
     :goto_0
     return-object v1
 
-    .line 31
     :catch_0
     move-exception v0
 
-    .line 32
     .local v0, "e":Ljava/lang/Throwable;
     invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
-    .line 33
     const-string v2, "HookClient"
 
     new-instance v3, Ljava/lang/StringBuilder;

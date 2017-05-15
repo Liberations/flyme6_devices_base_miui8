@@ -38,22 +38,18 @@
     .param p4, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 446
     const/4 v0, 0x0
 
     invoke-direct {p0, p2, p3, v0, p4}, Landroid/hardware/SystemSensorManager$BaseEventQueue;-><init>(Landroid/os/Looper;Landroid/hardware/SystemSensorManager;ILjava/lang/String;)V
 
-    .line 442
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Landroid/hardware/SystemSensorManager$SensorEventQueue;->mSensorsEvents:Landroid/util/SparseArray;
 
-    .line 447
     iput-object p1, p0, Landroid/hardware/SystemSensorManager$SensorEventQueue;->mListener:Landroid/hardware/SensorEventListener;
 
-    .line 448
     return-void
 .end method
 
@@ -64,7 +60,6 @@
     .param p1, "sensor"    # Landroid/hardware/Sensor;
 
     .prologue
-    .line 452
     new-instance v0, Landroid/hardware/SensorEvent;
 
     iget-object v1, p0, Landroid/hardware/SystemSensorManager$SensorEventQueue;->mManager:Landroid/hardware/SystemSensorManager;
@@ -80,13 +75,11 @@
 
     invoke-direct {v0, v1}, Landroid/hardware/SensorEvent;-><init>(I)V
 
-    .line 454
     .local v0, "t":Landroid/hardware/SensorEvent;
     iget-object v2, p0, Landroid/hardware/SystemSensorManager$SensorEventQueue;->mSensorsEvents:Landroid/util/SparseArray;
 
     monitor-enter v2
 
-    .line 455
     :try_start_0
     iget-object v1, p0, Landroid/hardware/SystemSensorManager$SensorEventQueue;->mSensorsEvents:Landroid/util/SparseArray;
 
@@ -96,13 +89,10 @@
 
     invoke-virtual {v1, v3, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 456
     monitor-exit v2
 
-    .line 457
     return-void
 
-    .line 456
     :catchall_0
     move-exception v1
 
@@ -118,14 +108,12 @@
     .param p1, "handle"    # I
 
     .prologue
-    .line 499
     iget-object v1, p0, Landroid/hardware/SystemSensorManager$SensorEventQueue;->mListener:Landroid/hardware/SensorEventListener;
 
     instance-of v1, v1, Landroid/hardware/SensorEventListener2;
 
     if-eqz v1, :cond_0
 
-    .line 500
     iget-object v1, p0, Landroid/hardware/SystemSensorManager$SensorEventQueue;->mManager:Landroid/hardware/SystemSensorManager;
 
     # getter for: Landroid/hardware/SystemSensorManager;->mHandleToSensor:Landroid/util/SparseArray;
@@ -139,7 +127,6 @@
 
     check-cast v0, Landroid/hardware/Sensor;
 
-    .line 501
     .local v0, "sensor":Landroid/hardware/Sensor;
     iget-object v1, p0, Landroid/hardware/SystemSensorManager$SensorEventQueue;->mListener:Landroid/hardware/SensorEventListener;
 
@@ -147,7 +134,6 @@
 
     invoke-interface {v1, v0}, Landroid/hardware/SensorEventListener2;->onFlushCompleted(Landroid/hardware/Sensor;)V
 
-    .line 503
     .end local v0    # "sensor":Landroid/hardware/Sensor;
     :cond_0
     return-void
@@ -163,7 +149,6 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 471
     iget-object v4, p0, Landroid/hardware/SystemSensorManager$SensorEventQueue;->mManager:Landroid/hardware/SystemSensorManager;
 
     # getter for: Landroid/hardware/SystemSensorManager;->mHandleToSensor:Landroid/util/SparseArray;
@@ -177,17 +162,14 @@
 
     check-cast v2, Landroid/hardware/Sensor;
 
-    .line 472
     .local v2, "sensor":Landroid/hardware/Sensor;
     const/4 v3, 0x0
 
-    .line 473
     .local v3, "t":Landroid/hardware/SensorEvent;
     iget-object v5, p0, Landroid/hardware/SystemSensorManager$SensorEventQueue;->mSensorsEvents:Landroid/util/SparseArray;
 
     monitor-enter v5
 
-    .line 474
     :try_start_0
     iget-object v4, p0, Landroid/hardware/SystemSensorManager$SensorEventQueue;->mSensorsEvents:Landroid/util/SparseArray;
 
@@ -201,17 +183,13 @@
 
     move-object v3, v0
 
-    .line 475
     monitor-exit v5
 
-    .line 477
     if-nez v3, :cond_0
 
-    .line 495
     :goto_0
     return-void
 
-    .line 475
     :catchall_0
     move-exception v4
 
@@ -221,7 +199,6 @@
 
     throw v4
 
-    .line 483
     :cond_0
     iget-object v4, v3, Landroid/hardware/SensorEvent;->values:[F
 
@@ -231,23 +208,18 @@
 
     invoke-static {p2, v6, v4, v6, v5}, Ljava/lang/System;->arraycopy([FI[FII)V
 
-    .line 484
     iput-wide p4, v3, Landroid/hardware/SensorEvent;->timestamp:J
 
-    .line 485
     iput p3, v3, Landroid/hardware/SensorEvent;->accuracy:I
 
-    .line 486
     iput-object v2, v3, Landroid/hardware/SensorEvent;->sensor:Landroid/hardware/Sensor;
 
-    .line 489
     iget-object v4, p0, Landroid/hardware/SystemSensorManager$SensorEventQueue;->mSensorAccuracies:Landroid/util/SparseIntArray;
 
     invoke-virtual {v4, p1}, Landroid/util/SparseIntArray;->get(I)I
 
     move-result v1
 
-    .line 490
     .local v1, "accuracy":I
     iget v4, v3, Landroid/hardware/SensorEvent;->accuracy:I
 
@@ -257,14 +229,12 @@
 
     if-eq v1, v4, :cond_1
 
-    .line 491
     iget-object v4, p0, Landroid/hardware/SystemSensorManager$SensorEventQueue;->mSensorAccuracies:Landroid/util/SparseIntArray;
 
     iget v5, v3, Landroid/hardware/SensorEvent;->accuracy:I
 
     invoke-virtual {v4, p1, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 492
     iget-object v4, p0, Landroid/hardware/SystemSensorManager$SensorEventQueue;->mListener:Landroid/hardware/SensorEventListener;
 
     iget-object v5, v3, Landroid/hardware/SensorEvent;->sensor:Landroid/hardware/Sensor;
@@ -273,7 +243,6 @@
 
     invoke-interface {v4, v5, v6}, Landroid/hardware/SensorEventListener;->onAccuracyChanged(Landroid/hardware/Sensor;I)V
 
-    .line 494
     :cond_1
     iget-object v4, p0, Landroid/hardware/SystemSensorManager$SensorEventQueue;->mListener:Landroid/hardware/SensorEventListener;
 
@@ -287,12 +256,10 @@
     .param p1, "sensor"    # Landroid/hardware/Sensor;
 
     .prologue
-    .line 461
     iget-object v1, p0, Landroid/hardware/SystemSensorManager$SensorEventQueue;->mSensorsEvents:Landroid/util/SparseArray;
 
     monitor-enter v1
 
-    .line 462
     :try_start_0
     iget-object v0, p0, Landroid/hardware/SystemSensorManager$SensorEventQueue;->mSensorsEvents:Landroid/util/SparseArray;
 
@@ -302,13 +269,10 @@
 
     invoke-virtual {v0, v2}, Landroid/util/SparseArray;->delete(I)V
 
-    .line 463
     monitor-exit v1
 
-    .line 464
     return-void
 
-    .line 463
     :catchall_0
     move-exception v0
 

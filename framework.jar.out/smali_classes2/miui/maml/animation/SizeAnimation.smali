@@ -26,14 +26,13 @@
 
     const/4 v6, 0x0
 
-    .line 17
     const-string v2, "Size"
 
     const/4 v3, 0x2
 
     new-array v3, v3, [Ljava/lang/String;
 
-    const-string/jumbo v4, "w"
+    const-string v4, "w"
 
     aput-object v4, v3, v6
 
@@ -43,7 +42,6 @@
 
     invoke-direct {p0, p1, v2, v3, p2}, Lmiui/maml/animation/BaseAnimation;-><init>(Lorg/w3c/dom/Element;Ljava/lang/String;[Ljava/lang/String;Lmiui/maml/elements/ScreenElement;)V
 
-    .line 23
     iget-object v2, p0, Lmiui/maml/animation/SizeAnimation;->mItems:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -65,7 +63,6 @@
 
     check-cast v0, Lmiui/maml/animation/BaseAnimation$AnimationItem;
 
-    .line 24
     .local v0, "ai":Lmiui/maml/animation/BaseAnimation$AnimationItem;
     invoke-virtual {v0, v6}, Lmiui/maml/animation/BaseAnimation$AnimationItem;->get(I)D
 
@@ -77,14 +74,12 @@
 
     if-lez v2, :cond_1
 
-    .line 25
     invoke-virtual {v0, v6}, Lmiui/maml/animation/BaseAnimation$AnimationItem;->get(I)D
 
     move-result-wide v2
 
     iput-wide v2, p0, Lmiui/maml/animation/SizeAnimation;->mMaxW:D
 
-    .line 26
     :cond_1
     invoke-virtual {v0, v7}, Lmiui/maml/animation/BaseAnimation$AnimationItem;->get(I)D
 
@@ -96,7 +91,6 @@
 
     if-lez v2, :cond_0
 
-    .line 27
     invoke-virtual {v0, v7}, Lmiui/maml/animation/BaseAnimation$AnimationItem;->get(I)D
 
     move-result-wide v2
@@ -105,7 +99,6 @@
 
     goto :goto_0
 
-    .line 29
     .end local v0    # "ai":Lmiui/maml/animation/BaseAnimation$AnimationItem;
     :cond_2
     return-void
@@ -117,7 +110,6 @@
     .locals 2
 
     .prologue
-    .line 36
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lmiui/maml/animation/SizeAnimation;->getCurValue(I)D
@@ -131,7 +123,6 @@
     .locals 2
 
     .prologue
-    .line 44
     iget-wide v0, p0, Lmiui/maml/animation/SizeAnimation;->mMaxH:D
 
     return-wide v0
@@ -141,7 +132,6 @@
     .locals 2
 
     .prologue
-    .line 40
     iget-wide v0, p0, Lmiui/maml/animation/SizeAnimation;->mMaxW:D
 
     return-wide v0
@@ -151,7 +141,6 @@
     .locals 2
 
     .prologue
-    .line 32
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lmiui/maml/animation/SizeAnimation;->getCurValue(I)D

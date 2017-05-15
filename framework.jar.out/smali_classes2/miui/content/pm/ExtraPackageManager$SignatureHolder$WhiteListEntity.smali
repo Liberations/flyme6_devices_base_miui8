@@ -27,16 +27,12 @@
     .param p2, "signatures"    # [Landroid/content/pm/Signature;
 
     .prologue
-    .line 62
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 63
     iput-object p1, p0, Lmiui/content/pm/ExtraPackageManager$SignatureHolder$WhiteListEntity;->pkgName:Ljava/lang/String;
 
-    .line 64
     iput-object p2, p0, Lmiui/content/pm/ExtraPackageManager$SignatureHolder$WhiteListEntity;->signatures:[Landroid/content/pm/Signature;
 
-    .line 65
     return-void
 .end method
 
@@ -47,7 +43,6 @@
     .param p3, "x2"    # Lmiui/content/pm/ExtraPackageManager$1;
 
     .prologue
-    .line 56
     invoke-direct {p0, p1, p2}, Lmiui/content/pm/ExtraPackageManager$SignatureHolder$WhiteListEntity;-><init>(Ljava/lang/String;[Landroid/content/pm/Signature;)V
 
     return-void

@@ -49,7 +49,6 @@
     .locals 1
 
     .prologue
-    .line 55
     new-instance v0, Lcom/miui/whetstone/WhetstoneConfig$1;
 
     invoke-direct {v0}, Lcom/miui/whetstone/WhetstoneConfig$1;-><init>()V
@@ -64,13 +63,10 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 65
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 66
     invoke-virtual {p0, p1}, Lcom/miui/whetstone/WhetstoneConfig;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 67
     return-void
 .end method
 
@@ -80,7 +76,6 @@
     .param p2, "x1"    # Lcom/miui/whetstone/WhetstoneConfig$1;
 
     .prologue
-    .line 11
     invoke-direct {p0, p1}, Lcom/miui/whetstone/WhetstoneConfig;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -100,17 +95,13 @@
     .end annotation
 
     .prologue
-    .line 20
     .local p1, "whiteList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 21
     iput-object p1, p0, Lcom/miui/whetstone/WhetstoneConfig;->mWhiteList:Ljava/util/List;
 
-    .line 22
     iput p2, p0, Lcom/miui/whetstone/WhetstoneConfig;->mType:I
 
-    .line 23
     return-void
 .end method
 
@@ -120,7 +111,6 @@
     .locals 1
 
     .prologue
-    .line 39
     const/4 v0, 0x0
 
     return v0
@@ -130,7 +120,6 @@
     .locals 1
 
     .prologue
-    .line 34
     iget v0, p0, Lcom/miui/whetstone/WhetstoneConfig;->mType:I
 
     return v0
@@ -149,7 +138,6 @@
     .end annotation
 
     .prologue
-    .line 30
     iget-object v0, p0, Lcom/miui/whetstone/WhetstoneConfig;->mWhiteList:Ljava/util/List;
 
     return-object v0
@@ -160,7 +148,6 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 51
     const-class v0, Ljava/util/List;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -173,14 +160,12 @@
 
     iput-object v0, p0, Lcom/miui/whetstone/WhetstoneConfig;->mWhiteList:Ljava/util/List;
 
-    .line 52
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/miui/whetstone/WhetstoneConfig;->mType:I
 
-    .line 53
     return-void
 .end method
 
@@ -197,11 +182,9 @@
     .end annotation
 
     .prologue
-    .line 26
     .local p1, "whiteList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     iput-object p1, p0, Lcom/miui/whetstone/WhetstoneConfig;->mWhiteList:Ljava/util/List;
 
-    .line 27
     return-void
 .end method
 
@@ -211,22 +194,18 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 44
     iget-object v0, p0, Lcom/miui/whetstone/WhetstoneConfig;->mWhiteList:Ljava/util/List;
 
     if-eqz v0, :cond_0
 
-    .line 45
     iget-object v0, p0, Lcom/miui/whetstone/WhetstoneConfig;->mWhiteList:Ljava/util/List;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeList(Ljava/util/List;)V
 
-    .line 47
     :cond_0
     iget v0, p0, Lcom/miui/whetstone/WhetstoneConfig;->mType:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 48
     return-void
 .end method

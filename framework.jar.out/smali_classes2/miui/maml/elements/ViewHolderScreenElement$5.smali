@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 210
     iput-object p1, p0, Lmiui/maml/elements/ViewHolderScreenElement$5;->this$0:Lmiui/maml/elements/ViewHolderScreenElement;
 
     iput-boolean p2, p0, Lmiui/maml/elements/ViewHolderScreenElement$5;->val$_v:Z
@@ -44,7 +43,6 @@
     .locals 2
 
     .prologue
-    .line 212
     iget-object v0, p0, Lmiui/maml/elements/ViewHolderScreenElement$5;->this$0:Lmiui/maml/elements/ViewHolderScreenElement;
 
     invoke-virtual {v0}, Lmiui/maml/elements/ViewHolderScreenElement;->getView()Landroid/view/View;
@@ -60,10 +58,8 @@
     :goto_0
     invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 213
     return-void
 
-    .line 212
     :cond_0
     const/4 v0, 0x4
 

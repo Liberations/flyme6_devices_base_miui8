@@ -15,20 +15,16 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 15
     iput-object p1, p0, Lmiui/securitycenter/applicationlock/ApplicationLockHelper;->mContext:Landroid/content/Context;
 
-    .line 16
     new-instance v0, Landroid/security/MiuiLockPatternUtils;
 
     invoke-direct {v0, p1}, Landroid/security/MiuiLockPatternUtils;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lmiui/securitycenter/applicationlock/ApplicationLockHelper;->mLockPatternUtils:Landroid/security/MiuiLockPatternUtils;
 
-    .line 17
     return-void
 .end method
 
@@ -39,10 +35,8 @@
     .param p1, "patternString"    # Ljava/lang/String;
 
     .prologue
-    .line 32
     const/4 v0, 0x0
 
-    .line 34
     .local v0, "check":Z
     :try_start_0
     iget-object v3, p0, Lmiui/securitycenter/applicationlock/ApplicationLockHelper;->mLockPatternUtils:Landroid/security/MiuiLockPatternUtils;
@@ -51,7 +45,6 @@
 
     move-result-object v2
 
-    .line 35
     .local v2, "pattern":Ljava/util/List;, "Ljava/util/List<Lcom/android/internal/widget/LockPatternView$Cell;>;"
     iget-object v3, p0, Lmiui/securitycenter/applicationlock/ApplicationLockHelper;->mLockPatternUtils:Landroid/security/MiuiLockPatternUtils;
 
@@ -67,16 +60,13 @@
 
     move-result v0
 
-    .line 39
     .end local v2    # "pattern":Ljava/util/List;, "Ljava/util/List<Lcom/android/internal/widget/LockPatternView$Cell;>;"
     :goto_0
     return v0
 
-    .line 36
     :catch_0
     move-exception v1
 
-    .line 37
     .local v1, "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -87,7 +77,6 @@
     .locals 2
 
     .prologue
-    .line 47
     iget-object v0, p0, Lmiui/securitycenter/applicationlock/ApplicationLockHelper;->mLockPatternUtils:Landroid/security/MiuiLockPatternUtils;
 
     iget-object v1, p0, Lmiui/securitycenter/applicationlock/ApplicationLockHelper;->mContext:Landroid/content/Context;
@@ -98,7 +87,6 @@
 
     invoke-virtual {v0, v1}, Landroid/security/MiuiLockPatternUtils;->clearLock(I)V
 
-    .line 48
     return-void
 .end method
 
@@ -106,7 +94,6 @@
     .locals 2
 
     .prologue
-    .line 24
     iget-object v0, p0, Lmiui/securitycenter/applicationlock/ApplicationLockHelper;->mLockPatternUtils:Landroid/security/MiuiLockPatternUtils;
 
     iget-object v1, p0, Lmiui/securitycenter/applicationlock/ApplicationLockHelper;->mContext:Landroid/content/Context;
@@ -126,7 +113,6 @@
     .locals 2
 
     .prologue
-    .line 20
     iget-object v0, p0, Lmiui/securitycenter/applicationlock/ApplicationLockHelper;->mLockPatternUtils:Landroid/security/MiuiLockPatternUtils;
 
     iget-object v1, p0, Lmiui/securitycenter/applicationlock/ApplicationLockHelper;->mContext:Landroid/content/Context;
@@ -146,7 +132,6 @@
     .locals 1
 
     .prologue
-    .line 43
     iget-object v0, p0, Lmiui/securitycenter/applicationlock/ApplicationLockHelper;->mLockPatternUtils:Landroid/security/MiuiLockPatternUtils;
 
     invoke-virtual {v0}, Landroid/security/MiuiLockPatternUtils;->savedMiuiLockPatternExists()Z
@@ -160,7 +145,6 @@
     .locals 3
 
     .prologue
-    .line 28
     iget-object v0, p0, Lmiui/securitycenter/applicationlock/ApplicationLockHelper;->mLockPatternUtils:Landroid/security/MiuiLockPatternUtils;
 
     iget-object v1, p0, Lmiui/securitycenter/applicationlock/ApplicationLockHelper;->mContext:Landroid/content/Context;

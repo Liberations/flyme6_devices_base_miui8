@@ -25,29 +25,22 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 2218
     invoke-direct {p0}, Lorg/apache/miui/commons/lang3/builder/ToStringStyle;-><init>()V
 
-    .line 2219
     invoke-virtual {p0, v0}, Lorg/apache/miui/commons/lang3/builder/ToStringStyle$SimpleToStringStyle;->setUseClassName(Z)V
 
-    .line 2220
     invoke-virtual {p0, v0}, Lorg/apache/miui/commons/lang3/builder/ToStringStyle$SimpleToStringStyle;->setUseIdentityHashCode(Z)V
 
-    .line 2221
     invoke-virtual {p0, v0}, Lorg/apache/miui/commons/lang3/builder/ToStringStyle$SimpleToStringStyle;->setUseFieldNames(Z)V
 
-    .line 2222
     const-string v0, ""
 
     invoke-virtual {p0, v0}, Lorg/apache/miui/commons/lang3/builder/ToStringStyle$SimpleToStringStyle;->setContentStart(Ljava/lang/String;)V
 
-    .line 2223
     const-string v0, ""
 
     invoke-virtual {p0, v0}, Lorg/apache/miui/commons/lang3/builder/ToStringStyle$SimpleToStringStyle;->setContentEnd(Ljava/lang/String;)V
 
-    .line 2224
     return-void
 .end method
 
@@ -55,7 +48,6 @@
     .locals 1
 
     .prologue
-    .line 2231
     sget-object v0, Lorg/apache/miui/commons/lang3/builder/ToStringStyle;->SIMPLE_STYLE:Lorg/apache/miui/commons/lang3/builder/ToStringStyle;
 
     return-object v0

@@ -22,37 +22,34 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 14
     const-string v1, "Item"
 
     const/4 v2, 0x3
 
     new-array v2, v2, [Ljava/lang/String;
 
-    const-string/jumbo v3, "value"
+    const-string v3, "value"
 
     aput-object v3, v2, v5
 
     const/4 v3, 0x1
 
-    const-string/jumbo v4, "x"
+    const-string v4, "x"
 
     aput-object v4, v2, v3
 
     const/4 v3, 0x2
 
-    const-string/jumbo v4, "y"
+    const-string v4, "y"
 
     aput-object v4, v2, v3
 
     invoke-direct {p0, p1, v1, v2, p2}, Lmiui/maml/animation/BaseAnimation;-><init>(Lorg/w3c/dom/Element;Ljava/lang/String;[Ljava/lang/String;Lmiui/maml/elements/ScreenElement;)V
 
-    .line 19
     invoke-virtual {p0, v5}, Lmiui/maml/animation/ScaleAnimation;->getItem(I)Lmiui/maml/animation/BaseAnimation$AnimationItem;
 
     move-result-object v0
 
-    .line 20
     .local v0, "ai":Lmiui/maml/animation/BaseAnimation$AnimationItem;
     invoke-direct {p0, v0}, Lmiui/maml/animation/ScaleAnimation;->getItemX(Lmiui/maml/animation/BaseAnimation$AnimationItem;)D
 
@@ -60,14 +57,12 @@
 
     iput-wide v2, p0, Lmiui/maml/animation/ScaleAnimation;->mDelayValueX:D
 
-    .line 21
     invoke-direct {p0, v0}, Lmiui/maml/animation/ScaleAnimation;->getItemY(Lmiui/maml/animation/BaseAnimation$AnimationItem;)D
 
     move-result-wide v2
 
     iput-wide v2, p0, Lmiui/maml/animation/ScaleAnimation;->mDelayValueY:D
 
-    .line 22
     return-void
 .end method
 
@@ -78,7 +73,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 46
     if-nez p1, :cond_0
 
     const-wide/high16 v0, 0x3ff0000000000000L    # 1.0
@@ -116,7 +110,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 50
     if-nez p1, :cond_0
 
     const-wide/high16 v0, 0x3ff0000000000000L    # 1.0
@@ -154,7 +147,6 @@
     .param p1, "i"    # I
 
     .prologue
-    .line 55
     if-eqz p1, :cond_0
 
     const/4 v0, 0x1
@@ -177,7 +169,6 @@
     .locals 2
 
     .prologue
-    .line 25
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lmiui/maml/animation/ScaleAnimation;->getCurValue(I)D
@@ -191,7 +182,6 @@
     .locals 2
 
     .prologue
-    .line 29
     const/4 v0, 0x2
 
     invoke-virtual {p0, v0}, Lmiui/maml/animation/ScaleAnimation;->getCurValue(I)D
@@ -208,22 +198,18 @@
     .param p3, "ratio"    # F
 
     .prologue
-    .line 34
     if-nez p1, :cond_0
 
     if-nez p2, :cond_0
 
-    .line 43
     :goto_0
     return-void
 
-    .line 38
     :cond_0
     invoke-direct {p0, p1}, Lmiui/maml/animation/ScaleAnimation;->getItemX(Lmiui/maml/animation/BaseAnimation$AnimationItem;)D
 
     move-result-wide v0
 
-    .line 39
     .local v0, "x":D
     const/4 v4, 0x1
 
@@ -241,12 +227,10 @@
 
     invoke-virtual {p0, v4, v6, v7}, Lmiui/maml/animation/ScaleAnimation;->setCurValue(ID)V
 
-    .line 41
     invoke-direct {p0, p1}, Lmiui/maml/animation/ScaleAnimation;->getItemY(Lmiui/maml/animation/BaseAnimation$AnimationItem;)D
 
     move-result-wide v2
 
-    .line 42
     .local v2, "y":D
     const/4 v4, 0x2
 

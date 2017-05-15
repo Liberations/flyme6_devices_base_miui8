@@ -38,7 +38,6 @@
     .locals 0
 
     .prologue
-    .line 56
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -57,10 +56,8 @@
     .end annotation
 
     .prologue
-    .line 514
     const-wide/16 v4, 0x0
 
-    .line 517
     .local v4, "sizeBytes":J
     invoke-virtual {p0}, Landroid/content/pm/PackageParser$PackageLite;->getAllCodePaths()Ljava/util/List;
 
@@ -85,13 +82,11 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 518
     .local v1, "codePath":Ljava/lang/String;
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 519
     .local v0, "codeFile":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->length()J
 
@@ -99,10 +94,8 @@
 
     add-long/2addr v4, v6
 
-    .line 521
     if-eqz p2, :cond_0
 
-    .line 522
     const/4 v3, 0x0
 
     invoke-static {v0, v3}, Lcom/android/internal/content/PackageHelper;->extractPublicFiles(Ljava/io/File;Ljava/io/File;)J
@@ -113,7 +106,6 @@
 
     goto :goto_0
 
-    .line 527
     .end local v0    # "codeFile":Ljava/io/File;
     .end local v1    # "codePath":Ljava/lang/String;
     :cond_1
@@ -123,7 +115,6 @@
 
     add-long/2addr v4, v6
 
-    .line 529
     return-wide v4
 .end method
 
@@ -139,24 +130,20 @@
     .end annotation
 
     .prologue
-    .line 503
     const/4 v0, 0x0
 
-    .line 505
     .local v0, "handle":Lcom/android/internal/content/NativeLibraryHelper$Handle;
     :try_start_0
     invoke-static {p0}, Lcom/android/internal/content/NativeLibraryHelper$Handle;->create(Landroid/content/pm/PackageParser$PackageLite;)Lcom/android/internal/content/NativeLibraryHelper$Handle;
 
     move-result-object v0
 
-    .line 506
     invoke-static {p0, v0, p1, p2}, Lcom/android/internal/content/PackageHelper;->calculateInstalledSize(Landroid/content/pm/PackageParser$PackageLite;Lcom/android/internal/content/NativeLibraryHelper$Handle;ZLjava/lang/String;)J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-wide v2
 
-    .line 508
     invoke-static {v0}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
     return-wide v2
@@ -181,12 +168,10 @@
     .end annotation
 
     .prologue
-    .line 299
     const/16 v4, 0x1000
 
     new-array v0, v4, [B
 
-    .line 303
     .local v0, "buffer":[B
     invoke-virtual {p0}, Ljava/util/zip/ZipEntry;->getMethod()I
 
@@ -194,22 +179,18 @@
 
     if-nez v4, :cond_0
 
-    .line 305
     new-instance v2, Ljava/util/zip/ZipEntry;
 
     invoke-direct {v2, p0}, Ljava/util/zip/ZipEntry;-><init>(Ljava/util/zip/ZipEntry;)V
 
-    .line 310
     .local v2, "newEntry":Ljava/util/zip/ZipEntry;
     :goto_0
     invoke-virtual {p2, v2}, Ljava/util/zip/ZipOutputStream;->putNextEntry(Ljava/util/zip/ZipEntry;)V
 
-    .line 312
     invoke-virtual {p1, p0}, Ljava/util/zip/ZipFile;->getInputStream(Ljava/util/zip/ZipEntry;)Ljava/io/InputStream;
 
     move-result-object v1
 
-    .line 314
     .local v1, "data":Ljava/io/InputStream;
     :goto_1
     :try_start_0
@@ -220,7 +201,6 @@
     .local v3, "num":I
     if-lez v3, :cond_1
 
-    .line 315
     const/4 v4, 0x0
 
     invoke-virtual {p2, v0, v4, v3}, Ljava/util/zip/ZipOutputStream;->write([BII)V
@@ -229,7 +209,6 @@
 
     goto :goto_1
 
-    .line 319
     .end local v3    # "num":I
     :catchall_0
     move-exception v4
@@ -238,7 +217,6 @@
 
     throw v4
 
-    .line 308
     .end local v1    # "data":Ljava/io/InputStream;
     .end local v2    # "newEntry":Ljava/util/zip/ZipEntry;
     :cond_0
@@ -253,7 +231,6 @@
     .restart local v2    # "newEntry":Ljava/util/zip/ZipEntry;
     goto :goto_0
 
-    .line 317
     .restart local v1    # "data":Ljava/io/InputStream;
     .restart local v3    # "num":I
     :cond_1
@@ -262,10 +239,8 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 319
     invoke-static {v1}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 321
     return-void
 .end method
 
@@ -278,7 +253,6 @@
     .param p5, "isExternal"    # Z
 
     .prologue
-    .line 87
     const-wide/32 v4, 0x100000
 
     add-long/2addr v4, p0
@@ -291,14 +265,12 @@
 
     add-int/lit8 v2, v1, 0x1
 
-    .line 89
     .local v2, "sizeMb":I
     :try_start_0
     invoke-static {}, Lcom/android/internal/content/PackageHelper;->getMountService()Landroid/os/storage/IMountService;
 
     move-result-object v0
 
-    .line 94
     .local v0, "mountService":Landroid/os/storage/IMountService;
     const-string v3, "ext4"
 
@@ -314,11 +286,9 @@
 
     move-result v9
 
-    .line 96
     .local v9, "rc":I
     if-eqz v9, :cond_0
 
-    .line 97
     const-string v1, "PackageHelper"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -341,16 +311,13 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 98
     const/4 v7, 0x0
 
-    .line 107
     .end local v0    # "mountService":Landroid/os/storage/IMountService;
     .end local v9    # "rc":I
     :goto_0
     return-object v7
 
-    .line 100
     .restart local v0    # "mountService":Landroid/os/storage/IMountService;
     .restart local v9    # "rc":I
     :cond_0
@@ -360,18 +327,15 @@
 
     move-result-object v7
 
-    .line 103
     .local v7, "cachePath":Ljava/lang/String;
     goto :goto_0
 
-    .line 104
     .end local v0    # "mountService":Landroid/os/storage/IMountService;
     .end local v7    # "cachePath":Ljava/lang/String;
     .end local v9    # "rc":I
     :catch_0
     move-exception v8
 
-    .line 105
     .local v8, "e":Landroid/os/RemoteException;
     const-string v1, "PackageHelper"
 
@@ -379,7 +343,6 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 107
     const/4 v7, 0x0
 
     goto :goto_0
@@ -394,7 +357,6 @@
 
     const/4 v2, 0x0
 
-    .line 212
     :try_start_0
     invoke-static {}, Lcom/android/internal/content/PackageHelper;->getMountService()Landroid/os/storage/IMountService;
 
@@ -406,11 +368,9 @@
 
     move-result v1
 
-    .line 213
     .local v1, "rc":I
     if-eqz v1, :cond_0
 
-    .line 214
     const-string v3, "PackageHelper"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -435,7 +395,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 222
     .end local v1    # "rc":I
     :goto_0
     return v2
@@ -444,15 +403,12 @@
     :cond_0
     move v2, v3
 
-    .line 217
     goto :goto_0
 
-    .line 218
     .end local v1    # "rc":I
     :catch_0
     move-exception v0
 
-    .line 219
     .local v0, "e":Landroid/os/RemoteException;
     const-string v3, "PackageHelper"
 
@@ -500,22 +456,17 @@
     .end annotation
 
     .prologue
-    .line 252
     if-nez p1, :cond_2
 
-    .line 253
     const/4 v0, 0x0
 
-    .line 254
     .local v0, "fstr":Ljava/io/FileOutputStream;
     const/4 v3, 0x0
 
-    .line 261
     .local v3, "publicZipOutStream":Ljava/util/zip/ZipOutputStream;
     :goto_0
     const-wide/16 v4, 0x0
 
-    .line 264
     .local v4, "size":J
     :try_start_0
     new-instance v2, Ljava/util/zip/ZipFile;
@@ -528,7 +479,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 267
     .local v2, "privateZip":Ljava/util/zip/ZipFile;
     :try_start_1
     invoke-virtual {v2}, Ljava/util/zip/ZipFile;->entries()Ljava/util/Enumeration;
@@ -558,13 +508,11 @@
 
     check-cast v6, Ljava/util/zip/ZipEntry;
 
-    .line 268
     .local v6, "zipEntry":Ljava/util/zip/ZipEntry;
     invoke-virtual {v6}, Ljava/util/zip/ZipEntry;->getName()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 269
     .local v7, "zipEntryName":Ljava/lang/String;
     const-string v8, "AndroidManifest.xml"
 
@@ -590,7 +538,6 @@
 
     if-eqz v8, :cond_0
 
-    .line 272
     :cond_1
     invoke-virtual {v6}, Ljava/util/zip/ZipEntry;->getSize()J
 
@@ -598,17 +545,14 @@
 
     add-long/2addr v4, v8
 
-    .line 273
     if-eqz p1, :cond_0
 
-    .line 274
     invoke-static {v6, v2, v3}, Lcom/android/internal/content/PackageHelper;->copyZipEntry(Ljava/util/zip/ZipEntry;Ljava/util/zip/ZipFile;Ljava/util/zip/ZipOutputStream;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_1
 
-    .line 279
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v6    # "zipEntry":Ljava/util/zip/ZipEntry;
     .end local v7    # "zipEntryName":Ljava/lang/String;
@@ -627,7 +571,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 291
     .end local v2    # "privateZip":Ljava/util/zip/ZipFile;
     :catchall_1
     move-exception v8
@@ -636,7 +579,6 @@
 
     throw v8
 
-    .line 256
     .end local v0    # "fstr":Ljava/io/FileOutputStream;
     .end local v3    # "publicZipOutStream":Ljava/util/zip/ZipOutputStream;
     .end local v4    # "size":J
@@ -645,13 +587,11 @@
 
     invoke-direct {v0, p1}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
-    .line 257
     .restart local v0    # "fstr":Ljava/io/FileOutputStream;
     new-instance v3, Ljava/util/zip/ZipOutputStream;
 
     invoke-direct {v3, v0}, Ljava/util/zip/ZipOutputStream;-><init>(Ljava/io/OutputStream;)V
 
-    .line 258
     .restart local v3    # "publicZipOutStream":Ljava/util/zip/ZipOutputStream;
     const-string v8, "PackageHelper"
 
@@ -687,7 +627,6 @@
 
     goto :goto_0
 
-    .line 279
     .restart local v1    # "i$":Ljava/util/Iterator;
     .restart local v2    # "privateZip":Ljava/util/zip/ZipFile;
     .restart local v4    # "size":J
@@ -698,24 +637,18 @@
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_0
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 282
     :goto_3
     if-eqz p1, :cond_4
 
-    .line 283
     :try_start_5
     invoke-virtual {v3}, Ljava/util/zip/ZipOutputStream;->finish()V
 
-    .line 284
     invoke-virtual {v3}, Ljava/util/zip/ZipOutputStream;->flush()V
 
-    .line 285
     invoke-static {v0}, Landroid/os/FileUtils;->sync(Ljava/io/FileOutputStream;)Z
 
-    .line 286
     invoke-virtual {v3}, Ljava/util/zip/ZipOutputStream;->close()V
 
-    .line 287
     invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v8
@@ -730,14 +663,11 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 291
     :cond_4
     invoke-static {v3}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 294
     return-wide v4
 
-    .line 279
     :catch_0
     move-exception v8
 
@@ -757,7 +687,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 196
     :try_start_0
     invoke-static {}, Lcom/android/internal/content/PackageHelper;->getMountService()Landroid/os/storage/IMountService;
 
@@ -767,11 +696,9 @@
 
     move-result v1
 
-    .line 197
     .local v1, "rc":I
     if-eqz v1, :cond_0
 
-    .line 198
     const-string v3, "PackageHelper"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -796,24 +723,20 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 206
     .end local v1    # "rc":I
     :goto_0
     return v2
 
-    .line 201
     .restart local v1    # "rc":I
     :cond_0
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 202
     .end local v1    # "rc":I
     :catch_0
     move-exception v0
 
-    .line 203
     .local v0, "e":Landroid/os/RemoteException;
     const-string v3, "PackageHelper"
 
@@ -856,7 +779,6 @@
     .param p1, "sizeBytes"    # J
 
     .prologue
-    .line 418
     const-class v2, Landroid/os/storage/StorageManager;
 
     invoke-virtual {p0, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -865,13 +787,11 @@
 
     check-cast v1, Landroid/os/storage/StorageManager;
 
-    .line 419
     .local v1, "storage":Landroid/os/storage/StorageManager;
     invoke-virtual {v1}, Landroid/os/storage/StorageManager;->getPrimaryVolume()Landroid/os/storage/StorageVolume;
 
     move-result-object v0
 
-    .line 420
     .local v0, "primary":Landroid/os/storage/StorageVolume;
     const-wide/16 v2, 0x0
 
@@ -926,7 +846,6 @@
     .param p1, "sizeBytes"    # J
 
     .prologue
-    .line 412
     const-class v2, Landroid/os/storage/StorageManager;
 
     invoke-virtual {p0, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -935,13 +854,11 @@
 
     check-cast v0, Landroid/os/storage/StorageManager;
 
-    .line 413
     .local v0, "storage":Landroid/os/storage/StorageManager;
     invoke-static {}, Landroid/os/Environment;->getDataDirectory()Ljava/io/File;
 
     move-result-object v1
 
-    .line 414
     .local v1, "target":Ljava/io/File;
     invoke-virtual {v0, v1}, Landroid/os/storage/StorageManager;->getStorageBytesUntilLow(Ljava/io/File;)J
 
@@ -971,7 +888,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 325
     :try_start_0
     invoke-static {}, Lcom/android/internal/content/PackageHelper;->getMountService()Landroid/os/storage/IMountService;
 
@@ -981,11 +897,9 @@
 
     move-result v1
 
-    .line 326
     .local v1, "rc":I
     if-eqz v1, :cond_0
 
-    .line 327
     const-string v3, "PackageHelper"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1010,24 +924,20 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 334
     .end local v1    # "rc":I
     :goto_0
     return v2
 
-    .line 330
     .restart local v1    # "rc":I
     :cond_0
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 331
     .end local v1    # "rc":I
     :catch_0
     move-exception v0
 
-    .line 332
     .local v0, "e":Landroid/os/RemoteException;
     const-string v3, "PackageHelper"
 
@@ -1073,25 +983,21 @@
     .end annotation
 
     .prologue
-    .line 75
     const-string v1, "mount"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 76
     .local v0, "service":Landroid/os/IBinder;
     if-eqz v0, :cond_0
 
-    .line 77
     invoke-static {v0}, Landroid/os/storage/IMountService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/os/storage/IMountService;
 
     move-result-object v1
 
     return-object v1
 
-    .line 79
     :cond_0
     const-string v1, "PackageHelper"
 
@@ -1099,7 +1005,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 80
     new-instance v1, Landroid/os/RemoteException;
 
     const-string v2, "Could not contact mount service"
@@ -1114,7 +1019,6 @@
     .param p0, "cid"    # Ljava/lang/String;
 
     .prologue
-    .line 176
     :try_start_0
     invoke-static {}, Lcom/android/internal/content/PackageHelper;->getMountService()Landroid/os/storage/IMountService;
 
@@ -1126,15 +1030,12 @@
 
     move-result-object v1
 
-    .line 181
     :goto_0
     return-object v1
 
-    .line 177
     :catch_0
     move-exception v0
 
-    .line 178
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "PackageHelper"
 
@@ -1168,7 +1069,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 181
     const/4 v1, 0x0
 
     goto :goto_0
@@ -1179,7 +1079,6 @@
     .param p0, "cid"    # Ljava/lang/String;
 
     .prologue
-    .line 186
     :try_start_0
     invoke-static {}, Lcom/android/internal/content/PackageHelper;->getMountService()Landroid/os/storage/IMountService;
 
@@ -1191,15 +1090,12 @@
 
     move-result-object v1
 
-    .line 191
     :goto_0
     return-object v1
 
-    .line 187
     :catch_0
     move-exception v0
 
-    .line 188
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "PackageHelper"
 
@@ -1233,7 +1129,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 191
     const/4 v1, 0x0
 
     goto :goto_0
@@ -1243,7 +1138,6 @@
     .locals 4
 
     .prologue
-    .line 227
     :try_start_0
     invoke-static {}, Lcom/android/internal/content/PackageHelper;->getMountService()Landroid/os/storage/IMountService;
 
@@ -1255,17 +1149,14 @@
 
     move-result-object v1
 
-    .line 232
     .local v0, "e":Landroid/os/RemoteException;
     :goto_0
     return-object v1
 
-    .line 228
     .end local v0    # "e":Landroid/os/RemoteException;
     :catch_0
     move-exception v0
 
-    .line 229
     .restart local v0    # "e":Landroid/os/RemoteException;
     const-string v1, "PackageHelper"
 
@@ -1289,7 +1180,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 232
     const/4 v1, 0x0
 
     goto :goto_0
@@ -1300,7 +1190,6 @@
     .param p0, "cid"    # Ljava/lang/String;
 
     .prologue
-    .line 237
     :try_start_0
     invoke-static {}, Lcom/android/internal/content/PackageHelper;->getMountService()Landroid/os/storage/IMountService;
 
@@ -1312,15 +1201,12 @@
 
     move-result v1
 
-    .line 241
     :goto_0
     return v1
 
-    .line 238
     :catch_0
     move-exception v0
 
-    .line 239
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "PackageHelper"
 
@@ -1350,7 +1236,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 241
     const/4 v1, 0x0
 
     goto :goto_0
@@ -1363,7 +1248,6 @@
     .param p2, "ownerUid"    # I
 
     .prologue
-    .line 127
     const/4 v0, 0x1
 
     invoke-static {p0, p1, p2, v0}, Lcom/android/internal/content/PackageHelper;->mountSdDir(Ljava/lang/String;Ljava/lang/String;IZ)Ljava/lang/String;
@@ -1383,7 +1267,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 132
     :try_start_0
     invoke-static {}, Lcom/android/internal/content/PackageHelper;->getMountService()Landroid/os/storage/IMountService;
 
@@ -1393,11 +1276,9 @@
 
     move-result v1
 
-    .line 133
     .local v1, "rc":I
     if-eqz v1, :cond_0
 
-    .line 134
     const-string v3, "PackageHelper"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1430,12 +1311,10 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 141
     .end local v1    # "rc":I
     :goto_0
     return-object v2
 
-    .line 137
     .restart local v1    # "rc":I
     :cond_0
     invoke-static {}, Lcom/android/internal/content/PackageHelper;->getMountService()Landroid/os/storage/IMountService;
@@ -1450,12 +1329,10 @@
 
     goto :goto_0
 
-    .line 138
     .end local v1    # "rc":I
     :catch_0
     move-exception v0
 
-    .line 139
     .local v0, "e":Landroid/os/RemoteException;
     const-string v3, "PackageHelper"
 
@@ -1474,7 +1351,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 160
     :try_start_0
     invoke-static {}, Lcom/android/internal/content/PackageHelper;->getMountService()Landroid/os/storage/IMountService;
 
@@ -1484,11 +1360,9 @@
 
     move-result v1
 
-    .line 161
     .local v1, "rc":I
     if-eqz v1, :cond_0
 
-    .line 162
     const-string v3, "PackageHelper"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1515,7 +1389,7 @@
 
     move-result-object v4
 
-    const-string/jumbo v5, "with rc "
+    const-string v5, "with rc "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1533,24 +1407,20 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 171
     .end local v1    # "rc":I
     :goto_0
     return v2
 
-    .line 166
     .restart local v1    # "rc":I
     :cond_0
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 167
     .end local v1    # "rc":I
     :catch_0
     move-exception v0
 
-    .line 168
     .local v0, "e":Landroid/os/RemoteException;
     const-string v3, "PackageHelper"
 
@@ -1604,14 +1474,12 @@
     .param p2, "after"    # Ljava/lang/String;
 
     .prologue
-    .line 533
     invoke-virtual {p0, p1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 534
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1646,7 +1514,6 @@
 
     throw v0
 
-    .line 537
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1692,7 +1559,6 @@
     .prologue
     const-wide/32 v6, 0x100000
 
-    .line 112
     add-long v4, p0, v6
 
     div-long/2addr v4, v6
@@ -1701,14 +1567,12 @@
 
     add-int/lit8 v3, v4, 0x1
 
-    .line 114
     .local v3, "sizeMb":I
     :try_start_0
     invoke-static {}, Lcom/android/internal/content/PackageHelper;->getMountService()Landroid/os/storage/IMountService;
 
     move-result-object v1
 
-    .line 115
     .local v1, "mountService":Landroid/os/storage/IMountService;
     invoke-interface {v1, p2, v3, p3}, Landroid/os/storage/IMountService;->resizeSecureContainer(Ljava/lang/String;ILjava/lang/String;)I
     :try_end_0
@@ -1716,24 +1580,19 @@
 
     move-result v2
 
-    .line 116
     .local v2, "rc":I
     if-nez v2, :cond_0
 
-    .line 117
     const/4 v4, 0x1
 
-    .line 123
     .end local v1    # "mountService":Landroid/os/storage/IMountService;
     .end local v2    # "rc":I
     :goto_0
     return v4
 
-    .line 119
     :catch_0
     move-exception v0
 
-    .line 120
     .local v0, "e":Landroid/os/RemoteException;
     const-string v4, "PackageHelper"
 
@@ -1741,7 +1600,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 122
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const-string v4, "PackageHelper"
@@ -1766,7 +1624,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 123
     const/4 v4, 0x0
 
     goto :goto_0
@@ -1785,10 +1642,8 @@
 
     const/4 v5, 0x1
 
-    .line 431
     const/4 v1, 0x0
 
-    .line 433
     .local v1, "existingInfo":Landroid/content/pm/ApplicationInfo;
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -1803,65 +1658,52 @@
 
     move-result-object v1
 
-    .line 440
     :goto_0
     and-int/lit8 v7, p5, 0x10
 
     if-eqz v7, :cond_5
 
-    .line 441
     const/4 v4, 0x1
 
-    .line 442
     .local v4, "prefer":I
     const/4 v0, 0x0
 
-    .line 470
     .local v0, "checkBoth":Z
     :goto_1
     const/4 v3, 0x0
 
-    .line 471
     .local v3, "fitsOnInternal":Z
     if-nez v0, :cond_0
 
     if-ne v4, v5, :cond_1
 
-    .line 472
     :cond_0
     invoke-static {p0, p3, p4}, Lcom/android/internal/content/PackageHelper;->fitsOnInternal(Landroid/content/Context;J)Z
 
     move-result v3
 
-    .line 475
     :cond_1
     const/4 v2, 0x0
 
-    .line 476
     .local v2, "fitsOnExternal":Z
     if-nez v0, :cond_2
 
     if-ne v4, v6, :cond_3
 
-    .line 477
     :cond_2
     invoke-static {p0, p3, p4}, Lcom/android/internal/content/PackageHelper;->fitsOnExternal(Landroid/content/Context;J)Z
 
     move-result v2
 
-    .line 480
     :cond_3
     if-ne v4, v5, :cond_c
 
-    .line 481
     if-eqz v3, :cond_d
 
-    .line 498
     :cond_4
     :goto_2
     return v5
 
-    .line 443
     .end local v0    # "checkBoth":Z
     .end local v2    # "fitsOnExternal":Z
     .end local v3    # "fitsOnInternal":Z
@@ -1871,58 +1713,47 @@
 
     if-eqz v7, :cond_6
 
-    .line 444
     const/4 v4, 0x2
 
-    .line 445
     .restart local v4    # "prefer":I
     const/4 v0, 0x0
 
     .restart local v0    # "checkBoth":Z
     goto :goto_1
 
-    .line 446
     .end local v0    # "checkBoth":Z
     .end local v4    # "prefer":I
     :cond_6
     if-ne p2, v5, :cond_7
 
-    .line 447
     const/4 v4, 0x1
 
-    .line 448
     .restart local v4    # "prefer":I
     const/4 v0, 0x0
 
     .restart local v0    # "checkBoth":Z
     goto :goto_1
 
-    .line 449
     .end local v0    # "checkBoth":Z
     .end local v4    # "prefer":I
     :cond_7
     if-ne p2, v6, :cond_8
 
-    .line 450
     const/4 v4, 0x2
 
-    .line 451
     .restart local v4    # "prefer":I
     const/4 v0, 0x1
 
     .restart local v0    # "checkBoth":Z
     goto :goto_1
 
-    .line 452
     .end local v0    # "checkBoth":Z
     .end local v4    # "prefer":I
     :cond_8
     if-nez p2, :cond_b
 
-    .line 454
     if-eqz v1, :cond_a
 
-    .line 456
     iget v7, v1, Landroid/content/pm/ApplicationInfo;->flags:I
 
     const/high16 v8, 0x40000
@@ -1931,10 +1762,8 @@
 
     if-eqz v7, :cond_9
 
-    .line 457
     const/4 v4, 0x2
 
-    .line 464
     .restart local v4    # "prefer":I
     :goto_3
     const/4 v0, 0x1
@@ -1942,7 +1771,6 @@
     .restart local v0    # "checkBoth":Z
     goto :goto_1
 
-    .line 459
     .end local v0    # "checkBoth":Z
     .end local v4    # "prefer":I
     :cond_9
@@ -1951,7 +1779,6 @@
     .restart local v4    # "prefer":I
     goto :goto_3
 
-    .line 462
     .end local v4    # "prefer":I
     :cond_a
     const/4 v4, 0x1
@@ -1959,54 +1786,43 @@
     .restart local v4    # "prefer":I
     goto :goto_3
 
-    .line 466
     .end local v4    # "prefer":I
     :cond_b
     const/4 v4, 0x1
 
-    .line 467
     .restart local v4    # "prefer":I
     const/4 v0, 0x0
 
     .restart local v0    # "checkBoth":Z
     goto :goto_1
 
-    .line 484
     .restart local v2    # "fitsOnExternal":Z
     .restart local v3    # "fitsOnInternal":Z
     :cond_c
     if-ne v4, v6, :cond_d
 
-    .line 485
     if-eqz v2, :cond_d
 
     move v5, v6
 
-    .line 486
     goto :goto_2
 
-    .line 490
     :cond_d
     if-eqz v0, :cond_e
 
-    .line 491
     if-nez v3, :cond_4
 
-    .line 493
     if-eqz v2, :cond_e
 
     move v5, v6
 
-    .line 494
     goto :goto_2
 
-    .line 498
     :cond_e
     const/4 v5, -0x1
 
     goto :goto_2
 
-    .line 435
     .end local v0    # "checkBoth":Z
     .end local v2    # "fitsOnExternal":Z
     .end local v3    # "fitsOnInternal":Z
@@ -2030,10 +1846,8 @@
     .end annotation
 
     .prologue
-    .line 350
     const/4 v8, 0x0
 
-    .line 352
     .local v8, "existingInfo":Landroid/content/pm/ApplicationInfo;
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -2050,7 +1864,6 @@
 
     move-result-object v8
 
-    .line 357
     :goto_0
     const-class v13, Landroid/os/storage/StorageManager;
 
@@ -2060,7 +1873,6 @@
 
     check-cast v11, Landroid/os/storage/StorageManager;
 
-    .line 358
     .local v11, "storageManager":Landroid/os/storage/StorageManager;
     move-wide/from16 v0, p3
 
@@ -2068,21 +1880,17 @@
 
     move-result v9
 
-    .line 360
     .local v9, "fitsOnInternal":Z
     new-instance v2, Landroid/util/ArraySet;
 
     invoke-direct {v2}, Landroid/util/ArraySet;-><init>()V
 
-    .line 361
     .local v2, "allCandidates":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Ljava/lang/String;>;"
     const/4 v3, 0x0
 
-    .line 362
     .local v3, "bestCandidate":Landroid/os/storage/VolumeInfo;
     const-wide/high16 v6, -0x8000000000000000L
 
-    .line 363
     .local v6, "bestCandidateAvailBytes":J
     invoke-virtual {v11}, Landroid/os/storage/StorageManager;->getVolumes()Ljava/util/List;
 
@@ -2107,7 +1915,6 @@
 
     check-cast v12, Landroid/os/storage/VolumeInfo;
 
-    .line 364
     .local v12, "vol":Landroid/os/storage/VolumeInfo;
     iget v13, v12, Landroid/os/storage/VolumeInfo;->type:I
 
@@ -2121,7 +1928,6 @@
 
     if-eqz v13, :cond_0
 
-    .line 365
     new-instance v13, Ljava/io/File;
 
     iget-object v14, v12, Landroid/os/storage/VolumeInfo;->path:Ljava/lang/String;
@@ -2132,32 +1938,26 @@
 
     move-result-wide v4
 
-    .line 366
     .local v4, "availBytes":J
     cmp-long v13, v4, p3
 
     if-ltz v13, :cond_1
 
-    .line 367
     iget-object v13, v12, Landroid/os/storage/VolumeInfo;->fsUuid:Ljava/lang/String;
 
     invoke-virtual {v2, v13}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 369
     :cond_1
     cmp-long v13, v4, v6
 
     if-ltz v13, :cond_0
 
-    .line 370
     move-object v3, v12
 
-    .line 371
     move-wide v6, v4
 
     goto :goto_1
 
-    .line 377
     .end local v4    # "availBytes":J
     .end local v12    # "vol":Landroid/os/storage/VolumeInfo;
     :cond_2
@@ -2169,10 +1969,8 @@
 
     if-eqz v13, :cond_3
 
-    .line 378
     const/16 p2, 0x1
 
-    .line 382
     :cond_3
     const/4 v13, 0x1
 
@@ -2180,17 +1978,13 @@
 
     if-ne v0, v13, :cond_5
 
-    .line 383
     if-eqz v9, :cond_4
 
-    .line 384
     const/4 v13, 0x0
 
-    .line 405
     :goto_2
     return-object v13
 
-    .line 386
     :cond_4
     new-instance v13, Ljava/io/IOException;
 
@@ -2200,23 +1994,19 @@
 
     throw v13
 
-    .line 391
     :cond_5
     if-eqz v8, :cond_7
 
-    .line 392
     iget-object v13, v8, Landroid/content/pm/ApplicationInfo;->volumeUuid:Ljava/lang/String;
 
     if-nez v13, :cond_6
 
     if-eqz v9, :cond_6
 
-    .line 393
     const/4 v13, 0x0
 
     goto :goto_2
 
-    .line 395
     :cond_6
     iget-object v13, v8, Landroid/content/pm/ApplicationInfo;->volumeUuid:Ljava/lang/String;
 
@@ -2226,30 +2016,24 @@
 
     if-eqz v13, :cond_7
 
-    .line 396
     iget-object v13, v8, Landroid/content/pm/ApplicationInfo;->volumeUuid:Ljava/lang/String;
 
     goto :goto_2
 
-    .line 402
     :cond_7
     if-eqz v3, :cond_8
 
-    .line 403
     iget-object v13, v3, Landroid/os/storage/VolumeInfo;->fsUuid:Ljava/lang/String;
 
     goto :goto_2
 
-    .line 404
     :cond_8
     if-eqz v9, :cond_9
 
-    .line 405
     const/4 v13, 0x0
 
     goto :goto_2
 
-    .line 407
     :cond_9
     new-instance v13, Ljava/io/IOException;
 
@@ -2259,7 +2043,6 @@
 
     throw v13
 
-    .line 354
     .end local v2    # "allCandidates":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Ljava/lang/String;>;"
     .end local v3    # "bestCandidate":Landroid/os/storage/VolumeInfo;
     .end local v6    # "bestCandidateAvailBytes":J
@@ -2281,7 +2064,6 @@
 
     const/4 v2, 0x0
 
-    .line 146
     :try_start_0
     invoke-static {}, Lcom/android/internal/content/PackageHelper;->getMountService()Landroid/os/storage/IMountService;
 
@@ -2293,11 +2075,9 @@
 
     move-result v1
 
-    .line 147
     .local v1, "rc":I
     if-eqz v1, :cond_0
 
-    .line 148
     const-string v3, "PackageHelper"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2332,7 +2112,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 155
     .end local v1    # "rc":I
     :goto_0
     return v2
@@ -2341,15 +2120,12 @@
     :cond_0
     move v2, v3
 
-    .line 151
     goto :goto_0
 
-    .line 152
     .end local v1    # "rc":I
     :catch_0
     move-exception v0
 
-    .line 153
     .local v0, "e":Landroid/os/RemoteException;
     const-string v3, "PackageHelper"
 

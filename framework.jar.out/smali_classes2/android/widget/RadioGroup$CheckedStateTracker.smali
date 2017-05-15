@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 337
     iput-object p1, p0, Landroid/widget/RadioGroup$CheckedStateTracker;->this$0:Landroid/widget/RadioGroup;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Landroid/widget/RadioGroup$1;
 
     .prologue
-    .line 337
     invoke-direct {p0, p1}, Landroid/widget/RadioGroup$CheckedStateTracker;-><init>(Landroid/widget/RadioGroup;)V
 
     return-void
@@ -56,7 +54,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 340
     iget-object v1, p0, Landroid/widget/RadioGroup$CheckedStateTracker;->this$0:Landroid/widget/RadioGroup;
 
     # getter for: Landroid/widget/RadioGroup;->mProtectFromCheckedChange:Z
@@ -66,11 +63,9 @@
 
     if-eqz v1, :cond_0
 
-    .line 352
     :goto_0
     return-void
 
-    .line 344
     :cond_0
     iget-object v1, p0, Landroid/widget/RadioGroup$CheckedStateTracker;->this$0:Landroid/widget/RadioGroup;
 
@@ -79,7 +74,6 @@
     # setter for: Landroid/widget/RadioGroup;->mProtectFromCheckedChange:Z
     invoke-static {v1, v2}, Landroid/widget/RadioGroup;->access$302(Landroid/widget/RadioGroup;Z)Z
 
-    .line 345
     iget-object v1, p0, Landroid/widget/RadioGroup$CheckedStateTracker;->this$0:Landroid/widget/RadioGroup;
 
     # getter for: Landroid/widget/RadioGroup;->mCheckedId:I
@@ -91,7 +85,6 @@
 
     if-eq v1, v2, :cond_1
 
-    .line 346
     iget-object v1, p0, Landroid/widget/RadioGroup$CheckedStateTracker;->this$0:Landroid/widget/RadioGroup;
 
     iget-object v2, p0, Landroid/widget/RadioGroup$CheckedStateTracker;->this$0:Landroid/widget/RadioGroup;
@@ -104,19 +97,16 @@
     # invokes: Landroid/widget/RadioGroup;->setCheckedStateForView(IZ)V
     invoke-static {v1, v2, v3}, Landroid/widget/RadioGroup;->access$500(Landroid/widget/RadioGroup;IZ)V
 
-    .line 348
     :cond_1
     iget-object v1, p0, Landroid/widget/RadioGroup$CheckedStateTracker;->this$0:Landroid/widget/RadioGroup;
 
     # setter for: Landroid/widget/RadioGroup;->mProtectFromCheckedChange:Z
     invoke-static {v1, v3}, Landroid/widget/RadioGroup;->access$302(Landroid/widget/RadioGroup;Z)Z
 
-    .line 350
     invoke-virtual {p1}, Landroid/widget/CompoundButton;->getId()I
 
     move-result v0
 
-    .line 351
     .local v0, "id":I
     iget-object v1, p0, Landroid/widget/RadioGroup$CheckedStateTracker;->this$0:Landroid/widget/RadioGroup;
 

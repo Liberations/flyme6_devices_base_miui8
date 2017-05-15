@@ -23,21 +23,18 @@
     .locals 2
 
     .prologue
-    .line 16
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     sput-object v0, Landroid/net/wifi/WifiStateMachineInjector;->sBannedProcessName:Ljava/util/HashSet;
 
-    .line 18
     sget-object v0, Landroid/net/wifi/WifiStateMachineInjector;->sBannedProcessName:Ljava/util/HashSet;
 
     const-string v1, "com.amap.android.location"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 19
     return-void
 .end method
 
@@ -45,7 +42,6 @@
     .locals 0
 
     .prologue
-    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -57,7 +53,6 @@
     .param p1, "p2pConnected"    # Ljava/util/concurrent/atomic/AtomicBoolean;
 
     .prologue
-    .line 22
     if-eqz p1, :cond_2
 
     invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
@@ -66,7 +61,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 23
     const-string v5, "activity"
 
     invoke-virtual {p0, v5}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -75,19 +69,16 @@
 
     check-cast v0, Landroid/app/ActivityManager;
 
-    .line 25
     .local v0, "am":Landroid/app/ActivityManager;
     invoke-virtual {v0}, Landroid/app/ActivityManager;->getRunningAppProcesses()Ljava/util/List;
 
     move-result-object v4
 
-    .line 26
     .local v4, "infos":Ljava/util/List;, "Ljava/util/List<Landroid/app/ActivityManager$RunningAppProcessInfo;>;"
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v1
 
-    .line 27
     .local v1, "callingPid":I
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -107,13 +98,11 @@
 
     check-cast v3, Landroid/app/ActivityManager$RunningAppProcessInfo;
 
-    .line 28
     .local v3, "info":Landroid/app/ActivityManager$RunningAppProcessInfo;
     iget v5, v3, Landroid/app/ActivityManager$RunningAppProcessInfo;->pid:I
 
     if-ne v5, v1, :cond_0
 
-    .line 29
     const-string v5, "WifiStateMachineInj"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -154,7 +143,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 34
     iget v5, v3, Landroid/app/ActivityManager$RunningAppProcessInfo;->importance:I
 
     const/16 v6, 0x64
@@ -171,7 +159,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 36
     :cond_1
     const-string v5, "WifiStateMachineInj"
 
@@ -203,10 +190,8 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 37
     const/4 v5, 0x1
 
-    .line 44
     .end local v0    # "am":Landroid/app/ActivityManager;
     .end local v1    # "callingPid":I
     .end local v2    # "i$":Ljava/util/Iterator;

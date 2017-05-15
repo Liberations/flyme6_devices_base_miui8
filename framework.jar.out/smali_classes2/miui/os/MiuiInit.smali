@@ -20,7 +20,6 @@
     .locals 0
 
     .prologue
-    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,7 +30,6 @@
     .param p0, "keepUserApps"    # Z
 
     .prologue
-    .line 61
     :try_start_0
     invoke-static {}, Lmiui/os/MiuiInit;->getService()Lmiui/os/IMiuiInit;
 
@@ -41,15 +39,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 65
     :goto_0
     return-void
 
-    .line 62
     :catch_0
     move-exception v0
 
-    .line 63
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "MiuiInit"
 
@@ -64,7 +59,6 @@
     .locals 3
 
     .prologue
-    .line 52
     :try_start_0
     invoke-static {}, Lmiui/os/MiuiInit;->getService()Lmiui/os/IMiuiInit;
 
@@ -76,17 +70,14 @@
 
     move-result-object v1
 
-    .line 56
     .local v0, "e":Landroid/os/RemoteException;
     :goto_0
     return-object v1
 
-    .line 53
     .end local v0    # "e":Landroid/os/RemoteException;
     :catch_0
     move-exception v0
 
-    .line 54
     .restart local v0    # "e":Landroid/os/RemoteException;
     const-string v1, "MiuiInit"
 
@@ -94,7 +85,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 56
     const/4 v1, 0x0
 
     goto :goto_0
@@ -105,7 +95,6 @@
     .param p0, "pkg"    # Ljava/lang/String;
 
     .prologue
-    .line 78
     :try_start_0
     invoke-static {}, Lmiui/os/MiuiInit;->getService()Lmiui/os/IMiuiInit;
 
@@ -117,15 +106,12 @@
 
     move-result-object v1
 
-    .line 83
     :goto_0
     return-object v1
 
-    .line 79
     :catch_0
     move-exception v0
 
-    .line 80
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "MiuiInit"
 
@@ -133,7 +119,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 83
     const-string v1, ""
 
     goto :goto_0
@@ -143,19 +128,16 @@
     .locals 2
 
     .prologue
-    .line 20
     sget-object v1, Lmiui/os/MiuiInit;->sService:Lmiui/os/IMiuiInit;
 
     if-nez v1, :cond_0
 
-    .line 21
     const-string v1, "MiuiInit"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 22
     .local v0, "b":Landroid/os/IBinder;
     invoke-static {v0}, Lmiui/os/IMiuiInit$Stub;->asInterface(Landroid/os/IBinder;)Lmiui/os/IMiuiInit;
 
@@ -163,7 +145,6 @@
 
     sput-object v1, Lmiui/os/MiuiInit;->sService:Lmiui/os/IMiuiInit;
 
-    .line 24
     :cond_0
     sget-object v1, Lmiui/os/MiuiInit;->sService:Lmiui/os/IMiuiInit;
 
@@ -176,10 +157,8 @@
     .param p1, "obs"    # Lmiui/os/IMiuiInitObserver;
 
     .prologue
-    .line 29
     const/4 v1, 0x0
 
-    .line 31
     .local v1, "ret":Z
     :try_start_0
     invoke-static {}, Lmiui/os/MiuiInit;->getService()Lmiui/os/IMiuiInit;
@@ -192,15 +171,12 @@
 
     move-result v1
 
-    .line 37
     :goto_0
     return v1
 
-    .line 32
     :catch_0
     move-exception v0
 
-    .line 33
     .local v0, "e":Landroid/os/RemoteException;
     const-string v2, "MiuiInit"
 
@@ -230,7 +206,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 35
     const/4 v1, 0x0
 
     goto :goto_0
@@ -240,7 +215,6 @@
     .locals 3
 
     .prologue
-    .line 42
     :try_start_0
     invoke-static {}, Lmiui/os/MiuiInit;->getService()Lmiui/os/IMiuiInit;
 
@@ -250,20 +224,16 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 43
     const/4 v1, 0x1
 
-    .line 47
     .local v0, "e":Landroid/os/RemoteException;
     :goto_0
     return v1
 
-    .line 44
     .end local v0    # "e":Landroid/os/RemoteException;
     :catch_0
     move-exception v0
 
-    .line 45
     .restart local v0    # "e":Landroid/os/RemoteException;
     const-string v1, "MiuiInit"
 
@@ -271,7 +241,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 47
     const/4 v1, 0x0
 
     goto :goto_0
@@ -282,7 +251,6 @@
     .param p0, "pkg"    # Ljava/lang/String;
 
     .prologue
-    .line 69
     :try_start_0
     invoke-static {}, Lmiui/os/MiuiInit;->getService()Lmiui/os/IMiuiInit;
 
@@ -294,15 +262,12 @@
 
     move-result v1
 
-    .line 73
     :goto_0
     return v1
 
-    .line 70
     :catch_0
     move-exception v0
 
-    .line 71
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "MiuiInit"
 
@@ -310,7 +275,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 73
     const/4 v1, 0x0
 
     goto :goto_0

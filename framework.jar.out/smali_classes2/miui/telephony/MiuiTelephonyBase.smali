@@ -12,7 +12,6 @@
     .locals 1
 
     .prologue
-    .line 10
     const-string v0, "MiuiTelephonyBase"
 
     sput-object v0, Lmiui/telephony/MiuiTelephonyBase;->LOG_TAG:Ljava/lang/String;
@@ -24,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 9
     invoke-direct {p0}, Lmiui/telephony/IMiuiTelephony$Stub;-><init>()V
 
     return-void
@@ -38,14 +36,12 @@
     .param p2, "callingPkg"    # Ljava/lang/String;
 
     .prologue
-    .line 54
     sget-object v0, Lmiui/telephony/MiuiTelephonyBase;->LOG_TAG:Ljava/lang/String;
 
     const-string v1, "unexpected getCellLocation method call"
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 55
     const/4 v0, 0x0
 
     return-object v0
@@ -56,7 +52,6 @@
     .param p1, "callingPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 42
     const/4 v0, 0x0
 
     return-object v0
@@ -78,14 +73,12 @@
     .end annotation
 
     .prologue
-    .line 29
     sget-object v0, Lmiui/telephony/MiuiTelephonyBase;->LOG_TAG:Ljava/lang/String;
 
     const-string v1, "unexpected getDeviceIdList method call"
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 30
     new-instance v0, Ljava/util/ArrayList;
 
     const/4 v1, 0x0
@@ -101,7 +94,6 @@
     .param p2, "callingPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 46
     const/4 v0, 0x0
 
     return-object v0
@@ -123,7 +115,6 @@
     .end annotation
 
     .prologue
-    .line 34
     new-instance v0, Ljava/util/ArrayList;
 
     const/4 v1, 0x0
@@ -139,7 +130,6 @@
     .param p2, "callingPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 50
     const/4 v0, 0x0
 
     return-object v0
@@ -161,7 +151,6 @@
     .end annotation
 
     .prologue
-    .line 38
     new-instance v0, Ljava/util/ArrayList;
 
     const/4 v1, 0x0
@@ -176,7 +165,6 @@
     .param p1, "phoneId"    # I
 
     .prologue
-    .line 13
     const/4 v0, 0x0
 
     return v0
@@ -186,7 +174,6 @@
     .locals 1
 
     .prologue
-    .line 25
     const/4 v0, 0x0
 
     return v0
@@ -196,7 +183,6 @@
     .locals 1
 
     .prologue
-    .line 17
     const/4 v0, 0x0
 
     return v0
@@ -206,7 +192,6 @@
     .locals 1
 
     .prologue
-    .line 21
     const/4 v0, 0x0
 
     return v0

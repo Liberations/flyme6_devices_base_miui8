@@ -51,7 +51,6 @@
     .locals 1
 
     .prologue
-    .line 47
     const-class v0, Landroid/content/pm/IntentFilterVerificationInfo;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -60,7 +59,6 @@
 
     sput-object v0, Landroid/content/pm/IntentFilterVerificationInfo;->TAG:Ljava/lang/String;
 
-    .line 235
     new-instance v0, Landroid/content/pm/IntentFilterVerificationInfo$1;
 
     invoke-direct {v0}, Landroid/content/pm/IntentFilterVerificationInfo$1;-><init>()V
@@ -74,27 +72,22 @@
     .locals 1
 
     .prologue
-    .line 58
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 54
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
     iput-object v0, p0, Landroid/content/pm/IntentFilterVerificationInfo;->mDomains:Landroid/util/ArraySet;
 
-    .line 59
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/content/pm/IntentFilterVerificationInfo;->mPackageName:Ljava/lang/String;
 
-    .line 60
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/content/pm/IntentFilterVerificationInfo;->mMainStatus:I
 
-    .line 61
     return-void
 .end method
 
@@ -103,20 +96,16 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 74
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 54
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
     iput-object v0, p0, Landroid/content/pm/IntentFilterVerificationInfo;->mDomains:Landroid/util/ArraySet;
 
-    .line 75
     invoke-direct {p0, p1}, Landroid/content/pm/IntentFilterVerificationInfo;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 76
     return-void
 .end method
 
@@ -135,31 +124,25 @@
     .end annotation
 
     .prologue
-    .line 63
     .local p2, "domains":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 54
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
     iput-object v0, p0, Landroid/content/pm/IntentFilterVerificationInfo;->mDomains:Landroid/util/ArraySet;
 
-    .line 64
     iput-object p1, p0, Landroid/content/pm/IntentFilterVerificationInfo;->mPackageName:Ljava/lang/String;
 
-    .line 65
     iget-object v0, p0, Landroid/content/pm/IntentFilterVerificationInfo;->mDomains:Landroid/util/ArraySet;
 
     invoke-virtual {v0, p2}, Landroid/util/ArraySet;->addAll(Ljava/util/Collection;)Z
 
-    .line 66
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/content/pm/IntentFilterVerificationInfo;->mMainStatus:I
 
-    .line 67
     return-void
 .end method
 
@@ -174,20 +157,16 @@
     .end annotation
 
     .prologue
-    .line 70
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 54
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
     iput-object v0, p0, Landroid/content/pm/IntentFilterVerificationInfo;->mDomains:Landroid/util/ArraySet;
 
-    .line 71
     invoke-virtual {p0, p1}, Landroid/content/pm/IntentFilterVerificationInfo;->readFromXml(Lorg/xmlpull/v1/XmlPullParser;)V
 
-    .line 72
     return-void
 .end method
 
@@ -196,12 +175,10 @@
     .param p0, "val"    # J
 
     .prologue
-    .line 188
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 189
     .local v0, "sb":Ljava/lang/StringBuilder;
     const/16 v1, 0x20
 
@@ -211,12 +188,10 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 209
-    const-string/jumbo v1, "undefined"
+    const-string v1, "undefined"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 212
     :goto_0
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -224,13 +199,11 @@
 
     return-object v1
 
-    .line 191
     :pswitch_0
     const-string v1, "always : "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 192
     const-wide/16 v2, -0x1
 
     and-long/2addr v2, p0
@@ -243,7 +216,6 @@
 
     goto :goto_0
 
-    .line 196
     :pswitch_1
     const-string v1, "ask"
 
@@ -251,15 +223,13 @@
 
     goto :goto_0
 
-    .line 200
     :pswitch_2
-    const-string/jumbo v1, "never"
+    const-string v1, "never"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
-    .line 204
     :pswitch_3
     const-string v1, "always-ask"
 
@@ -267,7 +237,6 @@
 
     goto :goto_0
 
-    .line 189
     nop
 
     :pswitch_data_0
@@ -284,35 +253,29 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 221
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Landroid/content/pm/IntentFilterVerificationInfo;->mPackageName:Ljava/lang/String;
 
-    .line 222
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Landroid/content/pm/IntentFilterVerificationInfo;->mMainStatus:I
 
-    .line 223
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 224
     .local v0, "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readStringList(Ljava/util/List;)V
 
-    .line 225
     iget-object v1, p0, Landroid/content/pm/IntentFilterVerificationInfo;->mDomains:Landroid/util/ArraySet;
 
     invoke-virtual {v1, v0}, Landroid/util/ArraySet;->addAll(Ljava/util/Collection;)Z
 
-    .line 226
     return-void
 .end method
 
@@ -322,7 +285,6 @@
     .locals 1
 
     .prologue
-    .line 217
     const/4 v0, 0x0
 
     return v0
@@ -341,7 +303,6 @@
     .end annotation
 
     .prologue
-    .line 96
     iget-object v0, p0, Landroid/content/pm/IntentFilterVerificationInfo;->mDomains:Landroid/util/ArraySet;
 
     return-object v0
@@ -351,12 +312,10 @@
     .locals 4
 
     .prologue
-    .line 104
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 105
     .local v1, "sb":Ljava/lang/StringBuilder;
     iget-object v3, p0, Landroid/content/pm/IntentFilterVerificationInfo;->mDomains:Landroid/util/ArraySet;
 
@@ -378,7 +337,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 106
     .local v2, "str":Ljava/lang/String;
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->length()I
 
@@ -386,18 +344,15 @@
 
     if-lez v3, :cond_0
 
-    .line 107
     const-string v3, " "
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 109
     :cond_0
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
-    .line 111
     .end local v2    # "str":Ljava/lang/String;
     :cond_1
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -414,14 +369,12 @@
     .param p3, "defaultValue"    # I
 
     .prologue
-    .line 127
     const/4 v2, 0x0
 
     invoke-interface {p1, v2, p2}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 128
     .local v1, "value":Ljava/lang/String;
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -429,7 +382,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 129
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -474,13 +426,11 @@
 
     move-result-object v0
 
-    .line 131
     .local v0, "msg":Ljava/lang/String;
     sget-object v2, Landroid/content/pm/IntentFilterVerificationInfo;->TAG:Ljava/lang/String;
 
     invoke-static {v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 134
     .end local v0    # "msg":Ljava/lang/String;
     .end local p3    # "defaultValue":I
     :goto_0
@@ -499,7 +449,6 @@
     .locals 1
 
     .prologue
-    .line 79
     iget-object v0, p0, Landroid/content/pm/IntentFilterVerificationInfo;->mPackageName:Ljava/lang/String;
 
     return-object v0
@@ -509,7 +458,6 @@
     .locals 1
 
     .prologue
-    .line 83
     iget v0, p0, Landroid/content/pm/IntentFilterVerificationInfo;->mMainStatus:I
 
     return v0
@@ -519,7 +467,6 @@
     .locals 2
 
     .prologue
-    .line 184
     iget v0, p0, Landroid/content/pm/IntentFilterVerificationInfo;->mMainStatus:I
 
     int-to-long v0, v0
@@ -538,18 +485,15 @@
     .param p3, "defaultValue"    # Ljava/lang/String;
 
     .prologue
-    .line 115
     const/4 v2, 0x0
 
     invoke-interface {p1, v2, p2}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 116
     .local v1, "value":Ljava/lang/String;
     if-nez v1, :cond_0
 
-    .line 117
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -594,13 +538,11 @@
 
     move-result-object v0
 
-    .line 119
     .local v0, "msg":Ljava/lang/String;
     sget-object v2, Landroid/content/pm/IntentFilterVerificationInfo;->TAG:Ljava/lang/String;
 
     invoke-static {v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 122
     .end local v0    # "msg":Ljava/lang/String;
     .end local p3    # "defaultValue":Ljava/lang/String;
     :goto_0
@@ -630,8 +572,7 @@
 
     const/4 v7, -0x1
 
-    .line 140
-    const-string/jumbo v5, "packageName"
+    const-string v5, "packageName"
 
     invoke-virtual {p0, p1, v5, v9}, Landroid/content/pm/IntentFilterVerificationInfo;->getStringFromXml(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -639,31 +580,26 @@
 
     iput-object v5, p0, Landroid/content/pm/IntentFilterVerificationInfo;->mPackageName:Ljava/lang/String;
 
-    .line 141
     iget-object v5, p0, Landroid/content/pm/IntentFilterVerificationInfo;->mPackageName:Ljava/lang/String;
 
     if-nez v5, :cond_0
 
-    .line 142
     sget-object v5, Landroid/content/pm/IntentFilterVerificationInfo;->TAG:Ljava/lang/String;
 
     const-string v6, "Package name cannot be null!"
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 144
     :cond_0
-    const-string/jumbo v5, "status"
+    const-string v5, "status"
 
     invoke-virtual {p0, p1, v5, v7}, Landroid/content/pm/IntentFilterVerificationInfo;->getIntFromXml(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;I)I
 
     move-result v2
 
-    .line 145
     .local v2, "status":I
     if-ne v2, v7, :cond_1
 
-    .line 146
     sget-object v5, Landroid/content/pm/IntentFilterVerificationInfo;->TAG:Ljava/lang/String;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -686,16 +622,13 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 148
     :cond_1
     iput v2, p0, Landroid/content/pm/IntentFilterVerificationInfo;->mMainStatus:I
 
-    .line 150
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v1
 
-    .line 153
     .local v1, "outerDepth":I
     :cond_2
     :goto_0
@@ -716,7 +649,6 @@
 
     if-le v5, v1, :cond_6
 
-    .line 155
     :cond_3
     if-eq v4, v8, :cond_2
 
@@ -724,12 +656,10 @@
 
     if-eq v4, v5, :cond_2
 
-    .line 160
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 161
     .local v3, "tagName":Ljava/lang/String;
     const-string v5, "domain"
 
@@ -739,14 +669,12 @@
 
     if-eqz v5, :cond_5
 
-    .line 162
-    const-string/jumbo v5, "name"
+    const-string v5, "name"
 
     invoke-virtual {p0, p1, v5, v9}, Landroid/content/pm/IntentFilterVerificationInfo;->getStringFromXml(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 163
     .local v0, "name":Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -754,12 +682,10 @@
 
     if-nez v5, :cond_4
 
-    .line 164
     iget-object v5, p0, Landroid/content/pm/IntentFilterVerificationInfo;->mDomains:Landroid/util/ArraySet;
 
     invoke-virtual {v5, v0}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 169
     .end local v0    # "name":Ljava/lang/String;
     :cond_4
     :goto_1
@@ -767,7 +693,6 @@
 
     goto :goto_0
 
-    .line 167
     :cond_5
     sget-object v5, Landroid/content/pm/IntentFilterVerificationInfo;->TAG:Ljava/lang/String;
 
@@ -793,7 +718,6 @@
 
     goto :goto_1
 
-    .line 171
     .end local v3    # "tagName":Ljava/lang/String;
     :cond_6
     return-void
@@ -812,7 +736,6 @@
     .end annotation
 
     .prologue
-    .line 100
     .local p1, "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     new-instance v0, Landroid/util/ArraySet;
 
@@ -820,7 +743,6 @@
 
     iput-object v0, p0, Landroid/content/pm/IntentFilterVerificationInfo;->mDomains:Landroid/util/ArraySet;
 
-    .line 101
     return-void
 .end method
 
@@ -829,21 +751,17 @@
     .param p1, "s"    # I
 
     .prologue
-    .line 87
     if-ltz p1, :cond_0
 
     const/4 v0, 0x3
 
     if-gt p1, v0, :cond_0
 
-    .line 89
     iput p1, p0, Landroid/content/pm/IntentFilterVerificationInfo;->mMainStatus:I
 
-    .line 93
     :goto_0
     return-void
 
-    .line 91
     :cond_0
     sget-object v0, Landroid/content/pm/IntentFilterVerificationInfo;->TAG:Ljava/lang/String;
 
@@ -876,17 +794,14 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 230
     iget-object v0, p0, Landroid/content/pm/IntentFilterVerificationInfo;->mPackageName:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 231
     iget v0, p0, Landroid/content/pm/IntentFilterVerificationInfo;->mMainStatus:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 232
     new-instance v0, Ljava/util/ArrayList;
 
     iget-object v1, p0, Landroid/content/pm/IntentFilterVerificationInfo;->mDomains:Landroid/util/ArraySet;
@@ -895,7 +810,6 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeStringList(Ljava/util/List;)V
 
-    .line 233
     return-void
 .end method
 
@@ -911,15 +825,13 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 174
-    const-string/jumbo v2, "packageName"
+    const-string v2, "packageName"
 
     iget-object v3, p0, Landroid/content/pm/IntentFilterVerificationInfo;->mPackageName:Ljava/lang/String;
 
     invoke-interface {p1, v4, v2, v3}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 175
-    const-string/jumbo v2, "status"
+    const-string v2, "status"
 
     iget v3, p0, Landroid/content/pm/IntentFilterVerificationInfo;->mMainStatus:I
 
@@ -929,7 +841,6 @@
 
     invoke-interface {p1, v4, v2, v3}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 176
     iget-object v2, p0, Landroid/content/pm/IntentFilterVerificationInfo;->mDomains:Landroid/util/ArraySet;
 
     invoke-virtual {v2}, Landroid/util/ArraySet;->iterator()Ljava/util/Iterator;
@@ -950,25 +861,21 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 177
     .local v1, "str":Ljava/lang/String;
     const-string v2, "domain"
 
     invoke-interface {p1, v4, v2}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 178
-    const-string/jumbo v2, "name"
+    const-string v2, "name"
 
     invoke-interface {p1, v4, v2, v1}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 179
     const-string v2, "domain"
 
     invoke-interface {p1, v4, v2}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     goto :goto_0
 
-    .line 181
     .end local v1    # "str":Ljava/lang/String;
     :cond_0
     return-void

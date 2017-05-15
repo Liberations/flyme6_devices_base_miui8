@@ -49,19 +49,14 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 50
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 51
     iput-object v0, p0, Lmiui/maml/ResourceManager$BitmapInfo;->mBitmap:Landroid/graphics/Bitmap;
 
-    .line 52
     iput-object v0, p0, Lmiui/maml/ResourceManager$BitmapInfo;->mPadding:Landroid/graphics/Rect;
 
-    .line 53
     iput-object v0, p0, Lmiui/maml/ResourceManager$BitmapInfo;->mNinePatch:Landroid/graphics/NinePatch;
 
-    .line 54
     return-void
 .end method
 
@@ -73,16 +68,12 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 56
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 57
     iput-object p1, p0, Lmiui/maml/ResourceManager$BitmapInfo;->mBitmap:Landroid/graphics/Bitmap;
 
-    .line 58
     iput-object p2, p0, Lmiui/maml/ResourceManager$BitmapInfo;->mPadding:Landroid/graphics/Rect;
 
-    .line 59
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getNinePatchChunk()[B
@@ -91,7 +82,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 60
     new-instance v0, Landroid/graphics/NinePatch;
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getNinePatchChunk()[B
@@ -102,7 +92,6 @@
 
     iput-object v0, p0, Lmiui/maml/ResourceManager$BitmapInfo;->mNinePatch:Landroid/graphics/NinePatch;
 
-    .line 64
     :goto_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -110,10 +99,8 @@
 
     iput-wide v0, p0, Lmiui/maml/ResourceManager$BitmapInfo;->mLastVisitTime:J
 
-    .line 65
     return-void
 
-    .line 62
     :cond_0
     iput-object v2, p0, Lmiui/maml/ResourceManager$BitmapInfo;->mNinePatch:Landroid/graphics/NinePatch;
 
@@ -131,42 +118,34 @@
     .end annotation
 
     .prologue
-    .line 70
     iget-object v1, p0, Lmiui/maml/ResourceManager$BitmapInfo;->mWeakRefCache:Ljava/util/HashMap;
 
     monitor-enter v1
 
-    .line 71
     :try_start_0
     iget-object v0, p0, Lmiui/maml/ResourceManager$BitmapInfo;->mWeakRefCache:Ljava/util/HashMap;
 
     if-eqz v0, :cond_0
 
-    .line 72
     iget-object v0, p0, Lmiui/maml/ResourceManager$BitmapInfo;->mWeakRefCache:Ljava/util/HashMap;
 
     iget-object v2, p0, Lmiui/maml/ResourceManager$BitmapInfo;->mKey:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 73
     const/4 v0, 0x0
 
     iput-object v0, p0, Lmiui/maml/ResourceManager$BitmapInfo;->mWeakRefCache:Ljava/util/HashMap;
 
-    .line 75
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 76
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    .line 77
     return-void
 
-    .line 75
     :catchall_0
     move-exception v0
 

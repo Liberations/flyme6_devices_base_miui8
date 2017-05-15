@@ -43,7 +43,6 @@
     .locals 0
 
     .prologue
-    .line 812
     .local p0, "this":Landroid/app/SystemServiceRegistry$StaticOuterContextServiceFetcher;, "Landroid/app/SystemServiceRegistry$StaticOuterContextServiceFetcher<TT;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -74,17 +73,14 @@
     .end annotation
 
     .prologue
-    .line 817
     .local p0, "this":Landroid/app/SystemServiceRegistry$StaticOuterContextServiceFetcher;, "Landroid/app/SystemServiceRegistry$StaticOuterContextServiceFetcher<TT;>;"
     monitor-enter p0
 
-    .line 818
     :try_start_0
     iget-object v0, p0, Landroid/app/SystemServiceRegistry$StaticOuterContextServiceFetcher;->mCachedInstance:Ljava/lang/Object;
 
     if-nez v0, :cond_0
 
-    .line 819
     invoke-virtual {p1}, Landroid/app/ContextImpl;->getOuterContext()Landroid/content/Context;
 
     move-result-object v0
@@ -95,7 +91,6 @@
 
     iput-object v0, p0, Landroid/app/SystemServiceRegistry$StaticOuterContextServiceFetcher;->mCachedInstance:Ljava/lang/Object;
 
-    .line 821
     :cond_0
     iget-object v0, p0, Landroid/app/SystemServiceRegistry$StaticOuterContextServiceFetcher;->mCachedInstance:Ljava/lang/Object;
 
@@ -103,7 +98,6 @@
 
     return-object v0
 
-    .line 822
     :catchall_0
     move-exception v0
 

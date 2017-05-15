@@ -25,12 +25,10 @@
     .locals 0
 
     .prologue
-    .line 800
     iput-object p1, p0, Lmiui/maml/ScreenElementRoot$ExtraResource$Resource;->this$0:Lmiui/maml/ScreenElementRoot$ExtraResource;
 
     invoke-direct {p0, p1}, Lmiui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;-><init>(Lmiui/maml/ScreenElementRoot$ExtraResource;)V
 
-    .line 801
     return-void
 .end method
 
@@ -40,13 +38,10 @@
     .param p3, "type"    # Lmiui/maml/ScreenElementRoot$ExtraResource$MetricsType;
 
     .prologue
-    .line 803
     iput-object p1, p0, Lmiui/maml/ScreenElementRoot$ExtraResource$Resource;->this$0:Lmiui/maml/ScreenElementRoot$ExtraResource;
 
-    .line 804
     invoke-direct {p0, p1, p2, p3}, Lmiui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;-><init>(Lmiui/maml/ScreenElementRoot$ExtraResource;Ljava/lang/String;Lmiui/maml/ScreenElementRoot$ExtraResource$MetricsType;)V
 
-    .line 805
     sget-object v0, Lmiui/maml/ScreenElementRoot$3;->$SwitchMap$miui$maml$ScreenElementRoot$ExtraResource$MetricsType:[I
 
     invoke-virtual {p3}, Lmiui/maml/ScreenElementRoot$ExtraResource$MetricsType;->ordinal()I
@@ -57,11 +52,9 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 813
     :goto_0
     return-void
 
-    .line 807
     :pswitch_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -87,7 +80,6 @@
 
     goto :goto_0
 
-    .line 810
     :pswitch_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -113,7 +105,6 @@
 
     goto :goto_0
 
-    .line 805
     nop
 
     :pswitch_data_0
@@ -130,7 +121,6 @@
     .param p1, "info"    # [Ljava/lang/String;
 
     .prologue
-    .line 816
     array-length v0, p1
 
     const/4 v1, 0x2
@@ -144,10 +134,8 @@
 
     iput-object v0, p0, Lmiui/maml/ScreenElementRoot$ExtraResource$Resource;->mPath:Ljava/lang/String;
 
-    .line 817
     return-void
 
-    .line 816
     :cond_0
     const/4 v0, 0x1
 
@@ -158,7 +146,6 @@
     .locals 2
 
     .prologue
-    .line 821
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

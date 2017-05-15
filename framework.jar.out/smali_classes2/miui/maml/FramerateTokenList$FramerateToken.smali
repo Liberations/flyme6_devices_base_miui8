@@ -28,15 +28,12 @@
     .param p2, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 19
     iput-object p1, p0, Lmiui/maml/FramerateTokenList$FramerateToken;->this$0:Lmiui/maml/FramerateTokenList;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 20
     iput-object p2, p0, Lmiui/maml/FramerateTokenList$FramerateToken;->mName:Ljava/lang/String;
 
-    .line 21
     return-void
 .end method
 
@@ -46,7 +43,6 @@
     .locals 1
 
     .prologue
-    .line 24
     iget v0, p0, Lmiui/maml/FramerateTokenList$FramerateToken;->mFramerate:F
 
     return v0
@@ -57,14 +53,12 @@
     .param p1, "f"    # F
 
     .prologue
-    .line 28
     iget v0, p0, Lmiui/maml/FramerateTokenList$FramerateToken;->mFramerate:F
 
     cmpl-float v0, v0, p1
 
     if-eqz v0, :cond_1
 
-    .line 30
     iget-object v0, p0, Lmiui/maml/FramerateTokenList$FramerateToken;->this$0:Lmiui/maml/FramerateTokenList;
 
     # getter for: Lmiui/maml/FramerateTokenList;->mFramerateChangeListener:Lmiui/maml/FramerateTokenList$FramerateChangeListener;
@@ -74,7 +68,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 31
     iget-object v0, p0, Lmiui/maml/FramerateTokenList$FramerateToken;->this$0:Lmiui/maml/FramerateTokenList;
 
     # getter for: Lmiui/maml/FramerateTokenList;->mFramerateChangeListener:Lmiui/maml/FramerateTokenList$FramerateChangeListener;
@@ -86,17 +79,14 @@
 
     invoke-interface {v0, v1, p1}, Lmiui/maml/FramerateTokenList$FramerateChangeListener;->onFrameRateChage(FF)V
 
-    .line 33
     :cond_0
     iput p1, p0, Lmiui/maml/FramerateTokenList$FramerateToken;->mFramerate:F
 
-    .line 34
     iget-object v0, p0, Lmiui/maml/FramerateTokenList$FramerateToken;->this$0:Lmiui/maml/FramerateTokenList;
 
     # invokes: Lmiui/maml/FramerateTokenList;->onChange()V
     invoke-static {v0}, Lmiui/maml/FramerateTokenList;->access$100(Lmiui/maml/FramerateTokenList;)V
 
-    .line 36
     :cond_1
     return-void
 .end method

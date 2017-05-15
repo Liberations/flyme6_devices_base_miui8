@@ -54,7 +54,6 @@
 
     const/4 v3, 0x0
 
-    .line 34
     new-instance v0, Lmiui/maml/util/IntentInfo$Type;
 
     const-string v1, "STRING"
@@ -63,7 +62,6 @@
 
     sput-object v0, Lmiui/maml/util/IntentInfo$Type;->STRING:Lmiui/maml/util/IntentInfo$Type;
 
-    .line 35
     new-instance v0, Lmiui/maml/util/IntentInfo$Type;
 
     const-string v1, "INT"
@@ -72,7 +70,6 @@
 
     sput-object v0, Lmiui/maml/util/IntentInfo$Type;->INT:Lmiui/maml/util/IntentInfo$Type;
 
-    .line 36
     new-instance v0, Lmiui/maml/util/IntentInfo$Type;
 
     const-string v1, "LONG"
@@ -81,7 +78,6 @@
 
     sput-object v0, Lmiui/maml/util/IntentInfo$Type;->LONG:Lmiui/maml/util/IntentInfo$Type;
 
-    .line 37
     new-instance v0, Lmiui/maml/util/IntentInfo$Type;
 
     const-string v1, "FLOAT"
@@ -90,7 +86,6 @@
 
     sput-object v0, Lmiui/maml/util/IntentInfo$Type;->FLOAT:Lmiui/maml/util/IntentInfo$Type;
 
-    .line 38
     new-instance v0, Lmiui/maml/util/IntentInfo$Type;
 
     const-string v1, "DOUBLE"
@@ -99,7 +94,6 @@
 
     sput-object v0, Lmiui/maml/util/IntentInfo$Type;->DOUBLE:Lmiui/maml/util/IntentInfo$Type;
 
-    .line 39
     new-instance v0, Lmiui/maml/util/IntentInfo$Type;
 
     const-string v1, "BOOLEAN"
@@ -110,7 +104,6 @@
 
     sput-object v0, Lmiui/maml/util/IntentInfo$Type;->BOOLEAN:Lmiui/maml/util/IntentInfo$Type;
 
-    .line 33
     const/4 v0, 0x6
 
     new-array v0, v0, [Lmiui/maml/util/IntentInfo$Type;
@@ -155,7 +148,6 @@
     .end annotation
 
     .prologue
-    .line 33
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -166,7 +158,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 33
     const-class v0, Lmiui/maml/util/IntentInfo$Type;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -182,7 +173,6 @@
     .locals 1
 
     .prologue
-    .line 33
     sget-object v0, Lmiui/maml/util/IntentInfo$Type;->$VALUES:[Lmiui/maml/util/IntentInfo$Type;
 
     invoke-virtual {v0}, [Lmiui/maml/util/IntentInfo$Type;->clone()Ljava/lang/Object;

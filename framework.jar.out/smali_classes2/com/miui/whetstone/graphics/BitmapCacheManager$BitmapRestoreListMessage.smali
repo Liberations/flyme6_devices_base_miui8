@@ -53,19 +53,15 @@
     .end annotation
 
     .prologue
-    .line 488
     .local p2, "bitmaps":Ljava/util/concurrent/ConcurrentHashMap;, "Ljava/util/concurrent/ConcurrentHashMap<Ljava/lang/String;Landroid/graphics/Bitmap;>;"
     iput-object p1, p0, Lcom/miui/whetstone/graphics/BitmapCacheManager$BitmapRestoreListMessage;->this$0:Lcom/miui/whetstone/graphics/BitmapCacheManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 489
     iput-object p2, p0, Lcom/miui/whetstone/graphics/BitmapCacheManager$BitmapRestoreListMessage;->mBitmaps:Ljava/util/concurrent/ConcurrentHashMap;
 
-    .line 490
     iput-object p3, p0, Lcom/miui/whetstone/graphics/BitmapCacheManager$BitmapRestoreListMessage;->mActivity:Landroid/app/Activity;
 
-    .line 491
     return-void
 .end method
 
@@ -79,7 +75,6 @@
 
     const/4 v8, 0x2
 
-    .line 494
     # getter for: Lcom/miui/whetstone/graphics/BitmapCacheManager;->DEBUG:Ljava/lang/Boolean;
     invoke-static {}, Lcom/miui/whetstone/graphics/BitmapCacheManager;->access$000()Ljava/lang/Boolean;
 
@@ -91,14 +86,12 @@
 
     if-eqz v6, :cond_0
 
-    .line 495
     const-string v6, "WhetstoneBitmapCache"
 
     const-string v7, "get all from diskcache start"
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 497
     :cond_0
     iget-object v6, p0, Lcom/miui/whetstone/graphics/BitmapCacheManager$BitmapRestoreListMessage;->mBitmaps:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -110,13 +103,11 @@
 
     move-result-object v3
 
-    .line 498
     .local v3, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/util/Map$Entry<Ljava/lang/String;Landroid/graphics/Bitmap;>;>;"
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
-    .line 499
     .local v0, "array":Ljava/util/concurrent/ConcurrentHashMap;, "Ljava/util/concurrent/ConcurrentHashMap<Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;>;"
     :cond_1
     :goto_0
@@ -126,14 +117,12 @@
 
     if-eqz v6, :cond_2
 
-    .line 500
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/util/Map$Entry;
 
-    .line 502
     .local v2, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Landroid/graphics/Bitmap;>;"
     iget-object v6, p0, Lcom/miui/whetstone/graphics/BitmapCacheManager$BitmapRestoreListMessage;->this$0:Lcom/miui/whetstone/graphics/BitmapCacheManager;
 
@@ -152,11 +141,9 @@
 
     move-result-object v1
 
-    .line 503
     .local v1, "bitmap":Landroid/graphics/Bitmap;
     if-eqz v1, :cond_1
 
-    .line 504
     # getter for: Lcom/miui/whetstone/graphics/BitmapCacheManager;->BITMAP_RECYCLE:Ljava/lang/Boolean;
     invoke-static {}, Lcom/miui/whetstone/graphics/BitmapCacheManager;->access$300()Ljava/lang/Boolean;
 
@@ -186,7 +173,6 @@
 
     if-nez v6, :cond_1
 
-    .line 505
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v6
@@ -195,7 +181,6 @@
 
     goto :goto_0
 
-    .line 509
     .end local v1    # "bitmap":Landroid/graphics/Bitmap;
     .end local v2    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Landroid/graphics/Bitmap;>;"
     :cond_2
@@ -210,14 +195,12 @@
 
     if-eqz v6, :cond_3
 
-    .line 510
     const-string v6, "WhetstoneBitmapCache"
 
     const-string v7, "get all from diskcache end"
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 513
     :cond_3
     iget-object v6, p0, Lcom/miui/whetstone/graphics/BitmapCacheManager$BitmapRestoreListMessage;->this$0:Lcom/miui/whetstone/graphics/BitmapCacheManager;
 
@@ -230,7 +213,6 @@
 
     move-result-object v4
 
-    .line 514
     .local v4, "msg1":Landroid/os/Message;
     iget-object v6, p0, Lcom/miui/whetstone/graphics/BitmapCacheManager$BitmapRestoreListMessage;->this$0:Lcom/miui/whetstone/graphics/BitmapCacheManager;
 
@@ -245,7 +227,6 @@
 
     move-result-object v5
 
-    .line 515
     .local v5, "msg2":Landroid/os/Message;
     iget-object v6, p0, Lcom/miui/whetstone/graphics/BitmapCacheManager$BitmapRestoreListMessage;->this$0:Lcom/miui/whetstone/graphics/BitmapCacheManager;
 
@@ -256,7 +237,6 @@
 
     invoke-virtual {v6, v8}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 516
     iget-object v6, p0, Lcom/miui/whetstone/graphics/BitmapCacheManager$BitmapRestoreListMessage;->this$0:Lcom/miui/whetstone/graphics/BitmapCacheManager;
 
     # getter for: Lcom/miui/whetstone/graphics/BitmapCacheManager;->sMainHandler:Landroid/os/Handler;
@@ -266,7 +246,6 @@
 
     invoke-virtual {v6, v9}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 517
     iget-object v6, p0, Lcom/miui/whetstone/graphics/BitmapCacheManager$BitmapRestoreListMessage;->this$0:Lcom/miui/whetstone/graphics/BitmapCacheManager;
 
     # getter for: Lcom/miui/whetstone/graphics/BitmapCacheManager;->sMainHandler:Landroid/os/Handler;
@@ -276,7 +255,6 @@
 
     invoke-virtual {v6, v4}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 518
     iget-object v6, p0, Lcom/miui/whetstone/graphics/BitmapCacheManager$BitmapRestoreListMessage;->this$0:Lcom/miui/whetstone/graphics/BitmapCacheManager;
 
     # getter for: Lcom/miui/whetstone/graphics/BitmapCacheManager;->sMainHandler:Landroid/os/Handler;
@@ -286,6 +264,5 @@
 
     invoke-virtual {v6, v5}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 519
     return-void
 .end method

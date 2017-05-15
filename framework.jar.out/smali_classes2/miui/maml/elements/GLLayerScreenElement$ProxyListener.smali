@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 102
     iput-object p1, p0, Lmiui/maml/elements/GLLayerScreenElement$ProxyListener;->this$0:Lmiui/maml/elements/GLLayerScreenElement;
 
     invoke-direct {p0}, Lmiui/maml/RendererController$EmptyListener;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lmiui/maml/elements/GLLayerScreenElement$1;
 
     .prologue
-    .line 102
     invoke-direct {p0, p1}, Lmiui/maml/elements/GLLayerScreenElement$ProxyListener;-><init>(Lmiui/maml/elements/GLLayerScreenElement;)V
 
     return-void
@@ -49,7 +47,6 @@
     .locals 1
 
     .prologue
-    .line 111
     iget-object v0, p0, Lmiui/maml/elements/GLLayerScreenElement$ProxyListener;->this$0:Lmiui/maml/elements/GLLayerScreenElement;
 
     # getter for: Lmiui/maml/elements/GLLayerScreenElement;->mView:Landroid/opengl/GLSurfaceView;
@@ -59,7 +56,6 @@
 
     invoke-virtual {v0}, Landroid/opengl/GLSurfaceView;->requestRender()V
 
-    .line 112
     return-void
 .end method
 
@@ -68,7 +64,6 @@
     .param p1, "currentTime"    # J
 
     .prologue
-    .line 107
     return-void
 .end method
 
@@ -76,7 +71,6 @@
     .locals 1
 
     .prologue
-    .line 116
     iget-object v0, p0, Lmiui/maml/elements/GLLayerScreenElement$ProxyListener;->this$0:Lmiui/maml/elements/GLLayerScreenElement;
 
     iget-object v0, v0, Lmiui/maml/elements/GLLayerScreenElement;->mRoot:Lmiui/maml/ScreenElementRoot;
@@ -87,6 +81,5 @@
 
     invoke-virtual {v0}, Lmiui/maml/RendererController;->triggerUpdate()V
 
-    .line 117
     return-void
 .end method

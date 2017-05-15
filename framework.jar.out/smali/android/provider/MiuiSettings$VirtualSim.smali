@@ -47,7 +47,6 @@
     .locals 0
 
     .prologue
-    .line 4152
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -58,12 +57,11 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 4239
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    const-string/jumbo v1, "misim_id"
+    const-string v1, "misim_id"
 
     const-wide/16 v2, 0x0
 
@@ -79,12 +77,11 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 4248
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    const-string/jumbo v1, "virtual_sim_network_type"
+    const-string v1, "virtual_sim_network_type"
 
     const-string v2, ""
 
@@ -100,12 +97,11 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 4186
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    const-string/jumbo v1, "virtual_sim_iccid"
+    const-string v1, "virtual_sim_iccid"
 
     const-string v2, ""
 
@@ -121,12 +117,11 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 4176
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    const-string/jumbo v1, "virtual_sim_imsi"
+    const-string v1, "virtual_sim_imsi"
 
     const-string v2, ""
 
@@ -142,12 +137,11 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 4196
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    const-string/jumbo v1, "virtual_sim_slot_id"
+    const-string v1, "virtual_sim_slot_id"
 
     const/4 v2, 0x0
 
@@ -163,12 +157,11 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 4221
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    const-string/jumbo v1, "virtual_sim_status"
+    const-string v1, "virtual_sim_status"
 
     const/4 v2, 0x2
 
@@ -184,12 +177,11 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 4211
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    const-string/jumbo v1, "virtual_sim_type"
+    const-string v1, "virtual_sim_type"
 
     const/4 v2, 0x0
 
@@ -205,12 +197,11 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 4230
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    const-string/jumbo v2, "misim_imsi"
+    const-string v2, "misim_imsi"
 
     const/4 v3, 0x0
 
@@ -218,7 +209,6 @@
 
     move-result-object v0
 
-    .line 4231
     .local v0, "miMobileImsi":Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -258,12 +248,11 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 4243
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    const-string/jumbo v2, "virtual_sim_network_type"
+    const-string v2, "virtual_sim_network_type"
 
     const-string v3, ""
 
@@ -271,7 +260,6 @@
 
     move-result-object v0
 
-    .line 4244
     .local v0, "networkType":Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -304,7 +292,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 4172
     invoke-static {p0}, Landroid/provider/MiuiSettings$VirtualSim;->getVirtualSimImsi(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
@@ -332,16 +319,14 @@
     .param p1, "miSimId"    # J
 
     .prologue
-    .line 4235
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    const-string/jumbo v1, "misim_id"
+    const-string v1, "misim_id"
 
     invoke-static {v0, v1, p1, p2}, Lmiui/provider/ExtraSettings$System;->putLong(Landroid/content/ContentResolver;Ljava/lang/String;J)Z
 
-    .line 4236
     return-void
 .end method
 
@@ -351,16 +336,14 @@
     .param p1, "imsi"    # Ljava/lang/String;
 
     .prologue
-    .line 4226
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    const-string/jumbo v1, "misim_imsi"
+    const-string v1, "misim_imsi"
 
     invoke-static {v0, v1, p1}, Lmiui/provider/ExtraSettings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 4227
     return-void
 .end method
 
@@ -370,16 +353,14 @@
     .param p1, "networkType"    # Ljava/lang/String;
 
     .prologue
-    .line 4252
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    const-string/jumbo v1, "virtual_sim_network_type"
+    const-string v1, "virtual_sim_network_type"
 
     invoke-static {v0, v1, p1}, Lmiui/provider/ExtraSettings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 4253
     return-void
 .end method
 
@@ -389,16 +370,14 @@
     .param p1, "iccid"    # Ljava/lang/String;
 
     .prologue
-    .line 4191
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    const-string/jumbo v1, "virtual_sim_iccid"
+    const-string v1, "virtual_sim_iccid"
 
     invoke-static {v0, v1, p1}, Lmiui/provider/ExtraSettings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 4193
     return-void
 .end method
 
@@ -408,16 +387,14 @@
     .param p1, "imsi"    # Ljava/lang/String;
 
     .prologue
-    .line 4181
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    const-string/jumbo v1, "virtual_sim_imsi"
+    const-string v1, "virtual_sim_imsi"
 
     invoke-static {v0, v1, p1}, Lmiui/provider/ExtraSettings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 4183
     return-void
 .end method
 
@@ -427,16 +404,14 @@
     .param p1, "slotId"    # I
 
     .prologue
-    .line 4201
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    const-string/jumbo v1, "virtual_sim_slot_id"
+    const-string v1, "virtual_sim_slot_id"
 
     invoke-static {v0, v1, p1}, Lmiui/provider/ExtraSettings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 4203
     return-void
 .end method
 
@@ -446,16 +421,14 @@
     .param p1, "status"    # I
 
     .prologue
-    .line 4216
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    const-string/jumbo v1, "virtual_sim_status"
+    const-string v1, "virtual_sim_status"
 
     invoke-static {v0, v1, p1}, Lmiui/provider/ExtraSettings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 4218
     return-void
 .end method
 
@@ -465,15 +438,13 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 4206
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    const-string/jumbo v1, "virtual_sim_type"
+    const-string v1, "virtual_sim_type"
 
     invoke-static {v0, v1, p1}, Lmiui/provider/ExtraSettings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 4208
     return-void
 .end method

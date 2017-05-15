@@ -38,22 +38,18 @@
     .param p4, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 513
     const/4 v0, 0x0
 
     invoke-direct {p0, p2, p3, v0, p4}, Landroid/hardware/SystemSensorManager$BaseEventQueue;-><init>(Landroid/os/Looper;Landroid/hardware/SystemSensorManager;ILjava/lang/String;)V
 
-    .line 509
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Landroid/hardware/SystemSensorManager$TriggerEventQueue;->mTriggerEvents:Landroid/util/SparseArray;
 
-    .line 514
     iput-object p1, p0, Landroid/hardware/SystemSensorManager$TriggerEventQueue;->mListener:Landroid/hardware/TriggerEventListener;
 
-    .line 515
     return-void
 .end method
 
@@ -64,7 +60,6 @@
     .param p1, "sensor"    # Landroid/hardware/Sensor;
 
     .prologue
-    .line 519
     new-instance v0, Landroid/hardware/TriggerEvent;
 
     iget-object v1, p0, Landroid/hardware/SystemSensorManager$TriggerEventQueue;->mManager:Landroid/hardware/SystemSensorManager;
@@ -80,13 +75,11 @@
 
     invoke-direct {v0, v1}, Landroid/hardware/TriggerEvent;-><init>(I)V
 
-    .line 521
     .local v0, "t":Landroid/hardware/TriggerEvent;
     iget-object v2, p0, Landroid/hardware/SystemSensorManager$TriggerEventQueue;->mTriggerEvents:Landroid/util/SparseArray;
 
     monitor-enter v2
 
-    .line 522
     :try_start_0
     iget-object v1, p0, Landroid/hardware/SystemSensorManager$TriggerEventQueue;->mTriggerEvents:Landroid/util/SparseArray;
 
@@ -96,13 +89,10 @@
 
     invoke-virtual {v1, v3, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 523
     monitor-exit v2
 
-    .line 524
     return-void
 
-    .line 523
     :catchall_0
     move-exception v1
 
@@ -118,7 +108,6 @@
     .param p1, "handle"    # I
 
     .prologue
-    .line 562
     return-void
 .end method
 
@@ -132,7 +121,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 538
     iget-object v3, p0, Landroid/hardware/SystemSensorManager$TriggerEventQueue;->mManager:Landroid/hardware/SystemSensorManager;
 
     # getter for: Landroid/hardware/SystemSensorManager;->mHandleToSensor:Landroid/util/SparseArray;
@@ -146,17 +134,14 @@
 
     check-cast v1, Landroid/hardware/Sensor;
 
-    .line 539
     .local v1, "sensor":Landroid/hardware/Sensor;
     const/4 v2, 0x0
 
-    .line 540
     .local v2, "t":Landroid/hardware/TriggerEvent;
     iget-object v4, p0, Landroid/hardware/SystemSensorManager$TriggerEventQueue;->mTriggerEvents:Landroid/util/SparseArray;
 
     monitor-enter v4
 
-    .line 541
     :try_start_0
     iget-object v3, p0, Landroid/hardware/SystemSensorManager$TriggerEventQueue;->mTriggerEvents:Landroid/util/SparseArray;
 
@@ -170,15 +155,12 @@
 
     move-object v2, v0
 
-    .line 542
     monitor-exit v4
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 543
     if-nez v2, :cond_0
 
-    .line 544
     const-string v3, "SensorManager"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -201,11 +183,9 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 558
     :goto_0
     return-void
 
-    .line 542
     :catchall_0
     move-exception v3
 
@@ -216,7 +196,6 @@
 
     throw v3
 
-    .line 549
     :cond_0
     iget-object v3, v2, Landroid/hardware/TriggerEvent;->values:[F
 
@@ -226,20 +205,16 @@
 
     invoke-static {p2, v5, v3, v5, v4}, Ljava/lang/System;->arraycopy([FI[FII)V
 
-    .line 550
     iput-wide p4, v2, Landroid/hardware/TriggerEvent;->timestamp:J
 
-    .line 551
     iput-object v1, v2, Landroid/hardware/TriggerEvent;->sensor:Landroid/hardware/Sensor;
 
-    .line 555
     iget-object v3, p0, Landroid/hardware/SystemSensorManager$TriggerEventQueue;->mManager:Landroid/hardware/SystemSensorManager;
 
     iget-object v4, p0, Landroid/hardware/SystemSensorManager$TriggerEventQueue;->mListener:Landroid/hardware/TriggerEventListener;
 
     invoke-virtual {v3, v4, v1, v5}, Landroid/hardware/SystemSensorManager;->cancelTriggerSensorImpl(Landroid/hardware/TriggerEventListener;Landroid/hardware/Sensor;Z)Z
 
-    .line 557
     iget-object v3, p0, Landroid/hardware/SystemSensorManager$TriggerEventQueue;->mListener:Landroid/hardware/TriggerEventListener;
 
     invoke-virtual {v3, v2}, Landroid/hardware/TriggerEventListener;->onTrigger(Landroid/hardware/TriggerEvent;)V
@@ -252,12 +227,10 @@
     .param p1, "sensor"    # Landroid/hardware/Sensor;
 
     .prologue
-    .line 528
     iget-object v1, p0, Landroid/hardware/SystemSensorManager$TriggerEventQueue;->mTriggerEvents:Landroid/util/SparseArray;
 
     monitor-enter v1
 
-    .line 529
     :try_start_0
     iget-object v0, p0, Landroid/hardware/SystemSensorManager$TriggerEventQueue;->mTriggerEvents:Landroid/util/SparseArray;
 
@@ -267,13 +240,10 @@
 
     invoke-virtual {v0, v2}, Landroid/util/SparseArray;->delete(I)V
 
-    .line 530
     monitor-exit v1
 
-    .line 531
     return-void
 
-    .line 530
     :catchall_0
     move-exception v0
 

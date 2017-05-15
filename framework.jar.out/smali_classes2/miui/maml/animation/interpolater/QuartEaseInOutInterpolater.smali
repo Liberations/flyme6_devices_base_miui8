@@ -11,7 +11,6 @@
     .locals 0
 
     .prologue
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -26,7 +25,6 @@
     .prologue
     const/high16 v2, 0x40000000    # 2.0f
 
-    .line 8
     mul-float/2addr p1, v2
 
     const/high16 v0, 0x3f800000    # 1.0f
@@ -35,7 +33,6 @@
 
     if-gez v0, :cond_0
 
-    .line 9
     const/high16 v0, 0x3f000000    # 0.5f
 
     mul-float/2addr v0, p1
@@ -46,7 +43,6 @@
 
     mul-float/2addr v0, p1
 
-    .line 10
     :goto_0
     return v0
 

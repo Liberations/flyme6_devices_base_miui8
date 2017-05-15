@@ -70,7 +70,6 @@
 
     const/4 v3, 0x0
 
-    .line 18
     new-instance v0, Lmiui/maml/data/StringFunctions$Fun;
 
     const-string v1, "INVALID"
@@ -79,7 +78,6 @@
 
     sput-object v0, Lmiui/maml/data/StringFunctions$Fun;->INVALID:Lmiui/maml/data/StringFunctions$Fun;
 
-    .line 20
     new-instance v0, Lmiui/maml/data/StringFunctions$Fun;
 
     const-string v1, "STR_TOLOWER"
@@ -88,7 +86,6 @@
 
     sput-object v0, Lmiui/maml/data/StringFunctions$Fun;->STR_TOLOWER:Lmiui/maml/data/StringFunctions$Fun;
 
-    .line 21
     new-instance v0, Lmiui/maml/data/StringFunctions$Fun;
 
     const-string v1, "STR_TOUPPER"
@@ -97,7 +94,6 @@
 
     sput-object v0, Lmiui/maml/data/StringFunctions$Fun;->STR_TOUPPER:Lmiui/maml/data/StringFunctions$Fun;
 
-    .line 22
     new-instance v0, Lmiui/maml/data/StringFunctions$Fun;
 
     const-string v1, "STR_TRIM"
@@ -106,7 +102,6 @@
 
     sput-object v0, Lmiui/maml/data/StringFunctions$Fun;->STR_TRIM:Lmiui/maml/data/StringFunctions$Fun;
 
-    .line 23
     new-instance v0, Lmiui/maml/data/StringFunctions$Fun;
 
     const-string v1, "STR_REPLACE"
@@ -115,7 +110,6 @@
 
     sput-object v0, Lmiui/maml/data/StringFunctions$Fun;->STR_REPLACE:Lmiui/maml/data/StringFunctions$Fun;
 
-    .line 24
     new-instance v0, Lmiui/maml/data/StringFunctions$Fun;
 
     const-string v1, "STR_REPLACEALL"
@@ -126,7 +120,6 @@
 
     sput-object v0, Lmiui/maml/data/StringFunctions$Fun;->STR_REPLACEALL:Lmiui/maml/data/StringFunctions$Fun;
 
-    .line 25
     new-instance v0, Lmiui/maml/data/StringFunctions$Fun;
 
     const-string v1, "STR_REPLACEFIRST"
@@ -137,7 +130,6 @@
 
     sput-object v0, Lmiui/maml/data/StringFunctions$Fun;->STR_REPLACEFIRST:Lmiui/maml/data/StringFunctions$Fun;
 
-    .line 27
     new-instance v0, Lmiui/maml/data/StringFunctions$Fun;
 
     const-string v1, "STR_CONTAINS"
@@ -148,7 +140,6 @@
 
     sput-object v0, Lmiui/maml/data/StringFunctions$Fun;->STR_CONTAINS:Lmiui/maml/data/StringFunctions$Fun;
 
-    .line 28
     new-instance v0, Lmiui/maml/data/StringFunctions$Fun;
 
     const-string v1, "STR_STARTWITH"
@@ -159,7 +150,6 @@
 
     sput-object v0, Lmiui/maml/data/StringFunctions$Fun;->STR_STARTWITH:Lmiui/maml/data/StringFunctions$Fun;
 
-    .line 29
     new-instance v0, Lmiui/maml/data/StringFunctions$Fun;
 
     const-string v1, "STR_ENDSWITH"
@@ -170,7 +160,6 @@
 
     sput-object v0, Lmiui/maml/data/StringFunctions$Fun;->STR_ENDSWITH:Lmiui/maml/data/StringFunctions$Fun;
 
-    .line 30
     new-instance v0, Lmiui/maml/data/StringFunctions$Fun;
 
     const-string v1, "STR_ISEMPTY"
@@ -181,7 +170,6 @@
 
     sput-object v0, Lmiui/maml/data/StringFunctions$Fun;->STR_ISEMPTY:Lmiui/maml/data/StringFunctions$Fun;
 
-    .line 31
     new-instance v0, Lmiui/maml/data/StringFunctions$Fun;
 
     const-string v1, "STR_MATCHES"
@@ -192,7 +180,6 @@
 
     sput-object v0, Lmiui/maml/data/StringFunctions$Fun;->STR_MATCHES:Lmiui/maml/data/StringFunctions$Fun;
 
-    .line 32
     new-instance v0, Lmiui/maml/data/StringFunctions$Fun;
 
     const-string v1, "STR_INDEXOF"
@@ -203,7 +190,6 @@
 
     sput-object v0, Lmiui/maml/data/StringFunctions$Fun;->STR_INDEXOF:Lmiui/maml/data/StringFunctions$Fun;
 
-    .line 33
     new-instance v0, Lmiui/maml/data/StringFunctions$Fun;
 
     const-string v1, "STR_LASTINDEXOF"
@@ -214,7 +200,6 @@
 
     sput-object v0, Lmiui/maml/data/StringFunctions$Fun;->STR_LASTINDEXOF:Lmiui/maml/data/StringFunctions$Fun;
 
-    .line 17
     const/16 v0, 0xe
 
     new-array v0, v0, [Lmiui/maml/data/StringFunctions$Fun;
@@ -307,7 +292,6 @@
     .end annotation
 
     .prologue
-    .line 17
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -318,7 +302,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 17
     const-class v0, Lmiui/maml/data/StringFunctions$Fun;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -334,7 +317,6 @@
     .locals 1
 
     .prologue
-    .line 17
     sget-object v0, Lmiui/maml/data/StringFunctions$Fun;->$VALUES:[Lmiui/maml/data/StringFunctions$Fun;
 
     invoke-virtual {v0}, [Lmiui/maml/data/StringFunctions$Fun;->clone()Ljava/lang/Object;

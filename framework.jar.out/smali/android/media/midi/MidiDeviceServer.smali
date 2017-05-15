@@ -81,74 +81,60 @@
     .param p4, "callback"    # Landroid/media/midi/MidiDeviceServer$Callback;
 
     .prologue
-    .line 294
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 63
     new-instance v1, Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-direct {v1}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
 
     iput-object v1, p0, Landroid/media/midi/MidiDeviceServer;->mInputPorts:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    .line 71
     invoke-static {}, Ldalvik/system/CloseGuard;->get()Ldalvik/system/CloseGuard;
 
     move-result-object v1
 
     iput-object v1, p0, Landroid/media/midi/MidiDeviceServer;->mGuard:Ldalvik/system/CloseGuard;
 
-    .line 157
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     iput-object v1, p0, Landroid/media/midi/MidiDeviceServer;->mPortClients:Ljava/util/HashMap;
 
-    .line 160
     new-instance v1, Landroid/media/midi/MidiDeviceServer$1;
 
     invoke-direct {v1, p0}, Landroid/media/midi/MidiDeviceServer$1;-><init>(Landroid/media/midi/MidiDeviceServer;)V
 
     iput-object v1, p0, Landroid/media/midi/MidiDeviceServer;->mServer:Landroid/media/midi/IMidiDeviceServer;
 
-    .line 295
     iput-object p1, p0, Landroid/media/midi/MidiDeviceServer;->mMidiManager:Landroid/media/midi/IMidiManager;
 
-    .line 296
     iput-object p2, p0, Landroid/media/midi/MidiDeviceServer;->mInputPortReceivers:[Landroid/media/midi/MidiReceiver;
 
-    .line 297
     array-length v1, p2
 
     iput v1, p0, Landroid/media/midi/MidiDeviceServer;->mInputPortCount:I
 
-    .line 298
     iput p3, p0, Landroid/media/midi/MidiDeviceServer;->mOutputPortCount:I
 
-    .line 299
     iput-object p4, p0, Landroid/media/midi/MidiDeviceServer;->mCallback:Landroid/media/midi/MidiDeviceServer$Callback;
 
-    .line 301
     iget v1, p0, Landroid/media/midi/MidiDeviceServer;->mInputPortCount:I
 
     new-array v1, v1, [Landroid/media/midi/MidiOutputPort;
 
     iput-object v1, p0, Landroid/media/midi/MidiDeviceServer;->mInputPortOutputPorts:[Landroid/media/midi/MidiOutputPort;
 
-    .line 303
     new-array v1, p3, [Lcom/android/internal/midi/MidiDispatcher;
 
     iput-object v1, p0, Landroid/media/midi/MidiDeviceServer;->mOutputPortDispatchers:[Lcom/android/internal/midi/MidiDispatcher;
 
-    .line 304
     const/4 v0, 0x0
 
     .local v0, "i":I
     :goto_0
     if-ge v0, p3, :cond_0
 
-    .line 305
     iget-object v1, p0, Landroid/media/midi/MidiDeviceServer;->mOutputPortDispatchers:[Lcom/android/internal/midi/MidiDispatcher;
 
     new-instance v2, Lcom/android/internal/midi/MidiDispatcher;
@@ -157,12 +143,10 @@
 
     aput-object v2, v1, v0
 
-    .line 304
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 308
     :cond_0
     iget v1, p0, Landroid/media/midi/MidiDeviceServer;->mInputPortCount:I
 
@@ -170,19 +154,16 @@
 
     iput-object v1, p0, Landroid/media/midi/MidiDeviceServer;->mInputPortOpen:[Z
 
-    .line 309
     new-array v1, p3, [I
 
     iput-object v1, p0, Landroid/media/midi/MidiDeviceServer;->mOutputPortOpenCount:[I
 
-    .line 311
     iget-object v1, p0, Landroid/media/midi/MidiDeviceServer;->mGuard:Ldalvik/system/CloseGuard;
 
     const-string v2, "close"
 
     invoke-virtual {v1, v2}, Ldalvik/system/CloseGuard;->open(Ljava/lang/String;)V
 
-    .line 312
     return-void
 .end method
 
@@ -194,17 +175,14 @@
     .param p4, "callback"    # Landroid/media/midi/MidiDeviceServer$Callback;
 
     .prologue
-    .line 317
     invoke-virtual {p3}, Landroid/media/midi/MidiDeviceInfo;->getOutputPortCount()I
 
     move-result v0
 
     invoke-direct {p0, p1, p2, v0, p4}, Landroid/media/midi/MidiDeviceServer;-><init>(Landroid/media/midi/IMidiManager;[Landroid/media/midi/MidiReceiver;ILandroid/media/midi/MidiDeviceServer$Callback;)V
 
-    .line 318
     iput-object p3, p0, Landroid/media/midi/MidiDeviceServer;->mDeviceInfo:Landroid/media/midi/MidiDeviceInfo;
 
-    .line 319
     return-void
 .end method
 
@@ -213,7 +191,6 @@
     .param p0, "x0"    # Landroid/media/midi/MidiDeviceServer;
 
     .prologue
-    .line 43
     iget-object v0, p0, Landroid/media/midi/MidiDeviceServer;->mInputPortOutputPorts:[Landroid/media/midi/MidiOutputPort;
 
     return-object v0
@@ -224,7 +201,6 @@
     .param p0, "x0"    # Landroid/media/midi/MidiDeviceServer;
 
     .prologue
-    .line 43
     iget-object v0, p0, Landroid/media/midi/MidiDeviceServer;->mInputPortOpen:[Z
 
     return-object v0
@@ -235,7 +211,6 @@
     .param p0, "x0"    # Landroid/media/midi/MidiDeviceServer;
 
     .prologue
-    .line 43
     iget v0, p0, Landroid/media/midi/MidiDeviceServer;->mOutputPortCount:I
 
     return v0
@@ -246,7 +221,6 @@
     .param p0, "x0"    # Landroid/media/midi/MidiDeviceServer;
 
     .prologue
-    .line 43
     iget-object v0, p0, Landroid/media/midi/MidiDeviceServer;->mCallback:Landroid/media/midi/MidiDeviceServer$Callback;
 
     return-object v0
@@ -257,7 +231,6 @@
     .param p0, "x0"    # Landroid/media/midi/MidiDeviceServer;
 
     .prologue
-    .line 43
     invoke-direct {p0}, Landroid/media/midi/MidiDeviceServer;->updateDeviceStatus()V
 
     return-void
@@ -268,7 +241,6 @@
     .param p0, "x0"    # Landroid/media/midi/MidiDeviceServer;
 
     .prologue
-    .line 43
     iget-object v0, p0, Landroid/media/midi/MidiDeviceServer;->mOutputPortDispatchers:[Lcom/android/internal/midi/MidiDispatcher;
 
     return-object v0
@@ -279,7 +251,6 @@
     .param p0, "x0"    # Landroid/media/midi/MidiDeviceServer;
 
     .prologue
-    .line 43
     iget-object v0, p0, Landroid/media/midi/MidiDeviceServer;->mOutputPortOpenCount:[I
 
     return-object v0
@@ -290,7 +261,6 @@
     .param p0, "x0"    # Landroid/media/midi/MidiDeviceServer;
 
     .prologue
-    .line 43
     iget-object v0, p0, Landroid/media/midi/MidiDeviceServer;->mInputPorts:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     return-object v0
@@ -301,7 +271,6 @@
     .param p0, "x0"    # Landroid/media/midi/MidiDeviceServer;
 
     .prologue
-    .line 43
     iget-object v0, p0, Landroid/media/midi/MidiDeviceServer;->mDeviceInfo:Landroid/media/midi/MidiDeviceInfo;
 
     return-object v0
@@ -313,7 +282,6 @@
     .param p1, "x1"    # Landroid/media/midi/MidiDeviceInfo;
 
     .prologue
-    .line 43
     iput-object p1, p0, Landroid/media/midi/MidiDeviceServer;->mDeviceInfo:Landroid/media/midi/MidiDeviceInfo;
 
     return-object p1
@@ -324,7 +292,6 @@
     .param p0, "x0"    # Landroid/media/midi/MidiDeviceServer;
 
     .prologue
-    .line 43
     iget v0, p0, Landroid/media/midi/MidiDeviceServer;->mInputPortCount:I
 
     return v0
@@ -335,7 +302,6 @@
     .param p0, "x0"    # Landroid/media/midi/MidiDeviceServer;
 
     .prologue
-    .line 43
     iget-object v0, p0, Landroid/media/midi/MidiDeviceServer;->mInputPortReceivers:[Landroid/media/midi/MidiReceiver;
 
     return-object v0
@@ -346,7 +312,6 @@
     .param p0, "x0"    # Landroid/media/midi/MidiDeviceServer;
 
     .prologue
-    .line 43
     iget-object v0, p0, Landroid/media/midi/MidiDeviceServer;->mPortClients:Ljava/util/HashMap;
 
     return-object v0
@@ -356,12 +321,10 @@
     .locals 7
 
     .prologue
-    .line 331
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 333
     .local v2, "identityToken":J
     new-instance v1, Landroid/media/midi/MidiDeviceStatus;
 
@@ -373,18 +336,15 @@
 
     invoke-direct {v1, v4, v5, v6}, Landroid/media/midi/MidiDeviceStatus;-><init>(Landroid/media/midi/MidiDeviceInfo;[Z[I)V
 
-    .line 335
     .local v1, "status":Landroid/media/midi/MidiDeviceStatus;
     iget-object v4, p0, Landroid/media/midi/MidiDeviceServer;->mCallback:Landroid/media/midi/MidiDeviceServer$Callback;
 
     if-eqz v4, :cond_0
 
-    .line 336
     iget-object v4, p0, Landroid/media/midi/MidiDeviceServer;->mCallback:Landroid/media/midi/MidiDeviceServer$Callback;
 
     invoke-interface {v4, p0, v1}, Landroid/media/midi/MidiDeviceServer$Callback;->onDeviceStatusChanged(Landroid/media/midi/MidiDeviceServer;Landroid/media/midi/MidiDeviceStatus;)V
 
-    .line 339
     :cond_0
     :try_start_0
     iget-object v4, p0, Landroid/media/midi/MidiDeviceServer;->mMidiManager:Landroid/media/midi/IMidiManager;
@@ -396,18 +356,14 @@
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 343
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 345
     :goto_0
     return-void
 
-    .line 340
     :catch_0
     move-exception v0
 
-    .line 341
     .local v0, "e":Landroid/os/RemoteException;
     :try_start_1
     const-string v4, "MidiDeviceServer"
@@ -418,7 +374,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 343
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
@@ -438,7 +393,6 @@
     .locals 1
 
     .prologue
-    .line 326
     iget-object v0, p0, Landroid/media/midi/MidiDeviceServer;->mServer:Landroid/media/midi/IMidiDeviceServer;
 
     invoke-interface {v0}, Landroid/media/midi/IMidiDeviceServer;->asBinder()Landroid/os/IBinder;
@@ -457,12 +411,10 @@
     .end annotation
 
     .prologue
-    .line 349
     iget-object v6, p0, Landroid/media/midi/MidiDeviceServer;->mGuard:Ldalvik/system/CloseGuard;
 
     monitor-enter v6
 
-    .line 350
     :try_start_0
     iget-boolean v5, p0, Landroid/media/midi/MidiDeviceServer;->mIsClosed:Z
 
@@ -470,17 +422,14 @@
 
     monitor-exit v6
 
-    .line 371
     :goto_0
     return-void
 
-    .line 351
     :cond_0
     iget-object v5, p0, Landroid/media/midi/MidiDeviceServer;->mGuard:Ldalvik/system/CloseGuard;
 
     invoke-virtual {v5}, Ldalvik/system/CloseGuard;->close()V
 
-    .line 353
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -489,32 +438,26 @@
 
     if-ge v1, v5, :cond_2
 
-    .line 354
     iget-object v5, p0, Landroid/media/midi/MidiDeviceServer;->mInputPortOutputPorts:[Landroid/media/midi/MidiOutputPort;
 
     aget-object v4, v5, v1
 
-    .line 355
     .local v4, "outputPort":Landroid/media/midi/MidiOutputPort;
     if-eqz v4, :cond_1
 
-    .line 356
     invoke-static {v4}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 357
     iget-object v5, p0, Landroid/media/midi/MidiDeviceServer;->mInputPortOutputPorts:[Landroid/media/midi/MidiOutputPort;
 
     const/4 v7, 0x0
 
     aput-object v7, v5, v1
 
-    .line 353
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 360
     .end local v4    # "outputPort":Landroid/media/midi/MidiOutputPort;
     :cond_2
     iget-object v5, p0, Landroid/media/midi/MidiDeviceServer;->mInputPorts:Ljava/util/concurrent/CopyOnWriteArrayList;
@@ -537,13 +480,11 @@
 
     check-cast v3, Landroid/media/midi/MidiInputPort;
 
-    .line 361
     .local v3, "inputPort":Landroid/media/midi/MidiInputPort;
     invoke-static {v3}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
     goto :goto_2
 
-    .line 370
     .end local v1    # "i":I
     .end local v2    # "i$":Ljava/util/Iterator;
     .end local v3    # "inputPort":Landroid/media/midi/MidiInputPort;
@@ -556,7 +497,6 @@
 
     throw v5
 
-    .line 363
     .restart local v1    # "i":I
     .restart local v2    # "i$":Ljava/util/Iterator;
     :cond_3
@@ -567,7 +507,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 365
     :try_start_2
     iget-object v5, p0, Landroid/media/midi/MidiDeviceServer;->mMidiManager:Landroid/media/midi/IMidiManager;
 
@@ -578,23 +517,19 @@
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 369
     :goto_3
     const/4 v5, 0x1
 
     :try_start_3
     iput-boolean v5, p0, Landroid/media/midi/MidiDeviceServer;->mIsClosed:Z
 
-    .line 370
     monitor-exit v6
 
     goto :goto_0
 
-    .line 366
     :catch_0
     move-exception v0
 
-    .line 367
     .local v0, "e":Landroid/os/RemoteException;
     const-string v5, "MidiDeviceServer"
 
@@ -616,24 +551,19 @@
     .end annotation
 
     .prologue
-    .line 376
     :try_start_0
     iget-object v0, p0, Landroid/media/midi/MidiDeviceServer;->mGuard:Ldalvik/system/CloseGuard;
 
     invoke-virtual {v0}, Ldalvik/system/CloseGuard;->warnIfOpen()V
 
-    .line 377
     invoke-virtual {p0}, Landroid/media/midi/MidiDeviceServer;->close()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 379
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    .line 381
     return-void
 
-    .line 379
     :catchall_0
     move-exception v0
 
@@ -646,7 +576,6 @@
     .locals 1
 
     .prologue
-    .line 322
     iget-object v0, p0, Landroid/media/midi/MidiDeviceServer;->mServer:Landroid/media/midi/IMidiDeviceServer;
 
     return-object v0
@@ -658,12 +587,10 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 389
     iget v1, p0, Landroid/media/midi/MidiDeviceServer;->mOutputPortCount:I
 
     new-array v0, v1, [Landroid/media/midi/MidiReceiver;
 
-    .line 390
     .local v0, "receivers":[Landroid/media/midi/MidiReceiver;
     iget-object v1, p0, Landroid/media/midi/MidiDeviceServer;->mOutputPortDispatchers:[Lcom/android/internal/midi/MidiDispatcher;
 
@@ -671,6 +598,5 @@
 
     invoke-static {v1, v3, v0, v3, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 391
     return-object v0
 .end method

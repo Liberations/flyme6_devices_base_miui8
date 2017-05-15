@@ -94,12 +94,10 @@
     .locals 1
 
     .prologue
-    .line 43
     const-string v0, "UserManager"
 
     sput-object v0, Landroid/os/UserManager;->TAG:Ljava/lang/String;
 
-    .line 499
     const/4 v0, 0x0
 
     sput-object v0, Landroid/os/UserManager;->sInstance:Landroid/os/UserManager;
@@ -113,16 +111,12 @@
     .param p2, "service"    # Landroid/os/IUserManager;
 
     .prologue
-    .line 510
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 511
     iput-object p2, p0, Landroid/os/UserManager;->mService:Landroid/os/IUserManager;
 
-    .line 512
     iput-object p1, p0, Landroid/os/UserManager;->mContext:Landroid/content/Context;
 
-    .line 513
     return-void
 .end method
 
@@ -133,17 +127,14 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 893
-    const-string/jumbo v0, "no_outgoing_calls"
+    const-string v0, "no_outgoing_calls"
 
     invoke-virtual {p0, v0, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 894
-    const-string/jumbo v0, "no_sms"
+    const-string v0, "no_sms"
 
     invoke-virtual {p0, v0, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 895
     return-void
 .end method
 
@@ -152,7 +143,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 503
     const-class v1, Landroid/os/UserManager;
 
     monitor-enter v1
@@ -162,8 +152,7 @@
 
     if-nez v0, :cond_0
 
-    .line 504
-    const-string/jumbo v0, "user"
+    const-string v0, "user"
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -173,7 +162,6 @@
 
     sput-object v0, Landroid/os/UserManager;->sInstance:Landroid/os/UserManager;
 
-    .line 506
     :cond_0
     sget-object v0, Landroid/os/UserManager;->sInstance:Landroid/os/UserManager;
     :try_end_0
@@ -183,7 +171,6 @@
 
     return-object v0
 
-    .line 503
     :catchall_0
     move-exception v0
 
@@ -198,7 +185,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 1267
     sget-object v1, Landroid/os/Build;->ID:Ljava/lang/String;
 
     const-string v2, "JVP"
@@ -209,12 +195,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 1270
     :cond_0
     :goto_0
     return v0
 
-    .line 1269
     :cond_1
     invoke-static {}, Landroid/app/ActivityManager;->isLowRamDeviceStatic()Z
 
@@ -222,7 +206,6 @@
 
     if-nez v1, :cond_0
 
-    .line 1270
     const-string v0, "fw.max_users"
 
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
@@ -248,7 +231,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 521
     invoke-static {}, Landroid/os/UserManager;->getMaxSupportedUsers()I
 
     move-result v1
@@ -288,7 +270,6 @@
     .locals 3
 
     .prologue
-    .line 1002
     :try_start_0
     iget-object v1, p0, Landroid/os/UserManager;->mService:Landroid/os/IUserManager;
 
@@ -298,15 +279,12 @@
 
     move-result v1
 
-    .line 1005
     :goto_0
     return v1
 
-    .line 1003
     :catch_0
     move-exception v0
 
-    .line 1004
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/UserManager;->TAG:Ljava/lang/String;
 
@@ -314,7 +292,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1005
     const/4 v1, 0x0
 
     goto :goto_0
@@ -326,22 +303,18 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 981
     invoke-virtual {p0, v5}, Landroid/os/UserManager;->getUsers(Z)Ljava/util/List;
 
     move-result-object v4
 
-    .line 982
     .local v4, "users":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     invoke-interface {v4}, Ljava/util/List;->size()I
 
     move-result v2
 
-    .line 983
     .local v2, "totalUserCount":I
     const/4 v0, 0x0
 
-    .line 984
     .local v0, "aliveUserCount":I
     const/4 v1, 0x0
 
@@ -349,14 +322,12 @@
     :goto_0
     if-ge v1, v2, :cond_1
 
-    .line 985
     invoke-interface {v4, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Landroid/content/pm/UserInfo;
 
-    .line 986
     .local v3, "user":Landroid/content/pm/UserInfo;
     invoke-virtual {v3}, Landroid/content/pm/UserInfo;->isGuest()Z
 
@@ -364,16 +335,13 @@
 
     if-nez v6, :cond_0
 
-    .line 987
     add-int/lit8 v0, v0, 0x1
 
-    .line 984
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 990
     .end local v3    # "user":Landroid/content/pm/UserInfo;
     :cond_1
     invoke-static {}, Landroid/os/UserManager;->getMaxSupportedUsers()I
@@ -397,23 +365,20 @@
     .param p2, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 848
     const/4 v3, 0x4
 
     invoke-virtual {p0, p2, v3}, Landroid/os/UserManager;->createUser(Ljava/lang/String;I)Landroid/content/pm/UserInfo;
 
     move-result-object v0
 
-    .line 849
     .local v0, "guest":Landroid/content/pm/UserInfo;
     if-eqz v0, :cond_0
 
-    .line 850
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
-    const-string/jumbo v4, "skip_first_use_hints"
+    const-string v4, "skip_first_use_hints"
 
     const-string v5, "1"
 
@@ -421,7 +386,6 @@
 
     invoke-static {v3, v4, v5, v6}, Landroid/provider/Settings$Secure;->putStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)Z
 
-    .line 853
     :try_start_0
     iget-object v3, p0, Landroid/os/UserManager;->mService:Landroid/os/IUserManager;
 
@@ -429,22 +393,19 @@
 
     move-result-object v1
 
-    .line 854
     .local v1, "guestRestrictions":Landroid/os/Bundle;
-    const-string/jumbo v3, "no_sms"
+    const-string v3, "no_sms"
 
     const/4 v4, 0x1
 
     invoke-virtual {v1, v3, v4}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 855
-    const-string/jumbo v3, "no_install_unknown_sources"
+    const-string v3, "no_install_unknown_sources"
 
     const/4 v4, 0x1
 
     invoke-virtual {v1, v3, v4}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 856
     iget-object v3, p0, Landroid/os/UserManager;->mService:Landroid/os/IUserManager;
 
     iget v4, v0, Landroid/content/pm/UserInfo;->id:I
@@ -453,17 +414,14 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 861
     .end local v1    # "guestRestrictions":Landroid/os/Bundle;
     :cond_0
     :goto_0
     return-object v0
 
-    .line 857
     :catch_0
     move-exception v2
 
-    .line 858
     .local v2, "re":Landroid/os/RemoteException;
     sget-object v3, Landroid/os/UserManager;->TAG:Ljava/lang/String;
 
@@ -481,7 +439,6 @@
     .param p3, "userHandle"    # I
 
     .prologue
-    .line 911
     :try_start_0
     iget-object v1, p0, Landroid/os/UserManager;->mService:Landroid/os/IUserManager;
 
@@ -491,15 +448,12 @@
 
     move-result-object v1
 
-    .line 914
     :goto_0
     return-object v1
 
-    .line 912
     :catch_0
     move-exception v0
 
-    .line 913
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/UserManager;->TAG:Ljava/lang/String;
 
@@ -507,7 +461,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 914
     const/4 v1, 0x0
 
     goto :goto_0
@@ -521,7 +474,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 878
     :try_start_0
     iget-object v4, p0, Landroid/os/UserManager;->mService:Landroid/os/IUserManager;
 
@@ -529,18 +481,15 @@
 
     move-result-object v1
 
-    .line 879
     .local v1, "user":Landroid/content/pm/UserInfo;
     if-nez v1, :cond_0
 
     move-object v1, v3
 
-    .line 888
     .end local v1    # "user":Landroid/content/pm/UserInfo;
     :goto_0
     return-object v1
 
-    .line 882
     .restart local v1    # "user":Landroid/content/pm/UserInfo;
     :cond_0
     iget-object v4, p0, Landroid/os/UserManager;->mService:Landroid/os/IUserManager;
@@ -551,11 +500,9 @@
 
     move-result-object v2
 
-    .line 883
     .local v2, "userRestrictions":Landroid/os/Bundle;
     invoke-static {v2}, Landroid/os/UserManager;->addDefaultUserRestrictions(Landroid/os/Bundle;)V
 
-    .line 884
     iget-object v4, p0, Landroid/os/UserManager;->mService:Landroid/os/IUserManager;
 
     iget v5, v1, Landroid/content/pm/UserInfo;->id:I
@@ -566,13 +513,11 @@
 
     goto :goto_0
 
-    .line 886
     .end local v1    # "user":Landroid/content/pm/UserInfo;
     .end local v2    # "userRestrictions":Landroid/os/Bundle;
     :catch_0
     move-exception v0
 
-    .line 887
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v4, Landroid/os/UserManager;->TAG:Ljava/lang/String;
 
@@ -582,7 +527,6 @@
 
     move-object v1, v3
 
-    .line 888
     goto :goto_0
 .end method
 
@@ -592,7 +536,6 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 834
     :try_start_0
     iget-object v1, p0, Landroid/os/UserManager;->mService:Landroid/os/IUserManager;
 
@@ -602,15 +545,12 @@
 
     move-result-object v1
 
-    .line 837
     :goto_0
     return-object v1
 
-    .line 835
     :catch_0
     move-exception v0
 
-    .line 836
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/UserManager;->TAG:Ljava/lang/String;
 
@@ -618,7 +558,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 837
     const/4 v1, 0x0
 
     goto :goto_0
@@ -629,7 +568,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 1340
     :try_start_0
     iget-object v1, p0, Landroid/os/UserManager;->mService:Landroid/os/IUserManager;
 
@@ -639,15 +577,12 @@
 
     move-result-object v1
 
-    .line 1344
     :goto_0
     return-object v1
 
-    .line 1341
     :catch_0
     move-exception v0
 
-    .line 1342
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/UserManager;->TAG:Ljava/lang/String;
 
@@ -671,7 +606,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1344
     const/4 v1, 0x0
 
     goto :goto_0
@@ -683,7 +617,6 @@
     .param p2, "user"    # Landroid/os/UserHandle;
 
     .prologue
-    .line 1352
     :try_start_0
     iget-object v1, p0, Landroid/os/UserManager;->mService:Landroid/os/IUserManager;
 
@@ -697,15 +630,12 @@
 
     move-result-object v1
 
-    .line 1356
     :goto_0
     return-object v1
 
-    .line 1353
     :catch_0
     move-exception v0
 
-    .line 1354
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/UserManager;->TAG:Ljava/lang/String;
 
@@ -733,7 +663,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1356
     const/4 v1, 0x0
 
     goto :goto_0
@@ -747,7 +676,6 @@
     .param p4, "badgeDensity"    # I
 
     .prologue
-    .line 1150
     iget-object v0, p0, Landroid/os/UserManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -767,7 +695,6 @@
     .param p2, "user"    # Landroid/os/UserHandle;
 
     .prologue
-    .line 1120
     iget-object v0, p0, Landroid/os/UserManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -787,7 +714,6 @@
     .param p2, "user"    # Landroid/os/UserHandle;
 
     .prologue
-    .line 1167
     iget-object v0, p0, Landroid/os/UserManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -806,7 +732,6 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 1079
     :try_start_0
     iget-object v1, p0, Landroid/os/UserManager;->mService:Landroid/os/IUserManager;
 
@@ -816,15 +741,12 @@
 
     move-result v1
 
-    .line 1082
     :goto_0
     return v1
 
-    .line 1080
     :catch_0
     move-exception v0
 
-    .line 1081
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/UserManager;->TAG:Ljava/lang/String;
 
@@ -832,7 +754,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1082
     const/4 v1, -0x1
 
     goto :goto_0
@@ -842,7 +763,6 @@
     .locals 3
 
     .prologue
-    .line 1410
     :try_start_0
     iget-object v1, p0, Landroid/os/UserManager;->mService:Landroid/os/IUserManager;
 
@@ -852,15 +772,12 @@
 
     move-result-object v1
 
-    .line 1414
     :goto_0
     return-object v1
 
-    .line 1411
     :catch_0
     move-exception v0
 
-    .line 1412
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/UserManager;->TAG:Ljava/lang/String;
 
@@ -868,7 +785,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1414
     new-instance v1, Landroid/os/Bundle;
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
@@ -890,7 +806,6 @@
     .end annotation
 
     .prologue
-    .line 1041
     :try_start_0
     iget-object v1, p0, Landroid/os/UserManager;->mService:Landroid/os/IUserManager;
 
@@ -902,15 +817,12 @@
 
     move-result-object v1
 
-    .line 1044
     :goto_0
     return-object v1
 
-    .line 1042
     :catch_0
     move-exception v0
 
-    .line 1043
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/UserManager;->TAG:Ljava/lang/String;
 
@@ -918,7 +830,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1044
     const/4 v1, 0x0
 
     goto :goto_0
@@ -929,7 +840,6 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 1094
     :try_start_0
     iget-object v1, p0, Landroid/os/UserManager;->mService:Landroid/os/IUserManager;
 
@@ -939,15 +849,12 @@
 
     move-result-object v1
 
-    .line 1097
     :goto_0
     return-object v1
 
-    .line 1095
     :catch_0
     move-exception v0
 
-    .line 1096
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/UserManager;->TAG:Ljava/lang/String;
 
@@ -955,7 +862,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1097
     const/4 v1, 0x0
 
     goto :goto_0
@@ -975,7 +881,6 @@
     .end annotation
 
     .prologue
-    .line 1022
     :try_start_0
     iget-object v1, p0, Landroid/os/UserManager;->mService:Landroid/os/IUserManager;
 
@@ -987,15 +892,12 @@
 
     move-result-object v1
 
-    .line 1025
     :goto_0
     return-object v1
 
-    .line 1023
     :catch_0
     move-exception v0
 
-    .line 1024
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/UserManager;->TAG:Ljava/lang/String;
 
@@ -1003,7 +905,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1025
     const/4 v1, 0x0
 
     goto :goto_0
@@ -1014,7 +915,6 @@
     .param p1, "user"    # Landroid/os/UserHandle;
 
     .prologue
-    .line 804
     invoke-virtual {p1}, Landroid/os/UserHandle;->getIdentifier()I
 
     move-result v0
@@ -1032,12 +932,10 @@
     .locals 2
 
     .prologue
-    .line 954
     invoke-virtual {p0}, Landroid/os/UserManager;->getUsers()Ljava/util/List;
 
     move-result-object v0
 
-    .line 955
     .local v0, "users":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     if-eqz v0, :cond_0
 
@@ -1059,7 +957,6 @@
     .param p1, "userHandle"    # Landroid/os/UserHandle;
 
     .prologue
-    .line 1425
     :try_start_0
     iget-object v1, p0, Landroid/os/UserManager;->mService:Landroid/os/IUserManager;
 
@@ -1073,15 +970,12 @@
 
     move-result-wide v2
 
-    .line 1428
     :goto_0
     return-wide v2
 
-    .line 1426
     :catch_0
     move-exception v0
 
-    .line 1427
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/UserManager;->TAG:Ljava/lang/String;
 
@@ -1089,7 +983,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1428
     const-wide/16 v2, 0x0
 
     goto :goto_0
@@ -1100,14 +993,12 @@
     .param p1, "serialNumber"    # J
 
     .prologue
-    .line 817
     long-to-int v1, p1
 
     invoke-virtual {p0, v1}, Landroid/os/UserManager;->getUserHandle(I)I
 
     move-result v0
 
-    .line 818
     .local v0, "ident":I
     if-ltz v0, :cond_0
 
@@ -1128,7 +1019,6 @@
     .locals 1
 
     .prologue
-    .line 533
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v0
@@ -1141,7 +1031,6 @@
     .param p1, "userSerialNumber"    # I
 
     .prologue
-    .line 1323
     :try_start_0
     iget-object v1, p0, Landroid/os/UserManager;->mService:Landroid/os/IUserManager;
 
@@ -1151,15 +1040,12 @@
 
     move-result v1
 
-    .line 1327
     :goto_0
     return v1
 
-    .line 1324
     :catch_0
     move-exception v0
 
-    .line 1325
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/UserManager;->TAG:Ljava/lang/String;
 
@@ -1183,7 +1069,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1327
     const/4 v1, -0x1
 
     goto :goto_0
@@ -1194,7 +1079,6 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 1242
     :try_start_0
     iget-object v2, p0, Landroid/os/UserManager;->mService:Landroid/os/IUserManager;
 
@@ -1204,11 +1088,9 @@
 
     move-result-object v0
 
-    .line 1243
     .local v0, "fd":Landroid/os/ParcelFileDescriptor;
     if-eqz v0, :cond_0
 
-    .line 1245
     :try_start_1
     invoke-virtual {v0}, Landroid/os/ParcelFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
 
@@ -1220,43 +1102,36 @@
 
     move-result-object v2
 
-    .line 1248
     :try_start_2
     invoke-virtual {v0}, Landroid/os/ParcelFileDescriptor;->close()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 1256
     .end local v0    # "fd":Landroid/os/ParcelFileDescriptor;
     :goto_0
     return-object v2
 
-    .line 1247
     .restart local v0    # "fd":Landroid/os/ParcelFileDescriptor;
     :catchall_0
     move-exception v2
 
-    .line 1248
     :try_start_3
     invoke-virtual {v0}, Landroid/os/ParcelFileDescriptor;->close()V
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_2
     .catch Landroid/os/RemoteException; {:try_start_3 .. :try_end_3} :catch_0
 
-    .line 1250
     :goto_1
     :try_start_4
     throw v2
     :try_end_4
     .catch Landroid/os/RemoteException; {:try_start_4 .. :try_end_4} :catch_0
 
-    .line 1253
     .end local v0    # "fd":Landroid/os/ParcelFileDescriptor;
     :catch_0
     move-exception v1
 
-    .line 1254
     .local v1, "re":Landroid/os/RemoteException;
     sget-object v2, Landroid/os/UserManager;->TAG:Ljava/lang/String;
 
@@ -1264,14 +1139,12 @@
 
     invoke-static {v2, v3, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1256
     .end local v1    # "re":Landroid/os/RemoteException;
     :cond_0
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 1249
     .restart local v0    # "fd":Landroid/os/ParcelFileDescriptor;
     :catch_1
     move-exception v3
@@ -1289,7 +1162,6 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 666
     :try_start_0
     iget-object v1, p0, Landroid/os/UserManager;->mService:Landroid/os/IUserManager;
 
@@ -1299,15 +1171,12 @@
 
     move-result-object v1
 
-    .line 669
     :goto_0
     return-object v1
 
-    .line 667
     :catch_0
     move-exception v0
 
-    .line 668
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/UserManager;->TAG:Ljava/lang/String;
 
@@ -1315,7 +1184,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 669
     const/4 v1, 0x0
 
     goto :goto_0
@@ -1325,7 +1193,6 @@
     .locals 3
 
     .prologue
-    .line 544
     :try_start_0
     iget-object v1, p0, Landroid/os/UserManager;->mService:Landroid/os/IUserManager;
 
@@ -1341,15 +1208,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 547
     :goto_0
     return-object v1
 
-    .line 545
     :catch_0
     move-exception v0
 
-    .line 546
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/UserManager;->TAG:Ljava/lang/String;
 
@@ -1357,7 +1221,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 547
     const-string v1, ""
 
     goto :goto_0
@@ -1376,18 +1239,15 @@
     .end annotation
 
     .prologue
-    .line 1055
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1056
     .local v2, "profiles":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/os/UserHandle;>;"
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1058
     .local v5, "users":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     :try_start_0
     iget-object v6, p0, Landroid/os/UserManager;->mService:Landroid/os/IUserManager;
@@ -1404,7 +1264,6 @@
 
     move-result-object v5
 
-    .line 1063
     invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -1423,7 +1282,6 @@
 
     check-cast v1, Landroid/content/pm/UserInfo;
 
-    .line 1064
     .local v1, "info":Landroid/content/pm/UserInfo;
     new-instance v4, Landroid/os/UserHandle;
 
@@ -1431,20 +1289,17 @@
 
     invoke-direct {v4, v6}, Landroid/os/UserHandle;-><init>(I)V
 
-    .line 1065
     .local v4, "userHandle":Landroid/os/UserHandle;
     invoke-virtual {v2, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 1059
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v1    # "info":Landroid/content/pm/UserInfo;
     .end local v4    # "userHandle":Landroid/os/UserHandle;
     :catch_0
     move-exception v3
 
-    .line 1060
     .local v3, "re":Landroid/os/RemoteException;
     sget-object v6, Landroid/os/UserManager;->TAG:Ljava/lang/String;
 
@@ -1452,10 +1307,8 @@
 
     invoke-static {v6, v7, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1061
     const/4 v2, 0x0
 
-    .line 1067
     .end local v2    # "profiles":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/os/UserHandle;>;"
     .end local v3    # "re":Landroid/os/RemoteException;
     :cond_0
@@ -1466,7 +1319,6 @@
     .locals 1
 
     .prologue
-    .line 678
     invoke-static {}, Landroid/os/Process;->myUserHandle()Landroid/os/UserHandle;
 
     move-result-object v0
@@ -1483,7 +1335,6 @@
     .param p1, "userHandle"    # Landroid/os/UserHandle;
 
     .prologue
-    .line 688
     :try_start_0
     iget-object v1, p0, Landroid/os/UserManager;->mService:Landroid/os/IUserManager;
 
@@ -1497,15 +1348,12 @@
 
     move-result-object v1
 
-    .line 691
     :goto_0
     return-object v1
 
-    .line 689
     :catch_0
     move-exception v0
 
-    .line 690
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/UserManager;->TAG:Ljava/lang/String;
 
@@ -1513,7 +1361,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 691
     sget-object v1, Landroid/os/Bundle;->EMPTY:Landroid/os/Bundle;
 
     goto :goto_0
@@ -1524,7 +1371,6 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 1305
     :try_start_0
     iget-object v1, p0, Landroid/os/UserManager;->mService:Landroid/os/IUserManager;
 
@@ -1534,15 +1380,12 @@
 
     move-result v1
 
-    .line 1309
     :goto_0
     return v1
 
-    .line 1306
     :catch_0
     move-exception v0
 
-    .line 1307
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/UserManager;->TAG:Ljava/lang/String;
 
@@ -1566,7 +1409,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1309
     const/4 v1, -0x1
 
     goto :goto_0
@@ -1585,7 +1427,6 @@
     .end annotation
 
     .prologue
-    .line 966
     :try_start_0
     iget-object v1, p0, Landroid/os/UserManager;->mService:Landroid/os/IUserManager;
 
@@ -1597,15 +1438,12 @@
 
     move-result-object v1
 
-    .line 969
     :goto_0
     return-object v1
 
-    .line 967
     :catch_0
     move-exception v0
 
-    .line 968
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/UserManager;->TAG:Ljava/lang/String;
 
@@ -1613,7 +1451,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 969
     const/4 v1, 0x0
 
     goto :goto_0
@@ -1633,7 +1470,6 @@
     .end annotation
 
     .prologue
-    .line 1181
     :try_start_0
     iget-object v1, p0, Landroid/os/UserManager;->mService:Landroid/os/IUserManager;
 
@@ -1643,15 +1479,12 @@
 
     move-result-object v1
 
-    .line 1184
     :goto_0
     return-object v1
 
-    .line 1182
     :catch_0
     move-exception v0
 
-    .line 1183
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/UserManager;->TAG:Ljava/lang/String;
 
@@ -1659,7 +1492,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1184
     const/4 v1, 0x0
 
     goto :goto_0
@@ -1670,7 +1502,6 @@
     .param p1, "restrictionKey"    # Ljava/lang/String;
 
     .prologue
-    .line 774
     invoke-static {}, Landroid/os/Process;->myUserHandle()Landroid/os/UserHandle;
 
     move-result-object v0
@@ -1688,7 +1519,6 @@
     .param p2, "userHandle"    # Landroid/os/UserHandle;
 
     .prologue
-    .line 786
     :try_start_0
     iget-object v1, p0, Landroid/os/UserManager;->mService:Landroid/os/IUserManager;
 
@@ -1702,15 +1532,12 @@
 
     move-result v1
 
-    .line 790
     :goto_0
     return v1
 
-    .line 788
     :catch_0
     move-exception v0
 
-    .line 789
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/UserManager;->TAG:Ljava/lang/String;
 
@@ -1718,7 +1545,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 790
     const/4 v1, 0x0
 
     goto :goto_0
@@ -1728,7 +1554,6 @@
     .locals 2
 
     .prologue
-    .line 582
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v1
@@ -1737,7 +1562,6 @@
 
     move-result-object v0
 
-    .line 583
     .local v0, "user":Landroid/content/pm/UserInfo;
     if-eqz v0, :cond_0
 
@@ -1758,7 +1582,6 @@
     .locals 2
 
     .prologue
-    .line 607
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v1
@@ -1767,7 +1590,6 @@
 
     move-result-object v0
 
-    .line 608
     .local v0, "user":Landroid/content/pm/UserInfo;
     if-eqz v0, :cond_0
 
@@ -1788,7 +1610,6 @@
     .locals 3
 
     .prologue
-    .line 594
     :try_start_0
     iget-object v1, p0, Landroid/os/UserManager;->mService:Landroid/os/IUserManager;
 
@@ -1798,15 +1619,12 @@
 
     move-result v1
 
-    .line 597
     :goto_0
     return v1
 
-    .line 595
     :catch_0
     move-exception v0
 
-    .line 596
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/UserManager;->TAG:Ljava/lang/String;
 
@@ -1814,7 +1632,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 597
     const/4 v1, 0x0
 
     goto :goto_0
@@ -1824,7 +1641,6 @@
     .locals 2
 
     .prologue
-    .line 620
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v1
@@ -1833,7 +1649,6 @@
 
     move-result-object v0
 
-    .line 621
     .local v0, "user":Landroid/content/pm/UserInfo;
     if-eqz v0, :cond_0
 
@@ -1854,7 +1669,6 @@
     .locals 1
 
     .prologue
-    .line 573
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v0
@@ -1876,7 +1690,6 @@
     .locals 2
 
     .prologue
-    .line 561
     iget-object v0, p0, Landroid/os/UserManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -1899,7 +1712,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 634
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -1917,15 +1729,12 @@
 
     move-result v1
 
-    .line 637
     :goto_0
     return v1
 
-    .line 636
     :catch_0
     move-exception v0
 
-    .line 637
     .local v0, "e":Landroid/os/RemoteException;
     goto :goto_0
 .end method
@@ -1935,7 +1744,6 @@
     .param p1, "user"    # Landroid/os/UserHandle;
 
     .prologue
-    .line 650
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -1953,15 +1761,12 @@
 
     move-result v1
 
-    .line 653
     :goto_0
     return v1
 
-    .line 652
     :catch_0
     move-exception v0
 
-    .line 653
     .local v0, "e":Landroid/os/RemoteException;
     const/4 v1, 0x0
 
@@ -1976,25 +1781,20 @@
 
     const/4 v6, 0x1
 
-    .line 1281
     invoke-virtual {p0, v6}, Landroid/os/UserManager;->getUsers(Z)Ljava/util/List;
 
     move-result-object v4
 
-    .line 1282
     .local v4, "users":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     if-nez v4, :cond_1
 
-    .line 1293
     :cond_0
     :goto_0
     return v5
 
-    .line 1285
     :cond_1
     const/4 v2, 0x0
 
-    .line 1286
     .local v2, "switchableUserCount":I
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -2015,7 +1815,6 @@
 
     check-cast v3, Landroid/content/pm/UserInfo;
 
-    .line 1287
     .local v3, "user":Landroid/content/pm/UserInfo;
     invoke-virtual {v3}, Landroid/content/pm/UserInfo;->supportsSwitchTo()Z
 
@@ -2023,12 +1822,10 @@
 
     if-eqz v7, :cond_2
 
-    .line 1288
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 1291
     .end local v3    # "user":Landroid/content/pm/UserInfo;
     :cond_3
     iget-object v7, p0, Landroid/os/UserManager;->mContext:Landroid/content/Context;
@@ -2047,7 +1844,6 @@
 
     move v0, v6
 
-    .line 1293
     .local v0, "guestEnabled":Z
     :goto_2
     if-gt v2, v6, :cond_4
@@ -2063,7 +1859,6 @@
     :cond_5
     move v0, v5
 
-    .line 1291
     goto :goto_2
 .end method
 
@@ -2072,7 +1867,6 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 927
     :try_start_0
     iget-object v1, p0, Landroid/os/UserManager;->mService:Landroid/os/IUserManager;
 
@@ -2082,15 +1876,12 @@
 
     move-result v1
 
-    .line 930
     :goto_0
     return v1
 
-    .line 928
     :catch_0
     move-exception v0
 
-    .line 929
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/UserManager;->TAG:Ljava/lang/String;
 
@@ -2098,7 +1889,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 930
     const/4 v1, 0x0
 
     goto :goto_0
@@ -2108,7 +1898,6 @@
     .locals 3
 
     .prologue
-    .line 1386
     :try_start_0
     iget-object v1, p0, Landroid/os/UserManager;->mService:Landroid/os/IUserManager;
 
@@ -2116,15 +1905,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1390
     :goto_0
     return-void
 
-    .line 1387
     :catch_0
     move-exception v0
 
-    .line 1388
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/UserManager;->TAG:Ljava/lang/String;
 
@@ -2140,7 +1926,6 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 1196
     :try_start_0
     iget-object v1, p0, Landroid/os/UserManager;->mService:Landroid/os/IUserManager;
 
@@ -2150,15 +1935,12 @@
 
     move-result v1
 
-    .line 1199
     :goto_0
     return v1
 
-    .line 1197
     :catch_0
     move-exception v0
 
-    .line 1198
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/UserManager;->TAG:Ljava/lang/String;
 
@@ -2166,7 +1948,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1199
     const/4 v1, 0x0
 
     goto :goto_0
@@ -2179,7 +1960,6 @@
     .param p3, "user"    # Landroid/os/UserHandle;
 
     .prologue
-    .line 1365
     :try_start_0
     iget-object v1, p0, Landroid/os/UserManager;->mService:Landroid/os/IUserManager;
 
@@ -2191,15 +1971,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1369
     :goto_0
     return-void
 
-    .line 1366
     :catch_0
     move-exception v0
 
-    .line 1367
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/UserManager;->TAG:Ljava/lang/String;
 
@@ -2235,7 +2012,6 @@
     .param p1, "restrictions"    # Landroid/os/Bundle;
 
     .prologue
-    .line 1398
     :try_start_0
     iget-object v1, p0, Landroid/os/UserManager;->mService:Landroid/os/IUserManager;
 
@@ -2243,15 +2019,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1402
     :goto_0
     return-void
 
-    .line 1399
     :catch_0
     move-exception v0
 
-    .line 1400
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/UserManager;->TAG:Ljava/lang/String;
 
@@ -2267,7 +2040,6 @@
     .param p1, "newPin"    # Ljava/lang/String;
 
     .prologue
-    .line 1380
     const/4 v0, 0x0
 
     return v0
@@ -2278,7 +2050,6 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 944
     :try_start_0
     iget-object v1, p0, Landroid/os/UserManager;->mService:Landroid/os/IUserManager;
 
@@ -2286,15 +2057,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 948
     :goto_0
     return-void
 
-    .line 945
     :catch_0
     move-exception v0
 
-    .line 946
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/UserManager;->TAG:Ljava/lang/String;
 
@@ -2311,7 +2079,6 @@
     .param p2, "icon"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 1227
     :try_start_0
     iget-object v1, p0, Landroid/os/UserManager;->mService:Landroid/os/IUserManager;
 
@@ -2319,15 +2086,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1231
     :goto_0
     return-void
 
-    .line 1228
     :catch_0
     move-exception v0
 
-    .line 1229
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/UserManager;->TAG:Ljava/lang/String;
 
@@ -2344,7 +2108,6 @@
     .param p2, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 1213
     :try_start_0
     iget-object v1, p0, Landroid/os/UserManager;->mService:Landroid/os/IUserManager;
 
@@ -2352,15 +2115,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1217
     :goto_0
     return-void
 
-    .line 1214
     :catch_0
     move-exception v0
 
-    .line 1215
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/UserManager;->TAG:Ljava/lang/String;
 
@@ -2379,19 +2139,15 @@
     .end annotation
 
     .prologue
-    .line 740
     invoke-virtual {p0}, Landroid/os/UserManager;->getUserRestrictions()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 741
     .local v0, "bundle":Landroid/os/Bundle;
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 742
     invoke-virtual {p0, v0}, Landroid/os/UserManager;->setUserRestrictions(Landroid/os/Bundle;)V
 
-    .line 743
     return-void
 .end method
 
@@ -2404,7 +2160,6 @@
     .end annotation
 
     .prologue
-    .line 760
     :try_start_0
     iget-object v1, p0, Landroid/os/UserManager;->mService:Landroid/os/IUserManager;
 
@@ -2416,15 +2171,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 764
     :goto_0
     return-void
 
-    .line 761
     :catch_0
     move-exception v0
 
-    .line 762
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/UserManager;->TAG:Ljava/lang/String;
 
@@ -2442,14 +2194,12 @@
     .end annotation
 
     .prologue
-    .line 706
     invoke-static {}, Landroid/os/Process;->myUserHandle()Landroid/os/UserHandle;
 
     move-result-object v0
 
     invoke-virtual {p0, p1, v0}, Landroid/os/UserManager;->setUserRestrictions(Landroid/os/Bundle;Landroid/os/UserHandle;)V
 
-    .line 707
     return-void
 .end method
 
@@ -2461,7 +2211,6 @@
     .end annotation
 
     .prologue
-    .line 722
     :try_start_0
     iget-object v1, p0, Landroid/os/UserManager;->mService:Landroid/os/IUserManager;
 
@@ -2473,15 +2222,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 726
     :goto_0
     return-void
 
-    .line 723
     :catch_0
     move-exception v0
 
-    .line 724
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/UserManager;->TAG:Ljava/lang/String;
 

@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 386
     iput-object p1, p0, Landroid/app/EnterTransitionCoordinator$5;->this$0:Landroid/app/EnterTransitionCoordinator;
 
     iput-object p2, p0, Landroid/app/EnterTransitionCoordinator$5;->val$sharedElementState:Landroid/os/Bundle;
@@ -44,18 +43,15 @@
     .locals 3
 
     .prologue
-    .line 389
     iget-object v1, p0, Landroid/app/EnterTransitionCoordinator$5;->this$0:Landroid/app/EnterTransitionCoordinator;
 
     invoke-virtual {v1}, Landroid/app/EnterTransitionCoordinator;->getDecor()Landroid/view/ViewGroup;
 
     move-result-object v0
 
-    .line 390
     .local v0, "decorView":Landroid/view/View;
     if-eqz v0, :cond_0
 
-    .line 391
     invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object v1
@@ -66,10 +62,8 @@
 
     invoke-virtual {v1, v2}, Landroid/view/ViewTreeObserver;->addOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
-    .line 405
     invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
-    .line 407
     :cond_0
     return-void
 .end method

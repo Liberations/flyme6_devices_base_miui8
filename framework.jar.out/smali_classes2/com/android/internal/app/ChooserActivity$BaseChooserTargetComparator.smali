@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 885
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -46,7 +45,6 @@
     .param p2, "rhs"    # Landroid/service/chooser/ChooserTarget;
 
     .prologue
-    .line 889
     invoke-virtual {p1}, Landroid/service/chooser/ChooserTarget;->getScore()F
 
     move-result v0
@@ -72,7 +70,6 @@
     .param p2, "x1"    # Ljava/lang/Object;
 
     .prologue
-    .line 885
     check-cast p1, Landroid/service/chooser/ChooserTarget;
 
     .end local p1    # "x0":Ljava/lang/Object;

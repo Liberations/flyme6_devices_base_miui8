@@ -601,8 +601,7 @@
 
     const/4 v3, 0x1
 
-    .line 259
-    const-string/jumbo v1, "ro.haptic.default_level"
+    const-string v1, "ro.haptic.default_level"
 
     invoke-static {v1, v3}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
@@ -610,7 +609,6 @@
 
     sput v1, Landroid/provider/MiuiSettings$System;->HAPTIC_FEEDBACK_LEVEL_DEFAULT:I
 
-    .line 310
     sget-boolean v1, Lmiui/os/Build;->IS_CTA_BUILD:Z
 
     if-nez v1, :cond_0
@@ -629,12 +627,10 @@
     :goto_0
     sput v1, Landroid/provider/MiuiSettings$System;->STATUS_BAR_SHOW_NOTIFICATION_ICON_DEFAULT:I
 
-    .line 546
     sget-boolean v1, Lmiui/os/Build;->IS_CM_CUSTOMIZATION_TEST:Z
 
     sput-boolean v1, Landroid/provider/MiuiSettings$System;->VIBRATE_IN_NORMAL_DEFAULT:Z
 
-    .line 577
     sget-boolean v1, Lmiui/os/Build;->IS_CM_CUSTOMIZATION_TEST:Z
 
     if-eqz v1, :cond_2
@@ -644,14 +640,12 @@
     :goto_1
     sput-boolean v1, Landroid/provider/MiuiSettings$System;->SHOW_LOCK_BEFORE_UNLOCK_DEFAULT:Z
 
-    .line 769
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v1, Landroid/provider/MiuiSettings$System;->screenKeys:Ljava/util/ArrayList;
 
-    .line 770
     sget-object v1, Landroid/provider/MiuiSettings$System;->screenKeys:Ljava/util/ArrayList;
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -660,7 +654,6 @@
 
     invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 771
     sget-object v1, Landroid/provider/MiuiSettings$System;->screenKeys:Ljava/util/ArrayList;
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -669,7 +662,6 @@
 
     invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 772
     sget-object v1, Landroid/provider/MiuiSettings$System;->screenKeys:Ljava/util/ArrayList;
 
     const/4 v4, 0x3
@@ -680,20 +672,18 @@
 
     invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 846
     new-array v1, v5, [Ljava/lang/String;
 
-    const-string/jumbo v4, "high"
+    const-string v4, "high"
 
     aput-object v4, v1, v2
 
-    const-string/jumbo v4, "middle"
+    const-string v4, "middle"
 
     aput-object v4, v1, v3
 
     sput-object v1, Landroid/provider/MiuiSettings$System;->POWER_MODE_VALUES:[Ljava/lang/String;
 
-    .line 917
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -706,7 +696,6 @@
 
     sput v1, Landroid/provider/MiuiSettings$System;->CALL_BREATHING_LIGHT_COLOR_DEFAULT:I
 
-    .line 927
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -719,7 +708,6 @@
 
     sput v1, Landroid/provider/MiuiSettings$System;->CALL_BREATHING_LIGHT_FREQ_DEFAULT:I
 
-    .line 1389
     const-string v1, "calendar_alert"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -728,8 +716,7 @@
 
     sput-object v1, Landroid/provider/MiuiSettings$System;->DEFAULT_CALENDAR_ALERT_URI:Landroid/net/Uri;
 
-    .line 1405
-    const-string/jumbo v1, "sms_received_sound"
+    const-string v1, "sms_received_sound"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -737,8 +724,7 @@
 
     sput-object v1, Landroid/provider/MiuiSettings$System;->DEFAULT_SMS_RECEIVED_RINGTONE_URI:Landroid/net/Uri;
 
-    .line 1421
-    const-string/jumbo v1, "sms_delivered_sound"
+    const-string v1, "sms_delivered_sound"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -746,8 +732,7 @@
 
     sput-object v1, Landroid/provider/MiuiSettings$System;->DEFAULT_SMS_DELIVERED_RINGTONE_URI:Landroid/net/Uri;
 
-    .line 1455
-    const-string/jumbo v1, "ringtone_sound_slot_1"
+    const-string v1, "ringtone_sound_slot_1"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -755,8 +740,7 @@
 
     sput-object v1, Landroid/provider/MiuiSettings$System;->DEFAULT_RINGTONE_URI_SLOT_1:Landroid/net/Uri;
 
-    .line 1457
-    const-string/jumbo v1, "ringtone_sound_slot_2"
+    const-string v1, "ringtone_sound_slot_2"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -764,8 +748,7 @@
 
     sput-object v1, Landroid/provider/MiuiSettings$System;->DEFAULT_RINGTONE_URI_SLOT_2:Landroid/net/Uri;
 
-    .line 1459
-    const-string/jumbo v1, "sms_received_sound_slot_1"
+    const-string v1, "sms_received_sound_slot_1"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -773,8 +756,7 @@
 
     sput-object v1, Landroid/provider/MiuiSettings$System;->DEFAULT_SMS_RECEIVED_SOUND_URI_SLOT_1:Landroid/net/Uri;
 
-    .line 1461
-    const-string/jumbo v1, "sms_received_sound_slot_2"
+    const-string v1, "sms_received_sound_slot_2"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -782,8 +764,7 @@
 
     sput-object v1, Landroid/provider/MiuiSettings$System;->DEFAULT_SMS_RECEIVED_SOUND_URI_SLOT_2:Landroid/net/Uri;
 
-    .line 1463
-    const-string/jumbo v1, "sms_delivered_sound_slot_1"
+    const-string v1, "sms_delivered_sound_slot_1"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -791,8 +772,7 @@
 
     sput-object v1, Landroid/provider/MiuiSettings$System;->DEFAULT_SMS_DELIVERED_SOUND_URI_SLOT_1:Landroid/net/Uri;
 
-    .line 1465
-    const-string/jumbo v1, "sms_delivered_sound_slot_2"
+    const-string v1, "sms_delivered_sound_slot_2"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -800,7 +780,6 @@
 
     sput-object v1, Landroid/provider/MiuiSettings$System;->DEFAULT_SMS_DELIVERED_SOUND_URI_SLOT_2:Landroid/net/Uri;
 
-    .line 1495
     sget-boolean v1, Lmiui/os/Build;->IS_CTS_BUILD:Z
 
     if-nez v1, :cond_3
@@ -808,535 +787,458 @@
     :goto_2
     sput-boolean v3, Landroid/provider/MiuiSettings$System;->DEFAULT_PERSIST_SYS_LINE_BREAKING:Z
 
-    .line 2026
     new-instance v1, Landroid/util/ArraySet;
 
     invoke-direct {v1}, Landroid/util/ArraySet;-><init>()V
 
     sput-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    .line 2028
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "sync_for_sim_com.xiaomi-call_log-0"
+    const-string v2, "sync_for_sim_com.xiaomi-call_log-0"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2029
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "sync_for_sim_com.xiaomi-call_log-1"
+    const-string v2, "sync_for_sim_com.xiaomi-call_log-1"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2030
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "setting_last_time_alert_call_log"
+    const-string v2, "setting_last_time_alert_call_log"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2031
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "sync_for_sim_com.xiaomi-wifi-0"
+    const-string v2, "sync_for_sim_com.xiaomi-wifi-0"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2032
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "sync_for_sim_com.xiaomi-wifi-1"
+    const-string v2, "sync_for_sim_com.xiaomi-wifi-1"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2033
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "setting_last_time_alert_wifi"
+    const-string v2, "setting_last_time_alert_wifi"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2034
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "sync_for_sim_com.xiaomi-com.miui.gallery.cloud.provider-0"
+    const-string v2, "sync_for_sim_com.xiaomi-com.miui.gallery.cloud.provider-0"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2035
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "sync_for_sim_com.xiaomi-com.miui.gallery.cloud.provider-1"
+    const-string v2, "sync_for_sim_com.xiaomi-com.miui.gallery.cloud.provider-1"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2036
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "setting_last_time_alert_com.miui.gallery.cloud.provider"
+    const-string v2, "setting_last_time_alert_com.miui.gallery.cloud.provider"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2037
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "sync_for_sim_com.xiaomi-records-0"
+    const-string v2, "sync_for_sim_com.xiaomi-records-0"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2038
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "sync_for_sim_com.xiaomi-records-1"
+    const-string v2, "sync_for_sim_com.xiaomi-records-1"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2039
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "setting_last_time_alert_records"
+    const-string v2, "setting_last_time_alert_records"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2040
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "sync_for_sim_com.xiaomi-com.android.calendar-0"
+    const-string v2, "sync_for_sim_com.xiaomi-com.android.calendar-0"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2041
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "sync_for_sim_com.xiaomi-com.android.calendar-1"
+    const-string v2, "sync_for_sim_com.xiaomi-com.android.calendar-1"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2042
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "setting_last_time_alert_com.android.calendar"
+    const-string v2, "setting_last_time_alert_com.android.calendar"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2043
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "sync_for_sim_com.xiaomi-notes-0"
+    const-string v2, "sync_for_sim_com.xiaomi-notes-0"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2044
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "sync_for_sim_com.xiaomi-notes-1"
+    const-string v2, "sync_for_sim_com.xiaomi-notes-1"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2045
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "setting_last_time_alert_notes"
+    const-string v2, "setting_last_time_alert_notes"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2046
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "sync_for_sim_com.xiaomi-sms-0"
+    const-string v2, "sync_for_sim_com.xiaomi-sms-0"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2047
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "sync_for_sim_com.xiaomi-sms-1"
+    const-string v2, "sync_for_sim_com.xiaomi-sms-1"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2048
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "setting_last_time_alert_sms"
+    const-string v2, "setting_last_time_alert_sms"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2049
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "sync_for_sim_com.xiaomi-com.android.contacts-0"
+    const-string v2, "sync_for_sim_com.xiaomi-com.android.contacts-0"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2050
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "sync_for_sim_com.xiaomi-com.android.contacts-1"
+    const-string v2, "sync_for_sim_com.xiaomi-com.android.contacts-1"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2051
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "setting_last_time_alert_com.android.contacts"
+    const-string v2, "setting_last_time_alert_com.android.contacts"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2052
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "sync_for_sim_com.xiaomi-com.miui.browser-0"
+    const-string v2, "sync_for_sim_com.xiaomi-com.miui.browser-0"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2053
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "sync_for_sim_com.xiaomi-com.miui.browser-1"
+    const-string v2, "sync_for_sim_com.xiaomi-com.miui.browser-1"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2054
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "setting_last_time_alert_com.miui.browser"
+    const-string v2, "setting_last_time_alert_com.miui.browser"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2055
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "sync_for_sim_com.xiaomi-antispam-0"
+    const-string v2, "sync_for_sim_com.xiaomi-antispam-0"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2056
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "sync_for_sim_com.xiaomi-antispam-1"
+    const-string v2, "sync_for_sim_com.xiaomi-antispam-1"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2057
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "setting_last_time_alert_antispam"
+    const-string v2, "setting_last_time_alert_antispam"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2058
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "sync_for_sim_com.xiaomi-com.miui.player-0"
+    const-string v2, "sync_for_sim_com.xiaomi-com.miui.player-0"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2059
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "sync_for_sim_com.xiaomi-com.miui.player-1"
+    const-string v2, "sync_for_sim_com.xiaomi-com.miui.player-1"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2060
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "setting_last_time_alert_com.miui.player"
+    const-string v2, "setting_last_time_alert_com.miui.player"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2062
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
     const-string v2, "com.xiaomi.opensdk.pdc.host"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2063
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "micloud_network_availability"
+    const-string v2, "micloud_network_availability"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2064
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "micloud_hosts"
+    const-string v2, "micloud_hosts"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2065
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "micloud_accountname"
+    const-string v2, "micloud_accountname"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2066
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "micloud_hosts_v2"
+    const-string v2, "micloud_hosts_v2"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2067
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "micloud_accountname_v2"
+    const-string v2, "micloud_accountname_v2"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2068
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "micloud_updatehosts_third_party"
+    const-string v2, "micloud_updatehosts_third_party"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2070
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "mms_sync_wild_msg_state"
+    const-string v2, "mms_sync_wild_msg_state"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2071
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "mms_sync_wild_numbers"
+    const-string v2, "mms_sync_wild_numbers"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2072
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "mms_upload_old_msg_state"
+    const-string v2, "mms_upload_old_msg_state"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2073
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "mms_upload_old_msg_accounts"
+    const-string v2, "mms_upload_old_msg_accounts"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2074
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "mms_thread_marker"
+    const-string v2, "mms_thread_marker"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2075
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "mms_private_address_marker"
+    const-string v2, "mms_private_address_marker"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2077
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "miprofile.settings.miprofile_user_notice"
+    const-string v2, "miprofile.settings.miprofile_user_notice"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2078
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "miprofile.settings.miprofile_badge_notice"
+    const-string v2, "miprofile.settings.miprofile_badge_notice"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2079
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "miprofile.settings.miprofile_set"
+    const-string v2, "miprofile.settings.miprofile_set"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2080
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "miprofile.settings.miprofile_on"
+    const-string v2, "miprofile.settings.miprofile_on"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2081
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "miprofile.settings.miprofile_visible"
+    const-string v2, "miprofile.settings.miprofile_visible"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2085
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
     const-string v2, "debug_switch"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2086
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
     const-string v2, "debug_dp_path"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2087
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "xunlei_token"
+    const-string v2, "xunlei_token"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2088
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "vip_token"
+    const-string v2, "vip_token"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2089
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "xunlei_usage_permission"
+    const-string v2, "xunlei_usage_permission"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2091
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
     const-string v2, "default_alarm_alert"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2092
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "next_alarm_clock_formatted"
+    const-string v2, "next_alarm_clock_formatted"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2094
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "voiceassist_report_method"
+    const-string v2, "voiceassist_report_method"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2095
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "voiceassist_phone_report"
+    const-string v2, "voiceassist_phone_report"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2096
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "voiceassist_sms_report"
+    const-string v2, "voiceassist_sms_report"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2098
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "last_valid_device_id"
+    const-string v2, "last_valid_device_id"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2101
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "livetalk_service_status"
+    const-string v2, "livetalk_service_status"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2102
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "livetalk_enabled"
+    const-string v2, "livetalk_enabled"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2103
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "livetalk_switch_state"
+    const-string v2, "livetalk_switch_state"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2104
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "need_prompt"
+    const-string v2, "need_prompt"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2105
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "livetalk_use_current_account"
+    const-string v2, "livetalk_use_current_account"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2106
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "internal_dial_avaiable"
+    const-string v2, "internal_dial_avaiable"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2107
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "international_dial_avaiable"
+    const-string v2, "international_dial_avaiable"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2108
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "recent_country_remain_mins"
+    const-string v2, "recent_country_remain_mins"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2109
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "livetalk_dial_range"
+    const-string v2, "livetalk_dial_range"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2110
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "livetalk_available_status"
+    const-string v2, "livetalk_available_status"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2111
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "livetalk_remain_minutes"
+    const-string v2, "livetalk_remain_minutes"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2114
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "lock_wallpaper_provider_authority"
+    const-string v2, "lock_wallpaper_provider_authority"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2115
     const-string v0, "clock_changed_time_"
 
-    .line 2116
     .local v0, "themeClockSettingPrefix":Ljava/lang/String;
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
@@ -1360,7 +1262,6 @@
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2117
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1383,7 +1284,6 @@
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2118
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1406,7 +1306,6 @@
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2119
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1429,103 +1328,88 @@
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2123
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
     const-string v2, "com.xiaomi.market.enable_share_progress_status"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2124
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
     const-string v2, "com.miui.home.enable_share_progress_status"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2125
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
     const-string v2, "com.xiaomi.discover.enable_share_progress_status"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2126
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
     const-string v2, "com.xiaomi.mipicks.enable_share_progress_status"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2128
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "touch_assistant_enabled"
+    const-string v2, "touch_assistant_enabled"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2129
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "touch_assistant_show_on_keyguard"
+    const-string v2, "touch_assistant_show_on_keyguard"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2132
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
     const-string v2, "frequent_phrases"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2135
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "ringtone_sound_slot_1"
+    const-string v2, "ringtone_sound_slot_1"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2136
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "ringtone_sound_slot_2"
+    const-string v2, "ringtone_sound_slot_2"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2138
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "updatable_system_app_count"
+    const-string v2, "updatable_system_app_count"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2141
     sget-object v1, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v2, "show_touches"
+    const-string v2, "show_touches"
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2142
     return-void
 
     .end local v0    # "themeClockSettingPrefix":Ljava/lang/String;
     :cond_1
     move v1, v2
 
-    .line 310
     goto/16 :goto_0
 
     :cond_2
     move v1, v3
 
-    .line 577
     goto/16 :goto_1
 
     :cond_3
     move v3, v2
 
-    .line 1495
     goto/16 :goto_2
 .end method
 
@@ -1533,10 +1417,8 @@
     .locals 0
 
     .prologue
-    .line 171
     invoke-direct {p0}, Landroid/provider/SystemSettings$System;-><init>()V
 
-    .line 1841
     return-void
 .end method
 
@@ -1554,13 +1436,11 @@
     .end annotation
 
     .prologue
-    .line 1689
     .local p0, "components":Ljava/util/List;, "Ljava/util/List<Landroid/content/ComponentName;>;"
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1690
     .local v2, "sb":Ljava/lang/StringBuilder;
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -1568,11 +1448,9 @@
 
     add-int/lit8 v1, v3, -0x1
 
-    .line 1691
     .local v1, "max":I
     const/4 v0, 0x0
 
-    .line 1692
     .local v0, "i":I
     :goto_0
     invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1587,23 +1465,19 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1693
     if-ne v0, v1, :cond_0
 
-    .line 1694
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
 
     return-object v3
 
-    .line 1695
     :cond_0
     const-string v3, ","
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1691
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
@@ -1625,7 +1499,6 @@
     .end annotation
 
     .prologue
-    .line 1685
     const-string v0, "activity_resolve_order"
 
     invoke-static {p0, v0}, Landroid/provider/MiuiSettings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
@@ -1651,7 +1524,6 @@
 
     const/4 v2, 0x0
 
-    .line 1572
     if-eqz p2, :cond_0
 
     move v0, v1
@@ -1693,7 +1565,6 @@
     .end annotation
 
     .prologue
-    .line 955
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
@@ -1706,13 +1577,11 @@
 
     move-result-object v2
 
-    .line 957
     .local v2, "ssidList":Ljava/lang/String;
     new-instance v3, Ljava/util/HashSet;
 
     invoke-direct {v3}, Ljava/util/HashSet;-><init>()V
 
-    .line 958
     .local v3, "ssidSet":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1720,18 +1589,15 @@
 
     if-nez v4, :cond_0
 
-    .line 959
     const-string v4, ","
 
     invoke-virtual {v2, v4}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 960
     .local v1, "ssidArr":[Ljava/lang/String;
     if-eqz v1, :cond_0
 
-    .line 961
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -1740,7 +1606,6 @@
 
     if-ge v0, v4, :cond_0
 
-    .line 963
     :try_start_0
     new-instance v4, Ljava/lang/String;
 
@@ -1758,19 +1623,16 @@
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 961
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 969
     .end local v0    # "i":I
     .end local v1    # "ssidArr":[Ljava/lang/String;
     :cond_0
     return-object v3
 
-    .line 964
     .restart local v0    # "i":I
     .restart local v1    # "ssidArr":[Ljava/lang/String;
     :catch_0
@@ -1793,18 +1655,15 @@
 
     const/4 v10, 0x0
 
-    .line 1791
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v4
 
-    .line 1792
     .local v4, "res":Landroid/content/res/Resources;
     invoke-static {}, Landroid/provider/MiuiSettings$System;->getSmallWindowMode()Landroid/provider/MiuiSettings$System$SmallWindowType;
 
     move-result-object v5
 
-    .line 1794
     .local v5, "type":Landroid/provider/MiuiSettings$System$SmallWindowType;
     new-array v0, v14, [I
 
@@ -1840,7 +1699,6 @@
 
     aput v6, v0, v13
 
-    .line 1796
     .local v0, "defaultSize":[I
     new-instance v3, Landroid/graphics/Rect;
 
@@ -1854,20 +1712,17 @@
 
     invoke-direct {v3, v6, v7, v8, v9}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 1798
     .local v3, "rect":Landroid/graphics/Rect;
     if-nez v5, :cond_1
 
-    .line 1828
     :cond_0
     :goto_0
     return-object v3
 
-    .line 1803
     :cond_1
     new-array v1, v14, [I
 
-    const-string/jumbo v6, "smartcover_smallwindow_left"
+    const-string v6, "smartcover_smallwindow_left"
 
     aget v7, v0, v10
 
@@ -1877,7 +1732,7 @@
 
     aput v6, v1, v10
 
-    const-string/jumbo v6, "smartcover_smallwindow_top"
+    const-string v6, "smartcover_smallwindow_top"
 
     aget v7, v0, v11
 
@@ -1887,7 +1742,7 @@
 
     aput v6, v1, v11
 
-    const-string/jumbo v6, "smartcover_smallwindow_right"
+    const-string v6, "smartcover_smallwindow_right"
 
     aget v7, v0, v12
 
@@ -1897,7 +1752,7 @@
 
     aput v6, v1, v12
 
-    const-string/jumbo v6, "smartcover_smallwindow_bottom"
+    const-string v6, "smartcover_smallwindow_bottom"
 
     aget v7, v0, v13
 
@@ -1907,19 +1762,16 @@
 
     aput v6, v1, v13
 
-    .line 1807
     .local v1, "displaySize":[I
-    const-string/jumbo v6, "support_multiple_small_win_cover"
+    const-string v6, "support_multiple_small_win_cover"
 
     invoke-static {v6, v10}, Lmiui/util/FeatureParser;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v2
 
-    .line 1808
     .local v2, "multi":Z
     if-eqz v2, :cond_2
 
-    .line 1809
     sget-object v6, Landroid/provider/MiuiSettings$1;->$SwitchMap$android$provider$MiuiSettings$System$SmallWindowType:[I
 
     invoke-virtual {v5}, Landroid/provider/MiuiSettings$System$SmallWindowType;->ordinal()I
@@ -1930,7 +1782,6 @@
 
     packed-switch v6, :pswitch_data_0
 
-    .line 1825
     :cond_2
     :goto_1
     if-eqz v1, :cond_0
@@ -1939,7 +1790,6 @@
 
     if-ne v6, v14, :cond_0
 
-    .line 1826
     aget v6, v1, v10
 
     aget v7, v1, v11
@@ -1952,42 +1802,35 @@
 
     goto :goto_0
 
-    .line 1811
     :pswitch_0
-    const-string/jumbo v6, "smartcover_smallwindow_x7_size"
+    const-string v6, "smartcover_smallwindow_x7_size"
 
     invoke-static {v6}, Lmiui/util/FeatureParser;->getIntArray(Ljava/lang/String;)[I
 
     move-result-object v1
 
-    .line 1812
     goto :goto_1
 
-    .line 1814
     :pswitch_1
-    const-string/jumbo v6, "smartcover_smallwindow_a1_size"
+    const-string v6, "smartcover_smallwindow_a1_size"
 
     invoke-static {v6}, Lmiui/util/FeatureParser;->getIntArray(Ljava/lang/String;)[I
 
     move-result-object v1
 
-    .line 1815
     goto :goto_1
 
-    .line 1817
     :pswitch_2
-    const-string/jumbo v6, "smartcover_smallwindow_a7_size"
+    const-string v6, "smartcover_smallwindow_a7_size"
 
     invoke-static {v6}, Lmiui/util/FeatureParser;->getIntArray(Ljava/lang/String;)[I
 
     move-result-object v1
 
-    .line 1818
     goto :goto_1
 
-    .line 1820
     :pswitch_3
-    const-string/jumbo v6, "smartcover_smallwindow_b7_size"
+    const-string v6, "smartcover_smallwindow_b7_size"
 
     invoke-static {v6}, Lmiui/util/FeatureParser;->getIntArray(Ljava/lang/String;)[I
 
@@ -1995,7 +1838,6 @@
 
     goto :goto_1
 
-    .line 1809
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -2010,12 +1852,11 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 264
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    const-string/jumbo v1, "haptic_feedback_level"
+    const-string v1, "haptic_feedback_level"
 
     sget v2, Landroid/provider/MiuiSettings$System;->HAPTIC_FEEDBACK_LEVEL_DEFAULT:I
 
@@ -2044,12 +1885,11 @@
     .end annotation
 
     .prologue
-    .line 1058
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
-    const-string/jumbo v5, "hotspot_mac_black_set"
+    const-string v5, "hotspot_mac_black_set"
 
     const/4 v6, -0x2
 
@@ -2057,13 +1897,11 @@
 
     move-result-object v3
 
-    .line 1060
     .local v3, "macList":Ljava/lang/String;
     new-instance v2, Ljava/util/HashSet;
 
     invoke-direct {v2}, Ljava/util/HashSet;-><init>()V
 
-    .line 1061
     .local v2, "macBlackSet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -2071,18 +1909,15 @@
 
     if-nez v4, :cond_0
 
-    .line 1062
     const-string v4, ","
 
     invoke-virtual {v3, v4}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1063
     .local v1, "mac":[Ljava/lang/String;
     if-eqz v1, :cond_0
 
-    .line 1064
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -2091,7 +1926,6 @@
 
     if-ge v0, v4, :cond_0
 
-    .line 1066
     :try_start_0
     new-instance v4, Ljava/lang/String;
 
@@ -2109,19 +1943,16 @@
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1064
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1072
     .end local v0    # "i":I
     .end local v1    # "mac":[Ljava/lang/String;
     :cond_0
     return-object v2
 
-    .line 1067
     .restart local v0    # "i":I
     .restart local v1    # "mac":[Ljava/lang/String;
     :catch_0
@@ -2135,17 +1966,15 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 1023
     const/4 v0, 0x0
 
-    .line 1025
     .local v0, "num":I
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    const-string/jumbo v2, "hotspot_max_station_num"
+    const-string v2, "hotspot_max_station_num"
 
     const/4 v3, -0x2
 
@@ -2155,11 +1984,9 @@
 
     move-result v0
 
-    .line 1029
     :goto_0
     return v0
 
-    .line 1027
     :catch_0
     move-exception v1
 
@@ -2171,12 +1998,11 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 1089
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    const-string/jumbo v1, "hotspot_vendor_specific"
+    const-string v1, "hotspot_vendor_specific"
 
     const/4 v2, -0x2
 
@@ -2193,7 +2019,6 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 698
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
@@ -2204,7 +2029,6 @@
 
     move-result-object v0
 
-    .line 699
     .local v0, "action":Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -2212,10 +2036,8 @@
 
     if-eqz v2, :cond_0
 
-    .line 700
-    const-string/jumbo v0, "none"
+    const-string v0, "none"
 
-    .line 701
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -2226,9 +2048,8 @@
 
     move-result-object v1
 
-    .line 703
     .local v1, "defaultActions":[Ljava/lang/String;
-    const-string/jumbo v2, "screen_key_long_press_menu"
+    const-string v2, "screen_key_long_press_menu"
 
     invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2236,21 +2057,18 @@
 
     if-eqz v2, :cond_1
 
-    .line 704
     const/4 v2, 0x0
 
     aget-object v0, v1, v2
 
-    .line 716
     .end local v1    # "defaultActions":[Ljava/lang/String;
     :cond_0
     :goto_0
     return-object v0
 
-    .line 706
     .restart local v1    # "defaultActions":[Ljava/lang/String;
     :cond_1
-    const-string/jumbo v2, "screen_key_long_press_home"
+    const-string v2, "screen_key_long_press_home"
 
     invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2258,16 +2076,14 @@
 
     if-eqz v2, :cond_2
 
-    .line 707
     const/4 v2, 0x1
 
     aget-object v0, v1, v2
 
     goto :goto_0
 
-    .line 709
     :cond_2
-    const-string/jumbo v2, "screen_key_long_press_back"
+    const-string v2, "screen_key_long_press_back"
 
     invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2275,16 +2091,14 @@
 
     if-eqz v2, :cond_3
 
-    .line 710
     const/4 v2, 0x2
 
     aget-object v0, v1, v2
 
     goto :goto_0
 
-    .line 712
     :cond_3
-    const-string/jumbo v2, "screen_key_long_press_app_switch"
+    const-string v2, "screen_key_long_press_app_switch"
 
     invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2292,7 +2106,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 713
     const/4 v2, 0x3
 
     aget-object v0, v1, v2
@@ -2316,24 +2129,21 @@
     .end annotation
 
     .prologue
-    .line 779
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
-    .line 780
     .local v6, "result":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v7
 
-    const-string/jumbo v8, "screen_key_order"
+    const-string v8, "screen_key_order"
 
     invoke-static {v7, v8}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 781
     .local v4, "keyList":Ljava/lang/String;
     invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -2341,14 +2151,12 @@
 
     if-nez v7, :cond_1
 
-    .line 782
     const-string v7, " "
 
     invoke-virtual {v4, v7}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v5
 
-    .line 783
     .local v5, "keys":[Ljava/lang/String;
     const/4 v1, 0x0
 
@@ -2358,7 +2166,6 @@
 
     if-ge v1, v7, :cond_1
 
-    .line 785
     :try_start_0
     aget-object v7, v5, v1
 
@@ -2370,7 +2177,6 @@
 
     move-result v3
 
-    .line 786
     .local v3, "id":I
     sget-object v7, Landroid/provider/MiuiSettings$System;->screenKeys:Ljava/util/ArrayList;
 
@@ -2384,7 +2190,6 @@
 
     if-eqz v7, :cond_0
 
-    .line 787
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v7
@@ -2393,22 +2198,18 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 783
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 789
     .end local v3    # "id":I
     :catch_0
     move-exception v0
 
-    .line 790
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v6}, Ljava/util/ArrayList;->clear()V
 
-    .line 796
     .end local v0    # "e":Ljava/lang/Exception;
     .end local v1    # "i":I
     .end local v5    # "keys":[Ljava/lang/String;
@@ -2434,7 +2235,6 @@
 
     check-cast v3, Ljava/lang/Integer;
 
-    .line 797
     .local v3, "id":Ljava/lang/Integer;
     invoke-virtual {v6, v3}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
@@ -2442,12 +2242,10 @@
 
     if-nez v7, :cond_2
 
-    .line 798
     invoke-virtual {v6, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 802
     .end local v3    # "id":Ljava/lang/Integer;
     :cond_3
     return-object v6
@@ -2457,7 +2255,6 @@
     .locals 2
 
     .prologue
-    .line 327
     sget-boolean v0, Lmiui/os/Build;->IS_CM_CUSTOMIZATION_TEST:Z
 
     if-nez v0, :cond_0
@@ -2504,53 +2301,43 @@
 
     const/4 v6, 0x0
 
-    .line 1849
-    const-string/jumbo v5, "persist.sys.smallwin_type"
+    const-string v5, "persist.sys.smallwin_type"
 
     invoke-static {v5, v7}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result v4
 
-    .line 1850
     .local v4, "win":I
     if-ne v4, v7, :cond_3
 
-    .line 1851
-    const-string/jumbo v5, "support_multiple_small_win_cover"
+    const-string v5, "support_multiple_small_win_cover"
 
     invoke-static {v5, v6}, Lmiui/util/FeatureParser;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
 
-    .line 1852
     .local v0, "multi":Z
     const/4 v3, 0x0
 
-    .line 1853
     .local v3, "typeArray":[I
     if-eqz v0, :cond_0
 
-    .line 1854
-    const-string/jumbo v5, "small_win_cover_type"
+    const-string v5, "small_win_cover_type"
 
     invoke-static {v5}, Lmiui/util/FeatureParser;->getIntArray(Ljava/lang/String;)[I
 
     move-result-object v3
 
-    .line 1865
     :goto_0
     if-nez v3, :cond_2
 
-    .line 1866
     const/4 v2, 0x0
 
-    .line 1889
     .end local v0    # "multi":Z
     .end local v3    # "typeArray":[I
     :goto_1
     return-object v2
 
-    .line 1856
     .restart local v0    # "multi":Z
     .restart local v3    # "typeArray":[I
     :cond_0
@@ -2558,19 +2345,16 @@
 
     new-array v3, v5, [I
 
-    .line 1857
-    const-string/jumbo v5, "support_small_win_cover"
+    const-string v5, "support_small_win_cover"
 
     invoke-static {v5, v6}, Lmiui/util/FeatureParser;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v1
 
-    .line 1858
     .local v1, "supportSmallWin":Z
     if-eqz v1, :cond_1
 
-    .line 1859
-    const-string/jumbo v5, "small_win_cover_type"
+    const-string v5, "small_win_cover_type"
 
     invoke-static {v5, v8}, Lmiui/util/FeatureParser;->getInteger(Ljava/lang/String;I)I
 
@@ -2580,61 +2364,47 @@
 
     goto :goto_0
 
-    .line 1861
     :cond_1
     aput v8, v3, v6
 
     goto :goto_0
 
-    .line 1868
     .end local v1    # "supportSmallWin":Z
     :cond_2
     aget v4, v3, v6
 
-    .line 1871
     .end local v0    # "multi":Z
     .end local v3    # "typeArray":[I
     :cond_3
     const/4 v2, 0x0
 
-    .line 1872
     .local v2, "type":Landroid/provider/MiuiSettings$System$SmallWindowType;
     packed-switch v4, :pswitch_data_0
 
-    .line 1886
     const/4 v2, 0x0
 
     goto :goto_1
 
-    .line 1874
     :pswitch_0
     sget-object v2, Landroid/provider/MiuiSettings$System$SmallWindowType;->X7_STYLE:Landroid/provider/MiuiSettings$System$SmallWindowType;
 
-    .line 1875
     goto :goto_1
 
-    .line 1877
     :pswitch_1
     sget-object v2, Landroid/provider/MiuiSettings$System$SmallWindowType;->A1_STYLE:Landroid/provider/MiuiSettings$System$SmallWindowType;
 
-    .line 1878
     goto :goto_1
 
-    .line 1880
     :pswitch_2
     sget-object v2, Landroid/provider/MiuiSettings$System$SmallWindowType;->A7_LATTICE:Landroid/provider/MiuiSettings$System$SmallWindowType;
 
-    .line 1881
     goto :goto_1
 
-    .line 1883
     :pswitch_3
     sget-object v2, Landroid/provider/MiuiSettings$System$SmallWindowType;->B7_FULL:Landroid/provider/MiuiSettings$System$SmallWindowType;
 
-    .line 1884
     goto :goto_1
 
-    .line 1872
     nop
 
     :pswitch_data_0
@@ -2652,7 +2422,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 1533
     invoke-static {p0, p1}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -2667,7 +2436,6 @@
     .param p2, "defValue"    # Ljava/lang/String;
 
     .prologue
-    .line 1518
     const-class v1, Landroid/provider/MiuiSettings$System;
 
     monitor-enter v1
@@ -2679,20 +2447,16 @@
 
     move-result-object v0
 
-    .line 1519
     .local v0, "result":Ljava/lang/String;
     if-nez v0, :cond_0
 
-    .line 1520
     move-object v0, p2
 
-    .line 1522
     :cond_0
     monitor-exit v1
 
     return-object v0
 
-    .line 1518
     .end local v0    # "result":Ljava/lang/String;
     :catchall_0
     move-exception v2
@@ -2709,7 +2473,6 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 1538
     invoke-static {p0, p1, p2}, Landroid/provider/Settings$System;->getStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
@@ -2721,7 +2484,6 @@
     .locals 1
 
     .prologue
-    .line 206
     const-string v0, "TW"
 
     invoke-static {v0}, Lmiui/os/Build;->checkRegion(Ljava/lang/String;)Z
@@ -2748,7 +2510,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 191
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
@@ -2777,12 +2538,11 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 270
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    const-string/jumbo v2, "haptic_feedback_enabled"
+    const-string v2, "haptic_feedback_enabled"
 
     const/4 v3, -0x3
 
@@ -2803,12 +2563,11 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 1835
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    const-string/jumbo v1, "is_small_window"
+    const-string v1, "is_small_window"
 
     const/4 v2, 0x0
 
@@ -2823,8 +2582,7 @@
     .locals 2
 
     .prologue
-    .line 1500
-    const-string/jumbo v0, "persist.sys.line_breaking"
+    const-string v0, "persist.sys.line_breaking"
 
     sget-boolean v1, Landroid/provider/MiuiSettings$System;->DEFAULT_PERSIST_SYS_LINE_BREAKING:Z
 
@@ -2840,12 +2598,11 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 1935
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    const-string/jumbo v1, "key_midrop_enabled"
+    const-string v1, "key_midrop_enabled"
 
     const/4 v2, 0x0
 
@@ -2862,7 +2619,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 175
     sget-object v0, Landroid/provider/MiuiSettings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -2879,14 +2635,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 176
     const/4 v0, 0x1
 
-    .line 179
     :goto_0
     return v0
 
-    .line 178
     :cond_0
     const-string v0, "SystemSettings"
 
@@ -2894,7 +2647,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 179
     const/4 v0, 0x0
 
     goto :goto_0
@@ -2909,21 +2661,19 @@
 
     const/4 v2, 0x1
 
-    .line 1477
     sget-boolean v3, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     if-eqz v3, :cond_0
 
     move v0, v1
 
-    .line 1478
     .local v0, "def":I
     :goto_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
-    const-string/jumbo v4, "simple_mode"
+    const-string v4, "simple_mode"
 
     invoke-static {v3, v4, v0}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -2938,14 +2688,12 @@
     :cond_0
     move v0, v2
 
-    .line 1477
     goto :goto_0
 
     .restart local v0    # "def":I
     :cond_1
     move v2, v1
 
-    .line 1478
     goto :goto_1
 .end method
 
@@ -2960,18 +2708,16 @@
 
     const/4 v2, 0x0
 
-    .line 2006
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
-    const-string/jumbo v4, "touch_assistant_enabled"
+    const-string v4, "touch_assistant_enabled"
 
     invoke-static {v3, v4, v2, p1}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
     move-result v0
 
-    .line 2008
     .local v0, "result":I
     if-ne v0, v1, :cond_0
 
@@ -2993,18 +2739,16 @@
     .prologue
     const/4 v3, 0x2
 
-    .line 2016
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    const-string/jumbo v2, "touch_assistant_enabled"
+    const-string v2, "touch_assistant_enabled"
 
     invoke-static {v1, v2, v3, p1}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
     move-result v0
 
-    .line 2018
     .local v0, "result":I
     if-ne v0, v3, :cond_0
 
@@ -3034,7 +2778,6 @@
     .end annotation
 
     .prologue
-    .line 1680
     .local p1, "components":Ljava/util/List;, "Ljava/util/List<Landroid/content/ComponentName;>;"
     const-string v0, "activity_resolve_order"
 
@@ -3044,7 +2787,6 @@
 
     invoke-static {p0, v0, v1}, Landroid/provider/MiuiSettings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 1681
     return-void
 .end method
 
@@ -3055,7 +2797,6 @@
     .param p2, "value"    # Z
 
     .prologue
-    .line 1562
     if-eqz p2, :cond_0
 
     const/4 v0, 0x1
@@ -3081,7 +2822,6 @@
     .param p3, "userHandle"    # I
 
     .prologue
-    .line 1567
     if-eqz p2, :cond_0
 
     const/4 v0, 0x1
@@ -3106,7 +2846,6 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 1552
     invoke-static {p0, p1, p2}, Landroid/provider/Settings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v0
@@ -3122,7 +2861,6 @@
     .param p3, "userHandle"    # I
 
     .prologue
-    .line 1558
     invoke-static {p0, p1, p2, p3}, Landroid/provider/Settings$System;->putStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)Z
 
     move-result v0
@@ -3145,21 +2883,17 @@
     .end annotation
 
     .prologue
-    .line 976
     .local p1, "ssidSet":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     if-nez p1, :cond_0
 
-    .line 989
     :goto_0
     return-void
 
-    .line 979
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 980
     .local v0, "base64Ssid":Ljava/lang/StringBuilder;
     invoke-virtual {p1}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
@@ -3179,7 +2913,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 982
     .local v2, "ssid":Ljava/lang/String;
     :try_start_0
     invoke-virtual {v2}, Ljava/lang/String;->getBytes()[B
@@ -3194,7 +2927,6 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 983
     const-string v3, ","
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -3203,13 +2935,11 @@
 
     goto :goto_1
 
-    .line 984
     :catch_0
     move-exception v3
 
     goto :goto_1
 
-    .line 987
     .end local v2    # "ssid":Ljava/lang/String;
     :cond_1
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -3244,20 +2974,16 @@
     .end annotation
 
     .prologue
-    .line 1036
     .local p1, "macSet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     if-eqz p1, :cond_2
 
-    .line 1037
     const-string v3, "^[a-fA-F0-9]{2}+:[a-fA-F0-9]{2}+:[a-fA-F0-9]{2}+:[a-fA-F0-9]{2}+:[a-fA-F0-9]{2}+:[a-fA-F0-9]{2}$"
 
-    .line 1039
     .local v3, "patternMac":Ljava/lang/String;
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1040
     .local v0, "base64Mac":Ljava/lang/StringBuilder;
     invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -3278,7 +3004,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 1042
     .local v2, "mac":Ljava/lang/String;
     :try_start_0
     const-string v4, "^[a-fA-F0-9]{2}+:[a-fA-F0-9]{2}+:[a-fA-F0-9]{2}+:[a-fA-F0-9]{2}+:[a-fA-F0-9]{2}+:[a-fA-F0-9]{2}$"
@@ -3289,7 +3014,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 1043
     invoke-virtual {v2}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v4
@@ -3302,7 +3026,6 @@
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1044
     const-string v4, ","
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -3311,20 +3034,18 @@
 
     goto :goto_0
 
-    .line 1046
     :catch_0
     move-exception v4
 
     goto :goto_0
 
-    .line 1049
     .end local v2    # "mac":Ljava/lang/String;
     :cond_1
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
-    const-string/jumbo v5, "hotspot_mac_black_set"
+    const-string v5, "hotspot_mac_black_set"
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -3334,7 +3055,6 @@
 
     invoke-static {v4, v5, v6, v7}, Landroid/provider/Settings$System;->putStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)Z
 
-    .line 1052
     .end local v0    # "base64Mac":Ljava/lang/StringBuilder;
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v3    # "patternMac":Ljava/lang/String;
@@ -3348,28 +3068,24 @@
     .param p1, "num"    # I
 
     .prologue
-    .line 1011
     if-lez p1, :cond_0
 
     const/16 v0, 0x7d8
 
     if-ge p1, v0, :cond_0
 
-    .line 1012
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    const-string/jumbo v1, "hotspot_max_station_num"
+    const-string v1, "hotspot_max_station_num"
 
     const/4 v2, -0x2
 
     invoke-static {v0, v1, p1, v2}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 1014
     const/4 v0, 0x1
 
-    .line 1016
     :goto_0
     return v0
 
@@ -3385,21 +3101,18 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 1079
     if-eqz p1, :cond_0
 
-    .line 1080
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    const-string/jumbo v1, "hotspot_vendor_specific"
+    const-string v1, "hotspot_vendor_specific"
 
     const/4 v2, -0x2
 
     invoke-static {v0, v1, p1, v2}, Landroid/provider/Settings$System;->putStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)Z
 
-    .line 1083
     :cond_0
     return-void
 .end method
@@ -3410,12 +3123,11 @@
     .param p1, "isSimpleMode"    # Z
 
     .prologue
-    .line 1485
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    const-string/jumbo v2, "simple_mode"
+    const-string v2, "simple_mode"
 
     if-eqz p1, :cond_0
 
@@ -3424,10 +3136,8 @@
     :goto_0
     invoke-static {v1, v2, v0}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 1486
     return-void
 
-    .line 1485
     :cond_0
     const/4 v0, 0x0
 
@@ -3443,22 +3153,19 @@
 
     const/4 v3, 0x0
 
-    .line 1896
-    const-string/jumbo v2, "support_hall_sensor"
+    const-string v2, "support_hall_sensor"
 
     invoke-static {v2, v3}, Lmiui/util/FeatureParser;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v1
 
-    .line 1897
     .local v1, "supportHallSensor":Z
     if-eqz v1, :cond_0
 
     if-nez p0, :cond_1
 
-    .line 1898
     :cond_0
-    const-string/jumbo v2, "persist.sys.smartcover_mode"
+    const-string v2, "persist.sys.smartcover_mode"
 
     invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -3466,22 +3173,18 @@
 
     invoke-static {v2, v3}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1922
     :goto_0
     return-void
 
-    .line 1902
     :cond_1
     invoke-static {}, Landroid/provider/MiuiSettings$System;->getSmallWindowMode()Landroid/provider/MiuiSettings$System$SmallWindowType;
 
     move-result-object v0
 
-    .line 1903
     .local v0, "coverType":Landroid/provider/MiuiSettings$System$SmallWindowType;
     if-nez v0, :cond_2
 
-    .line 1904
-    const-string/jumbo v2, "persist.sys.smartcover_mode"
+    const-string v2, "persist.sys.smartcover_mode"
 
     invoke-static {v4}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -3491,7 +3194,6 @@
 
     goto :goto_0
 
-    .line 1907
     :cond_2
     sget-object v2, Landroid/provider/MiuiSettings$1;->$SwitchMap$android$provider$MiuiSettings$System$SmallWindowType:[I
 
@@ -3503,8 +3205,7 @@
 
     packed-switch v2, :pswitch_data_0
 
-    .line 1919
-    const-string/jumbo v2, "persist.sys.smartcover_mode"
+    const-string v2, "persist.sys.smartcover_mode"
 
     invoke-static {v4}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -3514,9 +3215,8 @@
 
     goto :goto_0
 
-    .line 1910
     :pswitch_0
-    const-string/jumbo v2, "persist.sys.smartcover_mode"
+    const-string v2, "persist.sys.smartcover_mode"
 
     const/4 v3, 0x2
 
@@ -3528,9 +3228,8 @@
 
     goto :goto_0
 
-    .line 1913
     :pswitch_1
-    const-string/jumbo v2, "persist.sys.smartcover_mode"
+    const-string v2, "persist.sys.smartcover_mode"
 
     const/4 v3, 0x3
 
@@ -3542,9 +3241,8 @@
 
     goto :goto_0
 
-    .line 1916
     :pswitch_2
-    const-string/jumbo v2, "persist.sys.smartcover_mode"
+    const-string v2, "persist.sys.smartcover_mode"
 
     const/4 v3, 0x4
 
@@ -3556,7 +3254,6 @@
 
     goto :goto_0
 
-    .line 1907
     nop
 
     :pswitch_data_0
@@ -3574,12 +3271,11 @@
     .param p1, "useWordPhoto"    # Z
 
     .prologue
-    .line 1599
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    const-string/jumbo v2, "word_photo"
+    const-string v2, "word_photo"
 
     if-eqz p1, :cond_0
 
@@ -3588,10 +3284,8 @@
     :goto_0
     invoke-static {v1, v2, v0}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 1600
     return-void
 
-    .line 1599
     :cond_0
     const/4 v0, 0x0
 
@@ -3614,23 +3308,19 @@
     .end annotation
 
     .prologue
-    .line 1700
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1701
     .local v1, "list":Ljava/util/List;, "Ljava/util/List<Landroid/content/ComponentName;>;"
     if-eqz p0, :cond_0
 
-    .line 1702
     const-string v3, ","
 
     invoke-virtual {p0, v3}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v2
 
-    .line 1703
     .local v2, "split":[Ljava/lang/String;
     const/4 v0, 0x0
 
@@ -3640,7 +3330,6 @@
 
     if-ge v0, v3, :cond_0
 
-    .line 1704
     aget-object v3, v2, v0
 
     invoke-static {v3}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
@@ -3649,12 +3338,10 @@
 
     invoke-interface {v1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1703
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1707
     .end local v0    # "i":I
     .end local v2    # "split":[Ljava/lang/String;
     :cond_0
@@ -3669,10 +3356,9 @@
 
     const/4 v6, 0x0
 
-    .line 1632
     const-string v3, "1"
 
-    const-string/jumbo v4, "sys.boot_completed"
+    const-string v4, "sys.boot_completed"
 
     const-string v5, "0"
 
@@ -3686,7 +3372,7 @@
 
     if-eqz v3, :cond_0
 
-    const-string/jumbo v3, "support_screen_color_persist"
+    const-string v3, "support_screen_color_persist"
 
     invoke-static {v3, v6}, Lmiui/util/FeatureParser;->getBoolean(Ljava/lang/String;Z)Z
 
@@ -3694,34 +3380,29 @@
 
     if-eqz v3, :cond_0
 
-    .line 1670
     .local v0, "TAG":Ljava/lang/String;
     .local v1, "currValue":I
     .local v2, "dfm":Lmiui/hareware/display/DisplayFeatureManager;
     :goto_0
     return-void
 
-    .line 1637
     .end local v0    # "TAG":Ljava/lang/String;
     .end local v1    # "currValue":I
     .end local v2    # "dfm":Lmiui/hareware/display/DisplayFeatureManager;
     :cond_0
     const-string v0, "DisplayFeatureManager"
 
-    .line 1638
     .restart local v0    # "TAG":Ljava/lang/String;
     const-string v3, "DisplayFeatureManager"
 
-    const-string/jumbo v4, "updateScreenColor begin"
+    const-string v4, "updateScreenColor begin"
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1639
     invoke-static {}, Lmiui/hareware/display/DisplayFeatureManager;->getInstance()Lmiui/hareware/display/DisplayFeatureManager;
 
     move-result-object v2
 
-    .line 1642
     .restart local v2    # "dfm":Lmiui/hareware/display/DisplayFeatureManager;
     invoke-static {}, Landroid/provider/MiuiSettings$ScreenEffect;->isScreenPaperMode()Z
 
@@ -3729,24 +3410,20 @@
 
     if-eqz v3, :cond_3
 
-    .line 1643
     const-string v3, "DisplayFeatureManager"
 
-    const-string/jumbo v4, "setScreenPaperMode true"
+    const-string v4, "setScreenPaperMode true"
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1644
     invoke-static {v7}, Landroid/provider/MiuiSettings$ScreenEffect;->setScreenPaperMode(Z)V
 
-    .line 1660
     :cond_1
     :goto_1
     invoke-virtual {v2}, Lmiui/hareware/display/DisplayFeatureManager;->getScreenSaturation()I
 
     move-result v1
 
-    .line 1661
     .restart local v1    # "currValue":I
     const-string v3, "DisplayFeatureManager"
 
@@ -3754,7 +3431,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "setScreenSaturation "
+    const-string v5, "setScreenSaturation "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3770,11 +3447,9 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1662
     invoke-virtual {v2, v1}, Lmiui/hareware/display/DisplayFeatureManager;->setScreenSaturation(I)V
 
-    .line 1664
-    const-string/jumbo v3, "support_screen_optimize"
+    const-string v3, "support_screen_optimize"
 
     invoke-static {v3, v6}, Lmiui/util/FeatureParser;->getBoolean(Ljava/lang/String;Z)Z
 
@@ -3782,19 +3457,17 @@
 
     if-eqz v3, :cond_2
 
-    .line 1665
     invoke-virtual {v2}, Lmiui/hareware/display/DisplayFeatureManager;->getScreenCabc()I
 
     move-result v1
 
-    .line 1666
     const-string v3, "DisplayFeatureManager"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "setScreenCabc "
+    const-string v5, "setScreenCabc "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3810,29 +3483,25 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1667
     invoke-virtual {v2, v1}, Lmiui/hareware/display/DisplayFeatureManager;->setScreenCabc(I)V
 
-    .line 1669
     :cond_2
     const-string v3, "DisplayFeatureManager"
 
-    const-string/jumbo v4, "updateScreenColor end"
+    const-string v4, "updateScreenColor end"
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 1646
     .end local v1    # "currValue":I
     :cond_3
     invoke-virtual {v2}, Lmiui/hareware/display/DisplayFeatureManager;->getScreenGamut()I
 
     move-result v1
 
-    .line 1647
     .restart local v1    # "currValue":I
-    const-string/jumbo v3, "screen_standard_mode"
+    const-string v3, "screen_standard_mode"
 
     invoke-static {v3, v6}, Lmiui/util/FeatureParser;->getInteger(Ljava/lang/String;I)I
 
@@ -3842,14 +3511,13 @@
 
     if-eqz v1, :cond_4
 
-    .line 1649
     const-string v3, "DisplayFeatureManager"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "setScreenGamut "
+    const-string v5, "setScreenGamut "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3865,30 +3533,26 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1650
     invoke-virtual {v2, v1}, Lmiui/hareware/display/DisplayFeatureManager;->setScreenGamut(I)V
 
     goto :goto_1
 
-    .line 1652
     :cond_4
     invoke-virtual {v2}, Lmiui/hareware/display/DisplayFeatureManager;->getColorPrefer()I
 
     move-result v1
 
-    .line 1653
     const/4 v3, 0x2
 
     if-eq v1, v3, :cond_1
 
-    .line 1654
     const-string v3, "DisplayFeatureManager"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "setColorPrefer "
+    const-string v5, "setColorPrefer "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3904,7 +3568,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1655
     invoke-virtual {v2, v1}, Lmiui/hareware/display/DisplayFeatureManager;->setColorPrefer(I)V
 
     goto/16 :goto_1
@@ -3919,12 +3582,11 @@
 
     const/4 v1, 0x0
 
-    .line 1606
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
-    const-string/jumbo v3, "word_photo"
+    const-string v3, "word_photo"
 
     invoke-static {v2, v3, v1}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 

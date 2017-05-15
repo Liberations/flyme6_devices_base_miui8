@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 8
     invoke-direct {p0}, Lorg/ifaa/android/manager/IFAAManager;-><init>()V
 
     return-void

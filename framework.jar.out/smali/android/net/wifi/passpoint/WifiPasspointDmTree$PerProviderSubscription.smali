@@ -51,7 +51,6 @@
     .locals 1
 
     .prologue
-    .line 138
     new-instance v0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$PerProviderSubscription$1;
 
     invoke-direct {v0}, Landroid/net/wifi/passpoint/WifiPasspointDmTree$PerProviderSubscription$1;-><init>()V
@@ -65,17 +64,14 @@
     .locals 1
 
     .prologue
-    .line 113
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 105
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$PerProviderSubscription;->credentialInfo:Ljava/util/HashMap;
 
-    .line 114
     return-void
 .end method
 
@@ -84,20 +80,16 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 116
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 105
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$PerProviderSubscription;->credentialInfo:Ljava/util/HashMap;
 
-    .line 117
     invoke-virtual {p0, p1}, Landroid/net/wifi/passpoint/WifiPasspointDmTree$PerProviderSubscription;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 118
     return-void
 .end method
 
@@ -108,18 +100,15 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 108
     new-instance v0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$CredentialInfo;
 
     invoke-direct {v0, p1}, Landroid/net/wifi/passpoint/WifiPasspointDmTree$CredentialInfo;-><init>(Ljava/lang/String;)V
 
-    .line 109
     .local v0, "obj":Landroid/net/wifi/passpoint/WifiPasspointDmTree$CredentialInfo;
     iget-object v1, p0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$PerProviderSubscription;->credentialInfo:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 110
     return-object v0
 .end method
 
@@ -127,7 +116,6 @@
     .locals 1
 
     .prologue
-    .line 121
     const/4 v0, 0x0
 
     return v0
@@ -138,14 +126,11 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 130
     if-nez p1, :cond_0
 
-    .line 136
     :goto_0
     return-void
 
-    .line 133
     :cond_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
@@ -153,7 +138,6 @@
 
     iput-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$PerProviderSubscription;->UpdateIdentifier:Ljava/lang/String;
 
-    .line 134
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$PerProviderSubscription;->credentialInfo:Ljava/util/HashMap;
 
     const-class v1, Landroid/net/wifi/passpoint/WifiPasspointDmTree$CredentialInfo;
@@ -173,16 +157,13 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 125
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$PerProviderSubscription;->UpdateIdentifier:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 126
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$PerProviderSubscription;->credentialInfo:Ljava/util/HashMap;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeMap(Ljava/util/Map;)V
 
-    .line 127
     return-void
 .end method

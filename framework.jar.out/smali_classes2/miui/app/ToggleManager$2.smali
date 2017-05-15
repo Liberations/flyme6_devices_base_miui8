@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 1007
     iput-object p1, p0, Lmiui/app/ToggleManager$2;->this$0:Lmiui/app/ToggleManager;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -39,7 +38,6 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 1010
     iget-object v2, p0, Lmiui/app/ToggleManager$2;->this$0:Lmiui/app/ToggleManager;
 
     # getter for: Lmiui/app/ToggleManager;->mToggleOrderChangedListener:Ljava/util/List;
@@ -53,7 +51,6 @@
 
     if-lez v2, :cond_0
 
-    .line 1011
     iget-object v2, p0, Lmiui/app/ToggleManager$2;->this$0:Lmiui/app/ToggleManager;
 
     # getter for: Lmiui/app/ToggleManager;->mToggleOrderChangedListener:Ljava/util/List;
@@ -79,13 +76,11 @@
 
     check-cast v1, Lmiui/app/ToggleManager$OnToggleOrderChangedListener;
 
-    .line 1012
     .local v1, "toggleOrderChangedListener":Lmiui/app/ToggleManager$OnToggleOrderChangedListener;
     invoke-interface {v1}, Lmiui/app/ToggleManager$OnToggleOrderChangedListener;->OnToggleOrderChanged()V
 
     goto :goto_0
 
-    .line 1015
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v1    # "toggleOrderChangedListener":Lmiui/app/ToggleManager$OnToggleOrderChangedListener;
     :cond_0

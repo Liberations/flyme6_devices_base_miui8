@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 3405
     iput-object p1, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$2$1;->this$2:Lcom/android/internal/policy/PhoneWindow$DecorView$2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 3420
     return-void
 .end method
 
@@ -50,7 +48,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 3413
     iget-object v0, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$2$1;->this$2:Lcom/android/internal/policy/PhoneWindow$DecorView$2;
 
     iget-object v0, v0, Lcom/android/internal/policy/PhoneWindow$DecorView$2;->this$1:Lcom/android/internal/policy/PhoneWindow$DecorView;
@@ -64,7 +61,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/widget/ActionBarContextView;->setAlpha(F)V
 
-    .line 3414
     iget-object v0, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$2$1;->this$2:Lcom/android/internal/policy/PhoneWindow$DecorView$2;
 
     iget-object v0, v0, Lcom/android/internal/policy/PhoneWindow$DecorView$2;->this$1:Lcom/android/internal/policy/PhoneWindow$DecorView;
@@ -74,7 +70,6 @@
     # setter for: Lcom/android/internal/policy/PhoneWindow$DecorView;->mFadeAnim:Landroid/animation/ObjectAnimator;
     invoke-static {v0, v1}, Lcom/android/internal/policy/PhoneWindow$DecorView;->access$2602(Lcom/android/internal/policy/PhoneWindow$DecorView;Landroid/animation/ObjectAnimator;)Landroid/animation/ObjectAnimator;
 
-    .line 3415
     return-void
 .end method
 
@@ -83,7 +78,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 3425
     return-void
 .end method
 
@@ -92,7 +86,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 3408
     iget-object v0, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$2$1;->this$2:Lcom/android/internal/policy/PhoneWindow$DecorView$2;
 
     iget-object v0, v0, Lcom/android/internal/policy/PhoneWindow$DecorView$2;->this$1:Lcom/android/internal/policy/PhoneWindow$DecorView;
@@ -106,6 +99,5 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/widget/ActionBarContextView;->setVisibility(I)V
 
-    .line 3409
     return-void
 .end method

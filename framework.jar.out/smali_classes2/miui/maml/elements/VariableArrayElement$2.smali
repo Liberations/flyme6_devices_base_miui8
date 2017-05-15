@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 182
     iput-object p1, p0, Lmiui/maml/elements/VariableArrayElement$2;->this$0:Lmiui/maml/elements/VariableArrayElement;
 
     iput-object p2, p0, Lmiui/maml/elements/VariableArrayElement$2;->val$vars:Lmiui/maml/data/Variables;
@@ -45,7 +44,6 @@
     .param p1, "child"    # Lorg/w3c/dom/Element;
 
     .prologue
-    .line 185
     iget-object v0, p0, Lmiui/maml/elements/VariableArrayElement$2;->this$0:Lmiui/maml/elements/VariableArrayElement;
 
     # getter for: Lmiui/maml/elements/VariableArrayElement;->mArray:Ljava/util/ArrayList;
@@ -63,6 +61,5 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 186
     return-void
 .end method

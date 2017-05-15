@@ -43,17 +43,14 @@
     .param p1, "l"    # Lmiui/maml/NotifierManager$OnNotifyListener;
 
     .prologue
-    .line 139
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 140
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lmiui/maml/NotifierManager$BaseNotifier$Listener;->ref:Ljava/lang/ref/WeakReference;
 
-    .line 141
     return-void
 .end method
 
@@ -62,7 +59,6 @@
     .param p0, "x0"    # Lmiui/maml/NotifierManager$BaseNotifier$Listener;
 
     .prologue
-    .line 131
     iget-boolean v0, p0, Lmiui/maml/NotifierManager$BaseNotifier$Listener;->paused:Z
 
     return v0
@@ -77,31 +73,24 @@
     .param p3, "o"    # Ljava/lang/Object;
 
     .prologue
-    .line 144
     iget-boolean v1, p0, Lmiui/maml/NotifierManager$BaseNotifier$Listener;->paused:Z
 
     if-eqz v1, :cond_1
 
-    .line 145
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lmiui/maml/NotifierManager$BaseNotifier$Listener;->pendingNotify:Z
 
-    .line 146
     iput-object p1, p0, Lmiui/maml/NotifierManager$BaseNotifier$Listener;->context:Landroid/content/Context;
 
-    .line 147
     iput-object p2, p0, Lmiui/maml/NotifierManager$BaseNotifier$Listener;->intent:Landroid/content/Intent;
 
-    .line 148
     iput-object p3, p0, Lmiui/maml/NotifierManager$BaseNotifier$Listener;->obj:Ljava/lang/Object;
 
-    .line 155
     :cond_0
     :goto_0
     return-void
 
-    .line 150
     :cond_1
     iget-object v1, p0, Lmiui/maml/NotifierManager$BaseNotifier$Listener;->ref:Ljava/lang/ref/WeakReference;
 
@@ -111,11 +100,9 @@
 
     check-cast v0, Lmiui/maml/NotifierManager$OnNotifyListener;
 
-    .line 151
     .local v0, "l":Lmiui/maml/NotifierManager$OnNotifyListener;
     if-eqz v0, :cond_0
 
-    .line 152
     invoke-interface {v0, p1, p2, p3}, Lmiui/maml/NotifierManager$OnNotifyListener;->onNotify(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/Object;)V
 
     goto :goto_0
@@ -125,12 +112,10 @@
     .locals 1
 
     .prologue
-    .line 158
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lmiui/maml/NotifierManager$BaseNotifier$Listener;->paused:Z
 
-    .line 159
     return-void
 .end method
 
@@ -142,15 +127,12 @@
 
     const/4 v4, 0x0
 
-    .line 163
     iput-boolean v5, p0, Lmiui/maml/NotifierManager$BaseNotifier$Listener;->paused:Z
 
-    .line 164
     iget-boolean v1, p0, Lmiui/maml/NotifierManager$BaseNotifier$Listener;->pendingNotify:Z
 
     if-eqz v1, :cond_0
 
-    .line 165
     iget-object v1, p0, Lmiui/maml/NotifierManager$BaseNotifier$Listener;->ref:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -159,11 +141,9 @@
 
     check-cast v0, Lmiui/maml/NotifierManager$OnNotifyListener;
 
-    .line 166
     .local v0, "l":Lmiui/maml/NotifierManager$OnNotifyListener;
     if-eqz v0, :cond_0
 
-    .line 167
     iget-object v1, p0, Lmiui/maml/NotifierManager$BaseNotifier$Listener;->context:Landroid/content/Context;
 
     iget-object v2, p0, Lmiui/maml/NotifierManager$BaseNotifier$Listener;->intent:Landroid/content/Intent;
@@ -172,19 +152,14 @@
 
     invoke-interface {v0, v1, v2, v3}, Lmiui/maml/NotifierManager$OnNotifyListener;->onNotify(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/Object;)V
 
-    .line 168
     iput-boolean v5, p0, Lmiui/maml/NotifierManager$BaseNotifier$Listener;->pendingNotify:Z
 
-    .line 169
     iput-object v4, p0, Lmiui/maml/NotifierManager$BaseNotifier$Listener;->context:Landroid/content/Context;
 
-    .line 170
     iput-object v4, p0, Lmiui/maml/NotifierManager$BaseNotifier$Listener;->intent:Landroid/content/Intent;
 
-    .line 171
     iput-object v4, p0, Lmiui/maml/NotifierManager$BaseNotifier$Listener;->obj:Ljava/lang/Object;
 
-    .line 174
     .end local v0    # "l":Lmiui/maml/NotifierManager$OnNotifyListener;
     :cond_0
     return-void

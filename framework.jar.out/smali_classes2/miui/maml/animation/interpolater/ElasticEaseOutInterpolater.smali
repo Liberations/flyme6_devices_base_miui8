@@ -17,20 +17,16 @@
     .locals 1
 
     .prologue
-    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 11
     const v0, 0x3e99999a    # 0.3f
 
     iput v0, p0, Lmiui/maml/animation/interpolater/ElasticEaseOutInterpolater;->mPriod:F
 
-    .line 12
     const/4 v0, 0x0
 
     iput v0, p0, Lmiui/maml/animation/interpolater/ElasticEaseOutInterpolater;->mAmplitude:F
 
-    .line 13
     return-void
 .end method
 
@@ -40,16 +36,12 @@
     .param p2, "amplitude"    # F
 
     .prologue
-    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 16
     iput p1, p0, Lmiui/maml/animation/interpolater/ElasticEaseOutInterpolater;->mPriod:F
 
-    .line 17
     iput p2, p0, Lmiui/maml/animation/interpolater/ElasticEaseOutInterpolater;->mAmplitude:F
 
-    .line 18
     return-void
 .end method
 
@@ -66,20 +58,16 @@
 
     const/high16 v3, 0x3f800000    # 1.0f
 
-    .line 21
     iget v0, p0, Lmiui/maml/animation/interpolater/ElasticEaseOutInterpolater;->mAmplitude:F
 
-    .line 24
     .local v0, "a":F
     cmpl-float v4, p1, v2
 
     if-nez v4, :cond_0
 
-    .line 34
     :goto_0
     return v2
 
-    .line 26
     :cond_0
     cmpl-float v2, p1, v3
 
@@ -87,26 +75,21 @@
 
     move v2, v3
 
-    .line 27
     goto :goto_0
 
-    .line 28
     :cond_1
     cmpg-float v2, v0, v3
 
     if-gez v2, :cond_2
 
-    .line 29
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 30
     iget v2, p0, Lmiui/maml/animation/interpolater/ElasticEaseOutInterpolater;->mPriod:F
 
     const/high16 v3, 0x40800000    # 4.0f
 
     div-float v1, v2, v3
 
-    .line 34
     .local v1, "s":F
     :goto_1
     float-to-double v2, v0
@@ -151,7 +134,6 @@
 
     goto :goto_0
 
-    .line 32
     .end local v1    # "s":F
     :cond_2
     iget v2, p0, Lmiui/maml/animation/interpolater/ElasticEaseOutInterpolater;->mPriod:F

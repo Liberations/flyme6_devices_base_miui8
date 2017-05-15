@@ -33,19 +33,14 @@
 
     const/4 v0, 0x0
 
-    .line 54
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 49
     iput-boolean v0, p0, Landroid/util/ResolutionOverride;->mIsEnabled:Z
 
-    .line 50
     iput v0, p0, Landroid/util/ResolutionOverride;->mOverrideXres:I
 
-    .line 51
     iput v0, p0, Landroid/util/ResolutionOverride;->mOverrideYres:I
 
-    .line 55
     invoke-virtual {p1}, Landroid/view/SurfaceView;->getContext()Landroid/content/Context;
 
     move-result-object v7
@@ -62,7 +57,6 @@
 
     move v0, v6
 
-    .line 56
     .local v0, "enable":Z
     :cond_0
     invoke-virtual {p1}, Landroid/view/SurfaceView;->getResources()Landroid/content/res/Resources;
@@ -75,7 +69,6 @@
 
     iget v2, v7, Landroid/content/res/Configuration;->orientation:I
 
-    .line 58
     .local v2, "orientation":I
     if-eqz v0, :cond_4
 
@@ -83,7 +76,6 @@
 
     if-ne v2, v9, :cond_4
 
-    .line 60
     :cond_1
     const-string v7, "persist.debug.app_res_override"
 
@@ -93,7 +85,6 @@
 
     move-result-object v4
 
-    .line 62
     .local v4, "resStr":Ljava/lang/String;
     if-eqz v4, :cond_2
 
@@ -103,17 +94,14 @@
 
     if-lez v7, :cond_2
 
-    .line 63
     invoke-virtual {v4}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 64
     invoke-virtual {v4, v10}, Ljava/lang/String;->indexOf(I)I
 
     move-result v3
 
-    .line 65
     .local v3, "pos":I
     if-lez v3, :cond_2
 
@@ -123,7 +111,6 @@
 
     if-ne v7, v3, :cond_2
 
-    .line 67
     const/4 v7, 0x0
 
     :try_start_0
@@ -137,7 +124,6 @@
 
     iput v7, p0, Landroid/util/ResolutionOverride;->mOverrideXres:I
 
-    .line 68
     add-int/lit8 v7, v3, 0x1
 
     invoke-virtual {v4, v7}, Ljava/lang/String;->substring(I)Ljava/lang/String;
@@ -152,25 +138,20 @@
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 75
     .end local v3    # "pos":I
     :cond_2
     :goto_0
     if-ne v2, v9, :cond_3
 
-    .line 76
     iget v5, p0, Landroid/util/ResolutionOverride;->mOverrideXres:I
 
-    .line 77
     .local v5, "tmp":I
     iget v7, p0, Landroid/util/ResolutionOverride;->mOverrideYres:I
 
     iput v7, p0, Landroid/util/ResolutionOverride;->mOverrideXres:I
 
-    .line 78
     iput v5, p0, Landroid/util/ResolutionOverride;->mOverrideYres:I
 
-    .line 81
     .end local v5    # "tmp":I
     :cond_3
     iget v7, p0, Landroid/util/ResolutionOverride;->mOverrideXres:I
@@ -181,21 +162,17 @@
 
     if-lez v7, :cond_4
 
-    .line 82
     iput-boolean v6, p0, Landroid/util/ResolutionOverride;->mIsEnabled:Z
 
-    .line 88
     .end local v4    # "resStr":Ljava/lang/String;
     :cond_4
     return-void
 
-    .line 69
     .restart local v3    # "pos":I
     .restart local v4    # "resStr":Ljava/lang/String;
     :catch_0
     move-exception v1
 
-    .line 70
     .local v1, "ex":Ljava/lang/NumberFormatException;
     const-string v7, "ResolutionOverride"
 
@@ -213,16 +190,13 @@
     .param p1, "surfaceView"    # Landroid/view/SurfaceView;
 
     .prologue
-    .line 118
     iget-boolean v0, p0, Landroid/util/ResolutionOverride;->mIsEnabled:Z
 
     if-nez v0, :cond_0
 
-    .line 139
     :goto_0
     return-void
 
-    .line 126
     :cond_0
     new-instance v0, Landroid/util/ResolutionOverride$1;
 
@@ -230,7 +204,6 @@
 
     invoke-virtual {p1, v0}, Landroid/view/SurfaceView;->post(Ljava/lang/Runnable;)Z
 
-    .line 133
     new-instance v0, Landroid/util/ResolutionOverride$2;
 
     invoke-direct {v0, p0, p1}, Landroid/util/ResolutionOverride$2;-><init>(Landroid/util/ResolutionOverride;Landroid/view/SurfaceView;)V
@@ -250,22 +223,18 @@
     .prologue
     const/high16 v5, 0x3f800000    # 1.0f
 
-    .line 101
     iget-boolean v3, p0, Landroid/util/ResolutionOverride;->mIsEnabled:Z
 
     if-nez v3, :cond_0
 
-    .line 114
     :goto_0
     return-void
 
-    .line 105
     :cond_0
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
-    .line 107
     .local v0, "matrix":Landroid/graphics/Matrix;
     iget v3, p0, Landroid/util/ResolutionOverride;->mOverrideXres:I
 
@@ -281,7 +250,6 @@
 
     div-float v1, v3, v4
 
-    .line 108
     .local v1, "xscale":F
     iget v3, p0, Landroid/util/ResolutionOverride;->mOverrideYres:I
 
@@ -297,11 +265,9 @@
 
     div-float v2, v3, v4
 
-    .line 111
     .local v2, "yscale":F
     invoke-virtual {v0, v1, v2}, Landroid/graphics/Matrix;->postScale(FF)Z
 
-    .line 112
     invoke-virtual {p2, v0}, Landroid/view/MotionEvent;->transform(Landroid/graphics/Matrix;)V
 
     goto :goto_0
@@ -312,16 +278,13 @@
     .param p1, "view"    # Landroid/view/SurfaceView;
 
     .prologue
-    .line 92
     iget-boolean v0, p0, Landroid/util/ResolutionOverride;->mIsEnabled:Z
 
     if-nez v0, :cond_0
 
-    .line 97
     :goto_0
     return-void
 
-    .line 96
     :cond_0
     invoke-virtual {p1}, Landroid/view/SurfaceView;->getHolder()Landroid/view/SurfaceHolder;
 

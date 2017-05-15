@@ -24,15 +24,12 @@
     .param p1, "id"    # Ljava/lang/String;
 
     .prologue
-    .line 152
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lmiui/maml/MamlConfigSettings$ConfigFileHelper;-><init>(Ljava/lang/String;)V
 
-    .line 153
     iput-object p1, p0, Lmiui/maml/MamlConfigSettings$LockscreenConfigFileHelper;->mId:Ljava/lang/String;
 
-    .line 154
     return-void
 .end method
 
@@ -43,7 +40,6 @@
     .param p1, "file"    # Ljava/lang/String;
 
     .prologue
-    .line 158
     invoke-static {}, Lmiui/content/res/ThemeResources;->getSystem()Lmiui/content/res/ThemeResourcesSystem;
 
     move-result-object v0
@@ -59,7 +55,6 @@
     .locals 1
 
     .prologue
-    .line 168
     const-string v0, "/data/system/theme/config.config"
 
     return-object v0
@@ -70,7 +65,6 @@
     .param p1, "file"    # Ljava/lang/String;
 
     .prologue
-    .line 163
     invoke-static {}, Lmiui/content/res/ThemeResources;->getSystem()Lmiui/content/res/ThemeResourcesSystem;
 
     move-result-object v0
@@ -88,10 +82,8 @@
     .locals 3
 
     .prologue
-    .line 173
     invoke-super {p0}, Lmiui/maml/MamlConfigSettings$ConfigFileHelper;->save()V
 
-    .line 175
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -130,12 +122,10 @@
 
     move-result-object v0
 
-    .line 177
     .local v0, "path":Ljava/lang/String;
     iget-object v1, p0, Lmiui/maml/MamlConfigSettings$LockscreenConfigFileHelper;->mConfigFile:Lmiui/maml/util/ConfigFile;
 
     invoke-virtual {v1, v0}, Lmiui/maml/util/ConfigFile;->save(Ljava/lang/String;)Z
 
-    .line 178
     return-void
 .end method

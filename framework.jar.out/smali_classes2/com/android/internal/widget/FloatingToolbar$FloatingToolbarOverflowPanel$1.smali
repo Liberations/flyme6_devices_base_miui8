@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1180
     iput-object p1, p0, Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarOverflowPanel$1;->this$0:Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarOverflowPanel;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 1183
     iget-object v0, p0, Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarOverflowPanel$1;->this$0:Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarOverflowPanel;
 
     # getter for: Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarOverflowPanel;->mCloseOverflow:Ljava/lang/Runnable;
@@ -51,6 +49,5 @@
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    .line 1184
     return-void
 .end method

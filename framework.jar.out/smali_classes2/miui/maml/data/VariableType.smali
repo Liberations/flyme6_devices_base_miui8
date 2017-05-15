@@ -74,7 +74,6 @@
 
     const/4 v4, 0x0
 
-    .line 5
     new-instance v0, Lmiui/maml/data/VariableType;
 
     const-string v1, "INVALID"
@@ -85,7 +84,6 @@
 
     sput-object v0, Lmiui/maml/data/VariableType;->INVALID:Lmiui/maml/data/VariableType;
 
-    .line 6
     new-instance v0, Lmiui/maml/data/VariableType;
 
     const-string v1, "NUM"
@@ -96,7 +94,6 @@
 
     sput-object v0, Lmiui/maml/data/VariableType;->NUM:Lmiui/maml/data/VariableType;
 
-    .line 7
     new-instance v0, Lmiui/maml/data/VariableType;
 
     const-string v1, "STR"
@@ -107,7 +104,6 @@
 
     sput-object v0, Lmiui/maml/data/VariableType;->STR:Lmiui/maml/data/VariableType;
 
-    .line 8
     new-instance v0, Lmiui/maml/data/VariableType;
 
     const-string v1, "OBJ"
@@ -118,7 +114,6 @@
 
     sput-object v0, Lmiui/maml/data/VariableType;->OBJ:Lmiui/maml/data/VariableType;
 
-    .line 10
     new-instance v0, Lmiui/maml/data/VariableType;
 
     const-string v1, "NUM_ARR"
@@ -129,7 +124,6 @@
 
     sput-object v0, Lmiui/maml/data/VariableType;->NUM_ARR:Lmiui/maml/data/VariableType;
 
-    .line 11
     new-instance v0, Lmiui/maml/data/VariableType;
 
     const-string v1, "DOUBLE_ARR"
@@ -142,7 +136,6 @@
 
     sput-object v0, Lmiui/maml/data/VariableType;->DOUBLE_ARR:Lmiui/maml/data/VariableType;
 
-    .line 12
     new-instance v0, Lmiui/maml/data/VariableType;
 
     const-string v1, "FLOAT_ARR"
@@ -155,7 +148,6 @@
 
     sput-object v0, Lmiui/maml/data/VariableType;->FLOAT_ARR:Lmiui/maml/data/VariableType;
 
-    .line 13
     new-instance v0, Lmiui/maml/data/VariableType;
 
     const-string v1, "INT_ARR"
@@ -168,7 +160,6 @@
 
     sput-object v0, Lmiui/maml/data/VariableType;->INT_ARR:Lmiui/maml/data/VariableType;
 
-    .line 14
     new-instance v0, Lmiui/maml/data/VariableType;
 
     const-string v1, "SHORT_ARR"
@@ -181,7 +172,6 @@
 
     sput-object v0, Lmiui/maml/data/VariableType;->SHORT_ARR:Lmiui/maml/data/VariableType;
 
-    .line 15
     new-instance v0, Lmiui/maml/data/VariableType;
 
     const-string v1, "BYTE_ARR"
@@ -194,7 +184,6 @@
 
     sput-object v0, Lmiui/maml/data/VariableType;->BYTE_ARR:Lmiui/maml/data/VariableType;
 
-    .line 16
     new-instance v0, Lmiui/maml/data/VariableType;
 
     const-string v1, "LONG_ARR"
@@ -207,7 +196,6 @@
 
     sput-object v0, Lmiui/maml/data/VariableType;->LONG_ARR:Lmiui/maml/data/VariableType;
 
-    .line 17
     new-instance v0, Lmiui/maml/data/VariableType;
 
     const-string v1, "BOOLEAN_ARR"
@@ -220,7 +208,6 @@
 
     sput-object v0, Lmiui/maml/data/VariableType;->BOOLEAN_ARR:Lmiui/maml/data/VariableType;
 
-    .line 18
     new-instance v0, Lmiui/maml/data/VariableType;
 
     const-string v1, "CHAR_ARR"
@@ -233,7 +220,6 @@
 
     sput-object v0, Lmiui/maml/data/VariableType;->CHAR_ARR:Lmiui/maml/data/VariableType;
 
-    .line 20
     new-instance v0, Lmiui/maml/data/VariableType;
 
     const-string v1, "STR_ARR"
@@ -246,7 +232,6 @@
 
     sput-object v0, Lmiui/maml/data/VariableType;->STR_ARR:Lmiui/maml/data/VariableType;
 
-    .line 21
     new-instance v0, Lmiui/maml/data/VariableType;
 
     const-string v1, "OBJ_ARR"
@@ -259,7 +244,6 @@
 
     sput-object v0, Lmiui/maml/data/VariableType;->OBJ_ARR:Lmiui/maml/data/VariableType;
 
-    .line 4
     const/16 v0, 0xf
 
     new-array v0, v0, [Lmiui/maml/data/VariableType;
@@ -360,14 +344,11 @@
     .end annotation
 
     .prologue
-    .line 58
     .local p3, "clazz":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 59
     iput-object p3, p0, Lmiui/maml/data/VariableType;->mTypeClass:Ljava/lang/Class;
 
-    .line 60
     return-void
 .end method
 
@@ -376,7 +357,6 @@
     .param p0, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 24
     const-string v0, "number"
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -385,14 +365,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 25
     sget-object v0, Lmiui/maml/data/VariableType;->NUM:Lmiui/maml/data/VariableType;
 
-    .line 53
     :goto_0
     return-object v0
 
-    .line 26
     :cond_0
     const-string v0, "string"
 
@@ -402,12 +379,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 27
     sget-object v0, Lmiui/maml/data/VariableType;->STR:Lmiui/maml/data/VariableType;
 
     goto :goto_0
 
-    .line 28
     :cond_1
     const-string v0, "object"
 
@@ -417,12 +392,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 29
     sget-object v0, Lmiui/maml/data/VariableType;->OBJ:Lmiui/maml/data/VariableType;
 
     goto :goto_0
 
-    .line 30
     :cond_2
     const-string v0, "number[]"
 
@@ -432,12 +405,10 @@
 
     if-eqz v0, :cond_3
 
-    .line 31
     sget-object v0, Lmiui/maml/data/VariableType;->NUM_ARR:Lmiui/maml/data/VariableType;
 
     goto :goto_0
 
-    .line 32
     :cond_3
     const-string v0, "double[]"
 
@@ -447,12 +418,10 @@
 
     if-eqz v0, :cond_4
 
-    .line 33
     sget-object v0, Lmiui/maml/data/VariableType;->DOUBLE_ARR:Lmiui/maml/data/VariableType;
 
     goto :goto_0
 
-    .line 34
     :cond_4
     const-string v0, "float[]"
 
@@ -462,12 +431,10 @@
 
     if-eqz v0, :cond_5
 
-    .line 35
     sget-object v0, Lmiui/maml/data/VariableType;->FLOAT_ARR:Lmiui/maml/data/VariableType;
 
     goto :goto_0
 
-    .line 36
     :cond_5
     const-string v0, "int[]"
 
@@ -477,12 +444,10 @@
 
     if-eqz v0, :cond_6
 
-    .line 37
     sget-object v0, Lmiui/maml/data/VariableType;->INT_ARR:Lmiui/maml/data/VariableType;
 
     goto :goto_0
 
-    .line 38
     :cond_6
     const-string v0, "short[]"
 
@@ -492,12 +457,10 @@
 
     if-eqz v0, :cond_7
 
-    .line 39
     sget-object v0, Lmiui/maml/data/VariableType;->SHORT_ARR:Lmiui/maml/data/VariableType;
 
     goto :goto_0
 
-    .line 40
     :cond_7
     const-string v0, "byte[]"
 
@@ -507,12 +470,10 @@
 
     if-eqz v0, :cond_8
 
-    .line 41
     sget-object v0, Lmiui/maml/data/VariableType;->BYTE_ARR:Lmiui/maml/data/VariableType;
 
     goto :goto_0
 
-    .line 42
     :cond_8
     const-string v0, "long[]"
 
@@ -522,12 +483,10 @@
 
     if-eqz v0, :cond_9
 
-    .line 43
     sget-object v0, Lmiui/maml/data/VariableType;->LONG_ARR:Lmiui/maml/data/VariableType;
 
     goto :goto_0
 
-    .line 44
     :cond_9
     const-string v0, "boolean[]"
 
@@ -537,12 +496,10 @@
 
     if-eqz v0, :cond_a
 
-    .line 45
     sget-object v0, Lmiui/maml/data/VariableType;->BOOLEAN_ARR:Lmiui/maml/data/VariableType;
 
     goto :goto_0
 
-    .line 46
     :cond_a
     const-string v0, "char[]"
 
@@ -552,12 +509,10 @@
 
     if-eqz v0, :cond_b
 
-    .line 47
     sget-object v0, Lmiui/maml/data/VariableType;->CHAR_ARR:Lmiui/maml/data/VariableType;
 
     goto :goto_0
 
-    .line 48
     :cond_b
     const-string v0, "string[]"
 
@@ -567,12 +522,10 @@
 
     if-eqz v0, :cond_c
 
-    .line 49
     sget-object v0, Lmiui/maml/data/VariableType;->STR_ARR:Lmiui/maml/data/VariableType;
 
     goto/16 :goto_0
 
-    .line 50
     :cond_c
     const-string v0, "object[]"
 
@@ -582,12 +535,10 @@
 
     if-eqz v0, :cond_d
 
-    .line 51
     sget-object v0, Lmiui/maml/data/VariableType;->OBJ_ARR:Lmiui/maml/data/VariableType;
 
     goto/16 :goto_0
 
-    .line 53
     :cond_d
     sget-object v0, Lmiui/maml/data/VariableType;->NUM:Lmiui/maml/data/VariableType;
 
@@ -599,7 +550,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 4
     const-class v0, Lmiui/maml/data/VariableType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -615,7 +565,6 @@
     .locals 1
 
     .prologue
-    .line 4
     sget-object v0, Lmiui/maml/data/VariableType;->$VALUES:[Lmiui/maml/data/VariableType;
 
     invoke-virtual {v0}, [Lmiui/maml/data/VariableType;->clone()Ljava/lang/Object;
@@ -633,7 +582,6 @@
     .locals 2
 
     .prologue
-    .line 72
     invoke-virtual {p0}, Lmiui/maml/data/VariableType;->ordinal()I
 
     move-result v0
@@ -673,7 +621,6 @@
     .locals 1
 
     .prologue
-    .line 64
     sget-object v0, Lmiui/maml/data/VariableType;->NUM:Lmiui/maml/data/VariableType;
 
     if-ne p0, v0, :cond_0
@@ -693,7 +640,6 @@
     .locals 2
 
     .prologue
-    .line 68
     invoke-virtual {p0}, Lmiui/maml/data/VariableType;->ordinal()I
 
     move-result v0

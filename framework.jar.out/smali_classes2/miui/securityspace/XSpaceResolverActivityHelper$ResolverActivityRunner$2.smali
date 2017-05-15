@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 83
     iput-object p1, p0, Lmiui/securityspace/XSpaceResolverActivityHelper$ResolverActivityRunner$2;->this$0:Lmiui/securityspace/XSpaceResolverActivityHelper$ResolverActivityRunner;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 86
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result v1
@@ -52,7 +50,6 @@
 
     const/4 v0, 0x0
 
-    .line 89
     .local v0, "aimUserId":I
     :goto_0
     iget-object v1, p0, Lmiui/securityspace/XSpaceResolverActivityHelper$ResolverActivityRunner$2;->this$0:Lmiui/securityspace/XSpaceResolverActivityHelper$ResolverActivityRunner;
@@ -60,10 +57,8 @@
     # invokes: Lmiui/securityspace/XSpaceResolverActivityHelper$ResolverActivityRunner;->forward(I)V
     invoke-static {v1, v0}, Lmiui/securityspace/XSpaceResolverActivityHelper$ResolverActivityRunner;->access$100(Lmiui/securityspace/XSpaceResolverActivityHelper$ResolverActivityRunner;I)V
 
-    .line 90
     return-void
 
-    .line 86
     .end local v0    # "aimUserId":I
     :cond_0
     const/16 v0, 0x3e7

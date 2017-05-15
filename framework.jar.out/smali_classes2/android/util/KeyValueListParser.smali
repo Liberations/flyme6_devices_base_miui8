@@ -25,24 +25,20 @@
     .param p1, "delim"    # C
 
     .prologue
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 27
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Landroid/util/KeyValueListParser;->mValues:Landroid/util/ArrayMap;
 
-    .line 36
     new-instance v0, Landroid/text/TextUtils$SimpleStringSplitter;
 
     invoke-direct {v0, p1}, Landroid/text/TextUtils$SimpleStringSplitter;-><init>(C)V
 
     iput-object v0, p0, Landroid/util/KeyValueListParser;->mSplitter:Landroid/text/TextUtils$StringSplitter;
 
-    .line 37
     return-void
 .end method
 
@@ -54,7 +50,6 @@
     .param p2, "def"    # F
 
     .prologue
-    .line 90
     iget-object v1, p0, Landroid/util/KeyValueListParser;->mValues:Landroid/util/ArrayMap;
 
     invoke-virtual {v1, p1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -63,11 +58,9 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 91
     .local v0, "value":Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 93
     :try_start_0
     invoke-static {v0}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
     :try_end_0
@@ -75,13 +68,11 @@
 
     move-result p2
 
-    .line 98
     .end local p2    # "def":F
     :cond_0
     :goto_0
     return p2
 
-    .line 94
     .restart local p2    # "def":F
     :catch_0
     move-exception v1
@@ -95,7 +86,6 @@
     .param p2, "def"    # J
 
     .prologue
-    .line 72
     iget-object v1, p0, Landroid/util/KeyValueListParser;->mValues:Landroid/util/ArrayMap;
 
     invoke-virtual {v1, p1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -104,11 +94,9 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 73
     .local v0, "value":Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 75
     :try_start_0
     invoke-static {v0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
     :try_end_0
@@ -116,13 +104,11 @@
 
     move-result-wide p2
 
-    .line 80
     .end local p2    # "def":J
     :cond_0
     :goto_0
     return-wide p2
 
-    .line 76
     .restart local p2    # "def":J
     :catch_0
     move-exception v1
@@ -136,7 +122,6 @@
     .param p2, "def"    # Ljava/lang/String;
 
     .prologue
-    .line 108
     iget-object v1, p0, Landroid/util/KeyValueListParser;->mValues:Landroid/util/ArrayMap;
 
     invoke-virtual {v1, p1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -145,11 +130,9 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 109
     .local v0, "value":Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 112
     .end local v0    # "value":Ljava/lang/String;
     :goto_0
     return-object v0
@@ -171,20 +154,16 @@
     .end annotation
 
     .prologue
-    .line 50
     iget-object v3, p0, Landroid/util/KeyValueListParser;->mValues:Landroid/util/ArrayMap;
 
     invoke-virtual {v3}, Landroid/util/ArrayMap;->clear()V
 
-    .line 51
     if-eqz p1, :cond_1
 
-    .line 52
     iget-object v3, p0, Landroid/util/KeyValueListParser;->mSplitter:Landroid/text/TextUtils$StringSplitter;
 
     invoke-interface {v3, p1}, Landroid/text/TextUtils$StringSplitter;->setString(Ljava/lang/String;)V
 
-    .line 53
     iget-object v3, p0, Landroid/util/KeyValueListParser;->mSplitter:Landroid/text/TextUtils$StringSplitter;
 
     invoke-interface {v3}, Landroid/text/TextUtils$StringSplitter;->iterator()Ljava/util/Iterator;
@@ -205,7 +184,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 54
     .local v1, "pair":Ljava/lang/String;
     const/16 v3, 0x3d
 
@@ -213,16 +191,13 @@
 
     move-result v2
 
-    .line 55
     .local v2, "sep":I
     if-gez v2, :cond_0
 
-    .line 56
     iget-object v3, p0, Landroid/util/KeyValueListParser;->mValues:Landroid/util/ArrayMap;
 
     invoke-virtual {v3}, Landroid/util/ArrayMap;->clear()V
 
-    .line 57
     new-instance v3, Ljava/lang/IllegalArgumentException;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -263,7 +238,6 @@
 
     throw v3
 
-    .line 60
     :cond_0
     iget-object v3, p0, Landroid/util/KeyValueListParser;->mValues:Landroid/util/ArrayMap;
 
@@ -291,7 +265,6 @@
 
     goto :goto_0
 
-    .line 63
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v1    # "pair":Ljava/lang/String;
     .end local v2    # "sep":I

@@ -62,7 +62,6 @@
     .locals 1
 
     .prologue
-    .line 534
     new-instance v0, Landroid/content/RestrictionEntry$1;
 
     invoke-direct {v0}, Landroid/content/RestrictionEntry$1;-><init>()V
@@ -78,16 +77,12 @@
     .param p2, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 144
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 145
     iput p1, p0, Landroid/content/RestrictionEntry;->mType:I
 
-    .line 146
     iput-object p2, p0, Landroid/content/RestrictionEntry;->mKey:Ljava/lang/String;
 
-    .line 147
     return-void
 .end method
 
@@ -96,84 +91,71 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 498
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 499
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
     iput v2, p0, Landroid/content/RestrictionEntry;->mType:I
 
-    .line 500
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
     iput-object v2, p0, Landroid/content/RestrictionEntry;->mKey:Ljava/lang/String;
 
-    .line 501
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
     iput-object v2, p0, Landroid/content/RestrictionEntry;->mTitle:Ljava/lang/String;
 
-    .line 502
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
     iput-object v2, p0, Landroid/content/RestrictionEntry;->mDescription:Ljava/lang/String;
 
-    .line 503
     invoke-virtual {p1}, Landroid/os/Parcel;->readStringArray()[Ljava/lang/String;
 
     move-result-object v2
 
     iput-object v2, p0, Landroid/content/RestrictionEntry;->mChoiceEntries:[Ljava/lang/String;
 
-    .line 504
     invoke-virtual {p1}, Landroid/os/Parcel;->readStringArray()[Ljava/lang/String;
 
     move-result-object v2
 
     iput-object v2, p0, Landroid/content/RestrictionEntry;->mChoiceValues:[Ljava/lang/String;
 
-    .line 505
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
     iput-object v2, p0, Landroid/content/RestrictionEntry;->mCurrentValue:Ljava/lang/String;
 
-    .line 506
     invoke-virtual {p1}, Landroid/os/Parcel;->readStringArray()[Ljava/lang/String;
 
     move-result-object v2
 
     iput-object v2, p0, Landroid/content/RestrictionEntry;->mCurrentValues:[Ljava/lang/String;
 
-    .line 507
     const/4 v2, 0x0
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->readParcelableArray(Ljava/lang/ClassLoader;)[Landroid/os/Parcelable;
 
     move-result-object v1
 
-    .line 508
     .local v1, "parcelables":[Landroid/os/Parcelable;
     if-eqz v1, :cond_0
 
-    .line 509
     array-length v2, v1
 
     new-array v2, v2, [Landroid/content/RestrictionEntry;
 
     iput-object v2, p0, Landroid/content/RestrictionEntry;->mRestrictions:[Landroid/content/RestrictionEntry;
 
-    .line 510
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -182,7 +164,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 511
     iget-object v3, p0, Landroid/content/RestrictionEntry;->mRestrictions:[Landroid/content/RestrictionEntry;
 
     aget-object v2, v1, v0
@@ -191,12 +172,10 @@
 
     aput-object v2, v3, v0
 
-    .line 510
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 514
     .end local v0    # "i":I
     :cond_0
     return-void
@@ -208,21 +187,16 @@
     .param p2, "selectedInt"    # I
 
     .prologue
-    .line 187
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 188
     iput-object p1, p0, Landroid/content/RestrictionEntry;->mKey:Ljava/lang/String;
 
-    .line 189
     const/4 v0, 0x5
 
     iput v0, p0, Landroid/content/RestrictionEntry;->mType:I
 
-    .line 190
     invoke-virtual {p0, p2}, Landroid/content/RestrictionEntry;->setIntValue(I)V
 
-    .line 191
     return-void
 .end method
 
@@ -232,21 +206,16 @@
     .param p2, "selectedString"    # Ljava/lang/String;
 
     .prologue
-    .line 154
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 155
     iput-object p1, p0, Landroid/content/RestrictionEntry;->mKey:Ljava/lang/String;
 
-    .line 156
     const/4 v0, 0x2
 
     iput v0, p0, Landroid/content/RestrictionEntry;->mType:I
 
-    .line 157
     iput-object p2, p0, Landroid/content/RestrictionEntry;->mCurrentValue:Ljava/lang/String;
 
-    .line 158
     return-void
 .end method
 
@@ -256,21 +225,16 @@
     .param p2, "selectedState"    # Z
 
     .prologue
-    .line 165
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 166
     iput-object p1, p0, Landroid/content/RestrictionEntry;->mKey:Ljava/lang/String;
 
-    .line 167
     const/4 v0, 0x1
 
     iput v0, p0, Landroid/content/RestrictionEntry;->mType:I
 
-    .line 168
     invoke-virtual {p0, p2}, Landroid/content/RestrictionEntry;->setSelectedState(Z)V
 
-    .line 169
     return-void
 .end method
 
@@ -283,24 +247,18 @@
     .prologue
     const/4 v5, 0x7
 
-    .line 204
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 205
     iput-object p1, p0, Landroid/content/RestrictionEntry;->mKey:Ljava/lang/String;
 
-    .line 206
     if-eqz p3, :cond_1
 
-    .line 207
     const/16 v4, 0x8
 
     iput v4, p0, Landroid/content/RestrictionEntry;->mType:I
 
-    .line 208
     if-eqz p2, :cond_2
 
-    .line 209
     move-object v0, p2
 
     .local v0, "arr$":[Landroid/content/RestrictionEntry;
@@ -315,7 +273,6 @@
 
     aget-object v3, v0, v1
 
-    .line 210
     .local v3, "restriction":Landroid/content/RestrictionEntry;
     invoke-virtual {v3}, Landroid/content/RestrictionEntry;->getType()I
 
@@ -323,7 +280,6 @@
 
     if-eq v4, v5, :cond_0
 
-    .line 211
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
     const-string v5, "bundle_array restriction can only have nested restriction entries of type bundle"
@@ -332,13 +288,11 @@
 
     throw v4
 
-    .line 209
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 217
     .end local v0    # "arr$":[Landroid/content/RestrictionEntry;
     .end local v1    # "i$":I
     .end local v2    # "len$":I
@@ -346,11 +300,9 @@
     :cond_1
     iput v5, p0, Landroid/content/RestrictionEntry;->mType:I
 
-    .line 219
     :cond_2
     invoke-virtual {p0, p2}, Landroid/content/RestrictionEntry;->setRestrictions([Landroid/content/RestrictionEntry;)V
 
-    .line 220
     return-void
 .end method
 
@@ -360,21 +312,16 @@
     .param p2, "selectedStrings"    # [Ljava/lang/String;
 
     .prologue
-    .line 176
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 177
     iput-object p1, p0, Landroid/content/RestrictionEntry;->mKey:Ljava/lang/String;
 
-    .line 178
     const/4 v0, 0x4
 
     iput v0, p0, Landroid/content/RestrictionEntry;->mType:I
 
-    .line 179
     iput-object p2, p0, Landroid/content/RestrictionEntry;->mCurrentValues:[Ljava/lang/String;
 
-    .line 180
     return-void
 .end method
 
@@ -384,7 +331,6 @@
     .param p1, "restrictionEntries"    # [Landroid/content/RestrictionEntry;
 
     .prologue
-    .line 242
     new-instance v0, Landroid/content/RestrictionEntry;
 
     const/4 v1, 0x1
@@ -400,7 +346,6 @@
     .param p1, "restrictionEntries"    # [Landroid/content/RestrictionEntry;
 
     .prologue
-    .line 230
     new-instance v0, Landroid/content/RestrictionEntry;
 
     const/4 v1, 0x0
@@ -416,7 +361,6 @@
     .locals 1
 
     .prologue
-    .line 518
     const/4 v0, 0x0
 
     return v0
@@ -431,15 +375,12 @@
 
     const/4 v1, 0x1
 
-    .line 456
     if-ne p1, p0, :cond_1
 
-    .line 477
     :cond_0
     :goto_0
     return v1
 
-    .line 457
     :cond_1
     instance-of v3, p1, Landroid/content/RestrictionEntry;
 
@@ -452,10 +393,8 @@
     :cond_2
     move-object v0, p1
 
-    .line 458
     check-cast v0, Landroid/content/RestrictionEntry;
 
-    .line 459
     .local v0, "other":Landroid/content/RestrictionEntry;
     iget v3, p0, Landroid/content/RestrictionEntry;->mType:I
 
@@ -476,10 +415,8 @@
     :cond_3
     move v1, v2
 
-    .line 460
     goto :goto_0
 
-    .line 462
     :cond_4
     iget-object v3, p0, Landroid/content/RestrictionEntry;->mCurrentValues:[Ljava/lang/String;
 
@@ -507,7 +444,6 @@
 
     if-nez v3, :cond_0
 
-    .line 467
     :cond_5
     iget-object v3, p0, Landroid/content/RestrictionEntry;->mCurrentValue:Ljava/lang/String;
 
@@ -535,7 +471,6 @@
 
     if-nez v3, :cond_0
 
-    .line 472
     :cond_6
     iget-object v3, p0, Landroid/content/RestrictionEntry;->mCurrentValue:Ljava/lang/String;
 
@@ -566,7 +501,6 @@
     :cond_7
     move v1, v2
 
-    .line 477
     goto :goto_0
 .end method
 
@@ -574,7 +508,6 @@
     .locals 1
 
     .prologue
-    .line 276
     iget-object v0, p0, Landroid/content/RestrictionEntry;->mCurrentValues:[Ljava/lang/String;
 
     return-object v0
@@ -584,7 +517,6 @@
     .locals 1
 
     .prologue
-    .line 409
     iget-object v0, p0, Landroid/content/RestrictionEntry;->mChoiceEntries:[Ljava/lang/String;
 
     return-object v0
@@ -594,7 +526,6 @@
     .locals 1
 
     .prologue
-    .line 379
     iget-object v0, p0, Landroid/content/RestrictionEntry;->mChoiceValues:[Ljava/lang/String;
 
     return-object v0
@@ -604,7 +535,6 @@
     .locals 1
 
     .prologue
-    .line 417
     iget-object v0, p0, Landroid/content/RestrictionEntry;->mDescription:Ljava/lang/String;
 
     return-object v0
@@ -614,7 +544,6 @@
     .locals 1
 
     .prologue
-    .line 292
     iget-object v0, p0, Landroid/content/RestrictionEntry;->mCurrentValue:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -628,7 +557,6 @@
     .locals 1
 
     .prologue
-    .line 435
     iget-object v0, p0, Landroid/content/RestrictionEntry;->mKey:Ljava/lang/String;
 
     return-object v0
@@ -638,7 +566,6 @@
     .locals 1
 
     .prologue
-    .line 362
     iget-object v0, p0, Landroid/content/RestrictionEntry;->mRestrictions:[Landroid/content/RestrictionEntry;
 
     return-object v0
@@ -648,7 +575,6 @@
     .locals 1
 
     .prologue
-    .line 284
     iget-object v0, p0, Landroid/content/RestrictionEntry;->mCurrentValue:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
@@ -662,7 +588,6 @@
     .locals 1
 
     .prologue
-    .line 267
     iget-object v0, p0, Landroid/content/RestrictionEntry;->mCurrentValue:Ljava/lang/String;
 
     return-object v0
@@ -672,7 +597,6 @@
     .locals 1
 
     .prologue
-    .line 443
     iget-object v0, p0, Landroid/content/RestrictionEntry;->mTitle:Ljava/lang/String;
 
     return-object v0
@@ -682,7 +606,6 @@
     .locals 1
 
     .prologue
-    .line 258
     iget v0, p0, Landroid/content/RestrictionEntry;->mType:I
 
     return v0
@@ -692,10 +615,8 @@
     .locals 7
 
     .prologue
-    .line 482
     const/16 v3, 0x11
 
-    .line 483
     .local v3, "result":I
     iget-object v5, p0, Landroid/content/RestrictionEntry;->mKey:Ljava/lang/String;
 
@@ -705,12 +626,10 @@
 
     add-int/lit16 v3, v5, 0x20f
 
-    .line 484
     iget-object v5, p0, Landroid/content/RestrictionEntry;->mCurrentValue:Ljava/lang/String;
 
     if-eqz v5, :cond_1
 
-    .line 485
     mul-int/lit8 v5, v3, 0x1f
 
     iget-object v6, p0, Landroid/content/RestrictionEntry;->mCurrentValue:Ljava/lang/String;
@@ -721,18 +640,15 @@
 
     add-int v3, v5, v6
 
-    .line 495
     :cond_0
     :goto_0
     return v3
 
-    .line 486
     :cond_1
     iget-object v5, p0, Landroid/content/RestrictionEntry;->mCurrentValues:[Ljava/lang/String;
 
     if-eqz v5, :cond_3
 
-    .line 487
     iget-object v0, p0, Landroid/content/RestrictionEntry;->mCurrentValues:[Ljava/lang/String;
 
     .local v0, "arr$":[Ljava/lang/String;
@@ -747,11 +663,9 @@
 
     aget-object v4, v0, v1
 
-    .line 488
     .local v4, "value":Ljava/lang/String;
     if-eqz v4, :cond_2
 
-    .line 489
     mul-int/lit8 v5, v3, 0x1f
 
     invoke-virtual {v4}, Ljava/lang/String;->hashCode()I
@@ -760,13 +674,11 @@
 
     add-int v3, v5, v6
 
-    .line 487
     :cond_2
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 492
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v1    # "i$":I
     .end local v2    # "len$":I
@@ -776,7 +688,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 493
     mul-int/lit8 v5, v3, 0x1f
 
     iget-object v6, p0, Landroid/content/RestrictionEntry;->mRestrictions:[Landroid/content/RestrictionEntry;
@@ -795,10 +706,8 @@
     .param p1, "allSelectedStrings"    # [Ljava/lang/String;
 
     .prologue
-    .line 327
     iput-object p1, p0, Landroid/content/RestrictionEntry;->mCurrentValues:[Ljava/lang/String;
 
-    .line 328
     return-void
 .end method
 
@@ -808,7 +717,6 @@
     .param p2, "stringArrayResId"    # I
 
     .prologue
-    .line 401
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -819,7 +727,6 @@
 
     iput-object v0, p0, Landroid/content/RestrictionEntry;->mChoiceEntries:[Ljava/lang/String;
 
-    .line 402
     return-void
 .end method
 
@@ -828,10 +735,8 @@
     .param p1, "choiceEntries"    # [Ljava/lang/String;
 
     .prologue
-    .line 392
     iput-object p1, p0, Landroid/content/RestrictionEntry;->mChoiceEntries:[Ljava/lang/String;
 
-    .line 393
     return-void
 .end method
 
@@ -841,7 +746,6 @@
     .param p2, "stringArrayResId"    # I
 
     .prologue
-    .line 355
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -852,7 +756,6 @@
 
     iput-object v0, p0, Landroid/content/RestrictionEntry;->mChoiceValues:[Ljava/lang/String;
 
-    .line 356
     return-void
 .end method
 
@@ -861,10 +764,8 @@
     .param p1, "choiceValues"    # [Ljava/lang/String;
 
     .prologue
-    .line 344
     iput-object p1, p0, Landroid/content/RestrictionEntry;->mChoiceValues:[Ljava/lang/String;
 
-    .line 345
     return-void
 .end method
 
@@ -873,10 +774,8 @@
     .param p1, "description"    # Ljava/lang/String;
 
     .prologue
-    .line 427
     iput-object p1, p0, Landroid/content/RestrictionEntry;->mDescription:Ljava/lang/String;
 
-    .line 428
     return-void
 .end method
 
@@ -885,14 +784,12 @@
     .param p1, "value"    # I
 
     .prologue
-    .line 300
     invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/content/RestrictionEntry;->mCurrentValue:Ljava/lang/String;
 
-    .line 301
     return-void
 .end method
 
@@ -901,10 +798,8 @@
     .param p1, "restrictions"    # [Landroid/content/RestrictionEntry;
 
     .prologue
-    .line 371
     iput-object p1, p0, Landroid/content/RestrictionEntry;->mRestrictions:[Landroid/content/RestrictionEntry;
 
-    .line 372
     return-void
 .end method
 
@@ -913,14 +808,12 @@
     .param p1, "state"    # Z
 
     .prologue
-    .line 318
     invoke-static {p1}, Ljava/lang/Boolean;->toString(Z)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/content/RestrictionEntry;->mCurrentValue:Ljava/lang/String;
 
-    .line 319
     return-void
 .end method
 
@@ -929,10 +822,8 @@
     .param p1, "selectedString"    # Ljava/lang/String;
 
     .prologue
-    .line 309
     iput-object p1, p0, Landroid/content/RestrictionEntry;->mCurrentValue:Ljava/lang/String;
 
-    .line 310
     return-void
 .end method
 
@@ -941,10 +832,8 @@
     .param p1, "title"    # Ljava/lang/String;
 
     .prologue
-    .line 451
     iput-object p1, p0, Landroid/content/RestrictionEntry;->mTitle:Ljava/lang/String;
 
-    .line 452
     return-void
 .end method
 
@@ -953,10 +842,8 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 250
     iput p1, p0, Landroid/content/RestrictionEntry;->mType:I
 
-    .line 251
     return-void
 .end method
 
@@ -966,7 +853,6 @@
     .prologue
     const/16 v2, 0x27
 
-    .line 546
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1130,53 +1016,43 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 523
     iget v0, p0, Landroid/content/RestrictionEntry;->mType:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 524
     iget-object v0, p0, Landroid/content/RestrictionEntry;->mKey:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 525
     iget-object v0, p0, Landroid/content/RestrictionEntry;->mTitle:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 526
     iget-object v0, p0, Landroid/content/RestrictionEntry;->mDescription:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 527
     iget-object v0, p0, Landroid/content/RestrictionEntry;->mChoiceEntries:[Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeStringArray([Ljava/lang/String;)V
 
-    .line 528
     iget-object v0, p0, Landroid/content/RestrictionEntry;->mChoiceValues:[Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeStringArray([Ljava/lang/String;)V
 
-    .line 529
     iget-object v0, p0, Landroid/content/RestrictionEntry;->mCurrentValue:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 530
     iget-object v0, p0, Landroid/content/RestrictionEntry;->mCurrentValues:[Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeStringArray([Ljava/lang/String;)V
 
-    .line 531
     iget-object v0, p0, Landroid/content/RestrictionEntry;->mRestrictions:[Landroid/content/RestrictionEntry;
 
     const/4 v1, 0x0
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeParcelableArray([Landroid/os/Parcelable;I)V
 
-    .line 532
     return-void
 .end method

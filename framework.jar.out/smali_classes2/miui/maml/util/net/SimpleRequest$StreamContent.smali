@@ -24,13 +24,10 @@
     .param p1, "stream"    # Ljava/io/InputStream;
 
     .prologue
-    .line 555
     invoke-direct {p0}, Lmiui/maml/util/net/SimpleRequest$HeaderContent;-><init>()V
 
-    .line 556
     iput-object p1, p0, Lmiui/maml/util/net/SimpleRequest$StreamContent;->stream:Ljava/io/InputStream;
 
-    .line 557
     return-void
 .end method
 
@@ -40,12 +37,10 @@
     .locals 1
 
     .prologue
-    .line 564
     iget-object v0, p0, Lmiui/maml/util/net/SimpleRequest$StreamContent;->stream:Ljava/io/InputStream;
 
     invoke-static {v0}, Lmiui/maml/util/net/IOUtils;->closeQuietly(Ljava/io/InputStream;)V
 
-    .line 565
     return-void
 .end method
 
@@ -53,7 +48,6 @@
     .locals 1
 
     .prologue
-    .line 560
     iget-object v0, p0, Lmiui/maml/util/net/SimpleRequest$StreamContent;->stream:Ljava/io/InputStream;
 
     return-object v0

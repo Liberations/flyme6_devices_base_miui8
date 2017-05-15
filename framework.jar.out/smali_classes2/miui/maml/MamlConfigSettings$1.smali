@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 292
     iput-object p1, p0, Lmiui/maml/MamlConfigSettings$1;->this$0:Lmiui/maml/MamlConfigSettings;
 
     iput-object p2, p0, Lmiui/maml/MamlConfigSettings$1;->val$rootScreen:Landroid/preference/PreferenceScreen;
@@ -45,7 +44,6 @@
     .param p1, "child"    # Lorg/w3c/dom/Element;
 
     .prologue
-    .line 295
     iget-object v0, p0, Lmiui/maml/MamlConfigSettings$1;->this$0:Lmiui/maml/MamlConfigSettings;
 
     iget-object v1, p0, Lmiui/maml/MamlConfigSettings$1;->val$rootScreen:Landroid/preference/PreferenceScreen;
@@ -53,6 +51,5 @@
     # invokes: Lmiui/maml/MamlConfigSettings;->createGroup(Landroid/preference/PreferenceScreen;Lorg/w3c/dom/Element;)V
     invoke-static {v0, v1, p1}, Lmiui/maml/MamlConfigSettings;->access$000(Lmiui/maml/MamlConfigSettings;Landroid/preference/PreferenceScreen;Lorg/w3c/dom/Element;)V
 
-    .line 296
     return-void
 .end method

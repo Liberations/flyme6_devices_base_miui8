@@ -47,21 +47,18 @@
     .locals 1
 
     .prologue
-    .line 149
     new-instance v0, Lorg/apache/http/conn/ssl/AllowAllHostnameVerifier;
 
     invoke-direct {v0}, Lorg/apache/http/conn/ssl/AllowAllHostnameVerifier;-><init>()V
 
     sput-object v0, Lorg/apache/http/conn/ssl/SSLSocketFactory;->ALLOW_ALL_HOSTNAME_VERIFIER:Lorg/apache/http/conn/ssl/X509HostnameVerifier;
 
-    .line 152
     new-instance v0, Lorg/apache/http/conn/ssl/BrowserCompatHostnameVerifier;
 
     invoke-direct {v0}, Lorg/apache/http/conn/ssl/BrowserCompatHostnameVerifier;-><init>()V
 
     sput-object v0, Lorg/apache/http/conn/ssl/SSLSocketFactory;->BROWSER_COMPATIBLE_HOSTNAME_VERIFIER:Lorg/apache/http/conn/ssl/X509HostnameVerifier;
 
-    .line 155
     new-instance v0, Lorg/apache/http/conn/ssl/StrictHostnameVerifier;
 
     invoke-direct {v0}, Lorg/apache/http/conn/ssl/StrictHostnameVerifier;-><init>()V
@@ -77,28 +74,22 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 249
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 180
     sget-object v0, Lorg/apache/http/conn/ssl/SSLSocketFactory;->BROWSER_COMPATIBLE_HOSTNAME_VERIFIER:Lorg/apache/http/conn/ssl/X509HostnameVerifier;
 
     iput-object v0, p0, Lorg/apache/http/conn/ssl/SSLSocketFactory;->hostnameVerifier:Lorg/apache/http/conn/ssl/X509HostnameVerifier;
 
-    .line 250
     iput-object v1, p0, Lorg/apache/http/conn/ssl/SSLSocketFactory;->sslcontext:Ljavax/net/ssl/SSLContext;
 
-    .line 251
     invoke-static {}, Ljavax/net/ssl/HttpsURLConnection;->getDefaultSSLSocketFactory()Ljavax/net/ssl/SSLSocketFactory;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/apache/http/conn/ssl/SSLSocketFactory;->socketfactory:Ljavax/net/ssl/SSLSocketFactory;
 
-    .line 252
     iput-object v1, p0, Lorg/apache/http/conn/ssl/SSLSocketFactory;->nameResolver:Lorg/apache/http/conn/scheme/HostNameResolver;
 
-    .line 253
     return-void
 .end method
 
@@ -120,47 +111,36 @@
     .end annotation
 
     .prologue
-    .line 191
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 180
     sget-object v2, Lorg/apache/http/conn/ssl/SSLSocketFactory;->BROWSER_COMPATIBLE_HOSTNAME_VERIFIER:Lorg/apache/http/conn/ssl/X509HostnameVerifier;
 
     iput-object v2, p0, Lorg/apache/http/conn/ssl/SSLSocketFactory;->hostnameVerifier:Lorg/apache/http/conn/ssl/X509HostnameVerifier;
 
-    .line 192
     if-nez p1, :cond_0
 
-    .line 193
     const-string p1, "TLS"
 
-    .line 195
     :cond_0
     const/4 v0, 0x0
 
-    .line 196
     .local v0, "keymanagers":[Ljavax/net/ssl/KeyManager;
     if-eqz p2, :cond_1
 
-    .line 197
     invoke-static {p2, p3}, Lorg/apache/http/conn/ssl/SSLSocketFactory;->createKeyManagers(Ljava/security/KeyStore;Ljava/lang/String;)[Ljavax/net/ssl/KeyManager;
 
     move-result-object v0
 
-    .line 199
     :cond_1
     const/4 v1, 0x0
 
-    .line 200
     .local v1, "trustmanagers":[Ljavax/net/ssl/TrustManager;
     if-eqz p4, :cond_2
 
-    .line 201
     invoke-static {p4}, Lorg/apache/http/conn/ssl/SSLSocketFactory;->createTrustManagers(Ljava/security/KeyStore;)[Ljavax/net/ssl/TrustManager;
 
     move-result-object v1
 
-    .line 203
     :cond_2
     invoke-static {p1}, Ljavax/net/ssl/SSLContext;->getInstance(Ljava/lang/String;)Ljavax/net/ssl/SSLContext;
 
@@ -168,12 +148,10 @@
 
     iput-object v2, p0, Lorg/apache/http/conn/ssl/SSLSocketFactory;->sslcontext:Ljavax/net/ssl/SSLContext;
 
-    .line 204
     iget-object v2, p0, Lorg/apache/http/conn/ssl/SSLSocketFactory;->sslcontext:Ljavax/net/ssl/SSLContext;
 
     invoke-virtual {v2, v0, v1, p5}, Ljavax/net/ssl/SSLContext;->init([Ljavax/net/ssl/KeyManager;[Ljavax/net/ssl/TrustManager;Ljava/security/SecureRandom;)V
 
-    .line 205
     iget-object v2, p0, Lorg/apache/http/conn/ssl/SSLSocketFactory;->sslcontext:Ljavax/net/ssl/SSLContext;
 
     invoke-virtual {v2}, Ljavax/net/ssl/SSLContext;->getSocketFactory()Ljavax/net/ssl/SSLSocketFactory;
@@ -182,10 +160,8 @@
 
     iput-object v2, p0, Lorg/apache/http/conn/ssl/SSLSocketFactory;->socketfactory:Ljavax/net/ssl/SSLSocketFactory;
 
-    .line 206
     iput-object p6, p0, Lorg/apache/http/conn/ssl/SSLSocketFactory;->nameResolver:Lorg/apache/http/conn/scheme/HostNameResolver;
 
-    .line 207
     return-void
 .end method
 
@@ -204,7 +180,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 227
     const-string v1, "TLS"
 
     move-object v0, p0
@@ -219,7 +194,6 @@
 
     invoke-direct/range {v0 .. v6}, Lorg/apache/http/conn/ssl/SSLSocketFactory;-><init>(Ljava/lang/String;Ljava/security/KeyStore;Ljava/lang/String;Ljava/security/KeyStore;Ljava/security/SecureRandom;Lorg/apache/http/conn/scheme/HostNameResolver;)V
 
-    .line 228
     return-void
 .end method
 
@@ -239,7 +213,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 221
     const-string v1, "TLS"
 
     move-object v0, p0
@@ -254,7 +227,6 @@
 
     invoke-direct/range {v0 .. v6}, Lorg/apache/http/conn/ssl/SSLSocketFactory;-><init>(Ljava/lang/String;Ljava/security/KeyStore;Ljava/lang/String;Ljava/security/KeyStore;Ljava/security/SecureRandom;Lorg/apache/http/conn/scheme/HostNameResolver;)V
 
-    .line 222
     return-void
 .end method
 
@@ -275,7 +247,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 215
     const-string v1, "TLS"
 
     move-object v0, p0
@@ -290,7 +261,6 @@
 
     invoke-direct/range {v0 .. v6}, Lorg/apache/http/conn/ssl/SSLSocketFactory;-><init>(Ljava/lang/String;Ljava/security/KeyStore;Ljava/lang/String;Ljava/security/KeyStore;Ljava/security/SecureRandom;Lorg/apache/http/conn/scheme/HostNameResolver;)V
 
-    .line 216
     return-void
 .end method
 
@@ -301,24 +271,18 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 237
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 180
     sget-object v0, Lorg/apache/http/conn/ssl/SSLSocketFactory;->BROWSER_COMPATIBLE_HOSTNAME_VERIFIER:Lorg/apache/http/conn/ssl/X509HostnameVerifier;
 
     iput-object v0, p0, Lorg/apache/http/conn/ssl/SSLSocketFactory;->hostnameVerifier:Lorg/apache/http/conn/ssl/X509HostnameVerifier;
 
-    .line 238
     iput-object v1, p0, Lorg/apache/http/conn/ssl/SSLSocketFactory;->sslcontext:Ljavax/net/ssl/SSLContext;
 
-    .line 239
     iput-object p1, p0, Lorg/apache/http/conn/ssl/SSLSocketFactory;->socketfactory:Ljavax/net/ssl/SSLSocketFactory;
 
-    .line 240
     iput-object v1, p0, Lorg/apache/http/conn/ssl/SSLSocketFactory;->nameResolver:Lorg/apache/http/conn/scheme/HostNameResolver;
 
-    .line 241
     return-void
 .end method
 
@@ -327,7 +291,6 @@
     .param p1, "x0"    # Lorg/apache/http/conn/ssl/SSLSocketFactory$1;
 
     .prologue
-    .line 143
     invoke-direct {p0}, Lorg/apache/http/conn/ssl/SSLSocketFactory;-><init>()V
 
     return-void
@@ -346,10 +309,8 @@
     .end annotation
 
     .prologue
-    .line 257
     if-nez p0, :cond_0
 
-    .line 258
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "Keystore may not be null"
@@ -358,7 +319,6 @@
 
     throw v1
 
-    .line 260
     :cond_0
     invoke-static {}, Ljavax/net/ssl/KeyManagerFactory;->getDefaultAlgorithm()Ljava/lang/String;
 
@@ -368,7 +328,6 @@
 
     move-result-object v0
 
-    .line 262
     .local v0, "kmfactory":Ljavax/net/ssl/KeyManagerFactory;
     if-eqz p1, :cond_1
 
@@ -379,14 +338,12 @@
     :goto_0
     invoke-virtual {v0, p0, v1}, Ljavax/net/ssl/KeyManagerFactory;->init(Ljava/security/KeyStore;[C)V
 
-    .line 263
     invoke-virtual {v0}, Ljavax/net/ssl/KeyManagerFactory;->getKeyManagers()[Ljavax/net/ssl/KeyManager;
 
     move-result-object v1
 
     return-object v1
 
-    .line 262
     :cond_1
     const/4 v1, 0x0
 
@@ -404,10 +361,8 @@
     .end annotation
 
     .prologue
-    .line 268
     if-nez p0, :cond_0
 
-    .line 269
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "Keystore may not be null"
@@ -416,7 +371,6 @@
 
     throw v1
 
-    .line 271
     :cond_0
     invoke-static {}, Ljavax/net/ssl/TrustManagerFactory;->getDefaultAlgorithm()Ljava/lang/String;
 
@@ -426,11 +380,9 @@
 
     move-result-object v0
 
-    .line 273
     .local v0, "tmfactory":Ljavax/net/ssl/TrustManagerFactory;
     invoke-virtual {v0, p0}, Ljavax/net/ssl/TrustManagerFactory;->init(Ljava/security/KeyStore;)V
 
-    .line 274
     invoke-virtual {v0}, Ljavax/net/ssl/TrustManagerFactory;->getTrustManagers()[Ljavax/net/ssl/TrustManager;
 
     move-result-object v1
@@ -442,7 +394,6 @@
     .locals 1
 
     .prologue
-    .line 174
     # getter for: Lorg/apache/http/conn/ssl/SSLSocketFactory$NoPreloadHolder;->DEFAULT_FACTORY:Lorg/apache/http/conn/ssl/SSLSocketFactory;
     invoke-static {}, Lorg/apache/http/conn/ssl/SSLSocketFactory$NoPreloadHolder;->access$100()Lorg/apache/http/conn/ssl/SSLSocketFactory;
 
@@ -468,10 +419,8 @@
     .end annotation
 
     .prologue
-    .line 297
     if-nez p2, :cond_0
 
-    .line 298
     new-instance v6, Ljava/lang/IllegalArgumentException;
 
     const-string v7, "Target host may not be null."
@@ -480,11 +429,9 @@
 
     throw v6
 
-    .line 300
     :cond_0
     if-nez p6, :cond_1
 
-    .line 301
     new-instance v6, Ljava/lang/IllegalArgumentException;
 
     const-string v7, "Parameters may not be null."
@@ -493,7 +440,6 @@
 
     throw v6
 
-    .line 304
     :cond_1
     if-eqz p1, :cond_5
 
@@ -506,49 +452,40 @@
 
     check-cast v5, Ljavax/net/ssl/SSLSocket;
 
-    .line 307
     .local v5, "sslsock":Ljavax/net/ssl/SSLSocket;
     if-nez p4, :cond_2
 
     if-lez p5, :cond_4
 
-    .line 310
     :cond_2
     if-gez p5, :cond_3
 
-    .line 311
     const/4 p5, 0x0
 
-    .line 313
     :cond_3
     new-instance v2, Ljava/net/InetSocketAddress;
 
     invoke-direct {v2, p4, p5}, Ljava/net/InetSocketAddress;-><init>(Ljava/net/InetAddress;I)V
 
-    .line 315
     .local v2, "isa":Ljava/net/InetSocketAddress;
     invoke-virtual {v5, v2}, Ljavax/net/ssl/SSLSocket;->bind(Ljava/net/SocketAddress;)V
 
-    .line 318
     .end local v2    # "isa":Ljava/net/InetSocketAddress;
     :cond_4
     invoke-static {p6}, Lorg/apache/http/params/HttpConnectionParams;->getConnectionTimeout(Lorg/apache/http/params/HttpParams;)I
 
     move-result v0
 
-    .line 319
     .local v0, "connTimeout":I
     invoke-static {p6}, Lorg/apache/http/params/HttpConnectionParams;->getSoTimeout(Lorg/apache/http/params/HttpParams;)I
 
     move-result v4
 
-    .line 322
     .local v4, "soTimeout":I
     iget-object v6, p0, Lorg/apache/http/conn/ssl/SSLSocketFactory;->nameResolver:Lorg/apache/http/conn/scheme/HostNameResolver;
 
     if-eqz v6, :cond_6
 
-    .line 323
     new-instance v3, Ljava/net/InetSocketAddress;
 
     iget-object v6, p0, Lorg/apache/http/conn/ssl/SSLSocketFactory;->nameResolver:Lorg/apache/http/conn/scheme/HostNameResolver;
@@ -559,29 +496,23 @@
 
     invoke-direct {v3, v6, p3}, Ljava/net/InetSocketAddress;-><init>(Ljava/net/InetAddress;I)V
 
-    .line 328
     .local v3, "remoteAddress":Ljava/net/InetSocketAddress;
     :goto_1
     invoke-virtual {v5, v3, v0}, Ljavax/net/ssl/SSLSocket;->connect(Ljava/net/SocketAddress;I)V
 
-    .line 330
     invoke-virtual {v5, v4}, Ljavax/net/ssl/SSLSocket;->setSoTimeout(I)V
 
-    .line 338
     :try_start_0
     invoke-virtual {v5}, Ljavax/net/ssl/SSLSocket;->startHandshake()V
 
-    .line 340
     iget-object v6, p0, Lorg/apache/http/conn/ssl/SSLSocketFactory;->hostnameVerifier:Lorg/apache/http/conn/ssl/X509HostnameVerifier;
 
     invoke-interface {v6, p2, v5}, Lorg/apache/http/conn/ssl/X509HostnameVerifier;->verify(Ljava/lang/String;Ljavax/net/ssl/SSLSocket;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 348
     return-object v5
 
-    .line 304
     .end local v0    # "connTimeout":I
     .end local v3    # "remoteAddress":Ljava/net/InetSocketAddress;
     .end local v4    # "soTimeout":I
@@ -593,7 +524,6 @@
 
     goto :goto_0
 
-    .line 325
     .restart local v0    # "connTimeout":I
     .restart local v4    # "soTimeout":I
     .restart local v5    # "sslsock":Ljavax/net/ssl/SSLSocket;
@@ -605,22 +535,18 @@
     .restart local v3    # "remoteAddress":Ljava/net/InetSocketAddress;
     goto :goto_1
 
-    .line 342
     :catch_0
     move-exception v1
 
-    .line 344
     .local v1, "iox":Ljava/io/IOException;
     :try_start_1
     invoke-virtual {v5}, Ljavax/net/ssl/SSLSocket;->close()V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 345
     :goto_2
     throw v1
 
-    .line 344
     :catch_1
     move-exception v6
 
@@ -636,7 +562,6 @@
     .end annotation
 
     .prologue
-    .line 283
     iget-object v0, p0, Lorg/apache/http/conn/ssl/SSLSocketFactory;->socketfactory:Ljavax/net/ssl/SSLSocketFactory;
 
     invoke-virtual {v0}, Ljavax/net/ssl/SSLSocketFactory;->createSocket()Ljava/net/Socket;
@@ -662,7 +587,6 @@
     .end annotation
 
     .prologue
-    .line 394
     iget-object v1, p0, Lorg/apache/http/conn/ssl/SSLSocketFactory;->socketfactory:Ljavax/net/ssl/SSLSocketFactory;
 
     invoke-virtual {v1, p1, p2, p3, p4}, Ljavax/net/ssl/SSLSocketFactory;->createSocket(Ljava/net/Socket;Ljava/lang/String;IZ)Ljava/net/Socket;
@@ -671,16 +595,13 @@
 
     check-cast v0, Ljavax/net/ssl/SSLSocket;
 
-    .line 406
     .local v0, "sslSocket":Ljavax/net/ssl/SSLSocket;
     invoke-virtual {v0}, Ljavax/net/ssl/SSLSocket;->startHandshake()V
 
-    .line 408
     iget-object v1, p0, Lorg/apache/http/conn/ssl/SSLSocketFactory;->hostnameVerifier:Lorg/apache/http/conn/ssl/X509HostnameVerifier;
 
     invoke-interface {v1, p2, v0}, Lorg/apache/http/conn/ssl/X509HostnameVerifier;->verify(Ljava/lang/String;Ljavax/net/ssl/SSLSocket;)V
 
-    .line 410
     return-object v0
 .end method
 
@@ -688,7 +609,6 @@
     .locals 1
 
     .prologue
-    .line 421
     iget-object v0, p0, Lorg/apache/http/conn/ssl/SSLSocketFactory;->hostnameVerifier:Lorg/apache/http/conn/ssl/X509HostnameVerifier;
 
     return-object v0
@@ -704,10 +624,8 @@
     .end annotation
 
     .prologue
-    .line 369
     if-nez p1, :cond_0
 
-    .line 370
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Socket may not be null."
@@ -716,13 +634,11 @@
 
     throw v0
 
-    .line 373
     :cond_0
     instance-of v0, p1, Ljavax/net/ssl/SSLSocket;
 
     if-nez v0, :cond_1
 
-    .line 374
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Socket not created by this factory."
@@ -731,7 +647,6 @@
 
     throw v0
 
-    .line 378
     :cond_1
     invoke-virtual {p1}, Ljava/net/Socket;->isClosed()Z
 
@@ -739,7 +654,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 379
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Socket is closed."
@@ -748,7 +662,6 @@
 
     throw v0
 
-    .line 382
     :cond_2
     const/4 v0, 0x1
 
@@ -760,10 +673,8 @@
     .param p1, "hostnameVerifier"    # Lorg/apache/http/conn/ssl/X509HostnameVerifier;
 
     .prologue
-    .line 414
     if-nez p1, :cond_0
 
-    .line 415
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Hostname verifier may not be null"
@@ -772,10 +683,8 @@
 
     throw v0
 
-    .line 417
     :cond_0
     iput-object p1, p0, Lorg/apache/http/conn/ssl/SSLSocketFactory;->hostnameVerifier:Lorg/apache/http/conn/ssl/X509HostnameVerifier;
 
-    .line 418
     return-void
 .end method

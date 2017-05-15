@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 81
     iput-object p1, p0, Landroid/media/midi/MidiManager$DeviceListener$1;->this$1:Landroid/media/midi/MidiManager$DeviceListener;
 
     iput-object p2, p0, Landroid/media/midi/MidiManager$DeviceListener$1;->val$deviceF:Landroid/media/midi/MidiDeviceInfo;
@@ -44,7 +43,6 @@
     .locals 2
 
     .prologue
-    .line 83
     iget-object v0, p0, Landroid/media/midi/MidiManager$DeviceListener$1;->this$1:Landroid/media/midi/MidiManager$DeviceListener;
 
     # getter for: Landroid/media/midi/MidiManager$DeviceListener;->mCallback:Landroid/media/midi/MidiManager$DeviceCallback;
@@ -56,6 +54,5 @@
 
     invoke-virtual {v0, v1}, Landroid/media/midi/MidiManager$DeviceCallback;->onDeviceAdded(Landroid/media/midi/MidiDeviceInfo;)V
 
-    .line 84
     return-void
 .end method

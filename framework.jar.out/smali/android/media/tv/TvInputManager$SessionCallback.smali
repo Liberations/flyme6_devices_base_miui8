@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 248
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,7 +32,6 @@
     .param p2, "channelUri"    # Landroid/net/Uri;
 
     .prologue
-    .line 275
     return-void
 .end method
 
@@ -42,7 +40,6 @@
     .param p1, "session"    # Landroid/media/tv/TvInputManager$Session;
 
     .prologue
-    .line 342
     return-void
 .end method
 
@@ -52,7 +49,6 @@
     .param p2, "rating"    # Landroid/media/tv/TvContentRating;
 
     .prologue
-    .line 352
     return-void
 .end method
 
@@ -65,7 +61,6 @@
     .param p5, "bottom"    # I
 
     .prologue
-    .line 367
     return-void
 .end method
 
@@ -74,7 +69,6 @@
     .param p1, "session"    # Landroid/media/tv/TvInputManager$Session;
 
     .prologue
-    .line 256
     return-void
 .end method
 
@@ -85,7 +79,6 @@
     .param p3, "eventArgs"    # Landroid/os/Bundle;
 
     .prologue
-    .line 379
     return-void
 .end method
 
@@ -94,7 +87,6 @@
     .param p1, "session"    # Landroid/media/tv/TvInputManager$Session;
 
     .prologue
-    .line 265
     return-void
 .end method
 
@@ -104,7 +96,6 @@
     .param p2, "timeMs"    # J
 
     .prologue
-    .line 418
     return-void
 .end method
 
@@ -114,7 +105,6 @@
     .param p2, "timeMs"    # J
 
     .prologue
-    .line 408
     return-void
 .end method
 
@@ -124,7 +114,6 @@
     .param p2, "status"    # I
 
     .prologue
-    .line 393
     return-void
 .end method
 
@@ -135,7 +124,6 @@
     .param p3, "trackId"    # Ljava/lang/String;
 
     .prologue
-    .line 297
     return-void
 .end method
 
@@ -154,7 +142,6 @@
     .end annotation
 
     .prologue
-    .line 284
     .local p2, "tracks":Ljava/util/List;, "Ljava/util/List<Landroid/media/tv/TvTrackInfo;>;"
     return-void
 .end method
@@ -164,7 +151,6 @@
     .param p1, "session"    # Landroid/media/tv/TvInputManager$Session;
 
     .prologue
-    .line 317
     return-void
 .end method
 
@@ -175,7 +161,6 @@
     .param p3, "height"    # I
 
     .prologue
-    .line 309
     return-void
 .end method
 
@@ -185,6 +170,5 @@
     .param p2, "reason"    # I
 
     .prologue
-    .line 333
     return-void
 .end method

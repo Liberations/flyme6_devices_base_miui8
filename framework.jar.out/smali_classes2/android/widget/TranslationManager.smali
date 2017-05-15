@@ -53,32 +53,24 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 34
     iput-object v0, p0, Landroid/widget/TranslationManager;->mService:Lcom/miui/translationservice/ITranslation;
 
-    .line 35
     iput-object v0, p0, Landroid/widget/TranslationManager;->mRemoteCallback:Landroid/widget/TranslationManager$TranslationRemoteCallback;
 
-    .line 37
     iput-object v0, p0, Landroid/widget/TranslationManager;->mBindServiceTask:Landroid/os/AsyncTask;
 
-    .line 40
     iput-object p1, p0, Landroid/widget/TranslationManager;->mContext:Landroid/content/Context;
 
-    .line 41
     iput-object p2, p0, Landroid/widget/TranslationManager;->mHandler:Landroid/os/Handler;
 
-    .line 43
     new-instance v0, Landroid/widget/TranslationManager$1;
 
     invoke-direct {v0, p0}, Landroid/widget/TranslationManager$1;-><init>(Landroid/widget/TranslationManager;)V
 
     iput-object v0, p0, Landroid/widget/TranslationManager;->mBindServiceTask:Landroid/os/AsyncTask;
 
-    .line 70
     return-void
 .end method
 
@@ -88,7 +80,6 @@
     .param p1, "x1"    # Lcom/miui/translationservice/ITranslation;
 
     .prologue
-    .line 25
     iput-object p1, p0, Landroid/widget/TranslationManager;->mService:Lcom/miui/translationservice/ITranslation;
 
     return-object p1
@@ -99,7 +90,6 @@
     .param p0, "x0"    # Landroid/widget/TranslationManager;
 
     .prologue
-    .line 25
     iget-object v0, p0, Landroid/widget/TranslationManager;->mRemoteCallback:Landroid/widget/TranslationManager$TranslationRemoteCallback;
 
     return-object v0
@@ -114,7 +104,6 @@
     .param p4, "x4"    # Lcom/miui/translationservice/ITranslationRemoteCallback;
 
     .prologue
-    .line 25
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/TranslationManager;->translate(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/miui/translationservice/ITranslationRemoteCallback;)V
 
     return-void
@@ -125,7 +114,6 @@
     .param p0, "x0"    # Landroid/widget/TranslationManager;
 
     .prologue
-    .line 25
     iget-object v0, p0, Landroid/widget/TranslationManager;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -136,7 +124,6 @@
     .param p0, "x0"    # Landroid/widget/TranslationManager;
 
     .prologue
-    .line 25
     invoke-direct {p0}, Landroid/widget/TranslationManager;->onTranslationFailed()V
 
     return-void
@@ -147,7 +134,6 @@
     .param p0, "x0"    # Landroid/widget/TranslationManager;
 
     .prologue
-    .line 25
     iget-object v0, p0, Landroid/widget/TranslationManager;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -157,14 +143,12 @@
     .locals 4
 
     .prologue
-    .line 100
     iget-object v1, p0, Landroid/widget/TranslationManager;->mHandler:Landroid/os/Handler;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
-    .line 101
     iget-object v1, p0, Landroid/widget/TranslationManager;->mHandler:Landroid/os/Handler;
 
     const/4 v2, 0x1
@@ -173,7 +157,6 @@
 
     move-result-object v0
 
-    .line 102
     .local v0, "msg":Landroid/os/Message;
     iget-object v1, p0, Landroid/widget/TranslationManager;->mHandler:Landroid/os/Handler;
 
@@ -181,7 +164,6 @@
 
     invoke-virtual {v1, v0, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 103
     return-void
 .end method
 
@@ -193,7 +175,6 @@
     .param p4, "callback"    # Lcom/miui/translationservice/ITranslationRemoteCallback;
 
     .prologue
-    .line 92
     :try_start_0
     iget-object v1, p0, Landroid/widget/TranslationManager;->mService:Lcom/miui/translationservice/ITranslation;
 
@@ -203,19 +184,15 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 97
     :goto_0
     return-void
 
-    .line 93
     :catch_0
     move-exception v0
 
-    .line 94
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 95
     invoke-direct {p0}, Landroid/widget/TranslationManager;->onTranslationFailed()V
 
     goto :goto_0
@@ -227,12 +204,11 @@
     .locals 2
 
     .prologue
-    .line 86
     sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     if-eqz v0, :cond_0
 
-    const-string/jumbo v0, "zh"
+    const-string v0, "zh"
 
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
@@ -267,17 +243,14 @@
     .param p3, "word"    # Ljava/lang/String;
 
     .prologue
-    .line 73
     iget-object v0, p0, Landroid/widget/TranslationManager;->mRemoteCallback:Landroid/widget/TranslationManager$TranslationRemoteCallback;
 
     if-eqz v0, :cond_0
 
-    .line 74
     iget-object v0, p0, Landroid/widget/TranslationManager;->mRemoteCallback:Landroid/widget/TranslationManager$TranslationRemoteCallback;
 
     invoke-virtual {v0}, Landroid/widget/TranslationManager$TranslationRemoteCallback;->cancel()V
 
-    .line 76
     :cond_0
     new-instance v0, Landroid/widget/TranslationManager$TranslationRemoteCallback;
 
@@ -287,21 +260,17 @@
 
     iput-object v0, p0, Landroid/widget/TranslationManager;->mRemoteCallback:Landroid/widget/TranslationManager$TranslationRemoteCallback;
 
-    .line 78
     iget-object v0, p0, Landroid/widget/TranslationManager;->mService:Lcom/miui/translationservice/ITranslation;
 
     if-eqz v0, :cond_1
 
-    .line 79
     iget-object v0, p0, Landroid/widget/TranslationManager;->mRemoteCallback:Landroid/widget/TranslationManager$TranslationRemoteCallback;
 
     invoke-direct {p0, p1, p2, p3, v0}, Landroid/widget/TranslationManager;->translate(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/miui/translationservice/ITranslationRemoteCallback;)V
 
-    .line 83
     :goto_0
     return-void
 
-    .line 81
     :cond_1
     iget-object v0, p0, Landroid/widget/TranslationManager;->mBindServiceTask:Landroid/os/AsyncTask;
 

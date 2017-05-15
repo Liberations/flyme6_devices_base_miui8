@@ -37,15 +37,12 @@
     .locals 1
 
     .prologue
-    .line 32
-    const-string/jumbo v0, "whetstone_sdk"
+    const-string v0, "whetstone_sdk"
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    .line 33
     invoke-static {}, Lcom/miui/whetstone/utils/UtilsNative;->init()V
 
-    .line 34
     return-void
 .end method
 
@@ -53,7 +50,6 @@
     .locals 0
 
     .prologue
-    .line 19
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -63,19 +59,16 @@
     .locals 6
 
     .prologue
-    .line 80
     invoke-static {}, Landroid/view/HardwareRenderer;->isAvailable()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 81
     sget-object v1, Lcom/miui/whetstone/utils/UtilsNative;->mWindowManagerGlobal:Ljava/lang/Class;
 
     if-eqz v1, :cond_1
 
-    .line 83
     :try_start_0
     sget-object v1, Lcom/miui/whetstone/utils/UtilsNative;->mStartTrimMemory:Ljava/lang/reflect/Method;
 
@@ -97,7 +90,6 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 84
     sget-object v1, Lcom/miui/whetstone/utils/UtilsNative;->mTrimLocalMemory:Ljava/lang/reflect/Method;
 
     sget-object v2, Lcom/miui/whetstone/utils/UtilsNative;->mWindowManagerGlobalObject:Ljava/lang/Object;
@@ -108,10 +100,8 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 85
     invoke-static {}, Lcom/miui/whetstone/utils/UtilsNative;->nativeClearOpenGLCache()V
 
-    .line 86
     sget-object v1, Lcom/miui/whetstone/utils/UtilsNative;->mEndTrimMemory:Ljava/lang/reflect/Method;
 
     sget-object v2, Lcom/miui/whetstone/utils/UtilsNative;->mWindowManagerGlobalObject:Ljava/lang/Object;
@@ -126,46 +116,38 @@
     .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 98
     .local v0, "e":Ljava/lang/IllegalArgumentException;
     :cond_0
     :goto_0
     return-void
 
-    .line 87
     .end local v0    # "e":Ljava/lang/IllegalArgumentException;
     :catch_0
     move-exception v0
 
-    .line 88
     .restart local v0    # "e":Ljava/lang/IllegalArgumentException;
     invoke-virtual {v0}, Ljava/lang/IllegalArgumentException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 89
     .end local v0    # "e":Ljava/lang/IllegalArgumentException;
     :catch_1
     move-exception v0
 
-    .line 90
     .local v0, "e":Ljava/lang/IllegalAccessException;
     invoke-virtual {v0}, Ljava/lang/IllegalAccessException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 91
     .end local v0    # "e":Ljava/lang/IllegalAccessException;
     :catch_2
     move-exception v0
 
-    .line 92
     .local v0, "e":Ljava/lang/reflect/InvocationTargetException;
     invoke-virtual {v0}, Ljava/lang/reflect/InvocationTargetException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 95
     .end local v0    # "e":Ljava/lang/reflect/InvocationTargetException;
     :cond_1
     invoke-static {}, Lcom/miui/whetstone/utils/UtilsNative;->nativeClearOpenGLCache()V
@@ -185,7 +167,6 @@
     .end annotation
 
     .prologue
-    .line 117
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v8
@@ -200,10 +181,8 @@
 
     if-eqz v8, :cond_2
 
-    .line 120
     if-eqz p2, :cond_1
 
-    .line 122
     :try_start_0
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -213,7 +192,6 @@
     :goto_0
     if-eqz v1, :cond_9
 
-    .line 123
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v8
@@ -234,25 +212,21 @@
 
     aget-object v4, v0, v6
 
-    .line 124
     .local v4, "field":Ljava/lang/reflect/Field;
     const/4 v8, 0x1
 
     invoke-virtual {v4, v8}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 125
     invoke-virtual {v4, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v8
 
     invoke-virtual {v4, p1, v8}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 123
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_1
 
-    .line 122
     .end local v4    # "field":Ljava/lang/reflect/Field;
     :cond_0
     invoke-virtual {v1}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
@@ -261,7 +235,6 @@
 
     goto :goto_0
 
-    .line 129
     .end local v0    # "arr$":[Ljava/lang/reflect/Field;
     .end local v1    # "clazz":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     .end local v6    # "i$":I
@@ -287,13 +260,11 @@
 
     aget-object v4, v0, v6
 
-    .line 130
     .restart local v4    # "field":Ljava/lang/reflect/Field;
     const/4 v8, 0x1
 
     invoke-virtual {v4, v8}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 131
     invoke-virtual {v4, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v8
@@ -302,12 +273,10 @@
     :try_end_0
     .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 129
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_2
 
-    .line 134
     .end local v0    # "arr$":[Ljava/lang/reflect/Field;
     .end local v4    # "field":Ljava/lang/reflect/Field;
     .end local v6    # "i$":I
@@ -315,7 +284,6 @@
     :catch_0
     move-exception v3
 
-    .line 136
     .local v3, "e":Ljava/lang/IllegalAccessException;
     new-instance v8, Ljava/lang/RuntimeException;
 
@@ -323,14 +291,12 @@
 
     throw v8
 
-    .line 142
     .end local v3    # "e":Ljava/lang/IllegalAccessException;
     :cond_2
     new-instance v5, Ljava/util/HashMap;
 
     invoke-direct {v5}, Ljava/util/HashMap;-><init>()V
 
-    .line 143
     .local v5, "fieldMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/reflect/Field;>;"
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -340,7 +306,6 @@
     :goto_3
     if-eqz v1, :cond_4
 
-    .line 144
     invoke-virtual {v1}, Ljava/lang/Class;->getDeclaredFields()[Ljava/lang/reflect/Field;
 
     move-result-object v0
@@ -357,7 +322,6 @@
 
     aget-object v4, v0, v6
 
-    .line 145
     .restart local v4    # "field":Ljava/lang/reflect/Field;
     invoke-virtual {v4}, Ljava/lang/reflect/Field;->getName()Ljava/lang/String;
 
@@ -365,12 +329,10 @@
 
     invoke-virtual {v5, v8, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 144
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_4
 
-    .line 143
     .end local v4    # "field":Ljava/lang/reflect/Field;
     :cond_3
     invoke-virtual {v1}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
@@ -379,14 +341,12 @@
 
     goto :goto_3
 
-    .line 150
     .end local v0    # "arr$":[Ljava/lang/reflect/Field;
     .end local v6    # "i$":I
     .end local v7    # "len$":I
     :cond_4
     if-eqz p2, :cond_7
 
-    .line 152
     :try_start_1
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -395,7 +355,6 @@
     :goto_5
     if-eqz v1, :cond_9
 
-    .line 153
     invoke-virtual {v1}, Ljava/lang/Class;->getDeclaredFields()[Ljava/lang/reflect/Field;
 
     move-result-object v0
@@ -412,13 +371,11 @@
 
     aget-object v4, v0, v6
 
-    .line 154
     .restart local v4    # "field":Ljava/lang/reflect/Field;
     const/4 v8, 0x1
 
     invoke-virtual {v4, v8}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 156
     invoke-virtual {v4}, Ljava/lang/reflect/Field;->getName()Ljava/lang/String;
 
     move-result-object v8
@@ -429,29 +386,24 @@
 
     check-cast v2, Ljava/lang/reflect/Field;
 
-    .line 157
     .local v2, "destField":Ljava/lang/reflect/Field;
     if-eqz v2, :cond_5
 
-    .line 158
     const/4 v8, 0x1
 
     invoke-virtual {v2, v8}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 159
     invoke-virtual {v4, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v8
 
     invoke-virtual {v2, p1, v8}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 153
     :cond_5
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_6
 
-    .line 152
     .end local v2    # "destField":Ljava/lang/reflect/Field;
     .end local v4    # "field":Ljava/lang/reflect/Field;
     :cond_6
@@ -461,7 +413,6 @@
 
     goto :goto_5
 
-    .line 164
     .end local v0    # "arr$":[Ljava/lang/reflect/Field;
     .end local v6    # "i$":I
     .end local v7    # "len$":I
@@ -486,13 +437,11 @@
 
     aget-object v4, v0, v6
 
-    .line 165
     .restart local v4    # "field":Ljava/lang/reflect/Field;
     const/4 v8, 0x1
 
     invoke-virtual {v4, v8}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 167
     invoke-virtual {v4}, Ljava/lang/reflect/Field;->getName()Ljava/lang/String;
 
     move-result-object v8
@@ -503,16 +452,13 @@
 
     check-cast v2, Ljava/lang/reflect/Field;
 
-    .line 168
     .restart local v2    # "destField":Ljava/lang/reflect/Field;
     if-eqz v2, :cond_8
 
-    .line 169
     const/4 v8, 0x1
 
     invoke-virtual {v2, v8}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 170
     invoke-virtual {v4, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v8
@@ -521,13 +467,11 @@
     :try_end_1
     .catch Ljava/lang/IllegalAccessException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 164
     :cond_8
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_7
 
-    .line 174
     .end local v0    # "arr$":[Ljava/lang/reflect/Field;
     .end local v2    # "destField":Ljava/lang/reflect/Field;
     .end local v4    # "field":Ljava/lang/reflect/Field;
@@ -536,7 +480,6 @@
     :catch_1
     move-exception v3
 
-    .line 176
     .restart local v3    # "e":Ljava/lang/IllegalAccessException;
     new-instance v8, Ljava/lang/RuntimeException;
 
@@ -544,7 +487,6 @@
 
     throw v8
 
-    .line 180
     .end local v1    # "clazz":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     .end local v3    # "e":Ljava/lang/IllegalAccessException;
     .end local v5    # "fieldMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/reflect/Field;>;"
@@ -564,23 +506,19 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 48
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v3, 0x15
 
     if-lt v2, v3, :cond_1
 
-    .line 49
     sput-object v4, Lcom/miui/whetstone/utils/UtilsNative;->mWindowManagerGlobal:Ljava/lang/Class;
 
-    .line 77
     .local v1, "getInstance":Ljava/lang/reflect/Method;
     :cond_0
     :goto_0
     return-void
 
-    .line 52
     .end local v1    # "getInstance":Ljava/lang/reflect/Method;
     :cond_1
     :try_start_0
@@ -594,12 +532,10 @@
 
     sput-object v2, Lcom/miui/whetstone/utils/UtilsNative;->mWindowManagerGlobal:Ljava/lang/Class;
 
-    .line 53
     sget-object v2, Lcom/miui/whetstone/utils/UtilsNative;->mWindowManagerGlobal:Ljava/lang/Class;
 
     if-eqz v2, :cond_0
 
-    .line 54
     sget-object v2, Lcom/miui/whetstone/utils/UtilsNative;->mWindowManagerGlobal:Ljava/lang/Class;
 
     const-string v3, "getInstance"
@@ -612,11 +548,9 @@
 
     move-result-object v1
 
-    .line 55
     .restart local v1    # "getInstance":Ljava/lang/reflect/Method;
     if-eqz v1, :cond_0
 
-    .line 56
     const/4 v2, 0x0
 
     const/4 v3, 0x0
@@ -629,12 +563,10 @@
 
     sput-object v2, Lcom/miui/whetstone/utils/UtilsNative;->mWindowManagerGlobalObject:Ljava/lang/Object;
 
-    .line 57
     sget-object v2, Lcom/miui/whetstone/utils/UtilsNative;->mWindowManagerGlobalObject:Ljava/lang/Object;
 
     if-eqz v2, :cond_0
 
-    .line 58
     sget-object v2, Lcom/miui/whetstone/utils/UtilsNative;->mWindowManagerGlobal:Ljava/lang/Class;
 
     const-string v3, "startTrimMemory"
@@ -655,7 +587,6 @@
 
     sput-object v2, Lcom/miui/whetstone/utils/UtilsNative;->mStartTrimMemory:Ljava/lang/reflect/Method;
 
-    .line 59
     sget-object v2, Lcom/miui/whetstone/utils/UtilsNative;->mWindowManagerGlobal:Ljava/lang/Class;
 
     const-string v3, "trimLocalMemory"
@@ -670,7 +601,6 @@
 
     sput-object v2, Lcom/miui/whetstone/utils/UtilsNative;->mTrimLocalMemory:Ljava/lang/reflect/Method;
 
-    .line 60
     sget-object v2, Lcom/miui/whetstone/utils/UtilsNative;->mWindowManagerGlobal:Ljava/lang/Class;
 
     const-string v3, "endTrimMemory"
@@ -693,13 +623,11 @@
 
     goto :goto_0
 
-    .line 64
     :catch_0
     move-exception v0
 
-    .line 65
     .local v0, "e":Ljava/lang/IllegalArgumentException;
-    const-string/jumbo v2, "whetstone"
+    const-string v2, "whetstone"
 
     invoke-static {v0}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
 
@@ -709,14 +637,12 @@
 
     goto :goto_0
 
-    .line 66
     .end local v0    # "e":Ljava/lang/IllegalArgumentException;
     :catch_1
     move-exception v0
 
-    .line 67
     .local v0, "e":Ljava/lang/NoSuchMethodException;
-    const-string/jumbo v2, "whetstone"
+    const-string v2, "whetstone"
 
     invoke-static {v0}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
 
@@ -726,14 +652,12 @@
 
     goto :goto_0
 
-    .line 68
     .end local v0    # "e":Ljava/lang/NoSuchMethodException;
     :catch_2
     move-exception v0
 
-    .line 69
     .local v0, "e":Ljava/lang/IllegalAccessException;
-    const-string/jumbo v2, "whetstone"
+    const-string v2, "whetstone"
 
     invoke-static {v0}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
 
@@ -743,14 +667,12 @@
 
     goto :goto_0
 
-    .line 70
     .end local v0    # "e":Ljava/lang/IllegalAccessException;
     :catch_3
     move-exception v0
 
-    .line 71
     .local v0, "e":Ljava/lang/reflect/InvocationTargetException;
-    const-string/jumbo v2, "whetstone"
+    const-string v2, "whetstone"
 
     invoke-static {v0}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
 
@@ -760,14 +682,12 @@
 
     goto/16 :goto_0
 
-    .line 72
     .end local v0    # "e":Ljava/lang/reflect/InvocationTargetException;
     :catch_4
     move-exception v0
 
-    .line 73
     .local v0, "e":Ljava/lang/ClassNotFoundException;
-    const-string/jumbo v2, "whetstone"
+    const-string v2, "whetstone"
 
     invoke-static {v0}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
 
@@ -793,7 +713,6 @@
     .param p1, "dest"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 45
     return-void
 .end method
 
@@ -807,7 +726,6 @@
     .param p7, "res"    # I
 
     .prologue
-    .line 106
     invoke-static/range {p0 .. p7}, Lcom/miui/whetstone/utils/UtilsNative;->nativeSensorsControl(Landroid/os/IBinder;ZIJJI)I
 
     move-result v0
@@ -820,10 +738,8 @@
     .param p0, "level"    # I
 
     .prologue
-    .line 101
     invoke-static {p0}, Lcom/miui/whetstone/utils/UtilsNative;->trimApplicationDalvik(I)V
 
-    .line 104
     return-void
 .end method
 

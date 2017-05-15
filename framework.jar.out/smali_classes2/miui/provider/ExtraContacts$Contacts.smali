@@ -71,7 +71,6 @@
     .locals 2
 
     .prologue
-    .line 699
     const-string v0, "content://com.android.contacts"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -86,7 +85,6 @@
 
     sput-object v0, Lmiui/provider/ExtraContacts$Contacts;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 752
     sget-object v0, Lmiui/provider/ExtraContacts$Contacts;->CONTENT_URI:Landroid/net/Uri;
 
     const-string v1, "group_id"
@@ -97,7 +95,6 @@
 
     sput-object v0, Lmiui/provider/ExtraContacts$Contacts;->CONTENT_GROUP_ID_URI:Landroid/net/Uri;
 
-    .line 758
     sget-object v0, Lmiui/provider/ExtraContacts$Contacts;->CONTENT_URI:Landroid/net/Uri;
 
     const-string v1, "group_ids"
@@ -108,7 +105,6 @@
 
     sput-object v0, Lmiui/provider/ExtraContacts$Contacts;->CONTENT_GROUP_IDS_URI:Landroid/net/Uri;
 
-    .line 764
     sget-object v0, Lmiui/provider/ExtraContacts$Contacts;->CONTENT_URI:Landroid/net/Uri;
 
     const-string v1, "account_not_group"
@@ -119,7 +115,6 @@
 
     sput-object v0, Lmiui/provider/ExtraContacts$Contacts;->CONTENT_ACCOUNT_NOT_GROUP_URI:Landroid/net/Uri;
 
-    .line 770
     sget-object v0, Lmiui/provider/ExtraContacts$Contacts;->CONTENT_URI:Landroid/net/Uri;
 
     const-string v1, "account"
@@ -130,7 +125,6 @@
 
     sput-object v0, Lmiui/provider/ExtraContacts$Contacts;->CONTENT_ACCOUNT_URI:Landroid/net/Uri;
 
-    .line 776
     sget-object v0, Lmiui/provider/ExtraContacts$Contacts;->CONTENT_URI:Landroid/net/Uri;
 
     const-string v1, "recent_contacts"
@@ -141,7 +135,6 @@
 
     sput-object v0, Lmiui/provider/ExtraContacts$Contacts;->CONTENT_RECENT_CONTACTS_URI:Landroid/net/Uri;
 
-    .line 782
     sget-object v0, Lmiui/provider/ExtraContacts$Contacts;->CONTENT_URI:Landroid/net/Uri;
 
     const-string v1, "account_count"
@@ -152,7 +145,6 @@
 
     sput-object v0, Lmiui/provider/ExtraContacts$Contacts;->CONTENT_ACCOUNT_COUNT_URI:Landroid/net/Uri;
 
-    .line 788
     sget-object v0, Lmiui/provider/ExtraContacts$Contacts;->CONTENT_URI:Landroid/net/Uri;
 
     const-string v1, "migrate_contacts"

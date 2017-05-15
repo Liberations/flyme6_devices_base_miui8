@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 401
     iput-object p1, p0, Lmiui/view/MiuiKeyBoardView$3;->this$0:Lmiui/view/MiuiKeyBoardView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "animation"    # Landroid/animation/ValueAnimator;
 
     .prologue
-    .line 404
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object v1
@@ -52,7 +50,6 @@
 
     move-result v0
 
-    .line 405
     .local v0, "value":F
     iget-object v1, p0, Lmiui/view/MiuiKeyBoardView$3;->this$0:Lmiui/view/MiuiKeyBoardView;
 
@@ -63,6 +60,5 @@
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setAlpha(F)V
 
-    .line 406
     return-void
 .end method

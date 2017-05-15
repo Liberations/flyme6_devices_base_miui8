@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 120
     iput-object p1, p0, Lmiui/mqsas/sdk/MQSEventManagerDelegate$1;->this$0:Lmiui/mqsas/sdk/MQSEventManagerDelegate;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 123
     # getter for: Lmiui/mqsas/sdk/MQSEventManagerDelegate;->TAG:Ljava/lang/String;
     invoke-static {}, Lmiui/mqsas/sdk/MQSEventManagerDelegate;->access$000()Ljava/lang/String;
 
@@ -50,7 +48,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 124
     iget-object v0, p0, Lmiui/mqsas/sdk/MQSEventManagerDelegate$1;->this$0:Lmiui/mqsas/sdk/MQSEventManagerDelegate;
 
     const/4 v1, 0x0
@@ -58,6 +55,5 @@
     # setter for: Lmiui/mqsas/sdk/MQSEventManagerDelegate;->mService:Lmiui/mqsas/IMQSService;
     invoke-static {v0, v1}, Lmiui/mqsas/sdk/MQSEventManagerDelegate;->access$102(Lmiui/mqsas/sdk/MQSEventManagerDelegate;Lmiui/mqsas/IMQSService;)Lmiui/mqsas/IMQSService;
 
-    .line 125
     return-void
 .end method

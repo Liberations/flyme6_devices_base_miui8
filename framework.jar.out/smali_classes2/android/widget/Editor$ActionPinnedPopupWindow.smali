@@ -64,44 +64,36 @@
     .param p2, "handleView"    # Landroid/widget/Editor$HandleView;
 
     .prologue
-    .line 2538
     iput-object p1, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->this$0:Landroid/widget/Editor;
 
-    .line 2539
     invoke-direct {p0, p1}, Landroid/widget/Editor$PinnedPopupWindow;-><init>(Landroid/widget/Editor;)V
 
-    .line 2493
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mVisibleChildren:Ljava/util/List;
 
-    .line 2507
     new-instance v0, Landroid/widget/Editor$ActionPinnedPopupWindow$1;
 
     invoke-direct {v0, p0}, Landroid/widget/Editor$ActionPinnedPopupWindow$1;-><init>(Landroid/widget/Editor$ActionPinnedPopupWindow;)V
 
     iput-object v0, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mShower:Ljava/lang/Runnable;
 
-    .line 2525
     new-instance v0, Landroid/graphics/Region;
 
     invoke-direct {v0}, Landroid/graphics/Region;-><init>()V
 
     iput-object v0, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mTouchableRegion:Landroid/graphics/Region;
 
-    .line 2526
     new-instance v0, Landroid/widget/Editor$ActionPinnedPopupWindow$2;
 
     invoke-direct {v0, p0}, Landroid/widget/Editor$ActionPinnedPopupWindow$2;-><init>(Landroid/widget/Editor$ActionPinnedPopupWindow;)V
 
     iput-object v0, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mInsetsComputer:Landroid/view/ViewTreeObserver$OnComputeInternalInsetsListener;
 
-    .line 2540
     iput-object p2, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mHandleView:Landroid/widget/Editor$HandleView;
 
-    .line 2541
     # getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
     invoke-static {p1}, Landroid/widget/Editor;->access$800(Landroid/widget/Editor;)Landroid/widget/TextView;
 
@@ -119,17 +111,14 @@
 
     iput v0, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mSpaceOffScreen:I
 
-    .line 2544
     invoke-virtual {p0}, Landroid/widget/Editor$ActionPinnedPopupWindow;->createAnimations()V
 
-    .line 2545
     iget-object v0, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mPopupWindow:Landroid/widget/PopupWindow;
 
     check-cast v0, Landroid/widget/Editor$AnimatePopupWindow;
 
     invoke-virtual {v0, p0}, Landroid/widget/Editor$AnimatePopupWindow;->setFader(Landroid/widget/Editor$Fader;)V
 
-    .line 2547
     # getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
     invoke-static {p1}, Landroid/widget/Editor;->access$800(Landroid/widget/Editor;)Landroid/widget/TextView;
 
@@ -149,7 +138,6 @@
 
     iput-object v0, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mInflater:Landroid/view/LayoutInflater;
 
-    .line 2549
     return-void
 .end method
 
@@ -158,7 +146,6 @@
     .param p0, "x0"    # Landroid/widget/Editor$ActionPinnedPopupWindow;
 
     .prologue
-    .line 2489
     invoke-direct {p0}, Landroid/widget/Editor$ActionPinnedPopupWindow;->isMiddleOffsetInSelection()Z
 
     move-result v0
@@ -171,7 +158,6 @@
     .param p0, "x0"    # Landroid/widget/Editor$ActionPinnedPopupWindow;
 
     .prologue
-    .line 2489
     iget-object v0, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mHandleView:Landroid/widget/Editor$HandleView;
 
     return-object v0
@@ -182,7 +168,6 @@
     .param p0, "x0"    # Landroid/widget/Editor$ActionPinnedPopupWindow;
 
     .prologue
-    .line 2489
     iget-object v0, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mTouchableRegion:Landroid/graphics/Region;
 
     return-object v0
@@ -194,7 +179,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 2804
     iget-object v1, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mMainPanel:Landroid/widget/TouchPanelLayout;
 
     if-eqz v1, :cond_0
@@ -219,7 +203,6 @@
     .locals 4
 
     .prologue
-    .line 2726
     iget-object v1, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->this$0:Landroid/widget/Editor;
 
     # getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
@@ -261,7 +244,6 @@
 
     move-result v0
 
-    .line 2727
     .local v0, "middleOffset":I
     iget-object v1, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->this$0:Landroid/widget/Editor;
 
@@ -304,7 +286,6 @@
     .locals 2
 
     .prologue
-    .line 2854
     iget-object v1, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mPopupWindow:Landroid/widget/PopupWindow;
 
     invoke-virtual {v1}, Landroid/widget/PopupWindow;->getContentView()Landroid/view/View;
@@ -319,18 +300,15 @@
 
     move-result-object v0
 
-    .line 2857
     .local v0, "viewTreeObserver":Landroid/view/ViewTreeObserver;
     iget-object v1, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mInsetsComputer:Landroid/view/ViewTreeObserver$OnComputeInternalInsetsListener;
 
     invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->removeOnComputeInternalInsetsListener(Landroid/view/ViewTreeObserver$OnComputeInternalInsetsListener;)V
 
-    .line 2858
     iget-object v1, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mInsetsComputer:Landroid/view/ViewTreeObserver$OnComputeInternalInsetsListener;
 
     invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->addOnComputeInternalInsetsListener(Landroid/view/ViewTreeObserver$OnComputeInternalInsetsListener;)V
 
-    .line 2859
     return-void
 .end method
 
@@ -342,22 +320,18 @@
     .prologue
     const/high16 v1, 0x3f800000    # 1.0f
 
-    .line 2747
     iget-object v0, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mAnimationFadeIn:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->cancel()V
 
-    .line 2749
     iget-object v0, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mContentView:Landroid/view/ViewGroup;
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setScaleX(F)V
 
-    .line 2750
     iget-object v0, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mContentView:Landroid/view/ViewGroup;
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setScaleY(F)V
 
-    .line 2751
     return-void
 .end method
 
@@ -368,7 +342,6 @@
     .prologue
     const/4 v10, 0x0
 
-    .line 2645
     iget-object v8, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->this$0:Landroid/widget/Editor;
 
     # getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
@@ -380,7 +353,6 @@
 
     move-result-object v2
 
-    .line 2646
     .local v2, "layout":Landroid/text/Layout;
     iget-object v8, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->this$0:Landroid/widget/Editor;
 
@@ -393,7 +365,6 @@
 
     move-result v6
 
-    .line 2647
     .local v6, "selectionStart":I
     iget-object v8, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->this$0:Landroid/widget/Editor;
 
@@ -406,19 +377,16 @@
 
     move-result v5
 
-    .line 2648
     .local v5, "selectionEnd":I
     invoke-virtual {v2, v6}, Landroid/text/Layout;->getLineForOffset(I)I
 
     move-result v4
 
-    .line 2649
     .local v4, "lineStart":I
     invoke-virtual {v2, v5}, Landroid/text/Layout;->getLineForOffset(I)I
 
     move-result v3
 
-    .line 2650
     .local v3, "lineEnd":I
     invoke-virtual {v2, v3}, Landroid/text/Layout;->getLineTop(I)I
 
@@ -430,7 +398,6 @@
 
     sub-int v7, v8, v9
 
-    .line 2652
     .local v7, "spaceBetweenSelection":I
     iget-object v8, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->this$0:Landroid/widget/Editor;
 
@@ -453,7 +420,6 @@
 
     move-result v1
 
-    .line 2654
     .local v1, "handleHeight":I
     iget-object v8, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->this$0:Landroid/widget/Editor;
 
@@ -470,7 +436,6 @@
 
     move-result-object v0
 
-    .line 2656
     .local v0, "displayMetrics":Landroid/util/DisplayMetrics;
     if-gez p1, :cond_2
 
@@ -483,7 +448,6 @@
 
     if-eqz v8, :cond_2
 
-    .line 2657
     iget-object v8, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mContentView:Landroid/view/ViewGroup;
 
     invoke-virtual {v8}, Landroid/view/ViewGroup;->getMeasuredHeight()I
@@ -492,7 +456,6 @@
 
     if-le v7, v8, :cond_1
 
-    .line 2658
     invoke-virtual {v2, v4}, Landroid/text/Layout;->getLineBottom(I)I
 
     move-result v8
@@ -505,7 +468,6 @@
 
     add-int/2addr p1, v8
 
-    .line 2662
     :goto_0
     iget-object v8, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mContentView:Landroid/view/ViewGroup;
 
@@ -515,20 +477,16 @@
 
     add-int/2addr p1, v8
 
-    .line 2663
     div-int/lit8 v8, v1, 0x2
 
     add-int/2addr p1, v8
 
-    .line 2665
     iput-boolean v10, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mAboveHandle:Z
 
-    .line 2683
     :cond_0
     :goto_1
     return p1
 
-    .line 2660
     :cond_1
     invoke-virtual {v2, v3}, Landroid/text/Layout;->getLineBottom(I)I
 
@@ -544,7 +502,6 @@
 
     goto :goto_0
 
-    .line 2666
     :cond_2
     if-gez p1, :cond_3
 
@@ -561,12 +518,10 @@
 
     if-eqz v8, :cond_3
 
-    .line 2667
     invoke-virtual {v2, v4}, Landroid/text/Layout;->getLineBottom(I)I
 
     move-result p1
 
-    .line 2668
     iget-object v8, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->this$0:Landroid/widget/Editor;
 
     # getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
@@ -580,17 +535,14 @@
 
     add-int/2addr p1, v8
 
-    .line 2669
     div-int/lit8 v8, v1, 0x2
 
     add-int/2addr p1, v8
 
-    .line 2671
     iput-boolean v10, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mAboveHandle:Z
 
     goto :goto_1
 
-    .line 2672
     :cond_3
     iget-object v8, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mContentView:Landroid/view/ViewGroup;
 
@@ -613,7 +565,6 @@
 
     if-eqz v8, :cond_0
 
-    .line 2674
     iget-object v8, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mContentView:Landroid/view/ViewGroup;
 
     invoke-virtual {v8}, Landroid/view/ViewGroup;->getMeasuredHeight()I
@@ -622,7 +573,6 @@
 
     if-le v7, v8, :cond_4
 
-    .line 2675
     invoke-virtual {v2, v3}, Landroid/text/Layout;->getLineBottom(I)I
 
     move-result v8
@@ -635,7 +585,6 @@
 
     sub-int/2addr p1, v8
 
-    .line 2679
     :goto_2
     iget-object v8, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mContentView:Landroid/view/ViewGroup;
 
@@ -645,14 +594,12 @@
 
     sub-int/2addr p1, v8
 
-    .line 2680
     div-int/lit8 v8, v1, 0x2
 
     sub-int/2addr p1, v8
 
     goto :goto_1
 
-    .line 2677
     :cond_4
     invoke-virtual {v2, v3}, Landroid/text/Layout;->getLineBottom(I)I
 
@@ -673,7 +620,6 @@
     .locals 11
 
     .prologue
-    .line 2571
     iget-object v9, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->this$0:Landroid/widget/Editor;
 
     # getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
@@ -685,7 +631,6 @@
 
     move-result v6
 
-    .line 2572
     .local v6, "selectionStart":I
     iget-object v9, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->this$0:Landroid/widget/Editor;
 
@@ -698,7 +643,6 @@
 
     move-result v5
 
-    .line 2573
     .local v5, "selectionEnd":I
     iget-object v9, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->this$0:Landroid/widget/Editor;
 
@@ -711,16 +655,13 @@
 
     move-result-object v3
 
-    .line 2574
     .local v3, "layout":Landroid/text/Layout;
     const/4 v9, 0x1
 
     iput-boolean v9, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mAboveHandle:Z
 
-    .line 2576
     invoke-virtual {p0}, Landroid/widget/Editor$ActionPinnedPopupWindow;->measureContent()V
 
-    .line 2579
     iget-object v9, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->this$0:Landroid/widget/Editor;
 
     # invokes: Landroid/widget/Editor;->isOffsetVisible(I)Z
@@ -730,7 +671,6 @@
 
     if-eqz v9, :cond_0
 
-    .line 2580
     invoke-virtual {v3, v6}, Landroid/text/Layout;->getLineForOffset(I)I
 
     move-result v9
@@ -749,7 +689,6 @@
 
     iput v9, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mPositionY:I
 
-    .line 2582
     iget v9, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mPositionY:I
 
     iget-object v10, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->this$0:Landroid/widget/Editor;
@@ -767,7 +706,6 @@
 
     iput v9, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mPositionY:I
 
-    .line 2610
     :goto_0
     iget-object v9, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mContentView:Landroid/view/ViewGroup;
 
@@ -775,25 +713,21 @@
 
     move-result v8
 
-    .line 2611
     .local v8, "width":I
     iget-object v9, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mHandleView:Landroid/widget/Editor$HandleView;
 
     iget v2, v9, Landroid/widget/Editor$HandleView;->mHorizontalScale:F
 
-    .line 2613
     .local v2, "horizontalScale":F
     invoke-virtual {v3, v6}, Landroid/text/Layout;->getPrimaryHorizontal(I)F
 
     move-result v7
 
-    .line 2614
     .local v7, "startPositionX":F
     invoke-virtual {v3, v5}, Landroid/text/Layout;->getPrimaryHorizontal(I)F
 
     move-result v0
 
-    .line 2615
     .local v0, "endPositionX":F
     add-float v9, v7, v0
 
@@ -826,10 +760,8 @@
 
     iput v9, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mPositionX:I
 
-    .line 2617
     return-void
 
-    .line 2583
     .end local v0    # "endPositionX":F
     .end local v2    # "horizontalScale":F
     .end local v7    # "startPositionX":F
@@ -844,7 +776,6 @@
 
     if-eqz v9, :cond_2
 
-    .line 2584
     invoke-virtual {v3, v5}, Landroid/text/Layout;->getLineForOffset(I)I
 
     move-result v9
@@ -855,7 +786,6 @@
 
     iput v9, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mPositionY:I
 
-    .line 2585
     iget v9, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mPositionY:I
 
     iget-object v10, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->this$0:Landroid/widget/Editor;
@@ -873,7 +803,6 @@
 
     iput v9, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mPositionY:I
 
-    .line 2587
     iget-object v9, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mHandleView:Landroid/widget/Editor$HandleView;
 
     invoke-virtual {v9}, Landroid/widget/Editor$HandleView;->getVisibility()I
@@ -882,7 +811,6 @@
 
     if-nez v9, :cond_1
 
-    .line 2588
     iget-object v9, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->this$0:Landroid/widget/Editor;
 
     # getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
@@ -904,7 +832,6 @@
 
     move-result v1
 
-    .line 2590
     .local v1, "handleHeight":I
     iget v9, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mPositionY:I
 
@@ -914,7 +841,6 @@
 
     iput v9, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mPositionY:I
 
-    .line 2593
     .end local v1    # "handleHeight":I
     :cond_1
     const/4 v9, 0x0
@@ -923,7 +849,6 @@
 
     goto :goto_0
 
-    .line 2594
     :cond_2
     iget-object v9, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->this$0:Landroid/widget/Editor;
 
@@ -938,12 +863,10 @@
 
     if-eqz v9, :cond_3
 
-    .line 2595
     invoke-virtual {p0}, Landroid/widget/Editor$ActionPinnedPopupWindow;->getTextOffset()I
 
     move-result v4
 
-    .line 2596
     .local v4, "offset":I
     invoke-virtual {v3, v4}, Landroid/text/Layout;->getLineForOffset(I)I
 
@@ -963,7 +886,6 @@
 
     iput v9, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mPositionY:I
 
-    .line 2598
     iget v9, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mPositionY:I
 
     iget-object v10, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->this$0:Landroid/widget/Editor;
@@ -983,7 +905,6 @@
 
     goto/16 :goto_0
 
-    .line 2602
     .end local v4    # "offset":I
     :cond_3
     iget-object v9, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->this$0:Landroid/widget/Editor;
@@ -995,7 +916,6 @@
 
     if-nez v9, :cond_4
 
-    .line 2603
     iget-object v9, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->this$0:Landroid/widget/Editor;
 
     new-instance v10, Landroid/graphics/Rect;
@@ -1005,7 +925,6 @@
     # setter for: Landroid/widget/Editor;->mTempRect:Landroid/graphics/Rect;
     invoke-static {v9, v10}, Landroid/widget/Editor;->access$1902(Landroid/widget/Editor;Landroid/graphics/Rect;)Landroid/graphics/Rect;
 
-    .line 2605
     :cond_4
     iget-object v9, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->this$0:Landroid/widget/Editor;
 
@@ -1023,7 +942,6 @@
 
     invoke-virtual {v9, v10}, Landroid/widget/TextView;->getLocalVisibleRect(Landroid/graphics/Rect;)Z
 
-    .line 2606
     iget-object v9, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->this$0:Landroid/widget/Editor;
 
     # getter for: Landroid/widget/Editor;->mTempRect:Landroid/graphics/Rect;
@@ -1079,13 +997,10 @@
     .locals 0
 
     .prologue
-    .line 2694
     invoke-super {p0}, Landroid/widget/Editor$PinnedPopupWindow;->dismiss()V
 
-    .line 2695
     invoke-virtual {p0}, Landroid/widget/Editor$ActionPinnedPopupWindow;->setZeroTouchableSurface()V
 
-    .line 2696
     return-void
 .end method
 
@@ -1093,12 +1008,10 @@
     .locals 1
 
     .prologue
-    .line 2742
     iget-object v0, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mPopupWindow:Landroid/widget/PopupWindow;
 
     invoke-virtual {v0}, Landroid/widget/PopupWindow;->dismiss()V
 
-    .line 2743
     return-void
 .end method
 
@@ -1106,7 +1019,6 @@
     .locals 2
 
     .prologue
-    .line 2737
     iget-object v0, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->this$0:Landroid/widget/Editor;
 
     # getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
@@ -1141,7 +1053,6 @@
     .param p1, "line"    # I
 
     .prologue
-    .line 2732
     const/4 v0, 0x0
 
     return v0
@@ -1151,7 +1062,6 @@
     .locals 2
 
     .prologue
-    .line 2688
     iget-object v0, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->this$0:Landroid/widget/Editor;
 
     # getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
@@ -1163,10 +1073,8 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 2689
     invoke-super {p0}, Landroid/widget/Editor$PinnedPopupWindow;->hide()V
 
-    .line 2690
     return-void
 .end method
 
@@ -1174,7 +1082,6 @@
     .locals 7
 
     .prologue
-    .line 2553
     iget-object v3, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->this$0:Landroid/widget/Editor;
 
     # getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
@@ -1190,7 +1097,6 @@
 
     move-result-object v1
 
-    .line 2554
     .local v1, "displayMetrics":Landroid/util/DisplayMetrics;
     iget v3, v1, Landroid/util/DisplayMetrics;->widthPixels:I
 
@@ -1200,7 +1106,6 @@
 
     add-int v0, v3, v4
 
-    .line 2556
     .local v0, "contentWidth":I
     sget-boolean v3, Lmiui/os/Build;->IS_TABLET:Z
 
@@ -1221,11 +1126,9 @@
     :goto_0
     if-ge v4, v3, :cond_2
 
-    .line 2558
     :cond_0
     const/high16 v2, -0x80000000
 
-    .line 2563
     .local v2, "widthMode":I
     :goto_1
     iget-object v3, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mContentView:Landroid/view/ViewGroup;
@@ -1244,17 +1147,14 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/view/ViewGroup;->measure(II)V
 
-    .line 2567
     return-void
 
-    .line 2556
     .end local v2    # "widthMode":I
     :cond_1
     const/4 v3, 0x6
 
     goto :goto_0
 
-    .line 2560
     :cond_2
     const/high16 v2, 0x40000000    # 2.0f
 
@@ -1267,7 +1167,6 @@
     .param p1, "needMeasure"    # Z
 
     .prologue
-    .line 2819
     iget-object v10, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mContentView:Landroid/view/ViewGroup;
 
     const v11, 0x110b000e
@@ -1276,31 +1175,26 @@
 
     move-result-object v7
 
-    .line 2820
     .local v7, "panel":Landroid/view/View;
     invoke-virtual {v7}, Landroid/view/View;->getPaddingLeft()I
 
     move-result v4
 
-    .line 2821
     .local v4, "paddingLeft":I
     invoke-virtual {v7}, Landroid/view/View;->getPaddingTop()I
 
     move-result v6
 
-    .line 2822
     .local v6, "paddingTop":I
     invoke-virtual {v7}, Landroid/view/View;->getPaddingRight()I
 
     move-result v5
 
-    .line 2823
     .local v5, "paddingRight":I
     invoke-virtual {v7}, Landroid/view/View;->getPaddingBottom()I
 
     move-result v3
 
-    .line 2825
     .local v3, "paddingBottom":I
     if-nez p1, :cond_0
 
@@ -1312,7 +1206,6 @@
 
     if-nez v10, :cond_1
 
-    .line 2826
     :cond_0
     iget-object v10, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->this$0:Landroid/widget/Editor;
 
@@ -1329,7 +1222,6 @@
 
     move-result-object v0
 
-    .line 2827
     .local v0, "displayMetrics":Landroid/util/DisplayMetrics;
     iget v10, v0, Landroid/util/DisplayMetrics;->widthPixels:I
 
@@ -1339,7 +1231,6 @@
 
     add-int v2, v10, v11
 
-    .line 2829
     .local v2, "maxWidth":I
     iget-object v10, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mVisibleChildren:Ljava/util/List;
 
@@ -1356,10 +1247,8 @@
     :goto_0
     if-ge v11, v10, :cond_3
 
-    .line 2831
     const/high16 v9, -0x80000000
 
-    .line 2836
     .local v9, "widthMode":I
     :goto_1
     invoke-static {v2, v9}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
@@ -1376,7 +1265,6 @@
 
     invoke-virtual {v7, v10, v11}, Landroid/view/View;->measure(II)V
 
-    .line 2842
     .end local v0    # "displayMetrics":Landroid/util/DisplayMetrics;
     .end local v2    # "maxWidth":I
     .end local v9    # "widthMode":I
@@ -1385,13 +1273,11 @@
 
     move-result v8
 
-    .line 2843
     .local v8, "width":I
     invoke-virtual {v7}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v1
 
-    .line 2844
     .local v1, "height":I
     iget-object v10, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mTouchableRegion:Landroid/graphics/Region;
 
@@ -1425,10 +1311,8 @@
 
     invoke-virtual {v10, v11, v12, v13, v14}, Landroid/graphics/Region;->set(IIII)Z
 
-    .line 2848
     return-void
 
-    .line 2829
     .end local v1    # "height":I
     .end local v8    # "width":I
     .restart local v0    # "displayMetrics":Landroid/util/DisplayMetrics;
@@ -1438,7 +1322,6 @@
 
     goto :goto_0
 
-    .line 2833
     :cond_3
     const/high16 v9, 0x40000000    # 2.0f
 
@@ -1454,7 +1337,6 @@
 
     const/4 v3, -0x1
 
-    .line 2766
     iget-object v0, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mMainPanel:Landroid/widget/TouchPanelLayout;
 
     invoke-virtual {v0}, Landroid/widget/TouchPanelLayout;->getParent()Landroid/view/ViewParent;
@@ -1463,20 +1345,16 @@
 
     if-eqz v0, :cond_0
 
-    .line 2767
     invoke-virtual {p0, v4}, Landroid/widget/Editor$ActionPinnedPopupWindow;->setContentAreaAsTouchableSurface(Z)V
 
-    .line 2775
     :goto_0
     return-void
 
-    .line 2770
     :cond_0
     iget-object v0, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mContentView:Landroid/view/ViewGroup;
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->removeAllViews()V
 
-    .line 2771
     iget-object v0, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mContentView:Landroid/view/ViewGroup;
 
     iget-object v1, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mMainPanel:Landroid/widget/TouchPanelLayout;
@@ -1487,7 +1365,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 2774
     invoke-virtual {p0, v4}, Landroid/widget/Editor$ActionPinnedPopupWindow;->setContentAreaAsTouchableSurface(Z)V
 
     goto :goto_0
@@ -1501,17 +1378,14 @@
     .prologue
     const/4 v4, -0x1
 
-    .line 2778
     invoke-virtual {p0}, Landroid/widget/Editor$ActionPinnedPopupWindow;->dismiss()V
 
-    .line 2780
     iget-object v2, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mHandleView:Landroid/widget/Editor$HandleView;
 
     instance-of v2, v2, Landroid/widget/Editor$InsertionHandleView;
 
     if-eqz v2, :cond_0
 
-    .line 2781
     iget-object v2, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mHandleView:Landroid/widget/Editor$HandleView;
 
     check-cast v2, Landroid/widget/Editor$InsertionHandleView;
@@ -1519,7 +1393,6 @@
     # invokes: Landroid/widget/Editor$InsertionHandleView;->removeHiderCallback()V
     invoke-static {v2}, Landroid/widget/Editor$InsertionHandleView;->access$2000(Landroid/widget/Editor$InsertionHandleView;)V
 
-    .line 2784
     :cond_0
     new-instance v1, Landroid/widget/LinearLayout;
 
@@ -1536,28 +1409,22 @@
 
     invoke-direct {v1, v2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
-    .line 2785
     .local v1, "subPanel":Landroid/widget/LinearLayout;
     if-eqz p2, :cond_1
 
-    .line 2786
     invoke-virtual {v1, p2}, Landroid/widget/LinearLayout;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 2787
     const v2, 0x110b000e
 
     invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->setId(I)V
 
-    .line 2789
     :cond_1
     invoke-virtual {v1, p1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 2791
     iget-object v2, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mContentView:Landroid/view/ViewGroup;
 
     invoke-virtual {v2}, Landroid/view/ViewGroup;->removeAllViews()V
 
-    .line 2792
     iget-object v2, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mContentView:Landroid/view/ViewGroup;
 
     new-instance v3, Landroid/view/ViewGroup$LayoutParams;
@@ -1566,15 +1433,12 @@
 
     invoke-virtual {v2, v1, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 2795
     iget-object v2, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mVisibleChildren:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->clear()V
 
-    .line 2796
     invoke-virtual {p0}, Landroid/widget/Editor$ActionPinnedPopupWindow;->computeLocalPosition()V
 
-    .line 2797
     iget-object v2, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->this$0:Landroid/widget/Editor;
 
     # invokes: Landroid/widget/Editor;->getPositionListener()Landroid/widget/Editor$PositionListener;
@@ -1582,7 +1446,6 @@
 
     move-result-object v0
 
-    .line 2798
     .local v0, "positionListener":Landroid/widget/Editor$PositionListener;
     invoke-virtual {v0}, Landroid/widget/Editor$PositionListener;->getPositionX()I
 
@@ -1594,12 +1457,10 @@
 
     invoke-virtual {p0, v2, v3}, Landroid/widget/Editor$ActionPinnedPopupWindow;->updatePosition(II)V
 
-    .line 2800
     const/4 v2, 0x0
 
     invoke-virtual {p0, v2}, Landroid/widget/Editor$ActionPinnedPopupWindow;->setContentAreaAsTouchableSurface(Z)V
 
-    .line 2801
     return-void
 .end method
 
@@ -1608,7 +1469,6 @@
     .param p1, "y"    # I
 
     .prologue
-    .line 2755
     return-void
 .end method
 
@@ -1616,12 +1476,10 @@
     .locals 1
 
     .prologue
-    .line 2812
     iget-object v0, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mTouchableRegion:Landroid/graphics/Region;
 
     invoke-virtual {v0}, Landroid/graphics/Region;->setEmpty()V
 
-    .line 2813
     return-void
 .end method
 
@@ -1629,13 +1487,10 @@
     .locals 0
 
     .prologue
-    .line 2761
     invoke-virtual {p0}, Landroid/widget/Editor$ActionPinnedPopupWindow;->setMainPanelAsContent()V
 
-    .line 2762
     invoke-super {p0}, Landroid/widget/Editor$PinnedPopupWindow;->show()V
 
-    .line 2763
     return-void
 .end method
 
@@ -1644,7 +1499,6 @@
     .param p1, "delay"    # I
 
     .prologue
-    .line 2721
     iget-object v0, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->this$0:Landroid/widget/Editor;
 
     # getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
@@ -1656,7 +1510,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 2722
     iget-object v0, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->this$0:Landroid/widget/Editor;
 
     # getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
@@ -1670,7 +1523,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/widget/TextView;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 2723
     return-void
 .end method
 
@@ -1680,37 +1532,31 @@
     .param p2, "parentPositionY"    # I
 
     .prologue
-    .line 2621
     iget v4, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mPositionX:I
 
     add-int v1, p1, v4
 
-    .line 2622
     .local v1, "positionX":I
     iget v4, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mPositionY:I
 
     add-int v2, p2, v4
 
-    .line 2623
     .local v2, "positionY":I
     invoke-virtual {p0, v2}, Landroid/widget/Editor$ActionPinnedPopupWindow;->clipVertically(I)I
 
     move-result v2
 
-    .line 2625
     iget-object v4, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mContentView:Landroid/view/ViewGroup;
 
     invoke-virtual {v4}, Landroid/view/ViewGroup;->getMeasuredWidth()I
 
     move-result v3
 
-    .line 2626
     .local v3, "width":I
     iget-object v4, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mPopupWindow:Landroid/widget/PopupWindow;
 
     invoke-virtual {v4, v3}, Landroid/widget/PopupWindow;->setWidth(I)V
 
-    .line 2629
     iget-object v4, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->this$0:Landroid/widget/Editor;
 
     # getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
@@ -1726,7 +1572,6 @@
 
     move-result-object v0
 
-    .line 2630
     .local v0, "displayMetrics":Landroid/util/DisplayMetrics;
     iget v4, v0, Landroid/util/DisplayMetrics;->widthPixels:I
 
@@ -1740,7 +1585,6 @@
 
     move-result v1
 
-    .line 2631
     iget v4, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mSpaceOffScreen:I
 
     neg-int v4, v4
@@ -1749,25 +1593,21 @@
 
     move-result v1
 
-    .line 2633
     invoke-virtual {p0}, Landroid/widget/Editor$ActionPinnedPopupWindow;->isShowing()Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    .line 2634
     iget-object v4, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mPopupWindow:Landroid/widget/PopupWindow;
 
     const/4 v5, -0x1
 
     invoke-virtual {v4, v1, v2, v3, v5}, Landroid/widget/PopupWindow;->update(IIII)V
 
-    .line 2641
     :goto_0
     return-void
 
-    .line 2636
     :cond_0
     iget-object v4, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mPopupWindow:Landroid/widget/PopupWindow;
 
@@ -1782,7 +1622,6 @@
 
     invoke-virtual {v4, v5, v6, v1, v2}, Landroid/widget/PopupWindow;->showAtLocation(Landroid/view/View;III)V
 
-    .line 2639
     invoke-direct {p0}, Landroid/widget/Editor$ActionPinnedPopupWindow;->setTouchableSurfaceInsetsComputer()V
 
     goto :goto_0
@@ -1796,16 +1635,13 @@
     .param p4, "parentScrolled"    # Z
 
     .prologue
-    .line 2701
     if-nez p4, :cond_0
 
     if-eqz p3, :cond_2
 
-    .line 2702
     :cond_0
     const/4 v1, 0x0
 
-    .line 2703
     .local v1, "insertionMode":Z
     iget-object v2, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mHandleView:Landroid/widget/Editor$HandleView;
 
@@ -1821,23 +1657,19 @@
 
     if-eqz v2, :cond_1
 
-    .line 2704
     iget-object v0, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->mHandleView:Landroid/widget/Editor$HandleView;
 
     check-cast v0, Landroid/widget/Editor$InsertionHandleView;
 
-    .line 2705
     .local v0, "insertionHandle":Landroid/widget/Editor$InsertionHandleView;
     # invokes: Landroid/widget/Editor$InsertionHandleView;->removeHiderCallback()V
     invoke-static {v0}, Landroid/widget/Editor$InsertionHandleView;->access$2000(Landroid/widget/Editor$InsertionHandleView;)V
 
-    .line 2706
     const/4 v1, 0x1
 
     # setter for: Landroid/widget/Editor$InsertionHandleView;->mReShowPopup:Z
     invoke-static {v0, v1}, Landroid/widget/Editor$InsertionHandleView;->access$2102(Landroid/widget/Editor$InsertionHandleView;Z)Z
 
-    .line 2709
     .end local v0    # "insertionHandle":Landroid/widget/Editor$InsertionHandleView;
     :cond_1
     invoke-direct {p0}, Landroid/widget/Editor$ActionPinnedPopupWindow;->isMainPanelContent()Z
@@ -1846,31 +1678,25 @@
 
     if-eqz v2, :cond_3
 
-    .line 2710
     invoke-virtual {p0}, Landroid/widget/Editor$ActionPinnedPopupWindow;->hide()V
 
-    .line 2711
     const/16 v2, 0x1f4
 
     invoke-virtual {p0, v2}, Landroid/widget/Editor$ActionPinnedPopupWindow;->show(I)V
 
-    .line 2718
     .end local v1    # "insertionMode":Z
     :cond_2
     :goto_0
     return-void
 
-    .line 2712
     .restart local v1    # "insertionMode":Z
     :cond_3
     if-eqz v1, :cond_4
 
-    .line 2713
     invoke-virtual {p0}, Landroid/widget/Editor$ActionPinnedPopupWindow;->hide()V
 
     goto :goto_0
 
-    .line 2715
     :cond_4
     iget-object v2, p0, Landroid/widget/Editor$ActionPinnedPopupWindow;->this$0:Landroid/widget/Editor;
 

@@ -29,19 +29,16 @@
     .param p2, "key"    # Ljava/lang/Integer;
 
     .prologue
-    .line 529
     iput-object p1, p0, Lcom/miui/whetstone/graphics/BitmapCacheManager$BitmapClearMessage;->this$0:Lcom/miui/whetstone/graphics/BitmapCacheManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 530
     invoke-static {p2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/miui/whetstone/graphics/BitmapCacheManager$BitmapClearMessage;->mKey:Ljava/lang/String;
 
-    .line 531
     return-void
 .end method
 
@@ -51,7 +48,6 @@
     .locals 2
 
     .prologue
-    .line 535
     iget-object v0, p0, Lcom/miui/whetstone/graphics/BitmapCacheManager$BitmapClearMessage;->this$0:Lcom/miui/whetstone/graphics/BitmapCacheManager;
 
     # getter for: Lcom/miui/whetstone/graphics/BitmapCacheManager;->sBitmapManager:Lcom/miui/whetstone/graphics/BitmapCache;
@@ -63,6 +59,5 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/whetstone/graphics/BitmapCache;->clearBitmapFromDiskCache(Ljava/lang/String;)V
 
-    .line 536
     return-void
 .end method

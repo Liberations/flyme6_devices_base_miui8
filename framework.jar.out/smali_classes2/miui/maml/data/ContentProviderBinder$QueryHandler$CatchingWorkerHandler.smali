@@ -24,13 +24,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 448
     iput-object p1, p0, Lmiui/maml/data/ContentProviderBinder$QueryHandler$CatchingWorkerHandler;->this$1:Lmiui/maml/data/ContentProviderBinder$QueryHandler;
 
-    .line 449
     invoke-direct {p0, p1, p2}, Landroid/content/AsyncQueryHandler$WorkerHandler;-><init>(Landroid/content/AsyncQueryHandler;Landroid/os/Looper;)V
 
-    .line 450
     return-void
 .end method
 
@@ -41,7 +38,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 456
     :try_start_0
     invoke-super {p0, p1}, Landroid/content/AsyncQueryHandler$WorkerHandler;->handleMessage(Landroid/os/Message;)V
     :try_end_0
@@ -49,15 +45,12 @@
     .catch Landroid/database/sqlite/SQLiteFullException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Landroid/database/sqlite/SQLiteDatabaseCorruptException; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 464
     :goto_0
     return-void
 
-    .line 457
     :catch_0
     move-exception v0
 
-    .line 458
     .local v0, "e":Landroid/database/sqlite/SQLiteDiskIOException;
     const-string v1, "ContentProviderBinder"
 
@@ -67,12 +60,10 @@
 
     goto :goto_0
 
-    .line 459
     .end local v0    # "e":Landroid/database/sqlite/SQLiteDiskIOException;
     :catch_1
     move-exception v0
 
-    .line 460
     .local v0, "e":Landroid/database/sqlite/SQLiteFullException;
     const-string v1, "ContentProviderBinder"
 
@@ -82,12 +73,10 @@
 
     goto :goto_0
 
-    .line 461
     .end local v0    # "e":Landroid/database/sqlite/SQLiteFullException;
     :catch_2
     move-exception v0
 
-    .line 462
     .local v0, "e":Landroid/database/sqlite/SQLiteDatabaseCorruptException;
     const-string v1, "ContentProviderBinder"
 

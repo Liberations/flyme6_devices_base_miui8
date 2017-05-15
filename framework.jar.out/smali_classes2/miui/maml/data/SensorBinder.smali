@@ -52,14 +52,12 @@
     .locals 3
 
     .prologue
-    .line 38
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lmiui/maml/data/SensorBinder;->SENSOR_TYPES:Ljava/util/HashMap;
 
-    .line 43
     sget-object v0, Lmiui/maml/data/SensorBinder;->SENSOR_TYPES:Ljava/util/HashMap;
 
     const-string v1, "orientation"
@@ -72,7 +70,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 44
     sget-object v0, Lmiui/maml/data/SensorBinder;->SENSOR_TYPES:Ljava/util/HashMap;
 
     const-string v1, "gravity"
@@ -85,7 +82,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 45
     sget-object v0, Lmiui/maml/data/SensorBinder;->SENSOR_TYPES:Ljava/util/HashMap;
 
     const-string v1, "accelerometer"
@@ -98,7 +94,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 46
     sget-object v0, Lmiui/maml/data/SensorBinder;->SENSOR_TYPES:Ljava/util/HashMap;
 
     const-string v1, "linear_acceleration"
@@ -111,7 +106,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 47
     sget-object v0, Lmiui/maml/data/SensorBinder;->SENSOR_TYPES:Ljava/util/HashMap;
 
     const-string v1, "pressure"
@@ -124,7 +118,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 48
     sget-object v0, Lmiui/maml/data/SensorBinder;->SENSOR_TYPES:Ljava/util/HashMap;
 
     const-string v1, "proximity"
@@ -137,7 +130,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 49
     sget-object v0, Lmiui/maml/data/SensorBinder;->SENSOR_TYPES:Ljava/util/HashMap;
 
     const-string v1, "light"
@@ -150,7 +142,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 50
     sget-object v0, Lmiui/maml/data/SensorBinder;->SENSOR_TYPES:Ljava/util/HashMap;
 
     const-string v1, "gyroscope"
@@ -163,7 +154,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 51
     return-void
 .end method
 
@@ -173,10 +163,8 @@
     .param p2, "root"    # Lmiui/maml/ScreenElementRoot;
 
     .prologue
-    .line 63
     invoke-direct {p0, p1, p2}, Lmiui/maml/data/VariableBinder;-><init>(Lorg/w3c/dom/Element;Lmiui/maml/ScreenElementRoot;)V
 
-    .line 64
     const-string v0, "type"
 
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -185,7 +173,6 @@
 
     iput-object v0, p0, Lmiui/maml/data/SensorBinder;->mType:Ljava/lang/String;
 
-    .line 65
     const-string v0, "rate"
 
     const/4 v1, 0x3
@@ -196,7 +183,6 @@
 
     iput v0, p0, Lmiui/maml/data/SensorBinder;->mRate:I
 
-    .line 66
     invoke-virtual {p0}, Lmiui/maml/data/SensorBinder;->getVariables()Lmiui/maml/data/Variables;
 
     move-result-object v0
@@ -213,12 +199,10 @@
 
     iput-object v0, p0, Lmiui/maml/data/SensorBinder;->mEnableExp:Lmiui/maml/data/Expression;
 
-    .line 68
     sget-object v0, Lmiui/maml/data/SensorBinder;->mSensorManager:Landroid/hardware/SensorManager;
 
     if-nez v0, :cond_0
 
-    .line 69
     invoke-virtual {p0}, Lmiui/maml/data/SensorBinder;->getContext()Lmiui/maml/ScreenContext;
 
     move-result-object v0
@@ -235,7 +219,6 @@
 
     sput-object v0, Lmiui/maml/data/SensorBinder;->mSensorManager:Landroid/hardware/SensorManager;
 
-    .line 71
     :cond_0
     sget-object v0, Lmiui/maml/data/SensorBinder;->mSensorManager:Landroid/hardware/SensorManager;
 
@@ -251,12 +234,10 @@
 
     iput-object v0, p0, Lmiui/maml/data/SensorBinder;->mSensor:Landroid/hardware/Sensor;
 
-    .line 72
     iget-object v0, p0, Lmiui/maml/data/SensorBinder;->mSensor:Landroid/hardware/Sensor;
 
     if-nez v0, :cond_1
 
-    .line 73
     const-string v0, "SensorBinder"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -281,11 +262,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 95
     :goto_0
     return-void
 
-    .line 76
     :cond_1
     new-instance v0, Lmiui/maml/data/SensorBinder$1;
 
@@ -293,7 +272,6 @@
 
     iput-object v0, p0, Lmiui/maml/data/SensorBinder;->mSensorEventListener:Landroid/hardware/SensorEventListener;
 
-    .line 94
     invoke-virtual {p0, p1}, Lmiui/maml/data/SensorBinder;->loadVariables(Lorg/w3c/dom/Element;)V
 
     goto :goto_0
@@ -304,7 +282,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 143
     sget-object v2, Lmiui/maml/data/SensorBinder;->SENSOR_TYPES:Ljava/util/HashMap;
 
     invoke-virtual {v2, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -313,20 +290,16 @@
 
     check-cast v1, Ljava/lang/Integer;
 
-    .line 144
     .local v1, "type":Ljava/lang/Integer;
     if-eqz v1, :cond_0
 
-    .line 145
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v2
 
-    .line 151
     :goto_0
     return v2
 
-    .line 149
     :cond_0
     :try_start_0
     invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -337,11 +310,9 @@
 
     goto :goto_0
 
-    .line 150
     :catch_0
     move-exception v0
 
-    .line 151
     .local v0, "e":Ljava/lang/NumberFormatException;
     const/4 v2, 0x0
 
@@ -352,7 +323,6 @@
     .locals 4
 
     .prologue
-    .line 123
     iget-boolean v0, p0, Lmiui/maml/data/SensorBinder;->mRegistered:Z
 
     if-nez v0, :cond_0
@@ -365,12 +335,10 @@
 
     if-nez v0, :cond_1
 
-    .line 127
     :cond_0
     :goto_0
     return-void
 
-    .line 125
     :cond_1
     sget-object v0, Lmiui/maml/data/SensorBinder;->mSensorManager:Landroid/hardware/SensorManager;
 
@@ -382,7 +350,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/hardware/SensorManager;->registerListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;I)Z
 
-    .line 126
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lmiui/maml/data/SensorBinder;->mRegistered:Z
@@ -394,7 +361,6 @@
     .locals 3
 
     .prologue
-    .line 130
     iget-boolean v0, p0, Lmiui/maml/data/SensorBinder;->mRegistered:Z
 
     if-eqz v0, :cond_0
@@ -403,12 +369,10 @@
 
     if-nez v0, :cond_1
 
-    .line 134
     :cond_0
     :goto_0
     return-void
 
-    .line 132
     :cond_1
     sget-object v0, Lmiui/maml/data/SensorBinder;->mSensorManager:Landroid/hardware/SensorManager;
 
@@ -418,7 +382,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/hardware/SensorManager;->unregisterListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;)V
 
-    .line 133
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lmiui/maml/data/SensorBinder;->mRegistered:Z
@@ -432,13 +395,10 @@
     .locals 0
 
     .prologue
-    .line 99
     invoke-direct {p0}, Lmiui/maml/data/SensorBinder;->unregisterListener()V
 
-    .line 100
     invoke-super {p0}, Lmiui/maml/data/VariableBinder;->finish()V
 
-    .line 101
     return-void
 .end method
 
@@ -448,10 +408,8 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 105
     invoke-super {p0}, Lmiui/maml/data/VariableBinder;->init()V
 
-    .line 106
     iget-object v1, p0, Lmiui/maml/data/SensorBinder;->mEnableExp:Lmiui/maml/data/Expression;
 
     if-eqz v1, :cond_0
@@ -472,13 +430,10 @@
     :goto_0
     iput-boolean v0, p0, Lmiui/maml/data/SensorBinder;->mEnable:Z
 
-    .line 107
     invoke-direct {p0}, Lmiui/maml/data/SensorBinder;->registerListener()V
 
-    .line 108
     return-void
 
-    .line 106
     :cond_1
     const/4 v0, 0x0
 
@@ -490,7 +445,6 @@
     .param p1, "child"    # Lorg/w3c/dom/Element;
 
     .prologue
-    .line 138
     new-instance v0, Lmiui/maml/data/SensorBinder$Variable;
 
     invoke-virtual {p0}, Lmiui/maml/data/SensorBinder;->getContext()Lmiui/maml/ScreenContext;
@@ -509,7 +463,6 @@
     .param p1, "x0"    # Lorg/w3c/dom/Element;
 
     .prologue
-    .line 18
     invoke-virtual {p0, p1}, Lmiui/maml/data/SensorBinder;->onLoadVariable(Lorg/w3c/dom/Element;)Lmiui/maml/data/SensorBinder$Variable;
 
     move-result-object v0
@@ -521,13 +474,10 @@
     .locals 0
 
     .prologue
-    .line 112
     invoke-super {p0}, Lmiui/maml/data/VariableBinder;->pause()V
 
-    .line 113
     invoke-direct {p0}, Lmiui/maml/data/SensorBinder;->unregisterListener()V
 
-    .line 114
     return-void
 .end method
 
@@ -535,12 +485,9 @@
     .locals 0
 
     .prologue
-    .line 118
     invoke-super {p0}, Lmiui/maml/data/VariableBinder;->resume()V
 
-    .line 119
     invoke-direct {p0}, Lmiui/maml/data/SensorBinder;->registerListener()V
 
-    .line 120
     return-void
 .end method

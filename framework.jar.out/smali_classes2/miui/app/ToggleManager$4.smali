@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 1025
     iput-object p1, p0, Lmiui/app/ToggleManager$4;->this$0:Lmiui/app/ToggleManager;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -39,7 +38,6 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 1028
     iget-object v0, p0, Lmiui/app/ToggleManager$4;->this$0:Lmiui/app/ToggleManager;
 
     # getter for: Lmiui/app/ToggleManager;->mMobileDataUtils:Landroid/app/MobileDataUtils;
@@ -56,12 +54,10 @@
 
     invoke-virtual {v0, v1}, Landroid/app/MobileDataUtils;->onMobileDataChange(Landroid/content/Context;)V
 
-    .line 1029
     iget-object v0, p0, Lmiui/app/ToggleManager$4;->this$0:Lmiui/app/ToggleManager;
 
     # invokes: Lmiui/app/ToggleManager;->updateDataToggle()V
     invoke-static {v0}, Lmiui/app/ToggleManager;->access$200(Lmiui/app/ToggleManager;)V
 
-    .line 1030
     return-void
 .end method

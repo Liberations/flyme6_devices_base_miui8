@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 82
     iput-object p1, p0, Lmiui/maml/elements/AttrDataBinders$AttrDataBinder$NameBinder;->this$0:Lmiui/maml/elements/AttrDataBinders$AttrDataBinder;
 
     const/4 v0, 0x0
@@ -39,7 +38,6 @@
     .param p2, "x1"    # Lmiui/maml/elements/AttrDataBinders$1;
 
     .prologue
-    .line 82
     invoke-direct {p0, p1}, Lmiui/maml/elements/AttrDataBinders$AttrDataBinder$NameBinder;-><init>(Lmiui/maml/elements/AttrDataBinders$AttrDataBinder;)V
 
     return-void
@@ -52,7 +50,6 @@
     .param p1, "e"    # Lmiui/maml/elements/ScreenElement;
 
     .prologue
-    .line 85
     iget-object v0, p0, Lmiui/maml/elements/AttrDataBinders$AttrDataBinder$NameBinder;->this$0:Lmiui/maml/elements/AttrDataBinders$AttrDataBinder;
 
     iget-object v0, v0, Lmiui/maml/elements/AttrDataBinders$AttrDataBinder;->mVars:Lmiui/maml/data/ContextVariables;
@@ -67,6 +64,5 @@
 
     invoke-virtual {p1, v0}, Lmiui/maml/elements/ScreenElement;->setName(Ljava/lang/String;)V
 
-    .line 86
     return-void
 .end method

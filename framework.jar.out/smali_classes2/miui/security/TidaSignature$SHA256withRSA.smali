@@ -19,15 +19,12 @@
     .locals 2
 
     .prologue
-    .line 44
     invoke-direct {p0}, Lmiui/security/TidaSignature;-><init>()V
 
-    .line 45
     const-string v0, "SHA256withRSA"
 
     iput-object v0, p0, Lmiui/security/TidaSignature$SHA256withRSA;->mAlgorithm:Ljava/lang/String;
 
-    .line 47
     # getter for: Lmiui/security/TidaSignature;->TAG:Ljava/lang/String;
     invoke-static {}, Lmiui/security/TidaSignature;->access$000()Ljava/lang/String;
 
@@ -37,6 +34,5 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 48
     return-void
 .end method

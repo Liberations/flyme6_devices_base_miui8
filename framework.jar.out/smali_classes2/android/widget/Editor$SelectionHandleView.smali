@@ -32,18 +32,14 @@
     .param p3, "drawableRtl"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 5051
     iput-object p1, p0, Landroid/widget/Editor$SelectionHandleView;->this$0:Landroid/widget/Editor;
 
-    .line 5052
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/Editor$HandleView;-><init>(Landroid/widget/Editor;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    .line 5049
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/widget/Editor$SelectionHandleView;->mY:I
 
-    .line 5054
     iget v0, p0, Landroid/widget/Editor$SelectionHandleView;->mHotspotX:I
 
     invoke-virtual {p0}, Landroid/widget/Editor$SelectionHandleView;->getHorizontalOffset()I
@@ -56,12 +52,10 @@
 
     invoke-virtual {p0, v0}, Landroid/widget/Editor$SelectionHandleView;->setPivotX(F)V
 
-    .line 5055
     iget-object v0, p0, Landroid/widget/Editor$SelectionHandleView;->mContainer:Landroid/widget/Editor$AnimatePopupWindow;
 
     invoke-virtual {v0, p0}, Landroid/widget/Editor$AnimatePopupWindow;->setFader(Landroid/widget/Editor$Fader;)V
 
-    .line 5056
     return-void
 .end method
 
@@ -70,7 +64,6 @@
     .param p0, "x0"    # Landroid/widget/Editor$SelectionHandleView;
 
     .prologue
-    .line 5045
     iget v0, p0, Landroid/widget/Editor$SelectionHandleView;->mY:I
 
     return v0
@@ -82,7 +75,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 5045
     iput p1, p0, Landroid/widget/Editor$SelectionHandleView;->mY:I
 
     return p1
@@ -94,28 +86,23 @@
     .locals 1
 
     .prologue
-    .line 5134
     iget-object v0, p0, Landroid/widget/Editor$SelectionHandleView;->mAnimationFadeIn:Landroid/animation/AnimatorSet;
 
     if-eqz v0, :cond_0
 
-    .line 5135
     iget-object v0, p0, Landroid/widget/Editor$SelectionHandleView;->mAnimationFadeIn:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->cancel()V
 
-    .line 5138
     :cond_0
     const/high16 v0, 0x3f800000    # 1.0f
 
     invoke-virtual {p0, v0}, Landroid/widget/Editor$SelectionHandleView;->setScaleX(F)V
 
-    .line 5139
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Landroid/widget/Editor$SelectionHandleView;->setTranslationX(F)V
 
-    .line 5140
     return-void
 .end method
 
@@ -133,7 +120,6 @@
 
     const/4 v8, 0x0
 
-    .line 5095
     int-to-float v4, p1
 
     iget v5, p0, Landroid/widget/Editor$SelectionHandleView;->mTranslation:F
@@ -144,24 +130,20 @@
 
     add-float v2, v4, v5
 
-    .line 5096
     .local v2, "startX":F
     move v0, p2
 
-    .line 5097
     .local v0, "locationY":I
     const/4 v4, -0x1
 
     iput v4, p0, Landroid/widget/Editor$SelectionHandleView;->mY:I
 
-    .line 5099
     new-instance v4, Landroid/animation/AnimatorSet;
 
     invoke-direct {v4}, Landroid/animation/AnimatorSet;-><init>()V
 
     iput-object v4, p0, Landroid/widget/Editor$SelectionHandleView;->mAnimationFadeIn:Landroid/animation/AnimatorSet;
 
-    .line 5100
     iget-object v4, p0, Landroid/widget/Editor$SelectionHandleView;->mAnimationFadeIn:Landroid/animation/AnimatorSet;
 
     new-instance v5, Lmiui/view/animation/CubicEaseOutInterpolator;
@@ -170,14 +152,12 @@
 
     invoke-virtual {v4, v5}, Landroid/animation/AnimatorSet;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 5101
     iget-object v4, p0, Landroid/widget/Editor$SelectionHandleView;->mAnimationFadeIn:Landroid/animation/AnimatorSet;
 
     const-wide/16 v6, 0x12c
 
     invoke-virtual {v4, v6, v7}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
-    .line 5103
     sget-object v4, Landroid/view/View;->SCALE_X:Landroid/util/Property;
 
     new-array v5, v10, [F
@@ -188,7 +168,6 @@
 
     move-result-object v1
 
-    .line 5105
     .local v1, "scaleAnimatorX":Landroid/animation/ObjectAnimator;
     iget v4, p0, Landroid/widget/Editor$SelectionHandleView;->mTranslation:F
 
@@ -196,7 +175,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 5106
     new-array v4, v10, [F
 
     aput v2, v4, v8
@@ -209,7 +187,6 @@
 
     move-result-object v3
 
-    .line 5107
     .local v3, "translationAnimator":Landroid/animation/ValueAnimator;
     new-instance v4, Landroid/widget/Editor$SelectionHandleView$1;
 
@@ -217,7 +194,6 @@
 
     invoke-virtual {v3, v4}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 5118
     iget-object v4, p0, Landroid/widget/Editor$SelectionHandleView;->mAnimationFadeIn:Landroid/animation/AnimatorSet;
 
     new-array v5, v10, [Landroid/animation/Animator;
@@ -228,20 +204,16 @@
 
     invoke-virtual {v4, v5}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 5119
     iput v11, p0, Landroid/widget/Editor$SelectionHandleView;->mTranslation:F
 
-    .line 5124
     .end local v3    # "translationAnimator":Landroid/animation/ValueAnimator;
     :goto_0
     iget-object v4, p0, Landroid/widget/Editor$SelectionHandleView;->mAnimationFadeIn:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v4}, Landroid/animation/AnimatorSet;->start()V
 
-    .line 5125
     return-void
 
-    .line 5121
     :cond_0
     iget-object v4, p0, Landroid/widget/Editor$SelectionHandleView;->mAnimationFadeIn:Landroid/animation/AnimatorSet;
 
@@ -253,7 +225,6 @@
 
     goto :goto_0
 
-    .line 5103
     nop
 
     :array_0
@@ -267,12 +238,10 @@
     .locals 1
 
     .prologue
-    .line 5129
     iget-object v0, p0, Landroid/widget/Editor$SelectionHandleView;->mContainer:Landroid/widget/Editor$AnimatePopupWindow;
 
     invoke-virtual {v0}, Landroid/widget/Editor$AnimatePopupWindow;->dismiss()V
 
-    .line 5130
     return-void
 .end method
 
@@ -280,12 +249,10 @@
     .locals 2
 
     .prologue
-    .line 5083
     iget-object v0, p0, Landroid/widget/Editor$SelectionHandleView;->mActionPopupWindow:Landroid/widget/Editor$ActionPopupWindow;
 
     if-nez v0, :cond_0
 
-    .line 5084
     new-instance v0, Landroid/widget/Editor$SelectionPopupWindow;
 
     iget-object v1, p0, Landroid/widget/Editor$SelectionHandleView;->this$0:Landroid/widget/Editor;
@@ -294,7 +261,6 @@
 
     iput-object v0, p0, Landroid/widget/Editor$SelectionHandleView;->mActionPopupWindow:Landroid/widget/Editor$ActionPopupWindow;
 
-    .line 5086
     :cond_0
     iget-object v0, p0, Landroid/widget/Editor$SelectionHandleView;->mActionPopupWindow:Landroid/widget/Editor$ActionPopupWindow;
 
@@ -305,12 +271,10 @@
     .locals 1
 
     .prologue
-    .line 5078
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Landroid/widget/Editor$SelectionHandleView;->showActionPopupWindow(I)V
 
-    .line 5079
     return-void
 .end method
 
@@ -318,7 +282,6 @@
     .locals 1
 
     .prologue
-    .line 5071
     iget-object v0, p0, Landroid/widget/Editor$SelectionHandleView;->this$0:Landroid/widget/Editor;
 
     invoke-virtual {v0}, Landroid/widget/Editor;->hasSelectionController()Z
@@ -340,10 +303,8 @@
 
     if-nez v0, :cond_0
 
-    .line 5072
     invoke-virtual {p0}, Landroid/widget/Editor$SelectionHandleView;->hideActionPopupWindow()V
 
-    .line 5074
     :cond_0
     return-void
 .end method
@@ -353,12 +314,10 @@
     .param p1, "ev"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 5060
     invoke-super {p0, p1}, Landroid/widget/Editor$HandleView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
-    .line 5061
     .local v0, "result":Z
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
@@ -366,11 +325,9 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 5066
     :goto_0
     return v0
 
-    .line 5063
     :pswitch_0
     const/16 v1, 0x12c
 
@@ -378,7 +335,6 @@
 
     goto :goto_0
 
-    .line 5061
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -390,10 +346,8 @@
     .param p1, "actionPopupWindow"    # Landroid/widget/Editor$ActionPopupWindow;
 
     .prologue
-    .line 5090
     iput-object p1, p0, Landroid/widget/Editor$SelectionHandleView;->mActionPopupWindow:Landroid/widget/Editor$ActionPopupWindow;
 
-    .line 5091
     return-void
 .end method
 
@@ -402,10 +356,8 @@
     .param p1, "translation"    # F
 
     .prologue
-    .line 5148
     iput p1, p0, Landroid/widget/Editor$SelectionHandleView;->mTranslation:F
 
-    .line 5149
     return-void
 .end method
 
@@ -414,9 +366,7 @@
     .param p1, "y"    # I
 
     .prologue
-    .line 5144
     iput p1, p0, Landroid/widget/Editor$SelectionHandleView;->mY:I
 
-    .line 5145
     return-void
 .end method

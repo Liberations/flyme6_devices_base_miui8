@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 52
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,12 +46,10 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 55
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 56
     .local v2, "responseCode":I
     new-instance v1, Landroid/service/gatekeeper/GateKeeperResponse;
 
@@ -60,11 +57,9 @@
 
     invoke-direct {v1, v2, v5}, Landroid/service/gatekeeper/GateKeeperResponse;-><init>(ILandroid/service/gatekeeper/GateKeeperResponse$1;)V
 
-    .line 57
     .local v1, "response":Landroid/service/gatekeeper/GateKeeperResponse;
     if-ne v2, v4, :cond_1
 
-    .line 58
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
@@ -72,16 +67,13 @@
     # invokes: Landroid/service/gatekeeper/GateKeeperResponse;->setTimeout(I)V
     invoke-static {v1, v4}, Landroid/service/gatekeeper/GateKeeperResponse;->access$100(Landroid/service/gatekeeper/GateKeeperResponse;I)V
 
-    .line 68
     :cond_0
     :goto_0
     return-object v1
 
-    .line 59
     :cond_1
     if-nez v2, :cond_0
 
-    .line 60
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
@@ -92,29 +84,23 @@
     # invokes: Landroid/service/gatekeeper/GateKeeperResponse;->setShouldReEnroll(Z)V
     invoke-static {v1, v4}, Landroid/service/gatekeeper/GateKeeperResponse;->access$200(Landroid/service/gatekeeper/GateKeeperResponse;Z)V
 
-    .line 61
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 62
     .local v3, "size":I
     if-lez v3, :cond_0
 
-    .line 63
     new-array v0, v3, [B
 
-    .line 64
     .local v0, "payload":[B
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readByteArray([B)V
 
-    .line 65
     # invokes: Landroid/service/gatekeeper/GateKeeperResponse;->setPayload([B)V
     invoke-static {v1, v0}, Landroid/service/gatekeeper/GateKeeperResponse;->access$300(Landroid/service/gatekeeper/GateKeeperResponse;[B)V
 
     goto :goto_0
 
-    .line 60
     .end local v0    # "payload":[B
     .end local v3    # "size":I
     :cond_2
@@ -128,7 +114,6 @@
     .param p1, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 52
     invoke-virtual {p0, p1}, Landroid/service/gatekeeper/GateKeeperResponse$1;->createFromParcel(Landroid/os/Parcel;)Landroid/service/gatekeeper/GateKeeperResponse;
 
     move-result-object v0
@@ -141,7 +126,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 73
     new-array v0, p1, [Landroid/service/gatekeeper/GateKeeperResponse;
 
     return-object v0
@@ -152,7 +136,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 52
     invoke-virtual {p0, p1}, Landroid/service/gatekeeper/GateKeeperResponse$1;->newArray(I)[Landroid/service/gatekeeper/GateKeeperResponse;
 
     move-result-object v0

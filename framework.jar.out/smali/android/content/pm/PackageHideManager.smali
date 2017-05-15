@@ -45,7 +45,6 @@
     .locals 1
 
     .prologue
-    .line 36
     const-class v0, Landroid/content/pm/PackageHideManager;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -54,7 +53,6 @@
 
     sput-object v0, Landroid/content/pm/PackageHideManager;->TAG:Ljava/lang/String;
 
-    .line 71
     const/4 v0, 0x0
 
     sput-object v0, Landroid/content/pm/PackageHideManager;->sInstance:Landroid/content/pm/PackageHideManager;
@@ -67,20 +65,16 @@
     .param p1, "isFirstBoot"    # Z
 
     .prologue
-    .line 87
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 74
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroid/content/pm/PackageHideManager;->mShouldHideApks:Ljava/util/Map;
 
-    .line 88
     invoke-direct {p0, p1}, Landroid/content/pm/PackageHideManager;->init(Z)V
 
-    .line 89
     return-void
 .end method
 
@@ -89,7 +83,6 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 324
     iget-object v2, p0, Landroid/content/pm/PackageHideManager;->mShouldHideApks:Ljava/util/Map;
 
     invoke-interface {v2}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -114,13 +107,11 @@
 
     check-cast v1, Landroid/content/pm/PackageHideManager$AppHideItem;
 
-    .line 325
     .local v1, "item":Landroid/content/pm/PackageHideManager$AppHideItem;
     invoke-direct {p0, p1, v1}, Landroid/content/pm/PackageHideManager;->clearUserAleadyInstalled(Landroid/content/Context;Landroid/content/pm/PackageHideManager$AppHideItem;)V
 
     goto :goto_0
 
-    .line 327
     .end local v1    # "item":Landroid/content/pm/PackageHideManager$AppHideItem;
     :cond_0
     return-void
@@ -132,12 +123,10 @@
     .param p2, "item"    # Landroid/content/pm/PackageHideManager$AppHideItem;
 
     .prologue
-    .line 330
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v5
 
-    .line 332
     .local v5, "packageManager":Landroid/content/pm/PackageManager;
     :try_start_0
     iget-object v7, p2, Landroid/content/pm/PackageHideManager$AppHideItem;->packageName:Ljava/lang/String;
@@ -148,7 +137,6 @@
 
     move-result-object v0
 
-    .line 334
     .local v0, "applicationInfo":Landroid/content/pm/ApplicationInfo;
     if-eqz v0, :cond_1
 
@@ -156,7 +144,6 @@
 
     if-eqz v7, :cond_1
 
-    .line 335
     iget-object v1, p2, Landroid/content/pm/PackageHideManager$AppHideItem;->pathArray:[Ljava/lang/String;
 
     .local v1, "arr$":[Ljava/lang/String;
@@ -171,7 +158,6 @@
 
     aget-object v6, v1, v3
 
-    .line 336
     .local v6, "path":Ljava/lang/String;
     iget-object v7, v0, Landroid/content/pm/ApplicationInfo;->sourceDir:Ljava/lang/String;
 
@@ -185,12 +171,10 @@
 
     if-nez v7, :cond_0
 
-    .line 339
     new-instance v2, Ljava/io/File;
 
     invoke-direct {v2, v6}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 340
     .local v2, "file":Ljava/io/File;
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
@@ -204,19 +188,16 @@
 
     if-eqz v7, :cond_0
 
-    .line 341
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 335
     .end local v2    # "file":Ljava/io/File;
     :cond_0
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 346
     .end local v0    # "applicationInfo":Landroid/content/pm/ApplicationInfo;
     .end local v1    # "arr$":[Ljava/lang/String;
     .end local v3    # "i$":I
@@ -225,7 +206,6 @@
     :catch_0
     move-exception v7
 
-    .line 349
     :cond_1
     return-void
 .end method
@@ -235,42 +215,35 @@
     .param p0, "isFirstBoot"    # Z
 
     .prologue
-    .line 77
     sget-object v0, Landroid/content/pm/PackageHideManager;->sInstance:Landroid/content/pm/PackageHideManager;
 
     if-nez v0, :cond_1
 
-    .line 78
     const-class v1, Landroid/content/pm/PackageHideManager;
 
     monitor-enter v1
 
-    .line 79
     :try_start_0
     sget-object v0, Landroid/content/pm/PackageHideManager;->sInstance:Landroid/content/pm/PackageHideManager;
 
     if-nez v0, :cond_0
 
-    .line 80
     new-instance v0, Landroid/content/pm/PackageHideManager;
 
     invoke-direct {v0, p0}, Landroid/content/pm/PackageHideManager;-><init>(Z)V
 
     sput-object v0, Landroid/content/pm/PackageHideManager;->sInstance:Landroid/content/pm/PackageHideManager;
 
-    .line 82
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 84
     :cond_1
     sget-object v0, Landroid/content/pm/PackageHideManager;->sInstance:Landroid/content/pm/PackageHideManager;
 
     return-object v0
 
-    .line 82
     :catchall_0
     move-exception v0
 
@@ -293,19 +266,16 @@
 
     const/4 v2, 0x2
 
-    .line 92
     invoke-static {}, Landroid/content/pm/PackageHideManager;->isValidDevice()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 115
     :cond_0
     :goto_0
     return-void
 
-    .line 95
     :cond_1
     new-instance v0, Ljava/io/File;
 
@@ -315,59 +285,47 @@
 
     sput-object v0, Landroid/content/pm/PackageHideManager;->mFile:Ljava/io/File;
 
-    .line 96
     invoke-direct {p0}, Landroid/content/pm/PackageHideManager;->readAppHideConfig()V
 
-    .line 97
     sget-object v0, Landroid/content/pm/PackageHideManager;->appHideConfig:Landroid/content/pm/PackageHideManager$AppHideConfig;
 
     if-nez v0, :cond_2
 
-    .line 98
     new-instance v0, Landroid/content/pm/PackageHideManager$AppHideConfig;
 
     invoke-direct {v0}, Landroid/content/pm/PackageHideManager$AppHideConfig;-><init>()V
 
     sput-object v0, Landroid/content/pm/PackageHideManager;->appHideConfig:Landroid/content/pm/PackageHideManager$AppHideConfig;
 
-    .line 99
     sget-object v0, Landroid/content/pm/PackageHideManager;->appHideConfig:Landroid/content/pm/PackageHideManager$AppHideConfig;
 
     iput-boolean v3, v0, Landroid/content/pm/PackageHideManager$AppHideConfig;->isFunctionOpen:Z
 
-    .line 100
     sget-object v0, Landroid/content/pm/PackageHideManager;->appHideConfig:Landroid/content/pm/PackageHideManager$AppHideConfig;
 
     iput-boolean v3, v0, Landroid/content/pm/PackageHideManager$AppHideConfig;->isHide:Z
 
-    .line 101
     sget-object v0, Landroid/content/pm/PackageHideManager;->appHideConfig:Landroid/content/pm/PackageHideManager$AppHideConfig;
 
     iput v2, v0, Landroid/content/pm/PackageHideManager$AppHideConfig;->version:I
 
-    .line 103
     :cond_2
     if-eqz p1, :cond_3
 
-    .line 104
     sget-object v0, Landroid/content/pm/PackageHideManager;->appHideConfig:Landroid/content/pm/PackageHideManager$AppHideConfig;
 
     iput-boolean v4, v0, Landroid/content/pm/PackageHideManager$AppHideConfig;->isFunctionOpen:Z
 
-    .line 105
     sget-object v0, Landroid/content/pm/PackageHideManager;->appHideConfig:Landroid/content/pm/PackageHideManager$AppHideConfig;
 
     iput-boolean v4, v0, Landroid/content/pm/PackageHideManager$AppHideConfig;->isHide:Z
 
-    .line 106
     invoke-direct {p0}, Landroid/content/pm/PackageHideManager;->initHideApks()V
 
-    .line 107
     invoke-direct {p0}, Landroid/content/pm/PackageHideManager;->writeAppHideConfig()Z
 
     goto :goto_0
 
-    .line 108
     :cond_3
     sget-object v0, Landroid/content/pm/PackageHideManager;->mFile:Ljava/io/File;
 
@@ -377,22 +335,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 110
     sget-object v0, Landroid/content/pm/PackageHideManager;->appHideConfig:Landroid/content/pm/PackageHideManager$AppHideConfig;
 
     iget v0, v0, Landroid/content/pm/PackageHideManager$AppHideConfig;->version:I
 
     if-eq v0, v2, :cond_0
 
-    .line 111
     sget-object v0, Landroid/content/pm/PackageHideManager;->appHideConfig:Landroid/content/pm/PackageHideManager$AppHideConfig;
 
     iput v2, v0, Landroid/content/pm/PackageHideManager$AppHideConfig;->version:I
 
-    .line 112
     invoke-direct {p0}, Landroid/content/pm/PackageHideManager;->initHideApks()V
 
-    .line 113
     invoke-direct {p0}, Landroid/content/pm/PackageHideManager;->writeAppHideConfig()Z
 
     goto :goto_0
@@ -402,27 +356,23 @@
     .locals 9
 
     .prologue
-    .line 269
     iget-object v4, p0, Landroid/content/pm/PackageHideManager;->mShouldHideApks:Ljava/util/Map;
 
     invoke-interface {v4}, Ljava/util/Map;->clear()V
 
-    .line 270
-    const-string/jumbo v4, "hidden_app_packagename_list"
+    const-string v4, "hidden_app_packagename_list"
 
     invoke-static {v4}, Lmiui/util/FeatureParser;->getStringArray(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v3
 
-    .line 271
     .local v3, "pkgNameList":[Ljava/lang/String;
-    const-string/jumbo v4, "hidden_app_path_list"
+    const-string v4, "hidden_app_path_list"
 
     invoke-static {v4}, Lmiui/util/FeatureParser;->getStringArray(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 272
     .local v0, "appPathList":[Ljava/lang/String;
     if-eqz v3, :cond_0
 
@@ -434,7 +384,6 @@
 
     if-ne v4, v5, :cond_0
 
-    .line 273
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -443,7 +392,6 @@
 
     if-ge v1, v4, :cond_0
 
-    .line 274
     aget-object v4, v0, v1
 
     const-string v5, ","
@@ -452,7 +400,6 @@
 
     move-result-object v2
 
-    .line 275
     .local v2, "paths":[Ljava/lang/String;
     iget-object v4, p0, Landroid/content/pm/PackageHideManager;->mShouldHideApks:Ljava/util/Map;
 
@@ -468,12 +415,10 @@
 
     invoke-interface {v4, v5, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 273
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 278
     .end local v1    # "i":I
     .end local v2    # "paths":[Ljava/lang/String;
     :cond_0
@@ -484,7 +429,6 @@
     .locals 2
 
     .prologue
-    .line 265
     invoke-static {}, Landroid/os/Process;->myUid()I
 
     move-result v0
@@ -510,8 +454,7 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 378
-    const-string/jumbo v1, "support_app_hiding"
+    const-string v1, "support_app_hiding"
 
     invoke-static {v1, v0}, Lmiui/util/FeatureParser;->getBoolean(Ljava/lang/String;Z)Z
 
@@ -546,15 +489,12 @@
 
     const/4 v1, 0x0
 
-    .line 250
     if-nez p1, :cond_1
 
-    .line 261
     :cond_0
     :goto_0
     return v1
 
-    .line 255
     :cond_1
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
@@ -565,13 +505,11 @@
 
     if-ne v0, v2, :cond_1
 
-    .line 258
     :cond_2
     if-ne v0, v3, :cond_0
 
     move v1, v2
 
-    .line 261
     goto :goto_0
 .end method
 
@@ -579,15 +517,12 @@
     .locals 13
 
     .prologue
-    .line 183
     sget-object v10, Landroid/content/pm/PackageHideManager;->mFile:Ljava/io/File;
 
     monitor-enter v10
 
-    .line 184
     const/4 v6, 0x0
 
-    .line 186
     .local v6, "stream":Ljava/io/InputStream;
     :try_start_0
     invoke-direct {p0}, Landroid/content/pm/PackageHideManager;->isSystemServer()Z
@@ -596,7 +531,6 @@
 
     if-eqz v9, :cond_3
 
-    .line 187
     new-instance v7, Ljava/io/FileInputStream;
 
     sget-object v9, Landroid/content/pm/PackageHideManager;->mFile:Ljava/io/File;
@@ -607,7 +541,6 @@
     .local v7, "stream":Ljava/io/InputStream;
     move-object v6, v7
 
-    .line 195
     .end local v7    # "stream":Ljava/io/InputStream;
     .restart local v6    # "stream":Ljava/io/InputStream;
     :goto_0
@@ -615,21 +548,17 @@
 
     move-result-object v4
 
-    .line 196
     .local v4, "parser":Lorg/xmlpull/v1/XmlPullParser;
     const/4 v9, 0x0
 
     invoke-interface {v4, v6, v9}, Lorg/xmlpull/v1/XmlPullParser;->setInput(Ljava/io/InputStream;Ljava/lang/String;)V
 
-    .line 197
     invoke-direct {p0, v4}, Landroid/content/pm/PackageHideManager;->moveToNextStartTag(Lorg/xmlpull/v1/XmlPullParser;)Z
 
-    .line 198
     invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v8
 
-    .line 199
     .local v8, "tagName":Ljava/lang/String;
     const-string v9, "app-hide"
 
@@ -639,19 +568,17 @@
 
     if-eqz v9, :cond_0
 
-    .line 200
     new-instance v9, Landroid/content/pm/PackageHideManager$AppHideConfig;
 
     invoke-direct {v9}, Landroid/content/pm/PackageHideManager$AppHideConfig;-><init>()V
 
     sput-object v9, Landroid/content/pm/PackageHideManager;->appHideConfig:Landroid/content/pm/PackageHideManager$AppHideConfig;
 
-    .line 201
     sget-object v9, Landroid/content/pm/PackageHideManager;->appHideConfig:Landroid/content/pm/PackageHideManager$AppHideConfig;
 
     const/4 v11, 0x0
 
-    const-string/jumbo v12, "isFunctionOpen"
+    const-string v12, "isFunctionOpen"
 
     invoke-interface {v4, v11, v12}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -663,12 +590,11 @@
 
     iput-boolean v11, v9, Landroid/content/pm/PackageHideManager$AppHideConfig;->isFunctionOpen:Z
 
-    .line 203
     sget-object v9, Landroid/content/pm/PackageHideManager;->appHideConfig:Landroid/content/pm/PackageHideManager$AppHideConfig;
 
     const/4 v11, 0x0
 
-    const-string/jumbo v12, "version"
+    const-string v12, "version"
 
     invoke-interface {v4, v11, v12}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -680,12 +606,11 @@
 
     iput v11, v9, Landroid/content/pm/PackageHideManager$AppHideConfig;->version:I
 
-    .line 205
     sget-object v9, Landroid/content/pm/PackageHideManager;->appHideConfig:Landroid/content/pm/PackageHideManager$AppHideConfig;
 
     const/4 v11, 0x0
 
-    const-string/jumbo v12, "isHide"
+    const-string v12, "isHide"
 
     invoke-interface {v4, v11, v12}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -697,7 +622,6 @@
 
     iput-boolean v11, v9, Landroid/content/pm/PackageHideManager$AppHideConfig;->isHide:Z
 
-    .line 208
     :cond_0
     :goto_1
     invoke-direct {p0, v4}, Landroid/content/pm/PackageHideManager;->moveToNextStartTag(Lorg/xmlpull/v1/XmlPullParser;)Z
@@ -706,13 +630,11 @@
 
     if-eqz v9, :cond_6
 
-    .line 209
     invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v8
 
-    .line 210
-    const-string/jumbo v9, "item"
+    const-string v9, "item"
 
     invoke-virtual {v8, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -720,30 +642,27 @@
 
     if-eqz v9, :cond_0
 
-    .line 211
     const/4 v9, 0x0
 
-    const-string/jumbo v11, "package"
+    const-string v11, "package"
 
     invoke-interface {v4, v9, v11}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 212
     .local v3, "packageName":Ljava/lang/String;
     const/4 v9, 0x0
 
-    const-string/jumbo v11, "path"
+    const-string v11, "path"
 
     invoke-interface {v4, v9, v11}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 213
     .local v5, "path":Ljava/lang/String;
     const/4 v9, 0x0
 
-    const-string/jumbo v11, "isHide"
+    const-string v11, "isHide"
 
     invoke-interface {v4, v9, v11}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -753,7 +672,6 @@
 
     move-result v2
 
-    .line 215
     .local v2, "isHide":Z
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -767,7 +685,6 @@
 
     if-nez v9, :cond_1
 
-    .line 216
     iget-object v9, p0, Landroid/content/pm/PackageHideManager;->mShouldHideApks:Ljava/util/Map;
 
     new-instance v11, Landroid/content/pm/PackageHideManager$AppHideItem;
@@ -782,7 +699,6 @@
 
     invoke-interface {v9, v3, v11}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 219
     :cond_1
     sget-object v9, Landroid/content/pm/PackageHideManager;->TAG:Ljava/lang/String;
 
@@ -790,7 +706,7 @@
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v12, "read item: "
+    const-string v12, "read item: "
 
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -827,7 +743,6 @@
 
     goto :goto_1
 
-    .line 222
     .end local v2    # "isHide":Z
     .end local v3    # "packageName":Ljava/lang/String;
     .end local v4    # "parser":Lorg/xmlpull/v1/XmlPullParser;
@@ -836,7 +751,6 @@
     :catch_0
     move-exception v1
 
-    .line 223
     .local v1, "e":Ljava/lang/IllegalStateException;
     :try_start_1
     sget-object v9, Landroid/content/pm/PackageHideManager;->TAG:Ljava/lang/String;
@@ -863,17 +777,14 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 239
     if-eqz v6, :cond_2
 
-    .line 240
     :try_start_2
     invoke-virtual {v6}, Ljava/io/InputStream;->close()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_f
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 245
     .end local v1    # "e":Ljava/lang/IllegalStateException;
     :cond_2
     :goto_2
@@ -882,11 +793,9 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 246
     :goto_3
     return-void
 
-    .line 189
     :cond_3
     :try_start_4
     sget-object v9, Landroid/content/pm/PackageHideManager;->mFile:Ljava/io/File;
@@ -908,21 +817,17 @@
 
     move-result-object v0
 
-    .line 190
     .local v0, "bytes":[B
     if-nez v0, :cond_5
 
-    .line 239
     if-eqz v6, :cond_4
 
-    .line 240
     :try_start_5
     invoke-virtual {v6}, Ljava/io/InputStream;->close()V
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_e
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 243
     :cond_4
     :goto_4
     :try_start_6
@@ -930,7 +835,6 @@
 
     goto :goto_3
 
-    .line 245
     .end local v0    # "bytes":[B
     :catchall_0
     move-exception v9
@@ -941,7 +845,6 @@
 
     throw v9
 
-    .line 193
     .restart local v0    # "bytes":[B
     :cond_5
     :try_start_7
@@ -966,14 +869,12 @@
     .restart local v6    # "stream":Ljava/io/InputStream;
     goto/16 :goto_0
 
-    .line 239
     .end local v0    # "bytes":[B
     .restart local v4    # "parser":Lorg/xmlpull/v1/XmlPullParser;
     .restart local v8    # "tagName":Ljava/lang/String;
     :cond_6
     if-eqz v6, :cond_2
 
-    .line 240
     :try_start_8
     invoke-virtual {v6}, Ljava/io/InputStream;->close()V
     :try_end_8
@@ -982,19 +883,16 @@
 
     goto :goto_2
 
-    .line 242
     :catch_1
     move-exception v9
 
     goto :goto_2
 
-    .line 224
     .end local v4    # "parser":Lorg/xmlpull/v1/XmlPullParser;
     .end local v8    # "tagName":Ljava/lang/String;
     :catch_2
     move-exception v1
 
-    .line 225
     .local v1, "e":Ljava/lang/NullPointerException;
     :try_start_9
     sget-object v9, Landroid/content/pm/PackageHideManager;->TAG:Ljava/lang/String;
@@ -1021,10 +919,8 @@
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_1
 
-    .line 239
     if-eqz v6, :cond_2
 
-    .line 240
     :try_start_a
     invoke-virtual {v6}, Ljava/io/InputStream;->close()V
     :try_end_a
@@ -1033,18 +929,15 @@
 
     goto :goto_2
 
-    .line 242
     :catch_3
     move-exception v9
 
     goto :goto_2
 
-    .line 226
     .end local v1    # "e":Ljava/lang/NullPointerException;
     :catch_4
     move-exception v1
 
-    .line 227
     .local v1, "e":Ljava/lang/NumberFormatException;
     :try_start_b
     sget-object v9, Landroid/content/pm/PackageHideManager;->TAG:Ljava/lang/String;
@@ -1071,10 +964,8 @@
     :try_end_b
     .catchall {:try_start_b .. :try_end_b} :catchall_1
 
-    .line 239
     if-eqz v6, :cond_2
 
-    .line 240
     :try_start_c
     invoke-virtual {v6}, Ljava/io/InputStream;->close()V
     :try_end_c
@@ -1083,18 +974,15 @@
 
     goto :goto_2
 
-    .line 242
     :catch_5
     move-exception v9
 
     goto :goto_2
 
-    .line 228
     .end local v1    # "e":Ljava/lang/NumberFormatException;
     :catch_6
     move-exception v1
 
-    .line 229
     .local v1, "e":Lorg/xmlpull/v1/XmlPullParserException;
     :try_start_d
     sget-object v9, Landroid/content/pm/PackageHideManager;->TAG:Ljava/lang/String;
@@ -1121,10 +1009,8 @@
     :try_end_d
     .catchall {:try_start_d .. :try_end_d} :catchall_1
 
-    .line 239
     if-eqz v6, :cond_2
 
-    .line 240
     :try_start_e
     invoke-virtual {v6}, Ljava/io/InputStream;->close()V
     :try_end_e
@@ -1133,18 +1019,15 @@
 
     goto/16 :goto_2
 
-    .line 242
     :catch_7
     move-exception v9
 
     goto/16 :goto_2
 
-    .line 230
     .end local v1    # "e":Lorg/xmlpull/v1/XmlPullParserException;
     :catch_8
     move-exception v1
 
-    .line 231
     .local v1, "e":Ljava/io/IOException;
     :try_start_f
     sget-object v9, Landroid/content/pm/PackageHideManager;->TAG:Ljava/lang/String;
@@ -1171,10 +1054,8 @@
     :try_end_f
     .catchall {:try_start_f .. :try_end_f} :catchall_1
 
-    .line 239
     if-eqz v6, :cond_2
 
-    .line 240
     :try_start_10
     invoke-virtual {v6}, Ljava/io/InputStream;->close()V
     :try_end_10
@@ -1183,18 +1064,15 @@
 
     goto/16 :goto_2
 
-    .line 242
     :catch_9
     move-exception v9
 
     goto/16 :goto_2
 
-    .line 232
     .end local v1    # "e":Ljava/io/IOException;
     :catch_a
     move-exception v1
 
-    .line 233
     .local v1, "e":Ljava/lang/IndexOutOfBoundsException;
     :try_start_11
     sget-object v9, Landroid/content/pm/PackageHideManager;->TAG:Ljava/lang/String;
@@ -1221,10 +1099,8 @@
     :try_end_11
     .catchall {:try_start_11 .. :try_end_11} :catchall_1
 
-    .line 239
     if-eqz v6, :cond_2
 
-    .line 240
     :try_start_12
     invoke-virtual {v6}, Ljava/io/InputStream;->close()V
     :try_end_12
@@ -1233,18 +1109,15 @@
 
     goto/16 :goto_2
 
-    .line 242
     :catch_b
     move-exception v9
 
     goto/16 :goto_2
 
-    .line 234
     .end local v1    # "e":Ljava/lang/IndexOutOfBoundsException;
     :catch_c
     move-exception v1
 
-    .line 235
     .local v1, "e":Ljava/lang/Exception;
     :try_start_13
     sget-object v9, Landroid/content/pm/PackageHideManager;->TAG:Ljava/lang/String;
@@ -1271,10 +1144,8 @@
     :try_end_13
     .catchall {:try_start_13 .. :try_end_13} :catchall_1
 
-    .line 239
     if-eqz v6, :cond_2
 
-    .line 240
     :try_start_14
     invoke-virtual {v6}, Ljava/io/InputStream;->close()V
     :try_end_14
@@ -1283,28 +1154,23 @@
 
     goto/16 :goto_2
 
-    .line 242
     :catch_d
     move-exception v9
 
     goto/16 :goto_2
 
-    .line 238
     .end local v1    # "e":Ljava/lang/Exception;
     :catchall_1
     move-exception v9
 
-    .line 239
     if-eqz v6, :cond_7
 
-    .line 240
     :try_start_15
     invoke-virtual {v6}, Ljava/io/InputStream;->close()V
     :try_end_15
     .catch Ljava/io/IOException; {:try_start_15 .. :try_end_15} :catch_10
     .catchall {:try_start_15 .. :try_end_15} :catchall_0
 
-    .line 243
     :cond_7
     :goto_5
     :try_start_16
@@ -1312,7 +1178,6 @@
     :try_end_16
     .catchall {:try_start_16 .. :try_end_16} :catchall_0
 
-    .line 242
     .restart local v0    # "bytes":[B
     :catch_e
     move-exception v9
@@ -1337,14 +1202,11 @@
     .locals 14
 
     .prologue
-    .line 118
     const/4 v7, 0x0
 
-    .line 119
     .local v7, "stream":Ljava/io/OutputStream;
     const/4 v6, 0x1
 
-    .line 120
     .local v6, "result":Z
     invoke-direct {p0}, Landroid/content/pm/PackageHideManager;->isSystemServer()Z
 
@@ -1358,7 +1220,6 @@
 
     move-result-object v9
 
-    .line 123
     .local v9, "tmpPath":Ljava/lang/String;
     :goto_0
     :try_start_0
@@ -1368,7 +1229,6 @@
 
     if-eqz v10, :cond_4
 
-    .line 124
     new-instance v8, Ljava/io/FileOutputStream;
 
     invoke-direct {v8, v9}, Ljava/io/FileOutputStream;-><init>(Ljava/lang/String;)V
@@ -1377,7 +1237,6 @@
     .local v8, "stream":Ljava/io/OutputStream;
     move-object v7, v8
 
-    .line 129
     .end local v8    # "stream":Ljava/io/OutputStream;
     .restart local v7    # "stream":Ljava/io/OutputStream;
     :goto_1
@@ -1385,13 +1244,11 @@
 
     invoke-direct {v5}, Lcom/android/internal/util/FastXmlSerializer;-><init>()V
 
-    .line 130
     .local v5, "out":Lorg/xmlpull/v1/XmlSerializer;
-    const-string/jumbo v10, "utf-8"
+    const-string v10, "utf-8"
 
     invoke-interface {v5, v7, v10}, Lorg/xmlpull/v1/XmlSerializer;->setOutput(Ljava/io/OutputStream;Ljava/lang/String;)V
 
-    .line 131
     const/4 v10, 0x0
 
     const/4 v11, 0x1
@@ -1402,17 +1259,15 @@
 
     invoke-interface {v5, v10, v11}, Lorg/xmlpull/v1/XmlSerializer;->startDocument(Ljava/lang/String;Ljava/lang/Boolean;)V
 
-    .line 132
     const/4 v10, 0x0
 
     const-string v11, "app-hide"
 
     invoke-interface {v5, v10, v11}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 134
     const/4 v10, 0x0
 
-    const-string/jumbo v11, "isFunctionOpen"
+    const-string v11, "isFunctionOpen"
 
     sget-object v12, Landroid/content/pm/PackageHideManager;->appHideConfig:Landroid/content/pm/PackageHideManager$AppHideConfig;
 
@@ -1424,10 +1279,9 @@
 
     invoke-interface {v5, v10, v11, v12}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 135
     const/4 v10, 0x0
 
-    const-string/jumbo v11, "version"
+    const-string v11, "version"
 
     sget-object v12, Landroid/content/pm/PackageHideManager;->appHideConfig:Landroid/content/pm/PackageHideManager$AppHideConfig;
 
@@ -1439,10 +1293,9 @@
 
     invoke-interface {v5, v10, v11, v12}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 136
     const/4 v10, 0x0
 
-    const-string/jumbo v11, "isHide"
+    const-string v11, "isHide"
 
     sget-object v12, Landroid/content/pm/PackageHideManager;->appHideConfig:Landroid/content/pm/PackageHideManager$AppHideConfig;
 
@@ -1454,12 +1307,10 @@
 
     invoke-interface {v5, v10, v11, v12}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 138
     iget-object v10, p0, Landroid/content/pm/PackageHideManager;->mShouldHideApks:Ljava/util/Map;
 
     if-eqz v10, :cond_5
 
-    .line 139
     iget-object v10, p0, Landroid/content/pm/PackageHideManager;->mShouldHideApks:Ljava/util/Map;
 
     invoke-interface {v10}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -1485,7 +1336,6 @@
 
     check-cast v4, Landroid/content/pm/PackageHideManager$AppHideItem;
 
-    .line 140
     .local v4, "item":Landroid/content/pm/PackageHideManager$AppHideItem;
     iget-object v10, v4, Landroid/content/pm/PackageHideManager$AppHideItem;->packageName:Ljava/lang/String;
 
@@ -1505,26 +1355,23 @@
 
     if-nez v10, :cond_0
 
-    .line 144
     const/4 v10, 0x0
 
-    const-string/jumbo v11, "item"
+    const-string v11, "item"
 
     invoke-interface {v5, v10, v11}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 145
     const/4 v10, 0x0
 
-    const-string/jumbo v11, "package"
+    const-string v11, "package"
 
     iget-object v12, v4, Landroid/content/pm/PackageHideManager$AppHideItem;->packageName:Ljava/lang/String;
 
     invoke-interface {v5, v10, v11, v12}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 146
     const/4 v10, 0x0
 
-    const-string/jumbo v11, "path"
+    const-string v11, "path"
 
     invoke-virtual {v4}, Landroid/content/pm/PackageHideManager$AppHideItem;->getJoinPath()Ljava/lang/String;
 
@@ -1532,10 +1379,9 @@
 
     invoke-interface {v5, v10, v11, v12}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 147
     const/4 v10, 0x0
 
-    const-string/jumbo v11, "isHide"
+    const-string v11, "isHide"
 
     iget-boolean v12, v4, Landroid/content/pm/PackageHideManager$AppHideItem;->isHide:Z
 
@@ -1545,10 +1391,9 @@
 
     invoke-interface {v5, v10, v11, v12}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 148
     const/4 v10, 0x0
 
-    const-string/jumbo v11, "item"
+    const-string v11, "item"
 
     invoke-interface {v5, v10, v11}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
     :try_end_0
@@ -1557,14 +1402,12 @@
 
     goto :goto_2
 
-    .line 157
     .end local v3    # "i$":Ljava/util/Iterator;
     .end local v4    # "item":Landroid/content/pm/PackageHideManager$AppHideItem;
     .end local v5    # "out":Lorg/xmlpull/v1/XmlSerializer;
     :catch_0
     move-exception v2
 
-    .line 158
     .local v2, "e":Ljava/lang/Exception;
     :try_start_1
     sget-object v10, Landroid/content/pm/PackageHideManager;->TAG:Ljava/lang/String;
@@ -1575,19 +1418,15 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 159
     const/4 v6, 0x0
 
-    .line 161
     if-eqz v7, :cond_1
 
-    .line 163
     :try_start_2
     invoke-virtual {v7}, Ljava/io/OutputStream;->close()V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 169
     .end local v2    # "e":Ljava/lang/Exception;
     :cond_1
     :goto_3
@@ -1599,7 +1438,6 @@
 
     if-nez v10, :cond_2
 
-    .line 171
     :try_start_3
     sget-object v11, Landroid/content/pm/PackageHideManager;->mFile:Ljava/io/File;
 
@@ -1607,7 +1445,6 @@
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_4
 
-    .line 172
     :try_start_4
     sget-object v10, Landroid/content/pm/PackageHideManager;->mFile:Ljava/io/File;
 
@@ -1619,17 +1456,14 @@
 
     move-result v6
 
-    .line 173
     monitor-exit v11
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 179
     :cond_2
     :goto_4
     return v6
 
-    .line 120
     .end local v9    # "tmpPath":Ljava/lang/String;
     :cond_3
     new-instance v10, Ljava/lang/StringBuilder;
@@ -1672,7 +1506,6 @@
 
     goto/16 :goto_0
 
-    .line 126
     .restart local v9    # "tmpPath":Ljava/lang/String;
     :cond_4
     :try_start_5
@@ -1688,7 +1521,6 @@
     .restart local v7    # "stream":Ljava/io/OutputStream;
     goto/16 :goto_1
 
-    .line 151
     .restart local v5    # "out":Lorg/xmlpull/v1/XmlSerializer;
     :cond_5
     const/4 v10, 0x0
@@ -1697,17 +1529,14 @@
 
     invoke-interface {v5, v10, v11}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 152
     invoke-interface {v5}, Lorg/xmlpull/v1/XmlSerializer;->endDocument()V
 
-    .line 153
     invoke-direct {p0}, Landroid/content/pm/PackageHideManager;->isSystemServer()Z
 
     move-result v10
 
     if-nez v10, :cond_6
 
-    .line 154
     const/4 v11, 0x0
 
     move-object v0, v7
@@ -1727,11 +1556,9 @@
 
     move-result v6
 
-    .line 161
     :cond_6
     if-eqz v7, :cond_1
 
-    .line 163
     :try_start_6
     invoke-virtual {v7}, Ljava/io/OutputStream;->close()V
     :try_end_6
@@ -1739,57 +1566,45 @@
 
     goto :goto_3
 
-    .line 164
     :catch_1
     move-exception v2
 
-    .line 165
     .restart local v2    # "e":Ljava/lang/Exception;
     const/4 v6, 0x0
 
-    .line 166
     goto :goto_3
 
-    .line 164
     .end local v5    # "out":Lorg/xmlpull/v1/XmlSerializer;
     :catch_2
     move-exception v2
 
-    .line 165
     const/4 v6, 0x0
 
-    .line 166
     goto :goto_3
 
-    .line 161
     .end local v2    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v10
 
     if-eqz v7, :cond_7
 
-    .line 163
     :try_start_7
     invoke-virtual {v7}, Ljava/io/OutputStream;->close()V
     :try_end_7
     .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_3
 
-    .line 166
     :cond_7
     :goto_5
     throw v10
 
-    .line 164
     :catch_3
     move-exception v2
 
-    .line 165
     .restart local v2    # "e":Ljava/lang/Exception;
     const/4 v6, 0x0
 
     goto :goto_5
 
-    .line 173
     .end local v2    # "e":Ljava/lang/Exception;
     :catchall_1
     move-exception v10
@@ -1804,15 +1619,12 @@
     :try_end_9
     .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_4
 
-    .line 174
     :catch_4
     move-exception v2
 
-    .line 175
     .restart local v2    # "e":Ljava/lang/Exception;
     invoke-static {v9}, Landroid/miui/Shell;->remove(Ljava/lang/String;)Z
 
-    .line 176
     const/4 v6, 0x0
 
     goto :goto_4
@@ -1833,12 +1645,10 @@
     .end annotation
 
     .prologue
-    .line 307
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
-    .line 308
     .local v6, "pathList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-virtual {p0}, Landroid/content/pm/PackageHideManager;->isAppHide()Z
 
@@ -1846,7 +1656,6 @@
 
     if-eqz v7, :cond_1
 
-    .line 309
     iget-object v7, p0, Landroid/content/pm/PackageHideManager;->mShouldHideApks:Ljava/util/Map;
 
     invoke-interface {v7}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -1870,7 +1679,6 @@
 
     check-cast v3, Landroid/content/pm/PackageHideManager$AppHideItem;
 
-    .line 310
     .local v3, "item":Landroid/content/pm/PackageHideManager$AppHideItem;
     iget-boolean v7, v3, Landroid/content/pm/PackageHideManager$AppHideItem;->isHide:Z
 
@@ -1880,7 +1688,6 @@
 
     if-eqz v7, :cond_0
 
-    .line 311
     iget-object v0, v3, Landroid/content/pm/PackageHideManager$AppHideItem;->pathArray:[Ljava/lang/String;
 
     .local v0, "arr$":[Ljava/lang/String;
@@ -1895,16 +1702,13 @@
 
     aget-object v5, v0, v2
 
-    .line 312
     .local v5, "path":Ljava/lang/String;
     invoke-interface {v6, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 311
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 317
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v2    # "i$":I
     .end local v3    # "item":Landroid/content/pm/PackageHideManager$AppHideItem;
@@ -1918,7 +1722,6 @@
     .locals 1
 
     .prologue
-    .line 359
     invoke-static {}, Landroid/content/pm/PackageHideManager;->isValidDevice()Z
 
     move-result v0
@@ -1941,10 +1744,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 361
     const/4 v0, 0x1
 
-    .line 363
     :goto_0
     return v0
 
@@ -1961,7 +1762,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 367
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -1974,12 +1774,10 @@
 
     if-nez v2, :cond_1
 
-    .line 374
     :cond_0
     :goto_0
     return v1
 
-    .line 370
     :cond_1
     iget-object v2, p0, Landroid/content/pm/PackageHideManager;->mShouldHideApks:Ljava/util/Map;
 
@@ -1989,7 +1787,6 @@
 
     check-cast v0, Landroid/content/pm/PackageHideManager$AppHideItem;
 
-    .line 371
     .local v0, "item":Landroid/content/pm/PackageHideManager$AppHideItem;
     if-eqz v0, :cond_0
 
@@ -1997,7 +1794,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 372
     const/4 v1, 0x1
 
     goto :goto_0
@@ -2007,7 +1803,6 @@
     .locals 1
 
     .prologue
-    .line 352
     invoke-static {}, Landroid/content/pm/PackageHideManager;->isValidDevice()Z
 
     move-result v0
@@ -2024,10 +1819,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 353
     const/4 v0, 0x1
 
-    .line 355
     :goto_0
     return v0
 
@@ -2046,7 +1839,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 292
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -2063,12 +1855,10 @@
 
     if-nez v2, :cond_1
 
-    .line 303
     :cond_0
     :goto_0
     return v1
 
-    .line 295
     :cond_1
     iget-object v2, p0, Landroid/content/pm/PackageHideManager;->mShouldHideApks:Ljava/util/Map;
 
@@ -2078,7 +1868,6 @@
 
     check-cast v0, Landroid/content/pm/PackageHideManager$AppHideItem;
 
-    .line 296
     .local v0, "item":Landroid/content/pm/PackageHideManager$AppHideItem;
     if-eqz v0, :cond_0
 
@@ -2086,16 +1875,12 @@
 
     if-eq v2, p3, :cond_0
 
-    .line 297
     iput-boolean p3, v0, Landroid/content/pm/PackageHideManager$AppHideItem;->isHide:Z
 
-    .line 298
     if-nez p3, :cond_2
 
-    .line 299
     invoke-direct {p0, p1, v0}, Landroid/content/pm/PackageHideManager;->clearUserAleadyInstalled(Landroid/content/Context;Landroid/content/pm/PackageHideManager$AppHideItem;)V
 
-    .line 301
     :cond_2
     invoke-direct {p0}, Landroid/content/pm/PackageHideManager;->writeAppHideConfig()Z
 
@@ -2110,7 +1895,6 @@
     .param p2, "hide"    # Z
 
     .prologue
-    .line 281
     invoke-static {}, Landroid/content/pm/PackageHideManager;->isValidDevice()Z
 
     move-result v0
@@ -2127,27 +1911,21 @@
 
     if-ne v0, p2, :cond_1
 
-    .line 282
     :cond_0
     const/4 v0, 0x0
 
-    .line 288
     :goto_0
     return v0
 
-    .line 284
     :cond_1
     sget-object v0, Landroid/content/pm/PackageHideManager;->appHideConfig:Landroid/content/pm/PackageHideManager$AppHideConfig;
 
     iput-boolean p2, v0, Landroid/content/pm/PackageHideManager$AppHideConfig;->isHide:Z
 
-    .line 285
     if-nez p2, :cond_2
 
-    .line 286
     invoke-direct {p0, p1}, Landroid/content/pm/PackageHideManager;->clearUserAleadyInstalled(Landroid/content/Context;)V
 
-    .line 288
     :cond_2
     invoke-direct {p0}, Landroid/content/pm/PackageHideManager;->writeAppHideConfig()Z
 

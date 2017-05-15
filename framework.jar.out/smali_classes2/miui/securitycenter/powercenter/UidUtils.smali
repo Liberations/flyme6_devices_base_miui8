@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,14 +18,12 @@
     .param p0, "uid"    # I
 
     .prologue
-    .line 9
     invoke-static {p0}, Lmiui/securitycenter/powercenter/UidUtils;->isSharedGid(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 10
     const/4 v0, 0x0
 
     invoke-static {p0}, Landroid/os/UserHandle;->getAppIdFromSharedAppGid(I)I
@@ -37,7 +34,6 @@
 
     move-result p0
 
-    .line 13
     .end local p0    # "uid":I
     :cond_0
     return p0
@@ -48,7 +44,6 @@
     .param p0, "uid"    # I
 
     .prologue
-    .line 17
     invoke-static {p0}, Landroid/os/UserHandle;->getAppIdFromSharedAppGid(I)I
 
     move-result v0

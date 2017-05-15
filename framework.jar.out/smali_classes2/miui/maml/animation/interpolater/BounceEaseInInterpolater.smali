@@ -11,7 +11,6 @@
     .locals 0
 
     .prologue
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,7 +23,6 @@
     .prologue
     const/high16 v1, 0x3f800000    # 1.0f
 
-    .line 12
     sub-float v0, v1, p0
 
     invoke-static {v0}, Lmiui/maml/animation/interpolater/BounceEaseOutInterpolater;->getInterpolationImp(F)F
@@ -43,7 +41,6 @@
     .param p1, "t"    # F
 
     .prologue
-    .line 8
     invoke-static {p1}, Lmiui/maml/animation/interpolater/BounceEaseInInterpolater;->getInterpolationImp(F)F
 
     move-result v0

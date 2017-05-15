@@ -25,7 +25,6 @@
     .locals 3
 
     .prologue
-    .line 873
     invoke-static {}, Lmiui/maml/data/Expression$Tokenizer$TokenType;->values()[Lmiui/maml/data/Expression$Tokenizer$TokenType;
 
     move-result-object v0
@@ -163,7 +162,6 @@
     :try_end_7
     .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_14
 
-    .line 528
     :goto_7
     invoke-static {}, Lmiui/maml/data/Expression$Ope;->values()[Lmiui/maml/data/Expression$Ope;
 
@@ -597,7 +595,6 @@
 
     goto/16 :goto_8
 
-    .line 873
     :catch_14
     move-exception v0
 

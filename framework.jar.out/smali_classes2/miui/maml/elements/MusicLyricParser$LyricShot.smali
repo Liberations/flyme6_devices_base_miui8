@@ -27,15 +27,11 @@
     .param p2, "p"    # D
 
     .prologue
-    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     iput p1, p0, Lmiui/maml/elements/MusicLyricParser$LyricShot;->lineIndex:I
 
-    .line 46
     iput-wide p2, p0, Lmiui/maml/elements/MusicLyricParser$LyricShot;->percent:D
 
-    .line 47
     return-void
 .end method

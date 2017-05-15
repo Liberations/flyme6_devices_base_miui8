@@ -31,20 +31,16 @@
     .locals 1
 
     .prologue
-    .line 572
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 566
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/media/AudioTrack$Builder;->mSessionId:I
 
-    .line 567
     const/4 v0, 0x1
 
     iput v0, p0, Landroid/media/AudioTrack$Builder;->mMode:I
 
-    .line 573
     return-void
 .end method
 
@@ -61,12 +57,10 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 681
     iget-object v1, p0, Landroid/media/AudioTrack$Builder;->mAttributes:Landroid/media/AudioAttributes;
 
     if-nez v1, :cond_0
 
-    .line 682
     new-instance v1, Landroid/media/AudioAttributes$Builder;
 
     invoke-direct {v1}, Landroid/media/AudioAttributes$Builder;-><init>()V
@@ -81,13 +75,11 @@
 
     iput-object v1, p0, Landroid/media/AudioTrack$Builder;->mAttributes:Landroid/media/AudioAttributes;
 
-    .line 686
     :cond_0
     iget-object v1, p0, Landroid/media/AudioTrack$Builder;->mFormat:Landroid/media/AudioFormat;
 
     if-nez v1, :cond_1
 
-    .line 687
     new-instance v1, Landroid/media/AudioFormat$Builder;
 
     invoke-direct {v1}, Landroid/media/AudioFormat$Builder;-><init>()V
@@ -116,7 +108,6 @@
 
     iput-object v1, p0, Landroid/media/AudioTrack$Builder;->mFormat:Landroid/media/AudioFormat;
 
-    .line 697
     :cond_1
     :try_start_0
     iget v1, p0, Landroid/media/AudioTrack$Builder;->mMode:I
@@ -127,7 +118,6 @@
 
     if-nez v1, :cond_2
 
-    .line 698
     iget-object v1, p0, Landroid/media/AudioTrack$Builder;->mFormat:Landroid/media/AudioFormat;
 
     invoke-virtual {v1}, Landroid/media/AudioFormat;->getChannelCount()I
@@ -150,7 +140,6 @@
 
     iput v1, p0, Landroid/media/AudioTrack$Builder;->mBufferSizeInBytes:I
 
-    .line 701
     :cond_2
     new-instance v0, Landroid/media/AudioTrack;
 
@@ -166,7 +155,6 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/media/AudioTrack;-><init>(Landroid/media/AudioAttributes;Landroid/media/AudioFormat;III)V
 
-    .line 703
     .local v0, "track":Landroid/media/AudioTrack;
     invoke-virtual {v0}, Landroid/media/AudioTrack;->getState()I
 
@@ -174,7 +162,6 @@
 
     if-nez v1, :cond_3
 
-    .line 705
     new-instance v1, Ljava/lang/UnsupportedOperationException;
 
     const-string v2, "Cannot create AudioTrack"
@@ -185,12 +172,10 @@
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 708
     .end local v0    # "track":Landroid/media/AudioTrack;
     :catch_0
     move-exception v6
 
-    .line 709
     .local v6, "e":Ljava/lang/IllegalArgumentException;
     new-instance v1, Ljava/lang/UnsupportedOperationException;
 
@@ -202,7 +187,6 @@
 
     throw v1
 
-    .line 707
     .end local v6    # "e":Ljava/lang/IllegalArgumentException;
     .restart local v0    # "track":Landroid/media/AudioTrack;
     :cond_3
@@ -219,10 +203,8 @@
     .end annotation
 
     .prologue
-    .line 584
     if-nez p1, :cond_0
 
-    .line 585
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Illegal null AudioAttributes argument"
@@ -231,11 +213,9 @@
 
     throw v0
 
-    .line 588
     :cond_0
     iput-object p1, p0, Landroid/media/AudioTrack$Builder;->mAttributes:Landroid/media/AudioAttributes;
 
-    .line 589
     return-object p0
 .end method
 
@@ -249,10 +229,8 @@
     .end annotation
 
     .prologue
-    .line 602
     if-nez p1, :cond_0
 
-    .line 603
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Illegal null AudioFormat argument"
@@ -261,11 +239,9 @@
 
     throw v0
 
-    .line 606
     :cond_0
     iput-object p1, p0, Landroid/media/AudioTrack$Builder;->mFormat:Landroid/media/AudioFormat;
 
-    .line 607
     return-object p0
 .end method
 
@@ -279,10 +255,8 @@
     .end annotation
 
     .prologue
-    .line 627
     if-gtz p1, :cond_0
 
-    .line 628
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -307,11 +281,9 @@
 
     throw v0
 
-    .line 630
     :cond_0
     iput p1, p0, Landroid/media/AudioTrack$Builder;->mBufferSizeInBytes:I
 
-    .line 631
     return-object p0
 .end method
 
@@ -325,14 +297,12 @@
     .end annotation
 
     .prologue
-    .line 665
     if-eqz p1, :cond_0
 
     const/4 v0, 0x1
 
     if-ge p1, v0, :cond_0
 
-    .line 666
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -357,11 +327,9 @@
 
     throw v0
 
-    .line 668
     :cond_0
     iput p1, p0, Landroid/media/AudioTrack$Builder;->mSessionId:I
 
-    .line 669
     return-object p0
 .end method
 
@@ -375,10 +343,8 @@
     .end annotation
 
     .prologue
-    .line 643
     packed-switch p1, :pswitch_data_0
 
-    .line 649
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -403,14 +369,11 @@
 
     throw v0
 
-    .line 646
     :pswitch_0
     iput p1, p0, Landroid/media/AudioTrack$Builder;->mMode:I
 
-    .line 651
     return-object p0
 
-    .line 643
     nop
 
     :pswitch_data_0

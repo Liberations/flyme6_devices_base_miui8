@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 218
     iput-object p1, p0, Landroid/hardware/camera2/impl/CameraDeviceImpl$7;->this$0:Landroid/hardware/camera2/impl/CameraDeviceImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,10 +39,8 @@
     .locals 3
 
     .prologue
-    .line 221
     const/4 v0, 0x0
 
-    .line 222
     .local v0, "sessionCallback":Landroid/hardware/camera2/impl/CameraDeviceImpl$StateCallbackKK;
     iget-object v1, p0, Landroid/hardware/camera2/impl/CameraDeviceImpl$7;->this$0:Landroid/hardware/camera2/impl/CameraDeviceImpl;
 
@@ -51,7 +48,6 @@
 
     monitor-enter v2
 
-    .line 223
     :try_start_0
     iget-object v1, p0, Landroid/hardware/camera2/impl/CameraDeviceImpl$7;->this$0:Landroid/hardware/camera2/impl/CameraDeviceImpl;
 
@@ -64,11 +60,9 @@
 
     monitor-exit v2
 
-    .line 231
     :goto_0
     return-void
 
-    .line 225
     :cond_0
     iget-object v1, p0, Landroid/hardware/camera2/impl/CameraDeviceImpl$7;->this$0:Landroid/hardware/camera2/impl/CameraDeviceImpl;
 
@@ -77,20 +71,16 @@
 
     move-result-object v0
 
-    .line 226
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 227
     if-eqz v0, :cond_1
 
-    .line 228
     iget-object v1, p0, Landroid/hardware/camera2/impl/CameraDeviceImpl$7;->this$0:Landroid/hardware/camera2/impl/CameraDeviceImpl;
 
     invoke-virtual {v0, v1}, Landroid/hardware/camera2/impl/CameraDeviceImpl$StateCallbackKK;->onDisconnected(Landroid/hardware/camera2/CameraDevice;)V
 
-    .line 230
     :cond_1
     iget-object v1, p0, Landroid/hardware/camera2/impl/CameraDeviceImpl$7;->this$0:Landroid/hardware/camera2/impl/CameraDeviceImpl;
 
@@ -105,7 +95,6 @@
 
     goto :goto_0
 
-    .line 226
     :catchall_0
     move-exception v1
 

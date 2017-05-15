@@ -16,10 +16,8 @@
     .locals 0
 
     .prologue
-    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 12
     return-void
 .end method
 
@@ -28,38 +26,32 @@
     .param p0, "param"    # Lmiui/maml/ScreenElementRootFactory$Parameter;
 
     .prologue
-    .line 33
     # getter for: Lmiui/maml/ScreenElementRootFactory$Parameter;->mContext:Landroid/content/Context;
     invoke-static {p0}, Lmiui/maml/ScreenElementRootFactory$Parameter;->access$000(Lmiui/maml/ScreenElementRootFactory$Parameter;)Landroid/content/Context;
 
     move-result-object v6
 
-    .line 34
     .local v6, "context":Landroid/content/Context;
     if-nez v6, :cond_0
 
-    .line 35
     new-instance v2, Ljava/lang/NullPointerException;
 
     invoke-direct {v2}, Ljava/lang/NullPointerException;-><init>()V
 
     throw v2
 
-    .line 37
     :cond_0
     # getter for: Lmiui/maml/ScreenElementRootFactory$Parameter;->mResourceLoader:Lmiui/maml/ResourceLoader;
     invoke-static {p0}, Lmiui/maml/ScreenElementRootFactory$Parameter;->access$100(Lmiui/maml/ScreenElementRootFactory$Parameter;)Lmiui/maml/ResourceLoader;
 
     move-result-object v1
 
-    .line 38
     .local v1, "loader":Lmiui/maml/ResourceLoader;
     # getter for: Lmiui/maml/ScreenElementRootFactory$Parameter;->mPath:Ljava/lang/String;
     invoke-static {p0}, Lmiui/maml/ScreenElementRootFactory$Parameter;->access$200(Lmiui/maml/ScreenElementRootFactory$Parameter;)Ljava/lang/String;
 
     move-result-object v8
 
-    .line 39
     .local v8, "path":Ljava/lang/String;
     if-nez v1, :cond_1
 
@@ -75,7 +67,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 40
     new-instance v2, Lmiui/maml/util/ZipResourceLoader;
 
     invoke-direct {v2, v8}, Lmiui/maml/util/ZipResourceLoader;-><init>(Ljava/lang/String;)V
@@ -94,18 +85,14 @@
 
     move-result-object v1
 
-    .line 42
     :cond_1
     if-nez v1, :cond_2
 
-    .line 43
     const/4 v2, 0x0
 
-    .line 48
     :goto_0
     return-object v2
 
-    .line 45
     :cond_2
     new-instance v0, Lmiui/maml/LifecycleResourceManager;
 
@@ -115,13 +102,11 @@
 
     invoke-direct/range {v0 .. v5}, Lmiui/maml/LifecycleResourceManager;-><init>(Lmiui/maml/ResourceLoader;JJ)V
 
-    .line 47
     .local v0, "rm":Lmiui/maml/LifecycleResourceManager;
     new-instance v7, Lmiui/maml/ScreenContext;
 
     invoke-direct {v7, v6, v0}, Lmiui/maml/ScreenContext;-><init>(Landroid/content/Context;Lmiui/maml/ResourceManager;)V
 
-    .line 48
     .local v7, "mElementContext":Lmiui/maml/ScreenContext;
     new-instance v2, Lmiui/maml/ScreenElementRoot;
 

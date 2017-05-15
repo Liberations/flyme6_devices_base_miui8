@@ -27,10 +27,8 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 404
     invoke-direct {p0, p1}, Lmiui/maml/NotifierManager$BaseNotifier;-><init>(Landroid/content/Context;)V
 
-    .line 391
     new-instance v0, Lmiui/maml/NotifierManager$ContentChangeNotifier$1;
 
     const/4 v1, 0x0
@@ -39,10 +37,8 @@
 
     iput-object v0, p0, Lmiui/maml/NotifierManager$ContentChangeNotifier;->mObserver:Landroid/database/ContentObserver;
 
-    .line 405
     iput-object p2, p0, Lmiui/maml/NotifierManager$ContentChangeNotifier;->mUri:Landroid/net/Uri;
 
-    .line 406
     return-void
 .end method
 
@@ -54,7 +50,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 410
     iget-object v0, p0, Lmiui/maml/NotifierManager$ContentChangeNotifier;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -69,7 +64,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 411
     const/4 v0, 0x1
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -78,7 +72,6 @@
 
     invoke-virtual {p0, v4, v4, v0}, Lmiui/maml/NotifierManager$ContentChangeNotifier;->onNotify(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/Object;)V
 
-    .line 412
     return-void
 .end method
 
@@ -86,7 +79,6 @@
     .locals 2
 
     .prologue
-    .line 416
     iget-object v0, p0, Lmiui/maml/NotifierManager$ContentChangeNotifier;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -97,6 +89,5 @@
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
-    .line 417
     return-void
 .end method

@@ -14,7 +14,6 @@
     .locals 0
 
     .prologue
-    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -26,8 +25,7 @@
     .param p1, "server"    # Ljava/lang/String;
 
     .prologue
-    .line 14
-    const-string/jumbo v2, "phone"
+    const-string v2, "phone"
 
     invoke-virtual {p0, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -35,13 +33,11 @@
 
     check-cast v1, Landroid/telephony/TelephonyManager;
 
-    .line 15
     .local v1, "telephonyManager":Landroid/telephony/TelephonyManager;
     invoke-virtual {v1}, Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 18
     .local v0, "networkOperator":Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -64,11 +60,9 @@
 
     if-eqz v2, :cond_2
 
-    .line 20
     :cond_1
-    const-string/jumbo p1, "http://connect.rom.miui.com/generate_204"
+    const-string p1, "http://connect.rom.miui.com/generate_204"
 
-    .line 22
     :cond_2
     return-object p1
 .end method
@@ -80,10 +74,8 @@
     .prologue
     const/4 v2, 0x3
 
-    .line 26
     const-string v0, ""
 
-    .line 27
     .local v0, "mcc":Ljava/lang/String;
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -97,14 +89,12 @@
 
     if-lt v1, v2, :cond_0
 
-    .line 28
     const/4 v1, 0x0
 
     invoke-virtual {p0, v1, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 30
     :cond_0
     const-string v1, "460"
 

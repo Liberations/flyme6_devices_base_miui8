@@ -43,7 +43,6 @@
     .locals 0
 
     .prologue
-    .line 92
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -55,7 +54,6 @@
     .locals 1
 
     .prologue
-    .line 114
     iget v0, p0, Landroid/net/wifi/passpoint/WifiPasspointInfo$WanMetrics;->wanInfo:I
 
     and-int/lit8 v0, v0, 0x8
@@ -77,7 +75,6 @@
     .locals 1
 
     .prologue
-    .line 106
     iget v0, p0, Landroid/net/wifi/passpoint/WifiPasspointInfo$WanMetrics;->wanInfo:I
 
     and-int/lit8 v0, v0, 0x3
@@ -89,7 +86,6 @@
     .locals 1
 
     .prologue
-    .line 110
     iget v0, p0, Landroid/net/wifi/passpoint/WifiPasspointInfo$WanMetrics;->wanInfo:I
 
     and-int/lit8 v0, v0, 0x4
@@ -111,7 +107,6 @@
     .locals 4
 
     .prologue
-    .line 119
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

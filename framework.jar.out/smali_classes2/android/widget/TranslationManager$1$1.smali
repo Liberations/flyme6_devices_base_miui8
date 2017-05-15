@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 48
     iput-object p1, p0, Landroid/widget/TranslationManager$1$1;->this$1:Landroid/widget/TranslationManager$1;
 
     iput-object p2, p0, Landroid/widget/TranslationManager$1$1;->val$params:[Ljava/lang/String;
@@ -46,7 +45,6 @@
     .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
-    .line 52
     iget-object v0, p0, Landroid/widget/TranslationManager$1$1;->this$1:Landroid/widget/TranslationManager$1;
 
     iget-object v0, v0, Landroid/widget/TranslationManager$1;->this$0:Landroid/widget/TranslationManager;
@@ -58,7 +56,6 @@
     # setter for: Landroid/widget/TranslationManager;->mService:Lcom/miui/translationservice/ITranslation;
     invoke-static {v0, v1}, Landroid/widget/TranslationManager;->access$002(Landroid/widget/TranslationManager;Lcom/miui/translationservice/ITranslation;)Lcom/miui/translationservice/ITranslation;
 
-    .line 53
     iget-object v0, p0, Landroid/widget/TranslationManager$1$1;->this$1:Landroid/widget/TranslationManager$1;
 
     iget-object v0, v0, Landroid/widget/TranslationManager$1;->this$0:Landroid/widget/TranslationManager;
@@ -93,7 +90,6 @@
     # invokes: Landroid/widget/TranslationManager;->translate(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/miui/translationservice/ITranslationRemoteCallback;)V
     invoke-static {v0, v1, v2, v3, v4}, Landroid/widget/TranslationManager;->access$200(Landroid/widget/TranslationManager;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/miui/translationservice/ITranslationRemoteCallback;)V
 
-    .line 54
     return-void
 .end method
 
@@ -102,7 +98,6 @@
     .param p1, "name"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 58
     iget-object v0, p0, Landroid/widget/TranslationManager$1$1;->this$1:Landroid/widget/TranslationManager$1;
 
     iget-object v0, v0, Landroid/widget/TranslationManager$1;->this$0:Landroid/widget/TranslationManager;
@@ -112,6 +107,5 @@
     # setter for: Landroid/widget/TranslationManager;->mService:Lcom/miui/translationservice/ITranslation;
     invoke-static {v0, v1}, Landroid/widget/TranslationManager;->access$002(Landroid/widget/TranslationManager;Lcom/miui/translationservice/ITranslation;)Lcom/miui/translationservice/ITranslation;
 
-    .line 59
     return-void
 .end method

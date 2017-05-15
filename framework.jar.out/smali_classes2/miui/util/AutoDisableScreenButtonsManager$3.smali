@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 185
     iput-object p1, p0, Lmiui/util/AutoDisableScreenButtonsManager$3;->this$0:Lmiui/util/AutoDisableScreenButtonsManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 187
     iget-object v0, p0, Lmiui/util/AutoDisableScreenButtonsManager$3;->this$0:Lmiui/util/AutoDisableScreenButtonsManager;
 
     # getter for: Lmiui/util/AutoDisableScreenButtonsManager;->mFloatView:Lmiui/view/AutoDisableScreenbuttonsFloatView;
@@ -51,7 +49,6 @@
 
     invoke-virtual {v0}, Lmiui/view/AutoDisableScreenbuttonsFloatView;->dismiss()V
 
-    .line 188
     iget-object v0, p0, Lmiui/util/AutoDisableScreenButtonsManager$3;->this$0:Lmiui/util/AutoDisableScreenButtonsManager;
 
     const/4 v1, 0x1
@@ -59,7 +56,6 @@
     # invokes: Lmiui/util/AutoDisableScreenButtonsManager;->saveTmpDisableButtonsStatus(Z)V
     invoke-static {v0, v1}, Lmiui/util/AutoDisableScreenButtonsManager;->access$100(Lmiui/util/AutoDisableScreenButtonsManager;Z)V
 
-    .line 189
     iget-object v0, p0, Lmiui/util/AutoDisableScreenButtonsManager$3;->this$0:Lmiui/util/AutoDisableScreenButtonsManager;
 
     # invokes: Lmiui/util/AutoDisableScreenButtonsManager;->showPromptsIfNeeds()Z
@@ -69,7 +65,6 @@
 
     if-nez v0, :cond_0
 
-    .line 192
     :cond_0
     return-void
 .end method

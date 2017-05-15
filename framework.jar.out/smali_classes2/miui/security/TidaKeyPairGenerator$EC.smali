@@ -19,15 +19,12 @@
     .locals 1
 
     .prologue
-    .line 48
     invoke-direct {p0}, Lmiui/security/TidaKeyPairGenerator;-><init>()V
 
-    .line 49
     const-string v0, "EC"
 
     iput-object v0, p0, Lmiui/security/TidaKeyPairGenerator$EC;->mAlgorithm:Ljava/lang/String;
 
-    .line 51
     :try_start_0
     iget-object v0, p0, Lmiui/security/TidaKeyPairGenerator$EC;->mAlgorithm:Ljava/lang/String;
 
@@ -39,11 +36,9 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 54
     :goto_0
     return-void
 
-    .line 52
     :catch_0
     move-exception v0
 

@@ -41,7 +41,6 @@
     .locals 0
 
     .prologue
-    .line 43
     .local p0, "this":Lorg/apache/miui/commons/lang3/tuple/Pair;, "Lorg/apache/miui/commons/lang3/tuple/Pair<TL;TR;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -67,7 +66,6 @@
     .end annotation
 
     .prologue
-    .line 61
     .local p0, "left":Ljava/lang/Object;, "TL;"
     .local p1, "right":Ljava/lang/Object;, "TR;"
     new-instance v0, Lorg/apache/miui/commons/lang3/tuple/ImmutablePair;
@@ -84,7 +82,6 @@
     .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
-    .line 43
     .local p0, "this":Lorg/apache/miui/commons/lang3/tuple/Pair;, "Lorg/apache/miui/commons/lang3/tuple/Pair<TL;TR;>;"
     check-cast p1, Lorg/apache/miui/commons/lang3/tuple/Pair;
 
@@ -109,7 +106,6 @@
     .end annotation
 
     .prologue
-    .line 116
     .local p0, "this":Lorg/apache/miui/commons/lang3/tuple/Pair;, "Lorg/apache/miui/commons/lang3/tuple/Pair<TL;TR;>;"
     .local p1, "other":Lorg/apache/miui/commons/lang3/tuple/Pair;, "Lorg/apache/miui/commons/lang3/tuple/Pair<TL;TR;>;"
     new-instance v0, Lorg/apache/miui/commons/lang3/builder/CompareToBuilder;
@@ -157,15 +153,12 @@
 
     const/4 v2, 0x0
 
-    .line 128
     if-ne p1, p0, :cond_1
 
-    .line 136
     :cond_0
     :goto_0
     return v1
 
-    .line 131
     :cond_1
     instance-of v3, p1, Ljava/util/Map$Entry;
 
@@ -173,10 +166,8 @@
 
     move-object v0, p1
 
-    .line 132
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 133
     .local v0, "other":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<**>;"
     invoke-virtual {p0}, Lorg/apache/miui/commons/lang3/tuple/Pair;->getKey()Ljava/lang/Object;
 
@@ -215,7 +206,6 @@
     :cond_3
     move v1, v2
 
-    .line 136
     goto :goto_0
 .end method
 
@@ -229,7 +219,6 @@
     .end annotation
 
     .prologue
-    .line 92
     .local p0, "this":Lorg/apache/miui/commons/lang3/tuple/Pair;, "Lorg/apache/miui/commons/lang3/tuple/Pair<TL;TR;>;"
     invoke-virtual {p0}, Lorg/apache/miui/commons/lang3/tuple/Pair;->getLeft()Ljava/lang/Object;
 
@@ -264,7 +253,6 @@
     .end annotation
 
     .prologue
-    .line 104
     .local p0, "this":Lorg/apache/miui/commons/lang3/tuple/Pair;, "Lorg/apache/miui/commons/lang3/tuple/Pair<TL;TR;>;"
     invoke-virtual {p0}, Lorg/apache/miui/commons/lang3/tuple/Pair;->getRight()Ljava/lang/Object;
 
@@ -280,7 +268,6 @@
     .local p0, "this":Lorg/apache/miui/commons/lang3/tuple/Pair;, "Lorg/apache/miui/commons/lang3/tuple/Pair<TL;TR;>;"
     const/4 v1, 0x0
 
-    .line 148
     invoke-virtual {p0}, Lorg/apache/miui/commons/lang3/tuple/Pair;->getKey()Ljava/lang/Object;
 
     move-result-object v0
@@ -328,7 +315,6 @@
     .locals 2
 
     .prologue
-    .line 159
     .local p0, "this":Lorg/apache/miui/commons/lang3/tuple/Pair;, "Lorg/apache/miui/commons/lang3/tuple/Pair<TL;TR;>;"
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -380,7 +366,6 @@
     .param p1, "format"    # Ljava/lang/String;
 
     .prologue
-    .line 174
     .local p0, "this":Lorg/apache/miui/commons/lang3/tuple/Pair;, "Lorg/apache/miui/commons/lang3/tuple/Pair<TL;TR;>;"
     const/4 v0, 0x2
 

@@ -34,24 +34,20 @@
     .param p1, "root"    # Lmiui/maml/ScreenElementRoot;
 
     .prologue
-    .line 180
     invoke-direct {p0, p1}, Lmiui/maml/elements/BitmapProvider;-><init>(Lmiui/maml/ScreenElementRoot;)V
 
-    .line 185
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lmiui/maml/elements/BitmapProvider$ResourceImageProvider;->mSrcNameLock:Ljava/lang/Object;
 
-    .line 188
     new-instance v0, Lmiui/maml/elements/BitmapProvider$ResourceImageProvider$1;
 
     invoke-direct {v0, p0}, Lmiui/maml/elements/BitmapProvider$ResourceImageProvider$1;-><init>(Lmiui/maml/elements/BitmapProvider$ResourceImageProvider;)V
 
     iput-object v0, p0, Lmiui/maml/elements/BitmapProvider$ResourceImageProvider;->mAsyncLoadListener:Lmiui/maml/ResourceManager$AsyncLoadListener;
 
-    .line 181
     return-void
 .end method
 
@@ -60,7 +56,6 @@
     .param p0, "x0"    # Lmiui/maml/elements/BitmapProvider$ResourceImageProvider;
 
     .prologue
-    .line 178
     iget-object v0, p0, Lmiui/maml/elements/BitmapProvider$ResourceImageProvider;->mCachedBitmapName:Ljava/lang/String;
 
     return-object v0
@@ -72,7 +67,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 178
     iput-object p1, p0, Lmiui/maml/elements/BitmapProvider$ResourceImageProvider;->mCachedBitmapName:Ljava/lang/String;
 
     return-object p1
@@ -84,37 +78,29 @@
     .locals 2
 
     .prologue
-    .line 236
     invoke-super {p0}, Lmiui/maml/elements/BitmapProvider;->finish()V
 
-    .line 237
     iget-object v1, p0, Lmiui/maml/elements/BitmapProvider$ResourceImageProvider;->mSrcNameLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 238
     const/4 v0, 0x0
 
     :try_start_0
     iput-object v0, p0, Lmiui/maml/elements/BitmapProvider$ResourceImageProvider;->mLoadingBitmapName:Ljava/lang/String;
 
-    .line 239
     const/4 v0, 0x0
 
     iput-object v0, p0, Lmiui/maml/elements/BitmapProvider$ResourceImageProvider;->mCachedBitmapName:Ljava/lang/String;
 
-    .line 240
     iget-object v0, p0, Lmiui/maml/elements/BitmapProvider$ResourceImageProvider;->mVersionedBitmap:Lmiui/maml/elements/BitmapProvider$VersionedBitmap;
 
     invoke-virtual {v0}, Lmiui/maml/elements/BitmapProvider$VersionedBitmap;->reset()V
 
-    .line 241
     monitor-exit v1
 
-    .line 242
     return-void
 
-    .line 241
     :catchall_0
     move-exception v0
 
@@ -135,14 +121,12 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 208
     iget-object v3, p0, Lmiui/maml/elements/BitmapProvider$ResourceImageProvider;->mVersionedBitmap:Lmiui/maml/elements/BitmapProvider$VersionedBitmap;
 
     invoke-virtual {v3}, Lmiui/maml/elements/BitmapProvider$VersionedBitmap;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 209
     .local v0, "bmp":Landroid/graphics/Bitmap;
     if-eqz v0, :cond_0
 
@@ -161,11 +145,9 @@
 
     if-nez v3, :cond_2
 
-    .line 210
     :cond_1
     if-eqz p2, :cond_4
 
-    .line 211
     iget-object v3, p0, Lmiui/maml/elements/BitmapProvider$ResourceImageProvider;->mRoot:Lmiui/maml/ScreenElementRoot;
 
     invoke-virtual {v3}, Lmiui/maml/ScreenElementRoot;->getContext()Lmiui/maml/ScreenContext;
@@ -178,7 +160,6 @@
 
     move-result-object v1
 
-    .line 212
     .local v1, "info":Lmiui/maml/ResourceManager$BitmapInfo;
     iget-object v3, p0, Lmiui/maml/elements/BitmapProvider$ResourceImageProvider;->mVersionedBitmap:Lmiui/maml/elements/BitmapProvider$VersionedBitmap;
 
@@ -187,10 +168,8 @@
     :goto_0
     invoke-virtual {v3, v2}, Lmiui/maml/elements/BitmapProvider$VersionedBitmap;->setBitmap(Landroid/graphics/Bitmap;)Z
 
-    .line 213
     iput-object p1, p0, Lmiui/maml/elements/BitmapProvider$ResourceImageProvider;->mCachedBitmapName:Ljava/lang/String;
 
-    .line 231
     .end local v1    # "info":Lmiui/maml/ResourceManager$BitmapInfo;
     :cond_2
     :goto_1
@@ -198,14 +177,12 @@
 
     return-object v2
 
-    .line 212
     .restart local v1    # "info":Lmiui/maml/ResourceManager$BitmapInfo;
     :cond_3
     iget-object v2, v1, Lmiui/maml/ResourceManager$BitmapInfo;->mBitmap:Landroid/graphics/Bitmap;
 
     goto :goto_0
 
-    .line 215
     .end local v1    # "info":Lmiui/maml/ResourceManager$BitmapInfo;
     :cond_4
     iget-object v3, p0, Lmiui/maml/elements/BitmapProvider$ResourceImageProvider;->mRoot:Lmiui/maml/ScreenElementRoot;
@@ -222,13 +199,11 @@
 
     move-result-object v1
 
-    .line 219
     .restart local v1    # "info":Lmiui/maml/ResourceManager$BitmapInfo;
     iget-object v3, p0, Lmiui/maml/elements/BitmapProvider$ResourceImageProvider;->mSrcNameLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 220
     if-eqz v1, :cond_5
 
     :try_start_0
@@ -236,7 +211,6 @@
 
     if-nez v4, :cond_7
 
-    .line 221
     :cond_5
     iget-object v4, p0, Lmiui/maml/elements/BitmapProvider$ResourceImageProvider;->mVersionedBitmap:Lmiui/maml/elements/BitmapProvider$VersionedBitmap;
 
@@ -245,15 +219,12 @@
     :goto_2
     invoke-virtual {v4, v2}, Lmiui/maml/elements/BitmapProvider$VersionedBitmap;->setBitmap(Landroid/graphics/Bitmap;)Z
 
-    .line 222
     iput-object p1, p0, Lmiui/maml/elements/BitmapProvider$ResourceImageProvider;->mCachedBitmapName:Ljava/lang/String;
 
-    .line 223
     const/4 v2, 0x0
 
     iput-object v2, p0, Lmiui/maml/elements/BitmapProvider$ResourceImageProvider;->mLoadingBitmapName:Ljava/lang/String;
 
-    .line 227
     :goto_3
     monitor-exit v3
 
@@ -268,14 +239,12 @@
 
     throw v2
 
-    .line 221
     :cond_6
     :try_start_1
     iget-object v2, v1, Lmiui/maml/ResourceManager$BitmapInfo;->mBitmap:Landroid/graphics/Bitmap;
 
     goto :goto_2
 
-    .line 225
     :cond_7
     iput-object p1, p0, Lmiui/maml/elements/BitmapProvider$ResourceImageProvider;->mLoadingBitmapName:Ljava/lang/String;
     :try_end_1

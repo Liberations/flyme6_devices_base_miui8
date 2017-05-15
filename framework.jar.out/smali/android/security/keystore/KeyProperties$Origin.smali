@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 673
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,10 +29,8 @@
     .param p0, "origin"    # I
 
     .prologue
-    .line 676
     packed-switch p0, :pswitch_data_0
 
-    .line 684
     :pswitch_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -59,27 +56,22 @@
 
     throw v0
 
-    .line 678
     :pswitch_1
     const/4 v0, 0x1
 
-    .line 682
     :goto_0
     return v0
 
-    .line 680
     :pswitch_2
     const/4 v0, 0x2
 
     goto :goto_0
 
-    .line 682
     :pswitch_3
     const/4 v0, 0x4
 
     goto :goto_0
 
-    .line 676
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1

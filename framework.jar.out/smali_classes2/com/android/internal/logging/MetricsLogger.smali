@@ -49,7 +49,6 @@
     .locals 0
 
     .prologue
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -61,12 +60,10 @@
     .param p1, "category"    # I
 
     .prologue
-    .line 79
     const-string v0, ""
 
     invoke-static {p0, p1, v0}, Lcom/android/internal/logging/MetricsLogger;->action(Landroid/content/Context;ILjava/lang/String;)V
 
-    .line 80
     return-void
 .end method
 
@@ -77,14 +74,12 @@
     .param p2, "value"    # I
 
     .prologue
-    .line 83
     invoke-static {p2}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {p0, p1, v0}, Lcom/android/internal/logging/MetricsLogger;->action(Landroid/content/Context;ILjava/lang/String;)V
 
-    .line 84
     return-void
 .end method
 
@@ -95,14 +90,12 @@
     .param p2, "pkg"    # Ljava/lang/String;
 
     .prologue
-    .line 91
     sget-boolean v0, Landroid/os/Build;->IS_DEBUGGABLE:Z
 
     if-eqz v0, :cond_0
 
     if-nez p1, :cond_0
 
-    .line 92
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Must define metric category"
@@ -111,11 +104,9 @@
 
     throw v0
 
-    .line 94
     :cond_0
     invoke-static {p1, p2}, Lcom/android/internal/logging/EventLogTags;->writeSysuiAction(ILjava/lang/String;)V
 
-    .line 95
     return-void
 .end method
 
@@ -126,14 +117,12 @@
     .param p2, "value"    # Z
 
     .prologue
-    .line 87
     invoke-static {p2}, Ljava/lang/Boolean;->toString(Z)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {p0, p1, v0}, Lcom/android/internal/logging/MetricsLogger;->action(Landroid/content/Context;ILjava/lang/String;)V
 
-    .line 88
     return-void
 .end method
 
@@ -144,10 +133,8 @@
     .param p2, "value"    # I
 
     .prologue
-    .line 99
     invoke-static {p1, p2}, Lcom/android/internal/logging/EventLogTags;->writeSysuiCount(Ljava/lang/String;I)V
 
-    .line 100
     return-void
 .end method
 
@@ -162,14 +149,12 @@
     .end annotation
 
     .prologue
-    .line 58
     sget-boolean v0, Landroid/os/Build;->IS_DEBUGGABLE:Z
 
     if-eqz v0, :cond_0
 
     if-nez p1, :cond_0
 
-    .line 59
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Must define metric category"
@@ -178,13 +163,11 @@
 
     throw v0
 
-    .line 61
     :cond_0
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lcom/android/internal/logging/EventLogTags;->writeSysuiViewVisibility(II)V
 
-    .line 62
     return-void
 .end method
 
@@ -195,10 +178,8 @@
     .param p2, "bucket"    # I
 
     .prologue
-    .line 104
     invoke-static {p1, p2}, Lcom/android/internal/logging/EventLogTags;->writeSysuiHistogram(Ljava/lang/String;I)V
 
-    .line 105
     return-void
 .end method
 
@@ -214,7 +195,6 @@
     .end annotation
 
     .prologue
-    .line 75
     if-nez p2, :cond_0
 
     const/4 v0, 0x1
@@ -222,10 +202,8 @@
     :goto_0
     invoke-static {p0, p1, v0}, Lcom/android/internal/logging/MetricsLogger;->visibility(Landroid/content/Context;IZ)V
 
-    .line 76
     return-void
 
-    .line 75
     :cond_0
     const/4 v0, 0x0
 
@@ -244,17 +222,13 @@
     .end annotation
 
     .prologue
-    .line 66
     if-eqz p2, :cond_0
 
-    .line 67
     invoke-static {p0, p1}, Lcom/android/internal/logging/MetricsLogger;->visible(Landroid/content/Context;I)V
 
-    .line 71
     :goto_0
     return-void
 
-    .line 69
     :cond_0
     invoke-static {p0, p1}, Lcom/android/internal/logging/MetricsLogger;->hidden(Landroid/content/Context;I)V
 
@@ -272,14 +246,12 @@
     .end annotation
 
     .prologue
-    .line 51
     sget-boolean v0, Landroid/os/Build;->IS_DEBUGGABLE:Z
 
     if-eqz v0, :cond_0
 
     if-nez p1, :cond_0
 
-    .line 52
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Must define metric category"
@@ -288,12 +260,10 @@
 
     throw v0
 
-    .line 54
     :cond_0
     const/16 v0, 0x64
 
     invoke-static {p1, v0}, Lcom/android/internal/logging/EventLogTags;->writeSysuiViewVisibility(II)V
 
-    .line 55
     return-void
 .end method

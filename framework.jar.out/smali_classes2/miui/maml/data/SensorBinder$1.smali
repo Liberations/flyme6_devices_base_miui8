@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 76
     iput-object p1, p0, Lmiui/maml/data/SensorBinder$1;->this$0:Lmiui/maml/data/SensorBinder;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "accuracy"    # I
 
     .prologue
-    .line 92
     return-void
 .end method
 
@@ -51,12 +49,10 @@
     .param p1, "event"    # Landroid/hardware/SensorEvent;
 
     .prologue
-    .line 80
     iget-object v4, p1, Landroid/hardware/SensorEvent;->values:[F
 
     array-length v1, v4
 
-    .line 81
     .local v1, "size":I
     iget-object v4, p0, Lmiui/maml/data/SensorBinder$1;->this$0:Lmiui/maml/data/SensorBinder;
 
@@ -84,10 +80,8 @@
     .local v2, "v":Lmiui/maml/data/VariableBinder$Variable;
     move-object v3, v2
 
-    .line 82
     check-cast v3, Lmiui/maml/data/SensorBinder$Variable;
 
-    .line 83
     .local v3, "var":Lmiui/maml/data/SensorBinder$Variable;
     iget v4, v3, Lmiui/maml/data/SensorBinder$Variable;->mIndex:I
 
@@ -97,7 +91,6 @@
 
     if-ge v4, v1, :cond_0
 
-    .line 84
     iget-object v4, p1, Landroid/hardware/SensorEvent;->values:[F
 
     iget v5, v3, Lmiui/maml/data/SensorBinder$Variable;->mIndex:I
@@ -110,7 +103,6 @@
 
     goto :goto_0
 
-    .line 87
     .end local v2    # "v":Lmiui/maml/data/VariableBinder$Variable;
     .end local v3    # "var":Lmiui/maml/data/SensorBinder$Variable;
     :cond_1
@@ -118,6 +110,5 @@
 
     invoke-virtual {v4}, Lmiui/maml/data/SensorBinder;->onUpdateComplete()V
 
-    .line 88
     return-void
 .end method

@@ -25,7 +25,6 @@
     .locals 3
 
     .prologue
-    .line 522
     invoke-static {}, Lmiui/maml/elements/ScreenElement$Align;->values()[Lmiui/maml/elements/ScreenElement$Align;
 
     move-result-object v0
@@ -67,7 +66,6 @@
     :try_end_1
     .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 507
     :goto_1
     invoke-static {}, Lmiui/maml/elements/ScreenElement$AlignV;->values()[Lmiui/maml/elements/ScreenElement$AlignV;
 
@@ -123,7 +121,6 @@
 
     goto :goto_2
 
-    .line 522
     :catch_2
     move-exception v0
 

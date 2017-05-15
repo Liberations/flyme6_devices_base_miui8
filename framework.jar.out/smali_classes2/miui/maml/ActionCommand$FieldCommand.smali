@@ -33,10 +33,8 @@
     .param p2, "ele"    # Lorg/w3c/dom/Element;
 
     .prologue
-    .line 1797
     invoke-direct {p0, p1, p2}, Lmiui/maml/ActionCommand$BaseMethodCommand;-><init>(Lmiui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
 
-    .line 1798
     const-string v1, "field"
 
     invoke-interface {p2, v1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -45,7 +43,6 @@
 
     iput-object v1, p0, Lmiui/maml/ActionCommand$FieldCommand;->mFieldName:Ljava/lang/String;
 
-    .line 1799
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -86,14 +83,12 @@
 
     iput-object v1, p0, Lmiui/maml/ActionCommand$FieldCommand;->mLogStr:Ljava/lang/String;
 
-    .line 1800
     const-string v1, "method"
 
     invoke-interface {p2, v1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1801
     .local v0, "method":Ljava/lang/String;
     const-string v1, "get"
 
@@ -103,17 +98,14 @@
 
     if-eqz v1, :cond_1
 
-    .line 1802
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lmiui/maml/ActionCommand$FieldCommand;->mIsSet:Z
 
-    .line 1806
     :cond_0
     :goto_0
     return-void
 
-    .line 1803
     :cond_1
     const-string v1, "set"
 
@@ -123,7 +115,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1804
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lmiui/maml/ActionCommand$FieldCommand;->mIsSet:Z
@@ -137,21 +128,17 @@
     .locals 6
 
     .prologue
-    .line 1842
     iget-object v2, p0, Lmiui/maml/ActionCommand$FieldCommand;->mField:Ljava/lang/reflect/Field;
 
     if-nez v2, :cond_0
 
-    .line 1844
     invoke-virtual {p0}, Lmiui/maml/ActionCommand$FieldCommand;->loadField()V
 
-    .line 1847
     :cond_0
     iget-object v2, p0, Lmiui/maml/ActionCommand$FieldCommand;->mField:Ljava/lang/reflect/Field;
 
     if-eqz v2, :cond_1
 
-    .line 1849
     :try_start_0
     sget-object v2, Lmiui/maml/ActionCommand$1;->$SwitchMap$miui$maml$ActionCommand$TargetCommand$TargetType:[I
 
@@ -165,21 +152,17 @@
 
     packed-switch v2, :pswitch_data_0
 
-    .line 1876
     :cond_1
     :goto_0
     return-void
 
-    .line 1852
     :pswitch_0
     iget-boolean v2, p0, Lmiui/maml/ActionCommand$FieldCommand;->mIsSet:Z
 
     if-eqz v2, :cond_2
 
-    .line 1853
     invoke-virtual {p0}, Lmiui/maml/ActionCommand$FieldCommand;->prepareParams()V
 
-    .line 1854
     iget-object v2, p0, Lmiui/maml/ActionCommand$FieldCommand;->mParamValues:[Ljava/lang/Object;
 
     if-eqz v2, :cond_1
@@ -192,7 +175,6 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 1855
     iget-object v2, p0, Lmiui/maml/ActionCommand$FieldCommand;->mField:Ljava/lang/reflect/Field;
 
     invoke-virtual {p0}, Lmiui/maml/ActionCommand$FieldCommand;->getTarget()Ljava/lang/Object;
@@ -213,11 +195,9 @@
 
     goto :goto_0
 
-    .line 1868
     :catch_0
     move-exception v0
 
-    .line 1869
     .local v0, "e":Ljava/lang/IllegalArgumentException;
     const-string v2, "ActionCommand"
 
@@ -229,7 +209,6 @@
 
     goto :goto_0
 
-    .line 1858
     .end local v0    # "e":Ljava/lang/IllegalArgumentException;
     :cond_2
     :try_start_1
@@ -237,7 +216,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 1859
     iget-object v2, p0, Lmiui/maml/ActionCommand$FieldCommand;->mField:Ljava/lang/reflect/Field;
 
     invoke-virtual {p0}, Lmiui/maml/ActionCommand$FieldCommand;->getTarget()Ljava/lang/Object;
@@ -248,7 +226,6 @@
 
     move-result-object v1
 
-    .line 1860
     .local v1, "returnValue":Ljava/lang/Object;
     iget-object v2, p0, Lmiui/maml/ActionCommand$FieldCommand;->mReturnVar:Lmiui/maml/data/IndexedVariable;
 
@@ -260,12 +237,10 @@
 
     goto :goto_0
 
-    .line 1870
     .end local v1    # "returnValue":Ljava/lang/Object;
     :catch_1
     move-exception v0
 
-    .line 1871
     .local v0, "e":Ljava/lang/IllegalAccessException;
     const-string v2, "ActionCommand"
 
@@ -277,12 +252,10 @@
 
     goto :goto_0
 
-    .line 1872
     .end local v0    # "e":Ljava/lang/IllegalAccessException;
     :catch_2
     move-exception v0
 
-    .line 1873
     .local v0, "e":Ljava/lang/NullPointerException;
     const-string v2, "ActionCommand"
 
@@ -318,7 +291,6 @@
 
     goto :goto_0
 
-    .line 1849
     nop
 
     :pswitch_data_0
@@ -332,10 +304,8 @@
     .locals 2
 
     .prologue
-    .line 1810
     invoke-super {p0}, Lmiui/maml/ActionCommand$BaseMethodCommand;->init()V
 
-    .line 1811
     sget-object v0, Lmiui/maml/ActionCommand$1;->$SwitchMap$miui$maml$ActionCommand$TargetCommand$TargetType:[I
 
     iget-object v1, p0, Lmiui/maml/ActionCommand$FieldCommand;->mTargetType:Lmiui/maml/ActionCommand$TargetCommand$TargetType;
@@ -348,23 +318,19 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 1820
     :cond_0
     :goto_0
     return-void
 
-    .line 1814
     :pswitch_0
     iget-object v0, p0, Lmiui/maml/ActionCommand$FieldCommand;->mField:Ljava/lang/reflect/Field;
 
     if-eqz v0, :cond_0
 
-    .line 1815
     invoke-virtual {p0}, Lmiui/maml/ActionCommand$FieldCommand;->loadField()V
 
     goto :goto_0
 
-    .line 1811
     nop
 
     :pswitch_data_0
@@ -378,35 +344,29 @@
     .locals 5
 
     .prologue
-    .line 1823
     iget-object v2, p0, Lmiui/maml/ActionCommand$FieldCommand;->mTargetClass:Ljava/lang/Class;
 
     if-nez v2, :cond_0
 
-    .line 1824
     invoke-virtual {p0}, Lmiui/maml/ActionCommand$FieldCommand;->getTarget()Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 1825
     .local v1, "target":Ljava/lang/Object;
     if-eqz v1, :cond_0
 
-    .line 1826
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
 
     iput-object v2, p0, Lmiui/maml/ActionCommand$FieldCommand;->mTargetClass:Ljava/lang/Class;
 
-    .line 1829
     .end local v1    # "target":Ljava/lang/Object;
     :cond_0
     iget-object v2, p0, Lmiui/maml/ActionCommand$FieldCommand;->mTargetClass:Ljava/lang/Class;
 
     if-eqz v2, :cond_1
 
-    .line 1831
     :try_start_0
     iget-object v2, p0, Lmiui/maml/ActionCommand$FieldCommand;->mTargetClass:Ljava/lang/Class;
 
@@ -420,15 +380,12 @@
     :try_end_0
     .catch Ljava/lang/NoSuchFieldException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1838
     :goto_0
     return-void
 
-    .line 1832
     :catch_0
     move-exception v0
 
-    .line 1833
     .local v0, "e":Ljava/lang/NoSuchFieldException;
     const-string v2, "ActionCommand"
 
@@ -458,7 +415,6 @@
 
     goto :goto_0
 
-    .line 1836
     .end local v0    # "e":Ljava/lang/NoSuchFieldException;
     :cond_1
     const-string v2, "ActionCommand"

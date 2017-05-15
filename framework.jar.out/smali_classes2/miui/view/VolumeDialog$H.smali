@@ -47,17 +47,14 @@
     .locals 1
 
     .prologue
-    .line 663
     iput-object p1, p0, Lmiui/view/VolumeDialog$H;->this$0:Lmiui/view/VolumeDialog;
 
-    .line 664
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 665
     return-void
 .end method
 
@@ -68,16 +65,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 669
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 715
     :goto_0
     return-void
 
-    .line 671
     :pswitch_0
     const-string v0, "VolumeDialog"
 
@@ -85,7 +79,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 672
     iget-object v0, p0, Lmiui/view/VolumeDialog$H;->this$0:Lmiui/view/VolumeDialog;
 
     iget v1, p1, Landroid/os/Message;->arg1:I
@@ -95,7 +88,6 @@
 
     goto :goto_0
 
-    .line 675
     :pswitch_1
     const-string v0, "VolumeDialog"
 
@@ -103,7 +95,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 676
     iget-object v0, p0, Lmiui/view/VolumeDialog$H;->this$0:Lmiui/view/VolumeDialog;
 
     # invokes: Lmiui/view/VolumeDialog;->dismissH()V
@@ -111,7 +102,6 @@
 
     goto :goto_0
 
-    .line 679
     :pswitch_2
     const-string v0, "VolumeDialog"
 
@@ -119,7 +109,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 680
     iget-object v1, p0, Lmiui/view/VolumeDialog$H;->this$0:Lmiui/view/VolumeDialog;
 
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -131,7 +120,6 @@
 
     goto :goto_0
 
-    .line 683
     :pswitch_3
     const-string v0, "VolumeDialog"
 
@@ -139,7 +127,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 684
     iget-object v0, p0, Lmiui/view/VolumeDialog$H;->this$0:Lmiui/view/VolumeDialog;
 
     const/4 v1, 0x0
@@ -149,7 +136,6 @@
 
     goto :goto_0
 
-    .line 687
     :pswitch_4
     const-string v0, "VolumeDialog"
 
@@ -157,7 +143,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 688
     iget-object v0, p0, Lmiui/view/VolumeDialog$H;->this$0:Lmiui/view/VolumeDialog;
 
     # invokes: Lmiui/view/VolumeDialog;->rescheduleTimeoutH()V
@@ -165,7 +150,6 @@
 
     goto :goto_0
 
-    .line 691
     :pswitch_5
     const-string v0, "VolumeDialog"
 
@@ -173,7 +157,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 692
     iget-object v0, p0, Lmiui/view/VolumeDialog$H;->this$0:Lmiui/view/VolumeDialog;
 
     # invokes: Lmiui/view/VolumeDialog;->updateDialogBottomMarginH()V
@@ -181,7 +164,6 @@
 
     goto :goto_0
 
-    .line 695
     :pswitch_6
     const-string v0, "VolumeDialog"
 
@@ -189,7 +171,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 696
     iget-object v0, p0, Lmiui/view/VolumeDialog$H;->this$0:Lmiui/view/VolumeDialog;
 
     iget v1, p1, Landroid/os/Message;->arg1:I
@@ -201,7 +182,6 @@
 
     goto :goto_0
 
-    .line 699
     :pswitch_7
     const-string v0, "VolumeDialog"
 
@@ -209,7 +189,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 700
     iget-object v0, p0, Lmiui/view/VolumeDialog$H;->this$0:Lmiui/view/VolumeDialog;
 
     iget v1, p1, Landroid/os/Message;->arg1:I
@@ -219,7 +198,6 @@
 
     goto :goto_0
 
-    .line 703
     :pswitch_8
     const-string v0, "VolumeDialog"
 
@@ -227,7 +205,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 704
     iget-object v0, p0, Lmiui/view/VolumeDialog$H;->this$0:Lmiui/view/VolumeDialog;
 
     iget v1, p1, Landroid/os/Message;->arg1:I
@@ -237,7 +214,6 @@
 
     goto/16 :goto_0
 
-    .line 707
     :pswitch_9
     const-string v0, "VolumeDialog"
 
@@ -245,7 +221,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 708
     iget-object v0, p0, Lmiui/view/VolumeDialog$H;->this$0:Lmiui/view/VolumeDialog;
 
     # invokes: Lmiui/view/VolumeDialog;->vibrateH()V
@@ -253,7 +228,6 @@
 
     goto/16 :goto_0
 
-    .line 711
     :pswitch_a
     const-string v0, "VolumeDialog"
 
@@ -261,7 +235,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 712
     iget-object v0, p0, Lmiui/view/VolumeDialog$H;->this$0:Lmiui/view/VolumeDialog;
 
     const/4 v1, 0x0
@@ -271,7 +244,6 @@
 
     goto/16 :goto_0
 
-    .line 669
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

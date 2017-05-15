@@ -34,7 +34,6 @@
     .param p2, "x0"    # I
 
     .prologue
-    .line 103
     iput-object p1, p0, Lmiui/maml/ResourceManager$1;->this$0:Lmiui/maml/ResourceManager;
 
     invoke-direct {p0, p2}, Landroid/util/LruCache;-><init>(I)V
@@ -50,7 +49,6 @@
     .param p2, "x1"    # Ljava/lang/Object;
 
     .prologue
-    .line 103
     check-cast p1, Ljava/lang/String;
 
     .end local p1    # "x0":Ljava/lang/Object;
@@ -70,18 +68,15 @@
     .param p2, "bi"    # Lmiui/maml/ResourceManager$BitmapInfo;
 
     .prologue
-    .line 106
     if-eqz p2, :cond_0
 
     iget-object v0, p2, Lmiui/maml/ResourceManager$BitmapInfo;->mBitmap:Landroid/graphics/Bitmap;
 
     if-nez v0, :cond_1
 
-    .line 107
     :cond_0
     const/4 v0, 0x0
 
-    .line 109
     :goto_0
     return v0
 

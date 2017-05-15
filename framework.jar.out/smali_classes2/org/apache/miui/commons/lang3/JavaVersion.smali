@@ -57,7 +57,6 @@
 
     const/high16 v5, 0x3fc00000    # 1.5f
 
-    .line 33
     new-instance v0, Lorg/apache/miui/commons/lang3/JavaVersion;
 
     const-string v1, "JAVA_0_9"
@@ -68,7 +67,6 @@
 
     sput-object v0, Lorg/apache/miui/commons/lang3/JavaVersion;->JAVA_0_9:Lorg/apache/miui/commons/lang3/JavaVersion;
 
-    .line 38
     new-instance v0, Lorg/apache/miui/commons/lang3/JavaVersion;
 
     const-string v1, "JAVA_1_1"
@@ -81,7 +79,6 @@
 
     sput-object v0, Lorg/apache/miui/commons/lang3/JavaVersion;->JAVA_1_1:Lorg/apache/miui/commons/lang3/JavaVersion;
 
-    .line 43
     new-instance v0, Lorg/apache/miui/commons/lang3/JavaVersion;
 
     const-string v1, "JAVA_1_2"
@@ -94,7 +91,6 @@
 
     sput-object v0, Lorg/apache/miui/commons/lang3/JavaVersion;->JAVA_1_2:Lorg/apache/miui/commons/lang3/JavaVersion;
 
-    .line 48
     new-instance v0, Lorg/apache/miui/commons/lang3/JavaVersion;
 
     const-string v1, "JAVA_1_3"
@@ -107,7 +103,6 @@
 
     sput-object v0, Lorg/apache/miui/commons/lang3/JavaVersion;->JAVA_1_3:Lorg/apache/miui/commons/lang3/JavaVersion;
 
-    .line 53
     new-instance v0, Lorg/apache/miui/commons/lang3/JavaVersion;
 
     const-string v1, "JAVA_1_4"
@@ -122,7 +117,6 @@
 
     sput-object v0, Lorg/apache/miui/commons/lang3/JavaVersion;->JAVA_1_4:Lorg/apache/miui/commons/lang3/JavaVersion;
 
-    .line 58
     new-instance v0, Lorg/apache/miui/commons/lang3/JavaVersion;
 
     const-string v1, "JAVA_1_5"
@@ -135,7 +129,6 @@
 
     sput-object v0, Lorg/apache/miui/commons/lang3/JavaVersion;->JAVA_1_5:Lorg/apache/miui/commons/lang3/JavaVersion;
 
-    .line 63
     new-instance v0, Lorg/apache/miui/commons/lang3/JavaVersion;
 
     const-string v1, "JAVA_1_6"
@@ -150,7 +143,6 @@
 
     sput-object v0, Lorg/apache/miui/commons/lang3/JavaVersion;->JAVA_1_6:Lorg/apache/miui/commons/lang3/JavaVersion;
 
-    .line 68
     new-instance v0, Lorg/apache/miui/commons/lang3/JavaVersion;
 
     const-string v1, "JAVA_1_7"
@@ -165,7 +157,6 @@
 
     sput-object v0, Lorg/apache/miui/commons/lang3/JavaVersion;->JAVA_1_7:Lorg/apache/miui/commons/lang3/JavaVersion;
 
-    .line 73
     new-instance v0, Lorg/apache/miui/commons/lang3/JavaVersion;
 
     const-string v1, "JAVA_1_8"
@@ -180,7 +171,6 @@
 
     sput-object v0, Lorg/apache/miui/commons/lang3/JavaVersion;->JAVA_1_8:Lorg/apache/miui/commons/lang3/JavaVersion;
 
-    .line 28
     const/16 v0, 0x9
 
     new-array v0, v0, [Lorg/apache/miui/commons/lang3/JavaVersion;
@@ -249,16 +239,12 @@
     .end annotation
 
     .prologue
-    .line 90
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 91
     iput p3, p0, Lorg/apache/miui/commons/lang3/JavaVersion;->value:F
 
-    .line 92
     iput-object p4, p0, Lorg/apache/miui/commons/lang3/JavaVersion;->name:Ljava/lang/String;
 
-    .line 93
     return-void
 .end method
 
@@ -267,7 +253,6 @@
     .param p0, "nom"    # Ljava/lang/String;
 
     .prologue
-    .line 133
     const-string v0, "0.9"
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -276,14 +261,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 134
     sget-object v0, Lorg/apache/miui/commons/lang3/JavaVersion;->JAVA_0_9:Lorg/apache/miui/commons/lang3/JavaVersion;
 
-    .line 152
     :goto_0
     return-object v0
 
-    .line 135
     :cond_0
     const-string v0, "1.1"
 
@@ -293,12 +275,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 136
     sget-object v0, Lorg/apache/miui/commons/lang3/JavaVersion;->JAVA_1_1:Lorg/apache/miui/commons/lang3/JavaVersion;
 
     goto :goto_0
 
-    .line 137
     :cond_1
     const-string v0, "1.2"
 
@@ -308,12 +288,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 138
     sget-object v0, Lorg/apache/miui/commons/lang3/JavaVersion;->JAVA_1_2:Lorg/apache/miui/commons/lang3/JavaVersion;
 
     goto :goto_0
 
-    .line 139
     :cond_2
     const-string v0, "1.3"
 
@@ -323,12 +301,10 @@
 
     if-eqz v0, :cond_3
 
-    .line 140
     sget-object v0, Lorg/apache/miui/commons/lang3/JavaVersion;->JAVA_1_3:Lorg/apache/miui/commons/lang3/JavaVersion;
 
     goto :goto_0
 
-    .line 141
     :cond_3
     const-string v0, "1.4"
 
@@ -338,12 +314,10 @@
 
     if-eqz v0, :cond_4
 
-    .line 142
     sget-object v0, Lorg/apache/miui/commons/lang3/JavaVersion;->JAVA_1_4:Lorg/apache/miui/commons/lang3/JavaVersion;
 
     goto :goto_0
 
-    .line 143
     :cond_4
     const-string v0, "1.5"
 
@@ -353,12 +327,10 @@
 
     if-eqz v0, :cond_5
 
-    .line 144
     sget-object v0, Lorg/apache/miui/commons/lang3/JavaVersion;->JAVA_1_5:Lorg/apache/miui/commons/lang3/JavaVersion;
 
     goto :goto_0
 
-    .line 145
     :cond_5
     const-string v0, "1.6"
 
@@ -368,12 +340,10 @@
 
     if-eqz v0, :cond_6
 
-    .line 146
     sget-object v0, Lorg/apache/miui/commons/lang3/JavaVersion;->JAVA_1_6:Lorg/apache/miui/commons/lang3/JavaVersion;
 
     goto :goto_0
 
-    .line 147
     :cond_6
     const-string v0, "1.7"
 
@@ -383,12 +353,10 @@
 
     if-eqz v0, :cond_7
 
-    .line 148
     sget-object v0, Lorg/apache/miui/commons/lang3/JavaVersion;->JAVA_1_7:Lorg/apache/miui/commons/lang3/JavaVersion;
 
     goto :goto_0
 
-    .line 149
     :cond_7
     const-string v0, "1.8"
 
@@ -398,12 +366,10 @@
 
     if-eqz v0, :cond_8
 
-    .line 150
     sget-object v0, Lorg/apache/miui/commons/lang3/JavaVersion;->JAVA_1_8:Lorg/apache/miui/commons/lang3/JavaVersion;
 
     goto :goto_0
 
-    .line 152
     :cond_8
     const/4 v0, 0x0
 
@@ -415,7 +381,6 @@
     .param p0, "nom"    # Ljava/lang/String;
 
     .prologue
-    .line 120
     invoke-static {p0}, Lorg/apache/miui/commons/lang3/JavaVersion;->get(Ljava/lang/String;)Lorg/apache/miui/commons/lang3/JavaVersion;
 
     move-result-object v0
@@ -428,7 +393,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 28
     const-class v0, Lorg/apache/miui/commons/lang3/JavaVersion;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -444,7 +408,6 @@
     .locals 1
 
     .prologue
-    .line 28
     sget-object v0, Lorg/apache/miui/commons/lang3/JavaVersion;->$VALUES:[Lorg/apache/miui/commons/lang3/JavaVersion;
 
     invoke-virtual {v0}, [Lorg/apache/miui/commons/lang3/JavaVersion;->clone()Ljava/lang/Object;
@@ -463,7 +426,6 @@
     .param p1, "requiredVersion"    # Lorg/apache/miui/commons/lang3/JavaVersion;
 
     .prologue
-    .line 106
     iget v0, p0, Lorg/apache/miui/commons/lang3/JavaVersion;->value:F
 
     iget v1, p1, Lorg/apache/miui/commons/lang3/JavaVersion;->value:F
@@ -487,7 +449,6 @@
     .locals 1
 
     .prologue
-    .line 166
     iget-object v0, p0, Lorg/apache/miui/commons/lang3/JavaVersion;->name:Ljava/lang/String;
 
     return-object v0

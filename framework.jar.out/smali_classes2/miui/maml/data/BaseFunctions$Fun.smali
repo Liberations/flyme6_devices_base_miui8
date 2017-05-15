@@ -118,7 +118,6 @@
 
     const/4 v3, 0x0
 
-    .line 23
     new-instance v0, Lmiui/maml/data/BaseFunctions$Fun;
 
     const-string v1, "INVALID"
@@ -127,7 +126,6 @@
 
     sput-object v0, Lmiui/maml/data/BaseFunctions$Fun;->INVALID:Lmiui/maml/data/BaseFunctions$Fun;
 
-    .line 24
     new-instance v0, Lmiui/maml/data/BaseFunctions$Fun;
 
     const-string v1, "RAND"
@@ -136,7 +134,6 @@
 
     sput-object v0, Lmiui/maml/data/BaseFunctions$Fun;->RAND:Lmiui/maml/data/BaseFunctions$Fun;
 
-    .line 25
     new-instance v0, Lmiui/maml/data/BaseFunctions$Fun;
 
     const-string v1, "SIN"
@@ -145,7 +142,6 @@
 
     sput-object v0, Lmiui/maml/data/BaseFunctions$Fun;->SIN:Lmiui/maml/data/BaseFunctions$Fun;
 
-    .line 26
     new-instance v0, Lmiui/maml/data/BaseFunctions$Fun;
 
     const-string v1, "COS"
@@ -154,7 +150,6 @@
 
     sput-object v0, Lmiui/maml/data/BaseFunctions$Fun;->COS:Lmiui/maml/data/BaseFunctions$Fun;
 
-    .line 27
     new-instance v0, Lmiui/maml/data/BaseFunctions$Fun;
 
     const-string v1, "TAN"
@@ -163,7 +158,6 @@
 
     sput-object v0, Lmiui/maml/data/BaseFunctions$Fun;->TAN:Lmiui/maml/data/BaseFunctions$Fun;
 
-    .line 28
     new-instance v0, Lmiui/maml/data/BaseFunctions$Fun;
 
     const-string v1, "ASIN"
@@ -174,7 +168,6 @@
 
     sput-object v0, Lmiui/maml/data/BaseFunctions$Fun;->ASIN:Lmiui/maml/data/BaseFunctions$Fun;
 
-    .line 29
     new-instance v0, Lmiui/maml/data/BaseFunctions$Fun;
 
     const-string v1, "ACOS"
@@ -185,7 +178,6 @@
 
     sput-object v0, Lmiui/maml/data/BaseFunctions$Fun;->ACOS:Lmiui/maml/data/BaseFunctions$Fun;
 
-    .line 30
     new-instance v0, Lmiui/maml/data/BaseFunctions$Fun;
 
     const-string v1, "ATAN"
@@ -196,7 +188,6 @@
 
     sput-object v0, Lmiui/maml/data/BaseFunctions$Fun;->ATAN:Lmiui/maml/data/BaseFunctions$Fun;
 
-    .line 31
     new-instance v0, Lmiui/maml/data/BaseFunctions$Fun;
 
     const-string v1, "SINH"
@@ -207,7 +198,6 @@
 
     sput-object v0, Lmiui/maml/data/BaseFunctions$Fun;->SINH:Lmiui/maml/data/BaseFunctions$Fun;
 
-    .line 32
     new-instance v0, Lmiui/maml/data/BaseFunctions$Fun;
 
     const-string v1, "COSH"
@@ -218,7 +208,6 @@
 
     sput-object v0, Lmiui/maml/data/BaseFunctions$Fun;->COSH:Lmiui/maml/data/BaseFunctions$Fun;
 
-    .line 33
     new-instance v0, Lmiui/maml/data/BaseFunctions$Fun;
 
     const-string v1, "SQRT"
@@ -229,7 +218,6 @@
 
     sput-object v0, Lmiui/maml/data/BaseFunctions$Fun;->SQRT:Lmiui/maml/data/BaseFunctions$Fun;
 
-    .line 34
     new-instance v0, Lmiui/maml/data/BaseFunctions$Fun;
 
     const-string v1, "ABS"
@@ -240,7 +228,6 @@
 
     sput-object v0, Lmiui/maml/data/BaseFunctions$Fun;->ABS:Lmiui/maml/data/BaseFunctions$Fun;
 
-    .line 35
     new-instance v0, Lmiui/maml/data/BaseFunctions$Fun;
 
     const-string v1, "LEN"
@@ -251,7 +238,6 @@
 
     sput-object v0, Lmiui/maml/data/BaseFunctions$Fun;->LEN:Lmiui/maml/data/BaseFunctions$Fun;
 
-    .line 36
     new-instance v0, Lmiui/maml/data/BaseFunctions$Fun;
 
     const-string v1, "EVAL"
@@ -262,7 +248,6 @@
 
     sput-object v0, Lmiui/maml/data/BaseFunctions$Fun;->EVAL:Lmiui/maml/data/BaseFunctions$Fun;
 
-    .line 37
     new-instance v0, Lmiui/maml/data/BaseFunctions$Fun;
 
     const-string v1, "PRECISE_EVAL"
@@ -273,7 +258,6 @@
 
     sput-object v0, Lmiui/maml/data/BaseFunctions$Fun;->PRECISE_EVAL:Lmiui/maml/data/BaseFunctions$Fun;
 
-    .line 38
     new-instance v0, Lmiui/maml/data/BaseFunctions$Fun;
 
     const-string v1, "ROUND"
@@ -284,7 +268,6 @@
 
     sput-object v0, Lmiui/maml/data/BaseFunctions$Fun;->ROUND:Lmiui/maml/data/BaseFunctions$Fun;
 
-    .line 39
     new-instance v0, Lmiui/maml/data/BaseFunctions$Fun;
 
     const-string v1, "INT"
@@ -295,7 +278,6 @@
 
     sput-object v0, Lmiui/maml/data/BaseFunctions$Fun;->INT:Lmiui/maml/data/BaseFunctions$Fun;
 
-    .line 40
     new-instance v0, Lmiui/maml/data/BaseFunctions$Fun;
 
     const-string v1, "NUM"
@@ -306,7 +288,6 @@
 
     sput-object v0, Lmiui/maml/data/BaseFunctions$Fun;->NUM:Lmiui/maml/data/BaseFunctions$Fun;
 
-    .line 41
     new-instance v0, Lmiui/maml/data/BaseFunctions$Fun;
 
     const-string v1, "MIN"
@@ -317,7 +298,6 @@
 
     sput-object v0, Lmiui/maml/data/BaseFunctions$Fun;->MIN:Lmiui/maml/data/BaseFunctions$Fun;
 
-    .line 42
     new-instance v0, Lmiui/maml/data/BaseFunctions$Fun;
 
     const-string v1, "MAX"
@@ -328,7 +308,6 @@
 
     sput-object v0, Lmiui/maml/data/BaseFunctions$Fun;->MAX:Lmiui/maml/data/BaseFunctions$Fun;
 
-    .line 43
     new-instance v0, Lmiui/maml/data/BaseFunctions$Fun;
 
     const-string v1, "POW"
@@ -339,7 +318,6 @@
 
     sput-object v0, Lmiui/maml/data/BaseFunctions$Fun;->POW:Lmiui/maml/data/BaseFunctions$Fun;
 
-    .line 44
     new-instance v0, Lmiui/maml/data/BaseFunctions$Fun;
 
     const-string v1, "LOG"
@@ -350,7 +328,6 @@
 
     sput-object v0, Lmiui/maml/data/BaseFunctions$Fun;->LOG:Lmiui/maml/data/BaseFunctions$Fun;
 
-    .line 45
     new-instance v0, Lmiui/maml/data/BaseFunctions$Fun;
 
     const-string v1, "LOG10"
@@ -361,7 +338,6 @@
 
     sput-object v0, Lmiui/maml/data/BaseFunctions$Fun;->LOG10:Lmiui/maml/data/BaseFunctions$Fun;
 
-    .line 46
     new-instance v0, Lmiui/maml/data/BaseFunctions$Fun;
 
     const-string v1, "DIGIT"
@@ -372,7 +348,6 @@
 
     sput-object v0, Lmiui/maml/data/BaseFunctions$Fun;->DIGIT:Lmiui/maml/data/BaseFunctions$Fun;
 
-    .line 48
     new-instance v0, Lmiui/maml/data/BaseFunctions$Fun;
 
     const-string v1, "EQ"
@@ -383,7 +358,6 @@
 
     sput-object v0, Lmiui/maml/data/BaseFunctions$Fun;->EQ:Lmiui/maml/data/BaseFunctions$Fun;
 
-    .line 49
     new-instance v0, Lmiui/maml/data/BaseFunctions$Fun;
 
     const-string v1, "NE"
@@ -394,7 +368,6 @@
 
     sput-object v0, Lmiui/maml/data/BaseFunctions$Fun;->NE:Lmiui/maml/data/BaseFunctions$Fun;
 
-    .line 50
     new-instance v0, Lmiui/maml/data/BaseFunctions$Fun;
 
     const-string v1, "GE"
@@ -405,7 +378,6 @@
 
     sput-object v0, Lmiui/maml/data/BaseFunctions$Fun;->GE:Lmiui/maml/data/BaseFunctions$Fun;
 
-    .line 51
     new-instance v0, Lmiui/maml/data/BaseFunctions$Fun;
 
     const-string v1, "GT"
@@ -416,7 +388,6 @@
 
     sput-object v0, Lmiui/maml/data/BaseFunctions$Fun;->GT:Lmiui/maml/data/BaseFunctions$Fun;
 
-    .line 52
     new-instance v0, Lmiui/maml/data/BaseFunctions$Fun;
 
     const-string v1, "LE"
@@ -427,7 +398,6 @@
 
     sput-object v0, Lmiui/maml/data/BaseFunctions$Fun;->LE:Lmiui/maml/data/BaseFunctions$Fun;
 
-    .line 53
     new-instance v0, Lmiui/maml/data/BaseFunctions$Fun;
 
     const-string v1, "LT"
@@ -438,7 +408,6 @@
 
     sput-object v0, Lmiui/maml/data/BaseFunctions$Fun;->LT:Lmiui/maml/data/BaseFunctions$Fun;
 
-    .line 54
     new-instance v0, Lmiui/maml/data/BaseFunctions$Fun;
 
     const-string v1, "ISNULL"
@@ -449,7 +418,6 @@
 
     sput-object v0, Lmiui/maml/data/BaseFunctions$Fun;->ISNULL:Lmiui/maml/data/BaseFunctions$Fun;
 
-    .line 55
     new-instance v0, Lmiui/maml/data/BaseFunctions$Fun;
 
     const-string v1, "NOT"
@@ -460,7 +428,6 @@
 
     sput-object v0, Lmiui/maml/data/BaseFunctions$Fun;->NOT:Lmiui/maml/data/BaseFunctions$Fun;
 
-    .line 57
     new-instance v0, Lmiui/maml/data/BaseFunctions$Fun;
 
     const-string v1, "IFELSE"
@@ -471,7 +438,6 @@
 
     sput-object v0, Lmiui/maml/data/BaseFunctions$Fun;->IFELSE:Lmiui/maml/data/BaseFunctions$Fun;
 
-    .line 60
     new-instance v0, Lmiui/maml/data/BaseFunctions$Fun;
 
     const-string v1, "AND"
@@ -482,7 +448,6 @@
 
     sput-object v0, Lmiui/maml/data/BaseFunctions$Fun;->AND:Lmiui/maml/data/BaseFunctions$Fun;
 
-    .line 61
     new-instance v0, Lmiui/maml/data/BaseFunctions$Fun;
 
     const-string v1, "OR"
@@ -493,7 +458,6 @@
 
     sput-object v0, Lmiui/maml/data/BaseFunctions$Fun;->OR:Lmiui/maml/data/BaseFunctions$Fun;
 
-    .line 64
     new-instance v0, Lmiui/maml/data/BaseFunctions$Fun;
 
     const-string v1, "EQS"
@@ -504,7 +468,6 @@
 
     sput-object v0, Lmiui/maml/data/BaseFunctions$Fun;->EQS:Lmiui/maml/data/BaseFunctions$Fun;
 
-    .line 65
     new-instance v0, Lmiui/maml/data/BaseFunctions$Fun;
 
     const-string v1, "SUBSTR"
@@ -515,7 +478,6 @@
 
     sput-object v0, Lmiui/maml/data/BaseFunctions$Fun;->SUBSTR:Lmiui/maml/data/BaseFunctions$Fun;
 
-    .line 68
     new-instance v0, Lmiui/maml/data/BaseFunctions$Fun;
 
     const-string v1, "HASH"
@@ -526,7 +488,6 @@
 
     sput-object v0, Lmiui/maml/data/BaseFunctions$Fun;->HASH:Lmiui/maml/data/BaseFunctions$Fun;
 
-    .line 22
     const/16 v0, 0x26
 
     new-array v0, v0, [Lmiui/maml/data/BaseFunctions$Fun;
@@ -763,7 +724,6 @@
     .end annotation
 
     .prologue
-    .line 22
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -774,7 +734,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 22
     const-class v0, Lmiui/maml/data/BaseFunctions$Fun;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -790,7 +749,6 @@
     .locals 1
 
     .prologue
-    .line 22
     sget-object v0, Lmiui/maml/data/BaseFunctions$Fun;->$VALUES:[Lmiui/maml/data/BaseFunctions$Fun;
 
     invoke-virtual {v0}, [Lmiui/maml/data/BaseFunctions$Fun;->clone()Ljava/lang/Object;

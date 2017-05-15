@@ -54,19 +54,15 @@
     .end annotation
 
     .prologue
-    .line 69
     .local p0, "this":Lorg/apache/miui/commons/lang3/tuple/ImmutablePair;, "Lorg/apache/miui/commons/lang3/tuple/ImmutablePair<TL;TR;>;"
     .local p1, "left":Ljava/lang/Object;, "TL;"
     .local p2, "right":Ljava/lang/Object;, "TR;"
     invoke-direct {p0}, Lorg/apache/miui/commons/lang3/tuple/Pair;-><init>()V
 
-    .line 70
     iput-object p1, p0, Lorg/apache/miui/commons/lang3/tuple/ImmutablePair;->left:Ljava/lang/Object;
 
-    .line 71
     iput-object p2, p0, Lorg/apache/miui/commons/lang3/tuple/ImmutablePair;->right:Ljava/lang/Object;
 
-    .line 72
     return-void
 .end method
 
@@ -89,7 +85,6 @@
     .end annotation
 
     .prologue
-    .line 59
     .local p0, "left":Ljava/lang/Object;, "TL;"
     .local p1, "right":Ljava/lang/Object;, "TR;"
     new-instance v0, Lorg/apache/miui/commons/lang3/tuple/ImmutablePair;
@@ -111,7 +106,6 @@
     .end annotation
 
     .prologue
-    .line 80
     .local p0, "this":Lorg/apache/miui/commons/lang3/tuple/ImmutablePair;, "Lorg/apache/miui/commons/lang3/tuple/ImmutablePair<TL;TR;>;"
     iget-object v0, p0, Lorg/apache/miui/commons/lang3/tuple/ImmutablePair;->left:Ljava/lang/Object;
 
@@ -127,7 +121,6 @@
     .end annotation
 
     .prologue
-    .line 88
     .local p0, "this":Lorg/apache/miui/commons/lang3/tuple/ImmutablePair;, "Lorg/apache/miui/commons/lang3/tuple/ImmutablePair<TL;TR;>;"
     iget-object v0, p0, Lorg/apache/miui/commons/lang3/tuple/ImmutablePair;->right:Ljava/lang/Object;
 
@@ -143,7 +136,6 @@
     .end annotation
 
     .prologue
-    .line 101
     .local p0, "this":Lorg/apache/miui/commons/lang3/tuple/ImmutablePair;, "Lorg/apache/miui/commons/lang3/tuple/ImmutablePair<TL;TR;>;"
     .local p1, "value":Ljava/lang/Object;, "TR;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;

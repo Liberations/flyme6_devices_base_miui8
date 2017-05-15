@@ -41,10 +41,8 @@
     .param p3, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 1229
     invoke-direct {p0, p1, p2, p3}, Lmiui/maml/ActionCommand$PropertyCommand;-><init>(Lmiui/maml/elements/ScreenElement;Lmiui/maml/util/Variable;Ljava/lang/String;)V
 
-    .line 1230
     const-string v0, "play"
 
     invoke-virtual {p3, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -53,17 +51,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 1231
     sget-object v0, Lmiui/maml/ActionCommand$AnimationProperty$Type;->PLAY:Lmiui/maml/ActionCommand$AnimationProperty$Type;
 
     iput-object v0, p0, Lmiui/maml/ActionCommand$AnimationProperty;->mType:Lmiui/maml/ActionCommand$AnimationProperty$Type;
 
-    .line 1245
     :cond_0
     :goto_0
     return-void
 
-    .line 1232
     :cond_1
     const-string v0, "pause"
 
@@ -73,14 +68,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 1233
     sget-object v0, Lmiui/maml/ActionCommand$AnimationProperty$Type;->PAUSE:Lmiui/maml/ActionCommand$AnimationProperty$Type;
 
     iput-object v0, p0, Lmiui/maml/ActionCommand$AnimationProperty;->mType:Lmiui/maml/ActionCommand$AnimationProperty$Type;
 
     goto :goto_0
 
-    .line 1234
     :cond_2
     const-string v0, "resume"
 
@@ -90,14 +83,12 @@
 
     if-eqz v0, :cond_3
 
-    .line 1235
     sget-object v0, Lmiui/maml/ActionCommand$AnimationProperty$Type;->RESUME:Lmiui/maml/ActionCommand$AnimationProperty$Type;
 
     iput-object v0, p0, Lmiui/maml/ActionCommand$AnimationProperty;->mType:Lmiui/maml/ActionCommand$AnimationProperty$Type;
 
     goto :goto_0
 
-    .line 1236
     :cond_3
     invoke-virtual {p3}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
@@ -119,12 +110,10 @@
 
     if-eqz v0, :cond_4
 
-    .line 1237
     sget-object v0, Lmiui/maml/ActionCommand$AnimationProperty$Type;->PLAY_WITH_PARAMS:Lmiui/maml/ActionCommand$AnimationProperty$Type;
 
     iput-object v0, p0, Lmiui/maml/ActionCommand$AnimationProperty;->mType:Lmiui/maml/ActionCommand$AnimationProperty$Type;
 
-    .line 1238
     invoke-virtual {p0}, Lmiui/maml/ActionCommand$AnimationProperty;->getVariables()Lmiui/maml/data/Variables;
 
     move-result-object v0
@@ -147,7 +136,6 @@
 
     iput-object v0, p0, Lmiui/maml/ActionCommand$AnimationProperty;->mPlayParams:[Lmiui/maml/data/Expression;
 
-    .line 1239
     iget-object v0, p0, Lmiui/maml/ActionCommand$AnimationProperty;->mPlayParams:[Lmiui/maml/data/Expression;
 
     if-eqz v0, :cond_0
@@ -168,7 +156,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 1240
     const-string v0, "ActionCommand"
 
     const-string v1, "bad expression format"
@@ -177,7 +164,6 @@
 
     goto :goto_0
 
-    .line 1243
     :cond_4
     sget-object v0, Lmiui/maml/ActionCommand$AnimationProperty$Type;->INVALID:Lmiui/maml/ActionCommand$AnimationProperty$Type;
 
@@ -202,7 +188,6 @@
 
     const/4 v10, 0x0
 
-    .line 1249
     sget-object v0, Lmiui/maml/ActionCommand$1;->$SwitchMap$miui$maml$ActionCommand$AnimationProperty$Type:[I
 
     iget-object v1, p0, Lmiui/maml/ActionCommand$AnimationProperty;->mType:Lmiui/maml/ActionCommand$AnimationProperty$Type;
@@ -215,11 +200,9 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 1281
     :goto_0
     return-void
 
-    .line 1251
     :pswitch_0
     iget-object v0, p0, Lmiui/maml/ActionCommand$AnimationProperty;->mTargetElement:Lmiui/maml/elements/ScreenElement;
 
@@ -227,7 +210,6 @@
 
     goto :goto_0
 
-    .line 1254
     :pswitch_1
     iget-object v0, p0, Lmiui/maml/ActionCommand$AnimationProperty;->mTargetElement:Lmiui/maml/elements/ScreenElement;
 
@@ -235,7 +217,6 @@
 
     goto :goto_0
 
-    .line 1257
     :pswitch_2
     iget-object v0, p0, Lmiui/maml/ActionCommand$AnimationProperty;->mTargetElement:Lmiui/maml/elements/ScreenElement;
 
@@ -243,23 +224,18 @@
 
     goto :goto_0
 
-    .line 1260
     :pswitch_3
     const-wide/16 v2, 0x0
 
-    .line 1261
     .local v2, "startTime":J
     const-wide/16 v4, -0x1
 
-    .line 1262
     .local v4, "endTime":J
     const/4 v6, 0x0
 
-    .line 1263
     .local v6, "isLoop":Z
     const/4 v7, 0x0
 
-    .line 1264
     .local v7, "isDelay":Z
     iget-object v0, p0, Lmiui/maml/ActionCommand$AnimationProperty;->mPlayParams:[Lmiui/maml/data/Expression;
 
@@ -267,7 +243,6 @@
 
     if-lez v0, :cond_0
 
-    .line 1265
     iget-object v0, p0, Lmiui/maml/ActionCommand$AnimationProperty;->mPlayParams:[Lmiui/maml/data/Expression;
 
     aget-object v0, v0, v10
@@ -279,7 +254,6 @@
     :goto_1
     double-to-long v2, v0
 
-    .line 1267
     :cond_0
     iget-object v0, p0, Lmiui/maml/ActionCommand$AnimationProperty;->mPlayParams:[Lmiui/maml/data/Expression;
 
@@ -287,7 +261,6 @@
 
     if-le v0, v11, :cond_1
 
-    .line 1268
     iget-object v0, p0, Lmiui/maml/ActionCommand$AnimationProperty;->mPlayParams:[Lmiui/maml/data/Expression;
 
     aget-object v0, v0, v11
@@ -299,7 +272,6 @@
     :goto_2
     double-to-long v4, v0
 
-    .line 1271
     :cond_1
     iget-object v0, p0, Lmiui/maml/ActionCommand$AnimationProperty;->mPlayParams:[Lmiui/maml/data/Expression;
 
@@ -307,7 +279,6 @@
 
     if-le v0, v12, :cond_2
 
-    .line 1272
     iget-object v0, p0, Lmiui/maml/ActionCommand$AnimationProperty;->mPlayParams:[Lmiui/maml/data/Expression;
 
     aget-object v0, v0, v12
@@ -316,7 +287,6 @@
 
     move v6, v10
 
-    .line 1274
     :cond_2
     :goto_3
     iget-object v0, p0, Lmiui/maml/ActionCommand$AnimationProperty;->mPlayParams:[Lmiui/maml/data/Expression;
@@ -325,7 +295,6 @@
 
     if-le v0, v13, :cond_3
 
-    .line 1275
     iget-object v0, p0, Lmiui/maml/ActionCommand$AnimationProperty;->mPlayParams:[Lmiui/maml/data/Expression;
 
     aget-object v0, v0, v13
@@ -334,7 +303,6 @@
 
     move v7, v10
 
-    .line 1277
     :cond_3
     :goto_4
     iget-object v1, p0, Lmiui/maml/ActionCommand$AnimationProperty;->mTargetElement:Lmiui/maml/elements/ScreenElement;
@@ -343,7 +311,6 @@
 
     goto :goto_0
 
-    .line 1265
     :cond_4
     iget-object v0, p0, Lmiui/maml/ActionCommand$AnimationProperty;->mPlayParams:[Lmiui/maml/data/Expression;
 
@@ -355,7 +322,6 @@
 
     goto :goto_1
 
-    .line 1268
     :cond_5
     iget-object v0, p0, Lmiui/maml/ActionCommand$AnimationProperty;->mPlayParams:[Lmiui/maml/data/Expression;
 
@@ -367,7 +333,6 @@
 
     goto :goto_2
 
-    .line 1272
     :cond_6
     iget-object v0, p0, Lmiui/maml/ActionCommand$AnimationProperty;->mPlayParams:[Lmiui/maml/data/Expression;
 
@@ -390,7 +355,6 @@
 
     goto :goto_3
 
-    .line 1275
     :cond_8
     iget-object v0, p0, Lmiui/maml/ActionCommand$AnimationProperty;->mPlayParams:[Lmiui/maml/data/Expression;
 
@@ -413,7 +377,6 @@
 
     goto :goto_4
 
-    .line 1249
     nop
 
     :pswitch_data_0

@@ -98,7 +98,6 @@
     .locals 2
 
     .prologue
-    .line 35
     sget-object v0, Landroid/provider/ContactsContract;->AUTHORITY_URI:Landroid/net/Uri;
 
     const-string v1, "search_t9"
@@ -109,7 +108,6 @@
 
     sput-object v0, Lmiui/provider/ExtraContacts$SmartDialer;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 36
     sget-object v0, Landroid/provider/ContactsContract;->AUTHORITY_URI:Landroid/net/Uri;
 
     const-string v1, "rebuild_t9_index"
@@ -120,7 +118,6 @@
 
     sput-object v0, Lmiui/provider/ExtraContacts$SmartDialer;->CONTENT_REBUILDT9_URI:Landroid/net/Uri;
 
-    .line 37
     sget-object v0, Landroid/provider/ContactsContract;->AUTHORITY_URI:Landroid/net/Uri;
 
     const-string v1, "build_yellowpage_t9_index"
@@ -138,7 +135,6 @@
     .locals 0
 
     .prologue
-    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

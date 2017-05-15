@@ -26,14 +26,11 @@
     .end annotation
 
     .prologue
-    .line 51
     .local p1, "callbacks":Landroid/app/FragmentHostCallback;, "Landroid/app/FragmentHostCallback<*>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 52
     iput-object p1, p0, Landroid/app/FragmentController;->mHost:Landroid/app/FragmentHostCallback;
 
-    .line 53
     return-void
 .end method
 
@@ -49,7 +46,6 @@
     .end annotation
 
     .prologue
-    .line 48
     .local p0, "callbacks":Landroid/app/FragmentHostCallback;, "Landroid/app/FragmentHostCallback<*>;"
     new-instance v0, Landroid/app/FragmentController;
 
@@ -65,7 +61,6 @@
     .param p1, "parent"    # Landroid/app/Fragment;
 
     .prologue
-    .line 82
     iget-object v0, p0, Landroid/app/FragmentController;->mHost:Landroid/app/FragmentHostCallback;
 
     iget-object v0, v0, Landroid/app/FragmentHostCallback;->mFragmentManager:Landroid/app/FragmentManagerImpl;
@@ -76,7 +71,6 @@
 
     invoke-virtual {v0, v1, v2, p1}, Landroid/app/FragmentManagerImpl;->attachController(Landroid/app/FragmentHostCallback;Landroid/app/FragmentContainer;Landroid/app/Fragment;)V
 
-    .line 84
     return-void
 .end method
 
@@ -84,14 +78,12 @@
     .locals 1
 
     .prologue
-    .line 152
     iget-object v0, p0, Landroid/app/FragmentController;->mHost:Landroid/app/FragmentHostCallback;
 
     iget-object v0, v0, Landroid/app/FragmentHostCallback;->mFragmentManager:Landroid/app/FragmentManagerImpl;
 
     invoke-virtual {v0}, Landroid/app/FragmentManagerImpl;->dispatchActivityCreated()V
 
-    .line 153
     return-void
 .end method
 
@@ -100,14 +92,12 @@
     .param p1, "newConfig"    # Landroid/content/res/Configuration;
 
     .prologue
-    .line 229
     iget-object v0, p0, Landroid/app/FragmentController;->mHost:Landroid/app/FragmentHostCallback;
 
     iget-object v0, v0, Landroid/app/FragmentHostCallback;->mFragmentManager:Landroid/app/FragmentManagerImpl;
 
     invoke-virtual {v0, p1}, Landroid/app/FragmentManagerImpl;->dispatchConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 230
     return-void
 .end method
 
@@ -116,7 +106,6 @@
     .param p1, "item"    # Landroid/view/MenuItem;
 
     .prologue
-    .line 303
     iget-object v0, p0, Landroid/app/FragmentController;->mHost:Landroid/app/FragmentHostCallback;
 
     iget-object v0, v0, Landroid/app/FragmentHostCallback;->mFragmentManager:Landroid/app/FragmentManagerImpl;
@@ -132,14 +121,12 @@
     .locals 1
 
     .prologue
-    .line 141
     iget-object v0, p0, Landroid/app/FragmentController;->mHost:Landroid/app/FragmentHostCallback;
 
     iget-object v0, v0, Landroid/app/FragmentHostCallback;->mFragmentManager:Landroid/app/FragmentManagerImpl;
 
     invoke-virtual {v0}, Landroid/app/FragmentManagerImpl;->dispatchCreate()V
 
-    .line 142
     return-void
 .end method
 
@@ -149,7 +136,6 @@
     .param p2, "inflater"    # Landroid/view/MenuInflater;
 
     .prologue
-    .line 265
     iget-object v0, p0, Landroid/app/FragmentController;->mHost:Landroid/app/FragmentHostCallback;
 
     iget-object v0, v0, Landroid/app/FragmentHostCallback;->mFragmentManager:Landroid/app/FragmentManagerImpl;
@@ -165,14 +151,12 @@
     .locals 1
 
     .prologue
-    .line 218
     iget-object v0, p0, Landroid/app/FragmentController;->mHost:Landroid/app/FragmentHostCallback;
 
     iget-object v0, v0, Landroid/app/FragmentHostCallback;->mFragmentManager:Landroid/app/FragmentManagerImpl;
 
     invoke-virtual {v0}, Landroid/app/FragmentManagerImpl;->dispatchDestroy()V
 
-    .line 219
     return-void
 .end method
 
@@ -180,14 +164,12 @@
     .locals 1
 
     .prologue
-    .line 207
     iget-object v0, p0, Landroid/app/FragmentController;->mHost:Landroid/app/FragmentHostCallback;
 
     iget-object v0, v0, Landroid/app/FragmentHostCallback;->mFragmentManager:Landroid/app/FragmentManagerImpl;
 
     invoke-virtual {v0}, Landroid/app/FragmentManagerImpl;->dispatchDestroyView()V
 
-    .line 208
     return-void
 .end method
 
@@ -195,14 +177,12 @@
     .locals 1
 
     .prologue
-    .line 241
     iget-object v0, p0, Landroid/app/FragmentController;->mHost:Landroid/app/FragmentHostCallback;
 
     iget-object v0, v0, Landroid/app/FragmentHostCallback;->mFragmentManager:Landroid/app/FragmentManagerImpl;
 
     invoke-virtual {v0}, Landroid/app/FragmentManagerImpl;->dispatchLowMemory()V
 
-    .line 242
     return-void
 .end method
 
@@ -211,7 +191,6 @@
     .param p1, "item"    # Landroid/view/MenuItem;
 
     .prologue
-    .line 290
     iget-object v0, p0, Landroid/app/FragmentController;->mHost:Landroid/app/FragmentHostCallback;
 
     iget-object v0, v0, Landroid/app/FragmentHostCallback;->mFragmentManager:Landroid/app/FragmentManagerImpl;
@@ -228,14 +207,12 @@
     .param p1, "menu"    # Landroid/view/Menu;
 
     .prologue
-    .line 314
     iget-object v0, p0, Landroid/app/FragmentController;->mHost:Landroid/app/FragmentHostCallback;
 
     iget-object v0, v0, Landroid/app/FragmentHostCallback;->mFragmentManager:Landroid/app/FragmentManagerImpl;
 
     invoke-virtual {v0, p1}, Landroid/app/FragmentManagerImpl;->dispatchOptionsMenuClosed(Landroid/view/Menu;)V
 
-    .line 315
     return-void
 .end method
 
@@ -243,14 +220,12 @@
     .locals 1
 
     .prologue
-    .line 185
     iget-object v0, p0, Landroid/app/FragmentController;->mHost:Landroid/app/FragmentHostCallback;
 
     iget-object v0, v0, Landroid/app/FragmentHostCallback;->mFragmentManager:Landroid/app/FragmentManagerImpl;
 
     invoke-virtual {v0}, Landroid/app/FragmentManagerImpl;->dispatchPause()V
 
-    .line 186
     return-void
 .end method
 
@@ -259,7 +234,6 @@
     .param p1, "menu"    # Landroid/view/Menu;
 
     .prologue
-    .line 277
     iget-object v0, p0, Landroid/app/FragmentController;->mHost:Landroid/app/FragmentHostCallback;
 
     iget-object v0, v0, Landroid/app/FragmentHostCallback;->mFragmentManager:Landroid/app/FragmentManagerImpl;
@@ -275,14 +249,12 @@
     .locals 1
 
     .prologue
-    .line 174
     iget-object v0, p0, Landroid/app/FragmentController;->mHost:Landroid/app/FragmentHostCallback;
 
     iget-object v0, v0, Landroid/app/FragmentHostCallback;->mFragmentManager:Landroid/app/FragmentManagerImpl;
 
     invoke-virtual {v0}, Landroid/app/FragmentManagerImpl;->dispatchResume()V
 
-    .line 175
     return-void
 .end method
 
@@ -290,14 +262,12 @@
     .locals 1
 
     .prologue
-    .line 163
     iget-object v0, p0, Landroid/app/FragmentController;->mHost:Landroid/app/FragmentHostCallback;
 
     iget-object v0, v0, Landroid/app/FragmentHostCallback;->mFragmentManager:Landroid/app/FragmentManagerImpl;
 
     invoke-virtual {v0}, Landroid/app/FragmentManagerImpl;->dispatchStart()V
 
-    .line 164
     return-void
 .end method
 
@@ -305,14 +275,12 @@
     .locals 1
 
     .prologue
-    .line 196
     iget-object v0, p0, Landroid/app/FragmentController;->mHost:Landroid/app/FragmentHostCallback;
 
     iget-object v0, v0, Landroid/app/FragmentHostCallback;->mFragmentManager:Landroid/app/FragmentManagerImpl;
 
     invoke-virtual {v0}, Landroid/app/FragmentManagerImpl;->dispatchStop()V
 
-    .line 197
     return-void
 .end method
 
@@ -321,14 +289,12 @@
     .param p1, "level"    # I
 
     .prologue
-    .line 253
     iget-object v0, p0, Landroid/app/FragmentController;->mHost:Landroid/app/FragmentHostCallback;
 
     iget-object v0, v0, Landroid/app/FragmentHostCallback;->mFragmentManager:Landroid/app/FragmentManagerImpl;
 
     invoke-virtual {v0, p1}, Landroid/app/FragmentManagerImpl;->dispatchTrimMemory(I)V
 
-    .line 254
     return-void
 .end method
 
@@ -336,12 +302,10 @@
     .locals 1
 
     .prologue
-    .line 350
     iget-object v0, p0, Landroid/app/FragmentController;->mHost:Landroid/app/FragmentHostCallback;
 
     invoke-virtual {v0}, Landroid/app/FragmentHostCallback;->doLoaderDestroy()V
 
-    .line 351
     return-void
 .end method
 
@@ -349,12 +313,10 @@
     .locals 1
 
     .prologue
-    .line 332
     iget-object v0, p0, Landroid/app/FragmentController;->mHost:Landroid/app/FragmentHostCallback;
 
     invoke-virtual {v0}, Landroid/app/FragmentHostCallback;->doLoaderStart()V
 
-    .line 333
     return-void
 .end method
 
@@ -363,12 +325,10 @@
     .param p1, "retain"    # Z
 
     .prologue
-    .line 343
     iget-object v0, p0, Landroid/app/FragmentController;->mHost:Landroid/app/FragmentHostCallback;
 
     invoke-virtual {v0, p1}, Landroid/app/FragmentHostCallback;->doLoaderStop(Z)V
 
-    .line 344
     return-void
 .end method
 
@@ -380,12 +340,10 @@
     .param p4, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 382
     iget-object v0, p0, Landroid/app/FragmentController;->mHost:Landroid/app/FragmentHostCallback;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Landroid/app/FragmentHostCallback;->dumpLoaders(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
-    .line 383
     return-void
 .end method
 
@@ -393,7 +351,6 @@
     .locals 1
 
     .prologue
-    .line 325
     iget-object v0, p0, Landroid/app/FragmentController;->mHost:Landroid/app/FragmentHostCallback;
 
     iget-object v0, v0, Landroid/app/FragmentHostCallback;->mFragmentManager:Landroid/app/FragmentManagerImpl;
@@ -410,7 +367,6 @@
     .param p1, "who"    # Ljava/lang/String;
 
     .prologue
-    .line 74
     iget-object v0, p0, Landroid/app/FragmentController;->mHost:Landroid/app/FragmentHostCallback;
 
     iget-object v0, v0, Landroid/app/FragmentHostCallback;->mFragmentManager:Landroid/app/FragmentManagerImpl;
@@ -426,7 +382,6 @@
     .locals 1
 
     .prologue
-    .line 59
     iget-object v0, p0, Landroid/app/FragmentController;->mHost:Landroid/app/FragmentHostCallback;
 
     invoke-virtual {v0}, Landroid/app/FragmentHostCallback;->getFragmentManagerImpl()Landroid/app/FragmentManagerImpl;
@@ -440,7 +395,6 @@
     .locals 1
 
     .prologue
-    .line 66
     iget-object v0, p0, Landroid/app/FragmentController;->mHost:Landroid/app/FragmentHostCallback;
 
     invoke-virtual {v0}, Landroid/app/FragmentHostCallback;->getLoaderManagerImpl()Landroid/app/LoaderManagerImpl;
@@ -454,14 +408,12 @@
     .locals 1
 
     .prologue
-    .line 105
     iget-object v0, p0, Landroid/app/FragmentController;->mHost:Landroid/app/FragmentHostCallback;
 
     iget-object v0, v0, Landroid/app/FragmentHostCallback;->mFragmentManager:Landroid/app/FragmentManagerImpl;
 
     invoke-virtual {v0}, Landroid/app/FragmentManagerImpl;->noteStateNotSaved()V
 
-    .line 106
     return-void
 .end method
 
@@ -473,7 +425,6 @@
     .param p4, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 98
     iget-object v0, p0, Landroid/app/FragmentController;->mHost:Landroid/app/FragmentHostCallback;
 
     iget-object v0, v0, Landroid/app/FragmentHostCallback;->mFragmentManager:Landroid/app/FragmentManagerImpl;
@@ -489,12 +440,10 @@
     .locals 1
 
     .prologue
-    .line 357
     iget-object v0, p0, Landroid/app/FragmentController;->mHost:Landroid/app/FragmentHostCallback;
 
     invoke-virtual {v0}, Landroid/app/FragmentHostCallback;->reportLoaderStart()V
 
-    .line 358
     return-void
 .end method
 
@@ -513,7 +462,6 @@
     .end annotation
 
     .prologue
-    .line 122
     .local p2, "nonConfigList":Ljava/util/List;, "Ljava/util/List<Landroid/app/Fragment;>;"
     iget-object v0, p0, Landroid/app/FragmentController;->mHost:Landroid/app/FragmentHostCallback;
 
@@ -521,7 +469,6 @@
 
     invoke-virtual {v0, p1, p2}, Landroid/app/FragmentManagerImpl;->restoreAllState(Landroid/os/Parcelable;Ljava/util/List;)V
 
-    .line 123
     return-void
 .end method
 
@@ -539,13 +486,11 @@
     .end annotation
 
     .prologue
-    .line 375
     .local p1, "loaderManagers":Landroid/util/ArrayMap;, "Landroid/util/ArrayMap<Ljava/lang/String;Landroid/app/LoaderManager;>;"
     iget-object v0, p0, Landroid/app/FragmentController;->mHost:Landroid/app/FragmentHostCallback;
 
     invoke-virtual {v0, p1}, Landroid/app/FragmentHostCallback;->restoreLoaderNonConfig(Landroid/util/ArrayMap;)V
 
-    .line 376
     return-void
 .end method
 
@@ -563,7 +508,6 @@
     .end annotation
 
     .prologue
-    .line 365
     iget-object v0, p0, Landroid/app/FragmentController;->mHost:Landroid/app/FragmentHostCallback;
 
     invoke-virtual {v0}, Landroid/app/FragmentHostCallback;->retainLoaderNonConfig()Landroid/util/ArrayMap;
@@ -586,7 +530,6 @@
     .end annotation
 
     .prologue
-    .line 130
     iget-object v0, p0, Landroid/app/FragmentController;->mHost:Landroid/app/FragmentHostCallback;
 
     iget-object v0, v0, Landroid/app/FragmentHostCallback;->mFragmentManager:Landroid/app/FragmentManagerImpl;
@@ -602,7 +545,6 @@
     .locals 1
 
     .prologue
-    .line 112
     iget-object v0, p0, Landroid/app/FragmentController;->mHost:Landroid/app/FragmentHostCallback;
 
     iget-object v0, v0, Landroid/app/FragmentHostCallback;->mFragmentManager:Landroid/app/FragmentManagerImpl;

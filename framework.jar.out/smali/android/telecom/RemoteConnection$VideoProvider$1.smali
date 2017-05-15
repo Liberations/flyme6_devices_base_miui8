@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 322
     iput-object p1, p0, Landroid/telecom/RemoteConnection$VideoProvider$1;->this$0:Landroid/telecom/RemoteConnection$VideoProvider;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 380
     const/4 v0, 0x0
 
     return-object v0
@@ -51,7 +49,6 @@
     .param p1, "dataUsage"    # J
 
     .prologue
-    .line 358
     iget-object v2, p0, Landroid/telecom/RemoteConnection$VideoProvider$1;->this$0:Landroid/telecom/RemoteConnection$VideoProvider;
 
     # getter for: Landroid/telecom/RemoteConnection$VideoProvider;->mCallbacks:Ljava/util/Set;
@@ -77,7 +74,6 @@
 
     check-cast v1, Landroid/telecom/RemoteConnection$VideoProvider$Callback;
 
-    .line 359
     .local v1, "l":Landroid/telecom/RemoteConnection$VideoProvider$Callback;
     iget-object v2, p0, Landroid/telecom/RemoteConnection$VideoProvider$1;->this$0:Landroid/telecom/RemoteConnection$VideoProvider;
 
@@ -85,7 +81,6 @@
 
     goto :goto_0
 
-    .line 361
     .end local v1    # "l":Landroid/telecom/RemoteConnection$VideoProvider$Callback;
     :cond_0
     return-void
@@ -96,7 +91,6 @@
     .param p1, "cameraCapabilities"    # Landroid/telecom/VideoProfile$CameraCapabilities;
 
     .prologue
-    .line 366
     iget-object v2, p0, Landroid/telecom/RemoteConnection$VideoProvider$1;->this$0:Landroid/telecom/RemoteConnection$VideoProvider;
 
     # getter for: Landroid/telecom/RemoteConnection$VideoProvider;->mCallbacks:Ljava/util/Set;
@@ -122,7 +116,6 @@
 
     check-cast v1, Landroid/telecom/RemoteConnection$VideoProvider$Callback;
 
-    .line 367
     .local v1, "l":Landroid/telecom/RemoteConnection$VideoProvider$Callback;
     iget-object v2, p0, Landroid/telecom/RemoteConnection$VideoProvider$1;->this$0:Landroid/telecom/RemoteConnection$VideoProvider;
 
@@ -130,7 +123,6 @@
 
     goto :goto_0
 
-    .line 369
     .end local v1    # "l":Landroid/telecom/RemoteConnection$VideoProvider$Callback;
     :cond_0
     return-void
@@ -142,7 +134,6 @@
     .param p2, "height"    # I
 
     .prologue
-    .line 351
     iget-object v2, p0, Landroid/telecom/RemoteConnection$VideoProvider$1;->this$0:Landroid/telecom/RemoteConnection$VideoProvider;
 
     # getter for: Landroid/telecom/RemoteConnection$VideoProvider;->mCallbacks:Ljava/util/Set;
@@ -168,7 +159,6 @@
 
     check-cast v1, Landroid/telecom/RemoteConnection$VideoProvider$Callback;
 
-    .line 352
     .local v1, "l":Landroid/telecom/RemoteConnection$VideoProvider$Callback;
     iget-object v2, p0, Landroid/telecom/RemoteConnection$VideoProvider$1;->this$0:Landroid/telecom/RemoteConnection$VideoProvider;
 
@@ -176,7 +166,6 @@
 
     goto :goto_0
 
-    .line 354
     .end local v1    # "l":Landroid/telecom/RemoteConnection$VideoProvider$Callback;
     :cond_0
     return-void
@@ -187,7 +176,6 @@
     .param p1, "videoQuality"    # I
 
     .prologue
-    .line 373
     iget-object v2, p0, Landroid/telecom/RemoteConnection$VideoProvider$1;->this$0:Landroid/telecom/RemoteConnection$VideoProvider;
 
     # getter for: Landroid/telecom/RemoteConnection$VideoProvider;->mCallbacks:Ljava/util/Set;
@@ -213,7 +201,6 @@
 
     check-cast v1, Landroid/telecom/RemoteConnection$VideoProvider$Callback;
 
-    .line 374
     .local v1, "l":Landroid/telecom/RemoteConnection$VideoProvider$Callback;
     iget-object v2, p0, Landroid/telecom/RemoteConnection$VideoProvider$1;->this$0:Landroid/telecom/RemoteConnection$VideoProvider;
 
@@ -221,7 +208,6 @@
 
     goto :goto_0
 
-    .line 376
     .end local v1    # "l":Landroid/telecom/RemoteConnection$VideoProvider$Callback;
     :cond_0
     return-void
@@ -232,7 +218,6 @@
     .param p1, "event"    # I
 
     .prologue
-    .line 344
     iget-object v2, p0, Landroid/telecom/RemoteConnection$VideoProvider$1;->this$0:Landroid/telecom/RemoteConnection$VideoProvider;
 
     # getter for: Landroid/telecom/RemoteConnection$VideoProvider;->mCallbacks:Ljava/util/Set;
@@ -258,7 +243,6 @@
 
     check-cast v1, Landroid/telecom/RemoteConnection$VideoProvider$Callback;
 
-    .line 345
     .local v1, "l":Landroid/telecom/RemoteConnection$VideoProvider$Callback;
     iget-object v2, p0, Landroid/telecom/RemoteConnection$VideoProvider$1;->this$0:Landroid/telecom/RemoteConnection$VideoProvider;
 
@@ -266,7 +250,6 @@
 
     goto :goto_0
 
-    .line 347
     .end local v1    # "l":Landroid/telecom/RemoteConnection$VideoProvider$Callback;
     :cond_0
     return-void
@@ -277,7 +260,6 @@
     .param p1, "videoProfile"    # Landroid/telecom/VideoProfile;
 
     .prologue
-    .line 325
     iget-object v2, p0, Landroid/telecom/RemoteConnection$VideoProvider$1;->this$0:Landroid/telecom/RemoteConnection$VideoProvider;
 
     # getter for: Landroid/telecom/RemoteConnection$VideoProvider;->mCallbacks:Ljava/util/Set;
@@ -303,7 +285,6 @@
 
     check-cast v1, Landroid/telecom/RemoteConnection$VideoProvider$Callback;
 
-    .line 326
     .local v1, "l":Landroid/telecom/RemoteConnection$VideoProvider$Callback;
     iget-object v2, p0, Landroid/telecom/RemoteConnection$VideoProvider$1;->this$0:Landroid/telecom/RemoteConnection$VideoProvider;
 
@@ -311,7 +292,6 @@
 
     goto :goto_0
 
-    .line 328
     .end local v1    # "l":Landroid/telecom/RemoteConnection$VideoProvider$Callback;
     :cond_0
     return-void
@@ -324,7 +304,6 @@
     .param p3, "responseProfile"    # Landroid/telecom/VideoProfile;
 
     .prologue
-    .line 333
     iget-object v2, p0, Landroid/telecom/RemoteConnection$VideoProvider$1;->this$0:Landroid/telecom/RemoteConnection$VideoProvider;
 
     # getter for: Landroid/telecom/RemoteConnection$VideoProvider;->mCallbacks:Ljava/util/Set;
@@ -350,7 +329,6 @@
 
     check-cast v1, Landroid/telecom/RemoteConnection$VideoProvider$Callback;
 
-    .line 334
     .local v1, "l":Landroid/telecom/RemoteConnection$VideoProvider$Callback;
     iget-object v2, p0, Landroid/telecom/RemoteConnection$VideoProvider$1;->this$0:Landroid/telecom/RemoteConnection$VideoProvider;
 
@@ -358,7 +336,6 @@
 
     goto :goto_0
 
-    .line 340
     .end local v1    # "l":Landroid/telecom/RemoteConnection$VideoProvider$Callback;
     :cond_0
     return-void

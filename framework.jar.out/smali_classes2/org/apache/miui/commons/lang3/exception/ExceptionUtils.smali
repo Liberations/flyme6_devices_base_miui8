@@ -14,7 +14,6 @@
     .locals 3
 
     .prologue
-    .line 55
     const/16 v0, 0xc
 
     new-array v0, v0, [Ljava/lang/String;
@@ -100,10 +99,8 @@
     .locals 0
 
     .prologue
-    .line 77
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 78
     return-void
 .end method
 
@@ -114,7 +111,6 @@
     .end annotation
 
     .prologue
-    .line 125
     sget-object v0, Lorg/apache/miui/commons/lang3/exception/ExceptionUtils;->CAUSE_METHOD_NAMES:[Ljava/lang/String;
 
     invoke-static {p0, v0}, Lorg/apache/miui/commons/lang3/exception/ExceptionUtils;->getCause(Ljava/lang/Throwable;[Ljava/lang/String;)Ljava/lang/Throwable;
@@ -134,24 +130,19 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 143
     if-nez p0, :cond_1
 
     move-object v1, v5
 
-    .line 160
     :cond_0
     :goto_0
     return-object v1
 
-    .line 147
     :cond_1
     if-nez p1, :cond_2
 
-    .line 148
     sget-object p1, Lorg/apache/miui/commons/lang3/exception/ExceptionUtils;->CAUSE_METHOD_NAMES:[Ljava/lang/String;
 
-    .line 151
     :cond_2
     move-object v0, p1
 
@@ -167,20 +158,16 @@
 
     aget-object v4, v0, v2
 
-    .line 152
     .local v4, "methodName":Ljava/lang/String;
     if-eqz v4, :cond_3
 
-    .line 153
     invoke-static {p0, v4}, Lorg/apache/miui/commons/lang3/exception/ExceptionUtils;->getCauseUsingMethodName(Ljava/lang/Throwable;Ljava/lang/String;)Ljava/lang/Throwable;
 
     move-result-object v1
 
-    .line 154
     .local v1, "cause":Ljava/lang/Throwable;
     if-nez v1, :cond_0
 
-    .line 151
     .end local v1    # "cause":Ljava/lang/Throwable;
     :cond_3
     add-int/lit8 v2, v2, 0x1
@@ -191,7 +178,6 @@
     :cond_4
     move-object v1, v5
 
-    .line 160
     goto :goto_0
 .end method
 
@@ -201,10 +187,8 @@
     .param p1, "methodName"    # Ljava/lang/String;
 
     .prologue
-    .line 194
     const/4 v0, 0x0
 
-    .line 196
     .local v0, "method":Ljava/lang/reflect/Method;
     :try_start_0
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -222,7 +206,6 @@
 
     move-result-object v0
 
-    .line 203
     :goto_0
     if-eqz v0, :cond_0
 
@@ -238,7 +221,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 205
     const/4 v1, 0x0
 
     :try_start_1
@@ -254,40 +236,33 @@
     .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 214
     :goto_1
     return-object v1
 
-    .line 210
     :catch_0
     move-exception v1
 
-    .line 214
     :cond_0
     :goto_2
     const/4 v1, 0x0
 
     goto :goto_1
 
-    .line 208
     :catch_1
     move-exception v1
 
     goto :goto_2
 
-    .line 206
     :catch_2
     move-exception v1
 
     goto :goto_2
 
-    .line 199
     :catch_3
     move-exception v1
 
     goto :goto_0
 
-    .line 197
     :catch_4
     move-exception v1
 
@@ -300,7 +275,6 @@
     .end annotation
 
     .prologue
-    .line 92
     sget-object v0, Lorg/apache/miui/commons/lang3/exception/ExceptionUtils;->CAUSE_METHOD_NAMES:[Ljava/lang/String;
 
     invoke-static {v0}, Lorg/apache/miui/commons/lang3/ArrayUtils;->clone([Ljava/lang/Object;)[Ljava/lang/Object;
@@ -317,17 +291,13 @@
     .param p0, "th"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 673
     if-nez p0, :cond_0
 
-    .line 674
     const-string v2, ""
 
-    .line 678
     :goto_0
     return-object v2
 
-    .line 676
     :cond_0
     const/4 v2, 0x0
 
@@ -335,13 +305,11 @@
 
     move-result-object v0
 
-    .line 677
     .local v0, "clsName":Ljava/lang/String;
     invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 678
     .local v1, "msg":Ljava/lang/String;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -377,12 +345,10 @@
     .param p0, "throwable"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 181
     invoke-static {p0}, Lorg/apache/miui/commons/lang3/exception/ExceptionUtils;->getThrowableList(Ljava/lang/Throwable;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 182
     .local v0, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Throwable;>;"
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -418,18 +384,15 @@
     .param p0, "th"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 693
     invoke-static {p0}, Lorg/apache/miui/commons/lang3/exception/ExceptionUtils;->getRootCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
     move-result-object v0
 
-    .line 694
     .local v0, "root":Ljava/lang/Throwable;
     if-nez v0, :cond_0
 
     move-object v0, p0
 
-    .line 695
     :cond_0
     invoke-static {v0}, Lorg/apache/miui/commons/lang3/exception/ExceptionUtils;->getMessage(Ljava/lang/Throwable;)Ljava/lang/String;
 
@@ -443,33 +406,26 @@
     .param p0, "throwable"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 518
     if-nez p0, :cond_0
 
-    .line 519
     sget-object v7, Lorg/apache/miui/commons/lang3/ArrayUtils;->EMPTY_STRING_ARRAY:[Ljava/lang/String;
 
-    .line 540
     :goto_0
     return-object v7
 
-    .line 521
     :cond_0
     invoke-static {p0}, Lorg/apache/miui/commons/lang3/exception/ExceptionUtils;->getThrowables(Ljava/lang/Throwable;)[Ljava/lang/Throwable;
 
     move-result-object v5
 
-    .line 522
     .local v5, "throwables":[Ljava/lang/Throwable;
     array-length v0, v5
 
-    .line 523
     .local v0, "count":I
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 524
     .local v1, "frames":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     add-int/lit8 v7, v0, -0x1
 
@@ -479,7 +435,6 @@
 
     move-result-object v4
 
-    .line 525
     .local v4, "nextTrace":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     move v2, v0
 
@@ -489,14 +444,11 @@
 
     if-ltz v2, :cond_4
 
-    .line 526
     move-object v6, v4
 
-    .line 527
     .local v6, "trace":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     if-eqz v2, :cond_2
 
-    .line 528
     add-int/lit8 v7, v2, -0x1
 
     aget-object v7, v5, v7
@@ -505,16 +457,13 @@
 
     move-result-object v4
 
-    .line 529
     invoke-static {v6, v4}, Lorg/apache/miui/commons/lang3/exception/ExceptionUtils;->removeCommonFrames(Ljava/util/List;Ljava/util/List;)V
 
-    .line 531
     :cond_2
     add-int/lit8 v7, v0, -0x1
 
     if-ne v2, v7, :cond_3
 
-    .line 532
     aget-object v7, v5, v2
 
     invoke-virtual {v7}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
@@ -523,7 +472,6 @@
 
     invoke-interface {v1, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 536
     :goto_1
     const/4 v3, 0x0
 
@@ -535,19 +483,16 @@
 
     if-ge v3, v7, :cond_1
 
-    .line 537
     invoke-interface {v6, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v7
 
     invoke-interface {v1, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 536
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_2
 
-    .line 534
     .end local v3    # "j":I
     :cond_3
     new-instance v7, Ljava/lang/StringBuilder;
@@ -578,7 +523,6 @@
 
     goto :goto_1
 
-    .line 540
     .end local v6    # "trace":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :cond_4
     invoke-interface {v1}, Ljava/util/List;->size()I
@@ -612,32 +556,26 @@
     .end annotation
 
     .prologue
-    .line 642
     invoke-static {p0}, Lorg/apache/miui/commons/lang3/exception/ExceptionUtils;->getStackTrace(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 643
     .local v4, "stackTrace":Ljava/lang/String;
     sget-object v2, Lorg/apache/miui/commons/lang3/SystemUtils;->LINE_SEPARATOR:Ljava/lang/String;
 
-    .line 644
     .local v2, "linebreak":Ljava/lang/String;
     new-instance v1, Ljava/util/StringTokenizer;
 
     invoke-direct {v1, v4, v2}, Ljava/util/StringTokenizer;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 645
     .local v1, "frames":Ljava/util/StringTokenizer;
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 646
     .local v3, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/4 v6, 0x0
 
-    .line 647
     .local v6, "traceStarted":Z
     :cond_0
     :goto_0
@@ -647,12 +585,10 @@
 
     if-eqz v7, :cond_2
 
-    .line 648
     invoke-virtual {v1}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 650
     .local v5, "token":Ljava/lang/String;
     const-string v7, "at"
 
@@ -660,7 +596,6 @@
 
     move-result v0
 
-    .line 651
     .local v0, "at":I
     const/4 v7, -0x1
 
@@ -682,19 +617,15 @@
 
     if-nez v7, :cond_1
 
-    .line 652
     const/4 v6, 0x1
 
-    .line 653
     invoke-interface {v3, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 654
     :cond_1
     if-eqz v6, :cond_0
 
-    .line 658
     .end local v0    # "at":I
     .end local v5    # "token":Ljava/lang/String;
     :cond_2
@@ -706,22 +637,18 @@
     .param p0, "stackTrace"    # Ljava/lang/String;
 
     .prologue
-    .line 620
     sget-object v1, Lorg/apache/miui/commons/lang3/SystemUtils;->LINE_SEPARATOR:Ljava/lang/String;
 
-    .line 621
     .local v1, "linebreak":Ljava/lang/String;
     new-instance v0, Ljava/util/StringTokenizer;
 
     invoke-direct {v0, p0, v1}, Ljava/util/StringTokenizer;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 622
     .local v0, "frames":Ljava/util/StringTokenizer;
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 623
     .local v2, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :goto_0
     invoke-virtual {v0}, Ljava/util/StringTokenizer;->hasMoreTokens()Z
@@ -730,7 +657,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 624
     invoke-virtual {v0}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
     move-result-object v3
@@ -739,7 +665,6 @@
 
     goto :goto_0
 
-    .line 626
     :cond_0
     invoke-interface {v2}, Ljava/util/List;->size()I
 
@@ -761,13 +686,10 @@
     .param p0, "throwable"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 604
     if-nez p0, :cond_0
 
-    .line 605
     sget-object v0, Lorg/apache/miui/commons/lang3/ArrayUtils;->EMPTY_STRING_ARRAY:[Ljava/lang/String;
 
-    .line 607
     :goto_0
     return-object v0
 
@@ -788,12 +710,10 @@
     .param p0, "throwable"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 584
     new-instance v1, Ljava/io/StringWriter;
 
     invoke-direct {v1}, Ljava/io/StringWriter;-><init>()V
 
-    .line 585
     .local v1, "sw":Ljava/io/StringWriter;
     new-instance v0, Ljava/io/PrintWriter;
 
@@ -801,11 +721,9 @@
 
     invoke-direct {v0, v1, v2}, Ljava/io/PrintWriter;-><init>(Ljava/io/Writer;Z)V
 
-    .line 586
     .local v0, "pw":Ljava/io/PrintWriter;
     invoke-virtual {p0, v0}, Ljava/lang/Throwable;->printStackTrace(Ljava/io/PrintWriter;)V
 
-    .line 587
     invoke-virtual {v1}, Ljava/io/StringWriter;->getBuffer()Ljava/lang/StringBuffer;
 
     move-result-object v2
@@ -822,7 +740,6 @@
     .param p0, "throwable"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 235
     invoke-static {p0}, Lorg/apache/miui/commons/lang3/exception/ExceptionUtils;->getThrowableList(Ljava/lang/Throwable;)Ljava/util/List;
 
     move-result-object v0
@@ -850,12 +767,10 @@
     .end annotation
 
     .prologue
-    .line 282
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 283
     .local v0, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Throwable;>;"
     :goto_0
     if-eqz p0, :cond_0
@@ -866,17 +781,14 @@
 
     if-nez v1, :cond_0
 
-    .line 284
     invoke-interface {v0, p0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 285
     invoke-static {p0}, Lorg/apache/miui/commons/lang3/exception/ExceptionUtils;->getCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
     move-result-object p0
 
     goto :goto_0
 
-    .line 287
     :cond_0
     return-object v0
 .end method
@@ -886,12 +798,10 @@
     .param p0, "throwable"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 258
     invoke-static {p0}, Lorg/apache/miui/commons/lang3/exception/ExceptionUtils;->getThrowableList(Ljava/lang/Throwable;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 259
     .local v0, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Throwable;>;"
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -926,7 +836,6 @@
     .local p1, "type":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v2, -0x1
 
-    .line 388
     if-eqz p0, :cond_0
 
     if-nez p1, :cond_2
@@ -934,25 +843,20 @@
     :cond_0
     move v0, v2
 
-    .line 411
     :cond_1
     :goto_0
     return v0
 
-    .line 391
     :cond_2
     if-gez p2, :cond_3
 
-    .line 392
     const/4 p2, 0x0
 
-    .line 394
     :cond_3
     invoke-static {p0}, Lorg/apache/miui/commons/lang3/exception/ExceptionUtils;->getThrowables(Ljava/lang/Throwable;)[Ljava/lang/Throwable;
 
     move-result-object v1
 
-    .line 395
     .local v1, "throwables":[Ljava/lang/Throwable;
     array-length v3, v1
 
@@ -960,14 +864,11 @@
 
     move v0, v2
 
-    .line 396
     goto :goto_0
 
-    .line 398
     :cond_4
     if-eqz p3, :cond_5
 
-    .line 399
     move v0, p2
 
     .local v0, "i":I
@@ -976,7 +877,6 @@
 
     if-ge v0, v3, :cond_6
 
-    .line 400
     aget-object v3, v1, v0
 
     invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -989,12 +889,10 @@
 
     if-nez v3, :cond_1
 
-    .line 399
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 405
     .end local v0    # "i":I
     :cond_5
     move v0, p2
@@ -1005,7 +903,6 @@
 
     if-ge v0, v3, :cond_6
 
-    .line 406
     aget-object v3, v1, v0
 
     invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -1018,7 +915,6 @@
 
     if-nez v3, :cond_1
 
-    .line 405
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_2
@@ -1026,7 +922,6 @@
     :cond_6
     move v0, v2
 
-    .line 411
     goto :goto_0
 .end method
 
@@ -1046,7 +941,6 @@
     .local p1, "clazz":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v0, 0x0
 
-    .line 306
     invoke-static {p0, p1, v0, v0}, Lorg/apache/miui/commons/lang3/exception/ExceptionUtils;->indexOf(Ljava/lang/Throwable;Ljava/lang/Class;IZ)I
 
     move-result v0
@@ -1068,7 +962,6 @@
     .end annotation
 
     .prologue
-    .line 329
     .local p1, "clazz":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v0, 0x0
 
@@ -1092,7 +985,6 @@
     .end annotation
 
     .prologue
-    .line 349
     .local p1, "type":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v0, 0x0
 
@@ -1119,7 +1011,6 @@
     .end annotation
 
     .prologue
-    .line 373
     .local p1, "type":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v0, 0x1
 
@@ -1135,12 +1026,10 @@
     .param p0, "throwable"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 434
     sget-object v0, Ljava/lang/System;->err:Ljava/io/PrintStream;
 
     invoke-static {p0, v0}, Lorg/apache/miui/commons/lang3/exception/ExceptionUtils;->printRootCauseStackTrace(Ljava/lang/Throwable;Ljava/io/PrintStream;)V
 
-    .line 435
     return-void
 .end method
 
@@ -1150,18 +1039,14 @@
     .param p1, "stream"    # Ljava/io/PrintStream;
 
     .prologue
-    .line 457
     if-nez p0, :cond_0
 
-    .line 468
     :goto_0
     return-void
 
-    .line 460
     :cond_0
     if-nez p1, :cond_1
 
-    .line 461
     new-instance v5, Ljava/lang/IllegalArgumentException;
 
     const-string v6, "The PrintStream must not be null"
@@ -1170,13 +1055,11 @@
 
     throw v5
 
-    .line 463
     :cond_1
     invoke-static {p0}, Lorg/apache/miui/commons/lang3/exception/ExceptionUtils;->getRootCauseStackTrace(Ljava/lang/Throwable;)[Ljava/lang/String;
 
     move-result-object v4
 
-    .line 464
     .local v4, "trace":[Ljava/lang/String;
     move-object v0, v4
 
@@ -1192,16 +1075,13 @@
 
     aget-object v1, v0, v2
 
-    .line 465
     .local v1, "element":Ljava/lang/String;
     invoke-virtual {p1, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 464
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 467
     .end local v1    # "element":Ljava/lang/String;
     :cond_2
     invoke-virtual {p1}, Ljava/io/PrintStream;->flush()V
@@ -1215,18 +1095,14 @@
     .param p1, "writer"    # Ljava/io/PrintWriter;
 
     .prologue
-    .line 490
     if-nez p0, :cond_0
 
-    .line 501
     :goto_0
     return-void
 
-    .line 493
     :cond_0
     if-nez p1, :cond_1
 
-    .line 494
     new-instance v5, Ljava/lang/IllegalArgumentException;
 
     const-string v6, "The PrintWriter must not be null"
@@ -1235,13 +1111,11 @@
 
     throw v5
 
-    .line 496
     :cond_1
     invoke-static {p0}, Lorg/apache/miui/commons/lang3/exception/ExceptionUtils;->getRootCauseStackTrace(Ljava/lang/Throwable;)[Ljava/lang/String;
 
     move-result-object v4
 
-    .line 497
     .local v4, "trace":[Ljava/lang/String;
     move-object v0, v4
 
@@ -1257,16 +1131,13 @@
 
     aget-object v1, v0, v2
 
-    .line 498
     .local v1, "element":Ljava/lang/String;
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 497
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 500
     .end local v1    # "element":Ljava/lang/String;
     :cond_2
     invoke-virtual {p1}, Ljava/io/PrintWriter;->flush()V
@@ -1291,14 +1162,12 @@
     .end annotation
 
     .prologue
-    .line 552
     .local p0, "causeFrames":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .local p1, "wrapperFrames":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     if-eqz p0, :cond_0
 
     if-nez p1, :cond_1
 
-    .line 553
     :cond_0
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
@@ -1308,7 +1177,6 @@
 
     throw v4
 
-    .line 555
     :cond_1
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -1316,7 +1184,6 @@
 
     add-int/lit8 v1, v4, -0x1
 
-    .line 556
     .local v1, "causeFrameIndex":I
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -1324,21 +1191,18 @@
 
     add-int/lit8 v3, v4, -0x1
 
-    .line 557
     .local v3, "wrapperFrameIndex":I
     :goto_0
     if-ltz v1, :cond_3
 
     if-ltz v3, :cond_3
 
-    .line 560
     invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/String;
 
-    .line 561
     .local v0, "causeFrame":Ljava/lang/String;
     invoke-interface {p1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -1346,7 +1210,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 562
     .local v2, "wrapperFrame":Ljava/lang/String;
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1354,20 +1217,15 @@
 
     if-eqz v4, :cond_2
 
-    .line 563
     invoke-interface {p0, v1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    .line 565
     :cond_2
     add-int/lit8 v1, v1, -0x1
 
-    .line 566
     add-int/lit8 v3, v3, -0x1
 
-    .line 567
     goto :goto_0
 
-    .line 568
     .end local v0    # "causeFrame":Ljava/lang/String;
     .end local v2    # "wrapperFrame":Ljava/lang/String;
     :cond_3

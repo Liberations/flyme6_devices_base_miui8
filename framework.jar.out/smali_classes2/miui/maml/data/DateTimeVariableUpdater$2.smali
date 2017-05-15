@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 109
     invoke-static {}, Lmiui/maml/data/DateTimeVariableUpdater$Accuracy;->values()[Lmiui/maml/data/DateTimeVariableUpdater$Accuracy;
 
     move-result-object v0

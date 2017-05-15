@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 70
     iput-object p1, p0, Lmiui/util/AutoDisableScreenButtonsManager$1;->this$0:Lmiui/util/AutoDisableScreenButtonsManager;
 
     iput-boolean p2, p0, Lmiui/util/AutoDisableScreenButtonsManager$1;->val$visible:Z
@@ -46,12 +45,10 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 72
     iget-boolean v3, p0, Lmiui/util/AutoDisableScreenButtonsManager$1;->val$visible:Z
 
     if-eqz v3, :cond_2
 
-    .line 74
     iget-object v3, p0, Lmiui/util/AutoDisableScreenButtonsManager$1;->this$0:Lmiui/util/AutoDisableScreenButtonsManager;
 
     # getter for: Lmiui/util/AutoDisableScreenButtonsManager;->mScreenButtonsTmpDisabled:Z
@@ -61,7 +58,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 75
     iget-object v3, p0, Lmiui/util/AutoDisableScreenButtonsManager$1;->this$0:Lmiui/util/AutoDisableScreenButtonsManager;
 
     const/4 v4, 0x0
@@ -69,7 +65,6 @@
     # invokes: Lmiui/util/AutoDisableScreenButtonsManager;->saveTmpDisableButtonsStatus(Z)V
     invoke-static {v3, v4}, Lmiui/util/AutoDisableScreenButtonsManager;->access$100(Lmiui/util/AutoDisableScreenButtonsManager;Z)V
 
-    .line 77
     :cond_0
     iget-object v3, p0, Lmiui/util/AutoDisableScreenButtonsManager$1;->this$0:Lmiui/util/AutoDisableScreenButtonsManager;
 
@@ -80,7 +75,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 78
     iget-object v3, p0, Lmiui/util/AutoDisableScreenButtonsManager$1;->this$0:Lmiui/util/AutoDisableScreenButtonsManager;
 
     # getter for: Lmiui/util/AutoDisableScreenButtonsManager;->mFloatView:Lmiui/view/AutoDisableScreenbuttonsFloatView;
@@ -90,7 +84,6 @@
 
     invoke-virtual {v3}, Lmiui/view/AutoDisableScreenbuttonsFloatView;->dismiss()V
 
-    .line 91
     :cond_1
     :goto_0
     iget-object v3, p0, Lmiui/util/AutoDisableScreenButtonsManager$1;->this$0:Lmiui/util/AutoDisableScreenButtonsManager;
@@ -100,10 +93,8 @@
     # setter for: Lmiui/util/AutoDisableScreenButtonsManager;->mStatusBarVisibleOld:Z
     invoke-static {v3, v4}, Lmiui/util/AutoDisableScreenButtonsManager;->access$602(Lmiui/util/AutoDisableScreenButtonsManager;Z)Z
 
-    .line 92
     return-void
 
-    .line 80
     :cond_2
     iget-object v3, p0, Lmiui/util/AutoDisableScreenButtonsManager$1;->this$0:Lmiui/util/AutoDisableScreenButtonsManager;
 
@@ -117,16 +108,13 @@
 
     move-result-object v0
 
-    .line 81
     .local v0, "cn":Landroid/content/ComponentName;
     if-eqz v0, :cond_1
 
-    .line 82
     invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 83
     .local v2, "packageName":Ljava/lang/String;
     iget-object v3, p0, Lmiui/util/AutoDisableScreenButtonsManager$1;->this$0:Lmiui/util/AutoDisableScreenButtonsManager;
 
@@ -139,13 +127,11 @@
 
     move-result v1
 
-    .line 84
     .local v1, "flag":I
     const/4 v3, 0x2
 
     if-ne v1, v3, :cond_3
 
-    .line 85
     iget-object v3, p0, Lmiui/util/AutoDisableScreenButtonsManager$1;->this$0:Lmiui/util/AutoDisableScreenButtonsManager;
 
     # invokes: Lmiui/util/AutoDisableScreenButtonsManager;->saveTmpDisableButtonsStatus(Z)V
@@ -153,11 +139,9 @@
 
     goto :goto_0
 
-    .line 86
     :cond_3
     if-ne v1, v4, :cond_1
 
-    .line 87
     iget-object v3, p0, Lmiui/util/AutoDisableScreenButtonsManager$1;->this$0:Lmiui/util/AutoDisableScreenButtonsManager;
 
     # invokes: Lmiui/util/AutoDisableScreenButtonsManager;->showFloat()V

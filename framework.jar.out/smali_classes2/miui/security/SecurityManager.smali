@@ -52,7 +52,6 @@
 
     const/4 v1, 0x1
 
-    .line 37
     const-class v3, Lmiui/security/SecurityManager;
 
     invoke-virtual {v3}, Ljava/lang/Class;->desiredAssertionStatus()Z
@@ -64,14 +63,12 @@
     :goto_0
     sput-boolean v1, Lmiui/security/SecurityManager;->$assertionsDisabled:Z
 
-    .line 76
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0x13
 
     if-le v1, v2, :cond_0
 
-    .line 78
     :try_start_0
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -79,7 +76,6 @@
 
     if-lt v1, v2, :cond_2
 
-    .line 79
     const-class v1, Landroid/app/Activity;
 
     const-string v2, "finish"
@@ -100,7 +96,6 @@
 
     sput-object v1, Lmiui/security/SecurityManager;->sActivityFinishMethod:Ljava/lang/reflect/Method;
 
-    .line 83
     :goto_1
     sget-object v1, Lmiui/security/SecurityManager;->sActivityFinishMethod:Ljava/lang/reflect/Method;
 
@@ -110,7 +105,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 606
     .local v0, "e":Ljava/lang/Exception;
     :cond_0
     :goto_2
@@ -118,17 +112,14 @@
 
     invoke-static {v1}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    .line 607
     return-void
 
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_1
     move v1, v2
 
-    .line 37
     goto :goto_0
 
-    .line 81
     :cond_2
     :try_start_1
     const-class v1, Landroid/app/Activity;
@@ -155,11 +146,9 @@
 
     goto :goto_1
 
-    .line 84
     :catch_0
     move-exception v0
 
-    .line 85
     .restart local v0    # "e":Ljava/lang/Exception;
     const-string v1, "SecurityManager"
 
@@ -175,13 +164,10 @@
     .param p1, "service"    # Lmiui/security/ISecurityManager;
 
     .prologue
-    .line 90
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 91
     iput-object p1, p0, Lmiui/security/SecurityManager;->mService:Lmiui/security/ISecurityManager;
 
-    .line 92
     return-void
 .end method
 
@@ -190,36 +176,30 @@
     .param p1, "activity"    # Landroid/app/Activity;
 
     .prologue
-    .line 553
     invoke-virtual {p1}, Landroid/app/Activity;->finish()V
 
-    .line 554
     invoke-virtual {p1}, Landroid/app/Activity;->isFinishing()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 572
     :cond_0
     :goto_0
     return-void
 
-    .line 558
     :cond_1
     :try_start_0
     sget-object v1, Lmiui/security/SecurityManager;->sActivityFinishMethod:Ljava/lang/reflect/Method;
 
     if-eqz v1, :cond_3
 
-    .line 559
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0x18
 
     if-lt v1, v2, :cond_2
 
-    .line 560
     sget-object v1, Lmiui/security/SecurityManager;->sActivityFinishMethod:Ljava/lang/reflect/Method;
 
     const/4 v2, 0x1
@@ -242,11 +222,9 @@
 
     goto :goto_0
 
-    .line 569
     :catch_0
     move-exception v0
 
-    .line 570
     .local v0, "e":Ljava/lang/Exception;
     const-string v1, "SecurityManager"
 
@@ -256,7 +234,6 @@
 
     goto :goto_0
 
-    .line 562
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_2
     :try_start_1
@@ -280,7 +257,6 @@
 
     goto :goto_0
 
-    .line 565
     :cond_3
     invoke-virtual {p1}, Landroid/app/Activity;->getParent()Landroid/app/Activity;
 
@@ -288,7 +264,6 @@
 
     if-nez v1, :cond_0
 
-    .line 566
     invoke-virtual {p1}, Landroid/app/Activity;->finishAffinity()V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
@@ -304,7 +279,6 @@
     .prologue
     const/4 v10, 0x0
 
-    .line 99
     sget-boolean v11, Lmiui/security/SecurityManager;->$assertionsDisabled:Z
 
     if-nez v11, :cond_0
@@ -317,13 +291,11 @@
 
     throw v10
 
-    .line 101
     :cond_0
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v8
 
-    .line 102
     .local v8, "uid":I
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -333,16 +305,13 @@
 
     move-result-object v7
 
-    .line 103
     .local v7, "pkgs":[Ljava/lang/String;
     if-nez v7, :cond_2
 
-    .line 111
     :cond_1
     :goto_0
     return v10
 
-    .line 106
     :cond_2
     move-object v0, v7
 
@@ -364,7 +333,6 @@
 
     aget-object v6, v0, v3
 
-    .line 107
     .local v6, "pkg":Ljava/lang/String;
     move-object v1, p1
 
@@ -381,7 +349,6 @@
 
     aget-object v9, v1, v2
 
-    .line 108
     .local v9, "validPkg":Ljava/lang/String;
     invoke-virtual {v6, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -393,13 +360,11 @@
 
     goto :goto_0
 
-    .line 107
     :cond_3
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
-    .line 106
     .end local v9    # "validPkg":Ljava/lang/String;
     :cond_4
     add-int/lit8 v2, v3, 0x1
@@ -417,12 +382,10 @@
     .param p2, "where"    # Ljava/lang/String;
 
     .prologue
-    .line 781
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 782
     .local v0, "now":J
     sub-long v2, v0, p0
 
@@ -432,7 +395,6 @@
 
     if-lez v2, :cond_0
 
-    .line 784
     const-string v2, "SecurityManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -467,7 +429,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 786
     :cond_0
     return-void
 .end method
@@ -487,14 +448,11 @@
 
     const/high16 v5, 0x2000000
 
-    .line 465
     const-string v0, "android.app.action.CHECK_ACCESS_CONTROL"
 
-    .line 466
     .local v0, "action":Ljava/lang/String;
     const-string v2, "com.miui.securitycenter"
 
-    .line 467
     .local v2, "targetPkg":Ljava/lang/String;
     const-string v3, "is_pad"
 
@@ -506,36 +464,28 @@
 
     if-eqz v3, :cond_0
 
-    .line 468
     const-string v0, "android.app.action.CHECK_ACCESS_CONTROL_PAD"
 
-    .line 469
     const-string v2, "com.android.settings"
 
-    .line 472
     :cond_0
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 473
     .local v1, "result":Landroid/content/Intent;
     const-string v3, "android.intent.extra.shortcut.NAME"
 
     invoke-virtual {v1, v3, p0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 474
     const/high16 v3, 0x800000
 
     invoke-virtual {v1, v3}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 475
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 476
     if-eqz p1, :cond_6
 
-    .line 479
     invoke-virtual {p1}, Landroid/content/Intent;->getFlags()I
 
     move-result v3
@@ -544,25 +494,19 @@
 
     if-eqz v3, :cond_1
 
-    .line 480
     invoke-virtual {v1, v5}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 482
     :cond_1
     const/high16 v3, 0x1000000
 
     invoke-virtual {p1, v3}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 483
     if-eqz p3, :cond_5
 
-    .line 485
     if-ltz p2, :cond_2
 
-    .line 486
     invoke-virtual {p1, v5}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 488
     :cond_2
     invoke-virtual {p1}, Landroid/content/Intent;->getFlags()I
 
@@ -572,43 +516,35 @@
 
     if-nez v3, :cond_3
 
-    .line 489
     invoke-virtual {v1, v7}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 496
     :cond_3
     :goto_0
     const-string v3, "android.intent.extra.INTENT"
 
     invoke-virtual {v1, v3, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 500
     :goto_1
     const/16 v3, 0x3e7
 
     if-ne p4, v3, :cond_4
 
-    .line 501
     const-string v3, "originating_uid"
 
     invoke-virtual {v1, v3, p4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 504
     :cond_4
     return-object v1
 
-    .line 493
     :cond_5
     invoke-virtual {p1, v6}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 494
     const/high16 v3, 0x8000000
 
     invoke-virtual {v1, v3}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     goto :goto_0
 
-    .line 498
     :cond_6
     invoke-virtual {v1, v7}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
@@ -620,17 +556,14 @@
     .param p0, "original"    # I
 
     .prologue
-    .line 592
     invoke-static {p0}, Lmiui/securityspace/XSpaceUserHandle;->isXSpaceUserId(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 593
     const/4 p0, 0x0
 
-    .line 595
     .end local p0    # "original":I
     :cond_0
     return p0
@@ -643,10 +576,8 @@
     .locals 0
 
     .prologue
-    .line 602
     invoke-static {}, Lmiui/security/SecurityManager;->hook()V
 
-    .line 603
     return-void
 .end method
 
@@ -657,7 +588,6 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 746
     :try_start_0
     iget-object v1, p0, Lmiui/security/SecurityManager;->mService:Lmiui/security/ISecurityManager;
 
@@ -667,19 +597,15 @@
 
     move-result v1
 
-    .line 750
     :goto_0
     return v1
 
-    .line 747
     :catch_0
     move-exception v0
 
-    .line 748
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 750
     const/4 v1, 0x0
 
     goto :goto_0
@@ -690,7 +616,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 179
     :try_start_0
     iget-object v0, p0, Lmiui/security/SecurityManager;->mService:Lmiui/security/ISecurityManager;
 
@@ -698,11 +623,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 182
     :goto_0
     return-void
 
-    .line 180
     :catch_0
     move-exception v0
 
@@ -715,7 +638,6 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 186
     :try_start_0
     iget-object v1, p0, Lmiui/security/SecurityManager;->mService:Lmiui/security/ISecurityManager;
 
@@ -723,14 +645,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 190
     return-void
 
-    .line 187
     :catch_0
     move-exception v0
 
-    .line 188
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -749,7 +668,6 @@
     .prologue
     const/4 v9, 0x0
 
-    .line 508
     if-eqz p1, :cond_1
 
     invoke-virtual {p1}, Landroid/app/Activity;->getParent()Landroid/app/Activity;
@@ -758,18 +676,15 @@
 
     if-nez v6, :cond_1
 
-    .line 509
     invoke-virtual {p1}, Landroid/app/Activity;->getPackageName()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 511
     .local v3, "packageName":Ljava/lang/String;
     new-instance v5, Landroid/content/Intent;
 
     invoke-direct {v5}, Landroid/content/Intent;-><init>()V
 
-    .line 512
     .local v5, "targetIntent":Landroid/content/Intent;
     new-instance v6, Landroid/content/ComponentName;
 
@@ -785,7 +700,6 @@
 
     invoke-virtual {v5, v6}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 513
     const-string v6, "com.miui.gallery"
 
     invoke-virtual {v6, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -810,17 +724,14 @@
 
     if-eqz v6, :cond_0
 
-    .line 515
     :try_start_0
     invoke-virtual {p1}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v4
 
-    .line 516
     .local v4, "sourceIntent":Landroid/content/Intent;
     if-eqz v4, :cond_0
 
-    .line 517
     const-string v6, "skip_interception"
 
     const-string v7, "skip_interception"
@@ -835,7 +746,6 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 524
     .end local v4    # "sourceIntent":Landroid/content/Intent;
     :cond_0
     :goto_0
@@ -843,7 +753,6 @@
 
     move-result v1
 
-    .line 525
     .local v1, "flag":I
     and-int/lit8 v6, v1, 0x1
 
@@ -853,7 +762,6 @@
 
     if-nez v6, :cond_2
 
-    .line 547
     .end local v1    # "flag":I
     .end local v3    # "packageName":Ljava/lang/String;
     .end local v5    # "targetIntent":Landroid/content/Intent;
@@ -861,13 +769,11 @@
     :goto_1
     return-void
 
-    .line 519
     .restart local v3    # "packageName":Ljava/lang/String;
     .restart local v5    # "targetIntent":Landroid/content/Intent;
     :catch_0
     move-exception v0
 
-    .line 520
     .local v0, "e":Ljava/lang/Throwable;
     const-string v6, "SecurityManager"
 
@@ -877,7 +783,6 @@
 
     goto :goto_0
 
-    .line 529
     .end local v0    # "e":Ljava/lang/Throwable;
     .restart local v1    # "flag":I
     :cond_2
@@ -885,21 +790,17 @@
 
     if-eqz v6, :cond_3
 
-    .line 530
     invoke-virtual {p1, v9}, Landroid/app/Activity;->setResult(I)V
 
-    .line 531
     invoke-direct {p0, p1}, Lmiui/security/SecurityManager;->activityFinish(Landroid/app/Activity;)V
 
     goto :goto_1
 
-    .line 535
     :cond_3
     and-int/lit8 v6, v1, 0x4
 
     if-nez v6, :cond_1
 
-    .line 539
     const/4 v6, 0x0
 
     const/4 v7, -0x1
@@ -910,7 +811,6 @@
 
     move-result-object v2
 
-    .line 540
     .local v2, "intent":Landroid/content/Intent;
     const-string v6, "android.app.extra.PROTECTED_APP_TOKEN"
 
@@ -920,7 +820,6 @@
 
     invoke-virtual {v2, v6, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/IBinder;)Landroid/content/Intent;
 
-    .line 542
     :try_start_1
     invoke-virtual {p1, v2}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
     :try_end_1
@@ -928,11 +827,9 @@
 
     goto :goto_1
 
-    .line 543
     :catch_1
     move-exception v0
 
-    .line 544
     .local v0, "e":Landroid/content/ActivityNotFoundException;
     const-string v6, "SecurityManager"
 
@@ -948,7 +845,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 214
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Lmiui/security/SecurityManager;->checkAccessControlPass(Ljava/lang/String;Landroid/content/Intent;)Z
@@ -964,10 +860,8 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 218
     const/4 v0, 0x0
 
-    .line 220
     .local v0, "retval":Z
     :try_start_0
     iget-object v1, p0, Lmiui/security/SecurityManager;->mService:Lmiui/security/ISecurityManager;
@@ -978,11 +872,9 @@
 
     move-result v0
 
-    .line 223
     :goto_0
     return v0
 
-    .line 221
     :catch_0
     move-exception v1
 
@@ -995,7 +887,6 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 227
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0, p2}, Lmiui/security/SecurityManager;->checkAccessControlPassAsUser(Ljava/lang/String;Landroid/content/Intent;I)Z
@@ -1012,10 +903,8 @@
     .param p3, "userId"    # I
 
     .prologue
-    .line 231
     const/4 v0, 0x0
 
-    .line 233
     .local v0, "retval":Z
     :try_start_0
     iget-object v1, p0, Lmiui/security/SecurityManager;->mService:Lmiui/security/ISecurityManager;
@@ -1026,11 +915,9 @@
 
     move-result v0
 
-    .line 236
     :goto_0
     return v0
 
-    .line 234
     :catch_0
     move-exception v1
 
@@ -1042,7 +929,6 @@
     .param p1, "pattern"    # Ljava/lang/String;
 
     .prologue
-    .line 295
     :try_start_0
     iget-object v1, p0, Lmiui/security/SecurityManager;->mService:Lmiui/security/ISecurityManager;
 
@@ -1058,11 +944,9 @@
 
     return v1
 
-    .line 296
     :catch_0
     move-exception v0
 
-    .line 297
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -1081,16 +965,13 @@
     .param p4, "userId"    # I
 
     .prologue
-    .line 332
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
-    .line 333
     .local v2, "startTime":J
     const/4 v0, 0x0
 
-    .line 335
     .local v0, "retval":Z
     :try_start_0
     iget-object v1, p0, Lmiui/security/SecurityManager;->mService:Lmiui/security/ISecurityManager;
@@ -1101,16 +982,13 @@
 
     move-result v0
 
-    .line 338
     :goto_0
     const-string v1, "checkAllowStartActivity"
 
     invoke-static {v2, v3, v1}, Lmiui/security/SecurityManager;->checkTime(JLjava/lang/String;)V
 
-    .line 339
     return v0
 
-    .line 336
     :catch_0
     move-exception v1
 
@@ -1122,7 +1000,6 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 138
     :try_start_0
     iget-object v1, p0, Lmiui/security/SecurityManager;->mService:Lmiui/security/ISecurityManager;
 
@@ -1132,19 +1009,15 @@
 
     move-result v1
 
-    .line 142
     :goto_0
     return v1
 
-    .line 139
     :catch_0
     move-exception v0
 
-    .line 140
     .local v0, "ex":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 142
     const/4 v1, 0x0
 
     goto :goto_0
@@ -1155,7 +1028,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 738
     :try_start_0
     iget-object v1, p0, Lmiui/security/SecurityManager;->mService:Lmiui/security/ISecurityManager;
 
@@ -1167,15 +1039,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 742
     :goto_0
     return-void
 
-    .line 739
     :catch_0
     move-exception v0
 
-    .line 740
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -1189,7 +1058,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 706
     :try_start_0
     iget-object v1, p0, Lmiui/security/SecurityManager;->mService:Lmiui/security/ISecurityManager;
 
@@ -1203,12 +1071,10 @@
 
     const/4 v0, 0x1
 
-    .line 710
     :cond_0
     :goto_0
     return v0
 
-    .line 707
     :catch_0
     move-exception v1
 
@@ -1220,10 +1086,8 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 240
     const/4 v0, 0x0
 
-    .line 242
     .local v0, "retval":Z
     :try_start_0
     iget-object v1, p0, Lmiui/security/SecurityManager;->mService:Lmiui/security/ISecurityManager;
@@ -1234,11 +1098,9 @@
 
     move-result v0
 
-    .line 245
     :goto_0
     return v0
 
-    .line 243
     :catch_0
     move-exception v1
 
@@ -1251,10 +1113,8 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 249
     const/4 v0, 0x0
 
-    .line 251
     .local v0, "retval":Z
     :try_start_0
     iget-object v1, p0, Lmiui/security/SecurityManager;->mService:Lmiui/security/ISecurityManager;
@@ -1265,11 +1125,9 @@
 
     move-result v0
 
-    .line 254
     :goto_0
     return v0
 
-    .line 252
     :catch_0
     move-exception v1
 
@@ -1281,10 +1139,8 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 315
     const/4 v0, 0x0
 
-    .line 317
     .local v0, "retval":Z
     :try_start_0
     iget-object v1, p0, Lmiui/security/SecurityManager;->mService:Lmiui/security/ISecurityManager;
@@ -1295,11 +1151,9 @@
 
     move-result v0
 
-    .line 320
     :goto_0
     return v0
 
-    .line 318
     :catch_0
     move-exception v1
 
@@ -1314,7 +1168,6 @@
     .param p4, "userId"    # I
 
     .prologue
-    .line 435
     if-eqz p1, :cond_0
 
     instance-of v0, p1, Landroid/app/Activity;
@@ -1323,7 +1176,6 @@
 
     const/4 v4, 0x1
 
-    .line 436
     .local v4, "isFromActivity":Z
     :goto_0
     const/4 v5, -0x1
@@ -1344,7 +1196,6 @@
 
     return-object v0
 
-    .line 435
     .end local v4    # "isFromActivity":Z
     :cond_0
     const/4 v4, 0x0
@@ -1364,7 +1215,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 441
     if-eqz p1, :cond_0
 
     invoke-virtual {p0, p1, p6}, Lmiui/security/SecurityManager;->isAccessControlActived(Landroid/content/Context;I)Z
@@ -1373,16 +1223,13 @@
 
     if-nez v2, :cond_1
 
-    .line 459
     :cond_0
     :goto_0
     return-object v1
 
-    .line 445
     :cond_1
     const/4 v0, 0x0
 
-    .line 447
     .local v0, "info":Landroid/content/pm/ApplicationInfo;
     :try_start_0
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
@@ -1397,11 +1244,9 @@
 
     move-result-object v0
 
-    .line 450
     :goto_1
     if-eqz v0, :cond_0
 
-    .line 455
     if-eqz p3, :cond_2
 
     if-eqz v0, :cond_2
@@ -1421,14 +1266,12 @@
 
     if-nez v2, :cond_0
 
-    .line 459
     invoke-static {p2, p3, p5, p4, p6}, Lmiui/security/SecurityManager;->getCheckAccessIntent(Ljava/lang/String;Landroid/content/Intent;IZI)Landroid/content/Intent;
 
     move-result-object v1
 
     goto :goto_0
 
-    .line 448
     :catch_0
     move-exception v2
 
@@ -1449,12 +1292,10 @@
     .param p10, "callingUid"    # I
 
     .prologue
-    .line 344
     invoke-virtual/range {p0 .. p10}, Lmiui/security/SecurityManager;->getCheckStartActivityIntent(Landroid/content/Context;Landroid/content/pm/ApplicationInfo;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;ZIZII)Landroid/content/Intent;
 
     move-result-object v7
 
-    .line 345
     .local v7, "ret":Landroid/content/Intent;
     if-nez v7, :cond_0
 
@@ -1472,12 +1313,10 @@
 
     move/from16 v6, p9
 
-    .line 346
     invoke-virtual/range {v0 .. v6}, Lmiui/security/SecurityManager;->getCheckAccessControlIntent(Landroid/content/Context;Ljava/lang/String;Landroid/content/Intent;ZII)Landroid/content/Intent;
 
     move-result-object v7
 
-    .line 348
     :cond_0
     return-object v7
 .end method
@@ -1496,12 +1335,10 @@
     .param p10, "callingUid"    # I
 
     .prologue
-    .line 353
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v8
 
-    .line 355
     .local v8, "startTime":J
     if-eqz p5, :cond_0
 
@@ -1515,38 +1352,31 @@
 
     if-eqz v7, :cond_1
 
-    .line 356
     :cond_0
     const/4 v6, 0x0
 
-    .line 431
     :goto_0
     return-object v6
 
-    .line 359
     :cond_1
     if-nez p2, :cond_3
 
-    .line 360
     invoke-static {p3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v7
 
     if-eqz v7, :cond_2
 
-    .line 361
     const/4 v6, 0x0
 
     goto :goto_0
 
-    .line 364
     :cond_2
     :try_start_0
     invoke-static/range {p10 .. p10}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v4
 
-    .line 365
     .local v4, "callingUserId":I
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
@@ -1560,21 +1390,17 @@
 
     move-result-object p2
 
-    .line 369
     .end local v4    # "callingUserId":I
     :goto_1
     if-nez p2, :cond_3
 
-    .line 370
     const/4 v6, 0x0
 
     goto :goto_0
 
-    .line 366
     :catch_0
     move-exception v5
 
-    .line 367
     .local v5, "e":Ljava/lang/Exception;
     const-string v7, "SecurityManager"
 
@@ -1584,7 +1410,6 @@
 
     goto :goto_1
 
-    .line 374
     .end local v5    # "e":Ljava/lang/Exception;
     :cond_3
     iget v7, p2, Landroid/content/pm/ApplicationInfo;->flags:I
@@ -1599,17 +1424,14 @@
 
     if-ge v7, v10, :cond_5
 
-    .line 376
     :cond_4
     const/4 v6, 0x0
 
     goto :goto_0
 
-    .line 379
     :cond_5
     const/4 v3, 0x0
 
-    .line 381
     .local v3, "calleeAppInfo":Landroid/content/pm/ApplicationInfo;
     :try_start_1
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
@@ -1626,20 +1448,16 @@
 
     move-result-object v3
 
-    .line 385
     :goto_2
     if-nez v3, :cond_6
 
-    .line 386
     const/4 v6, 0x0
 
     goto :goto_0
 
-    .line 382
     :catch_1
     move-exception v5
 
-    .line 383
     .restart local v5    # "e":Ljava/lang/Exception;
     const-string v7, "SecurityManager"
 
@@ -1649,7 +1467,6 @@
 
     goto :goto_2
 
-    .line 389
     .end local v5    # "e":Ljava/lang/Exception;
     :cond_6
     iget v7, v3, Landroid/content/pm/ApplicationInfo;->flags:I
@@ -1664,13 +1481,11 @@
 
     if-ge v7, v10, :cond_8
 
-    .line 391
     :cond_7
     const/4 v6, 0x0
 
     goto :goto_0
 
-    .line 395
     :cond_8
     iget-object v7, p2, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
@@ -1694,17 +1509,14 @@
 
     if-eqz v7, :cond_a
 
-    .line 397
     :cond_9
     const/4 v6, 0x0
 
     goto :goto_0
 
-    .line 400
     :cond_a
     const-string v2, "android.app.action.CHECK_ALLOW_START_ACTIVITY"
 
-    .line 401
     .local v2, "action":Ljava/lang/String;
     const-string v7, "is_pad"
 
@@ -1716,18 +1528,15 @@
 
     if-eqz v7, :cond_b
 
-    .line 402
     const/4 v6, 0x0
 
     goto :goto_0
 
-    .line 406
     :cond_b
     new-instance v6, Landroid/content/Intent;
 
     invoke-direct {v6, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 407
     .local v6, "result":Landroid/content/Intent;
     const-string v7, "CallerPkgName"
 
@@ -1735,34 +1544,28 @@
 
     invoke-virtual {v6, v7, v10}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 408
     const-string v7, "CalleePkgName"
 
     iget-object v10, v3, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
     invoke-virtual {v6, v7, v10}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 409
     const-string v7, "UserId"
 
     move/from16 v0, p9
 
     invoke-virtual {v6, v7, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 410
     const/high16 v7, 0x800000
 
     invoke-virtual {v6, v7}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 411
     const-string v7, "com.miui.securitycenter"
 
     invoke-virtual {v6, v7}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 412
     if-eqz p5, :cond_e
 
-    .line 415
     invoke-virtual/range {p5 .. p5}, Landroid/content/Intent;->getFlags()I
 
     move-result v7
@@ -1773,12 +1576,10 @@
 
     if-eqz v7, :cond_c
 
-    .line 416
     const/high16 v7, 0x2000000
 
     invoke-virtual {v6, v7}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 418
     :cond_c
     const/high16 v7, 0x1000000
 
@@ -1786,20 +1587,16 @@
 
     invoke-virtual {v0, v7}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 419
     if-eqz p6, :cond_f
 
-    .line 421
     if-ltz p7, :cond_d
 
-    .line 422
     const/high16 v7, 0x2000000
 
     move-object/from16 v0, p5
 
     invoke-virtual {v0, v7}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 428
     :cond_d
     :goto_3
     const-string v7, "android.intent.extra.INTENT"
@@ -1808,7 +1605,6 @@
 
     invoke-virtual {v6, v7, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 430
     :cond_e
     const-string v7, "getCheckStartActivityIntent"
 
@@ -1816,7 +1612,6 @@
 
     goto/16 :goto_0
 
-    .line 426
     :cond_f
     const/high16 v7, 0x10000000
 
@@ -1832,7 +1627,6 @@
     .param p1, "pid"    # I
 
     .prologue
-    .line 124
     :try_start_0
     iget-object v1, p0, Lmiui/security/SecurityManager;->mService:Lmiui/security/ISecurityManager;
 
@@ -1842,19 +1636,15 @@
 
     move-result-object v1
 
-    .line 128
     :goto_0
     return-object v1
 
-    .line 125
     :catch_0
     move-exception v0
 
-    .line 126
     .local v0, "ex":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 128
     const/4 v1, 0x0
 
     goto :goto_0
@@ -1864,7 +1654,6 @@
     .locals 3
 
     .prologue
-    .line 790
     :try_start_0
     iget-object v1, p0, Lmiui/security/SecurityManager;->mService:Lmiui/security/ISecurityManager;
 
@@ -1876,11 +1665,9 @@
 
     return v1
 
-    .line 791
     :catch_0
     move-exception v0
 
-    .line 792
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -1895,7 +1682,6 @@
     .locals 1
 
     .prologue
-    .line 689
     :try_start_0
     iget-object v0, p0, Lmiui/security/SecurityManager;->mService:Lmiui/security/ISecurityManager;
 
@@ -1905,15 +1691,12 @@
 
     move-result-object v0
 
-    .line 693
     :goto_0
     return-object v0
 
-    .line 690
     :catch_0
     move-exception v0
 
-    .line 693
     const/4 v0, 0x0
 
     goto :goto_0
@@ -1924,7 +1707,6 @@
     .param p1, "componentName"    # Ljava/lang/String;
 
     .prologue
-    .line 621
     :try_start_0
     iget-object v1, p0, Lmiui/security/SecurityManager;->mService:Lmiui/security/ISecurityManager;
 
@@ -1934,15 +1716,12 @@
 
     move-result-wide v2
 
-    .line 623
     :goto_0
     return-wide v2
 
-    .line 622
     :catch_0
     move-exception v0
 
-    .line 623
     .local v0, "e":Landroid/os/RemoteException;
     const-wide/16 v2, 0x0
 
@@ -1955,7 +1734,6 @@
     .param p2, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 798
     :try_start_0
     iget-object v1, p0, Lmiui/security/SecurityManager;->mService:Lmiui/security/ISecurityManager;
 
@@ -1963,14 +1741,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 802
     return-void
 
-    .line 799
     :catch_0
     move-exception v0
 
-    .line 800
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -1986,7 +1761,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 774
     :try_start_0
     iget-object v1, p0, Lmiui/security/SecurityManager;->mService:Lmiui/security/ISecurityManager;
 
@@ -1994,14 +1768,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 778
     return-void
 
-    .line 775
     :catch_0
     move-exception v0
 
-    .line 776
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -2016,7 +1787,6 @@
     .locals 3
 
     .prologue
-    .line 308
     :try_start_0
     iget-object v1, p0, Lmiui/security/SecurityManager;->mService:Lmiui/security/ISecurityManager;
 
@@ -2032,11 +1802,9 @@
 
     return v1
 
-    .line 309
     :catch_0
     move-exception v0
 
-    .line 310
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -2052,7 +1820,6 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 578
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v0
@@ -2074,12 +1841,10 @@
 
     const/4 v1, 0x0
 
-    .line 585
     invoke-static {p2}, Lmiui/security/SecurityManager;->getUserHandle(I)I
 
     move-result p2
 
-    .line 586
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
@@ -2107,7 +1872,6 @@
     .param p2, "pkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 116
     :try_start_0
     iget-object v1, p0, Lmiui/security/SecurityManager;->mService:Lmiui/security/ISecurityManager;
 
@@ -2115,15 +1879,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 120
     :goto_0
     return-void
 
-    .line 117
     :catch_0
     move-exception v0
 
-    .line 118
     .local v0, "ex":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -2135,7 +1896,6 @@
     .param p1, "token"    # Landroid/os/IBinder;
 
     .prologue
-    .line 728
     :try_start_0
     iget-object v1, p0, Lmiui/security/SecurityManager;->mService:Lmiui/security/ISecurityManager;
 
@@ -2145,19 +1905,15 @@
 
     move-result v1
 
-    .line 732
     :goto_0
     return v1
 
-    .line 729
     :catch_0
     move-exception v0
 
-    .line 730
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 732
     const/4 v1, 0x0
 
     goto :goto_0
@@ -2177,7 +1933,6 @@
     .end annotation
 
     .prologue
-    .line 665
     .local p2, "whiteList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :try_start_0
     iget-object v1, p0, Lmiui/security/SecurityManager;->mService:Lmiui/security/ISecurityManager;
@@ -2186,15 +1941,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 669
     :goto_0
     return-void
 
-    .line 666
     :catch_0
     move-exception v0
 
-    .line 667
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "SecurityManager"
 
@@ -2212,7 +1964,6 @@
     .param p3, "userId"    # I
 
     .prologue
-    .line 649
     :try_start_0
     iget-object v0, p0, Lmiui/security/SecurityManager;->mService:Lmiui/security/ISecurityManager;
 
@@ -2220,11 +1971,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 653
     :goto_0
     return-void
 
-    .line 650
     :catch_0
     move-exception v0
 
@@ -2245,7 +1994,6 @@
     .end annotation
 
     .prologue
-    .line 657
     .local p1, "wakePathWhiteList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :try_start_0
     iget-object v0, p0, Lmiui/security/SecurityManager;->mService:Lmiui/security/ISecurityManager;
@@ -2254,11 +2002,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 661
     :goto_0
     return-void
 
-    .line 658
     :catch_0
     move-exception v0
 
@@ -2271,7 +2017,6 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 630
     :try_start_0
     iget-object v0, p0, Lmiui/security/SecurityManager;->mService:Lmiui/security/ISecurityManager;
 
@@ -2281,15 +2026,12 @@
 
     move-result v0
 
-    .line 634
     :goto_0
     return v0
 
-    .line 631
     :catch_0
     move-exception v0
 
-    .line 634
     const/4 v0, 0x0
 
     goto :goto_0
@@ -2300,7 +2042,6 @@
     .param p1, "path"    # Ljava/lang/String;
 
     .prologue
-    .line 640
     :try_start_0
     iget-object v0, p0, Lmiui/security/SecurityManager;->mService:Lmiui/security/ISecurityManager;
 
@@ -2310,15 +2051,12 @@
 
     move-result-object v0
 
-    .line 644
     :goto_0
     return-object v0
 
-    .line 641
     :catch_0
     move-exception v0
 
-    .line 644
     const/4 v0, 0x0
 
     goto :goto_0
@@ -2329,7 +2067,6 @@
     .param p1, "callback"    # Lcom/android/internal/app/IWakePathCallback;
 
     .prologue
-    .line 698
     :try_start_0
     iget-object v0, p0, Lmiui/security/SecurityManager;->mService:Lmiui/security/ISecurityManager;
 
@@ -2337,11 +2074,9 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 702
     :goto_0
     return-void
 
-    .line 699
     :catch_0
     move-exception v0
 
@@ -2353,7 +2088,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 194
     :try_start_0
     iget-object v0, p0, Lmiui/security/SecurityManager;->mService:Lmiui/security/ISecurityManager;
 
@@ -2361,11 +2095,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 197
     :goto_0
     return-void
 
-    .line 195
     :catch_0
     move-exception v0
 
@@ -2378,7 +2110,6 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 207
     :try_start_0
     iget-object v1, p0, Lmiui/security/SecurityManager;->mService:Lmiui/security/ISecurityManager;
 
@@ -2386,14 +2117,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 211
     return-void
 
-    .line 208
     :catch_0
     move-exception v0
 
-    .line 209
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -2409,7 +2137,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 673
     :try_start_0
     iget-object v0, p0, Lmiui/security/SecurityManager;->mService:Lmiui/security/ISecurityManager;
 
@@ -2417,11 +2144,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 677
     :goto_0
     return-void
 
-    .line 674
     :catch_0
     move-exception v0
 
@@ -2433,7 +2158,6 @@
     .param p1, "pattern"    # Ljava/lang/String;
 
     .prologue
-    .line 280
     :try_start_0
     iget-object v1, p0, Lmiui/security/SecurityManager;->mService:Lmiui/security/ISecurityManager;
 
@@ -2445,14 +2169,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 284
     return-void
 
-    .line 281
     :catch_0
     move-exception v0
 
-    .line 282
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -2468,7 +2189,6 @@
     .param p1, "status"    # I
 
     .prologue
-    .line 720
     :try_start_0
     iget-object v0, p0, Lmiui/security/SecurityManager;->mService:Lmiui/security/ISecurityManager;
 
@@ -2476,11 +2196,9 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 724
     :goto_0
     return-void
 
-    .line 721
     :catch_0
     move-exception v0
 
@@ -2493,7 +2211,6 @@
     .param p2, "enabled"    # Z
 
     .prologue
-    .line 259
     :try_start_0
     iget-object v0, p0, Lmiui/security/SecurityManager;->mService:Lmiui/security/ISecurityManager;
 
@@ -2501,11 +2218,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 262
     :goto_0
     return-void
 
-    .line 260
     :catch_0
     move-exception v0
 
@@ -2519,7 +2234,6 @@
     .param p3, "userId"    # I
 
     .prologue
-    .line 266
     :try_start_0
     iget-object v1, p0, Lmiui/security/SecurityManager;->mService:Lmiui/security/ISecurityManager;
 
@@ -2527,14 +2241,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 270
     return-void
 
-    .line 267
     :catch_0
     move-exception v0
 
-    .line 268
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -2551,7 +2262,6 @@
     .param p2, "enabled"    # Z
 
     .prologue
-    .line 326
     :try_start_0
     iget-object v0, p0, Lmiui/security/SecurityManager;->mService:Lmiui/security/ISecurityManager;
 
@@ -2559,11 +2269,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 329
     :goto_0
     return-void
 
-    .line 327
     :catch_0
     move-exception v0
 
@@ -2576,7 +2284,6 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 761
     :try_start_0
     iget-object v1, p0, Lmiui/security/SecurityManager;->mService:Lmiui/security/ISecurityManager;
 
@@ -2584,14 +2291,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 765
     return-void
 
-    .line 762
     :catch_0
     move-exception v0
 
-    .line 763
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -2607,7 +2311,6 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 681
     :try_start_0
     iget-object v0, p0, Lmiui/security/SecurityManager;->mService:Lmiui/security/ISecurityManager;
 
@@ -2615,11 +2318,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 685
     :goto_0
     return-void
 
-    .line 682
     :catch_0
     move-exception v0
 
@@ -2632,7 +2333,6 @@
     .param p2, "timeInSeconds"    # J
 
     .prologue
-    .line 613
     :try_start_0
     iget-object v0, p0, Lmiui/security/SecurityManager;->mService:Lmiui/security/ISecurityManager;
 
@@ -2640,11 +2340,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 617
     :goto_0
     return-void
 
-    .line 614
     :catch_0
     move-exception v0
 
@@ -2658,13 +2356,11 @@
     .param p3, "count"    # I
 
     .prologue
-    .line 156
     :try_start_0
     invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 157
     .local v1, "pkgName":Ljava/lang/String;
     iget-object v2, p0, Lmiui/security/SecurityManager;->mService:Lmiui/security/ISecurityManager;
 
@@ -2674,20 +2370,16 @@
 
     move-result v2
 
-    .line 161
     .end local v1    # "pkgName":Ljava/lang/String;
     :goto_0
     return v2
 
-    .line 158
     :catch_0
     move-exception v0
 
-    .line 159
     .local v0, "ex":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 161
     const/4 v2, 0x0
 
     goto :goto_0
@@ -2697,7 +2389,6 @@
     .locals 2
 
     .prologue
-    .line 170
     :try_start_0
     iget-object v1, p0, Lmiui/security/SecurityManager;->mService:Lmiui/security/ISecurityManager;
 
@@ -2707,19 +2398,15 @@
 
     move-result v1
 
-    .line 174
     :goto_0
     return v1
 
-    .line 171
     :catch_0
     move-exception v0
 
-    .line 172
     .local v0, "ex":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 174
     const/4 v1, 0x0
 
     goto :goto_0

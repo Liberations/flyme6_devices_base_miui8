@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 102
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -48,8 +47,7 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 105
-    const-string/jumbo v1, "private"
+    const-string v1, "private"
 
     invoke-virtual {p1}, Landroid/os/storage/VolumeInfo;->getId()Ljava/lang/String;
 
@@ -61,12 +59,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 112
     :cond_0
     :goto_0
     return v0
 
-    .line 107
     :cond_1
     invoke-virtual {p1}, Landroid/os/storage/VolumeInfo;->getDescription()Ljava/lang/String;
 
@@ -74,12 +70,10 @@
 
     if-nez v1, :cond_2
 
-    .line 108
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 109
     :cond_2
     invoke-virtual {p2}, Landroid/os/storage/VolumeInfo;->getDescription()Ljava/lang/String;
 
@@ -87,7 +81,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 112
     invoke-virtual {p1}, Landroid/os/storage/VolumeInfo;->getDescription()Ljava/lang/String;
 
     move-result-object v0
@@ -109,7 +102,6 @@
     .param p2, "x1"    # Ljava/lang/Object;
 
     .prologue
-    .line 102
     check-cast p1, Landroid/os/storage/VolumeInfo;
 
     .end local p1    # "x0":Ljava/lang/Object;

@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 169
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,10 +29,8 @@
     .param p0, "keymasterAlgorithm"    # I
 
     .prologue
-    .line 185
     packed-switch p0, :pswitch_data_0
 
-    .line 191
     :pswitch_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -59,11 +56,9 @@
 
     throw v0
 
-    .line 187
     :pswitch_1
     const-string v0, "EC"
 
-    .line 189
     :goto_0
     return-object v0
 
@@ -72,7 +67,6 @@
 
     goto :goto_0
 
-    .line 185
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_2
@@ -87,10 +81,8 @@
     .param p1, "keymasterDigest"    # I
 
     .prologue
-    .line 211
     sparse-switch p0, :sswitch_data_0
 
-    .line 231
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -115,19 +107,15 @@
 
     throw v0
 
-    .line 213
     :sswitch_0
     const-string v0, "AES"
 
-    .line 225
     :goto_0
     return-object v0
 
-    .line 215
     :sswitch_1
     packed-switch p1, :pswitch_data_0
 
-    .line 227
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -156,44 +144,37 @@
 
     throw v0
 
-    .line 217
     :pswitch_0
     const-string v0, "HmacSHA1"
 
     goto :goto_0
 
-    .line 219
     :pswitch_1
     const-string v0, "HmacSHA224"
 
     goto :goto_0
 
-    .line 221
     :pswitch_2
     const-string v0, "HmacSHA256"
 
     goto :goto_0
 
-    .line 223
     :pswitch_3
     const-string v0, "HmacSHA384"
 
     goto :goto_0
 
-    .line 225
     :pswitch_4
     const-string v0, "HmacSHA512"
 
     goto :goto_0
 
-    .line 211
     :sswitch_data_0
     .sparse-switch
         0x20 -> :sswitch_0
         0x80 -> :sswitch_1
     .end sparse-switch
 
-    .line 215
     :pswitch_data_0
     .packed-switch 0x2
         :pswitch_0
@@ -209,7 +190,6 @@
     .param p0, "algorithm"    # Ljava/lang/String;
 
     .prologue
-    .line 173
     const-string v0, "EC"
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -218,14 +198,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 174
     const/4 v0, 0x3
 
-    .line 176
     :goto_0
     return v0
 
-    .line 175
     :cond_0
     const-string v0, "RSA"
 
@@ -235,12 +212,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 176
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 178
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -280,14 +255,12 @@
 
     const/4 v5, -0x1
 
-    .line 242
     sget-object v6, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     invoke-virtual {p0, v6}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 243
     .local v0, "algorithmUpper":Ljava/lang/String;
     const-string v6, "HMAC"
 
@@ -297,7 +270,6 @@
 
     if-eqz v6, :cond_1
 
-    .line 244
     const-string v6, "HMAC"
 
     invoke-virtual {v6}, Ljava/lang/String;->length()I
@@ -308,7 +280,6 @@
 
     move-result-object v1
 
-    .line 245
     .local v1, "digestUpper":Ljava/lang/String;
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
@@ -320,7 +291,6 @@
     :goto_0
     packed-switch v5, :pswitch_data_0
 
-    .line 257
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -345,7 +315,6 @@
 
     throw v2
 
-    .line 245
     :sswitch_0
     const-string v6, "SHA1"
 
@@ -414,7 +383,6 @@
     :pswitch_0
     move v2, v3
 
-    .line 261
     .end local v1    # "digestUpper":Ljava/lang/String;
     :goto_1
     :pswitch_1
@@ -424,16 +392,13 @@
     :pswitch_2
     move v2, v4
 
-    .line 251
     goto :goto_1
 
-    .line 253
     :pswitch_3
     const/4 v2, 0x5
 
     goto :goto_1
 
-    .line 255
     :pswitch_4
     const/4 v2, 0x6
 
@@ -443,10 +408,8 @@
     :cond_1
     move v2, v5
 
-    .line 261
     goto :goto_1
 
-    .line 245
     nop
 
     :sswitch_data_0
@@ -473,7 +436,6 @@
     .param p0, "algorithm"    # Ljava/lang/String;
 
     .prologue
-    .line 198
     const-string v0, "AES"
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -482,14 +444,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 199
     const/16 v0, 0x20
 
-    .line 201
     :goto_0
     return v0
 
-    .line 200
     :cond_0
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
@@ -505,12 +464,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 201
     const/16 v0, 0x80
 
     goto :goto_0
 
-    .line 203
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 

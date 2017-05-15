@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 902
     iput-object p1, p0, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter$1;->this$1:Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;
 
     iput-object p2, p0, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter$1;->val$this$0:Lcom/android/internal/app/ChooserActivity;
@@ -41,15 +40,12 @@
     .locals 1
 
     .prologue
-    .line 905
     invoke-super {p0}, Landroid/database/DataSetObserver;->onChanged()V
 
-    .line 906
     iget-object v0, p0, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter$1;->this$1:Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;
 
     invoke-virtual {v0}, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;->notifyDataSetChanged()V
 
-    .line 907
     return-void
 .end method
 
@@ -57,14 +53,11 @@
     .locals 1
 
     .prologue
-    .line 911
     invoke-super {p0}, Landroid/database/DataSetObserver;->onInvalidated()V
 
-    .line 912
     iget-object v0, p0, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter$1;->this$1:Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;
 
     invoke-virtual {v0}, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;->notifyDataSetInvalidated()V
 
-    .line 913
     return-void
 .end method

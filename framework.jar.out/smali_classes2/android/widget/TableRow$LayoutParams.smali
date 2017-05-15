@@ -43,27 +43,22 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 464
     const/4 v0, -0x2
 
     invoke-direct {p0, v1, v0}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
-    .line 412
     const/4 v0, 0x2
 
     new-array v0, v0, [I
 
     iput-object v0, p0, Landroid/widget/TableRow$LayoutParams;->mOffset:[I
 
-    .line 465
     iput v1, p0, Landroid/widget/TableRow$LayoutParams;->column:I
 
-    .line 466
     const/4 v0, 0x1
 
     iput v0, p0, Landroid/widget/TableRow$LayoutParams;->span:I
 
-    .line 467
     return-void
 .end method
 
@@ -72,13 +67,10 @@
     .param p1, "column"    # I
 
     .prologue
-    .line 479
     invoke-direct {p0}, Landroid/widget/TableRow$LayoutParams;-><init>()V
 
-    .line 480
     iput p1, p0, Landroid/widget/TableRow$LayoutParams;->column:I
 
-    .line 481
     return-void
 .end method
 
@@ -88,27 +80,22 @@
     .param p2, "h"    # I
 
     .prologue
-    .line 440
     invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
-    .line 412
     const/4 v0, 0x2
 
     new-array v0, v0, [I
 
     iput-object v0, p0, Landroid/widget/TableRow$LayoutParams;->mOffset:[I
 
-    .line 441
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/widget/TableRow$LayoutParams;->column:I
 
-    .line 442
     const/4 v0, 0x1
 
     iput v0, p0, Landroid/widget/TableRow$LayoutParams;->span:I
 
-    .line 443
     return-void
 .end method
 
@@ -119,27 +106,22 @@
     .param p3, "initWeight"    # F
 
     .prologue
-    .line 453
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/LinearLayout$LayoutParams;-><init>(IIF)V
 
-    .line 412
     const/4 v0, 0x2
 
     new-array v0, v0, [I
 
     iput-object v0, p0, Landroid/widget/TableRow$LayoutParams;->mOffset:[I
 
-    .line 454
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/widget/TableRow$LayoutParams;->column:I
 
-    .line 455
     const/4 v0, 0x1
 
     iput v0, p0, Landroid/widget/TableRow$LayoutParams;->span:I
 
-    .line 456
     return-void
 .end method
 
@@ -151,24 +133,20 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 418
     invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout$LayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 412
     const/4 v1, 0x2
 
     new-array v1, v1, [I
 
     iput-object v1, p0, Landroid/widget/TableRow$LayoutParams;->mOffset:[I
 
-    .line 420
     sget-object v1, Lcom/android/internal/R$styleable;->TableRow_Cell:[I
 
     invoke-virtual {p1, p2, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    .line 424
     .local v0, "a":Landroid/content/res/TypedArray;
     const/4 v1, 0x0
 
@@ -180,26 +158,21 @@
 
     iput v1, p0, Landroid/widget/TableRow$LayoutParams;->column:I
 
-    .line 425
     invoke-virtual {v0, v3, v3}, Landroid/content/res/TypedArray;->getInt(II)I
 
     move-result v1
 
     iput v1, p0, Landroid/widget/TableRow$LayoutParams;->span:I
 
-    .line 426
     iget v1, p0, Landroid/widget/TableRow$LayoutParams;->span:I
 
     if-gt v1, v3, :cond_0
 
-    .line 427
     iput v3, p0, Landroid/widget/TableRow$LayoutParams;->span:I
 
-    .line 430
     :cond_0
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 431
     return-void
 .end method
 
@@ -208,17 +181,14 @@
     .param p1, "p"    # Landroid/view/ViewGroup$LayoutParams;
 
     .prologue
-    .line 487
     invoke-direct {p0, p1}, Landroid/widget/LinearLayout$LayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 412
     const/4 v0, 0x2
 
     new-array v0, v0, [I
 
     iput-object v0, p0, Landroid/widget/TableRow$LayoutParams;->mOffset:[I
 
-    .line 488
     return-void
 .end method
 
@@ -227,17 +197,14 @@
     .param p1, "source"    # Landroid/view/ViewGroup$MarginLayoutParams;
 
     .prologue
-    .line 494
     invoke-direct {p0, p1}, Landroid/widget/LinearLayout$LayoutParams;-><init>(Landroid/view/ViewGroup$MarginLayoutParams;)V
 
-    .line 412
     const/4 v0, 0x2
 
     new-array v0, v0, [I
 
     iput-object v0, p0, Landroid/widget/TableRow$LayoutParams;->mOffset:[I
 
-    .line 495
     return-void
 .end method
 
@@ -246,7 +213,6 @@
     .param p0, "x0"    # Landroid/widget/TableRow$LayoutParams;
 
     .prologue
-    .line 396
     iget-object v0, p0, Landroid/widget/TableRow$LayoutParams;->mOffset:[I
 
     return-object v0
@@ -259,24 +225,20 @@
     .param p1, "encoder"    # Landroid/view/ViewHierarchyEncoder;
 
     .prologue
-    .line 517
     invoke-super {p0, p1}, Landroid/widget/LinearLayout$LayoutParams;->encodeProperties(Landroid/view/ViewHierarchyEncoder;)V
 
-    .line 518
     const-string v0, "layout:column"
 
     iget v1, p0, Landroid/widget/TableRow$LayoutParams;->column:I
 
     invoke-virtual {p1, v0, v1}, Landroid/view/ViewHierarchyEncoder;->addProperty(Ljava/lang/String;I)V
 
-    .line 519
     const-string v0, "layout:span"
 
     iget v1, p0, Landroid/widget/TableRow$LayoutParams;->span:I
 
     invoke-virtual {p1, v0, v1}, Landroid/view/ViewHierarchyEncoder;->addProperty(Ljava/lang/String;I)V
 
-    .line 520
     return-void
 .end method
 
@@ -287,14 +249,12 @@
     .param p3, "heightAttr"    # I
 
     .prologue
-    .line 500
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 501
     const-string v0, "layout_width"
 
     invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getLayoutDimension(ILjava/lang/String;)I
@@ -303,7 +263,6 @@
 
     iput v0, p0, Landroid/widget/TableRow$LayoutParams;->width:I
 
-    .line 507
     :goto_0
     invoke-virtual {p1, p3}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -311,7 +270,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 508
     const-string v0, "layout_height"
 
     invoke-virtual {p1, p3, v0}, Landroid/content/res/TypedArray;->getLayoutDimension(ILjava/lang/String;)I
@@ -320,11 +278,9 @@
 
     iput v0, p0, Landroid/widget/TableRow$LayoutParams;->height:I
 
-    .line 512
     :goto_1
     return-void
 
-    .line 503
     :cond_0
     const/4 v0, -0x1
 
@@ -332,7 +288,6 @@
 
     goto :goto_0
 
-    .line 510
     :cond_1
     const/4 v0, -0x2
 

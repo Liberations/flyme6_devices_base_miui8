@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 546
     invoke-direct {p0}, Landroid/app/SystemServiceRegistry$CachedServiceFetcher;-><init>()V
 
     return-void
@@ -41,20 +40,17 @@
     .param p1, "ctx"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 549
     const-string v2, "appops"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 550
     .local v0, "b":Landroid/os/IBinder;
     invoke-static {v0}, Lcom/android/internal/app/IAppOpsService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/internal/app/IAppOpsService;
 
     move-result-object v1
 
-    .line 551
     .local v1, "service":Lcom/android/internal/app/IAppOpsService;
     new-instance v2, Landroid/app/AppOpsManager;
 
@@ -68,7 +64,6 @@
     .param p1, "x0"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 546
     invoke-virtual {p0, p1}, Landroid/app/SystemServiceRegistry$50;->createService(Landroid/app/ContextImpl;)Landroid/app/AppOpsManager;
 
     move-result-object v0

@@ -33,7 +33,6 @@
     .locals 1
 
     .prologue
-    .line 553
     const-string v0, "content://records/call_records"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -49,9 +48,7 @@
     .locals 0
 
     .prologue
-    .line 550
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 555
     return-void
 .end method

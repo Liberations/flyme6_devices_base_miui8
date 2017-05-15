@@ -72,7 +72,6 @@
     .locals 1
 
     .prologue
-    .line 188
     new-instance v0, Lcom/miui/whetstone/CloudControlInfo$1;
 
     invoke-direct {v0}, Lcom/miui/whetstone/CloudControlInfo$1;-><init>()V
@@ -87,10 +86,8 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 128
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 129
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -115,12 +112,10 @@
 
     invoke-static {v1}, Lcom/miui/whetstone/CloudControlInfo;->log(Ljava/lang/String;)V
 
-    .line 130
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 131
     .local v0, "flag":I
     and-int/lit8 v1, v0, 0x1
 
@@ -132,7 +127,6 @@
 
     iput-object v1, p0, Lcom/miui/whetstone/CloudControlInfo;->mPkgName:Ljava/lang/String;
 
-    .line 132
     :cond_0
     and-int/lit8 v1, v0, 0x2
 
@@ -144,7 +138,6 @@
 
     iput-object v1, p0, Lcom/miui/whetstone/CloudControlInfo;->mClassName:Ljava/lang/String;
 
-    .line 133
     :cond_1
     and-int/lit8 v1, v0, 0x4
 
@@ -156,7 +149,6 @@
 
     iput-object v1, p0, Lcom/miui/whetstone/CloudControlInfo;->mUrl:Ljava/lang/String;
 
-    .line 134
     :cond_2
     and-int/lit8 v1, v0, 0x8
 
@@ -168,7 +160,6 @@
 
     iput-object v1, p0, Lcom/miui/whetstone/CloudControlInfo;->mParams:Ljava/lang/String;
 
-    .line 135
     :cond_3
     and-int/lit8 v1, v0, 0x10
 
@@ -180,7 +171,6 @@
 
     iput-object v1, p0, Lcom/miui/whetstone/CloudControlInfo;->mHttpMethod:Ljava/lang/String;
 
-    .line 136
     :cond_4
     and-int/lit8 v1, v0, 0x20
 
@@ -192,7 +182,6 @@
 
     iput v1, p0, Lcom/miui/whetstone/CloudControlInfo;->mTriggerDelayAtMin:I
 
-    .line 137
     :cond_5
     and-int/lit8 v1, v0, 0x40
 
@@ -204,7 +193,6 @@
 
     iput v1, p0, Lcom/miui/whetstone/CloudControlInfo;->mIntervalAtMin:I
 
-    .line 138
     :cond_6
     and-int/lit16 v1, v0, 0x80
 
@@ -216,7 +204,6 @@
 
     iput v1, p0, Lcom/miui/whetstone/CloudControlInfo;->mTimeout:I
 
-    .line 139
     :cond_7
     and-int/lit16 v1, v0, 0x100
 
@@ -233,7 +220,6 @@
     :goto_0
     iput-boolean v1, p0, Lcom/miui/whetstone/CloudControlInfo;->mIsIntentWithResponse:Z
 
-    .line 140
     :cond_8
     and-int/lit16 v1, v0, 0x200
 
@@ -245,11 +231,9 @@
 
     iput-object v1, p0, Lcom/miui/whetstone/CloudControlInfo;->mConfig:Ljava/lang/String;
 
-    .line 141
     :cond_9
     return-void
 
-    .line 139
     :cond_a
     const/4 v1, 0x0
 
@@ -261,13 +245,10 @@
     .param p1, "c"    # Lcom/miui/whetstone/CloudControlInfo;
 
     .prologue
-    .line 76
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 77
     invoke-virtual {p0, p1}, Lcom/miui/whetstone/CloudControlInfo;->copyFrom(Lcom/miui/whetstone/CloudControlInfo;)V
 
-    .line 78
     return-void
 .end method
 
@@ -280,10 +261,8 @@
     .param p5, "httpMethod"    # Ljava/lang/String;
 
     .prologue
-    .line 53
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 54
     const/4 v6, 0x0
 
     const/4 v7, 0x0
@@ -308,7 +287,6 @@
 
     invoke-virtual/range {v0 .. v10}, Lcom/miui/whetstone/CloudControlInfo;->initialize(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIIZLjava/lang/String;)V
 
-    .line 56
     return-void
 .end method
 
@@ -326,13 +304,10 @@
     .param p10, "config"    # Ljava/lang/String;
 
     .prologue
-    .line 64
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 65
     invoke-virtual/range {p0 .. p10}, Lcom/miui/whetstone/CloudControlInfo;->initialize(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIIZLjava/lang/String;)V
 
-    .line 67
     return-void
 .end method
 
@@ -340,10 +315,8 @@
     .locals 2
 
     .prologue
-    .line 144
     const/4 v0, 0x0
 
-    .line 145
     .local v0, "flag":I
     iget-object v1, p0, Lcom/miui/whetstone/CloudControlInfo;->mPkgName:Ljava/lang/String;
 
@@ -351,7 +324,6 @@
 
     or-int/lit8 v0, v0, 0x1
 
-    .line 146
     :cond_0
     iget-object v1, p0, Lcom/miui/whetstone/CloudControlInfo;->mClassName:Ljava/lang/String;
 
@@ -359,7 +331,6 @@
 
     or-int/lit8 v0, v0, 0x2
 
-    .line 147
     :cond_1
     iget-object v1, p0, Lcom/miui/whetstone/CloudControlInfo;->mUrl:Ljava/lang/String;
 
@@ -367,7 +338,6 @@
 
     or-int/lit8 v0, v0, 0x4
 
-    .line 148
     :cond_2
     iget-object v1, p0, Lcom/miui/whetstone/CloudControlInfo;->mParams:Ljava/lang/String;
 
@@ -375,7 +345,6 @@
 
     or-int/lit8 v0, v0, 0x8
 
-    .line 149
     :cond_3
     iget-object v1, p0, Lcom/miui/whetstone/CloudControlInfo;->mHttpMethod:Ljava/lang/String;
 
@@ -383,27 +352,21 @@
 
     or-int/lit8 v0, v0, 0x10
 
-    .line 150
     :cond_4
     or-int/lit8 v0, v0, 0x20
 
-    .line 151
     or-int/lit8 v0, v0, 0x40
 
-    .line 152
     or-int/lit16 v0, v0, 0x80
 
-    .line 153
     or-int/lit16 v0, v0, 0x100
 
-    .line 154
     iget-object v1, p0, Lcom/miui/whetstone/CloudControlInfo;->mConfig:Ljava/lang/String;
 
     if-eqz v1, :cond_5
 
     or-int/lit16 v0, v0, 0x200
 
-    .line 155
     :cond_5
     return v0
 .end method
@@ -413,12 +376,10 @@
     .param p0, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 266
     const-string v0, "CloudControlInfo"
 
     invoke-static {v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 267
     return-void
 .end method
 
@@ -429,57 +390,46 @@
     .param p1, "c"    # Lcom/miui/whetstone/CloudControlInfo;
 
     .prologue
-    .line 111
     iget-object v0, p1, Lcom/miui/whetstone/CloudControlInfo;->mPkgName:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/miui/whetstone/CloudControlInfo;->mPkgName:Ljava/lang/String;
 
-    .line 112
     iget-object v0, p1, Lcom/miui/whetstone/CloudControlInfo;->mClassName:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/miui/whetstone/CloudControlInfo;->mClassName:Ljava/lang/String;
 
-    .line 113
     iget-object v0, p1, Lcom/miui/whetstone/CloudControlInfo;->mUrl:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/miui/whetstone/CloudControlInfo;->mUrl:Ljava/lang/String;
 
-    .line 114
     iget-object v0, p1, Lcom/miui/whetstone/CloudControlInfo;->mParams:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/miui/whetstone/CloudControlInfo;->mParams:Ljava/lang/String;
 
-    .line 115
     iget-object v0, p1, Lcom/miui/whetstone/CloudControlInfo;->mHttpMethod:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/miui/whetstone/CloudControlInfo;->mHttpMethod:Ljava/lang/String;
 
-    .line 116
     iget v0, p1, Lcom/miui/whetstone/CloudControlInfo;->mTriggerDelayAtMin:I
 
     iput v0, p0, Lcom/miui/whetstone/CloudControlInfo;->mTriggerDelayAtMin:I
 
-    .line 117
     iget v0, p1, Lcom/miui/whetstone/CloudControlInfo;->mIntervalAtMin:I
 
     iput v0, p0, Lcom/miui/whetstone/CloudControlInfo;->mIntervalAtMin:I
 
-    .line 118
     iget v0, p1, Lcom/miui/whetstone/CloudControlInfo;->mTimeout:I
 
     iput v0, p0, Lcom/miui/whetstone/CloudControlInfo;->mTimeout:I
 
-    .line 119
     iget-boolean v0, p1, Lcom/miui/whetstone/CloudControlInfo;->mIsIntentWithResponse:Z
 
     iput-boolean v0, p0, Lcom/miui/whetstone/CloudControlInfo;->mIsIntentWithResponse:Z
 
-    .line 120
     iget-object v0, p1, Lcom/miui/whetstone/CloudControlInfo;->mConfig:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/miui/whetstone/CloudControlInfo;->mConfig:Ljava/lang/String;
 
-    .line 121
     return-void
 .end method
 
@@ -487,7 +437,6 @@
     .locals 1
 
     .prologue
-    .line 180
     const/4 v0, 0x0
 
     return v0
@@ -500,7 +449,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 206
     :try_start_0
     move-object v0, p1
 
@@ -510,25 +458,20 @@
     :try_end_0
     .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 211
     .local v2, "p":Lcom/miui/whetstone/CloudControlInfo;
     if-nez p1, :cond_1
 
-    .line 215
     .end local v2    # "p":Lcom/miui/whetstone/CloudControlInfo;
     :cond_0
     :goto_0
     return v3
 
-    .line 207
     :catch_0
     move-exception v1
 
-    .line 208
     .local v1, "ex":Ljava/lang/ClassCastException;
     goto :goto_0
 
-    .line 215
     .end local v1    # "ex":Ljava/lang/ClassCastException;
     .restart local v2    # "p":Lcom/miui/whetstone/CloudControlInfo;
     :cond_1
@@ -625,12 +568,11 @@
     .locals 2
 
     .prologue
-    .line 248
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "{"
+    const-string v1, "{"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -654,7 +596,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -681,37 +623,26 @@
     .param p10, "config"    # Ljava/lang/String;
 
     .prologue
-    .line 95
     iput-object p1, p0, Lcom/miui/whetstone/CloudControlInfo;->mPkgName:Ljava/lang/String;
 
-    .line 96
     iput-object p2, p0, Lcom/miui/whetstone/CloudControlInfo;->mClassName:Ljava/lang/String;
 
-    .line 97
     iput-object p3, p0, Lcom/miui/whetstone/CloudControlInfo;->mUrl:Ljava/lang/String;
 
-    .line 98
     iput-object p4, p0, Lcom/miui/whetstone/CloudControlInfo;->mParams:Ljava/lang/String;
 
-    .line 99
     iput-object p5, p0, Lcom/miui/whetstone/CloudControlInfo;->mHttpMethod:Ljava/lang/String;
 
-    .line 100
     iput p6, p0, Lcom/miui/whetstone/CloudControlInfo;->mTriggerDelayAtMin:I
 
-    .line 101
     iput p7, p0, Lcom/miui/whetstone/CloudControlInfo;->mIntervalAtMin:I
 
-    .line 102
     iput p8, p0, Lcom/miui/whetstone/CloudControlInfo;->mTimeout:I
 
-    .line 103
     iput-boolean p9, p0, Lcom/miui/whetstone/CloudControlInfo;->mIsIntentWithResponse:Z
 
-    .line 104
     iput-object p10, p0, Lcom/miui/whetstone/CloudControlInfo;->mConfig:Ljava/lang/String;
 
-    .line 105
     return-void
 .end method
 
@@ -719,7 +650,6 @@
     .locals 1
 
     .prologue
-    .line 255
     iget-object v0, p0, Lcom/miui/whetstone/CloudControlInfo;->mPkgName:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -771,7 +701,6 @@
     .locals 2
 
     .prologue
-    .line 233
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -909,16 +838,13 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 162
     invoke-direct {p0}, Lcom/miui/whetstone/CloudControlInfo;->buildFlagValue()I
 
     move-result v0
 
-    .line 163
     .local v0, "flag":I
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 164
     iget-object v1, p0, Lcom/miui/whetstone/CloudControlInfo;->mPkgName:Ljava/lang/String;
 
     if-eqz v1, :cond_0
@@ -927,7 +853,6 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 165
     :cond_0
     iget-object v1, p0, Lcom/miui/whetstone/CloudControlInfo;->mClassName:Ljava/lang/String;
 
@@ -937,7 +862,6 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 166
     :cond_1
     iget-object v1, p0, Lcom/miui/whetstone/CloudControlInfo;->mUrl:Ljava/lang/String;
 
@@ -947,7 +871,6 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 167
     :cond_2
     iget-object v1, p0, Lcom/miui/whetstone/CloudControlInfo;->mParams:Ljava/lang/String;
 
@@ -957,7 +880,6 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 168
     :cond_3
     iget-object v1, p0, Lcom/miui/whetstone/CloudControlInfo;->mHttpMethod:Ljava/lang/String;
 
@@ -967,23 +889,19 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 169
     :cond_4
     iget v1, p0, Lcom/miui/whetstone/CloudControlInfo;->mTriggerDelayAtMin:I
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 170
     iget v1, p0, Lcom/miui/whetstone/CloudControlInfo;->mIntervalAtMin:I
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 171
     iget v1, p0, Lcom/miui/whetstone/CloudControlInfo;->mTimeout:I
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 172
     iget-boolean v1, p0, Lcom/miui/whetstone/CloudControlInfo;->mIsIntentWithResponse:Z
 
     if-eqz v1, :cond_6
@@ -995,7 +913,6 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 173
     iget-object v1, p0, Lcom/miui/whetstone/CloudControlInfo;->mConfig:Ljava/lang/String;
 
     if-eqz v1, :cond_5
@@ -1004,11 +921,9 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 174
     :cond_5
     return-void
 
-    .line 172
     :cond_6
     const/4 v1, 0x0
 

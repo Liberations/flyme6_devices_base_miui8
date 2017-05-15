@@ -112,7 +112,6 @@
     .locals 1
 
     .prologue
-    .line 136
     new-instance v0, Lcom/miui/whetstone/strategy/WhetstonePackageInfo$1;
 
     invoke-direct {v0}, Lcom/miui/whetstone/strategy/WhetstonePackageInfo$1;-><init>()V
@@ -127,13 +126,10 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 146
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 147
     invoke-virtual {p0, p1}, Lcom/miui/whetstone/strategy/WhetstonePackageInfo;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 148
     return-void
 .end method
 
@@ -143,7 +139,6 @@
     .param p2, "x1"    # Lcom/miui/whetstone/strategy/WhetstonePackageInfo$1;
 
     .prologue
-    .line 9
     invoke-direct {p0, p1}, Lcom/miui/whetstone/strategy/WhetstonePackageInfo;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -161,34 +156,24 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 74
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 75
     iput-object p1, p0, Lcom/miui/whetstone/strategy/WhetstonePackageInfo;->packageName:Ljava/lang/String;
 
-    .line 76
     iput-object p2, p0, Lcom/miui/whetstone/strategy/WhetstonePackageInfo;->samePackageList:Ljava/lang/String;
 
-    .line 77
     iput p3, p0, Lcom/miui/whetstone/strategy/WhetstonePackageInfo;->capacity:I
 
-    .line 78
     iput p4, p0, Lcom/miui/whetstone/strategy/WhetstonePackageInfo;->uiMemoryThresold:I
 
-    .line 79
     iput p5, p0, Lcom/miui/whetstone/strategy/WhetstonePackageInfo;->nonUiMemoryThresold:I
 
-    .line 80
     iput-boolean p6, p0, Lcom/miui/whetstone/strategy/WhetstonePackageInfo;->mScreenOffClear:Z
 
-    .line 81
     iput v0, p0, Lcom/miui/whetstone/strategy/WhetstonePackageInfo;->flag:I
 
-    .line 82
     iput v0, p0, Lcom/miui/whetstone/strategy/WhetstonePackageInfo;->type:I
 
-    .line 83
     return-void
 .end method
 
@@ -200,13 +185,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 65
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 66
     iput-object p1, p0, Lcom/miui/whetstone/strategy/WhetstonePackageInfo;->packageName:Ljava/lang/String;
 
-    .line 67
     if-eqz p2, :cond_0
 
     const/high16 v0, -0x80000000
@@ -214,19 +196,15 @@
     :goto_0
     iput v0, p0, Lcom/miui/whetstone/strategy/WhetstonePackageInfo;->flag:I
 
-    .line 68
     iput v1, p0, Lcom/miui/whetstone/strategy/WhetstonePackageInfo;->type:I
 
-    .line 69
     iput-boolean v1, p0, Lcom/miui/whetstone/strategy/WhetstonePackageInfo;->mScreenOffClear:Z
 
-    .line 70
     return-void
 
     :cond_0
     move v0, v1
 
-    .line 67
     goto :goto_0
 .end method
 
@@ -237,14 +215,12 @@
     .param p1, "flg"    # I
 
     .prologue
-    .line 106
     iget v0, p0, Lcom/miui/whetstone/strategy/WhetstonePackageInfo;->flag:I
 
     or-int/2addr v0, p1
 
     iput v0, p0, Lcom/miui/whetstone/strategy/WhetstonePackageInfo;->flag:I
 
-    .line 107
     return-void
 .end method
 
@@ -253,14 +229,12 @@
     .param p1, "flag"    # I
 
     .prologue
-    .line 102
     iget v0, p0, Lcom/miui/whetstone/strategy/WhetstonePackageInfo;->type:I
 
     or-int/2addr v0, p1
 
     iput v0, p0, Lcom/miui/whetstone/strategy/WhetstonePackageInfo;->type:I
 
-    .line 103
     return-void
 .end method
 
@@ -268,7 +242,6 @@
     .locals 1
 
     .prologue
-    .line 119
     const/4 v0, 0x0
 
     return v0
@@ -278,7 +251,6 @@
     .locals 1
 
     .prologue
-    .line 90
     iget v0, p0, Lcom/miui/whetstone/strategy/WhetstonePackageInfo;->uid:I
 
     return v0
@@ -288,7 +260,6 @@
     .locals 1
 
     .prologue
-    .line 114
     iget v0, p0, Lcom/miui/whetstone/strategy/WhetstonePackageInfo;->flag:I
 
     and-int/lit16 v0, v0, 0x4000
@@ -311,7 +282,6 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 94
     iget v0, p0, Lcom/miui/whetstone/strategy/WhetstonePackageInfo;->flag:I
 
     and-int/2addr v0, p1
@@ -333,7 +303,6 @@
     .locals 2
 
     .prologue
-    .line 110
     iget v0, p0, Lcom/miui/whetstone/strategy/WhetstonePackageInfo;->flag:I
 
     const/high16 v1, -0x80000000
@@ -358,7 +327,6 @@
     .param p1, "flag"    # I
 
     .prologue
-    .line 98
     iget v0, p0, Lcom/miui/whetstone/strategy/WhetstonePackageInfo;->type:I
 
     and-int/2addr v0, p1
@@ -381,35 +349,30 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 130
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/miui/whetstone/strategy/WhetstonePackageInfo;->packageName:Ljava/lang/String;
 
-    .line 131
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/miui/whetstone/strategy/WhetstonePackageInfo;->flag:I
 
-    .line 132
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/miui/whetstone/strategy/WhetstonePackageInfo;->type:I
 
-    .line 133
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/miui/whetstone/strategy/WhetstonePackageInfo;->uid:I
 
-    .line 134
     return-void
 .end method
 
@@ -418,10 +381,8 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 86
     iput p1, p0, Lcom/miui/whetstone/strategy/WhetstonePackageInfo;->uid:I
 
-    .line 87
     return-void
 .end method
 
@@ -429,18 +390,16 @@
     .locals 4
 
     .prologue
-    .line 151
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 152
     .local v0, "builder":Ljava/lang/StringBuilder;
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "{WhetstonePackageInfo#PacakgeName:"
+    const-string v3, "{WhetstonePackageInfo#PacakgeName:"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -458,7 +417,6 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 153
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -481,7 +439,6 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 154
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -504,7 +461,6 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 155
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -527,14 +483,12 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 156
     iget v2, p0, Lcom/miui/whetstone/strategy/WhetstonePackageInfo;->flag:I
 
     invoke-static {v2}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 157
     .local v1, "hexFlag":Ljava/lang/String;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -574,19 +528,16 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 158
     iget v2, p0, Lcom/miui/whetstone/strategy/WhetstonePackageInfo;->flag:I
 
     and-int/lit8 v2, v2, 0x1
 
     if-eqz v2, :cond_0
 
-    .line 159
     const-string v2, ",BitmapCache"
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 161
     :cond_0
     iget v2, p0, Lcom/miui/whetstone/strategy/WhetstonePackageInfo;->flag:I
 
@@ -594,12 +545,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 162
     const-string v2, ",DestoryActivity"
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 164
     :cond_1
     iget v2, p0, Lcom/miui/whetstone/strategy/WhetstonePackageInfo;->flag:I
 
@@ -607,12 +556,10 @@
 
     if-eqz v2, :cond_2
 
-    .line 165
     const-string v2, ",isOPENGLDiable"
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 167
     :cond_2
     iget v2, p0, Lcom/miui/whetstone/strategy/WhetstonePackageInfo;->flag:I
 
@@ -620,12 +567,10 @@
 
     if-eqz v2, :cond_3
 
-    .line 168
     const-string v2, ",TRIMHEAPS"
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 170
     :cond_3
     iget v2, p0, Lcom/miui/whetstone/strategy/WhetstonePackageInfo;->flag:I
 
@@ -633,12 +578,10 @@
 
     if-eqz v2, :cond_4
 
-    .line 171
     const-string v2, ",TRIM_OPENGL"
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 173
     :cond_4
     iget v2, p0, Lcom/miui/whetstone/strategy/WhetstonePackageInfo;->flag:I
 
@@ -646,12 +589,10 @@
 
     if-eqz v2, :cond_5
 
-    .line 174
     const-string v2, ",SOFT_RESET"
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 176
     :cond_5
     iget v2, p0, Lcom/miui/whetstone/strategy/WhetstonePackageInfo;->flag:I
 
@@ -661,12 +602,10 @@
 
     if-eqz v2, :cond_6
 
-    .line 177
     const-string v2, ",APP_SYSTEM"
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 179
     :cond_6
     iget v2, p0, Lcom/miui/whetstone/strategy/WhetstonePackageInfo;->flag:I
 
@@ -674,12 +613,10 @@
 
     if-eqz v2, :cond_7
 
-    .line 180
     const-string v2, ",ZRAM"
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 182
     :cond_7
     iget v2, p0, Lcom/miui/whetstone/strategy/WhetstonePackageInfo;->flag:I
 
@@ -687,12 +624,10 @@
 
     if-eqz v2, :cond_8
 
-    .line 183
     const-string v2, ",TRIMPROCESS_BY_ACTIVITY"
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 185
     :cond_8
     iget v2, p0, Lcom/miui/whetstone/strategy/WhetstonePackageInfo;->flag:I
 
@@ -700,12 +635,10 @@
 
     if-eqz v2, :cond_9
 
-    .line 186
     const-string v2, ",FLAG_DEAL_SCHEDULE"
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 188
     :cond_9
     iget v2, p0, Lcom/miui/whetstone/strategy/WhetstonePackageInfo;->flag:I
 
@@ -713,12 +646,10 @@
 
     if-eqz v2, :cond_a
 
-    .line 189
     const-string v2, ",FLAG_TRIMHEAPSIZE"
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 191
     :cond_a
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -748,19 +679,16 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 192
     iget v2, p0, Lcom/miui/whetstone/strategy/WhetstonePackageInfo;->type:I
 
     and-int/lit8 v2, v2, 0x1
 
     if-eqz v2, :cond_b
 
-    .line 193
     const-string v2, ",IM_PUSH"
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 195
     :cond_b
     iget v2, p0, Lcom/miui/whetstone/strategy/WhetstonePackageInfo;->type:I
 
@@ -768,12 +696,10 @@
 
     if-eqz v2, :cond_c
 
-    .line 196
     const-string v2, ",Game"
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 198
     :cond_c
     iget v2, p0, Lcom/miui/whetstone/strategy/WhetstonePackageInfo;->type:I
 
@@ -781,12 +707,10 @@
 
     if-eqz v2, :cond_d
 
-    .line 199
     const-string v2, ",note"
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 201
     :cond_d
     iget v2, p0, Lcom/miui/whetstone/strategy/WhetstonePackageInfo;->type:I
 
@@ -794,12 +718,10 @@
 
     if-eqz v2, :cond_e
 
-    .line 202
     const-string v2, ",notification"
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 204
     :cond_e
     iget v2, p0, Lcom/miui/whetstone/strategy/WhetstonePackageInfo;->type:I
 
@@ -807,12 +729,10 @@
 
     if-eqz v2, :cond_f
 
-    .line 205
     const-string v2, ",AUTO_START"
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 207
     :cond_f
     iget v2, p0, Lcom/miui/whetstone/strategy/WhetstonePackageInfo;->type:I
 
@@ -820,18 +740,15 @@
 
     if-eqz v2, :cond_10
 
-    .line 208
     const-string v2, ",TYPE_LARGE_MEMORY"
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 210
     :cond_10
     const-string v2, "] }"
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 211
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
@@ -845,26 +762,21 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 123
     iget-object v0, p0, Lcom/miui/whetstone/strategy/WhetstonePackageInfo;->packageName:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 124
     iget v0, p0, Lcom/miui/whetstone/strategy/WhetstonePackageInfo;->flag:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 125
     iget v0, p0, Lcom/miui/whetstone/strategy/WhetstonePackageInfo;->type:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 126
     iget v0, p0, Lcom/miui/whetstone/strategy/WhetstonePackageInfo;->uid:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 127
     return-void
 .end method

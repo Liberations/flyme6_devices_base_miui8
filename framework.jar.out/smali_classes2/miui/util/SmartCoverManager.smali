@@ -62,7 +62,6 @@
     .locals 2
 
     .prologue
-    .line 42
     const-string v0, "support_multiple_small_win_cover"
 
     const/4 v1, 0x0
@@ -80,15 +79,12 @@
     .locals 1
 
     .prologue
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 48
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lmiui/util/SmartCoverManager;->mSmartCoverLidOpen:Z
 
-    .line 237
     return-void
 .end method
 
@@ -97,7 +93,6 @@
     .param p0, "x0"    # Lmiui/util/SmartCoverManager;
 
     .prologue
-    .line 27
     iget-object v0, p0, Lmiui/util/SmartCoverManager;->mContentResolver:Landroid/content/ContentResolver;
 
     return-object v0
@@ -108,7 +103,6 @@
     .param p0, "x0"    # Lmiui/util/SmartCoverManager;
 
     .prologue
-    .line 27
     iget v0, p0, Lmiui/util/SmartCoverManager;->mCurrentUserId:I
 
     return v0
@@ -120,7 +114,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 176
     const-string v1, "persist.sys.smartcover_mode"
 
     const/4 v2, -0x1
@@ -131,18 +124,14 @@
 
     iput v1, p0, Lmiui/util/SmartCoverManager;->mSmartCoverMode:I
 
-    .line 178
     iget v1, p0, Lmiui/util/SmartCoverManager;->mSmartCoverMode:I
 
     if-nez v1, :cond_0
 
-    .line 179
     iput-boolean v0, p0, Lmiui/util/SmartCoverManager;->mSmartCoverLidOpen:Z
 
-    .line 180
     const/4 v0, 0x0
 
-    .line 182
     :cond_0
     return v0
 .end method
@@ -156,7 +145,6 @@
 
     const/4 v2, 0x0
 
-    .line 166
     const/4 v3, 0x2
 
     iget v4, p0, Lmiui/util/SmartCoverManager;->mSmartCoverMode:I
@@ -165,7 +153,6 @@
 
     move v0, v1
 
-    .line 167
     .local v0, "supportSmallWinMode":Z
     :goto_0
     iget-object v3, p0, Lmiui/util/SmartCoverManager;->mContext:Landroid/content/Context;
@@ -185,21 +172,18 @@
 
     invoke-static {v3, v4, v1, v2}, Landroid/provider/MiuiSettings$System;->putBooleanForUser(Landroid/content/ContentResolver;Ljava/lang/String;ZI)Z
 
-    .line 169
     return v0
 
     .end local v0    # "supportSmallWinMode":Z
     :cond_0
     move v0, v2
 
-    .line 166
     goto :goto_0
 
     .restart local v0    # "supportSmallWinMode":Z
     :cond_1
     move v1, v2
 
-    .line 167
     goto :goto_1
 .end method
 
@@ -210,7 +194,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 111
     iget-object v1, p0, Lmiui/util/SmartCoverManager;->mContentResolver:Landroid/content/ContentResolver;
 
     const-string v2, "smart_cover_key"
@@ -221,18 +204,15 @@
 
     move-result v0
 
-    .line 113
     .local v0, "first":Z
     if-eqz v0, :cond_0
 
-    .line 114
     iget-object v1, p0, Lmiui/util/SmartCoverManager;->mContentResolver:Landroid/content/ContentResolver;
 
     const-string v2, "smart_cover_key"
 
     invoke-static {v1, v2, v4, v4}, Landroid/provider/MiuiSettings$System;->putBooleanForUser(Landroid/content/ContentResolver;Ljava/lang/String;ZI)Z
 
-    .line 118
     :cond_0
     if-eqz v0, :cond_1
 
@@ -242,12 +222,10 @@
 
     if-nez v1, :cond_2
 
-    .line 125
     :cond_1
     :goto_0
     return-void
 
-    .line 122
     :cond_2
     iget-object v1, p0, Lmiui/util/SmartCoverManager;->mContext:Landroid/content/Context;
 
@@ -288,20 +266,15 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 186
     iput-boolean p1, p0, Lmiui/util/SmartCoverManager;->mSmartCoverLidOpen:Z
 
-    .line 187
     if-nez p1, :cond_0
 
-    .line 188
     invoke-direct {p0, v0}, Lmiui/util/SmartCoverManager;->setScreenOffByLid(Z)V
 
-    .line 191
     :cond_0
     if-eqz p2, :cond_1
 
-    .line 192
     iget-object v1, p0, Lmiui/util/SmartCoverManager;->mContext:Landroid/content/Context;
 
     new-instance v2, Landroid/content/Intent;
@@ -320,7 +293,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 196
     :cond_1
     if-nez p1, :cond_3
 
@@ -331,29 +303,23 @@
 
     if-eqz v0, :cond_2
 
-    .line 197
     if-nez p1, :cond_4
 
-    .line 198
     iget-object v0, p0, Lmiui/util/SmartCoverManager;->mPowerManagerWrapper:Lmiui/util/SmartCoverManager$PowerManagerWrapper;
 
     invoke-virtual {v0}, Lmiui/util/SmartCoverManager$PowerManagerWrapper;->goToSleep()V
 
-    .line 204
     :cond_2
     :goto_1
     invoke-direct {p0, p1}, Lmiui/util/SmartCoverManager;->updateScreenOffTimeoutIfNeeded(Z)V
 
-    .line 205
     return-void
 
-    .line 196
     :cond_3
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 200
     :cond_4
     iget-object v0, p0, Lmiui/util/SmartCoverManager;->mPowerManagerWrapper:Lmiui/util/SmartCoverManager$PowerManagerWrapper;
 
@@ -367,12 +333,10 @@
     .param p1, "byLid"    # Z
 
     .prologue
-    .line 229
     if-eqz p1, :cond_0
 
     const-string v1, "true"
 
-    .line 231
     .local v1, "value":Ljava/lang/String;
     :goto_0
     :try_start_0
@@ -382,23 +346,19 @@
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 235
     :goto_1
     return-void
 
-    .line 229
     .end local v1    # "value":Ljava/lang/String;
     :cond_0
     const-string v1, "false"
 
     goto :goto_0
 
-    .line 232
     .restart local v1    # "value":Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 233
     .local v0, "ex":Ljava/lang/RuntimeException;
     const-string v2, "SmartCoverManager"
 
@@ -430,7 +390,6 @@
     .param p1, "change"    # Z
 
     .prologue
-    .line 221
     iget-object v1, p0, Lmiui/util/SmartCoverManager;->mContentResolver:Landroid/content/ContentResolver;
 
     const-string v2, "screen_off_timeout"
@@ -442,10 +401,8 @@
     :goto_0
     invoke-static {v1, v2, v0}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 223
     iput-boolean p1, p0, Lmiui/util/SmartCoverManager;->mNeedResetTimeout:Z
 
-    .line 224
     iget-object v0, p0, Lmiui/util/SmartCoverManager;->mContentResolver:Landroid/content/ContentResolver;
 
     const-string v1, "need_reset_screen_off_timeout"
@@ -456,10 +413,8 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/provider/MiuiSettings$System;->putBooleanForUser(Landroid/content/ContentResolver;Ljava/lang/String;ZI)Z
 
-    .line 226
     return-void
 
-    .line 221
     :cond_0
     const v0, 0x7fffffff
 
@@ -475,7 +430,6 @@
 
     const/4 v2, 0x0
 
-    .line 211
     const-wide/32 v4, 0x7fffffff
 
     iget-object v3, p0, Lmiui/util/SmartCoverManager;->mContentResolver:Landroid/content/ContentResolver;
@@ -494,17 +448,14 @@
 
     move v0, v1
 
-    .line 213
     .local v0, "isNeverTurnOff":Z
     :goto_0
     if-eqz v0, :cond_2
 
     if-nez p1, :cond_2
 
-    .line 214
     invoke-direct {p0, v1}, Lmiui/util/SmartCoverManager;->triggerScreenOffTimeout(Z)V
 
-    .line 218
     :cond_0
     :goto_1
     return-void
@@ -513,10 +464,8 @@
     :cond_1
     move v0, v2
 
-    .line 211
     goto :goto_0
 
-    .line 215
     .restart local v0    # "isNeverTurnOff":Z
     :cond_2
     if-eqz p1, :cond_0
@@ -525,7 +474,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 216
     invoke-direct {p0, v2}, Lmiui/util/SmartCoverManager;->triggerScreenOffTimeout(Z)V
 
     goto :goto_1
@@ -539,7 +487,6 @@
     .param p2, "pw"    # Ljava/io/PrintWriter;
 
     .prologue
-    .line 157
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v0, "mSmartCoverLidOpen="
@@ -550,7 +497,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 158
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v0, "mSmartCoverMode="
@@ -561,7 +507,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(I)V
 
-    .line 159
     return-void
 .end method
 
@@ -576,17 +521,14 @@
 
     const/4 v4, 0x0
 
-    .line 64
     invoke-direct {p0}, Lmiui/util/SmartCoverManager;->checkSmartCoverEnable()Z
 
-    .line 66
     const/4 v2, -0x1
 
     iget v5, p0, Lmiui/util/SmartCoverManager;->mSmartCoverMode:I
 
     if-ne v2, v5, :cond_0
 
-    .line 67
     sget-boolean v2, Lmiui/util/SmartCoverManager;->MULTI:Z
 
     if-nez v2, :cond_3
@@ -596,11 +538,9 @@
     :goto_0
     invoke-static {v2}, Landroid/provider/MiuiSettings$System;->setSmartCoverMode(Z)V
 
-    .line 70
     :cond_0
     const/4 v0, 0x0
 
-    .line 71
     .local v0, "inSmallWinMode":Z
     const/4 v2, 0x2
 
@@ -610,22 +550,18 @@
 
     move v1, v3
 
-    .line 72
     .local v1, "setSmallWinMode":Z
     :goto_1
     if-eqz v1, :cond_1
 
-    .line 73
     if-nez p1, :cond_5
 
     move v0, v3
 
-    .line 75
     :cond_1
     :goto_2
     invoke-direct {p0, v0}, Lmiui/util/SmartCoverManager;->enableInSmallWinMode(Z)Z
 
-    .line 78
     iget-object v2, p0, Lmiui/util/SmartCoverManager;->mContentResolver:Landroid/content/ContentResolver;
 
     const-string v3, "need_reset_screen_off_timeout"
@@ -636,7 +572,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 80
     iget-object v2, p0, Lmiui/util/SmartCoverManager;->mContentResolver:Landroid/content/ContentResolver;
 
     const-string v3, "screen_off_timeout"
@@ -645,14 +580,12 @@
 
     invoke-static {v2, v3, v5}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 81
     iget-object v2, p0, Lmiui/util/SmartCoverManager;->mContentResolver:Landroid/content/ContentResolver;
 
     const-string v3, "need_reset_screen_off_timeout"
 
     invoke-static {v2, v3, v4, v6}, Landroid/provider/MiuiSettings$System;->putBooleanForUser(Landroid/content/ContentResolver;Ljava/lang/String;ZI)Z
 
-    .line 85
     :cond_2
     return v1
 
@@ -661,21 +594,18 @@
     :cond_3
     move v2, v4
 
-    .line 67
     goto :goto_0
 
     .restart local v0    # "inSmallWinMode":Z
     :cond_4
     move v1, v4
 
-    .line 71
     goto :goto_1
 
     .restart local v1    # "setSmallWinMode":Z
     :cond_5
     move v0, v4
 
-    .line 73
     goto :goto_2
 .end method
 
@@ -683,7 +613,6 @@
     .locals 1
 
     .prologue
-    .line 145
     iget-boolean v0, p0, Lmiui/util/SmartCoverManager;->mSmartCoverLidOpen:Z
 
     return v0
@@ -693,7 +622,6 @@
     .locals 1
 
     .prologue
-    .line 138
     iget v0, p0, Lmiui/util/SmartCoverManager;->mSmartCoverMode:I
 
     return v0
@@ -705,32 +633,26 @@
     .param p2, "powerManager"    # Landroid/os/PowerManager;
 
     .prologue
-    .line 53
     iput-object p1, p0, Lmiui/util/SmartCoverManager;->mContext:Landroid/content/Context;
 
-    .line 54
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     iput-object v0, p0, Lmiui/util/SmartCoverManager;->mContentResolver:Landroid/content/ContentResolver;
 
-    .line 55
     new-instance v0, Lmiui/util/SmartCoverManager$PowerManagerWrapper;
 
     invoke-direct {v0, p0, p2}, Lmiui/util/SmartCoverManager$PowerManagerWrapper;-><init>(Lmiui/util/SmartCoverManager;Landroid/os/PowerManager;)V
 
     iput-object v0, p0, Lmiui/util/SmartCoverManager;->mPowerManagerWrapper:Lmiui/util/SmartCoverManager$PowerManagerWrapper;
 
-    .line 56
     invoke-direct {p0}, Lmiui/util/SmartCoverManager;->checkSmartCoverEnable()Z
 
-    .line 57
     const/4 v0, 0x0
 
     iput v0, p0, Lmiui/util/SmartCoverManager;->mCurrentUserId:I
 
-    .line 58
     return-void
 .end method
 
@@ -740,30 +662,23 @@
     .param p2, "systemBooted"    # Z
 
     .prologue
-    .line 92
     invoke-direct {p0}, Lmiui/util/SmartCoverManager;->checkSmartCoverEnable()Z
 
     move-result v0
 
-    .line 93
     .local v0, "smartCoverEnable":Z
     invoke-direct {p0, v0}, Lmiui/util/SmartCoverManager;->guideSmartCoverSettingIfNeeded(Z)V
 
-    .line 95
     if-nez v0, :cond_0
 
-    .line 96
     const/4 v1, 0x0
 
-    .line 100
     :goto_0
     return v1
 
-    .line 99
     :cond_0
     invoke-direct {p0, p1, p2}, Lmiui/util/SmartCoverManager;->handleLidSwitchChanged(ZZ)V
 
-    .line 100
     const/4 v1, 0x1
 
     goto :goto_0
@@ -775,15 +690,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 131
     iget-boolean v1, p0, Lmiui/util/SmartCoverManager;->mSmartCoverLidOpen:Z
 
     if-eqz v1, :cond_0
 
-    .line 132
     invoke-direct {p0, v0}, Lmiui/util/SmartCoverManager;->setScreenOffByLid(Z)V
 
-    .line 134
     :cond_0
     iget-boolean v1, p0, Lmiui/util/SmartCoverManager;->mSmartCoverLidOpen:Z
 
@@ -812,20 +724,16 @@
     .param p1, "newUserId"    # I
 
     .prologue
-    .line 149
     iget v0, p0, Lmiui/util/SmartCoverManager;->mCurrentUserId:I
 
     if-ne v0, p1, :cond_0
 
-    .line 154
     :goto_0
     return-void
 
-    .line 152
     :cond_0
     iput p1, p0, Lmiui/util/SmartCoverManager;->mCurrentUserId:I
 
-    .line 153
     iget-boolean v0, p0, Lmiui/util/SmartCoverManager;->mSmartCoverLidOpen:Z
 
     if-nez v0, :cond_1

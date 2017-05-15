@@ -16,10 +16,8 @@
     .locals 0
 
     .prologue
-    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 37
     return-void
 .end method
 
@@ -27,17 +25,14 @@
     .locals 9
 
     .prologue
-    .line 101
     const/4 v3, 0x0
 
-    .line 104
     .local v3, "networkStatsTethering":Landroid/net/NetworkStats;
     :try_start_0
     sget-object v5, Lmiui/securitycenter/NetworkUtils;->mNMService:Landroid/os/INetworkManagementService;
 
     if-nez v5, :cond_0
 
-    .line 105
     const-string v5, "network_management"
 
     invoke-static {v5}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -50,7 +45,6 @@
 
     sput-object v5, Lmiui/securitycenter/NetworkUtils;->mNMService:Landroid/os/INetworkManagementService;
 
-    .line 108
     :cond_0
     sget-object v5, Lmiui/securitycenter/NetworkUtils;->mNMService:Landroid/os/INetworkManagementService;
 
@@ -58,7 +52,6 @@
 
     move-result-object v3
 
-    .line 109
     if-eqz v3, :cond_2
 
     invoke-virtual {v3}, Landroid/net/NetworkStats;->size()I
@@ -69,24 +62,20 @@
 
     if-lez v5, :cond_2
 
-    .line 111
     :try_start_1
     sget-object v5, Lmiui/securitycenter/NetworkUtils;->mSystemServiceClassLoader:Ljava/lang/ClassLoader;
 
     if-nez v5, :cond_1
 
-    .line 112
     const-string v5, "SYSTEMSERVERCLASSPATH"
 
     invoke-static {v5}, Landroid/system/Os;->getenv(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 113
     .local v4, "systemServerClasspath":Ljava/lang/String;
     if-eqz v4, :cond_3
 
-    .line 114
     new-instance v5, Ldalvik/system/PathClassLoader;
 
     invoke-static {}, Ljava/lang/ClassLoader;->getSystemClassLoader()Ljava/lang/ClassLoader;
@@ -97,7 +86,6 @@
 
     sput-object v5, Lmiui/securitycenter/NetworkUtils;->mSystemServiceClassLoader:Ljava/lang/ClassLoader;
 
-    .line 120
     .end local v4    # "systemServerClasspath":Ljava/lang/String;
     :cond_1
     :goto_0
@@ -111,7 +99,6 @@
 
     move-result-object v2
 
-    .line 122
     .local v2, "netPluginClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const-string v5, "getTetherStats"
 
@@ -141,7 +128,6 @@
 
     move-result-object v1
 
-    .line 124
     .local v1, "method":Ljava/lang/reflect/Method;
     const/4 v5, 0x0
 
@@ -167,14 +153,12 @@
 
     invoke-virtual {v1, v5, v6}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 134
     .end local v1    # "method":Ljava/lang/reflect/Method;
     .end local v2    # "netPluginClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :cond_2
     :goto_1
     return-object v3
 
-    .line 116
     .restart local v4    # "systemServerClasspath":Ljava/lang/String;
     :cond_3
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
@@ -192,18 +176,15 @@
 
     goto :goto_0
 
-    .line 125
     .end local v4    # "systemServerClasspath":Ljava/lang/String;
     :catch_0
     move-exception v5
 
     goto :goto_1
 
-    .line 127
     :catch_1
     move-exception v0
 
-    .line 128
     .local v0, "e":Ljava/lang/Exception;
     :try_start_2
     const-string v5, "OverLayUtil"
@@ -216,12 +197,10 @@
 
     goto :goto_1
 
-    .line 131
     .end local v0    # "e":Ljava/lang/Exception;
     :catch_2
     move-exception v0
 
-    .line 132
     .restart local v0    # "e":Ljava/lang/Exception;
     const-string v5, "OverLayUtil"
 
@@ -237,7 +216,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 83
     const-string v3, "connectivity"
 
     invoke-static {v3}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -248,11 +226,9 @@
 
     move-result-object v1
 
-    .line 85
     .local v1, "cm":Landroid/net/IConnectivityManager;
     const/4 v0, 0x0
 
-    .line 87
     .local v0, "activeLink":Landroid/net/LinkProperties;
     const/4 v3, 0x0
 
@@ -263,30 +239,24 @@
 
     move-result-object v0
 
-    .line 91
     :goto_0
     if-eqz v0, :cond_0
 
-    .line 92
     invoke-virtual {v0}, Landroid/net/LinkProperties;->getInterfaceName()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 94
     :goto_1
     return-object v3
 
-    .line 88
     :catch_0
     move-exception v2
 
-    .line 89
     .local v2, "e":Landroid/os/RemoteException;
     invoke-virtual {v2}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 94
     .end local v2    # "e":Landroid/os/RemoteException;
     :cond_0
     const-string v3, "rmnet0"
@@ -310,30 +280,24 @@
     .end annotation
 
     .prologue
-    .line 138
     const/4 v4, 0x0
 
-    .line 140
     .local v4, "result":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;>;"
     invoke-static {}, Lmiui/securitycenter/NetworkUtils;->getAdjustedNetworkStatsTethering()Landroid/net/NetworkStats;
 
     move-result-object v3
 
-    .line 141
     .local v3, "networkStatsTethering":Landroid/net/NetworkStats;
     const/4 v0, 0x0
 
-    .line 142
     .local v0, "entry":Landroid/net/NetworkStats$Entry;
     if-eqz v3, :cond_0
 
-    .line 143
     new-instance v4, Ljava/util/ArrayList;
 
     .end local v4    # "result":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;>;"
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 144
     .restart local v4    # "result":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;>;"
     const/4 v1, 0x0
 
@@ -345,17 +309,14 @@
 
     if-ge v1, v5, :cond_0
 
-    .line 145
     invoke-virtual {v3, v1, v0}, Landroid/net/NetworkStats;->getValues(ILandroid/net/NetworkStats$Entry;)Landroid/net/NetworkStats$Entry;
 
     move-result-object v0
 
-    .line 146
     new-instance v2, Ljava/util/HashMap;
 
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
-    .line 147
     .local v2, "info":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v5, "uid"
 
@@ -367,14 +328,12 @@
 
     invoke-interface {v2, v5, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 148
     const-string v5, "iface"
 
     iget-object v6, v0, Landroid/net/NetworkStats$Entry;->iface:Ljava/lang/String;
 
     invoke-interface {v2, v5, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 149
     const-string v5, "rxBytes"
 
     iget-wide v6, v0, Landroid/net/NetworkStats$Entry;->rxBytes:J
@@ -385,7 +344,6 @@
 
     invoke-interface {v2, v5, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 150
     const-string v5, "txBytes"
 
     iget-wide v6, v0, Landroid/net/NetworkStats$Entry;->txBytes:J
@@ -396,7 +354,6 @@
 
     invoke-interface {v2, v5, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 151
     const-string v5, "tag"
 
     iget v6, v0, Landroid/net/NetworkStats$Entry;->tag:I
@@ -407,15 +364,12 @@
 
     invoke-interface {v2, v5, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 152
     invoke-virtual {v4, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 144
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 155
     .end local v1    # "i":I
     .end local v2    # "info":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_0
@@ -437,14 +391,12 @@
     .end annotation
 
     .prologue
-    .line 46
     if-eqz p0, :cond_0
 
     if-eqz p1, :cond_0
 
     if-nez p2, :cond_2
 
-    .line 47
     :cond_0
     const-string v3, "OverLayUtil"
 
@@ -452,12 +404,10 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 80
     :cond_1
     :goto_0
     return-void
 
-    .line 51
     :cond_2
     invoke-virtual {p2}, Landroid/net/wifi/WifiConfiguration;->getIpAssignment()Landroid/net/IpConfiguration$IpAssignment;
 
@@ -467,8 +417,7 @@
 
     if-ne v3, v4, :cond_1
 
-    .line 52
-    const-string/jumbo v3, "wifi"
+    const-string v3, "wifi"
 
     invoke-virtual {p0, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -476,20 +425,16 @@
 
     check-cast v2, Landroid/net/wifi/WifiManager;
 
-    .line 53
     .local v2, "wifiManager":Landroid/net/wifi/WifiManager;
     if-eqz v2, :cond_1
 
-    .line 57
     invoke-virtual {p2}, Landroid/net/wifi/WifiConfiguration;->getStaticIpConfiguration()Landroid/net/StaticIpConfiguration;
 
     move-result-object v0
 
-    .line 58
     .local v0, "config":Landroid/net/StaticIpConfiguration;
     const/4 v1, 0x0
 
-    .line 59
     .local v1, "oldDns":Ljava/net/InetAddress;
     iget-object v3, v0, Landroid/net/StaticIpConfiguration;->dnsServers:Ljava/util/ArrayList;
 
@@ -499,7 +444,6 @@
 
     if-lez v3, :cond_3
 
-    .line 60
     iget-object v3, v0, Landroid/net/StaticIpConfiguration;->dnsServers:Ljava/util/ArrayList;
 
     const/4 v4, 0x0
@@ -511,27 +455,22 @@
     .end local v1    # "oldDns":Ljava/net/InetAddress;
     check-cast v1, Ljava/net/InetAddress;
 
-    .line 62
     .restart local v1    # "oldDns":Ljava/net/InetAddress;
     :cond_3
     iget-object v3, v0, Landroid/net/StaticIpConfiguration;->dnsServers:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->clear()V
 
-    .line 63
     iget-object v3, v0, Landroid/net/StaticIpConfiguration;->dnsServers:Ljava/util/ArrayList;
 
     invoke-virtual {v3, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 64
     if-eqz v1, :cond_4
 
-    .line 65
     iget-object v3, v0, Landroid/net/StaticIpConfiguration;->dnsServers:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 68
     :cond_4
     new-instance v3, Lmiui/securitycenter/NetworkUtils$1;
 
@@ -548,7 +487,6 @@
     .param p1, "mobileDataEnabled"    # Z
 
     .prologue
-    .line 40
     const-string v1, "phone"
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -557,10 +495,8 @@
 
     check-cast v0, Landroid/telephony/TelephonyManager;
 
-    .line 41
     .local v0, "telephonyService":Landroid/telephony/TelephonyManager;
     invoke-virtual {v0, p1}, Landroid/telephony/TelephonyManager;->setDataEnabled(Z)V
 
-    .line 42
     return-void
 .end method

@@ -28,28 +28,22 @@
     .param p1, "orig"    # Landroid/graphics/drawable/DrawableWrapper$DrawableWrapperState;
 
     .prologue
-    .line 398
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable$ConstantState;-><init>()V
 
-    .line 399
     if-eqz p1, :cond_0
 
-    .line 400
     iget-object v0, p1, Landroid/graphics/drawable/DrawableWrapper$DrawableWrapperState;->mThemeAttrs:[I
 
     iput-object v0, p0, Landroid/graphics/drawable/DrawableWrapper$DrawableWrapperState;->mThemeAttrs:[I
 
-    .line 401
     iget v0, p1, Landroid/graphics/drawable/DrawableWrapper$DrawableWrapperState;->mChangingConfigurations:I
 
     iput v0, p0, Landroid/graphics/drawable/DrawableWrapper$DrawableWrapperState;->mChangingConfigurations:I
 
-    .line 402
     iget-object v0, p1, Landroid/graphics/drawable/DrawableWrapper$DrawableWrapperState;->mDrawableState:Landroid/graphics/drawable/Drawable$ConstantState;
 
     iput-object v0, p0, Landroid/graphics/drawable/DrawableWrapper$DrawableWrapperState;->mDrawableState:Landroid/graphics/drawable/Drawable$ConstantState;
 
-    .line 404
     :cond_0
     return-void
 .end method
@@ -69,20 +63,16 @@
     .end annotation
 
     .prologue
-    .line 415
     .local p1, "atlasList":Ljava/util/Collection;, "Ljava/util/Collection<Landroid/graphics/Bitmap;>;"
     iget-object v0, p0, Landroid/graphics/drawable/DrawableWrapper$DrawableWrapperState;->mDrawableState:Landroid/graphics/drawable/Drawable$ConstantState;
 
-    .line 416
     .local v0, "state":Landroid/graphics/drawable/Drawable$ConstantState;
     if-eqz v0, :cond_0
 
-    .line 417
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable$ConstantState;->addAtlasableBitmaps(Ljava/util/Collection;)I
 
     move-result v1
 
-    .line 419
     :goto_0
     return v1
 
@@ -96,7 +86,6 @@
     .locals 1
 
     .prologue
-    .line 408
     iget-object v0, p0, Landroid/graphics/drawable/DrawableWrapper$DrawableWrapperState;->mThemeAttrs:[I
 
     if-nez v0, :cond_1
@@ -136,7 +125,6 @@
     .locals 1
 
     .prologue
-    .line 437
     iget-object v0, p0, Landroid/graphics/drawable/DrawableWrapper$DrawableWrapperState;->mDrawableState:Landroid/graphics/drawable/Drawable$ConstantState;
 
     if-eqz v0, :cond_0
@@ -156,7 +144,6 @@
     .locals 2
 
     .prologue
-    .line 432
     iget v1, p0, Landroid/graphics/drawable/DrawableWrapper$DrawableWrapperState;->mChangingConfigurations:I
 
     iget-object v0, p0, Landroid/graphics/drawable/DrawableWrapper$DrawableWrapperState;->mDrawableState:Landroid/graphics/drawable/Drawable$ConstantState;
@@ -184,7 +171,6 @@
     .locals 1
 
     .prologue
-    .line 424
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Landroid/graphics/drawable/DrawableWrapper$DrawableWrapperState;->newDrawable(Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;

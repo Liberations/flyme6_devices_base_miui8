@@ -53,10 +53,8 @@
     .locals 0
 
     .prologue
-    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1429
     return-void
 .end method
 
@@ -68,7 +66,6 @@
     .param p3, "addForAllUsers"    # Z
 
     .prologue
-    .line 695
     invoke-static {p0, p1, p2, p3}, Lmiui/provider/CallLog;->addCall(Landroid/content/Context;Landroid/net/Uri;Landroid/content/ContentValues;Z)Landroid/net/Uri;
 
     move-result-object v0

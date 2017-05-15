@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 199
     iput-object p1, p0, Lmiui/push/IQ$2;->val$request:Lmiui/push/IQ;
 
     invoke-direct {p0}, Lmiui/push/IQ;-><init>()V
@@ -37,7 +36,6 @@
     .locals 1
 
     .prologue
-    .line 201
     iget-object v0, p0, Lmiui/push/IQ$2;->val$request:Lmiui/push/IQ;
 
     invoke-virtual {v0}, Lmiui/push/IQ;->getChildElementXML()Ljava/lang/String;

@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 45
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,7 +33,6 @@
     .locals 0
 
     .prologue
-    .line 48
     return-void
 .end method
 
@@ -42,7 +40,6 @@
     .locals 0
 
     .prologue
-    .line 64
     return-void
 .end method
 
@@ -50,7 +47,6 @@
     .locals 0
 
     .prologue
-    .line 52
     return-void
 .end method
 
@@ -59,7 +55,6 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 76
     return-void
 .end method
 
@@ -68,7 +63,6 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 72
     return-void
 .end method
 
@@ -76,7 +70,6 @@
     .locals 0
 
     .prologue
-    .line 56
     return-void
 .end method
 
@@ -84,7 +77,6 @@
     .locals 0
 
     .prologue
-    .line 60
     return-void
 .end method
 
@@ -93,6 +85,5 @@
     .param p1, "currentTime"    # J
 
     .prologue
-    .line 68
     return-void
 .end method

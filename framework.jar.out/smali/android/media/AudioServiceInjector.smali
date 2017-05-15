@@ -14,7 +14,6 @@
     .locals 0
 
     .prologue
-    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -25,7 +24,6 @@
     .param p0, "defaultStreamVolume"    # [I
 
     .prologue
-    .line 128
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -34,21 +32,18 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 129
     if-eqz v0, :cond_0
 
     const/4 v1, 0x6
 
     if-ne v0, v1, :cond_1
 
-    .line 128
     :cond_0
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 132
     :cond_1
     const/16 v1, 0xa
 
@@ -56,7 +51,6 @@
 
     goto :goto_1
 
-    .line 134
     :cond_2
     return-void
 .end method
@@ -67,28 +61,23 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 36
     invoke-static {p1}, Lmiui/util/AudioManagerHelper;->getHiFiVolume(Landroid/content/Context;)I
 
     move-result v0
 
-    .line 38
     .local v0, "currentHiFiVolume":I
     const/4 v1, -0x1
 
     if-ne p0, v1, :cond_1
 
-    .line 39
     add-int/lit8 v1, v0, -0xa
 
     invoke-static {p1, v1}, Lmiui/util/AudioManagerHelper;->setHiFiVolume(Landroid/content/Context;I)V
 
-    .line 43
     :cond_0
     :goto_0
     return-void
 
-    .line 40
     :cond_1
     const/4 v1, 0x1
 
@@ -98,7 +87,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 41
     add-int/lit8 v1, v0, 0xa
 
     invoke-static {p1, v1}, Lmiui/util/AudioManagerHelper;->setHiFiVolume(Landroid/content/Context;I)V
@@ -111,7 +99,6 @@
     .param p0, "maxStreamVolume"    # [I
 
     .prologue
-    .line 119
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -120,21 +107,18 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 120
     if-eqz v0, :cond_0
 
     const/4 v1, 0x6
 
     if-ne v0, v1, :cond_1
 
-    .line 119
     :cond_0
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 123
     :cond_1
     const/16 v1, 0xf
 
@@ -142,7 +126,6 @@
 
     goto :goto_1
 
-    .line 125
     :cond_2
     return-void
 .end method
@@ -154,12 +137,10 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 106
     add-int/lit8 v1, p1, 0x5
 
     div-int/lit8 v0, v1, 0xa
 
-    .line 107
     .local v0, "retValue":I
     const/4 v1, 0x3
 
@@ -171,10 +152,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 109
     add-int/lit8 v0, v0, 0xa
 
-    .line 111
     :cond_0
     return v0
 .end method
@@ -186,12 +165,10 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 98
     add-int/lit8 v1, p1, 0x5
 
     div-int/lit8 v0, v1, 0xa
 
-    .line 99
     .local v0, "retValue":I
     const/4 v1, 0x3
 
@@ -203,7 +180,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 100
     invoke-static {p2}, Lmiui/util/AudioManagerHelper;->getHiFiVolume(Landroid/content/Context;)I
 
     move-result v1
@@ -212,7 +188,6 @@
 
     add-int/2addr v0, v1
 
-    .line 102
     :cond_0
     return v0
 .end method
@@ -225,7 +200,6 @@
     .param p3, "direction"    # I
 
     .prologue
-    .line 137
     invoke-static {p0, p2}, Lmiui/util/AudioManagerHelper;->getValidatedRingerMode(Landroid/content/Context;I)I
 
     move-result v0
@@ -238,7 +212,6 @@
     .param p0, "flags"    # I
 
     .prologue
-    .line 115
     const/high16 v0, 0x100000
 
     and-int/2addr v0, p0
@@ -262,7 +235,6 @@
     .param p1, "pkg"    # Landroid/content/pm/PackageInfo;
 
     .prologue
-    .line 141
     iget-object v0, p1, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
     invoke-static {v0, p0}, Lcom/miui/whetstone/WhetstoneActivityManager;->checkIfPackageIsLocked(Ljava/lang/String;I)Z
@@ -283,26 +255,21 @@
     .param p6, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 48
     :try_start_0
     invoke-static/range {p6 .. p6}, Lmiui/util/AudioManagerHelper;->isHiFiMode(Landroid/content/Context;)Z
 
     move-result v3
 
-    .line 49
     .local v3, "isHiFiMode":Z
     const/4 v1, 0x0
 
-    .line 50
     .local v1, "clazz":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
 
-    .line 51
     const/4 v4, 0x0
 
-    .line 52
     .local v4, "method":Ljava/lang/reflect/Method;
     sget v8, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -310,11 +277,9 @@
 
     if-lt v8, v9, :cond_3
 
-    .line 53
     if-eqz v1, :cond_0
 
-    .line 54
-    const-string/jumbo v8, "setStreamVolumeInt"
+    const-string v8, "setStreamVolumeInt"
 
     const/4 v9, 0x5
 
@@ -354,7 +319,6 @@
 
     move-result-object v4
 
-    .line 63
     :cond_0
     :goto_0
     const/4 v8, 0x3
@@ -367,26 +331,21 @@
 
     if-lt p2, v0, :cond_5
 
-    .line 64
     move/from16 v5, p4
 
-    .line 65
     .local v5, "rawStreamMaxIndex":I
     if-eqz v4, :cond_1
 
-    .line 66
     const/4 v8, 0x1
 
     invoke-virtual {v4, v8}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
-    .line 67
     sget v8, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v9, 0x17
 
     if-lt v8, v9, :cond_4
 
-    .line 68
     const/4 v8, 0x5
 
     new-array v8, v8, [Ljava/lang/Object;
@@ -435,14 +394,12 @@
 
     invoke-virtual {v4, p0, v8}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 73
     :cond_1
     :goto_1
     add-int/lit8 v8, v5, 0x5
 
     div-int/lit8 v6, v8, 0xa
 
-    .line 74
     .local v6, "streamMaxIndex":I
     sget v8, Landroid/media/AudioServiceInjector;->mOriginalIndexWhenSetStreamVolume:I
 
@@ -454,7 +411,6 @@
 
     invoke-static {v0, v8}, Lmiui/util/AudioManagerHelper;->setHiFiVolume(Landroid/content/Context;I)V
 
-    .line 95
     .end local v1    # "clazz":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     .end local v3    # "isHiFiMode":Z
     .end local v4    # "method":Ljava/lang/reflect/Method;
@@ -464,15 +420,13 @@
     :goto_2
     return-void
 
-    .line 58
     .restart local v1    # "clazz":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     .restart local v3    # "isHiFiMode":Z
     .restart local v4    # "method":Ljava/lang/reflect/Method;
     :cond_3
     if-eqz v1, :cond_0
 
-    .line 59
-    const-string/jumbo v8, "setStreamVolumeInt"
+    const-string v8, "setStreamVolumeInt"
 
     const/4 v9, 0x4
 
@@ -508,7 +462,6 @@
 
     goto :goto_0
 
-    .line 70
     .restart local v5    # "rawStreamMaxIndex":I
     :cond_4
     const/4 v8, 0x4
@@ -560,7 +513,6 @@
 
     goto :goto_1
 
-    .line 86
     .end local v1    # "clazz":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     .end local v3    # "isHiFiMode":Z
     .end local v4    # "method":Ljava/lang/reflect/Method;
@@ -568,13 +520,11 @@
     :catch_0
     move-exception v2
 
-    .line 87
     .local v2, "e":Ljava/lang/UnsupportedOperationException;
     invoke-virtual {v2}, Ljava/lang/UnsupportedOperationException;->printStackTrace()V
 
     goto :goto_2
 
-    .line 76
     .end local v2    # "e":Ljava/lang/UnsupportedOperationException;
     .restart local v1    # "clazz":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     .restart local v3    # "isHiFiMode":Z
@@ -582,20 +532,17 @@
     :cond_5
     if-eqz v4, :cond_2
 
-    .line 77
     const/4 v8, 0x1
 
     :try_start_1
     invoke-virtual {v4, v8}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
-    .line 78
     sget v8, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v9, 0x17
 
     if-lt v8, v9, :cond_6
 
-    .line 79
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -632,7 +579,6 @@
 
     move-result-object v7
 
-    .line 80
     .local v7, "tag":Ljava/lang/String;
     const/4 v8, 0x5
 
@@ -687,7 +633,6 @@
 
     goto/16 :goto_2
 
-    .line 88
     .end local v1    # "clazz":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     .end local v3    # "isHiFiMode":Z
     .end local v4    # "method":Ljava/lang/reflect/Method;
@@ -695,13 +640,11 @@
     :catch_1
     move-exception v2
 
-    .line 89
     .local v2, "e":Ljava/lang/NoSuchMethodException;
     invoke-virtual {v2}, Ljava/lang/NoSuchMethodException;->printStackTrace()V
 
     goto/16 :goto_2
 
-    .line 82
     .end local v2    # "e":Ljava/lang/NoSuchMethodException;
     .restart local v1    # "clazz":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     .restart local v3    # "isHiFiMode":Z
@@ -757,25 +700,21 @@
 
     goto/16 :goto_2
 
-    .line 90
     .end local v1    # "clazz":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     .end local v3    # "isHiFiMode":Z
     .end local v4    # "method":Ljava/lang/reflect/Method;
     :catch_2
     move-exception v2
 
-    .line 91
     .local v2, "e":Ljava/lang/IllegalAccessException;
     invoke-virtual {v2}, Ljava/lang/IllegalAccessException;->printStackTrace()V
 
     goto/16 :goto_2
 
-    .line 92
     .end local v2    # "e":Ljava/lang/IllegalAccessException;
     :catch_3
     move-exception v2
 
-    .line 93
     .local v2, "e":Ljava/lang/reflect/InvocationTargetException;
     invoke-virtual {v2}, Ljava/lang/reflect/InvocationTargetException;->printStackTrace()V
 
@@ -795,7 +734,6 @@
 
     const/4 v4, 0x0
 
-    .line 24
     const/4 v6, 0x3
 
     if-ne p0, v6, :cond_0
@@ -806,22 +744,18 @@
 
     if-nez v6, :cond_1
 
-    .line 32
     :cond_0
     :goto_0
     return v4
 
-    .line 28
     :cond_1
     invoke-static {p4}, Lmiui/util/AudioManagerHelper;->getHiFiVolume(Landroid/content/Context;)I
 
     move-result v2
 
-    .line 29
     .local v2, "currentHiFiVolume":I
     move v3, p3
 
-    .line 30
     .local v3, "maxStreamIndex":I
     const/4 v6, -0x1
 
@@ -831,7 +765,6 @@
 
     move v0, v5
 
-    .line 31
     .local v0, "adjustDownHiFiVolume":Z
     :goto_1
     if-ne p1, v5, :cond_4
@@ -840,7 +773,6 @@
 
     move v1, v5
 
-    .line 32
     .local v1, "adjustUpHiFiVolume":Z
     :goto_2
     if-nez v0, :cond_2
@@ -857,13 +789,11 @@
     :cond_3
     move v0, v4
 
-    .line 30
     goto :goto_1
 
     .restart local v0    # "adjustDownHiFiVolume":Z
     :cond_4
     move v1, v4
 
-    .line 31
     goto :goto_2
 .end method

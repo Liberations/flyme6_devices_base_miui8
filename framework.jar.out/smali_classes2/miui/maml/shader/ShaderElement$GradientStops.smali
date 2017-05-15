@@ -38,12 +38,10 @@
     .locals 1
 
     .prologue
-    .line 63
     iput-object p1, p0, Lmiui/maml/shader/ShaderElement$GradientStops;->this$0:Lmiui/maml/shader/ShaderElement;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 69
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -60,12 +58,10 @@
     .param p1, "stop"    # Lmiui/maml/shader/ShaderElement$GradientStop;
 
     .prologue
-    .line 106
     iget-object v0, p0, Lmiui/maml/shader/ShaderElement$GradientStops;->mGradientStopArr:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 107
     return-void
 .end method
 
@@ -73,7 +69,6 @@
     .locals 1
 
     .prologue
-    .line 77
     iget-object v0, p0, Lmiui/maml/shader/ShaderElement$GradientStops;->mColors:[I
 
     return-object v0
@@ -83,7 +78,6 @@
     .locals 1
 
     .prologue
-    .line 81
     iget-object v0, p0, Lmiui/maml/shader/ShaderElement$GradientStops;->mPositions:[F
 
     return-object v0
@@ -93,7 +87,6 @@
     .locals 1
 
     .prologue
-    .line 72
     invoke-virtual {p0}, Lmiui/maml/shader/ShaderElement$GradientStops;->size()I
 
     move-result v0
@@ -102,7 +95,6 @@
 
     iput-object v0, p0, Lmiui/maml/shader/ShaderElement$GradientStops;->mColors:[I
 
-    .line 73
     invoke-virtual {p0}, Lmiui/maml/shader/ShaderElement$GradientStops;->size()I
 
     move-result v0
@@ -111,7 +103,6 @@
 
     iput-object v0, p0, Lmiui/maml/shader/ShaderElement$GradientStops;->mPositions:[F
 
-    .line 74
     return-void
 .end method
 
@@ -119,7 +110,6 @@
     .locals 1
 
     .prologue
-    .line 110
     iget-object v0, p0, Lmiui/maml/shader/ShaderElement$GradientStops;->mGradientStopArr:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -133,10 +123,8 @@
     .locals 5
 
     .prologue
-    .line 85
     const/4 v1, 0x0
 
-    .line 86
     .local v1, "changed":Z
     const/4 v2, 0x0
 
@@ -148,7 +136,6 @@
 
     if-ge v2, v4, :cond_2
 
-    .line 87
     iget-object v4, p0, Lmiui/maml/shader/ShaderElement$GradientStops;->mGradientStopArr:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -161,7 +148,6 @@
 
     move-result v0
 
-    .line 88
     .local v0, "c":I
     iget-object v4, p0, Lmiui/maml/shader/ShaderElement$GradientStops;->mColors:[I
 
@@ -169,16 +155,13 @@
 
     if-eq v0, v4, :cond_0
 
-    .line 89
     const/4 v1, 0x1
 
-    .line 91
     :cond_0
     iget-object v4, p0, Lmiui/maml/shader/ShaderElement$GradientStops;->mColors:[I
 
     aput v0, v4, v2
 
-    .line 93
     iget-object v4, p0, Lmiui/maml/shader/ShaderElement$GradientStops;->mGradientStopArr:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -191,7 +174,6 @@
 
     move-result v3
 
-    .line 94
     .local v3, "p":F
     iget-object v4, p0, Lmiui/maml/shader/ShaderElement$GradientStops;->mPositions:[F
 
@@ -201,32 +183,26 @@
 
     if-eqz v4, :cond_1
 
-    .line 95
     const/4 v1, 0x1
 
-    .line 97
     :cond_1
     iget-object v4, p0, Lmiui/maml/shader/ShaderElement$GradientStops;->mPositions:[F
 
     aput v3, v4, v2
 
-    .line 86
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 100
     .end local v0    # "c":I
     .end local v3    # "p":F
     :cond_2
     if-eqz v1, :cond_3
 
-    .line 101
     iget-object v4, p0, Lmiui/maml/shader/ShaderElement$GradientStops;->this$0:Lmiui/maml/shader/ShaderElement;
 
     invoke-virtual {v4}, Lmiui/maml/shader/ShaderElement;->onGradientStopsChanged()V
 
-    .line 103
     :cond_3
     return-void
 .end method

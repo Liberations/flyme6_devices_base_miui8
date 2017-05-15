@@ -24,17 +24,14 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 505
     iput-object p1, p0, Landroid/media/ImageWriter$ListenerHandler;->this$0:Landroid/media/ImageWriter;
 
-    .line 506
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
     invoke-direct {p0, p2, v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
 
-    .line 507
     return-void
 .end method
 
@@ -45,7 +42,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 512
     iget-object v1, p0, Landroid/media/ImageWriter$ListenerHandler;->this$0:Landroid/media/ImageWriter;
 
     # getter for: Landroid/media/ImageWriter;->mListenerLock:Ljava/lang/Object;
@@ -55,7 +51,6 @@
 
     monitor-enter v2
 
-    .line 513
     :try_start_0
     iget-object v1, p0, Landroid/media/ImageWriter$ListenerHandler;->this$0:Landroid/media/ImageWriter;
 
@@ -64,25 +59,20 @@
 
     move-result-object v0
 
-    .line 514
     .local v0, "listener":Landroid/media/ImageWriter$OnImageReleasedListener;
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 515
     if-eqz v0, :cond_0
 
-    .line 516
     iget-object v1, p0, Landroid/media/ImageWriter$ListenerHandler;->this$0:Landroid/media/ImageWriter;
 
     invoke-interface {v0, v1}, Landroid/media/ImageWriter$OnImageReleasedListener;->onImageReleased(Landroid/media/ImageWriter;)V
 
-    .line 518
     :cond_0
     return-void
 
-    .line 514
     .end local v0    # "listener":Landroid/media/ImageWriter$OnImageReleasedListener;
     :catchall_0
     move-exception v1

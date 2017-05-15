@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 260
     invoke-static {}, Lmiui/maml/elements/ElementGroup$LinearDirection;->values()[Lmiui/maml/elements/ElementGroup$LinearDirection;
 
     move-result-object v0

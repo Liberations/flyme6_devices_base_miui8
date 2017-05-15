@@ -36,20 +36,16 @@
     .locals 1
 
     .prologue
-    .line 299
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable$ConstantState;-><init>()V
 
-    .line 296
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/graphics/drawable/ColorDrawable$ColorState;->mTint:Landroid/content/res/ColorStateList;
 
-    .line 297
     sget-object v0, Landroid/graphics/drawable/Drawable;->DEFAULT_TINT_MODE:Landroid/graphics/PorterDuff$Mode;
 
     iput-object v0, p0, Landroid/graphics/drawable/ColorDrawable$ColorState;->mTintMode:Landroid/graphics/PorterDuff$Mode;
 
-    .line 301
     return-void
 .end method
 
@@ -58,50 +54,40 @@
     .param p1, "state"    # Landroid/graphics/drawable/ColorDrawable$ColorState;
 
     .prologue
-    .line 303
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable$ConstantState;-><init>()V
 
-    .line 296
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/graphics/drawable/ColorDrawable$ColorState;->mTint:Landroid/content/res/ColorStateList;
 
-    .line 297
     sget-object v0, Landroid/graphics/drawable/Drawable;->DEFAULT_TINT_MODE:Landroid/graphics/PorterDuff$Mode;
 
     iput-object v0, p0, Landroid/graphics/drawable/ColorDrawable$ColorState;->mTintMode:Landroid/graphics/PorterDuff$Mode;
 
-    .line 304
     iget-object v0, p1, Landroid/graphics/drawable/ColorDrawable$ColorState;->mThemeAttrs:[I
 
     iput-object v0, p0, Landroid/graphics/drawable/ColorDrawable$ColorState;->mThemeAttrs:[I
 
-    .line 305
     iget v0, p1, Landroid/graphics/drawable/ColorDrawable$ColorState;->mBaseColor:I
 
     iput v0, p0, Landroid/graphics/drawable/ColorDrawable$ColorState;->mBaseColor:I
 
-    .line 306
     iget v0, p1, Landroid/graphics/drawable/ColorDrawable$ColorState;->mUseColor:I
 
     iput v0, p0, Landroid/graphics/drawable/ColorDrawable$ColorState;->mUseColor:I
 
-    .line 307
     iget v0, p1, Landroid/graphics/drawable/ColorDrawable$ColorState;->mChangingConfigurations:I
 
     iput v0, p0, Landroid/graphics/drawable/ColorDrawable$ColorState;->mChangingConfigurations:I
 
-    .line 308
     iget-object v0, p1, Landroid/graphics/drawable/ColorDrawable$ColorState;->mTint:Landroid/content/res/ColorStateList;
 
     iput-object v0, p0, Landroid/graphics/drawable/ColorDrawable$ColorState;->mTint:Landroid/content/res/ColorStateList;
 
-    .line 309
     iget-object v0, p1, Landroid/graphics/drawable/ColorDrawable$ColorState;->mTintMode:Landroid/graphics/PorterDuff$Mode;
 
     iput-object v0, p0, Landroid/graphics/drawable/ColorDrawable$ColorState;->mTintMode:Landroid/graphics/PorterDuff$Mode;
 
-    .line 310
     return-void
 .end method
 
@@ -111,7 +97,6 @@
     .locals 1
 
     .prologue
-    .line 314
     iget-object v0, p0, Landroid/graphics/drawable/ColorDrawable$ColorState;->mThemeAttrs:[I
 
     if-nez v0, :cond_0
@@ -144,7 +129,6 @@
     .locals 2
 
     .prologue
-    .line 330
     iget v1, p0, Landroid/graphics/drawable/ColorDrawable$ColorState;->mChangingConfigurations:I
 
     iget-object v0, p0, Landroid/graphics/drawable/ColorDrawable$ColorState;->mTint:Landroid/content/res/ColorStateList;
@@ -174,7 +158,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 320
     new-instance v0, Landroid/graphics/drawable/ColorDrawable;
 
     invoke-direct {v0, p0, v1, v1}, Landroid/graphics/drawable/ColorDrawable;-><init>(Landroid/graphics/drawable/ColorDrawable$ColorState;Landroid/content/res/Resources;Landroid/graphics/drawable/ColorDrawable$1;)V
@@ -187,7 +170,6 @@
     .param p1, "res"    # Landroid/content/res/Resources;
 
     .prologue
-    .line 325
     new-instance v0, Landroid/graphics/drawable/ColorDrawable;
 
     const/4 v1, 0x0

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 66
     iput-object p1, p0, Lmiui/util/ProximitySensorWrapper$2;->this$0:Lmiui/util/ProximitySensorWrapper;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,16 +37,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 69
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 77
     :goto_0
     return-void
 
-    .line 71
     :pswitch_0
     iget-object v0, p0, Lmiui/util/ProximitySensorWrapper$2;->this$0:Lmiui/util/ProximitySensorWrapper;
 
@@ -58,7 +54,6 @@
 
     goto :goto_0
 
-    .line 74
     :pswitch_1
     iget-object v0, p0, Lmiui/util/ProximitySensorWrapper$2;->this$0:Lmiui/util/ProximitySensorWrapper;
 
@@ -69,7 +64,6 @@
 
     goto :goto_0
 
-    .line 69
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

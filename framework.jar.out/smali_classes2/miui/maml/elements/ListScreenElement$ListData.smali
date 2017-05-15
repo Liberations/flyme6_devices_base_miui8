@@ -39,29 +39,22 @@
     .param p3, "list"    # Lmiui/maml/elements/ListScreenElement;
 
     .prologue
-    .line 294
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 292
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lmiui/maml/elements/ListScreenElement$ListData;->mColumns:Ljava/util/ArrayList;
 
-    .line 295
     iput-object p2, p0, Lmiui/maml/elements/ListScreenElement$ListData;->mRoot:Lmiui/maml/ScreenElementRoot;
 
-    .line 296
     iput-object p3, p0, Lmiui/maml/elements/ListScreenElement$ListData;->mList:Lmiui/maml/elements/ListScreenElement;
 
-    .line 297
     if-eqz p1, :cond_0
 
-    .line 298
     invoke-direct {p0, p1}, Lmiui/maml/elements/ListScreenElement$ListData;->load(Lorg/w3c/dom/Element;)V
 
-    .line 300
     :cond_0
     return-void
 .end method
@@ -71,7 +64,6 @@
     .param p1, "node"    # Lorg/w3c/dom/Element;
 
     .prologue
-    .line 303
     const-string v0, "Column"
 
     new-instance v1, Lmiui/maml/elements/ListScreenElement$ListData$1;
@@ -80,7 +72,6 @@
 
     invoke-static {p1, v0, v1}, Lmiui/maml/util/Utils;->traverseXmlElementChildren(Lorg/w3c/dom/Element;Ljava/lang/String;Lmiui/maml/util/Utils$XmlTraverseListener;)V
 
-    .line 309
     return-void
 .end method
 
@@ -90,7 +81,6 @@
     .locals 3
 
     .prologue
-    .line 320
     iget-object v2, p0, Lmiui/maml/elements/ListScreenElement$ListData;->mColumns:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -112,16 +102,13 @@
 
     check-cast v0, Lmiui/maml/elements/ListScreenElement$Column;
 
-    .line 321
     .local v0, "column":Lmiui/maml/elements/ListScreenElement$Column;
     if-eqz v0, :cond_0
 
-    .line 322
     invoke-virtual {v0}, Lmiui/maml/elements/ListScreenElement$Column;->finish()V
 
     goto :goto_0
 
-    .line 325
     .end local v0    # "column":Lmiui/maml/elements/ListScreenElement$Column;
     :cond_1
     return-void
@@ -131,7 +118,6 @@
     .locals 3
 
     .prologue
-    .line 312
     iget-object v2, p0, Lmiui/maml/elements/ListScreenElement$ListData;->mColumns:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -153,16 +139,13 @@
 
     check-cast v0, Lmiui/maml/elements/ListScreenElement$Column;
 
-    .line 313
     .local v0, "column":Lmiui/maml/elements/ListScreenElement$Column;
     if-eqz v0, :cond_0
 
-    .line 314
     invoke-virtual {v0}, Lmiui/maml/elements/ListScreenElement$Column;->init()V
 
     goto :goto_0
 
-    .line 317
     .end local v0    # "column":Lmiui/maml/elements/ListScreenElement$Column;
     :cond_1
     return-void

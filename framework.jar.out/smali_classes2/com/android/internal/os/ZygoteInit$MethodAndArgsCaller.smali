@@ -30,16 +30,12 @@
     .param p2, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 732
     invoke-direct {p0}, Ljava/lang/Exception;-><init>()V
 
-    .line 733
     iput-object p1, p0, Lcom/android/internal/os/ZygoteInit$MethodAndArgsCaller;->mMethod:Ljava/lang/reflect/Method;
 
-    .line 734
     iput-object p2, p0, Lcom/android/internal/os/ZygoteInit$MethodAndArgsCaller;->mArgs:[Ljava/lang/String;
 
-    .line 735
     return-void
 .end method
 
@@ -49,7 +45,6 @@
     .locals 7
 
     .prologue
-    .line 739
     :try_start_0
     iget-object v2, p0, Lcom/android/internal/os/ZygoteInit$MethodAndArgsCaller;->mMethod:Ljava/lang/reflect/Method;
 
@@ -70,14 +65,11 @@
     .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 751
     return-void
 
-    .line 740
     :catch_0
     move-exception v1
 
-    .line 741
     .local v1, "ex":Ljava/lang/IllegalAccessException;
     new-instance v2, Ljava/lang/RuntimeException;
 
@@ -85,43 +77,36 @@
 
     throw v2
 
-    .line 742
     .end local v1    # "ex":Ljava/lang/IllegalAccessException;
     :catch_1
     move-exception v1
 
-    .line 743
     .local v1, "ex":Ljava/lang/reflect/InvocationTargetException;
     invoke-virtual {v1}, Ljava/lang/reflect/InvocationTargetException;->getCause()Ljava/lang/Throwable;
 
     move-result-object v0
 
-    .line 744
     .local v0, "cause":Ljava/lang/Throwable;
     instance-of v2, v0, Ljava/lang/RuntimeException;
 
     if-eqz v2, :cond_0
 
-    .line 745
     check-cast v0, Ljava/lang/RuntimeException;
 
     .end local v0    # "cause":Ljava/lang/Throwable;
     throw v0
 
-    .line 746
     .restart local v0    # "cause":Ljava/lang/Throwable;
     :cond_0
     instance-of v2, v0, Ljava/lang/Error;
 
     if-eqz v2, :cond_1
 
-    .line 747
     check-cast v0, Ljava/lang/Error;
 
     .end local v0    # "cause":Ljava/lang/Throwable;
     throw v0
 
-    .line 749
     .restart local v0    # "cause":Ljava/lang/Throwable;
     :cond_1
     new-instance v2, Ljava/lang/RuntimeException;

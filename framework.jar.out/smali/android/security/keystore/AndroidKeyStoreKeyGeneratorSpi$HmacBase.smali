@@ -20,7 +20,6 @@
     .param p1, "keymasterDigest"    # I
 
     .prologue
-    .line 64
     const/16 v0, 0x80
 
     invoke-static {p1}, Landroid/security/keystore/KeymasterUtils;->getDigestOutputSizeBits(I)I
@@ -29,6 +28,5 @@
 
     invoke-direct {p0, v0, p1, v1}, Landroid/security/keystore/AndroidKeyStoreKeyGeneratorSpi;-><init>(III)V
 
-    .line 67
     return-void
 .end method

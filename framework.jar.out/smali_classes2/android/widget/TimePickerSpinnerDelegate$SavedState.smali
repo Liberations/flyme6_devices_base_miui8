@@ -38,7 +38,6 @@
     .locals 1
 
     .prologue
-    .line 581
     new-instance v0, Landroid/widget/TimePickerSpinnerDelegate$SavedState$1;
 
     invoke-direct {v0}, Landroid/widget/TimePickerSpinnerDelegate$SavedState$1;-><init>()V
@@ -53,24 +52,20 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 560
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcel;)V
 
-    .line 561
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/widget/TimePickerSpinnerDelegate$SavedState;->mHour:I
 
-    .line 562
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/widget/TimePickerSpinnerDelegate$SavedState;->mMinute:I
 
-    .line 563
     return-void
 .end method
 
@@ -80,7 +75,6 @@
     .param p2, "x1"    # Landroid/widget/TimePickerSpinnerDelegate$1;
 
     .prologue
-    .line 549
     invoke-direct {p0, p1}, Landroid/widget/TimePickerSpinnerDelegate$SavedState;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -93,16 +87,12 @@
     .param p3, "minute"    # I
 
     .prologue
-    .line 554
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcelable;)V
 
-    .line 555
     iput p2, p0, Landroid/widget/TimePickerSpinnerDelegate$SavedState;->mHour:I
 
-    .line 556
     iput p3, p0, Landroid/widget/TimePickerSpinnerDelegate$SavedState;->mMinute:I
 
-    .line 557
     return-void
 .end method
 
@@ -114,7 +104,6 @@
     .param p4, "x3"    # Landroid/widget/TimePickerSpinnerDelegate$1;
 
     .prologue
-    .line 549
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/TimePickerSpinnerDelegate$SavedState;-><init>(Landroid/os/Parcelable;II)V
 
     return-void
@@ -126,7 +115,6 @@
     .locals 1
 
     .prologue
-    .line 566
     iget v0, p0, Landroid/widget/TimePickerSpinnerDelegate$SavedState;->mHour:I
 
     return v0
@@ -136,7 +124,6 @@
     .locals 1
 
     .prologue
-    .line 570
     iget v0, p0, Landroid/widget/TimePickerSpinnerDelegate$SavedState;->mMinute:I
 
     return v0
@@ -148,19 +135,15 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 575
     invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 576
     iget v0, p0, Landroid/widget/TimePickerSpinnerDelegate$SavedState;->mHour:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 577
     iget v0, p0, Landroid/widget/TimePickerSpinnerDelegate$SavedState;->mMinute:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 578
     return-void
 .end method

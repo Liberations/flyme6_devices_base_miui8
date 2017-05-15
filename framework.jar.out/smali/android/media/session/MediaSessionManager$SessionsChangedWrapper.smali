@@ -32,26 +32,20 @@
     .param p3, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 329
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 335
     new-instance v0, Landroid/media/session/MediaSessionManager$SessionsChangedWrapper$1;
 
     invoke-direct {v0, p0}, Landroid/media/session/MediaSessionManager$SessionsChangedWrapper$1;-><init>(Landroid/media/session/MediaSessionManager$SessionsChangedWrapper;)V
 
     iput-object v0, p0, Landroid/media/session/MediaSessionManager$SessionsChangedWrapper;->mStub:Landroid/media/session/IActiveSessionsListener$Stub;
 
-    .line 330
     iput-object p1, p0, Landroid/media/session/MediaSessionManager$SessionsChangedWrapper;->mContext:Landroid/content/Context;
 
-    .line 331
     iput-object p2, p0, Landroid/media/session/MediaSessionManager$SessionsChangedWrapper;->mListener:Landroid/media/session/MediaSessionManager$OnActiveSessionsChangedListener;
 
-    .line 332
     iput-object p3, p0, Landroid/media/session/MediaSessionManager$SessionsChangedWrapper;->mHandler:Landroid/os/Handler;
 
-    .line 333
     return-void
 .end method
 
@@ -60,7 +54,6 @@
     .param p0, "x0"    # Landroid/media/session/MediaSessionManager$SessionsChangedWrapper;
 
     .prologue
-    .line 323
     iget-object v0, p0, Landroid/media/session/MediaSessionManager$SessionsChangedWrapper;->mStub:Landroid/media/session/IActiveSessionsListener$Stub;
 
     return-object v0
@@ -71,7 +64,6 @@
     .param p0, "x0"    # Landroid/media/session/MediaSessionManager$SessionsChangedWrapper;
 
     .prologue
-    .line 323
     invoke-direct {p0}, Landroid/media/session/MediaSessionManager$SessionsChangedWrapper;->release()V
 
     return-void
@@ -82,7 +74,6 @@
     .param p0, "x0"    # Landroid/media/session/MediaSessionManager$SessionsChangedWrapper;
 
     .prologue
-    .line 323
     iget-object v0, p0, Landroid/media/session/MediaSessionManager$SessionsChangedWrapper;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -93,7 +84,6 @@
     .param p0, "x0"    # Landroid/media/session/MediaSessionManager$SessionsChangedWrapper;
 
     .prologue
-    .line 323
     iget-object v0, p0, Landroid/media/session/MediaSessionManager$SessionsChangedWrapper;->mListener:Landroid/media/session/MediaSessionManager$OnActiveSessionsChangedListener;
 
     return-object v0
@@ -104,7 +94,6 @@
     .param p0, "x0"    # Landroid/media/session/MediaSessionManager$SessionsChangedWrapper;
 
     .prologue
-    .line 323
     iget-object v0, p0, Landroid/media/session/MediaSessionManager$SessionsChangedWrapper;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -116,15 +105,11 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 358
     iput-object v0, p0, Landroid/media/session/MediaSessionManager$SessionsChangedWrapper;->mContext:Landroid/content/Context;
 
-    .line 359
     iput-object v0, p0, Landroid/media/session/MediaSessionManager$SessionsChangedWrapper;->mListener:Landroid/media/session/MediaSessionManager$OnActiveSessionsChangedListener;
 
-    .line 360
     iput-object v0, p0, Landroid/media/session/MediaSessionManager$SessionsChangedWrapper;->mHandler:Landroid/os/Handler;
 
-    .line 361
     return-void
 .end method

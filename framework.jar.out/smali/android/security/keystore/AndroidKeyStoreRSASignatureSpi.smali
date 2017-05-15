@@ -37,16 +37,12 @@
     .param p2, "keymasterPadding"    # I
 
     .prologue
-    .line 133
     invoke-direct {p0}, Landroid/security/keystore/AndroidKeyStoreSignatureSpiBase;-><init>()V
 
-    .line 134
     iput p1, p0, Landroid/security/keystore/AndroidKeyStoreRSASignatureSpi;->mKeymasterDigest:I
 
-    .line 135
     iput p2, p0, Landroid/security/keystore/AndroidKeyStoreRSASignatureSpi;->mKeymasterPadding:I
 
-    .line 136
     return-void
 .end method
 
@@ -57,28 +53,24 @@
     .param p1, "keymasterArgs"    # Landroid/security/keymaster/KeymasterArguments;
 
     .prologue
-    .line 160
     const v0, 0x10000002
 
     const/4 v1, 0x1
 
     invoke-virtual {p1, v0, v1}, Landroid/security/keymaster/KeymasterArguments;->addEnum(II)V
 
-    .line 161
     const v0, 0x20000005
 
     iget v1, p0, Landroid/security/keystore/AndroidKeyStoreRSASignatureSpi;->mKeymasterDigest:I
 
     invoke-virtual {p1, v0, v1}, Landroid/security/keymaster/KeymasterArguments;->addEnum(II)V
 
-    .line 162
     const v0, 0x20000006
 
     iget v1, p0, Landroid/security/keystore/AndroidKeyStoreRSASignatureSpi;->mKeymasterPadding:I
 
     invoke-virtual {p1, v0, v1}, Landroid/security/keymaster/KeymasterArguments;->addEnum(II)V
 
-    .line 163
     return-void
 .end method
 
@@ -92,7 +84,6 @@
     .end annotation
 
     .prologue
-    .line 140
     const-string v0, "RSA"
 
     invoke-virtual {p1}, Landroid/security/keystore/AndroidKeyStoreKey;->getAlgorithm()Ljava/lang/String;
@@ -105,7 +96,6 @@
 
     if-nez v0, :cond_0
 
-    .line 141
     new-instance v0, Ljava/security/InvalidKeyException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -152,11 +142,9 @@
 
     throw v0
 
-    .line 144
     :cond_0
     invoke-super {p0, p1}, Landroid/security/keystore/AndroidKeyStoreSignatureSpiBase;->initKey(Landroid/security/keystore/AndroidKeyStoreKey;)V
 
-    .line 145
     return-void
 .end method
 
@@ -164,10 +152,8 @@
     .locals 0
 
     .prologue
-    .line 149
     invoke-super {p0}, Landroid/security/keystore/AndroidKeyStoreSignatureSpiBase;->resetAll()V
 
-    .line 150
     return-void
 .end method
 
@@ -175,9 +161,7 @@
     .locals 0
 
     .prologue
-    .line 154
     invoke-super {p0}, Landroid/security/keystore/AndroidKeyStoreSignatureSpiBase;->resetWhilePreservingInitState()V
 
-    .line 155
     return-void
 .end method

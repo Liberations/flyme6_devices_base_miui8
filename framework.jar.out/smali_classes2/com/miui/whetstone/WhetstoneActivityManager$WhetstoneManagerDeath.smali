@@ -27,13 +27,10 @@
     .param p1, "token"    # Lcom/miui/whetstone/server/IWhetstoneActivityManager;
 
     .prologue
-    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 30
     iput-object p1, p0, Lcom/miui/whetstone/WhetstoneActivityManager$WhetstoneManagerDeath;->mToken:Lcom/miui/whetstone/server/IWhetstoneActivityManager;
 
-    .line 31
     return-void
 .end method
 
@@ -43,18 +40,15 @@
     .locals 2
 
     .prologue
-    .line 34
     const/4 v0, 0x0
 
     # setter for: Lcom/miui/whetstone/WhetstoneActivityManager;->ws:Lcom/miui/whetstone/server/IWhetstoneActivityManager;
     invoke-static {v0}, Lcom/miui/whetstone/WhetstoneActivityManager;->access$002(Lcom/miui/whetstone/server/IWhetstoneActivityManager;)Lcom/miui/whetstone/server/IWhetstoneActivityManager;
 
-    .line 35
     iget-object v0, p0, Lcom/miui/whetstone/WhetstoneActivityManager$WhetstoneManagerDeath;->mToken:Lcom/miui/whetstone/server/IWhetstoneActivityManager;
 
     if-eqz v0, :cond_0
 
-    .line 36
     iget-object v0, p0, Lcom/miui/whetstone/WhetstoneActivityManager$WhetstoneManagerDeath;->mToken:Lcom/miui/whetstone/server/IWhetstoneActivityManager;
 
     invoke-interface {v0}, Lcom/miui/whetstone/server/IWhetstoneActivityManager;->asBinder()Landroid/os/IBinder;
@@ -65,7 +59,6 @@
 
     invoke-interface {v0, p0, v1}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 38
     :cond_0
     return-void
 .end method

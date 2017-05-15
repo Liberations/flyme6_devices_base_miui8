@@ -27,14 +27,12 @@
     .locals 2
 
     .prologue
-    .line 100
     invoke-static {}, Lmiui/util/AppConstants;->getCurrentApplication()Landroid/app/Application;
 
     move-result-object v0
 
     sput-object v0, Lmiui/telephony/SubscriptionManagerEx$Holder;->CONTEXT:Landroid/content/Context;
 
-    .line 102
     sget-object v0, Lmiui/telephony/SubscriptionManagerEx$Holder;->CONTEXT:Landroid/content/Context;
 
     invoke-static {v0}, Landroid/telephony/SubscriptionManager;->from(Landroid/content/Context;)Landroid/telephony/SubscriptionManager;
@@ -43,7 +41,6 @@
 
     sput-object v0, Lmiui/telephony/SubscriptionManagerEx$Holder;->SUBSCRIPTION_MANAGER:Landroid/telephony/SubscriptionManager;
 
-    .line 104
     new-instance v0, Lmiui/telephony/SubscriptionManagerEx;
 
     const/4 v1, 0x0
@@ -59,7 +56,6 @@
     .locals 0
 
     .prologue
-    .line 106
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 3556
     iput-object p1, p0, Landroid/widget/Editor$ActionPopupWindow$1;->this$1:Landroid/widget/Editor$ActionPopupWindow;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,19 +37,16 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 3560
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 3569
     const-string v1, "Editor"
 
     const-string v2, "Unrecognised message received."
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3573
     :goto_0
     iget-object v1, p0, Landroid/widget/Editor$ActionPopupWindow$1;->this$1:Landroid/widget/Editor$ActionPopupWindow;
 
@@ -58,16 +54,13 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/Editor$ActionPopupWindow;->setContentAreaAsTouchableSurface(Z)V
 
-    .line 3574
     return-void
 
-    .line 3562
     :pswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/miui/translationservice/provider/TranslationResult;
 
-    .line 3563
     .local v0, "result":Lcom/miui/translationservice/provider/TranslationResult;
     iget-object v1, p0, Landroid/widget/Editor$ActionPopupWindow$1;->this$1:Landroid/widget/Editor$ActionPopupWindow;
 
@@ -80,7 +73,6 @@
 
     goto :goto_0
 
-    .line 3566
     .end local v0    # "result":Lcom/miui/translationservice/provider/TranslationResult;
     :pswitch_1
     iget-object v1, p0, Landroid/widget/Editor$ActionPopupWindow$1;->this$1:Landroid/widget/Editor$ActionPopupWindow;
@@ -96,7 +88,6 @@
 
     goto :goto_0
 
-    .line 3560
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

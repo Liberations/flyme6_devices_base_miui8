@@ -30,7 +30,6 @@
     .locals 1
 
     .prologue
-    .line 248
     const-string v0, "content://rcsgroup/rms_log_group"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -46,7 +45,6 @@
     .locals 0
 
     .prologue
-    .line 236
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -60,7 +58,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 241
     sget-object v1, Landroid/juphoon/provider/RmsDefine$RmsGroup;->CONTENT_URI:Landroid/net/Uri;
 
     const-string v5, "date DESC"
@@ -86,7 +83,6 @@
     .param p3, "orderBy"    # Ljava/lang/String;
 
     .prologue
-    .line 245
     sget-object v1, Landroid/juphoon/provider/RmsDefine$RmsGroup;->CONTENT_URI:Landroid/net/Uri;
 
     const/4 v4, 0x0

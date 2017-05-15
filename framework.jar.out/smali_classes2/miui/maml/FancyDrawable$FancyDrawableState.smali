@@ -24,13 +24,10 @@
     .param p1, "rendererCore"    # Lmiui/maml/RendererCore;
 
     .prologue
-    .line 208
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable$ConstantState;-><init>()V
 
-    .line 209
     iput-object p1, p0, Lmiui/maml/FancyDrawable$FancyDrawableState;->mRendererCore:Lmiui/maml/RendererCore;
 
-    .line 210
     return-void
 .end method
 
@@ -40,7 +37,6 @@
     .locals 1
 
     .prologue
-    .line 219
     const/4 v0, 0x0
 
     return v0
@@ -50,7 +46,6 @@
     .locals 2
 
     .prologue
-    .line 214
     new-instance v0, Lmiui/maml/FancyDrawable;
 
     iget-object v1, p0, Lmiui/maml/FancyDrawable$FancyDrawableState;->mRendererCore:Lmiui/maml/RendererCore;

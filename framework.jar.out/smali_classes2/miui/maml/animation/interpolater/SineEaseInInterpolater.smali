@@ -11,7 +11,6 @@
     .locals 0
 
     .prologue
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,7 +23,6 @@
     .param p1, "t"    # F
 
     .prologue
-    .line 8
     float-to-double v0, p1
 
     const-wide v2, 0x3ff921fb54442d18L    # 1.5707963267948966

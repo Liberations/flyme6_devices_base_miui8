@@ -35,7 +35,6 @@
     .locals 0
 
     .prologue
-    .line 2682
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,8 +46,7 @@
     .param p1, "isOpen"    # Z
 
     .prologue
-    .line 2764
-    const-string/jumbo v0, "open_cross_user_notification"
+    const-string v0, "open_cross_user_notification"
 
     invoke-static {p0, v0, p1}, Landroid/provider/MiuiSettings$Global;->putBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
@@ -63,8 +61,7 @@
     .param p1, "isOpen"    # Z
 
     .prologue
-    .line 2778
-    const-string/jumbo v0, "open_second_space_status_icon"
+    const-string v0, "open_second_space_status_icon"
 
     invoke-static {p0, v0, p1}, Landroid/provider/MiuiSettings$Global;->putBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
@@ -79,8 +76,7 @@
     .param p1, "isOpen"    # Z
 
     .prologue
-    .line 2750
-    const-string/jumbo v0, "open_switch_user_notification"
+    const-string v0, "open_switch_user_notification"
 
     invoke-static {p0, v0, p1}, Landroid/provider/MiuiSettings$Global;->putBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
@@ -95,8 +91,7 @@
     .param p1, "isOpen"    # Z
 
     .prologue
-    .line 2736
-    const-string/jumbo v0, "open_privacy_contact_in_second_space"
+    const-string v0, "open_privacy_contact_in_second_space"
 
     invoke-static {p0, v0, p1}, Landroid/provider/MiuiSettings$Global;->putBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
@@ -113,7 +108,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 2792
     invoke-static {p0, p1, v0}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result v1
@@ -133,8 +127,7 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 2757
-    const-string/jumbo v1, "open_cross_user_notification"
+    const-string v1, "open_cross_user_notification"
 
     invoke-static {p0, v1, v0}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -158,8 +151,7 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 2771
-    const-string/jumbo v1, "open_second_space_status_icon"
+    const-string v1, "open_second_space_status_icon"
 
     invoke-static {p0, v1, v0}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -183,8 +175,7 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 2743
-    const-string/jumbo v1, "open_switch_user_notification"
+    const-string v1, "open_switch_user_notification"
 
     invoke-static {p0, v1, v0}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -206,8 +197,7 @@
     .param p0, "cr"    # Landroid/content/ContentResolver;
 
     .prologue
-    .line 2729
-    const-string/jumbo v0, "open_privacy_contact_in_second_space"
+    const-string v0, "open_privacy_contact_in_second_space"
 
     invoke-static {p0, v0}, Landroid/provider/MiuiSettings$Global;->getBoolean(Landroid/content/ContentResolver;Ljava/lang/String;)Z
 
@@ -223,7 +213,6 @@
     .param p2, "value"    # Z
 
     .prologue
-    .line 2785
     if-eqz p2, :cond_0
 
     const/4 v0, 0x1

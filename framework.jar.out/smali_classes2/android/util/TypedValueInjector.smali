@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,7 +19,6 @@
     .param p1, "metrics"    # Landroid/util/DisplayMetrics;
 
     .prologue
-    .line 5
     iget v0, p1, Landroid/util/DisplayMetrics;->scaledDensity:F
 
     mul-float/2addr v0, p0

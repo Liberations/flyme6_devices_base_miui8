@@ -12,7 +12,6 @@
     .locals 0
 
     .prologue
-    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,7 +23,6 @@
     .param p1, "fingerprintId"    # Ljava/lang/String;
 
     .prologue
-    .line 32
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v1
@@ -33,18 +31,14 @@
 
     move-result-object v0
 
-    .line 33
     .local v0, "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Integer;>;"
     if-eqz v0, :cond_0
 
-    .line 34
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 36
     :cond_0
     invoke-static {p0, v0}, Landroid/security/FingerprintIdUtils;->putUserFingerprintIds(Landroid/content/Context;Ljava/util/HashMap;)V
 
-    .line 37
     return-void
 .end method
 
@@ -53,7 +47,6 @@
     .param p0, "userId"    # I
 
     .prologue
-    .line 40
     new-instance v0, Ljava/io/File;
 
     invoke-static {p0}, Landroid/os/Environment;->getUserSystemDirectory(I)Ljava/io/File;
@@ -76,8 +69,7 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 45
-    const-string/jumbo v0, "security"
+    const-string v0, "security"
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -106,7 +98,6 @@
     .end annotation
 
     .prologue
-    .line 27
     invoke-static {p0}, Landroid/security/FingerprintIdUtils;->getSecurityManager(Landroid/content/Context;)Lmiui/security/SecurityManager;
 
     move-result-object v1
@@ -119,7 +110,6 @@
 
     move-result-object v0
 
-    .line 28
     .local v0, "str":Ljava/lang/String;
     invoke-static {v0}, Landroid/security/FingerprintIdUtils;->str2Map(Ljava/lang/String;)Ljava/util/HashMap;
 
@@ -143,13 +133,11 @@
     .end annotation
 
     .prologue
-    .line 49
     .local p0, "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Integer;>;"
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 50
     .local v0, "buffer":Ljava/lang/StringBuilder;
     invoke-virtual {p0}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
@@ -159,7 +147,6 @@
 
     move-result-object v2
 
-    .line 51
     .local v2, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/Integer;>;>;"
     :cond_0
     :goto_0
@@ -169,14 +156,12 @@
 
     if-eqz v5, :cond_1
 
-    .line 52
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 53
     .local v1, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/Integer;>;"
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -184,41 +169,34 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 54
     .local v3, "key":Ljava/lang/String;
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 56
     const/16 v5, 0x3d
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 57
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Ljava/lang/Integer;
 
-    .line 58
     .local v4, "value":Ljava/lang/Integer;
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 60
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v5
 
     if-eqz v5, :cond_0
 
-    .line 61
     const-string v5, ","
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
-    .line 64
     .end local v1    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/Integer;>;"
     .end local v3    # "key":Ljava/lang/String;
     .end local v4    # "value":Ljava/lang/Integer;
@@ -246,15 +224,12 @@
     .end annotation
 
     .prologue
-    .line 20
     .local p1, "fingeridMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Integer;>;"
     if-nez p1, :cond_0
 
-    .line 24
     :goto_0
     return-void
 
-    .line 23
     :cond_0
     invoke-static {p0}, Landroid/security/FingerprintIdUtils;->getSecurityManager(Landroid/content/Context;)Lmiui/security/SecurityManager;
 
@@ -294,12 +269,10 @@
     .end annotation
 
     .prologue
-    .line 68
     new-instance v2, Ljava/util/HashMap;
 
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
-    .line 69
     .local v2, "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Integer;>;"
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -307,18 +280,15 @@
 
     if-nez v7, :cond_0
 
-    .line 70
     const-string v7, ","
 
     invoke-virtual {p0, v7}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v3
 
-    .line 71
     .local v3, "packageArr":[Ljava/lang/String;
     if-eqz v3, :cond_0
 
-    .line 72
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -327,10 +297,8 @@
 
     if-ge v1, v7, :cond_0
 
-    .line 73
     aget-object v4, v3, v1
 
-    .line 74
     .local v4, "pair":Ljava/lang/String;
     const/16 v7, 0x3d
 
@@ -338,7 +306,6 @@
 
     move-result v0
 
-    .line 75
     .local v0, "equalIndex":I
     const/4 v7, 0x0
 
@@ -346,7 +313,6 @@
 
     move-result-object v5
 
-    .line 76
     .local v5, "pairKey":Ljava/lang/String;
     add-int/lit8 v7, v0, 0x1
 
@@ -354,7 +320,6 @@
 
     move-result-object v6
 
-    .line 77
     .local v6, "pairValue":Ljava/lang/String;
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
 
@@ -362,12 +327,10 @@
 
     invoke-virtual {v2, v5, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 72
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 81
     .end local v0    # "equalIndex":I
     .end local v1    # "i":I
     .end local v3    # "packageArr":[Ljava/lang/String;

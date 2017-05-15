@@ -16,7 +16,6 @@
     .locals 0
 
     .prologue
-    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,7 +27,6 @@
     .param p1, "folderPath"    # Ljava/lang/String;
 
     .prologue
-    .line 23
     if-eqz p1, :cond_0
 
     new-instance v1, Ljava/io/File;
@@ -41,7 +39,6 @@
 
     if-nez v1, :cond_1
 
-    .line 24
     :cond_0
     const-string v1, "MiuiMediaScannerUtil"
 
@@ -65,11 +62,9 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 31
     :goto_0
     return-void
 
-    .line 27
     :cond_1
     new-instance v0, Landroid/content/Intent;
 
@@ -77,7 +72,6 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 28
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "com.android.providers.media"
 
@@ -85,7 +79,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 29
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -96,7 +89,6 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    .line 30
     invoke-virtual {p0, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
     goto :goto_0
@@ -108,7 +100,6 @@
     .param p1, "filePath"    # Ljava/lang/String;
 
     .prologue
-    .line 37
     if-eqz p1, :cond_0
 
     new-instance v1, Ljava/io/File;
@@ -121,7 +112,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 38
     :cond_0
     const-string v1, "MiuiMediaScannerUtil"
 
@@ -145,11 +135,9 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 45
     :goto_0
     return-void
 
-    .line 41
     :cond_1
     new-instance v0, Landroid/content/Intent;
 
@@ -157,7 +145,6 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 42
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "com.android.providers.media"
 
@@ -165,7 +152,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 43
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -176,7 +162,6 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    .line 44
     invoke-virtual {p0, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
     goto :goto_0
@@ -187,14 +172,12 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 48
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.MEDIA_MOUNTED"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 49
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "com.android.providers.media"
 
@@ -202,7 +185,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 50
     invoke-static {}, Lmiui/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
 
     move-result-object v1
@@ -213,9 +195,7 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    .line 51
     invoke-virtual {p0, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 52
     return-void
 .end method

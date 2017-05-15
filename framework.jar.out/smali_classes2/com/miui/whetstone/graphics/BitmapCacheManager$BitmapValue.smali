@@ -48,29 +48,24 @@
     .param p1, "key"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 44
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/miui/whetstone/graphics/BitmapCacheManager$BitmapValue;->mArray:Ljava/util/ArrayList;
 
-    .line 48
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lcom/miui/whetstone/graphics/BitmapCacheManager$BitmapValue;->mKey:Ljava/lang/ref/WeakReference;
 
-    .line 49
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/miui/whetstone/graphics/BitmapCacheManager$BitmapValue;->mHasCached:Z
 
-    .line 50
     return-void
 .end method
 
@@ -80,24 +75,20 @@
     .param p2, "dr"    # Landroid/graphics/drawable/BitmapDrawable;
 
     .prologue
-    .line 52
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 44
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/miui/whetstone/graphics/BitmapCacheManager$BitmapValue;->mArray:Ljava/util/ArrayList;
 
-    .line 53
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lcom/miui/whetstone/graphics/BitmapCacheManager$BitmapValue;->mKey:Ljava/lang/ref/WeakReference;
 
-    .line 54
     iget-object v0, p0, Lcom/miui/whetstone/graphics/BitmapCacheManager$BitmapValue;->mArray:Ljava/util/ArrayList;
 
     new-instance v1, Ljava/lang/ref/WeakReference;
@@ -106,12 +97,10 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 55
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/miui/whetstone/graphics/BitmapCacheManager$BitmapValue;->mHasCached:Z
 
-    .line 56
     return-void
 .end method
 
@@ -121,7 +110,6 @@
     .locals 3
 
     .prologue
-    .line 74
     iget-object v2, p0, Lcom/miui/whetstone/graphics/BitmapCacheManager$BitmapValue;->mKey:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -130,23 +118,19 @@
 
     if-nez v2, :cond_0
 
-    .line 76
     iget-object v2, p0, Lcom/miui/whetstone/graphics/BitmapCacheManager$BitmapValue;->mArray:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
 
-    .line 77
     const/4 v2, 0x1
 
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v2
 
-    .line 87
     :goto_0
     return-object v2
 
-    .line 79
     :cond_0
     iget-object v2, p0, Lcom/miui/whetstone/graphics/BitmapCacheManager$BitmapValue;->mArray:Ljava/util/ArrayList;
 
@@ -154,7 +138,6 @@
 
     move-result-object v1
 
-    .line 80
     .local v1, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/ref/WeakReference<Landroid/graphics/drawable/BitmapDrawable;>;>;"
     :cond_1
     :goto_1
@@ -164,14 +147,12 @@
 
     if-eqz v2, :cond_2
 
-    .line 81
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/ref/WeakReference;
 
-    .line 82
     .local v0, "entry":Ljava/lang/ref/WeakReference;, "Ljava/lang/ref/WeakReference<Landroid/graphics/drawable/BitmapDrawable;>;"
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -179,12 +160,10 @@
 
     if-nez v2, :cond_1
 
-    .line 83
     invoke-interface {v1}, Ljava/util/Iterator;->remove()V
 
     goto :goto_1
 
-    .line 87
     .end local v0    # "entry":Ljava/lang/ref/WeakReference;, "Ljava/lang/ref/WeakReference<Landroid/graphics/drawable/BitmapDrawable;>;"
     :cond_2
     const/4 v2, 0x0
@@ -201,14 +180,12 @@
     .param p1, "dr"    # Landroid/graphics/drawable/BitmapDrawable;
 
     .prologue
-    .line 63
     iget-object v2, p0, Lcom/miui/whetstone/graphics/BitmapCacheManager$BitmapValue;->mArray:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    .line 64
     .local v1, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/ref/WeakReference<Landroid/graphics/drawable/BitmapDrawable;>;>;"
     :cond_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -217,14 +194,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 65
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/ref/WeakReference;
 
-    .line 66
     .local v0, "entry":Ljava/lang/ref/WeakReference;, "Ljava/lang/ref/WeakReference<Landroid/graphics/drawable/BitmapDrawable;>;"
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -232,7 +207,6 @@
 
     if-ne v2, p1, :cond_0
 
-    .line 70
     .end local v0    # "entry":Ljava/lang/ref/WeakReference;, "Ljava/lang/ref/WeakReference<Landroid/graphics/drawable/BitmapDrawable;>;"
     .end local p1    # "dr":Landroid/graphics/drawable/BitmapDrawable;
     :goto_0
@@ -250,7 +224,6 @@
     .param p1, "dr"    # Landroid/graphics/drawable/BitmapDrawable;
 
     .prologue
-    .line 59
     iget-object v0, p0, Lcom/miui/whetstone/graphics/BitmapCacheManager$BitmapValue;->mArray:Ljava/util/ArrayList;
 
     new-instance v1, Ljava/lang/ref/WeakReference;
@@ -259,7 +232,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 60
     return-void
 .end method
 
@@ -267,7 +239,6 @@
     .locals 1
 
     .prologue
-    .line 91
     iget-boolean v0, p0, Lcom/miui/whetstone/graphics/BitmapCacheManager$BitmapValue;->mHasCached:Z
 
     if-eqz v0, :cond_0
@@ -286,7 +257,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 92
     iget-object v0, p0, Lcom/miui/whetstone/graphics/BitmapCacheManager$BitmapValue;->mKey:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -297,7 +267,6 @@
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 94
     :cond_0
     return-void
 .end method

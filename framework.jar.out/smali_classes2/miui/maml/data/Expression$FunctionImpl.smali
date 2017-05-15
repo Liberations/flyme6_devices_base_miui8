@@ -24,13 +24,10 @@
     .param p1, "p"    # I
 
     .prologue
-    .line 705
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 706
     iput p1, p0, Lmiui/maml/data/Expression$FunctionImpl;->params:I
 
-    .line 707
     return-void
 .end method
 

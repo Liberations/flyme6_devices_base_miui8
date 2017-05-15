@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Looper;
 
     .prologue
-    .line 51
     iput-object p1, p0, Lcom/miui/whetstone/LocationProxy$CallbackTransport$2;->this$0:Lcom/miui/whetstone/LocationProxy$CallbackTransport;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -39,12 +38,10 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 54
     iget-object v0, p0, Lcom/miui/whetstone/LocationProxy$CallbackTransport$2;->this$0:Lcom/miui/whetstone/LocationProxy$CallbackTransport;
 
     # invokes: Lcom/miui/whetstone/LocationProxy$CallbackTransport;->_handleMessage(Landroid/os/Message;)V
     invoke-static {v0, p1}, Lcom/miui/whetstone/LocationProxy$CallbackTransport;->access$000(Lcom/miui/whetstone/LocationProxy$CallbackTransport;Landroid/os/Message;)V
 
-    .line 55
     return-void
 .end method

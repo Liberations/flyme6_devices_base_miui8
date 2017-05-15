@@ -176,7 +176,6 @@
     .locals 1
 
     .prologue
-    .line 612
     new-instance v0, Landroid/net/wifi/passpoint/WifiPasspointCredential$1;
 
     invoke-direct {v0}, Landroid/net/wifi/passpoint/WifiPasspointCredential$1;-><init>()V
@@ -190,15 +189,12 @@
     .locals 1
 
     .prologue
-    .line 105
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 100
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mUserPreferred:Z
 
-    .line 105
     return-void
 .end method
 
@@ -209,29 +205,23 @@
     .param p3, "config"    # Landroid/net/wifi/WifiEnterpriseConfig;
 
     .prologue
-    .line 114
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 100
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mUserPreferred:Z
 
-    .line 115
     iput-object p1, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mRealm:Ljava/lang/String;
 
-    .line 116
     invoke-virtual {p3}, Landroid/net/wifi/WifiEnterpriseConfig;->getEapMethod()I
 
     move-result v0
 
     packed-switch v0, :pswitch_data_0
 
-    .line 124
     :goto_0
     return-void
 
-    .line 119
     :pswitch_0
     new-instance v0, Landroid/net/wifi/WifiEnterpriseConfig;
 
@@ -241,7 +231,6 @@
 
     goto :goto_0
 
-    .line 116
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -260,49 +249,38 @@
     .param p7, "credinfo"    # Landroid/net/wifi/passpoint/WifiPasspointDmTree$CredentialInfo;
 
     .prologue
-    .line 133
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 100
     const/4 v4, 0x0
 
     iput-boolean v4, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mUserPreferred:Z
 
-    .line 135
     if-nez p7, :cond_0
 
-    .line 201
     :goto_0
     return-void
 
-    .line 139
     :cond_0
     iput-object p1, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mType:Ljava/lang/String;
 
-    .line 140
     iput-object p2, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mCaRootCert:Ljava/lang/String;
 
-    .line 141
     iput-object p3, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mClientCert:Ljava/lang/String;
 
-    .line 143
     iget-object v4, p6, Landroid/net/wifi/passpoint/WifiPasspointDmTree$SpFqdn;->nodeName:Ljava/lang/String;
 
     iput-object v4, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mWifiSpFqdn:Ljava/lang/String;
 
-    .line 144
     iget-object v4, p6, Landroid/net/wifi/passpoint/WifiPasspointDmTree$SpFqdn;->perProviderSubscription:Landroid/net/wifi/passpoint/WifiPasspointDmTree$PerProviderSubscription;
 
     iget-object v4, v4, Landroid/net/wifi/passpoint/WifiPasspointDmTree$PerProviderSubscription;->UpdateIdentifier:Ljava/lang/String;
 
     iput-object v4, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mUpdateIdentifier:Ljava/lang/String;
 
-    .line 146
     iget-object v4, p7, Landroid/net/wifi/passpoint/WifiPasspointDmTree$CredentialInfo;->nodeName:Ljava/lang/String;
 
     iput-object v4, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mCredentialName:Ljava/lang/String;
 
-    .line 147
     iget-object v4, p7, Landroid/net/wifi/passpoint/WifiPasspointDmTree$CredentialInfo;->homeSP:Landroid/net/wifi/passpoint/WifiPasspointDmTree$HomeSP;
 
     iget-object v4, v4, Landroid/net/wifi/passpoint/WifiPasspointDmTree$HomeSP;->otherHomePartners:Ljava/util/HashMap;
@@ -313,20 +291,17 @@
 
     iput-object v4, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mOtherHomePartnerList:Ljava/util/Collection;
 
-    .line 149
     iget-object v4, p7, Landroid/net/wifi/passpoint/WifiPasspointDmTree$CredentialInfo;->aAAServerTrustRoot:Ljava/util/HashMap;
 
     invoke-virtual {v4}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
     move-result-object v3
 
-    .line 150
     .local v3, "set":Ljava/util/Set;
     invoke-interface {v3}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
 
-    .line 151
     .local v2, "i":Ljava/util/Iterator;
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
@@ -334,14 +309,12 @@
 
     if-eqz v4, :cond_1
 
-    .line 152
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 153
     .local v1, "entry3":Ljava/util/Map$Entry;
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -349,18 +322,15 @@
 
     check-cast v0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$AAAServerTrustRoot;
 
-    .line 154
     .local v0, "aaa":Landroid/net/wifi/passpoint/WifiPasspointDmTree$AAAServerTrustRoot;
     iget-object v4, v0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$AAAServerTrustRoot;->CertURL:Ljava/lang/String;
 
     iput-object v4, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mAaaCertUrl:Ljava/lang/String;
 
-    .line 155
     iget-object v4, v0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$AAAServerTrustRoot;->CertSHA256Fingerprint:Ljava/lang/String;
 
     iput-object v4, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mAaaSha256Fingerprint:Ljava/lang/String;
 
-    .line 158
     .end local v0    # "aaa":Landroid/net/wifi/passpoint/WifiPasspointDmTree$AAAServerTrustRoot;
     .end local v1    # "entry3":Ljava/util/Map$Entry;
     :cond_1
@@ -372,7 +342,6 @@
 
     iput-object v4, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mCertType:Ljava/lang/String;
 
-    .line 159
     iget-object v4, p7, Landroid/net/wifi/passpoint/WifiPasspointDmTree$CredentialInfo;->credential:Landroid/net/wifi/passpoint/WifiPasspointDmTree$Credential;
 
     iget-object v4, v4, Landroid/net/wifi/passpoint/WifiPasspointDmTree$Credential;->digitalCertificate:Landroid/net/wifi/passpoint/WifiPasspointDmTree$DigitalCertificate;
@@ -381,7 +350,6 @@
 
     iput-object v4, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mCertSha256Fingerprint:Ljava/lang/String;
 
-    .line 160
     iget-object v4, p7, Landroid/net/wifi/passpoint/WifiPasspointDmTree$CredentialInfo;->credential:Landroid/net/wifi/passpoint/WifiPasspointDmTree$Credential;
 
     iget-object v4, v4, Landroid/net/wifi/passpoint/WifiPasspointDmTree$Credential;->usernamePassword:Landroid/net/wifi/passpoint/WifiPasspointDmTree$UsernamePassword;
@@ -390,7 +358,6 @@
 
     iput-object v4, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mUsername:Ljava/lang/String;
 
-    .line 161
     iget-object v4, p7, Landroid/net/wifi/passpoint/WifiPasspointDmTree$CredentialInfo;->credential:Landroid/net/wifi/passpoint/WifiPasspointDmTree$Credential;
 
     iget-object v4, v4, Landroid/net/wifi/passpoint/WifiPasspointDmTree$Credential;->usernamePassword:Landroid/net/wifi/passpoint/WifiPasspointDmTree$UsernamePassword;
@@ -399,7 +366,6 @@
 
     iput-object v4, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mPasswd:Ljava/lang/String;
 
-    .line 162
     iget-object v4, p7, Landroid/net/wifi/passpoint/WifiPasspointDmTree$CredentialInfo;->credential:Landroid/net/wifi/passpoint/WifiPasspointDmTree$Credential;
 
     iget-object v4, v4, Landroid/net/wifi/passpoint/WifiPasspointDmTree$Credential;->usernamePassword:Landroid/net/wifi/passpoint/WifiPasspointDmTree$UsernamePassword;
@@ -408,7 +374,6 @@
 
     iput-boolean v4, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mIsMachineRemediation:Z
 
-    .line 163
     iget-object v4, p7, Landroid/net/wifi/passpoint/WifiPasspointDmTree$CredentialInfo;->credential:Landroid/net/wifi/passpoint/WifiPasspointDmTree$Credential;
 
     iget-object v4, v4, Landroid/net/wifi/passpoint/WifiPasspointDmTree$Credential;->usernamePassword:Landroid/net/wifi/passpoint/WifiPasspointDmTree$UsernamePassword;
@@ -419,7 +384,6 @@
 
     iput-object v4, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mInnerMethod:Ljava/lang/String;
 
-    .line 164
     iget-object v4, p7, Landroid/net/wifi/passpoint/WifiPasspointDmTree$CredentialInfo;->credential:Landroid/net/wifi/passpoint/WifiPasspointDmTree$Credential;
 
     iget-object v4, v4, Landroid/net/wifi/passpoint/WifiPasspointDmTree$Credential;->sim:Landroid/net/wifi/passpoint/WifiPasspointDmTree$SIM;
@@ -428,44 +392,36 @@
 
     iput-object v4, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mImsi:Ljava/lang/String;
 
-    .line 165
     iput-object p4, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mMcc:Ljava/lang/String;
 
-    .line 166
     iput-object p5, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mMnc:Ljava/lang/String;
 
-    .line 167
     iget-object v4, p7, Landroid/net/wifi/passpoint/WifiPasspointDmTree$CredentialInfo;->credential:Landroid/net/wifi/passpoint/WifiPasspointDmTree$Credential;
 
     iget-object v4, v4, Landroid/net/wifi/passpoint/WifiPasspointDmTree$Credential;->CreationDate:Ljava/lang/String;
 
     iput-object v4, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mCreationDate:Ljava/lang/String;
 
-    .line 168
     iget-object v4, p7, Landroid/net/wifi/passpoint/WifiPasspointDmTree$CredentialInfo;->credential:Landroid/net/wifi/passpoint/WifiPasspointDmTree$Credential;
 
     iget-object v4, v4, Landroid/net/wifi/passpoint/WifiPasspointDmTree$Credential;->ExpirationDate:Ljava/lang/String;
 
     iput-object v4, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mExpirationDate:Ljava/lang/String;
 
-    .line 169
     iget-object v4, p7, Landroid/net/wifi/passpoint/WifiPasspointDmTree$CredentialInfo;->credential:Landroid/net/wifi/passpoint/WifiPasspointDmTree$Credential;
 
     iget-object v4, v4, Landroid/net/wifi/passpoint/WifiPasspointDmTree$Credential;->Realm:Ljava/lang/String;
 
     iput-object v4, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mRealm:Ljava/lang/String;
 
-    .line 171
     iget-object v4, p7, Landroid/net/wifi/passpoint/WifiPasspointDmTree$CredentialInfo;->credentialPriority:Ljava/lang/String;
 
     if-nez v4, :cond_2
 
-    .line 172
     const/16 v4, 0x80
 
     iput v4, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mCrednetialPriority:I
 
-    .line 177
     :goto_1
     iget-object v4, p7, Landroid/net/wifi/passpoint/WifiPasspointDmTree$CredentialInfo;->homeSP:Landroid/net/wifi/passpoint/WifiPasspointDmTree$HomeSP;
 
@@ -473,35 +429,30 @@
 
     iput-object v4, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mHomeSpFqdn:Ljava/lang/String;
 
-    .line 179
     iget-object v4, p7, Landroid/net/wifi/passpoint/WifiPasspointDmTree$CredentialInfo;->subscriptionUpdate:Landroid/net/wifi/passpoint/WifiPasspointDmTree$SubscriptionUpdate;
 
     iget-object v4, v4, Landroid/net/wifi/passpoint/WifiPasspointDmTree$SubscriptionUpdate;->UpdateInterval:Ljava/lang/String;
 
     iput-object v4, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mSubscriptionUpdateInterval:Ljava/lang/String;
 
-    .line 180
     iget-object v4, p7, Landroid/net/wifi/passpoint/WifiPasspointDmTree$CredentialInfo;->subscriptionUpdate:Landroid/net/wifi/passpoint/WifiPasspointDmTree$SubscriptionUpdate;
 
     iget-object v4, v4, Landroid/net/wifi/passpoint/WifiPasspointDmTree$SubscriptionUpdate;->UpdateMethod:Ljava/lang/String;
 
     iput-object v4, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mSubscriptionUpdateMethod:Ljava/lang/String;
 
-    .line 181
     iget-object v4, p7, Landroid/net/wifi/passpoint/WifiPasspointDmTree$CredentialInfo;->subscriptionUpdate:Landroid/net/wifi/passpoint/WifiPasspointDmTree$SubscriptionUpdate;
 
     iget-object v4, v4, Landroid/net/wifi/passpoint/WifiPasspointDmTree$SubscriptionUpdate;->Restriction:Ljava/lang/String;
 
     iput-object v4, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mSubscriptionUpdateRestriction:Ljava/lang/String;
 
-    .line 182
     iget-object v4, p7, Landroid/net/wifi/passpoint/WifiPasspointDmTree$CredentialInfo;->subscriptionUpdate:Landroid/net/wifi/passpoint/WifiPasspointDmTree$SubscriptionUpdate;
 
     iget-object v4, v4, Landroid/net/wifi/passpoint/WifiPasspointDmTree$SubscriptionUpdate;->URI:Ljava/lang/String;
 
     iput-object v4, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mSubscriptionUpdateURI:Ljava/lang/String;
 
-    .line 183
     iget-object v4, p7, Landroid/net/wifi/passpoint/WifiPasspointDmTree$CredentialInfo;->subscriptionUpdate:Landroid/net/wifi/passpoint/WifiPasspointDmTree$SubscriptionUpdate;
 
     iget-object v4, v4, Landroid/net/wifi/passpoint/WifiPasspointDmTree$SubscriptionUpdate;->usernamePassword:Landroid/net/wifi/passpoint/WifiPasspointDmTree$UsernamePassword;
@@ -510,7 +461,6 @@
 
     iput-object v4, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mSubscriptionUpdateUsername:Ljava/lang/String;
 
-    .line 184
     iget-object v4, p7, Landroid/net/wifi/passpoint/WifiPasspointDmTree$CredentialInfo;->subscriptionUpdate:Landroid/net/wifi/passpoint/WifiPasspointDmTree$SubscriptionUpdate;
 
     iget-object v4, v4, Landroid/net/wifi/passpoint/WifiPasspointDmTree$SubscriptionUpdate;->usernamePassword:Landroid/net/wifi/passpoint/WifiPasspointDmTree$UsernamePassword;
@@ -519,7 +469,6 @@
 
     iput-object v4, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mSubscriptionUpdatePassword:Ljava/lang/String;
 
-    .line 186
     iget-object v4, p7, Landroid/net/wifi/passpoint/WifiPasspointDmTree$CredentialInfo;->policy:Landroid/net/wifi/passpoint/WifiPasspointDmTree$Policy;
 
     iget-object v4, v4, Landroid/net/wifi/passpoint/WifiPasspointDmTree$Policy;->policyUpdate:Landroid/net/wifi/passpoint/WifiPasspointDmTree$PolicyUpdate;
@@ -528,7 +477,6 @@
 
     iput-object v4, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mPolicyUpdateUri:Ljava/lang/String;
 
-    .line 187
     iget-object v4, p7, Landroid/net/wifi/passpoint/WifiPasspointDmTree$CredentialInfo;->policy:Landroid/net/wifi/passpoint/WifiPasspointDmTree$Policy;
 
     iget-object v4, v4, Landroid/net/wifi/passpoint/WifiPasspointDmTree$Policy;->policyUpdate:Landroid/net/wifi/passpoint/WifiPasspointDmTree$PolicyUpdate;
@@ -537,7 +485,6 @@
 
     iput-object v4, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mPolicyUpdateInterval:Ljava/lang/String;
 
-    .line 188
     iget-object v4, p7, Landroid/net/wifi/passpoint/WifiPasspointDmTree$CredentialInfo;->policy:Landroid/net/wifi/passpoint/WifiPasspointDmTree$Policy;
 
     iget-object v4, v4, Landroid/net/wifi/passpoint/WifiPasspointDmTree$Policy;->policyUpdate:Landroid/net/wifi/passpoint/WifiPasspointDmTree$PolicyUpdate;
@@ -548,7 +495,6 @@
 
     iput-object v4, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mPolicyUpdateUsername:Ljava/lang/String;
 
-    .line 189
     iget-object v4, p7, Landroid/net/wifi/passpoint/WifiPasspointDmTree$CredentialInfo;->policy:Landroid/net/wifi/passpoint/WifiPasspointDmTree$Policy;
 
     iget-object v4, v4, Landroid/net/wifi/passpoint/WifiPasspointDmTree$Policy;->policyUpdate:Landroid/net/wifi/passpoint/WifiPasspointDmTree$PolicyUpdate;
@@ -559,7 +505,6 @@
 
     iput-object v4, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mPolicyUpdatePassword:Ljava/lang/String;
 
-    .line 190
     iget-object v4, p7, Landroid/net/wifi/passpoint/WifiPasspointDmTree$CredentialInfo;->policy:Landroid/net/wifi/passpoint/WifiPasspointDmTree$Policy;
 
     iget-object v4, v4, Landroid/net/wifi/passpoint/WifiPasspointDmTree$Policy;->policyUpdate:Landroid/net/wifi/passpoint/WifiPasspointDmTree$PolicyUpdate;
@@ -568,7 +513,6 @@
 
     iput-object v4, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mPolicyUpdateRestriction:Ljava/lang/String;
 
-    .line 191
     iget-object v4, p7, Landroid/net/wifi/passpoint/WifiPasspointDmTree$CredentialInfo;->policy:Landroid/net/wifi/passpoint/WifiPasspointDmTree$Policy;
 
     iget-object v4, v4, Landroid/net/wifi/passpoint/WifiPasspointDmTree$Policy;->policyUpdate:Landroid/net/wifi/passpoint/WifiPasspointDmTree$PolicyUpdate;
@@ -577,7 +521,6 @@
 
     iput-object v4, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mPolicyUpdateMethod:Ljava/lang/String;
 
-    .line 192
     iget-object v4, p7, Landroid/net/wifi/passpoint/WifiPasspointDmTree$CredentialInfo;->policy:Landroid/net/wifi/passpoint/WifiPasspointDmTree$Policy;
 
     iget-object v4, v4, Landroid/net/wifi/passpoint/WifiPasspointDmTree$Policy;->preferredRoamingPartnerList:Ljava/util/HashMap;
@@ -588,7 +531,6 @@
 
     iput-object v4, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mPreferredRoamingPartnerList:Ljava/util/Collection;
 
-    .line 193
     iget-object v4, p7, Landroid/net/wifi/passpoint/WifiPasspointDmTree$CredentialInfo;->policy:Landroid/net/wifi/passpoint/WifiPasspointDmTree$Policy;
 
     iget-object v4, v4, Landroid/net/wifi/passpoint/WifiPasspointDmTree$Policy;->minBackhaulThreshold:Ljava/util/HashMap;
@@ -599,7 +541,6 @@
 
     iput-object v4, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mMinBackhaulThresholdNetwork:Ljava/util/Collection;
 
-    .line 194
     iget-object v4, p7, Landroid/net/wifi/passpoint/WifiPasspointDmTree$CredentialInfo;->policy:Landroid/net/wifi/passpoint/WifiPasspointDmTree$Policy;
 
     iget-object v4, v4, Landroid/net/wifi/passpoint/WifiPasspointDmTree$Policy;->requiredProtoPortTuple:Ljava/util/HashMap;
@@ -610,14 +551,12 @@
 
     iput-object v4, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mRequiredProtoPortTuple:Ljava/util/Collection;
 
-    .line 195
     iget-object v4, p7, Landroid/net/wifi/passpoint/WifiPasspointDmTree$CredentialInfo;->policy:Landroid/net/wifi/passpoint/WifiPasspointDmTree$Policy;
 
     iget-object v4, v4, Landroid/net/wifi/passpoint/WifiPasspointDmTree$Policy;->maximumBSSLoadValue:Ljava/lang/String;
 
     iput-object v4, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mMaxBssLoad:Ljava/lang/String;
 
-    .line 196
     iget-object v4, p7, Landroid/net/wifi/passpoint/WifiPasspointDmTree$CredentialInfo;->policy:Landroid/net/wifi/passpoint/WifiPasspointDmTree$Policy;
 
     iget-object v4, v4, Landroid/net/wifi/passpoint/WifiPasspointDmTree$Policy;->sPExclusionList:Ljava/util/HashMap;
@@ -628,7 +567,6 @@
 
     iput-object v4, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mSpExclusionList:Ljava/util/Collection;
 
-    .line 198
     iget-object v4, p7, Landroid/net/wifi/passpoint/WifiPasspointDmTree$CredentialInfo;->homeSP:Landroid/net/wifi/passpoint/WifiPasspointDmTree$HomeSP;
 
     iget-object v4, v4, Landroid/net/wifi/passpoint/WifiPasspointDmTree$HomeSP;->homeOIList:Ljava/util/HashMap;
@@ -639,14 +577,12 @@
 
     iput-object v4, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mHomeOIList:Ljava/util/Collection;
 
-    .line 199
     iget-object v4, p7, Landroid/net/wifi/passpoint/WifiPasspointDmTree$CredentialInfo;->homeSP:Landroid/net/wifi/passpoint/WifiPasspointDmTree$HomeSP;
 
     iget-object v4, v4, Landroid/net/wifi/passpoint/WifiPasspointDmTree$HomeSP;->FriendlyName:Ljava/lang/String;
 
     iput-object v4, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mFriendlyName:Ljava/lang/String;
 
-    .line 200
     iget-object v4, p7, Landroid/net/wifi/passpoint/WifiPasspointDmTree$CredentialInfo;->credential:Landroid/net/wifi/passpoint/WifiPasspointDmTree$Credential;
 
     iget-boolean v4, v4, Landroid/net/wifi/passpoint/WifiPasspointDmTree$Credential;->CheckAAAServerCertStatus:Z
@@ -655,7 +591,6 @@
 
     goto/16 :goto_0
 
-    .line 174
     :cond_2
     iget-object v4, p7, Landroid/net/wifi/passpoint/WifiPasspointDmTree$CredentialInfo;->credentialPriority:Ljava/lang/String;
 
@@ -674,7 +609,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 33
     iput-object p1, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mWifiSpFqdn:Ljava/lang/String;
 
     return-object p1
@@ -686,7 +620,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 33
     iput-object p1, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mCredentialName:Ljava/lang/String;
 
     return-object p1
@@ -698,7 +631,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 33
     iput-object p1, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mType:Ljava/lang/String;
 
     return-object p1
@@ -710,7 +642,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 33
     iput p1, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mCrednetialPriority:I
 
     return p1
@@ -722,7 +653,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 33
     iput-object p1, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mHomeSpFqdn:Ljava/lang/String;
 
     return-object p1
@@ -734,7 +664,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 33
     iput-object p1, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mRealm:Ljava/lang/String;
 
     return-object p1
@@ -747,21 +676,17 @@
     .param p1, "another"    # Landroid/net/wifi/passpoint/WifiPasspointCredential;
 
     .prologue
-    .line 634
     iget v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mCrednetialPriority:I
 
     iget v1, p1, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mCrednetialPriority:I
 
     if-ge v0, v1, :cond_0
 
-    .line 635
     const/4 v0, -0x1
 
-    .line 639
     :goto_0
     return v0
 
-    .line 636
     :cond_0
     iget v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mCrednetialPriority:I
 
@@ -769,7 +694,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 637
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mType:Ljava/lang/String;
 
     iget-object v1, p1, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mType:Ljava/lang/String;
@@ -780,7 +704,6 @@
 
     goto :goto_0
 
-    .line 639
     :cond_1
     const/4 v0, 0x1
 
@@ -791,7 +714,6 @@
     .locals 1
 
     .prologue
-    .line 588
     const/4 v0, 0x0
 
     return v0
@@ -806,10 +728,8 @@
 
     const/4 v3, 0x0
 
-    .line 482
     const/4 v1, 0x0
 
-    .line 483
     .local v1, "result":Z
     instance-of v4, p1, Landroid/net/wifi/passpoint/WifiPasspointCredential;
 
@@ -817,10 +737,8 @@
 
     move-object v0, p1
 
-    .line 484
     check-cast v0, Landroid/net/wifi/passpoint/WifiPasspointCredential;
 
-    .line 485
     .local v0, "other":Landroid/net/wifi/passpoint/WifiPasspointCredential;
     iget-object v4, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mType:Ljava/lang/String;
 
@@ -832,7 +750,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 486
     iget-object v4, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mType:Ljava/lang/String;
 
     const-string v5, "TTLS"
@@ -843,7 +760,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 487
     iget-object v4, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mUsername:Ljava/lang/String;
 
     iget-object v5, v0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mUsername:Ljava/lang/String;
@@ -886,7 +802,6 @@
 
     move v1, v2
 
-    .line 492
     :cond_0
     :goto_0
     iget-object v4, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mType:Ljava/lang/String;
@@ -899,7 +814,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 493
     iget-object v4, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mRealm:Ljava/lang/String;
 
     iget-object v5, v0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mRealm:Ljava/lang/String;
@@ -932,7 +846,6 @@
 
     move v1, v2
 
-    .line 497
     :cond_1
     :goto_1
     iget-object v4, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mType:Ljava/lang/String;
@@ -945,7 +858,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 498
     iget-object v4, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mMcc:Ljava/lang/String;
 
     iget-object v5, v0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mMcc:Ljava/lang/String;
@@ -988,7 +900,6 @@
 
     move v1, v2
 
-    .line 505
     .end local v0    # "other":Landroid/net/wifi/passpoint/WifiPasspointCredential;
     :cond_2
     :goto_2
@@ -998,19 +909,16 @@
     :cond_3
     move v1, v3
 
-    .line 487
     goto :goto_0
 
     :cond_4
     move v1, v3
 
-    .line 493
     goto :goto_1
 
     :cond_5
     move v1, v3
 
-    .line 498
     goto :goto_2
 .end method
 
@@ -1018,7 +926,6 @@
     .locals 1
 
     .prologue
-    .line 431
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mAaaCertUrl:Ljava/lang/String;
 
     return-object v0
@@ -1028,7 +935,6 @@
     .locals 1
 
     .prologue
-    .line 436
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mAaaSha256Fingerprint:Ljava/lang/String;
 
     return-object v0
@@ -1047,7 +953,6 @@
     .end annotation
 
     .prologue
-    .line 411
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mMinBackhaulThresholdNetwork:Ljava/util/Collection;
 
     return-object v0
@@ -1057,7 +962,6 @@
     .locals 1
 
     .prologue
-    .line 289
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mCaRootCert:Ljava/lang/String;
 
     return-object v0
@@ -1067,7 +971,6 @@
     .locals 1
 
     .prologue
-    .line 258
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mCertSha256Fingerprint:Ljava/lang/String;
 
     return-object v0
@@ -1077,7 +980,6 @@
     .locals 1
 
     .prologue
-    .line 253
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mCertType:Ljava/lang/String;
 
     return-object v0
@@ -1087,7 +989,6 @@
     .locals 1
 
     .prologue
-    .line 471
     iget-boolean v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mCheckAaaServerCertStatus:Z
 
     return v0
@@ -1097,7 +998,6 @@
     .locals 1
 
     .prologue
-    .line 294
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mClientCert:Ljava/lang/String;
 
     return-object v0
@@ -1107,7 +1007,6 @@
     .locals 1
 
     .prologue
-    .line 386
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mCreationDate:Ljava/lang/String;
 
     return-object v0
@@ -1117,7 +1016,6 @@
     .locals 1
 
     .prologue
-    .line 225
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mCredentialName:Ljava/lang/String;
 
     return-object v0
@@ -1127,7 +1025,6 @@
     .locals 2
 
     .prologue
-    .line 239
     new-instance v0, Landroid/net/wifi/WifiEnterpriseConfig;
 
     iget-object v1, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mEnterpriseConfig:Landroid/net/wifi/WifiEnterpriseConfig;
@@ -1141,7 +1038,6 @@
     .locals 1
 
     .prologue
-    .line 391
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mExpirationDate:Ljava/lang/String;
 
     return-object v0
@@ -1151,7 +1047,6 @@
     .locals 1
 
     .prologue
-    .line 456
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mFriendlyName:Ljava/lang/String;
 
     return-object v0
@@ -1170,7 +1065,6 @@
     .end annotation
 
     .prologue
-    .line 406
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mHomeOIList:Ljava/util/Collection;
 
     return-object v0
@@ -1180,7 +1074,6 @@
     .locals 1
 
     .prologue
-    .line 327
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mHomeSpFqdn:Ljava/lang/String;
 
     return-object v0
@@ -1190,7 +1083,6 @@
     .locals 1
 
     .prologue
-    .line 274
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mImsi:Ljava/lang/String;
 
     return-object v0
@@ -1200,7 +1092,6 @@
     .locals 1
 
     .prologue
-    .line 426
     iget-boolean v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mIsMachineRemediation:Z
 
     return v0
@@ -1210,7 +1101,6 @@
     .locals 1
 
     .prologue
-    .line 461
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mMaxBssLoad:Ljava/lang/String;
 
     return-object v0
@@ -1220,7 +1110,6 @@
     .locals 1
 
     .prologue
-    .line 279
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mMcc:Ljava/lang/String;
 
     return-object v0
@@ -1230,7 +1119,6 @@
     .locals 1
 
     .prologue
-    .line 284
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mMnc:Ljava/lang/String;
 
     return-object v0
@@ -1249,7 +1137,6 @@
     .end annotation
 
     .prologue
-    .line 341
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mOtherHomePartnerList:Ljava/util/Collection;
 
     return-object v0
@@ -1259,7 +1146,6 @@
     .locals 1
 
     .prologue
-    .line 269
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mPasswd:Ljava/lang/String;
 
     return-object v0
@@ -1269,7 +1155,6 @@
     .locals 1
 
     .prologue
-    .line 361
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mPolicyUpdateInterval:Ljava/lang/String;
 
     return-object v0
@@ -1279,7 +1164,6 @@
     .locals 1
 
     .prologue
-    .line 381
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mPolicyUpdateMethod:Ljava/lang/String;
 
     return-object v0
@@ -1289,7 +1173,6 @@
     .locals 1
 
     .prologue
-    .line 371
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mPolicyUpdatePassword:Ljava/lang/String;
 
     return-object v0
@@ -1299,7 +1182,6 @@
     .locals 1
 
     .prologue
-    .line 376
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mPolicyUpdateRestriction:Ljava/lang/String;
 
     return-object v0
@@ -1309,7 +1191,6 @@
     .locals 1
 
     .prologue
-    .line 356
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mPolicyUpdateUri:Ljava/lang/String;
 
     return-object v0
@@ -1319,7 +1200,6 @@
     .locals 1
 
     .prologue
-    .line 366
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mPolicyUpdateUsername:Ljava/lang/String;
 
     return-object v0
@@ -1338,7 +1218,6 @@
     .end annotation
 
     .prologue
-    .line 401
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mPreferredRoamingPartnerList:Ljava/util/Collection;
 
     return-object v0
@@ -1348,15 +1227,12 @@
     .locals 1
 
     .prologue
-    .line 315
     iget-boolean v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mUserPreferred:Z
 
     if-eqz v0, :cond_0
 
-    .line 316
     const/4 v0, 0x0
 
-    .line 319
     :goto_0
     return v0
 
@@ -1370,7 +1246,6 @@
     .locals 1
 
     .prologue
-    .line 302
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mRealm:Ljava/lang/String;
 
     return-object v0
@@ -1389,7 +1264,6 @@
     .end annotation
 
     .prologue
-    .line 416
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mRequiredProtoPortTuple:Ljava/util/Collection;
 
     return-object v0
@@ -1408,7 +1282,6 @@
     .end annotation
 
     .prologue
-    .line 421
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mSpExclusionList:Ljava/util/Collection;
 
     return-object v0
@@ -1418,7 +1291,6 @@
     .locals 1
 
     .prologue
-    .line 451
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mSubscriptionUpdateInterval:Ljava/lang/String;
 
     return-object v0
@@ -1428,7 +1300,6 @@
     .locals 1
 
     .prologue
-    .line 351
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mSubscriptionUpdatePassword:Ljava/lang/String;
 
     return-object v0
@@ -1438,7 +1309,6 @@
     .locals 1
 
     .prologue
-    .line 441
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mSubscriptionUpdateRestriction:Ljava/lang/String;
 
     return-object v0
@@ -1448,7 +1318,6 @@
     .locals 1
 
     .prologue
-    .line 446
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mSubscriptionUpdateURI:Ljava/lang/String;
 
     return-object v0
@@ -1458,7 +1327,6 @@
     .locals 1
 
     .prologue
-    .line 346
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mSubscriptionUpdateUsername:Ljava/lang/String;
 
     return-object v0
@@ -1468,7 +1336,6 @@
     .locals 1
 
     .prologue
-    .line 230
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mType:Ljava/lang/String;
 
     return-object v0
@@ -1478,7 +1345,6 @@
     .locals 1
 
     .prologue
-    .line 205
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mUpdateIdentifier:Ljava/lang/String;
 
     return-object v0
@@ -1488,7 +1354,6 @@
     .locals 1
 
     .prologue
-    .line 210
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mSubscriptionUpdateMethod:Ljava/lang/String;
 
     return-object v0
@@ -1498,7 +1363,6 @@
     .locals 1
 
     .prologue
-    .line 263
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mUsername:Ljava/lang/String;
 
     return-object v0
@@ -1508,7 +1372,6 @@
     .locals 1
 
     .prologue
-    .line 466
     iget-boolean v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mUserPreferred:Z
 
     return v0
@@ -1518,7 +1381,6 @@
     .locals 1
 
     .prologue
-    .line 220
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mWifiSpFqdn:Ljava/lang/String;
 
     return-object v0
@@ -1528,16 +1390,13 @@
     .locals 2
 
     .prologue
-    .line 646
     const/16 v0, 0xd0
 
-    .line 647
     .local v0, "hash":I
     iget-object v1, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mType:Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
-    .line 648
     iget-object v1, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mType:Ljava/lang/String;
 
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
@@ -1546,13 +1405,11 @@
 
     add-int/2addr v0, v1
 
-    .line 650
     :cond_0
     iget-object v1, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mRealm:Ljava/lang/String;
 
     if-eqz v1, :cond_1
 
-    .line 651
     iget-object v1, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mRealm:Ljava/lang/String;
 
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
@@ -1561,13 +1418,11 @@
 
     add-int/2addr v0, v1
 
-    .line 653
     :cond_1
     iget-object v1, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mHomeSpFqdn:Ljava/lang/String;
 
     if-eqz v1, :cond_2
 
-    .line 654
     iget-object v1, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mHomeSpFqdn:Ljava/lang/String;
 
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
@@ -1576,13 +1431,11 @@
 
     add-int/2addr v0, v1
 
-    .line 656
     :cond_2
     iget-object v1, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mUsername:Ljava/lang/String;
 
     if-eqz v1, :cond_3
 
-    .line 657
     iget-object v1, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mUsername:Ljava/lang/String;
 
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
@@ -1591,13 +1444,11 @@
 
     add-int/2addr v0, v1
 
-    .line 659
     :cond_3
     iget-object v1, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mPasswd:Ljava/lang/String;
 
     if-eqz v1, :cond_4
 
-    .line 660
     iget-object v1, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mPasswd:Ljava/lang/String;
 
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
@@ -1606,7 +1457,6 @@
 
     add-int/2addr v0, v1
 
-    .line 663
     :cond_4
     return v0
 .end method
@@ -1616,49 +1466,42 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 603
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mWifiSpFqdn:Ljava/lang/String;
 
-    .line 604
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mCredentialName:Ljava/lang/String;
 
-    .line 605
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mType:Ljava/lang/String;
 
-    .line 606
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mCrednetialPriority:I
 
-    .line 607
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mHomeSpFqdn:Ljava/lang/String;
 
-    .line 608
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mRealm:Ljava/lang/String;
 
-    .line 609
     return-void
 .end method
 
@@ -1667,7 +1510,6 @@
     .param p1, "config"    # Landroid/net/wifi/WifiEnterpriseConfig;
 
     .prologue
-    .line 249
     return-void
 .end method
 
@@ -1676,10 +1518,8 @@
     .param p1, "expirationdate"    # Ljava/lang/String;
 
     .prologue
-    .line 396
     iput-object p1, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mExpirationDate:Ljava/lang/String;
 
-    .line 397
     return-void
 .end method
 
@@ -1688,10 +1528,8 @@
     .param p1, "fqdn"    # Ljava/lang/String;
 
     .prologue
-    .line 335
     iput-object p1, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mHomeSpFqdn:Ljava/lang/String;
 
-    .line 336
     return-void
 .end method
 
@@ -1700,10 +1538,8 @@
     .param p1, "realm"    # Ljava/lang/String;
 
     .prologue
-    .line 310
     iput-object p1, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mRealm:Ljava/lang/String;
 
-    .line 311
     return-void
 .end method
 
@@ -1712,10 +1548,8 @@
     .param p1, "method"    # Ljava/lang/String;
 
     .prologue
-    .line 215
     iput-object p1, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mSubscriptionUpdateMethod:Ljava/lang/String;
 
-    .line 216
     return-void
 .end method
 
@@ -1724,10 +1558,8 @@
     .param p1, "value"    # Z
 
     .prologue
-    .line 476
     iput-boolean p1, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mUserPreferred:Z
 
-    .line 477
     return-void
 .end method
 
@@ -1735,16 +1567,13 @@
     .locals 9
 
     .prologue
-    .line 511
     new-instance v6, Ljava/lang/StringBuffer;
 
     invoke-direct {v6}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 512
     .local v6, "sb":Ljava/lang/StringBuffer;
     const-string v4, "<none>"
 
-    .line 517
     .local v4, "none":Ljava/lang/String;
     const-string v7, ", UpdateIdentifier: "
 
@@ -2073,17 +1902,14 @@
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuffer;->append(Ljava/lang/Object;)Ljava/lang/StringBuffer;
 
-    .line 546
     iget-object v7, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mPreferredRoamingPartnerList:Ljava/util/Collection;
 
     if-eqz v7, :cond_12
 
-    .line 547
     const-string v7, "PreferredRoamingPartnerList:"
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 548
     iget-object v7, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mPreferredRoamingPartnerList:Ljava/util/Collection;
 
     invoke-interface {v7}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
@@ -2104,7 +1930,6 @@
 
     check-cast v5, Landroid/net/wifi/passpoint/WifiPasspointDmTree$PreferredRoamingPartnerList;
 
-    .line 549
     .local v5, "prpListItem":Landroid/net/wifi/passpoint/WifiPasspointDmTree$PreferredRoamingPartnerList;
     const-string v7, "[fqdnmatch:"
 
@@ -2148,7 +1973,6 @@
 
     goto :goto_12
 
-    .line 517
     .end local v3    # "i$":Ljava/util/Iterator;
     .end local v5    # "prpListItem":Landroid/net/wifi/passpoint/WifiPasspointDmTree$PreferredRoamingPartnerList;
     .restart local v4    # "none":Ljava/lang/String;
@@ -2242,19 +2066,16 @@
 
     goto/16 :goto_11
 
-    .line 555
     .end local v4    # "none":Ljava/lang/String;
     :cond_12
     iget-object v7, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mHomeOIList:Ljava/util/Collection;
 
     if-eqz v7, :cond_13
 
-    .line 556
     const-string v7, "HomeOIList:"
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 557
     iget-object v7, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mHomeOIList:Ljava/util/Collection;
 
     invoke-interface {v7}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
@@ -2275,7 +2096,6 @@
 
     check-cast v1, Landroid/net/wifi/passpoint/WifiPasspointDmTree$HomeOIList;
 
-    .line 558
     .local v1, "HomeOIListItem":Landroid/net/wifi/passpoint/WifiPasspointDmTree$HomeOIList;
     const-string v7, "[HomeOI:"
 
@@ -2307,7 +2127,6 @@
 
     goto :goto_13
 
-    .line 564
     .end local v1    # "HomeOIListItem":Landroid/net/wifi/passpoint/WifiPasspointDmTree$HomeOIList;
     .end local v3    # "i$":Ljava/util/Iterator;
     :cond_13
@@ -2315,12 +2134,10 @@
 
     if-eqz v7, :cond_14
 
-    .line 565
     const-string v7, "BackHaulThreshold:"
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 566
     iget-object v7, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mMinBackhaulThresholdNetwork:Ljava/util/Collection;
 
     invoke-interface {v7}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
@@ -2341,7 +2158,6 @@
 
     check-cast v0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$MinBackhaulThresholdNetwork;
 
-    .line 567
     .local v0, "BhtListItem":Landroid/net/wifi/passpoint/WifiPasspointDmTree$MinBackhaulThresholdNetwork;
     const-string v7, "[networkType:"
 
@@ -2385,7 +2201,6 @@
 
     goto :goto_14
 
-    .line 574
     .end local v0    # "BhtListItem":Landroid/net/wifi/passpoint/WifiPasspointDmTree$MinBackhaulThresholdNetwork;
     .end local v3    # "i$":Ljava/util/Iterator;
     :cond_14
@@ -2393,12 +2208,10 @@
 
     if-eqz v7, :cond_15
 
-    .line 575
     const-string v7, "WifiMORequiredProtoPortTupleList:"
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 576
     iget-object v7, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mRequiredProtoPortTuple:Ljava/util/Collection;
 
     invoke-interface {v7}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
@@ -2419,7 +2232,6 @@
 
     check-cast v2, Landroid/net/wifi/passpoint/WifiPasspointDmTree$RequiredProtoPortTuple;
 
-    .line 577
     .local v2, "RpptListItem":Landroid/net/wifi/passpoint/WifiPasspointDmTree$RequiredProtoPortTuple;
     const-string v7, "[IPProtocol:"
 
@@ -2451,7 +2263,6 @@
 
     goto :goto_15
 
-    .line 583
     .end local v2    # "RpptListItem":Landroid/net/wifi/passpoint/WifiPasspointDmTree$RequiredProtoPortTuple;
     .end local v3    # "i$":Ljava/util/Iterator;
     :cond_15
@@ -2468,36 +2279,29 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 593
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mWifiSpFqdn:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 594
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mCredentialName:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 595
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mType:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 596
     iget v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mCrednetialPriority:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 597
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mHomeSpFqdn:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 598
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointCredential;->mRealm:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 599
     return-void
 .end method

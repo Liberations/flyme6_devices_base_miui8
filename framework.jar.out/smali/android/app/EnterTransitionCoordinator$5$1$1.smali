@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 396
     iput-object p1, p0, Landroid/app/EnterTransitionCoordinator$5$1$1;->this$2:Landroid/app/EnterTransitionCoordinator$5$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 399
     iget-object v0, p0, Landroid/app/EnterTransitionCoordinator$5$1$1;->this$2:Landroid/app/EnterTransitionCoordinator$5$1;
 
     iget-object v0, v0, Landroid/app/EnterTransitionCoordinator$5$1;->this$1:Landroid/app/EnterTransitionCoordinator$5;
@@ -56,6 +54,5 @@
     # invokes: Landroid/app/EnterTransitionCoordinator;->startSharedElementTransition(Landroid/os/Bundle;)V
     invoke-static {v0, v1}, Landroid/app/EnterTransitionCoordinator;->access$100(Landroid/app/EnterTransitionCoordinator;Landroid/os/Bundle;)V
 
-    .line 400
     return-void
 .end method

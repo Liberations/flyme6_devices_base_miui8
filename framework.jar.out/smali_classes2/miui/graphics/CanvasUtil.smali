@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,9 +18,7 @@
     .param p0, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 6
     invoke-virtual {p0}, Landroid/graphics/Canvas;->release()V
 
-    .line 7
     return-void
 .end method

@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Looper;
 
     .prologue
-    .line 52
     iput-object p1, p0, Landroid/media/MediaScannerInjector$1$1;->this$0:Landroid/media/MediaScannerInjector$1;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -39,14 +38,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 55
     const-string v2, "MediaScannerInjector"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "handleMessage what: "
+    const-string v4, "handleMessage what: "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -64,23 +62,19 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 56
     iget v2, p1, Landroid/os/Message;->what:I
 
     const/4 v3, 0x1
 
     if-ne v2, v3, :cond_0
 
-    .line 57
     # invokes: Landroid/media/MediaScannerInjector;->initDebugDirectory()V
     invoke-static {}, Landroid/media/MediaScannerInjector;->access$100()V
 
-    .line 58
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Ljava/lang/String;
 
-    .line 59
     .local v1, "path":Ljava/lang/String;
     const-string v2, "MediaScannerInjector"
 
@@ -104,7 +98,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 60
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -129,7 +122,6 @@
 
     move-result-object v0
 
-    .line 61
     .local v0, "name":Ljava/lang/String;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -157,7 +149,6 @@
     # invokes: Landroid/media/MediaScannerInjector;->copyFile(Ljava/lang/String;Ljava/lang/String;I)V
     invoke-static {v1, v2, v3}, Landroid/media/MediaScannerInjector;->access$300(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 63
     .end local v0    # "name":Ljava/lang/String;
     .end local v1    # "path":Ljava/lang/String;
     :cond_0

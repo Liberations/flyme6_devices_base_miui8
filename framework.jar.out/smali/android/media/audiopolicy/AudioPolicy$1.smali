@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 424
     iput-object p1, p0, Landroid/media/audiopolicy/AudioPolicy$1;->this$0:Landroid/media/audiopolicy/AudioPolicy;
 
     invoke-direct {p0}, Landroid/media/audiopolicy/IAudioPolicyCallback$Stub;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "requestResult"    # I
 
     .prologue
-    .line 427
     iget-object v0, p0, Landroid/media/audiopolicy/AudioPolicy$1;->this$0:Landroid/media/audiopolicy/AudioPolicy;
 
     const/4 v1, 0x1
@@ -47,7 +45,6 @@
     # invokes: Landroid/media/audiopolicy/AudioPolicy;->sendMsg(ILjava/lang/Object;I)V
     invoke-static {v0, v1, p1, p2}, Landroid/media/audiopolicy/AudioPolicy;->access$100(Landroid/media/audiopolicy/AudioPolicy;ILjava/lang/Object;I)V
 
-    .line 432
     return-void
 .end method
 
@@ -57,7 +54,6 @@
     .param p2, "wasNotified"    # Z
 
     .prologue
-    .line 435
     iget-object v1, p0, Landroid/media/audiopolicy/AudioPolicy$1;->this$0:Landroid/media/audiopolicy/AudioPolicy;
 
     const/4 v2, 0x2
@@ -70,10 +66,8 @@
     # invokes: Landroid/media/audiopolicy/AudioPolicy;->sendMsg(ILjava/lang/Object;I)V
     invoke-static {v1, v2, p1, v0}, Landroid/media/audiopolicy/AudioPolicy;->access$100(Landroid/media/audiopolicy/AudioPolicy;ILjava/lang/Object;I)V
 
-    .line 440
     return-void
 
-    .line 435
     :cond_0
     const/4 v0, 0x0
 
@@ -86,7 +80,6 @@
     .param p2, "state"    # I
 
     .prologue
-    .line 443
     iget-object v2, p0, Landroid/media/audiopolicy/AudioPolicy$1;->this$0:Landroid/media/audiopolicy/AudioPolicy;
 
     # getter for: Landroid/media/audiopolicy/AudioPolicy;->mConfig:Landroid/media/audiopolicy/AudioPolicyConfig;
@@ -117,7 +110,6 @@
 
     check-cast v1, Landroid/media/audiopolicy/AudioMix;
 
-    .line 444
     .local v1, "mix":Landroid/media/audiopolicy/AudioMix;
     invoke-virtual {v1}, Landroid/media/audiopolicy/AudioMix;->getRegistration()Ljava/lang/String;
 
@@ -129,10 +121,8 @@
 
     if-eqz v2, :cond_0
 
-    .line 445
     iput p2, v1, Landroid/media/audiopolicy/AudioMix;->mMixState:I
 
-    .line 446
     iget-object v2, p0, Landroid/media/audiopolicy/AudioPolicy$1;->this$0:Landroid/media/audiopolicy/AudioPolicy;
 
     const/4 v3, 0x3
@@ -144,7 +134,6 @@
 
     goto :goto_0
 
-    .line 452
     .end local v1    # "mix":Landroid/media/audiopolicy/AudioMix;
     :cond_1
     return-void

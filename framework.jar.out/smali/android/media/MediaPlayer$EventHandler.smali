@@ -27,16 +27,12 @@
     .param p3, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 2800
     iput-object p1, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
 
-    .line 2801
     invoke-direct {p0, p3}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 2802
     iput-object p2, p0, Landroid/media/MediaPlayer$EventHandler;->mMediaPlayer:Landroid/media/MediaPlayer;
 
-    .line 2803
     return-void
 .end method
 
@@ -47,7 +43,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 2807
     iget-object v7, p0, Landroid/media/MediaPlayer$EventHandler;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     # getter for: Landroid/media/MediaPlayer;->mNativeContext:J
@@ -61,26 +56,22 @@
 
     if-nez v7, :cond_1
 
-    .line 2808
     const-string v7, "MediaPlayer"
 
-    const-string/jumbo v8, "mediaplayer went away with unhandled events"
+    const-string v8, "mediaplayer went away with unhandled events"
 
     invoke-static {v7, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2973
     :cond_0
     :goto_0
     :sswitch_0
     return-void
 
-    .line 2811
     :cond_1
     iget v7, p1, Landroid/os/Message;->what:I
 
     sparse-switch v7, :sswitch_data_0
 
-    .line 2970
     const-string v7, "MediaPlayer"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -107,7 +98,6 @@
 
     goto :goto_0
 
-    .line 2814
     :sswitch_1
     :try_start_0
     iget-object v7, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
@@ -117,7 +107,6 @@
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2823
     :goto_1
     iget-object v7, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
 
@@ -128,7 +117,6 @@
 
     if-eqz v7, :cond_0
 
-    .line 2824
     iget-object v7, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
 
     # getter for: Landroid/media/MediaPlayer;->mOnPreparedListener:Landroid/media/MediaPlayer$OnPreparedListener;
@@ -142,11 +130,9 @@
 
     goto :goto_0
 
-    .line 2815
     :catch_0
     move-exception v1
 
-    .line 2819
     .local v1, "e":Ljava/lang/RuntimeException;
     const/16 v7, 0x64
 
@@ -160,13 +146,11 @@
 
     move-result-object v3
 
-    .line 2821
     .local v3, "msg2":Landroid/os/Message;
     invoke-virtual {p0, v3}, Landroid/media/MediaPlayer$EventHandler;->sendMessage(Landroid/os/Message;)Z
 
     goto :goto_1
 
-    .line 2828
     .end local v1    # "e":Ljava/lang/RuntimeException;
     .end local v3    # "msg2":Landroid/os/Message;
     :sswitch_2
@@ -179,7 +163,6 @@
 
     if-eqz v7, :cond_2
 
-    .line 2829
     iget-object v7, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
 
     # getter for: Landroid/media/MediaPlayer;->mOnCompletionListener:Landroid/media/MediaPlayer$OnCompletionListener;
@@ -191,7 +174,6 @@
 
     invoke-interface {v7, v8}, Landroid/media/MediaPlayer$OnCompletionListener;->onCompletion(Landroid/media/MediaPlayer;)V
 
-    .line 2830
     :cond_2
     iget-object v7, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
 
@@ -202,7 +184,6 @@
 
     goto :goto_0
 
-    .line 2835
     :sswitch_3
     iget-object v7, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
 
@@ -211,16 +192,13 @@
 
     move-result-object v6
 
-    .line 2836
     .local v6, "timeProvider":Landroid/media/MediaPlayer$TimeProvider;
     if-eqz v6, :cond_0
 
-    .line 2837
     invoke-virtual {v6}, Landroid/media/MediaPlayer$TimeProvider;->onStopped()V
 
     goto :goto_0
 
-    .line 2845
     .end local v6    # "timeProvider":Landroid/media/MediaPlayer$TimeProvider;
     :sswitch_4
     iget-object v7, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
@@ -230,11 +208,9 @@
 
     move-result-object v6
 
-    .line 2846
     .restart local v6    # "timeProvider":Landroid/media/MediaPlayer$TimeProvider;
     if-eqz v6, :cond_0
 
-    .line 2847
     iget v7, p1, Landroid/os/Message;->what:I
 
     const/4 v8, 0x7
@@ -253,7 +229,6 @@
 
     goto :goto_2
 
-    .line 2853
     .end local v6    # "timeProvider":Landroid/media/MediaPlayer$TimeProvider;
     :sswitch_5
     iget-object v7, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
@@ -265,7 +240,6 @@
 
     if-eqz v7, :cond_0
 
-    .line 2854
     iget-object v7, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
 
     # getter for: Landroid/media/MediaPlayer;->mOnBufferingUpdateListener:Landroid/media/MediaPlayer$OnBufferingUpdateListener;
@@ -281,7 +255,6 @@
 
     goto/16 :goto_0
 
-    .line 2858
     :sswitch_6
     iget-object v7, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
 
@@ -292,7 +265,6 @@
 
     if-eqz v7, :cond_4
 
-    .line 2859
     iget-object v7, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
 
     # getter for: Landroid/media/MediaPlayer;->mOnSeekCompleteListener:Landroid/media/MediaPlayer$OnSeekCompleteListener;
@@ -304,7 +276,6 @@
 
     invoke-interface {v7, v8}, Landroid/media/MediaPlayer$OnSeekCompleteListener;->onSeekComplete(Landroid/media/MediaPlayer;)V
 
-    .line 2865
     :cond_4
     :sswitch_7
     iget-object v7, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
@@ -314,18 +285,15 @@
 
     move-result-object v6
 
-    .line 2866
     .restart local v6    # "timeProvider":Landroid/media/MediaPlayer$TimeProvider;
     if-eqz v6, :cond_0
 
-    .line 2867
     iget-object v7, p0, Landroid/media/MediaPlayer$EventHandler;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v6, v7}, Landroid/media/MediaPlayer$TimeProvider;->onSeekComplete(Landroid/media/MediaPlayer;)V
 
     goto/16 :goto_0
 
-    .line 2873
     .end local v6    # "timeProvider":Landroid/media/MediaPlayer$TimeProvider;
     :sswitch_8
     iget-object v7, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
@@ -337,7 +305,6 @@
 
     if-eqz v7, :cond_0
 
-    .line 2874
     iget-object v7, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
 
     # getter for: Landroid/media/MediaPlayer;->mOnVideoSizeChangedListener:Landroid/media/MediaPlayer$OnVideoSizeChangedListener;
@@ -355,7 +322,6 @@
 
     goto/16 :goto_0
 
-    .line 2880
     :sswitch_9
     const-string v7, "MediaPlayer"
 
@@ -399,10 +365,8 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2881
     const/4 v2, 0x0
 
-    .line 2882
     .local v2, "error_was_handled":Z
     iget-object v7, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
 
@@ -413,7 +377,6 @@
 
     if-eqz v7, :cond_5
 
-    .line 2883
     iget-object v7, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
 
     # getter for: Landroid/media/MediaPlayer;->mOnErrorListener:Landroid/media/MediaPlayer$OnErrorListener;
@@ -431,7 +394,6 @@
 
     move-result v2
 
-    .line 2885
     :cond_5
     iget-object v7, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
 
@@ -444,7 +406,6 @@
 
     if-nez v2, :cond_6
 
-    .line 2886
     iget-object v7, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
 
     # getter for: Landroid/media/MediaPlayer;->mOnCompletionListener:Landroid/media/MediaPlayer$OnCompletionListener;
@@ -456,7 +417,6 @@
 
     invoke-interface {v7, v8}, Landroid/media/MediaPlayer$OnCompletionListener;->onCompletion(Landroid/media/MediaPlayer;)V
 
-    .line 2888
     :cond_6
     iget-object v7, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
 
@@ -467,14 +427,12 @@
 
     goto/16 :goto_0
 
-    .line 2892
     .end local v2    # "error_was_handled":Z
     :sswitch_a
     iget v7, p1, Landroid/os/Message;->arg1:I
 
     sparse-switch v7, :sswitch_data_1
 
-    .line 2922
     :cond_7
     :goto_3
     iget-object v7, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
@@ -486,7 +444,6 @@
 
     if-eqz v7, :cond_0
 
-    .line 2923
     iget-object v7, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
 
     # getter for: Landroid/media/MediaPlayer;->mOnInfoListener:Landroid/media/MediaPlayer$OnInfoListener;
@@ -504,7 +461,6 @@
 
     goto/16 :goto_0
 
-    .line 2894
     :sswitch_b
     const-string v7, "MediaPlayer"
 
@@ -550,7 +506,6 @@
 
     goto :goto_3
 
-    .line 2898
     :sswitch_c
     :try_start_1
     iget-object v7, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
@@ -560,14 +515,12 @@
     :try_end_1
     .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 2907
     :goto_4
     :sswitch_d
     const/16 v7, 0x322
 
     iput v7, p1, Landroid/os/Message;->arg1:I
 
-    .line 2909
     iget-object v7, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
 
     # getter for: Landroid/media/MediaPlayer;->mSubtitleController:Landroid/media/SubtitleController;
@@ -577,7 +530,6 @@
 
     if-eqz v7, :cond_7
 
-    .line 2910
     iget-object v7, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
 
     # getter for: Landroid/media/MediaPlayer;->mSubtitleController:Landroid/media/SubtitleController;
@@ -589,11 +541,9 @@
 
     goto :goto_3
 
-    .line 2899
     :catch_1
     move-exception v1
 
-    .line 2900
     .restart local v1    # "e":Ljava/lang/RuntimeException;
     const/16 v7, 0x64
 
@@ -607,13 +557,11 @@
 
     move-result-object v3
 
-    .line 2902
     .restart local v3    # "msg2":Landroid/os/Message;
     invoke-virtual {p0, v3}, Landroid/media/MediaPlayer$EventHandler;->sendMessage(Landroid/os/Message;)Z
 
     goto :goto_4
 
-    .line 2915
     .end local v1    # "e":Ljava/lang/RuntimeException;
     .end local v3    # "msg2":Landroid/os/Message;
     :sswitch_e
@@ -624,11 +572,9 @@
 
     move-result-object v6
 
-    .line 2916
     .restart local v6    # "timeProvider":Landroid/media/MediaPlayer$TimeProvider;
     if-eqz v6, :cond_7
 
-    .line 2917
     iget v7, p1, Landroid/os/Message;->arg1:I
 
     const/16 v8, 0x2bd
@@ -647,7 +593,6 @@
 
     goto :goto_5
 
-    .line 2928
     .end local v6    # "timeProvider":Landroid/media/MediaPlayer$TimeProvider;
     :sswitch_f
     iget-object v7, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
@@ -659,12 +604,10 @@
 
     if-eqz v7, :cond_0
 
-    .line 2930
     iget-object v7, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     if-nez v7, :cond_9
 
-    .line 2931
     iget-object v7, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
 
     # getter for: Landroid/media/MediaPlayer;->mOnTimedTextListener:Landroid/media/MediaPlayer$OnTimedTextListener;
@@ -680,7 +623,6 @@
 
     goto/16 :goto_0
 
-    .line 2933
     :cond_9
     iget-object v7, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -688,22 +630,18 @@
 
     if-eqz v7, :cond_0
 
-    .line 2934
     iget-object v4, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v4, Landroid/os/Parcel;
 
-    .line 2935
     .local v4, "parcel":Landroid/os/Parcel;
     new-instance v5, Landroid/media/TimedText;
 
     invoke-direct {v5, v4}, Landroid/media/TimedText;-><init>(Landroid/os/Parcel;)V
 
-    .line 2936
     .local v5, "text":Landroid/media/TimedText;
     invoke-virtual {v4}, Landroid/os/Parcel;->recycle()V
 
-    .line 2937
     iget-object v7, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
 
     # getter for: Landroid/media/MediaPlayer;->mOnTimedTextListener:Landroid/media/MediaPlayer$OnTimedTextListener;
@@ -717,7 +655,6 @@
 
     goto/16 :goto_0
 
-    .line 2943
     .end local v4    # "parcel":Landroid/os/Parcel;
     .end local v5    # "text":Landroid/media/TimedText;
     :sswitch_10
@@ -730,29 +667,24 @@
 
     if-eqz v7, :cond_0
 
-    .line 2946
     iget-object v7, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     instance-of v7, v7, Landroid/os/Parcel;
 
     if-eqz v7, :cond_0
 
-    .line 2947
     iget-object v4, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v4, Landroid/os/Parcel;
 
-    .line 2948
     .restart local v4    # "parcel":Landroid/os/Parcel;
     new-instance v0, Landroid/media/SubtitleData;
 
     invoke-direct {v0, v4}, Landroid/media/SubtitleData;-><init>(Landroid/os/Parcel;)V
 
-    .line 2949
     .local v0, "data":Landroid/media/SubtitleData;
     invoke-virtual {v4}, Landroid/os/Parcel;->recycle()V
 
-    .line 2950
     iget-object v7, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
 
     # getter for: Landroid/media/MediaPlayer;->mOnSubtitleDataListener:Landroid/media/MediaPlayer$OnSubtitleDataListener;
@@ -766,7 +698,6 @@
 
     goto/16 :goto_0
 
-    .line 2955
     .end local v0    # "data":Landroid/media/SubtitleData;
     .end local v4    # "parcel":Landroid/os/Parcel;
     :sswitch_11
@@ -779,29 +710,24 @@
 
     if-eqz v7, :cond_0
 
-    .line 2958
     iget-object v7, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     instance-of v7, v7, Landroid/os/Parcel;
 
     if-eqz v7, :cond_0
 
-    .line 2959
     iget-object v4, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v4, Landroid/os/Parcel;
 
-    .line 2960
     .restart local v4    # "parcel":Landroid/os/Parcel;
     invoke-static {v4}, Landroid/media/TimedMetaData;->createTimedMetaDataFromParcel(Landroid/os/Parcel;)Landroid/media/TimedMetaData;
 
     move-result-object v0
 
-    .line 2961
     .local v0, "data":Landroid/media/TimedMetaData;
     invoke-virtual {v4}, Landroid/os/Parcel;->recycle()V
 
-    .line 2962
     iget-object v7, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
 
     # getter for: Landroid/media/MediaPlayer;->mOnTimedMetaDataAvailableListener:Landroid/media/MediaPlayer$OnTimedMetaDataAvailableListener;
@@ -815,7 +741,6 @@
 
     goto/16 :goto_0
 
-    .line 2811
     :sswitch_data_0
     .sparse-switch
         0x0 -> :sswitch_0
@@ -835,7 +760,6 @@
         0xca -> :sswitch_11
     .end sparse-switch
 
-    .line 2892
     :sswitch_data_1
     .sparse-switch
         0x2bc -> :sswitch_b

@@ -21,10 +21,8 @@
     .locals 0
 
     .prologue
-    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 29
     return-void
 .end method
 
@@ -32,7 +30,6 @@
     .locals 1
 
     .prologue
-    .line 13
     sget-object v0, Landroid/location/MiuiLocationManagerProxy;->sInvokeMonitor:Landroid/location/MiuiLocationManagerProxy$IInvokeMonitor;
 
     return-object v0
@@ -43,7 +40,6 @@
     .param p0, "locationManager"    # Landroid/location/ILocationManager;
 
     .prologue
-    .line 26
     new-instance v0, Landroid/location/MiuiLocationManagerProxy$ProxyBinder;
 
     invoke-interface {p0}, Landroid/location/ILocationManager;->asBinder()Landroid/os/IBinder;
@@ -64,22 +60,17 @@
     .param p0, "m"    # Landroid/location/MiuiLocationManagerProxy$IInvokeMonitor;
 
     .prologue
-    .line 20
     const-class v1, Landroid/location/MiuiLocationManagerProxy;
 
     monitor-enter v1
 
-    .line 21
     :try_start_0
     sput-object p0, Landroid/location/MiuiLocationManagerProxy;->sInvokeMonitor:Landroid/location/MiuiLocationManagerProxy$IInvokeMonitor;
 
-    .line 22
     monitor-exit v1
 
-    .line 23
     return-void
 
-    .line 22
     :catchall_0
     move-exception v0
 

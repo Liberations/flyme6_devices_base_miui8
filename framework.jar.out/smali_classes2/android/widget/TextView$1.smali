@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 4113
     iput-object p1, p0, Landroid/widget/TextView$1;->this$0:Landroid/widget/TextView;
 
     iput-object p2, p0, Landroid/widget/TextView$1;->val$error:Ljava/lang/CharSequence;
@@ -44,7 +43,6 @@
     .locals 2
 
     .prologue
-    .line 4115
     iget-object v0, p0, Landroid/widget/TextView$1;->this$0:Landroid/widget/TextView;
 
     # getter for: Landroid/widget/TextView;->mEditor:Landroid/widget/Editor;
@@ -65,7 +63,6 @@
 
     if-nez v0, :cond_1
 
-    .line 4116
     :cond_0
     iget-object v0, p0, Landroid/widget/TextView$1;->this$0:Landroid/widget/TextView;
 
@@ -73,7 +70,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setError(Ljava/lang/CharSequence;)V
 
-    .line 4118
     :cond_1
     return-void
 .end method

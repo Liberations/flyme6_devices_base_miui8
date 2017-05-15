@@ -28,13 +28,10 @@
     .param p3, "traceCounter"    # Ljava/lang/String;
 
     .prologue
-    .line 3981
     iput-object p1, p0, Landroid/view/ViewRootImpl$ImeInputStage;->this$0:Landroid/view/ViewRootImpl;
 
-    .line 3982
     invoke-direct {p0, p1, p2, p3}, Landroid/view/ViewRootImpl$AsyncInputStage;-><init>(Landroid/view/ViewRootImpl;Landroid/view/ViewRootImpl$InputStage;Ljava/lang/String;)V
 
-    .line 3983
     return-void
 .end method
 
@@ -46,25 +43,20 @@
     .param p2, "handled"    # Z
 
     .prologue
-    .line 4013
     move-object v0, p1
 
     check-cast v0, Landroid/view/ViewRootImpl$QueuedInputEvent;
 
-    .line 4014
     .local v0, "q":Landroid/view/ViewRootImpl$QueuedInputEvent;
     if-eqz p2, :cond_0
 
-    .line 4015
     const/4 v1, 0x1
 
     invoke-virtual {p0, v0, v1}, Landroid/view/ViewRootImpl$ImeInputStage;->finish(Landroid/view/ViewRootImpl$QueuedInputEvent;Z)V
 
-    .line 4019
     :goto_0
     return-void
 
-    .line 4018
     :cond_0
     invoke-virtual {p0, v0}, Landroid/view/ViewRootImpl$ImeInputStage;->forward(Landroid/view/ViewRootImpl$QueuedInputEvent;)V
 
@@ -80,7 +72,6 @@
 
     const/4 v3, 0x0
 
-    .line 3987
     iget-object v5, p0, Landroid/view/ViewRootImpl$ImeInputStage;->this$0:Landroid/view/ViewRootImpl;
 
     iget-boolean v5, v5, Landroid/view/ViewRootImpl;->mLastWasImTarget:Z
@@ -96,19 +87,15 @@
 
     if-nez v5, :cond_0
 
-    .line 3988
     invoke-static {}, Landroid/view/inputmethod/InputMethodManager;->peekInstance()Landroid/view/inputmethod/InputMethodManager;
 
     move-result-object v1
 
-    .line 3989
     .local v1, "imm":Landroid/view/inputmethod/InputMethodManager;
     if-eqz v1, :cond_0
 
-    .line 3990
     iget-object v0, p1, Landroid/view/ViewRootImpl$QueuedInputEvent;->mEvent:Landroid/view/InputEvent;
 
-    .line 3992
     .local v0, "event":Landroid/view/InputEvent;
     iget-object v5, p0, Landroid/view/ViewRootImpl$ImeInputStage;->this$0:Landroid/view/ViewRootImpl;
 
@@ -118,13 +105,11 @@
 
     move-result v2
 
-    .line 3994
     .local v2, "result":I
     const/16 v5, 0x63
 
     if-ne v2, v5, :cond_1
 
-    .line 4008
     .end local v0    # "event":Landroid/view/InputEvent;
     .end local v1    # "imm":Landroid/view/inputmethod/InputMethodManager;
     .end local v2    # "result":I
@@ -132,7 +117,6 @@
     :goto_0
     return v3
 
-    .line 3998
     .restart local v0    # "event":Landroid/view/InputEvent;
     .restart local v1    # "imm":Landroid/view/inputmethod/InputMethodManager;
     .restart local v2    # "result":I
@@ -141,14 +125,11 @@
 
     move v3, v4
 
-    .line 3999
     goto :goto_0
 
-    .line 4000
     :cond_2
     if-eqz v2, :cond_0
 
-    .line 4004
     const/4 v3, 0x3
 
     goto :goto_0

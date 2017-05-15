@@ -25,10 +25,8 @@
     .param p2, "var"    # Lmiui/maml/data/Variables;
 
     .prologue
-    .line 55
     invoke-direct {p0, p1, p2}, Lmiui/maml/data/VariableBinder$Variable;-><init>(Lorg/w3c/dom/Element;Lmiui/maml/data/Variables;)V
 
-    .line 56
     const-string v0, "index"
 
     const/4 v1, 0x0
@@ -39,6 +37,5 @@
 
     iput v0, p0, Lmiui/maml/data/SensorBinder$Variable;->mIndex:I
 
-    .line 57
     return-void
 .end method

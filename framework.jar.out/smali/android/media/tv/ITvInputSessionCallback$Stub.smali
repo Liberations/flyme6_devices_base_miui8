@@ -58,15 +58,12 @@
     .locals 1
 
     .prologue
-    .line 19
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 20
     const-string v0, "android.media.tv.ITvInputSessionCallback"
 
     invoke-virtual {p0, p0, v0}, Landroid/media/tv/ITvInputSessionCallback$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 21
     return-void
 .end method
 
@@ -75,17 +72,13 @@
     .param p0, "obj"    # Landroid/os/IBinder;
 
     .prologue
-    .line 28
     if-nez p0, :cond_0
 
-    .line 29
     const/4 v0, 0x0
 
-    .line 35
     :goto_0
     return-object v0
 
-    .line 31
     :cond_0
     const-string v1, "android.media.tv.ITvInputSessionCallback"
 
@@ -93,7 +86,6 @@
 
     move-result-object v0
 
-    .line 32
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -101,12 +93,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 33
     check-cast v0, Landroid/media/tv/ITvInputSessionCallback;
 
     goto :goto_0
 
-    .line 35
     :cond_1
     new-instance v0, Landroid/media/tv/ITvInputSessionCallback$Stub$Proxy;
 
@@ -122,7 +112,6 @@
     .locals 0
 
     .prologue
-    .line 39
     return-object p0
 .end method
 
@@ -141,10 +130,8 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 43
     sparse-switch p1, :sswitch_data_0
 
-    .line 173
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v6
@@ -152,7 +139,6 @@
     :goto_0
     return v6
 
-    .line 47
     :sswitch_0
     const-string v7, "android.media.tv.ITvInputSessionCallback"
 
@@ -160,13 +146,11 @@
 
     goto :goto_0
 
-    .line 52
     :sswitch_1
     const-string v7, "android.media.tv.ITvInputSessionCallback"
 
     invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 54
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v7
@@ -175,19 +159,16 @@
 
     move-result-object v0
 
-    .line 56
     .local v0, "_arg0":Landroid/media/tv/ITvInputSession;
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v3
 
-    .line 57
     .local v3, "_arg1":Landroid/os/IBinder;
     invoke-virtual {p0, v0, v3}, Landroid/media/tv/ITvInputSessionCallback$Stub;->onSessionCreated(Landroid/media/tv/ITvInputSession;Landroid/os/IBinder;)V
 
     goto :goto_0
 
-    .line 62
     .end local v0    # "_arg0":Landroid/media/tv/ITvInputSession;
     .end local v3    # "_arg1":Landroid/os/IBinder;
     :sswitch_2
@@ -195,12 +176,10 @@
 
     invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 64
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 66
     .local v0, "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -208,7 +187,6 @@
 
     if-eqz v7, :cond_0
 
-    .line 67
     sget-object v7, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v7, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -217,14 +195,12 @@
 
     check-cast v3, Landroid/os/Bundle;
 
-    .line 72
     .local v3, "_arg1":Landroid/os/Bundle;
     :goto_1
     invoke-virtual {p0, v0, v3}, Landroid/media/tv/ITvInputSessionCallback$Stub;->onSessionEvent(Ljava/lang/String;Landroid/os/Bundle;)V
 
     goto :goto_0
 
-    .line 70
     .end local v3    # "_arg1":Landroid/os/Bundle;
     :cond_0
     const/4 v3, 0x0
@@ -232,7 +208,6 @@
     .restart local v3    # "_arg1":Landroid/os/Bundle;
     goto :goto_1
 
-    .line 77
     .end local v0    # "_arg0":Ljava/lang/String;
     .end local v3    # "_arg1":Landroid/os/Bundle;
     :sswitch_3
@@ -240,14 +215,12 @@
 
     invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 79
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v7
 
     if-eqz v7, :cond_1
 
-    .line 80
     sget-object v7, Landroid/net/Uri;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v7, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -256,14 +229,12 @@
 
     check-cast v0, Landroid/net/Uri;
 
-    .line 85
     .local v0, "_arg0":Landroid/net/Uri;
     :goto_2
     invoke-virtual {p0, v0}, Landroid/media/tv/ITvInputSessionCallback$Stub;->onChannelRetuned(Landroid/net/Uri;)V
 
     goto :goto_0
 
-    .line 83
     .end local v0    # "_arg0":Landroid/net/Uri;
     :cond_1
     const/4 v0, 0x0
@@ -271,51 +242,43 @@
     .restart local v0    # "_arg0":Landroid/net/Uri;
     goto :goto_2
 
-    .line 90
     .end local v0    # "_arg0":Landroid/net/Uri;
     :sswitch_4
     const-string v7, "android.media.tv.ITvInputSessionCallback"
 
     invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 92
     sget-object v7, Landroid/media/tv/TvTrackInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-virtual {p2, v7}, Landroid/os/Parcel;->createTypedArrayList(Landroid/os/Parcelable$Creator;)Ljava/util/ArrayList;
 
     move-result-object v2
 
-    .line 93
     .local v2, "_arg0":Ljava/util/List;, "Ljava/util/List<Landroid/media/tv/TvTrackInfo;>;"
     invoke-virtual {p0, v2}, Landroid/media/tv/ITvInputSessionCallback$Stub;->onTracksChanged(Ljava/util/List;)V
 
     goto :goto_0
 
-    .line 98
     .end local v2    # "_arg0":Ljava/util/List;, "Ljava/util/List<Landroid/media/tv/TvTrackInfo;>;"
     :sswitch_5
     const-string v7, "android.media.tv.ITvInputSessionCallback"
 
     invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 100
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 102
     .local v0, "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 103
     .local v3, "_arg1":Ljava/lang/String;
     invoke-virtual {p0, v0, v3}, Landroid/media/tv/ITvInputSessionCallback$Stub;->onTrackSelected(ILjava/lang/String;)V
 
     goto :goto_0
 
-    .line 108
     .end local v0    # "_arg0":I
     .end local v3    # "_arg1":Ljava/lang/String;
     :sswitch_6
@@ -323,94 +286,78 @@
 
     invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 109
     invoke-virtual {p0}, Landroid/media/tv/ITvInputSessionCallback$Stub;->onVideoAvailable()V
 
     goto :goto_0
 
-    .line 114
     :sswitch_7
     const-string v7, "android.media.tv.ITvInputSessionCallback"
 
     invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 116
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 117
     .restart local v0    # "_arg0":I
     invoke-virtual {p0, v0}, Landroid/media/tv/ITvInputSessionCallback$Stub;->onVideoUnavailable(I)V
 
     goto/16 :goto_0
 
-    .line 122
     .end local v0    # "_arg0":I
     :sswitch_8
     const-string v7, "android.media.tv.ITvInputSessionCallback"
 
     invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 123
     invoke-virtual {p0}, Landroid/media/tv/ITvInputSessionCallback$Stub;->onContentAllowed()V
 
     goto/16 :goto_0
 
-    .line 128
     :sswitch_9
     const-string v7, "android.media.tv.ITvInputSessionCallback"
 
     invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 130
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 131
     .local v0, "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v0}, Landroid/media/tv/ITvInputSessionCallback$Stub;->onContentBlocked(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 136
     .end local v0    # "_arg0":Ljava/lang/String;
     :sswitch_a
     const-string v7, "android.media.tv.ITvInputSessionCallback"
 
     invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 138
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 140
     .local v0, "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 142
     .local v3, "_arg1":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 144
     .local v4, "_arg2":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 145
     .local v5, "_arg3":I
     invoke-virtual {p0, v0, v3, v4, v5}, Landroid/media/tv/ITvInputSessionCallback$Stub;->onLayoutSurface(IIII)V
 
     goto/16 :goto_0
 
-    .line 150
     .end local v0    # "_arg0":I
     .end local v3    # "_arg1":I
     .end local v4    # "_arg2":I
@@ -420,54 +367,45 @@
 
     invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 152
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 153
     .restart local v0    # "_arg0":I
     invoke-virtual {p0, v0}, Landroid/media/tv/ITvInputSessionCallback$Stub;->onTimeShiftStatusChanged(I)V
 
     goto/16 :goto_0
 
-    .line 158
     .end local v0    # "_arg0":I
     :sswitch_c
     const-string v7, "android.media.tv.ITvInputSessionCallback"
 
     invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 160
     invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
-    .line 161
     .local v0, "_arg0":J
     invoke-virtual {p0, v0, v1}, Landroid/media/tv/ITvInputSessionCallback$Stub;->onTimeShiftStartPositionChanged(J)V
 
     goto/16 :goto_0
 
-    .line 166
     .end local v0    # "_arg0":J
     :sswitch_d
     const-string v7, "android.media.tv.ITvInputSessionCallback"
 
     invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 168
     invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
-    .line 169
     .restart local v0    # "_arg0":J
     invoke-virtual {p0, v0, v1}, Landroid/media/tv/ITvInputSessionCallback$Stub;->onTimeShiftCurrentPositionChanged(J)V
 
     goto/16 :goto_0
 
-    .line 43
     nop
 
     :sswitch_data_0

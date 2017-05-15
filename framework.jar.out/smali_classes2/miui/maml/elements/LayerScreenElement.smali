@@ -26,10 +26,8 @@
     .param p2, "root"    # Lmiui/maml/ScreenElementRoot;
 
     .prologue
-    .line 17
     invoke-direct {p0, p1, p2}, Lmiui/maml/elements/ViewHolderScreenElement;-><init>(Lorg/w3c/dom/Element;Lmiui/maml/ScreenElementRoot;)V
 
-    .line 18
     new-instance v0, Lmiui/maml/elements/LayerScreenElement$LayerView;
 
     invoke-virtual {p2}, Lmiui/maml/ScreenElementRoot;->getContext()Lmiui/maml/ScreenContext;
@@ -42,7 +40,6 @@
 
     iput-object v0, p0, Lmiui/maml/elements/LayerScreenElement;->mView:Lmiui/maml/elements/LayerScreenElement$LayerView;
 
-    .line 19
     return-void
 .end method
 
@@ -52,7 +49,6 @@
     .locals 1
 
     .prologue
-    .line 36
     iget-object v0, p0, Lmiui/maml/elements/LayerScreenElement;->mView:Lmiui/maml/elements/LayerScreenElement$LayerView;
 
     return-object v0

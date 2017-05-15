@@ -21,10 +21,8 @@
     .param p2, "root"    # Lmiui/maml/ScreenElementRoot;
 
     .prologue
-    .line 618
     invoke-direct {p0, p1, p2}, Lmiui/maml/elements/ElementGroup;-><init>(Lorg/w3c/dom/Element;Lmiui/maml/ScreenElementRoot;)V
 
-    .line 619
     return-void
 .end method
 
@@ -34,7 +32,6 @@
     .locals 1
 
     .prologue
-    .line 623
     iget-object v0, p0, Lmiui/maml/ScreenElementRoot$InnerGroup;->mRoot:Lmiui/maml/ScreenElementRoot;
 
     invoke-virtual {v0}, Lmiui/maml/ScreenElementRoot;->getRendererController()Lmiui/maml/RendererController;

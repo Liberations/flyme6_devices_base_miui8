@@ -54,7 +54,6 @@
     .locals 1
 
     .prologue
-    .line 175
     new-instance v0, Lcom/miui/translationservice/provider/TranslationResult$Symbol$1;
 
     invoke-direct {v0}, Lcom/miui/translationservice/provider/TranslationResult$Symbol$1;-><init>()V
@@ -68,10 +67,8 @@
     .locals 0
 
     .prologue
-    .line 110
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 111
     return-void
 .end method
 
@@ -80,36 +77,30 @@
     .param p1, "src"    # Landroid/os/Parcel;
 
     .prologue
-    .line 113
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 114
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {p0, v1}, Lcom/miui/translationservice/provider/TranslationResult$Symbol;->setPhEn(Ljava/lang/String;)V
 
-    .line 115
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {p0, v1}, Lcom/miui/translationservice/provider/TranslationResult$Symbol;->setPhAm(Ljava/lang/String;)V
 
-    .line 116
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {p0, v1}, Lcom/miui/translationservice/provider/TranslationResult$Symbol;->setWordSymbol(Ljava/lang/String;)V
 
-    .line 117
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 118
     .local v0, "parts":Ljava/util/List;, "Ljava/util/List<Lcom/miui/translationservice/provider/TranslationResult$Part;>;"
     const-class v1, Lcom/miui/translationservice/provider/TranslationResult$Symbol;
 
@@ -119,10 +110,8 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->readList(Ljava/util/List;Ljava/lang/ClassLoader;)V
 
-    .line 119
     invoke-virtual {p0, v0}, Lcom/miui/translationservice/provider/TranslationResult$Symbol;->setParts(Ljava/util/List;)V
 
-    .line 120
     return-void
 .end method
 
@@ -132,7 +121,6 @@
     .param p2, "x1"    # Lcom/miui/translationservice/provider/TranslationResult$1;
 
     .prologue
-    .line 109
     invoke-direct {p0, p1}, Lcom/miui/translationservice/provider/TranslationResult$Symbol;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -144,7 +132,6 @@
     .locals 1
 
     .prologue
-    .line 164
     const/4 v0, 0x0
 
     return v0
@@ -163,7 +150,6 @@
     .end annotation
 
     .prologue
-    .line 159
     iget-object v0, p0, Lcom/miui/translationservice/provider/TranslationResult$Symbol;->mParts:Ljava/util/List;
 
     return-object v0
@@ -173,7 +159,6 @@
     .locals 1
 
     .prologue
-    .line 139
     iget-object v0, p0, Lcom/miui/translationservice/provider/TranslationResult$Symbol;->mPhAm:Ljava/lang/String;
 
     return-object v0
@@ -183,7 +168,6 @@
     .locals 1
 
     .prologue
-    .line 129
     iget-object v0, p0, Lcom/miui/translationservice/provider/TranslationResult$Symbol;->mPhEn:Ljava/lang/String;
 
     return-object v0
@@ -193,7 +177,6 @@
     .locals 1
 
     .prologue
-    .line 149
     iget-object v0, p0, Lcom/miui/translationservice/provider/TranslationResult$Symbol;->mWordSymbol:Ljava/lang/String;
 
     return-object v0
@@ -212,11 +195,9 @@
     .end annotation
 
     .prologue
-    .line 155
     .local p1, "parts":Ljava/util/List;, "Ljava/util/List<Lcom/miui/translationservice/provider/TranslationResult$Part;>;"
     iput-object p1, p0, Lcom/miui/translationservice/provider/TranslationResult$Symbol;->mParts:Ljava/util/List;
 
-    .line 156
     return-void
 .end method
 
@@ -225,10 +206,8 @@
     .param p1, "phAm"    # Ljava/lang/String;
 
     .prologue
-    .line 135
     iput-object p1, p0, Lcom/miui/translationservice/provider/TranslationResult$Symbol;->mPhAm:Ljava/lang/String;
 
-    .line 136
     return-void
 .end method
 
@@ -237,10 +216,8 @@
     .param p1, "phEn"    # Ljava/lang/String;
 
     .prologue
-    .line 125
     iput-object p1, p0, Lcom/miui/translationservice/provider/TranslationResult$Symbol;->mPhEn:Ljava/lang/String;
 
-    .line 126
     return-void
 .end method
 
@@ -249,10 +226,8 @@
     .param p1, "wordSymbol"    # Ljava/lang/String;
 
     .prologue
-    .line 145
     iput-object p1, p0, Lcom/miui/translationservice/provider/TranslationResult$Symbol;->mWordSymbol:Ljava/lang/String;
 
-    .line 146
     return-void
 .end method
 
@@ -262,26 +237,21 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 169
     iget-object v0, p0, Lcom/miui/translationservice/provider/TranslationResult$Symbol;->mPhEn:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 170
     iget-object v0, p0, Lcom/miui/translationservice/provider/TranslationResult$Symbol;->mPhAm:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 171
     iget-object v0, p0, Lcom/miui/translationservice/provider/TranslationResult$Symbol;->mWordSymbol:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 172
     iget-object v0, p0, Lcom/miui/translationservice/provider/TranslationResult$Symbol;->mParts:Ljava/util/List;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeList(Ljava/util/List;)V
 
-    .line 173
     return-void
 .end method

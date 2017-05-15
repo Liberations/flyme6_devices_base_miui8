@@ -56,10 +56,8 @@
     .locals 1
 
     .prologue
-    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 15
     const/4 v0, -0x1
 
     iput-byte v0, p0, Lmiui/securitycenter/powercenter/HistoryItemWrapper;->cmd:B
@@ -74,7 +72,6 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 46
     const-string v0, "time"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -83,18 +80,15 @@
 
     if-eqz v0, :cond_0
 
-    .line 47
     iget-wide v0, p0, Lmiui/securitycenter/powercenter/HistoryItemWrapper;->time:J
 
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
-    .line 91
     :goto_0
     return-object v0
 
-    .line 49
     :cond_0
     const-string v0, "cmd"
 
@@ -104,7 +98,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 50
     iget-byte v0, p0, Lmiui/securitycenter/powercenter/HistoryItemWrapper;->cmd:B
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -113,7 +106,6 @@
 
     goto :goto_0
 
-    .line 52
     :cond_1
     const-string v0, "batteryLevel"
 
@@ -123,7 +115,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 53
     iget-byte v0, p0, Lmiui/securitycenter/powercenter/HistoryItemWrapper;->batteryLevel:B
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -132,7 +123,6 @@
 
     goto :goto_0
 
-    .line 55
     :cond_2
     const-string v0, "batteryStatus"
 
@@ -142,7 +132,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 56
     iget-byte v0, p0, Lmiui/securitycenter/powercenter/HistoryItemWrapper;->batteryStatus:B
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -151,7 +140,6 @@
 
     goto :goto_0
 
-    .line 58
     :cond_3
     const-string v0, "batteryHealth"
 
@@ -161,7 +149,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 59
     iget-byte v0, p0, Lmiui/securitycenter/powercenter/HistoryItemWrapper;->batteryHealth:B
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -170,7 +157,6 @@
 
     goto :goto_0
 
-    .line 61
     :cond_4
     const-string v0, "batteryPlugType"
 
@@ -180,7 +166,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 62
     iget-byte v0, p0, Lmiui/securitycenter/powercenter/HistoryItemWrapper;->batteryPlugType:B
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -189,7 +174,6 @@
 
     goto :goto_0
 
-    .line 64
     :cond_5
     const-string v0, "batteryTemperature"
 
@@ -199,7 +183,6 @@
 
     if-eqz v0, :cond_6
 
-    .line 65
     iget-short v0, p0, Lmiui/securitycenter/powercenter/HistoryItemWrapper;->batteryTemperature:S
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -208,7 +191,6 @@
 
     goto :goto_0
 
-    .line 67
     :cond_6
     const-string v0, "batteryVoltage"
 
@@ -218,7 +200,6 @@
 
     if-eqz v0, :cond_7
 
-    .line 68
     iget-char v0, p0, Lmiui/securitycenter/powercenter/HistoryItemWrapper;->batteryVoltage:C
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -227,9 +208,8 @@
 
     goto :goto_0
 
-    .line 70
     :cond_7
-    const-string/jumbo v0, "wifiOn"
+    const-string v0, "wifiOn"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -237,7 +217,6 @@
 
     if-eqz v0, :cond_8
 
-    .line 71
     iget-boolean v0, p0, Lmiui/securitycenter/powercenter/HistoryItemWrapper;->wifiOn:Z
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -246,7 +225,6 @@
 
     goto :goto_0
 
-    .line 73
     :cond_8
     const-string v0, "gpsOn"
 
@@ -256,7 +234,6 @@
 
     if-eqz v0, :cond_9
 
-    .line 74
     iget-boolean v0, p0, Lmiui/securitycenter/powercenter/HistoryItemWrapper;->gpsOn:Z
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -265,7 +242,6 @@
 
     goto/16 :goto_0
 
-    .line 76
     :cond_9
     const-string v0, "charging"
 
@@ -275,7 +251,6 @@
 
     if-eqz v0, :cond_a
 
-    .line 77
     iget-boolean v0, p0, Lmiui/securitycenter/powercenter/HistoryItemWrapper;->charging:Z
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -284,7 +259,6 @@
 
     goto/16 :goto_0
 
-    .line 79
     :cond_a
     const-string v0, "screenOn"
 
@@ -294,7 +268,6 @@
 
     if-eqz v0, :cond_b
 
-    .line 80
     iget-boolean v0, p0, Lmiui/securitycenter/powercenter/HistoryItemWrapper;->screenOn:Z
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -303,9 +276,8 @@
 
     goto/16 :goto_0
 
-    .line 82
     :cond_b
-    const-string/jumbo v0, "wakelockOn"
+    const-string v0, "wakelockOn"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -313,7 +285,6 @@
 
     if-eqz v0, :cond_c
 
-    .line 83
     iget-boolean v0, p0, Lmiui/securitycenter/powercenter/HistoryItemWrapper;->wakelockOn:Z
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -322,7 +293,6 @@
 
     goto/16 :goto_0
 
-    .line 85
     :cond_c
     const-string v0, "phoneSignalStrength"
 
@@ -332,7 +302,6 @@
 
     if-eqz v0, :cond_d
 
-    .line 86
     iget v0, p0, Lmiui/securitycenter/powercenter/HistoryItemWrapper;->phoneSignalStrength:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -341,7 +310,6 @@
 
     goto/16 :goto_0
 
-    .line 88
     :cond_d
     const-string v0, "cpuRunning"
 
@@ -351,7 +319,6 @@
 
     if-eqz v0, :cond_e
 
-    .line 89
     iget-boolean v0, p0, Lmiui/securitycenter/powercenter/HistoryItemWrapper;->cpuRunning:Z
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -360,7 +327,6 @@
 
     goto/16 :goto_0
 
-    .line 91
     :cond_e
     const/4 v0, 0x0
 
@@ -371,7 +337,6 @@
     .locals 2
 
     .prologue
-    .line 95
     iget-wide v0, p0, Lmiui/securitycenter/powercenter/HistoryItemWrapper;->time:J
 
     return-wide v0
@@ -385,19 +350,16 @@
 
     const/4 v0, 0x1
 
-    .line 33
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v3, 0x15
 
     if-lt v2, v3, :cond_2
 
-    .line 34
     iget-byte v2, p0, Lmiui/securitycenter/powercenter/HistoryItemWrapper;->cmd:B
 
     if-nez v2, :cond_1
 
-    .line 37
     :cond_0
     :goto_0
     return v0
@@ -405,10 +367,8 @@
     :cond_1
     move v0, v1
 
-    .line 34
     goto :goto_0
 
-    .line 37
     :cond_2
     iget-byte v2, p0, Lmiui/securitycenter/powercenter/HistoryItemWrapper;->cmd:B
 
@@ -423,7 +383,6 @@
     .locals 2
 
     .prologue
-    .line 42
     iget-byte v0, p0, Lmiui/securitycenter/powercenter/HistoryItemWrapper;->cmd:B
 
     const/4 v1, 0x6

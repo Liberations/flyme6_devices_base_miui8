@@ -60,7 +60,6 @@
 
     const/4 v3, 0x0
 
-    .line 139
     new-instance v0, Lmiui/maml/data/Expression$Tokenizer$TokenType;
 
     const-string v1, "INVALID"
@@ -69,7 +68,6 @@
 
     sput-object v0, Lmiui/maml/data/Expression$Tokenizer$TokenType;->INVALID:Lmiui/maml/data/Expression$Tokenizer$TokenType;
 
-    .line 140
     new-instance v0, Lmiui/maml/data/Expression$Tokenizer$TokenType;
 
     const-string v1, "VAR_NUM"
@@ -78,7 +76,6 @@
 
     sput-object v0, Lmiui/maml/data/Expression$Tokenizer$TokenType;->VAR_NUM:Lmiui/maml/data/Expression$Tokenizer$TokenType;
 
-    .line 141
     new-instance v0, Lmiui/maml/data/Expression$Tokenizer$TokenType;
 
     const-string v1, "VAR_STR"
@@ -87,7 +84,6 @@
 
     sput-object v0, Lmiui/maml/data/Expression$Tokenizer$TokenType;->VAR_STR:Lmiui/maml/data/Expression$Tokenizer$TokenType;
 
-    .line 142
     new-instance v0, Lmiui/maml/data/Expression$Tokenizer$TokenType;
 
     const-string v1, "NUM"
@@ -96,7 +92,6 @@
 
     sput-object v0, Lmiui/maml/data/Expression$Tokenizer$TokenType;->NUM:Lmiui/maml/data/Expression$Tokenizer$TokenType;
 
-    .line 143
     new-instance v0, Lmiui/maml/data/Expression$Tokenizer$TokenType;
 
     const-string v1, "STR"
@@ -105,7 +100,6 @@
 
     sput-object v0, Lmiui/maml/data/Expression$Tokenizer$TokenType;->STR:Lmiui/maml/data/Expression$Tokenizer$TokenType;
 
-    .line 144
     new-instance v0, Lmiui/maml/data/Expression$Tokenizer$TokenType;
 
     const-string v1, "OPE"
@@ -116,7 +110,6 @@
 
     sput-object v0, Lmiui/maml/data/Expression$Tokenizer$TokenType;->OPE:Lmiui/maml/data/Expression$Tokenizer$TokenType;
 
-    .line 145
     new-instance v0, Lmiui/maml/data/Expression$Tokenizer$TokenType;
 
     const-string v1, "FUN"
@@ -127,7 +120,6 @@
 
     sput-object v0, Lmiui/maml/data/Expression$Tokenizer$TokenType;->FUN:Lmiui/maml/data/Expression$Tokenizer$TokenType;
 
-    .line 146
     new-instance v0, Lmiui/maml/data/Expression$Tokenizer$TokenType;
 
     const-string v1, "BRACKET_ROUND"
@@ -138,7 +130,6 @@
 
     sput-object v0, Lmiui/maml/data/Expression$Tokenizer$TokenType;->BRACKET_ROUND:Lmiui/maml/data/Expression$Tokenizer$TokenType;
 
-    .line 147
     new-instance v0, Lmiui/maml/data/Expression$Tokenizer$TokenType;
 
     const-string v1, "BRACKET_SQUARE"
@@ -149,7 +140,6 @@
 
     sput-object v0, Lmiui/maml/data/Expression$Tokenizer$TokenType;->BRACKET_SQUARE:Lmiui/maml/data/Expression$Tokenizer$TokenType;
 
-    .line 138
     const/16 v0, 0x9
 
     new-array v0, v0, [Lmiui/maml/data/Expression$Tokenizer$TokenType;
@@ -212,7 +202,6 @@
     .end annotation
 
     .prologue
-    .line 138
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -223,7 +212,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 138
     const-class v0, Lmiui/maml/data/Expression$Tokenizer$TokenType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -239,7 +227,6 @@
     .locals 1
 
     .prologue
-    .line 138
     sget-object v0, Lmiui/maml/data/Expression$Tokenizer$TokenType;->$VALUES:[Lmiui/maml/data/Expression$Tokenizer$TokenType;
 
     invoke-virtual {v0}, [Lmiui/maml/data/Expression$Tokenizer$TokenType;->clone()Ljava/lang/Object;

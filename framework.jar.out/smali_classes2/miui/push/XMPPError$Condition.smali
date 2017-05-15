@@ -73,7 +73,6 @@
     .locals 2
 
     .prologue
-    .line 459
     new-instance v0, Lmiui/push/XMPPError$Condition;
 
     const-string v1, "internal-server-error"
@@ -82,7 +81,6 @@
 
     sput-object v0, Lmiui/push/XMPPError$Condition;->interna_server_error:Lmiui/push/XMPPError$Condition;
 
-    .line 460
     new-instance v0, Lmiui/push/XMPPError$Condition;
 
     const-string v1, "forbidden"
@@ -91,7 +89,6 @@
 
     sput-object v0, Lmiui/push/XMPPError$Condition;->forbidden:Lmiui/push/XMPPError$Condition;
 
-    .line 461
     new-instance v0, Lmiui/push/XMPPError$Condition;
 
     const-string v1, "bad-request"
@@ -100,7 +97,6 @@
 
     sput-object v0, Lmiui/push/XMPPError$Condition;->bad_request:Lmiui/push/XMPPError$Condition;
 
-    .line 462
     new-instance v0, Lmiui/push/XMPPError$Condition;
 
     const-string v1, "conflict"
@@ -109,7 +105,6 @@
 
     sput-object v0, Lmiui/push/XMPPError$Condition;->conflict:Lmiui/push/XMPPError$Condition;
 
-    .line 463
     new-instance v0, Lmiui/push/XMPPError$Condition;
 
     const-string v1, "feature-not-implemented"
@@ -118,7 +113,6 @@
 
     sput-object v0, Lmiui/push/XMPPError$Condition;->feature_not_implemented:Lmiui/push/XMPPError$Condition;
 
-    .line 465
     new-instance v0, Lmiui/push/XMPPError$Condition;
 
     const-string v1, "gone"
@@ -127,7 +121,6 @@
 
     sput-object v0, Lmiui/push/XMPPError$Condition;->gone:Lmiui/push/XMPPError$Condition;
 
-    .line 466
     new-instance v0, Lmiui/push/XMPPError$Condition;
 
     const-string v1, "item-not-found"
@@ -136,7 +129,6 @@
 
     sput-object v0, Lmiui/push/XMPPError$Condition;->item_not_found:Lmiui/push/XMPPError$Condition;
 
-    .line 467
     new-instance v0, Lmiui/push/XMPPError$Condition;
 
     const-string v1, "jid-malformed"
@@ -145,7 +137,6 @@
 
     sput-object v0, Lmiui/push/XMPPError$Condition;->jid_malformed:Lmiui/push/XMPPError$Condition;
 
-    .line 468
     new-instance v0, Lmiui/push/XMPPError$Condition;
 
     const-string v1, "not-acceptable"
@@ -154,7 +145,6 @@
 
     sput-object v0, Lmiui/push/XMPPError$Condition;->no_acceptable:Lmiui/push/XMPPError$Condition;
 
-    .line 469
     new-instance v0, Lmiui/push/XMPPError$Condition;
 
     const-string v1, "not-allowed"
@@ -163,7 +153,6 @@
 
     sput-object v0, Lmiui/push/XMPPError$Condition;->not_allowed:Lmiui/push/XMPPError$Condition;
 
-    .line 470
     new-instance v0, Lmiui/push/XMPPError$Condition;
 
     const-string v1, "not-authorized"
@@ -172,7 +161,6 @@
 
     sput-object v0, Lmiui/push/XMPPError$Condition;->not_authorized:Lmiui/push/XMPPError$Condition;
 
-    .line 471
     new-instance v0, Lmiui/push/XMPPError$Condition;
 
     const-string v1, "payment-required"
@@ -181,7 +169,6 @@
 
     sput-object v0, Lmiui/push/XMPPError$Condition;->payment_required:Lmiui/push/XMPPError$Condition;
 
-    .line 472
     new-instance v0, Lmiui/push/XMPPError$Condition;
 
     const-string v1, "recipient-unavailable"
@@ -190,7 +177,6 @@
 
     sput-object v0, Lmiui/push/XMPPError$Condition;->recipient_unavailable:Lmiui/push/XMPPError$Condition;
 
-    .line 473
     new-instance v0, Lmiui/push/XMPPError$Condition;
 
     const-string v1, "redirect"
@@ -199,7 +185,6 @@
 
     sput-object v0, Lmiui/push/XMPPError$Condition;->redirect:Lmiui/push/XMPPError$Condition;
 
-    .line 474
     new-instance v0, Lmiui/push/XMPPError$Condition;
 
     const-string v1, "registration-required"
@@ -208,7 +193,6 @@
 
     sput-object v0, Lmiui/push/XMPPError$Condition;->registration_required:Lmiui/push/XMPPError$Condition;
 
-    .line 475
     new-instance v0, Lmiui/push/XMPPError$Condition;
 
     const-string v1, "remote-server-error"
@@ -217,7 +201,6 @@
 
     sput-object v0, Lmiui/push/XMPPError$Condition;->remote_server_error:Lmiui/push/XMPPError$Condition;
 
-    .line 476
     new-instance v0, Lmiui/push/XMPPError$Condition;
 
     const-string v1, "remote-server-not-found"
@@ -226,7 +209,6 @@
 
     sput-object v0, Lmiui/push/XMPPError$Condition;->remote_server_not_found:Lmiui/push/XMPPError$Condition;
 
-    .line 478
     new-instance v0, Lmiui/push/XMPPError$Condition;
 
     const-string v1, "remote-server-timeout"
@@ -235,7 +217,6 @@
 
     sput-object v0, Lmiui/push/XMPPError$Condition;->remote_server_timeout:Lmiui/push/XMPPError$Condition;
 
-    .line 479
     new-instance v0, Lmiui/push/XMPPError$Condition;
 
     const-string v1, "resource-constraint"
@@ -244,7 +225,6 @@
 
     sput-object v0, Lmiui/push/XMPPError$Condition;->resource_constraint:Lmiui/push/XMPPError$Condition;
 
-    .line 480
     new-instance v0, Lmiui/push/XMPPError$Condition;
 
     const-string v1, "service-unavailable"
@@ -253,7 +233,6 @@
 
     sput-object v0, Lmiui/push/XMPPError$Condition;->service_unavailable:Lmiui/push/XMPPError$Condition;
 
-    .line 481
     new-instance v0, Lmiui/push/XMPPError$Condition;
 
     const-string v1, "subscription-required"
@@ -262,7 +241,6 @@
 
     sput-object v0, Lmiui/push/XMPPError$Condition;->subscription_required:Lmiui/push/XMPPError$Condition;
 
-    .line 482
     new-instance v0, Lmiui/push/XMPPError$Condition;
 
     const-string v1, "undefined-condition"
@@ -271,7 +249,6 @@
 
     sput-object v0, Lmiui/push/XMPPError$Condition;->undefined_condition:Lmiui/push/XMPPError$Condition;
 
-    .line 483
     new-instance v0, Lmiui/push/XMPPError$Condition;
 
     const-string v1, "unexpected-request"
@@ -280,7 +257,6 @@
 
     sput-object v0, Lmiui/push/XMPPError$Condition;->unexpected_request:Lmiui/push/XMPPError$Condition;
 
-    .line 484
     new-instance v0, Lmiui/push/XMPPError$Condition;
 
     const-string v1, "request-timeout"
@@ -297,13 +273,10 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 488
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 489
     iput-object p1, p0, Lmiui/push/XMPPError$Condition;->value:Ljava/lang/String;
 
-    .line 490
     return-void
 .end method
 
@@ -312,7 +285,6 @@
     .param p0, "x0"    # Lmiui/push/XMPPError$Condition;
 
     .prologue
-    .line 457
     iget-object v0, p0, Lmiui/push/XMPPError$Condition;->value:Ljava/lang/String;
 
     return-object v0
@@ -324,7 +296,6 @@
     .locals 1
 
     .prologue
-    .line 493
     iget-object v0, p0, Lmiui/push/XMPPError$Condition;->value:Ljava/lang/String;
 
     return-object v0

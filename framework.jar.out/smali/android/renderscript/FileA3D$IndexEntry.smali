@@ -38,30 +38,22 @@
     .param p6, "type"    # Landroid/renderscript/FileA3D$EntryType;
 
     .prologue
-    .line 157
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 158
     iput-object p1, p0, Landroid/renderscript/FileA3D$IndexEntry;->mRS:Landroid/renderscript/RenderScript;
 
-    .line 159
     iput p2, p0, Landroid/renderscript/FileA3D$IndexEntry;->mIndex:I
 
-    .line 160
     iput-wide p3, p0, Landroid/renderscript/FileA3D$IndexEntry;->mID:J
 
-    .line 161
     iput-object p5, p0, Landroid/renderscript/FileA3D$IndexEntry;->mName:Ljava/lang/String;
 
-    .line 162
     iput-object p6, p0, Landroid/renderscript/FileA3D$IndexEntry;->mEntryType:Landroid/renderscript/FileA3D$EntryType;
 
-    .line 163
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/renderscript/FileA3D$IndexEntry;->mLoadedObj:Landroid/renderscript/BaseObj;
 
-    .line 164
     return-void
 .end method
 
@@ -73,7 +65,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 130
     const-class v3, Landroid/renderscript/FileA3D$IndexEntry;
 
     monitor-enter v3
@@ -83,19 +74,16 @@
 
     if-eqz v4, :cond_1
 
-    .line 131
     iget-object v2, p1, Landroid/renderscript/FileA3D$IndexEntry;->mLoadedObj:Landroid/renderscript/BaseObj;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 154
     :cond_0
     :goto_0
     monitor-exit v3
 
     return-object v2
 
-    .line 135
     :cond_1
     :try_start_1
     iget-object v4, p1, Landroid/renderscript/FileA3D$IndexEntry;->mEntryType:Landroid/renderscript/FileA3D$EntryType;
@@ -104,7 +92,6 @@
 
     if-eq v4, v5, :cond_0
 
-    .line 139
     iget-wide v4, p1, Landroid/renderscript/FileA3D$IndexEntry;->mID:J
 
     iget v6, p1, Landroid/renderscript/FileA3D$IndexEntry;->mIndex:I
@@ -113,7 +100,6 @@
 
     move-result-wide v0
 
-    .line 140
     .local v0, "objectID":J
     const-wide/16 v4, 0x0
 
@@ -121,7 +107,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 144
     sget-object v2, Landroid/renderscript/FileA3D$1;->$SwitchMap$android$renderscript$FileA3D$EntryType:[I
 
     iget-object v4, p1, Landroid/renderscript/FileA3D$IndexEntry;->mEntryType:Landroid/renderscript/FileA3D$EntryType;
@@ -134,7 +119,6 @@
 
     packed-switch v2, :pswitch_data_0
 
-    .line 150
     new-instance v2, Landroid/renderscript/RSRuntimeException;
 
     const-string v4, "Unrecognized object type in file."
@@ -145,7 +129,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 130
     .end local v0    # "objectID":J
     :catchall_0
     move-exception v2
@@ -154,7 +137,6 @@
 
     throw v2
 
-    .line 146
     .restart local v0    # "objectID":J
     :pswitch_0
     :try_start_2
@@ -164,19 +146,16 @@
 
     iput-object v2, p1, Landroid/renderscript/FileA3D$IndexEntry;->mLoadedObj:Landroid/renderscript/BaseObj;
 
-    .line 153
     iget-object v2, p1, Landroid/renderscript/FileA3D$IndexEntry;->mLoadedObj:Landroid/renderscript/BaseObj;
 
     invoke-virtual {v2}, Landroid/renderscript/BaseObj;->updateFromNative()V
 
-    .line 154
     iget-object v2, p1, Landroid/renderscript/FileA3D$IndexEntry;->mLoadedObj:Landroid/renderscript/BaseObj;
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     goto :goto_0
 
-    .line 144
     nop
 
     :pswitch_data_0
@@ -191,7 +170,6 @@
     .locals 1
 
     .prologue
-    .line 104
     iget-object v0, p0, Landroid/renderscript/FileA3D$IndexEntry;->mEntryType:Landroid/renderscript/FileA3D$EntryType;
 
     return-object v0
@@ -201,7 +179,6 @@
     .locals 1
 
     .prologue
-    .line 126
     invoke-virtual {p0}, Landroid/renderscript/FileA3D$IndexEntry;->getObject()Landroid/renderscript/BaseObj;
 
     move-result-object v0
@@ -215,7 +192,6 @@
     .locals 1
 
     .prologue
-    .line 93
     iget-object v0, p0, Landroid/renderscript/FileA3D$IndexEntry;->mName:Ljava/lang/String;
 
     return-object v0
@@ -225,19 +201,16 @@
     .locals 2
 
     .prologue
-    .line 113
     iget-object v1, p0, Landroid/renderscript/FileA3D$IndexEntry;->mRS:Landroid/renderscript/RenderScript;
 
     invoke-virtual {v1}, Landroid/renderscript/RenderScript;->validate()V
 
-    .line 114
     iget-object v1, p0, Landroid/renderscript/FileA3D$IndexEntry;->mRS:Landroid/renderscript/RenderScript;
 
     invoke-static {v1, p0}, Landroid/renderscript/FileA3D$IndexEntry;->internalCreate(Landroid/renderscript/RenderScript;Landroid/renderscript/FileA3D$IndexEntry;)Landroid/renderscript/BaseObj;
 
     move-result-object v0
 
-    .line 115
     .local v0, "obj":Landroid/renderscript/BaseObj;
     return-object v0
 .end method

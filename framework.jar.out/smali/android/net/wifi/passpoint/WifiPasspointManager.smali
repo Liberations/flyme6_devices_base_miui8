@@ -88,16 +88,12 @@
     .param p2, "service"    # Landroid/net/wifi/passpoint/IWifiPasspointManager;
 
     .prologue
-    .line 403
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 404
     iput-object p1, p0, Landroid/net/wifi/passpoint/WifiPasspointManager;->mContext:Landroid/content/Context;
 
-    .line 405
     iput-object p2, p0, Landroid/net/wifi/passpoint/WifiPasspointManager;->mService:Landroid/net/wifi/passpoint/IWifiPasspointManager;
 
-    .line 406
     return-void
 .end method
 
@@ -106,7 +102,6 @@
     .param p0, "c"    # Landroid/net/wifi/passpoint/WifiPasspointManager$Channel;
 
     .prologue
-    .line 565
     if-nez p0, :cond_0
 
     new-instance v0, Ljava/lang/IllegalArgumentException;
@@ -117,7 +112,6 @@
 
     throw v0
 
-    .line 566
     :cond_0
     return-void
 .end method
@@ -129,7 +123,6 @@
     .param p1, "cred"    # Landroid/net/wifi/passpoint/WifiPasspointCredential;
 
     .prologue
-    .line 514
     :try_start_0
     iget-object v1, p0, Landroid/net/wifi/passpoint/WifiPasspointManager;->mService:Landroid/net/wifi/passpoint/IWifiPasspointManager;
 
@@ -139,15 +132,12 @@
 
     move-result v1
 
-    .line 516
     :goto_0
     return v1
 
-    .line 515
     :catch_0
     move-exception v0
 
-    .line 516
     .local v0, "e":Landroid/os/RemoteException;
     const/4 v1, 0x0
 
@@ -159,7 +149,6 @@
     .param p1, "policy"    # Landroid/net/wifi/passpoint/WifiPasspointPolicy;
 
     .prologue
-    .line 562
     return-void
 .end method
 
@@ -176,7 +165,6 @@
     .end annotation
 
     .prologue
-    .line 500
     :try_start_0
     iget-object v1, p0, Landroid/net/wifi/passpoint/WifiPasspointManager;->mService:Landroid/net/wifi/passpoint/IWifiPasspointManager;
 
@@ -186,15 +174,12 @@
 
     move-result-object v1
 
-    .line 502
     :goto_0
     return-object v1
 
-    .line 501
     :catch_0
     move-exception v0
 
-    .line 502
     .local v0, "e":Landroid/os/RemoteException;
     const/4 v1, 0x0
 
@@ -205,7 +190,6 @@
     .locals 2
 
     .prologue
-    .line 440
     :try_start_0
     iget-object v1, p0, Landroid/net/wifi/passpoint/WifiPasspointManager;->mService:Landroid/net/wifi/passpoint/IWifiPasspointManager;
 
@@ -215,15 +199,12 @@
 
     move-result-object v1
 
-    .line 442
     :goto_0
     return-object v1
 
-    .line 441
     :catch_0
     move-exception v0
 
-    .line 442
     .local v0, "e":Landroid/os/RemoteException;
     const/4 v1, 0x0
 
@@ -234,7 +215,6 @@
     .locals 2
 
     .prologue
-    .line 448
     :try_start_0
     iget-object v1, p0, Landroid/net/wifi/passpoint/WifiPasspointManager;->mService:Landroid/net/wifi/passpoint/IWifiPasspointManager;
 
@@ -244,15 +224,12 @@
 
     move-result v1
 
-    .line 450
     :goto_0
     return v1
 
-    .line 449
     :catch_0
     move-exception v0
 
-    .line 450
     .local v0, "e":Landroid/os/RemoteException;
     const/4 v1, 0x0
 
@@ -268,29 +245,24 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 421
     invoke-virtual {p0}, Landroid/net/wifi/passpoint/WifiPasspointManager;->getMessenger()Landroid/os/Messenger;
 
     move-result-object v1
 
-    .line 422
     .local v1, "messenger":Landroid/os/Messenger;
     if-nez v1, :cond_1
 
     move-object v0, v2
 
-    .line 430
     :cond_0
     :goto_0
     return-object v0
 
-    .line 425
     :cond_1
     new-instance v0, Landroid/net/wifi/passpoint/WifiPasspointManager$Channel;
 
     invoke-direct {v0, p1, p2, p3}, Landroid/net/wifi/passpoint/WifiPasspointManager$Channel;-><init>(Landroid/content/Context;Landroid/os/Looper;Landroid/net/wifi/passpoint/WifiPasspointManager$ChannelListener;)V
 
-    .line 426
     .local v0, "c":Landroid/net/wifi/passpoint/WifiPasspointManager$Channel;
     # getter for: Landroid/net/wifi/passpoint/WifiPasspointManager$Channel;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {v0}, Landroid/net/wifi/passpoint/WifiPasspointManager$Channel;->access$600(Landroid/net/wifi/passpoint/WifiPasspointManager$Channel;)Lcom/android/internal/util/AsyncChannel;
@@ -310,7 +282,6 @@
 
     move-object v0, v2
 
-    .line 430
     goto :goto_0
 .end method
 
@@ -319,7 +290,6 @@
     .param p1, "cred"    # Landroid/net/wifi/passpoint/WifiPasspointCredential;
 
     .prologue
-    .line 544
     :try_start_0
     iget-object v1, p0, Landroid/net/wifi/passpoint/WifiPasspointManager;->mService:Landroid/net/wifi/passpoint/IWifiPasspointManager;
 
@@ -329,15 +299,12 @@
 
     move-result v1
 
-    .line 546
     :goto_0
     return v1
 
-    .line 545
     :catch_0
     move-exception v0
 
-    .line 546
     .local v0, "e":Landroid/os/RemoteException;
     const/4 v1, 0x0
 
@@ -363,22 +330,20 @@
     .end annotation
 
     .prologue
-    .line 456
     .local p2, "requested":Ljava/util/List;, "Ljava/util/List<Landroid/net/wifi/ScanResult;>;"
     const-string v5, "PasspointManager"
 
-    const-string/jumbo v6, "requestAnqpInfo start"
+    const-string v6, "requestAnqpInfo start"
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 457
     const-string v5, "PasspointManager"
 
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "requested.size="
+    const-string v7, "requested.size="
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -398,15 +363,12 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 458
     invoke-static {p1}, Landroid/net/wifi/passpoint/WifiPasspointManager;->checkChannel(Landroid/net/wifi/passpoint/WifiPasspointManager$Channel;)V
 
-    .line 459
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 460
     .local v3, "list":Ljava/util/List;, "Ljava/util/List<Landroid/net/wifi/ScanResult;>;"
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -427,7 +389,6 @@
 
     check-cast v4, Landroid/net/wifi/ScanResult;
 
-    .line 461
     .local v4, "sr":Landroid/net/wifi/ScanResult;
     iget-object v5, v4, Landroid/net/wifi/ScanResult;->capabilities:Ljava/lang/String;
 
@@ -439,14 +400,11 @@
 
     if-eqz v5, :cond_0
 
-    .line 462
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 463
     # invokes: Landroid/net/wifi/passpoint/WifiPasspointManager$Channel;->anqpRequestStart(Landroid/net/wifi/ScanResult;)V
     invoke-static {p1, v4}, Landroid/net/wifi/passpoint/WifiPasspointManager$Channel;->access$700(Landroid/net/wifi/passpoint/WifiPasspointManager$Channel;Landroid/net/wifi/ScanResult;)V
 
-    .line 464
     const-string v5, "PasspointManager"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -473,14 +431,12 @@
 
     goto :goto_0
 
-    .line 466
     .end local v4    # "sr":Landroid/net/wifi/ScanResult;
     :cond_1
     invoke-interface {v3}, Ljava/util/List;->size()I
 
     move-result v0
 
-    .line 467
     .local v0, "count":I
     const-string v5, "PasspointManager"
 
@@ -504,31 +460,25 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 468
     if-nez v0, :cond_2
 
-    .line 470
     const-string v5, "PasspointManager"
 
     const-string v6, "ANQP info request contains no HS20 APs, skipped"
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 471
     invoke-interface {p4}, Landroid/net/wifi/passpoint/WifiPasspointManager$ActionListener;->onSuccess()V
 
-    .line 478
     :goto_1
     return-void
 
-    .line 474
     :cond_2
     # invokes: Landroid/net/wifi/passpoint/WifiPasspointManager$Channel;->putListener(Ljava/lang/Object;I)I
     invoke-static {p1, p4, v0}, Landroid/net/wifi/passpoint/WifiPasspointManager$Channel;->access$800(Landroid/net/wifi/passpoint/WifiPasspointManager$Channel;Ljava/lang/Object;I)I
 
     move-result v2
 
-    .line 475
     .local v2, "key":I
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -547,7 +497,6 @@
 
     check-cast v4, Landroid/net/wifi/ScanResult;
 
-    .line 476
     .restart local v4    # "sr":Landroid/net/wifi/ScanResult;
     # getter for: Landroid/net/wifi/passpoint/WifiPasspointManager$Channel;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {p1}, Landroid/net/wifi/passpoint/WifiPasspointManager$Channel;->access$600(Landroid/net/wifi/passpoint/WifiPasspointManager$Channel;)Lcom/android/internal/util/AsyncChannel;
@@ -560,12 +509,11 @@
 
     goto :goto_2
 
-    .line 477
     .end local v4    # "sr":Landroid/net/wifi/ScanResult;
     :cond_3
     const-string v5, "PasspointManager"
 
-    const-string/jumbo v6, "requestAnqpInfo end"
+    const-string v6, "requestAnqpInfo end"
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -589,7 +537,6 @@
     .end annotation
 
     .prologue
-    .line 486
     .local p1, "requested":Ljava/util/List;, "Ljava/util/List<Landroid/net/wifi/ScanResult;>;"
     :try_start_0
     iget-object v1, p0, Landroid/net/wifi/passpoint/WifiPasspointManager;->mService:Landroid/net/wifi/passpoint/IWifiPasspointManager;
@@ -600,15 +547,12 @@
 
     move-result-object v1
 
-    .line 488
     :goto_0
     return-object v1
 
-    .line 487
     :catch_0
     move-exception v0
 
-    .line 488
     .local v0, "e":Landroid/os/RemoteException;
     const/4 v1, 0x0
 
@@ -634,7 +578,6 @@
     .end annotation
 
     .prologue
-    .line 482
     .local p2, "requested":Ljava/util/List;, "Ljava/util/List<Landroid/net/wifi/passpoint/WifiPasspointOsuProvider;>;"
     return-void
 .end method
@@ -646,23 +589,19 @@
     .param p3, "listener"    # Landroid/net/wifi/passpoint/WifiPasspointManager$OsuRemListener;
 
     .prologue
-    .line 551
     const-string v1, "PasspointManager"
 
-    const-string/jumbo v2, "startOsu start"
+    const-string v2, "startOsu start"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 552
     invoke-static {p1}, Landroid/net/wifi/passpoint/WifiPasspointManager;->checkChannel(Landroid/net/wifi/passpoint/WifiPasspointManager$Channel;)V
 
-    .line 553
     # invokes: Landroid/net/wifi/passpoint/WifiPasspointManager$Channel;->putListener(Ljava/lang/Object;)I
     invoke-static {p1, p3}, Landroid/net/wifi/passpoint/WifiPasspointManager$Channel;->access$900(Landroid/net/wifi/passpoint/WifiPasspointManager$Channel;Ljava/lang/Object;)I
 
     move-result v0
 
-    .line 554
     .local v0, "key":I
     # getter for: Landroid/net/wifi/passpoint/WifiPasspointManager$Channel;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
     invoke-static {p1}, Landroid/net/wifi/passpoint/WifiPasspointManager$Channel;->access$600(Landroid/net/wifi/passpoint/WifiPasspointManager$Channel;)Lcom/android/internal/util/AsyncChannel;
@@ -675,14 +614,12 @@
 
     invoke-virtual {v1, v2, v3, v0, p2}, Lcom/android/internal/util/AsyncChannel;->sendMessage(IIILjava/lang/Object;)V
 
-    .line 555
     const-string v1, "PasspointManager"
 
-    const-string/jumbo v2, "startOsu end"
+    const-string v2, "startOsu end"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 556
     return-void
 .end method
 
@@ -692,7 +629,6 @@
     .param p2, "listener"    # Landroid/net/wifi/passpoint/WifiPasspointManager$OsuRemListener;
 
     .prologue
-    .line 559
     return-void
 .end method
 
@@ -701,7 +637,6 @@
     .param p1, "cred"    # Landroid/net/wifi/passpoint/WifiPasspointCredential;
 
     .prologue
-    .line 529
     :try_start_0
     iget-object v1, p0, Landroid/net/wifi/passpoint/WifiPasspointManager;->mService:Landroid/net/wifi/passpoint/IWifiPasspointManager;
 
@@ -711,15 +646,12 @@
 
     move-result v1
 
-    .line 531
     :goto_0
     return v1
 
-    .line 530
     :catch_0
     move-exception v0
 
-    .line 531
     .local v0, "e":Landroid/os/RemoteException;
     const/4 v1, 0x0
 

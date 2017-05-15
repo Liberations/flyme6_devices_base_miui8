@@ -32,7 +32,6 @@
     .locals 1
 
     .prologue
-    .line 2420
     const-string v0, "content://antispam/account"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;

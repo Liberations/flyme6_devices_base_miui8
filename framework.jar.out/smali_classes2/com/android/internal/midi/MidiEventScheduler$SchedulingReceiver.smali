@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 33
     iput-object p1, p0, Lcom/android/internal/midi/MidiEventScheduler$SchedulingReceiver;->this$0:Lcom/android/internal/midi/MidiEventScheduler;
 
     invoke-direct {p0}, Landroid/media/midi/MidiReceiver;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/internal/midi/MidiEventScheduler$1;
 
     .prologue
-    .line 33
     invoke-direct {p0, p1}, Lcom/android/internal/midi/MidiEventScheduler$SchedulingReceiver;-><init>(Lcom/android/internal/midi/MidiEventScheduler;)V
 
     return-void
@@ -49,12 +47,10 @@
     .locals 1
 
     .prologue
-    .line 49
     iget-object v0, p0, Lcom/android/internal/midi/MidiEventScheduler$SchedulingReceiver;->this$0:Lcom/android/internal/midi/MidiEventScheduler;
 
     invoke-virtual {v0}, Lcom/android/internal/midi/MidiEventScheduler;->flush()V
 
-    .line 50
     return-void
 .end method
 
@@ -71,7 +67,6 @@
     .end annotation
 
     .prologue
-    .line 41
     iget-object v0, p0, Lcom/android/internal/midi/MidiEventScheduler$SchedulingReceiver;->this$0:Lcom/android/internal/midi/MidiEventScheduler;
 
     move-object v1, p1
@@ -87,16 +82,13 @@
 
     move-result-object v6
 
-    .line 42
     .local v6, "event":Lcom/android/internal/midi/MidiEventScheduler$MidiEvent;
     if-eqz v6, :cond_0
 
-    .line 43
     iget-object v0, p0, Lcom/android/internal/midi/MidiEventScheduler$SchedulingReceiver;->this$0:Lcom/android/internal/midi/MidiEventScheduler;
 
     invoke-virtual {v0, v6}, Lcom/android/internal/midi/MidiEventScheduler;->add(Lcom/android/internal/midi/EventScheduler$SchedulableEvent;)V
 
-    .line 45
     :cond_0
     return-void
 .end method

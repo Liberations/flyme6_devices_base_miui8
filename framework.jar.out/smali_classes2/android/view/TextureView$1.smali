@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 769
     iput-object p1, p0, Landroid/view/TextureView$1;->this$0:Landroid/view/TextureView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,17 +40,14 @@
     .param p1, "surfaceTexture"    # Landroid/graphics/SurfaceTexture;
 
     .prologue
-    .line 772
     iget-object v0, p0, Landroid/view/TextureView$1;->this$0:Landroid/view/TextureView;
 
     # invokes: Landroid/view/TextureView;->updateLayer()V
     invoke-static {v0}, Landroid/view/TextureView;->access$000(Landroid/view/TextureView;)V
 
-    .line 773
     iget-object v0, p0, Landroid/view/TextureView$1;->this$0:Landroid/view/TextureView;
 
     invoke-virtual {v0}, Landroid/view/TextureView;->invalidate()V
 
-    .line 774
     return-void
 .end method

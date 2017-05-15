@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 94
     iput-object p1, p0, Landroid/widget/YearPickerView$2;->this$0:Landroid/widget/YearPickerView;
 
     iput p2, p0, Landroid/widget/YearPickerView$2;->val$year:I
@@ -44,7 +43,6 @@
     .locals 3
 
     .prologue
-    .line 97
     iget-object v1, p0, Landroid/widget/YearPickerView$2;->this$0:Landroid/widget/YearPickerView;
 
     # getter for: Landroid/widget/YearPickerView;->mAdapter:Landroid/widget/YearPickerView$YearAdapter;
@@ -58,7 +56,6 @@
 
     move-result v0
 
-    .line 98
     .local v0, "position":I
     if-ltz v0, :cond_0
 
@@ -70,12 +67,10 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 99
     iget-object v1, p0, Landroid/widget/YearPickerView$2;->this$0:Landroid/widget/YearPickerView;
 
     invoke-virtual {v1, v0}, Landroid/widget/YearPickerView;->setSelectionCentered(I)V
 
-    .line 101
     :cond_0
     return-void
 .end method

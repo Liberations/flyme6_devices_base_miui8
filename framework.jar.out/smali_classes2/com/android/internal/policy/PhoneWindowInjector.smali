@@ -12,10 +12,8 @@
     .locals 0
 
     .prologue
-    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 11
     return-void
 .end method
 
@@ -26,25 +24,20 @@
     .prologue
     const/16 v2, 0x40
 
-    .line 14
     invoke-virtual {p0}, Lcom/android/internal/policy/PhoneWindow;->getNavigationBarColor()I
 
     move-result v0
 
-    .line 15
     .local v0, "navigationBarColor":I
     const/4 v1, -0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 16
     invoke-virtual {p0, v2}, Lcom/android/internal/policy/PhoneWindow;->addExtraFlags(I)V
 
-    .line 20
     :goto_0
     return-void
 
-    .line 18
     :cond_0
     invoke-virtual {p0, v2}, Lcom/android/internal/policy/PhoneWindow;->clearExtraFlags(I)V
 
@@ -57,7 +50,6 @@
     .param p1, "insets"    # Landroid/view/WindowInsets;
 
     .prologue
-    .line 23
     if-eqz p0, :cond_0
 
     if-eqz p1, :cond_0
@@ -70,17 +62,14 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 24
     invoke-virtual {p1}, Landroid/view/WindowInsets;->getSystemWindowInsetBottom()I
 
     move-result v0
 
     sput v0, Lcom/android/internal/policy/PhoneWindowInjector;->sLastInsetBottom:I
 
-    .line 25
     invoke-virtual {p0}, Landroid/view/View;->requestApplyInsets()V
 
-    .line 27
     :cond_0
     return-void
 .end method

@@ -31,27 +31,21 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 40
     invoke-direct {p0}, Lcom/miui/whetstone/ILocationCallback$Stub;-><init>()V
 
-    .line 41
     iput-object p1, p0, Lcom/miui/whetstone/LocationProxy$CallbackTransport;->mCallback:Lcom/miui/whetstone/LocationCallback;
 
-    .line 43
     if-nez p2, :cond_0
 
-    .line 44
     new-instance v0, Lcom/miui/whetstone/LocationProxy$CallbackTransport$1;
 
     invoke-direct {v0, p0}, Lcom/miui/whetstone/LocationProxy$CallbackTransport$1;-><init>(Lcom/miui/whetstone/LocationProxy$CallbackTransport;)V
 
     iput-object v0, p0, Lcom/miui/whetstone/LocationProxy$CallbackTransport;->mCallbackHandler:Landroid/os/Handler;
 
-    .line 58
     :goto_0
     return-void
 
-    .line 51
     :cond_0
     new-instance v0, Lcom/miui/whetstone/LocationProxy$CallbackTransport$2;
 
@@ -67,12 +61,10 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 69
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 75
     const-string v1, "LocationProxy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -97,11 +89,9 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 77
     :goto_0
     return-void
 
-    .line 71
     :pswitch_0
     new-instance v0, Landroid/location/Location;
 
@@ -111,7 +101,6 @@
 
     invoke-direct {v0, v1}, Landroid/location/Location;-><init>(Landroid/location/Location;)V
 
-    .line 72
     .local v0, "location":Landroid/location/Location;
     iget-object v1, p0, Lcom/miui/whetstone/LocationProxy$CallbackTransport;->mCallback:Lcom/miui/whetstone/LocationCallback;
 
@@ -119,7 +108,6 @@
 
     goto :goto_0
 
-    .line 69
     nop
 
     :pswitch_data_0
@@ -134,7 +122,6 @@
     .param p1, "x1"    # Landroid/os/Message;
 
     .prologue
-    .line 34
     invoke-direct {p0, p1}, Lcom/miui/whetstone/LocationProxy$CallbackTransport;->_handleMessage(Landroid/os/Message;)V
 
     return-void
@@ -147,25 +134,20 @@
     .param p1, "location"    # Landroid/location/Location;
 
     .prologue
-    .line 62
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v0
 
-    .line 63
     .local v0, "msg":Landroid/os/Message;
     const/4 v1, 0x1
 
     iput v1, v0, Landroid/os/Message;->what:I
 
-    .line 64
     iput-object p1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 65
     iget-object v1, p0, Lcom/miui/whetstone/LocationProxy$CallbackTransport;->mCallbackHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 66
     return-void
 .end method

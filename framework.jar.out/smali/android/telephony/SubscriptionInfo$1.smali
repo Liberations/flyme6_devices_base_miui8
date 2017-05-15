@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 306
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,78 +44,65 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 309
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 310
     .local v1, "id":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 311
     .local v2, "iccId":Ljava/lang/String;
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 312
     .local v3, "simSlotIndex":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readCharSequence()Ljava/lang/CharSequence;
 
     move-result-object v4
 
-    .line 313
     .local v4, "displayName":Ljava/lang/CharSequence;
     invoke-virtual {p1}, Landroid/os/Parcel;->readCharSequence()Ljava/lang/CharSequence;
 
     move-result-object v5
 
-    .line 314
     .local v5, "carrierName":Ljava/lang/CharSequence;
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 315
     .local v6, "nameSource":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v7
 
-    .line 316
     .local v7, "iconTint":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v8
 
-    .line 317
     .local v8, "number":Ljava/lang/String;
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v9
 
-    .line 318
     .local v9, "dataRoaming":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v11
 
-    .line 319
     .local v11, "mcc":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v12
 
-    .line 320
     .local v12, "mnc":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v13
 
-    .line 321
     .local v13, "countryIso":Ljava/lang/String;
     sget-object v0, Landroid/graphics/Bitmap;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -126,7 +112,6 @@
 
     check-cast v10, Landroid/graphics/Bitmap;
 
-    .line 323
     .local v10, "iconBitmap":Landroid/graphics/Bitmap;
     new-instance v0, Landroid/telephony/SubscriptionInfo;
 
@@ -140,7 +125,6 @@
     .param p1, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 306
     invoke-virtual {p0, p1}, Landroid/telephony/SubscriptionInfo$1;->createFromParcel(Landroid/os/Parcel;)Landroid/telephony/SubscriptionInfo;
 
     move-result-object v0
@@ -153,7 +137,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 329
     new-array v0, p1, [Landroid/telephony/SubscriptionInfo;
 
     return-object v0
@@ -164,7 +147,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 306
     invoke-virtual {p0, p1}, Landroid/telephony/SubscriptionInfo$1;->newArray(I)[Landroid/telephony/SubscriptionInfo;
 
     move-result-object v0

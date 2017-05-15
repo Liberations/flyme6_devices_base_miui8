@@ -33,10 +33,8 @@
     .param p2, "ele"    # Lorg/w3c/dom/Element;
 
     .prologue
-    .line 1069
     invoke-direct {p0, p1}, Lmiui/maml/ActionCommand;-><init>(Lmiui/maml/elements/ScreenElement;)V
 
-    .line 1070
     const-string v0, "command"
 
     invoke-interface {p2, v0}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -45,7 +43,6 @@
 
     iput-object v0, p0, Lmiui/maml/ActionCommand$ExternCommand;->mCommand:Ljava/lang/String;
 
-    .line 1071
     invoke-virtual {p0}, Lmiui/maml/ActionCommand$ExternCommand;->getVariables()Lmiui/maml/data/Variables;
 
     move-result-object v0
@@ -62,7 +59,6 @@
 
     iput-object v0, p0, Lmiui/maml/ActionCommand$ExternCommand;->mNumParaExp:Lmiui/maml/data/Expression;
 
-    .line 1072
     invoke-virtual {p0}, Lmiui/maml/ActionCommand$ExternCommand;->getVariables()Lmiui/maml/data/Variables;
 
     move-result-object v0
@@ -79,7 +75,6 @@
 
     iput-object v0, p0, Lmiui/maml/ActionCommand$ExternCommand;->mStrParaExp:Lmiui/maml/data/Expression;
 
-    .line 1073
     return-void
 .end method
 
@@ -91,7 +86,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1077
     invoke-virtual {p0}, Lmiui/maml/ActionCommand$ExternCommand;->getRoot()Lmiui/maml/ScreenElementRoot;
 
     move-result-object v2
@@ -112,10 +106,8 @@
     :goto_1
     invoke-virtual {v2, v3, v0, v1}, Lmiui/maml/ScreenElementRoot;->issueExternCommand(Ljava/lang/String;Ljava/lang/Double;Ljava/lang/String;)V
 
-    .line 1080
     return-void
 
-    .line 1077
     :cond_0
     iget-object v0, p0, Lmiui/maml/ActionCommand$ExternCommand;->mNumParaExp:Lmiui/maml/data/Expression;
 

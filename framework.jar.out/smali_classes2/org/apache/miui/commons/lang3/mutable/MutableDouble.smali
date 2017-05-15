@@ -36,10 +36,8 @@
     .locals 0
 
     .prologue
-    .line 45
     invoke-direct {p0}, Ljava/lang/Number;-><init>()V
 
-    .line 46
     return-void
 .end method
 
@@ -48,13 +46,10 @@
     .param p1, "value"    # D
 
     .prologue
-    .line 54
     invoke-direct {p0}, Ljava/lang/Number;-><init>()V
 
-    .line 55
     iput-wide p1, p0, Lorg/apache/miui/commons/lang3/mutable/MutableDouble;->value:D
 
-    .line 56
     return-void
 .end method
 
@@ -63,17 +58,14 @@
     .param p1, "value"    # Ljava/lang/Number;
 
     .prologue
-    .line 65
     invoke-direct {p0}, Ljava/lang/Number;-><init>()V
 
-    .line 66
     invoke-virtual {p1}, Ljava/lang/Number;->doubleValue()D
 
     move-result-wide v0
 
     iput-wide v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableDouble;->value:D
 
-    .line 67
     return-void
 .end method
 
@@ -87,17 +79,14 @@
     .end annotation
 
     .prologue
-    .line 77
     invoke-direct {p0}, Ljava/lang/Number;-><init>()V
 
-    .line 78
     invoke-static {p1}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
 
     move-result-wide v0
 
     iput-wide v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableDouble;->value:D
 
-    .line 79
     return-void
 .end method
 
@@ -108,14 +97,12 @@
     .param p1, "operand"    # D
 
     .prologue
-    .line 156
     iget-wide v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableDouble;->value:D
 
     add-double/2addr v0, p1
 
     iput-wide v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableDouble;->value:D
 
-    .line 157
     return-void
 .end method
 
@@ -124,7 +111,6 @@
     .param p1, "operand"    # Ljava/lang/Number;
 
     .prologue
-    .line 167
     iget-wide v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableDouble;->value:D
 
     invoke-virtual {p1}, Ljava/lang/Number;->doubleValue()D
@@ -135,7 +121,6 @@
 
     iput-wide v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableDouble;->value:D
 
-    .line 168
     return-void
 .end method
 
@@ -144,7 +129,6 @@
     .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
-    .line 29
     check-cast p1, Lorg/apache/miui/commons/lang3/mutable/MutableDouble;
 
     .end local p1    # "x0":Ljava/lang/Object;
@@ -160,10 +144,8 @@
     .param p1, "other"    # Lorg/apache/miui/commons/lang3/mutable/MutableDouble;
 
     .prologue
-    .line 298
     iget-wide v0, p1, Lorg/apache/miui/commons/lang3/mutable/MutableDouble;->value:D
 
-    .line 299
     .local v0, "anotherVal":D
     iget-wide v2, p0, Lorg/apache/miui/commons/lang3/mutable/MutableDouble;->value:D
 
@@ -178,7 +160,6 @@
     .locals 4
 
     .prologue
-    .line 145
     iget-wide v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableDouble;->value:D
 
     const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
@@ -187,7 +168,6 @@
 
     iput-wide v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableDouble;->value:D
 
-    .line 146
     return-void
 .end method
 
@@ -195,7 +175,6 @@
     .locals 2
 
     .prologue
-    .line 230
     iget-wide v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableDouble;->value:D
 
     return-wide v0
@@ -206,7 +185,6 @@
     .param p1, "obj"    # Ljava/lang/Object;
 
     .prologue
-    .line 275
     instance-of v0, p1, Lorg/apache/miui/commons/lang3/mutable/MutableDouble;
 
     if-eqz v0, :cond_0
@@ -245,7 +223,6 @@
     .locals 2
 
     .prologue
-    .line 220
     iget-wide v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableDouble;->value:D
 
     double-to-float v0, v0
@@ -257,7 +234,6 @@
     .locals 2
 
     .prologue
-    .line 88
     iget-wide v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableDouble;->value:D
 
     invoke-static {v0, v1}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
@@ -271,7 +247,6 @@
     .locals 1
 
     .prologue
-    .line 29
     invoke-virtual {p0}, Lorg/apache/miui/commons/lang3/mutable/MutableDouble;->getValue()Ljava/lang/Double;
 
     move-result-object v0
@@ -283,14 +258,12 @@
     .locals 4
 
     .prologue
-    .line 286
     iget-wide v2, p0, Lorg/apache/miui/commons/lang3/mutable/MutableDouble;->value:D
 
     invoke-static {v2, v3}, Ljava/lang/Double;->doubleToLongBits(D)J
 
     move-result-wide v0
 
-    .line 287
     .local v0, "bits":J
     const/16 v2, 0x20
 
@@ -307,7 +280,6 @@
     .locals 4
 
     .prologue
-    .line 136
     iget-wide v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableDouble;->value:D
 
     const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
@@ -316,7 +288,6 @@
 
     iput-wide v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableDouble;->value:D
 
-    .line 137
     return-void
 .end method
 
@@ -324,7 +295,6 @@
     .locals 2
 
     .prologue
-    .line 200
     iget-wide v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableDouble;->value:D
 
     double-to-int v0, v0
@@ -336,7 +306,6 @@
     .locals 2
 
     .prologue
-    .line 126
     iget-wide v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableDouble;->value:D
 
     invoke-static {v0, v1}, Ljava/lang/Double;->isInfinite(D)Z
@@ -350,7 +319,6 @@
     .locals 2
 
     .prologue
-    .line 117
     iget-wide v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableDouble;->value:D
 
     invoke-static {v0, v1}, Ljava/lang/Double;->isNaN(D)Z
@@ -364,7 +332,6 @@
     .locals 2
 
     .prologue
-    .line 210
     iget-wide v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableDouble;->value:D
 
     double-to-long v0, v0
@@ -377,10 +344,8 @@
     .param p1, "value"    # D
 
     .prologue
-    .line 97
     iput-wide p1, p0, Lorg/apache/miui/commons/lang3/mutable/MutableDouble;->value:D
 
-    .line 98
     return-void
 .end method
 
@@ -389,14 +354,12 @@
     .param p1, "value"    # Ljava/lang/Number;
 
     .prologue
-    .line 107
     invoke-virtual {p1}, Ljava/lang/Number;->doubleValue()D
 
     move-result-wide v0
 
     iput-wide v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableDouble;->value:D
 
-    .line 108
     return-void
 .end method
 
@@ -405,7 +368,6 @@
     .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
-    .line 29
     check-cast p1, Ljava/lang/Number;
 
     .end local p1    # "x0":Ljava/lang/Object;
@@ -419,14 +381,12 @@
     .param p1, "operand"    # D
 
     .prologue
-    .line 177
     iget-wide v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableDouble;->value:D
 
     sub-double/2addr v0, p1
 
     iput-wide v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableDouble;->value:D
 
-    .line 178
     return-void
 .end method
 
@@ -435,7 +395,6 @@
     .param p1, "operand"    # Ljava/lang/Number;
 
     .prologue
-    .line 188
     iget-wide v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableDouble;->value:D
 
     invoke-virtual {p1}, Ljava/lang/Number;->doubleValue()D
@@ -446,7 +405,6 @@
 
     iput-wide v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableDouble;->value:D
 
-    .line 189
     return-void
 .end method
 
@@ -454,7 +412,6 @@
     .locals 2
 
     .prologue
-    .line 240
     invoke-virtual {p0}, Lorg/apache/miui/commons/lang3/mutable/MutableDouble;->doubleValue()D
 
     move-result-wide v0
@@ -470,7 +427,6 @@
     .locals 2
 
     .prologue
-    .line 310
     iget-wide v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableDouble;->value:D
 
     invoke-static {v0, v1}, Ljava/lang/String;->valueOf(D)Ljava/lang/String;

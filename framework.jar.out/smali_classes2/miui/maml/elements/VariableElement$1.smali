@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 187
     invoke-static {}, Lmiui/maml/data/VariableType;->values()[Lmiui/maml/data/VariableType;
 
     move-result-object v0

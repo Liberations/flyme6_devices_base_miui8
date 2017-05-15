@@ -43,7 +43,6 @@
     .locals 1
 
     .prologue
-    .line 296
     new-instance v0, Landroid/net/wifi/WifiScanner$ScanData$1;
 
     invoke-direct {v0}, Landroid/net/wifi/WifiScanner$ScanData$1;-><init>()V
@@ -57,7 +56,6 @@
     .locals 0
 
     .prologue
-    .line 244
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -70,19 +68,14 @@
     .param p3, "results"    # [Landroid/net/wifi/ScanResult;
 
     .prologue
-    .line 246
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 247
     iput p1, p0, Landroid/net/wifi/WifiScanner$ScanData;->mId:I
 
-    .line 248
     iput p2, p0, Landroid/net/wifi/WifiScanner$ScanData;->mFlags:I
 
-    .line 249
     iput-object p3, p0, Landroid/net/wifi/WifiScanner$ScanData;->mResults:[Landroid/net/wifi/ScanResult;
 
-    .line 250
     return-void
 .end method
 
@@ -91,20 +84,16 @@
     .param p1, "s"    # Landroid/net/wifi/WifiScanner$ScanData;
 
     .prologue
-    .line 252
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 253
     iget v3, p1, Landroid/net/wifi/WifiScanner$ScanData;->mId:I
 
     iput v3, p0, Landroid/net/wifi/WifiScanner$ScanData;->mId:I
 
-    .line 254
     iget v3, p1, Landroid/net/wifi/WifiScanner$ScanData;->mFlags:I
 
     iput v3, p0, Landroid/net/wifi/WifiScanner$ScanData;->mFlags:I
 
-    .line 255
     iget-object v3, p1, Landroid/net/wifi/WifiScanner$ScanData;->mResults:[Landroid/net/wifi/ScanResult;
 
     array-length v3, v3
@@ -113,7 +102,6 @@
 
     iput-object v3, p0, Landroid/net/wifi/WifiScanner$ScanData;->mResults:[Landroid/net/wifi/ScanResult;
 
-    .line 256
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -124,29 +112,24 @@
 
     if-ge v0, v3, :cond_0
 
-    .line 257
     iget-object v3, p1, Landroid/net/wifi/WifiScanner$ScanData;->mResults:[Landroid/net/wifi/ScanResult;
 
     aget-object v2, v3, v0
 
-    .line 258
     .local v2, "result":Landroid/net/wifi/ScanResult;
     new-instance v1, Landroid/net/wifi/ScanResult;
 
     invoke-direct {v1, v2}, Landroid/net/wifi/ScanResult;-><init>(Landroid/net/wifi/ScanResult;)V
 
-    .line 259
     .local v1, "newResult":Landroid/net/wifi/ScanResult;
     iget-object v3, p0, Landroid/net/wifi/WifiScanner$ScanData;->mResults:[Landroid/net/wifi/ScanResult;
 
     aput-object v1, v3, v0
 
-    .line 256
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 261
     .end local v1    # "newResult":Landroid/net/wifi/ScanResult;
     .end local v2    # "result":Landroid/net/wifi/ScanResult;
     :cond_0
@@ -159,7 +142,6 @@
     .locals 1
 
     .prologue
-    .line 277
     const/4 v0, 0x0
 
     return v0
@@ -169,7 +151,6 @@
     .locals 1
 
     .prologue
-    .line 268
     iget v0, p0, Landroid/net/wifi/WifiScanner$ScanData;->mFlags:I
 
     return v0
@@ -179,7 +160,6 @@
     .locals 1
 
     .prologue
-    .line 264
     iget v0, p0, Landroid/net/wifi/WifiScanner$ScanData;->mId:I
 
     return v0
@@ -189,7 +169,6 @@
     .locals 1
 
     .prologue
-    .line 272
     iget-object v0, p0, Landroid/net/wifi/WifiScanner$ScanData;->mResults:[Landroid/net/wifi/ScanResult;
 
     return-object v0
@@ -201,29 +180,24 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 282
     iget-object v2, p0, Landroid/net/wifi/WifiScanner$ScanData;->mResults:[Landroid/net/wifi/ScanResult;
 
     if-eqz v2, :cond_0
 
-    .line 283
     iget v2, p0, Landroid/net/wifi/WifiScanner$ScanData;->mId:I
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 284
     iget v2, p0, Landroid/net/wifi/WifiScanner$ScanData;->mFlags:I
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 285
     iget-object v2, p0, Landroid/net/wifi/WifiScanner$ScanData;->mResults:[Landroid/net/wifi/ScanResult;
 
     array-length v2, v2
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 286
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -234,21 +208,17 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 287
     iget-object v2, p0, Landroid/net/wifi/WifiScanner$ScanData;->mResults:[Landroid/net/wifi/ScanResult;
 
     aget-object v1, v2, v0
 
-    .line 288
     .local v1, "result":Landroid/net/wifi/ScanResult;
     invoke-virtual {v1, p1, p2}, Landroid/net/wifi/ScanResult;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 286
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 291
     .end local v0    # "i":I
     .end local v1    # "result":Landroid/net/wifi/ScanResult;
     :cond_0
@@ -256,7 +226,6 @@
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 293
     :cond_1
     return-void
 .end method

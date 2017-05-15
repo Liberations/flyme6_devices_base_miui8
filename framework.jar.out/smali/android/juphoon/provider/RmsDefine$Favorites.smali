@@ -41,7 +41,6 @@
     .locals 1
 
     .prologue
-    .line 37
     const-string v0, "content://favorite-rms"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -50,7 +49,6 @@
 
     sput-object v0, Landroid/juphoon/provider/RmsDefine$Favorites;->FAVORITE_CONTENT_URI_RMS:Landroid/net/Uri;
 
-    .line 38
     const-string v0, "content://favorite-rms/rms_log"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -59,7 +57,6 @@
 
     sput-object v0, Landroid/juphoon/provider/RmsDefine$Favorites;->FAVORITE_CONTENT_URI_RMS_LOG:Landroid/net/Uri;
 
-    .line 39
     const-string v0, "content://favorite-rms/rms_log_group"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -68,7 +65,6 @@
 
     sput-object v0, Landroid/juphoon/provider/RmsDefine$Favorites;->FAVORITE_CONTENT_URI_RMS_LOGGROUP:Landroid/net/Uri;
 
-    .line 40
     const-string v0, "content://favorite-sms"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -77,7 +73,6 @@
 
     sput-object v0, Landroid/juphoon/provider/RmsDefine$Favorites;->FAVORITE_CONTENT_URI_SMS:Landroid/net/Uri;
 
-    .line 41
     const-string v0, "content://favorite-mms"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -86,7 +81,6 @@
 
     sput-object v0, Landroid/juphoon/provider/RmsDefine$Favorites;->FAVORITE_CONTENT_URI_MMS:Landroid/net/Uri;
 
-    .line 42
     const-string v0, "content://favorite-mms-sms"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -102,7 +96,6 @@
     .locals 0
 
     .prologue
-    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

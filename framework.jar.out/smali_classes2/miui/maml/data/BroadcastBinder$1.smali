@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 48
     iput-object p1, p0, Lmiui/maml/data/BroadcastBinder$1;->this$0:Lmiui/maml/data/BroadcastBinder;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 52
     const-string v0, "BroadcastBinder"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -68,13 +66,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 54
     iget-object v0, p0, Lmiui/maml/data/BroadcastBinder$1;->this$0:Lmiui/maml/data/BroadcastBinder;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, p1, p2, v1}, Lmiui/maml/data/BroadcastBinder;->onNotify(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/Object;)V
 
-    .line 55
     return-void
 .end method

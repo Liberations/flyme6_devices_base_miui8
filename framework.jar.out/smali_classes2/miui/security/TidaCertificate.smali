@@ -12,19 +12,16 @@
     .locals 1
 
     .prologue
-    .line 11
     const-string v0, "Tida"
 
     invoke-direct {p0, v0}, Ljava/security/cert/Certificate;-><init>(Ljava/lang/String;)V
 
-    .line 12
     new-instance v0, Lmiui/security/TidaPublicKey;
 
     invoke-direct {v0}, Lmiui/security/TidaPublicKey;-><init>()V
 
     iput-object v0, p0, Lmiui/security/TidaCertificate;->mPublicKey:Ljava/security/PublicKey;
 
-    .line 13
     return-void
 .end method
 
@@ -39,7 +36,6 @@
     .end annotation
 
     .prologue
-    .line 16
     invoke-virtual {p0}, Lmiui/security/TidaCertificate;->getType()Ljava/lang/String;
 
     move-result-object v0
@@ -55,7 +51,6 @@
     .locals 1
 
     .prologue
-    .line 32
     iget-object v0, p0, Lmiui/security/TidaCertificate;->mPublicKey:Ljava/security/PublicKey;
 
     return-object v0
@@ -65,7 +60,6 @@
     .locals 1
 
     .prologue
-    .line 28
     const-string v0, "TidaCertificate"
 
     return-object v0
@@ -76,12 +70,10 @@
     .param p1, "key"    # Ljava/security/PublicKey;
 
     .prologue
-    .line 20
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Lmiui/security/TidaCertificate;->verify(Ljava/security/PublicKey;Ljava/lang/String;)V
 
-    .line 21
     return-void
 .end method
 
@@ -91,7 +83,6 @@
     .param p2, "sigProvider"    # Ljava/lang/String;
 
     .prologue
-    .line 24
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "Unsupported"

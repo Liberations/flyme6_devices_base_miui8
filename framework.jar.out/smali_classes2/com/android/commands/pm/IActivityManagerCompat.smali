@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,18 +27,15 @@
 
     const/4 v1, 0x0
 
-    .line 13
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
     move-result-object v0
 
-    .line 14
     .local v0, "am":Landroid/app/IActivityManager;
     invoke-interface {v0}, Landroid/app/IActivityManager;->getCurrentUser()Landroid/content/pm/UserInfo;
 
     move-result-object v12
 
-    .line 15
     .local v12, "userInfo":Landroid/content/pm/UserInfo;
     const-string v2, "pm"
 

@@ -40,17 +40,14 @@
     .param p1, "keymasterPadding"    # I
 
     .prologue
-    .line 62
     const/16 v0, 0x20
 
     invoke-direct {p0, v0, p1}, Landroid/security/keystore/AndroidKeyStoreAuthenticatedAESCipherSpi;-><init>(II)V
 
-    .line 59
     const/16 v0, 0x80
 
     iput v0, p0, Landroid/security/keystore/AndroidKeyStoreAuthenticatedAESCipherSpi$GCM;->mTagLengthBits:I
 
-    .line 63
     return-void
 .end method
 
@@ -61,10 +58,8 @@
     .param p1, "keymasterArgs"    # Landroid/security/keymaster/KeymasterArguments;
 
     .prologue
-    .line 215
     invoke-super {p0, p1}, Landroid/security/keystore/AndroidKeyStoreAuthenticatedAESCipherSpi;->addAlgorithmSpecificParametersToBegin(Landroid/security/keymaster/KeymasterArguments;)V
 
-    .line 216
     const v0, 0x300003eb
 
     iget v1, p0, Landroid/security/keystore/AndroidKeyStoreAuthenticatedAESCipherSpi$GCM;->mTagLengthBits:I
@@ -73,7 +68,6 @@
 
     invoke-virtual {p1, v0, v2, v3}, Landroid/security/keymaster/KeymasterArguments;->addUnsignedInt(IJ)V
 
-    .line 217
     return-void
 .end method
 
@@ -83,7 +77,6 @@
     .param p2, "operationToken"    # Landroid/os/IBinder;
 
     .prologue
-    .line 193
     new-instance v0, Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer;
 
     new-instance v1, Landroid/security/keystore/AndroidKeyStoreAuthenticatedAESCipherSpi$AdditionalAuthenticationDataStream;
@@ -103,7 +96,6 @@
     .param p2, "operationToken"    # Landroid/os/IBinder;
 
     .prologue
-    .line 177
     new-instance v0, Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer;
 
     new-instance v1, Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer$MainDataStream;
@@ -112,7 +104,6 @@
 
     invoke-direct {v0, v1}, Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer;-><init>(Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer$Stream;)V
 
-    .line 180
     .local v0, "streamer":Landroid/security/keystore/KeyStoreCryptoOperationStreamer;
     invoke-virtual {p0}, Landroid/security/keystore/AndroidKeyStoreAuthenticatedAESCipherSpi$GCM;->isEncrypting()Z
 
@@ -120,7 +111,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 185
     .end local v0    # "streamer":Landroid/security/keystore/KeyStoreCryptoOperationStreamer;
     :goto_0
     return-object v0
@@ -142,12 +132,10 @@
     .locals 5
 
     .prologue
-    .line 156
     invoke-virtual {p0}, Landroid/security/keystore/AndroidKeyStoreAuthenticatedAESCipherSpi$GCM;->getIv()[B
 
     move-result-object v1
 
-    .line 157
     .local v1, "iv":[B
     if-eqz v1, :cond_0
 
@@ -155,7 +143,6 @@
 
     if-lez v3, :cond_0
 
-    .line 159
     :try_start_0
     const-string v3, "GCM"
 
@@ -163,7 +150,6 @@
 
     move-result-object v2
 
-    .line 160
     .local v2, "params":Ljava/security/AlgorithmParameters;
     new-instance v3, Ljavax/crypto/spec/GCMParameterSpec;
 
@@ -176,16 +162,13 @@
     .catch Ljava/security/NoSuchAlgorithmException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/security/spec/InvalidParameterSpecException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 170
     .end local v2    # "params":Ljava/security/AlgorithmParameters;
     :goto_0
     return-object v2
 
-    .line 162
     :catch_0
     move-exception v0
 
-    .line 163
     .local v0, "e":Ljava/security/NoSuchAlgorithmException;
     new-instance v3, Ljava/security/ProviderException;
 
@@ -195,12 +178,10 @@
 
     throw v3
 
-    .line 165
     .end local v0    # "e":Ljava/security/NoSuchAlgorithmException;
     :catch_1
     move-exception v0
 
-    .line 166
     .local v0, "e":Ljava/security/spec/InvalidParameterSpecException;
     new-instance v3, Ljava/security/ProviderException;
 
@@ -210,7 +191,6 @@
 
     throw v3
 
-    .line 170
     .end local v0    # "e":Ljava/security/spec/InvalidParameterSpecException;
     :cond_0
     const/4 v2, 0x0
@@ -222,7 +202,6 @@
     .locals 1
 
     .prologue
-    .line 199
     invoke-virtual {p0}, Landroid/security/keystore/AndroidKeyStoreAuthenticatedAESCipherSpi$GCM;->getIv()[B
 
     move-result-object v0
@@ -235,10 +214,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 201
     const/16 v0, 0xc
 
-    .line 204
     :goto_0
     return v0
 
@@ -252,7 +229,6 @@
     .locals 1
 
     .prologue
-    .line 209
     const/4 v0, 0x0
 
     return v0
@@ -262,7 +238,6 @@
     .locals 1
 
     .prologue
-    .line 220
     iget v0, p0, Landroid/security/keystore/AndroidKeyStoreAuthenticatedAESCipherSpi$GCM;->mTagLengthBits:I
 
     return v0
@@ -277,14 +252,12 @@
     .end annotation
 
     .prologue
-    .line 78
     invoke-virtual {p0}, Landroid/security/keystore/AndroidKeyStoreAuthenticatedAESCipherSpi$GCM;->isEncrypting()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 79
     new-instance v0, Ljava/security/InvalidKeyException;
 
     const-string v1, "IV required when decrypting. Use IvParameterSpec or AlgorithmParameters to provide it."
@@ -293,7 +266,6 @@
 
     throw v0
 
-    .line 82
     :cond_0
     return-void
 .end method
@@ -308,17 +280,14 @@
     .end annotation
 
     .prologue
-    .line 123
     if-nez p1, :cond_0
 
-    .line 124
     invoke-virtual {p0}, Landroid/security/keystore/AndroidKeyStoreAuthenticatedAESCipherSpi$GCM;->isEncrypting()Z
 
     move-result v2
 
     if-nez v2, :cond_2
 
-    .line 126
     new-instance v2, Ljava/security/InvalidAlgorithmParameterException;
 
     const-string v3, "IV required when decrypting. Use GCMParameterSpec or GCM AlgorithmParameters to provide it."
@@ -327,7 +296,6 @@
 
     throw v2
 
-    .line 132
     :cond_0
     const-string v2, "GCM"
 
@@ -341,7 +309,6 @@
 
     if-nez v2, :cond_1
 
-    .line 133
     new-instance v2, Ljava/security/InvalidAlgorithmParameterException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -376,7 +343,6 @@
 
     throw v2
 
-    .line 140
     :cond_1
     :try_start_0
     const-class v2, Ljavax/crypto/spec/GCMParameterSpec;
@@ -389,21 +355,17 @@
     :try_end_0
     .catch Ljava/security/spec/InvalidParameterSpecException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 150
     .local v1, "spec":Ljavax/crypto/spec/GCMParameterSpec;
     invoke-virtual {p0, v1}, Landroid/security/keystore/AndroidKeyStoreAuthenticatedAESCipherSpi$GCM;->initAlgorithmSpecificParameters(Ljava/security/spec/AlgorithmParameterSpec;)V
 
-    .line 151
     .end local v1    # "spec":Ljavax/crypto/spec/GCMParameterSpec;
     :cond_2
     :goto_0
     return-void
 
-    .line 141
     :catch_0
     move-exception v0
 
-    .line 142
     .local v0, "e":Ljava/security/spec/InvalidParameterSpecException;
     invoke-virtual {p0}, Landroid/security/keystore/AndroidKeyStoreAuthenticatedAESCipherSpi$GCM;->isEncrypting()Z
 
@@ -411,7 +373,6 @@
 
     if-nez v2, :cond_3
 
-    .line 144
     new-instance v2, Ljava/security/InvalidAlgorithmParameterException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -436,7 +397,6 @@
 
     throw v2
 
-    .line 147
     :cond_3
     const/4 v2, 0x0
 
@@ -457,17 +417,14 @@
     .prologue
     const/16 v6, 0xc
 
-    .line 88
     if-nez p1, :cond_0
 
-    .line 89
     invoke-virtual {p0}, Landroid/security/keystore/AndroidKeyStoreAuthenticatedAESCipherSpi$GCM;->isEncrypting()Z
 
     move-result v3
 
     if-nez v3, :cond_6
 
-    .line 91
     new-instance v3, Ljava/security/InvalidAlgorithmParameterException;
 
     const-string v4, "GCMParameterSpec must be provided when decrypting"
@@ -476,13 +433,11 @@
 
     throw v3
 
-    .line 96
     :cond_0
     instance-of v3, p1, Ljavax/crypto/spec/GCMParameterSpec;
 
     if-nez v3, :cond_1
 
-    .line 97
     new-instance v3, Ljava/security/InvalidAlgorithmParameterException;
 
     const-string v4, "Only GCMParameterSpec supported"
@@ -494,20 +449,16 @@
     :cond_1
     move-object v1, p1
 
-    .line 99
     check-cast v1, Ljavax/crypto/spec/GCMParameterSpec;
 
-    .line 100
     .local v1, "spec":Ljavax/crypto/spec/GCMParameterSpec;
     invoke-virtual {v1}, Ljavax/crypto/spec/GCMParameterSpec;->getIV()[B
 
     move-result-object v0
 
-    .line 101
     .local v0, "iv":[B
     if-nez v0, :cond_2
 
-    .line 102
     new-instance v3, Ljava/security/InvalidAlgorithmParameterException;
 
     const-string v4, "Null IV in GCMParameterSpec"
@@ -516,13 +467,11 @@
 
     throw v3
 
-    .line 103
     :cond_2
     array-length v3, v0
 
     if-eq v3, v6, :cond_3
 
-    .line 104
     new-instance v3, Ljava/security/InvalidAlgorithmParameterException;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -565,13 +514,11 @@
 
     throw v3
 
-    .line 108
     :cond_3
     invoke-virtual {v1}, Ljavax/crypto/spec/GCMParameterSpec;->getTLen()I
 
     move-result v2
 
-    .line 109
     .local v2, "tagLengthBits":I
     const/16 v3, 0x60
 
@@ -585,7 +532,6 @@
 
     if-eqz v3, :cond_5
 
-    .line 112
     :cond_4
     new-instance v3, Ljava/security/InvalidAlgorithmParameterException;
 
@@ -623,14 +569,11 @@
 
     throw v3
 
-    .line 116
     :cond_5
     invoke-virtual {p0, v0}, Landroid/security/keystore/AndroidKeyStoreAuthenticatedAESCipherSpi$GCM;->setIv([B)V
 
-    .line 117
     iput v2, p0, Landroid/security/keystore/AndroidKeyStoreAuthenticatedAESCipherSpi$GCM;->mTagLengthBits:I
 
-    .line 118
     .end local v0    # "iv":[B
     .end local v1    # "spec":Ljavax/crypto/spec/GCMParameterSpec;
     .end local v2    # "tagLengthBits":I
@@ -642,15 +585,12 @@
     .locals 1
 
     .prologue
-    .line 67
     const/16 v0, 0x80
 
     iput v0, p0, Landroid/security/keystore/AndroidKeyStoreAuthenticatedAESCipherSpi$GCM;->mTagLengthBits:I
 
-    .line 68
     invoke-super {p0}, Landroid/security/keystore/AndroidKeyStoreAuthenticatedAESCipherSpi;->resetAll()V
 
-    .line 69
     return-void
 .end method
 
@@ -658,9 +598,7 @@
     .locals 0
 
     .prologue
-    .line 73
     invoke-super {p0}, Landroid/security/keystore/AndroidKeyStoreAuthenticatedAESCipherSpi;->resetWhilePreservingInitState()V
 
-    .line 74
     return-void
 .end method

@@ -48,21 +48,18 @@
 
     const/4 v2, 0x0
 
-    .line 40
     new-instance v0, Landroid/text/TextDirectionHeuristics$TextDirectionHeuristicInternal;
 
     invoke-direct {v0, v2, v3, v2}, Landroid/text/TextDirectionHeuristics$TextDirectionHeuristicInternal;-><init>(Landroid/text/TextDirectionHeuristics$TextDirectionAlgorithm;ZLandroid/text/TextDirectionHeuristics$1;)V
 
     sput-object v0, Landroid/text/TextDirectionHeuristics;->LTR:Landroid/text/TextDirectionHeuristic;
 
-    .line 46
     new-instance v0, Landroid/text/TextDirectionHeuristics$TextDirectionHeuristicInternal;
 
     invoke-direct {v0, v2, v4, v2}, Landroid/text/TextDirectionHeuristics$TextDirectionHeuristicInternal;-><init>(Landroid/text/TextDirectionHeuristics$TextDirectionAlgorithm;ZLandroid/text/TextDirectionHeuristics$1;)V
 
     sput-object v0, Landroid/text/TextDirectionHeuristics;->RTL:Landroid/text/TextDirectionHeuristic;
 
-    .line 54
     new-instance v0, Landroid/text/TextDirectionHeuristics$TextDirectionHeuristicInternal;
 
     sget-object v1, Landroid/text/TextDirectionHeuristics$FirstStrong;->INSTANCE:Landroid/text/TextDirectionHeuristics$FirstStrong;
@@ -71,7 +68,6 @@
 
     sput-object v0, Landroid/text/TextDirectionHeuristics;->FIRSTSTRONG_LTR:Landroid/text/TextDirectionHeuristic;
 
-    .line 62
     new-instance v0, Landroid/text/TextDirectionHeuristics$TextDirectionHeuristicInternal;
 
     sget-object v1, Landroid/text/TextDirectionHeuristics$FirstStrong;->INSTANCE:Landroid/text/TextDirectionHeuristics$FirstStrong;
@@ -80,7 +76,6 @@
 
     sput-object v0, Landroid/text/TextDirectionHeuristics;->FIRSTSTRONG_RTL:Landroid/text/TextDirectionHeuristic;
 
-    .line 69
     new-instance v0, Landroid/text/TextDirectionHeuristics$TextDirectionHeuristicInternal;
 
     sget-object v1, Landroid/text/TextDirectionHeuristics$AnyStrong;->INSTANCE_RTL:Landroid/text/TextDirectionHeuristics$AnyStrong;
@@ -89,7 +84,6 @@
 
     sput-object v0, Landroid/text/TextDirectionHeuristics;->ANYRTL_LTR:Landroid/text/TextDirectionHeuristic;
 
-    .line 75
     sget-object v0, Landroid/text/TextDirectionHeuristics$TextDirectionHeuristicLocale;->INSTANCE:Landroid/text/TextDirectionHeuristics$TextDirectionHeuristicLocale;
 
     sput-object v0, Landroid/text/TextDirectionHeuristics;->LOCALE:Landroid/text/TextDirectionHeuristic;
@@ -101,10 +95,8 @@
     .locals 0
 
     .prologue
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 288
     return-void
 .end method
 
@@ -113,7 +105,6 @@
     .param p0, "x0"    # I
 
     .prologue
-    .line 35
     invoke-static {p0}, Landroid/text/TextDirectionHeuristics;->isRtlCodePoint(I)I
 
     move-result v0
@@ -134,7 +125,6 @@
 
     const/4 v1, 0x0
 
-    .line 88
     invoke-static {p0}, Ljava/lang/Character;->getDirectionality(I)B
 
     move-result v3
@@ -143,7 +133,6 @@
 
     move v0, v2
 
-    .line 126
     :cond_0
     :goto_0
     :pswitch_0
@@ -152,10 +141,8 @@
     :pswitch_1
     move v0, v1
 
-    .line 93
     goto :goto_0
 
-    .line 98
     :pswitch_2
     const/16 v3, 0x590
 
@@ -213,10 +200,8 @@
     :cond_6
     move v0, v1
 
-    .line 105
     goto :goto_0
 
-    .line 106
     :cond_7
     const/16 v1, 0x2065
 
@@ -278,10 +263,8 @@
     :cond_d
     move v0, v2
 
-    .line 120
     goto :goto_0
 
-    .line 88
     :pswitch_data_0
     .packed-switch -0x1
         :pswitch_2

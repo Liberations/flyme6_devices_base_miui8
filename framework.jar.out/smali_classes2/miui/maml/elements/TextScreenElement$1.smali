@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 318
     invoke-static {}, Lmiui/maml/elements/ScreenElement$Align;->values()[Lmiui/maml/elements/ScreenElement$Align;
 
     move-result-object v0

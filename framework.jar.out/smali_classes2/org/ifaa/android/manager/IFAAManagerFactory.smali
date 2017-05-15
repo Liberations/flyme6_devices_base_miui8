@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,7 +19,6 @@
     .param p1, "authType"    # I
 
     .prologue
-    .line 10
     invoke-static {}, Lorg/ifaa/android/manager/IFAAManagerImpl;->getInstance()Lorg/ifaa/android/manager/IFAAManagerV2;
 
     move-result-object v0

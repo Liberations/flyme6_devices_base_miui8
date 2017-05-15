@@ -37,7 +37,6 @@
     .locals 1
 
     .prologue
-    .line 53
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -51,13 +50,11 @@
     .locals 1
 
     .prologue
-    .line 64
     .local p0, "this":Landroid/util/SparseArray;, "Landroid/util/SparseArray<TE;>;"
     const/16 v0, 0xa
 
     invoke-direct {p0, v0}, Landroid/util/SparseArray;-><init>(I)V
 
-    .line 65
     return-void
 .end method
 
@@ -69,33 +66,25 @@
     .local p0, "this":Landroid/util/SparseArray;, "Landroid/util/SparseArray<TE;>;"
     const/4 v1, 0x0
 
-    .line 74
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 54
     iput-boolean v1, p0, Landroid/util/SparseArray;->mGarbage:Z
 
-    .line 75
     if-nez p1, :cond_0
 
-    .line 76
     sget-object v0, Llibcore/util/EmptyArray;->INT:[I
 
     iput-object v0, p0, Landroid/util/SparseArray;->mKeys:[I
 
-    .line 77
     sget-object v0, Llibcore/util/EmptyArray;->OBJECT:[Ljava/lang/Object;
 
     iput-object v0, p0, Landroid/util/SparseArray;->mValues:[Ljava/lang/Object;
 
-    .line 82
     :goto_0
     iput v1, p0, Landroid/util/SparseArray;->mSize:I
 
-    .line 83
     return-void
 
-    .line 79
     :cond_0
     invoke-static {p1}, Lcom/android/internal/util/ArrayUtils;->newUnpaddedObjectArray(I)[Ljava/lang/Object;
 
@@ -103,7 +92,6 @@
 
     iput-object v0, p0, Landroid/util/SparseArray;->mValues:[Ljava/lang/Object;
 
-    .line 80
     iget-object v0, p0, Landroid/util/SparseArray;->mValues:[Ljava/lang/Object;
 
     array-length v0, v0
@@ -119,23 +107,18 @@
     .locals 7
 
     .prologue
-    .line 187
     .local p0, "this":Landroid/util/SparseArray;, "Landroid/util/SparseArray<TE;>;"
     iget v2, p0, Landroid/util/SparseArray;->mSize:I
 
-    .line 188
     .local v2, "n":I
     const/4 v3, 0x0
 
-    .line 189
     .local v3, "o":I
     iget-object v1, p0, Landroid/util/SparseArray;->mKeys:[I
 
-    .line 190
     .local v1, "keys":[I
     iget-object v5, p0, Landroid/util/SparseArray;->mValues:[Ljava/lang/Object;
 
-    .line 192
     .local v5, "values":[Ljava/lang/Object;
     const/4 v0, 0x0
 
@@ -143,52 +126,41 @@
     :goto_0
     if-ge v0, v2, :cond_2
 
-    .line 193
     aget-object v4, v5, v0
 
-    .line 195
     .local v4, "val":Ljava/lang/Object;
     sget-object v6, Landroid/util/SparseArray;->DELETED:Ljava/lang/Object;
 
     if-eq v4, v6, :cond_1
 
-    .line 196
     if-eq v0, v3, :cond_0
 
-    .line 197
     aget v6, v1, v0
 
     aput v6, v1, v3
 
-    .line 198
     aput-object v4, v5, v3
 
-    .line 199
     const/4 v6, 0x0
 
     aput-object v6, v5, v0
 
-    .line 202
     :cond_0
     add-int/lit8 v3, v3, 0x1
 
-    .line 192
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 206
     .end local v4    # "val":Ljava/lang/Object;
     :cond_2
     const/4 v6, 0x0
 
     iput-boolean v6, p0, Landroid/util/SparseArray;->mGarbage:Z
 
-    .line 207
     iput v3, p0, Landroid/util/SparseArray;->mSize:I
 
-    .line 210
     return-void
 .end method
 
@@ -204,7 +176,6 @@
     .end annotation
 
     .prologue
-    .line 362
     .local p0, "this":Landroid/util/SparseArray;, "Landroid/util/SparseArray<TE;>;"
     .local p2, "value":Ljava/lang/Object;, "TE;"
     iget v0, p0, Landroid/util/SparseArray;->mSize:I
@@ -221,14 +192,11 @@
 
     if-gt p1, v0, :cond_0
 
-    .line 363
     invoke-virtual {p0, p1, p2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 374
     :goto_0
     return-void
 
-    .line 367
     :cond_0
     iget-boolean v0, p0, Landroid/util/SparseArray;->mGarbage:Z
 
@@ -242,10 +210,8 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 368
     invoke-direct {p0}, Landroid/util/SparseArray;->gc()V
 
-    .line 371
     :cond_1
     iget-object v0, p0, Landroid/util/SparseArray;->mKeys:[I
 
@@ -257,7 +223,6 @@
 
     iput-object v0, p0, Landroid/util/SparseArray;->mKeys:[I
 
-    .line 372
     iget-object v0, p0, Landroid/util/SparseArray;->mValues:[Ljava/lang/Object;
 
     iget v1, p0, Landroid/util/SparseArray;->mSize:I
@@ -268,7 +233,6 @@
 
     iput-object v0, p0, Landroid/util/SparseArray;->mValues:[Ljava/lang/Object;
 
-    .line 373
     iget v0, p0, Landroid/util/SparseArray;->mSize:I
 
     add-int/lit8 v0, v0, 0x1
@@ -285,14 +249,11 @@
     .local p0, "this":Landroid/util/SparseArray;, "Landroid/util/SparseArray<TE;>;"
     const/4 v4, 0x0
 
-    .line 346
     iget v1, p0, Landroid/util/SparseArray;->mSize:I
 
-    .line 347
     .local v1, "n":I
     iget-object v2, p0, Landroid/util/SparseArray;->mValues:[Ljava/lang/Object;
 
-    .line 349
     .local v2, "values":[Ljava/lang/Object;
     const/4 v0, 0x0
 
@@ -300,24 +261,19 @@
     :goto_0
     if-ge v0, v1, :cond_0
 
-    .line 350
     const/4 v3, 0x0
 
     aput-object v3, v2, v0
 
-    .line 349
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 353
     :cond_0
     iput v4, p0, Landroid/util/SparseArray;->mSize:I
 
-    .line 354
     iput-boolean v4, p0, Landroid/util/SparseArray;->mGarbage:Z
 
-    .line 355
     return-void
 .end method
 
@@ -332,11 +288,9 @@
     .end annotation
 
     .prologue
-    .line 88
     .local p0, "this":Landroid/util/SparseArray;, "Landroid/util/SparseArray<TE;>;"
     const/4 v1, 0x0
 
-    .line 90
     .local v1, "clone":Landroid/util/SparseArray;, "Landroid/util/SparseArray<TE;>;"
     :try_start_0
     invoke-super {p0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
@@ -349,7 +303,6 @@
 
     move-object v1, v0
 
-    .line 91
     iget-object v2, p0, Landroid/util/SparseArray;->mKeys:[I
 
     invoke-virtual {v2}, [I->clone()Ljava/lang/Object;
@@ -360,7 +313,6 @@
 
     iput-object v2, v1, Landroid/util/SparseArray;->mKeys:[I
 
-    .line 92
     iget-object v2, p0, Landroid/util/SparseArray;->mValues:[Ljava/lang/Object;
 
     invoke-virtual {v2}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
@@ -373,11 +325,9 @@
     :try_end_0
     .catch Ljava/lang/CloneNotSupportedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 96
     :goto_0
     return-object v1
 
-    .line 93
     :catch_0
     move-exception v2
 
@@ -393,7 +343,6 @@
     .end annotation
 
     .prologue
-    .line 52
     .local p0, "this":Landroid/util/SparseArray;, "Landroid/util/SparseArray<TE;>;"
     invoke-virtual {p0}, Landroid/util/SparseArray;->clone()Landroid/util/SparseArray;
 
@@ -407,7 +356,6 @@
     .param p1, "key"    # I
 
     .prologue
-    .line 126
     .local p0, "this":Landroid/util/SparseArray;, "Landroid/util/SparseArray<TE;>;"
     iget-object v1, p0, Landroid/util/SparseArray;->mKeys:[I
 
@@ -417,11 +365,9 @@
 
     move-result v0
 
-    .line 128
     .local v0, "i":I
     if-ltz v0, :cond_0
 
-    .line 129
     iget-object v1, p0, Landroid/util/SparseArray;->mValues:[Ljava/lang/Object;
 
     aget-object v1, v1, v0
@@ -430,19 +376,16 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 130
     iget-object v1, p0, Landroid/util/SparseArray;->mValues:[Ljava/lang/Object;
 
     sget-object v2, Landroid/util/SparseArray;->DELETED:Ljava/lang/Object;
 
     aput-object v2, v1, v0
 
-    .line 131
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Landroid/util/SparseArray;->mGarbage:Z
 
-    .line 134
     :cond_0
     return-void
 .end method
@@ -457,7 +400,6 @@
     .end annotation
 
     .prologue
-    .line 104
     .local p0, "this":Landroid/util/SparseArray;, "Landroid/util/SparseArray<TE;>;"
     const/4 v0, 0x0
 
@@ -478,7 +420,6 @@
     .end annotation
 
     .prologue
-    .line 113
     .local p0, "this":Landroid/util/SparseArray;, "Landroid/util/SparseArray<TE;>;"
     .local p2, "valueIfKeyNotFound":Ljava/lang/Object;, "TE;"
     iget-object v1, p0, Landroid/util/SparseArray;->mKeys:[I
@@ -489,7 +430,6 @@
 
     move-result v0
 
-    .line 115
     .local v0, "i":I
     if-ltz v0, :cond_0
 
@@ -501,7 +441,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 118
     .end local p2    # "valueIfKeyNotFound":Ljava/lang/Object;, "TE;"
     :cond_0
     :goto_0
@@ -521,16 +460,13 @@
     .param p1, "key"    # I
 
     .prologue
-    .line 313
     .local p0, "this":Landroid/util/SparseArray;, "Landroid/util/SparseArray<TE;>;"
     iget-boolean v0, p0, Landroid/util/SparseArray;->mGarbage:Z
 
     if-eqz v0, :cond_0
 
-    .line 314
     invoke-direct {p0}, Landroid/util/SparseArray;->gc()V
 
-    .line 317
     :cond_0
     iget-object v0, p0, Landroid/util/SparseArray;->mKeys:[I
 
@@ -552,17 +488,14 @@
     .end annotation
 
     .prologue
-    .line 331
     .local p0, "this":Landroid/util/SparseArray;, "Landroid/util/SparseArray<TE;>;"
     .local p1, "value":Ljava/lang/Object;, "TE;"
     iget-boolean v1, p0, Landroid/util/SparseArray;->mGarbage:Z
 
     if-eqz v1, :cond_0
 
-    .line 332
     invoke-direct {p0}, Landroid/util/SparseArray;->gc()V
 
-    .line 335
     :cond_0
     const/4 v0, 0x0
 
@@ -572,26 +505,22 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 336
     iget-object v1, p0, Landroid/util/SparseArray;->mValues:[Ljava/lang/Object;
 
     aget-object v1, v1, v0
 
     if-ne v1, p1, :cond_1
 
-    .line 339
     .end local v0    # "i":I
     :goto_1
     return v0
 
-    .line 335
     .restart local v0    # "i":I
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 339
     :cond_2
     const/4 v0, -0x1
 
@@ -603,16 +532,13 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 267
     .local p0, "this":Landroid/util/SparseArray;, "Landroid/util/SparseArray<TE;>;"
     iget-boolean v0, p0, Landroid/util/SparseArray;->mGarbage:Z
 
     if-eqz v0, :cond_0
 
-    .line 268
     invoke-direct {p0}, Landroid/util/SparseArray;->gc()V
 
-    .line 271
     :cond_0
     iget-object v0, p0, Landroid/util/SparseArray;->mKeys:[I
 
@@ -631,7 +557,6 @@
     .end annotation
 
     .prologue
-    .line 218
     .local p0, "this":Landroid/util/SparseArray;, "Landroid/util/SparseArray<TE;>;"
     .local p2, "value":Ljava/lang/Object;, "TE;"
     iget-object v1, p0, Landroid/util/SparseArray;->mKeys:[I
@@ -642,24 +567,19 @@
 
     move-result v0
 
-    .line 220
     .local v0, "i":I
     if-ltz v0, :cond_0
 
-    .line 221
     iget-object v1, p0, Landroid/util/SparseArray;->mValues:[Ljava/lang/Object;
 
     aput-object p2, v1, v0
 
-    .line 242
     :goto_0
     return-void
 
-    .line 223
     :cond_0
     xor-int/lit8 v0, v0, -0x1
 
-    .line 225
     iget v1, p0, Landroid/util/SparseArray;->mSize:I
 
     if-ge v0, v1, :cond_1
@@ -672,19 +592,16 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 226
     iget-object v1, p0, Landroid/util/SparseArray;->mKeys:[I
 
     aput p1, v1, v0
 
-    .line 227
     iget-object v1, p0, Landroid/util/SparseArray;->mValues:[Ljava/lang/Object;
 
     aput-object p2, v1, v0
 
     goto :goto_0
 
-    .line 231
     :cond_1
     iget-boolean v1, p0, Landroid/util/SparseArray;->mGarbage:Z
 
@@ -698,10 +615,8 @@
 
     if-lt v1, v2, :cond_2
 
-    .line 232
     invoke-direct {p0}, Landroid/util/SparseArray;->gc()V
 
-    .line 235
     iget-object v1, p0, Landroid/util/SparseArray;->mKeys:[I
 
     iget v2, p0, Landroid/util/SparseArray;->mSize:I
@@ -712,7 +627,6 @@
 
     xor-int/lit8 v0, v1, -0x1
 
-    .line 238
     :cond_2
     iget-object v1, p0, Landroid/util/SparseArray;->mKeys:[I
 
@@ -724,7 +638,6 @@
 
     iput-object v1, p0, Landroid/util/SparseArray;->mKeys:[I
 
-    .line 239
     iget-object v1, p0, Landroid/util/SparseArray;->mValues:[Ljava/lang/Object;
 
     iget v2, p0, Landroid/util/SparseArray;->mSize:I
@@ -735,7 +648,6 @@
 
     iput-object v1, p0, Landroid/util/SparseArray;->mValues:[Ljava/lang/Object;
 
-    .line 240
     iget v1, p0, Landroid/util/SparseArray;->mSize:I
 
     add-int/lit8 v1, v1, 0x1
@@ -750,11 +662,9 @@
     .param p1, "key"    # I
 
     .prologue
-    .line 158
     .local p0, "this":Landroid/util/SparseArray;, "Landroid/util/SparseArray<TE;>;"
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->delete(I)V
 
-    .line 159
     return-void
 .end method
 
@@ -763,7 +673,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 165
     .local p0, "this":Landroid/util/SparseArray;, "Landroid/util/SparseArray<TE;>;"
     iget-object v0, p0, Landroid/util/SparseArray;->mValues:[Ljava/lang/Object;
 
@@ -773,19 +682,16 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 166
     iget-object v0, p0, Landroid/util/SparseArray;->mValues:[Ljava/lang/Object;
 
     sget-object v1, Landroid/util/SparseArray;->DELETED:Ljava/lang/Object;
 
     aput-object v1, v0, p1
 
-    .line 167
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/util/SparseArray;->mGarbage:Z
 
-    .line 169
     :cond_0
     return-void
 .end method
@@ -796,7 +702,6 @@
     .param p2, "size"    # I
 
     .prologue
-    .line 178
     .local p0, "this":Landroid/util/SparseArray;, "Landroid/util/SparseArray<TE;>;"
     iget v2, p0, Landroid/util/SparseArray;->mSize:I
 
@@ -806,7 +711,6 @@
 
     move-result v0
 
-    .line 179
     .local v0, "end":I
     move v1, p1
 
@@ -814,15 +718,12 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 180
     invoke-virtual {p0, v1}, Landroid/util/SparseArray;->removeAt(I)V
 
-    .line 179
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 182
     :cond_0
     return-void
 .end method
@@ -837,7 +738,6 @@
     .end annotation
 
     .prologue
-    .line 141
     .local p0, "this":Landroid/util/SparseArray;, "Landroid/util/SparseArray<TE;>;"
     iget-object v2, p0, Landroid/util/SparseArray;->mKeys:[I
 
@@ -847,11 +747,9 @@
 
     move-result v0
 
-    .line 143
     .local v0, "i":I
     if-ltz v0, :cond_0
 
-    .line 144
     iget-object v2, p0, Landroid/util/SparseArray;->mValues:[Ljava/lang/Object;
 
     aget-object v2, v2, v0
@@ -860,12 +758,10 @@
 
     if-eq v2, v3, :cond_0
 
-    .line 145
     iget-object v2, p0, Landroid/util/SparseArray;->mValues:[Ljava/lang/Object;
 
     aget-object v1, v2, v0
 
-    .line 146
     .local v1, "old":Ljava/lang/Object;, "TE;"
     iget-object v2, p0, Landroid/util/SparseArray;->mValues:[Ljava/lang/Object;
 
@@ -873,12 +769,10 @@
 
     aput-object v3, v2, v0
 
-    .line 147
     const/4 v2, 0x1
 
     iput-boolean v2, p0, Landroid/util/SparseArray;->mGarbage:Z
 
-    .line 151
     .end local v1    # "old":Ljava/lang/Object;, "TE;"
     :goto_0
     return-object v1
@@ -899,23 +793,19 @@
     .end annotation
 
     .prologue
-    .line 300
     .local p0, "this":Landroid/util/SparseArray;, "Landroid/util/SparseArray<TE;>;"
     .local p2, "value":Ljava/lang/Object;, "TE;"
     iget-boolean v0, p0, Landroid/util/SparseArray;->mGarbage:Z
 
     if-eqz v0, :cond_0
 
-    .line 301
     invoke-direct {p0}, Landroid/util/SparseArray;->gc()V
 
-    .line 304
     :cond_0
     iget-object v0, p0, Landroid/util/SparseArray;->mValues:[Ljava/lang/Object;
 
     aput-object p2, v0, p1
 
-    .line 305
     return-void
 .end method
 
@@ -923,16 +813,13 @@
     .locals 1
 
     .prologue
-    .line 249
     .local p0, "this":Landroid/util/SparseArray;, "Landroid/util/SparseArray<TE;>;"
     iget-boolean v0, p0, Landroid/util/SparseArray;->mGarbage:Z
 
     if-eqz v0, :cond_0
 
-    .line 250
     invoke-direct {p0}, Landroid/util/SparseArray;->gc()V
 
-    .line 253
     :cond_0
     iget v0, p0, Landroid/util/SparseArray;->mSize:I
 
@@ -943,7 +830,6 @@
     .locals 5
 
     .prologue
-    .line 385
     .local p0, "this":Landroid/util/SparseArray;, "Landroid/util/SparseArray<TE;>;"
     invoke-virtual {p0}, Landroid/util/SparseArray;->size()I
 
@@ -951,14 +837,11 @@
 
     if-gtz v4, :cond_0
 
-    .line 386
-    const-string/jumbo v4, "{}"
+    const-string v4, "{}"
 
-    .line 406
     :goto_0
     return-object v4
 
-    .line 389
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -968,13 +851,11 @@
 
     invoke-direct {v0, v4}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 390
     .local v0, "buffer":Ljava/lang/StringBuilder;
     const/16 v4, 0x7b
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 391
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -983,48 +864,38 @@
 
     if-ge v1, v4, :cond_3
 
-    .line 392
     if-lez v1, :cond_1
 
-    .line 393
     const-string v4, ", "
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 395
     :cond_1
     invoke-virtual {p0, v1}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v2
 
-    .line 396
     .local v2, "key":I
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 397
     const/16 v4, 0x3d
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 398
     invoke-virtual {p0, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v3
 
-    .line 399
     .local v3, "value":Ljava/lang/Object;
     if-eq v3, p0, :cond_2
 
-    .line 400
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 391
     :goto_2
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 402
     :cond_2
     const-string v4, "(this Map)"
 
@@ -1032,7 +903,6 @@
 
     goto :goto_2
 
-    .line 405
     .end local v2    # "key":I
     .end local v3    # "value":Ljava/lang/Object;
     :cond_3
@@ -1040,7 +910,6 @@
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 406
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v4
@@ -1058,16 +927,13 @@
     .end annotation
 
     .prologue
-    .line 287
     .local p0, "this":Landroid/util/SparseArray;, "Landroid/util/SparseArray<TE;>;"
     iget-boolean v0, p0, Landroid/util/SparseArray;->mGarbage:Z
 
     if-eqz v0, :cond_0
 
-    .line 288
     invoke-direct {p0}, Landroid/util/SparseArray;->gc()V
 
-    .line 291
     :cond_0
     iget-object v0, p0, Landroid/util/SparseArray;->mValues:[Ljava/lang/Object;
 

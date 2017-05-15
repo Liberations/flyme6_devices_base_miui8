@@ -24,13 +24,10 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 86
     iput-object p1, p0, Lmiui/maml/component/MamlView$InnerView;->this$0:Lmiui/maml/component/MamlView;
 
-    .line 87
     invoke-direct {p0, p2}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 88
     return-void
 .end method
 
@@ -41,7 +38,6 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 92
     iget-object v1, p0, Lmiui/maml/component/MamlView$InnerView;->this$0:Lmiui/maml/component/MamlView;
 
     # getter for: Lmiui/maml/component/MamlView;->mHasDelay:Z
@@ -64,11 +60,9 @@
 
     if-nez v1, :cond_0
 
-    .line 105
     :goto_0
     return-void
 
-    .line 96
     :cond_0
     iget-object v1, p0, Lmiui/maml/component/MamlView$InnerView;->this$0:Lmiui/maml/component/MamlView;
 
@@ -83,12 +77,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 97
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
     move-result v0
 
-    .line 98
     .local v0, "sa":I
     iget-object v1, p0, Lmiui/maml/component/MamlView$InnerView;->this$0:Lmiui/maml/component/MamlView;
 
@@ -124,17 +116,14 @@
 
     invoke-virtual {p1, v1, v2, v3, v4}, Landroid/graphics/Canvas;->scale(FFFF)V
 
-    .line 99
     iget-object v1, p0, Lmiui/maml/component/MamlView$InnerView;->this$0:Lmiui/maml/component/MamlView;
 
     iget-object v1, v1, Lmiui/maml/component/MamlView;->mRoot:Lmiui/maml/ScreenElementRoot;
 
     invoke-virtual {v1, p1}, Lmiui/maml/ScreenElementRoot;->render(Landroid/graphics/Canvas;)V
 
-    .line 100
     invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
-    .line 104
     .end local v0    # "sa":I
     :goto_1
     iget-object v1, p0, Lmiui/maml/component/MamlView$InnerView;->this$0:Lmiui/maml/component/MamlView;
@@ -148,7 +137,6 @@
 
     goto :goto_0
 
-    .line 102
     :cond_1
     iget-object v1, p0, Lmiui/maml/component/MamlView$InnerView;->this$0:Lmiui/maml/component/MamlView;
 

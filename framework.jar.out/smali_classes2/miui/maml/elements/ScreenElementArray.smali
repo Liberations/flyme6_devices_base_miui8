@@ -16,10 +16,8 @@
     .param p2, "root"    # Lmiui/maml/ScreenElementRoot;
 
     .prologue
-    .line 25
     invoke-direct {p0, p1, p2}, Lmiui/maml/elements/ElementGroup;-><init>(Lorg/w3c/dom/Element;Lmiui/maml/ScreenElementRoot;)V
 
-    .line 26
     const-string v4, "count"
 
     const/4 v5, 0x0
@@ -28,11 +26,9 @@
 
     move-result v1
 
-    .line 27
     .local v1, "count":I
     move-object v0, p2
 
-    .line 28
     .local v0, "_root":Lmiui/maml/ScreenElementRoot;
     const-string v4, "indexName"
 
@@ -40,7 +36,6 @@
 
     move-result-object v3
 
-    .line 29
     .local v3, "indexVarName":Ljava/lang/String;
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -48,10 +43,8 @@
 
     if-eqz v4, :cond_0
 
-    .line 30
     const-string v3, "__i"
 
-    .line 32
     :cond_0
     new-instance v2, Lmiui/maml/data/IndexedVariable;
 
@@ -63,7 +56,6 @@
 
     invoke-direct {v2, v3, v4, v5}, Lmiui/maml/data/IndexedVariable;-><init>(Ljava/lang/String;Lmiui/maml/data/Variables;Z)V
 
-    .line 33
     .local v2, "indexVar":Lmiui/maml/data/IndexedVariable;
     const/4 v4, 0x0
 
@@ -73,7 +65,6 @@
 
     invoke-static {p1, v4, v5}, Lmiui/maml/util/Utils;->traverseXmlElementChildren(Lorg/w3c/dom/Element;Ljava/lang/String;Lmiui/maml/util/Utils$XmlTraverseListener;)V
 
-    .line 49
     return-void
 .end method
 
@@ -83,7 +74,6 @@
     .param p1, "x1"    # Lorg/w3c/dom/Element;
 
     .prologue
-    .line 20
     invoke-super {p0, p1}, Lmiui/maml/elements/ElementGroup;->onCreateChild(Lorg/w3c/dom/Element;)Lmiui/maml/elements/ScreenElement;
 
     move-result-object v0
@@ -98,7 +88,6 @@
     .param p1, "ele"    # Lorg/w3c/dom/Element;
 
     .prologue
-    .line 53
     const/4 v0, 0x0
 
     return-object v0

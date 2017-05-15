@@ -33,7 +33,6 @@
     .locals 0
 
     .prologue
-    .line 2194
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -51,25 +50,18 @@
     .param p6, "newMode"    # I
 
     .prologue
-    .line 2202
     iput p1, p0, Landroid/media/MediaCodec$CryptoInfo;->numSubSamples:I
 
-    .line 2203
     iput-object p2, p0, Landroid/media/MediaCodec$CryptoInfo;->numBytesOfClearData:[I
 
-    .line 2204
     iput-object p3, p0, Landroid/media/MediaCodec$CryptoInfo;->numBytesOfEncryptedData:[I
 
-    .line 2205
     iput-object p4, p0, Landroid/media/MediaCodec$CryptoInfo;->key:[B
 
-    .line 2206
     iput-object p5, p0, Landroid/media/MediaCodec$CryptoInfo;->iv:[B
 
-    .line 2207
     iput p6, p0, Landroid/media/MediaCodec$CryptoInfo;->mode:I
 
-    .line 2208
     return-void
 .end method
 
@@ -77,12 +69,10 @@
     .locals 5
 
     .prologue
-    .line 2238
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 2239
     .local v0, "builder":Ljava/lang/StringBuilder;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -106,10 +96,8 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2240
     const-string v1, "0123456789abcdef"
 
-    .line 2241
     .local v1, "hexdigits":Ljava/lang/String;
     const/4 v2, 0x0
 
@@ -121,7 +109,6 @@
 
     if-ge v2, v3, :cond_0
 
-    .line 2242
     iget-object v3, p0, Landroid/media/MediaCodec$CryptoInfo;->key:[B
 
     aget-byte v3, v3, v2
@@ -136,7 +123,6 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 2243
     iget-object v3, p0, Landroid/media/MediaCodec$CryptoInfo;->key:[B
 
     aget-byte v3, v3, v2
@@ -149,18 +135,15 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 2241
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 2245
     :cond_0
     const-string v3, "], iv ["
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2246
     const/4 v2, 0x0
 
     :goto_1
@@ -170,7 +153,6 @@
 
     if-ge v2, v3, :cond_1
 
-    .line 2247
     iget-object v3, p0, Landroid/media/MediaCodec$CryptoInfo;->iv:[B
 
     aget-byte v3, v3, v2
@@ -185,7 +167,6 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 2248
     iget-object v3, p0, Landroid/media/MediaCodec$CryptoInfo;->iv:[B
 
     aget-byte v3, v3, v2
@@ -198,18 +179,15 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 2246
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 2250
     :cond_1
     const-string v3, "], clear "
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2251
     iget-object v3, p0, Landroid/media/MediaCodec$CryptoInfo;->numBytesOfClearData:[I
 
     invoke-static {v3}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
@@ -218,12 +196,10 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2252
     const-string v3, ", encrypted "
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2253
     iget-object v3, p0, Landroid/media/MediaCodec$CryptoInfo;->numBytesOfEncryptedData:[I
 
     invoke-static {v3}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
@@ -232,7 +208,6 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2254
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3

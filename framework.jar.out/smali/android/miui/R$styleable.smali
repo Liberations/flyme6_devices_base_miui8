@@ -67,7 +67,6 @@
     .locals 1
 
     .prologue
-    .line 1167
     const/16 v0, 0xe
 
     new-array v0, v0, [I
@@ -76,7 +75,6 @@
 
     sput-object v0, Landroid/miui/R$styleable;->LockPatternView:[I
 
-    .line 1357
     const/4 v0, 0x7
 
     new-array v0, v0, [I
@@ -87,7 +85,6 @@
 
     return-void
 
-    .line 1167
     :array_0
     .array-data 4
         0x11010007
@@ -106,7 +103,6 @@
         0x11010014
     .end array-data
 
-    .line 1357
     :array_1
     .array-data 4
         0x11010000
@@ -123,7 +119,6 @@
     .locals 0
 
     .prologue
-    .line 1130
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

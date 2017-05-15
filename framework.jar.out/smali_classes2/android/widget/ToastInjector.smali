@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,7 +19,6 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 40
     const/4 v0, 0x1
 
     return v0

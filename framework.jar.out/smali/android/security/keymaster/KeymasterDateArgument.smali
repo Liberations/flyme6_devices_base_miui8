@@ -14,10 +14,8 @@
     .param p2, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 40
     invoke-direct {p0, p1}, Landroid/security/keymaster/KeymasterArgument;-><init>(I)V
 
-    .line 41
     new-instance v0, Ljava/util/Date;
 
     invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
@@ -28,7 +26,6 @@
 
     iput-object v0, p0, Landroid/security/keymaster/KeymasterDateArgument;->date:Ljava/util/Date;
 
-    .line 42
     return-void
 .end method
 
@@ -38,17 +35,14 @@
     .param p2, "date"    # Ljava/util/Date;
 
     .prologue
-    .line 29
     invoke-direct {p0, p1}, Landroid/security/keymaster/KeymasterArgument;-><init>(I)V
 
-    .line 30
     invoke-static {p1}, Landroid/security/keymaster/KeymasterDefs;->getTagType(I)I
 
     move-result v0
 
     packed-switch v0, :pswitch_data_0
 
-    .line 34
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -73,14 +67,11 @@
 
     throw v0
 
-    .line 36
     :pswitch_0
     iput-object p2, p0, Landroid/security/keymaster/KeymasterDateArgument;->date:Ljava/util/Date;
 
-    .line 37
     return-void
 
-    .line 30
     :pswitch_data_0
     .packed-switch 0x60000000
         :pswitch_0
@@ -94,7 +85,6 @@
     .param p1, "out"    # Landroid/os/Parcel;
 
     .prologue
-    .line 46
     iget-object v0, p0, Landroid/security/keymaster/KeymasterDateArgument;->date:Ljava/util/Date;
 
     invoke-virtual {v0}, Ljava/util/Date;->getTime()J
@@ -103,6 +93,5 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 47
     return-void
 .end method

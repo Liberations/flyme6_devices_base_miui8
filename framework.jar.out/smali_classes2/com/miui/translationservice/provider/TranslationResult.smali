@@ -60,7 +60,6 @@
     .locals 1
 
     .prologue
-    .line 95
     new-instance v0, Lcom/miui/translationservice/provider/TranslationResult$1;
 
     invoke-direct {v0}, Lcom/miui/translationservice/provider/TranslationResult$1;-><init>()V
@@ -74,10 +73,8 @@
     .locals 0
 
     .prologue
-    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 19
     return-void
 .end method
 
@@ -86,43 +83,36 @@
     .param p1, "src"    # Landroid/os/Parcel;
 
     .prologue
-    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 22
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {p0, v1}, Lcom/miui/translationservice/provider/TranslationResult;->setCopyright(Ljava/lang/String;)V
 
-    .line 23
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {p0, v1}, Lcom/miui/translationservice/provider/TranslationResult;->setDetailLink(Ljava/lang/String;)V
 
-    .line 24
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     invoke-virtual {p0, v1}, Lcom/miui/translationservice/provider/TranslationResult;->setStatus(I)V
 
-    .line 25
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {p0, v1}, Lcom/miui/translationservice/provider/TranslationResult;->setWordName(Ljava/lang/String;)V
 
-    .line 26
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 27
     .local v0, "symbols":Ljava/util/List;, "Ljava/util/List<Lcom/miui/translationservice/provider/TranslationResult$Symbol;>;"
     const-class v1, Lcom/miui/translationservice/provider/TranslationResult;
 
@@ -132,10 +122,8 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->readList(Ljava/util/List;Ljava/lang/ClassLoader;)V
 
-    .line 28
     invoke-virtual {p0, v0}, Lcom/miui/translationservice/provider/TranslationResult;->setSymbols(Ljava/util/List;)V
 
-    .line 29
     return-void
 .end method
 
@@ -145,7 +133,6 @@
     .param p2, "x1"    # Lcom/miui/translationservice/provider/TranslationResult$1;
 
     .prologue
-    .line 12
     invoke-direct {p0, p1}, Lcom/miui/translationservice/provider/TranslationResult;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -157,7 +144,6 @@
     .locals 1
 
     .prologue
-    .line 83
     const/4 v0, 0x0
 
     return v0
@@ -167,7 +153,6 @@
     .locals 1
 
     .prologue
-    .line 38
     iget-object v0, p0, Lcom/miui/translationservice/provider/TranslationResult;->mCopyright:Ljava/lang/String;
 
     return-object v0
@@ -177,7 +162,6 @@
     .locals 1
 
     .prologue
-    .line 44
     iget-object v0, p0, Lcom/miui/translationservice/provider/TranslationResult;->mDetailLink:Ljava/lang/String;
 
     return-object v0
@@ -187,7 +171,6 @@
     .locals 1
 
     .prologue
-    .line 58
     iget v0, p0, Lcom/miui/translationservice/provider/TranslationResult;->mStatus:I
 
     return v0
@@ -206,7 +189,6 @@
     .end annotation
 
     .prologue
-    .line 78
     iget-object v0, p0, Lcom/miui/translationservice/provider/TranslationResult;->mSymbols:Ljava/util/List;
 
     return-object v0
@@ -216,7 +198,6 @@
     .locals 1
 
     .prologue
-    .line 68
     iget-object v0, p0, Lcom/miui/translationservice/provider/TranslationResult;->mWordName:Ljava/lang/String;
 
     return-object v0
@@ -227,10 +208,8 @@
     .param p1, "copyright"    # Ljava/lang/String;
 
     .prologue
-    .line 34
     iput-object p1, p0, Lcom/miui/translationservice/provider/TranslationResult;->mCopyright:Ljava/lang/String;
 
-    .line 35
     return-void
 .end method
 
@@ -239,10 +218,8 @@
     .param p1, "detailLink"    # Ljava/lang/String;
 
     .prologue
-    .line 48
     iput-object p1, p0, Lcom/miui/translationservice/provider/TranslationResult;->mDetailLink:Ljava/lang/String;
 
-    .line 49
     return-void
 .end method
 
@@ -251,10 +228,8 @@
     .param p1, "status"    # I
 
     .prologue
-    .line 54
     iput p1, p0, Lcom/miui/translationservice/provider/TranslationResult;->mStatus:I
 
-    .line 55
     return-void
 .end method
 
@@ -271,11 +246,9 @@
     .end annotation
 
     .prologue
-    .line 74
     .local p1, "symbols":Ljava/util/List;, "Ljava/util/List<Lcom/miui/translationservice/provider/TranslationResult$Symbol;>;"
     iput-object p1, p0, Lcom/miui/translationservice/provider/TranslationResult;->mSymbols:Ljava/util/List;
 
-    .line 75
     return-void
 .end method
 
@@ -284,10 +257,8 @@
     .param p1, "wordName"    # Ljava/lang/String;
 
     .prologue
-    .line 64
     iput-object p1, p0, Lcom/miui/translationservice/provider/TranslationResult;->mWordName:Ljava/lang/String;
 
-    .line 65
     return-void
 .end method
 
@@ -297,31 +268,25 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 88
     iget-object v0, p0, Lcom/miui/translationservice/provider/TranslationResult;->mCopyright:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 89
     iget-object v0, p0, Lcom/miui/translationservice/provider/TranslationResult;->mDetailLink:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 90
     iget v0, p0, Lcom/miui/translationservice/provider/TranslationResult;->mStatus:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 91
     iget-object v0, p0, Lcom/miui/translationservice/provider/TranslationResult;->mWordName:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 92
     iget-object v0, p0, Lcom/miui/translationservice/provider/TranslationResult;->mSymbols:Ljava/util/List;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeList(Ljava/util/List;)V
 
-    .line 93
     return-void
 .end method

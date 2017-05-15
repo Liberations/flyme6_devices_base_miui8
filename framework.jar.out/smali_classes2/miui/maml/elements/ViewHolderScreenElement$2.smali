@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 115
     iput-object p1, p0, Lmiui/maml/elements/ViewHolderScreenElement$2;->this$0:Lmiui/maml/elements/ViewHolderScreenElement;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 117
     iget-object v1, p0, Lmiui/maml/elements/ViewHolderScreenElement$2;->this$0:Lmiui/maml/elements/ViewHolderScreenElement;
 
     # getter for: Lmiui/maml/elements/ViewHolderScreenElement;->mViewAdded:Z
@@ -50,20 +48,17 @@
 
     if-eqz v1, :cond_0
 
-    .line 118
     iget-object v1, p0, Lmiui/maml/elements/ViewHolderScreenElement$2;->this$0:Lmiui/maml/elements/ViewHolderScreenElement;
 
     invoke-virtual {v1}, Lmiui/maml/elements/ViewHolderScreenElement;->getView()Landroid/view/View;
 
     move-result-object v0
 
-    .line 119
     .local v0, "v":Landroid/view/View;
     iget-object v1, p0, Lmiui/maml/elements/ViewHolderScreenElement$2;->this$0:Lmiui/maml/elements/ViewHolderScreenElement;
 
     invoke-virtual {v1, v0}, Lmiui/maml/elements/ViewHolderScreenElement;->onUpdateView(Landroid/view/View;)V
 
-    .line 121
     .end local v0    # "v":Landroid/view/View;
     :cond_0
     return-void

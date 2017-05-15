@@ -22,10 +22,8 @@
     .param p3, "indexExp"    # Lmiui/maml/data/Expression;
 
     .prologue
-    .line 421
     invoke-direct {p0, p1, p2, p3}, Lmiui/maml/data/Expression$ArrayVariableExpression;-><init>(Lmiui/maml/data/Variables;Ljava/lang/String;Lmiui/maml/data/Expression;)V
 
-    .line 422
     return-void
 .end method
 
@@ -37,20 +35,16 @@
     .prologue
     const-wide/16 v2, 0x0
 
-    .line 426
     invoke-virtual {p0}, Lmiui/maml/data/Expression$StringArrayVariableExpression;->evaluateStr()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 427
     .local v1, "str":Ljava/lang/String;
     if-nez v1, :cond_0
 
-    .line 432
     :goto_0
     return-wide v2
 
-    .line 430
     :cond_0
     :try_start_0
     invoke-static {v1}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
@@ -61,11 +55,9 @@
 
     goto :goto_0
 
-    .line 431
     :catch_0
     move-exception v0
 
-    .line 432
     .local v0, "e":Ljava/lang/NumberFormatException;
     goto :goto_0
 .end method
@@ -74,7 +66,6 @@
     .locals 4
 
     .prologue
-    .line 438
     iget-object v0, p0, Lmiui/maml/data/Expression$StringArrayVariableExpression;->mIndexedVar:Lmiui/maml/data/IndexedVariable;
 
     iget-object v1, p0, Lmiui/maml/data/Expression$StringArrayVariableExpression;->mIndexExp:Lmiui/maml/data/Expression;
@@ -96,7 +87,6 @@
     .locals 4
 
     .prologue
-    .line 443
     iget-object v0, p0, Lmiui/maml/data/Expression$StringArrayVariableExpression;->mIndexedVar:Lmiui/maml/data/IndexedVariable;
 
     iget-object v1, p0, Lmiui/maml/data/Expression$StringArrayVariableExpression;->mIndexExp:Lmiui/maml/data/Expression;

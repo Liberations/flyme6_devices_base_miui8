@@ -12,7 +12,6 @@
     .locals 2
 
     .prologue
-    .line 17
     sget-object v0, Landroid/os/Build;->HARDWARE:Ljava/lang/String;
 
     const-string v1, "goldfish"
@@ -30,7 +29,6 @@
     .locals 0
 
     .prologue
-    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,12 +39,10 @@
     .param p0, "resources"    # Landroid/content/res/Resources;
 
     .prologue
-    .line 24
     sget-boolean v0, Lcom/android/internal/util/ScreenShapeHelper;->IS_EMULATOR:Z
 
     if-eqz v0, :cond_0
 
-    .line 25
     const-string v0, "ro.emu.win_outset_bottom_px"
 
     const/4 v1, 0x0
@@ -55,7 +51,6 @@
 
     move-result v0
 
-    .line 27
     :goto_0
     return v0
 

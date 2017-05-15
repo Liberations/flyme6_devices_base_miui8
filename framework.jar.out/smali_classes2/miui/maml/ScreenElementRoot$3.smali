@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 734
     invoke-static {}, Lmiui/maml/ScreenElementRoot$ExtraResource$MetricsType;->values()[Lmiui/maml/ScreenElementRoot$ExtraResource$MetricsType;
 
     move-result-object v0

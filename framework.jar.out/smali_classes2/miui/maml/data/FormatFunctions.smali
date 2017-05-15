@@ -23,13 +23,10 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 28
     invoke-direct {p0, p2}, Lmiui/maml/data/Expression$FunctionImpl;-><init>(I)V
 
-    .line 29
     iput-object p1, p0, Lmiui/maml/data/FormatFunctions;->mFun:Lmiui/maml/data/FormatFunctions$Fun;
 
-    .line 30
     return-void
 .end method
 
@@ -39,7 +36,6 @@
     .prologue
     const/4 v3, 0x2
 
-    .line 22
     const-string v0, "formatDate"
 
     new-instance v1, Lmiui/maml/data/FormatFunctions;
@@ -50,7 +46,6 @@
 
     invoke-static {v0, v1}, Lmiui/maml/data/Expression$FunctionExpression;->registerFunction(Ljava/lang/String;Lmiui/maml/data/Expression$FunctionImpl;)V
 
-    .line 23
     const-string v0, "formatFloat"
 
     new-instance v1, Lmiui/maml/data/FormatFunctions;
@@ -61,7 +56,6 @@
 
     invoke-static {v0, v1}, Lmiui/maml/data/Expression$FunctionExpression;->registerFunction(Ljava/lang/String;Lmiui/maml/data/Expression$FunctionImpl;)V
 
-    .line 24
     const-string v0, "formatInt"
 
     new-instance v1, Lmiui/maml/data/FormatFunctions;
@@ -72,7 +66,6 @@
 
     invoke-static {v0, v1}, Lmiui/maml/data/Expression$FunctionExpression;->registerFunction(Ljava/lang/String;Lmiui/maml/data/Expression$FunctionImpl;)V
 
-    .line 25
     return-void
 .end method
 
@@ -84,7 +77,6 @@
     .param p2, "var"    # Lmiui/maml/data/Variables;
 
     .prologue
-    .line 34
     const-wide/16 v0, 0x0
 
     return-wide v0
@@ -102,22 +94,18 @@
 
     const/4 v4, 0x1
 
-    .line 39
     aget-object v2, p1, v2
 
     invoke-virtual {v2}, Lmiui/maml/data/Expression;->evaluateStr()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 40
     .local v0, "format":Ljava/lang/String;
     if-nez v0, :cond_0
 
-    .line 60
     :goto_0
     return-object v1
 
-    .line 43
     :cond_0
     sget-object v2, Lmiui/maml/data/FormatFunctions$1;->$SwitchMap$miui$maml$data$FormatFunctions$Fun:[I
 
@@ -133,7 +121,6 @@
 
     goto :goto_0
 
-    .line 45
     :pswitch_0
     aget-object v1, p1, v4
 
@@ -149,7 +136,6 @@
 
     goto :goto_0
 
-    .line 48
     :pswitch_1
     const/4 v2, 0x1
 
@@ -180,7 +166,6 @@
 
     goto :goto_0
 
-    .line 54
     :pswitch_2
     const/4 v2, 0x1
 
@@ -213,19 +198,16 @@
 
     goto :goto_0
 
-    .line 55
     :catch_0
     move-exception v2
 
     goto :goto_0
 
-    .line 49
     :catch_1
     move-exception v2
 
     goto :goto_0
 
-    .line 43
     nop
 
     :pswitch_data_0

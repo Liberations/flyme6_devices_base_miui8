@@ -14,7 +14,6 @@
     .locals 0
 
     .prologue
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -25,7 +24,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 30
     invoke-static {}, Lmiui/os/Build;->getUserMode()I
 
     move-result v0
@@ -34,8 +32,7 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 31
-    const-string/jumbo v0, "ringtone"
+    const-string v0, "ringtone"
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -43,10 +40,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 32
     const-string p0, "elder-ringtone"
 
-    .line 34
     :cond_0
     return-object p0
 .end method

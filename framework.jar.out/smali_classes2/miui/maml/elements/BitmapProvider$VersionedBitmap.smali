@@ -26,13 +26,10 @@
     .param p1, "bmp"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
     iput-object p1, p0, Lmiui/maml/elements/BitmapProvider$VersionedBitmap;->mBitmap:Landroid/graphics/Bitmap;
 
-    .line 40
     return-void
 .end method
 
@@ -44,7 +41,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 73
     if-eqz p0, :cond_0
 
     if-nez p1, :cond_1
@@ -77,7 +73,6 @@
     .locals 1
 
     .prologue
-    .line 64
     iget-object v0, p0, Lmiui/maml/elements/BitmapProvider$VersionedBitmap;->mBitmap:Landroid/graphics/Bitmap;
 
     return-object v0
@@ -87,17 +82,14 @@
     .locals 1
 
     .prologue
-    .line 68
     const/4 v0, 0x0
 
     iput-object v0, p0, Lmiui/maml/elements/BitmapProvider$VersionedBitmap;->mBitmap:Landroid/graphics/Bitmap;
 
-    .line 69
     const/4 v0, 0x0
 
     iput v0, p0, Lmiui/maml/elements/BitmapProvider$VersionedBitmap;->mVersion:I
 
-    .line 70
     return-void
 .end method
 
@@ -106,24 +98,19 @@
     .param p1, "versionedBmp"    # Lmiui/maml/elements/BitmapProvider$VersionedBitmap;
 
     .prologue
-    .line 43
     if-eqz p1, :cond_0
 
-    .line 44
     iget-object v0, p1, Lmiui/maml/elements/BitmapProvider$VersionedBitmap;->mBitmap:Landroid/graphics/Bitmap;
 
     iput-object v0, p0, Lmiui/maml/elements/BitmapProvider$VersionedBitmap;->mBitmap:Landroid/graphics/Bitmap;
 
-    .line 45
     iget v0, p1, Lmiui/maml/elements/BitmapProvider$VersionedBitmap;->mVersion:I
 
     iput v0, p0, Lmiui/maml/elements/BitmapProvider$VersionedBitmap;->mVersion:I
 
-    .line 49
     :goto_0
     return-void
 
-    .line 47
     :cond_0
     invoke-virtual {p0}, Lmiui/maml/elements/BitmapProvider$VersionedBitmap;->reset()V
 
@@ -135,22 +122,18 @@
     .param p1, "bmp"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 52
     iget-object v0, p0, Lmiui/maml/elements/BitmapProvider$VersionedBitmap;->mBitmap:Landroid/graphics/Bitmap;
 
     if-eq p1, v0, :cond_0
 
-    .line 53
     iput-object p1, p0, Lmiui/maml/elements/BitmapProvider$VersionedBitmap;->mBitmap:Landroid/graphics/Bitmap;
 
-    .line 54
     iget v0, p0, Lmiui/maml/elements/BitmapProvider$VersionedBitmap;->mVersion:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lmiui/maml/elements/BitmapProvider$VersionedBitmap;->mVersion:I
 
-    .line 56
     :cond_0
     iget-object v0, p0, Lmiui/maml/elements/BitmapProvider$VersionedBitmap;->mBitmap:Landroid/graphics/Bitmap;
 
@@ -171,7 +154,6 @@
     .locals 2
 
     .prologue
-    .line 60
     iget v0, p0, Lmiui/maml/elements/BitmapProvider$VersionedBitmap;->mVersion:I
 
     add-int/lit8 v1, v0, 0x1

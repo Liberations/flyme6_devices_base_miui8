@@ -54,7 +54,6 @@
     .locals 1
 
     .prologue
-    .line 103
     const-string v0, "^([0-9][0-9]+):([0-9][0-9]):([0-9][0-9])(?:(\\.[0-9]+)|:([0-9][0-9])(?:\\.([0-9]+))?)?$"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -63,7 +62,6 @@
 
     sput-object v0, Landroid/media/TtmlUtils;->CLOCK_TIME:Ljava/util/regex/Pattern;
 
-    .line 107
     const-string v0, "^([0-9]+(?:\\.[0-9]+)?)(h|m|s|ms|f|t)$"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -79,10 +77,8 @@
     .locals 0
 
     .prologue
-    .line 110
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 111
     return-void
 .end method
 
@@ -91,7 +87,6 @@
     .param p0, "in"    # Ljava/lang/String;
 
     .prologue
-    .line 178
     const/4 v0, 0x1
 
     invoke-static {p0, v0}, Landroid/media/TtmlUtils;->applySpacePolicy(Ljava/lang/String;Z)Ljava/lang/String;
@@ -107,7 +102,6 @@
     .param p1, "treatLfAsSpace"    # Z
 
     .prologue
-    .line 193
     const-string v4, "\r\n"
 
     const-string v5, "\n"
@@ -116,7 +110,6 @@
 
     move-result-object v0
 
-    .line 196
     .local v0, "crRemoved":Ljava/lang/String;
     const-string v4, " *\n *"
 
@@ -126,7 +119,6 @@
 
     move-result-object v3
 
-    .line 198
     .local v3, "spacesNeighboringLfRemoved":Ljava/lang/String;
     if-eqz p1, :cond_0
 
@@ -138,7 +130,6 @@
 
     move-result-object v1
 
-    .line 201
     .local v1, "lfToSpace":Ljava/lang/String;
     :goto_0
     const-string v4, "[ \t\\x0B\u000c\r]+"
@@ -149,7 +140,6 @@
 
     move-result-object v2
 
-    .line 202
     .local v2, "spacesCollapsed":Ljava/lang/String;
     return-object v2
 
@@ -158,7 +148,6 @@
     :cond_0
     move-object v1, v3
 
-    .line 198
     goto :goto_0
 .end method
 
@@ -169,12 +158,10 @@
     .param p3, "endUs"    # J
 
     .prologue
-    .line 213
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 214
     .local v6, "text":Ljava/lang/StringBuilder;
     const/4 v7, 0x0
 
@@ -186,7 +173,6 @@
 
     invoke-static/range {v1 .. v7}, Landroid/media/TtmlUtils;->extractText(Landroid/media/TtmlNode;JJLjava/lang/StringBuilder;Z)V
 
-    .line 215
     invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -211,7 +197,6 @@
     .param p6, "inPTag"    # Z
 
     .prologue
-    .line 220
     iget-object v3, p0, Landroid/media/TtmlNode;->mName:Ljava/lang/String;
 
     const-string v4, "#pcdata"
@@ -224,19 +209,16 @@
 
     if-eqz p6, :cond_1
 
-    .line 221
     iget-object v3, p0, Landroid/media/TtmlNode;->mText:Ljava/lang/String;
 
     move-object/from16 v0, p5
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 236
     :cond_0
     :goto_0
     return-void
 
-    .line 222
     :cond_1
     iget-object v3, p0, Landroid/media/TtmlNode;->mName:Ljava/lang/String;
 
@@ -250,7 +232,6 @@
 
     if-eqz p6, :cond_2
 
-    .line 223
     const-string v3, "\n"
 
     move-object/from16 v0, p5
@@ -259,11 +240,10 @@
 
     goto :goto_0
 
-    .line 224
     :cond_2
     iget-object v3, p0, Landroid/media/TtmlNode;->mName:Ljava/lang/String;
 
-    const-string/jumbo v4, "metadata"
+    const-string v4, "metadata"
 
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -271,29 +251,25 @@
 
     if-nez v3, :cond_0
 
-    .line 226
     invoke-virtual/range {p0 .. p4}, Landroid/media/TtmlNode;->isActive(JJ)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 227
     iget-object v3, p0, Landroid/media/TtmlNode;->mName:Ljava/lang/String;
 
-    const-string/jumbo v4, "p"
+    const-string v4, "p"
 
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v11
 
-    .line 228
     .local v11, "pTag":Z
     invoke-virtual/range {p5 .. p5}, Ljava/lang/StringBuilder;->length()I
 
     move-result v10
 
-    .line 229
     .local v10, "length":I
     const/4 v2, 0x0
 
@@ -307,7 +283,6 @@
 
     if-ge v2, v3, :cond_5
 
-    .line 230
     iget-object v3, p0, Landroid/media/TtmlNode;->mChildren:Ljava/util/List;
 
     invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -332,18 +307,15 @@
 
     invoke-static/range {v3 .. v9}, Landroid/media/TtmlUtils;->extractText(Landroid/media/TtmlNode;JJLjava/lang/StringBuilder;Z)V
 
-    .line 229
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 230
     :cond_4
     const/4 v9, 0x0
 
     goto :goto_2
 
-    .line 232
     :cond_5
     if-eqz v11, :cond_0
 
@@ -353,7 +325,6 @@
 
     if-eq v10, v3, :cond_0
 
-    .line 233
     const-string v3, "\n"
 
     move-object/from16 v0, p5
@@ -370,7 +341,6 @@
     .param p3, "endUs"    # J
 
     .prologue
-    .line 246
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -382,10 +352,8 @@
 
     move-wide v4, p3
 
-    .line 247
     invoke-static/range {v1 .. v6}, Landroid/media/TtmlUtils;->extractTtmlFragment(Landroid/media/TtmlNode;JJLjava/lang/StringBuilder;)V
 
-    .line 248
     invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -401,7 +369,6 @@
     .param p5, "out"    # Ljava/lang/StringBuilder;
 
     .prologue
-    .line 253
     iget-object v1, p0, Landroid/media/TtmlNode;->mName:Ljava/lang/String;
 
     const-string v2, "#pcdata"
@@ -412,17 +379,14 @@
 
     if-eqz v1, :cond_1
 
-    .line 254
     iget-object v1, p0, Landroid/media/TtmlNode;->mText:Ljava/lang/String;
 
     invoke-virtual {p5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 269
     :cond_0
     :goto_0
     return-void
 
-    .line 255
     :cond_1
     iget-object v1, p0, Landroid/media/TtmlNode;->mName:Ljava/lang/String;
 
@@ -434,14 +398,12 @@
 
     if-eqz v1, :cond_2
 
-    .line 256
     const-string v1, "<br/>"
 
     invoke-virtual {p5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
-    .line 257
     :cond_2
     invoke-virtual {p0, p1, p2, p3, p4}, Landroid/media/TtmlNode;->isActive(JJ)Z
 
@@ -449,27 +411,22 @@
 
     if-eqz v1, :cond_0
 
-    .line 258
     const-string v1, "<"
 
     invoke-virtual {p5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 259
     iget-object v1, p0, Landroid/media/TtmlNode;->mName:Ljava/lang/String;
 
     invoke-virtual {p5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 260
     iget-object v1, p0, Landroid/media/TtmlNode;->mAttributes:Ljava/lang/String;
 
     invoke-virtual {p5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 261
     const-string v1, ">"
 
     invoke-virtual {p5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 262
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -482,7 +439,6 @@
 
     if-ge v0, v1, :cond_3
 
-    .line 263
     iget-object v1, p0, Landroid/media/TtmlNode;->mChildren:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -499,23 +455,19 @@
 
     invoke-static/range {v1 .. v6}, Landroid/media/TtmlUtils;->extractTtmlFragment(Landroid/media/TtmlNode;JJLjava/lang/StringBuilder;)V
 
-    .line 262
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 265
     :cond_3
     const-string v1, "</"
 
     invoke-virtual {p5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 266
     iget-object v1, p0, Landroid/media/TtmlNode;->mName:Ljava/lang/String;
 
     invoke-virtual {p5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 267
     const-string v1, ">"
 
     invoke-virtual {p5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -536,7 +488,6 @@
     .end annotation
 
     .prologue
-    .line 129
     sget-object v13, Landroid/media/TtmlUtils;->CLOCK_TIME:Ljava/util/regex/Pattern;
 
     move-object/from16 v0, p0
@@ -545,7 +496,6 @@
 
     move-result-object v7
 
-    .line 130
     .local v7, "matcher":Ljava/util/regex/Matcher;
     invoke-virtual {v7}, Ljava/util/regex/Matcher;->matches()Z
 
@@ -553,14 +503,12 @@
 
     if-eqz v13, :cond_3
 
-    .line 131
     const/4 v13, 0x1
 
     invoke-virtual {v7, v13}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 132
     .local v6, "hours":Ljava/lang/String;
     invoke-static {v6}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
@@ -574,7 +522,6 @@
 
     long-to-double v2, v0
 
-    .line 133
     .local v2, "durationSeconds":D
     const/4 v13, 0x2
 
@@ -582,7 +529,6 @@
 
     move-result-object v8
 
-    .line 134
     .local v8, "minutes":Ljava/lang/String;
     invoke-static {v8}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
@@ -600,14 +546,12 @@
 
     add-double v2, v2, v16
 
-    .line 135
     const/4 v13, 0x3
 
     invoke-virtual {v7, v13}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v9
 
-    .line 136
     .local v9, "seconds":Ljava/lang/String;
     invoke-static {v9}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
@@ -621,14 +565,12 @@
 
     add-double v2, v2, v16
 
-    .line 137
     const/4 v13, 0x4
 
     invoke-virtual {v7, v13}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 138
     .local v4, "fraction":Ljava/lang/String;
     if-eqz v4, :cond_0
 
@@ -639,14 +581,12 @@
     :goto_0
     add-double v2, v2, v16
 
-    .line 139
     const/4 v13, 0x5
 
     invoke-virtual {v7, v13}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 140
     .local v5, "frames":Ljava/lang/String;
     if-eqz v5, :cond_1
 
@@ -671,14 +611,12 @@
     :goto_1
     add-double v2, v2, v16
 
-    .line 141
     const/4 v13, 0x6
 
     invoke-virtual {v7, v13}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v10
 
-    .line 142
     .local v10, "subframes":Ljava/lang/String;
     if-eqz v10, :cond_2
 
@@ -711,7 +649,6 @@
     :goto_2
     add-double v2, v2, v16
 
-    .line 145
     const-wide v16, 0x408f400000000000L    # 1000.0
 
     mul-double v16, v16, v2
@@ -722,7 +659,6 @@
 
     move-wide/from16 v16, v0
 
-    .line 165
     .end local v2    # "durationSeconds":D
     .end local v4    # "fraction":Ljava/lang/String;
     .end local v5    # "frames":Ljava/lang/String;
@@ -733,7 +669,6 @@
     :goto_3
     return-wide v16
 
-    .line 138
     .restart local v2    # "durationSeconds":D
     .restart local v4    # "fraction":Ljava/lang/String;
     .restart local v6    # "hours":Ljava/lang/String;
@@ -744,21 +679,18 @@
 
     goto :goto_0
 
-    .line 140
     .restart local v5    # "frames":Ljava/lang/String;
     :cond_1
     const-wide/16 v16, 0x0
 
     goto :goto_1
 
-    .line 142
     .restart local v10    # "subframes":Ljava/lang/String;
     :cond_2
     const-wide/16 v16, 0x0
 
     goto :goto_2
 
-    .line 147
     .end local v2    # "durationSeconds":D
     .end local v4    # "fraction":Ljava/lang/String;
     .end local v5    # "frames":Ljava/lang/String;
@@ -775,27 +707,23 @@
 
     move-result-object v7
 
-    .line 148
     invoke-virtual {v7}, Ljava/util/regex/Matcher;->matches()Z
 
     move-result v13
 
     if-eqz v13, :cond_a
 
-    .line 149
     const/4 v13, 0x1
 
     invoke-virtual {v7, v13}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v11
 
-    .line 150
     .local v11, "timeValue":Ljava/lang/String;
     invoke-static {v11}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
 
     move-result-wide v14
 
-    .line 151
     .local v14, "value":D
     const/4 v13, 0x2
 
@@ -803,7 +731,6 @@
 
     move-result-object v12
 
-    .line 152
     .local v12, "unit":Ljava/lang/String;
     const-string v13, "h"
 
@@ -813,12 +740,10 @@
 
     if-eqz v13, :cond_5
 
-    .line 153
     const-wide v16, 0x41ead27480000000L    # 3.6E9
 
     mul-double v14, v14, v16
 
-    .line 165
     :cond_4
     :goto_4
     double-to-long v0, v14
@@ -827,9 +752,8 @@
 
     goto :goto_3
 
-    .line 154
     :cond_5
-    const-string/jumbo v13, "m"
+    const-string v13, "m"
 
     invoke-virtual {v12, v13}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -837,16 +761,14 @@
 
     if-eqz v13, :cond_6
 
-    .line 155
     const-wide v16, 0x418c9c3800000000L    # 6.0E7
 
     mul-double v14, v14, v16
 
     goto :goto_4
 
-    .line 156
     :cond_6
-    const-string/jumbo v13, "s"
+    const-string v13, "s"
 
     invoke-virtual {v12, v13}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -854,16 +776,14 @@
 
     if-eqz v13, :cond_7
 
-    .line 157
     const-wide v16, 0x412e848000000000L    # 1000000.0
 
     mul-double v14, v14, v16
 
     goto :goto_4
 
-    .line 158
     :cond_7
-    const-string/jumbo v13, "ms"
+    const-string v13, "ms"
 
     invoke-virtual {v12, v13}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -871,14 +791,12 @@
 
     if-eqz v13, :cond_8
 
-    .line 159
     const-wide v16, 0x408f400000000000L    # 1000.0
 
     mul-double v14, v14, v16
 
     goto :goto_4
 
-    .line 160
     :cond_8
     const-string v13, "f"
 
@@ -888,7 +806,6 @@
 
     if-eqz v13, :cond_9
 
-    .line 161
     move/from16 v0, p1
 
     int-to-double v0, v0
@@ -903,9 +820,8 @@
 
     goto :goto_4
 
-    .line 162
     :cond_9
-    const-string/jumbo v13, "t"
+    const-string v13, "t"
 
     invoke-virtual {v12, v13}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -913,7 +829,6 @@
 
     if-eqz v13, :cond_4
 
-    .line 163
     move/from16 v0, p3
 
     int-to-double v0, v0
@@ -928,7 +843,6 @@
 
     goto :goto_4
 
-    .line 167
     .end local v11    # "timeValue":Ljava/lang/String;
     .end local v12    # "unit":Ljava/lang/String;
     .end local v14    # "value":D

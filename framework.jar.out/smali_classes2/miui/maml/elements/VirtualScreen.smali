@@ -27,10 +27,8 @@
     .param p2, "root"    # Lmiui/maml/ScreenElementRoot;
 
     .prologue
-    .line 23
     invoke-direct {p0, p1, p2}, Lmiui/maml/elements/ElementGroup;-><init>(Lorg/w3c/dom/Element;Lmiui/maml/ScreenElementRoot;)V
 
-    .line 24
     return-void
 .end method
 
@@ -43,20 +41,16 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 51
     iget-boolean v0, p0, Lmiui/maml/elements/VirtualScreen;->mTicked:Z
 
     if-eqz v0, :cond_0
 
-    .line 52
     iput-boolean v2, p0, Lmiui/maml/elements/VirtualScreen;->mTicked:Z
 
-    .line 53
     iget-object v0, p0, Lmiui/maml/elements/VirtualScreen;->mScreenCanvas:Landroid/graphics/Canvas;
 
     invoke-virtual {v0}, Landroid/graphics/Canvas;->save()I
 
-    .line 54
     iget-object v0, p0, Lmiui/maml/elements/VirtualScreen;->mScreenCanvas:Landroid/graphics/Canvas;
 
     invoke-virtual {p0}, Lmiui/maml/elements/VirtualScreen;->getMatrix()Landroid/graphics/Matrix;
@@ -65,29 +59,24 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Canvas;->concat(Landroid/graphics/Matrix;)V
 
-    .line 55
     iget-object v0, p0, Lmiui/maml/elements/VirtualScreen;->mScreenCanvas:Landroid/graphics/Canvas;
 
     sget-object v1, Landroid/graphics/PorterDuff$Mode;->CLEAR:Landroid/graphics/PorterDuff$Mode;
 
     invoke-virtual {v0, v2, v1}, Landroid/graphics/Canvas;->drawColor(ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 56
     iget-object v0, p0, Lmiui/maml/elements/VirtualScreen;->mScreenCanvas:Landroid/graphics/Canvas;
 
     invoke-super {p0, v0}, Lmiui/maml/elements/ElementGroup;->doRender(Landroid/graphics/Canvas;)V
 
-    .line 57
     iget-object v0, p0, Lmiui/maml/elements/VirtualScreen;->mScreenCanvas:Landroid/graphics/Canvas;
 
     invoke-virtual {v0}, Landroid/graphics/Canvas;->restore()V
 
-    .line 58
     iget-object v0, p0, Lmiui/maml/elements/VirtualScreen;->mVersionedBitmap:Lmiui/maml/elements/BitmapProvider$VersionedBitmap;
 
     invoke-virtual {v0}, Lmiui/maml/elements/BitmapProvider$VersionedBitmap;->updateVersion()I
 
-    .line 60
     :cond_0
     return-void
 .end method
@@ -97,15 +86,12 @@
     .param p1, "currentTime"    # J
 
     .prologue
-    .line 64
     invoke-super {p0, p1, p2}, Lmiui/maml/elements/ElementGroup;->doTick(J)V
 
-    .line 65
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lmiui/maml/elements/VirtualScreen;->mTicked:Z
 
-    .line 66
     return-void
 .end method
 
@@ -115,21 +101,16 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 43
     invoke-super {p0}, Lmiui/maml/elements/ElementGroup;->finish()V
 
-    .line 44
     iget-object v0, p0, Lmiui/maml/elements/VirtualScreen;->mScreenBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 45
     iput-object v1, p0, Lmiui/maml/elements/VirtualScreen;->mScreenBitmap:Landroid/graphics/Bitmap;
 
-    .line 46
     iput-object v1, p0, Lmiui/maml/elements/VirtualScreen;->mScreenCanvas:Landroid/graphics/Canvas;
 
-    .line 47
     return-void
 .end method
 
@@ -137,7 +118,6 @@
     .locals 1
 
     .prologue
-    .line 69
     iget-object v0, p0, Lmiui/maml/elements/VirtualScreen;->mScreenBitmap:Landroid/graphics/Bitmap;
 
     return-object v0
@@ -148,7 +128,6 @@
     .param p1, "id"    # Ljava/lang/String;
 
     .prologue
-    .line 74
     iget-object v0, p0, Lmiui/maml/elements/VirtualScreen;->mVersionedBitmap:Lmiui/maml/elements/BitmapProvider$VersionedBitmap;
 
     return-object v0
@@ -160,21 +139,17 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 28
     invoke-super {p0}, Lmiui/maml/elements/ElementGroup;->init()V
 
-    .line 29
     invoke-virtual {p0}, Lmiui/maml/elements/VirtualScreen;->getWidth()F
 
     move-result v1
 
-    .line 30
     .local v1, "width":F
     cmpg-float v2, v1, v4
 
     if-gez v2, :cond_0
 
-    .line 31
     const-string v2, "screen_width"
 
     invoke-virtual {p0}, Lmiui/maml/elements/VirtualScreen;->getVariables()Lmiui/maml/data/Variables;
@@ -189,19 +164,16 @@
 
     move-result v1
 
-    .line 32
     :cond_0
     invoke-virtual {p0}, Lmiui/maml/elements/VirtualScreen;->getHeight()F
 
     move-result v0
 
-    .line 33
     .local v0, "height":F
     cmpg-float v2, v0, v4
 
     if-gez v2, :cond_1
 
-    .line 34
     const-string v2, "screen_height"
 
     invoke-virtual {p0}, Lmiui/maml/elements/VirtualScreen;->getVariables()Lmiui/maml/data/Variables;
@@ -216,7 +188,6 @@
 
     move-result v0
 
-    .line 35
     :cond_1
     invoke-static {v1}, Ljava/lang/Math;->round(F)I
 
@@ -234,7 +205,6 @@
 
     iput-object v2, p0, Lmiui/maml/elements/VirtualScreen;->mScreenBitmap:Landroid/graphics/Bitmap;
 
-    .line 36
     iget-object v2, p0, Lmiui/maml/elements/VirtualScreen;->mScreenBitmap:Landroid/graphics/Bitmap;
 
     iget-object v3, p0, Lmiui/maml/elements/VirtualScreen;->mRoot:Lmiui/maml/ScreenElementRoot;
@@ -245,7 +215,6 @@
 
     invoke-virtual {v2, v3}, Landroid/graphics/Bitmap;->setDensity(I)V
 
-    .line 37
     new-instance v2, Landroid/graphics/Canvas;
 
     iget-object v3, p0, Lmiui/maml/elements/VirtualScreen;->mScreenBitmap:Landroid/graphics/Bitmap;
@@ -254,7 +223,6 @@
 
     iput-object v2, p0, Lmiui/maml/elements/VirtualScreen;->mScreenCanvas:Landroid/graphics/Canvas;
 
-    .line 38
     new-instance v2, Lmiui/maml/elements/BitmapProvider$VersionedBitmap;
 
     iget-object v3, p0, Lmiui/maml/elements/VirtualScreen;->mScreenBitmap:Landroid/graphics/Bitmap;
@@ -263,6 +231,5 @@
 
     iput-object v2, p0, Lmiui/maml/elements/VirtualScreen;->mVersionedBitmap:Lmiui/maml/elements/BitmapProvider$VersionedBitmap;
 
-    .line 39
     return-void
 .end method

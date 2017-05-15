@@ -28,10 +28,8 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 257
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 259
     const-string v0, "toggle"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -40,15 +38,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 260
     iput-boolean v1, p0, Lmiui/maml/ActionCommand$OnOffCommandHelper;->mIsToggle:Z
 
-    .line 265
     :cond_0
     :goto_0
     return-void
 
-    .line 261
     :cond_1
     const-string v0, "on"
 
@@ -58,12 +53,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 262
     iput-boolean v1, p0, Lmiui/maml/ActionCommand$OnOffCommandHelper;->mIsOn:Z
 
     goto :goto_0
 
-    .line 263
     :cond_2
     const-string v0, "off"
 
@@ -73,7 +66,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 264
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lmiui/maml/ActionCommand$OnOffCommandHelper;->mIsOn:Z

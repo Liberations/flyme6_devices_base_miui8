@@ -37,10 +37,8 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 1193
     invoke-direct {p0, p1, p2, p3}, Lmiui/maml/ActionCommand$PropertyCommand;-><init>(Lmiui/maml/elements/ScreenElement;Lmiui/maml/util/Variable;Ljava/lang/String;)V
 
-    .line 1194
     const-string v0, "toggle"
 
     invoke-virtual {p3, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -49,15 +47,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 1195
     iput-boolean v1, p0, Lmiui/maml/ActionCommand$VisibilityProperty;->mIsToggle:Z
 
-    .line 1200
     :cond_0
     :goto_0
     return-void
 
-    .line 1196
     :cond_1
     const-string v0, "true"
 
@@ -67,12 +62,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 1197
     iput-boolean v1, p0, Lmiui/maml/ActionCommand$VisibilityProperty;->mIsShow:Z
 
     goto :goto_0
 
-    .line 1198
     :cond_2
     const-string v0, "false"
 
@@ -82,7 +75,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1199
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lmiui/maml/ActionCommand$VisibilityProperty;->mIsShow:Z
@@ -96,12 +88,10 @@
     .locals 2
 
     .prologue
-    .line 1204
     iget-boolean v0, p0, Lmiui/maml/ActionCommand$VisibilityProperty;->mIsToggle:Z
 
     if-eqz v0, :cond_1
 
-    .line 1205
     iget-object v1, p0, Lmiui/maml/ActionCommand$VisibilityProperty;->mTargetElement:Lmiui/maml/elements/ScreenElement;
 
     iget-object v0, p0, Lmiui/maml/ActionCommand$VisibilityProperty;->mTargetElement:Lmiui/maml/elements/ScreenElement;
@@ -117,17 +107,14 @@
     :goto_0
     invoke-virtual {v1, v0}, Lmiui/maml/elements/ScreenElement;->show(Z)V
 
-    .line 1208
     :goto_1
     return-void
 
-    .line 1205
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 1207
     :cond_1
     iget-object v0, p0, Lmiui/maml/ActionCommand$VisibilityProperty;->mTargetElement:Lmiui/maml/elements/ScreenElement;
 

@@ -78,10 +78,8 @@
     .param p3, "channel"    # Landroid/view/InputChannel;
 
     .prologue
-    .line 75
     invoke-direct {p0}, Landroid/media/tv/ITvInputSession$Stub;-><init>()V
 
-    .line 76
     new-instance v0, Lcom/android/internal/os/HandlerCaller;
 
     const/4 v1, 0x0
@@ -92,16 +90,12 @@
 
     iput-object v0, p0, Landroid/media/tv/ITvInputSessionWrapper;->mCaller:Lcom/android/internal/os/HandlerCaller;
 
-    .line 77
     iput-object p2, p0, Landroid/media/tv/ITvInputSessionWrapper;->mTvInputSessionImpl:Landroid/media/tv/TvInputService$Session;
 
-    .line 78
     iput-object p3, p0, Landroid/media/tv/ITvInputSessionWrapper;->mChannel:Landroid/view/InputChannel;
 
-    .line 79
     if-eqz p3, :cond_0
 
-    .line 80
     new-instance v0, Landroid/media/tv/ITvInputSessionWrapper$TvInputEventReceiver;
 
     invoke-virtual {p1}, Landroid/content/Context;->getMainLooper()Landroid/os/Looper;
@@ -112,7 +106,6 @@
 
     iput-object v0, p0, Landroid/media/tv/ITvInputSessionWrapper;->mReceiver:Landroid/media/tv/ITvInputSessionWrapper$TvInputEventReceiver;
 
-    .line 82
     :cond_0
     return-void
 .end method
@@ -122,7 +115,6 @@
     .param p0, "x0"    # Landroid/media/tv/ITvInputSessionWrapper;
 
     .prologue
-    .line 42
     iget-object v0, p0, Landroid/media/tv/ITvInputSessionWrapper;->mTvInputSessionImpl:Landroid/media/tv/TvInputService$Session;
 
     return-object v0
@@ -136,7 +128,6 @@
     .param p2, "data"    # Landroid/os/Bundle;
 
     .prologue
-    .line 250
     iget-object v0, p0, Landroid/media/tv/ITvInputSessionWrapper;->mCaller:Lcom/android/internal/os/HandlerCaller;
 
     iget-object v1, p0, Landroid/media/tv/ITvInputSessionWrapper;->mCaller:Lcom/android/internal/os/HandlerCaller;
@@ -149,7 +140,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/HandlerCaller;->executeOrSendMessage(Landroid/os/Message;)V
 
-    .line 252
     return-void
 .end method
 
@@ -159,7 +149,6 @@
     .param p2, "frame"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 256
     iget-object v0, p0, Landroid/media/tv/ITvInputSessionWrapper;->mCaller:Lcom/android/internal/os/HandlerCaller;
 
     iget-object v1, p0, Landroid/media/tv/ITvInputSessionWrapper;->mCaller:Lcom/android/internal/os/HandlerCaller;
@@ -172,7 +161,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/HandlerCaller;->executeOrSendMessage(Landroid/os/Message;)V
 
-    .line 258
     return-void
 .end method
 
@@ -183,7 +171,6 @@
     .param p3, "height"    # I
 
     .prologue
-    .line 222
     iget-object v6, p0, Landroid/media/tv/ITvInputSessionWrapper;->mCaller:Lcom/android/internal/os/HandlerCaller;
 
     iget-object v0, p0, Landroid/media/tv/ITvInputSessionWrapper;->mCaller:Lcom/android/internal/os/HandlerCaller;
@@ -204,7 +191,6 @@
 
     invoke-virtual {v6, v0}, Lcom/android/internal/os/HandlerCaller;->executeOrSendMessage(Landroid/os/Message;)V
 
-    .line 224
     return-void
 .end method
 
@@ -215,28 +201,23 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 86
     iget-object v1, p0, Landroid/media/tv/ITvInputSessionWrapper;->mTvInputSessionImpl:Landroid/media/tv/TvInputService$Session;
 
     if-nez v1, :cond_1
 
-    .line 202
     :cond_0
     return-void
 
-    .line 90
     :cond_1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
 
-    .line 91
     .local v4, "startTime":J
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 184
     const-string v1, "TvInputSessionWrapper"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -261,7 +242,6 @@
 
     invoke-static {v1, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 188
     :cond_2
     :goto_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -270,7 +250,6 @@
 
     sub-long v2, v6, v4
 
-    .line 189
     .local v2, "duration":J
     const-wide/16 v6, 0x32
 
@@ -278,7 +257,6 @@
 
     if-lez v1, :cond_0
 
-    .line 190
     const-string v1, "TvInputSessionWrapper"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -307,7 +285,7 @@
 
     move-result-object v6
 
-    const-string/jumbo v7, "ms)"
+    const-string v7, "ms)"
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -319,7 +297,6 @@
 
     invoke-static {v1, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 192
     iget v1, p1, Landroid/os/Message;->what:I
 
     const/4 v6, 0x6
@@ -332,7 +309,6 @@
 
     if-lez v1, :cond_4
 
-    .line 193
     new-instance v1, Ljava/lang/RuntimeException;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -349,7 +325,7 @@
 
     move-result-object v6
 
-    const-string/jumbo v7, "ms > "
+    const-string v7, "ms > "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -361,7 +337,7 @@
 
     move-result-object v6
 
-    const-string/jumbo v7, "ms) "
+    const-string v7, "ms) "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -381,46 +357,37 @@
 
     throw v1
 
-    .line 93
     .end local v2    # "duration":J
     :pswitch_0
     iget-object v1, p0, Landroid/media/tv/ITvInputSessionWrapper;->mTvInputSessionImpl:Landroid/media/tv/TvInputService$Session;
 
     invoke-virtual {v1}, Landroid/media/tv/TvInputService$Session;->release()V
 
-    .line 94
     iput-object v6, p0, Landroid/media/tv/ITvInputSessionWrapper;->mTvInputSessionImpl:Landroid/media/tv/TvInputService$Session;
 
-    .line 95
     iget-object v1, p0, Landroid/media/tv/ITvInputSessionWrapper;->mReceiver:Landroid/media/tv/ITvInputSessionWrapper$TvInputEventReceiver;
 
     if-eqz v1, :cond_3
 
-    .line 96
     iget-object v1, p0, Landroid/media/tv/ITvInputSessionWrapper;->mReceiver:Landroid/media/tv/ITvInputSessionWrapper$TvInputEventReceiver;
 
     invoke-virtual {v1}, Landroid/media/tv/ITvInputSessionWrapper$TvInputEventReceiver;->dispose()V
 
-    .line 97
     iput-object v6, p0, Landroid/media/tv/ITvInputSessionWrapper;->mReceiver:Landroid/media/tv/ITvInputSessionWrapper$TvInputEventReceiver;
 
-    .line 99
     :cond_3
     iget-object v1, p0, Landroid/media/tv/ITvInputSessionWrapper;->mChannel:Landroid/view/InputChannel;
 
     if-eqz v1, :cond_2
 
-    .line 100
     iget-object v1, p0, Landroid/media/tv/ITvInputSessionWrapper;->mChannel:Landroid/view/InputChannel;
 
     invoke-virtual {v1}, Landroid/view/InputChannel;->dispose()V
 
-    .line 101
     iput-object v6, p0, Landroid/media/tv/ITvInputSessionWrapper;->mChannel:Landroid/view/InputChannel;
 
     goto/16 :goto_0
 
-    .line 106
     :pswitch_1
     iget-object v6, p0, Landroid/media/tv/ITvInputSessionWrapper;->mTvInputSessionImpl:Landroid/media/tv/TvInputService$Session;
 
@@ -436,7 +403,6 @@
 
     goto/16 :goto_0
 
-    .line 110
     :pswitch_2
     iget-object v6, p0, Landroid/media/tv/ITvInputSessionWrapper;->mTvInputSessionImpl:Landroid/media/tv/TvInputService$Session;
 
@@ -448,13 +414,11 @@
 
     goto/16 :goto_0
 
-    .line 114
     :pswitch_3
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/internal/os/SomeArgs;
 
-    .line 115
     .local v0, "args":Lcom/android/internal/os/SomeArgs;
     iget-object v1, p0, Landroid/media/tv/ITvInputSessionWrapper;->mTvInputSessionImpl:Landroid/media/tv/TvInputService$Session;
 
@@ -466,12 +430,10 @@
 
     invoke-virtual {v1, v6, v7, v8}, Landroid/media/tv/TvInputService$Session;->dispatchSurfaceChanged(III)V
 
-    .line 116
     invoke-virtual {v0}, Lcom/android/internal/os/SomeArgs;->recycle()V
 
     goto/16 :goto_0
 
-    .line 120
     .end local v0    # "args":Lcom/android/internal/os/SomeArgs;
     :pswitch_4
     iget-object v6, p0, Landroid/media/tv/ITvInputSessionWrapper;->mTvInputSessionImpl:Landroid/media/tv/TvInputService$Session;
@@ -488,13 +450,11 @@
 
     goto/16 :goto_0
 
-    .line 124
     :pswitch_5
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/internal/os/SomeArgs;
 
-    .line 125
     .restart local v0    # "args":Lcom/android/internal/os/SomeArgs;
     iget-object v7, p0, Landroid/media/tv/ITvInputSessionWrapper;->mTvInputSessionImpl:Landroid/media/tv/TvInputService$Session;
 
@@ -508,12 +468,10 @@
 
     invoke-virtual {v7, v1, v6}, Landroid/media/tv/TvInputService$Session;->tune(Landroid/net/Uri;Landroid/os/Bundle;)V
 
-    .line 126
     invoke-virtual {v0}, Lcom/android/internal/os/SomeArgs;->recycle()V
 
     goto/16 :goto_0
 
-    .line 130
     .end local v0    # "args":Lcom/android/internal/os/SomeArgs;
     :pswitch_6
     iget-object v6, p0, Landroid/media/tv/ITvInputSessionWrapper;->mTvInputSessionImpl:Landroid/media/tv/TvInputService$Session;
@@ -530,13 +488,11 @@
 
     goto/16 :goto_0
 
-    .line 134
     :pswitch_7
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/internal/os/SomeArgs;
 
-    .line 135
     .restart local v0    # "args":Lcom/android/internal/os/SomeArgs;
     iget-object v6, p0, Landroid/media/tv/ITvInputSessionWrapper;->mTvInputSessionImpl:Landroid/media/tv/TvInputService$Session;
 
@@ -554,19 +510,16 @@
 
     invoke-virtual {v6, v7, v1}, Landroid/media/tv/TvInputService$Session;->selectTrack(ILjava/lang/String;)V
 
-    .line 136
     invoke-virtual {v0}, Lcom/android/internal/os/SomeArgs;->recycle()V
 
     goto/16 :goto_0
 
-    .line 140
     .end local v0    # "args":Lcom/android/internal/os/SomeArgs;
     :pswitch_8
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/internal/os/SomeArgs;
 
-    .line 141
     .restart local v0    # "args":Lcom/android/internal/os/SomeArgs;
     iget-object v7, p0, Landroid/media/tv/ITvInputSessionWrapper;->mTvInputSessionImpl:Landroid/media/tv/TvInputService$Session;
 
@@ -580,19 +533,16 @@
 
     invoke-virtual {v7, v1, v6}, Landroid/media/tv/TvInputService$Session;->appPrivateCommand(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 142
     invoke-virtual {v0}, Lcom/android/internal/os/SomeArgs;->recycle()V
 
     goto/16 :goto_0
 
-    .line 146
     .end local v0    # "args":Lcom/android/internal/os/SomeArgs;
     :pswitch_9
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/internal/os/SomeArgs;
 
-    .line 147
     .restart local v0    # "args":Lcom/android/internal/os/SomeArgs;
     iget-object v7, p0, Landroid/media/tv/ITvInputSessionWrapper;->mTvInputSessionImpl:Landroid/media/tv/TvInputService$Session;
 
@@ -606,12 +556,10 @@
 
     invoke-virtual {v7, v1, v6}, Landroid/media/tv/TvInputService$Session;->createOverlayView(Landroid/os/IBinder;Landroid/graphics/Rect;)V
 
-    .line 148
     invoke-virtual {v0}, Lcom/android/internal/os/SomeArgs;->recycle()V
 
     goto/16 :goto_0
 
-    .line 152
     .end local v0    # "args":Lcom/android/internal/os/SomeArgs;
     :pswitch_a
     iget-object v6, p0, Landroid/media/tv/ITvInputSessionWrapper;->mTvInputSessionImpl:Landroid/media/tv/TvInputService$Session;
@@ -624,7 +572,6 @@
 
     goto/16 :goto_0
 
-    .line 156
     :pswitch_b
     iget-object v1, p0, Landroid/media/tv/ITvInputSessionWrapper;->mTvInputSessionImpl:Landroid/media/tv/TvInputService$Session;
 
@@ -634,7 +581,6 @@
 
     goto/16 :goto_0
 
-    .line 160
     :pswitch_c
     iget-object v6, p0, Landroid/media/tv/ITvInputSessionWrapper;->mTvInputSessionImpl:Landroid/media/tv/TvInputService$Session;
 
@@ -646,7 +592,6 @@
 
     goto/16 :goto_0
 
-    .line 164
     :pswitch_d
     iget-object v1, p0, Landroid/media/tv/ITvInputSessionWrapper;->mTvInputSessionImpl:Landroid/media/tv/TvInputService$Session;
 
@@ -654,7 +599,6 @@
 
     goto/16 :goto_0
 
-    .line 168
     :pswitch_e
     iget-object v1, p0, Landroid/media/tv/ITvInputSessionWrapper;->mTvInputSessionImpl:Landroid/media/tv/TvInputService$Session;
 
@@ -662,7 +606,6 @@
 
     goto/16 :goto_0
 
-    .line 172
     :pswitch_f
     iget-object v6, p0, Landroid/media/tv/ITvInputSessionWrapper;->mTvInputSessionImpl:Landroid/media/tv/TvInputService$Session;
 
@@ -678,7 +621,6 @@
 
     goto/16 :goto_0
 
-    .line 176
     :pswitch_10
     iget-object v6, p0, Landroid/media/tv/ITvInputSessionWrapper;->mTvInputSessionImpl:Landroid/media/tv/TvInputService$Session;
 
@@ -690,7 +632,6 @@
 
     goto/16 :goto_0
 
-    .line 180
     :pswitch_11
     iget-object v6, p0, Landroid/media/tv/ITvInputSessionWrapper;->mTvInputSessionImpl:Landroid/media/tv/TvInputService$Session;
 
@@ -706,7 +647,6 @@
 
     goto/16 :goto_0
 
-    .line 197
     .restart local v2    # "duration":J
     :cond_4
     const-wide/16 v6, 0x1388
@@ -715,7 +655,6 @@
 
     if-lez v1, :cond_0
 
-    .line 198
     new-instance v1, Ljava/lang/RuntimeException;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -744,7 +683,7 @@
 
     move-result-object v6
 
-    const-string/jumbo v7, "ms > "
+    const-string v7, "ms > "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -756,7 +695,7 @@
 
     move-result-object v6
 
-    const-string/jumbo v7, "ms)."
+    const-string v7, "ms)."
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -770,7 +709,6 @@
 
     throw v1
 
-    .line 91
     nop
 
     :pswitch_data_0
@@ -801,7 +739,6 @@
     .param p1, "frame"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 262
     iget-object v0, p0, Landroid/media/tv/ITvInputSessionWrapper;->mCaller:Lcom/android/internal/os/HandlerCaller;
 
     iget-object v1, p0, Landroid/media/tv/ITvInputSessionWrapper;->mCaller:Lcom/android/internal/os/HandlerCaller;
@@ -814,7 +751,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/HandlerCaller;->executeOrSendMessage(Landroid/os/Message;)V
 
-    .line 263
     return-void
 .end method
 
@@ -822,12 +758,10 @@
     .locals 3
 
     .prologue
-    .line 206
     iget-object v0, p0, Landroid/media/tv/ITvInputSessionWrapper;->mTvInputSessionImpl:Landroid/media/tv/TvInputService$Session;
 
     invoke-virtual {v0}, Landroid/media/tv/TvInputService$Session;->scheduleOverlayViewCleanup()V
 
-    .line 207
     iget-object v0, p0, Landroid/media/tv/ITvInputSessionWrapper;->mCaller:Lcom/android/internal/os/HandlerCaller;
 
     iget-object v1, p0, Landroid/media/tv/ITvInputSessionWrapper;->mCaller:Lcom/android/internal/os/HandlerCaller;
@@ -840,7 +774,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/HandlerCaller;->executeOrSendMessage(Landroid/os/Message;)V
 
-    .line 208
     return-void
 .end method
 
@@ -848,7 +781,6 @@
     .locals 3
 
     .prologue
-    .line 267
     iget-object v0, p0, Landroid/media/tv/ITvInputSessionWrapper;->mCaller:Lcom/android/internal/os/HandlerCaller;
 
     iget-object v1, p0, Landroid/media/tv/ITvInputSessionWrapper;->mCaller:Lcom/android/internal/os/HandlerCaller;
@@ -861,7 +793,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/HandlerCaller;->executeOrSendMessage(Landroid/os/Message;)V
 
-    .line 268
     return-void
 .end method
 
@@ -871,7 +802,6 @@
     .param p2, "trackId"    # Ljava/lang/String;
 
     .prologue
-    .line 245
     iget-object v0, p0, Landroid/media/tv/ITvInputSessionWrapper;->mCaller:Lcom/android/internal/os/HandlerCaller;
 
     iget-object v1, p0, Landroid/media/tv/ITvInputSessionWrapper;->mCaller:Lcom/android/internal/os/HandlerCaller;
@@ -888,7 +818,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/HandlerCaller;->executeOrSendMessage(Landroid/os/Message;)V
 
-    .line 246
     return-void
 .end method
 
@@ -897,7 +826,6 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 240
     iget-object v0, p0, Landroid/media/tv/ITvInputSessionWrapper;->mCaller:Lcom/android/internal/os/HandlerCaller;
 
     iget-object v1, p0, Landroid/media/tv/ITvInputSessionWrapper;->mCaller:Lcom/android/internal/os/HandlerCaller;
@@ -914,7 +842,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/HandlerCaller;->executeOrSendMessage(Landroid/os/Message;)V
 
-    .line 241
     return-void
 .end method
 
@@ -923,7 +850,6 @@
     .param p1, "isMain"    # Z
 
     .prologue
-    .line 212
     iget-object v0, p0, Landroid/media/tv/ITvInputSessionWrapper;->mCaller:Lcom/android/internal/os/HandlerCaller;
 
     iget-object v1, p0, Landroid/media/tv/ITvInputSessionWrapper;->mCaller:Lcom/android/internal/os/HandlerCaller;
@@ -940,7 +866,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/HandlerCaller;->executeOrSendMessage(Landroid/os/Message;)V
 
-    .line 213
     return-void
 .end method
 
@@ -949,7 +874,6 @@
     .param p1, "surface"    # Landroid/view/Surface;
 
     .prologue
-    .line 217
     iget-object v0, p0, Landroid/media/tv/ITvInputSessionWrapper;->mCaller:Lcom/android/internal/os/HandlerCaller;
 
     iget-object v1, p0, Landroid/media/tv/ITvInputSessionWrapper;->mCaller:Lcom/android/internal/os/HandlerCaller;
@@ -962,7 +886,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/HandlerCaller;->executeOrSendMessage(Landroid/os/Message;)V
 
-    .line 218
     return-void
 .end method
 
@@ -971,7 +894,6 @@
     .param p1, "volume"    # F
 
     .prologue
-    .line 228
     iget-object v0, p0, Landroid/media/tv/ITvInputSessionWrapper;->mCaller:Lcom/android/internal/os/HandlerCaller;
 
     iget-object v1, p0, Landroid/media/tv/ITvInputSessionWrapper;->mCaller:Lcom/android/internal/os/HandlerCaller;
@@ -988,7 +910,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/HandlerCaller;->executeOrSendMessage(Landroid/os/Message;)V
 
-    .line 229
     return-void
 .end method
 
@@ -997,7 +918,6 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 299
     iget-object v0, p0, Landroid/media/tv/ITvInputSessionWrapper;->mCaller:Lcom/android/internal/os/HandlerCaller;
 
     iget-object v1, p0, Landroid/media/tv/ITvInputSessionWrapper;->mCaller:Lcom/android/internal/os/HandlerCaller;
@@ -1014,7 +934,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/HandlerCaller;->executeOrSendMessage(Landroid/os/Message;)V
 
-    .line 301
     return-void
 .end method
 
@@ -1022,7 +941,6 @@
     .locals 3
 
     .prologue
-    .line 278
     iget-object v0, p0, Landroid/media/tv/ITvInputSessionWrapper;->mCaller:Lcom/android/internal/os/HandlerCaller;
 
     iget-object v1, p0, Landroid/media/tv/ITvInputSessionWrapper;->mCaller:Lcom/android/internal/os/HandlerCaller;
@@ -1035,7 +953,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/HandlerCaller;->executeOrSendMessage(Landroid/os/Message;)V
 
-    .line 279
     return-void
 .end method
 
@@ -1043,7 +960,6 @@
     .locals 3
 
     .prologue
-    .line 283
     iget-object v0, p0, Landroid/media/tv/ITvInputSessionWrapper;->mCaller:Lcom/android/internal/os/HandlerCaller;
 
     iget-object v1, p0, Landroid/media/tv/ITvInputSessionWrapper;->mCaller:Lcom/android/internal/os/HandlerCaller;
@@ -1056,7 +972,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/HandlerCaller;->executeOrSendMessage(Landroid/os/Message;)V
 
-    .line 284
     return-void
 .end method
 
@@ -1065,7 +980,6 @@
     .param p1, "timeMs"    # J
 
     .prologue
-    .line 288
     iget-object v0, p0, Landroid/media/tv/ITvInputSessionWrapper;->mCaller:Lcom/android/internal/os/HandlerCaller;
 
     iget-object v1, p0, Landroid/media/tv/ITvInputSessionWrapper;->mCaller:Lcom/android/internal/os/HandlerCaller;
@@ -1082,7 +996,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/HandlerCaller;->executeOrSendMessage(Landroid/os/Message;)V
 
-    .line 289
     return-void
 .end method
 
@@ -1091,7 +1004,6 @@
     .param p1, "params"    # Landroid/media/PlaybackParams;
 
     .prologue
-    .line 293
     iget-object v0, p0, Landroid/media/tv/ITvInputSessionWrapper;->mCaller:Lcom/android/internal/os/HandlerCaller;
 
     iget-object v1, p0, Landroid/media/tv/ITvInputSessionWrapper;->mCaller:Lcom/android/internal/os/HandlerCaller;
@@ -1104,7 +1016,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/HandlerCaller;->executeOrSendMessage(Landroid/os/Message;)V
 
-    .line 295
     return-void
 .end method
 
@@ -1116,12 +1027,10 @@
     .prologue
     const/4 v2, 0x6
 
-    .line 234
     iget-object v0, p0, Landroid/media/tv/ITvInputSessionWrapper;->mCaller:Lcom/android/internal/os/HandlerCaller;
 
     invoke-virtual {v0, v2}, Lcom/android/internal/os/HandlerCaller;->removeMessages(I)V
 
-    .line 235
     iget-object v0, p0, Landroid/media/tv/ITvInputSessionWrapper;->mCaller:Lcom/android/internal/os/HandlerCaller;
 
     iget-object v1, p0, Landroid/media/tv/ITvInputSessionWrapper;->mCaller:Lcom/android/internal/os/HandlerCaller;
@@ -1132,7 +1041,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/HandlerCaller;->executeOrSendMessage(Landroid/os/Message;)V
 
-    .line 236
     return-void
 .end method
 
@@ -1141,7 +1049,6 @@
     .param p1, "unblockedRating"    # Ljava/lang/String;
 
     .prologue
-    .line 272
     iget-object v0, p0, Landroid/media/tv/ITvInputSessionWrapper;->mCaller:Lcom/android/internal/os/HandlerCaller;
 
     iget-object v1, p0, Landroid/media/tv/ITvInputSessionWrapper;->mCaller:Lcom/android/internal/os/HandlerCaller;
@@ -1154,6 +1061,5 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/HandlerCaller;->executeOrSendMessage(Landroid/os/Message;)V
 
-    .line 274
     return-void
 .end method

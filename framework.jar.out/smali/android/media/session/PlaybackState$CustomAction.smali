@@ -51,7 +51,6 @@
     .locals 1
 
     .prologue
-    .line 629
     new-instance v0, Landroid/media/session/PlaybackState$CustomAction$1;
 
     invoke-direct {v0}, Landroid/media/session/PlaybackState$CustomAction$1;-><init>()V
@@ -66,17 +65,14 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 609
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 610
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/media/session/PlaybackState$CustomAction;->mAction:Ljava/lang/String;
 
-    .line 611
     sget-object v0, Landroid/text/TextUtils;->CHAR_SEQUENCE_CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -87,21 +83,18 @@
 
     iput-object v0, p0, Landroid/media/session/PlaybackState$CustomAction;->mName:Ljava/lang/CharSequence;
 
-    .line 612
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/media/session/PlaybackState$CustomAction;->mIcon:I
 
-    .line 613
     invoke-virtual {p1}, Landroid/os/Parcel;->readBundle()Landroid/os/Bundle;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/media/session/PlaybackState$CustomAction;->mExtras:Landroid/os/Bundle;
 
-    .line 614
     return-void
 .end method
 
@@ -111,7 +104,6 @@
     .param p2, "x1"    # Landroid/media/session/PlaybackState$1;
 
     .prologue
-    .line 593
     invoke-direct {p0, p1}, Landroid/media/session/PlaybackState$CustomAction;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -125,22 +117,16 @@
     .param p4, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 602
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 603
     iput-object p1, p0, Landroid/media/session/PlaybackState$CustomAction;->mAction:Ljava/lang/String;
 
-    .line 604
     iput-object p2, p0, Landroid/media/session/PlaybackState$CustomAction;->mName:Ljava/lang/CharSequence;
 
-    .line 605
     iput p3, p0, Landroid/media/session/PlaybackState$CustomAction;->mIcon:I
 
-    .line 606
     iput-object p4, p0, Landroid/media/session/PlaybackState$CustomAction;->mExtras:Landroid/os/Bundle;
 
-    .line 607
     return-void
 .end method
 
@@ -153,7 +139,6 @@
     .param p5, "x4"    # Landroid/media/session/PlaybackState$1;
 
     .prologue
-    .line 593
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/media/session/PlaybackState$CustomAction;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;ILandroid/os/Bundle;)V
 
     return-void
@@ -165,7 +150,6 @@
     .locals 1
 
     .prologue
-    .line 626
     const/4 v0, 0x0
 
     return v0
@@ -175,7 +159,6 @@
     .locals 1
 
     .prologue
-    .line 649
     iget-object v0, p0, Landroid/media/session/PlaybackState$CustomAction;->mAction:Ljava/lang/String;
 
     return-object v0
@@ -185,7 +168,6 @@
     .locals 1
 
     .prologue
-    .line 678
     iget-object v0, p0, Landroid/media/session/PlaybackState$CustomAction;->mExtras:Landroid/os/Bundle;
 
     return-object v0
@@ -195,7 +177,6 @@
     .locals 1
 
     .prologue
-    .line 667
     iget v0, p0, Landroid/media/session/PlaybackState$CustomAction;->mIcon:I
 
     return v0
@@ -205,7 +186,6 @@
     .locals 1
 
     .prologue
-    .line 658
     iget-object v0, p0, Landroid/media/session/PlaybackState$CustomAction;->mName:Ljava/lang/CharSequence;
 
     return-object v0
@@ -215,7 +195,6 @@
     .locals 2
 
     .prologue
-    .line 683
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -269,26 +248,21 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 618
     iget-object v0, p0, Landroid/media/session/PlaybackState$CustomAction;->mAction:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 619
     iget-object v0, p0, Landroid/media/session/PlaybackState$CustomAction;->mName:Ljava/lang/CharSequence;
 
     invoke-static {v0, p1, p2}, Landroid/text/TextUtils;->writeToParcel(Ljava/lang/CharSequence;Landroid/os/Parcel;I)V
 
-    .line 620
     iget v0, p0, Landroid/media/session/PlaybackState$CustomAction;->mIcon:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 621
     iget-object v0, p0, Landroid/media/session/PlaybackState$CustomAction;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
 
-    .line 622
     return-void
 .end method

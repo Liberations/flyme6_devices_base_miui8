@@ -42,16 +42,12 @@
     .param p2, "logSwitchesFileName"    # Ljava/lang/String;
 
     .prologue
-    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 38
     iput-object p1, p0, Lmiui/log/LogSwitchesConfigManager;->logSwitchesFolder:Ljava/lang/String;
 
-    .line 39
     iput-object p2, p0, Lmiui/log/LogSwitchesConfigManager;->logSwitchesFileName:Ljava/lang/String;
 
-    .line 40
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -76,21 +72,18 @@
 
     iput-object v0, p0, Lmiui/log/LogSwitchesConfigManager;->logSwitchesFilePath:Ljava/lang/String;
 
-    .line 41
     new-instance v0, Lmiui/log/LogSwitchesConfigMonitor;
 
     invoke-direct {v0, p1, p2}, Lmiui/log/LogSwitchesConfigMonitor;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     iput-object v0, p0, Lmiui/log/LogSwitchesConfigManager;->logSwitchesMonitor:Lmiui/log/LogSwitchesConfigMonitor;
 
-    .line 42
     new-instance v0, Lmiui/log/LogSwitchesConfigWriter;
 
     invoke-direct {v0, p1, p2}, Lmiui/log/LogSwitchesConfigWriter;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     iput-object v0, p0, Lmiui/log/LogSwitchesConfigManager;->logSwitchesWriter:Lmiui/log/LogSwitchesConfigWriter;
 
-    .line 43
     return-void
 .end method
 
@@ -119,12 +112,10 @@
     .end annotation
 
     .prologue
-    .line 183
     new-instance v5, Ljava/util/HashMap;
 
     invoke-direct {v5}, Ljava/util/HashMap;-><init>()V
 
-    .line 184
     .local v5, "result":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lmiui/log/AppLogSwitches;>;"
     move-object v2, p2
 
@@ -140,7 +131,6 @@
 
     aget-object v1, v2, v3
 
-    .line 185
     .local v1, "appName":Ljava/lang/String;
     new-instance v0, Lmiui/log/AppLogSwitches;
 
@@ -163,18 +153,15 @@
 
     invoke-direct {v0, v7, v6, v1, v8}, Lmiui/log/AppLogSwitches;-><init>(ZLjava/lang/String;Ljava/lang/String;Ljava/util/HashMap;)V
 
-    .line 189
     .local v0, "appConfig":Lmiui/log/AppLogSwitches;
     iget-object v6, v0, Lmiui/log/AppLogSwitches;->uniqueName:Ljava/lang/String;
 
     invoke-virtual {v5, v6, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 184
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 185
     .end local v0    # "appConfig":Lmiui/log/AppLogSwitches;
     .restart local v1    # "appName":Ljava/lang/String;
     :cond_1
@@ -182,7 +169,6 @@
 
     goto :goto_1
 
-    .line 191
     .end local v1    # "appName":Ljava/lang/String;
     :cond_2
     return-object v5
@@ -209,12 +195,10 @@
     .end annotation
 
     .prologue
-    .line 195
     new-instance v5, Ljava/util/HashMap;
 
     invoke-direct {v5}, Ljava/util/HashMap;-><init>()V
 
-    .line 196
     .local v5, "logSwitches":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lmiui/log/LogSwitch;>;"
     move-object v0, p1
 
@@ -230,7 +214,6 @@
 
     aget-object v6, v0, v2
 
-    .line 197
     .local v6, "tag":Ljava/lang/String;
     new-instance v4, Lmiui/log/LogSwitch;
 
@@ -238,18 +221,15 @@
 
     invoke-direct {v4, v6, v7, p3}, Lmiui/log/LogSwitch;-><init>(Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 198
     .local v4, "logSwitch":Lmiui/log/LogSwitch;
     iget-object v7, v4, Lmiui/log/LogSwitch;->uniqueName:Ljava/lang/String;
 
     invoke-virtual {v5, v7, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 196
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 200
     .end local v4    # "logSwitch":Lmiui/log/LogSwitch;
     .end local v6    # "tag":Ljava/lang/String;
     :cond_0
@@ -264,7 +244,6 @@
 
     aget-object v1, v0, v2
 
-    .line 201
     .local v1, "group":Ljava/lang/String;
     new-instance v4, Lmiui/log/LogSwitch;
 
@@ -272,18 +251,15 @@
 
     invoke-direct {v4, v7, v1, p3}, Lmiui/log/LogSwitch;-><init>(Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 202
     .restart local v4    # "logSwitch":Lmiui/log/LogSwitch;
     iget-object v7, v4, Lmiui/log/LogSwitch;->uniqueName:Ljava/lang/String;
 
     invoke-virtual {v5, v7, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 200
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 204
     .end local v1    # "group":Ljava/lang/String;
     .end local v4    # "logSwitch":Lmiui/log/LogSwitch;
     :cond_1
@@ -314,14 +290,12 @@
     .end annotation
 
     .prologue
-    .line 150
     .local p1, "current":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lmiui/log/AppLogSwitches;>;"
     .local p2, "appLevelUpdates":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lmiui/log/AppLogSwitches;>;"
     new-instance v4, Ljava/util/HashMap;
 
     invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
 
-    .line 151
     .local v4, "newConfig":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lmiui/log/AppLogSwitches;>;"
     invoke-virtual {p1}, Ljava/util/HashMap;->values()Ljava/util/Collection;
 
@@ -346,7 +320,6 @@
 
     check-cast v1, Lmiui/log/AppLogSwitches;
 
-    .line 152
     .local v1, "currentAppLogSwitches":Lmiui/log/AppLogSwitches;
     iget-object v5, v1, Lmiui/log/AppLogSwitches;->uniqueName:Ljava/lang/String;
 
@@ -356,7 +329,6 @@
 
     check-cast v0, Lmiui/log/AppLogSwitches;
 
-    .line 153
     .local v0, "appUpdates":Lmiui/log/AppLogSwitches;
     invoke-virtual {v1}, Lmiui/log/AppLogSwitches;->clone()Ljava/lang/Object;
 
@@ -364,22 +336,18 @@
 
     check-cast v3, Lmiui/log/AppLogSwitches;
 
-    .line 154
     .local v3, "newAppLogSwitches":Lmiui/log/AppLogSwitches;
     if-nez v0, :cond_1
 
-    .line 155
     iget-object v5, v3, Lmiui/log/AppLogSwitches;->uniqueName:Ljava/lang/String;
 
     invoke-virtual {v4, v5, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
-    .line 157
     :cond_1
     invoke-direct {p0, v3, v0}, Lmiui/log/LogSwitchesConfigManager;->update(Lmiui/log/AppLogSwitches;Lmiui/log/AppLogSwitches;)V
 
-    .line 158
     iget-object v5, v3, Lmiui/log/AppLogSwitches;->logSwitches:Ljava/util/HashMap;
 
     invoke-virtual {v5}, Ljava/util/HashMap;->size()I
@@ -388,14 +356,12 @@
 
     if-lez v5, :cond_0
 
-    .line 159
     iget-object v5, v3, Lmiui/log/AppLogSwitches;->uniqueName:Ljava/lang/String;
 
     invoke-virtual {v4, v5, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
-    .line 163
     .end local v0    # "appUpdates":Lmiui/log/AppLogSwitches;
     .end local v1    # "currentAppLogSwitches":Lmiui/log/AppLogSwitches;
     .end local v3    # "newAppLogSwitches":Lmiui/log/AppLogSwitches;
@@ -422,7 +388,6 @@
 
     check-cast v0, Lmiui/log/AppLogSwitches;
 
-    .line 164
     .restart local v0    # "appUpdates":Lmiui/log/AppLogSwitches;
     iget-object v5, v0, Lmiui/log/AppLogSwitches;->uniqueName:Ljava/lang/String;
 
@@ -432,7 +397,6 @@
 
     if-nez v5, :cond_3
 
-    .line 165
     iget-object v6, v0, Lmiui/log/AppLogSwitches;->uniqueName:Ljava/lang/String;
 
     invoke-virtual {v0}, Lmiui/log/AppLogSwitches;->clone()Ljava/lang/Object;
@@ -445,7 +409,6 @@
 
     goto :goto_1
 
-    .line 168
     .end local v0    # "appUpdates":Lmiui/log/AppLogSwitches;
     :cond_4
     return-object v4
@@ -473,13 +436,11 @@
     .end annotation
 
     .prologue
-    .line 134
     .local p1, "current":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lmiui/log/AppLogSwitches;>;"
     new-instance v3, Ljava/util/HashMap;
 
     invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
 
-    .line 135
     .local v3, "newConfig":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lmiui/log/AppLogSwitches;>;"
     invoke-virtual {p1}, Ljava/util/HashMap;->values()Ljava/util/Collection;
 
@@ -504,7 +465,6 @@
 
     check-cast v0, Lmiui/log/AppLogSwitches;
 
-    .line 136
     .local v0, "currentAppConfig":Lmiui/log/AppLogSwitches;
     invoke-virtual {v0}, Lmiui/log/AppLogSwitches;->clone()Ljava/lang/Object;
 
@@ -512,11 +472,9 @@
 
     check-cast v2, Lmiui/log/AppLogSwitches;
 
-    .line 137
     .local v2, "newAppConfig":Lmiui/log/AppLogSwitches;
     invoke-direct {p0, v2, p2}, Lmiui/log/LogSwitchesConfigManager;->update(Lmiui/log/AppLogSwitches;Lmiui/log/AppLogSwitches;)V
 
-    .line 138
     iget-object v4, v2, Lmiui/log/AppLogSwitches;->logSwitches:Ljava/util/HashMap;
 
     invoke-virtual {v4}, Ljava/util/HashMap;->size()I
@@ -525,14 +483,12 @@
 
     if-lez v4, :cond_0
 
-    .line 139
     iget-object v4, v2, Lmiui/log/AppLogSwitches;->uniqueName:Ljava/lang/String;
 
     invoke-virtual {v3, v4, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
-    .line 142
     .end local v0    # "currentAppConfig":Lmiui/log/AppLogSwitches;
     .end local v2    # "newAppConfig":Lmiui/log/AppLogSwitches;
     :cond_1
@@ -544,12 +500,10 @@
 
     if-nez v4, :cond_2
 
-    .line 143
     iget-object v4, p2, Lmiui/log/AppLogSwitches;->uniqueName:Ljava/lang/String;
 
     invoke-virtual {v3, v4, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 145
     :cond_2
     return-object v3
 .end method
@@ -561,14 +515,12 @@
     .prologue
     const/4 v10, 0x0
 
-    .line 78
     const-string v9, "allapps"
 
     invoke-virtual {p1, v9, v10}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v8
 
-    .line 79
     .local v8, "targetAll":Z
     const-string v9, "packages"
 
@@ -576,7 +528,6 @@
 
     move-result-object v5
 
-    .line 80
     .local v5, "packagesStr":Ljava/lang/String;
     const-string v9, "programs"
 
@@ -584,25 +535,21 @@
 
     move-result-object v7
 
-    .line 81
     .local v7, "programsStr":Ljava/lang/String;
     if-nez v5, :cond_1
 
     new-array v4, v10, [Ljava/lang/String;
 
-    .line 82
     .local v4, "packages":[Ljava/lang/String;
     :goto_0
     if-nez v7, :cond_2
 
     new-array v6, v10, [Ljava/lang/String;
 
-    .line 83
     .local v6, "programs":[Ljava/lang/String;
     :goto_1
     if-eqz v8, :cond_3
 
-    .line 84
     iget-object v9, p0, Lmiui/log/LogSwitchesConfigManager;->logSwitchesWriter:Lmiui/log/LogSwitchesConfigWriter;
 
     new-instance v10, Ljava/util/HashMap;
@@ -611,12 +558,10 @@
 
     invoke-virtual {v9, v10}, Lmiui/log/LogSwitchesConfigWriter;->write(Ljava/util/HashMap;)V
 
-    .line 101
     :cond_0
     :goto_2
     return-void
 
-    .line 81
     .end local v4    # "packages":[Ljava/lang/String;
     .end local v6    # "programs":[Ljava/lang/String;
     :cond_1
@@ -628,7 +573,6 @@
 
     goto :goto_0
 
-    .line 82
     .restart local v4    # "packages":[Ljava/lang/String;
     :cond_2
     const-string v9, ","
@@ -639,7 +583,6 @@
 
     goto :goto_1
 
-    .line 85
     .restart local v6    # "programs":[Ljava/lang/String;
     :cond_3
     array-length v9, v4
@@ -650,7 +593,6 @@
 
     if-lez v9, :cond_0
 
-    .line 86
     :cond_4
     iget-object v9, p0, Lmiui/log/LogSwitchesConfigManager;->logSwitchesMonitor:Lmiui/log/LogSwitchesConfigMonitor;
 
@@ -658,13 +600,11 @@
 
     move-result-object v1
 
-    .line 87
     .local v1, "currentConfig":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lmiui/log/AppLogSwitches;>;"
     new-instance v3, Ljava/util/HashMap;
 
     invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
 
-    .line 88
     .local v3, "newConfig":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lmiui/log/AppLogSwitches;>;"
     invoke-virtual {v1}, Ljava/util/HashMap;->values()Ljava/util/Collection;
 
@@ -689,7 +629,6 @@
 
     check-cast v0, Lmiui/log/AppLogSwitches;
 
-    .line 89
     .local v0, "appConfig":Lmiui/log/AppLogSwitches;
     iget-object v9, v0, Lmiui/log/AppLogSwitches;->packageName:Ljava/lang/String;
 
@@ -699,7 +638,6 @@
 
     if-nez v9, :cond_6
 
-    .line 90
     iget-object v9, v0, Lmiui/log/AppLogSwitches;->packageName:Ljava/lang/String;
 
     invoke-static {v4, v9}, Lcom/android/internal/util/ArrayUtils;->contains([Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -708,7 +646,6 @@
 
     if-nez v9, :cond_5
 
-    .line 91
     iget-object v10, v0, Lmiui/log/AppLogSwitches;->uniqueName:Ljava/lang/String;
 
     invoke-virtual {v0}, Lmiui/log/AppLogSwitches;->clone()Ljava/lang/Object;
@@ -721,7 +658,6 @@
 
     goto :goto_3
 
-    .line 93
     :cond_6
     iget-object v9, v0, Lmiui/log/AppLogSwitches;->programName:Ljava/lang/String;
 
@@ -731,7 +667,6 @@
 
     if-nez v9, :cond_5
 
-    .line 94
     iget-object v9, v0, Lmiui/log/AppLogSwitches;->programName:Ljava/lang/String;
 
     invoke-static {v6, v9}, Lcom/android/internal/util/ArrayUtils;->contains([Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -740,7 +675,6 @@
 
     if-nez v9, :cond_5
 
-    .line 95
     iget-object v10, v0, Lmiui/log/AppLogSwitches;->uniqueName:Ljava/lang/String;
 
     invoke-virtual {v0}, Lmiui/log/AppLogSwitches;->clone()Ljava/lang/Object;
@@ -753,7 +687,6 @@
 
     goto :goto_3
 
-    .line 99
     .end local v0    # "appConfig":Lmiui/log/AppLogSwitches;
     :cond_7
     iget-object v9, p0, Lmiui/log/LogSwitchesConfigManager;->logSwitchesWriter:Lmiui/log/LogSwitchesConfigWriter;
@@ -769,7 +702,6 @@
     .param p2, "isOn"    # Z
 
     .prologue
-    .line 104
     const-string v2, "allapps"
 
     const/4 v3, 0x0
@@ -780,7 +712,6 @@
 
     move-result v21
 
-    .line 105
     .local v21, "targetAll":Z
     const-string v2, "packages"
 
@@ -790,7 +721,6 @@
 
     move-result-object v18
 
-    .line 106
     .local v18, "packagesStr":Ljava/lang/String;
     const-string v2, "programs"
 
@@ -800,7 +730,6 @@
 
     move-result-object v19
 
-    .line 107
     .local v19, "programsStr":Ljava/lang/String;
     const-string v2, "tags"
 
@@ -810,7 +739,6 @@
 
     move-result-object v20
 
-    .line 108
     .local v20, "tagsStr":Ljava/lang/String;
     const-string v2, "groups"
 
@@ -820,7 +748,6 @@
 
     move-result-object v16
 
-    .line 109
     .local v16, "groupsStr":Ljava/lang/String;
     if-nez v18, :cond_0
 
@@ -828,7 +755,6 @@
 
     new-array v4, v2, [Ljava/lang/String;
 
-    .line 110
     .local v4, "packages":[Ljava/lang/String;
     :goto_0
     if-nez v19, :cond_1
@@ -837,7 +763,6 @@
 
     new-array v9, v2, [Ljava/lang/String;
 
-    .line 111
     .local v9, "programs":[Ljava/lang/String;
     :goto_1
     if-nez v20, :cond_2
@@ -846,7 +771,6 @@
 
     new-array v5, v2, [Ljava/lang/String;
 
-    .line 112
     .local v5, "tags":[Ljava/lang/String;
     :goto_2
     if-nez v16, :cond_3
@@ -855,7 +779,6 @@
 
     new-array v6, v2, [Ljava/lang/String;
 
-    .line 114
     .local v6, "groups":[Ljava/lang/String;
     :goto_3
     array-length v2, v5
@@ -866,11 +789,9 @@
 
     if-nez v2, :cond_4
 
-    .line 130
     :goto_4
     return-void
 
-    .line 109
     .end local v4    # "packages":[Ljava/lang/String;
     .end local v5    # "tags":[Ljava/lang/String;
     .end local v6    # "groups":[Ljava/lang/String;
@@ -886,7 +807,6 @@
 
     goto :goto_0
 
-    .line 110
     .restart local v4    # "packages":[Ljava/lang/String;
     :cond_1
     const-string v2, ","
@@ -899,7 +819,6 @@
 
     goto :goto_1
 
-    .line 111
     .restart local v9    # "programs":[Ljava/lang/String;
     :cond_2
     const-string v2, ","
@@ -912,7 +831,6 @@
 
     goto :goto_2
 
-    .line 112
     .restart local v5    # "tags":[Ljava/lang/String;
     :cond_3
     const-string v2, ","
@@ -925,7 +843,6 @@
 
     goto :goto_3
 
-    .line 118
     .restart local v6    # "groups":[Ljava/lang/String;
     :cond_4
     move-object/from16 v0, p0
@@ -936,11 +853,9 @@
 
     move-result-object v14
 
-    .line 120
     .local v14, "currentAppLogSwitches":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lmiui/log/AppLogSwitches;>;"
     if-eqz v21, :cond_5
 
-    .line 121
     new-instance v15, Lmiui/log/AppLogSwitches;
 
     const/4 v2, 0x1
@@ -959,7 +874,6 @@
 
     invoke-direct {v15, v2, v3, v7, v8}, Lmiui/log/AppLogSwitches;-><init>(ZLjava/lang/String;Ljava/lang/String;Ljava/util/HashMap;)V
 
-    .line 122
     .local v15, "globalUpdates":Lmiui/log/AppLogSwitches;
     move-object/from16 v0, p0
 
@@ -967,7 +881,6 @@
 
     move-result-object v17
 
-    .line 129
     .end local v15    # "globalUpdates":Lmiui/log/AppLogSwitches;
     .local v17, "newAppLogSwitches":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lmiui/log/AppLogSwitches;>;"
     :goto_5
@@ -981,14 +894,12 @@
 
     goto :goto_4
 
-    .line 124
     .end local v17    # "newAppLogSwitches":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lmiui/log/AppLogSwitches;>;"
     :cond_5
     new-instance v13, Ljava/util/HashMap;
 
     invoke-direct {v13}, Ljava/util/HashMap;-><init>()V
 
-    .line 125
     .local v13, "appLevelUpdates":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lmiui/log/AppLogSwitches;>;"
     const/4 v3, 0x1
 
@@ -1002,7 +913,6 @@
 
     invoke-virtual {v13, v2}, Ljava/util/HashMap;->putAll(Ljava/util/Map;)V
 
-    .line 126
     const/4 v8, 0x0
 
     move-object/from16 v7, p0
@@ -1019,7 +929,6 @@
 
     invoke-virtual {v13, v2}, Ljava/util/HashMap;->putAll(Ljava/util/Map;)V
 
-    .line 127
     move-object/from16 v0, p0
 
     invoke-direct {v0, v14, v13}, Lmiui/log/LogSwitchesConfigManager;->merge(Ljava/util/HashMap;Ljava/util/HashMap;)Ljava/util/HashMap;
@@ -1036,7 +945,6 @@
     .param p2, "updates"    # Lmiui/log/AppLogSwitches;
 
     .prologue
-    .line 172
     iget-object v3, p2, Lmiui/log/AppLogSwitches;->logSwitches:Ljava/util/HashMap;
 
     invoke-virtual {v3}, Ljava/util/HashMap;->values()Ljava/util/Collection;
@@ -1062,7 +970,6 @@
 
     check-cast v2, Lmiui/log/LogSwitch;
 
-    .line 173
     .local v2, "updateSwitch":Lmiui/log/LogSwitch;
     iget-object v3, p1, Lmiui/log/AppLogSwitches;->logSwitches:Ljava/util/HashMap;
 
@@ -1074,11 +981,9 @@
 
     check-cast v0, Lmiui/log/LogSwitch;
 
-    .line 174
     .local v0, "currentSwitch":Lmiui/log/LogSwitch;
     if-nez v0, :cond_1
 
-    .line 175
     iget-object v3, p1, Lmiui/log/AppLogSwitches;->logSwitches:Ljava/util/HashMap;
 
     iget-object v4, v2, Lmiui/log/LogSwitch;->uniqueName:Ljava/lang/String;
@@ -1087,7 +992,6 @@
 
     goto :goto_0
 
-    .line 176
     :cond_1
     iget-boolean v3, v2, Lmiui/log/LogSwitch;->isOn:Z
 
@@ -1095,7 +999,6 @@
 
     if-eq v3, v4, :cond_0
 
-    .line 177
     iget-object v3, p1, Lmiui/log/AppLogSwitches;->logSwitches:Ljava/util/HashMap;
 
     iget-object v4, v2, Lmiui/log/LogSwitch;->uniqueName:Ljava/lang/String;
@@ -1104,7 +1007,6 @@
 
     goto :goto_0
 
-    .line 180
     .end local v0    # "currentSwitch":Lmiui/log/LogSwitch;
     .end local v2    # "updateSwitch":Lmiui/log/LogSwitch;
     :cond_2
@@ -1119,7 +1021,6 @@
     .param p2, "synchronizedReadInitialLogSwitches"    # Z
 
     .prologue
-    .line 47
     monitor-enter p0
 
     :try_start_0
@@ -1133,13 +1034,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 50
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 49
     :cond_0
     :try_start_1
     iget-object v0, p0, Lmiui/log/LogSwitchesConfigManager;->logSwitchesMonitor:Lmiui/log/LogSwitchesConfigMonitor;
@@ -1150,7 +1049,6 @@
 
     goto :goto_0
 
-    .line 47
     :catchall_0
     move-exception v0
 
@@ -1164,15 +1062,12 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 65
     if-nez p1, :cond_1
 
-    .line 75
     :cond_0
     :goto_0
     return-void
 
-    .line 68
     :cond_1
     const-string v0, "miui.intent.action.REVERT_MIUILOG_SWITCHES"
 
@@ -1186,12 +1081,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 69
     invoke-direct {p0, p1}, Lmiui/log/LogSwitchesConfigManager;->revertLogSwitches(Landroid/content/Intent;)V
 
     goto :goto_0
 
-    .line 70
     :cond_2
     const-string v0, "miui.intent.action.SWITCH_ON_MIUILOGS"
 
@@ -1205,14 +1098,12 @@
 
     if-eqz v0, :cond_3
 
-    .line 71
     const/4 v0, 0x1
 
     invoke-direct {p0, p1, v0}, Lmiui/log/LogSwitchesConfigManager;->switchStatusOfLogSwitches(Landroid/content/Intent;Z)V
 
     goto :goto_0
 
-    .line 72
     :cond_3
     const-string v0, "miui.intent.action.SWITCH_OFF_MIUILOGS"
 
@@ -1226,7 +1117,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 73
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lmiui/log/LogSwitchesConfigManager;->switchStatusOfLogSwitches(Landroid/content/Intent;Z)V
@@ -1239,7 +1129,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 53
     monitor-enter p0
 
     :try_start_0
@@ -1249,12 +1138,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 54
     monitor-exit p0
 
     return-void
 
-    .line 53
     :catchall_0
     move-exception v0
 
@@ -1267,7 +1154,6 @@
     .locals 1
 
     .prologue
-    .line 61
     monitor-enter p0
 
     :try_start_0
@@ -1277,12 +1163,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 62
     monitor-exit p0
 
     return-void
 
-    .line 61
     :catchall_0
     move-exception v0
 
@@ -1296,7 +1180,6 @@
     .param p1, "programName"    # Ljava/lang/String;
 
     .prologue
-    .line 57
     monitor-enter p0
 
     :try_start_0
@@ -1306,12 +1189,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 58
     monitor-exit p0
 
     return-void
 
-    .line 57
     :catchall_0
     move-exception v0
 

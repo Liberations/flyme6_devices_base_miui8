@@ -43,7 +43,6 @@
     .locals 1
 
     .prologue
-    .line 626
     new-instance v0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$AAAServerTrustRoot$1;
 
     invoke-direct {v0}, Landroid/net/wifi/passpoint/WifiPasspointDmTree$AAAServerTrustRoot$1;-><init>()V
@@ -57,10 +56,8 @@
     .locals 0
 
     .prologue
-    .line 599
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 600
     return-void
 .end method
 
@@ -69,13 +66,10 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 602
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 603
     invoke-virtual {p0, p1}, Landroid/net/wifi/passpoint/WifiPasspointDmTree$AAAServerTrustRoot;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 604
     return-void
 .end method
 
@@ -86,19 +80,14 @@
     .param p3, "fp"    # Ljava/lang/String;
 
     .prologue
-    .line 593
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 594
     iput-object p1, p0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$AAAServerTrustRoot;->nodeName:Ljava/lang/String;
 
-    .line 595
     iput-object p2, p0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$AAAServerTrustRoot;->CertURL:Ljava/lang/String;
 
-    .line 596
     iput-object p3, p0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$AAAServerTrustRoot;->CertSHA256Fingerprint:Ljava/lang/String;
 
-    .line 597
     return-void
 .end method
 
@@ -108,7 +97,6 @@
     .locals 1
 
     .prologue
-    .line 607
     const/4 v0, 0x0
 
     return v0
@@ -119,14 +107,11 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 617
     if-nez p1, :cond_0
 
-    .line 624
     :goto_0
     return-void
 
-    .line 620
     :cond_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
@@ -134,14 +119,12 @@
 
     iput-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$AAAServerTrustRoot;->nodeName:Ljava/lang/String;
 
-    .line 621
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$AAAServerTrustRoot;->CertURL:Ljava/lang/String;
 
-    .line 622
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
@@ -157,21 +140,17 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 611
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$AAAServerTrustRoot;->nodeName:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 612
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$AAAServerTrustRoot;->CertURL:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 613
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$AAAServerTrustRoot;->CertSHA256Fingerprint:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 614
     return-void
 .end method

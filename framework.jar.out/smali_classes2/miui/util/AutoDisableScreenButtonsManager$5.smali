@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 221
     iput-object p1, p0, Lmiui/util/AutoDisableScreenButtonsManager$5;->this$0:Lmiui/util/AutoDisableScreenButtonsManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "whichButton"    # I
 
     .prologue
-    .line 224
     check-cast p1, Lmiui/app/AlertDialog;
 
     .end local p1    # "dialog":Landroid/content/DialogInterface;
@@ -52,7 +50,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 225
     iget-object v0, p0, Lmiui/util/AutoDisableScreenButtonsManager$5;->this$0:Lmiui/util/AutoDisableScreenButtonsManager;
 
     # getter for: Lmiui/util/AutoDisableScreenButtonsManager;->mContext:Landroid/content/Context;
@@ -70,7 +67,6 @@
 
     invoke-static {v0, v1, v2}, Lmiui/util/AutoDisableScreenButtonsHelper;->setValue(Landroid/content/Context;Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 227
     :cond_0
     return-void
 .end method

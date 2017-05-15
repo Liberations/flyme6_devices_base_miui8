@@ -42,39 +42,30 @@
     .param p5, "deviceToken"    # Landroid/os/IBinder;
 
     .prologue
-    .line 95
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     invoke-static {}, Ldalvik/system/CloseGuard;->get()Ldalvik/system/CloseGuard;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/media/midi/MidiDevice;->mGuard:Ldalvik/system/CloseGuard;
 
-    .line 96
     iput-object p1, p0, Landroid/media/midi/MidiDevice;->mDeviceInfo:Landroid/media/midi/MidiDeviceInfo;
 
-    .line 97
     iput-object p2, p0, Landroid/media/midi/MidiDevice;->mDeviceServer:Landroid/media/midi/IMidiDeviceServer;
 
-    .line 98
     iput-object p3, p0, Landroid/media/midi/MidiDevice;->mMidiManager:Landroid/media/midi/IMidiManager;
 
-    .line 99
     iput-object p4, p0, Landroid/media/midi/MidiDevice;->mClientToken:Landroid/os/IBinder;
 
-    .line 100
     iput-object p5, p0, Landroid/media/midi/MidiDevice;->mDeviceToken:Landroid/os/IBinder;
 
-    .line 101
     iget-object v0, p0, Landroid/media/midi/MidiDevice;->mGuard:Ldalvik/system/CloseGuard;
 
     const-string v1, "close"
 
     invoke-virtual {v0, v1}, Ldalvik/system/CloseGuard;->open(Ljava/lang/String;)V
 
-    .line 102
     return-void
 .end method
 
@@ -83,7 +74,6 @@
     .param p0, "x0"    # Landroid/media/midi/MidiDevice;
 
     .prologue
-    .line 36
     iget-object v0, p0, Landroid/media/midi/MidiDevice;->mDeviceServer:Landroid/media/midi/IMidiDeviceServer;
 
     return-object v0
@@ -100,12 +90,10 @@
     .end annotation
 
     .prologue
-    .line 196
     iget-object v2, p0, Landroid/media/midi/MidiDevice;->mGuard:Ldalvik/system/CloseGuard;
 
     monitor-enter v2
 
-    .line 197
     :try_start_0
     iget-object v1, p0, Landroid/media/midi/MidiDevice;->mGuard:Ldalvik/system/CloseGuard;
 
@@ -113,7 +101,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 199
     :try_start_1
     iget-object v1, p0, Landroid/media/midi/MidiDevice;->mMidiManager:Landroid/media/midi/IMidiManager;
 
@@ -126,19 +113,15 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 203
     :goto_0
     :try_start_2
     monitor-exit v2
 
-    .line 204
     return-void
 
-    .line 200
     :catch_0
     move-exception v0
 
-    .line 201
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "MidiDevice"
 
@@ -148,7 +131,6 @@
 
     goto :goto_0
 
-    .line 203
     .end local v0    # "e":Landroid/os/RemoteException;
     :catchall_0
     move-exception v1
@@ -168,7 +150,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 174
     if-ltz p2, :cond_0
 
     iget-object v4, p0, Landroid/media/midi/MidiDevice;->mDeviceInfo:Landroid/media/midi/MidiDeviceInfo;
@@ -179,47 +160,39 @@
 
     if-lt p2, v4, :cond_1
 
-    .line 175
     :cond_0
     new-instance v3, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v4, "outputPortNumber out of range"
+    const-string v4, "outputPortNumber out of range"
 
     invoke-direct {v3, v4}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v3
 
-    .line 178
     :cond_1
     invoke-virtual {p1}, Landroid/media/midi/MidiInputPort;->claimFileDescriptor()Landroid/os/ParcelFileDescriptor;
 
     move-result-object v1
 
-    .line 179
     .local v1, "pfd":Landroid/os/ParcelFileDescriptor;
     if-nez v1, :cond_2
 
-    .line 190
     :goto_0
     return-object v3
 
-    .line 183
     :cond_2
     :try_start_0
     new-instance v2, Landroid/os/Binder;
 
     invoke-direct {v2}, Landroid/os/Binder;-><init>()V
 
-    .line 184
     .local v2, "token":Landroid/os/IBinder;
     iget-object v4, p0, Landroid/media/midi/MidiDevice;->mDeviceServer:Landroid/media/midi/IMidiDeviceServer;
 
     invoke-interface {v4, v2, v1, p2}, Landroid/media/midi/IMidiDeviceServer;->connectPorts(Landroid/os/IBinder;Landroid/os/ParcelFileDescriptor;I)V
 
-    .line 186
     invoke-static {v1}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 187
     new-instance v4, Landroid/media/midi/MidiDevice$MidiConnection;
 
     invoke-direct {v4, p0, v2, p1}, Landroid/media/midi/MidiDevice$MidiConnection;-><init>(Landroid/media/midi/MidiDevice;Landroid/os/IBinder;Landroid/media/midi/MidiInputPort;)V
@@ -230,12 +203,10 @@
 
     goto :goto_0
 
-    .line 188
     .end local v2    # "token":Landroid/os/IBinder;
     :catch_0
     move-exception v0
 
-    .line 189
     .local v0, "e":Landroid/os/RemoteException;
     const-string v4, "MidiDevice"
 
@@ -255,24 +226,19 @@
     .end annotation
 
     .prologue
-    .line 209
     :try_start_0
     iget-object v0, p0, Landroid/media/midi/MidiDevice;->mGuard:Ldalvik/system/CloseGuard;
 
     invoke-virtual {v0}, Ldalvik/system/CloseGuard;->warnIfOpen()V
 
-    .line 210
     invoke-virtual {p0}, Landroid/media/midi/MidiDevice;->close()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 212
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    .line 214
     return-void
 
-    .line 212
     :catchall_0
     move-exception v0
 
@@ -285,7 +251,6 @@
     .locals 1
 
     .prologue
-    .line 110
     iget-object v0, p0, Landroid/media/midi/MidiDevice;->mDeviceInfo:Landroid/media/midi/MidiDeviceInfo;
 
     return-object v0
@@ -298,13 +263,11 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 126
     :try_start_0
     new-instance v2, Landroid/os/Binder;
 
     invoke-direct {v2}, Landroid/os/Binder;-><init>()V
 
-    .line 127
     .local v2, "token":Landroid/os/IBinder;
     iget-object v4, p0, Landroid/media/midi/MidiDevice;->mDeviceServer:Landroid/media/midi/IMidiDeviceServer;
 
@@ -312,17 +275,14 @@
 
     move-result-object v1
 
-    .line 128
     .local v1, "pfd":Landroid/os/ParcelFileDescriptor;
     if-nez v1, :cond_0
 
-    .line 134
     .end local v1    # "pfd":Landroid/os/ParcelFileDescriptor;
     .end local v2    # "token":Landroid/os/IBinder;
     :goto_0
     return-object v3
 
-    .line 131
     .restart local v1    # "pfd":Landroid/os/ParcelFileDescriptor;
     .restart local v2    # "token":Landroid/os/IBinder;
     :cond_0
@@ -338,13 +298,11 @@
 
     goto :goto_0
 
-    .line 132
     .end local v1    # "pfd":Landroid/os/ParcelFileDescriptor;
     .end local v2    # "token":Landroid/os/IBinder;
     :catch_0
     move-exception v0
 
-    .line 133
     .local v0, "e":Landroid/os/RemoteException;
     const-string v4, "MidiDevice"
 
@@ -362,13 +320,11 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 149
     :try_start_0
     new-instance v2, Landroid/os/Binder;
 
     invoke-direct {v2}, Landroid/os/Binder;-><init>()V
 
-    .line 150
     .local v2, "token":Landroid/os/IBinder;
     iget-object v4, p0, Landroid/media/midi/MidiDevice;->mDeviceServer:Landroid/media/midi/IMidiDeviceServer;
 
@@ -376,17 +332,14 @@
 
     move-result-object v1
 
-    .line 151
     .local v1, "pfd":Landroid/os/ParcelFileDescriptor;
     if-nez v1, :cond_0
 
-    .line 157
     .end local v1    # "pfd":Landroid/os/ParcelFileDescriptor;
     .end local v2    # "token":Landroid/os/IBinder;
     :goto_0
     return-object v3
 
-    .line 154
     .restart local v1    # "pfd":Landroid/os/ParcelFileDescriptor;
     .restart local v2    # "token":Landroid/os/IBinder;
     :cond_0
@@ -402,13 +355,11 @@
 
     goto :goto_0
 
-    .line 155
     .end local v1    # "pfd":Landroid/os/ParcelFileDescriptor;
     .end local v2    # "token":Landroid/os/IBinder;
     :catch_0
     move-exception v0
 
-    .line 156
     .local v0, "e":Landroid/os/RemoteException;
     const-string v4, "MidiDevice"
 
@@ -423,7 +374,6 @@
     .locals 2
 
     .prologue
-    .line 218
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

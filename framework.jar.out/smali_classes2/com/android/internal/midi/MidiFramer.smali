@@ -25,25 +25,20 @@
     .param p1, "receiver"    # Landroid/media/midi/MidiReceiver;
 
     .prologue
-    .line 44
     invoke-direct {p0}, Landroid/media/midi/MidiReceiver;-><init>()V
 
-    .line 36
     const-string v0, "MidiFramer"
 
     iput-object v0, p0, Lcom/android/internal/midi/MidiFramer;->TAG:Ljava/lang/String;
 
-    .line 38
     const/4 v0, 0x3
 
     new-array v0, v0, [B
 
     iput-object v0, p0, Lcom/android/internal/midi/MidiFramer;->mBuffer:[B
 
-    .line 45
     iput-object p1, p0, Lcom/android/internal/midi/MidiFramer;->mReceiver:Landroid/media/midi/MidiReceiver;
 
-    .line 46
     return-void
 .end method
 
@@ -54,7 +49,6 @@
     .param p2, "count"    # I
 
     .prologue
-    .line 49
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -79,7 +73,6 @@
 
     move-result-object v1
 
-    .line 50
     .local v1, "text":Ljava/lang/String;
     const/4 v0, 0x0
 
@@ -87,7 +80,6 @@
     :goto_0
     if-ge v0, p2, :cond_0
 
-    .line 51
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -126,12 +118,10 @@
 
     move-result-object v1
 
-    .line 50
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 53
     :cond_0
     return-object v1
 .end method
@@ -151,7 +141,6 @@
     .end annotation
 
     .prologue
-    .line 62
     move-object/from16 v0, p0
 
     iget-boolean v2, v0, Lcom/android/internal/midi/MidiFramer;->mInSysEx:Z
@@ -160,7 +149,6 @@
 
     move/from16 v4, p2
 
-    .line 64
     .local v4, "sysExStartOffset":I
     :goto_0
     const/4 v14, 0x0
@@ -171,37 +159,30 @@
 
     if-ge v14, v0, :cond_9
 
-    .line 65
     aget-byte v12, p1, p2
 
-    .line 66
     .local v12, "currentByte":B
     and-int/lit16 v13, v12, 0xff
 
-    .line 67
     .local v13, "currentInt":I
     const/16 v2, 0x80
 
     if-lt v13, v2, :cond_7
 
-    .line 68
     const/16 v2, 0xf0
 
     if-ge v13, v2, :cond_2
 
-    .line 69
     move-object/from16 v0, p0
 
     iput-byte v12, v0, Lcom/android/internal/midi/MidiFramer;->mRunningStatus:B
 
-    .line 70
     const/4 v2, 0x1
 
     move-object/from16 v0, p0
 
     iput v2, v0, Lcom/android/internal/midi/MidiFramer;->mCount:I
 
-    .line 71
     invoke-static {v12}, Lcom/android/internal/midi/MidiConstants;->getBytesPerMessage(B)I
 
     move-result v2
@@ -212,17 +193,14 @@
 
     iput v2, v0, Lcom/android/internal/midi/MidiFramer;->mNeeded:I
 
-    .line 113
     :cond_0
     :goto_2
     add-int/lit8 p2, p2, 0x1
 
-    .line 64
     add-int/lit8 v14, v14, 0x1
 
     goto :goto_1
 
-    .line 62
     .end local v4    # "sysExStartOffset":I
     .end local v12    # "currentByte":B
     .end local v13    # "currentInt":I
@@ -232,7 +210,6 @@
 
     goto :goto_0
 
-    .line 72
     .restart local v4    # "sysExStartOffset":I
     .restart local v12    # "currentByte":B
     .restart local v13    # "currentInt":I
@@ -242,37 +219,31 @@
 
     if-ge v13, v2, :cond_5
 
-    .line 73
     const/16 v2, 0xf0
 
     if-ne v13, v2, :cond_3
 
-    .line 75
     const/4 v2, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v2, v0, Lcom/android/internal/midi/MidiFramer;->mInSysEx:Z
 
-    .line 76
     move/from16 v4, p2
 
     goto :goto_2
 
-    .line 77
     :cond_3
     const/16 v2, 0xf7
 
     if-ne v13, v2, :cond_4
 
-    .line 79
     move-object/from16 v0, p0
 
     iget-boolean v2, v0, Lcom/android/internal/midi/MidiFramer;->mInSysEx:Z
 
     if-eqz v2, :cond_0
 
-    .line 80
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/midi/MidiFramer;->mReceiver:Landroid/media/midi/MidiReceiver;
@@ -287,19 +258,16 @@
 
     invoke-virtual/range {v2 .. v7}, Landroid/media/midi/MidiReceiver;->send([BIIJ)V
 
-    .line 82
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v2, v0, Lcom/android/internal/midi/MidiFramer;->mInSysEx:Z
 
-    .line 83
     const/4 v4, -0x1
 
     goto :goto_2
 
-    .line 86
     :cond_4
     move-object/from16 v0, p0
 
@@ -309,21 +277,18 @@
 
     aput-byte v12, v2, v3
 
-    .line 87
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput-byte v2, v0, Lcom/android/internal/midi/MidiFramer;->mRunningStatus:B
 
-    .line 88
     const/4 v2, 0x1
 
     move-object/from16 v0, p0
 
     iput v2, v0, Lcom/android/internal/midi/MidiFramer;->mCount:I
 
-    .line 89
     invoke-static {v12}, Lcom/android/internal/midi/MidiConstants;->getBytesPerMessage(B)I
 
     move-result v2
@@ -336,7 +301,6 @@
 
     goto :goto_2
 
-    .line 93
     :cond_5
     move-object/from16 v0, p0
 
@@ -344,7 +308,6 @@
 
     if-eqz v2, :cond_6
 
-    .line 94
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/midi/MidiFramer;->mReceiver:Landroid/media/midi/MidiReceiver;
@@ -357,10 +320,8 @@
 
     invoke-virtual/range {v2 .. v7}, Landroid/media/midi/MidiReceiver;->send([BIIJ)V
 
-    .line 96
     add-int/lit8 v4, p2, 0x1
 
-    .line 98
     :cond_6
     move-object/from16 v0, p0
 
@@ -378,7 +339,6 @@
 
     goto :goto_2
 
-    .line 101
     :cond_7
     move-object/from16 v0, p0
 
@@ -386,7 +346,6 @@
 
     if-nez v2, :cond_0
 
-    .line 102
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/midi/MidiFramer;->mBuffer:[B
@@ -403,7 +362,6 @@
 
     aput-byte v12, v2, v3
 
-    .line 103
     move-object/from16 v0, p0
 
     iget v2, v0, Lcom/android/internal/midi/MidiFramer;->mNeeded:I
@@ -416,14 +374,12 @@
 
     if-nez v2, :cond_0
 
-    .line 104
     move-object/from16 v0, p0
 
     iget-byte v2, v0, Lcom/android/internal/midi/MidiFramer;->mRunningStatus:B
 
     if-eqz v2, :cond_8
 
-    .line 105
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/midi/MidiFramer;->mBuffer:[B
@@ -436,7 +392,6 @@
 
     aput-byte v5, v2, v3
 
-    .line 107
     :cond_8
     move-object/from16 v0, p0
 
@@ -456,7 +411,6 @@
 
     invoke-virtual/range {v6 .. v11}, Landroid/media/midi/MidiReceiver;->send([BIIJ)V
 
-    .line 108
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/midi/MidiFramer;->mBuffer:[B
@@ -475,7 +429,6 @@
 
     iput v2, v0, Lcom/android/internal/midi/MidiFramer;->mNeeded:I
 
-    .line 109
     const/4 v2, 0x1
 
     move-object/from16 v0, p0
@@ -484,7 +437,6 @@
 
     goto/16 :goto_2
 
-    .line 117
     .end local v12    # "currentByte":B
     .end local v13    # "currentInt":I
     :cond_9
@@ -494,7 +446,6 @@
 
     if-ge v4, v0, :cond_a
 
-    .line 118
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/midi/MidiFramer;->mReceiver:Landroid/media/midi/MidiReceiver;
@@ -507,7 +458,6 @@
 
     invoke-virtual/range {v2 .. v7}, Landroid/media/midi/MidiReceiver;->send([BIIJ)V
 
-    .line 121
     :cond_a
     return-void
 .end method

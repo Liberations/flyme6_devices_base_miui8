@@ -24,13 +24,10 @@
     .param p1, "resources"    # Landroid/content/res/Resources;
 
     .prologue
-    .line 32
     invoke-direct {p0}, Landroid/content/res/ThemedResourceCache;-><init>()V
 
-    .line 33
     iput-object p1, p0, Landroid/content/res/DrawableCache;->mResources:Landroid/content/res/Resources;
 
-    .line 34
     return-void
 .end method
 
@@ -42,25 +39,21 @@
     .param p3, "theme"    # Landroid/content/res/Resources$Theme;
 
     .prologue
-    .line 45
     invoke-virtual {p0, p1, p2, p3}, Landroid/content/res/DrawableCache;->get(JLandroid/content/res/Resources$Theme;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/graphics/drawable/Drawable$ConstantState;
 
-    .line 46
     .local v0, "entry":Landroid/graphics/drawable/Drawable$ConstantState;
     if-eqz v0, :cond_0
 
-    .line 47
     iget-object v1, p0, Landroid/content/res/DrawableCache;->mResources:Landroid/content/res/Resources;
 
     invoke-virtual {v0, v1, p3}, Landroid/graphics/drawable/Drawable$ConstantState;->newDrawable(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
-    .line 50
     :goto_0
     return-object v1
 
@@ -76,7 +69,6 @@
     .param p2, "configChanges"    # I
 
     .prologue
-    .line 55
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable$ConstantState;->getChangingConfigurations()I
 
     move-result v0
@@ -94,7 +86,6 @@
     .param p2, "x1"    # I
 
     .prologue
-    .line 24
     check-cast p1, Landroid/graphics/drawable/Drawable$ConstantState;
 
     .end local p1    # "x0":Ljava/lang/Object;

@@ -23,7 +23,6 @@
     .locals 2
 
     .prologue
-    .line 166
     new-instance v0, Lorg/apache/http/conn/ssl/SSLSocketFactory;
 
     const/4 v1, 0x0
@@ -39,7 +38,6 @@
     .locals 0
 
     .prologue
-    .line 162
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -49,7 +47,6 @@
     .locals 1
 
     .prologue
-    .line 162
     sget-object v0, Lorg/apache/http/conn/ssl/SSLSocketFactory$NoPreloadHolder;->DEFAULT_FACTORY:Lorg/apache/http/conn/ssl/SSLSocketFactory;
 
     return-object v0

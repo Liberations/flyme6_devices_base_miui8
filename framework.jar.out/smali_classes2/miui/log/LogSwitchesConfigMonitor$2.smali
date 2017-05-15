@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 77
     iput-object p1, p0, Lmiui/log/LogSwitchesConfigMonitor$2;->this$0:Lmiui/log/LogSwitchesConfigMonitor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,12 +39,10 @@
     .locals 4
 
     .prologue
-    .line 80
     iget-object v1, p0, Lmiui/log/LogSwitchesConfigMonitor$2;->this$0:Lmiui/log/LogSwitchesConfigMonitor;
 
     monitor-enter v1
 
-    .line 81
     :try_start_0
     iget-object v0, p0, Lmiui/log/LogSwitchesConfigMonitor$2;->this$0:Lmiui/log/LogSwitchesConfigMonitor;
 
@@ -70,13 +67,10 @@
     # setter for: Lmiui/log/LogSwitchesConfigMonitor;->currentLogSwitchesConfig:Ljava/util/HashMap;
     invoke-static {v0, v2}, Lmiui/log/LogSwitchesConfigMonitor;->access$102(Lmiui/log/LogSwitchesConfigMonitor;Ljava/util/HashMap;)Ljava/util/HashMap;
 
-    .line 82
     monitor-exit v1
 
-    .line 83
     return-void
 
-    .line 82
     :catchall_0
     move-exception v0
 

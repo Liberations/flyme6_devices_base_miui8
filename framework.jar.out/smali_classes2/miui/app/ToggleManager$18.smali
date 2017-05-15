@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1135
     iput-object p1, p0, Lmiui/app/ToggleManager$18;->this$0:Lmiui/app/ToggleManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "which"    # I
 
     .prologue
-    .line 1138
     iget-object v0, p0, Lmiui/app/ToggleManager$18;->this$0:Lmiui/app/ToggleManager;
 
     # getter for: Lmiui/app/ToggleManager;->mHandler:Landroid/os/Handler;
@@ -58,7 +56,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 1139
     iget-object v0, p0, Lmiui/app/ToggleManager$18;->this$0:Lmiui/app/ToggleManager;
 
     # getter for: Lmiui/app/ToggleManager;->mHandler:Landroid/os/Handler;
@@ -77,6 +74,5 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 1140
     return-void
 .end method

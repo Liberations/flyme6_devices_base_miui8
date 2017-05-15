@@ -23,10 +23,8 @@
     .locals 1
 
     .prologue
-    .line 599
     iput-object p1, p0, Lmiui/maml/data/ContentProviderBinder$ChangeObserver;->this$0:Lmiui/maml/data/ContentProviderBinder;
 
-    .line 600
     # getter for: Lmiui/maml/data/ContentProviderBinder;->mHandler:Landroid/os/Handler;
     invoke-static {p1}, Lmiui/maml/data/ContentProviderBinder;->access$200(Lmiui/maml/data/ContentProviderBinder;)Landroid/os/Handler;
 
@@ -34,7 +32,6 @@
 
     invoke-direct {p0, v0}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 601
     return-void
 .end method
 
@@ -44,7 +41,6 @@
     .locals 1
 
     .prologue
-    .line 605
     const/4 v0, 0x1
 
     return v0
@@ -55,11 +51,9 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 610
     iget-object v0, p0, Lmiui/maml/data/ContentProviderBinder$ChangeObserver;->this$0:Lmiui/maml/data/ContentProviderBinder;
 
     invoke-virtual {v0}, Lmiui/maml/data/ContentProviderBinder;->onContentChanged()V
 
-    .line 611
     return-void
 .end method

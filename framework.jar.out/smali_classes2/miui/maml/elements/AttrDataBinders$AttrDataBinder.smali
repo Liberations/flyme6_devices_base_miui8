@@ -45,10 +45,8 @@
     .param p2, "v"    # Lmiui/maml/data/ContextVariables;
 
     .prologue
-    .line 111
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 112
     const-string v0, "target"
 
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -57,7 +55,6 @@
 
     iput-object v0, p0, Lmiui/maml/elements/AttrDataBinders$AttrDataBinder;->mTarget:Ljava/lang/String;
 
-    .line 113
     const-string v0, "attr"
 
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -66,7 +63,6 @@
 
     iput-object v0, p0, Lmiui/maml/elements/AttrDataBinders$AttrDataBinder;->mAttr:Ljava/lang/String;
 
-    .line 114
     const-string v0, "data"
 
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -75,10 +71,8 @@
 
     iput-object v0, p0, Lmiui/maml/elements/AttrDataBinders$AttrDataBinder;->mData:Ljava/lang/String;
 
-    .line 115
     iput-object p2, p0, Lmiui/maml/elements/AttrDataBinders$AttrDataBinder;->mVars:Lmiui/maml/data/ContextVariables;
 
-    .line 116
     iget-object v0, p0, Lmiui/maml/elements/AttrDataBinders$AttrDataBinder;->mAttr:Ljava/lang/String;
 
     invoke-direct {p0, v0}, Lmiui/maml/elements/AttrDataBinders$AttrDataBinder;->createBinder(Ljava/lang/String;)Lmiui/maml/elements/AttrDataBinders$AttrDataBinder$Binder;
@@ -87,7 +81,6 @@
 
     iput-object v0, p0, Lmiui/maml/elements/AttrDataBinders$AttrDataBinder;->mBinder:Lmiui/maml/elements/AttrDataBinders$AttrDataBinder$Binder;
 
-    .line 117
     iget-object v0, p0, Lmiui/maml/elements/AttrDataBinders$AttrDataBinder;->mTarget:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -116,7 +109,6 @@
 
     if-nez v0, :cond_1
 
-    .line 119
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -126,7 +118,6 @@
 
     throw v0
 
-    .line 120
     :cond_1
     return-void
 .end method
@@ -138,19 +129,16 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 123
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 139
     :cond_0
     :goto_0
     return-object v0
 
-    .line 126
     :cond_1
     const-string v1, "text"
 
@@ -160,7 +148,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 127
     new-instance v1, Lmiui/maml/elements/AttrDataBinders$AttrDataBinder$TextBinder;
 
     invoke-direct {v1, p0, v0}, Lmiui/maml/elements/AttrDataBinders$AttrDataBinder$TextBinder;-><init>(Lmiui/maml/elements/AttrDataBinders$AttrDataBinder;Lmiui/maml/elements/AttrDataBinders$1;)V
@@ -169,7 +156,6 @@
 
     goto :goto_0
 
-    .line 128
     :cond_2
     const-string v1, "paras"
 
@@ -187,7 +173,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 129
     :cond_3
     new-instance v1, Lmiui/maml/elements/AttrDataBinders$AttrDataBinder$ParamsBinder;
 
@@ -197,7 +182,6 @@
 
     goto :goto_0
 
-    .line 130
     :cond_4
     const-string v1, "name"
 
@@ -207,7 +191,6 @@
 
     if-eqz v1, :cond_5
 
-    .line 131
     new-instance v1, Lmiui/maml/elements/AttrDataBinders$AttrDataBinder$NameBinder;
 
     invoke-direct {v1, p0, v0}, Lmiui/maml/elements/AttrDataBinders$AttrDataBinder$NameBinder;-><init>(Lmiui/maml/elements/AttrDataBinders$AttrDataBinder;Lmiui/maml/elements/AttrDataBinders$1;)V
@@ -216,7 +199,6 @@
 
     goto :goto_0
 
-    .line 132
     :cond_5
     const-string v1, "bitmap"
 
@@ -226,7 +208,6 @@
 
     if-eqz v1, :cond_6
 
-    .line 133
     new-instance v1, Lmiui/maml/elements/AttrDataBinders$AttrDataBinder$BitmapBinder;
 
     invoke-direct {v1, p0, v0}, Lmiui/maml/elements/AttrDataBinders$AttrDataBinder$BitmapBinder;-><init>(Lmiui/maml/elements/AttrDataBinders$AttrDataBinder;Lmiui/maml/elements/AttrDataBinders$1;)V
@@ -235,7 +216,6 @@
 
     goto :goto_0
 
-    .line 134
     :cond_6
     const-string v1, "src"
 
@@ -245,7 +225,6 @@
 
     if-eqz v1, :cond_7
 
-    .line 135
     new-instance v1, Lmiui/maml/elements/AttrDataBinders$AttrDataBinder$SrcBinder;
 
     invoke-direct {v1, p0, v0}, Lmiui/maml/elements/AttrDataBinders$AttrDataBinder$SrcBinder;-><init>(Lmiui/maml/elements/AttrDataBinders$AttrDataBinder;Lmiui/maml/elements/AttrDataBinders$1;)V
@@ -254,7 +233,6 @@
 
     goto :goto_0
 
-    .line 136
     :cond_7
     const-string v1, "srcid"
 
@@ -264,7 +242,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 137
     new-instance v1, Lmiui/maml/elements/AttrDataBinders$AttrDataBinder$SrcIdBinder;
 
     invoke-direct {v1, p0, v0}, Lmiui/maml/elements/AttrDataBinders$AttrDataBinder$SrcIdBinder;-><init>(Lmiui/maml/elements/AttrDataBinders$AttrDataBinder;Lmiui/maml/elements/AttrDataBinders$1;)V
@@ -281,7 +258,6 @@
     .param p1, "g"    # Lmiui/maml/elements/ElementGroup;
 
     .prologue
-    .line 145
     :try_start_0
     iget-object v2, p0, Lmiui/maml/elements/AttrDataBinders$AttrDataBinder;->mTarget:Ljava/lang/String;
 
@@ -289,34 +265,27 @@
 
     move-result-object v1
 
-    .line 146
     .local v1, "se":Lmiui/maml/elements/ScreenElement;
     if-eqz v1, :cond_0
 
-    .line 147
     iget-object v2, p0, Lmiui/maml/elements/AttrDataBinders$AttrDataBinder;->mBinder:Lmiui/maml/elements/AttrDataBinders$AttrDataBinder$Binder;
 
     invoke-virtual {v2, v1}, Lmiui/maml/elements/AttrDataBinders$AttrDataBinder$Binder;->bind(Lmiui/maml/elements/ScreenElement;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 148
     const/4 v2, 0x1
 
-    .line 153
     .end local v1    # "se":Lmiui/maml/elements/ScreenElement;
     :goto_0
     return v2
 
-    .line 150
     :catch_0
     move-exception v0
 
-    .line 151
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 153
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     const/4 v2, 0x0

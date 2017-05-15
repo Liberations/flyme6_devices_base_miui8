@@ -25,13 +25,10 @@
     .param p3, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 464
     iput-object p1, p0, Landroid/media/audiopolicy/AudioPolicy$EventHandler;->this$0:Landroid/media/audiopolicy/AudioPolicy;
 
-    .line 465
     invoke-direct {p0, p3}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 466
     return-void
 .end method
 
@@ -42,12 +39,10 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 470
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 492
     const-string v0, "AudioPolicy"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -72,12 +67,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 494
     :cond_0
     :goto_0
     return-void
 
-    .line 472
     :pswitch_0
     iget-object v0, p0, Landroid/media/audiopolicy/AudioPolicy$EventHandler;->this$0:Landroid/media/audiopolicy/AudioPolicy;
 
@@ -86,7 +79,6 @@
 
     goto :goto_0
 
-    .line 475
     :pswitch_1
     iget-object v0, p0, Landroid/media/audiopolicy/AudioPolicy$EventHandler;->this$0:Landroid/media/audiopolicy/AudioPolicy;
 
@@ -97,7 +89,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 476
     iget-object v0, p0, Landroid/media/audiopolicy/AudioPolicy$EventHandler;->this$0:Landroid/media/audiopolicy/AudioPolicy;
 
     # getter for: Landroid/media/audiopolicy/AudioPolicy;->mFocusListener:Landroid/media/audiopolicy/AudioPolicy$AudioPolicyFocusListener;
@@ -115,7 +106,6 @@
 
     goto :goto_0
 
-    .line 481
     :pswitch_2
     iget-object v0, p0, Landroid/media/audiopolicy/AudioPolicy$EventHandler;->this$0:Landroid/media/audiopolicy/AudioPolicy;
 
@@ -126,7 +116,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 482
     iget-object v0, p0, Landroid/media/audiopolicy/AudioPolicy$EventHandler;->this$0:Landroid/media/audiopolicy/AudioPolicy;
 
     # getter for: Landroid/media/audiopolicy/AudioPolicy;->mFocusListener:Landroid/media/audiopolicy/AudioPolicy$AudioPolicyFocusListener;
@@ -154,7 +143,6 @@
 
     goto :goto_1
 
-    .line 487
     :pswitch_3
     iget-object v0, p0, Landroid/media/audiopolicy/AudioPolicy$EventHandler;->this$0:Landroid/media/audiopolicy/AudioPolicy;
 
@@ -165,7 +153,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 488
     iget-object v0, p0, Landroid/media/audiopolicy/AudioPolicy$EventHandler;->this$0:Landroid/media/audiopolicy/AudioPolicy;
 
     # getter for: Landroid/media/audiopolicy/AudioPolicy;->mStatusListener:Landroid/media/audiopolicy/AudioPolicy$AudioPolicyStatusListener;
@@ -181,7 +168,6 @@
 
     goto :goto_0
 
-    .line 470
     nop
 
     :pswitch_data_0

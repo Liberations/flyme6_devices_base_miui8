@@ -28,10 +28,8 @@
     .param p2, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
     return-void
 .end method
 
@@ -46,7 +44,6 @@
     .end annotation
 
     .prologue
-    .line 34
     new-instance v0, Ljava/lang/CloneNotSupportedException;
 
     const-string v1, "doesn\'t implement Cloneable"
@@ -60,7 +57,6 @@
     .locals 0
 
     .prologue
-    .line 66
     return-void
 .end method
 
@@ -68,7 +64,6 @@
     .locals 0
 
     .prologue
-    .line 50
     return-void
 .end method
 
@@ -76,7 +71,6 @@
     .locals 0
 
     .prologue
-    .line 38
     return-void
 .end method
 
@@ -84,7 +78,6 @@
     .locals 0
 
     .prologue
-    .line 56
     return-void
 .end method
 
@@ -92,7 +85,6 @@
     .locals 0
 
     .prologue
-    .line 63
     return-void
 .end method
 
@@ -100,7 +92,6 @@
     .locals 0
 
     .prologue
-    .line 44
     return-void
 .end method
 

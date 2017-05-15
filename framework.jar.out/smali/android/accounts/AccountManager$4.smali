@@ -37,7 +37,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 783
     .local p3, "x1":Landroid/accounts/AccountManagerCallback;, "Landroid/accounts/AccountManagerCallback<Landroid/accounts/Account;>;"
     iput-object p1, p0, Landroid/accounts/AccountManager$4;->this$0:Landroid/accounts/AccountManager;
 
@@ -62,14 +61,12 @@
     .end annotation
 
     .prologue
-    .line 791
     const-string v2, "authAccount"
 
     invoke-virtual {p1, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 792
     .local v0, "name":Ljava/lang/String;
     const-string v2, "accountType"
 
@@ -77,7 +74,6 @@
 
     move-result-object v1
 
-    .line 793
     .local v1, "type":Ljava/lang/String;
     new-instance v2, Landroid/accounts/Account;
 
@@ -96,7 +92,6 @@
     .end annotation
 
     .prologue
-    .line 783
     invoke-virtual {p0, p1}, Landroid/accounts/AccountManager$4;->bundleToResult(Landroid/os/Bundle;)Landroid/accounts/Account;
 
     move-result-object v0
@@ -113,12 +108,10 @@
     .end annotation
 
     .prologue
-    .line 786
     const/16 v0, 0x1f
 
     invoke-static {v0}, Landroid/util/SeempLog;->record(I)I
 
-    .line 787
     iget-object v0, p0, Landroid/accounts/AccountManager$4;->this$0:Landroid/accounts/AccountManager;
 
     # getter for: Landroid/accounts/AccountManager;->mService:Landroid/accounts/IAccountManager;
@@ -134,6 +127,5 @@
 
     invoke-interface {v0, v1, v2, v3}, Landroid/accounts/IAccountManager;->renameAccount(Landroid/accounts/IAccountManagerResponse;Landroid/accounts/Account;Ljava/lang/String;)V
 
-    .line 788
     return-void
 .end method

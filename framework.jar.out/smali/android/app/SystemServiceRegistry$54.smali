@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 580
     invoke-direct {p0}, Landroid/app/SystemServiceRegistry$CachedServiceFetcher;-><init>()V
 
     return-void
@@ -41,20 +40,17 @@
     .param p1, "ctx"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 583
-    const-string/jumbo v2, "print"
+    const-string v2, "print"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 584
     .local v0, "iBinder":Landroid/os/IBinder;
     invoke-static {v0}, Landroid/print/IPrintManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/print/IPrintManager;
 
     move-result-object v1
 
-    .line 585
     .local v1, "service":Landroid/print/IPrintManager;
     new-instance v2, Landroid/print/PrintManager;
 
@@ -84,7 +80,6 @@
     .param p1, "x0"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 580
     invoke-virtual {p0, p1}, Landroid/app/SystemServiceRegistry$54;->createService(Landroid/app/ContextImpl;)Landroid/print/PrintManager;
 
     move-result-object v0

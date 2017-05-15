@@ -34,26 +34,20 @@
     .param p2, "root"    # Lmiui/maml/ScreenElementRoot;
 
     .prologue
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 19
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lmiui/maml/data/VariableBinderManager;->mVariableBinders:Ljava/util/ArrayList;
 
-    .line 32
     iput-object p2, p0, Lmiui/maml/data/VariableBinderManager;->mRoot:Lmiui/maml/ScreenElementRoot;
 
-    .line 33
     if-eqz p1, :cond_0
 
-    .line 34
     invoke-direct {p0, p1, p2}, Lmiui/maml/data/VariableBinderManager;->load(Lorg/w3c/dom/Element;Lmiui/maml/ScreenElementRoot;)V
 
-    .line 35
     :cond_0
     return-void
 .end method
@@ -65,16 +59,13 @@
     .param p2, "m"    # Lmiui/maml/data/VariableBinderManager;
 
     .prologue
-    .line 92
     invoke-interface {p0}, Lorg/w3c/dom/Element;->getTagName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 93
     .local v1, "tag":Ljava/lang/String;
     const/4 v0, 0x0
 
-    .line 94
     .local v0, "ret":Lmiui/maml/data/VariableBinder;
     const-string v2, "ContentProviderBinder"
 
@@ -84,26 +75,21 @@
 
     if-eqz v2, :cond_2
 
-    .line 95
     new-instance v0, Lmiui/maml/data/ContentProviderBinder;
 
     .end local v0    # "ret":Lmiui/maml/data/VariableBinder;
     invoke-direct {v0, p0, p1}, Lmiui/maml/data/ContentProviderBinder;-><init>(Lorg/w3c/dom/Element;Lmiui/maml/ScreenElementRoot;)V
 
-    .line 109
     .restart local v0    # "ret":Lmiui/maml/data/VariableBinder;
     :cond_0
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 110
     invoke-virtual {v0, p2}, Lmiui/maml/data/VariableBinder;->setQueryCompleteListener(Lmiui/maml/data/ContentProviderBinder$QueryCompleteListener;)V
 
-    .line 112
     :cond_1
     return-object v0
 
-    .line 96
     :cond_2
     const-string v2, "WebServiceBinder"
 
@@ -113,7 +99,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 97
     new-instance v0, Lmiui/maml/data/WebServiceBinder;
 
     .end local v0    # "ret":Lmiui/maml/data/VariableBinder;
@@ -122,7 +107,6 @@
     .restart local v0    # "ret":Lmiui/maml/data/VariableBinder;
     goto :goto_0
 
-    .line 98
     :cond_3
     const-string v2, "SensorBinder"
 
@@ -132,7 +116,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 99
     new-instance v0, Lmiui/maml/data/SensorBinder;
 
     .end local v0    # "ret":Lmiui/maml/data/VariableBinder;
@@ -141,7 +124,6 @@
     .restart local v0    # "ret":Lmiui/maml/data/VariableBinder;
     goto :goto_0
 
-    .line 100
     :cond_4
     const-string v2, "LocationBinder"
 
@@ -151,7 +133,6 @@
 
     if-eqz v2, :cond_5
 
-    .line 101
     new-instance v0, Lmiui/maml/data/LocationBinder;
 
     .end local v0    # "ret":Lmiui/maml/data/VariableBinder;
@@ -160,7 +141,6 @@
     .restart local v0    # "ret":Lmiui/maml/data/VariableBinder;
     goto :goto_0
 
-    .line 102
     :cond_5
     const-string v2, "BroadcastBinder"
 
@@ -170,7 +150,6 @@
 
     if-eqz v2, :cond_6
 
-    .line 103
     new-instance v0, Lmiui/maml/data/BroadcastBinder;
 
     .end local v0    # "ret":Lmiui/maml/data/VariableBinder;
@@ -179,7 +158,6 @@
     .restart local v0    # "ret":Lmiui/maml/data/VariableBinder;
     goto :goto_0
 
-    .line 104
     :cond_6
     const-string v2, "FileBinder"
 
@@ -189,7 +167,6 @@
 
     if-eqz v2, :cond_7
 
-    .line 105
     new-instance v0, Lmiui/maml/data/FileBinder;
 
     .end local v0    # "ret":Lmiui/maml/data/VariableBinder;
@@ -198,7 +175,6 @@
     .restart local v0    # "ret":Lmiui/maml/data/VariableBinder;
     goto :goto_0
 
-    .line 106
     :cond_7
     const-string v2, "SettingsBinder"
 
@@ -208,7 +184,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 107
     new-instance v0, Lmiui/maml/data/SettingsBinder;
 
     .end local v0    # "ret":Lmiui/maml/data/VariableBinder;
@@ -224,17 +199,14 @@
     .param p2, "root"    # Lmiui/maml/ScreenElementRoot;
 
     .prologue
-    .line 82
     if-nez p1, :cond_0
 
-    .line 83
     const-string v0, "VariableBinderManager"
 
     const-string v1, "node is null"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 84
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "node is null"
@@ -243,11 +215,9 @@
 
     throw v0
 
-    .line 87
     :cond_0
     invoke-direct {p0, p1, p2}, Lmiui/maml/data/VariableBinderManager;->loadBinders(Lorg/w3c/dom/Element;Lmiui/maml/ScreenElementRoot;)V
 
-    .line 88
     return-void
 .end method
 
@@ -257,12 +227,10 @@
     .param p2, "root"    # Lmiui/maml/ScreenElementRoot;
 
     .prologue
-    .line 116
     invoke-interface {p1}, Lorg/w3c/dom/Element;->getChildNodes()Lorg/w3c/dom/NodeList;
 
     move-result-object v0
 
-    .line 117
     .local v0, "children":Lorg/w3c/dom/NodeList;
     const/4 v1, 0x0
 
@@ -274,7 +242,6 @@
 
     if-ge v1, v4, :cond_1
 
-    .line 118
     invoke-interface {v0, v1}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
 
     move-result-object v4
@@ -287,29 +254,24 @@
 
     if-ne v4, v5, :cond_0
 
-    .line 119
     invoke-interface {v0, v1}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
 
     move-result-object v2
 
     check-cast v2, Lorg/w3c/dom/Element;
 
-    .line 120
     .local v2, "item":Lorg/w3c/dom/Element;
     invoke-static {v2, p2, p0}, Lmiui/maml/data/VariableBinderManager;->createBinder(Lorg/w3c/dom/Element;Lmiui/maml/ScreenElementRoot;Lmiui/maml/data/VariableBinderManager;)Lmiui/maml/data/VariableBinder;
 
     move-result-object v3
 
-    .line 121
     .local v3, "vb":Lmiui/maml/data/VariableBinder;
     if-eqz v3, :cond_0
 
-    .line 122
     iget-object v4, p0, Lmiui/maml/data/VariableBinderManager;->mVariableBinders:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 117
     .end local v2    # "item":Lorg/w3c/dom/Element;
     .end local v3    # "vb":Lmiui/maml/data/VariableBinder;
     :cond_0
@@ -317,7 +279,6 @@
 
     goto :goto_0
 
-    .line 126
     :cond_1
     return-void
 .end method
@@ -329,7 +290,6 @@
     .param p1, "v"    # Lmiui/maml/data/VariableBinderVisitor;
 
     .prologue
-    .line 76
     iget-object v2, p0, Lmiui/maml/data/VariableBinderManager;->mVariableBinders:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -350,13 +310,11 @@
 
     check-cast v0, Lmiui/maml/data/VariableBinder;
 
-    .line 77
     .local v0, "binder":Lmiui/maml/data/VariableBinder;
     invoke-virtual {v0, p1}, Lmiui/maml/data/VariableBinder;->accept(Lmiui/maml/data/VariableBinderVisitor;)V
 
     goto :goto_0
 
-    .line 79
     .end local v0    # "binder":Lmiui/maml/data/VariableBinder;
     :cond_0
     return-void
@@ -367,7 +325,6 @@
     .param p1, "uri"    # Ljava/lang/String;
 
     .prologue
-    .line 129
     new-instance v0, Lmiui/maml/util/TextFormatter;
 
     iget-object v1, p0, Lmiui/maml/data/VariableBinderManager;->mRoot:Lmiui/maml/ScreenElementRoot;
@@ -391,7 +348,6 @@
     .param p2, "uriParas"    # Ljava/lang/String;
 
     .prologue
-    .line 133
     new-instance v0, Lmiui/maml/util/TextFormatter;
 
     iget-object v1, p0, Lmiui/maml/data/VariableBinderManager;->mRoot:Lmiui/maml/ScreenElementRoot;
@@ -414,26 +370,21 @@
     .param p1, "uri"    # Lmiui/maml/util/TextFormatter;
 
     .prologue
-    .line 137
     new-instance v0, Lmiui/maml/data/ContentProviderBinder;
 
     iget-object v1, p0, Lmiui/maml/data/VariableBinderManager;->mRoot:Lmiui/maml/ScreenElementRoot;
 
     invoke-direct {v0, v1}, Lmiui/maml/data/ContentProviderBinder;-><init>(Lmiui/maml/ScreenElementRoot;)V
 
-    .line 138
     .local v0, "binder":Lmiui/maml/data/ContentProviderBinder;
     invoke-virtual {v0, p0}, Lmiui/maml/data/ContentProviderBinder;->setQueryCompleteListener(Lmiui/maml/data/ContentProviderBinder$QueryCompleteListener;)V
 
-    .line 139
     iput-object p1, v0, Lmiui/maml/data/ContentProviderBinder;->mUriFormatter:Lmiui/maml/util/TextFormatter;
 
-    .line 140
     iget-object v1, p0, Lmiui/maml/data/VariableBinderManager;->mVariableBinders:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 141
     new-instance v1, Lmiui/maml/data/ContentProviderBinder$Builder;
 
     invoke-direct {v1, v0}, Lmiui/maml/data/ContentProviderBinder$Builder;-><init>(Lmiui/maml/data/ContentProviderBinder;)V
@@ -446,7 +397,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 68
     iget-object v2, p0, Lmiui/maml/data/VariableBinderManager;->mVariableBinders:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -467,7 +417,6 @@
 
     check-cast v0, Lmiui/maml/data/VariableBinder;
 
-    .line 69
     .local v0, "binder":Lmiui/maml/data/VariableBinder;
     invoke-virtual {v0}, Lmiui/maml/data/VariableBinder;->getName()Ljava/lang/String;
 
@@ -479,7 +428,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 72
     .end local v0    # "binder":Lmiui/maml/data/VariableBinder;
     :goto_0
     return-object v0
@@ -494,7 +442,6 @@
     .locals 3
 
     .prologue
-    .line 50
     iget-object v2, p0, Lmiui/maml/data/VariableBinderManager;->mVariableBinders:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -515,13 +462,11 @@
 
     check-cast v0, Lmiui/maml/data/VariableBinder;
 
-    .line 51
     .local v0, "binder":Lmiui/maml/data/VariableBinder;
     invoke-virtual {v0}, Lmiui/maml/data/VariableBinder;->finish()V
 
     goto :goto_0
 
-    .line 53
     .end local v0    # "binder":Lmiui/maml/data/VariableBinder;
     :cond_0
     return-void
@@ -531,7 +476,6 @@
     .locals 3
 
     .prologue
-    .line 38
     iget-object v2, p0, Lmiui/maml/data/VariableBinderManager;->mVariableBinders:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -552,13 +496,11 @@
 
     check-cast v0, Lmiui/maml/data/VariableBinder;
 
-    .line 39
     .local v0, "binder":Lmiui/maml/data/VariableBinder;
     invoke-virtual {v0}, Lmiui/maml/data/VariableBinder;->init()V
 
     goto :goto_0
 
-    .line 41
     .end local v0    # "binder":Lmiui/maml/data/VariableBinder;
     :cond_0
     return-void
@@ -569,18 +511,15 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 146
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 155
     :cond_0
     return-void
 
-    .line 149
     :cond_1
     iget-object v3, p0, Lmiui/maml/data/VariableBinderManager;->mVariableBinders:Ljava/util/ArrayList;
 
@@ -603,13 +542,11 @@
 
     check-cast v0, Lmiui/maml/data/VariableBinder;
 
-    .line 150
     .local v0, "binder":Lmiui/maml/data/VariableBinder;
     invoke-virtual {v0}, Lmiui/maml/data/VariableBinder;->getDependency()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 151
     .local v1, "dependency":Ljava/lang/String;
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -623,7 +560,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 152
     invoke-virtual {v0}, Lmiui/maml/data/VariableBinder;->startQuery()V
 
     goto :goto_0
@@ -633,7 +569,6 @@
     .locals 3
 
     .prologue
-    .line 56
     iget-object v2, p0, Lmiui/maml/data/VariableBinderManager;->mVariableBinders:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -654,13 +589,11 @@
 
     check-cast v0, Lmiui/maml/data/VariableBinder;
 
-    .line 57
     .local v0, "binder":Lmiui/maml/data/VariableBinder;
     invoke-virtual {v0}, Lmiui/maml/data/VariableBinder;->pause()V
 
     goto :goto_0
 
-    .line 59
     .end local v0    # "binder":Lmiui/maml/data/VariableBinder;
     :cond_0
     return-void
@@ -670,7 +603,6 @@
     .locals 3
 
     .prologue
-    .line 62
     iget-object v2, p0, Lmiui/maml/data/VariableBinderManager;->mVariableBinders:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -691,13 +623,11 @@
 
     check-cast v0, Lmiui/maml/data/VariableBinder;
 
-    .line 63
     .local v0, "binder":Lmiui/maml/data/VariableBinder;
     invoke-virtual {v0}, Lmiui/maml/data/VariableBinder;->resume()V
 
     goto :goto_0
 
-    .line 65
     .end local v0    # "binder":Lmiui/maml/data/VariableBinder;
     :cond_0
     return-void
@@ -707,7 +637,6 @@
     .locals 3
 
     .prologue
-    .line 44
     iget-object v2, p0, Lmiui/maml/data/VariableBinderManager;->mVariableBinders:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -728,13 +657,11 @@
 
     check-cast v0, Lmiui/maml/data/VariableBinder;
 
-    .line 45
     .local v0, "binder":Lmiui/maml/data/VariableBinder;
     invoke-virtual {v0}, Lmiui/maml/data/VariableBinder;->tick()V
 
     goto :goto_0
 
-    .line 47
     .end local v0    # "binder":Lmiui/maml/data/VariableBinder;
     :cond_0
     return-void

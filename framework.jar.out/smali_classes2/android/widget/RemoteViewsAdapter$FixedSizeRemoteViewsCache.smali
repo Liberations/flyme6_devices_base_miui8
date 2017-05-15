@@ -92,13 +92,10 @@
     .prologue
     const/4 v2, -0x1
 
-    .line 592
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 593
     iput p1, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mMaxCount:I
 
-    .line 594
     const/high16 v0, 0x3f400000    # 0.75f
 
     iget v1, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mMaxCount:I
@@ -115,60 +112,50 @@
 
     iput v0, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mMaxCountSlack:I
 
-    .line 595
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mPreloadLowerBound:I
 
-    .line 596
     iput v2, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mPreloadUpperBound:I
 
-    .line 597
     new-instance v0, Landroid/widget/RemoteViewsAdapter$RemoteViewsMetaData;
 
     invoke-direct {v0}, Landroid/widget/RemoteViewsAdapter$RemoteViewsMetaData;-><init>()V
 
     iput-object v0, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mMetaData:Landroid/widget/RemoteViewsAdapter$RemoteViewsMetaData;
 
-    .line 598
     new-instance v0, Landroid/widget/RemoteViewsAdapter$RemoteViewsMetaData;
 
     invoke-direct {v0}, Landroid/widget/RemoteViewsAdapter$RemoteViewsMetaData;-><init>()V
 
     iput-object v0, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mTemporaryMetaData:Landroid/widget/RemoteViewsAdapter$RemoteViewsMetaData;
 
-    .line 599
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mIndexMetaData:Ljava/util/HashMap;
 
-    .line 600
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mIndexRemoteViews:Ljava/util/HashMap;
 
-    .line 601
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mRequestedIndices:Ljava/util/HashSet;
 
-    .line 602
     iput v2, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mLastRequestedIndex:I
 
-    .line 603
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mLoadIndices:Ljava/util/HashSet;
 
-    .line 604
     return-void
 .end method
 
@@ -177,7 +164,6 @@
     .param p0, "x0"    # Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;
 
     .prologue
-    .line 544
     iget-object v0, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mMetaData:Landroid/widget/RemoteViewsAdapter$RemoteViewsMetaData;
 
     return-object v0
@@ -188,7 +174,6 @@
     .param p0, "x0"    # Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;
 
     .prologue
-    .line 544
     iget-object v0, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mIndexRemoteViews:Ljava/util/HashMap;
 
     return-object v0
@@ -208,23 +193,18 @@
     .end annotation
 
     .prologue
-    .line 683
     .local p2, "visibleWindow":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     const/4 v3, 0x0
 
-    .line 684
     .local v3, "maxDist":I
     const/4 v4, -0x1
 
-    .line 685
     .local v4, "maxDistIndex":I
     const/4 v6, 0x0
 
-    .line 686
     .local v6, "maxDistNotVisible":I
     const/4 v5, -0x1
 
-    .line 687
     .local v5, "maxDistIndexNotVisible":I
     iget-object v7, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mIndexRemoteViews:Ljava/util/HashMap;
 
@@ -255,7 +235,6 @@
 
     move-result v1
 
-    .line 688
     .local v1, "i":I
     sub-int v7, v1, p1
 
@@ -263,7 +242,6 @@
 
     move-result v0
 
-    .line 689
     .local v0, "dist":I
     if-le v0, v6, :cond_1
 
@@ -277,25 +255,19 @@
 
     if-nez v7, :cond_1
 
-    .line 692
     move v5, v1
 
-    .line 693
     move v6, v0
 
-    .line 695
     :cond_1
     if-lt v0, v3, :cond_0
 
-    .line 698
     move v4, v1
 
-    .line 699
     move v3, v0
 
     goto :goto_0
 
-    .line 702
     .end local v0    # "dist":I
     .end local v1    # "i":I
     :cond_2
@@ -303,7 +275,6 @@
 
     if-le v5, v7, :cond_3
 
-    .line 705
     .end local v5    # "maxDistIndexNotVisible":I
     :goto_1
     return v5
@@ -319,10 +290,8 @@
     .locals 5
 
     .prologue
-    .line 671
     const/4 v2, 0x0
 
-    .line 672
     .local v2, "mem":I
     iget-object v4, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mIndexRemoteViews:Ljava/util/HashMap;
 
@@ -349,7 +318,6 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 673
     .local v0, "i":Ljava/lang/Integer;
     iget-object v4, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mIndexRemoteViews:Ljava/util/HashMap;
 
@@ -359,11 +327,9 @@
 
     check-cast v3, Landroid/widget/RemoteViews;
 
-    .line 674
     .local v3, "v":Landroid/widget/RemoteViews;
     if-eqz v3, :cond_0
 
-    .line 675
     invoke-virtual {v3}, Landroid/widget/RemoteViews;->estimateMemoryUsage()I
 
     move-result v4
@@ -372,7 +338,6 @@
 
     goto :goto_0
 
-    .line 678
     .end local v0    # "i":Ljava/lang/Integer;
     .end local v3    # "v":Landroid/widget/RemoteViews;
     :cond_1
@@ -385,12 +350,10 @@
     .locals 4
 
     .prologue
-    .line 662
     iget-object v1, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mTemporaryMetaData:Landroid/widget/RemoteViewsAdapter$RemoteViewsMetaData;
 
     monitor-enter v1
 
-    .line 663
     :try_start_0
     iget-object v2, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mMetaData:Landroid/widget/RemoteViewsAdapter$RemoteViewsMetaData;
 
@@ -398,7 +361,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 664
     :try_start_1
     iget-object v0, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mMetaData:Landroid/widget/RemoteViewsAdapter$RemoteViewsMetaData;
 
@@ -406,21 +368,17 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/RemoteViewsAdapter$RemoteViewsMetaData;->set(Landroid/widget/RemoteViewsAdapter$RemoteViewsMetaData;)V
 
-    .line 665
     monitor-exit v2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 666
     :try_start_2
     monitor-exit v1
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 667
     return-void
 
-    .line 665
     :catchall_0
     move-exception v0
 
@@ -432,7 +390,6 @@
     :try_start_4
     throw v0
 
-    .line 666
     :catchall_1
     move-exception v0
 
@@ -448,7 +405,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 777
     iget-object v0, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mIndexMetaData:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -467,7 +423,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 774
     iget-object v0, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mIndexRemoteViews:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -485,7 +440,6 @@
     .locals 1
 
     .prologue
-    .line 643
     iget-object v0, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mMetaData:Landroid/widget/RemoteViewsAdapter$RemoteViewsMetaData;
 
     return-object v0
@@ -496,7 +450,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 655
     iget-object v0, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mIndexMetaData:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -509,7 +462,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 656
     iget-object v0, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mIndexMetaData:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -522,7 +474,6 @@
 
     check-cast v0, Landroid/widget/RemoteViewsAdapter$RemoteViewsIndexMetaData;
 
-    .line 658
     :goto_0
     return-object v0
 
@@ -536,12 +487,10 @@
     .locals 5
 
     .prologue
-    .line 753
     iget-object v2, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mLoadIndices:Ljava/util/HashSet;
 
     monitor-enter v2
 
-    .line 755
     :try_start_0
     iget-object v1, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mRequestedIndices:Ljava/util/HashSet;
 
@@ -551,7 +500,6 @@
 
     if-nez v1, :cond_0
 
-    .line 756
     iget-object v1, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mRequestedIndices:Ljava/util/HashSet;
 
     invoke-virtual {v1}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
@@ -564,18 +512,15 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 757
     .local v0, "i":Ljava/lang/Integer;
     iget-object v1, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mRequestedIndices:Ljava/util/HashSet;
 
     invoke-virtual {v1, v0}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
 
-    .line 758
     iget-object v1, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mLoadIndices:Ljava/util/HashSet;
 
     invoke-virtual {v1, v0}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
 
-    .line 759
     const/4 v1, 0x2
 
     new-array v1, v1, [I
@@ -596,12 +541,10 @@
 
     monitor-exit v2
 
-    .line 769
     .end local v0    # "i":Ljava/lang/Integer;
     :goto_0
     return-object v1
 
-    .line 763
     :cond_0
     iget-object v1, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mLoadIndices:Ljava/util/HashSet;
 
@@ -611,7 +554,6 @@
 
     if-nez v1, :cond_1
 
-    .line 764
     iget-object v1, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mLoadIndices:Ljava/util/HashSet;
 
     invoke-virtual {v1}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
@@ -624,13 +566,11 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 765
     .restart local v0    # "i":Ljava/lang/Integer;
     iget-object v1, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mLoadIndices:Ljava/util/HashSet;
 
     invoke-virtual {v1, v0}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
 
-    .line 766
     const/4 v1, 0x2
 
     new-array v1, v1, [I
@@ -653,7 +593,6 @@
 
     goto :goto_0
 
-    .line 770
     .end local v0    # "i":Ljava/lang/Integer;
     :catchall_0
     move-exception v1
@@ -664,7 +603,6 @@
 
     throw v1
 
-    .line 769
     :cond_1
     const/4 v1, 0x2
 
@@ -693,7 +631,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 649
     iget-object v0, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mIndexRemoteViews:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -706,7 +643,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 650
     iget-object v0, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mIndexRemoteViews:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -719,7 +655,6 @@
 
     check-cast v0, Landroid/widget/RemoteViews;
 
-    .line 652
     :goto_0
     return-object v0
 
@@ -733,7 +668,6 @@
     .locals 1
 
     .prologue
-    .line 646
     iget-object v0, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mTemporaryMetaData:Landroid/widget/RemoteViewsAdapter$RemoteViewsMetaData;
 
     return-object v0
@@ -757,7 +691,6 @@
     .end annotation
 
     .prologue
-    .line 609
     .local p5, "visibleWindow":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     iget-object v3, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mIndexRemoteViews:Ljava/util/HashMap;
 
@@ -769,7 +702,6 @@
 
     if-lt v3, v4, :cond_0
 
-    .line 610
     iget-object v3, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mIndexRemoteViews:Ljava/util/HashMap;
 
     invoke-direct {p0, p1, p5}, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->getFarthestPositionFrom(ILjava/util/ArrayList;)I
@@ -782,7 +714,6 @@
 
     invoke-virtual {v3, v4}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 614
     :cond_0
     iget v3, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mLastRequestedIndex:I
 
@@ -792,7 +723,6 @@
 
     iget v1, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mLastRequestedIndex:I
 
-    .line 615
     .local v1, "pruneFromPosition":I
     :goto_0
     invoke-direct {p0}, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->getRemoteViewsBitmapMemoryUsage()I
@@ -803,16 +733,13 @@
 
     if-lt v3, v4, :cond_1
 
-    .line 621
     invoke-direct {p0, v1, p5}, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->getFarthestPositionFrom(ILjava/util/ArrayList;)I
 
     move-result v2
 
-    .line 625
     .local v2, "trimIndex":I
     if-gez v2, :cond_3
 
-    .line 633
     .end local v2    # "trimIndex":I
     :cond_1
     iget-object v3, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mIndexMetaData:Ljava/util/HashMap;
@@ -827,7 +754,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 634
     iget-object v3, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mIndexMetaData:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -840,11 +766,9 @@
 
     check-cast v0, Landroid/widget/RemoteViewsAdapter$RemoteViewsIndexMetaData;
 
-    .line 635
     .local v0, "metaData":Landroid/widget/RemoteViewsAdapter$RemoteViewsIndexMetaData;
     invoke-virtual {v0, p2, p3, p4}, Landroid/widget/RemoteViewsAdapter$RemoteViewsIndexMetaData;->set(Landroid/widget/RemoteViews;J)V
 
-    .line 639
     .end local v0    # "metaData":Landroid/widget/RemoteViewsAdapter$RemoteViewsIndexMetaData;
     :goto_1
     iget-object v3, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mIndexRemoteViews:Ljava/util/HashMap;
@@ -855,17 +779,14 @@
 
     invoke-virtual {v3, v4, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 640
     return-void
 
     .end local v1    # "pruneFromPosition":I
     :cond_2
     move v1, p1
 
-    .line 614
     goto :goto_0
 
-    .line 629
     .restart local v1    # "pruneFromPosition":I
     .restart local v2    # "trimIndex":I
     :cond_3
@@ -879,7 +800,6 @@
 
     goto :goto_0
 
-    .line 637
     .end local v2    # "trimIndex":I
     :cond_4
     iget-object v3, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mIndexMetaData:Ljava/util/HashMap;
@@ -904,7 +824,6 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 717
     iget v7, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mPreloadLowerBound:I
 
     if-gt v7, p1, :cond_0
@@ -913,7 +832,6 @@
 
     if-gt p1, v7, :cond_0
 
-    .line 718
     iget v7, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mPreloadUpperBound:I
 
     iget v8, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mPreloadLowerBound:I
@@ -922,7 +840,6 @@
 
     div-int/lit8 v0, v7, 0x2
 
-    .line 719
     .local v0, "center":I
     sub-int v7, p1, v0
 
@@ -934,67 +851,55 @@
 
     if-ge v7, v8, :cond_0
 
-    .line 747
     .end local v0    # "center":I
     :goto_0
     return v6
 
-    .line 724
     :cond_0
     const/4 v1, 0x0
 
-    .line 725
     .local v1, "count":I
     iget-object v7, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mMetaData:Landroid/widget/RemoteViewsAdapter$RemoteViewsMetaData;
 
     monitor-enter v7
 
-    .line 726
     :try_start_0
     iget-object v6, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mMetaData:Landroid/widget/RemoteViewsAdapter$RemoteViewsMetaData;
 
     iget v1, v6, Landroid/widget/RemoteViewsAdapter$RemoteViewsMetaData;->count:I
 
-    .line 727
     monitor-exit v7
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 728
     iget-object v7, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mLoadIndices:Ljava/util/HashSet;
 
     monitor-enter v7
 
-    .line 729
     :try_start_1
     iget-object v6, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mLoadIndices:Ljava/util/HashSet;
 
     invoke-virtual {v6}, Ljava/util/HashSet;->clear()V
 
-    .line 732
     iget-object v6, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mLoadIndices:Ljava/util/HashSet;
 
     iget-object v8, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mRequestedIndices:Ljava/util/HashSet;
 
     invoke-virtual {v6, v8}, Ljava/util/HashSet;->addAll(Ljava/util/Collection;)Z
 
-    .line 735
     iget v6, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mMaxCount:I
 
     div-int/lit8 v4, v6, 0x2
 
-    .line 736
     .local v4, "halfMaxCount":I
     sub-int v6, p1, v4
 
     iput v6, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mPreloadLowerBound:I
 
-    .line 737
     add-int v6, p1, v4
 
     iput v6, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mPreloadUpperBound:I
 
-    .line 738
     const/4 v6, 0x0
 
     iget v8, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mPreloadLowerBound:I
@@ -1003,7 +908,6 @@
 
     move-result v2
 
-    .line 739
     .local v2, "effectiveLowerBound":I
     iget v6, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mPreloadUpperBound:I
 
@@ -1013,7 +917,6 @@
 
     move-result v3
 
-    .line 740
     .local v3, "effectiveUpperBound":I
     move v5, v2
 
@@ -1021,7 +924,6 @@
     :goto_1
     if-gt v5, v3, :cond_1
 
-    .line 741
     iget-object v6, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mLoadIndices:Ljava/util/HashSet;
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1032,12 +934,10 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 740
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_1
 
-    .line 727
     .end local v2    # "effectiveLowerBound":I
     .end local v3    # "effectiveUpperBound":I
     .end local v4    # "halfMaxCount":I
@@ -1052,7 +952,6 @@
 
     throw v6
 
-    .line 745
     .restart local v2    # "effectiveLowerBound":I
     .restart local v3    # "effectiveUpperBound":I
     .restart local v4    # "halfMaxCount":I
@@ -1069,15 +968,12 @@
 
     invoke-virtual {v6, v8}, Ljava/util/HashSet;->removeAll(Ljava/util/Collection;)Z
 
-    .line 746
     monitor-exit v7
 
-    .line 747
     const/4 v6, 0x1
 
     goto :goto_0
 
-    .line 746
     .end local v2    # "effectiveLowerBound":I
     .end local v3    # "effectiveUpperBound":I
     .end local v4    # "halfMaxCount":I
@@ -1097,15 +993,12 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 709
     iput p1, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mLastRequestedIndex:I
 
-    .line 710
     iget-object v1, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mLoadIndices:Ljava/util/HashSet;
 
     monitor-enter v1
 
-    .line 711
     :try_start_0
     iget-object v0, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mRequestedIndices:Ljava/util/HashSet;
 
@@ -1115,7 +1008,6 @@
 
     invoke-virtual {v0, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 712
     iget-object v0, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mLoadIndices:Ljava/util/HashSet;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1124,13 +1016,10 @@
 
     invoke-virtual {v0, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 713
     monitor-exit v1
 
-    .line 714
     return-void
 
-    .line 713
     :catchall_0
     move-exception v0
 
@@ -1147,50 +1036,39 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 785
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mPreloadLowerBound:I
 
-    .line 786
     iput v1, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mPreloadUpperBound:I
 
-    .line 787
     iput v1, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mLastRequestedIndex:I
 
-    .line 788
     iget-object v0, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mIndexRemoteViews:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
-    .line 789
     iget-object v0, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mIndexMetaData:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
-    .line 790
     iget-object v1, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mLoadIndices:Ljava/util/HashSet;
 
     monitor-enter v1
 
-    .line 791
     :try_start_0
     iget-object v0, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mRequestedIndices:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->clear()V
 
-    .line 792
     iget-object v0, p0, Landroid/widget/RemoteViewsAdapter$FixedSizeRemoteViewsCache;->mLoadIndices:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->clear()V
 
-    .line 793
     monitor-exit v1
 
-    .line 794
     return-void
 
-    .line 793
     :catchall_0
     move-exception v0
 

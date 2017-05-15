@@ -153,68 +153,58 @@
     .locals 2
 
     .prologue
-    .line 132
     const-string v0, "com_miui_applicatinlock_use_fingerprint_state"
 
     sput-object v0, Landroid/provider/MiuiSettings;->APP_LOCK_USE_FINGERPRINT_STATE:Ljava/lang/String;
 
-    .line 160
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
     sput-object v0, Landroid/provider/MiuiSettings;->CROSS_PROFILE_SETTINGS:Ljava/util/Set;
 
-    .line 162
     sget-object v0, Landroid/provider/MiuiSettings;->CROSS_PROFILE_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v1, "ringtone"
+    const-string v1, "ringtone"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 163
     sget-object v0, Landroid/provider/MiuiSettings;->CROSS_PROFILE_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v1, "notification_sound"
+    const-string v1, "notification_sound"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 164
     sget-object v0, Landroid/provider/MiuiSettings;->CROSS_PROFILE_SETTINGS:Ljava/util/Set;
 
     const-string v1, "alarm_alert"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 165
     sget-object v0, Landroid/provider/MiuiSettings;->CROSS_PROFILE_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v1, "user_rotation"
+    const-string v1, "user_rotation"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 166
     sget-object v0, Landroid/provider/MiuiSettings;->CROSS_PROFILE_SETTINGS:Ljava/util/Set;
 
     const-string v1, "accelerometer_rotation"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 167
     sget-object v0, Landroid/provider/MiuiSettings;->CROSS_PROFILE_SETTINGS:Ljava/util/Set;
 
-    const-string/jumbo v1, "hide_rotation_lock_toggle_for_accessibility"
+    const-string v1, "hide_rotation_lock_toggle_for_accessibility"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 168
     sget-object v0, Landroid/provider/MiuiSettings;->CROSS_PROFILE_SETTINGS:Ljava/util/Set;
 
     const-string v1, "frequent_phrases"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 169
     return-void
 .end method
 
@@ -222,10 +212,8 @@
     .locals 0
 
     .prologue
-    .line 65
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4884
     return-void
 .end method
 
@@ -238,18 +226,15 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 4322
-    const-string/jumbo v2, "ui_mode_scale"
+    const-string v2, "ui_mode_scale"
 
     invoke-static {p0, v2, v0}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result v1
 
-    .line 4323
     .local v1, "scaleMode":I
     and-int/lit8 v1, v1, 0xf
 
-    .line 4325
     const/16 v2, 0xc
 
     if-eq v1, v2, :cond_0
@@ -270,24 +255,20 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 4330
     .local v0, "isLargeUiMode":Z
     :cond_0
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 4331
     invoke-static {v1}, Landroid/content/res/MiuiConfiguration;->getFontScale(I)F
 
     move-result v2
 
     iput v2, p1, Landroid/content/res/Configuration;->fontScale:F
 
-    .line 4333
     :cond_1
     return-void
 
-    .line 4325
     .end local v0    # "isLargeUiMode":Z
     :cond_2
     const/4 v0, 0x0

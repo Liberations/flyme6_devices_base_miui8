@@ -32,7 +32,6 @@
     .locals 1
 
     .prologue
-    .line 46
     const-string v0, "LegacyFaceDetectMapper"
 
     sput-object v0, Landroid/hardware/camera2/legacy/LegacyFaceDetectMapper;->TAG:Ljava/lang/String;
@@ -48,26 +47,20 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 71
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 53
     iput-boolean v0, p0, Landroid/hardware/camera2/legacy/LegacyFaceDetectMapper;->mFaceDetectEnabled:Z
 
-    .line 55
     iput-boolean v0, p0, Landroid/hardware/camera2/legacy/LegacyFaceDetectMapper;->mFaceDetectScenePriority:Z
 
-    .line 57
     iput-boolean v0, p0, Landroid/hardware/camera2/legacy/LegacyFaceDetectMapper;->mFaceDetectReporting:Z
 
-    .line 60
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Landroid/hardware/camera2/legacy/LegacyFaceDetectMapper;->mLock:Ljava/lang/Object;
 
-    .line 72
     const-string v0, "camera must not be null"
 
     invoke-static {p1, v0}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -78,12 +71,10 @@
 
     iput-object v0, p0, Landroid/hardware/camera2/legacy/LegacyFaceDetectMapper;->mCamera:Landroid/hardware/Camera;
 
-    .line 73
     const-string v0, "characteristics must not be null"
 
     invoke-static {p2, v0}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 75
     sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->STATISTICS_INFO_AVAILABLE_FACE_DETECT_MODES:Landroid/hardware/camera2/CameraCharacteristics$Key;
 
     invoke-virtual {p2, v0}, Landroid/hardware/camera2/CameraCharacteristics;->get(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
@@ -100,16 +91,13 @@
 
     iput-boolean v0, p0, Landroid/hardware/camera2/legacy/LegacyFaceDetectMapper;->mFaceDetectSupported:Z
 
-    .line 80
     iget-boolean v0, p0, Landroid/hardware/camera2/legacy/LegacyFaceDetectMapper;->mFaceDetectSupported:Z
 
     if-nez v0, :cond_0
 
-    .line 105
     :goto_0
     return-void
 
-    .line 84
     :cond_0
     iget-object v0, p0, Landroid/hardware/camera2/legacy/LegacyFaceDetectMapper;->mCamera:Landroid/hardware/Camera;
 
@@ -127,7 +115,6 @@
     .param p0, "x0"    # Landroid/hardware/camera2/legacy/LegacyFaceDetectMapper;
 
     .prologue
-    .line 45
     iget-object v0, p0, Landroid/hardware/camera2/legacy/LegacyFaceDetectMapper;->mLock:Ljava/lang/Object;
 
     return-object v0
@@ -138,7 +125,6 @@
     .param p0, "x0"    # Landroid/hardware/camera2/legacy/LegacyFaceDetectMapper;
 
     .prologue
-    .line 45
     iget-boolean v0, p0, Landroid/hardware/camera2/legacy/LegacyFaceDetectMapper;->mFaceDetectEnabled:Z
 
     return v0
@@ -150,7 +136,6 @@
     .param p1, "x1"    # [Landroid/hardware/Camera$Face;
 
     .prologue
-    .line 45
     iput-object p1, p0, Landroid/hardware/camera2/legacy/LegacyFaceDetectMapper;->mFaces:[Landroid/hardware/Camera$Face;
 
     return-object p1
@@ -160,7 +145,6 @@
     .locals 1
 
     .prologue
-    .line 45
     sget-object v0, Landroid/hardware/camera2/legacy/LegacyFaceDetectMapper;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -174,8 +158,7 @@
     .param p2, "legacyRequest"    # Landroid/hardware/camera2/legacy/LegacyRequest;
 
     .prologue
-    .line 208
-    const-string/jumbo v18, "result must not be null"
+    const-string v18, "result must not be null"
 
     move-object/from16 v0, p1
 
@@ -183,8 +166,7 @@
 
     invoke-static {v0, v1}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 209
-    const-string/jumbo v18, "legacyRequest must not be null"
+    const-string v18, "legacyRequest must not be null"
 
     move-object/from16 v0, p2
 
@@ -192,7 +174,6 @@
 
     invoke-static {v0, v1}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 214
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/hardware/camera2/legacy/LegacyFaceDetectMapper;->mLock:Ljava/lang/Object;
@@ -201,7 +182,6 @@
 
     monitor-enter v19
 
-    .line 215
     :try_start_0
     move-object/from16 v0, p0
 
@@ -213,7 +193,6 @@
 
     const/4 v9, 0x1
 
-    .line 218
     .local v9, "fdMode":I
     :goto_0
     move-object/from16 v0, p0
@@ -224,41 +203,34 @@
 
     if-eqz v18, :cond_1
 
-    .line 219
     move-object/from16 v0, p0
 
     iget-object v8, v0, Landroid/hardware/camera2/legacy/LegacyFaceDetectMapper;->mFaces:[Landroid/hardware/Camera$Face;
 
-    .line 224
     .local v8, "faces":[Landroid/hardware/Camera$Face;
     :goto_1
     move-object/from16 v0, p0
 
     iget-boolean v10, v0, Landroid/hardware/camera2/legacy/LegacyFaceDetectMapper;->mFaceDetectScenePriority:Z
 
-    .line 226
     .local v10, "fdScenePriority":Z
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/hardware/camera2/legacy/LegacyFaceDetectMapper;->mFacesPrev:[Landroid/hardware/Camera$Face;
 
-    .line 227
     .local v15, "previousFaces":[Landroid/hardware/Camera$Face;
     move-object/from16 v0, p0
 
     iput-object v8, v0, Landroid/hardware/camera2/legacy/LegacyFaceDetectMapper;->mFacesPrev:[Landroid/hardware/Camera$Face;
 
-    .line 228
     monitor-exit v19
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 230
     move-object/from16 v0, p2
 
     iget-object v5, v0, Landroid/hardware/camera2/legacy/LegacyRequest;->characteristics:Landroid/hardware/camera2/CameraCharacteristics;
 
-    .line 231
     .local v5, "characteristics":Landroid/hardware/camera2/CameraCharacteristics;
     move-object/from16 v0, p2
 
@@ -266,19 +238,16 @@
 
     move-object/from16 v16, v0
 
-    .line 232
     .local v16, "request":Landroid/hardware/camera2/CaptureRequest;
     move-object/from16 v0, p2
 
     iget-object v14, v0, Landroid/hardware/camera2/legacy/LegacyRequest;->previewSize:Landroid/util/Size;
 
-    .line 233
     .local v14, "previewSize":Landroid/util/Size;
     move-object/from16 v0, p2
 
     iget-object v13, v0, Landroid/hardware/camera2/legacy/LegacyRequest;->parameters:Landroid/hardware/Camera$Parameters;
 
-    .line 235
     .local v13, "params":Landroid/hardware/Camera$Parameters;
     sget-object v18, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_ACTIVE_ARRAY_SIZE:Landroid/hardware/camera2/CameraCharacteristics$Key;
 
@@ -290,7 +259,6 @@
 
     check-cast v3, Landroid/graphics/Rect;
 
-    .line 236
     .local v3, "activeArray":Landroid/graphics/Rect;
     sget-object v18, Landroid/hardware/camera2/CaptureRequest;->SCALER_CROP_REGION:Landroid/hardware/camera2/CaptureRequest$Key;
 
@@ -310,17 +278,14 @@
 
     move-result-object v17
 
-    .line 239
     .local v17, "zoomData":Landroid/hardware/camera2/legacy/ParameterUtils$ZoomData;
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
-    .line 240
     .local v6, "convertedFaces":Ljava/util/List;, "Ljava/util/List<Landroid/hardware/camera2/params/Face;>;"
     if-eqz v8, :cond_3
 
-    .line 241
     move-object v4, v8
 
     .local v4, "arr$":[Landroid/hardware/Camera$Face;
@@ -335,11 +300,9 @@
 
     aget-object v7, v4, v11
 
-    .line 242
     .local v7, "face":Landroid/hardware/Camera$Face;
     if-eqz v7, :cond_2
 
-    .line 243
     move-object/from16 v0, v17
 
     invoke-static {v7, v3, v0}, Landroid/hardware/camera2/legacy/ParameterUtils;->convertFaceFromLegacy(Landroid/hardware/Camera$Face;Landroid/graphics/Rect;Landroid/hardware/camera2/legacy/ParameterUtils$ZoomData;)Landroid/hardware/camera2/params/Face;
@@ -350,13 +313,11 @@
 
     invoke-interface {v6, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 241
     :goto_3
     add-int/lit8 v11, v11, 0x1
 
     goto :goto_2
 
-    .line 215
     .end local v3    # "activeArray":Landroid/graphics/Rect;
     .end local v4    # "arr$":[Landroid/hardware/Camera$Face;
     .end local v5    # "characteristics":Landroid/hardware/camera2/CameraCharacteristics;
@@ -377,7 +338,6 @@
 
     goto :goto_0
 
-    .line 221
     .restart local v9    # "fdMode":I
     :cond_1
     const/4 v8, 0x0
@@ -385,7 +345,6 @@
     .restart local v8    # "faces":[Landroid/hardware/Camera$Face;
     goto :goto_1
 
-    .line 228
     .end local v8    # "faces":[Landroid/hardware/Camera$Face;
     .end local v9    # "fdMode":I
     :catchall_0
@@ -398,7 +357,6 @@
 
     throw v18
 
-    .line 246
     .restart local v3    # "activeArray":Landroid/graphics/Rect;
     .restart local v4    # "arr$":[Landroid/hardware/Camera$Face;
     .restart local v5    # "characteristics":Landroid/hardware/camera2/CameraCharacteristics;
@@ -417,13 +375,12 @@
     :cond_2
     sget-object v18, Landroid/hardware/camera2/legacy/LegacyFaceDetectMapper;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v19, "mapResultFaces - read NULL face from camera1 device"
+    const-string v19, "mapResultFaces - read NULL face from camera1 device"
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_3
 
-    .line 255
     .end local v4    # "arr$":[Landroid/hardware/Camera$Face;
     .end local v7    # "face":Landroid/hardware/Camera$Face;
     .end local v11    # "i$":I
@@ -453,7 +410,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/hardware/camera2/impl/CameraMetadataNative;->set(Landroid/hardware/camera2/CaptureResult$Key;Ljava/lang/Object;)V
 
-    .line 256
     sget-object v18, Landroid/hardware/camera2/CaptureResult;->STATISTICS_FACE_DETECT_MODE:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -468,10 +424,8 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/hardware/camera2/impl/CameraMetadataNative;->set(Landroid/hardware/camera2/CaptureResult$Key;Ljava/lang/Object;)V
 
-    .line 259
     if-eqz v10, :cond_4
 
-    .line 260
     sget-object v18, Landroid/hardware/camera2/CaptureResult;->CONTROL_SCENE_MODE:Landroid/hardware/camera2/CaptureResult$Key;
 
     const/16 v19, 0x1
@@ -488,7 +442,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/hardware/camera2/impl/CameraMetadataNative;->set(Landroid/hardware/camera2/CaptureResult$Key;Ljava/lang/Object;)V
 
-    .line 262
     :cond_4
     return-void
 .end method
@@ -503,12 +456,10 @@
 
     const/4 v5, 0x1
 
-    .line 123
     const-string v3, "captureRequest must not be null"
 
     invoke-static {p1, v3}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 128
     sget-object v3, Landroid/hardware/camera2/CaptureRequest;->STATISTICS_FACE_DETECT_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -525,7 +476,6 @@
 
     move-result v1
 
-    .line 131
     .local v1, "fdMode":I
     if-eqz v1, :cond_0
 
@@ -533,18 +483,15 @@
 
     if-nez v3, :cond_0
 
-    .line 132
     sget-object v3, Landroid/hardware/camera2/legacy/LegacyFaceDetectMapper;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v4, "processFaceDetectMode - Ignoring statistics.faceDetectMode; face detection is not available"
+    const-string v4, "processFaceDetectMode - Ignoring statistics.faceDetectMode; face detection is not available"
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 191
     :goto_0
     return-void
 
-    .line 141
     :cond_0
     sget-object v3, Landroid/hardware/camera2/CaptureRequest;->CONTROL_SCENE_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
@@ -562,7 +509,6 @@
 
     move-result v2
 
-    .line 143
     .local v2, "sceneMode":I
     if-ne v2, v5, :cond_1
 
@@ -570,27 +516,24 @@
 
     if-nez v3, :cond_1
 
-    .line 144
     sget-object v3, Landroid/hardware/camera2/legacy/LegacyFaceDetectMapper;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v4, "processFaceDetectMode - ignoring control.sceneMode == FACE_PRIORITY; face detection is not available"
+    const-string v4, "processFaceDetectMode - ignoring control.sceneMode == FACE_PRIORITY; face detection is not available"
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 150
     :cond_1
     packed-switch v1, :pswitch_data_0
 
-    .line 160
     sget-object v3, Landroid/hardware/camera2/legacy/LegacyFaceDetectMapper;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "processFaceDetectMode - ignoring unknown statistics.faceDetectMode = "
+    const-string v5, "processFaceDetectMode - ignoring unknown statistics.faceDetectMode = "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -608,15 +551,13 @@
 
     goto :goto_0
 
-    .line 155
     :pswitch_0
     sget-object v3, Landroid/hardware/camera2/legacy/LegacyFaceDetectMapper;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v6, "processFaceDetectMode - statistics.faceDetectMode == FULL unsupported, downgrading to SIMPLE"
+    const-string v6, "processFaceDetectMode - statistics.faceDetectMode == FULL unsupported, downgrading to SIMPLE"
 
     invoke-static {v3, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 165
     :pswitch_1
     if-nez v1, :cond_2
 
@@ -625,32 +566,26 @@
     :cond_2
     move v0, v5
 
-    .line 167
     .local v0, "enableFaceDetect":Z
     :goto_1
     iget-object v6, p0, Landroid/hardware/camera2/legacy/LegacyFaceDetectMapper;->mLock:Ljava/lang/Object;
 
     monitor-enter v6
 
-    .line 169
     :try_start_0
     iget-boolean v3, p0, Landroid/hardware/camera2/legacy/LegacyFaceDetectMapper;->mFaceDetectEnabled:Z
 
     if-eq v0, v3, :cond_3
 
-    .line 170
     if-eqz v0, :cond_5
 
-    .line 171
     iget-object v3, p0, Landroid/hardware/camera2/legacy/LegacyFaceDetectMapper;->mCamera:Landroid/hardware/Camera;
 
     invoke-virtual {v3}, Landroid/hardware/Camera;->startFaceDetection()V
 
-    .line 186
     :goto_2
     iput-boolean v0, p0, Landroid/hardware/camera2/legacy/LegacyFaceDetectMapper;->mFaceDetectEnabled:Z
 
-    .line 187
     if-ne v2, v5, :cond_6
 
     move v3, v5
@@ -658,13 +593,11 @@
     :goto_3
     iput-boolean v3, p0, Landroid/hardware/camera2/legacy/LegacyFaceDetectMapper;->mFaceDetectScenePriority:Z
 
-    .line 188
     if-eqz v1, :cond_7
 
     :goto_4
     iput-boolean v5, p0, Landroid/hardware/camera2/legacy/LegacyFaceDetectMapper;->mFaceDetectReporting:Z
 
-    .line 190
     :cond_3
     monitor-exit v6
 
@@ -683,10 +616,8 @@
     :cond_4
     move v0, v4
 
-    .line 165
     goto :goto_1
 
-    .line 177
     .restart local v0    # "enableFaceDetect":Z
     :cond_5
     :try_start_1
@@ -694,7 +625,6 @@
 
     invoke-virtual {v3}, Landroid/hardware/Camera;->stopFaceDetection()V
 
-    .line 183
     const/4 v3, 0x0
 
     iput-object v3, p0, Landroid/hardware/camera2/legacy/LegacyFaceDetectMapper;->mFaces:[Landroid/hardware/Camera$Face;
@@ -706,16 +636,13 @@
     :cond_6
     move v3, v4
 
-    .line 187
     goto :goto_3
 
     :cond_7
     move v5, v4
 
-    .line 188
     goto :goto_4
 
-    .line 150
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1

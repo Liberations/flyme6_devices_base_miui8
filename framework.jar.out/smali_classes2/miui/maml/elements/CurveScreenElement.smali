@@ -14,10 +14,8 @@
     .param p2, "root"    # Lmiui/maml/ScreenElementRoot;
 
     .prologue
-    .line 15
     invoke-direct {p0, p1, p2}, Lmiui/maml/elements/GeometryScreenElement;-><init>(Lorg/w3c/dom/Element;Lmiui/maml/ScreenElementRoot;)V
 
-    .line 16
     return-void
 .end method
 
@@ -29,6 +27,5 @@
     .param p2, "mode"    # Lmiui/maml/elements/GeometryScreenElement$DrawMode;
 
     .prologue
-    .line 20
     return-void
 .end method

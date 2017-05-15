@@ -34,39 +34,30 @@
 
     const/4 v1, 0x0
 
-    .line 64
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 65
     iput-boolean p1, p0, Lmiui/maml/SoundManager$SoundOptions;->mKeepCur:Z
 
-    .line 66
     iput-boolean p2, p0, Lmiui/maml/SoundManager$SoundOptions;->mLoop:Z
 
-    .line 67
     cmpg-float v0, p3, v1
 
     if-gez v0, :cond_0
 
-    .line 68
     iput v1, p0, Lmiui/maml/SoundManager$SoundOptions;->mVolume:F
 
-    .line 74
     :goto_0
     return-void
 
-    .line 69
     :cond_0
     cmpl-float v0, p3, v2
 
     if-lez v0, :cond_1
 
-    .line 70
     iput v2, p0, Lmiui/maml/SoundManager$SoundOptions;->mVolume:F
 
     goto :goto_0
 
-    .line 72
     :cond_1
     iput p3, p0, Lmiui/maml/SoundManager$SoundOptions;->mVolume:F
 

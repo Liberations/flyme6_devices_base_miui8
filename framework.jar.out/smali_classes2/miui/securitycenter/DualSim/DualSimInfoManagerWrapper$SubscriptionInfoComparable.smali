@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 95
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -43,7 +42,6 @@
     .param p1, "x0"    # Lmiui/securitycenter/DualSim/DualSimInfoManagerWrapper$1;
 
     .prologue
-    .line 95
     invoke-direct {p0}, Lmiui/securitycenter/DualSim/DualSimInfoManagerWrapper$SubscriptionInfoComparable;-><init>()V
 
     return-void
@@ -57,7 +55,6 @@
     .param p2, "x1"    # Ljava/lang/Object;
 
     .prologue
-    .line 95
     check-cast p1, Lmiui/telephony/SubscriptionInfo;
 
     .end local p1    # "x0":Ljava/lang/Object;
@@ -77,7 +74,6 @@
     .param p2, "sim2"    # Lmiui/telephony/SubscriptionInfo;
 
     .prologue
-    .line 98
     invoke-virtual {p1}, Lmiui/telephony/SubscriptionInfo;->getSlotId()I
 
     move-result v0

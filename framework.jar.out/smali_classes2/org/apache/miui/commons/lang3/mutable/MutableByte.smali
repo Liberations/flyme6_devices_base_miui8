@@ -36,10 +36,8 @@
     .locals 0
 
     .prologue
-    .line 45
     invoke-direct {p0}, Ljava/lang/Number;-><init>()V
 
-    .line 46
     return-void
 .end method
 
@@ -48,13 +46,10 @@
     .param p1, "value"    # B
 
     .prologue
-    .line 54
     invoke-direct {p0}, Ljava/lang/Number;-><init>()V
 
-    .line 55
     iput-byte p1, p0, Lorg/apache/miui/commons/lang3/mutable/MutableByte;->value:B
 
-    .line 56
     return-void
 .end method
 
@@ -63,17 +58,14 @@
     .param p1, "value"    # Ljava/lang/Number;
 
     .prologue
-    .line 65
     invoke-direct {p0}, Ljava/lang/Number;-><init>()V
 
-    .line 66
     invoke-virtual {p1}, Ljava/lang/Number;->byteValue()B
 
     move-result v0
 
     iput-byte v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableByte;->value:B
 
-    .line 67
     return-void
 .end method
 
@@ -87,17 +79,14 @@
     .end annotation
 
     .prologue
-    .line 77
     invoke-direct {p0}, Ljava/lang/Number;-><init>()V
 
-    .line 78
     invoke-static {p1}, Ljava/lang/Byte;->parseByte(Ljava/lang/String;)B
 
     move-result v0
 
     iput-byte v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableByte;->value:B
 
-    .line 79
     return-void
 .end method
 
@@ -108,7 +97,6 @@
     .param p1, "operand"    # B
 
     .prologue
-    .line 137
     iget-byte v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableByte;->value:B
 
     add-int/2addr v0, p1
@@ -117,7 +105,6 @@
 
     iput-byte v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableByte;->value:B
 
-    .line 138
     return-void
 .end method
 
@@ -126,7 +113,6 @@
     .param p1, "operand"    # Ljava/lang/Number;
 
     .prologue
-    .line 148
     iget-byte v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableByte;->value:B
 
     invoke-virtual {p1}, Ljava/lang/Number;->byteValue()B
@@ -139,7 +125,6 @@
 
     iput-byte v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableByte;->value:B
 
-    .line 149
     return-void
 .end method
 
@@ -147,7 +132,6 @@
     .locals 1
 
     .prologue
-    .line 181
     iget-byte v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableByte;->value:B
 
     return v0
@@ -158,7 +142,6 @@
     .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
-    .line 29
     check-cast p1, Lorg/apache/miui/commons/lang3/mutable/MutableByte;
 
     .end local p1    # "x0":Ljava/lang/Object;
@@ -174,10 +157,8 @@
     .param p1, "other"    # Lorg/apache/miui/commons/lang3/mutable/MutableByte;
 
     .prologue
-    .line 269
     iget-byte v0, p1, Lorg/apache/miui/commons/lang3/mutable/MutableByte;->value:B
 
-    .line 270
     .local v0, "anotherVal":B
     iget-byte v1, p0, Lorg/apache/miui/commons/lang3/mutable/MutableByte;->value:B
 
@@ -207,7 +188,6 @@
     .locals 1
 
     .prologue
-    .line 126
     iget-byte v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableByte;->value:B
 
     add-int/lit8 v0, v0, -0x1
@@ -216,7 +196,6 @@
 
     iput-byte v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableByte;->value:B
 
-    .line 127
     return-void
 .end method
 
@@ -224,7 +203,6 @@
     .locals 2
 
     .prologue
-    .line 221
     iget-byte v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableByte;->value:B
 
     int-to-double v0, v0
@@ -239,12 +217,10 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 245
     instance-of v1, p1, Lorg/apache/miui/commons/lang3/mutable/MutableByte;
 
     if-eqz v1, :cond_0
 
-    .line 246
     iget-byte v1, p0, Lorg/apache/miui/commons/lang3/mutable/MutableByte;->value:B
 
     check-cast p1, Lorg/apache/miui/commons/lang3/mutable/MutableByte;
@@ -258,7 +234,6 @@
 
     const/4 v0, 0x1
 
-    .line 248
     :cond_0
     return v0
 .end method
@@ -267,7 +242,6 @@
     .locals 1
 
     .prologue
-    .line 211
     iget-byte v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableByte;->value:B
 
     int-to-float v0, v0
@@ -279,7 +253,6 @@
     .locals 1
 
     .prologue
-    .line 88
     iget-byte v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableByte;->value:B
 
     invoke-static {v0}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
@@ -293,7 +266,6 @@
     .locals 1
 
     .prologue
-    .line 29
     invoke-virtual {p0}, Lorg/apache/miui/commons/lang3/mutable/MutableByte;->getValue()Ljava/lang/Byte;
 
     move-result-object v0
@@ -305,7 +277,6 @@
     .locals 1
 
     .prologue
-    .line 258
     iget-byte v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableByte;->value:B
 
     return v0
@@ -315,7 +286,6 @@
     .locals 1
 
     .prologue
-    .line 117
     iget-byte v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableByte;->value:B
 
     add-int/lit8 v0, v0, 0x1
@@ -324,7 +294,6 @@
 
     iput-byte v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableByte;->value:B
 
-    .line 118
     return-void
 .end method
 
@@ -332,7 +301,6 @@
     .locals 1
 
     .prologue
-    .line 191
     iget-byte v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableByte;->value:B
 
     return v0
@@ -342,7 +310,6 @@
     .locals 2
 
     .prologue
-    .line 201
     iget-byte v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableByte;->value:B
 
     int-to-long v0, v0
@@ -355,10 +322,8 @@
     .param p1, "value"    # B
 
     .prologue
-    .line 97
     iput-byte p1, p0, Lorg/apache/miui/commons/lang3/mutable/MutableByte;->value:B
 
-    .line 98
     return-void
 .end method
 
@@ -367,14 +332,12 @@
     .param p1, "value"    # Ljava/lang/Number;
 
     .prologue
-    .line 107
     invoke-virtual {p1}, Ljava/lang/Number;->byteValue()B
 
     move-result v0
 
     iput-byte v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableByte;->value:B
 
-    .line 108
     return-void
 .end method
 
@@ -383,7 +346,6 @@
     .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
-    .line 29
     check-cast p1, Ljava/lang/Number;
 
     .end local p1    # "x0":Ljava/lang/Object;
@@ -397,7 +359,6 @@
     .param p1, "operand"    # B
 
     .prologue
-    .line 158
     iget-byte v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableByte;->value:B
 
     sub-int/2addr v0, p1
@@ -406,7 +367,6 @@
 
     iput-byte v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableByte;->value:B
 
-    .line 159
     return-void
 .end method
 
@@ -415,7 +375,6 @@
     .param p1, "operand"    # Ljava/lang/Number;
 
     .prologue
-    .line 169
     iget-byte v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableByte;->value:B
 
     invoke-virtual {p1}, Ljava/lang/Number;->byteValue()B
@@ -428,7 +387,6 @@
 
     iput-byte v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableByte;->value:B
 
-    .line 170
     return-void
 .end method
 
@@ -436,7 +394,6 @@
     .locals 1
 
     .prologue
-    .line 231
     invoke-virtual {p0}, Lorg/apache/miui/commons/lang3/mutable/MutableByte;->byteValue()B
 
     move-result v0
@@ -452,7 +409,6 @@
     .locals 1
 
     .prologue
-    .line 281
     iget-byte v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableByte;->value:B
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;

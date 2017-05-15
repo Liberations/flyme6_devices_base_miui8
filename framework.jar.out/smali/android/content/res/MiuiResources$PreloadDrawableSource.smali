@@ -32,20 +32,15 @@
     .param p4, "themePath"    # Ljava/lang/String;
 
     .prologue
-    .line 71
     iput-object p1, p0, Landroid/content/res/MiuiResources$PreloadDrawableSource;->this$0:Landroid/content/res/MiuiResources;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 72
     iput p2, p0, Landroid/content/res/MiuiResources$PreloadDrawableSource;->mCookie:I
 
-    .line 73
     iput-object p3, p0, Landroid/content/res/MiuiResources$PreloadDrawableSource;->mResourcePath:Ljava/lang/String;
 
-    .line 74
     iput-object p4, p0, Landroid/content/res/MiuiResources$PreloadDrawableSource;->mThemePath:Ljava/lang/String;
 
-    .line 75
     return-void
 .end method

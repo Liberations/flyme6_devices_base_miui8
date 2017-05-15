@@ -37,21 +37,17 @@
 
     const/4 v2, 0x0
 
-    .line 22
     sput-boolean v2, Lmiui/telephony/PhoneDebug;->VDBG:Z
 
-    .line 23
     const/4 v4, 0x0
 
     sput-object v4, Lmiui/telephony/PhoneDebug;->sListeners:Ljava/util/List;
 
-    .line 31
     :try_start_0
     invoke-static {}, Lmiui/util/AppConstants;->getCurrentApplication()Landroid/app/Application;
 
     move-result-object v0
 
-    .line 32
     .local v0, "context":Landroid/content/Context;
     const-string v4, "android"
 
@@ -65,12 +61,10 @@
 
     if-eqz v4, :cond_2
 
-    .line 33
     const v4, 0xea60
 
     invoke-static {v4}, Lmiui/telephony/PhoneDebug;->registerDelay(I)V
 
-    .line 34
     invoke-virtual {v0}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
@@ -101,11 +95,9 @@
     :cond_1
     sput-boolean v2, Lmiui/telephony/PhoneDebug;->VDBG:Z
 
-    .line 42
     :goto_0
     return-void
 
-    .line 37
     :cond_2
     invoke-static {}, Lmiui/telephony/PhoneDebug;->register()V
     :try_end_0
@@ -113,11 +105,9 @@
 
     goto :goto_0
 
-    .line 39
     :catch_0
     move-exception v1
 
-    .line 40
     .local v1, "e":Ljava/lang/Exception;
     const-string v2, "PhoneDebug"
 
@@ -148,7 +138,6 @@
     .locals 0
 
     .prologue
-    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -158,7 +147,6 @@
     .locals 0
 
     .prologue
-    .line 20
     invoke-static {}, Lmiui/telephony/PhoneDebug;->register()V
 
     return-void
@@ -168,7 +156,6 @@
     .locals 1
 
     .prologue
-    .line 20
     sget-object v0, Lmiui/telephony/PhoneDebug;->sListeners:Ljava/util/List;
 
     return-object v0
@@ -179,12 +166,10 @@
     .param p0, "listener"    # Lmiui/telephony/PhoneDebug$Listener;
 
     .prologue
-    .line 47
     sget-object v0, Lmiui/telephony/PhoneDebug;->sListeners:Ljava/util/List;
 
     if-nez v0, :cond_0
 
-    .line 48
     new-instance v0, Ljava/util/ArrayList;
 
     const/4 v1, 0x1
@@ -193,7 +178,6 @@
 
     sput-object v0, Lmiui/telephony/PhoneDebug;->sListeners:Ljava/util/List;
 
-    .line 50
     :cond_0
     if-eqz p0, :cond_1
 
@@ -205,15 +189,12 @@
 
     if-nez v0, :cond_1
 
-    .line 51
     sget-object v0, Lmiui/telephony/PhoneDebug;->sListeners:Ljava/util/List;
 
     invoke-interface {v0, p0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 52
     invoke-interface {p0}, Lmiui/telephony/PhoneDebug$Listener;->onDebugChanged()V
 
-    .line 54
     :cond_1
     return-object p0
 .end method
@@ -226,7 +207,6 @@
 
     const/4 v2, 0x0
 
-    .line 84
     :try_start_0
     invoke-static {}, Lmiui/util/AppConstants;->getCurrentApplication()Landroid/app/Application;
 
@@ -236,7 +216,6 @@
 
     move-result-object v0
 
-    .line 85
     .local v0, "cr":Landroid/content/ContentResolver;
     const-string v4, "phone_debug_flag"
 
@@ -264,7 +243,6 @@
     :cond_1
     sput-boolean v2, Lmiui/telephony/PhoneDebug;->VDBG:Z
 
-    .line 86
     const-string v2, "phone_debug_flag"
 
     invoke-static {v2}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -283,15 +261,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 101
     :goto_0
     return-void
 
-    .line 98
     :catch_0
     move-exception v1
 
-    .line 99
     .local v1, "te":Ljava/lang/Exception;
     const-string v2, "PhoneDebug"
 
@@ -323,7 +298,6 @@
     .param p0, "time"    # I
 
     .prologue
-    .line 67
     sget-boolean v0, Lmiui/telephony/PhoneDebug;->VDBG:Z
 
     if-eqz v0, :cond_0
@@ -334,7 +308,6 @@
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 68
     :cond_0
     new-instance v0, Ljava/lang/Thread;
 
@@ -346,7 +319,6 @@
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 80
     return-void
 .end method
 
@@ -355,19 +327,16 @@
     .param p0, "listener"    # Lmiui/telephony/PhoneDebug$Listener;
 
     .prologue
-    .line 58
     sget-object v0, Lmiui/telephony/PhoneDebug;->sListeners:Ljava/util/List;
 
     if-eqz v0, :cond_0
 
     if-eqz p0, :cond_0
 
-    .line 59
     sget-object v0, Lmiui/telephony/PhoneDebug;->sListeners:Ljava/util/List;
 
     invoke-interface {v0, p0}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 60
     sget-object v0, Lmiui/telephony/PhoneDebug;->sListeners:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
@@ -376,12 +345,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 61
     const/4 v0, 0x0
 
     sput-object v0, Lmiui/telephony/PhoneDebug;->sListeners:Ljava/util/List;
 
-    .line 64
     :cond_0
     return-void
 .end method

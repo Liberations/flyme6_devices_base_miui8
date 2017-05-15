@@ -44,16 +44,12 @@
     .end annotation
 
     .prologue
-    .line 83
     .local p1, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 84
     iput-object p1, p0, Landroid/app/ExtraActivityManager$PackageNameList;->mOrderList:Ljava/util/List;
 
-    .line 85
     iput p2, p0, Landroid/app/ExtraActivityManager$PackageNameList;->mPlayingCount:I
 
-    .line 86
     return-void
 .end method

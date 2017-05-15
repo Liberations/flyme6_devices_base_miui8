@@ -284,7 +284,6 @@
     .locals 2
 
     .prologue
-    .line 317
     new-instance v0, Landroid/media/AudioAttributes$Builder;
 
     invoke-direct {v0}, Landroid/media/AudioAttributes$Builder;-><init>()V
@@ -307,7 +306,6 @@
 
     sput-object v0, Landroid/app/Notification;->AUDIO_ATTRIBUTES_DEFAULT:Landroid/media/AudioAttributes;
 
-    .line 1773
     new-instance v0, Landroid/app/Notification$1;
 
     invoke-direct {v0}, Landroid/app/Notification$1;-><init>()V
@@ -419,37 +417,30 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1376
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 311
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/app/Notification;->audioStreamType:I
 
-    .line 325
     sget-object v0, Landroid/app/Notification;->AUDIO_ATTRIBUTES_DEFAULT:Landroid/media/AudioAttributes;
 
     iput-object v0, p0, Landroid/app/Notification;->audioAttributes:Landroid/media/AudioAttributes;
 
-    .line 530
     iput v1, p0, Landroid/app/Notification;->color:I
 
-    .line 701
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/app/Notification;->extras:Landroid/os/Bundle;
 
-    .line 5718
     new-instance v0, Landroid/app/MiuiNotification;
 
     invoke-direct {v0}, Landroid/app/MiuiNotification;-><init>()V
 
     iput-object v0, p0, Landroid/app/Notification;->extraNotification:Landroid/app/MiuiNotification;
 
-    .line 1377
     new-instance v0, Landroid/app/Notification$Builder;
 
     invoke-direct {v0, p1}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;)V
@@ -1861,7 +1852,6 @@
 
     invoke-virtual {v0, p0}, Landroid/app/Notification$Builder;->buildInto(Landroid/app/Notification;)Landroid/app/Notification;
 
-    .line 1385
     return-void
 .end method
 
@@ -1963,7 +1953,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1421
     :cond_0
     const-string v3, " defaults=0x"
 
@@ -2023,7 +2012,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1425
     :cond_1
     iget-object v3, p0, Landroid/app/Notification;->mGroupKey:Ljava/lang/String;
 
@@ -2037,7 +2025,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1428
     :cond_2
     iget-object v3, p0, Landroid/app/Notification;->mSortKey:Ljava/lang/String;
 
@@ -2051,7 +2038,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1431
     :cond_3
     iget-object v3, p0, Landroid/app/Notification;->actions:[Landroid/app/Notification$Action;
 
@@ -2067,7 +2053,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 1434
     :cond_4
     const-string v3, " vis="
 
@@ -2097,7 +2082,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1437
     :cond_5
     const-string v3, ")"
 
@@ -2109,7 +2093,6 @@
 
     return-object v3
 
-    .line 1440
     :cond_6
     const-string v3, "null"
 
@@ -2117,7 +2100,6 @@
 
     goto/16 :goto_0
 
-    .line 1446
     :cond_7
     iget-object v3, p0, Landroid/app/Notification;->vibrate:[J
 
@@ -2154,7 +2136,6 @@
 
     goto :goto_3
 
-    .line 1450
     :cond_8
     const/4 v3, -0x1
 
@@ -2166,7 +2147,6 @@
 
     invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    .line 1460
     :cond_9
     const-string v3, "]"
 
@@ -2504,19 +2484,16 @@
 
     goto/16 :goto_8
 
-    .line 1476
     :cond_a
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_9
 
-    .line 1480
     :cond_b
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_a
 
-    .line 1486
     :cond_c
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 

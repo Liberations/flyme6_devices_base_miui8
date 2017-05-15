@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 64
     iput-object p1, p0, Lmiui/securityspace/XSpaceResolverActivityHelper$ResolverActivityRunner$1;->this$0:Lmiui/securityspace/XSpaceResolverActivityHelper$ResolverActivityRunner;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 67
     iget-object v0, p0, Lmiui/securityspace/XSpaceResolverActivityHelper$ResolverActivityRunner$1;->this$0:Lmiui/securityspace/XSpaceResolverActivityHelper$ResolverActivityRunner;
 
     # getter for: Lmiui/securityspace/XSpaceResolverActivityHelper$ResolverActivityRunner;->mActivity:Landroid/app/Activity;
@@ -52,6 +50,5 @@
 
     invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
-    .line 68
     return-void
 .end method

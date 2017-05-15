@@ -24,13 +24,10 @@
     .param p1, "legacy"    # Landroid/content/pm/IPackageInstallObserver;
 
     .prologue
-    .line 4734
     invoke-direct {p0}, Landroid/app/PackageInstallObserver;-><init>()V
 
-    .line 4735
     iput-object p1, p0, Landroid/content/pm/PackageManager$LegacyPackageInstallObserver;->mLegacy:Landroid/content/pm/IPackageInstallObserver;
 
-    .line 4736
     return-void
 .end method
 
@@ -44,16 +41,13 @@
     .param p4, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 4741
     iget-object v0, p0, Landroid/content/pm/PackageManager$LegacyPackageInstallObserver;->mLegacy:Landroid/content/pm/IPackageInstallObserver;
 
     if-nez v0, :cond_0
 
-    .line 4746
     :goto_0
     return-void
 
-    .line 4743
     :cond_0
     :try_start_0
     iget-object v0, p0, Landroid/content/pm/PackageManager$LegacyPackageInstallObserver;->mLegacy:Landroid/content/pm/IPackageInstallObserver;
@@ -64,7 +58,6 @@
 
     goto :goto_0
 
-    .line 4744
     :catch_0
     move-exception v0
 

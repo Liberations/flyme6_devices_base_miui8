@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,7 +18,6 @@
     .param p0, "userId"    # I
 
     .prologue
-    .line 34
     invoke-static {p0}, Landroid/service/securespaces/SpaceEncryptionManager;->needAirlockUser(I)Z
 
     move-result v0
@@ -34,7 +32,6 @@
     .param p2, "authData"    # Ljava/lang/String;
 
     .prologue
-    .line 26
     invoke-static {p0, p1, p2}, Landroid/service/securespaces/SpaceEncryptionManager;->ecryptfsMount(IILjava/lang/String;)I
 
     move-result v0
@@ -47,10 +44,8 @@
     .param p0, "userId"    # I
 
     .prologue
-    .line 18
     invoke-static {p0}, Landroid/service/securespaces/SpaceEncryptionManager;->ecryptfsUnmount(I)I
 
-    .line 19
     return-void
 .end method
 
@@ -59,10 +54,8 @@
     .param p0, "userId"    # I
 
     .prologue
-    .line 22
     invoke-static {p0}, Landroid/service/securespaces/SpaceEncryptionManager;->ecryptfsUnmountRemovableNonOwner(I)V
 
-    .line 23
     return-void
 .end method
 
@@ -73,10 +66,8 @@
     .param p2, "authData"    # Ljava/lang/String;
 
     .prologue
-    .line 10
     invoke-static {p0, p1, p2}, Landroid/service/securespaces/SpaceEncryptionManager;->ecryptfsUpdate(IILjava/lang/String;)I
 
-    .line 11
     return-void
 .end method
 
@@ -85,7 +76,6 @@
     .param p0, "userId"    # I
 
     .prologue
-    .line 14
     invoke-static {p0}, Landroid/service/securespaces/SpaceEncryptionManager;->needsEcryptfsMount(I)Z
 
     move-result v0
@@ -98,7 +88,6 @@
     .param p0, "userId"    # I
 
     .prologue
-    .line 30
     invoke-static {p0}, Landroid/service/securespaces/SpaceEncryptionManager;->switchUser(I)Z
 
     move-result v0

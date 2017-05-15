@@ -34,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 43
     iput-object p1, p0, Landroid/widget/TranslationManager$1;->this$0:Landroid/widget/TranslationManager;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
@@ -49,7 +48,6 @@
     .param p1, "x0"    # [Ljava/lang/Object;
 
     .prologue
-    .line 43
     check-cast p1, [Ljava/lang/String;
 
     .end local p1    # "x0":[Ljava/lang/Object;
@@ -65,7 +63,6 @@
     .param p1, "params"    # [Ljava/lang/String;
 
     .prologue
-    .line 46
     new-instance v2, Landroid/content/Intent;
 
     invoke-direct {v2}, Landroid/content/Intent;-><init>()V
@@ -78,7 +75,6 @@
 
     move-result-object v0
 
-    .line 48
     .local v0, "intent":Landroid/content/Intent;
     iget-object v2, p0, Landroid/widget/TranslationManager$1;->this$0:Landroid/widget/TranslationManager;
 
@@ -97,17 +93,14 @@
 
     move-result v1
 
-    .line 63
     .local v1, "isBound":Z
     if-nez v1, :cond_0
 
-    .line 64
     iget-object v2, p0, Landroid/widget/TranslationManager$1;->this$0:Landroid/widget/TranslationManager;
 
     # invokes: Landroid/widget/TranslationManager;->onTranslationFailed()V
     invoke-static {v2}, Landroid/widget/TranslationManager;->access$400(Landroid/widget/TranslationManager;)V
 
-    .line 67
     :cond_0
     const/4 v2, 0x0
 

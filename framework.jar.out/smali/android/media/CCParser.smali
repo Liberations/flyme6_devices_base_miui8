@@ -93,7 +93,6 @@
     .locals 2
 
     .prologue
-    .line 121
     const-string v0, "CCParser"
 
     const/4 v1, 0x3
@@ -112,49 +111,40 @@
     .param p1, "listener"    # Landroid/media/CCParser$DisplayListener;
 
     .prologue
-    .line 163
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 155
     const/4 v0, 0x1
 
     iput v0, p0, Landroid/media/CCParser;->mMode:I
 
-    .line 156
     const/4 v0, 0x4
 
     iput v0, p0, Landroid/media/CCParser;->mRollUpSize:I
 
-    .line 157
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/media/CCParser;->mPrevCtrlCode:I
 
-    .line 159
     new-instance v0, Landroid/media/CCParser$CCMemory;
 
     invoke-direct {v0}, Landroid/media/CCParser$CCMemory;-><init>()V
 
     iput-object v0, p0, Landroid/media/CCParser;->mDisplay:Landroid/media/CCParser$CCMemory;
 
-    .line 160
     new-instance v0, Landroid/media/CCParser$CCMemory;
 
     invoke-direct {v0}, Landroid/media/CCParser$CCMemory;-><init>()V
 
     iput-object v0, p0, Landroid/media/CCParser;->mNonDisplay:Landroid/media/CCParser$CCMemory;
 
-    .line 161
     new-instance v0, Landroid/media/CCParser$CCMemory;
 
     invoke-direct {v0}, Landroid/media/CCParser$CCMemory;-><init>()V
 
     iput-object v0, p0, Landroid/media/CCParser;->mTextMem:Landroid/media/CCParser$CCMemory;
 
-    .line 164
     iput-object p1, p0, Landroid/media/CCParser;->mListener:Landroid/media/CCParser$DisplayListener;
 
-    .line 165
     return-void
 .end method
 
@@ -162,19 +152,17 @@
     .locals 3
 
     .prologue
-    .line 193
     iget v0, p0, Landroid/media/CCParser;->mMode:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 204
     const-string v0, "CCParser"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "unrecoginized mode: "
+    const-string v2, "unrecoginized mode: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -192,31 +180,26 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 206
     iget-object v0, p0, Landroid/media/CCParser;->mDisplay:Landroid/media/CCParser$CCMemory;
 
     :goto_0
     return-object v0
 
-    .line 195
     :pswitch_0
     iget-object v0, p0, Landroid/media/CCParser;->mNonDisplay:Landroid/media/CCParser$CCMemory;
 
     goto :goto_0
 
-    .line 199
     :pswitch_1
     iget-object v0, p0, Landroid/media/CCParser;->mTextMem:Landroid/media/CCParser$CCMemory;
 
     goto :goto_0
 
-    .line 202
     :pswitch_2
     iget-object v0, p0, Landroid/media/CCParser;->mDisplay:Landroid/media/CCParser$CCMemory;
 
     goto :goto_0
 
-    .line 193
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_2
@@ -241,12 +224,10 @@
 
     const/4 v4, 0x2
 
-    .line 263
     invoke-virtual {p1}, Landroid/media/CCParser$CCData;->getCtrlCode()I
 
     move-result v0
 
-    .line 265
     .local v0, "ctrlCode":I
     iget v2, p0, Landroid/media/CCParser;->mPrevCtrlCode:I
 
@@ -256,38 +237,30 @@
 
     if-ne v2, v0, :cond_0
 
-    .line 267
     iput v3, p0, Landroid/media/CCParser;->mPrevCtrlCode:I
 
-    .line 343
     :goto_0
     return v1
 
-    .line 271
     :cond_0
     packed-switch v0, :pswitch_data_0
 
-    .line 336
     :pswitch_0
     iput v3, p0, Landroid/media/CCParser;->mPrevCtrlCode:I
 
-    .line 337
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 274
     :pswitch_1
     iput v5, p0, Landroid/media/CCParser;->mMode:I
 
-    .line 340
     :cond_1
     :goto_1
     iput v0, p0, Landroid/media/CCParser;->mPrevCtrlCode:I
 
     goto :goto_0
 
-    .line 277
     :pswitch_2
     invoke-direct {p0}, Landroid/media/CCParser;->getMemory()Landroid/media/CCParser$CCMemory;
 
@@ -297,7 +270,6 @@
 
     goto :goto_1
 
-    .line 280
     :pswitch_3
     invoke-direct {p0}, Landroid/media/CCParser;->getMemory()Landroid/media/CCParser$CCMemory;
 
@@ -307,34 +279,28 @@
 
     goto :goto_1
 
-    .line 285
     :pswitch_4
     add-int/lit8 v2, v0, -0x23
 
     iput v2, p0, Landroid/media/CCParser;->mRollUpSize:I
 
-    .line 287
     iget v2, p0, Landroid/media/CCParser;->mMode:I
 
     if-eq v2, v4, :cond_2
 
-    .line 288
     iget-object v2, p0, Landroid/media/CCParser;->mDisplay:Landroid/media/CCParser$CCMemory;
 
     invoke-virtual {v2}, Landroid/media/CCParser$CCMemory;->erase()V
 
-    .line 289
     iget-object v2, p0, Landroid/media/CCParser;->mNonDisplay:Landroid/media/CCParser$CCMemory;
 
     invoke-virtual {v2}, Landroid/media/CCParser$CCMemory;->erase()V
 
-    .line 292
     :cond_2
     iput v4, p0, Landroid/media/CCParser;->mMode:I
 
     goto :goto_1
 
-    .line 295
     :pswitch_5
     const-string v2, "CCParser"
 
@@ -344,47 +310,39 @@
 
     goto :goto_1
 
-    .line 299
     :pswitch_6
     iput v1, p0, Landroid/media/CCParser;->mMode:I
 
     goto :goto_1
 
-    .line 302
     :pswitch_7
     iput v6, p0, Landroid/media/CCParser;->mMode:I
 
-    .line 303
     iget-object v2, p0, Landroid/media/CCParser;->mTextMem:Landroid/media/CCParser$CCMemory;
 
     invoke-virtual {v2}, Landroid/media/CCParser$CCMemory;->erase()V
 
     goto :goto_1
 
-    .line 306
     :pswitch_8
     iput v6, p0, Landroid/media/CCParser;->mMode:I
 
     goto :goto_1
 
-    .line 310
     :pswitch_9
     iget-object v2, p0, Landroid/media/CCParser;->mDisplay:Landroid/media/CCParser$CCMemory;
 
     invoke-virtual {v2}, Landroid/media/CCParser$CCMemory;->erase()V
 
-    .line 311
     invoke-direct {p0}, Landroid/media/CCParser;->updateDisplay()V
 
     goto :goto_1
 
-    .line 314
     :pswitch_a
     iget v2, p0, Landroid/media/CCParser;->mMode:I
 
     if-ne v2, v4, :cond_3
 
-    .line 315
     invoke-direct {p0}, Landroid/media/CCParser;->getMemory()Landroid/media/CCParser$CCMemory;
 
     move-result-object v2
@@ -393,18 +351,15 @@
 
     invoke-virtual {v2, v3}, Landroid/media/CCParser$CCMemory;->rollUp(I)V
 
-    .line 319
     :goto_2
     iget v2, p0, Landroid/media/CCParser;->mMode:I
 
     if-ne v2, v4, :cond_1
 
-    .line 320
     invoke-direct {p0}, Landroid/media/CCParser;->updateDisplay()V
 
     goto :goto_1
 
-    .line 317
     :cond_3
     invoke-direct {p0}, Landroid/media/CCParser;->getMemory()Landroid/media/CCParser$CCMemory;
 
@@ -414,7 +369,6 @@
 
     goto :goto_2
 
-    .line 325
     :pswitch_b
     iget-object v2, p0, Landroid/media/CCParser;->mNonDisplay:Landroid/media/CCParser$CCMemory;
 
@@ -422,19 +376,15 @@
 
     goto :goto_1
 
-    .line 329
     :pswitch_c
     invoke-direct {p0}, Landroid/media/CCParser;->swapMemory()V
 
-    .line 331
     iput v5, p0, Landroid/media/CCParser;->mMode:I
 
-    .line 332
     invoke-direct {p0}, Landroid/media/CCParser;->updateDisplay()V
 
     goto :goto_1
 
-    .line 271
     :pswitch_data_0
     .packed-switch 0x20
         :pswitch_1
@@ -463,22 +413,18 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 210
     invoke-virtual {p1}, Landroid/media/CCParser$CCData;->isDisplayableChar()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 211
     const/4 v0, 0x0
 
-    .line 225
     :cond_0
     :goto_0
     return v0
 
-    .line 215
     :cond_1
     # invokes: Landroid/media/CCParser$CCData;->isExtendedChar()Z
     invoke-static {p1}, Landroid/media/CCParser$CCData;->access$000(Landroid/media/CCParser$CCData;)Z
@@ -487,14 +433,12 @@
 
     if-eqz v1, :cond_2
 
-    .line 216
     invoke-direct {p0}, Landroid/media/CCParser;->getMemory()Landroid/media/CCParser$CCMemory;
 
     move-result-object v1
 
     invoke-virtual {v1}, Landroid/media/CCParser$CCMemory;->bs()V
 
-    .line 219
     :cond_2
     invoke-direct {p0}, Landroid/media/CCParser;->getMemory()Landroid/media/CCParser$CCMemory;
 
@@ -506,7 +450,6 @@
 
     invoke-virtual {v1, v2}, Landroid/media/CCParser$CCMemory;->writeText(Ljava/lang/String;)V
 
-    .line 221
     iget v1, p0, Landroid/media/CCParser;->mMode:I
 
     if-eq v1, v0, :cond_3
@@ -517,7 +460,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 222
     :cond_3
     invoke-direct {p0}, Landroid/media/CCParser;->updateDisplay()V
 
@@ -529,26 +471,21 @@
     .param p1, "ccData"    # Landroid/media/CCParser$CCData;
 
     .prologue
-    .line 229
     invoke-virtual {p1}, Landroid/media/CCParser$CCData;->getMidRow()Landroid/media/CCParser$StyleCode;
 
     move-result-object v0
 
-    .line 230
     .local v0, "m":Landroid/media/CCParser$StyleCode;
     if-eqz v0, :cond_0
 
-    .line 231
     invoke-direct {p0}, Landroid/media/CCParser;->getMemory()Landroid/media/CCParser$CCMemory;
 
     move-result-object v1
 
     invoke-virtual {v1, v0}, Landroid/media/CCParser$CCMemory;->writeMidRowCode(Landroid/media/CCParser$StyleCode;)V
 
-    .line 232
     const/4 v1, 0x1
 
-    .line 234
     :goto_0
     return v1
 
@@ -563,23 +500,19 @@
     .param p1, "ccData"    # Landroid/media/CCParser$CCData;
 
     .prologue
-    .line 238
     invoke-virtual {p1}, Landroid/media/CCParser$CCData;->getPAC()Landroid/media/CCParser$PAC;
 
     move-result-object v0
 
-    .line 240
     .local v0, "pac":Landroid/media/CCParser$PAC;
     if-eqz v0, :cond_1
 
-    .line 241
     iget v1, p0, Landroid/media/CCParser;->mMode:I
 
     const/4 v2, 0x2
 
     if-ne v1, v2, :cond_0
 
-    .line 242
     invoke-direct {p0}, Landroid/media/CCParser;->getMemory()Landroid/media/CCParser$CCMemory;
 
     move-result-object v1
@@ -593,7 +526,6 @@
     # invokes: Landroid/media/CCParser$CCMemory;->moveBaselineTo(II)V
     invoke-static {v1, v2, v3}, Landroid/media/CCParser$CCMemory;->access$100(Landroid/media/CCParser$CCMemory;II)V
 
-    .line 244
     :cond_0
     invoke-direct {p0}, Landroid/media/CCParser;->getMemory()Landroid/media/CCParser$CCMemory;
 
@@ -601,10 +533,8 @@
 
     invoke-virtual {v1, v0}, Landroid/media/CCParser$CCMemory;->writePAC(Landroid/media/CCParser$PAC;)V
 
-    .line 245
     const/4 v1, 0x1
 
-    .line 248
     :goto_0
     return v1
 
@@ -619,26 +549,21 @@
     .param p1, "ccData"    # Landroid/media/CCParser$CCData;
 
     .prologue
-    .line 252
     invoke-virtual {p1}, Landroid/media/CCParser$CCData;->getTabOffset()I
 
     move-result v0
 
-    .line 254
     .local v0, "tabs":I
     if-lez v0, :cond_0
 
-    .line 255
     invoke-direct {p0}, Landroid/media/CCParser;->getMemory()Landroid/media/CCParser$CCMemory;
 
     move-result-object v1
 
     invoke-virtual {v1, v0}, Landroid/media/CCParser$CCMemory;->tab(I)V
 
-    .line 256
     const/4 v1, 0x1
 
-    .line 259
     :goto_0
     return v1
 
@@ -652,19 +577,15 @@
     .locals 2
 
     .prologue
-    .line 354
     iget-object v0, p0, Landroid/media/CCParser;->mDisplay:Landroid/media/CCParser$CCMemory;
 
-    .line 355
     .local v0, "temp":Landroid/media/CCParser$CCMemory;
     iget-object v1, p0, Landroid/media/CCParser;->mNonDisplay:Landroid/media/CCParser$CCMemory;
 
     iput-object v1, p0, Landroid/media/CCParser;->mDisplay:Landroid/media/CCParser$CCMemory;
 
-    .line 356
     iput-object v0, p0, Landroid/media/CCParser;->mNonDisplay:Landroid/media/CCParser$CCMemory;
 
-    .line 357
     return-void
 .end method
 
@@ -672,19 +593,16 @@
     .locals 3
 
     .prologue
-    .line 347
     iget-object v1, p0, Landroid/media/CCParser;->mListener:Landroid/media/CCParser$DisplayListener;
 
     if-eqz v1, :cond_0
 
-    .line 348
     iget-object v1, p0, Landroid/media/CCParser;->mListener:Landroid/media/CCParser$DisplayListener;
 
     invoke-interface {v1}, Landroid/media/CCParser$DisplayListener;->getCaptionStyle()Landroid/view/accessibility/CaptioningManager$CaptionStyle;
 
     move-result-object v0
 
-    .line 349
     .local v0, "captionStyle":Landroid/view/accessibility/CaptioningManager$CaptionStyle;
     iget-object v1, p0, Landroid/media/CCParser;->mListener:Landroid/media/CCParser$DisplayListener;
 
@@ -696,7 +614,6 @@
 
     invoke-interface {v1, v2}, Landroid/media/CCParser$DisplayListener;->onDisplayChanged([Landroid/text/SpannableStringBuilder;)V
 
-    .line 351
     .end local v0    # "captionStyle":Landroid/view/accessibility/CaptioningManager$CaptionStyle;
     :cond_0
     return-void
@@ -709,12 +626,10 @@
     .param p1, "data"    # [B
 
     .prologue
-    .line 168
     invoke-static {p1}, Landroid/media/CCParser$CCData;->fromByteArray([B)[Landroid/media/CCParser$CCData;
 
     move-result-object v0
 
-    .line 170
     .local v0, "ccData":[Landroid/media/CCParser$CCData;
     const/4 v1, 0x0
 
@@ -724,12 +639,10 @@
 
     if-ge v1, v2, :cond_3
 
-    .line 171
     sget-boolean v2, Landroid/media/CCParser;->DEBUG:Z
 
     if-eqz v2, :cond_0
 
-    .line 172
     const-string v2, "CCParser"
 
     aget-object v3, v0, v1
@@ -740,7 +653,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 175
     :cond_0
     aget-object v2, v0, v1
 
@@ -774,14 +686,12 @@
 
     if-eqz v2, :cond_2
 
-    .line 170
     :cond_1
     :goto_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 182
     :cond_2
     aget-object v2, v0, v1
 
@@ -789,7 +699,6 @@
 
     goto :goto_1
 
-    .line 184
     :cond_3
     return-void
 .end method

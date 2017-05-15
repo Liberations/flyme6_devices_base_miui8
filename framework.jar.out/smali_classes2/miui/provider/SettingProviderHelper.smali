@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,19 +18,15 @@
     .param p0, "soundUri"    # Landroid/net/Uri;
 
     .prologue
-    .line 46
     invoke-virtual {p0}, Landroid/net/Uri;->getAuthority()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 47
     .local v0, "authority":Ljava/lang/String;
     if-nez v0, :cond_0
 
-    .line 48
     const-string v0, ""
 
-    .line 50
     :cond_0
     const-string v1, "media"
 
@@ -47,11 +42,9 @@
 
     if-eqz v1, :cond_2
 
-    .line 51
     :cond_1
     const-string v0, "media"
 
-    .line 53
     .end local v0    # "authority":Ljava/lang/String;
     :cond_2
     return-object v0
@@ -63,7 +56,6 @@
     .param p1, "ringtoneType"    # I
 
     .prologue
-    .line 57
     const-string v0, "media"
 
     invoke-static {p0}, Lmiui/provider/SettingProviderHelper;->getRingtoneAuthority(Landroid/net/Uri;)Ljava/lang/String;
@@ -76,12 +68,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 58
     invoke-static {p0, p1}, Landroid/media/ExtraRingtoneManager;->getUriForExtraCases(Landroid/net/Uri;I)Landroid/net/Uri;
 
     move-result-object p0
 
-    .line 60
     .end local p0    # "soundUri":Landroid/net/Uri;
     :cond_0
     return-object p0
@@ -93,10 +83,8 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 20
     const-string v0, "ringtone_default"
 
-    .line 21
     .local v0, "DEFAULT_RINGTONE":Ljava/lang/String;
     const-string v1, "ringtone_default"
 
@@ -104,91 +92,78 @@
 
     invoke-static {p0, p1, v1, v2}, Lmiui/provider/SettingProviderHelper;->loadRingtoneSetting(Landroid/database/sqlite/SQLiteStatement;Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 22
     const-string v1, "ringtone"
 
     sget v2, Lmiui/system/R$string;->def_ringtone:I
 
     invoke-static {p0, p1, v1, v2}, Lmiui/provider/SettingProviderHelper;->loadRingtoneSetting(Landroid/database/sqlite/SQLiteStatement;Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 23
     const-string v1, "alarm_alert"
 
     sget v2, Lmiui/system/R$string;->def_alarm_alert:I
 
     invoke-static {p0, p1, v1, v2}, Lmiui/provider/SettingProviderHelper;->loadRingtoneSetting(Landroid/database/sqlite/SQLiteStatement;Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 24
     const-string v1, "notification_sound"
 
     sget v2, Lmiui/system/R$string;->def_notification_sound:I
 
     invoke-static {p0, p1, v1, v2}, Lmiui/provider/SettingProviderHelper;->loadRingtoneSetting(Landroid/database/sqlite/SQLiteStatement;Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 25
     const-string v1, "calendar_alert"
 
     sget v2, Lmiui/system/R$string;->def_notification_sound:I
 
     invoke-static {p0, p1, v1, v2}, Lmiui/provider/SettingProviderHelper;->loadRingtoneSetting(Landroid/database/sqlite/SQLiteStatement;Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 26
     const-string v1, "sms_delivered_sound"
 
     sget v2, Lmiui/system/R$string;->def_sms_delivered_sound:I
 
     invoke-static {p0, p1, v1, v2}, Lmiui/provider/SettingProviderHelper;->loadRingtoneSetting(Landroid/database/sqlite/SQLiteStatement;Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 27
     const-string v1, "sms_received_sound"
 
     sget v2, Lmiui/system/R$string;->def_sms_received_sound:I
 
     invoke-static {p0, p1, v1, v2}, Lmiui/provider/SettingProviderHelper;->loadRingtoneSetting(Landroid/database/sqlite/SQLiteStatement;Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 28
     const-string v1, "ringtone_sound_slot_1"
 
     sget v2, Lmiui/system/R$string;->def_ringtone_slot_1:I
 
     invoke-static {p0, p1, v1, v2}, Lmiui/provider/SettingProviderHelper;->loadRingtoneSetting(Landroid/database/sqlite/SQLiteStatement;Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 29
     const-string v1, "ringtone_sound_slot_2"
 
     sget v2, Lmiui/system/R$string;->def_ringtone_slot_2:I
 
     invoke-static {p0, p1, v1, v2}, Lmiui/provider/SettingProviderHelper;->loadRingtoneSetting(Landroid/database/sqlite/SQLiteStatement;Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 30
     const-string v1, "sms_delivered_sound_slot_1"
 
     sget v2, Lmiui/system/R$string;->def_sms_delivered_sound_slot_1:I
 
     invoke-static {p0, p1, v1, v2}, Lmiui/provider/SettingProviderHelper;->loadRingtoneSetting(Landroid/database/sqlite/SQLiteStatement;Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 31
     const-string v1, "sms_delivered_sound_slot_2"
 
     sget v2, Lmiui/system/R$string;->def_sms_delivered_sound_slot_2:I
 
     invoke-static {p0, p1, v1, v2}, Lmiui/provider/SettingProviderHelper;->loadRingtoneSetting(Landroid/database/sqlite/SQLiteStatement;Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 32
     const-string v1, "sms_received_sound_slot_1"
 
     sget v2, Lmiui/system/R$string;->def_sms_received_sound_slot_1:I
 
     invoke-static {p0, p1, v1, v2}, Lmiui/provider/SettingProviderHelper;->loadRingtoneSetting(Landroid/database/sqlite/SQLiteStatement;Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 33
     const-string v1, "sms_received_sound_slot_2"
 
     sget v2, Lmiui/system/R$string;->def_sms_received_sound_slot_2:I
 
     invoke-static {p0, p1, v1, v2}, Lmiui/provider/SettingProviderHelper;->loadRingtoneSetting(Landroid/database/sqlite/SQLiteStatement;Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 34
     return-void
 .end method
 
@@ -200,12 +175,10 @@
     .param p3, "resid"    # I
 
     .prologue
-    .line 37
     invoke-virtual {p1, p3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 38
     .local v0, "path":Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -223,12 +196,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 39
     const/4 v1, 0x1
 
     invoke-virtual {p0, v1, p2}, Landroid/database/sqlite/SQLiteStatement;->bindString(ILjava/lang/String;)V
 
-    .line 40
     const/4 v1, 0x2
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -251,10 +222,8 @@
 
     invoke-virtual {p0, v1, v2}, Landroid/database/sqlite/SQLiteStatement;->bindString(ILjava/lang/String;)V
 
-    .line 41
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteStatement;->execute()V
 
-    .line 43
     :cond_0
     return-void
 .end method

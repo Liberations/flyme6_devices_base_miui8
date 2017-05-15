@@ -25,10 +25,8 @@
     .param p2, "cause"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 460
     invoke-direct {p0, p1, p2}, Ljava/lang/Error;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 461
     return-void
 .end method
 
@@ -37,9 +35,7 @@
     .param p1, "cause"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 456
     invoke-direct {p0, p1}, Ljava/lang/Error;-><init>(Ljava/lang/Throwable;)V
 
-    .line 457
     return-void
 .end method

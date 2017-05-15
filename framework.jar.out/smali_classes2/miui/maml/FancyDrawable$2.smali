@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 32
     iput-object p1, p0, Lmiui/maml/FancyDrawable$2;->this$0:Lmiui/maml/FancyDrawable;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,11 +39,9 @@
     .locals 1
 
     .prologue
-    .line 35
     iget-object v0, p0, Lmiui/maml/FancyDrawable$2;->this$0:Lmiui/maml/FancyDrawable;
 
     invoke-virtual {v0}, Lmiui/maml/FancyDrawable;->invalidateSelf()V
 
-    .line 36
     return-void
 .end method

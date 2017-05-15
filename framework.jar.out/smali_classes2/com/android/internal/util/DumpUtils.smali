@@ -16,10 +16,8 @@
     .locals 0
 
     .prologue
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 29
     return-void
 .end method
 
@@ -32,12 +30,10 @@
     .param p4, "timeout"    # J
 
     .prologue
-    .line 40
     new-instance v0, Ljava/io/StringWriter;
 
     invoke-direct {v0}, Ljava/io/StringWriter;-><init>()V
 
-    .line 41
     .local v0, "sw":Ljava/io/StringWriter;
     new-instance v1, Lcom/android/internal/util/DumpUtils$1;
 
@@ -49,18 +45,15 @@
 
     if-eqz v1, :cond_0
 
-    .line 49
     invoke-virtual {v0}, Ljava/io/StringWriter;->toString()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 53
     :goto_0
     return-void
 
-    .line 51
     :cond_0
     const-string v1, "... timed out"
 

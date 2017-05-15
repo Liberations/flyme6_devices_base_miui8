@@ -62,10 +62,8 @@
     .param p3, "rs"    # Landroid/renderscript/RenderScript;
 
     .prologue
-    .line 382
     invoke-direct {p0, p1, p2, p3}, Landroid/renderscript/BaseObj;-><init>(JLandroid/renderscript/RenderScript;)V
 
-    .line 383
     return-void
 .end method
 
@@ -93,33 +91,26 @@
     .end annotation
 
     .prologue
-    .line 387
     .local p3, "closures":Ljava/util/List;, "Ljava/util/List<Landroid/renderscript/ScriptGroup$Closure;>;"
     .local p4, "inputs":Ljava/util/List;, "Ljava/util/List<Landroid/renderscript/ScriptGroup$Input;>;"
     const-wide/16 v4, 0x0
 
     invoke-direct {p0, v4, v5, p1}, Landroid/renderscript/BaseObj;-><init>(JLandroid/renderscript/RenderScript;)V
 
-    .line 388
     iput-object p2, p0, Landroid/renderscript/ScriptGroup;->mName:Ljava/lang/String;
 
-    .line 389
     iput-object p3, p0, Landroid/renderscript/ScriptGroup;->mClosures:Ljava/util/List;
 
-    .line 390
     iput-object p4, p0, Landroid/renderscript/ScriptGroup;->mInputs2:Ljava/util/List;
 
-    .line 391
     iput-object p5, p0, Landroid/renderscript/ScriptGroup;->mOutputs2:[Landroid/renderscript/ScriptGroup$Future;
 
-    .line 393
     invoke-interface {p3}, Ljava/util/List;->size()I
 
     move-result v4
 
     new-array v0, v4, [J
 
-    .line 394
     .local v0, "closureIDs":[J
     const/4 v1, 0x0
 
@@ -129,7 +120,6 @@
 
     if-ge v1, v4, :cond_0
 
-    .line 395
     invoke-interface {p3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -142,12 +132,10 @@
 
     aput-wide v4, v0, v1
 
-    .line 394
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 397
     :cond_0
     sget-object v4, Landroid/renderscript/ScriptC;->mCachePath:Ljava/lang/String;
 
@@ -155,11 +143,9 @@
 
     move-result-wide v2
 
-    .line 398
     .local v2, "id":J
     invoke-virtual {p0, v2, v3}, Landroid/renderscript/ScriptGroup;->setID(J)V
 
-    .line 399
     return-void
 .end method
 
@@ -169,7 +155,6 @@
     .locals 4
 
     .prologue
-    .line 500
     iget-object v0, p0, Landroid/renderscript/ScriptGroup;->mRS:Landroid/renderscript/RenderScript;
 
     iget-object v1, p0, Landroid/renderscript/ScriptGroup;->mRS:Landroid/renderscript/RenderScript;
@@ -180,7 +165,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/renderscript/RenderScript;->nScriptGroupExecute(J)V
 
-    .line 501
     return-void
 .end method
 
@@ -191,7 +175,6 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 411
     array-length v10, p1
 
     iget-object v11, p0, Landroid/renderscript/ScriptGroup;->mInputs2:Ljava/util/List;
@@ -202,7 +185,6 @@
 
     if-ge v10, v11, :cond_1
 
-    .line 412
     const-string v10, "ScriptGroup"
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -235,7 +217,7 @@
 
     move-result-object v11
 
-    const-string/jumbo v12, "less than expected "
+    const-string v12, "less than expected "
 
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -257,12 +239,10 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 444
     :cond_0
     :goto_0
     return-object v8
 
-    .line 417
     :cond_1
     array-length v10, p1
 
@@ -274,7 +254,6 @@
 
     if-le v10, v11, :cond_2
 
-    .line 418
     const-string v10, "ScriptGroup"
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -307,7 +286,7 @@
 
     move-result-object v11
 
-    const-string/jumbo v12, "more than expected "
+    const-string v12, "more than expected "
 
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -329,7 +308,6 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 422
     :cond_2
     const/4 v2, 0x0
 
@@ -343,10 +321,8 @@
 
     if-ge v2, v10, :cond_5
 
-    .line 423
     aget-object v6, p1, v2
 
-    .line 424
     .local v6, "obj":Ljava/lang/Object;
     instance-of v10, v6, Landroid/renderscript/ScriptGroup$Future;
 
@@ -356,7 +332,6 @@
 
     if-eqz v10, :cond_4
 
-    .line 425
     :cond_3
     const-string v10, "ScriptGroup"
 
@@ -396,7 +371,6 @@
 
     goto :goto_0
 
-    .line 429
     :cond_4
     iget-object v10, p0, Landroid/renderscript/ScriptGroup;->mInputs2:Ljava/util/List;
 
@@ -406,16 +380,13 @@
 
     check-cast v9, Landroid/renderscript/ScriptGroup$Input;
 
-    .line 430
     .local v9, "unbound":Landroid/renderscript/ScriptGroup$Input;
     invoke-virtual {v9, v6}, Landroid/renderscript/ScriptGroup$Input;->set(Ljava/lang/Object;)V
 
-    .line 422
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 433
     .end local v6    # "obj":Ljava/lang/Object;
     .end local v9    # "unbound":Landroid/renderscript/ScriptGroup$Input;
     :cond_5
@@ -429,18 +400,15 @@
 
     invoke-virtual {v10, v12, v13}, Landroid/renderscript/RenderScript;->nScriptGroup2Execute(J)V
 
-    .line 435
     iget-object v10, p0, Landroid/renderscript/ScriptGroup;->mOutputs2:[Landroid/renderscript/ScriptGroup$Future;
 
     array-length v10, v10
 
     new-array v8, v10, [Ljava/lang/Object;
 
-    .line 436
     .local v8, "outputObjs":[Ljava/lang/Object;
     const/4 v2, 0x0
 
-    .line 437
     iget-object v0, p0, Landroid/renderscript/ScriptGroup;->mOutputs2:[Landroid/renderscript/ScriptGroup$Future;
 
     .local v0, "arr$":[Landroid/renderscript/ScriptGroup$Future;
@@ -459,19 +427,16 @@
 
     aget-object v1, v0, v4
 
-    .line 438
     .local v1, "f":Landroid/renderscript/ScriptGroup$Future;
     invoke-virtual {v1}, Landroid/renderscript/ScriptGroup$Future;->getValue()Ljava/lang/Object;
 
     move-result-object v7
 
-    .line 439
     .local v7, "output":Ljava/lang/Object;
     instance-of v10, v7, Landroid/renderscript/ScriptGroup$Input;
 
     if-eqz v10, :cond_6
 
-    .line 440
     check-cast v7, Landroid/renderscript/ScriptGroup$Input;
 
     .end local v7    # "output":Ljava/lang/Object;
@@ -479,7 +444,6 @@
 
     move-result-object v7
 
-    .line 442
     .restart local v7    # "output":Ljava/lang/Object;
     :cond_6
     add-int/lit8 v2, v3, 0x1
@@ -488,7 +452,6 @@
     .restart local v2    # "i":I
     aput-object v7, v8, v3
 
-    .line 437
     add-int/lit8 v4, v4, 0x1
 
     move v3, v2
@@ -504,7 +467,6 @@
     .param p2, "a"    # Landroid/renderscript/Allocation;
 
     .prologue
-    .line 459
     const/4 v0, 0x0
 
     .local v0, "ct":I
@@ -515,7 +477,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 460
     iget-object v1, p0, Landroid/renderscript/ScriptGroup;->mInputs:[Landroid/renderscript/ScriptGroup$IO;
 
     aget-object v1, v1, v0
@@ -524,14 +485,12 @@
 
     if-ne v1, p1, :cond_0
 
-    .line 461
     iget-object v1, p0, Landroid/renderscript/ScriptGroup;->mInputs:[Landroid/renderscript/ScriptGroup$IO;
 
     aget-object v1, v1, v0
 
     iput-object p2, v1, Landroid/renderscript/ScriptGroup$IO;->mAllocation:Landroid/renderscript/Allocation;
 
-    .line 462
     iget-object v1, p0, Landroid/renderscript/ScriptGroup;->mRS:Landroid/renderscript/RenderScript;
 
     iget-object v2, p0, Landroid/renderscript/ScriptGroup;->mRS:Landroid/renderscript/RenderScript;
@@ -554,16 +513,13 @@
 
     invoke-virtual/range {v1 .. v7}, Landroid/renderscript/RenderScript;->nScriptGroupSetInput(JJJ)V
 
-    .line 463
     return-void
 
-    .line 459
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 466
     :cond_1
     new-instance v1, Landroid/renderscript/RSIllegalArgumentException;
 
@@ -580,7 +536,6 @@
     .param p2, "a"    # Landroid/renderscript/Allocation;
 
     .prologue
-    .line 481
     const/4 v0, 0x0
 
     .local v0, "ct":I
@@ -591,7 +546,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 482
     iget-object v1, p0, Landroid/renderscript/ScriptGroup;->mOutputs:[Landroid/renderscript/ScriptGroup$IO;
 
     aget-object v1, v1, v0
@@ -600,14 +554,12 @@
 
     if-ne v1, p1, :cond_0
 
-    .line 483
     iget-object v1, p0, Landroid/renderscript/ScriptGroup;->mOutputs:[Landroid/renderscript/ScriptGroup$IO;
 
     aget-object v1, v1, v0
 
     iput-object p2, v1, Landroid/renderscript/ScriptGroup$IO;->mAllocation:Landroid/renderscript/Allocation;
 
-    .line 484
     iget-object v1, p0, Landroid/renderscript/ScriptGroup;->mRS:Landroid/renderscript/RenderScript;
 
     iget-object v2, p0, Landroid/renderscript/ScriptGroup;->mRS:Landroid/renderscript/RenderScript;
@@ -630,16 +582,13 @@
 
     invoke-virtual/range {v1 .. v7}, Landroid/renderscript/RenderScript;->nScriptGroupSetOutput(JJJ)V
 
-    .line 485
     return-void
 
-    .line 481
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 488
     :cond_1
     new-instance v1, Landroid/renderscript/RSIllegalArgumentException;
 

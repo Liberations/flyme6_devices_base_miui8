@@ -14,28 +14,23 @@
     .locals 2
 
     .prologue
-    .line 12
     const/4 v0, 0x1
 
     sput v0, Lorg/ifaa/android/manager/IFAAManager;->mIfaaVer:I
 
-    .line 15
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x18
 
     if-lt v0, v1, :cond_0
 
-    .line 16
     const/4 v0, 0x2
 
     sput v0, Lorg/ifaa/android/manager/IFAAManager;->mIfaaVer:I
 
-    .line 20
     :goto_0
     return-void
 
-    .line 18
     :cond_0
     const-string v0, "teeclientjni"
 
@@ -48,7 +43,6 @@
     .locals 0
 
     .prologue
-    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

@@ -45,27 +45,20 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 48
     const/4 v0, 0x0
 
     sput-boolean v0, Landroid/util/BoostFramework;->mIsLoaded:Z
 
-    .line 49
     sput-object v1, Landroid/util/BoostFramework;->mAcquireFunc:Ljava/lang/reflect/Method;
 
-    .line 50
     sput-object v1, Landroid/util/BoostFramework;->mReleaseFunc:Ljava/lang/reflect/Method;
 
-    .line 51
     sput-object v1, Landroid/util/BoostFramework;->mAcquireTouchFunc:Ljava/lang/reflect/Method;
 
-    .line 52
     sput-object v1, Landroid/util/BoostFramework;->mIOPStart:Ljava/lang/reflect/Method;
 
-    .line 53
     sput-object v1, Landroid/util/BoostFramework;->mIOPStop:Ljava/lang/reflect/Method;
 
-    .line 54
     sput-object v1, Landroid/util/BoostFramework;->mConstructor:Ljava/lang/reflect/Constructor;
 
     return-void
@@ -75,20 +68,16 @@
     .locals 7
 
     .prologue
-    .line 60
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 57
     const/4 v4, 0x0
 
     iput-object v4, p0, Landroid/util/BoostFramework;->mPerf:Ljava/lang/Object;
 
-    .line 62
     sget-boolean v4, Landroid/util/BoostFramework;->mIsLoaded:Z
 
     if-nez v4, :cond_0
 
-    .line 67
     :try_start_0
     new-instance v3, Ldalvik/system/PathClassLoader;
 
@@ -100,7 +89,6 @@
 
     invoke-direct {v3, v4, v5}, Ldalvik/system/PathClassLoader;-><init>(Ljava/lang/String;Ljava/lang/ClassLoader;)V
 
-    .line 69
     .local v3, "perfClassLoader":Ldalvik/system/PathClassLoader;
     const-string v4, "com.qualcomm.qti.Performance"
 
@@ -108,7 +96,6 @@
 
     move-result-object v2
 
-    .line 70
     .local v2, "perfClass":Ljava/lang/Class;
     const/4 v4, 0x0
 
@@ -120,7 +107,6 @@
 
     sput-object v4, Landroid/util/BoostFramework;->mConstructor:Ljava/lang/reflect/Constructor;
 
-    .line 72
     const/4 v4, 0x2
 
     new-array v0, v4, [Ljava/lang/Class;
@@ -137,7 +123,6 @@
 
     aput-object v5, v0, v4
 
-    .line 73
     .local v0, "argClasses":[Ljava/lang/Class;
     const-string v4, "perfLockAcquire"
 
@@ -147,7 +132,6 @@
 
     sput-object v4, Landroid/util/BoostFramework;->mAcquireFunc:Ljava/lang/reflect/Method;
 
-    .line 74
     const-string v4, "BoostFramework"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -172,12 +156,10 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 76
     const/4 v4, 0x0
 
     new-array v0, v4, [Ljava/lang/Class;
 
-    .line 77
     const-string v4, "perfLockRelease"
 
     invoke-virtual {v2, v4, v0}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
@@ -186,7 +168,6 @@
 
     sput-object v4, Landroid/util/BoostFramework;->mReleaseFunc:Ljava/lang/reflect/Method;
 
-    .line 78
     const-string v4, "BoostFramework"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -211,7 +192,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 80
     const/4 v4, 0x4
 
     new-array v0, v4, [Ljava/lang/Class;
@@ -241,7 +221,6 @@
 
     aput-object v5, v0, v4
 
-    .line 81
     .restart local v0    # "argClasses":[Ljava/lang/Class;
     const-string v4, "perfLockAcquireTouch"
 
@@ -251,7 +230,6 @@
 
     sput-object v4, Landroid/util/BoostFramework;->mAcquireTouchFunc:Ljava/lang/reflect/Method;
 
-    .line 82
     const-string v4, "BoostFramework"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -276,7 +254,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 84
     const/4 v4, 0x2
 
     new-array v0, v4, [Ljava/lang/Class;
@@ -294,7 +271,6 @@
 
     aput-object v5, v0, v4
 
-    .line 85
     .restart local v0    # "argClasses":[Ljava/lang/Class;
     const-string v4, "perfIOPrefetchStart"
 
@@ -304,7 +280,6 @@
 
     sput-object v4, Landroid/util/BoostFramework;->mIOPStart:Ljava/lang/reflect/Method;
 
-    .line 86
     const-string v4, "BoostFramework"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -329,12 +304,10 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 88
     const/4 v4, 0x0
 
     new-array v0, v4, [Ljava/lang/Class;
 
-    .line 89
     const-string v4, "perfIOPrefetchStop"
 
     invoke-virtual {v2, v4, v0}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
@@ -343,7 +316,6 @@
 
     sput-object v4, Landroid/util/BoostFramework;->mIOPStop:Ljava/lang/reflect/Method;
 
-    .line 90
     const-string v4, "BoostFramework"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -368,14 +340,12 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 92
     const/4 v4, 0x1
 
     sput-boolean v4, Landroid/util/BoostFramework;->mIsLoaded:Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 100
     .end local v0    # "argClasses":[Ljava/lang/Class;
     .end local v2    # "perfClass":Ljava/lang/Class;
     .end local v3    # "perfClassLoader":Ldalvik/system/PathClassLoader;
@@ -386,7 +356,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 101
     sget-object v4, Landroid/util/BoostFramework;->mConstructor:Ljava/lang/reflect/Constructor;
 
     const/4 v5, 0x0
@@ -401,7 +370,6 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 108
     :cond_1
     :goto_1
     const-string v4, "BoostFramework"
@@ -428,14 +396,11 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 109
     return-void
 
-    .line 94
     :catch_0
     move-exception v1
 
-    .line 95
     .local v1, "e":Ljava/lang/Exception;
     const-string v4, "BoostFramework"
 
@@ -461,12 +426,10 @@
 
     goto :goto_0
 
-    .line 104
     .end local v1    # "e":Ljava/lang/Exception;
     :catch_1
     move-exception v1
 
-    .line 105
     .restart local v1    # "e":Ljava/lang/Exception;
     const-string v4, "BoostFramework"
 
@@ -501,10 +464,8 @@
     .param p2, "pkg_name"    # Ljava/lang/String;
 
     .prologue
-    .line 161
     const/4 v1, -0x1
 
-    .line 163
     .local v1, "ret":I
     :try_start_0
     sget-object v3, Landroid/util/BoostFramework;->mIOPStart:Ljava/lang/reflect/Method;
@@ -531,7 +492,6 @@
 
     move-result-object v2
 
-    .line 164
     .local v2, "retVal":Ljava/lang/Object;
     check-cast v2, Ljava/lang/Integer;
 
@@ -542,15 +502,12 @@
 
     move-result v1
 
-    .line 168
     :goto_0
     return v1
 
-    .line 165
     :catch_0
     move-exception v0
 
-    .line 166
     .local v0, "e":Ljava/lang/Exception;
     const-string v3, "BoostFramework"
 
@@ -581,10 +538,8 @@
     .locals 6
 
     .prologue
-    .line 174
     const/4 v1, -0x1
 
-    .line 176
     .local v1, "ret":I
     :try_start_0
     sget-object v3, Landroid/util/BoostFramework;->mIOPStop:Ljava/lang/reflect/Method;
@@ -599,7 +554,6 @@
 
     move-result-object v2
 
-    .line 177
     .local v2, "retVal":Ljava/lang/Object;
     check-cast v2, Ljava/lang/Integer;
 
@@ -610,15 +564,12 @@
 
     move-result v1
 
-    .line 181
     :goto_0
     return v1
 
-    .line 178
     :catch_0
     move-exception v0
 
-    .line 179
     .local v0, "e":Ljava/lang/Exception;
     const-string v3, "BoostFramework"
 
@@ -651,10 +602,8 @@
     .param p2, "list"    # [I
 
     .prologue
-    .line 124
     const/4 v1, -0x1
 
-    .line 126
     .local v1, "ret":I
     :try_start_0
     sget-object v3, Landroid/util/BoostFramework;->mAcquireFunc:Ljava/lang/reflect/Method;
@@ -681,7 +630,6 @@
 
     move-result-object v2
 
-    .line 127
     .local v2, "retVal":Ljava/lang/Object;
     check-cast v2, Ljava/lang/Integer;
 
@@ -692,15 +640,12 @@
 
     move-result v1
 
-    .line 131
     :goto_0
     return v1
 
-    .line 128
     :catch_0
     move-exception v0
 
-    .line 129
     .local v0, "e":Ljava/lang/Exception;
     const-string v3, "BoostFramework"
 
@@ -735,10 +680,8 @@
     .param p4, "list"    # [I
 
     .prologue
-    .line 148
     const/4 v1, -0x1
 
-    .line 150
     .local v1, "ret":I
     :try_start_0
     sget-object v3, Landroid/util/BoostFramework;->mAcquireTouchFunc:Ljava/lang/reflect/Method;
@@ -773,7 +716,6 @@
 
     move-result-object v2
 
-    .line 151
     .local v2, "retVal":Ljava/lang/Object;
     check-cast v2, Ljava/lang/Integer;
 
@@ -784,15 +726,12 @@
 
     move-result v1
 
-    .line 155
     :goto_0
     return v1
 
-    .line 152
     :catch_0
     move-exception v0
 
-    .line 153
     .local v0, "e":Ljava/lang/Exception;
     const-string v3, "BoostFramework"
 
@@ -823,10 +762,8 @@
     .locals 6
 
     .prologue
-    .line 136
     const/4 v1, -0x1
 
-    .line 138
     .local v1, "ret":I
     :try_start_0
     sget-object v3, Landroid/util/BoostFramework;->mReleaseFunc:Ljava/lang/reflect/Method;
@@ -841,7 +778,6 @@
 
     move-result-object v2
 
-    .line 139
     .local v2, "retVal":Ljava/lang/Object;
     check-cast v2, Ljava/lang/Integer;
 
@@ -852,15 +788,12 @@
 
     move-result v1
 
-    .line 143
     :goto_0
     return v1
 
-    .line 140
     :catch_0
     move-exception v0
 
-    .line 141
     .local v0, "e":Ljava/lang/Exception;
     const-string v3, "BoostFramework"
 

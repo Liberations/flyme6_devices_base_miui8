@@ -27,15 +27,12 @@
     .param p2, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 209
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lmiui/maml/util/TextFormatter$FormatPara;-><init>(Lmiui/maml/util/TextFormatter$1;)V
 
-    .line 210
     iput-object p2, p0, Lmiui/maml/util/TextFormatter$StringVarPara;->mVariable:Ljava/lang/String;
 
-    .line 211
     new-instance v0, Lmiui/maml/data/IndexedVariable;
 
     iget-object v1, p0, Lmiui/maml/util/TextFormatter$StringVarPara;->mVariable:Ljava/lang/String;
@@ -46,7 +43,6 @@
 
     iput-object v0, p0, Lmiui/maml/util/TextFormatter$StringVarPara;->mVar:Lmiui/maml/data/IndexedVariable;
 
-    .line 212
     return-void
 .end method
 
@@ -56,14 +52,12 @@
     .locals 2
 
     .prologue
-    .line 216
     iget-object v1, p0, Lmiui/maml/util/TextFormatter$StringVarPara;->mVar:Lmiui/maml/data/IndexedVariable;
 
     invoke-virtual {v1}, Lmiui/maml/data/IndexedVariable;->getString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 217
     .local v0, "string":Ljava/lang/String;
     if-nez v0, :cond_0
 

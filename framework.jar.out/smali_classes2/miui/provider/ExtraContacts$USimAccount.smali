@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 1254
     invoke-direct {p0}, Lmiui/provider/ExtraContacts$SimAccount;-><init>()V
 
     return-void

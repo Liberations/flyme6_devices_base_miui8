@@ -45,7 +45,6 @@
     .locals 1
 
     .prologue
-    .line 102
     new-instance v0, Landroid/util/Log$1;
 
     invoke-direct {v0}, Landroid/util/Log$1;-><init>()V
@@ -59,10 +58,8 @@
     .locals 0
 
     .prologue
-    .line 108
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 109
     return-void
 .end method
 
@@ -72,7 +69,6 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 139
     const/4 v0, 0x0
 
     const/4 v1, 0x3
@@ -91,7 +87,6 @@
     .param p2, "tr"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 150
     const/4 v0, 0x0
 
     const/4 v1, 0x3
@@ -135,7 +130,6 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 232
     const/4 v0, 0x0
 
     const/4 v1, 0x6
@@ -154,7 +148,6 @@
     .param p2, "tr"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 247
     const/4 v0, 0x0
 
     const/4 v1, 0x6
@@ -197,36 +190,28 @@
     .param p0, "tr"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 331
     if-nez p0, :cond_0
 
-    .line 332
     const-string v3, ""
 
-    .line 349
     :goto_0
     return-object v3
 
-    .line 337
     :cond_0
     move-object v2, p0
 
-    .line 338
     .local v2, "t":Ljava/lang/Throwable;
     :goto_1
     if-eqz v2, :cond_2
 
-    .line 339
     instance-of v3, v2, Ljava/net/UnknownHostException;
 
     if-eqz v3, :cond_1
 
-    .line 340
     const-string v3, ""
 
     goto :goto_0
 
-    .line 342
     :cond_1
     invoke-virtual {v2}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
 
@@ -234,13 +219,11 @@
 
     goto :goto_1
 
-    .line 345
     :cond_2
     new-instance v1, Ljava/io/StringWriter;
 
     invoke-direct {v1}, Ljava/io/StringWriter;-><init>()V
 
-    .line 346
     .local v1, "sw":Ljava/io/StringWriter;
     new-instance v0, Lcom/android/internal/util/FastPrintWriter;
 
@@ -250,14 +233,11 @@
 
     invoke-direct {v0, v1, v3, v4}, Lcom/android/internal/util/FastPrintWriter;-><init>(Ljava/io/Writer;ZI)V
 
-    .line 347
     .local v0, "pw":Ljava/io/PrintWriter;
     invoke-virtual {p0, v0}, Ljava/lang/Throwable;->printStackTrace(Ljava/io/PrintWriter;)V
 
-    .line 348
     invoke-virtual {v0}, Ljava/io/PrintWriter;->flush()V
 
-    .line 349
     invoke-virtual {v1}, Ljava/io/StringWriter;->toString()Ljava/lang/String;
 
     move-result-object v3
@@ -271,7 +251,6 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 160
     const/4 v0, 0x0
 
     const/4 v1, 0x4
@@ -290,7 +269,6 @@
     .param p2, "tr"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 171
     const/4 v0, 0x0
 
     const/4 v1, 0x4
@@ -338,7 +316,6 @@
     .param p2, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 361
     const/4 v0, 0x0
 
     invoke-static {v0, p0, p1, p2}, Landroid/util/Log;->println_native(IILjava/lang/String;Ljava/lang/String;)I
@@ -356,10 +333,8 @@
     .param p0, "handler"    # Landroid/util/Log$TerribleFailureHandler;
 
     .prologue
-    .line 318
     if-nez p0, :cond_0
 
-    .line 319
     new-instance v1, Ljava/lang/NullPointerException;
 
     const-string v2, "handler == null"
@@ -368,15 +343,12 @@
 
     throw v1
 
-    .line 321
     :cond_0
     sget-object v0, Landroid/util/Log;->sWtfHandler:Landroid/util/Log$TerribleFailureHandler;
 
-    .line 322
     .local v0, "oldHandler":Landroid/util/Log$TerribleFailureHandler;
     sput-object p0, Landroid/util/Log;->sWtfHandler:Landroid/util/Log$TerribleFailureHandler;
 
-    .line 323
     return-object v0
 .end method
 
@@ -386,7 +358,6 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 118
     const/4 v0, 0x0
 
     const/4 v1, 0x2
@@ -405,7 +376,6 @@
     .param p2, "tr"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 129
     const/4 v0, 0x0
 
     const/4 v1, 0x2
@@ -449,7 +419,6 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 181
     const/4 v0, 0x0
 
     const/4 v1, 0x5
@@ -468,7 +437,6 @@
     .param p2, "tr"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 192
     const/4 v0, 0x0
 
     const/4 v1, 0x5
@@ -512,7 +480,6 @@
     .param p1, "tr"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 222
     const/4 v0, 0x0
 
     const/4 v1, 0x5
@@ -534,7 +501,6 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 237
     const/4 v0, 0x5
 
     const/4 v1, 0x2
@@ -556,12 +522,10 @@
     .param p5, "system"    # Z
 
     .prologue
-    .line 295
     new-instance v1, Landroid/util/Log$TerribleFailure;
 
     invoke-direct {v1, p2, p3}, Landroid/util/Log$TerribleFailure;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 299
     .local v1, "what":Landroid/util/Log$TerribleFailure;
     const/4 v2, 0x6
 
@@ -601,13 +565,11 @@
 
     move-result v0
 
-    .line 301
     .local v0, "bytes":I
     sget-object v2, Landroid/util/Log;->sWtfHandler:Landroid/util/Log$TerribleFailureHandler;
 
     invoke-interface {v2, p1, v1, p5}, Landroid/util/Log$TerribleFailureHandler;->onTerribleFailure(Ljava/lang/String;Landroid/util/Log$TerribleFailure;Z)V
 
-    .line 302
     return v0
 .end method
 
@@ -619,7 +581,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 260
     const/4 v3, 0x0
 
     move-object v1, p0
@@ -646,7 +607,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 290
     move-object v1, p0
 
     move-object v2, p1
@@ -672,7 +632,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 279
     invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v2
@@ -700,20 +659,17 @@
     .param p3, "system"    # Z
 
     .prologue
-    .line 306
     new-instance v0, Landroid/util/Log$TerribleFailure;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, p2, v1}, Landroid/util/Log$TerribleFailure;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 307
     .local v0, "what":Landroid/util/Log$TerribleFailure;
     sget-object v1, Landroid/util/Log;->sWtfHandler:Landroid/util/Log$TerribleFailureHandler;
 
     invoke-interface {v1, p1, v0, p3}, Landroid/util/Log$TerribleFailureHandler;->onTerribleFailure(Ljava/lang/String;Landroid/util/Log$TerribleFailure;Z)V
 
-    .line 308
     return-void
 .end method
 
@@ -725,7 +681,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 269
     const/4 v3, 0x0
 
     const/4 v4, 0x1

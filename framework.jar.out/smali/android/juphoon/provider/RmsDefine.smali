@@ -56,7 +56,6 @@
     .locals 2
 
     .prologue
-    .line 18
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -85,7 +84,6 @@
 
     sput-object v0, Landroid/juphoon/provider/RmsDefine;->RMS_FILE_PATH:Ljava/lang/String;
 
-    .line 19
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -114,7 +112,6 @@
 
     sput-object v0, Landroid/juphoon/provider/RmsDefine;->FAVORITES_FILE_PATH:Ljava/lang/String;
 
-    .line 20
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -150,9 +147,7 @@
     .locals 0
 
     .prologue
-    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 595
     return-void
 .end method

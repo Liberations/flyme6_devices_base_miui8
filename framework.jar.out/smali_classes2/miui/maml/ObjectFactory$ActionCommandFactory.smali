@@ -32,12 +32,10 @@
     .locals 1
 
     .prologue
-    .line 66
     const-string v0, "ActionCommand"
 
     invoke-direct {p0, v0}, Lmiui/maml/ObjectFactory$ObjectFactoryBase;-><init>(Ljava/lang/String;)V
 
-    .line 67
     return-void
 .end method
 
@@ -49,16 +47,13 @@
     .param p2, "ele"    # Lorg/w3c/dom/Element;
 
     .prologue
-    .line 70
     invoke-virtual {p0, p1, p2}, Lmiui/maml/ObjectFactory$ActionCommandFactory;->doCreate(Lmiui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)Lmiui/maml/ActionCommand;
 
     move-result-object v0
 
-    .line 71
     .local v0, "ret":Lmiui/maml/ActionCommand;
     if-eqz v0, :cond_0
 
-    .line 73
     .end local v0    # "ret":Lmiui/maml/ActionCommand;
     :goto_0
     return-object v0

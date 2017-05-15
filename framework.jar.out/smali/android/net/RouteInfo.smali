@@ -44,7 +44,6 @@
     .locals 1
 
     .prologue
-    .line 469
     new-instance v0, Landroid/net/RouteInfo$1;
 
     invoke-direct {v0}, Landroid/net/RouteInfo$1;-><init>()V
@@ -61,10 +60,8 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 224
     invoke-direct {p0, p1, v0, v0}, Landroid/net/RouteInfo;-><init>(Landroid/net/IpPrefix;Ljava/net/InetAddress;Ljava/lang/String;)V
 
-    .line 225
     return-void
 .end method
 
@@ -76,10 +73,8 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 238
     invoke-direct {p0, p1, v0, v0, p2}, Landroid/net/RouteInfo;-><init>(Landroid/net/IpPrefix;Ljava/net/InetAddress;Ljava/lang/String;I)V
 
-    .line 239
     return-void
 .end method
 
@@ -89,12 +84,10 @@
     .param p2, "gateway"    # Ljava/net/InetAddress;
 
     .prologue
-    .line 192
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Landroid/net/RouteInfo;-><init>(Landroid/net/IpPrefix;Ljava/net/InetAddress;Ljava/lang/String;)V
 
-    .line 193
     return-void
 .end method
 
@@ -105,12 +98,10 @@
     .param p3, "iface"    # Ljava/lang/String;
 
     .prologue
-    .line 164
     const/4 v0, 0x1
 
     invoke-direct {p0, p1, p2, p3, v0}, Landroid/net/RouteInfo;-><init>(Landroid/net/IpPrefix;Ljava/net/InetAddress;Ljava/lang/String;I)V
 
-    .line 165
     return-void
 .end method
 
@@ -124,13 +115,10 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 102
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 103
     sparse-switch p4, :sswitch_data_0
 
-    .line 119
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -155,19 +143,15 @@
 
     throw v0
 
-    .line 122
     :sswitch_0
     if-nez p1, :cond_0
 
-    .line 123
     if-eqz p2, :cond_6
 
-    .line 124
     instance-of v1, p2, Ljava/net/Inet4Address;
 
     if-eqz v1, :cond_5
 
-    .line 125
     new-instance p1, Landroid/net/IpPrefix;
 
     .end local p1    # "destination":Landroid/net/IpPrefix;
@@ -175,13 +159,11 @@
 
     invoke-direct {p1, v1, v0}, Landroid/net/IpPrefix;-><init>(Ljava/net/InetAddress;I)V
 
-    .line 138
     .restart local p1    # "destination":Landroid/net/IpPrefix;
     :cond_0
     :goto_0
     if-nez p2, :cond_1
 
-    .line 139
     invoke-virtual {p1}, Landroid/net/IpPrefix;->getAddress()Ljava/net/InetAddress;
 
     move-result-object v1
@@ -190,10 +172,8 @@
 
     if-eqz v1, :cond_7
 
-    .line 140
     sget-object p2, Ljava/net/Inet4Address;->ANY:Ljava/net/InetAddress;
 
-    .line 145
     :cond_1
     :goto_1
     invoke-virtual {p2}, Ljava/net/InetAddress;->isAnyLocalAddress()Z
@@ -207,7 +187,6 @@
     :cond_2
     iput-boolean v0, p0, Landroid/net/RouteInfo;->mHasGateway:Z
 
-    .line 147
     invoke-virtual {p1}, Landroid/net/IpPrefix;->getAddress()Ljava/net/InetAddress;
 
     move-result-object v0
@@ -233,7 +212,6 @@
 
     if-nez v0, :cond_8
 
-    .line 151
     :cond_4
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -243,7 +221,6 @@
 
     throw v0
 
-    .line 127
     :cond_5
     new-instance p1, Landroid/net/IpPrefix;
 
@@ -255,7 +232,6 @@
     .restart local p1    # "destination":Landroid/net/IpPrefix;
     goto :goto_0
 
-    .line 131
     :cond_6
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -291,36 +267,28 @@
 
     throw v0
 
-    .line 142
     :cond_7
     sget-object p2, Ljava/net/Inet6Address;->ANY:Ljava/net/InetAddress;
 
     goto :goto_1
 
-    .line 153
     :cond_8
     iput-object p1, p0, Landroid/net/RouteInfo;->mDestination:Landroid/net/IpPrefix;
 
-    .line 154
     iput-object p2, p0, Landroid/net/RouteInfo;->mGateway:Ljava/net/InetAddress;
 
-    .line 155
     iput-object p3, p0, Landroid/net/RouteInfo;->mInterface:Ljava/lang/String;
 
-    .line 156
     iput p4, p0, Landroid/net/RouteInfo;->mType:I
 
-    .line 157
     invoke-direct {p0}, Landroid/net/RouteInfo;->isHost()Z
 
     move-result v0
 
     iput-boolean v0, p0, Landroid/net/RouteInfo;->mIsHost:Z
 
-    .line 158
     return-void
 
-    .line 103
     nop
 
     :sswitch_data_0
@@ -338,10 +306,8 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 231
     invoke-direct {p0, p1, v0, v0}, Landroid/net/RouteInfo;-><init>(Landroid/net/LinkAddress;Ljava/net/InetAddress;Ljava/lang/String;)V
 
-    .line 232
     return-void
 .end method
 
@@ -351,12 +317,10 @@
     .param p2, "gateway"    # Ljava/net/InetAddress;
 
     .prologue
-    .line 201
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Landroid/net/RouteInfo;-><init>(Landroid/net/LinkAddress;Ljava/net/InetAddress;Ljava/lang/String;)V
 
-    .line 202
     return-void
 .end method
 
@@ -367,7 +331,6 @@
     .param p3, "iface"    # Ljava/lang/String;
 
     .prologue
-    .line 171
     if-nez p1, :cond_0
 
     const/4 v0, 0x0
@@ -375,10 +338,8 @@
     :goto_0
     invoke-direct {p0, v0, p2, p3}, Landroid/net/RouteInfo;-><init>(Landroid/net/IpPrefix;Ljava/net/InetAddress;Ljava/lang/String;)V
 
-    .line 174
     return-void
 
-    .line 171
     :cond_0
     new-instance v0, Landroid/net/IpPrefix;
 
@@ -402,14 +363,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 212
     move-object v0, v1
 
     check-cast v0, Landroid/net/IpPrefix;
 
     invoke-direct {p0, v0, p1, v1}, Landroid/net/RouteInfo;-><init>(Landroid/net/IpPrefix;Ljava/net/InetAddress;Ljava/lang/String;)V
 
-    .line 213
     return-void
 .end method
 
@@ -417,7 +376,6 @@
     .locals 2
 
     .prologue
-    .line 262
     iget-object v0, p0, Landroid/net/RouteInfo;->mDestination:Landroid/net/IpPrefix;
 
     invoke-virtual {v0}, Landroid/net/IpPrefix;->getAddress()Ljava/net/InetAddress;
@@ -477,7 +435,6 @@
     .param p1, "iface"    # Ljava/lang/String;
 
     .prologue
-    .line 245
     const/4 v0, 0x0
 
     invoke-static {p0, v0, p1}, Landroid/net/RouteInfo;->makeHostRoute(Ljava/net/InetAddress;Ljava/net/InetAddress;Ljava/lang/String;)Landroid/net/RouteInfo;
@@ -494,22 +451,18 @@
     .param p2, "iface"    # Ljava/lang/String;
 
     .prologue
-    .line 252
     if-nez p0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 257
     :goto_0
     return-object v0
 
-    .line 254
     :cond_0
     instance-of v0, p0, Ljava/net/Inet4Address;
 
     if-eqz v0, :cond_1
 
-    .line 255
     new-instance v0, Landroid/net/RouteInfo;
 
     new-instance v1, Landroid/net/IpPrefix;
@@ -522,7 +475,6 @@
 
     goto :goto_0
 
-    .line 257
     :cond_1
     new-instance v0, Landroid/net/RouteInfo;
 
@@ -554,7 +506,6 @@
     .end annotation
 
     .prologue
-    .line 383
     .local p0, "routes":Ljava/util/Collection;, "Ljava/util/Collection<Landroid/net/RouteInfo;>;"
     if-eqz p0, :cond_0
 
@@ -563,15 +514,12 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 397
     :cond_1
     return-object v0
 
-    .line 385
     :cond_2
     const/4 v0, 0x0
 
-    .line 387
     .local v0, "bestRoute":Landroid/net/RouteInfo;
     invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
@@ -592,7 +540,6 @@
 
     check-cast v2, Landroid/net/RouteInfo;
 
-    .line 388
     .local v2, "route":Landroid/net/RouteInfo;
     iget-object v3, v2, Landroid/net/RouteInfo;->mDestination:Landroid/net/IpPrefix;
 
@@ -606,7 +553,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 389
     if-eqz v0, :cond_4
 
     iget-object v3, v0, Landroid/net/RouteInfo;->mDestination:Landroid/net/IpPrefix;
@@ -623,7 +569,6 @@
 
     if-ge v3, v4, :cond_3
 
-    .line 394
     :cond_4
     invoke-virtual {v2, p1}, Landroid/net/RouteInfo;->matches(Ljava/net/InetAddress;)Z
 
@@ -642,7 +587,6 @@
     .locals 1
 
     .prologue
-    .line 452
     const/4 v0, 0x0
 
     return v0
@@ -657,15 +601,12 @@
 
     const/4 v2, 0x0
 
-    .line 426
     if-ne p0, p1, :cond_1
 
-    .line 432
     :cond_0
     :goto_0
     return v1
 
-    .line 428
     :cond_1
     instance-of v3, p1, Landroid/net/RouteInfo;
 
@@ -678,10 +619,8 @@
     :cond_2
     move-object v0, p1
 
-    .line 430
     check-cast v0, Landroid/net/RouteInfo;
 
-    .line 432
     .local v0, "target":Landroid/net/RouteInfo;
     iget-object v3, p0, Landroid/net/RouteInfo;->mDestination:Landroid/net/IpPrefix;
 
@@ -737,7 +676,6 @@
     .locals 1
 
     .prologue
-    .line 274
     iget-object v0, p0, Landroid/net/RouteInfo;->mDestination:Landroid/net/IpPrefix;
 
     return-object v0
@@ -747,7 +685,6 @@
     .locals 3
 
     .prologue
-    .line 282
     new-instance v0, Landroid/net/LinkAddress;
 
     iget-object v1, p0, Landroid/net/RouteInfo;->mDestination:Landroid/net/IpPrefix;
@@ -771,7 +708,6 @@
     .locals 1
 
     .prologue
-    .line 292
     iget-object v0, p0, Landroid/net/RouteInfo;->mGateway:Ljava/net/InetAddress;
 
     return-object v0
@@ -781,7 +717,6 @@
     .locals 1
 
     .prologue
-    .line 301
     iget-object v0, p0, Landroid/net/RouteInfo;->mInterface:Ljava/lang/String;
 
     return-object v0
@@ -791,7 +726,6 @@
     .locals 1
 
     .prologue
-    .line 312
     iget v0, p0, Landroid/net/RouteInfo;->mType:I
 
     return v0
@@ -801,7 +735,6 @@
     .locals 1
 
     .prologue
-    .line 359
     iget-boolean v0, p0, Landroid/net/RouteInfo;->mHasGateway:Z
 
     return v0
@@ -813,7 +746,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 442
     iget-object v0, p0, Landroid/net/RouteInfo;->mDestination:Landroid/net/IpPrefix;
 
     invoke-virtual {v0}, Landroid/net/IpPrefix;->hashCode()I
@@ -875,7 +807,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 321
     iget v1, p0, Landroid/net/RouteInfo;->mType:I
 
     if-ne v1, v0, :cond_0
@@ -901,7 +832,6 @@
     .locals 1
 
     .prologue
-    .line 348
     iget-boolean v0, p0, Landroid/net/RouteInfo;->mIsHost:Z
 
     return v0
@@ -911,7 +841,6 @@
     .locals 1
 
     .prologue
-    .line 329
     invoke-virtual {p0}, Landroid/net/RouteInfo;->isDefaultRoute()Z
 
     move-result v0
@@ -943,7 +872,6 @@
     .locals 1
 
     .prologue
-    .line 337
     invoke-virtual {p0}, Landroid/net/RouteInfo;->isDefaultRoute()Z
 
     move-result v0
@@ -976,7 +904,6 @@
     .param p1, "destination"    # Ljava/net/InetAddress;
 
     .prologue
-    .line 370
     iget-object v0, p0, Landroid/net/RouteInfo;->mDestination:Landroid/net/IpPrefix;
 
     invoke-virtual {v0, p1}, Landroid/net/IpPrefix;->contains(Ljava/net/InetAddress;)Z
@@ -990,10 +917,8 @@
     .locals 3
 
     .prologue
-    .line 404
     const-string v0, ""
 
-    .line 405
     .local v0, "val":Ljava/lang/String;
     iget-object v1, p0, Landroid/net/RouteInfo;->mDestination:Landroid/net/IpPrefix;
 
@@ -1005,7 +930,6 @@
 
     move-result-object v0
 
-    .line 406
     :cond_0
     iget v1, p0, Landroid/net/RouteInfo;->mType:I
 
@@ -1013,7 +937,6 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 407
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1032,12 +955,10 @@
 
     move-result-object v0
 
-    .line 418
     :cond_1
     :goto_0
     return-object v0
 
-    .line 408
     :cond_2
     iget v1, p0, Landroid/net/RouteInfo;->mType:I
 
@@ -1045,7 +966,6 @@
 
     if-ne v1, v2, :cond_3
 
-    .line 409
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1066,7 +986,6 @@
 
     goto :goto_0
 
-    .line 411
     :cond_3
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1086,7 +1005,6 @@
 
     move-result-object v0
 
-    .line 412
     iget-object v1, p0, Landroid/net/RouteInfo;->mGateway:Ljava/net/InetAddress;
 
     if-eqz v1, :cond_4
@@ -1119,7 +1037,6 @@
 
     move-result-object v0
 
-    .line 413
     :cond_4
     iget-object v1, p0, Landroid/net/RouteInfo;->mInterface:Ljava/lang/String;
 
@@ -1149,7 +1066,6 @@
 
     move-result-object v0
 
-    .line 414
     :cond_5
     iget v1, p0, Landroid/net/RouteInfo;->mType:I
 
@@ -1157,7 +1073,6 @@
 
     if-eq v1, v2, :cond_1
 
-    .line 415
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1191,37 +1106,30 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 459
     iget-object v1, p0, Landroid/net/RouteInfo;->mDestination:Landroid/net/IpPrefix;
 
     invoke-virtual {p1, v1, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 460
     iget-object v1, p0, Landroid/net/RouteInfo;->mGateway:Ljava/net/InetAddress;
 
     if-nez v1, :cond_0
 
     const/4 v0, 0x0
 
-    .line 461
     .local v0, "gatewayBytes":[B
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByteArray([B)V
 
-    .line 462
     iget-object v1, p0, Landroid/net/RouteInfo;->mInterface:Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 463
     iget v1, p0, Landroid/net/RouteInfo;->mType:I
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 464
     return-void
 
-    .line 460
     .end local v0    # "gatewayBytes":[B
     :cond_0
     iget-object v1, p0, Landroid/net/RouteInfo;->mGateway:Ljava/net/InetAddress;

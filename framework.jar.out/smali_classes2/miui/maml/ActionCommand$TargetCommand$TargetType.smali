@@ -44,7 +44,6 @@
 
     const/4 v2, 0x0
 
-    .line 1293
     new-instance v0, Lmiui/maml/ActionCommand$TargetCommand$TargetType;
 
     const-string v1, "SCREEN_ELEMENT"
@@ -53,7 +52,6 @@
 
     sput-object v0, Lmiui/maml/ActionCommand$TargetCommand$TargetType;->SCREEN_ELEMENT:Lmiui/maml/ActionCommand$TargetCommand$TargetType;
 
-    .line 1294
     new-instance v0, Lmiui/maml/ActionCommand$TargetCommand$TargetType;
 
     const-string v1, "VARIABLE"
@@ -62,7 +60,6 @@
 
     sput-object v0, Lmiui/maml/ActionCommand$TargetCommand$TargetType;->VARIABLE:Lmiui/maml/ActionCommand$TargetCommand$TargetType;
 
-    .line 1295
     new-instance v0, Lmiui/maml/ActionCommand$TargetCommand$TargetType;
 
     const-string v1, "CONSTRUCTOR"
@@ -71,7 +68,6 @@
 
     sput-object v0, Lmiui/maml/ActionCommand$TargetCommand$TargetType;->CONSTRUCTOR:Lmiui/maml/ActionCommand$TargetCommand$TargetType;
 
-    .line 1292
     const/4 v0, 0x3
 
     new-array v0, v0, [Lmiui/maml/ActionCommand$TargetCommand$TargetType;
@@ -102,7 +98,6 @@
     .end annotation
 
     .prologue
-    .line 1292
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -113,7 +108,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 1292
     const-class v0, Lmiui/maml/ActionCommand$TargetCommand$TargetType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -129,7 +123,6 @@
     .locals 1
 
     .prologue
-    .line 1292
     sget-object v0, Lmiui/maml/ActionCommand$TargetCommand$TargetType;->$VALUES:[Lmiui/maml/ActionCommand$TargetCommand$TargetType;
 
     invoke-virtual {v0}, [Lmiui/maml/ActionCommand$TargetCommand$TargetType;->clone()Ljava/lang/Object;

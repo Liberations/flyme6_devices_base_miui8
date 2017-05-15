@@ -23,10 +23,8 @@
     .locals 2
 
     .prologue
-    .line 195
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 196
     new-instance v0, Lcom/android/internal/view/RotationPolicy$RotationPolicyListener$1;
 
     new-instance v1, Landroid/os/Handler;

@@ -44,7 +44,6 @@
 
     const/4 v2, 0x0
 
-    .line 826
     new-instance v0, Lmiui/maml/ScreenElementRoot$ExtraResource$MetricsType;
 
     const-string v1, "DEN"
@@ -53,7 +52,6 @@
 
     sput-object v0, Lmiui/maml/ScreenElementRoot$ExtraResource$MetricsType;->DEN:Lmiui/maml/ScreenElementRoot$ExtraResource$MetricsType;
 
-    .line 827
     new-instance v0, Lmiui/maml/ScreenElementRoot$ExtraResource$MetricsType;
 
     const-string v1, "SW"
@@ -62,7 +60,6 @@
 
     sput-object v0, Lmiui/maml/ScreenElementRoot$ExtraResource$MetricsType;->SW:Lmiui/maml/ScreenElementRoot$ExtraResource$MetricsType;
 
-    .line 828
     new-instance v0, Lmiui/maml/ScreenElementRoot$ExtraResource$MetricsType;
 
     const-string v1, "SW_DEN"
@@ -71,7 +68,6 @@
 
     sput-object v0, Lmiui/maml/ScreenElementRoot$ExtraResource$MetricsType;->SW_DEN:Lmiui/maml/ScreenElementRoot$ExtraResource$MetricsType;
 
-    .line 825
     const/4 v0, 0x3
 
     new-array v0, v0, [Lmiui/maml/ScreenElementRoot$ExtraResource$MetricsType;
@@ -102,7 +98,6 @@
     .end annotation
 
     .prologue
-    .line 825
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -113,7 +108,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 825
     const-class v0, Lmiui/maml/ScreenElementRoot$ExtraResource$MetricsType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -129,7 +123,6 @@
     .locals 1
 
     .prologue
-    .line 825
     sget-object v0, Lmiui/maml/ScreenElementRoot$ExtraResource$MetricsType;->$VALUES:[Lmiui/maml/ScreenElementRoot$ExtraResource$MetricsType;
 
     invoke-virtual {v0}, [Lmiui/maml/ScreenElementRoot$ExtraResource$MetricsType;->clone()Ljava/lang/Object;

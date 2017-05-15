@@ -22,16 +22,12 @@
     .param p2, "logSwitchesFileName"    # Ljava/lang/String;
 
     .prologue
-    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 25
     iput-object p1, p0, Lmiui/log/LogSwitchesConfigWriter;->logSwitchesFolder:Ljava/lang/String;
 
-    .line 26
     iput-object p2, p0, Lmiui/log/LogSwitchesConfigWriter;->logSwitchesFileName:Ljava/lang/String;
 
-    .line 27
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -56,7 +52,6 @@
 
     iput-object v0, p0, Lmiui/log/LogSwitchesConfigWriter;->logSwitchesFilePath:Ljava/lang/String;
 
-    .line 28
     return-void
 .end method
 
@@ -76,13 +71,11 @@
     .end annotation
 
     .prologue
-    .line 31
     .local p1, "newLogSwitchesConfig":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lmiui/log/AppLogSwitches;>;"
     monitor-enter p0
 
     const/4 v3, 0x0
 
-    .line 33
     .local v3, "writer":Ljava/io/BufferedWriter;
     :try_start_0
     iget-object v5, p0, Lmiui/log/LogSwitchesConfigWriter;->logSwitchesFolder:Ljava/lang/String;
@@ -91,7 +84,6 @@
 
     invoke-static {v5, v6}, Lmiui/log/Utils;->createLogSwitchesFileIfNotExisted(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 34
     new-instance v4, Ljava/io/BufferedWriter;
 
     new-instance v5, Ljava/io/FileWriter;
@@ -105,7 +97,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_4
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 35
     .end local v3    # "writer":Ljava/io/BufferedWriter;
     .local v4, "writer":Ljava/io/BufferedWriter;
     :try_start_1
@@ -131,7 +122,6 @@
 
     check-cast v0, Lmiui/log/AppLogSwitches;
 
-    .line 36
     .local v0, "appLogSwitches":Lmiui/log/AppLogSwitches;
     invoke-virtual {v0}, Lmiui/log/AppLogSwitches;->toString()Ljava/lang/String;
 
@@ -139,7 +129,6 @@
 
     invoke-virtual {v4, v5}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 37
     invoke-virtual {v4}, Ljava/io/BufferedWriter;->newLine()V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
@@ -147,7 +136,6 @@
 
     goto :goto_0
 
-    .line 40
     .end local v0    # "appLogSwitches":Lmiui/log/AppLogSwitches;
     .end local v2    # "i$":Ljava/util/Iterator;
     :catch_0
@@ -155,7 +143,6 @@
 
     move-object v3, v4
 
-    .line 41
     .end local v4    # "writer":Ljava/io/BufferedWriter;
     .local v1, "ex":Ljava/io/IOException;
     .restart local v3    # "writer":Ljava/io/BufferedWriter;
@@ -187,17 +174,14 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 43
     if-eqz v3, :cond_0
 
-    .line 45
     :try_start_3
     invoke-virtual {v3}, Ljava/io/BufferedWriter;->close()V
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_2
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 50
     .end local v1    # "ex":Ljava/io/IOException;
     :cond_0
     :goto_2
@@ -205,7 +189,6 @@
 
     return-void
 
-    .line 39
     .end local v3    # "writer":Ljava/io/BufferedWriter;
     .restart local v2    # "i$":Ljava/util/Iterator;
     .restart local v4    # "writer":Ljava/io/BufferedWriter;
@@ -216,10 +199,8 @@
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_0
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
-    .line 43
     if-eqz v4, :cond_3
 
-    .line 45
     :try_start_5
     invoke-virtual {v4}, Ljava/io/BufferedWriter;->close()V
     :try_end_5
@@ -228,12 +209,10 @@
 
     move-object v3, v4
 
-    .line 47
     .end local v4    # "writer":Ljava/io/BufferedWriter;
     .restart local v3    # "writer":Ljava/io/BufferedWriter;
     goto :goto_2
 
-    .line 46
     .end local v3    # "writer":Ljava/io/BufferedWriter;
     .restart local v4    # "writer":Ljava/io/BufferedWriter;
     :catch_1
@@ -241,12 +220,10 @@
 
     move-object v3, v4
 
-    .line 47
     .end local v4    # "writer":Ljava/io/BufferedWriter;
     .restart local v3    # "writer":Ljava/io/BufferedWriter;
     goto :goto_2
 
-    .line 43
     .end local v2    # "i$":Ljava/util/Iterator;
     :catchall_0
     move-exception v5
@@ -254,14 +231,12 @@
     :goto_3
     if-eqz v3, :cond_2
 
-    .line 45
     :try_start_6
     invoke-virtual {v3}, Ljava/io/BufferedWriter;->close()V
     :try_end_6
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_3
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-    .line 47
     :cond_2
     :goto_4
     :try_start_7
@@ -269,7 +244,6 @@
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_1
 
-    .line 31
     :catchall_1
     move-exception v5
 
@@ -278,7 +252,6 @@
 
     throw v5
 
-    .line 46
     .restart local v1    # "ex":Ljava/io/IOException;
     :catch_2
     move-exception v5
@@ -291,7 +264,6 @@
 
     goto :goto_4
 
-    .line 43
     .end local v3    # "writer":Ljava/io/BufferedWriter;
     .restart local v4    # "writer":Ljava/io/BufferedWriter;
     :catchall_2
@@ -303,13 +275,11 @@
     .restart local v3    # "writer":Ljava/io/BufferedWriter;
     goto :goto_3
 
-    .line 40
     :catch_4
     move-exception v1
 
     goto :goto_1
 
-    .line 31
     .end local v3    # "writer":Ljava/io/BufferedWriter;
     .restart local v2    # "i$":Ljava/util/Iterator;
     .restart local v4    # "writer":Ljava/io/BufferedWriter;

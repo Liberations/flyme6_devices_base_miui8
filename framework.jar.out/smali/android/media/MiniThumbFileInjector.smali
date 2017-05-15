@@ -12,7 +12,6 @@
     .locals 0
 
     .prologue
-    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -23,7 +22,6 @@
     .param p0, "id"    # J
 
     .prologue
-    .line 11
     const-wide/16 v0, 0x1388
 
     rem-long v0, p0, v0
@@ -43,7 +41,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 15
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->get()B
 
     move-result v1

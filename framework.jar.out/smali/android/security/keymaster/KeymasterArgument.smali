@@ -28,7 +28,6 @@
     .locals 1
 
     .prologue
-    .line 33
     new-instance v0, Landroid/security/keymaster/KeymasterArgument$1;
 
     invoke-direct {v0}, Landroid/security/keymaster/KeymasterArgument$1;-><init>()V
@@ -43,13 +42,10 @@
     .param p1, "tag"    # I
 
     .prologue
-    .line 66
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 67
     iput p1, p0, Landroid/security/keymaster/KeymasterArgument;->tag:I
 
-    .line 68
     return-void
 .end method
 
@@ -59,7 +55,6 @@
     .locals 1
 
     .prologue
-    .line 77
     const/4 v0, 0x0
 
     return v0
@@ -71,15 +66,12 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 82
     iget v0, p0, Landroid/security/keymaster/KeymasterArgument;->tag:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 83
     invoke-virtual {p0, p1}, Landroid/security/keymaster/KeymasterArgument;->writeValue(Landroid/os/Parcel;)V
 
-    .line 84
     return-void
 .end method
 

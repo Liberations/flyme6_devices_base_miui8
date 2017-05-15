@@ -55,7 +55,6 @@
     .locals 1
 
     .prologue
-    .line 64
     new-instance v0, Ljava/lang/ThreadLocal;
 
     invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
@@ -70,15 +69,12 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 67
     invoke-direct {p0, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    .line 60
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/widget/DateTimeView;->mLastDisplay:I
 
-    .line 68
     return-void
 .end method
 
@@ -88,15 +84,12 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 71
     invoke-direct {p0, p1, p2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 60
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/widget/DateTimeView;->mLastDisplay:I
 
-    .line 72
     return-void
 .end method
 
@@ -105,7 +98,6 @@
     .param p0, "x0"    # Landroid/widget/DateTimeView;
 
     .prologue
-    .line 48
     iget-wide v0, p0, Landroid/widget/DateTimeView;->mUpdateTimeMillis:J
 
     return-wide v0
@@ -115,7 +107,6 @@
     .locals 1
 
     .prologue
-    .line 193
     invoke-virtual {p0}, Landroid/widget/DateTimeView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -133,15 +124,12 @@
     .locals 1
 
     .prologue
-    .line 197
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/widget/DateTimeView;->mLastFormat:Ljava/text/DateFormat;
 
-    .line 198
     invoke-virtual {p0}, Landroid/widget/DateTimeView;->update()V
 
-    .line 199
     return-void
 .end method
 
@@ -149,10 +137,8 @@
     .locals 2
 
     .prologue
-    .line 76
     invoke-super {p0}, Landroid/widget/TextView;->onAttachedToWindow()V
 
-    .line 77
     sget-object v1, Landroid/widget/DateTimeView;->sReceiverInfo:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v1}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
@@ -161,11 +147,9 @@
 
     check-cast v0, Landroid/widget/DateTimeView$ReceiverInfo;
 
-    .line 78
     .local v0, "ri":Landroid/widget/DateTimeView$ReceiverInfo;
     if-nez v0, :cond_0
 
-    .line 79
     new-instance v0, Landroid/widget/DateTimeView$ReceiverInfo;
 
     .end local v0    # "ri":Landroid/widget/DateTimeView$ReceiverInfo;
@@ -173,17 +157,14 @@
 
     invoke-direct {v0, v1}, Landroid/widget/DateTimeView$ReceiverInfo;-><init>(Landroid/widget/DateTimeView$1;)V
 
-    .line 80
     .restart local v0    # "ri":Landroid/widget/DateTimeView$ReceiverInfo;
     sget-object v1, Landroid/widget/DateTimeView;->sReceiverInfo:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v1, v0}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
 
-    .line 82
     :cond_0
     invoke-virtual {v0, p0}, Landroid/widget/DateTimeView$ReceiverInfo;->addView(Landroid/widget/DateTimeView;)V
 
-    .line 83
     return-void
 .end method
 
@@ -191,10 +172,8 @@
     .locals 2
 
     .prologue
-    .line 87
     invoke-super {p0}, Landroid/widget/TextView;->onDetachedFromWindow()V
 
-    .line 88
     sget-object v1, Landroid/widget/DateTimeView;->sReceiverInfo:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v1}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
@@ -203,14 +182,11 @@
 
     check-cast v0, Landroid/widget/DateTimeView$ReceiverInfo;
 
-    .line 89
     .local v0, "ri":Landroid/widget/DateTimeView$ReceiverInfo;
     if-eqz v0, :cond_0
 
-    .line 90
     invoke-virtual {v0, p0}, Landroid/widget/DateTimeView$ReceiverInfo;->removeView(Landroid/widget/DateTimeView;)V
 
-    .line 92
     :cond_0
     return-void
 .end method
@@ -224,26 +200,21 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 96
     new-instance v7, Landroid/text/format/Time;
 
     invoke-direct {v7}, Landroid/text/format/Time;-><init>()V
 
-    .line 97
     .local v7, "t":Landroid/text/format/Time;
     invoke-virtual {v7, p1, p2}, Landroid/text/format/Time;->set(J)V
 
-    .line 98
     iput v6, v7, Landroid/text/format/Time;->second:I
 
-    .line 99
     invoke-virtual {v7, v6}, Landroid/text/format/Time;->toMillis(Z)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/widget/DateTimeView;->mTimeMillis:J
 
-    .line 100
     new-instance v0, Ljava/util/Date;
 
     iget v1, v7, Landroid/text/format/Time;->year:I
@@ -262,10 +233,8 @@
 
     iput-object v0, p0, Landroid/widget/DateTimeView;->mTime:Ljava/util/Date;
 
-    .line 101
     invoke-virtual {p0}, Landroid/widget/DateTimeView;->update()V
 
-    .line 102
     return-void
 .end method
 
@@ -273,7 +242,6 @@
     .locals 26
 
     .prologue
-    .line 105
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/widget/DateTimeView;->mTime:Ljava/util/Date;
@@ -282,17 +250,14 @@
 
     if-nez v19, :cond_0
 
-    .line 190
     :goto_0
     return-void
 
-    .line 109
     :cond_0
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v14
 
-    .line 112
     .local v14, "start":J
     move-object/from16 v0, p0
 
@@ -300,13 +265,11 @@
 
     move-object/from16 v18, v0
 
-    .line 114
     .local v18, "time":Ljava/util/Date;
     new-instance v16, Landroid/text/format/Time;
 
     invoke-direct/range {v16 .. v16}, Landroid/text/format/Time;-><init>()V
 
-    .line 115
     .local v16, "t":Landroid/text/format/Time;
     move-object/from16 v0, p0
 
@@ -320,7 +283,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/text/format/Time;->set(J)V
 
-    .line 116
     const/16 v19, 0x0
 
     move/from16 v0, v19
@@ -329,7 +291,6 @@
 
     iput v0, v1, Landroid/text/format/Time;->second:I
 
-    .line 118
     move-object/from16 v0, v16
 
     iget v0, v0, Landroid/text/format/Time;->hour:I
@@ -344,7 +305,6 @@
 
     iput v0, v1, Landroid/text/format/Time;->hour:I
 
-    .line 119
     const/16 v19, 0x0
 
     move-object/from16 v0, v16
@@ -355,7 +315,6 @@
 
     move-result-wide v22
 
-    .line 120
     .local v22, "twelveHoursBefore":J
     move-object/from16 v0, v16
 
@@ -371,7 +330,6 @@
 
     iput v0, v1, Landroid/text/format/Time;->hour:I
 
-    .line 121
     const/16 v19, 0x0
 
     move-object/from16 v0, v16
@@ -382,7 +340,6 @@
 
     move-result-wide v20
 
-    .line 122
     .local v20, "twelveHoursAfter":J
     const/16 v19, 0x0
 
@@ -392,7 +349,6 @@
 
     iput v0, v1, Landroid/text/format/Time;->hour:I
 
-    .line 123
     const/16 v19, 0x0
 
     move/from16 v0, v19
@@ -401,7 +357,6 @@
 
     iput v0, v1, Landroid/text/format/Time;->minute:I
 
-    .line 124
     const/16 v19, 0x0
 
     move-object/from16 v0, v16
@@ -412,7 +367,6 @@
 
     move-result-wide v10
 
-    .line 125
     .local v10, "midnightBefore":J
     move-object/from16 v0, v16
 
@@ -428,7 +382,6 @@
 
     iput v0, v1, Landroid/text/format/Time;->monthDay:I
 
-    .line 126
     const/16 v19, 0x0
 
     move-object/from16 v0, v16
@@ -439,19 +392,16 @@
 
     move-result-wide v8
 
-    .line 128
     .local v8, "midnightAfter":J
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v12
 
-    .line 129
     .local v12, "nowMillis":J
     move-object/from16 v0, v16
 
     invoke-virtual {v0, v12, v13}, Landroid/text/format/Time;->set(J)V
 
-    .line 130
     const/16 v19, 0x0
 
     move/from16 v0, v19
@@ -460,7 +410,6 @@
 
     iput v0, v1, Landroid/text/format/Time;->second:I
 
-    .line 131
     const/16 v19, 0x0
 
     move-object/from16 v0, v16
@@ -471,7 +420,6 @@
 
     move-result-wide v12
 
-    .line 135
     cmp-long v19, v12, v10
 
     if-ltz v19, :cond_1
@@ -489,11 +437,9 @@
 
     if-gez v19, :cond_3
 
-    .line 137
     :cond_2
     const/4 v4, 0x0
 
-    .line 147
     .local v4, "display":I
     :goto_1
     move-object/from16 v0, p0
@@ -514,12 +460,10 @@
 
     if-eqz v19, :cond_4
 
-    .line 149
     move-object/from16 v0, p0
 
     iget-object v5, v0, Landroid/widget/DateTimeView;->mLastFormat:Ljava/text/DateFormat;
 
-    .line 165
     .local v5, "format":Ljava/text/DateFormat;
     :goto_2
     move-object/from16 v0, p0
@@ -534,7 +478,6 @@
 
     move-result-object v17
 
-    .line 166
     .local v17, "text":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -542,10 +485,8 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/DateTimeView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 169
     if-nez v4, :cond_6
 
-    .line 171
     cmp-long v19, v20, v8
 
     if-lez v19, :cond_5
@@ -558,18 +499,15 @@
 
     iput-wide v0, v2, Landroid/widget/DateTimeView;->mUpdateTimeMillis:J
 
-    .line 189
     .end local v22    # "twelveHoursBefore":J
     :goto_4
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v6
 
-    .line 190
     .local v6, "finish":J
     goto/16 :goto_0
 
-    .line 141
     .end local v4    # "display":I
     .end local v5    # "format":Ljava/text/DateFormat;
     .end local v6    # "finish":J
@@ -582,11 +520,9 @@
     .restart local v4    # "display":I
     goto :goto_1
 
-    .line 151
     :cond_4
     packed-switch v4, :pswitch_data_0
 
-    .line 159
     new-instance v19, Ljava/lang/RuntimeException;
 
     new-instance v24, Ljava/lang/StringBuilder;
@@ -617,13 +553,11 @@
 
     throw v19
 
-    .line 153
     :pswitch_0
     invoke-direct/range {p0 .. p0}, Landroid/widget/DateTimeView;->getTimeFormat()Ljava/text/DateFormat;
 
     move-result-object v5
 
-    .line 161
     .restart local v5    # "format":Ljava/text/DateFormat;
     :goto_5
     move-object/from16 v0, p0
@@ -632,7 +566,6 @@
 
     goto :goto_2
 
-    .line 156
     .end local v5    # "format":Ljava/text/DateFormat;
     :pswitch_1
     const/16 v19, 0x3
@@ -641,7 +574,6 @@
 
     move-result-object v5
 
-    .line 157
     .restart local v5    # "format":Ljava/text/DateFormat;
     goto :goto_5
 
@@ -649,10 +581,8 @@
     :cond_5
     move-wide/from16 v20, v8
 
-    .line 171
     goto :goto_3
 
-    .line 174
     :cond_6
     move-object/from16 v0, p0
 
@@ -664,7 +594,6 @@
 
     if-gez v19, :cond_7
 
-    .line 176
     const-wide/16 v24, 0x0
 
     move-wide/from16 v0, v24
@@ -675,7 +604,6 @@
 
     goto :goto_4
 
-    .line 180
     :cond_7
     cmp-long v19, v22, v10
 
@@ -697,7 +625,6 @@
 
     goto :goto_6
 
-    .line 151
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

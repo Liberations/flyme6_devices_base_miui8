@@ -34,19 +34,16 @@
     .locals 3
 
     .prologue
-    .line 92
     const/4 v0, 0x0
 
     sput-object v0, Lmiui/securityspace/CrossUserUtils;->sISecurityManager:Lmiui/security/ISecurityManager;
 
-    .line 125
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lmiui/securityspace/CrossUserUtils;->noCheckContentProviderPermissionPkg:Ljava/util/Map;
 
-    .line 127
     sget-object v0, Lmiui/securityspace/CrossUserUtils;->noCheckContentProviderPermissionPkg:Ljava/util/Map;
 
     const-string v1, "com.android.incallui"
@@ -55,7 +52,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 128
     return-void
 .end method
 
@@ -63,7 +59,6 @@
     .locals 0
 
     .prologue
-    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -75,7 +70,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 63
     invoke-static {p0, p1}, Lmiui/securityspace/CrossUserUtilsCompat;->addUserIdForUri(Landroid/net/Uri;I)Landroid/net/Uri;
 
     move-result-object v0
@@ -91,7 +85,6 @@
     .param p3, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 70
     invoke-static {p0, p1, p2, p3}, Lmiui/securityspace/CrossUserUtilsCompat;->addUserIdForUri(Landroid/net/Uri;Landroid/content/Context;Ljava/lang/String;Landroid/content/Intent;)Landroid/net/Uri;
 
     move-result-object v0
@@ -105,7 +98,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 146
     if-eqz p0, :cond_0
 
     sget-object v0, Lmiui/securityspace/CrossUserUtils;->noCheckContentProviderPermissionPkg:Ljava/util/Map;
@@ -118,10 +110,8 @@
 
     if-nez p1, :cond_0
 
-    .line 147
     const/4 v0, 0x1
 
-    .line 149
     :goto_0
     return v0
 
@@ -137,7 +127,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 79
     invoke-static {p0, p1}, Lmiui/securityspace/CrossUserUtilsCompat;->checkUidPermission(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v0
@@ -151,7 +140,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 122
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -188,7 +176,6 @@
     .param p2, "taskId"    # I
 
     .prologue
-    .line 115
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -232,13 +219,11 @@
     .locals 2
 
     .prologue
-    .line 101
     :try_start_0
     sget-object v1, Lmiui/securityspace/CrossUserUtils;->sISecurityManager:Lmiui/security/ISecurityManager;
 
     if-nez v1, :cond_0
 
-    .line 102
     const-string v1, "security"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -251,7 +236,6 @@
 
     sput-object v1, Lmiui/securityspace/CrossUserUtils;->sISecurityManager:Lmiui/security/ISecurityManager;
 
-    .line 104
     :cond_0
     sget-object v1, Lmiui/securityspace/CrossUserUtils;->sISecurityManager:Lmiui/security/ISecurityManager;
 
@@ -261,21 +245,17 @@
 
     move-result v1
 
-    .line 108
     .local v0, "e":Landroid/os/RemoteException;
     :goto_0
     return v1
 
-    .line 105
     .end local v0    # "e":Landroid/os/RemoteException;
     :catch_0
     move-exception v0
 
-    .line 106
     .restart local v0    # "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 108
     const/4 v1, 0x0
 
     goto :goto_0
@@ -287,7 +267,6 @@
     .param p1, "pkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 89
     invoke-static {p0, p1}, Lmiui/securityspace/CrossUserUtilsCompat;->getOriginalAppIcon(Landroid/content/Context;Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
@@ -300,7 +279,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 173
     invoke-static {p0}, Lmiui/securityspace/CrossUserUtilsCompat;->hasAirSpace(Landroid/content/Context;)Z
 
     move-result v0
@@ -313,7 +291,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 157
     invoke-static {p0}, Lmiui/securityspace/CrossUserUtilsCompat;->hasSecondSpace(Landroid/content/Context;)Z
 
     move-result v0
@@ -326,7 +303,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 161
     invoke-static {p0}, Lmiui/securityspace/CrossUserUtilsCompat;->hasSpace(Landroid/content/Context;)Z
 
     move-result v0
@@ -339,7 +315,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 165
     invoke-static {p0}, Lmiui/securityspace/CrossUserUtilsCompat;->hasXSpaceUser(Landroid/content/Context;)Z
 
     move-result v0
@@ -352,7 +327,6 @@
     .param p0, "userId"    # I
 
     .prologue
-    .line 153
     const/16 v0, 0x63
 
     if-ne p0, v0, :cond_0
@@ -374,7 +348,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 169
     invoke-static {p0, p1}, Lmiui/securityspace/CrossUserUtilsCompat;->isAirSpace(Landroid/content/Context;I)Z
 
     move-result v0
@@ -392,7 +365,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 132
     if-nez p2, :cond_1
 
     invoke-static {}, Lmiui/securityspace/XSpaceUserHandle;->isXSpaceUserCalling()Z
@@ -403,13 +375,11 @@
 
     move p3, v1
 
-    .line 142
     .end local p3    # "checkUser":Z
     :cond_0
     :goto_0
     return p3
 
-    .line 136
     .restart local p3    # "checkUser":Z
     :cond_1
     if-eqz p3, :cond_0
@@ -418,7 +388,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 137
     sget-object v2, Lmiui/securityspace/CrossUserUtils;->noCheckContentProviderPermissionPkg:Ljava/util/Map;
 
     invoke-interface {v2, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -427,7 +396,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 138
     .local v0, "authority":Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -441,6 +409,5 @@
 
     move p3, v1
 
-    .line 139
     goto :goto_0
 .end method

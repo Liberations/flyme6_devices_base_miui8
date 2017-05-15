@@ -106,16 +106,12 @@
 
     const/4 v4, 0x0
 
-    .line 92
     invoke-direct {p0}, Landroid/hardware/camera2/CameraCaptureSession;-><init>()V
 
-    .line 73
     iput-boolean v4, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mClosed:Z
 
-    .line 77
     iput-boolean v4, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mSkipUnconfigure:Z
 
-    .line 93
     if-eqz p3, :cond_0
 
     invoke-interface {p3}, Ljava/util/List;->isEmpty()Z
@@ -124,21 +120,18 @@
 
     if-eqz v0, :cond_1
 
-    .line 94
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "outputs must be a non-null, non-empty list"
+    const-string v1, "outputs must be a non-null, non-empty list"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 95
     :cond_1
     if-nez p4, :cond_2
 
-    .line 96
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "callback must not be null"
@@ -147,11 +140,9 @@
 
     throw v0
 
-    .line 99
     :cond_2
     iput p1, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mId:I
 
-    .line 100
     const-string v0, "Session %d: "
 
     new-array v1, v5, [Ljava/lang/Object;
@@ -170,20 +161,16 @@
 
     iput-object v0, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mIdString:Ljava/lang/String;
 
-    .line 103
     iput-object p3, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mOutputs:Ljava/util/List;
 
-    .line 104
     iput-object p2, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mInput:Landroid/view/Surface;
 
-    .line 105
     invoke-static {p5}, Landroid/hardware/camera2/impl/CameraDeviceImpl;->checkHandler(Landroid/os/Handler;)Landroid/os/Handler;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mStateHandler:Landroid/os/Handler;
 
-    .line 106
     iget-object v0, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mStateHandler:Landroid/os/Handler;
 
     invoke-direct {p0, v0, p4}, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->createUserStateCallbackProxy(Landroid/os/Handler;Landroid/hardware/camera2/CameraCaptureSession$StateCallback;)Landroid/hardware/camera2/CameraCaptureSession$StateCallback;
@@ -192,7 +179,6 @@
 
     iput-object v0, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mStateCallback:Landroid/hardware/camera2/CameraCaptureSession$StateCallback;
 
-    .line 108
     const-string v0, "deviceStateHandler must not be null"
 
     invoke-static {p7, v0}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -203,7 +189,6 @@
 
     iput-object v0, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mDeviceHandler:Landroid/os/Handler;
 
-    .line 109
     const-string v0, "deviceImpl must not be null"
 
     invoke-static {p6, v0}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -214,7 +199,6 @@
 
     iput-object v0, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mDeviceImpl:Landroid/hardware/camera2/impl/CameraDeviceImpl;
 
-    .line 117
     new-instance v0, Landroid/hardware/camera2/utils/TaskDrainer;
 
     iget-object v1, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mDeviceHandler:Landroid/os/Handler;
@@ -223,13 +207,12 @@
 
     invoke-direct {v2, p0, v6}, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl$SequenceDrainListener;-><init>(Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;Landroid/hardware/camera2/impl/CameraCaptureSessionImpl$1;)V
 
-    const-string/jumbo v3, "seq"
+    const-string v3, "seq"
 
     invoke-direct {v0, v1, v2, v3}, Landroid/hardware/camera2/utils/TaskDrainer;-><init>(Landroid/os/Handler;Landroid/hardware/camera2/utils/TaskDrainer$DrainListener;Ljava/lang/String;)V
 
     iput-object v0, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mSequenceDrainer:Landroid/hardware/camera2/utils/TaskDrainer;
 
-    .line 119
     new-instance v0, Landroid/hardware/camera2/utils/TaskSingleDrainer;
 
     iget-object v1, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mDeviceHandler:Landroid/os/Handler;
@@ -238,13 +221,12 @@
 
     invoke-direct {v2, p0, v6}, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl$IdleDrainListener;-><init>(Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;Landroid/hardware/camera2/impl/CameraCaptureSessionImpl$1;)V
 
-    const-string/jumbo v3, "idle"
+    const-string v3, "idle"
 
     invoke-direct {v0, v1, v2, v3}, Landroid/hardware/camera2/utils/TaskSingleDrainer;-><init>(Landroid/os/Handler;Landroid/hardware/camera2/utils/TaskDrainer$DrainListener;Ljava/lang/String;)V
 
     iput-object v0, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mIdleDrainer:Landroid/hardware/camera2/utils/TaskSingleDrainer;
 
-    .line 121
     new-instance v0, Landroid/hardware/camera2/utils/TaskSingleDrainer;
 
     iget-object v1, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mDeviceHandler:Landroid/os/Handler;
@@ -259,31 +241,24 @@
 
     iput-object v0, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mAbortDrainer:Landroid/hardware/camera2/utils/TaskSingleDrainer;
 
-    .line 126
     if-eqz p8, :cond_3
 
-    .line 127
     iget-object v0, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mStateCallback:Landroid/hardware/camera2/CameraCaptureSession$StateCallback;
 
     invoke-virtual {v0, p0}, Landroid/hardware/camera2/CameraCaptureSession$StateCallback;->onConfigured(Landroid/hardware/camera2/CameraCaptureSession;)V
 
-    .line 129
     iput-boolean v5, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mConfigureSuccess:Z
 
-    .line 136
     :goto_0
     return-void
 
-    .line 131
     :cond_3
     iget-object v0, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mStateCallback:Landroid/hardware/camera2/CameraCaptureSession$StateCallback;
 
     invoke-virtual {v0, p0}, Landroid/hardware/camera2/CameraCaptureSession$StateCallback;->onConfigureFailed(Landroid/hardware/camera2/CameraCaptureSession;)V
 
-    .line 132
     iput-boolean v5, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mClosed:Z
 
-    .line 133
     const-string v0, "CameraCaptureSession"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -308,7 +283,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 134
     iput-boolean v4, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mConfigureSuccess:Z
 
     goto :goto_0
@@ -319,7 +293,6 @@
     .param p0, "x0"    # Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;
 
     .prologue
-    .line 39
     iget-object v0, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mDeviceImpl:Landroid/hardware/camera2/impl/CameraDeviceImpl;
 
     return-object v0
@@ -331,7 +304,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 39
     invoke-direct {p0, p1}, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->finishPendingSequence(I)V
 
     return-void
@@ -342,7 +314,6 @@
     .param p0, "x0"    # Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;
 
     .prologue
-    .line 39
     iget-object v0, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mIdString:Ljava/lang/String;
 
     return-object v0
@@ -353,7 +324,6 @@
     .param p0, "x0"    # Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;
 
     .prologue
-    .line 39
     iget-object v0, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mIdleDrainer:Landroid/hardware/camera2/utils/TaskSingleDrainer;
 
     return-object v0
@@ -364,7 +334,6 @@
     .param p0, "x0"    # Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;
 
     .prologue
-    .line 39
     iget-object v0, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mStateCallback:Landroid/hardware/camera2/CameraCaptureSession$StateCallback;
 
     return-object v0
@@ -375,7 +344,6 @@
     .param p0, "x0"    # Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;
 
     .prologue
-    .line 39
     iget-boolean v0, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mAborting:Z
 
     return v0
@@ -387,7 +355,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 39
     iput-boolean p1, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mAborting:Z
 
     return p1
@@ -398,7 +365,6 @@
     .param p0, "x0"    # Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;
 
     .prologue
-    .line 39
     iget-object v0, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mAbortDrainer:Landroid/hardware/camera2/utils/TaskSingleDrainer;
 
     return-object v0
@@ -409,7 +375,6 @@
     .param p0, "x0"    # Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;
 
     .prologue
-    .line 39
     iget-boolean v0, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mSkipUnconfigure:Z
 
     return v0
@@ -420,7 +385,6 @@
     .param p1, "sequenceId"    # I
 
     .prologue
-    .line 620
     iget-object v0, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mSequenceDrainer:Landroid/hardware/camera2/utils/TaskDrainer;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -429,7 +393,6 @@
 
     invoke-virtual {v0, v1}, Landroid/hardware/camera2/utils/TaskDrainer;->taskStarted(Ljava/lang/Object;)V
 
-    .line 621
     return p1
 .end method
 
@@ -437,12 +400,10 @@
     .locals 2
 
     .prologue
-    .line 605
     iget-boolean v0, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mClosed:Z
 
     if-eqz v0, :cond_0
 
-    .line 606
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Session has been closed; further changes are illegal."
@@ -451,7 +412,6 @@
 
     throw v0
 
-    .line 609
     :cond_0
     return-void
 .end method
@@ -464,40 +424,33 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 438
     new-instance v3, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl$1;
 
     invoke-direct {v3, p0}, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl$1;-><init>(Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;)V
 
-    .line 459
     .local v3, "localCallback":Landroid/hardware/camera2/impl/CameraDeviceImpl$CaptureCallback;
     if-nez p2, :cond_0
 
-    .line 484
     .end local v3    # "localCallback":Landroid/hardware/camera2/impl/CameraDeviceImpl$CaptureCallback;
     :goto_0
     return-object v3
 
-    .line 466
     .restart local v3    # "localCallback":Landroid/hardware/camera2/impl/CameraDeviceImpl$CaptureCallback;
     :cond_0
     new-instance v4, Landroid/hardware/camera2/dispatch/InvokeDispatcher;
 
     invoke-direct {v4, v3}, Landroid/hardware/camera2/dispatch/InvokeDispatcher;-><init>(Ljava/lang/Object;)V
 
-    .line 469
     .local v4, "localSink":Landroid/hardware/camera2/dispatch/InvokeDispatcher;, "Landroid/hardware/camera2/dispatch/InvokeDispatcher<Landroid/hardware/camera2/impl/CameraDeviceImpl$CaptureCallback;>;"
     new-instance v6, Landroid/hardware/camera2/dispatch/InvokeDispatcher;
 
     invoke-direct {v6, p2}, Landroid/hardware/camera2/dispatch/InvokeDispatcher;-><init>(Ljava/lang/Object;)V
 
-    .line 471
     .local v6, "userCallbackSink":Landroid/hardware/camera2/dispatch/InvokeDispatcher;, "Landroid/hardware/camera2/dispatch/InvokeDispatcher<Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;>;"
     new-instance v2, Landroid/hardware/camera2/dispatch/HandlerDispatcher;
 
     invoke-direct {v2, v6, p1}, Landroid/hardware/camera2/dispatch/HandlerDispatcher;-><init>(Landroid/hardware/camera2/dispatch/Dispatchable;Landroid/os/Handler;)V
 
-    .line 473
     .local v2, "handlerPassthrough":Landroid/hardware/camera2/dispatch/HandlerDispatcher;, "Landroid/hardware/camera2/dispatch/HandlerDispatcher<Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;>;"
     new-instance v1, Landroid/hardware/camera2/dispatch/DuckTypingDispatcher;
 
@@ -505,13 +458,11 @@
 
     invoke-direct {v1, v2, v7}, Landroid/hardware/camera2/dispatch/DuckTypingDispatcher;-><init>(Landroid/hardware/camera2/dispatch/Dispatchable;Ljava/lang/Class;)V
 
-    .line 476
     .local v1, "duckToSession":Landroid/hardware/camera2/dispatch/DuckTypingDispatcher;, "Landroid/hardware/camera2/dispatch/DuckTypingDispatcher<Landroid/hardware/camera2/impl/CameraDeviceImpl$CaptureCallback;Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;>;"
     new-instance v5, Landroid/hardware/camera2/dispatch/ArgumentReplacingDispatcher;
 
     invoke-direct {v5, v1, v8, p0}, Landroid/hardware/camera2/dispatch/ArgumentReplacingDispatcher;-><init>(Landroid/hardware/camera2/dispatch/Dispatchable;ILjava/lang/Object;)V
 
-    .line 479
     .local v5, "replaceDeviceWithSession":Landroid/hardware/camera2/dispatch/ArgumentReplacingDispatcher;, "Landroid/hardware/camera2/dispatch/ArgumentReplacingDispatcher<Landroid/hardware/camera2/impl/CameraDeviceImpl$CaptureCallback;Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;>;"
     new-instance v0, Landroid/hardware/camera2/dispatch/BroadcastDispatcher;
 
@@ -527,7 +478,6 @@
 
     invoke-direct {v0, v7}, Landroid/hardware/camera2/dispatch/BroadcastDispatcher;-><init>([Landroid/hardware/camera2/dispatch/Dispatchable;)V
 
-    .line 484
     .local v0, "broadcaster":Landroid/hardware/camera2/dispatch/BroadcastDispatcher;, "Landroid/hardware/camera2/dispatch/BroadcastDispatcher<Landroid/hardware/camera2/impl/CameraDeviceImpl$CaptureCallback;>;"
     new-instance v3, Landroid/hardware/camera2/impl/CallbackProxies$DeviceCaptureCallbackProxy;
 
@@ -543,18 +493,15 @@
     .param p2, "callback"    # Landroid/hardware/camera2/CameraCaptureSession$StateCallback;
 
     .prologue
-    .line 418
     new-instance v1, Landroid/hardware/camera2/dispatch/InvokeDispatcher;
 
     invoke-direct {v1, p2}, Landroid/hardware/camera2/dispatch/InvokeDispatcher;-><init>(Ljava/lang/Object;)V
 
-    .line 419
     .local v1, "userCallbackSink":Landroid/hardware/camera2/dispatch/InvokeDispatcher;, "Landroid/hardware/camera2/dispatch/InvokeDispatcher<Landroid/hardware/camera2/CameraCaptureSession$StateCallback;>;"
     new-instance v0, Landroid/hardware/camera2/dispatch/HandlerDispatcher;
 
     invoke-direct {v0, v1, p1}, Landroid/hardware/camera2/dispatch/HandlerDispatcher;-><init>(Landroid/hardware/camera2/dispatch/Dispatchable;Landroid/os/Handler;)V
 
-    .line 422
     .local v0, "handlerPassthrough":Landroid/hardware/camera2/dispatch/HandlerDispatcher;, "Landroid/hardware/camera2/dispatch/HandlerDispatcher<Landroid/hardware/camera2/CameraCaptureSession$StateCallback;>;"
     new-instance v2, Landroid/hardware/camera2/impl/CallbackProxies$SessionStateCallbackProxy;
 
@@ -568,7 +515,6 @@
     .param p1, "sequenceId"    # I
 
     .prologue
-    .line 631
     iget-object v0, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mSequenceDrainer:Landroid/hardware/camera2/utils/TaskDrainer;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -577,7 +523,6 @@
 
     invoke-virtual {v0, v1}, Landroid/hardware/camera2/utils/TaskDrainer;->taskFinished(Ljava/lang/Object;)V
 
-    .line 632
     return-void
 .end method
 
@@ -592,18 +537,15 @@
     .end annotation
 
     .prologue
-    .line 283
     monitor-enter p0
 
     :try_start_0
     invoke-direct {p0}, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->checkNotClosed()V
 
-    .line 289
     iget-boolean v0, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mAborting:Z
 
     if-eqz v0, :cond_0
 
-    .line 290
     const-string v0, "CameraCaptureSession"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -630,25 +572,21 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 299
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 294
     :cond_0
     const/4 v0, 0x1
 
     :try_start_1
     iput-boolean v0, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mAborting:Z
 
-    .line 295
     iget-object v0, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mAbortDrainer:Landroid/hardware/camera2/utils/TaskSingleDrainer;
 
     invoke-virtual {v0}, Landroid/hardware/camera2/utils/TaskSingleDrainer;->taskStarted()V
 
-    .line 297
     iget-object v0, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mDeviceImpl:Landroid/hardware/camera2/impl/CameraDeviceImpl;
 
     invoke-virtual {v0}, Landroid/hardware/camera2/impl/CameraDeviceImpl;->flush()V
@@ -657,7 +595,6 @@
 
     goto :goto_0
 
-    .line 283
     :catchall_0
     move-exception v0
 
@@ -678,16 +615,14 @@
     .end annotation
 
     .prologue
-    .line 161
     monitor-enter p0
 
     if-nez p1, :cond_0
 
-    .line 162
     :try_start_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "request must not be null"
+    const-string v1, "request must not be null"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
@@ -695,7 +630,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 161
     :catchall_0
     move-exception v0
 
@@ -703,7 +637,6 @@
 
     throw v0
 
-    .line 163
     :cond_0
     :try_start_1
     invoke-virtual {p1}, Landroid/hardware/camera2/CaptureRequest;->isReprocess()Z
@@ -718,16 +651,14 @@
 
     if-nez v0, :cond_1
 
-    .line 164
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "this capture session cannot handle reprocess requests"
+    const-string v1, "this capture session cannot handle reprocess requests"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 166
     :cond_1
     invoke-virtual {p1}, Landroid/hardware/camera2/CaptureRequest;->isReprocess()Z
 
@@ -743,7 +674,6 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 167
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "capture request was created for another session"
@@ -752,16 +682,13 @@
 
     throw v0
 
-    .line 170
     :cond_2
     invoke-direct {p0}, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->checkNotClosed()V
 
-    .line 172
     invoke-static {p3, p2}, Landroid/hardware/camera2/impl/CameraDeviceImpl;->checkHandler(Landroid/os/Handler;Ljava/lang/Object;)Landroid/os/Handler;
 
     move-result-object p3
 
-    .line 179
     iget-object v0, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mDeviceImpl:Landroid/hardware/camera2/impl/CameraDeviceImpl;
 
     invoke-direct {p0, p3, p2}, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->createCaptureCallbackProxy(Landroid/os/Handler;Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;)Landroid/hardware/camera2/impl/CameraDeviceImpl$CaptureCallback;
@@ -809,13 +736,11 @@
     .end annotation
 
     .prologue
-    .line 186
     .local p1, "requests":Ljava/util/List;, "Ljava/util/List<Landroid/hardware/camera2/CaptureRequest;>;"
     monitor-enter p0
 
     if-nez p1, :cond_0
 
-    .line 187
     :try_start_0
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
@@ -827,7 +752,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 186
     :catchall_0
     move-exception v2
 
@@ -835,7 +759,6 @@
 
     throw v2
 
-    .line 188
     :cond_0
     :try_start_1
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
@@ -844,7 +767,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 189
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string v3, "Requests must have at least one element"
@@ -853,7 +775,6 @@
 
     throw v2
 
-    .line 192
     :cond_1
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -873,7 +794,6 @@
 
     check-cast v1, Landroid/hardware/camera2/CaptureRequest;
 
-    .line 193
     .local v1, "request":Landroid/hardware/camera2/CaptureRequest;
     invoke-virtual {v1}, Landroid/hardware/camera2/CaptureRequest;->isReprocess()Z
 
@@ -881,14 +801,12 @@
 
     if-eqz v2, :cond_2
 
-    .line 194
     invoke-virtual {p0}, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->isReprocessable()Z
 
     move-result v2
 
     if-nez v2, :cond_3
 
-    .line 195
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string v3, "This capture session cannot handle reprocess requests"
@@ -897,7 +815,6 @@
 
     throw v2
 
-    .line 197
     :cond_3
     invoke-virtual {v1}, Landroid/hardware/camera2/CaptureRequest;->getReprocessableSessionId()I
 
@@ -907,7 +824,6 @@
 
     if-eq v2, v3, :cond_2
 
-    .line 198
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string v3, "Capture request was created for another session"
@@ -916,17 +832,14 @@
 
     throw v2
 
-    .line 204
     .end local v1    # "request":Landroid/hardware/camera2/CaptureRequest;
     :cond_4
     invoke-direct {p0}, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->checkNotClosed()V
 
-    .line 206
     invoke-static {p3, p2}, Landroid/hardware/camera2/impl/CameraDeviceImpl;->checkHandler(Landroid/os/Handler;Ljava/lang/Object;)Landroid/os/Handler;
 
     move-result-object p3
 
-    .line 214
     iget-object v2, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mDeviceImpl:Landroid/hardware/camera2/impl/CameraDeviceImpl;
 
     invoke-direct {p0, p3, p2}, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->createCaptureCallbackProxy(Landroid/os/Handler;Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;)Landroid/hardware/camera2/impl/CameraDeviceImpl$CaptureCallback;
@@ -954,7 +867,6 @@
     .locals 4
 
     .prologue
-    .line 358
     monitor-enter p0
 
     :try_start_0
@@ -964,13 +876,11 @@
 
     if-eqz v1, :cond_0
 
-    .line 398
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 365
     :cond_0
     const/4 v1, 0x1
 
@@ -979,7 +889,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 378
     :try_start_2
     iget-object v1, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mDeviceImpl:Landroid/hardware/camera2/impl/CameraDeviceImpl;
 
@@ -989,7 +898,6 @@
     .catch Landroid/hardware/camera2/CameraAccessException; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 397
     :goto_1
     :try_start_3
     iget-object v1, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mSequenceDrainer:Landroid/hardware/camera2/utils/TaskDrainer;
@@ -1000,7 +908,6 @@
 
     goto :goto_0
 
-    .line 358
     :catchall_0
     move-exception v1
 
@@ -1008,11 +915,9 @@
 
     throw v1
 
-    .line 379
     :catch_0
     move-exception v0
 
-    .line 387
     .local v0, "e":Ljava/lang/IllegalStateException;
     :try_start_4
     iget-object v1, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mStateCallback:Landroid/hardware/camera2/CameraCaptureSession$StateCallback;
@@ -1021,12 +926,10 @@
 
     goto :goto_0
 
-    .line 389
     .end local v0    # "e":Ljava/lang/IllegalStateException;
     :catch_1
     move-exception v0
 
-    .line 391
     .local v0, "e":Landroid/hardware/camera2/CameraAccessException;
     const-string v1, "CameraCaptureSession"
 
@@ -1066,19 +969,15 @@
     .end annotation
 
     .prologue
-    .line 598
     :try_start_0
     invoke-virtual {p0}, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->close()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 600
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    .line 602
     return-void
 
-    .line 600
     :catchall_0
     move-exception v0
 
@@ -1091,7 +990,6 @@
     .locals 1
 
     .prologue
-    .line 140
     iget-object v0, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mDeviceImpl:Landroid/hardware/camera2/impl/CameraDeviceImpl;
 
     return-object v0
@@ -1101,10 +999,8 @@
     .locals 2
 
     .prologue
-    .line 500
     move-object v0, p0
 
-    .line 502
     .local v0, "session":Landroid/hardware/camera2/CameraCaptureSession;
     new-instance v1, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl$2;
 
@@ -1117,7 +1013,6 @@
     .locals 1
 
     .prologue
-    .line 308
     iget-object v0, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mInput:Landroid/view/Surface;
 
     return-object v0
@@ -1127,7 +1022,6 @@
     .locals 1
 
     .prologue
-    .line 411
     iget-boolean v0, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mAborting:Z
 
     return v0
@@ -1137,7 +1031,6 @@
     .locals 1
 
     .prologue
-    .line 303
     iget-object v0, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mInput:Landroid/view/Surface;
 
     if-eqz v0, :cond_0
@@ -1164,12 +1057,10 @@
     .end annotation
 
     .prologue
-    .line 150
     iget-object v0, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mDeviceImpl:Landroid/hardware/camera2/impl/CameraDeviceImpl;
 
     invoke-virtual {v0, p1, p2}, Landroid/hardware/camera2/impl/CameraDeviceImpl;->prepare(ILandroid/view/Surface;)V
 
-    .line 151
     return-void
 .end method
 
@@ -1183,12 +1074,10 @@
     .end annotation
 
     .prologue
-    .line 145
     iget-object v0, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mDeviceImpl:Landroid/hardware/camera2/impl/CameraDeviceImpl;
 
     invoke-virtual {v0, p1}, Landroid/hardware/camera2/impl/CameraDeviceImpl;->prepare(Landroid/view/Surface;)V
 
-    .line 146
     return-void
 .end method
 
@@ -1196,7 +1085,6 @@
     .locals 1
 
     .prologue
-    .line 350
     monitor-enter p0
 
     const/4 v0, 0x1
@@ -1204,17 +1092,14 @@
     :try_start_0
     iput-boolean v0, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mSkipUnconfigure:Z
 
-    .line 352
     invoke-virtual {p0}, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->close()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 353
     monitor-exit p0
 
     return-void
 
-    .line 350
     :catchall_0
     move-exception v0
 
@@ -1247,17 +1132,15 @@
     .end annotation
 
     .prologue
-    .line 243
     .local p1, "requests":Ljava/util/List;, "Ljava/util/List<Landroid/hardware/camera2/CaptureRequest;>;"
     monitor-enter p0
 
     if-nez p1, :cond_0
 
-    .line 244
     :try_start_0
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v3, "requests must not be null"
+    const-string v3, "requests must not be null"
 
     invoke-direct {v2, v3}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
@@ -1265,7 +1148,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 243
     :catchall_0
     move-exception v2
 
@@ -1273,7 +1155,6 @@
 
     throw v2
 
-    .line 245
     :cond_0
     :try_start_1
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
@@ -1282,16 +1163,14 @@
 
     if-eqz v2, :cond_1
 
-    .line 246
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v3, "requests must have at least one element"
+    const-string v3, "requests must have at least one element"
 
     invoke-direct {v2, v3}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v2
 
-    .line 249
     :cond_1
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1311,7 +1190,6 @@
 
     check-cast v1, Landroid/hardware/camera2/CaptureRequest;
 
-    .line 250
     .local v1, "r":Landroid/hardware/camera2/CaptureRequest;
     invoke-virtual {v1}, Landroid/hardware/camera2/CaptureRequest;->isReprocess()Z
 
@@ -1319,26 +1197,22 @@
 
     if-eqz v2, :cond_2
 
-    .line 251
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v3, "repeating reprocess burst requests are not supported"
+    const-string v3, "repeating reprocess burst requests are not supported"
 
     invoke-direct {v2, v3}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v2
 
-    .line 256
     .end local v1    # "r":Landroid/hardware/camera2/CaptureRequest;
     :cond_3
     invoke-direct {p0}, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->checkNotClosed()V
 
-    .line 258
     invoke-static {p3, p2}, Landroid/hardware/camera2/impl/CameraDeviceImpl;->checkHandler(Landroid/os/Handler;Ljava/lang/Object;)Landroid/os/Handler;
 
     move-result-object p3
 
-    .line 266
     iget-object v2, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mDeviceImpl:Landroid/hardware/camera2/impl/CameraDeviceImpl;
 
     invoke-direct {p0, p3, p2}, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->createCaptureCallbackProxy(Landroid/os/Handler;Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;)Landroid/hardware/camera2/impl/CameraDeviceImpl$CaptureCallback;
@@ -1374,16 +1248,14 @@
     .end annotation
 
     .prologue
-    .line 221
     monitor-enter p0
 
     if-nez p1, :cond_0
 
-    .line 222
     :try_start_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "request must not be null"
+    const-string v1, "request must not be null"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
@@ -1391,7 +1263,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 221
     :catchall_0
     move-exception v0
 
@@ -1399,7 +1270,6 @@
 
     throw v0
 
-    .line 223
     :cond_0
     :try_start_1
     invoke-virtual {p1}, Landroid/hardware/camera2/CaptureRequest;->isReprocess()Z
@@ -1408,25 +1278,21 @@
 
     if-eqz v0, :cond_1
 
-    .line 224
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "repeating reprocess requests are not supported"
+    const-string v1, "repeating reprocess requests are not supported"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 227
     :cond_1
     invoke-direct {p0}, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->checkNotClosed()V
 
-    .line 229
     invoke-static {p3, p2}, Landroid/hardware/camera2/impl/CameraDeviceImpl;->checkHandler(Landroid/os/Handler;Ljava/lang/Object;)Landroid/os/Handler;
 
     move-result-object p3
 
-    .line 236
     iget-object v0, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mDeviceImpl:Landroid/hardware/camera2/impl/CameraDeviceImpl;
 
     invoke-direct {p0, p3, p2}, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->createCaptureCallbackProxy(Landroid/os/Handler;Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;)Landroid/hardware/camera2/impl/CameraDeviceImpl$CaptureCallback;
@@ -1459,25 +1325,21 @@
     .end annotation
 
     .prologue
-    .line 272
     monitor-enter p0
 
     :try_start_0
     invoke-direct {p0}, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->checkNotClosed()V
 
-    .line 278
     iget-object v0, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mDeviceImpl:Landroid/hardware/camera2/impl/CameraDeviceImpl;
 
     invoke-virtual {v0}, Landroid/hardware/camera2/impl/CameraDeviceImpl;->stopRepeating()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 279
     monitor-exit p0
 
     return-void
 
-    .line 272
     :catchall_0
     move-exception v0
 
@@ -1496,11 +1358,9 @@
     .end annotation
 
     .prologue
-    .line 155
     iget-object v0, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->mDeviceImpl:Landroid/hardware/camera2/impl/CameraDeviceImpl;
 
     invoke-virtual {v0, p1}, Landroid/hardware/camera2/impl/CameraDeviceImpl;->tearDown(Landroid/view/Surface;)V
 
-    .line 156
     return-void
 .end method

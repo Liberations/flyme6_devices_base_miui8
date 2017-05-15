@@ -44,7 +44,6 @@
     .locals 1
 
     .prologue
-    .line 1058
     new-instance v0, Lcom/android/internal/widget/MiuiLockPatternView$SavedState$1;
 
     invoke-direct {v0}, Lcom/android/internal/widget/MiuiLockPatternView$SavedState$1;-><init>()V
@@ -61,24 +60,20 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1020
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcel;)V
 
-    .line 1021
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/internal/widget/MiuiLockPatternView$SavedState;->mSerializedPattern:Ljava/lang/String;
 
-    .line 1022
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/internal/widget/MiuiLockPatternView$SavedState;->mDisplayMode:I
 
-    .line 1023
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->readValue(Ljava/lang/ClassLoader;)Ljava/lang/Object;
 
     move-result-object v0
@@ -91,7 +86,6 @@
 
     iput-boolean v0, p0, Lcom/android/internal/widget/MiuiLockPatternView$SavedState;->mInputEnabled:Z
 
-    .line 1024
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->readValue(Ljava/lang/ClassLoader;)Ljava/lang/Object;
 
     move-result-object v0
@@ -104,7 +98,6 @@
 
     iput-boolean v0, p0, Lcom/android/internal/widget/MiuiLockPatternView$SavedState;->mInStealthMode:Z
 
-    .line 1025
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->readValue(Ljava/lang/ClassLoader;)Ljava/lang/Object;
 
     move-result-object v0
@@ -117,7 +110,6 @@
 
     iput-boolean v0, p0, Lcom/android/internal/widget/MiuiLockPatternView$SavedState;->mTactileFeedbackEnabled:Z
 
-    .line 1026
     return-void
 .end method
 
@@ -127,7 +119,6 @@
     .param p2, "x1"    # Lcom/android/internal/widget/MiuiLockPatternView$1;
 
     .prologue
-    .line 995
     invoke-direct {p0, p1}, Lcom/android/internal/widget/MiuiLockPatternView$SavedState;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -143,25 +134,18 @@
     .param p6, "tactileFeedbackEnabled"    # Z
 
     .prologue
-    .line 1008
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcelable;)V
 
-    .line 1009
     iput-object p2, p0, Lcom/android/internal/widget/MiuiLockPatternView$SavedState;->mSerializedPattern:Ljava/lang/String;
 
-    .line 1010
     iput p3, p0, Lcom/android/internal/widget/MiuiLockPatternView$SavedState;->mDisplayMode:I
 
-    .line 1011
     iput-boolean p4, p0, Lcom/android/internal/widget/MiuiLockPatternView$SavedState;->mInputEnabled:Z
 
-    .line 1012
     iput-boolean p5, p0, Lcom/android/internal/widget/MiuiLockPatternView$SavedState;->mInStealthMode:Z
 
-    .line 1013
     iput-boolean p6, p0, Lcom/android/internal/widget/MiuiLockPatternView$SavedState;->mTactileFeedbackEnabled:Z
 
-    .line 1014
     return-void
 .end method
 
@@ -176,7 +160,6 @@
     .param p7, "x6"    # Lcom/android/internal/widget/MiuiLockPatternView$1;
 
     .prologue
-    .line 995
     invoke-direct/range {p0 .. p6}, Lcom/android/internal/widget/MiuiLockPatternView$SavedState;-><init>(Landroid/os/Parcelable;Ljava/lang/String;IZZZ)V
 
     return-void
@@ -188,7 +171,6 @@
     .locals 1
 
     .prologue
-    .line 1033
     iget v0, p0, Lcom/android/internal/widget/MiuiLockPatternView$SavedState;->mDisplayMode:I
 
     return v0
@@ -198,7 +180,6 @@
     .locals 1
 
     .prologue
-    .line 1029
     iget-object v0, p0, Lcom/android/internal/widget/MiuiLockPatternView$SavedState;->mSerializedPattern:Ljava/lang/String;
 
     return-object v0
@@ -208,7 +189,6 @@
     .locals 1
 
     .prologue
-    .line 1041
     iget-boolean v0, p0, Lcom/android/internal/widget/MiuiLockPatternView$SavedState;->mInStealthMode:Z
 
     return v0
@@ -218,7 +198,6 @@
     .locals 1
 
     .prologue
-    .line 1037
     iget-boolean v0, p0, Lcom/android/internal/widget/MiuiLockPatternView$SavedState;->mInputEnabled:Z
 
     return v0
@@ -228,7 +207,6 @@
     .locals 1
 
     .prologue
-    .line 1045
     iget-boolean v0, p0, Lcom/android/internal/widget/MiuiLockPatternView$SavedState;->mTactileFeedbackEnabled:Z
 
     return v0
@@ -240,20 +218,16 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 1050
     invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 1051
     iget-object v0, p0, Lcom/android/internal/widget/MiuiLockPatternView$SavedState;->mSerializedPattern:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 1052
     iget v0, p0, Lcom/android/internal/widget/MiuiLockPatternView$SavedState;->mDisplayMode:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1053
     iget-boolean v0, p0, Lcom/android/internal/widget/MiuiLockPatternView$SavedState;->mInputEnabled:Z
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -262,7 +236,6 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeValue(Ljava/lang/Object;)V
 
-    .line 1054
     iget-boolean v0, p0, Lcom/android/internal/widget/MiuiLockPatternView$SavedState;->mInStealthMode:Z
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -271,7 +244,6 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeValue(Ljava/lang/Object;)V
 
-    .line 1055
     iget-boolean v0, p0, Lcom/android/internal/widget/MiuiLockPatternView$SavedState;->mTactileFeedbackEnabled:Z
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -280,6 +252,5 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeValue(Ljava/lang/Object;)V
 
-    .line 1056
     return-void
 .end method

@@ -40,17 +40,14 @@
     .locals 1
 
     .prologue
-    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 42
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     iput-object v0, p0, Lcom/miui/hybrid/hook/IntentHook;->ruleMap:Ljava/util/Map;
 
-    .line 45
     return-void
 .end method
 
@@ -58,42 +55,35 @@
     .locals 2
 
     .prologue
-    .line 24
     sget-object v0, Lcom/miui/hybrid/hook/IntentHook;->sInstance:Lcom/miui/hybrid/hook/IntentHook;
 
     if-nez v0, :cond_1
 
-    .line 25
     const-class v1, Lcom/miui/hybrid/hook/IntentHook;
 
     monitor-enter v1
 
-    .line 26
     :try_start_0
     sget-object v0, Lcom/miui/hybrid/hook/IntentHook;->sInstance:Lcom/miui/hybrid/hook/IntentHook;
 
     if-nez v0, :cond_0
 
-    .line 27
     new-instance v0, Lcom/miui/hybrid/hook/IntentHook;
 
     invoke-direct {v0}, Lcom/miui/hybrid/hook/IntentHook;-><init>()V
 
     sput-object v0, Lcom/miui/hybrid/hook/IntentHook;->sInstance:Lcom/miui/hybrid/hook/IntentHook;
 
-    .line 29
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 32
     :cond_1
     sget-object v0, Lcom/miui/hybrid/hook/IntentHook;->sInstance:Lcom/miui/hybrid/hook/IntentHook;
 
     return-object v0
 
-    .line 29
     :catchall_0
     move-exception v0
 
@@ -113,15 +103,12 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 129
     if-nez p1, :cond_1
 
-    .line 157
     :cond_0
     :goto_0
     return-object v3
 
-    .line 133
     :cond_1
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -129,16 +116,13 @@
 
     if-nez v4, :cond_0
 
-    .line 137
     invoke-virtual {p1}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v0
 
-    .line 138
     .local v0, "componentName":Landroid/content/ComponentName;
     if-eqz v0, :cond_0
 
-    .line 142
     invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v4
@@ -149,7 +133,6 @@
 
     if-nez v4, :cond_0
 
-    .line 147
     iget-object v4, p0, Lcom/miui/hybrid/hook/IntentHook;->ruleMap:Ljava/util/Map;
 
     invoke-interface {v4, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -158,16 +141,13 @@
 
     check-cast v2, Ljava/util/Map;
 
-    .line 149
     .local v2, "rules":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lcom/miui/hybrid/hook/IntentHook$RedirectRule;>;"
     if-eqz v2, :cond_0
 
-    .line 154
     invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 157
     .local v1, "pkgName":Ljava/lang/String;
     invoke-interface {v2, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -188,7 +168,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 78
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v3
@@ -201,7 +180,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 79
     :cond_0
     const-string v3, "IntentHook"
 
@@ -241,12 +219,10 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 89
     :cond_1
     :goto_0
     return-object v2
 
-    .line 83
     :cond_2
     iget-object v3, p0, Lcom/miui/hybrid/hook/IntentHook;->ruleMap:Ljava/util/Map;
 
@@ -256,18 +232,15 @@
 
     check-cast v1, Ljava/util/Map;
 
-    .line 84
     .local v1, "rules":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lcom/miui/hybrid/hook/IntentHook$RedirectRule;>;"
     if-eqz v1, :cond_1
 
-    .line 85
     invoke-interface {v1, p2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/miui/hybrid/hook/IntentHook$RedirectRule;
 
-    .line 86
     .local v0, "redirectRule":Lcom/miui/hybrid/hook/IntentHook$RedirectRule;
     const-string v3, "IntentHook"
 
@@ -301,7 +274,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 87
     if-eqz v0, :cond_1
 
     iget-object v2, v0, Lcom/miui/hybrid/hook/IntentHook$RedirectRule;->redirectPkg:Ljava/lang/String;
@@ -317,7 +289,6 @@
     .param p4, "clsNameMap"    # Landroid/os/Bundle;
 
     .prologue
-    .line 48
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -336,7 +307,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 49
     :cond_0
     const-string v2, "IntentHook"
 
@@ -396,14 +366,11 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 54
     const/4 v2, 0x0
 
-    .line 74
     :goto_0
     return v2
 
-    .line 58
     :cond_1
     new-instance v0, Lcom/miui/hybrid/hook/IntentHook$RedirectRule;
 
@@ -411,20 +378,15 @@
 
     invoke-direct {v0, v2}, Lcom/miui/hybrid/hook/IntentHook$RedirectRule;-><init>(Lcom/miui/hybrid/hook/IntentHook$1;)V
 
-    .line 59
     .local v0, "rule":Lcom/miui/hybrid/hook/IntentHook$RedirectRule;
     iput-object p1, v0, Lcom/miui/hybrid/hook/IntentHook$RedirectRule;->callingPkg:Ljava/lang/String;
 
-    .line 60
     iput-object p2, v0, Lcom/miui/hybrid/hook/IntentHook$RedirectRule;->originDestPkg:Ljava/lang/String;
 
-    .line 61
     iput-object p3, v0, Lcom/miui/hybrid/hook/IntentHook$RedirectRule;->redirectPkg:Ljava/lang/String;
 
-    .line 62
     iput-object p4, v0, Lcom/miui/hybrid/hook/IntentHook$RedirectRule;->clsNameMap:Landroid/os/Bundle;
 
-    .line 65
     iget-object v2, p0, Lcom/miui/hybrid/hook/IntentHook;->ruleMap:Ljava/util/Map;
 
     invoke-interface {v2, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -433,27 +395,22 @@
 
     check-cast v1, Ljava/util/Map;
 
-    .line 66
     .local v1, "rules":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lcom/miui/hybrid/hook/IntentHook$RedirectRule;>;"
     if-nez v1, :cond_2
 
-    .line 67
     new-instance v1, Ljava/util/concurrent/ConcurrentHashMap;
 
     .end local v1    # "rules":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lcom/miui/hybrid/hook/IntentHook$RedirectRule;>;"
     invoke-direct {v1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
-    .line 68
     .restart local v1    # "rules":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lcom/miui/hybrid/hook/IntentHook$RedirectRule;>;"
     iget-object v2, p0, Lcom/miui/hybrid/hook/IntentHook;->ruleMap:Ljava/util/Map;
 
     invoke-interface {v2, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 71
     :cond_2
     invoke-interface {v1, p2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 72
     const-string v2, "IntentHook"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -496,7 +453,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 74
     const/4 v2, 0x1
 
     goto :goto_0
@@ -508,42 +464,34 @@
     .param p2, "callingPkg"    # Ljava/lang/String;
 
     .prologue
-    .line 93
     invoke-direct {p0, p1, p2}, Lcom/miui/hybrid/hook/IntentHook;->getRedirectRule(Landroid/content/Intent;Ljava/lang/String;)Lcom/miui/hybrid/hook/IntentHook$RedirectRule;
 
     move-result-object v7
 
-    .line 94
     .local v7, "rule":Lcom/miui/hybrid/hook/IntentHook$RedirectRule;
     if-nez v7, :cond_0
 
-    .line 124
     :goto_0
     return-object p1
 
-    .line 98
     :cond_0
     invoke-virtual {p1}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v1
 
-    .line 99
     .local v1, "componentName":Landroid/content/ComponentName;
     invoke-virtual {v1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 100
     .local v3, "pkgName":Ljava/lang/String;
     invoke-virtual {v1}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 103
     .local v0, "clsName":Ljava/lang/String;
     iget-object v6, v7, Lcom/miui/hybrid/hook/IntentHook$RedirectRule;->redirectPkg:Ljava/lang/String;
 
-    .line 104
     .local v6, "redirectPkg":Ljava/lang/String;
     const-string v8, "IntentHook"
 
@@ -577,23 +525,19 @@
 
     invoke-static {v8, v9}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 107
     move-object v4, v0
 
-    .line 108
     .local v4, "redirectCls":Ljava/lang/String;
     iget-object v8, v7, Lcom/miui/hybrid/hook/IntentHook$RedirectRule;->clsNameMap:Landroid/os/Bundle;
 
     if-eqz v8, :cond_2
 
-    .line 109
     iget-object v8, v7, Lcom/miui/hybrid/hook/IntentHook$RedirectRule;->clsNameMap:Landroid/os/Bundle;
 
     invoke-virtual {v8, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 110
     .local v2, "mapClass":Ljava/lang/String;
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -601,10 +545,8 @@
 
     if-nez v8, :cond_1
 
-    .line 111
     move-object v4, v2
 
-    .line 112
     const-string v8, "IntentHook"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -637,20 +579,17 @@
 
     invoke-static {v8, v9}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 121
     .end local v2    # "mapClass":Ljava/lang/String;
     :goto_1
     new-instance v5, Landroid/content/ComponentName;
 
     invoke-direct {v5, v6, v4}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 122
     .local v5, "redirectComponent":Landroid/content/ComponentName;
     invoke-virtual {p1, v5}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
     goto :goto_0
 
-    .line 114
     .end local v5    # "redirectComponent":Landroid/content/ComponentName;
     .restart local v2    # "mapClass":Ljava/lang/String;
     :cond_1
@@ -684,7 +623,6 @@
 
     goto :goto_1
 
-    .line 117
     .end local v2    # "mapClass":Ljava/lang/String;
     :cond_2
     const-string v8, "IntentHook"

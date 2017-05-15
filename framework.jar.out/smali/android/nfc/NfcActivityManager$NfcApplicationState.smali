@@ -28,20 +28,16 @@
     .param p2, "app"    # Landroid/app/Application;
 
     .prologue
-    .line 60
     iput-object p1, p0, Landroid/nfc/NfcActivityManager$NfcApplicationState;->this$0:Landroid/nfc/NfcActivityManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 58
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/nfc/NfcActivityManager$NfcApplicationState;->refCount:I
 
-    .line 61
     iput-object p2, p0, Landroid/nfc/NfcActivityManager$NfcApplicationState;->app:Landroid/app/Application;
 
-    .line 62
     return-void
 .end method
 
@@ -51,28 +47,24 @@
     .locals 2
 
     .prologue
-    .line 64
     iget v0, p0, Landroid/nfc/NfcActivityManager$NfcApplicationState;->refCount:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Landroid/nfc/NfcActivityManager$NfcApplicationState;->refCount:I
 
-    .line 65
     iget v0, p0, Landroid/nfc/NfcActivityManager$NfcApplicationState;->refCount:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 66
     iget-object v0, p0, Landroid/nfc/NfcActivityManager$NfcApplicationState;->app:Landroid/app/Application;
 
     iget-object v1, p0, Landroid/nfc/NfcActivityManager$NfcApplicationState;->this$0:Landroid/nfc/NfcActivityManager;
 
     invoke-virtual {v0, v1}, Landroid/app/Application;->registerActivityLifecycleCallbacks(Landroid/app/Application$ActivityLifecycleCallbacks;)V
 
-    .line 68
     :cond_0
     return-void
 .end method
@@ -81,37 +73,31 @@
     .locals 3
 
     .prologue
-    .line 70
     iget v0, p0, Landroid/nfc/NfcActivityManager$NfcApplicationState;->refCount:I
 
     add-int/lit8 v0, v0, -0x1
 
     iput v0, p0, Landroid/nfc/NfcActivityManager$NfcApplicationState;->refCount:I
 
-    .line 71
     iget v0, p0, Landroid/nfc/NfcActivityManager$NfcApplicationState;->refCount:I
 
     if-nez v0, :cond_1
 
-    .line 72
     iget-object v0, p0, Landroid/nfc/NfcActivityManager$NfcApplicationState;->app:Landroid/app/Application;
 
     iget-object v1, p0, Landroid/nfc/NfcActivityManager$NfcApplicationState;->this$0:Landroid/nfc/NfcActivityManager;
 
     invoke-virtual {v0, v1}, Landroid/app/Application;->unregisterActivityLifecycleCallbacks(Landroid/app/Application$ActivityLifecycleCallbacks;)V
 
-    .line 76
     :cond_0
     :goto_0
     return-void
 
-    .line 73
     :cond_1
     iget v0, p0, Landroid/nfc/NfcActivityManager$NfcApplicationState;->refCount:I
 
     if-gez v0, :cond_0
 
-    .line 74
     const-string v0, "NFC"
 
     new-instance v1, Ljava/lang/StringBuilder;

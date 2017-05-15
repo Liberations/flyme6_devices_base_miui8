@@ -58,7 +58,6 @@
 
     const/4 v3, 0x0
 
-    .line 305
     new-instance v0, Lmiui/push/Presence$Type;
 
     const-string v1, "available"
@@ -67,7 +66,6 @@
 
     sput-object v0, Lmiui/push/Presence$Type;->available:Lmiui/push/Presence$Type;
 
-    .line 310
     new-instance v0, Lmiui/push/Presence$Type;
 
     const-string v1, "unavailable"
@@ -76,7 +74,6 @@
 
     sput-object v0, Lmiui/push/Presence$Type;->unavailable:Lmiui/push/Presence$Type;
 
-    .line 315
     new-instance v0, Lmiui/push/Presence$Type;
 
     const-string v1, "subscribe"
@@ -85,7 +82,6 @@
 
     sput-object v0, Lmiui/push/Presence$Type;->subscribe:Lmiui/push/Presence$Type;
 
-    .line 320
     new-instance v0, Lmiui/push/Presence$Type;
 
     const-string v1, "subscribed"
@@ -94,7 +90,6 @@
 
     sput-object v0, Lmiui/push/Presence$Type;->subscribed:Lmiui/push/Presence$Type;
 
-    .line 325
     new-instance v0, Lmiui/push/Presence$Type;
 
     const-string v1, "unsubscribe"
@@ -103,7 +98,6 @@
 
     sput-object v0, Lmiui/push/Presence$Type;->unsubscribe:Lmiui/push/Presence$Type;
 
-    .line 330
     new-instance v0, Lmiui/push/Presence$Type;
 
     const-string v1, "unsubscribed"
@@ -114,7 +108,6 @@
 
     sput-object v0, Lmiui/push/Presence$Type;->unsubscribed:Lmiui/push/Presence$Type;
 
-    .line 335
     new-instance v0, Lmiui/push/Presence$Type;
 
     const-string v1, "error"
@@ -125,7 +118,6 @@
 
     sput-object v0, Lmiui/push/Presence$Type;->error:Lmiui/push/Presence$Type;
 
-    .line 340
     new-instance v0, Lmiui/push/Presence$Type;
 
     const-string v1, "probe"
@@ -136,7 +128,6 @@
 
     sput-object v0, Lmiui/push/Presence$Type;->probe:Lmiui/push/Presence$Type;
 
-    .line 300
     const/16 v0, 0x8
 
     new-array v0, v0, [Lmiui/push/Presence$Type;
@@ -193,7 +184,6 @@
     .end annotation
 
     .prologue
-    .line 300
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -204,7 +194,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 300
     const-class v0, Lmiui/push/Presence$Type;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -220,7 +209,6 @@
     .locals 1
 
     .prologue
-    .line 300
     sget-object v0, Lmiui/push/Presence$Type;->$VALUES:[Lmiui/push/Presence$Type;
 
     invoke-virtual {v0}, [Lmiui/push/Presence$Type;->clone()Ljava/lang/Object;

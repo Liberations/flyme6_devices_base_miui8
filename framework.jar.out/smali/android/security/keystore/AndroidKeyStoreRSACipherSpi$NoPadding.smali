@@ -19,12 +19,10 @@
     .locals 1
 
     .prologue
-    .line 54
     const/4 v0, 0x1
 
     invoke-direct {p0, v0}, Landroid/security/keystore/AndroidKeyStoreRSACipherSpi;-><init>(I)V
 
-    .line 55
     return-void
 .end method
 
@@ -34,12 +32,10 @@
     .locals 1
 
     .prologue
-    .line 61
     const/4 v0, 0x2
 
     invoke-virtual {p0, v0}, Landroid/security/keystore/AndroidKeyStoreRSACipherSpi$NoPadding;->setKeymasterPurposeOverride(I)V
 
-    .line 62
     const/4 v0, 0x1
 
     return v0
@@ -49,7 +45,6 @@
     .locals 1
 
     .prologue
-    .line 89
     const/4 v0, 0x0
 
     return-object v0
@@ -64,7 +59,6 @@
     .end annotation
 
     .prologue
-    .line 52
     invoke-super {p0}, Landroid/security/keystore/AndroidKeyStoreRSACipherSpi;->finalize()V
 
     return-void
@@ -74,7 +68,6 @@
     .locals 1
 
     .prologue
-    .line 94
     const/4 v0, 0x0
 
     return v0
@@ -84,7 +77,6 @@
     .locals 1
 
     .prologue
-    .line 99
     const/4 v0, 0x0
 
     return v0
@@ -99,7 +91,6 @@
     .end annotation
 
     .prologue
-    .line 66
     return-void
 .end method
 
@@ -113,10 +104,8 @@
     .end annotation
 
     .prologue
-    .line 81
     if-eqz p1, :cond_0
 
-    .line 82
     new-instance v0, Ljava/security/InvalidAlgorithmParameterException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -147,7 +136,6 @@
 
     throw v0
 
-    .line 85
     :cond_0
     return-void
 .end method
@@ -162,10 +150,8 @@
     .end annotation
 
     .prologue
-    .line 71
     if-eqz p1, :cond_0
 
-    .line 72
     new-instance v0, Ljava/security/InvalidAlgorithmParameterException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -196,7 +182,6 @@
 
     throw v0
 
-    .line 75
     :cond_0
     return-void
 .end method

@@ -23,15 +23,12 @@
     .locals 1
 
     .prologue
-    .line 2152
     invoke-direct {p0}, Lorg/apache/miui/commons/lang3/builder/ToStringStyle;-><init>()V
 
-    .line 2153
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lorg/apache/miui/commons/lang3/builder/ToStringStyle$NoFieldNameToStringStyle;->setUseFieldNames(Z)V
 
-    .line 2154
     return-void
 .end method
 
@@ -39,7 +36,6 @@
     .locals 1
 
     .prologue
-    .line 2162
     sget-object v0, Lorg/apache/miui/commons/lang3/builder/ToStringStyle;->NO_FIELD_NAMES_STYLE:Lorg/apache/miui/commons/lang3/builder/ToStringStyle;
 
     return-object v0

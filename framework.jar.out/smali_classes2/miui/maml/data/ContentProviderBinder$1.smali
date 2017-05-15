@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 362
     iput-object p1, p0, Lmiui/maml/data/ContentProviderBinder$1;->this$0:Lmiui/maml/data/ContentProviderBinder;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,12 +39,10 @@
     .locals 1
 
     .prologue
-    .line 365
     iget-object v0, p0, Lmiui/maml/data/ContentProviderBinder$1;->this$0:Lmiui/maml/data/ContentProviderBinder;
 
     # invokes: Lmiui/maml/data/ContentProviderBinder;->checkUpdate()V
     invoke-static {v0}, Lmiui/maml/data/ContentProviderBinder;->access$000(Lmiui/maml/data/ContentProviderBinder;)V
 
-    .line 366
     return-void
 .end method

@@ -23,20 +23,16 @@
     .locals 1
 
     .prologue
-    .line 2186
     invoke-direct {p0}, Lorg/apache/miui/commons/lang3/builder/ToStringStyle;-><init>()V
 
-    .line 2187
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lorg/apache/miui/commons/lang3/builder/ToStringStyle$ShortPrefixToStringStyle;->setUseShortClassName(Z)V
 
-    .line 2188
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lorg/apache/miui/commons/lang3/builder/ToStringStyle$ShortPrefixToStringStyle;->setUseIdentityHashCode(Z)V
 
-    .line 2189
     return-void
 .end method
 
@@ -44,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 2196
     sget-object v0, Lorg/apache/miui/commons/lang3/builder/ToStringStyle;->SHORT_PREFIX_STYLE:Lorg/apache/miui/commons/lang3/builder/ToStringStyle;
 
     return-object v0

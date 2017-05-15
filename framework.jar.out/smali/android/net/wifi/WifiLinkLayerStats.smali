@@ -78,7 +78,6 @@
     .locals 1
 
     .prologue
-    .line 187
     new-instance v0, Landroid/net/wifi/WifiLinkLayerStats$1;
 
     invoke-direct {v0}, Landroid/net/wifi/WifiLinkLayerStats$1;-><init>()V
@@ -92,10 +91,8 @@
     .locals 0
 
     .prologue
-    .line 109
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 110
     return-void
 .end method
 
@@ -105,7 +102,6 @@
     .locals 1
 
     .prologue
-    .line 152
     const/4 v0, 0x0
 
     return v0
@@ -123,18 +119,15 @@
 
     const/16 v4, 0x22
 
-    .line 157
     iget-object v2, p0, Landroid/net/wifi/WifiLinkLayerStats;->SSID:Ljava/lang/String;
 
     if-nez v2, :cond_0
 
     const-string v2, ""
 
-    .line 173
     :goto_0
     return-object v2
 
-    .line 158
     :cond_0
     iget-object v2, p0, Landroid/net/wifi/WifiLinkLayerStats;->SSID:Ljava/lang/String;
 
@@ -142,7 +135,6 @@
 
     move-result v0
 
-    .line 159
     .local v0, "length":I
     if-le v0, v7, :cond_1
 
@@ -164,7 +156,6 @@
 
     if-ne v2, v4, :cond_1
 
-    .line 160
     iget-object v2, p0, Landroid/net/wifi/WifiLinkLayerStats;->SSID:Ljava/lang/String;
 
     add-int/lit8 v3, v0, -0x1
@@ -175,7 +166,6 @@
 
     goto :goto_0
 
-    .line 167
     :cond_1
     const/4 v2, 0x3
 
@@ -209,7 +199,6 @@
 
     if-ne v2, v4, :cond_2
 
-    .line 169
     iget-object v2, p0, Landroid/net/wifi/WifiLinkLayerStats;->SSID:Ljava/lang/String;
 
     add-int/lit8 v3, v0, -0x1
@@ -222,7 +211,6 @@
 
     move-result-object v1
 
-    .line 171
     .local v1, "wifiSsid":Landroid/net/wifi/WifiSsid;
     invoke-virtual {v1}, Landroid/net/wifi/WifiSsid;->toString()Ljava/lang/String;
 
@@ -230,7 +218,6 @@
 
     goto :goto_0
 
-    .line 173
     .end local v1    # "wifiSsid":Landroid/net/wifi/WifiSsid;
     :cond_2
     iget-object v2, p0, Landroid/net/wifi/WifiLinkLayerStats;->SSID:Ljava/lang/String;
@@ -244,12 +231,10 @@
     .prologue
     const/16 v4, 0xa
 
-    .line 115
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 116
     .local v0, "sbuf":Ljava/lang/StringBuilder;
     const-string v1, " WifiLinkLayerStats: "
 
@@ -259,12 +244,10 @@
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 118
     iget-object v1, p0, Landroid/net/wifi/WifiLinkLayerStats;->SSID:Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
-    .line 119
     const-string v1, " SSID: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -279,13 +262,11 @@
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 121
     :cond_0
     iget-object v1, p0, Landroid/net/wifi/WifiLinkLayerStats;->BSSID:Ljava/lang/String;
 
     if-eqz v1, :cond_1
 
-    .line 122
     const-string v1, " BSSID: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -300,7 +281,6 @@
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 125
     :cond_1
     const-string v1, " my bss beacon rx: "
 
@@ -320,7 +300,6 @@
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 126
     const-string v1, " RSSI mgmt: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -339,7 +318,6 @@
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 127
     const-string v1, " BE : "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -412,7 +390,6 @@
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 131
     const-string v1, " BK : "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -485,7 +462,6 @@
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 135
     const-string v1, " VI : "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -558,7 +534,6 @@
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 139
     const-string v1, " VO : "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -631,7 +606,6 @@
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 143
     const-string v1, " on_time : "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -698,7 +672,6 @@
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 147
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -712,36 +685,29 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 178
     iget-object v0, p0, Landroid/net/wifi/WifiLinkLayerStats;->SSID:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 179
     iget-object v0, p0, Landroid/net/wifi/WifiLinkLayerStats;->BSSID:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 180
     iget v0, p0, Landroid/net/wifi/WifiLinkLayerStats;->on_time:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 181
     iget v0, p0, Landroid/net/wifi/WifiLinkLayerStats;->tx_time:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 182
     iget v0, p0, Landroid/net/wifi/WifiLinkLayerStats;->rx_time:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 183
     iget v0, p0, Landroid/net/wifi/WifiLinkLayerStats;->on_time_scan:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 184
     return-void
 .end method

@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -23,7 +22,6 @@
     .end annotation
 
     .prologue
-    .line 44
     :try_start_0
     invoke-static {}, Landroid/security/GateKeeper;->getService()Landroid/service/gatekeeper/IGateKeeperService;
 
@@ -41,11 +39,9 @@
 
     return-wide v2
 
-    .line 45
     :catch_0
     move-exception v0
 
-    .line 46
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/IllegalStateException;
 
@@ -60,7 +56,6 @@
     .locals 3
 
     .prologue
-    .line 34
     const-string v1, "android.service.gatekeeper.IGateKeeperService"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -71,11 +66,9 @@
 
     move-result-object v0
 
-    .line 36
     .local v0, "service":Landroid/service/gatekeeper/IGateKeeperService;
     if-nez v0, :cond_0
 
-    .line 37
     new-instance v1, Ljava/lang/IllegalStateException;
 
     const-string v2, "Gatekeeper service not available"
@@ -84,7 +77,6 @@
 
     throw v1
 
-    .line 39
     :cond_0
     return-object v0
 .end method

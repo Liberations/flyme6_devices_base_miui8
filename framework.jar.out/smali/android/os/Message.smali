@@ -68,24 +68,20 @@
     .locals 1
 
     .prologue
-    .line 110
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Landroid/os/Message;->sPoolSync:Ljava/lang/Object;
 
-    .line 112
     const/4 v0, 0x0
 
     sput v0, Landroid/os/Message;->sPoolSize:I
 
-    .line 116
     const/4 v0, 0x1
 
     sput-boolean v0, Landroid/os/Message;->gCheckRecycle:Z
 
-    .line 539
     new-instance v0, Landroid/os/Message$1;
 
     invoke-direct {v0}, Landroid/os/Message$1;-><init>()V
@@ -99,22 +95,18 @@
     .locals 1
 
     .prologue
-    .line 486
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 79
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/os/Message;->sendingUid:I
 
-    .line 119
     new-instance v0, Landroid/os/BaseLooper$MessageMonitorInfo;
 
     invoke-direct {v0}, Landroid/os/BaseLooper$MessageMonitorInfo;-><init>()V
 
     iput-object v0, p0, Landroid/os/Message;->monitorInfo:Landroid/os/BaseLooper$MessageMonitorInfo;
 
-    .line 487
     return-void
 .end method
 
@@ -124,7 +116,6 @@
     .param p1, "x1"    # Landroid/os/Parcel;
 
     .prologue
-    .line 32
     invoke-direct {p0, p1}, Landroid/os/Message;->readFromParcel(Landroid/os/Parcel;)V
 
     return-void
@@ -134,65 +125,53 @@
     .locals 3
 
     .prologue
-    .line 126
     sget-object v2, Landroid/os/Message;->sPoolSync:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 127
     :try_start_0
     sget-object v1, Landroid/os/Message;->sPool:Landroid/os/Message;
 
     if-eqz v1, :cond_0
 
-    .line 128
     sget-object v0, Landroid/os/Message;->sPool:Landroid/os/Message;
 
-    .line 129
     .local v0, "m":Landroid/os/Message;
     iget-object v1, v0, Landroid/os/Message;->next:Landroid/os/Message;
 
     sput-object v1, Landroid/os/Message;->sPool:Landroid/os/Message;
 
-    .line 130
     const/4 v1, 0x0
 
     iput-object v1, v0, Landroid/os/Message;->next:Landroid/os/Message;
 
-    .line 131
     const/4 v1, 0x0
 
     iput v1, v0, Landroid/os/Message;->flags:I
 
-    .line 132
     sget v1, Landroid/os/Message;->sPoolSize:I
 
     add-int/lit8 v1, v1, -0x1
 
     sput v1, Landroid/os/Message;->sPoolSize:I
 
-    .line 133
     monitor-exit v2
 
-    .line 136
     .end local v0    # "m":Landroid/os/Message;
     :goto_0
     return-object v0
 
-    .line 135
     :cond_0
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 136
     new-instance v0, Landroid/os/Message;
 
     invoke-direct {v0}, Landroid/os/Message;-><init>()V
 
     goto :goto_0
 
-    .line 135
     .restart local v0    # "m":Landroid/os/Message;
     :catchall_0
     move-exception v1
@@ -210,16 +189,13 @@
     .param p0, "h"    # Landroid/os/Handler;
 
     .prologue
-    .line 170
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v0
 
-    .line 171
     .local v0, "m":Landroid/os/Message;
     iput-object p0, v0, Landroid/os/Message;->target:Landroid/os/Handler;
 
-    .line 173
     return-object v0
 .end method
 
@@ -229,19 +205,15 @@
     .param p1, "what"    # I
 
     .prologue
-    .line 199
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v0
 
-    .line 200
     .local v0, "m":Landroid/os/Message;
     iput-object p0, v0, Landroid/os/Message;->target:Landroid/os/Handler;
 
-    .line 201
     iput p1, v0, Landroid/os/Message;->what:I
 
-    .line 203
     return-object v0
 .end method
 
@@ -253,25 +225,19 @@
     .param p3, "arg2"    # I
 
     .prologue
-    .line 234
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v0
 
-    .line 235
     .local v0, "m":Landroid/os/Message;
     iput-object p0, v0, Landroid/os/Message;->target:Landroid/os/Handler;
 
-    .line 236
     iput p1, v0, Landroid/os/Message;->what:I
 
-    .line 237
     iput p2, v0, Landroid/os/Message;->arg1:I
 
-    .line 238
     iput p3, v0, Landroid/os/Message;->arg2:I
 
-    .line 240
     return-object v0
 .end method
 
@@ -284,28 +250,21 @@
     .param p4, "obj"    # Ljava/lang/Object;
 
     .prologue
-    .line 256
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v0
 
-    .line 257
     .local v0, "m":Landroid/os/Message;
     iput-object p0, v0, Landroid/os/Message;->target:Landroid/os/Handler;
 
-    .line 258
     iput p1, v0, Landroid/os/Message;->what:I
 
-    .line 259
     iput p2, v0, Landroid/os/Message;->arg1:I
 
-    .line 260
     iput p3, v0, Landroid/os/Message;->arg2:I
 
-    .line 261
     iput-object p4, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 263
     return-object v0
 .end method
 
@@ -316,22 +275,17 @@
     .param p2, "obj"    # Ljava/lang/Object;
 
     .prologue
-    .line 215
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v0
 
-    .line 216
     .local v0, "m":Landroid/os/Message;
     iput-object p0, v0, Landroid/os/Message;->target:Landroid/os/Handler;
 
-    .line 217
     iput p1, v0, Landroid/os/Message;->what:I
 
-    .line 218
     iput-object p2, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 220
     return-object v0
 .end method
 
@@ -341,19 +295,15 @@
     .param p1, "callback"    # Ljava/lang/Runnable;
 
     .prologue
-    .line 184
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v0
 
-    .line 185
     .local v0, "m":Landroid/os/Message;
     iput-object p0, v0, Landroid/os/Message;->target:Landroid/os/Handler;
 
-    .line 186
     iput-object p1, v0, Landroid/os/Message;->callback:Ljava/lang/Runnable;
 
-    .line 188
     return-object v0
 .end method
 
@@ -362,48 +312,39 @@
     .param p0, "orig"    # Landroid/os/Message;
 
     .prologue
-    .line 146
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v0
 
-    .line 147
     .local v0, "m":Landroid/os/Message;
     iget v1, p0, Landroid/os/Message;->what:I
 
     iput v1, v0, Landroid/os/Message;->what:I
 
-    .line 148
     iget v1, p0, Landroid/os/Message;->arg1:I
 
     iput v1, v0, Landroid/os/Message;->arg1:I
 
-    .line 149
     iget v1, p0, Landroid/os/Message;->arg2:I
 
     iput v1, v0, Landroid/os/Message;->arg2:I
 
-    .line 150
     iget-object v1, p0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     iput-object v1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 151
     iget-object v1, p0, Landroid/os/Message;->replyTo:Landroid/os/Messenger;
 
     iput-object v1, v0, Landroid/os/Message;->replyTo:Landroid/os/Messenger;
 
-    .line 152
     iget v1, p0, Landroid/os/Message;->sendingUid:I
 
     iput v1, v0, Landroid/os/Message;->sendingUid:I
 
-    .line 153
     iget-object v1, p0, Landroid/os/Message;->data:Landroid/os/Bundle;
 
     if-eqz v1, :cond_0
 
-    .line 154
     new-instance v1, Landroid/os/Bundle;
 
     iget-object v2, p0, Landroid/os/Message;->data:Landroid/os/Bundle;
@@ -412,23 +353,19 @@
 
     iput-object v1, v0, Landroid/os/Message;->data:Landroid/os/Bundle;
 
-    .line 156
     :cond_0
     iget-object v1, p0, Landroid/os/Message;->target:Landroid/os/Handler;
 
     iput-object v1, v0, Landroid/os/Message;->target:Landroid/os/Handler;
 
-    .line 157
     iget-object v1, p0, Landroid/os/Message;->callback:Ljava/lang/Runnable;
 
     iput-object v1, v0, Landroid/os/Message;->callback:Ljava/lang/Runnable;
 
-    .line 160
     iget-object v1, p0, Landroid/os/Message;->monitorInfo:Landroid/os/BaseLooper$MessageMonitorInfo;
 
     iput-object v1, v0, Landroid/os/Message;->monitorInfo:Landroid/os/BaseLooper$MessageMonitorInfo;
 
-    .line 161
     return-object v0
 .end method
 
@@ -437,35 +374,30 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 585
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/os/Message;->what:I
 
-    .line 586
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/os/Message;->arg1:I
 
-    .line 587
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/os/Message;->arg2:I
 
-    .line 588
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 589
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -480,7 +412,6 @@
 
     iput-object v0, p0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 591
     :cond_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
@@ -488,28 +419,24 @@
 
     iput-wide v0, p0, Landroid/os/Message;->when:J
 
-    .line 592
     invoke-virtual {p1}, Landroid/os/Parcel;->readBundle()Landroid/os/Bundle;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/os/Message;->data:Landroid/os/Bundle;
 
-    .line 593
     invoke-static {p1}, Landroid/os/Messenger;->readMessengerOrNullFromParcel(Landroid/os/Parcel;)Landroid/os/Messenger;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/os/Message;->replyTo:Landroid/os/Messenger;
 
-    .line 594
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/os/Message;->sendingUid:I
 
-    .line 596
     const-class v0, Landroid/os/BaseLooper$MessageMonitorInfo;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -524,7 +451,6 @@
 
     iput-object v0, p0, Landroid/os/Message;->monitorInfo:Landroid/os/BaseLooper$MessageMonitorInfo;
 
-    .line 597
     return-void
 .end method
 
@@ -533,17 +459,14 @@
     .param p0, "targetSdkVersion"    # I
 
     .prologue
-    .line 268
     const/16 v0, 0x15
 
     if-ge p0, v0, :cond_0
 
-    .line 269
     const/4 v0, 0x0
 
     sput-boolean v0, Landroid/os/Message;->gCheckRecycle:Z
 
-    .line 271
     :cond_0
     return-void
 .end method
@@ -555,49 +478,40 @@
     .param p1, "o"    # Landroid/os/Message;
 
     .prologue
-    .line 329
     iget v0, p1, Landroid/os/Message;->flags:I
 
     and-int/lit8 v0, v0, -0x2
 
     iput v0, p0, Landroid/os/Message;->flags:I
 
-    .line 330
     iget v0, p1, Landroid/os/Message;->what:I
 
     iput v0, p0, Landroid/os/Message;->what:I
 
-    .line 331
     iget v0, p1, Landroid/os/Message;->arg1:I
 
     iput v0, p0, Landroid/os/Message;->arg1:I
 
-    .line 332
     iget v0, p1, Landroid/os/Message;->arg2:I
 
     iput v0, p0, Landroid/os/Message;->arg2:I
 
-    .line 333
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     iput-object v0, p0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 334
     iget-object v0, p1, Landroid/os/Message;->replyTo:Landroid/os/Messenger;
 
     iput-object v0, p0, Landroid/os/Message;->replyTo:Landroid/os/Messenger;
 
-    .line 335
     iget v0, p1, Landroid/os/Message;->sendingUid:I
 
     iput v0, p0, Landroid/os/Message;->sendingUid:I
 
-    .line 337
     iget-object v0, p1, Landroid/os/Message;->data:Landroid/os/Bundle;
 
     if-eqz v0, :cond_0
 
-    .line 338
     iget-object v0, p1, Landroid/os/Message;->data:Landroid/os/Bundle;
 
     invoke-virtual {v0}, Landroid/os/Bundle;->clone()Ljava/lang/Object;
@@ -608,16 +522,13 @@
 
     iput-object v0, p0, Landroid/os/Message;->data:Landroid/os/Bundle;
 
-    .line 344
     :goto_0
     iget-object v0, p1, Landroid/os/Message;->monitorInfo:Landroid/os/BaseLooper$MessageMonitorInfo;
 
     iput-object v0, p0, Landroid/os/Message;->monitorInfo:Landroid/os/BaseLooper$MessageMonitorInfo;
 
-    .line 345
     return-void
 
-    .line 340
     :cond_0
     const/4 v0, 0x0
 
@@ -630,7 +541,6 @@
     .locals 1
 
     .prologue
-    .line 553
     const/4 v0, 0x0
 
     return v0
@@ -640,7 +550,6 @@
     .locals 1
 
     .prologue
-    .line 379
     iget-object v0, p0, Landroid/os/Message;->callback:Ljava/lang/Runnable;
 
     return-object v0
@@ -650,19 +559,16 @@
     .locals 1
 
     .prologue
-    .line 394
     iget-object v0, p0, Landroid/os/Message;->data:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
 
-    .line 395
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/os/Message;->data:Landroid/os/Bundle;
 
-    .line 398
     :cond_0
     iget-object v0, p0, Landroid/os/Message;->data:Landroid/os/Bundle;
 
@@ -673,7 +579,6 @@
     .locals 1
 
     .prologue
-    .line 367
     iget-object v0, p0, Landroid/os/Message;->target:Landroid/os/Handler;
 
     return-object v0
@@ -683,7 +588,6 @@
     .locals 2
 
     .prologue
-    .line 351
     iget-wide v0, p0, Landroid/os/Message;->when:J
 
     return-wide v0
@@ -693,7 +597,6 @@
     .locals 1
 
     .prologue
-    .line 439
     iget v0, p0, Landroid/os/Message;->flags:I
 
     and-int/lit8 v0, v0, 0x2
@@ -717,7 +620,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 477
     iget v1, p0, Landroid/os/Message;->flags:I
 
     and-int/lit8 v1, v1, 0x1
@@ -737,14 +639,12 @@
     .locals 1
 
     .prologue
-    .line 481
     iget v0, p0, Landroid/os/Message;->flags:I
 
     or-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Landroid/os/Message;->flags:I
 
-    .line 482
     return-void
 .end method
 
@@ -752,7 +652,6 @@
     .locals 1
 
     .prologue
-    .line 409
     iget-object v0, p0, Landroid/os/Message;->data:Landroid/os/Bundle;
 
     return-object v0
@@ -762,19 +661,16 @@
     .locals 2
 
     .prologue
-    .line 282
     invoke-virtual {p0}, Landroid/os/Message;->isInUse()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 283
     sget-boolean v0, Landroid/os/Message;->gCheckRecycle:Z
 
     if-eqz v0, :cond_1
 
-    .line 284
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "This message cannot be recycled because it is still in use."
@@ -783,11 +679,9 @@
 
     throw v0
 
-    .line 289
     :cond_0
     invoke-virtual {p0}, Landroid/os/Message;->recycleUnchecked()V
 
-    .line 290
     :cond_1
     return-void
 .end method
@@ -800,56 +694,42 @@
 
     const/4 v2, 0x0
 
-    .line 299
     const/4 v0, 0x1
 
     iput v0, p0, Landroid/os/Message;->flags:I
 
-    .line 300
     iput v1, p0, Landroid/os/Message;->what:I
 
-    .line 301
     iput v1, p0, Landroid/os/Message;->arg1:I
 
-    .line 302
     iput v1, p0, Landroid/os/Message;->arg2:I
 
-    .line 303
     iput-object v2, p0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 304
     iput-object v2, p0, Landroid/os/Message;->replyTo:Landroid/os/Messenger;
 
-    .line 305
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/os/Message;->sendingUid:I
 
-    .line 306
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Landroid/os/Message;->when:J
 
-    .line 307
     iput-object v2, p0, Landroid/os/Message;->target:Landroid/os/Handler;
 
-    .line 308
     iput-object v2, p0, Landroid/os/Message;->callback:Ljava/lang/Runnable;
 
-    .line 309
     iput-object v2, p0, Landroid/os/Message;->data:Landroid/os/Bundle;
 
-    .line 312
     iget-object v0, p0, Landroid/os/Message;->monitorInfo:Landroid/os/BaseLooper$MessageMonitorInfo;
 
     invoke-virtual {v0}, Landroid/os/BaseLooper$MessageMonitorInfo;->reset()V
 
-    .line 314
     sget-object v1, Landroid/os/Message;->sPoolSync:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 315
     :try_start_0
     sget v0, Landroid/os/Message;->sPoolSize:I
 
@@ -857,29 +737,23 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 316
     sget-object v0, Landroid/os/Message;->sPool:Landroid/os/Message;
 
     iput-object v0, p0, Landroid/os/Message;->next:Landroid/os/Message;
 
-    .line 317
     sput-object p0, Landroid/os/Message;->sPool:Landroid/os/Message;
 
-    .line 318
     sget v0, Landroid/os/Message;->sPoolSize:I
 
     add-int/lit8 v0, v0, 0x1
 
     sput v0, Landroid/os/Message;->sPoolSize:I
 
-    .line 320
     :cond_0
     monitor-exit v1
 
-    .line 321
     return-void
 
-    .line 320
     :catchall_0
     move-exception v0
 
@@ -894,12 +768,10 @@
     .locals 1
 
     .prologue
-    .line 427
     iget-object v0, p0, Landroid/os/Message;->target:Landroid/os/Handler;
 
     invoke-virtual {v0, p0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 428
     return-void
 .end method
 
@@ -908,21 +780,17 @@
     .param p1, "async"    # Z
 
     .prologue
-    .line 469
     if-eqz p1, :cond_0
 
-    .line 470
     iget v0, p0, Landroid/os/Message;->flags:I
 
     or-int/lit8 v0, v0, 0x2
 
     iput v0, p0, Landroid/os/Message;->flags:I
 
-    .line 474
     :goto_0
     return-void
 
-    .line 472
     :cond_0
     iget v0, p0, Landroid/os/Message;->flags:I
 
@@ -938,10 +806,8 @@
     .param p1, "data"    # Landroid/os/Bundle;
 
     .prologue
-    .line 419
     iput-object p1, p0, Landroid/os/Message;->data:Landroid/os/Bundle;
 
-    .line 420
     return-void
 .end method
 
@@ -950,10 +816,8 @@
     .param p1, "target"    # Landroid/os/Handler;
 
     .prologue
-    .line 355
     iput-object p1, p0, Landroid/os/Message;->target:Landroid/os/Handler;
 
-    .line 356
     return-void
 .end method
 
@@ -961,7 +825,6 @@
     .locals 2
 
     .prologue
-    .line 491
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
@@ -978,40 +841,33 @@
     .param p1, "now"    # J
 
     .prologue
-    .line 495
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 496
     .local v0, "b":Ljava/lang/StringBuilder;
-    const-string/jumbo v1, "{ when="
+    const-string v1, "{ when="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 497
     iget-wide v2, p0, Landroid/os/Message;->when:J
 
     sub-long/2addr v2, p1
 
     invoke-static {v2, v3, v0}, Landroid/util/TimeUtils;->formatDuration(JLjava/lang/StringBuilder;)V
 
-    .line 499
     iget-object v1, p0, Landroid/os/Message;->target:Landroid/os/Handler;
 
     if-eqz v1, :cond_5
 
-    .line 500
     iget-object v1, p0, Landroid/os/Message;->callback:Ljava/lang/Runnable;
 
     if-eqz v1, :cond_4
 
-    .line 501
     const-string v1, " callback="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 502
     iget-object v1, p0, Landroid/os/Message;->callback:Ljava/lang/Runnable;
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -1024,61 +880,50 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 508
     :goto_0
     iget v1, p0, Landroid/os/Message;->arg1:I
 
     if-eqz v1, :cond_0
 
-    .line 509
     const-string v1, " arg1="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 510
     iget v1, p0, Landroid/os/Message;->arg1:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 513
     :cond_0
     iget v1, p0, Landroid/os/Message;->arg2:I
 
     if-eqz v1, :cond_1
 
-    .line 514
     const-string v1, " arg2="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 515
     iget v1, p0, Landroid/os/Message;->arg2:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 518
     :cond_1
     iget-object v1, p0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     if-eqz v1, :cond_2
 
-    .line 519
     const-string v1, " obj="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 520
     iget-object v1, p0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 523
     :cond_2
     const-string v1, " target="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 524
     iget-object v1, p0, Landroid/os/Message;->target:Landroid/os/Handler;
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -1091,50 +936,42 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 527
     iget-object v1, p0, Landroid/os/Message;->monitorInfo:Landroid/os/BaseLooper$MessageMonitorInfo;
 
     if-eqz v1, :cond_3
 
-    .line 528
     iget-object v1, p0, Landroid/os/Message;->monitorInfo:Landroid/os/BaseLooper$MessageMonitorInfo;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 535
     :cond_3
     :goto_1
     const-string v1, " }"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 536
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
     return-object v1
 
-    .line 504
     :cond_4
     const-string v1, " what="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 505
     iget v1, p0, Landroid/os/Message;->what:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
-    .line 531
     :cond_5
     const-string v1, " barrier="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 532
     iget v1, p0, Landroid/os/Message;->arg1:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
@@ -1148,12 +985,10 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 557
     iget-object v2, p0, Landroid/os/Message;->callback:Ljava/lang/Runnable;
 
     if-eqz v2, :cond_0
 
-    .line 558
     new-instance v2, Ljava/lang/RuntimeException;
 
     const-string v3, "Can\'t marshal callbacks across processes."
@@ -1162,79 +997,64 @@
 
     throw v2
 
-    .line 561
     :cond_0
     iget v2, p0, Landroid/os/Message;->what:I
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 562
     iget v2, p0, Landroid/os/Message;->arg1:I
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 563
     iget v2, p0, Landroid/os/Message;->arg2:I
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 564
     iget-object v2, p0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     if-eqz v2, :cond_1
 
-    .line 566
     :try_start_0
     iget-object v1, p0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Landroid/os/Parcelable;
 
-    .line 567
     .local v1, "p":Landroid/os/Parcelable;
     const/4 v2, 0x1
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 568
     invoke-virtual {p1, v1, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
     :try_end_0
     .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 576
     .end local v1    # "p":Landroid/os/Parcelable;
     :goto_0
     iget-wide v2, p0, Landroid/os/Message;->when:J
 
     invoke-virtual {p1, v2, v3}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 577
     iget-object v2, p0, Landroid/os/Message;->data:Landroid/os/Bundle;
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
 
-    .line 578
     iget-object v2, p0, Landroid/os/Message;->replyTo:Landroid/os/Messenger;
 
     invoke-static {v2, p1}, Landroid/os/Messenger;->writeMessengerOrNullToParcel(Landroid/os/Messenger;Landroid/os/Parcel;)V
 
-    .line 579
     iget v2, p0, Landroid/os/Message;->sendingUid:I
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 581
     iget-object v2, p0, Landroid/os/Message;->monitorInfo:Landroid/os/BaseLooper$MessageMonitorInfo;
 
     invoke-virtual {p1, v2, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 582
     return-void
 
-    .line 569
     :catch_0
     move-exception v0
 
-    .line 570
     .local v0, "e":Ljava/lang/ClassCastException;
     new-instance v2, Ljava/lang/RuntimeException;
 
@@ -1244,7 +1064,6 @@
 
     throw v2
 
-    .line 574
     .end local v0    # "e":Ljava/lang/ClassCastException;
     :cond_1
     const/4 v2, 0x0

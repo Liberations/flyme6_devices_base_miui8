@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 324
     iput-object p1, p0, Lmiui/maml/MamlConfigSettings$2;->this$0:Lmiui/maml/MamlConfigSettings;
 
     iput-object p2, p0, Lmiui/maml/MamlConfigSettings$2;->val$category:Landroid/preference/PreferenceCategory;
@@ -45,7 +44,6 @@
     .param p1, "child"    # Lorg/w3c/dom/Element;
 
     .prologue
-    .line 327
     iget-object v1, p0, Lmiui/maml/MamlConfigSettings$2;->this$0:Lmiui/maml/MamlConfigSettings;
 
     invoke-interface {p1}, Lorg/w3c/dom/Element;->getNodeName()Ljava/lang/String;
@@ -57,7 +55,6 @@
 
     move-result-object v0
 
-    .line 328
     .local v0, "item":Lmiui/maml/MamlConfigSettings$Item;
     if-eqz v0, :cond_0
 
@@ -69,7 +66,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 329
     iget-object v1, p0, Lmiui/maml/MamlConfigSettings$2;->this$0:Lmiui/maml/MamlConfigSettings;
 
     # getter for: Lmiui/maml/MamlConfigSettings;->mPreferenceMap:Ljava/util/HashMap;
@@ -81,7 +77,6 @@
 
     invoke-virtual {v1, v2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 331
     :cond_0
     return-void
 .end method

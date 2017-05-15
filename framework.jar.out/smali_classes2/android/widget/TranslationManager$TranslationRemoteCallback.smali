@@ -25,12 +25,10 @@
     .locals 1
 
     .prologue
-    .line 105
     iput-object p1, p0, Landroid/widget/TranslationManager$TranslationRemoteCallback;->this$0:Landroid/widget/TranslationManager;
 
     invoke-direct {p0}, Lcom/miui/translationservice/ITranslationRemoteCallback$Stub;-><init>()V
 
-    .line 107
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/widget/TranslationManager$TranslationRemoteCallback;->mCancelled:Z
@@ -44,7 +42,6 @@
     .param p2, "x1"    # Landroid/widget/TranslationManager$1;
 
     .prologue
-    .line 105
     invoke-direct {p0, p1}, Landroid/widget/TranslationManager$TranslationRemoteCallback;-><init>(Landroid/widget/TranslationManager;)V
 
     return-void
@@ -56,12 +53,10 @@
     .locals 1
 
     .prologue
-    .line 110
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/widget/TranslationManager$TranslationRemoteCallback;->mCancelled:Z
 
-    .line 111
     return-void
 .end method
 
@@ -70,16 +65,13 @@
     .param p1, "result"    # Lcom/miui/translationservice/provider/TranslationResult;
 
     .prologue
-    .line 115
     iget-boolean v1, p0, Landroid/widget/TranslationManager$TranslationRemoteCallback;->mCancelled:Z
 
     if-eqz v1, :cond_0
 
-    .line 128
     :goto_0
     return-void
 
-    .line 119
     :cond_0
     iget-object v1, p0, Landroid/widget/TranslationManager$TranslationRemoteCallback;->this$0:Landroid/widget/TranslationManager;
 
@@ -92,10 +84,8 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
-    .line 122
     if-nez p1, :cond_1
 
-    .line 123
     iget-object v1, p0, Landroid/widget/TranslationManager$TranslationRemoteCallback;->this$0:Landroid/widget/TranslationManager;
 
     # getter for: Landroid/widget/TranslationManager;->mHandler:Landroid/os/Handler;
@@ -109,7 +99,6 @@
 
     move-result-object v0
 
-    .line 127
     .local v0, "msg":Landroid/os/Message;
     :goto_1
     iget-object v1, p0, Landroid/widget/TranslationManager$TranslationRemoteCallback;->this$0:Landroid/widget/TranslationManager;
@@ -125,7 +114,6 @@
 
     goto :goto_0
 
-    .line 125
     .end local v0    # "msg":Landroid/os/Message;
     :cond_1
     iget-object v1, p0, Landroid/widget/TranslationManager$TranslationRemoteCallback;->this$0:Landroid/widget/TranslationManager;

@@ -23,10 +23,8 @@
     .locals 0
 
     .prologue
-    .line 2119
     invoke-direct {p0}, Lorg/apache/miui/commons/lang3/builder/ToStringStyle;-><init>()V
 
-    .line 2120
     return-void
 .end method
 
@@ -34,7 +32,6 @@
     .locals 1
 
     .prologue
-    .line 2128
     sget-object v0, Lorg/apache/miui/commons/lang3/builder/ToStringStyle;->DEFAULT_STYLE:Lorg/apache/miui/commons/lang3/builder/ToStringStyle;
 
     return-object v0

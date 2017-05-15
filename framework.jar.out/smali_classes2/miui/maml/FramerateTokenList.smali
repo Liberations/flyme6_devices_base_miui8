@@ -38,17 +38,14 @@
     .locals 1
 
     .prologue
-    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lmiui/maml/FramerateTokenList;->mList:Ljava/util/ArrayList;
 
-    .line 44
     return-void
 .end method
 
@@ -57,20 +54,16 @@
     .param p1, "l"    # Lmiui/maml/FramerateTokenList$FramerateChangeListener;
 
     .prologue
-    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lmiui/maml/FramerateTokenList;->mList:Ljava/util/ArrayList;
 
-    .line 47
     iput-object p1, p0, Lmiui/maml/FramerateTokenList;->mFramerateChangeListener:Lmiui/maml/FramerateTokenList$FramerateChangeListener;
 
-    .line 48
     return-void
 .end method
 
@@ -79,7 +72,6 @@
     .param p0, "x0"    # Lmiui/maml/FramerateTokenList;
 
     .prologue
-    .line 8
     iget-object v0, p0, Lmiui/maml/FramerateTokenList;->mFramerateChangeListener:Lmiui/maml/FramerateTokenList$FramerateChangeListener;
 
     return-object v0
@@ -90,7 +82,6 @@
     .param p0, "x0"    # Lmiui/maml/FramerateTokenList;
 
     .prologue
-    .line 8
     invoke-direct {p0}, Lmiui/maml/FramerateTokenList;->onChange()V
 
     return-void
@@ -100,16 +91,13 @@
     .locals 5
 
     .prologue
-    .line 60
     const/4 v1, 0x0
 
-    .line 61
     .local v1, "r":F
     iget-object v4, p0, Lmiui/maml/FramerateTokenList;->mList:Ljava/util/ArrayList;
 
     monitor-enter v4
 
-    .line 62
     :try_start_0
     iget-object v3, p0, Lmiui/maml/FramerateTokenList;->mList:Ljava/util/ArrayList;
 
@@ -132,7 +120,6 @@
 
     check-cast v2, Lmiui/maml/FramerateTokenList$FramerateToken;
 
-    .line 63
     .local v2, "t":Lmiui/maml/FramerateTokenList$FramerateToken;
     iget v3, v2, Lmiui/maml/FramerateTokenList$FramerateToken;->mFramerate:F
 
@@ -140,25 +127,20 @@
 
     if-lez v3, :cond_0
 
-    .line 64
     iget v1, v2, Lmiui/maml/FramerateTokenList$FramerateToken;->mFramerate:F
 
     goto :goto_0
 
-    .line 66
     .end local v2    # "t":Lmiui/maml/FramerateTokenList$FramerateToken;
     :cond_1
     monitor-exit v4
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 67
     iput v1, p0, Lmiui/maml/FramerateTokenList;->mCurFramerate:F
 
-    .line 68
     return-void
 
-    .line 66
     .end local v0    # "i$":Ljava/util/Iterator;
     :catchall_0
     move-exception v3
@@ -177,24 +159,19 @@
     .locals 2
 
     .prologue
-    .line 71
     iget-object v1, p0, Lmiui/maml/FramerateTokenList;->mList:Ljava/util/ArrayList;
 
     monitor-enter v1
 
-    .line 72
     :try_start_0
     iget-object v0, p0, Lmiui/maml/FramerateTokenList;->mList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 73
     monitor-exit v1
 
-    .line 74
     return-void
 
-    .line 73
     :catchall_0
     move-exception v0
 
@@ -210,7 +187,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 51
     const-string v1, "FramerateTokenList"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -233,30 +209,24 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 52
     new-instance v0, Lmiui/maml/FramerateTokenList$FramerateToken;
 
     invoke-direct {v0, p0, p1}, Lmiui/maml/FramerateTokenList$FramerateToken;-><init>(Lmiui/maml/FramerateTokenList;Ljava/lang/String;)V
 
-    .line 53
     .local v0, "token":Lmiui/maml/FramerateTokenList$FramerateToken;
     iget-object v2, p0, Lmiui/maml/FramerateTokenList;->mList:Ljava/util/ArrayList;
 
     monitor-enter v2
 
-    .line 54
     :try_start_0
     iget-object v1, p0, Lmiui/maml/FramerateTokenList;->mList:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 55
     monitor-exit v2
 
-    .line 56
     return-object v0
 
-    .line 55
     :catchall_0
     move-exception v1
 
@@ -271,7 +241,6 @@
     .locals 1
 
     .prologue
-    .line 76
     iget v0, p0, Lmiui/maml/FramerateTokenList;->mCurFramerate:F
 
     return v0

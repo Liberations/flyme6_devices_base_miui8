@@ -21,7 +21,6 @@
     .locals 2
 
     .prologue
-    .line 14
     new-instance v0, Landroid/util/SparseArray;
 
     const/4 v1, 0x2
@@ -37,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -48,14 +46,12 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 18
     invoke-static {p0}, Lmiui/os/Environment;->isUsingMiui(Landroid/content/Context;)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 19
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
@@ -64,7 +60,6 @@
 
     move-result-object v2
 
-    .line 20
     .local v2, "metrics":Landroid/util/DisplayMetrics;
     const/high16 v3, 0x42c80000    # 100.0f
 
@@ -74,7 +69,6 @@
 
     float-to-int v1, v3
 
-    .line 22
     .local v1, "density":I
     sget-object v3, Landroid/view/ViewConfigurationInjector;->sConfigrations:Landroid/util/SparseArray;
 
@@ -84,7 +78,6 @@
 
     check-cast v0, Landroid/view/ViewConfiguration;
 
-    .line 25
     .end local v1    # "density":I
     .end local v2    # "metrics":Landroid/util/DisplayMetrics;
     :goto_0
@@ -102,14 +95,12 @@
     .param p1, "defaultValue"    # I
 
     .prologue
-    .line 48
     invoke-static {p0}, Lmiui/os/Environment;->isUsingMiui(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 49
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -126,7 +117,6 @@
 
     float-to-int p1, v0
 
-    .line 51
     .end local p1    # "defaultValue":I
     :cond_0
     return p1
@@ -138,14 +128,12 @@
     .param p1, "defaultValue"    # I
 
     .prologue
-    .line 41
     invoke-static {p0}, Lmiui/os/Environment;->isUsingMiui(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 42
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -162,7 +150,6 @@
 
     float-to-int p1, v0
 
-    .line 44
     .end local p1    # "defaultValue":I
     :cond_0
     return p1
@@ -173,7 +160,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 29
     invoke-static {p0}, Lmiui/os/Environment;->isUsingMiui(Landroid/content/Context;)Z
 
     move-result v0
@@ -187,14 +173,12 @@
     .param p1, "configuration"    # Landroid/view/ViewConfiguration;
 
     .prologue
-    .line 33
     invoke-static {p0}, Lmiui/os/Environment;->isUsingMiui(Landroid/content/Context;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 34
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -203,7 +187,6 @@
 
     move-result-object v1
 
-    .line 35
     .local v1, "metrics":Landroid/util/DisplayMetrics;
     const/high16 v2, 0x42c80000    # 100.0f
 
@@ -213,13 +196,11 @@
 
     float-to-int v0, v2
 
-    .line 36
     .local v0, "density":I
     sget-object v2, Landroid/view/ViewConfigurationInjector;->sConfigrations:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v0, p1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 38
     .end local v0    # "density":I
     .end local v1    # "metrics":Landroid/util/DisplayMetrics;
     :cond_0

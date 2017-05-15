@@ -20,7 +20,6 @@
     .locals 1
 
     .prologue
-    .line 30
     const-class v0, Lmiui/security/TidaKeyStore;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -36,7 +35,6 @@
     .locals 0
 
     .prologue
-    .line 28
     invoke-direct {p0}, Ljava/security/KeyStoreSpi;-><init>()V
 
     return-void
@@ -57,7 +55,6 @@
     .end annotation
 
     .prologue
-    .line 102
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -70,7 +67,6 @@
     .param p1, "alias"    # Ljava/lang/String;
 
     .prologue
-    .line 107
     iget-object v0, p0, Lmiui/security/TidaKeyStore;->mTida:Lmiui/security/Tida;
 
     invoke-virtual {v0, p1}, Lmiui/security/Tida;->contains(Ljava/lang/String;)Z
@@ -90,7 +86,6 @@
     .end annotation
 
     .prologue
-    .line 97
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -103,10 +98,8 @@
     .param p1, "alias"    # Ljava/lang/String;
 
     .prologue
-    .line 67
     if-nez p1, :cond_0
 
-    .line 68
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "alias == null"
@@ -115,7 +108,6 @@
 
     throw v0
 
-    .line 70
     :cond_0
     new-instance v0, Lmiui/security/TidaCertificate;
 
@@ -129,7 +121,6 @@
     .param p1, "cert"    # Ljava/security/cert/Certificate;
 
     .prologue
-    .line 127
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -142,7 +133,6 @@
     .param p1, "alias"    # Ljava/lang/String;
 
     .prologue
-    .line 48
     sget-object v2, Lmiui/security/TidaKeyStore;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -165,10 +155,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 50
     if-nez p1, :cond_0
 
-    .line 51
     new-instance v2, Ljava/lang/NullPointerException;
 
     const-string v3, "alias == null"
@@ -177,30 +165,24 @@
 
     throw v2
 
-    .line 54
     :cond_0
     invoke-virtual {p0, p1}, Lmiui/security/TidaKeyStore;->engineGetCertificate(Ljava/lang/String;)Ljava/security/cert/Certificate;
 
     move-result-object v1
 
-    .line 55
     .local v1, "leaf":Ljava/security/cert/Certificate;
     if-nez v1, :cond_1
 
-    .line 56
     const/4 v0, 0x0
 
-    .line 62
     :goto_0
     return-object v0
 
-    .line 59
     :cond_1
     const/4 v2, 0x1
 
     new-array v0, v2, [Ljava/security/cert/Certificate;
 
-    .line 60
     .local v0, "caList":[Ljava/security/cert/Certificate;
     const/4 v2, 0x0
 
@@ -214,7 +196,6 @@
     .param p1, "alias"    # Ljava/lang/String;
 
     .prologue
-    .line 75
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -234,7 +215,6 @@
     .end annotation
 
     .prologue
-    .line 38
     sget-object v0, Lmiui/security/TidaKeyStore;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -257,10 +237,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 40
     if-nez p1, :cond_0
 
-    .line 41
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "alias == null"
@@ -269,7 +247,6 @@
 
     throw v0
 
-    .line 43
     :cond_0
     new-instance v0, Lmiui/security/TidaPrivateKey;
 
@@ -283,7 +260,6 @@
     .param p1, "alias"    # Ljava/lang/String;
 
     .prologue
-    .line 122
     const/4 v0, 0x0
 
     return v0
@@ -294,7 +270,6 @@
     .param p1, "alias"    # Ljava/lang/String;
 
     .prologue
-    .line 117
     const/4 v0, 0x1
 
     return v0
@@ -313,10 +288,8 @@
     .end annotation
 
     .prologue
-    .line 139
     if-eqz p1, :cond_0
 
-    .line 140
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "InputStream not supported"
@@ -325,11 +298,9 @@
 
     throw v0
 
-    .line 143
     :cond_0
     if-eqz p2, :cond_1
 
-    .line 144
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "password not supported"
@@ -338,7 +309,6 @@
 
     throw v0
 
-    .line 147
     :cond_1
     invoke-static {}, Lmiui/security/Tida;->getInstance()Lmiui/security/Tida;
 
@@ -346,7 +316,6 @@
 
     iput-object v0, p0, Lmiui/security/TidaKeyStore;->mTida:Lmiui/security/Tida;
 
-    .line 148
     return-void
 .end method
 
@@ -361,7 +330,6 @@
     .end annotation
 
     .prologue
-    .line 92
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -381,7 +349,6 @@
     .end annotation
 
     .prologue
-    .line 153
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -402,7 +369,6 @@
     .end annotation
 
     .prologue
-    .line 81
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -422,7 +388,6 @@
     .end annotation
 
     .prologue
-    .line 87
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -434,7 +399,6 @@
     .locals 1
 
     .prologue
-    .line 112
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -455,7 +419,6 @@
     .end annotation
 
     .prologue
-    .line 133
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V

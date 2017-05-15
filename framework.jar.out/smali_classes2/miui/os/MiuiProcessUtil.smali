@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -18,7 +17,6 @@
     .locals 2
 
     .prologue
-    .line 13
     invoke-static {}, Landroid/os/Process;->getFreeMemory()J
 
     move-result-wide v0
@@ -30,7 +28,6 @@
     .locals 2
 
     .prologue
-    .line 9
     invoke-static {}, Landroid/os/Process;->getTotalMemory()J
 
     move-result-wide v0

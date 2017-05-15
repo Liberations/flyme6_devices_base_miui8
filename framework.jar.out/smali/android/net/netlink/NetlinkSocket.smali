@@ -35,10 +35,8 @@
     .end annotation
 
     .prologue
-    .line 54
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 55
     sget v0, Landroid/system/OsConstants;->AF_NETLINK:I
 
     sget v1, Landroid/system/OsConstants;->SOCK_DGRAM:I
@@ -49,7 +47,6 @@
 
     iput-object v0, p0, Landroid/net/netlink/NetlinkSocket;->mDescriptor:Ljava/io/FileDescriptor;
 
-    .line 58
     sget-object v0, Llibcore/io/Libcore;->os:Llibcore/io/Os;
 
     iget-object v1, p0, Landroid/net/netlink/NetlinkSocket;->mDescriptor:Ljava/io/FileDescriptor;
@@ -62,7 +59,6 @@
 
     invoke-interface {v0, v1, v2, v3, v4}, Llibcore/io/Os;->setsockoptInt(Ljava/io/FileDescriptor;III)V
 
-    .line 61
     return-void
 .end method
 
@@ -71,14 +67,12 @@
     .param p1, "timeoutMs"    # J
 
     .prologue
-    .line 98
     const-wide/16 v0, 0x0
 
     cmp-long v0, p1, v0
 
     if-gez v0, :cond_0
 
-    .line 99
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Negative timeouts not permitted"
@@ -87,7 +81,6 @@
 
     throw v0
 
-    .line 101
     :cond_0
     return-void
 .end method
@@ -105,12 +98,10 @@
     .end annotation
 
     .prologue
-    .line 68
     iget-object v0, p0, Landroid/net/netlink/NetlinkSocket;->mDescriptor:Ljava/io/FileDescriptor;
 
     invoke-static {v0, p1}, Landroid/system/Os;->bind(Ljava/io/FileDescriptor;Ljava/net/SocketAddress;)V
 
-    .line 69
     return-void
 .end method
 
@@ -118,12 +109,10 @@
     .locals 1
 
     .prologue
-    .line 167
     iget-object v0, p0, Landroid/net/netlink/NetlinkSocket;->mDescriptor:Ljava/io/FileDescriptor;
 
     invoke-static {v0}, Llibcore/io/IoUtils;->closeQuietly(Ljava/io/FileDescriptor;)V
 
-    .line 168
     return-void
 .end method
 
@@ -138,12 +127,10 @@
     .end annotation
 
     .prologue
-    .line 73
     iget-object v0, p0, Landroid/net/netlink/NetlinkSocket;->mDescriptor:Ljava/io/FileDescriptor;
 
     invoke-static {v0, p1}, Landroid/system/Os;->connect(Ljava/io/FileDescriptor;Ljava/net/SocketAddress;)V
 
-    .line 74
     return-void
 .end method
 
@@ -159,14 +146,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 77
     new-instance v0, Landroid/system/NetlinkSocketAddress;
 
     invoke-direct {v0, v1, v1}, Landroid/system/NetlinkSocketAddress;-><init>(II)V
 
     invoke-virtual {p0, v0}, Landroid/net/netlink/NetlinkSocket;->connectTo(Landroid/system/NetlinkSocketAddress;)V
 
-    .line 78
     return-void
 .end method
 
@@ -179,7 +164,6 @@
     .end annotation
 
     .prologue
-    .line 64
     iget-object v0, p0, Landroid/net/netlink/NetlinkSocket;->mDescriptor:Ljava/io/FileDescriptor;
 
     invoke-static {v0}, Landroid/system/Os;->getsockname(Ljava/io/FileDescriptor;)Ljava/net/SocketAddress;
@@ -201,7 +185,6 @@
     .end annotation
 
     .prologue
-    .line 86
     const/16 v0, 0x2000
 
     const-wide/16 v2, 0x0
@@ -226,15 +209,12 @@
     .end annotation
 
     .prologue
-    .line 111
     invoke-direct {p0, p2, p3}, Landroid/net/netlink/NetlinkSocket;->checkTimeout(J)V
 
-    .line 113
     iget-object v3, p0, Landroid/net/netlink/NetlinkSocket;->mDescriptor:Ljava/io/FileDescriptor;
 
     monitor-enter v3
 
-    .line 114
     :try_start_0
     iget-wide v4, p0, Landroid/net/netlink/NetlinkSocket;->mLastRecvTimeoutMs:J
 
@@ -242,7 +222,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 115
     iget-object v2, p0, Landroid/net/netlink/NetlinkSocket;->mDescriptor:Ljava/io/FileDescriptor;
 
     sget v4, Landroid/system/OsConstants;->SOL_SOCKET:I
@@ -255,21 +234,17 @@
 
     invoke-static {v2, v4, v5, v6}, Landroid/system/Os;->setsockoptTimeval(Ljava/io/FileDescriptor;IILandroid/system/StructTimeval;)V
 
-    .line 118
     iput-wide p2, p0, Landroid/net/netlink/NetlinkSocket;->mLastRecvTimeoutMs:J
 
-    .line 120
     :cond_0
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 122
     invoke-static {p1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
-    .line 123
     .local v0, "byteBuffer":Ljava/nio/ByteBuffer;
     iget-object v2, p0, Landroid/net/netlink/NetlinkSocket;->mDescriptor:Ljava/io/FileDescriptor;
 
@@ -277,37 +252,30 @@
 
     move-result v1
 
-    .line 124
     .local v1, "length":I
     if-ne v1, p1, :cond_1
 
-    .line 125
     const-string v2, "NetlinkSocket"
 
-    const-string/jumbo v3, "maximum read"
+    const-string v3, "maximum read"
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 127
     :cond_1
     const/4 v2, 0x0
 
     invoke-virtual {v0, v2}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 128
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
 
-    .line 129
     invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
 
     move-result-object v2
 
     invoke-virtual {v0, v2}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
-    .line 130
     return-object v0
 
-    .line 120
     .end local v0    # "byteBuffer":Ljava/nio/ByteBuffer;
     .end local v1    # "length":I
     :catchall_0
@@ -332,7 +300,6 @@
     .end annotation
 
     .prologue
-    .line 94
     const/16 v0, 0x2000
 
     invoke-virtual {p0, v0, p1, p2}, Landroid/net/netlink/NetlinkSocket;->recvMessage(IJ)Ljava/nio/ByteBuffer;
@@ -355,7 +322,6 @@
     .end annotation
 
     .prologue
-    .line 140
     const-wide/16 v4, 0x0
 
     move-object v0, p0
@@ -388,15 +354,12 @@
     .end annotation
 
     .prologue
-    .line 151
     invoke-direct {p0, p4, p5}, Landroid/net/netlink/NetlinkSocket;->checkTimeout(J)V
 
-    .line 153
     iget-object v1, p0, Landroid/net/netlink/NetlinkSocket;->mDescriptor:Ljava/io/FileDescriptor;
 
     monitor-enter v1
 
-    .line 154
     :try_start_0
     iget-wide v2, p0, Landroid/net/netlink/NetlinkSocket;->mLastSendTimeoutMs:J
 
@@ -404,7 +367,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 155
     iget-object v0, p0, Landroid/net/netlink/NetlinkSocket;->mDescriptor:Ljava/io/FileDescriptor;
 
     sget v2, Landroid/system/OsConstants;->SOL_SOCKET:I
@@ -417,16 +379,13 @@
 
     invoke-static {v0, v2, v3, v4}, Landroid/system/Os;->setsockoptTimeval(Ljava/io/FileDescriptor;IILandroid/system/StructTimeval;)V
 
-    .line 158
     iput-wide p4, p0, Landroid/net/netlink/NetlinkSocket;->mLastSendTimeoutMs:J
 
-    .line 160
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 162
     iget-object v0, p0, Landroid/net/netlink/NetlinkSocket;->mDescriptor:Ljava/io/FileDescriptor;
 
     invoke-static {v0, p1, p2, p3}, Landroid/system/Os;->write(Ljava/io/FileDescriptor;[BII)I
@@ -440,7 +399,6 @@
     :goto_0
     return v0
 
-    .line 160
     :catchall_0
     move-exception v0
 
@@ -451,7 +409,6 @@
 
     throw v0
 
-    .line 162
     :cond_1
     const/4 v0, 0x0
 

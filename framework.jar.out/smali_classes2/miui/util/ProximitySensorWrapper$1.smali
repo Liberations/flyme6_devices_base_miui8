@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 36
     iput-object p1, p0, Lmiui/util/ProximitySensorWrapper$1;->this$0:Lmiui/util/ProximitySensorWrapper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "accuracy"    # I
 
     .prologue
-    .line 61
     return-void
 .end method
 
@@ -57,12 +55,10 @@
 
     const/4 v3, 0x0
 
-    .line 39
     iget-object v4, p1, Landroid/hardware/SensorEvent;->values:[F
 
     aget v0, v4, v3
 
-    .line 41
     .local v0, "distance":F
     float-to-double v4, v0
 
@@ -95,7 +91,6 @@
 
     move v1, v2
 
-    .line 44
     .local v1, "isTooClose":Z
     :goto_0
     const-string v4, "ProximitySensorWrapper"
@@ -120,10 +115,8 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 45
     if-eqz v1, :cond_2
 
-    .line 46
     iget-object v4, p0, Lmiui/util/ProximitySensorWrapper$1;->this$0:Lmiui/util/ProximitySensorWrapper;
 
     # getter for: Lmiui/util/ProximitySensorWrapper;->mProximitySensorState:I
@@ -133,13 +126,11 @@
 
     if-eq v4, v2, :cond_0
 
-    .line 47
     iget-object v4, p0, Lmiui/util/ProximitySensorWrapper$1;->this$0:Lmiui/util/ProximitySensorWrapper;
 
     # setter for: Lmiui/util/ProximitySensorWrapper;->mProximitySensorState:I
     invoke-static {v4, v2}, Lmiui/util/ProximitySensorWrapper;->access$102(Lmiui/util/ProximitySensorWrapper;I)I
 
-    .line 48
     iget-object v4, p0, Lmiui/util/ProximitySensorWrapper$1;->this$0:Lmiui/util/ProximitySensorWrapper;
 
     # getter for: Lmiui/util/ProximitySensorWrapper;->mHandler:Landroid/os/Handler;
@@ -149,7 +140,6 @@
 
     invoke-virtual {v4, v2}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 49
     iget-object v2, p0, Lmiui/util/ProximitySensorWrapper$1;->this$0:Lmiui/util/ProximitySensorWrapper;
 
     # getter for: Lmiui/util/ProximitySensorWrapper;->mHandler:Landroid/os/Handler;
@@ -159,7 +149,6 @@
 
     invoke-virtual {v2, v3, v8, v9}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 58
     :cond_0
     :goto_1
     return-void
@@ -168,10 +157,8 @@
     :cond_1
     move v1, v3
 
-    .line 41
     goto :goto_0
 
-    .line 52
     .restart local v1    # "isTooClose":Z
     :cond_2
     iget-object v4, p0, Lmiui/util/ProximitySensorWrapper$1;->this$0:Lmiui/util/ProximitySensorWrapper;
@@ -183,13 +170,11 @@
 
     if-eqz v4, :cond_0
 
-    .line 53
     iget-object v4, p0, Lmiui/util/ProximitySensorWrapper$1;->this$0:Lmiui/util/ProximitySensorWrapper;
 
     # setter for: Lmiui/util/ProximitySensorWrapper;->mProximitySensorState:I
     invoke-static {v4, v3}, Lmiui/util/ProximitySensorWrapper;->access$102(Lmiui/util/ProximitySensorWrapper;I)I
 
-    .line 54
     iget-object v4, p0, Lmiui/util/ProximitySensorWrapper$1;->this$0:Lmiui/util/ProximitySensorWrapper;
 
     # getter for: Lmiui/util/ProximitySensorWrapper;->mHandler:Landroid/os/Handler;
@@ -199,7 +184,6 @@
 
     invoke-virtual {v4, v3}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 55
     iget-object v3, p0, Lmiui/util/ProximitySensorWrapper$1;->this$0:Lmiui/util/ProximitySensorWrapper;
 
     # getter for: Lmiui/util/ProximitySensorWrapper;->mHandler:Landroid/os/Handler;

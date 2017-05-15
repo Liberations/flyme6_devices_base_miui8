@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 1809
     invoke-static {}, Landroid/provider/MiuiSettings$System$SmallWindowType;->values()[Landroid/provider/MiuiSettings$System$SmallWindowType;
 
     move-result-object v0

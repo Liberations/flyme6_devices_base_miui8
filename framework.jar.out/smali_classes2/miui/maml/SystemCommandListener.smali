@@ -22,13 +22,10 @@
     .param p1, "r"    # Lmiui/maml/ScreenElementRoot;
 
     .prologue
-    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 14
     iput-object p1, p0, Lmiui/maml/SystemCommandListener;->mRoot:Lmiui/maml/ScreenElementRoot;
 
-    .line 15
     return-void
 .end method
 
@@ -41,7 +38,6 @@
     .param p3, "para2"    # Ljava/lang/String;
 
     .prologue
-    .line 20
     const-string v0, "__clearResource"
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -50,14 +46,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 21
     invoke-static {p3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 22
     iget-object v0, p0, Lmiui/maml/SystemCommandListener;->mRoot:Lmiui/maml/ScreenElementRoot;
 
     invoke-virtual {v0}, Lmiui/maml/ScreenElementRoot;->getContext()Lmiui/maml/ScreenContext;
@@ -68,12 +62,10 @@
 
     invoke-virtual {v0}, Lmiui/maml/ResourceManager;->clear()V
 
-    .line 29
     :cond_0
     :goto_0
     return-void
 
-    .line 24
     :cond_1
     iget-object v0, p0, Lmiui/maml/SystemCommandListener;->mRoot:Lmiui/maml/ScreenElementRoot;
 
@@ -87,7 +79,6 @@
 
     goto :goto_0
 
-    .line 26
     :cond_2
     const-string v0, "__requestUpdate"
 
@@ -97,7 +88,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 27
     iget-object v0, p0, Lmiui/maml/SystemCommandListener;->mRoot:Lmiui/maml/ScreenElementRoot;
 
     invoke-virtual {v0}, Lmiui/maml/ScreenElementRoot;->requestUpdate()V

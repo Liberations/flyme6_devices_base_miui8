@@ -34,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 182
     iput-object p1, p0, Landroid/telecom/RemoteConference$2;->this$0:Landroid/telecom/RemoteConference;
 
     iput-object p2, p0, Landroid/telecom/RemoteConference$2;->val$callback:Landroid/telecom/RemoteConference$Callback;
@@ -56,7 +55,6 @@
     .locals 4
 
     .prologue
-    .line 185
     iget-object v0, p0, Landroid/telecom/RemoteConference$2;->val$callback:Landroid/telecom/RemoteConference$Callback;
 
     iget-object v1, p0, Landroid/telecom/RemoteConference$2;->val$conference:Landroid/telecom/RemoteConference;
@@ -67,6 +65,5 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/telecom/RemoteConference$Callback;->onStateChanged(Landroid/telecom/RemoteConference;II)V
 
-    .line 186
     return-void
 .end method

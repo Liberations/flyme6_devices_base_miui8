@@ -63,13 +63,10 @@
     .param p1, "activity"    # Landroid/app/Activity;
 
     .prologue
-    .line 121
     invoke-direct {p0, p1}, Landroid/security/ChooseLockSettingsHelper;-><init>(Landroid/content/Context;)V
 
-    .line 122
     iput-object p1, p0, Landroid/security/ChooseLockSettingsHelper;->mActivity:Landroid/app/Activity;
 
-    .line 123
     return-void
 .end method
 
@@ -79,16 +76,12 @@
     .param p2, "type"    # I
 
     .prologue
-    .line 141
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 142
     iput-object p1, p0, Landroid/security/ChooseLockSettingsHelper;->mActivity:Landroid/app/Activity;
 
-    .line 143
     iput-object p1, p0, Landroid/security/ChooseLockSettingsHelper;->mContext:Landroid/content/Context;
 
-    .line 144
     new-instance v0, Landroid/security/MiuiLockPatternUtils;
 
     iget-object v1, p0, Landroid/security/ChooseLockSettingsHelper;->mContext:Landroid/content/Context;
@@ -97,7 +90,6 @@
 
     iput-object v0, p0, Landroid/security/ChooseLockSettingsHelper;->mLockPatternUtils:Landroid/security/MiuiLockPatternUtils;
 
-    .line 145
     return-void
 .end method
 
@@ -107,13 +99,10 @@
     .param p2, "fragment"    # Landroid/app/Fragment;
 
     .prologue
-    .line 137
     invoke-direct {p0, p1}, Landroid/security/ChooseLockSettingsHelper;-><init>(Landroid/app/Activity;)V
 
-    .line 138
     iput-object p2, p0, Landroid/security/ChooseLockSettingsHelper;->mFragment:Landroid/app/Fragment;
 
-    .line 139
     return-void
 .end method
 
@@ -122,13 +111,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 128
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 129
     iput-object p1, p0, Landroid/security/ChooseLockSettingsHelper;->mContext:Landroid/content/Context;
 
-    .line 130
     new-instance v0, Landroid/security/MiuiLockPatternUtils;
 
     iget-object v1, p0, Landroid/security/ChooseLockSettingsHelper;->mContext:Landroid/content/Context;
@@ -137,7 +123,6 @@
 
     iput-object v0, p0, Landroid/security/ChooseLockSettingsHelper;->mLockPatternUtils:Landroid/security/MiuiLockPatternUtils;
 
-    .line 131
     return-void
 .end method
 
@@ -146,7 +131,6 @@
     .param p1, "request"    # I
 
     .prologue
-    .line 246
     iget-object v1, p0, Landroid/security/ChooseLockSettingsHelper;->mLockPatternUtils:Landroid/security/MiuiLockPatternUtils;
 
     iget-object v2, p0, Landroid/security/ChooseLockSettingsHelper;->mLockPatternUtils:Landroid/security/MiuiLockPatternUtils;
@@ -161,20 +145,16 @@
 
     if-nez v1, :cond_0
 
-    .line 247
     const/4 v1, 0x0
 
-    .line 260
     :goto_0
     return v1
 
-    .line 250
     :cond_0
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 251
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "com.android.settings"
 
@@ -182,41 +162,34 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 252
     const/16 v1, -0x400
 
     if-ne p1, v1, :cond_1
 
-    .line 253
     const/high16 v1, 0x10000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 254
     iget-object v1, p0, Landroid/security/ChooseLockSettingsHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-    .line 260
     :goto_1
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 255
     :cond_1
     iget-object v1, p0, Landroid/security/ChooseLockSettingsHelper;->mFragment:Landroid/app/Fragment;
 
     if-eqz v1, :cond_2
 
-    .line 256
     iget-object v1, p0, Landroid/security/ChooseLockSettingsHelper;->mFragment:Landroid/app/Fragment;
 
     invoke-virtual {v1, v0, p1}, Landroid/app/Fragment;->startActivityForResult(Landroid/content/Intent;I)V
 
     goto :goto_1
 
-    .line 258
     :cond_2
     iget-object v1, p0, Landroid/security/ChooseLockSettingsHelper;->mActivity:Landroid/app/Activity;
 
@@ -232,7 +205,6 @@
     .param p3, "details"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 220
     iget-object v1, p0, Landroid/security/ChooseLockSettingsHelper;->mLockPatternUtils:Landroid/security/MiuiLockPatternUtils;
 
     iget-object v2, p0, Landroid/security/ChooseLockSettingsHelper;->mLockPatternUtils:Landroid/security/MiuiLockPatternUtils;
@@ -255,73 +227,60 @@
 
     if-nez v1, :cond_1
 
-    .line 222
     :cond_0
     const/4 v1, 0x0
 
-    .line 237
     :goto_0
     return v1
 
-    .line 224
     :cond_1
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 226
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "com.android.settings.ConfirmLockPattern.header"
 
     invoke-virtual {v0, v1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/CharSequence;)Landroid/content/Intent;
 
-    .line 227
     const-string v1, "com.android.settings.ConfirmLockPattern.footer"
 
     invoke-virtual {v0, v1, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/CharSequence;)Landroid/content/Intent;
 
-    .line 228
     const-string v1, "com.android.settings"
 
     const-string v2, "com.android.settings.ConfirmLockPattern"
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 229
     const/16 v1, -0x400
 
     if-ne p1, v1, :cond_2
 
-    .line 230
     const/high16 v1, 0x10000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 231
     iget-object v1, p0, Landroid/security/ChooseLockSettingsHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-    .line 237
     :goto_1
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 232
     :cond_2
     iget-object v1, p0, Landroid/security/ChooseLockSettingsHelper;->mFragment:Landroid/app/Fragment;
 
     if-eqz v1, :cond_3
 
-    .line 233
     iget-object v1, p0, Landroid/security/ChooseLockSettingsHelper;->mFragment:Landroid/app/Fragment;
 
     invoke-virtual {v1, v0, p1}, Landroid/app/Fragment;->startActivityForResult(Landroid/content/Intent;I)V
 
     goto :goto_1
 
-    .line 235
     :cond_3
     iget-object v1, p0, Landroid/security/ChooseLockSettingsHelper;->mActivity:Landroid/app/Activity;
 
@@ -340,7 +299,6 @@
 
     const/4 v1, 0x0
 
-    .line 287
     iget-object v2, p0, Landroid/security/ChooseLockSettingsHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -380,14 +338,13 @@
 
     const/4 v1, 0x0
 
-    .line 356
     iget-object v2, p0, Landroid/security/ChooseLockSettingsHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
-    const-string/jumbo v3, "password_for_privacymode"
+    const-string v3, "password_for_privacymode"
 
     invoke-static {v2, v3, v1}, Landroid/provider/Settings$Secure;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -412,14 +369,13 @@
 
     const/4 v1, 0x0
 
-    .line 269
     iget-object v2, p0, Landroid/security/ChooseLockSettingsHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
-    const-string/jumbo v3, "privacy_mode_enabled"
+    const-string v3, "privacy_mode_enabled"
 
     invoke-static {v2, v3, v1}, Landroid/provider/Settings$Secure;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -444,14 +400,13 @@
 
     const/4 v1, 0x0
 
-    .line 385
     iget-object v2, p0, Landroid/security/ChooseLockSettingsHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
-    const-string/jumbo v3, "privacy_password_is_open"
+    const-string v3, "privacy_password_is_open"
 
     invoke-static {v2, v3, v1}, Landroid/provider/Settings$Secure;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -476,14 +431,13 @@
 
     const/4 v1, 0x0
 
-    .line 302
     iget-object v2, p0, Landroid/security/ChooseLockSettingsHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
-    const-string/jumbo v3, "private_gallery_lock_enabled"
+    const-string v3, "private_gallery_lock_enabled"
 
     invoke-static {v2, v3, v1}, Landroid/provider/Settings$Secure;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -516,14 +470,13 @@
 
     const/4 v1, 0x0
 
-    .line 296
     iget-object v2, p0, Landroid/security/ChooseLockSettingsHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
-    const-string/jumbo v3, "private_sms_lock_enabled"
+    const-string v3, "private_sms_lock_enabled"
 
     invoke-static {v2, v3, v1}, Landroid/provider/Settings$Secure;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -557,26 +510,21 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 165
     iget-object v1, p0, Landroid/security/ChooseLockSettingsHelper;->mActivity:Landroid/app/Activity;
 
     if-nez v1, :cond_1
 
-    .line 181
     :cond_0
     :goto_0
     return v0
 
-    .line 166
     :cond_1
     iget-object v1, p0, Landroid/security/ChooseLockSettingsHelper;->mLockPatternUtils:Landroid/security/MiuiLockPatternUtils;
 
     if-eqz v1, :cond_0
 
-    .line 168
     const/4 v0, 0x0
 
-    .line 169
     .local v0, "launched":Z
     iget-object v1, p0, Landroid/security/ChooseLockSettingsHelper;->mLockPatternUtils:Landroid/security/MiuiLockPatternUtils;
 
@@ -594,16 +542,13 @@
 
     goto :goto_0
 
-    .line 171
     :sswitch_0
     invoke-direct {p0, p1, p2, p3}, Landroid/security/ChooseLockSettingsHelper;->confirmPattern(ILjava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v0
 
-    .line 172
     goto :goto_0
 
-    .line 178
     :sswitch_1
     invoke-direct {p0, p1}, Landroid/security/ChooseLockSettingsHelper;->confirmPassword(I)Z
 
@@ -611,7 +556,6 @@
 
     goto :goto_0
 
-    .line 169
     nop
 
     :sswitch_data_0
@@ -632,10 +576,8 @@
     .prologue
     const/16 v3, -0x400
 
-    .line 195
     const/4 v0, 0x0
 
-    .line 196
     .local v0, "launched":Z
     iget-object v1, p0, Landroid/security/ChooseLockSettingsHelper;->mLockPatternUtils:Landroid/security/MiuiLockPatternUtils;
 
@@ -643,11 +585,9 @@
 
     const/4 v1, 0x0
 
-    .line 209
     :goto_0
     return v1
 
-    .line 197
     :cond_0
     iget-object v1, p0, Landroid/security/ChooseLockSettingsHelper;->mLockPatternUtils:Landroid/security/MiuiLockPatternUtils;
 
@@ -666,19 +606,15 @@
     :goto_1
     move v1, v0
 
-    .line 209
     goto :goto_0
 
-    .line 199
     :sswitch_0
     invoke-direct {p0, v3, p1, p2}, Landroid/security/ChooseLockSettingsHelper;->confirmPattern(ILjava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v0
 
-    .line 200
     goto :goto_1
 
-    .line 206
     :sswitch_1
     invoke-direct {p0, v3}, Landroid/security/ChooseLockSettingsHelper;->confirmPassword(I)Z
 
@@ -686,7 +622,6 @@
 
     goto :goto_1
 
-    .line 197
     :sswitch_data_0
     .sparse-switch
         0x10000 -> :sswitch_0
@@ -702,7 +637,6 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 311
     iget-object v0, p0, Landroid/security/ChooseLockSettingsHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -718,21 +652,17 @@
     :goto_0
     invoke-static {v1, v2, v0}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 315
     if-nez p1, :cond_0
 
-    .line 316
     iget-object v0, p0, Landroid/security/ChooseLockSettingsHelper;->mLockPatternUtils:Landroid/security/MiuiLockPatternUtils;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/security/MiuiLockPatternUtils;->saveMiuiLockPattern(Ljava/util/List;)V
 
-    .line 318
     :cond_0
     return-void
 
-    .line 311
     :cond_1
     const/4 v0, 0x0
 
@@ -744,14 +674,13 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 365
     iget-object v0, p0, Landroid/security/ChooseLockSettingsHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    const-string/jumbo v2, "password_for_privacymode"
+    const-string v2, "password_for_privacymode"
 
     if-eqz p1, :cond_0
 
@@ -760,10 +689,8 @@
     :goto_0
     invoke-static {v1, v2, v0}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 367
     return-void
 
-    .line 365
     :cond_0
     const/4 v0, 0x0
 
@@ -775,14 +702,13 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 279
     iget-object v0, p0, Landroid/security/ChooseLockSettingsHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    const-string/jumbo v2, "privacy_mode_enabled"
+    const-string v2, "privacy_mode_enabled"
 
     if-eqz p1, :cond_0
 
@@ -791,10 +717,8 @@
     :goto_0
     invoke-static {v1, v2, v0}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 281
     return-void
 
-    .line 279
     :cond_0
     const/4 v0, 0x0
 
@@ -806,14 +730,12 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 373
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v0
 
     invoke-virtual {p0, p1, v0}, Landroid/security/ChooseLockSettingsHelper;->setPrivacyPasswordEnabledAsUser(ZI)V
 
-    .line 374
     return-void
 .end method
 
@@ -823,14 +745,13 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 380
     iget-object v0, p0, Landroid/security/ChooseLockSettingsHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    const-string/jumbo v2, "privacy_password_is_open"
+    const-string v2, "privacy_password_is_open"
 
     if-eqz p1, :cond_0
 
@@ -839,10 +760,8 @@
     :goto_0
     invoke-static {v1, v2, v0, p2}, Landroid/provider/Settings$Secure;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 382
     return-void
 
-    .line 380
     :cond_0
     const/4 v0, 0x0
 
@@ -854,14 +773,12 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 339
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v0
 
     invoke-virtual {p0, p1, v0}, Landroid/security/ChooseLockSettingsHelper;->setPrivateGalleryEnabledAsUser(ZI)V
 
-    .line 340
     return-void
 .end method
 
@@ -871,14 +788,13 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 346
     iget-object v0, p0, Landroid/security/ChooseLockSettingsHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    const-string/jumbo v2, "private_gallery_lock_enabled"
+    const-string v2, "private_gallery_lock_enabled"
 
     if-eqz p1, :cond_0
 
@@ -887,10 +803,8 @@
     :goto_0
     invoke-static {v1, v2, v0, p2}, Landroid/provider/Settings$Secure;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 348
     return-void
 
-    .line 346
     :cond_0
     const/4 v0, 0x0
 
@@ -902,14 +816,12 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 324
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v0
 
     invoke-virtual {p0, p1, v0}, Landroid/security/ChooseLockSettingsHelper;->setPrivateSmsEnabledAsUser(ZI)V
 
-    .line 325
     return-void
 .end method
 
@@ -919,14 +831,13 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 331
     iget-object v0, p0, Landroid/security/ChooseLockSettingsHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    const-string/jumbo v2, "private_sms_lock_enabled"
+    const-string v2, "private_sms_lock_enabled"
 
     if-eqz p1, :cond_0
 
@@ -935,10 +846,8 @@
     :goto_0
     invoke-static {v1, v2, v0, p2}, Landroid/provider/Settings$Secure;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 333
     return-void
 
-    .line 331
     :cond_0
     const/4 v0, 0x0
 
@@ -949,7 +858,6 @@
     .locals 1
 
     .prologue
-    .line 151
     iget-object v0, p0, Landroid/security/ChooseLockSettingsHelper;->mLockPatternUtils:Landroid/security/MiuiLockPatternUtils;
 
     return-object v0

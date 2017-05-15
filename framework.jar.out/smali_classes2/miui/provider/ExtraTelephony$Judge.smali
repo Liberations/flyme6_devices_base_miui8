@@ -54,7 +54,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 2392
     const-string v0, "content://antispam/sms_judge"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -67,7 +66,6 @@
 
     sput-object v0, Lmiui/provider/ExtraTelephony$Judge;->SMS_CONTENT_URI:Landroid/net/Uri;
 
-    .line 2394
     const-string v0, "content://antispam/call_judge"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -80,7 +78,6 @@
 
     sput-object v0, Lmiui/provider/ExtraTelephony$Judge;->CALL_CONTENT_URI:Landroid/net/Uri;
 
-    .line 2396
     const-string v0, "content://antispam/url_judge"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -93,7 +90,6 @@
 
     sput-object v0, Lmiui/provider/ExtraTelephony$Judge;->URL_CONTENT_URI:Landroid/net/Uri;
 
-    .line 2398
     const-string v0, "content://antispam/service_num_judge"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -106,7 +102,6 @@
 
     sput-object v0, Lmiui/provider/ExtraTelephony$Judge;->SERVICE_NUM_CONTENT_URI:Landroid/net/Uri;
 
-    .line 2400
     const-string v0, "content://antispam/call_transfer_intercept_judge"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -126,7 +121,6 @@
     .locals 0
 
     .prologue
-    .line 2391
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

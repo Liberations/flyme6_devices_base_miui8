@@ -63,7 +63,6 @@
     .locals 2
 
     .prologue
-    .line 37
     new-instance v0, Landroid/os/UserHandle;
 
     const/4 v1, -0x1
@@ -72,7 +71,6 @@
 
     sput-object v0, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
-    .line 43
     new-instance v0, Landroid/os/UserHandle;
 
     const/4 v1, -0x2
@@ -81,7 +79,6 @@
 
     sput-object v0, Landroid/os/UserHandle;->CURRENT:Landroid/os/UserHandle;
 
-    .line 53
     new-instance v0, Landroid/os/UserHandle;
 
     const/4 v1, -0x3
@@ -90,7 +87,6 @@
 
     sput-object v0, Landroid/os/UserHandle;->CURRENT_OR_SELF:Landroid/os/UserHandle;
 
-    .line 67
     new-instance v0, Landroid/os/UserHandle;
 
     const/4 v1, 0x0
@@ -99,14 +95,12 @@
 
     sput-object v0, Landroid/os/UserHandle;->OWNER:Landroid/os/UserHandle;
 
-    .line 77
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     sput-object v0, Landroid/os/UserHandle;->userHandles:Landroid/util/SparseArray;
 
-    .line 357
     new-instance v0, Landroid/os/UserHandle$1;
 
     invoke-direct {v0}, Landroid/os/UserHandle$1;-><init>()V
@@ -121,13 +115,10 @@
     .param p1, "h"    # I
 
     .prologue
-    .line 281
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 282
     iput p1, p0, Landroid/os/UserHandle;->mHandle:I
 
-    .line 283
     return-void
 .end method
 
@@ -136,17 +127,14 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 378
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 379
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/os/UserHandle;->mHandle:I
 
-    .line 380
     return-void
 .end method
 
@@ -155,16 +143,13 @@
     .param p0, "uid"    # I
 
     .prologue
-    .line 230
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 231
     .local v0, "sb":Ljava/lang/StringBuilder;
     invoke-static {v0, p0}, Landroid/os/UserHandle;->formatUid(Ljava/lang/StringBuilder;I)V
 
-    .line 232
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -182,35 +167,28 @@
 
     const/16 v2, 0x2710
 
-    .line 241
     if-ge p1, v2, :cond_0
 
-    .line 242
     invoke-virtual {p0, p1}, Ljava/io/PrintWriter;->print(I)V
 
-    .line 258
     :goto_0
     return-void
 
-    .line 244
     :cond_0
     const/16 v1, 0x75
 
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->print(C)V
 
-    .line 245
     invoke-static {p1}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v1
 
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->print(I)V
 
-    .line 246
     invoke-static {p1}, Landroid/os/UserHandle;->getAppId(I)I
 
     move-result v0
 
-    .line 247
     .local v0, "appId":I
     if-lt v0, v3, :cond_1
 
@@ -218,41 +196,34 @@
 
     if-gt v0, v1, :cond_1
 
-    .line 248
     const/16 v1, 0x69
 
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->print(C)V
 
-    .line 249
     sub-int v1, v0, v3
 
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->print(I)V
 
     goto :goto_0
 
-    .line 250
     :cond_1
     if-lt v0, v2, :cond_2
 
-    .line 251
     const/16 v1, 0x61
 
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->print(C)V
 
-    .line 252
     add-int/lit16 v1, v0, -0x2710
 
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->print(I)V
 
     goto :goto_0
 
-    .line 254
     :cond_2
     const/16 v1, 0x73
 
     invoke-virtual {p0, v1}, Ljava/io/PrintWriter;->print(C)V
 
-    .line 255
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->print(I)V
 
     goto :goto_0
@@ -268,35 +239,28 @@
 
     const/16 v2, 0x2710
 
-    .line 205
     if-ge p1, v2, :cond_0
 
-    .line 206
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 222
     :goto_0
     return-void
 
-    .line 208
     :cond_0
     const/16 v1, 0x75
 
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 209
     invoke-static {p1}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v1
 
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 210
     invoke-static {p1}, Landroid/os/UserHandle;->getAppId(I)I
 
     move-result v0
 
-    .line 211
     .local v0, "appId":I
     if-lt v0, v3, :cond_1
 
@@ -304,41 +268,34 @@
 
     if-gt v0, v1, :cond_1
 
-    .line 212
     const/16 v1, 0x69
 
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 213
     sub-int v1, v0, v3
 
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
-    .line 214
     :cond_1
     if-lt v0, v2, :cond_2
 
-    .line 215
     const/16 v1, 0x61
 
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 216
     add-int/lit16 v1, v0, -0x2710
 
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
-    .line 218
     :cond_2
     const/16 v1, 0x73
 
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 219
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     goto :goto_0
@@ -349,7 +306,6 @@
     .param p0, "uid"    # I
 
     .prologue
-    .line 166
     const v0, 0x186a0
 
     rem-int v0, p0, v0
@@ -364,7 +320,6 @@
     .prologue
     const v2, 0xc350
 
-    .line 191
     invoke-static {p0}, Landroid/os/UserHandle;->getAppId(I)I
 
     move-result v1
@@ -373,17 +328,14 @@
 
     sub-int v0, v1, v2
 
-    .line 193
     .local v0, "appId":I
     if-ltz v0, :cond_0
 
     if-lt v0, v2, :cond_1
 
-    .line 194
     :cond_0
     const/4 v0, -0x1
 
-    .line 196
     .end local v0    # "appId":I
     :cond_1
     return v0
@@ -393,7 +345,6 @@
     .locals 3
 
     .prologue
-    .line 139
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v2
@@ -402,7 +353,6 @@
 
     move-result v1
 
-    .line 140
     .local v1, "userId":I
     sget-object v2, Landroid/os/UserHandle;->userHandles:Landroid/util/SparseArray;
 
@@ -412,23 +362,19 @@
 
     check-cast v0, Landroid/os/UserHandle;
 
-    .line 142
     .local v0, "userHandle":Landroid/os/UserHandle;
     if-nez v0, :cond_0
 
-    .line 143
     new-instance v0, Landroid/os/UserHandle;
 
     .end local v0    # "userHandle":Landroid/os/UserHandle;
     invoke-direct {v0, v1}, Landroid/os/UserHandle;-><init>(I)V
 
-    .line 144
     .restart local v0    # "userHandle":Landroid/os/UserHandle;
     sget-object v2, Landroid/os/UserHandle;->userHandles:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v1, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 146
     :cond_0
     return-object v0
 .end method
@@ -437,7 +383,6 @@
     .locals 1
 
     .prologue
-    .line 134
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -454,7 +399,6 @@
     .param p0, "id"    # I
 
     .prologue
-    .line 182
     const v0, 0xc350
 
     const v1, 0x186a0
@@ -476,7 +420,6 @@
     .prologue
     const v1, 0x186a0
 
-    .line 155
     mul-int v0, p0, v1
 
     rem-int v1, p1, v1
@@ -491,7 +434,6 @@
     .param p0, "userId"    # I
 
     .prologue
-    .line 174
     const/16 v0, 0x270d
 
     invoke-static {p0, v0}, Landroid/os/UserHandle;->getUid(II)I
@@ -506,7 +448,6 @@
     .param p0, "uid"    # I
 
     .prologue
-    .line 126
     const v0, 0x186a0
 
     div-int v0, p0, v0
@@ -521,15 +462,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 112
     if-lez p0, :cond_0
 
-    .line 113
     invoke-static {p0}, Landroid/os/UserHandle;->getAppId(I)I
 
     move-result v0
 
-    .line 114
     .local v0, "appId":I
     const/16 v2, 0x2710
 
@@ -541,7 +479,6 @@
 
     const/4 v1, 0x1
 
-    .line 116
     .end local v0    # "appId":I
     :cond_0
     return v1
@@ -554,15 +491,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 102
     if-lez p0, :cond_0
 
-    .line 103
     invoke-static {p0}, Landroid/os/UserHandle;->getAppId(I)I
 
     move-result v0
 
-    .line 104
     .local v0, "appId":I
     const v2, 0x182b8
 
@@ -574,7 +508,6 @@
 
     const/4 v1, 0x1
 
-    .line 106
     .end local v0    # "appId":I
     :cond_0
     return v1
@@ -586,7 +519,6 @@
     .param p1, "uid2"    # I
 
     .prologue
-    .line 97
     invoke-static {p0}, Landroid/os/UserHandle;->getAppId(I)I
 
     move-result v0
@@ -614,7 +546,6 @@
     .param p1, "uid2"    # I
 
     .prologue
-    .line 85
     invoke-static {p0}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v0
@@ -640,7 +571,6 @@
     .locals 1
 
     .prologue
-    .line 267
     invoke-static {}, Landroid/os/Process;->myUid()I
 
     move-result v0
@@ -657,12 +587,10 @@
     .param p0, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 353
     invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 354
     .local v0, "h":I
     const/16 v1, -0x2710
 
@@ -687,19 +615,15 @@
     .param p1, "out"    # Landroid/os/Parcel;
 
     .prologue
-    .line 334
     if-eqz p0, :cond_0
 
-    .line 335
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Landroid/os/UserHandle;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 339
     :goto_0
     return-void
 
-    .line 337
     :cond_0
     const/16 v0, -0x2710
 
@@ -714,7 +638,6 @@
     .locals 1
 
     .prologue
-    .line 317
     const/4 v0, 0x0
 
     return v0
@@ -727,10 +650,8 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 302
     if-eqz p1, :cond_0
 
-    .line 303
     :try_start_0
     move-object v0, p1
 
@@ -738,7 +659,6 @@
 
     move-object v1, v0
 
-    .line 304
     .local v1, "other":Landroid/os/UserHandle;
     iget v3, p0, Landroid/os/UserHandle;->mHandle:I
 
@@ -750,13 +670,11 @@
 
     const/4 v2, 0x1
 
-    .line 308
     .end local v1    # "other":Landroid/os/UserHandle;
     :cond_0
     :goto_0
     return v2
 
-    .line 306
     :catch_0
     move-exception v3
 
@@ -767,7 +685,6 @@
     .locals 1
 
     .prologue
-    .line 291
     iget v0, p0, Landroid/os/UserHandle;->mHandle:I
 
     return v0
@@ -777,7 +694,6 @@
     .locals 1
 
     .prologue
-    .line 313
     iget v0, p0, Landroid/os/UserHandle;->mHandle:I
 
     return v0
@@ -787,7 +703,6 @@
     .locals 1
 
     .prologue
-    .line 277
     sget-object v0, Landroid/os/UserHandle;->OWNER:Landroid/os/UserHandle;
 
     invoke-virtual {p0, v0}, Landroid/os/UserHandle;->equals(Ljava/lang/Object;)Z
@@ -801,7 +716,6 @@
     .locals 2
 
     .prologue
-    .line 296
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -818,7 +732,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -837,11 +751,9 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 321
     iget v0, p0, Landroid/os/UserHandle;->mHandle:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 322
     return-void
 .end method

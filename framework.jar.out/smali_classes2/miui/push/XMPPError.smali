@@ -42,19 +42,14 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 211
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 172
     iput-object v0, p0, Lmiui/push/XMPPError;->applicationExtensions:Ljava/util/List;
 
-    .line 212
     iput p1, p0, Lmiui/push/XMPPError;->code:I
 
-    .line 213
     iput-object v0, p0, Lmiui/push/XMPPError;->message:Ljava/lang/String;
 
-    .line 214
     return-void
 .end method
 
@@ -64,21 +59,16 @@
     .param p2, "message"    # Ljava/lang/String;
 
     .prologue
-    .line 224
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 172
     const/4 v0, 0x0
 
     iput-object v0, p0, Lmiui/push/XMPPError;->applicationExtensions:Ljava/util/List;
 
-    .line 225
     iput p1, p0, Lmiui/push/XMPPError;->code:I
 
-    .line 226
     iput-object p2, p0, Lmiui/push/XMPPError;->message:Ljava/lang/String;
 
-    .line 227
     return-void
 .end method
 
@@ -104,34 +94,25 @@
     .end annotation
 
     .prologue
-    .line 242
     .local p6, "extension":Ljava/util/List;, "Ljava/util/List<Lmiui/push/CommonPacketExtension;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 172
     const/4 v0, 0x0
 
     iput-object v0, p0, Lmiui/push/XMPPError;->applicationExtensions:Ljava/util/List;
 
-    .line 243
     iput p1, p0, Lmiui/push/XMPPError;->code:I
 
-    .line 244
     iput-object p2, p0, Lmiui/push/XMPPError;->type:Ljava/lang/String;
 
-    .line 245
     iput-object p3, p0, Lmiui/push/XMPPError;->reason:Ljava/lang/String;
 
-    .line 246
     iput-object p4, p0, Lmiui/push/XMPPError;->condition:Ljava/lang/String;
 
-    .line 247
     iput-object p5, p0, Lmiui/push/XMPPError;->message:Ljava/lang/String;
 
-    .line 248
     iput-object p6, p0, Lmiui/push/XMPPError;->applicationExtensions:Ljava/util/List;
 
-    .line 249
     return-void
 .end method
 
@@ -140,15 +121,12 @@
     .param p1, "bundle"    # Landroid/os/Bundle;
 
     .prologue
-    .line 251
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 172
     const/4 v7, 0x0
 
     iput-object v7, p0, Lmiui/push/XMPPError;->applicationExtensions:Ljava/util/List;
 
-    .line 252
     const-string v7, "ext_err_code"
 
     invoke-virtual {p1, v7}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -157,7 +135,6 @@
 
     iput v7, p0, Lmiui/push/XMPPError;->code:I
 
-    .line 253
     const-string v7, "ext_err_type"
 
     invoke-virtual {p1, v7}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
@@ -166,7 +143,6 @@
 
     if-eqz v7, :cond_0
 
-    .line 254
     const-string v7, "ext_err_type"
 
     invoke-virtual {p1, v7}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -175,7 +151,6 @@
 
     iput-object v7, p0, Lmiui/push/XMPPError;->type:Ljava/lang/String;
 
-    .line 256
     :cond_0
     const-string v7, "ext_err_cond"
 
@@ -185,7 +160,6 @@
 
     iput-object v7, p0, Lmiui/push/XMPPError;->condition:Ljava/lang/String;
 
-    .line 257
     const-string v7, "ext_err_reason"
 
     invoke-virtual {p1, v7}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -194,7 +168,6 @@
 
     iput-object v7, p0, Lmiui/push/XMPPError;->reason:Ljava/lang/String;
 
-    .line 258
     const-string v7, "ext_err_msg"
 
     invoke-virtual {p1, v7}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -203,18 +176,15 @@
 
     iput-object v7, p0, Lmiui/push/XMPPError;->message:Ljava/lang/String;
 
-    .line 259
     const-string v7, "ext_exts"
 
     invoke-virtual {p1, v7}, Landroid/os/Bundle;->getParcelableArray(Ljava/lang/String;)[Landroid/os/Parcelable;
 
     move-result-object v3
 
-    .line 260
     .local v3, "extBundles":[Landroid/os/Parcelable;
     if-eqz v3, :cond_2
 
-    .line 261
     new-instance v7, Ljava/util/ArrayList;
 
     array-length v8, v3
@@ -223,7 +193,6 @@
 
     iput-object v7, p0, Lmiui/push/XMPPError;->applicationExtensions:Ljava/util/List;
 
-    .line 262
     move-object v0, v3
 
     .local v0, "arr$":[Landroid/os/Parcelable;
@@ -241,31 +210,25 @@
     .local v6, "p":Landroid/os/Parcelable;
     move-object v1, v6
 
-    .line 263
     check-cast v1, Landroid/os/Bundle;
 
-    .line 264
     .local v1, "b":Landroid/os/Bundle;
     invoke-static {v1}, Lmiui/push/CommonPacketExtension;->parseFromBundle(Landroid/os/Bundle;)Lmiui/push/CommonPacketExtension;
 
     move-result-object v2
 
-    .line 265
     .local v2, "ext":Lmiui/push/CommonPacketExtension;
     if-eqz v2, :cond_1
 
-    .line 266
     iget-object v7, p0, Lmiui/push/XMPPError;->applicationExtensions:Ljava/util/List;
 
     invoke-interface {v7, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 262
     :cond_1
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    .line 270
     .end local v0    # "arr$":[Landroid/os/Parcelable;
     .end local v1    # "b":Landroid/os/Bundle;
     .end local v2    # "ext":Lmiui/push/CommonPacketExtension;
@@ -283,19 +246,14 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 183
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 172
     iput-object v0, p0, Lmiui/push/XMPPError;->applicationExtensions:Ljava/util/List;
 
-    .line 184
     invoke-direct {p0, p1}, Lmiui/push/XMPPError;->init(Lmiui/push/XMPPError$Condition;)V
 
-    .line 185
     iput-object v0, p0, Lmiui/push/XMPPError;->message:Ljava/lang/String;
 
-    .line 186
     return-void
 .end method
 
@@ -305,21 +263,16 @@
     .param p2, "messageText"    # Ljava/lang/String;
 
     .prologue
-    .line 199
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 172
     const/4 v0, 0x0
 
     iput-object v0, p0, Lmiui/push/XMPPError;->applicationExtensions:Ljava/util/List;
 
-    .line 200
     invoke-direct {p0, p1}, Lmiui/push/XMPPError;->init(Lmiui/push/XMPPError$Condition;)V
 
-    .line 201
     iput-object p2, p0, Lmiui/push/XMPPError;->message:Ljava/lang/String;
 
-    .line 202
     return-void
 .end method
 
@@ -328,7 +281,6 @@
     .param p1, "condition"    # Lmiui/push/XMPPError$Condition;
 
     .prologue
-    .line 280
     # getter for: Lmiui/push/XMPPError$Condition;->value:Ljava/lang/String;
     invoke-static {p1}, Lmiui/push/XMPPError$Condition;->access$000(Lmiui/push/XMPPError$Condition;)Ljava/lang/String;
 
@@ -336,7 +288,6 @@
 
     iput-object v0, p0, Lmiui/push/XMPPError;->condition:Ljava/lang/String;
 
-    .line 281
     return-void
 .end method
 
@@ -347,7 +298,6 @@
     .param p1, "extension"    # Lmiui/push/CommonPacketExtension;
 
     .prologue
-    .line 439
     monitor-enter p0
 
     :try_start_0
@@ -355,14 +305,12 @@
 
     if-nez v0, :cond_0
 
-    .line 440
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lmiui/push/XMPPError;->applicationExtensions:Ljava/util/List;
 
-    .line 442
     :cond_0
     iget-object v0, p0, Lmiui/push/XMPPError;->applicationExtensions:Ljava/util/List;
 
@@ -370,12 +318,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 443
     monitor-exit p0
 
     return-void
 
-    .line 439
     :catchall_0
     move-exception v0
 
@@ -388,7 +334,6 @@
     .locals 1
 
     .prologue
-    .line 311
     iget v0, p0, Lmiui/push/XMPPError;->code:I
 
     return v0
@@ -398,7 +343,6 @@
     .locals 1
 
     .prologue
-    .line 289
     iget-object v0, p0, Lmiui/push/XMPPError;->condition:Ljava/lang/String;
 
     return-object v0
@@ -412,7 +356,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 422
     monitor-enter p0
 
     :try_start_0
@@ -429,13 +372,11 @@
     :cond_0
     move-object v0, v2
 
-    .line 430
     :goto_0
     monitor-exit p0
 
     return-object v0
 
-    .line 425
     :cond_1
     :try_start_1
     iget-object v3, p0, Lmiui/push/XMPPError;->applicationExtensions:Ljava/util/List;
@@ -458,7 +399,6 @@
 
     check-cast v0, Lmiui/push/PacketExtension;
 
-    .line 426
     .local v0, "ext":Lmiui/push/PacketExtension;
     invoke-interface {v0}, Lmiui/push/PacketExtension;->getElementName()Ljava/lang/String;
 
@@ -488,10 +428,8 @@
     :cond_3
     move-object v0, v2
 
-    .line 430
     goto :goto_0
 
-    .line 422
     .end local v1    # "i$":Ljava/util/Iterator;
     :catchall_0
     move-exception v2
@@ -514,7 +452,6 @@
     .end annotation
 
     .prologue
-    .line 407
     monitor-enter p0
 
     :try_start_0
@@ -522,14 +459,12 @@
 
     if-nez v0, :cond_0
 
-    .line 408
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v0
 
-    .line 410
     :goto_0
     monitor-exit p0
 
@@ -547,7 +482,6 @@
 
     goto :goto_0
 
-    .line 407
     :catchall_0
     move-exception v0
 
@@ -560,7 +494,6 @@
     .locals 1
 
     .prologue
-    .line 320
     iget-object v0, p0, Lmiui/push/XMPPError;->message:Ljava/lang/String;
 
     return-object v0
@@ -570,7 +503,6 @@
     .locals 1
 
     .prologue
-    .line 293
     iget-object v0, p0, Lmiui/push/XMPPError;->reason:Ljava/lang/String;
 
     return-object v0
@@ -580,7 +512,6 @@
     .locals 1
 
     .prologue
-    .line 302
     iget-object v0, p0, Lmiui/push/XMPPError;->type:Ljava/lang/String;
 
     return-object v0
@@ -599,7 +530,6 @@
     .end annotation
 
     .prologue
-    .line 451
     .local p1, "extension":Ljava/util/List;, "Ljava/util/List<Lmiui/push/CommonPacketExtension;>;"
     monitor-enter p0
 
@@ -608,12 +538,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 452
     monitor-exit p0
 
     return-void
 
-    .line 451
     :catchall_0
     move-exception v0
 
@@ -626,25 +554,21 @@
     .locals 9
 
     .prologue
-    .line 324
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 325
     .local v0, "bundle":Landroid/os/Bundle;
     iget-object v7, p0, Lmiui/push/XMPPError;->type:Ljava/lang/String;
 
     if-eqz v7, :cond_0
 
-    .line 326
     const-string v7, "ext_err_type"
 
     iget-object v8, p0, Lmiui/push/XMPPError;->type:Ljava/lang/String;
 
     invoke-virtual {v0, v7, v8}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 328
     :cond_0
     const-string v7, "ext_err_code"
 
@@ -652,51 +576,43 @@
 
     invoke-virtual {v0, v7, v8}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 329
     iget-object v7, p0, Lmiui/push/XMPPError;->reason:Ljava/lang/String;
 
     if-eqz v7, :cond_1
 
-    .line 330
     const-string v7, "ext_err_reason"
 
     iget-object v8, p0, Lmiui/push/XMPPError;->reason:Ljava/lang/String;
 
     invoke-virtual {v0, v7, v8}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 332
     :cond_1
     iget-object v7, p0, Lmiui/push/XMPPError;->condition:Ljava/lang/String;
 
     if-eqz v7, :cond_2
 
-    .line 333
     const-string v7, "ext_err_cond"
 
     iget-object v8, p0, Lmiui/push/XMPPError;->condition:Ljava/lang/String;
 
     invoke-virtual {v0, v7, v8}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 335
     :cond_2
     iget-object v7, p0, Lmiui/push/XMPPError;->message:Ljava/lang/String;
 
     if-eqz v7, :cond_3
 
-    .line 336
     const-string v7, "ext_err_msg"
 
     iget-object v8, p0, Lmiui/push/XMPPError;->message:Ljava/lang/String;
 
     invoke-virtual {v0, v7, v8}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 338
     :cond_3
     iget-object v7, p0, Lmiui/push/XMPPError;->applicationExtensions:Ljava/util/List;
 
     if-eqz v7, :cond_6
 
-    .line 339
     iget-object v7, p0, Lmiui/push/XMPPError;->applicationExtensions:Ljava/util/List;
 
     invoke-interface {v7}, Ljava/util/List;->size()I
@@ -705,11 +621,9 @@
 
     new-array v2, v7, [Landroid/os/Bundle;
 
-    .line 340
     .local v2, "extBundle":[Landroid/os/Bundle;
     const/4 v3, 0x0
 
-    .line 341
     .local v3, "i":I
     iget-object v7, p0, Lmiui/push/XMPPError;->applicationExtensions:Ljava/util/List;
 
@@ -732,17 +646,14 @@
 
     check-cast v1, Lmiui/push/CommonPacketExtension;
 
-    .line 342
     .local v1, "ext":Lmiui/push/CommonPacketExtension;
     invoke-virtual {v1}, Lmiui/push/CommonPacketExtension;->toBundle()Landroid/os/Bundle;
 
     move-result-object v6
 
-    .line 343
     .local v6, "subBundle":Landroid/os/Bundle;
     if-eqz v6, :cond_4
 
-    .line 344
     add-int/lit8 v4, v3, 0x1
 
     .end local v3    # "i":I
@@ -755,7 +666,6 @@
     .restart local v3    # "i":I
     goto :goto_0
 
-    .line 347
     .end local v1    # "ext":Lmiui/push/CommonPacketExtension;
     .end local v6    # "subBundle":Landroid/os/Bundle;
     :cond_5
@@ -763,7 +673,6 @@
 
     invoke-virtual {v0, v7, v2}, Landroid/os/Bundle;->putParcelableArray(Ljava/lang/String;[Landroid/os/Parcelable;)V
 
-    .line 349
     .end local v2    # "extBundle":[Landroid/os/Bundle;
     .end local v3    # "i":I
     .end local v5    # "i$":Ljava/util/Iterator;
@@ -775,23 +684,19 @@
     .locals 3
 
     .prologue
-    .line 388
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 389
     .local v0, "txt":Ljava/lang/StringBuilder;
     iget-object v1, p0, Lmiui/push/XMPPError;->condition:Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
-    .line 390
     iget-object v1, p0, Lmiui/push/XMPPError;->condition:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 392
     :cond_0
     const-string v1, "("
 
@@ -809,12 +714,10 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 393
     iget-object v1, p0, Lmiui/push/XMPPError;->message:Ljava/lang/String;
 
     if-eqz v1, :cond_1
 
-    .line 394
     const-string v1, " "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -825,7 +728,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 396
     :cond_1
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -838,12 +740,10 @@
     .locals 5
 
     .prologue
-    .line 358
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 359
     .local v0, "buf":Ljava/lang/StringBuilder;
     const-string v3, "<error code=\""
 
@@ -861,59 +761,48 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 360
     iget-object v3, p0, Lmiui/push/XMPPError;->type:Ljava/lang/String;
 
     if-eqz v3, :cond_0
 
-    .line 361
     const-string v3, " type=\""
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 362
     iget-object v3, p0, Lmiui/push/XMPPError;->type:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 363
     const-string v3, "\""
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 365
     :cond_0
     iget-object v3, p0, Lmiui/push/XMPPError;->reason:Ljava/lang/String;
 
     if-eqz v3, :cond_1
 
-    .line 366
     const-string v3, " reason=\""
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 367
     iget-object v3, p0, Lmiui/push/XMPPError;->reason:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 368
     const-string v3, "\""
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 370
     :cond_1
     const-string v3, ">"
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 371
     iget-object v3, p0, Lmiui/push/XMPPError;->condition:Ljava/lang/String;
 
     if-eqz v3, :cond_2
 
-    .line 372
     const-string v3, "<"
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -924,33 +813,27 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 373
     const-string v3, " xmlns=\"urn:ietf:params:xml:ns:xmpp-stanzas\"/>"
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 375
     :cond_2
     iget-object v3, p0, Lmiui/push/XMPPError;->message:Ljava/lang/String;
 
     if-eqz v3, :cond_3
 
-    .line 376
     const-string v3, "<text xml:lang=\"en\" xmlns=\"urn:ietf:params:xml:ns:xmpp-stanzas\">"
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 377
     iget-object v3, p0, Lmiui/push/XMPPError;->message:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 378
     const-string v3, "</text>"
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 380
     :cond_3
     invoke-virtual {p0}, Lmiui/push/XMPPError;->getExtensions()Ljava/util/List;
 
@@ -974,7 +857,6 @@
 
     check-cast v1, Lmiui/push/PacketExtension;
 
-    .line 381
     .local v1, "element":Lmiui/push/PacketExtension;
     invoke-interface {v1}, Lmiui/push/PacketExtension;->toXML()Ljava/lang/String;
 
@@ -984,14 +866,12 @@
 
     goto :goto_0
 
-    .line 383
     .end local v1    # "element":Lmiui/push/PacketExtension;
     :cond_4
     const-string v3, "</error>"
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 384
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3

@@ -31,7 +31,6 @@
     .param p3, "x1"    # Landroid/os/Handler;
 
     .prologue
-    .line 1287
     .local p4, "x2":Landroid/accounts/AccountManagerCallback;, "Landroid/accounts/AccountManagerCallback<Landroid/os/Bundle;>;"
     iput-object p1, p0, Landroid/accounts/AccountManager$9;->this$0:Landroid/accounts/AccountManager;
 
@@ -57,12 +56,10 @@
     .end annotation
 
     .prologue
-    .line 1289
     const/16 v0, 0x1f
 
     invoke-static {v0}, Landroid/util/SeempLog;->record(I)I
 
-    .line 1290
     iget-object v0, p0, Landroid/accounts/AccountManager$9;->this$0:Landroid/accounts/AccountManager;
 
     # getter for: Landroid/accounts/AccountManager;->mService:Landroid/accounts/IAccountManager;
@@ -84,6 +81,5 @@
 
     invoke-interface/range {v0 .. v6}, Landroid/accounts/IAccountManager;->getAuthToken(Landroid/accounts/IAccountManagerResponse;Landroid/accounts/Account;Ljava/lang/String;ZZLandroid/os/Bundle;)V
 
-    .line 1293
     return-void
 .end method

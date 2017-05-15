@@ -157,7 +157,6 @@
     .locals 1
 
     .prologue
-    .line 134
     invoke-static {}, Landroid/widget/ImageView$ScaleType;->values()[Landroid/widget/ImageView$ScaleType;
 
     move-result-object v0
@@ -186,7 +185,6 @@
     .end annotation
 
     .prologue
-    .line 212
     .local p2, "allSharedElementNames":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     new-instance v0, Landroid/os/Handler;
 
@@ -194,28 +192,24 @@
 
     invoke-direct {p0, v0}, Landroid/os/ResultReceiver;-><init>(Landroid/os/Handler;)V
 
-    .line 193
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/app/ActivityTransitionCoordinator;->mSharedElements:Ljava/util/ArrayList;
 
-    .line 194
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/app/ActivityTransitionCoordinator;->mSharedElementNames:Ljava/util/ArrayList;
 
-    .line 195
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/app/ActivityTransitionCoordinator;->mTransitioningViews:Ljava/util/ArrayList;
 
-    .line 198
     new-instance v0, Landroid/app/ActivityTransitionCoordinator$FixedEpicenterCallback;
 
     const/4 v1, 0x0
@@ -224,33 +218,26 @@
 
     iput-object v0, p0, Landroid/app/ActivityTransitionCoordinator;->mEpicenterCallback:Landroid/app/ActivityTransitionCoordinator$FixedEpicenterCallback;
 
-    .line 202
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/app/ActivityTransitionCoordinator;->mGhostViewListeners:Ljava/util/ArrayList;
 
-    .line 204
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Landroid/app/ActivityTransitionCoordinator;->mOriginalAlphas:Landroid/util/ArrayMap;
 
-    .line 213
     iput-object p1, p0, Landroid/app/ActivityTransitionCoordinator;->mWindow:Landroid/view/Window;
 
-    .line 214
     iput-object p3, p0, Landroid/app/ActivityTransitionCoordinator;->mListener:Landroid/app/SharedElementCallback;
 
-    .line 215
     iput-object p2, p0, Landroid/app/ActivityTransitionCoordinator;->mAllSharedElementNames:Ljava/util/ArrayList;
 
-    .line 216
     iput-boolean p4, p0, Landroid/app/ActivityTransitionCoordinator;->mIsReturning:Z
 
-    .line 217
     return-void
 .end method
 
@@ -260,7 +247,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 115
     iput-boolean p1, p0, Landroid/app/ActivityTransitionCoordinator;->mIsStartingTransition:Z
 
     return p1
@@ -271,7 +257,6 @@
     .param p0, "x0"    # Landroid/app/ActivityTransitionCoordinator;
 
     .prologue
-    .line 115
     iget-object v0, p0, Landroid/app/ActivityTransitionCoordinator;->mPendingTransition:Ljava/lang/Runnable;
 
     return-object v0
@@ -283,7 +268,6 @@
     .param p1, "x1"    # Ljava/lang/Runnable;
 
     .prologue
-    .line 115
     iput-object p1, p0, Landroid/app/ActivityTransitionCoordinator;->mPendingTransition:Ljava/lang/Runnable;
 
     return-object p1
@@ -296,12 +280,10 @@
     .param p2, "transitionArgs"    # Landroid/os/Bundle;
 
     .prologue
-    .line 580
     new-instance v3, Landroid/app/ActivityTransitionCoordinator$SharedElementOriginalState;
 
     invoke-direct {v3}, Landroid/app/ActivityTransitionCoordinator$SharedElementOriginalState;-><init>()V
 
-    .line 581
     .local v3, "state":Landroid/app/ActivityTransitionCoordinator$SharedElementOriginalState;
     invoke-virtual {p0}, Landroid/view/View;->getLeft()I
 
@@ -309,77 +291,65 @@
 
     iput v4, v3, Landroid/app/ActivityTransitionCoordinator$SharedElementOriginalState;->mLeft:I
 
-    .line 582
     invoke-virtual {p0}, Landroid/view/View;->getTop()I
 
     move-result v4
 
     iput v4, v3, Landroid/app/ActivityTransitionCoordinator$SharedElementOriginalState;->mTop:I
 
-    .line 583
     invoke-virtual {p0}, Landroid/view/View;->getRight()I
 
     move-result v4
 
     iput v4, v3, Landroid/app/ActivityTransitionCoordinator$SharedElementOriginalState;->mRight:I
 
-    .line 584
     invoke-virtual {p0}, Landroid/view/View;->getBottom()I
 
     move-result v4
 
     iput v4, v3, Landroid/app/ActivityTransitionCoordinator$SharedElementOriginalState;->mBottom:I
 
-    .line 585
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v4
 
     iput v4, v3, Landroid/app/ActivityTransitionCoordinator$SharedElementOriginalState;->mMeasuredWidth:I
 
-    .line 586
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v4
 
     iput v4, v3, Landroid/app/ActivityTransitionCoordinator$SharedElementOriginalState;->mMeasuredHeight:I
 
-    .line 587
     invoke-virtual {p0}, Landroid/view/View;->getTranslationZ()F
 
     move-result v4
 
     iput v4, v3, Landroid/app/ActivityTransitionCoordinator$SharedElementOriginalState;->mTranslationZ:F
 
-    .line 588
     invoke-virtual {p0}, Landroid/view/View;->getElevation()F
 
     move-result v4
 
     iput v4, v3, Landroid/app/ActivityTransitionCoordinator$SharedElementOriginalState;->mElevation:F
 
-    .line 589
     instance-of v4, p0, Landroid/widget/ImageView;
 
     if-nez v4, :cond_1
 
-    .line 606
     :cond_0
     :goto_0
     return-object v3
 
-    .line 592
     :cond_1
     invoke-virtual {p2, p1}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 593
     .local v0, "bundle":Landroid/os/Bundle;
     if-eqz v0, :cond_0
 
-    .line 596
-    const-string/jumbo v4, "shared_element:scaleType"
+    const-string v4, "shared_element:scaleType"
 
     const/4 v5, -0x1
 
@@ -387,16 +357,13 @@
 
     move-result v2
 
-    .line 597
     .local v2, "scaleTypeInt":I
     if-ltz v2, :cond_0
 
     move-object v1, p0
 
-    .line 601
     check-cast v1, Landroid/widget/ImageView;
 
-    .line 602
     .local v1, "imageView":Landroid/widget/ImageView;
     invoke-virtual {v1}, Landroid/widget/ImageView;->getScaleType()Landroid/widget/ImageView$ScaleType;
 
@@ -404,14 +371,12 @@
 
     iput-object v4, v3, Landroid/app/ActivityTransitionCoordinator$SharedElementOriginalState;->mScaleType:Landroid/widget/ImageView$ScaleType;
 
-    .line 603
     iget-object v4, v3, Landroid/app/ActivityTransitionCoordinator$SharedElementOriginalState;->mScaleType:Landroid/widget/ImageView$ScaleType;
 
     sget-object v5, Landroid/widget/ImageView$ScaleType;->MATRIX:Landroid/widget/ImageView$ScaleType;
 
     if-ne v4, v5, :cond_0
 
-    .line 604
     new-instance v4, Landroid/graphics/Matrix;
 
     invoke-virtual {v1}, Landroid/widget/ImageView;->getImageMatrix()Landroid/graphics/Matrix;
@@ -431,27 +396,22 @@
     .param p2, "matrix"    # Landroid/graphics/Matrix;
 
     .prologue
-    .line 512
     iget-object v4, p0, Landroid/app/ActivityTransitionCoordinator;->mSharedElementParentMatrices:Ljava/util/ArrayList;
 
     if-nez v4, :cond_1
 
     const/4 v0, -0x1
 
-    .line 514
     .local v0, "index":I
     :goto_0
     if-gez v0, :cond_2
 
-    .line 515
     invoke-virtual {p2}, Landroid/graphics/Matrix;->reset()V
 
-    .line 516
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v3
 
-    .line 517
     .local v3, "viewParent":Landroid/view/ViewParent;
     instance-of v4, v3, Landroid/view/ViewGroup;
 
@@ -459,14 +419,11 @@
 
     move-object v1, v3
 
-    .line 519
     check-cast v1, Landroid/view/ViewGroup;
 
-    .line 520
     .local v1, "parent":Landroid/view/ViewGroup;
     invoke-virtual {v1, p2}, Landroid/view/ViewGroup;->transformMatrixToLocal(Landroid/graphics/Matrix;)V
 
-    .line 521
     invoke-virtual {v1}, Landroid/view/ViewGroup;->getScrollX()I
 
     move-result v4
@@ -481,14 +438,12 @@
 
     invoke-virtual {p2, v4, v5}, Landroid/graphics/Matrix;->postTranslate(FF)Z
 
-    .line 529
     .end local v1    # "parent":Landroid/view/ViewGroup;
     .end local v3    # "viewParent":Landroid/view/ViewParent;
     :cond_0
     :goto_1
     return-void
 
-    .line 512
     .end local v0    # "index":I
     :cond_1
     iget-object v4, p0, Landroid/app/ActivityTransitionCoordinator;->mSharedElements:Ljava/util/ArrayList;
@@ -499,7 +454,6 @@
 
     goto :goto_0
 
-    .line 526
     .restart local v0    # "index":I
     :cond_2
     iget-object v4, p0, Landroid/app/ActivityTransitionCoordinator;->mSharedElementParentMatrices:Ljava/util/ArrayList;
@@ -510,7 +464,6 @@
 
     check-cast v2, Landroid/graphics/Matrix;
 
-    .line 527
     .local v2, "parentMatrix":Landroid/graphics/Matrix;
     invoke-virtual {p2, v2}, Landroid/graphics/Matrix;->set(Landroid/graphics/Matrix;)V
 
@@ -523,28 +476,23 @@
     .param p1, "decor"    # Landroid/view/ViewGroup;
 
     .prologue
-    .line 820
     if-eq p0, p1, :cond_0
 
     instance-of v1, p0, Landroid/view/ViewGroup;
 
     if-nez v1, :cond_1
 
-    .line 821
     :cond_0
     const/4 v1, 0x0
 
-    .line 827
     :goto_0
     return v1
 
     :cond_1
     move-object v0, p0
 
-    .line 823
     check-cast v0, Landroid/view/ViewGroup;
 
-    .line 824
     .local v0, "parent":Landroid/view/ViewGroup;
     invoke-virtual {v0}, Landroid/view/ViewGroup;->isTransitionGroup()Z
 
@@ -552,12 +500,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 825
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 827
     :cond_2
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getParent()Landroid/view/ViewParent;
 
@@ -586,17 +532,14 @@
     .end annotation
 
     .prologue
-    .line 267
     .local p1, "sharedElements":Landroid/util/ArrayMap;, "Landroid/util/ArrayMap<Ljava/lang/String;Landroid/view/View;>;"
     invoke-virtual {p0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v1
 
-    .line 268
     .local v1, "parent":Landroid/view/ViewParent;
     const/4 v0, 0x0
 
-    .line 269
     .local v0, "isNested":Z
     :goto_0
     instance-of v3, v1, Landroid/view/View;
@@ -605,10 +548,8 @@
 
     move-object v2, v1
 
-    .line 270
     check-cast v2, Landroid/view/View;
 
-    .line 271
     .local v2, "parentView":Landroid/view/View;
     invoke-virtual {p1, v2}, Landroid/util/ArrayMap;->containsValue(Ljava/lang/Object;)Z
 
@@ -616,22 +557,18 @@
 
     if-eqz v3, :cond_1
 
-    .line 272
     const/4 v0, 0x1
 
-    .line 277
     .end local v2    # "parentView":Landroid/view/View;
     :cond_0
     return v0
 
-    .line 275
     .restart local v2    # "parentView":Landroid/view/View;
     :cond_1
     invoke-virtual {v2}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v1
 
-    .line 276
     goto :goto_0
 .end method
 
@@ -641,40 +578,32 @@
     .param p1, "transition2"    # Landroid/transition/Transition;
 
     .prologue
-    .line 385
     if-nez p0, :cond_0
 
-    .line 393
     .end local p1    # "transition2":Landroid/transition/Transition;
     :goto_0
     return-object p1
 
-    .line 387
     .restart local p1    # "transition2":Landroid/transition/Transition;
     :cond_0
     if-nez p1, :cond_1
 
     move-object p1, p0
 
-    .line 388
     goto :goto_0
 
-    .line 390
     :cond_1
     new-instance v0, Landroid/transition/TransitionSet;
 
     invoke-direct {v0}, Landroid/transition/TransitionSet;-><init>()V
 
-    .line 391
     .local v0, "transitionSet":Landroid/transition/TransitionSet;
     invoke-virtual {v0, p0}, Landroid/transition/TransitionSet;->addTransition(Landroid/transition/Transition;)Landroid/transition/TransitionSet;
 
-    .line 392
     invoke-virtual {v0, p1}, Landroid/transition/TransitionSet;->addTransition(Landroid/transition/Transition;)Landroid/transition/TransitionSet;
 
     move-object p1, v0
 
-    .line 393
     goto :goto_0
 .end method
 
@@ -683,7 +612,6 @@
     .param p0, "scaleType"    # Landroid/widget/ImageView$ScaleType;
 
     .prologue
-    .line 926
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -694,26 +622,22 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 927
     sget-object v1, Landroid/app/ActivityTransitionCoordinator;->SCALE_TYPE_VALUES:[Landroid/widget/ImageView$ScaleType;
 
     aget-object v1, v1, v0
 
     if-ne p0, v1, :cond_0
 
-    .line 931
     .end local v0    # "i":I
     :goto_1
     return v0
 
-    .line 926
     .restart local v0    # "i":I
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 931
     :cond_1
     const/4 v0, -0x1
 
@@ -725,31 +649,25 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 317
     if-nez p1, :cond_0
 
-    .line 318
     iget-object v1, p0, Landroid/app/ActivityTransitionCoordinator;->mEpicenterCallback:Landroid/app/ActivityTransitionCoordinator$FixedEpicenterCallback;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Landroid/app/ActivityTransitionCoordinator$FixedEpicenterCallback;->setEpicenter(Landroid/graphics/Rect;)V
 
-    .line 324
     :goto_0
     return-void
 
-    .line 320
     :cond_0
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    .line 321
     .local v0, "epicenter":Landroid/graphics/Rect;
     invoke-virtual {p1, v0}, Landroid/view/View;->getBoundsOnScreen(Landroid/graphics/Rect;)V
 
-    .line 322
     iget-object v1, p0, Landroid/app/ActivityTransitionCoordinator;->mEpicenterCallback:Landroid/app/ActivityTransitionCoordinator$FixedEpicenterCallback;
 
     invoke-virtual {v1, v0}, Landroid/app/ActivityTransitionCoordinator$FixedEpicenterCallback;->setEpicenter(Landroid/graphics/Rect;)V
@@ -778,7 +696,6 @@
     .local p1, "originalState":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/app/ActivityTransitionCoordinator$SharedElementOriginalState;>;"
     const/high16 v10, 0x40000000    # 2.0f
 
-    .line 642
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -789,14 +706,12 @@
 
     if-ge v1, v6, :cond_1
 
-    .line 643
     invoke-virtual {p0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Landroid/view/View;
 
-    .line 644
     .local v4, "view":Landroid/view/View;
     invoke-virtual {p1, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -804,7 +719,6 @@
 
     check-cast v3, Landroid/app/ActivityTransitionCoordinator$SharedElementOriginalState;
 
-    .line 645
     .local v3, "state":Landroid/app/ActivityTransitionCoordinator$SharedElementOriginalState;
     instance-of v6, v4, Landroid/widget/ImageView;
 
@@ -816,47 +730,39 @@
 
     move-object v2, v4
 
-    .line 646
     check-cast v2, Landroid/widget/ImageView;
 
-    .line 647
     .local v2, "imageView":Landroid/widget/ImageView;
     iget-object v6, v3, Landroid/app/ActivityTransitionCoordinator$SharedElementOriginalState;->mScaleType:Landroid/widget/ImageView$ScaleType;
 
     invoke-virtual {v2, v6}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 648
     iget-object v6, v3, Landroid/app/ActivityTransitionCoordinator$SharedElementOriginalState;->mScaleType:Landroid/widget/ImageView$ScaleType;
 
     sget-object v7, Landroid/widget/ImageView$ScaleType;->MATRIX:Landroid/widget/ImageView$ScaleType;
 
     if-ne v6, v7, :cond_0
 
-    .line 649
     iget-object v6, v3, Landroid/app/ActivityTransitionCoordinator$SharedElementOriginalState;->mMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v2, v6}, Landroid/widget/ImageView;->setImageMatrix(Landroid/graphics/Matrix;)V
 
-    .line 652
     .end local v2    # "imageView":Landroid/widget/ImageView;
     :cond_0
     iget v6, v3, Landroid/app/ActivityTransitionCoordinator$SharedElementOriginalState;->mElevation:F
 
     invoke-virtual {v4, v6}, Landroid/view/View;->setElevation(F)V
 
-    .line 653
     iget v6, v3, Landroid/app/ActivityTransitionCoordinator$SharedElementOriginalState;->mTranslationZ:F
 
     invoke-virtual {v4, v6}, Landroid/view/View;->setTranslationZ(F)V
 
-    .line 654
     iget v6, v3, Landroid/app/ActivityTransitionCoordinator$SharedElementOriginalState;->mMeasuredWidth:I
 
     invoke-static {v6, v10}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result v5
 
-    .line 656
     .local v5, "widthSpec":I
     iget v6, v3, Landroid/app/ActivityTransitionCoordinator$SharedElementOriginalState;->mMeasuredHeight:I
 
@@ -864,11 +770,9 @@
 
     move-result v0
 
-    .line 658
     .local v0, "heightSpec":I
     invoke-virtual {v4, v5, v0}, Landroid/view/View;->measure(II)V
 
-    .line 659
     iget v6, v3, Landroid/app/ActivityTransitionCoordinator$SharedElementOriginalState;->mLeft:I
 
     iget v7, v3, Landroid/app/ActivityTransitionCoordinator$SharedElementOriginalState;->mTop:I
@@ -879,12 +783,10 @@
 
     invoke-virtual {v4, v6, v7, v8, v9}, Landroid/view/View;->layout(IIII)V
 
-    .line 642
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 661
     .end local v0    # "heightSpec":I
     .end local v3    # "state":Landroid/app/ActivityTransitionCoordinator$SharedElementOriginalState;
     .end local v4    # "view":Landroid/view/View;
@@ -897,25 +799,21 @@
     .locals 7
 
     .prologue
-    .line 495
     iget-object v5, p0, Landroid/app/ActivityTransitionCoordinator;->mSharedElements:Ljava/util/ArrayList;
 
     invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
 
     move-result v2
 
-    .line 496
     .local v2, "numSharedElements":I
     if-lez v2, :cond_0
 
-    .line 497
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5, v2}, Ljava/util/ArrayList;-><init>(I)V
 
     iput-object v5, p0, Landroid/app/ActivityTransitionCoordinator;->mSharedElementParentMatrices:Ljava/util/ArrayList;
 
-    .line 499
     :cond_0
     const/4 v0, 0x0
 
@@ -923,7 +821,6 @@
     :goto_0
     if-ge v0, v2, :cond_1
 
-    .line 500
     iget-object v5, p0, Landroid/app/ActivityTransitionCoordinator;->mSharedElements:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -932,7 +829,6 @@
 
     check-cast v4, Landroid/view/View;
 
-    .line 503
     .local v4, "view":Landroid/view/View;
     invoke-virtual {v4}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
@@ -940,17 +836,14 @@
 
     check-cast v3, Landroid/view/ViewGroup;
 
-    .line 504
     .local v3, "parent":Landroid/view/ViewGroup;
     new-instance v1, Landroid/graphics/Matrix;
 
     invoke-direct {v1}, Landroid/graphics/Matrix;-><init>()V
 
-    .line 505
     .local v1, "matrix":Landroid/graphics/Matrix;
     invoke-virtual {v3, v1}, Landroid/view/ViewGroup;->transformMatrixToLocal(Landroid/graphics/Matrix;)V
 
-    .line 506
     invoke-virtual {v3}, Landroid/view/ViewGroup;->getScrollX()I
 
     move-result v5
@@ -965,17 +858,14 @@
 
     invoke-virtual {v1, v5, v6}, Landroid/graphics/Matrix;->postTranslate(FF)Z
 
-    .line 507
     iget-object v5, p0, Landroid/app/ActivityTransitionCoordinator;->mSharedElementParentMatrices:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 499
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 509
     .end local v1    # "matrix":Landroid/graphics/Matrix;
     .end local v3    # "parent":Landroid/view/ViewGroup;
     .end local v4    # "view":Landroid/view/View;
@@ -993,7 +883,6 @@
     .param p6, "decorLoc"    # [I
 
     .prologue
-    .line 421
     move-object/from16 v0, p3
 
     move-object/from16 v1, p2
@@ -1002,15 +891,12 @@
 
     move-result-object v16
 
-    .line 422
     .local v16, "sharedElementBundle":Landroid/os/Bundle;
     if-nez v16, :cond_0
 
-    .line 492
     :goto_0
     return-void
 
-    .line 426
     :cond_0
     move-object/from16 v0, p1
 
@@ -1020,8 +906,7 @@
 
     if-eqz v24, :cond_1
 
-    .line 427
-    const-string/jumbo v24, "shared_element:scaleType"
+    const-string v24, "shared_element:scaleType"
 
     const/16 v25, -0x1
 
@@ -1035,34 +920,28 @@
 
     move-result v15
 
-    .line 428
     .local v15, "scaleTypeInt":I
     if-ltz v15, :cond_1
 
     move-object/from16 v9, p1
 
-    .line 429
     check-cast v9, Landroid/widget/ImageView;
 
-    .line 430
     .local v9, "imageView":Landroid/widget/ImageView;
     sget-object v24, Landroid/app/ActivityTransitionCoordinator;->SCALE_TYPE_VALUES:[Landroid/widget/ImageView$ScaleType;
 
     aget-object v14, v24, v15
 
-    .line 431
     .local v14, "scaleType":Landroid/widget/ImageView$ScaleType;
     invoke-virtual {v9, v14}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 432
     sget-object v24, Landroid/widget/ImageView$ScaleType;->MATRIX:Landroid/widget/ImageView$ScaleType;
 
     move-object/from16 v0, v24
 
     if-ne v14, v0, :cond_1
 
-    .line 433
-    const-string/jumbo v24, "shared_element:imageMatrix"
+    const-string v24, "shared_element:imageMatrix"
 
     move-object/from16 v0, v16
 
@@ -1072,24 +951,21 @@
 
     move-result-object v12
 
-    .line 434
     .local v12, "matrixValues":[F
     move-object/from16 v0, p4
 
     invoke-virtual {v0, v12}, Landroid/graphics/Matrix;->setValues([F)V
 
-    .line 435
     move-object/from16 v0, p4
 
     invoke-virtual {v9, v0}, Landroid/widget/ImageView;->setImageMatrix(Landroid/graphics/Matrix;)V
 
-    .line 440
     .end local v9    # "imageView":Landroid/widget/ImageView;
     .end local v12    # "matrixValues":[F
     .end local v14    # "scaleType":Landroid/widget/ImageView$ScaleType;
     .end local v15    # "scaleTypeInt":I
     :cond_1
-    const-string/jumbo v24, "shared_element:translationZ"
+    const-string v24, "shared_element:translationZ"
 
     move-object/from16 v0, v16
 
@@ -1099,7 +975,6 @@
 
     move-result v23
 
-    .line 441
     .local v23, "z":F
     move-object/from16 v0, p1
 
@@ -1107,8 +982,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationZ(F)V
 
-    .line 442
-    const-string/jumbo v24, "shared_element:elevation"
+    const-string v24, "shared_element:elevation"
 
     move-object/from16 v0, v16
 
@@ -1118,14 +992,12 @@
 
     move-result v6
 
-    .line 443
     .local v6, "elevation":F
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v6}, Landroid/view/View;->setElevation(F)V
 
-    .line 445
-    const-string/jumbo v24, "shared_element:screenLeft"
+    const-string v24, "shared_element:screenLeft"
 
     move-object/from16 v0, v16
 
@@ -1135,9 +1007,8 @@
 
     move-result v10
 
-    .line 446
     .local v10, "left":F
-    const-string/jumbo v24, "shared_element:screenTop"
+    const-string v24, "shared_element:screenTop"
 
     move-object/from16 v0, v16
 
@@ -1147,9 +1018,8 @@
 
     move-result v17
 
-    .line 447
     .local v17, "top":F
-    const-string/jumbo v24, "shared_element:screenRight"
+    const-string v24, "shared_element:screenRight"
 
     move-object/from16 v0, v16
 
@@ -1159,9 +1029,8 @@
 
     move-result v13
 
-    .line 448
     .local v13, "right":F
-    const-string/jumbo v24, "shared_element:screenBottom"
+    const-string v24, "shared_element:screenBottom"
 
     move-object/from16 v0, v16
 
@@ -1171,11 +1040,9 @@
 
     move-result v5
 
-    .line 450
     .local v5, "bottom":F
     if-eqz p6, :cond_2
 
-    .line 451
     const/16 v24, 0x0
 
     aget v24, p6, v24
@@ -1188,7 +1055,6 @@
 
     sub-float v10, v10, v24
 
-    .line 452
     const/16 v24, 0x1
 
     aget v24, p6, v24
@@ -1201,7 +1067,6 @@
 
     sub-float v17, v17, v24
 
-    .line 453
     const/16 v24, 0x0
 
     aget v24, p6, v24
@@ -1214,7 +1079,6 @@
 
     sub-float v13, v13, v24
 
-    .line 454
     const/16 v24, 0x1
 
     aget v24, p6, v24
@@ -1227,19 +1091,16 @@
 
     sub-float v5, v5, v24
 
-    .line 483
     :goto_1
     invoke-static {v10}, Ljava/lang/Math;->round(F)I
 
     move-result v21
 
-    .line 484
     .local v21, "x":I
     invoke-static/range {v17 .. v17}, Ljava/lang/Math;->round(F)I
 
     move-result v22
 
-    .line 485
     .local v22, "y":I
     invoke-static {v13}, Ljava/lang/Math;->round(F)I
 
@@ -1247,7 +1108,6 @@
 
     sub-int v19, v24, v21
 
-    .line 486
     .local v19, "width":I
     invoke-static {v5}, Ljava/lang/Math;->round(F)I
 
@@ -1255,7 +1115,6 @@
 
     sub-int v7, v24, v22
 
-    .line 487
     .local v7, "height":I
     const/high16 v24, 0x40000000    # 2.0f
 
@@ -1267,7 +1126,6 @@
 
     move-result v20
 
-    .line 488
     .local v20, "widthSpec":I
     const/high16 v24, 0x40000000    # 2.0f
 
@@ -1277,7 +1135,6 @@
 
     move-result v8
 
-    .line 489
     .local v8, "heightSpec":I
     move-object/from16 v0, p1
 
@@ -1285,7 +1142,6 @@
 
     invoke-virtual {v0, v1, v8}, Landroid/view/View;->measure(II)V
 
-    .line 491
     add-int v24, v21, v19
 
     add-int v25, v22, v7
@@ -1304,7 +1160,6 @@
 
     goto/16 :goto_0
 
-    .line 457
     .end local v7    # "height":I
     .end local v8    # "heightSpec":I
     .end local v19    # "width":I
@@ -1320,22 +1175,18 @@
 
     invoke-direct {v0, v1, v2}, Landroid/app/ActivityTransitionCoordinator;->getSharedElementParentMatrix(Landroid/view/View;Landroid/graphics/Matrix;)V
 
-    .line 458
     move-object/from16 v0, p5
 
     move/from16 v1, v17
 
     invoke-virtual {v0, v10, v1, v13, v5}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 459
     invoke-virtual/range {p4 .. p5}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;)Z
 
-    .line 461
     move-object/from16 v0, p5
 
     iget v11, v0, Landroid/graphics/RectF;->left:F
 
-    .line 462
     .local v11, "leftInParent":F
     move-object/from16 v0, p5
 
@@ -1343,7 +1194,6 @@
 
     move/from16 v18, v0
 
-    .line 465
     .local v18, "topInParent":F
     invoke-virtual/range {p1 .. p1}, Landroid/view/View;->getInverseMatrix()Landroid/graphics/Matrix;
 
@@ -1355,18 +1205,15 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;)Z
 
-    .line 466
     invoke-virtual/range {p5 .. p5}, Landroid/graphics/RectF;->width()F
 
     move-result v19
 
-    .line 467
     .local v19, "width":F
     invoke-virtual/range {p5 .. p5}, Landroid/graphics/RectF;->height()F
 
     move-result v7
 
-    .line 470
     .local v7, "height":F
     const/16 v24, 0x0
 
@@ -1376,7 +1223,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setLeft(I)V
 
-    .line 471
     const/16 v24, 0x0
 
     move-object/from16 v0, p1
@@ -1385,7 +1231,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTop(I)V
 
-    .line 472
     invoke-static/range {v19 .. v19}, Ljava/lang/Math;->round(F)I
 
     move-result v24
@@ -1396,7 +1241,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setRight(I)V
 
-    .line 473
     invoke-static {v7}, Ljava/lang/Math;->round(F)I
 
     move-result v24
@@ -1407,7 +1251,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBottom(I)V
 
-    .line 474
     const/16 v24, 0x0
 
     const/16 v25, 0x0
@@ -1422,7 +1265,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v7}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 475
     invoke-virtual/range {p1 .. p1}, Landroid/view/View;->getMatrix()Landroid/graphics/Matrix;
 
     move-result-object v24
@@ -1433,7 +1275,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;)Z
 
-    .line 477
     move-object/from16 v0, p5
 
     iget v0, v0, Landroid/graphics/RectF;->left:F
@@ -1442,7 +1283,6 @@
 
     sub-float v10, v11, v24
 
-    .line 478
     move-object/from16 v0, p5
 
     iget v0, v0, Landroid/graphics/RectF;->top:F
@@ -1451,10 +1291,8 @@
 
     sub-float v17, v18, v24
 
-    .line 479
     add-float v13, v10, v19
 
-    .line 480
     add-float v5, v17, v7
 
     goto/16 :goto_1
@@ -1474,11 +1312,9 @@
     .end annotation
 
     .prologue
-    .line 245
     .local p1, "sharedElements":Landroid/util/ArrayMap;, "Landroid/util/ArrayMap<Ljava/lang/String;Landroid/view/View;>;"
     const/4 v1, 0x1
 
-    .line 246
     .local v1, "isFirstRun":Z
     :goto_0
     invoke-virtual {p1}, Landroid/util/ArrayMap;->isEmpty()Z
@@ -1487,12 +1323,10 @@
 
     if-nez v5, :cond_4
 
-    .line 247
     invoke-virtual {p1}, Landroid/util/ArrayMap;->size()I
 
     move-result v3
 
-    .line 248
     .local v3, "numSharedElements":I
     add-int/lit8 v0, v3, -0x1
 
@@ -1500,14 +1334,12 @@
     :goto_1
     if-ltz v0, :cond_3
 
-    .line 249
     invoke-virtual {p1, v0}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Landroid/view/View;
 
-    .line 250
     .local v4, "view":Landroid/view/View;
     invoke-virtual {p1, v0}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
 
@@ -1515,7 +1347,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 251
     .local v2, "name":Ljava/lang/String;
     if-eqz v1, :cond_2
 
@@ -1529,18 +1360,15 @@
 
     if-nez v2, :cond_2
 
-    .line 252
     :cond_0
     invoke-virtual {p1, v0}, Landroid/util/ArrayMap;->removeAt(I)Ljava/lang/Object;
 
-    .line 248
     :cond_1
     :goto_2
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_1
 
-    .line 253
     :cond_2
     invoke-static {v4, p1}, Landroid/app/ActivityTransitionCoordinator;->isNested(Landroid/view/View;Landroid/util/ArrayMap;)Z
 
@@ -1548,31 +1376,25 @@
 
     if-nez v5, :cond_1
 
-    .line 254
     iget-object v5, p0, Landroid/app/ActivityTransitionCoordinator;->mSharedElementNames:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 255
     iget-object v5, p0, Landroid/app/ActivityTransitionCoordinator;->mSharedElements:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 256
     invoke-virtual {p1, v0}, Landroid/util/ArrayMap;->removeAt(I)Ljava/lang/Object;
 
     goto :goto_2
 
-    .line 259
     .end local v2    # "name":Ljava/lang/String;
     .end local v4    # "view":Landroid/view/View;
     :cond_3
     const/4 v1, 0x0
 
-    .line 260
     goto :goto_0
 
-    .line 261
     .end local v0    # "i":I
     .end local v3    # "numSharedElements":I
     :cond_4
@@ -1585,7 +1407,6 @@
     .param p2, "setTransitionAlpha"    # Z
 
     .prologue
-    .line 710
     iget-object v1, p0, Landroid/app/ActivityTransitionCoordinator;->mOriginalAlphas:Landroid/util/ArrayMap;
 
     invoke-virtual {v1, p1}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1594,27 +1415,22 @@
 
     check-cast v0, Ljava/lang/Float;
 
-    .line 711
     .local v0, "alpha":Ljava/lang/Float;
     if-eqz v0, :cond_0
 
-    .line 712
     invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
 
     move-result v1
 
     invoke-virtual {p1, v1}, Landroid/view/View;->setAlpha(F)V
 
-    .line 714
     :cond_0
     if-eqz p2, :cond_1
 
-    .line 715
     const/high16 v1, 0x3f800000    # 1.0f
 
     invoke-virtual {p1, v1}, Landroid/view/View;->setTransitionAlpha(F)V
 
-    .line 717
     :cond_1
     return-void
 .end method
@@ -1623,7 +1439,6 @@
     .locals 3
 
     .prologue
-    .line 893
     iget-boolean v2, p0, Landroid/app/ActivityTransitionCoordinator;->mViewsTransitionComplete:Z
 
     if-eqz v2, :cond_1
@@ -1632,32 +1447,26 @@
 
     if-eqz v2, :cond_1
 
-    .line 894
     invoke-virtual {p0}, Landroid/app/ActivityTransitionCoordinator;->getDecor()Landroid/view/ViewGroup;
 
     move-result-object v0
 
-    .line 895
     .local v0, "decor":Landroid/view/View;
     if-eqz v0, :cond_0
 
-    .line 896
     invoke-virtual {v0}, Landroid/view/View;->getViewRootImpl()Landroid/view/ViewRootImpl;
 
     move-result-object v1
 
-    .line 897
     .local v1, "viewRoot":Landroid/view/ViewRootImpl;
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Landroid/view/ViewRootImpl;->setPausedForTransition(Z)V
 
-    .line 899
     .end local v1    # "viewRoot":Landroid/view/ViewRootImpl;
     :cond_0
     invoke-virtual {p0}, Landroid/app/ActivityTransitionCoordinator;->onTransitionsComplete()V
 
-    .line 901
     .end local v0    # "decor":Landroid/view/View;
     :cond_1
     return-void
@@ -1669,12 +1478,10 @@
     .locals 1
 
     .prologue
-    .line 786
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/app/ActivityTransitionCoordinator;->mPendingTransition:Ljava/lang/Runnable;
 
-    .line 787
     iget-boolean v0, p0, Landroid/app/ActivityTransitionCoordinator;->mIsStartingTransition:Z
 
     return v0
@@ -1684,24 +1491,20 @@
     .locals 7
 
     .prologue
-    .line 664
     new-instance v3, Landroid/os/Bundle;
 
     invoke-direct {v3}, Landroid/os/Bundle;-><init>()V
 
-    .line 665
     .local v3, "bundle":Landroid/os/Bundle;
     new-instance v5, Landroid/graphics/RectF;
 
     invoke-direct {v5}, Landroid/graphics/RectF;-><init>()V
 
-    .line 666
     .local v5, "tempBounds":Landroid/graphics/RectF;
     new-instance v4, Landroid/graphics/Matrix;
 
     invoke-direct {v4}, Landroid/graphics/Matrix;-><init>()V
 
-    .line 667
     .local v4, "tempMatrix":Landroid/graphics/Matrix;
     const/4 v6, 0x0
 
@@ -1715,7 +1518,6 @@
 
     if-ge v6, v0, :cond_0
 
-    .line 668
     iget-object v0, p0, Landroid/app/ActivityTransitionCoordinator;->mSharedElements:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1724,7 +1526,6 @@
 
     check-cast v1, Landroid/view/View;
 
-    .line 669
     .local v1, "sharedElement":Landroid/view/View;
     iget-object v0, p0, Landroid/app/ActivityTransitionCoordinator;->mSharedElementNames:Ljava/util/ArrayList;
 
@@ -1737,15 +1538,12 @@
     .local v2, "name":Ljava/lang/String;
     move-object v0, p0
 
-    .line 670
     invoke-virtual/range {v0 .. v5}, Landroid/app/ActivityTransitionCoordinator;->captureSharedElementState(Landroid/view/View;Ljava/lang/String;Landroid/os/Bundle;Landroid/graphics/Matrix;Landroid/graphics/RectF;)V
 
-    .line 667
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_0
 
-    .line 672
     .end local v1    # "sharedElement":Landroid/view/View;
     .end local v2    # "name":Ljava/lang/String;
     :cond_0
@@ -1763,19 +1561,15 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 731
     new-instance v4, Landroid/os/Bundle;
 
     invoke-direct {v4}, Landroid/os/Bundle;-><init>()V
 
-    .line 732
     .local v4, "sharedElementBundle":Landroid/os/Bundle;
     invoke-virtual {p4}, Landroid/graphics/Matrix;->reset()V
 
-    .line 733
     invoke-virtual {p1, p4}, Landroid/view/View;->transformMatrixToGlobal(Landroid/graphics/Matrix;)V
 
-    .line 734
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
     move-result v5
@@ -1790,39 +1584,33 @@
 
     invoke-virtual {p5, v7, v7, v5, v6}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 735
     invoke-virtual {p4, p5}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;)Z
 
-    .line 737
-    const-string/jumbo v5, "shared_element:screenLeft"
+    const-string v5, "shared_element:screenLeft"
 
     iget v6, p5, Landroid/graphics/RectF;->left:F
 
     invoke-virtual {v4, v5, v6}, Landroid/os/Bundle;->putFloat(Ljava/lang/String;F)V
 
-    .line 738
-    const-string/jumbo v5, "shared_element:screenRight"
+    const-string v5, "shared_element:screenRight"
 
     iget v6, p5, Landroid/graphics/RectF;->right:F
 
     invoke-virtual {v4, v5, v6}, Landroid/os/Bundle;->putFloat(Ljava/lang/String;F)V
 
-    .line 739
-    const-string/jumbo v5, "shared_element:screenTop"
+    const-string v5, "shared_element:screenTop"
 
     iget v6, p5, Landroid/graphics/RectF;->top:F
 
     invoke-virtual {v4, v5, v6}, Landroid/os/Bundle;->putFloat(Ljava/lang/String;F)V
 
-    .line 740
-    const-string/jumbo v5, "shared_element:screenBottom"
+    const-string v5, "shared_element:screenBottom"
 
     iget v6, p5, Landroid/graphics/RectF;->bottom:F
 
     invoke-virtual {v4, v5, v6}, Landroid/os/Bundle;->putFloat(Ljava/lang/String;F)V
 
-    .line 741
-    const-string/jumbo v5, "shared_element:translationZ"
+    const-string v5, "shared_element:translationZ"
 
     invoke-virtual {p1}, Landroid/view/View;->getTranslationZ()F
 
@@ -1830,8 +1618,7 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/os/Bundle;->putFloat(Ljava/lang/String;F)V
 
-    .line 742
-    const-string/jumbo v5, "shared_element:elevation"
+    const-string v5, "shared_element:elevation"
 
     invoke-virtual {p1}, Landroid/view/View;->getElevation()F
 
@@ -1839,32 +1626,26 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/os/Bundle;->putFloat(Ljava/lang/String;F)V
 
-    .line 744
     const/4 v0, 0x0
 
-    .line 745
     .local v0, "bitmap":Landroid/os/Parcelable;
     iget-object v5, p0, Landroid/app/ActivityTransitionCoordinator;->mListener:Landroid/app/SharedElementCallback;
 
     if-eqz v5, :cond_0
 
-    .line 746
     iget-object v5, p0, Landroid/app/ActivityTransitionCoordinator;->mListener:Landroid/app/SharedElementCallback;
 
     invoke-virtual {v5, p1, p4, p5}, Landroid/app/SharedElementCallback;->onCaptureSharedElementSnapshot(Landroid/view/View;Landroid/graphics/Matrix;Landroid/graphics/RectF;)Landroid/os/Parcelable;
 
     move-result-object v0
 
-    .line 749
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 750
-    const-string/jumbo v5, "shared_element:bitmap"
+    const-string v5, "shared_element:bitmap"
 
     invoke-virtual {v4, v5, v0}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 753
     :cond_1
     instance-of v5, p1, Landroid/widget/ImageView;
 
@@ -1872,10 +1653,8 @@
 
     move-object v1, p1
 
-    .line 754
     check-cast v1, Landroid/widget/ImageView;
 
-    .line 755
     .local v1, "imageView":Landroid/widget/ImageView;
     invoke-virtual {v1}, Landroid/widget/ImageView;->getScaleType()Landroid/widget/ImageView$ScaleType;
 
@@ -1885,13 +1664,11 @@
 
     move-result v3
 
-    .line 756
     .local v3, "scaleTypeInt":I
-    const-string/jumbo v5, "shared_element:scaleType"
+    const-string v5, "shared_element:scaleType"
 
     invoke-virtual {v4, v5, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 757
     invoke-virtual {v1}, Landroid/widget/ImageView;->getScaleType()Landroid/widget/ImageView$ScaleType;
 
     move-result-object v5
@@ -1900,12 +1677,10 @@
 
     if-ne v5, v6, :cond_2
 
-    .line 758
     const/16 v5, 0x9
 
     new-array v2, v5, [F
 
-    .line 759
     .local v2, "matrix":[F
     invoke-virtual {v1}, Landroid/widget/ImageView;->getImageMatrix()Landroid/graphics/Matrix;
 
@@ -1913,19 +1688,16 @@
 
     invoke-virtual {v5, v2}, Landroid/graphics/Matrix;->getValues([F)V
 
-    .line 760
-    const-string/jumbo v5, "shared_element:imageMatrix"
+    const-string v5, "shared_element:imageMatrix"
 
     invoke-virtual {v4, v5, v2}, Landroid/os/Bundle;->putFloatArray(Ljava/lang/String;[F)V
 
-    .line 764
     .end local v1    # "imageView":Landroid/widget/ImageView;
     .end local v2    # "matrix":[F
     .end local v3    # "scaleTypeInt":I
     :cond_2
     invoke-virtual {p3, p2, v4}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 765
     return-void
 .end method
 
@@ -1935,35 +1707,26 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 677
     iput-object v1, p0, Landroid/app/ActivityTransitionCoordinator;->mWindow:Landroid/view/Window;
 
-    .line 678
     iget-object v0, p0, Landroid/app/ActivityTransitionCoordinator;->mSharedElements:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 679
     iput-object v1, p0, Landroid/app/ActivityTransitionCoordinator;->mTransitioningViews:Ljava/util/ArrayList;
 
-    .line 680
     iget-object v0, p0, Landroid/app/ActivityTransitionCoordinator;->mOriginalAlphas:Landroid/util/ArrayMap;
 
     invoke-virtual {v0}, Landroid/util/ArrayMap;->clear()V
 
-    .line 681
     iput-object v1, p0, Landroid/app/ActivityTransitionCoordinator;->mResultReceiver:Landroid/os/ResultReceiver;
 
-    .line 682
     iput-object v1, p0, Landroid/app/ActivityTransitionCoordinator;->mPendingTransition:Ljava/lang/Runnable;
 
-    .line 683
     iput-object v1, p0, Landroid/app/ActivityTransitionCoordinator;->mListener:Landroid/app/SharedElementCallback;
 
-    .line 684
     iput-object v1, p0, Landroid/app/ActivityTransitionCoordinator;->mSharedElementParentMatrices:Ljava/util/ArrayList;
 
-    .line 685
     return-void
 .end method
 
@@ -1973,25 +1736,20 @@
     .param p2, "includeTransitioningViews"    # Z
 
     .prologue
-    .line 376
     if-eqz p1, :cond_0
 
-    .line 377
     invoke-virtual {p1}, Landroid/transition/Transition;->clone()Landroid/transition/Transition;
 
     move-result-object p1
 
-    .line 378
     iget-object v0, p0, Landroid/app/ActivityTransitionCoordinator;->mEpicenterCallback:Landroid/app/ActivityTransitionCoordinator$FixedEpicenterCallback;
 
     invoke-virtual {p1, v0}, Landroid/transition/Transition;->setEpicenterCallback(Landroid/transition/Transition$EpicenterCallback;)V
 
-    .line 379
     invoke-virtual {p0, p1, p2}, Landroid/app/ActivityTransitionCoordinator;->setTargets(Landroid/transition/Transition;Z)Landroid/transition/Transition;
 
     move-result-object p1
 
-    .line 381
     :cond_0
     return-object p1
 .end method
@@ -2009,7 +1767,6 @@
     .end annotation
 
     .prologue
-    .line 339
     new-instance v0, Ljava/util/ArrayList;
 
     iget-object v1, p0, Landroid/app/ActivityTransitionCoordinator;->mSharedElements:Ljava/util/ArrayList;
@@ -2038,27 +1795,22 @@
     .end annotation
 
     .prologue
-    .line 610
     .local p2, "names":Ljava/util/Collection;, "Ljava/util/Collection<Ljava/lang/String;>;"
     invoke-interface/range {p2 .. p2}, Ljava/util/Collection;->size()I
 
     move-result v10
 
-    .line 611
     .local v10, "numSharedElements":I
     new-instance v13, Ljava/util/ArrayList;
 
     invoke-direct {v13, v10}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 612
     .local v13, "snapshots":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/view/View;>;"
     if-nez v10, :cond_1
 
-    .line 637
     :cond_0
     return-object v13
 
-    .line 615
     :cond_1
     invoke-virtual {p0}, Landroid/app/ActivityTransitionCoordinator;->getWindow()Landroid/view/Window;
 
@@ -2068,32 +1820,26 @@
 
     move-result-object v7
 
-    .line 616
     .local v7, "context":Landroid/content/Context;
     const/4 v0, 0x2
 
     new-array v6, v0, [I
 
-    .line 617
     .local v6, "decorLoc":[I
     invoke-virtual {p0}, Landroid/app/ActivityTransitionCoordinator;->getDecor()Landroid/view/ViewGroup;
 
     move-result-object v8
 
-    .line 618
     .local v8, "decorView":Landroid/view/ViewGroup;
     if-eqz v8, :cond_2
 
-    .line 619
     invoke-virtual {v8, v6}, Landroid/view/ViewGroup;->getLocationOnScreen([I)V
 
-    .line 621
     :cond_2
     new-instance v4, Landroid/graphics/Matrix;
 
     invoke-direct {v4}, Landroid/graphics/Matrix;-><init>()V
 
-    .line 622
     .local v4, "tempMatrix":Landroid/graphics/Matrix;
     invoke-interface/range {p2 .. p2}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
@@ -2113,28 +1859,23 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 623
     .local v2, "name":Ljava/lang/String;
     invoke-virtual {p1, v2}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object v12
 
-    .line 624
     .local v12, "sharedElementBundle":Landroid/os/Bundle;
     const/4 v1, 0x0
 
-    .line 625
     .local v1, "snapshot":Landroid/view/View;
     if-eqz v12, :cond_4
 
-    .line 626
-    const-string/jumbo v0, "shared_element:bitmap"
+    const-string v0, "shared_element:bitmap"
 
     invoke-virtual {v12, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object v11
 
-    .line 627
     .local v11, "parcelable":Landroid/os/Parcelable;
     if-eqz v11, :cond_3
 
@@ -2142,18 +1883,15 @@
 
     if-eqz v0, :cond_3
 
-    .line 628
     iget-object v0, p0, Landroid/app/ActivityTransitionCoordinator;->mListener:Landroid/app/SharedElementCallback;
 
     invoke-virtual {v0, v7, v11}, Landroid/app/SharedElementCallback;->onCreateSnapshotView(Landroid/content/Context;Landroid/os/Parcelable;)Landroid/view/View;
 
     move-result-object v1
 
-    .line 630
     :cond_3
     if-eqz v1, :cond_4
 
-    .line 631
     const/4 v5, 0x0
 
     move-object v0, p0
@@ -2162,7 +1900,6 @@
 
     invoke-direct/range {v0 .. v6}, Landroid/app/ActivityTransitionCoordinator;->setSharedElementState(Landroid/view/View;Ljava/lang/String;Landroid/os/Bundle;Landroid/graphics/Matrix;Landroid/graphics/RectF;[I)V
 
-    .line 635
     .end local v11    # "parcelable":Landroid/os/Parcelable;
     :cond_4
     invoke-virtual {v13, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -2183,7 +1920,6 @@
     .end annotation
 
     .prologue
-    .line 327
     iget-object v0, p0, Landroid/app/ActivityTransitionCoordinator;->mSharedElementNames:Ljava/util/ArrayList;
 
     return-object v0
@@ -2202,7 +1938,6 @@
     .end annotation
 
     .prologue
-    .line 342
     iget-object v0, p0, Landroid/app/ActivityTransitionCoordinator;->mAllSharedElementNames:Ljava/util/ArrayList;
 
     return-object v0
@@ -2212,7 +1947,6 @@
     .locals 1
 
     .prologue
-    .line 299
     iget-object v0, p0, Landroid/app/ActivityTransitionCoordinator;->mWindow:Landroid/view/Window;
 
     if-nez v0, :cond_0
@@ -2238,7 +1972,6 @@
     .locals 2
 
     .prologue
-    .line 688
     invoke-virtual {p0}, Landroid/app/ActivityTransitionCoordinator;->getWindow()Landroid/view/Window;
 
     move-result-object v0
@@ -2263,7 +1996,6 @@
     .end annotation
 
     .prologue
-    .line 331
     new-instance v1, Ljava/util/ArrayList;
 
     iget-object v2, p0, Landroid/app/ActivityTransitionCoordinator;->mSharedElements:Ljava/util/ArrayList;
@@ -2274,7 +2006,6 @@
 
     invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 332
     .local v1, "names":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const/4 v0, 0x0
 
@@ -2288,7 +2019,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 333
     iget-object v2, p0, Landroid/app/ActivityTransitionCoordinator;->mSharedElements:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -2303,12 +2033,10 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 332
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 335
     :cond_0
     return-object v1
 .end method
@@ -2320,7 +2048,6 @@
     .locals 1
 
     .prologue
-    .line 295
     iget-object v0, p0, Landroid/app/ActivityTransitionCoordinator;->mWindow:Landroid/view/Window;
 
     return-object v0
@@ -2339,13 +2066,11 @@
     .end annotation
 
     .prologue
-    .line 692
     .local p1, "views":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/view/View;>;"
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 693
     .local v0, "count":I
     const/4 v1, 0x0
 
@@ -2353,14 +2078,12 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 694
     invoke-virtual {p1, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Landroid/view/View;
 
-    .line 695
     .local v2, "view":Landroid/view/View;
     iget-object v3, p0, Landroid/app/ActivityTransitionCoordinator;->mOriginalAlphas:Landroid/util/ArrayMap;
 
@@ -2370,7 +2093,6 @@
 
     if-nez v3, :cond_0
 
-    .line 696
     iget-object v3, p0, Landroid/app/ActivityTransitionCoordinator;->mOriginalAlphas:Landroid/util/ArrayMap;
 
     invoke-virtual {v2}, Landroid/view/View;->getAlpha()F
@@ -2383,18 +2105,15 @@
 
     invoke-virtual {v3, v2, v4}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 698
     :cond_0
     const/4 v3, 0x0
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setAlpha(F)V
 
-    .line 693
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 700
     .end local v2    # "view":Landroid/view/View;
     :cond_1
     return-void
@@ -2404,7 +2123,6 @@
     .locals 1
 
     .prologue
-    .line 880
     iget-boolean v0, p0, Landroid/app/ActivityTransitionCoordinator;->mViewsTransitionComplete:Z
 
     return v0
@@ -2432,18 +2150,15 @@
     .end annotation
 
     .prologue
-    .line 399
     .local p1, "accepted":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     .local p2, "localViews":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/view/View;>;"
     new-instance v2, Landroid/util/ArrayMap;
 
     invoke-direct {v2}, Landroid/util/ArrayMap;-><init>()V
 
-    .line 400
     .local v2, "sharedElements":Landroid/util/ArrayMap;, "Landroid/util/ArrayMap<Ljava/lang/String;Landroid/view/View;>;"
     if-eqz p1, :cond_0
 
-    .line 401
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -2454,7 +2169,6 @@
 
     if-ge v1, v3, :cond_1
 
-    .line 402
     invoke-virtual {p1, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -2465,26 +2179,21 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 401
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 405
     .end local v1    # "i":I
     :cond_0
     invoke-virtual {p0}, Landroid/app/ActivityTransitionCoordinator;->getDecor()Landroid/view/ViewGroup;
 
     move-result-object v0
 
-    .line 406
     .local v0, "decorView":Landroid/view/ViewGroup;
     if-eqz v0, :cond_1
 
-    .line 407
     invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->findNamedViews(Ljava/util/Map;)V
 
-    .line 410
     .end local v0    # "decorView":Landroid/view/ViewGroup;
     :cond_1
     return-object v2
@@ -2494,7 +2203,6 @@
     .locals 1
 
     .prologue
-    .line 816
     const/4 v0, 0x1
 
     return v0
@@ -2504,14 +2212,12 @@
     .locals 9
 
     .prologue
-    .line 832
     iget-object v8, p0, Landroid/app/ActivityTransitionCoordinator;->mGhostViewListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v8}, Ljava/util/ArrayList;->size()I
 
     move-result v4
 
-    .line 833
     .local v4, "numListeners":I
     const/4 v2, 0x0
 
@@ -2519,7 +2225,6 @@
     :goto_0
     if-ge v2, v4, :cond_0
 
-    .line 834
     iget-object v8, p0, Landroid/app/ActivityTransitionCoordinator;->mGhostViewListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v8, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -2528,7 +2233,6 @@
 
     check-cast v3, Landroid/app/ActivityTransitionCoordinator$GhostViewListeners;
 
-    .line 835
     .local v3, "listener":Landroid/app/ActivityTransitionCoordinator$GhostViewListeners;
     invoke-virtual {v3}, Landroid/app/ActivityTransitionCoordinator$GhostViewListeners;->getView()Landroid/view/View;
 
@@ -2540,7 +2244,6 @@
 
     check-cast v6, Landroid/view/ViewGroup;
 
-    .line 836
     .local v6, "parent":Landroid/view/ViewGroup;
     invoke-virtual {v6}, Landroid/view/ViewGroup;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
@@ -2548,12 +2251,10 @@
 
     invoke-virtual {v8, v3}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
-    .line 833
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 838
     .end local v3    # "listener":Landroid/app/ActivityTransitionCoordinator$GhostViewListeners;
     .end local v6    # "parent":Landroid/view/ViewGroup;
     :cond_0
@@ -2561,7 +2262,6 @@
 
     invoke-virtual {v8}, Ljava/util/ArrayList;->clear()V
 
-    .line 840
     iget-object v8, p0, Landroid/app/ActivityTransitionCoordinator;->mWindow:Landroid/view/Window;
 
     if-eqz v8, :cond_1
@@ -2574,26 +2274,21 @@
 
     if-nez v8, :cond_2
 
-    .line 852
     :cond_1
     return-void
 
-    .line 843
     :cond_2
     invoke-virtual {p0}, Landroid/app/ActivityTransitionCoordinator;->getDecor()Landroid/view/ViewGroup;
 
     move-result-object v1
 
-    .line 844
     .local v1, "decor":Landroid/view/ViewGroup;
     if-eqz v1, :cond_1
 
-    .line 845
     invoke-virtual {v1}, Landroid/view/ViewGroup;->getOverlay()Landroid/view/ViewGroupOverlay;
 
     move-result-object v5
 
-    .line 846
     .local v5, "overlay":Landroid/view/ViewGroupOverlay;
     iget-object v8, p0, Landroid/app/ActivityTransitionCoordinator;->mSharedElements:Ljava/util/ArrayList;
 
@@ -2601,14 +2296,12 @@
 
     move-result v0
 
-    .line 847
     .local v0, "count":I
     const/4 v2, 0x0
 
     :goto_1
     if-ge v2, v0, :cond_1
 
-    .line 848
     iget-object v8, p0, Landroid/app/ActivityTransitionCoordinator;->mSharedElements:Ljava/util/ArrayList;
 
     invoke-virtual {v8, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -2617,11 +2310,9 @@
 
     check-cast v7, Landroid/view/View;
 
-    .line 849
     .local v7, "sharedElement":Landroid/view/View;
     invoke-static {v7}, Landroid/view/GhostView;->removeGhost(Landroid/view/View;)V
 
-    .line 847
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
@@ -2631,7 +2322,6 @@
     .locals 9
 
     .prologue
-    .line 791
     iget-object v8, p0, Landroid/app/ActivityTransitionCoordinator;->mWindow:Landroid/view/Window;
 
     if-eqz v8, :cond_0
@@ -2644,43 +2334,35 @@
 
     if-nez v8, :cond_1
 
-    .line 813
     :cond_0
     return-void
 
-    .line 794
     :cond_1
     invoke-direct {p0}, Landroid/app/ActivityTransitionCoordinator;->setSharedElementMatrices()V
 
-    .line 795
     iget-object v8, p0, Landroid/app/ActivityTransitionCoordinator;->mSharedElements:Ljava/util/ArrayList;
 
     invoke-virtual {v8}, Ljava/util/ArrayList;->size()I
 
     move-result v4
 
-    .line 796
     .local v4, "numSharedElements":I
     invoke-virtual {p0}, Landroid/app/ActivityTransitionCoordinator;->getDecor()Landroid/view/ViewGroup;
 
     move-result-object v0
 
-    .line 797
     .local v0, "decor":Landroid/view/ViewGroup;
     if-eqz v0, :cond_0
 
-    .line 798
     invoke-virtual {p0}, Landroid/app/ActivityTransitionCoordinator;->moveSharedElementWithParent()Z
 
     move-result v3
 
-    .line 799
     .local v3, "moveWithParent":Z
     new-instance v6, Landroid/graphics/Matrix;
 
     invoke-direct {v6}, Landroid/graphics/Matrix;-><init>()V
 
-    .line 800
     .local v6, "tempMatrix":Landroid/graphics/Matrix;
     const/4 v1, 0x0
 
@@ -2688,7 +2370,6 @@
     :goto_0
     if-ge v1, v4, :cond_0
 
-    .line 801
     iget-object v8, p0, Landroid/app/ActivityTransitionCoordinator;->mSharedElements:Ljava/util/ArrayList;
 
     invoke-virtual {v8, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -2697,11 +2378,9 @@
 
     check-cast v7, Landroid/view/View;
 
-    .line 802
     .local v7, "view":Landroid/view/View;
     invoke-virtual {v6}, Landroid/graphics/Matrix;->reset()V
 
-    .line 803
     iget-object v8, p0, Landroid/app/ActivityTransitionCoordinator;->mSharedElementParentMatrices:Ljava/util/ArrayList;
 
     invoke-virtual {v8, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -2712,17 +2391,14 @@
 
     invoke-virtual {v8, v6}, Landroid/graphics/Matrix;->invert(Landroid/graphics/Matrix;)Z
 
-    .line 804
     invoke-static {v7, v0, v6}, Landroid/view/GhostView;->addGhost(Landroid/view/View;Landroid/view/ViewGroup;Landroid/graphics/Matrix;)Landroid/view/GhostView;
 
-    .line 805
     invoke-virtual {v7}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v5
 
     check-cast v5, Landroid/view/ViewGroup;
 
-    .line 806
     .local v5, "parent":Landroid/view/ViewGroup;
     if-eqz v3, :cond_2
 
@@ -2732,12 +2408,10 @@
 
     if-nez v8, :cond_2
 
-    .line 807
     new-instance v2, Landroid/app/ActivityTransitionCoordinator$GhostViewListeners;
 
     invoke-direct {v2, v7, v5, v0}, Landroid/app/ActivityTransitionCoordinator$GhostViewListeners;-><init>(Landroid/view/View;Landroid/view/View;Landroid/view/ViewGroup;)V
 
-    .line 808
     .local v2, "listener":Landroid/app/ActivityTransitionCoordinator$GhostViewListeners;
     invoke-virtual {v5}, Landroid/view/ViewGroup;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
@@ -2745,12 +2419,10 @@
 
     invoke-virtual {v8, v2}, Landroid/view/ViewTreeObserver;->addOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
-    .line 809
     iget-object v8, p0, Landroid/app/ActivityTransitionCoordinator;->mGhostViewListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v8, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 800
     .end local v2    # "listener":Landroid/app/ActivityTransitionCoordinator$GhostViewListeners;
     :cond_2
     add-int/lit8 v1, v1, 0x1
@@ -2771,13 +2443,11 @@
     .end annotation
 
     .prologue
-    .line 556
     .local p1, "snapshots":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/view/View;>;"
     iget-object v0, p0, Landroid/app/ActivityTransitionCoordinator;->mListener:Landroid/app/SharedElementCallback;
 
     if-eqz v0, :cond_0
 
-    .line 557
     iget-object v0, p0, Landroid/app/ActivityTransitionCoordinator;->mListener:Landroid/app/SharedElementCallback;
 
     iget-object v1, p0, Landroid/app/ActivityTransitionCoordinator;->mSharedElementNames:Ljava/util/ArrayList;
@@ -2786,7 +2456,6 @@
 
     invoke-virtual {v0, v1, v2, p1}, Landroid/app/SharedElementCallback;->onSharedElementEnd(Ljava/util/List;Ljava/util/List;Ljava/util/List;)V
 
-    .line 559
     :cond_0
     return-void
 .end method
@@ -2795,7 +2464,6 @@
     .locals 0
 
     .prologue
-    .line 911
     return-void
 .end method
 
@@ -2803,32 +2471,26 @@
     .locals 3
 
     .prologue
-    .line 904
     invoke-virtual {p0}, Landroid/app/ActivityTransitionCoordinator;->getDecor()Landroid/view/ViewGroup;
 
     move-result-object v0
 
-    .line 905
     .local v0, "decor":Landroid/view/View;
     if-nez v0, :cond_1
 
     const/4 v1, 0x0
 
-    .line 906
     .local v1, "viewRoot":Landroid/view/ViewRootImpl;
     :goto_0
     if-eqz v1, :cond_0
 
-    .line 907
     const/4 v2, 0x1
 
     invoke-virtual {v1, v2}, Landroid/view/ViewRootImpl;->setPausedForTransition(Z)V
 
-    .line 909
     :cond_0
     return-void
 
-    .line 905
     .end local v1    # "viewRoot":Landroid/view/ViewRootImpl;
     :cond_1
     invoke-virtual {v0}, Landroid/view/View;->getViewRootImpl()Landroid/view/ViewRootImpl;
@@ -2843,16 +2505,13 @@
     .param p1, "visibility"    # I
 
     .prologue
-    .line 865
     invoke-virtual {p0}, Landroid/app/ActivityTransitionCoordinator;->getDecor()Landroid/view/ViewGroup;
 
     move-result-object v0
 
-    .line 866
     .local v0, "decorView":Landroid/view/View;
     if-eqz v0, :cond_0
 
-    .line 867
     invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object v1
@@ -2863,7 +2522,6 @@
 
     invoke-virtual {v1, v2}, Landroid/view/ViewTreeObserver;->addOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
-    .line 877
     :cond_0
     return-void
 .end method
@@ -2881,17 +2539,14 @@
     .end annotation
 
     .prologue
-    .line 562
     .local p1, "snapshots":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/view/View;>;"
     invoke-virtual {p0}, Landroid/app/ActivityTransitionCoordinator;->getDecor()Landroid/view/ViewGroup;
 
     move-result-object v0
 
-    .line 563
     .local v0, "decorView":Landroid/view/View;
     if-eqz v0, :cond_0
 
-    .line 564
     invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object v1
@@ -2902,7 +2557,6 @@
 
     invoke-virtual {v1, v2}, Landroid/view/ViewTreeObserver;->addOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
-    .line 575
     :cond_0
     return-void
 .end method
@@ -2911,10 +2565,8 @@
     .locals 5
 
     .prologue
-    .line 306
     const/4 v0, 0x0
 
-    .line 307
     .local v0, "epicenter":Landroid/view/View;
     iget-object v2, p0, Landroid/app/ActivityTransitionCoordinator;->mAllSharedElementNames:Ljava/util/ArrayList;
 
@@ -2932,7 +2584,6 @@
 
     if-nez v2, :cond_0
 
-    .line 308
     iget-object v2, p0, Landroid/app/ActivityTransitionCoordinator;->mSharedElementNames:Ljava/util/ArrayList;
 
     iget-object v3, p0, Landroid/app/ActivityTransitionCoordinator;->mAllSharedElementNames:Ljava/util/ArrayList;
@@ -2947,11 +2598,9 @@
 
     move-result v1
 
-    .line 309
     .local v1, "index":I
     if-ltz v1, :cond_0
 
-    .line 310
     iget-object v2, p0, Landroid/app/ActivityTransitionCoordinator;->mSharedElements:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -2961,13 +2610,11 @@
     .end local v0    # "epicenter":Landroid/view/View;
     check-cast v0, Landroid/view/View;
 
-    .line 313
     .end local v1    # "index":I
     .restart local v0    # "epicenter":Landroid/view/View;
     :cond_0
     invoke-direct {p0, v0}, Landroid/app/ActivityTransitionCoordinator;->setEpicenter(Landroid/view/View;)V
 
-    .line 314
     return-void
 .end method
 
@@ -2976,14 +2623,12 @@
     .param p1, "visibility"    # I
 
     .prologue
-    .line 855
     iget-object v3, p0, Landroid/app/ActivityTransitionCoordinator;->mSharedElements:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
     move-result v2
 
-    .line 856
     .local v2, "numSharedElements":I
     const/4 v1, 0x0
 
@@ -2991,7 +2636,6 @@
     :goto_0
     if-ge v1, v2, :cond_1
 
-    .line 857
     iget-object v3, p0, Landroid/app/ActivityTransitionCoordinator;->mSharedElements:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -3004,20 +2648,16 @@
 
     move-result-object v0
 
-    .line 858
     .local v0, "ghostView":Landroid/view/GhostView;
     if-eqz v0, :cond_0
 
-    .line 859
     invoke-virtual {v0, p1}, Landroid/view/GhostView;->setVisibility(I)V
 
-    .line 856
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 862
     .end local v0    # "ghostView":Landroid/view/GhostView;
     :cond_1
     return-void
@@ -3028,10 +2668,8 @@
     .param p1, "resultReceiver"    # Landroid/os/ResultReceiver;
 
     .prologue
-    .line 414
     iput-object p1, p0, Landroid/app/ActivityTransitionCoordinator;->mResultReceiver:Landroid/os/ResultReceiver;
 
-    .line 415
     return-void
 .end method
 
@@ -3054,28 +2692,23 @@
     .end annotation
 
     .prologue
-    .line 533
     .local p2, "snapshots":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/view/View;>;"
     new-instance v9, Ljava/util/ArrayList;
 
     invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
 
-    .line 535
     .local v9, "originalImageState":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/app/ActivityTransitionCoordinator$SharedElementOriginalState;>;"
     if-eqz p1, :cond_0
 
-    .line 536
     new-instance v4, Landroid/graphics/Matrix;
 
     invoke-direct {v4}, Landroid/graphics/Matrix;-><init>()V
 
-    .line 537
     .local v4, "tempMatrix":Landroid/graphics/Matrix;
     new-instance v5, Landroid/graphics/RectF;
 
     invoke-direct {v5}, Landroid/graphics/RectF;-><init>()V
 
-    .line 538
     .local v5, "tempRect":Landroid/graphics/RectF;
     iget-object v0, p0, Landroid/app/ActivityTransitionCoordinator;->mSharedElements:Ljava/util/ArrayList;
 
@@ -3083,7 +2716,6 @@
 
     move-result v8
 
-    .line 539
     .local v8, "numSharedElements":I
     const/4 v7, 0x0
 
@@ -3091,7 +2723,6 @@
     :goto_0
     if-ge v7, v8, :cond_0
 
-    .line 540
     iget-object v0, p0, Landroid/app/ActivityTransitionCoordinator;->mSharedElements:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v7}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -3100,7 +2731,6 @@
 
     check-cast v1, Landroid/view/View;
 
-    .line 541
     .local v1, "sharedElement":Landroid/view/View;
     iget-object v0, p0, Landroid/app/ActivityTransitionCoordinator;->mSharedElementNames:Ljava/util/ArrayList;
 
@@ -3110,17 +2740,14 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 542
     .local v2, "name":Ljava/lang/String;
     invoke-static {v1, v2, p1}, Landroid/app/ActivityTransitionCoordinator;->getOldSharedElementState(Landroid/view/View;Ljava/lang/String;Landroid/os/Bundle;)Landroid/app/ActivityTransitionCoordinator$SharedElementOriginalState;
 
     move-result-object v10
 
-    .line 544
     .local v10, "originalState":Landroid/app/ActivityTransitionCoordinator$SharedElementOriginalState;
     invoke-virtual {v9, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 545
     const/4 v6, 0x0
 
     move-object v0, p0
@@ -3129,12 +2756,10 @@
 
     invoke-direct/range {v0 .. v6}, Landroid/app/ActivityTransitionCoordinator;->setSharedElementState(Landroid/view/View;Ljava/lang/String;Landroid/os/Bundle;Landroid/graphics/Matrix;Landroid/graphics/RectF;[I)V
 
-    .line 539
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_0
 
-    .line 549
     .end local v1    # "sharedElement":Landroid/view/View;
     .end local v2    # "name":Ljava/lang/String;
     .end local v4    # "tempMatrix":Landroid/graphics/Matrix;
@@ -3147,7 +2772,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 550
     iget-object v0, p0, Landroid/app/ActivityTransitionCoordinator;->mListener:Landroid/app/SharedElementCallback;
 
     iget-object v3, p0, Landroid/app/ActivityTransitionCoordinator;->mSharedElementNames:Ljava/util/ArrayList;
@@ -3156,7 +2780,6 @@
 
     invoke-virtual {v0, v3, v6, p2}, Landroid/app/SharedElementCallback;->onSharedElementStart(Ljava/util/List;Ljava/util/List;Ljava/util/List;)V
 
-    .line 552
     :cond_1
     return-object v9
 .end method
@@ -3167,7 +2790,6 @@
     .param p2, "add"    # Z
 
     .prologue
-    .line 345
     if-eqz p1, :cond_0
 
     if-eqz p2, :cond_2
@@ -3184,28 +2806,23 @@
 
     if-eqz v3, :cond_2
 
-    .line 347
     :cond_0
     const/4 v1, 0x0
 
-    .line 371
     :cond_1
     :goto_0
     return-object v1
 
-    .line 351
     :cond_2
     new-instance v1, Landroid/transition/TransitionSet;
 
     invoke-direct {v1}, Landroid/transition/TransitionSet;-><init>()V
 
-    .line 352
     .local v1, "set":Landroid/transition/TransitionSet;
     iget-object v3, p0, Landroid/app/ActivityTransitionCoordinator;->mTransitioningViews:Ljava/util/ArrayList;
 
     if-eqz v3, :cond_4
 
-    .line 353
     iget-object v3, p0, Landroid/app/ActivityTransitionCoordinator;->mTransitioningViews:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
@@ -3218,7 +2835,6 @@
     :goto_1
     if-ltz v0, :cond_4
 
-    .line 354
     iget-object v3, p0, Landroid/app/ActivityTransitionCoordinator;->mTransitioningViews:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -3227,20 +2843,16 @@
 
     check-cast v2, Landroid/view/View;
 
-    .line 355
     .local v2, "view":Landroid/view/View;
     if-eqz p2, :cond_3
 
-    .line 356
     invoke-virtual {v1, v2}, Landroid/transition/TransitionSet;->addTarget(Landroid/view/View;)Landroid/transition/TransitionSet;
 
-    .line 353
     :goto_2
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_1
 
-    .line 358
     :cond_3
     const/4 v3, 0x1
 
@@ -3248,13 +2860,11 @@
 
     goto :goto_2
 
-    .line 364
     .end local v0    # "i":I
     .end local v2    # "view":Landroid/view/View;
     :cond_4
     invoke-virtual {v1, p1}, Landroid/transition/TransitionSet;->addTransition(Landroid/transition/Transition;)Landroid/transition/TransitionSet;
 
-    .line 366
     if-nez p2, :cond_1
 
     iget-object v3, p0, Landroid/app/ActivityTransitionCoordinator;->mTransitioningViews:Ljava/util/ArrayList;
@@ -3269,7 +2879,6 @@
 
     if-nez v3, :cond_1
 
-    .line 368
     new-instance v3, Landroid/transition/TransitionSet;
 
     invoke-direct {v3}, Landroid/transition/TransitionSet;-><init>()V
@@ -3285,15 +2894,12 @@
     .locals 1
 
     .prologue
-    .line 889
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/app/ActivityTransitionCoordinator;->mSharedElementTransitionComplete:Z
 
-    .line 890
     invoke-direct {p0}, Landroid/app/ActivityTransitionCoordinator;->startInputWhenTransitionsComplete()V
 
-    .line 891
     return-void
 .end method
 
@@ -3311,13 +2917,11 @@
     .end annotation
 
     .prologue
-    .line 703
     .local p1, "views":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/view/View;>;"
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 704
     .local v0, "count":I
     const/4 v1, 0x0
 
@@ -3325,7 +2929,6 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 705
     invoke-virtual {p1, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -3334,12 +2937,10 @@
 
     invoke-direct {p0, v2, p2}, Landroid/app/ActivityTransitionCoordinator;->showView(Landroid/view/View;Z)V
 
-    .line 704
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 707
     :cond_0
     return-void
 .end method
@@ -3349,25 +2950,20 @@
     .param p1, "runnable"    # Ljava/lang/Runnable;
 
     .prologue
-    .line 769
     iget-boolean v0, p0, Landroid/app/ActivityTransitionCoordinator;->mIsStartingTransition:Z
 
     if-eqz v0, :cond_0
 
-    .line 770
     iput-object p1, p0, Landroid/app/ActivityTransitionCoordinator;->mPendingTransition:Ljava/lang/Runnable;
 
-    .line 775
     :goto_0
     return-void
 
-    .line 772
     :cond_0
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/app/ActivityTransitionCoordinator;->mIsStartingTransition:Z
 
-    .line 773
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
     goto :goto_0
@@ -3377,22 +2973,18 @@
     .locals 4
 
     .prologue
-    .line 281
     iget-object v3, p0, Landroid/app/ActivityTransitionCoordinator;->mTransitioningViews:Ljava/util/ArrayList;
 
     if-nez v3, :cond_1
 
-    .line 292
     :cond_0
     return-void
 
-    .line 284
     :cond_1
     new-instance v1, Landroid/graphics/Rect;
 
     invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
 
-    .line 285
     .local v1, "r":Landroid/graphics/Rect;
     iget-object v3, p0, Landroid/app/ActivityTransitionCoordinator;->mTransitioningViews:Ljava/util/ArrayList;
 
@@ -3406,7 +2998,6 @@
     :goto_0
     if-ltz v0, :cond_0
 
-    .line 286
     iget-object v3, p0, Landroid/app/ActivityTransitionCoordinator;->mTransitioningViews:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -3415,7 +3006,6 @@
 
     check-cast v2, Landroid/view/View;
 
-    .line 287
     .local v2, "view":Landroid/view/View;
     invoke-virtual {v2, v1}, Landroid/view/View;->getGlobalVisibleRect(Landroid/graphics/Rect;)Z
 
@@ -3423,17 +3013,14 @@
 
     if-nez v3, :cond_2
 
-    .line 288
     iget-object v3, p0, Landroid/app/ActivityTransitionCoordinator;->mTransitioningViews:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 289
     const/4 v3, 0x1
 
     invoke-direct {p0, v2, v3}, Landroid/app/ActivityTransitionCoordinator;->showView(Landroid/view/View;Z)V
 
-    .line 285
     :cond_2
     add-int/lit8 v0, v0, -0x1
 
@@ -3444,12 +3031,10 @@
     .locals 1
 
     .prologue
-    .line 778
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/app/ActivityTransitionCoordinator;->mIsStartingTransition:Z
 
-    .line 779
     return-void
 .end method
 
@@ -3467,29 +3052,24 @@
     .end annotation
 
     .prologue
-    .line 220
     .local p1, "sharedElements":Landroid/util/ArrayMap;, "Landroid/util/ArrayMap<Ljava/lang/String;Landroid/view/View;>;"
     iget-object v1, p0, Landroid/app/ActivityTransitionCoordinator;->mAllSharedElementNames:Ljava/util/ArrayList;
 
     invoke-virtual {p1, v1}, Landroid/util/ArrayMap;->retainAll(Ljava/util/Collection;)Z
 
-    .line 221
     iget-object v1, p0, Landroid/app/ActivityTransitionCoordinator;->mListener:Landroid/app/SharedElementCallback;
 
     if-eqz v1, :cond_0
 
-    .line 222
     iget-object v1, p0, Landroid/app/ActivityTransitionCoordinator;->mListener:Landroid/app/SharedElementCallback;
 
     iget-object v2, p0, Landroid/app/ActivityTransitionCoordinator;->mAllSharedElementNames:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v2, p1}, Landroid/app/SharedElementCallback;->onMapSharedElements(Ljava/util/List;Ljava/util/Map;)V
 
-    .line 224
     :cond_0
     invoke-direct {p0, p1}, Landroid/app/ActivityTransitionCoordinator;->setSharedElements(Landroid/util/ArrayMap;)V
 
-    .line 225
     invoke-virtual {p0}, Landroid/app/ActivityTransitionCoordinator;->getViewsTransition()Landroid/transition/Transition;
 
     move-result-object v1
@@ -3500,21 +3080,17 @@
 
     if-eqz v1, :cond_2
 
-    .line 226
     invoke-virtual {p0}, Landroid/app/ActivityTransitionCoordinator;->getDecor()Landroid/view/ViewGroup;
 
     move-result-object v0
 
-    .line 227
     .local v0, "decorView":Landroid/view/ViewGroup;
     if-eqz v0, :cond_1
 
-    .line 228
     iget-object v1, p0, Landroid/app/ActivityTransitionCoordinator;->mTransitioningViews:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->captureTransitioningViews(Ljava/util/List;)V
 
-    .line 230
     :cond_1
     iget-object v1, p0, Landroid/app/ActivityTransitionCoordinator;->mTransitioningViews:Ljava/util/ArrayList;
 
@@ -3522,12 +3098,10 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->removeAll(Ljava/util/Collection;)Z
 
-    .line 232
     .end local v0    # "decorView":Landroid/view/ViewGroup;
     :cond_2
     invoke-virtual {p0}, Landroid/app/ActivityTransitionCoordinator;->setEpicenter()V
 
-    .line 233
     return-void
 .end method
 
@@ -3535,14 +3109,11 @@
     .locals 1
 
     .prologue
-    .line 884
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/app/ActivityTransitionCoordinator;->mViewsTransitionComplete:Z
 
-    .line 885
     invoke-direct {p0}, Landroid/app/ActivityTransitionCoordinator;->startInputWhenTransitionsComplete()V
 
-    .line 886
     return-void
 .end method

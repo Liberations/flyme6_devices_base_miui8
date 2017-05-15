@@ -110,15 +110,12 @@
     .locals 1
 
     .prologue
-    .line 18
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 19
     const-string v0, "android.media.tv.ITvInputManager"
 
     invoke-virtual {p0, p0, v0}, Landroid/media/tv/ITvInputManager$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 20
     return-void
 .end method
 
@@ -127,17 +124,13 @@
     .param p0, "obj"    # Landroid/os/IBinder;
 
     .prologue
-    .line 27
     if-nez p0, :cond_0
 
-    .line 28
     const/4 v0, 0x0
 
-    .line 34
     :goto_0
     return-object v0
 
-    .line 30
     :cond_0
     const-string v1, "android.media.tv.ITvInputManager"
 
@@ -145,7 +138,6 @@
 
     move-result-object v0
 
-    .line 31
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -153,12 +145,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 32
     check-cast v0, Landroid/media/tv/ITvInputManager;
 
     goto :goto_0
 
-    .line 34
     :cond_1
     new-instance v0, Landroid/media/tv/ITvInputManager$Stub$Proxy;
 
@@ -174,7 +164,6 @@
     .locals 0
 
     .prologue
-    .line 38
     return-object p0
 .end method
 
@@ -191,10 +180,8 @@
     .end annotation
 
     .prologue
-    .line 42
     sparse-switch p1, :sswitch_data_0
 
-    .line 594
     invoke-super/range {p0 .. p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v2
@@ -202,7 +189,6 @@
     :goto_0
     return v2
 
-    .line 46
     :sswitch_0
     const-string v2, "android.media.tv.ITvInputManager"
 
@@ -210,12 +196,10 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 47
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 51
     :sswitch_1
     const-string v2, "android.media.tv.ITvInputManager"
 
@@ -223,12 +207,10 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 53
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 54
     .local v3, "_arg0":I
     move-object/from16 v0, p0
 
@@ -236,21 +218,17 @@
 
     move-result-object v14
 
-    .line 55
     .local v14, "_result":Ljava/util/List;, "Ljava/util/List<Landroid/media/tv/TvInputInfo;>;"
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 56
     move-object/from16 v0, p3
 
     invoke-virtual {v0, v14}, Landroid/os/Parcel;->writeTypedList(Ljava/util/List;)V
 
-    .line 57
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 61
     .end local v3    # "_arg0":I
     .end local v14    # "_result":Ljava/util/List;, "Ljava/util/List<Landroid/media/tv/TvInputInfo;>;"
     :sswitch_2
@@ -260,18 +238,15 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 63
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 65
     .local v3, "_arg0":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 66
     .local v4, "_arg1":I
     move-object/from16 v0, p0
 
@@ -279,34 +254,28 @@
 
     move-result-object v10
 
-    .line 67
     .local v10, "_result":Landroid/media/tv/TvInputInfo;
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 68
     if-eqz v10, :cond_0
 
-    .line 69
     const/4 v2, 0x1
 
     move-object/from16 v0, p3
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 70
     const/4 v2, 0x1
 
     move-object/from16 v0, p3
 
     invoke-virtual {v10, v0, v2}, Landroid/media/tv/TvInputInfo;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 75
     :goto_1
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 73
     :cond_0
     const/4 v2, 0x0
 
@@ -316,7 +285,6 @@
 
     goto :goto_1
 
-    .line 79
     .end local v3    # "_arg0":Ljava/lang/String;
     .end local v4    # "_arg1":I
     .end local v10    # "_result":Landroid/media/tv/TvInputInfo;
@@ -327,18 +295,15 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 81
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 83
     .restart local v3    # "_arg0":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 84
     .restart local v4    # "_arg1":I
     move-object/from16 v0, p0
 
@@ -346,21 +311,17 @@
 
     move-result v10
 
-    .line 85
     .local v10, "_result":I
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 86
     move-object/from16 v0, p3
 
     invoke-virtual {v0, v10}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 87
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 91
     .end local v3    # "_arg0":Ljava/lang/String;
     .end local v4    # "_arg1":I
     .end local v10    # "_result":I
@@ -371,12 +332,10 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 93
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 94
     .local v3, "_arg0":I
     move-object/from16 v0, p0
 
@@ -384,21 +343,17 @@
 
     move-result-object v12
 
-    .line 95
     .local v12, "_result":Ljava/util/List;, "Ljava/util/List<Landroid/media/tv/TvContentRatingSystemInfo;>;"
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 96
     move-object/from16 v0, p3
 
     invoke-virtual {v0, v12}, Landroid/os/Parcel;->writeTypedList(Ljava/util/List;)V
 
-    .line 97
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 101
     .end local v3    # "_arg0":I
     .end local v12    # "_result":Ljava/util/List;, "Ljava/util/List<Landroid/media/tv/TvContentRatingSystemInfo;>;"
     :sswitch_5
@@ -408,7 +363,6 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 103
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v2
@@ -417,27 +371,22 @@
 
     move-result-object v3
 
-    .line 105
     .local v3, "_arg0":Landroid/media/tv/ITvInputManagerCallback;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 106
     .restart local v4    # "_arg1":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4}, Landroid/media/tv/ITvInputManager$Stub;->registerCallback(Landroid/media/tv/ITvInputManagerCallback;I)V
 
-    .line 107
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 108
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 112
     .end local v3    # "_arg0":Landroid/media/tv/ITvInputManagerCallback;
     .end local v4    # "_arg1":I
     :sswitch_6
@@ -447,7 +396,6 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 114
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v2
@@ -456,27 +404,22 @@
 
     move-result-object v3
 
-    .line 116
     .restart local v3    # "_arg0":Landroid/media/tv/ITvInputManagerCallback;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 117
     .restart local v4    # "_arg1":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4}, Landroid/media/tv/ITvInputManager$Stub;->unregisterCallback(Landroid/media/tv/ITvInputManagerCallback;I)V
 
-    .line 118
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 119
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 123
     .end local v3    # "_arg0":Landroid/media/tv/ITvInputManagerCallback;
     .end local v4    # "_arg1":I
     :sswitch_7
@@ -486,12 +429,10 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 125
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 126
     .local v3, "_arg0":I
     move-object/from16 v0, p0
 
@@ -499,11 +440,9 @@
 
     move-result v10
 
-    .line 127
     .local v10, "_result":Z
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 128
     if-eqz v10, :cond_1
 
     const/4 v2, 0x1
@@ -513,18 +452,15 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 129
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 128
     :cond_1
     const/4 v2, 0x0
 
     goto :goto_2
 
-    .line 133
     .end local v3    # "_arg0":I
     .end local v10    # "_result":Z
     :sswitch_8
@@ -534,7 +470,6 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 135
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
@@ -543,28 +478,23 @@
 
     const/4 v3, 0x1
 
-    .line 137
     .local v3, "_arg0":Z
     :goto_3
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 138
     .restart local v4    # "_arg1":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4}, Landroid/media/tv/ITvInputManager$Stub;->setParentalControlsEnabled(ZI)V
 
-    .line 139
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 140
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 135
     .end local v3    # "_arg0":Z
     .end local v4    # "_arg1":I
     :cond_2
@@ -572,7 +502,6 @@
 
     goto :goto_3
 
-    .line 144
     :sswitch_9
     const-string v2, "android.media.tv.ITvInputManager"
 
@@ -580,18 +509,15 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 146
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 148
     .local v3, "_arg0":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 149
     .restart local v4    # "_arg1":I
     move-object/from16 v0, p0
 
@@ -599,11 +525,9 @@
 
     move-result v10
 
-    .line 150
     .restart local v10    # "_result":Z
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 151
     if-eqz v10, :cond_3
 
     const/4 v2, 0x1
@@ -613,18 +537,15 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 152
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 151
     :cond_3
     const/4 v2, 0x0
 
     goto :goto_4
 
-    .line 156
     .end local v3    # "_arg0":Ljava/lang/String;
     .end local v4    # "_arg1":I
     .end local v10    # "_result":Z
@@ -635,12 +556,10 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 158
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 159
     .local v3, "_arg0":I
     move-object/from16 v0, p0
 
@@ -648,23 +567,19 @@
 
     move-result-object v16
 
-    .line 160
     .local v16, "_result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 161
     move-object/from16 v0, p3
 
     move-object/from16 v1, v16
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeStringList(Ljava/util/List;)V
 
-    .line 162
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 166
     .end local v3    # "_arg0":I
     .end local v16    # "_result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :sswitch_b
@@ -674,32 +589,26 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 168
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 170
     .local v3, "_arg0":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 171
     .restart local v4    # "_arg1":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4}, Landroid/media/tv/ITvInputManager$Stub;->addBlockedRating(Ljava/lang/String;I)V
 
-    .line 172
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 173
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 177
     .end local v3    # "_arg0":Ljava/lang/String;
     .end local v4    # "_arg1":I
     :sswitch_c
@@ -709,32 +618,26 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 179
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 181
     .restart local v3    # "_arg0":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 182
     .restart local v4    # "_arg1":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4}, Landroid/media/tv/ITvInputManager$Stub;->removeBlockedRating(Ljava/lang/String;I)V
 
-    .line 183
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 184
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 188
     .end local v3    # "_arg0":Ljava/lang/String;
     .end local v4    # "_arg1":I
     :sswitch_d
@@ -744,7 +647,6 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 190
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v2
@@ -753,39 +655,32 @@
 
     move-result-object v3
 
-    .line 192
     .local v3, "_arg0":Landroid/media/tv/ITvInputClient;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 194
     .local v4, "_arg1":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 196
     .local v5, "_arg2":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 197
     .local v6, "_arg3":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4, v5, v6}, Landroid/media/tv/ITvInputManager$Stub;->createSession(Landroid/media/tv/ITvInputClient;Ljava/lang/String;II)V
 
-    .line 198
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 199
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 203
     .end local v3    # "_arg0":Landroid/media/tv/ITvInputClient;
     .end local v4    # "_arg1":Ljava/lang/String;
     .end local v5    # "_arg2":I
@@ -797,32 +692,26 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 205
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v3
 
-    .line 207
     .local v3, "_arg0":Landroid/os/IBinder;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 208
     .local v4, "_arg1":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4}, Landroid/media/tv/ITvInputManager$Stub;->releaseSession(Landroid/os/IBinder;I)V
 
-    .line 209
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 210
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 214
     .end local v3    # "_arg0":Landroid/os/IBinder;
     .end local v4    # "_arg1":I
     :sswitch_f
@@ -832,32 +721,26 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 216
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v3
 
-    .line 218
     .restart local v3    # "_arg0":Landroid/os/IBinder;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 219
     .restart local v4    # "_arg1":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4}, Landroid/media/tv/ITvInputManager$Stub;->setMainSession(Landroid/os/IBinder;I)V
 
-    .line 220
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 221
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 225
     .end local v3    # "_arg0":Landroid/os/IBinder;
     .end local v4    # "_arg1":I
     :sswitch_10
@@ -867,12 +750,10 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 227
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v3
 
-    .line 229
     .restart local v3    # "_arg0":Landroid/os/IBinder;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
@@ -880,7 +761,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 230
     sget-object v2, Landroid/view/Surface;->CREATOR:Landroid/os/Parcelable$Creator;
 
     move-object/from16 v0, p2
@@ -891,28 +771,23 @@
 
     check-cast v4, Landroid/view/Surface;
 
-    .line 236
     .local v4, "_arg1":Landroid/view/Surface;
     :goto_5
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 237
     .restart local v5    # "_arg2":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4, v5}, Landroid/media/tv/ITvInputManager$Stub;->setSurface(Landroid/os/IBinder;Landroid/view/Surface;I)V
 
-    .line 238
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 239
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 233
     .end local v4    # "_arg1":Landroid/view/Surface;
     .end local v5    # "_arg2":I
     :cond_4
@@ -921,7 +796,6 @@
     .restart local v4    # "_arg1":Landroid/view/Surface;
     goto :goto_5
 
-    .line 243
     .end local v3    # "_arg0":Landroid/os/IBinder;
     .end local v4    # "_arg1":Landroid/view/Surface;
     :sswitch_11
@@ -931,30 +805,25 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 245
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v3
 
-    .line 247
     .restart local v3    # "_arg0":Landroid/os/IBinder;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 249
     .local v4, "_arg1":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 251
     .restart local v5    # "_arg2":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 253
     .restart local v6    # "_arg3":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
@@ -963,18 +832,14 @@
     .local v7, "_arg4":I
     move-object/from16 v2, p0
 
-    .line 254
     invoke-virtual/range {v2 .. v7}, Landroid/media/tv/ITvInputManager$Stub;->dispatchSurfaceChanged(Landroid/os/IBinder;IIII)V
 
-    .line 255
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 256
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 260
     .end local v3    # "_arg0":Landroid/os/IBinder;
     .end local v4    # "_arg1":I
     .end local v5    # "_arg2":I
@@ -987,38 +852,31 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 262
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v3
 
-    .line 264
     .restart local v3    # "_arg0":Landroid/os/IBinder;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readFloat()F
 
     move-result v4
 
-    .line 266
     .local v4, "_arg1":F
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 267
     .restart local v5    # "_arg2":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4, v5}, Landroid/media/tv/ITvInputManager$Stub;->setVolume(Landroid/os/IBinder;FI)V
 
-    .line 268
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 269
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 273
     .end local v3    # "_arg0":Landroid/os/IBinder;
     .end local v4    # "_arg1":F
     .end local v5    # "_arg2":I
@@ -1029,12 +887,10 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 275
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v3
 
-    .line 277
     .restart local v3    # "_arg0":Landroid/os/IBinder;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
@@ -1042,7 +898,6 @@
 
     if-eqz v2, :cond_5
 
-    .line 278
     sget-object v2, Landroid/net/Uri;->CREATOR:Landroid/os/Parcelable$Creator;
 
     move-object/from16 v0, p2
@@ -1053,7 +908,6 @@
 
     check-cast v4, Landroid/net/Uri;
 
-    .line 284
     .local v4, "_arg1":Landroid/net/Uri;
     :goto_6
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
@@ -1062,7 +916,6 @@
 
     if-eqz v2, :cond_6
 
-    .line 285
     sget-object v2, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
 
     move-object/from16 v0, p2
@@ -1073,28 +926,23 @@
 
     check-cast v5, Landroid/os/Bundle;
 
-    .line 291
     .local v5, "_arg2":Landroid/os/Bundle;
     :goto_7
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 292
     .restart local v6    # "_arg3":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4, v5, v6}, Landroid/media/tv/ITvInputManager$Stub;->tune(Landroid/os/IBinder;Landroid/net/Uri;Landroid/os/Bundle;I)V
 
-    .line 293
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 294
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 281
     .end local v4    # "_arg1":Landroid/net/Uri;
     .end local v5    # "_arg2":Landroid/os/Bundle;
     .end local v6    # "_arg3":I
@@ -1104,14 +952,12 @@
     .restart local v4    # "_arg1":Landroid/net/Uri;
     goto :goto_6
 
-    .line 288
     :cond_6
     const/4 v5, 0x0
 
     .restart local v5    # "_arg2":Landroid/os/Bundle;
     goto :goto_7
 
-    .line 298
     .end local v3    # "_arg0":Landroid/os/IBinder;
     .end local v4    # "_arg1":Landroid/net/Uri;
     .end local v5    # "_arg2":Landroid/os/Bundle;
@@ -1122,12 +968,10 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 300
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v3
 
-    .line 302
     .restart local v3    # "_arg0":Landroid/os/IBinder;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
@@ -1137,28 +981,23 @@
 
     const/4 v4, 0x1
 
-    .line 304
     .local v4, "_arg1":Z
     :goto_8
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 305
     .local v5, "_arg2":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4, v5}, Landroid/media/tv/ITvInputManager$Stub;->setCaptionEnabled(Landroid/os/IBinder;ZI)V
 
-    .line 306
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 307
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 302
     .end local v4    # "_arg1":Z
     .end local v5    # "_arg2":I
     :cond_7
@@ -1166,7 +1005,6 @@
 
     goto :goto_8
 
-    .line 311
     .end local v3    # "_arg0":Landroid/os/IBinder;
     :sswitch_15
     const-string v2, "android.media.tv.ITvInputManager"
@@ -1175,44 +1013,36 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 313
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v3
 
-    .line 315
     .restart local v3    # "_arg0":Landroid/os/IBinder;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 317
     .local v4, "_arg1":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 319
     .local v5, "_arg2":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 320
     .restart local v6    # "_arg3":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4, v5, v6}, Landroid/media/tv/ITvInputManager$Stub;->selectTrack(Landroid/os/IBinder;ILjava/lang/String;I)V
 
-    .line 321
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 322
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 326
     .end local v3    # "_arg0":Landroid/os/IBinder;
     .end local v4    # "_arg1":I
     .end local v5    # "_arg2":Ljava/lang/String;
@@ -1224,18 +1054,15 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 328
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v3
 
-    .line 330
     .restart local v3    # "_arg0":Landroid/os/IBinder;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 332
     .local v4, "_arg1":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
@@ -1243,7 +1070,6 @@
 
     if-eqz v2, :cond_8
 
-    .line 333
     sget-object v2, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
 
     move-object/from16 v0, p2
@@ -1254,28 +1080,23 @@
 
     check-cast v5, Landroid/os/Bundle;
 
-    .line 339
     .local v5, "_arg2":Landroid/os/Bundle;
     :goto_9
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 340
     .restart local v6    # "_arg3":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4, v5, v6}, Landroid/media/tv/ITvInputManager$Stub;->sendAppPrivateCommand(Landroid/os/IBinder;Ljava/lang/String;Landroid/os/Bundle;I)V
 
-    .line 341
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 342
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 336
     .end local v5    # "_arg2":Landroid/os/Bundle;
     .end local v6    # "_arg3":I
     :cond_8
@@ -1284,7 +1105,6 @@
     .restart local v5    # "_arg2":Landroid/os/Bundle;
     goto :goto_9
 
-    .line 346
     .end local v3    # "_arg0":Landroid/os/IBinder;
     .end local v4    # "_arg1":Ljava/lang/String;
     .end local v5    # "_arg2":Landroid/os/Bundle;
@@ -1295,18 +1115,15 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 348
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v3
 
-    .line 350
     .restart local v3    # "_arg0":Landroid/os/IBinder;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v4
 
-    .line 352
     .local v4, "_arg1":Landroid/os/IBinder;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
@@ -1314,7 +1131,6 @@
 
     if-eqz v2, :cond_9
 
-    .line 353
     sget-object v2, Landroid/graphics/Rect;->CREATOR:Landroid/os/Parcelable$Creator;
 
     move-object/from16 v0, p2
@@ -1325,28 +1141,23 @@
 
     check-cast v5, Landroid/graphics/Rect;
 
-    .line 359
     .local v5, "_arg2":Landroid/graphics/Rect;
     :goto_a
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 360
     .restart local v6    # "_arg3":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4, v5, v6}, Landroid/media/tv/ITvInputManager$Stub;->createOverlayView(Landroid/os/IBinder;Landroid/os/IBinder;Landroid/graphics/Rect;I)V
 
-    .line 361
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 362
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 356
     .end local v5    # "_arg2":Landroid/graphics/Rect;
     .end local v6    # "_arg3":I
     :cond_9
@@ -1355,7 +1166,6 @@
     .restart local v5    # "_arg2":Landroid/graphics/Rect;
     goto :goto_a
 
-    .line 366
     .end local v3    # "_arg0":Landroid/os/IBinder;
     .end local v4    # "_arg1":Landroid/os/IBinder;
     .end local v5    # "_arg2":Landroid/graphics/Rect;
@@ -1366,12 +1176,10 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 368
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v3
 
-    .line 370
     .restart local v3    # "_arg0":Landroid/os/IBinder;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
@@ -1379,7 +1187,6 @@
 
     if-eqz v2, :cond_a
 
-    .line 371
     sget-object v2, Landroid/graphics/Rect;->CREATOR:Landroid/os/Parcelable$Creator;
 
     move-object/from16 v0, p2
@@ -1390,28 +1197,23 @@
 
     check-cast v4, Landroid/graphics/Rect;
 
-    .line 377
     .local v4, "_arg1":Landroid/graphics/Rect;
     :goto_b
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 378
     .local v5, "_arg2":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4, v5}, Landroid/media/tv/ITvInputManager$Stub;->relayoutOverlayView(Landroid/os/IBinder;Landroid/graphics/Rect;I)V
 
-    .line 379
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 380
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 374
     .end local v4    # "_arg1":Landroid/graphics/Rect;
     .end local v5    # "_arg2":I
     :cond_a
@@ -1420,7 +1222,6 @@
     .restart local v4    # "_arg1":Landroid/graphics/Rect;
     goto :goto_b
 
-    .line 384
     .end local v3    # "_arg0":Landroid/os/IBinder;
     .end local v4    # "_arg1":Landroid/graphics/Rect;
     :sswitch_19
@@ -1430,32 +1231,26 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 386
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v3
 
-    .line 388
     .restart local v3    # "_arg0":Landroid/os/IBinder;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 389
     .local v4, "_arg1":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4}, Landroid/media/tv/ITvInputManager$Stub;->removeOverlayView(Landroid/os/IBinder;I)V
 
-    .line 390
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 391
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 395
     .end local v3    # "_arg0":Landroid/os/IBinder;
     .end local v4    # "_arg1":I
     :sswitch_1a
@@ -1465,38 +1260,31 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 397
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v3
 
-    .line 399
     .restart local v3    # "_arg0":Landroid/os/IBinder;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 401
     .local v4, "_arg1":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 402
     .restart local v5    # "_arg2":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4, v5}, Landroid/media/tv/ITvInputManager$Stub;->unblockContent(Landroid/os/IBinder;Ljava/lang/String;I)V
 
-    .line 403
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 404
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 408
     .end local v3    # "_arg0":Landroid/os/IBinder;
     .end local v4    # "_arg1":Ljava/lang/String;
     .end local v5    # "_arg2":I
@@ -1507,32 +1295,26 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 410
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v3
 
-    .line 412
     .restart local v3    # "_arg0":Landroid/os/IBinder;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 413
     .local v4, "_arg1":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4}, Landroid/media/tv/ITvInputManager$Stub;->timeShiftPause(Landroid/os/IBinder;I)V
 
-    .line 414
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 415
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 419
     .end local v3    # "_arg0":Landroid/os/IBinder;
     .end local v4    # "_arg1":I
     :sswitch_1c
@@ -1542,32 +1324,26 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 421
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v3
 
-    .line 423
     .restart local v3    # "_arg0":Landroid/os/IBinder;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 424
     .restart local v4    # "_arg1":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4}, Landroid/media/tv/ITvInputManager$Stub;->timeShiftResume(Landroid/os/IBinder;I)V
 
-    .line 425
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 426
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 430
     .end local v3    # "_arg0":Landroid/os/IBinder;
     .end local v4    # "_arg1":I
     :sswitch_1d
@@ -1577,38 +1353,31 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 432
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v3
 
-    .line 434
     .restart local v3    # "_arg0":Landroid/os/IBinder;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v8
 
-    .line 436
     .local v8, "_arg1":J
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 437
     .restart local v5    # "_arg2":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v8, v9, v5}, Landroid/media/tv/ITvInputManager$Stub;->timeShiftSeekTo(Landroid/os/IBinder;JI)V
 
-    .line 438
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 439
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 443
     .end local v3    # "_arg0":Landroid/os/IBinder;
     .end local v5    # "_arg2":I
     .end local v8    # "_arg1":J
@@ -1619,12 +1388,10 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 445
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v3
 
-    .line 447
     .restart local v3    # "_arg0":Landroid/os/IBinder;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
@@ -1632,7 +1399,6 @@
 
     if-eqz v2, :cond_b
 
-    .line 448
     sget-object v2, Landroid/media/PlaybackParams;->CREATOR:Landroid/os/Parcelable$Creator;
 
     move-object/from16 v0, p2
@@ -1643,28 +1409,23 @@
 
     check-cast v4, Landroid/media/PlaybackParams;
 
-    .line 454
     .local v4, "_arg1":Landroid/media/PlaybackParams;
     :goto_c
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 455
     .restart local v5    # "_arg2":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4, v5}, Landroid/media/tv/ITvInputManager$Stub;->timeShiftSetPlaybackParams(Landroid/os/IBinder;Landroid/media/PlaybackParams;I)V
 
-    .line 456
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 457
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 451
     .end local v4    # "_arg1":Landroid/media/PlaybackParams;
     .end local v5    # "_arg2":I
     :cond_b
@@ -1673,7 +1434,6 @@
     .restart local v4    # "_arg1":Landroid/media/PlaybackParams;
     goto :goto_c
 
-    .line 461
     .end local v3    # "_arg0":Landroid/os/IBinder;
     .end local v4    # "_arg1":Landroid/media/PlaybackParams;
     :sswitch_1f
@@ -1683,12 +1443,10 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 463
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v3
 
-    .line 465
     .restart local v3    # "_arg0":Landroid/os/IBinder;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
@@ -1698,28 +1456,23 @@
 
     const/4 v4, 0x1
 
-    .line 467
     .local v4, "_arg1":Z
     :goto_d
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 468
     .restart local v5    # "_arg2":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4, v5}, Landroid/media/tv/ITvInputManager$Stub;->timeShiftEnablePositionTracking(Landroid/os/IBinder;ZI)V
 
-    .line 469
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 470
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 465
     .end local v4    # "_arg1":Z
     .end local v5    # "_arg2":I
     :cond_c
@@ -1727,7 +1480,6 @@
 
     goto :goto_d
 
-    .line 474
     .end local v3    # "_arg0":Landroid/os/IBinder;
     :sswitch_20
     const-string v2, "android.media.tv.ITvInputManager"
@@ -1736,26 +1488,21 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 475
     invoke-virtual/range {p0 .. p0}, Landroid/media/tv/ITvInputManager$Stub;->getHardwareList()Ljava/util/List;
 
     move-result-object v13
 
-    .line 476
     .local v13, "_result":Ljava/util/List;, "Ljava/util/List<Landroid/media/tv/TvInputHardwareInfo;>;"
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 477
     move-object/from16 v0, p3
 
     invoke-virtual {v0, v13}, Landroid/os/Parcel;->writeTypedList(Ljava/util/List;)V
 
-    .line 478
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 482
     .end local v13    # "_result":Ljava/util/List;, "Ljava/util/List<Landroid/media/tv/TvInputHardwareInfo;>;"
     :sswitch_21
     const-string v2, "android.media.tv.ITvInputManager"
@@ -1764,12 +1511,10 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 484
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 486
     .local v3, "_arg0":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
@@ -1779,7 +1524,6 @@
 
     move-result-object v4
 
-    .line 488
     .local v4, "_arg1":Landroid/media/tv/ITvInputHardwareCallback;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
@@ -1787,7 +1531,6 @@
 
     if-eqz v2, :cond_d
 
-    .line 489
     sget-object v2, Landroid/media/tv/TvInputInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
     move-object/from16 v0, p2
@@ -1798,14 +1541,12 @@
 
     check-cast v5, Landroid/media/tv/TvInputInfo;
 
-    .line 495
     .local v5, "_arg2":Landroid/media/tv/TvInputInfo;
     :goto_e
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 496
     .restart local v6    # "_arg3":I
     move-object/from16 v0, p0
 
@@ -1813,11 +1554,9 @@
 
     move-result-object v10
 
-    .line 497
     .local v10, "_result":Landroid/media/tv/ITvInputHardware;
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 498
     if-eqz v10, :cond_e
 
     invoke-interface {v10}, Landroid/media/tv/ITvInputHardware;->asBinder()Landroid/os/IBinder;
@@ -1829,12 +1568,10 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
-    .line 499
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 492
     .end local v5    # "_arg2":Landroid/media/tv/TvInputInfo;
     .end local v6    # "_arg3":I
     .end local v10    # "_result":Landroid/media/tv/ITvInputHardware;
@@ -1844,7 +1581,6 @@
     .restart local v5    # "_arg2":Landroid/media/tv/TvInputInfo;
     goto :goto_e
 
-    .line 498
     .restart local v6    # "_arg3":I
     .restart local v10    # "_result":Landroid/media/tv/ITvInputHardware;
     :cond_e
@@ -1852,7 +1588,6 @@
 
     goto :goto_f
 
-    .line 503
     .end local v3    # "_arg0":I
     .end local v4    # "_arg1":Landroid/media/tv/ITvInputHardwareCallback;
     .end local v5    # "_arg2":Landroid/media/tv/TvInputInfo;
@@ -1865,12 +1600,10 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 505
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 507
     .restart local v3    # "_arg0":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
@@ -1880,27 +1613,22 @@
 
     move-result-object v4
 
-    .line 509
     .local v4, "_arg1":Landroid/media/tv/ITvInputHardware;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 510
     .local v5, "_arg2":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4, v5}, Landroid/media/tv/ITvInputManager$Stub;->releaseTvInputHardware(ILandroid/media/tv/ITvInputHardware;I)V
 
-    .line 511
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 512
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 516
     .end local v3    # "_arg0":I
     .end local v4    # "_arg1":Landroid/media/tv/ITvInputHardware;
     .end local v5    # "_arg2":I
@@ -1911,18 +1639,15 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 518
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 520
     .local v3, "_arg0":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 521
     .local v4, "_arg1":I
     move-object/from16 v0, p0
 
@@ -1930,21 +1655,17 @@
 
     move-result-object v15
 
-    .line 522
     .local v15, "_result":Ljava/util/List;, "Ljava/util/List<Landroid/media/tv/TvStreamConfig;>;"
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 523
     move-object/from16 v0, p3
 
     invoke-virtual {v0, v15}, Landroid/os/Parcel;->writeTypedList(Ljava/util/List;)V
 
-    .line 524
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 528
     .end local v3    # "_arg0":Ljava/lang/String;
     .end local v4    # "_arg1":I
     .end local v15    # "_result":Ljava/util/List;, "Ljava/util/List<Landroid/media/tv/TvStreamConfig;>;"
@@ -1955,12 +1676,10 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 530
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 532
     .restart local v3    # "_arg0":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
@@ -1968,7 +1687,6 @@
 
     if-eqz v2, :cond_f
 
-    .line 533
     sget-object v2, Landroid/view/Surface;->CREATOR:Landroid/os/Parcelable$Creator;
 
     move-object/from16 v0, p2
@@ -1979,7 +1697,6 @@
 
     check-cast v4, Landroid/view/Surface;
 
-    .line 539
     .local v4, "_arg1":Landroid/view/Surface;
     :goto_10
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
@@ -1988,7 +1705,6 @@
 
     if-eqz v2, :cond_10
 
-    .line 540
     sget-object v2, Landroid/media/tv/TvStreamConfig;->CREATOR:Landroid/os/Parcelable$Creator;
 
     move-object/from16 v0, p2
@@ -1999,14 +1715,12 @@
 
     check-cast v5, Landroid/media/tv/TvStreamConfig;
 
-    .line 546
     .local v5, "_arg2":Landroid/media/tv/TvStreamConfig;
     :goto_11
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 547
     .restart local v6    # "_arg3":I
     move-object/from16 v0, p0
 
@@ -2014,11 +1728,9 @@
 
     move-result v10
 
-    .line 548
     .local v10, "_result":Z
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 549
     if-eqz v10, :cond_11
 
     const/4 v2, 0x1
@@ -2028,12 +1740,10 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 550
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 536
     .end local v4    # "_arg1":Landroid/view/Surface;
     .end local v5    # "_arg2":Landroid/media/tv/TvStreamConfig;
     .end local v6    # "_arg3":I
@@ -2044,14 +1754,12 @@
     .restart local v4    # "_arg1":Landroid/view/Surface;
     goto :goto_10
 
-    .line 543
     :cond_10
     const/4 v5, 0x0
 
     .restart local v5    # "_arg2":Landroid/media/tv/TvStreamConfig;
     goto :goto_11
 
-    .line 549
     .restart local v6    # "_arg3":I
     .restart local v10    # "_result":Z
     :cond_11
@@ -2059,7 +1767,6 @@
 
     goto :goto_12
 
-    .line 554
     .end local v3    # "_arg0":Ljava/lang/String;
     .end local v4    # "_arg1":Landroid/view/Surface;
     .end local v5    # "_arg2":Landroid/media/tv/TvStreamConfig;
@@ -2072,12 +1779,10 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 556
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 557
     .local v3, "_arg0":I
     move-object/from16 v0, p0
 
@@ -2085,11 +1790,9 @@
 
     move-result v10
 
-    .line 558
     .restart local v10    # "_result":Z
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 559
     if-eqz v10, :cond_12
 
     const/4 v2, 0x1
@@ -2099,18 +1802,15 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 560
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 559
     :cond_12
     const/4 v2, 0x0
 
     goto :goto_13
 
-    .line 564
     .end local v3    # "_arg0":I
     .end local v10    # "_result":Z
     :sswitch_26
@@ -2120,26 +1820,21 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 565
     invoke-virtual/range {p0 .. p0}, Landroid/media/tv/ITvInputManager$Stub;->getDvbDeviceList()Ljava/util/List;
 
     move-result-object v11
 
-    .line 566
     .local v11, "_result":Ljava/util/List;, "Ljava/util/List<Landroid/media/tv/DvbDeviceInfo;>;"
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 567
     move-object/from16 v0, p3
 
     invoke-virtual {v0, v11}, Landroid/os/Parcel;->writeTypedList(Ljava/util/List;)V
 
-    .line 568
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 572
     .end local v11    # "_result":Ljava/util/List;, "Ljava/util/List<Landroid/media/tv/DvbDeviceInfo;>;"
     :sswitch_27
     const-string v2, "android.media.tv.ITvInputManager"
@@ -2148,14 +1843,12 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 574
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
     if-eqz v2, :cond_13
 
-    .line 575
     sget-object v2, Landroid/media/tv/DvbDeviceInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
     move-object/from16 v0, p2
@@ -2166,14 +1859,12 @@
 
     check-cast v3, Landroid/media/tv/DvbDeviceInfo;
 
-    .line 581
     .local v3, "_arg0":Landroid/media/tv/DvbDeviceInfo;
     :goto_14
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 582
     .local v4, "_arg1":I
     move-object/from16 v0, p0
 
@@ -2181,34 +1872,28 @@
 
     move-result-object v10
 
-    .line 583
     .local v10, "_result":Landroid/os/ParcelFileDescriptor;
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 584
     if-eqz v10, :cond_14
 
-    .line 585
     const/4 v2, 0x1
 
     move-object/from16 v0, p3
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 586
     const/4 v2, 0x1
 
     move-object/from16 v0, p3
 
     invoke-virtual {v10, v0, v2}, Landroid/os/ParcelFileDescriptor;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 591
     :goto_15
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 578
     .end local v3    # "_arg0":Landroid/media/tv/DvbDeviceInfo;
     .end local v4    # "_arg1":I
     .end local v10    # "_result":Landroid/os/ParcelFileDescriptor;
@@ -2218,7 +1903,6 @@
     .restart local v3    # "_arg0":Landroid/media/tv/DvbDeviceInfo;
     goto :goto_14
 
-    .line 589
     .restart local v4    # "_arg1":I
     .restart local v10    # "_result":Landroid/os/ParcelFileDescriptor;
     :cond_14
@@ -2230,7 +1914,6 @@
 
     goto :goto_15
 
-    .line 42
     nop
 
     :sswitch_data_0

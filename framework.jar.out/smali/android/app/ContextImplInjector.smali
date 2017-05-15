@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 17
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -18,8 +17,7 @@
     .locals 3
 
     .prologue
-    .line 19
-    const-string/jumbo v0, "security"
+    const-string v0, "security"
 
     const-class v1, Lmiui/security/SecurityManager;
 
@@ -29,8 +27,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 33
-    const-string/jumbo v0, "locationpolicy"
+    const-string v0, "locationpolicy"
 
     const-class v1, Landroid/location/LocationPolicyManager;
 
@@ -40,6 +37,5 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 
-    .line 42
     return-void
 .end method

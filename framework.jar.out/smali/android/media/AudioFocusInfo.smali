@@ -38,7 +38,6 @@
     .locals 1
 
     .prologue
-    .line 158
     new-instance v0, Landroid/media/AudioFocusInfo$1;
 
     invoke-direct {v0}, Landroid/media/AudioFocusInfo$1;-><init>()V
@@ -58,10 +57,8 @@
     .param p6, "flags"    # I
 
     .prologue
-    .line 51
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 52
     if-nez p1, :cond_0
 
     new-instance v0, Landroid/media/AudioAttributes$Builder;
@@ -76,7 +73,6 @@
     :cond_0
     iput-object p1, p0, Landroid/media/AudioFocusInfo;->mAttributes:Landroid/media/AudioAttributes;
 
-    .line 53
     if-nez p2, :cond_1
 
     const-string p2, ""
@@ -85,7 +81,6 @@
     :cond_1
     iput-object p2, p0, Landroid/media/AudioFocusInfo;->mClientId:Ljava/lang/String;
 
-    .line 54
     if-nez p3, :cond_2
 
     const-string p3, ""
@@ -94,16 +89,12 @@
     :cond_2
     iput-object p3, p0, Landroid/media/AudioFocusInfo;->mPackageName:Ljava/lang/String;
 
-    .line 55
     iput p4, p0, Landroid/media/AudioFocusInfo;->mGainRequest:I
 
-    .line 56
     iput p5, p0, Landroid/media/AudioFocusInfo;->mLossReceived:I
 
-    .line 57
     iput p6, p0, Landroid/media/AudioFocusInfo;->mFlags:I
 
-    .line 58
     return-void
 .end method
 
@@ -113,7 +104,6 @@
     .locals 1
 
     .prologue
-    .line 95
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/media/AudioFocusInfo;->mLossReceived:I
@@ -125,7 +115,6 @@
     .locals 1
 
     .prologue
-    .line 108
     const/4 v0, 0x0
 
     return v0
@@ -140,24 +129,19 @@
 
     const/4 v2, 0x0
 
-    .line 130
     if-ne p0, p1, :cond_1
 
-    .line 155
     :cond_0
     :goto_0
     return v1
 
-    .line 132
     :cond_1
     if-nez p1, :cond_2
 
     move v1, v2
 
-    .line 133
     goto :goto_0
 
-    .line 134
     :cond_2
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -171,16 +155,13 @@
 
     move v1, v2
 
-    .line 135
     goto :goto_0
 
     :cond_3
     move-object v0, p1
 
-    .line 136
     check-cast v0, Landroid/media/AudioFocusInfo;
 
-    .line 137
     .local v0, "other":Landroid/media/AudioFocusInfo;
     iget-object v3, p0, Landroid/media/AudioFocusInfo;->mAttributes:Landroid/media/AudioAttributes;
 
@@ -194,10 +175,8 @@
 
     move v1, v2
 
-    .line 138
     goto :goto_0
 
-    .line 140
     :cond_4
     iget-object v3, p0, Landroid/media/AudioFocusInfo;->mClientId:Ljava/lang/String;
 
@@ -211,10 +190,8 @@
 
     move v1, v2
 
-    .line 141
     goto :goto_0
 
-    .line 143
     :cond_5
     iget-object v3, p0, Landroid/media/AudioFocusInfo;->mPackageName:Ljava/lang/String;
 
@@ -228,10 +205,8 @@
 
     move v1, v2
 
-    .line 144
     goto :goto_0
 
-    .line 146
     :cond_6
     iget v3, p0, Landroid/media/AudioFocusInfo;->mGainRequest:I
 
@@ -241,10 +216,8 @@
 
     move v1, v2
 
-    .line 147
     goto :goto_0
 
-    .line 149
     :cond_7
     iget v3, p0, Landroid/media/AudioFocusInfo;->mLossReceived:I
 
@@ -254,10 +227,8 @@
 
     move v1, v2
 
-    .line 150
     goto :goto_0
 
-    .line 152
     :cond_8
     iget v3, p0, Landroid/media/AudioFocusInfo;->mFlags:I
 
@@ -267,7 +238,6 @@
 
     move v1, v2
 
-    .line 153
     goto :goto_0
 .end method
 
@@ -275,7 +245,6 @@
     .locals 1
 
     .prologue
-    .line 66
     iget-object v0, p0, Landroid/media/AudioFocusInfo;->mAttributes:Landroid/media/AudioAttributes;
 
     return-object v0
@@ -285,7 +254,6 @@
     .locals 1
 
     .prologue
-    .line 69
     iget-object v0, p0, Landroid/media/AudioFocusInfo;->mClientId:Ljava/lang/String;
 
     return-object v0
@@ -295,7 +263,6 @@
     .locals 1
 
     .prologue
-    .line 104
     iget v0, p0, Landroid/media/AudioFocusInfo;->mFlags:I
 
     return v0
@@ -305,7 +272,6 @@
     .locals 1
 
     .prologue
-    .line 82
     iget v0, p0, Landroid/media/AudioFocusInfo;->mGainRequest:I
 
     return v0
@@ -315,7 +281,6 @@
     .locals 1
 
     .prologue
-    .line 92
     iget v0, p0, Landroid/media/AudioFocusInfo;->mLossReceived:I
 
     return v0
@@ -325,7 +290,6 @@
     .locals 1
 
     .prologue
-    .line 72
     iget-object v0, p0, Landroid/media/AudioFocusInfo;->mPackageName:Ljava/lang/String;
 
     return-object v0
@@ -335,7 +299,6 @@
     .locals 3
 
     .prologue
-    .line 124
     const/4 v0, 0x5
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -391,36 +354,29 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 113
     iget-object v0, p0, Landroid/media/AudioFocusInfo;->mAttributes:Landroid/media/AudioAttributes;
 
     invoke-virtual {v0, p1, p2}, Landroid/media/AudioAttributes;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 114
     iget-object v0, p0, Landroid/media/AudioFocusInfo;->mClientId:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 115
     iget-object v0, p0, Landroid/media/AudioFocusInfo;->mPackageName:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 116
     iget v0, p0, Landroid/media/AudioFocusInfo;->mGainRequest:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 117
     iget v0, p0, Landroid/media/AudioFocusInfo;->mLossReceived:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 118
     iget v0, p0, Landroid/media/AudioFocusInfo;->mFlags:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 119
     return-void
 .end method

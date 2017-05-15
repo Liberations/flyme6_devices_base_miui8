@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 3953
     iput-object p1, p0, Landroid/widget/Editor$ActionPopupWindow$5;->this$1:Landroid/widget/Editor$ActionPopupWindow;
 
     iput p2, p0, Landroid/widget/Editor$ActionPopupWindow$5;->val$maximum:I
@@ -60,7 +59,6 @@
     .end annotation
 
     .prologue
-    .line 3957
     .local p1, "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     invoke-virtual {p1}, Landroid/widget/AdapterView;->getAdapter()Landroid/widget/Adapter;
 
@@ -72,7 +70,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 3958
     .local v0, "paste":Ljava/lang/String;
     iget-object v2, p0, Landroid/widget/Editor$ActionPopupWindow$5;->this$1:Landroid/widget/Editor$ActionPopupWindow;
 
@@ -90,14 +87,12 @@
     .local v1, "text":Ljava/lang/CharSequence;
     move-object v2, v1
 
-    .line 3959
     check-cast v2, Landroid/text/Spannable;
 
     iget v3, p0, Landroid/widget/Editor$ActionPopupWindow$5;->val$maximum:I
 
     invoke-static {v2, v3}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;I)V
 
-    .line 3960
     check-cast v1, Landroid/text/Editable;
 
     .end local v1    # "text":Ljava/lang/CharSequence;
@@ -107,6 +102,5 @@
 
     invoke-interface {v1, v2, v3, v0}, Landroid/text/Editable;->replace(IILjava/lang/CharSequence;)Landroid/text/Editable;
 
-    .line 3961
     return-void
 .end method

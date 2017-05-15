@@ -39,21 +39,16 @@
     .param p2, "node"    # Lorg/w3c/dom/Element;
 
     .prologue
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 33
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lmiui/maml/animation/BaseAnimation$AnimationItem;->mNeedEvaluate:Z
 
-    .line 39
     iput-object p1, p0, Lmiui/maml/animation/BaseAnimation$AnimationItem;->mAni:Lmiui/maml/animation/BaseAnimation;
 
-    .line 40
     invoke-direct {p0, p2}, Lmiui/maml/animation/BaseAnimation$AnimationItem;->load(Lorg/w3c/dom/Element;)V
 
-    .line 41
     return-void
 .end method
 
@@ -62,14 +57,12 @@
     .param p1, "node"    # Lorg/w3c/dom/Element;
 
     .prologue
-    .line 63
     iget-object v9, p0, Lmiui/maml/animation/BaseAnimation$AnimationItem;->mAni:Lmiui/maml/animation/BaseAnimation;
 
     invoke-virtual {v9}, Lmiui/maml/animation/BaseAnimation;->getVariables()Lmiui/maml/data/Variables;
 
     move-result-object v8
 
-    .line 64
     .local v8, "vars":Lmiui/maml/data/Variables;
     invoke-static {v8, p1}, Lmiui/maml/animation/interpolater/InterpolatorHelper;->create(Lmiui/maml/data/Variables;Lorg/w3c/dom/Element;)Lmiui/maml/animation/interpolater/InterpolatorHelper;
 
@@ -77,7 +70,6 @@
 
     iput-object v9, p0, Lmiui/maml/animation/BaseAnimation$AnimationItem;->mInterpolator:Lmiui/maml/animation/interpolater/InterpolatorHelper;
 
-    .line 66
     :try_start_0
     const-string v9, "time"
 
@@ -93,7 +85,6 @@
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 70
     :goto_0
     const-string v9, "dtime"
 
@@ -107,35 +98,29 @@
 
     iput-object v9, p0, Lmiui/maml/animation/BaseAnimation$AnimationItem;->mDeltaTimeExp:Lmiui/maml/data/Expression;
 
-    .line 71
     iget-object v9, p0, Lmiui/maml/animation/BaseAnimation$AnimationItem;->mAni:Lmiui/maml/animation/BaseAnimation;
 
     invoke-virtual {v9}, Lmiui/maml/animation/BaseAnimation;->getAttrs()[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 72
     .local v1, "attrs":[Ljava/lang/String;
     if-eqz v1, :cond_1
 
-    .line 73
     array-length v9, v1
 
     new-array v9, v9, [D
 
     iput-object v9, p0, Lmiui/maml/animation/BaseAnimation$AnimationItem;->mAttrsValue:[D
 
-    .line 74
     array-length v9, v1
 
     new-array v9, v9, [Lmiui/maml/data/Expression;
 
     iput-object v9, p0, Lmiui/maml/animation/BaseAnimation$AnimationItem;->mExps:[Lmiui/maml/data/Expression;
 
-    .line 75
     const/4 v3, 0x0
 
-    .line 76
     .local v3, "i":I
     move-object v0, v1
 
@@ -155,7 +140,6 @@
 
     aget-object v7, v0, v5
 
-    .line 77
     .local v7, "s":Ljava/lang/String;
     invoke-interface {p1, v7}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -165,13 +149,12 @@
 
     move-result-object v2
 
-    .line 79
     .local v2, "exp":Lmiui/maml/data/Expression;
     if-nez v2, :cond_0
 
     if-nez v4, :cond_0
 
-    const-string/jumbo v9, "value"
+    const-string v9, "value"
 
     invoke-virtual {v9, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -179,8 +162,7 @@
 
     if-nez v9, :cond_0
 
-    .line 80
-    const-string/jumbo v9, "value"
+    const-string v9, "value"
 
     invoke-interface {p1, v9}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -190,7 +172,6 @@
 
     move-result-object v2
 
-    .line 82
     :cond_0
     iget-object v9, p0, Lmiui/maml/animation/BaseAnimation$AnimationItem;->mExps:[Lmiui/maml/data/Expression;
 
@@ -200,7 +181,6 @@
     .restart local v3    # "i":I
     aput-object v2, v9, v4
 
-    .line 76
     add-int/lit8 v5, v5, 0x1
 
     move v4, v3
@@ -209,7 +189,6 @@
     .restart local v4    # "i":I
     goto :goto_1
 
-    .line 86
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v2    # "exp":Lmiui/maml/data/Expression;
     .end local v4    # "i":I
@@ -221,10 +200,8 @@
 
     iput-wide v10, p0, Lmiui/maml/animation/BaseAnimation$AnimationItem;->mInitTime:J
 
-    .line 87
     return-void
 
-    .line 67
     .end local v1    # "attrs":[Ljava/lang/String;
     :catch_0
     move-exception v9
@@ -236,20 +213,16 @@
     .locals 9
 
     .prologue
-    .line 90
     iget-object v6, p0, Lmiui/maml/animation/BaseAnimation$AnimationItem;->mExps:[Lmiui/maml/data/Expression;
 
     if-nez v6, :cond_1
 
-    .line 97
     :cond_0
     return-void
 
-    .line 93
     :cond_1
     const/4 v2, 0x0
 
-    .line 94
     .local v2, "i":I
     iget-object v0, p0, Lmiui/maml/animation/BaseAnimation$AnimationItem;->mExps:[Lmiui/maml/data/Expression;
 
@@ -269,7 +242,6 @@
 
     aget-object v1, v0, v4
 
-    .line 95
     .local v1, "e":Lmiui/maml/data/Expression;
     iget-object v8, p0, Lmiui/maml/animation/BaseAnimation$AnimationItem;->mAttrsValue:[D
 
@@ -284,7 +256,6 @@
     :goto_1
     aput-wide v6, v8, v3
 
-    .line 94
     add-int/lit8 v4, v4, 0x1
 
     move v3, v2
@@ -293,7 +264,6 @@
     .restart local v3    # "i":I
     goto :goto_0
 
-    .line 95
     .end local v3    # "i":I
     .restart local v2    # "i":I
     :cond_2
@@ -313,7 +283,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 56
     iget-object v1, p0, Lmiui/maml/animation/BaseAnimation$AnimationItem;->mExps:[Lmiui/maml/data/Expression;
 
     if-eqz v1, :cond_0
@@ -326,7 +295,6 @@
 
     if-lt p1, v1, :cond_1
 
-    .line 59
     :cond_0
     :goto_0
     return v0
@@ -348,7 +316,6 @@
     .param p1, "i"    # I
 
     .prologue
-    .line 44
     iget-object v0, p0, Lmiui/maml/animation/BaseAnimation$AnimationItem;->mAttrsValue:[D
 
     if-eqz v0, :cond_0
@@ -361,7 +328,6 @@
 
     if-lt p1, v0, :cond_1
 
-    .line 45
     :cond_0
     const-string v0, "BaseAnimation"
 
@@ -385,28 +351,22 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 46
     const-wide/16 v0, 0x0
 
-    .line 52
     :goto_0
     return-wide v0
 
-    .line 48
     :cond_1
     iget-boolean v0, p0, Lmiui/maml/animation/BaseAnimation$AnimationItem;->mNeedEvaluate:Z
 
     if-eqz v0, :cond_2
 
-    .line 49
     invoke-direct {p0}, Lmiui/maml/animation/BaseAnimation$AnimationItem;->reevaluate()V
 
-    .line 50
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lmiui/maml/animation/BaseAnimation$AnimationItem;->mNeedEvaluate:Z
 
-    .line 52
     :cond_2
     iget-object v0, p0, Lmiui/maml/animation/BaseAnimation$AnimationItem;->mAttrsValue:[D
 
@@ -419,16 +379,13 @@
     .locals 2
 
     .prologue
-    .line 100
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lmiui/maml/animation/BaseAnimation$AnimationItem;->mNeedEvaluate:Z
 
-    .line 101
     iget-wide v0, p0, Lmiui/maml/animation/BaseAnimation$AnimationItem;->mInitTime:J
 
     iput-wide v0, p0, Lmiui/maml/animation/BaseAnimation$AnimationItem;->mTime:J
 
-    .line 102
     return-void
 .end method

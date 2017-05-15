@@ -22,7 +22,6 @@
 
     const/4 v0, 0x1
 
-    .line 11
     const-string v1, "exquisite_mode_target_density"
 
     invoke-static {v1, v0}, Lmiui/util/FeatureParser;->getInteger(Ljava/lang/String;I)I
@@ -45,7 +44,6 @@
 
     sput v1, Lmiui/util/ExquisiteModeUtils;->DEFAULT_EXQUISITE_SCALE_VALUE:F
 
-    .line 15
     sget-boolean v1, Lmiui/os/Build;->IS_CTS_BUILD:Z
 
     if-nez v1, :cond_0
@@ -71,7 +69,6 @@
     .locals 0
 
     .prologue
-    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 218
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,14 +44,12 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 222
     new-instance v0, Landroid/app/admin/SystemUpdatePolicy;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, v1}, Landroid/app/admin/SystemUpdatePolicy;-><init>(Landroid/app/admin/SystemUpdatePolicy$1;)V
 
-    .line 223
     .local v0, "policy":Landroid/app/admin/SystemUpdatePolicy;
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -61,7 +58,6 @@
     # setter for: Landroid/app/admin/SystemUpdatePolicy;->mPolicyType:I
     invoke-static {v0, v1}, Landroid/app/admin/SystemUpdatePolicy;->access$102(Landroid/app/admin/SystemUpdatePolicy;I)I
 
-    .line 224
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
@@ -69,7 +65,6 @@
     # setter for: Landroid/app/admin/SystemUpdatePolicy;->mMaintenanceWindowStart:I
     invoke-static {v0, v1}, Landroid/app/admin/SystemUpdatePolicy;->access$202(Landroid/app/admin/SystemUpdatePolicy;I)I
 
-    .line 225
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
@@ -77,7 +72,6 @@
     # setter for: Landroid/app/admin/SystemUpdatePolicy;->mMaintenanceWindowEnd:I
     invoke-static {v0, v1}, Landroid/app/admin/SystemUpdatePolicy;->access$302(Landroid/app/admin/SystemUpdatePolicy;I)I
 
-    .line 226
     return-object v0
 .end method
 
@@ -86,7 +80,6 @@
     .param p1, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 218
     invoke-virtual {p0, p1}, Landroid/app/admin/SystemUpdatePolicy$1;->createFromParcel(Landroid/os/Parcel;)Landroid/app/admin/SystemUpdatePolicy;
 
     move-result-object v0
@@ -99,7 +92,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 231
     new-array v0, p1, [Landroid/app/admin/SystemUpdatePolicy;
 
     return-object v0
@@ -110,7 +102,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 218
     invoke-virtual {p0, p1}, Landroid/app/admin/SystemUpdatePolicy$1;->newArray(I)[Landroid/app/admin/SystemUpdatePolicy;
 
     move-result-object v0

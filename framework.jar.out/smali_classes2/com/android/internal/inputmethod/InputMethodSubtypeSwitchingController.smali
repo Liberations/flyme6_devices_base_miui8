@@ -37,7 +37,6 @@
     .locals 1
 
     .prologue
-    .line 49
     const-class v0, Lcom/android/internal/inputmethod/InputMethodSubtypeSwitchingController;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -55,16 +54,12 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 512
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 513
     iput-object p1, p0, Lcom/android/internal/inputmethod/InputMethodSubtypeSwitchingController;->mSettings:Lcom/android/internal/inputmethod/InputMethodUtils$InputMethodSettings;
 
-    .line 514
     invoke-virtual {p0, p2}, Lcom/android/internal/inputmethod/InputMethodSubtypeSwitchingController;->resetCircularListLocked(Landroid/content/Context;)V
 
-    .line 515
     return-void
 .end method
 
@@ -74,7 +69,6 @@
     .param p1, "x1"    # Landroid/view/inputmethod/InputMethodSubtype;
 
     .prologue
-    .line 48
     invoke-static {p0, p1}, Lcom/android/internal/inputmethod/InputMethodSubtypeSwitchingController;->calculateSubtypeId(Landroid/view/inputmethod/InputMethodInfo;Landroid/view/inputmethod/InputMethodSubtype;)I
 
     move-result v0
@@ -88,7 +82,6 @@
     .param p1, "subtype"    # Landroid/view/inputmethod/InputMethodSubtype;
 
     .prologue
-    .line 262
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Landroid/view/inputmethod/InputMethodSubtype;->hashCode()I
@@ -114,7 +107,6 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 519
     new-instance v0, Lcom/android/internal/inputmethod/InputMethodSubtypeSwitchingController;
 
     invoke-direct {v0, p0, p1}, Lcom/android/internal/inputmethod/InputMethodSubtypeSwitchingController;-><init>(Lcom/android/internal/inputmethod/InputMethodUtils$InputMethodSettings;Landroid/content/Context;)V
@@ -129,21 +121,17 @@
     .param p1, "pw"    # Landroid/util/Printer;
 
     .prologue
-    .line 556
     iget-object v0, p0, Lcom/android/internal/inputmethod/InputMethodSubtypeSwitchingController;->mController:Lcom/android/internal/inputmethod/InputMethodSubtypeSwitchingController$ControllerImpl;
 
     if-eqz v0, :cond_0
 
-    .line 557
     iget-object v0, p0, Lcom/android/internal/inputmethod/InputMethodSubtypeSwitchingController;->mController:Lcom/android/internal/inputmethod/InputMethodSubtypeSwitchingController$ControllerImpl;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/inputmethod/InputMethodSubtypeSwitchingController$ControllerImpl;->dump(Landroid/util/Printer;)V
 
-    .line 561
     :goto_0
     return-void
 
-    .line 559
     :cond_0
     const-string v0, "    mController=null"
 
@@ -159,15 +147,12 @@
     .param p3, "subtype"    # Landroid/view/inputmethod/InputMethodSubtype;
 
     .prologue
-    .line 540
     iget-object v0, p0, Lcom/android/internal/inputmethod/InputMethodSubtypeSwitchingController;->mController:Lcom/android/internal/inputmethod/InputMethodSubtypeSwitchingController$ControllerImpl;
 
     if-nez v0, :cond_0
 
-    .line 544
     const/4 v0, 0x0
 
-    .line 546
     :goto_0
     return-object v0
 
@@ -197,7 +182,6 @@
     .end annotation
 
     .prologue
-    .line 551
     iget-object v0, p0, Lcom/android/internal/inputmethod/InputMethodSubtypeSwitchingController;->mSubtypeList:Lcom/android/internal/inputmethod/InputMethodSubtypeSwitchingController$InputMethodAndSubtypeList;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/internal/inputmethod/InputMethodSubtypeSwitchingController$InputMethodAndSubtypeList;->getSortedInputMethodAndSubtypeList(ZZZ)Ljava/util/List;
@@ -213,16 +197,13 @@
     .param p2, "subtype"    # Landroid/view/inputmethod/InputMethodSubtype;
 
     .prologue
-    .line 523
     iget-object v0, p0, Lcom/android/internal/inputmethod/InputMethodSubtypeSwitchingController;->mController:Lcom/android/internal/inputmethod/InputMethodSubtypeSwitchingController$ControllerImpl;
 
     if-nez v0, :cond_0
 
-    .line 530
     :goto_0
     return-void
 
-    .line 529
     :cond_0
     iget-object v0, p0, Lcom/android/internal/inputmethod/InputMethodSubtypeSwitchingController;->mController:Lcom/android/internal/inputmethod/InputMethodSubtypeSwitchingController$ControllerImpl;
 
@@ -236,7 +217,6 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 533
     new-instance v0, Lcom/android/internal/inputmethod/InputMethodSubtypeSwitchingController$InputMethodAndSubtypeList;
 
     iget-object v1, p0, Lcom/android/internal/inputmethod/InputMethodSubtypeSwitchingController;->mSettings:Lcom/android/internal/inputmethod/InputMethodUtils$InputMethodSettings;
@@ -245,7 +225,6 @@
 
     iput-object v0, p0, Lcom/android/internal/inputmethod/InputMethodSubtypeSwitchingController;->mSubtypeList:Lcom/android/internal/inputmethod/InputMethodSubtypeSwitchingController$InputMethodAndSubtypeList;
 
-    .line 534
     iget-object v0, p0, Lcom/android/internal/inputmethod/InputMethodSubtypeSwitchingController;->mController:Lcom/android/internal/inputmethod/InputMethodSubtypeSwitchingController$ControllerImpl;
 
     iget-object v1, p0, Lcom/android/internal/inputmethod/InputMethodSubtypeSwitchingController;->mSubtypeList:Lcom/android/internal/inputmethod/InputMethodSubtypeSwitchingController$InputMethodAndSubtypeList;
@@ -260,6 +239,5 @@
 
     iput-object v0, p0, Lcom/android/internal/inputmethod/InputMethodSubtypeSwitchingController;->mController:Lcom/android/internal/inputmethod/InputMethodSubtypeSwitchingController$ControllerImpl;
 
-    .line 536
     return-void
 .end method

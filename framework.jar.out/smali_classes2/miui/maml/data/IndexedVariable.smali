@@ -19,13 +19,10 @@
     .param p3, "isNumber"    # Z
 
     .prologue
-    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 12
     iput-boolean p3, p0, Lmiui/maml/data/IndexedVariable;->mIsNumber:Z
 
-    .line 13
     iget-boolean v0, p0, Lmiui/maml/data/IndexedVariable;->mIsNumber:Z
 
     if-eqz v0, :cond_0
@@ -37,13 +34,10 @@
     :goto_0
     iput v0, p0, Lmiui/maml/data/IndexedVariable;->mIndex:I
 
-    .line 14
     iput-object p2, p0, Lmiui/maml/data/IndexedVariable;->mVars:Lmiui/maml/data/Variables;
 
-    .line 15
     return-void
 
-    .line 13
     :cond_0
     invoke-virtual {p2, p1}, Lmiui/maml/data/Variables;->registerVariable(Ljava/lang/String;)I
 
@@ -58,7 +52,6 @@
     .locals 2
 
     .prologue
-    .line 39
     iget-object v0, p0, Lmiui/maml/data/IndexedVariable;->mVars:Lmiui/maml/data/Variables;
 
     iget v1, p0, Lmiui/maml/data/IndexedVariable;->mIndex:I
@@ -75,7 +68,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 47
     iget-object v0, p0, Lmiui/maml/data/IndexedVariable;->mVars:Lmiui/maml/data/Variables;
 
     iget v1, p0, Lmiui/maml/data/IndexedVariable;->mIndex:I
@@ -92,7 +84,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 59
     iget-object v0, p0, Lmiui/maml/data/IndexedVariable;->mVars:Lmiui/maml/data/Variables;
 
     iget v1, p0, Lmiui/maml/data/IndexedVariable;->mIndex:I
@@ -109,7 +100,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 51
     iget-object v0, p0, Lmiui/maml/data/IndexedVariable;->mVars:Lmiui/maml/data/Variables;
 
     iget v1, p0, Lmiui/maml/data/IndexedVariable;->mIndex:I
@@ -125,7 +115,6 @@
     .locals 2
 
     .prologue
-    .line 55
     iget-object v0, p0, Lmiui/maml/data/IndexedVariable;->mVars:Lmiui/maml/data/Variables;
 
     iget v1, p0, Lmiui/maml/data/IndexedVariable;->mIndex:I
@@ -141,7 +130,6 @@
     .locals 1
 
     .prologue
-    .line 75
     iget v0, p0, Lmiui/maml/data/IndexedVariable;->mIndex:I
 
     return v0
@@ -151,7 +139,6 @@
     .locals 2
 
     .prologue
-    .line 43
     iget-object v0, p0, Lmiui/maml/data/IndexedVariable;->mVars:Lmiui/maml/data/Variables;
 
     iget v1, p0, Lmiui/maml/data/IndexedVariable;->mIndex:I
@@ -167,7 +154,6 @@
     .locals 1
 
     .prologue
-    .line 79
     iget-object v0, p0, Lmiui/maml/data/IndexedVariable;->mVars:Lmiui/maml/data/Variables;
 
     return-object v0
@@ -177,7 +163,6 @@
     .locals 3
 
     .prologue
-    .line 71
     iget-object v0, p0, Lmiui/maml/data/IndexedVariable;->mVars:Lmiui/maml/data/Variables;
 
     iget v1, p0, Lmiui/maml/data/IndexedVariable;->mIndex:I
@@ -199,7 +184,6 @@
 
     const/4 v1, 0x0
 
-    .line 63
     iget-boolean v2, p0, Lmiui/maml/data/IndexedVariable;->mIsNumber:Z
 
     if-eqz v2, :cond_2
@@ -248,7 +232,6 @@
 
     const/4 v1, 0x0
 
-    .line 67
     iget-boolean v2, p0, Lmiui/maml/data/IndexedVariable;->mIsNumber:Z
 
     if-eqz v2, :cond_2
@@ -293,14 +276,12 @@
     .param p1, "value"    # D
 
     .prologue
-    .line 18
     iget-object v0, p0, Lmiui/maml/data/IndexedVariable;->mVars:Lmiui/maml/data/Variables;
 
     iget v1, p0, Lmiui/maml/data/IndexedVariable;->mIndex:I
 
     invoke-virtual {v0, v1, p1, p2}, Lmiui/maml/data/Variables;->put(ID)V
 
-    .line 19
     return-void
 .end method
 
@@ -309,12 +290,10 @@
     .param p1, "value"    # Ljava/lang/Object;
 
     .prologue
-    .line 22
     iget-boolean v0, p0, Lmiui/maml/data/IndexedVariable;->mIsNumber:Z
 
     if-eqz v0, :cond_0
 
-    .line 23
     iget-object v0, p0, Lmiui/maml/data/IndexedVariable;->mVars:Lmiui/maml/data/Variables;
 
     iget v1, p0, Lmiui/maml/data/IndexedVariable;->mIndex:I
@@ -323,11 +302,9 @@
 
     move-result v0
 
-    .line 27
     :goto_0
     return v0
 
-    .line 25
     :cond_0
     iget-object v0, p0, Lmiui/maml/data/IndexedVariable;->mVars:Lmiui/maml/data/Variables;
 
@@ -335,7 +312,6 @@
 
     invoke-virtual {v0, v1, p1}, Lmiui/maml/data/Variables;->put(ILjava/lang/Object;)V
 
-    .line 27
     const/4 v0, 0x1
 
     goto :goto_0
@@ -347,7 +323,6 @@
     .param p2, "value"    # D
 
     .prologue
-    .line 31
     iget-object v0, p0, Lmiui/maml/data/IndexedVariable;->mVars:Lmiui/maml/data/Variables;
 
     iget v1, p0, Lmiui/maml/data/IndexedVariable;->mIndex:I
@@ -365,7 +340,6 @@
     .param p2, "value"    # Ljava/lang/Object;
 
     .prologue
-    .line 35
     iget-boolean v0, p0, Lmiui/maml/data/IndexedVariable;->mIsNumber:Z
 
     if-eqz v0, :cond_0

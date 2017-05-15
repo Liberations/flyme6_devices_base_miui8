@@ -33,17 +33,14 @@
     .locals 1
 
     .prologue
-    .line 191
     iput-object p1, p0, Lmiui/util/LongScreenshotUtils$ContentPort$H;->this$0:Lmiui/util/LongScreenshotUtils$ContentPort;
 
-    .line 192
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 193
     return-void
 .end method
 
@@ -54,17 +51,14 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 197
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 216
     :cond_0
     :goto_0
     return-void
 
-    .line 199
     :pswitch_0
     iget-object v0, p0, Lmiui/util/LongScreenshotUtils$ContentPort$H;->this$0:Lmiui/util/LongScreenshotUtils$ContentPort;
 
@@ -73,7 +67,6 @@
 
     goto :goto_0
 
-    .line 202
     :pswitch_1
     iget-object v0, p0, Lmiui/util/LongScreenshotUtils$ContentPort$H;->this$0:Lmiui/util/LongScreenshotUtils$ContentPort;
 
@@ -84,13 +77,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 203
     iget-object v0, p0, Lmiui/util/LongScreenshotUtils$ContentPort$H;->this$0:Lmiui/util/LongScreenshotUtils$ContentPort;
 
     # invokes: Lmiui/util/LongScreenshotUtils$ContentPort;->scrollView()V
     invoke-static {v0}, Lmiui/util/LongScreenshotUtils$ContentPort;->access$200(Lmiui/util/LongScreenshotUtils$ContentPort;)V
 
-    .line 204
     const/4 v0, 0x3
 
     const-wide/16 v2, 0xc8
@@ -99,7 +90,6 @@
 
     goto :goto_0
 
-    .line 208
     :pswitch_2
     iget-object v0, p0, Lmiui/util/LongScreenshotUtils$ContentPort$H;->this$0:Lmiui/util/LongScreenshotUtils$ContentPort;
 
@@ -110,7 +100,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 209
     iget-object v0, p0, Lmiui/util/LongScreenshotUtils$ContentPort$H;->this$0:Lmiui/util/LongScreenshotUtils$ContentPort;
 
     # invokes: Lmiui/util/LongScreenshotUtils$ContentPort;->broadcastCallback()V
@@ -118,7 +107,6 @@
 
     goto :goto_0
 
-    .line 213
     :pswitch_3
     iget-object v0, p0, Lmiui/util/LongScreenshotUtils$ContentPort$H;->this$0:Lmiui/util/LongScreenshotUtils$ContentPort;
 
@@ -127,7 +115,6 @@
 
     goto :goto_0
 
-    .line 197
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

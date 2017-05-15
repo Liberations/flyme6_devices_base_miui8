@@ -27,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 1071
     iput-object p1, p0, Lmiui/maml/elements/AdvancedSlider$CheckTouchResult;->this$0:Lmiui/maml/elements/AdvancedSlider;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p2, "x1"    # Lmiui/maml/elements/AdvancedSlider$1;
 
     .prologue
-    .line 1071
     invoke-direct {p0, p1}, Lmiui/maml/elements/AdvancedSlider$CheckTouchResult;-><init>(Lmiui/maml/elements/AdvancedSlider;)V
 
     return-void

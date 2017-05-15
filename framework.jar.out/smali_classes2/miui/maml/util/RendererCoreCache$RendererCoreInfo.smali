@@ -30,17 +30,13 @@
     .param p1, "rc"    # Lmiui/maml/RendererCore;
 
     .prologue
-    .line 50
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 44
     const-wide v0, 0x7fffffffffffffffL
 
     iput-wide v0, p0, Lmiui/maml/util/RendererCoreCache$RendererCoreInfo;->accessTime:J
 
-    .line 51
     iput-object p1, p0, Lmiui/maml/util/RendererCoreCache$RendererCoreInfo;->r:Lmiui/maml/RendererCore;
 
-    .line 52
     return-void
 .end method

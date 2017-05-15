@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 161
     invoke-direct {p0}, Lmiui/push/IQ;-><init>()V
 
     return-void
@@ -31,7 +30,6 @@
     .locals 1
 
     .prologue
-    .line 163
     const/4 v0, 0x0
 
     return-object v0

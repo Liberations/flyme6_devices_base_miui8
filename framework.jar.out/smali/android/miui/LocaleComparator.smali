@@ -37,17 +37,15 @@
 
     const/4 v2, 0x0
 
-    .line 16
     sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     if-eqz v0, :cond_0
 
-    .line 17
     const/16 v0, 0x9
 
     new-array v0, v0, [Ljava/lang/String;
 
-    const-string/jumbo v1, "zh_CN"
+    const-string v1, "zh_CN"
 
     aput-object v1, v0, v2
 
@@ -59,43 +57,42 @@
 
     aput-object v1, v0, v4
 
-    const-string/jumbo v1, "hi_IN"
+    const-string v1, "hi_IN"
 
     aput-object v1, v0, v5
 
     const/4 v1, 0x4
 
-    const-string/jumbo v2, "in_ID"
+    const-string v2, "in_ID"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x5
 
-    const-string/jumbo v2, "ms_MY"
+    const-string v2, "ms_MY"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x6
 
-    const-string/jumbo v2, "vi_VN"
+    const-string v2, "vi_VN"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x7
 
-    const-string/jumbo v2, "zh_TW"
+    const-string v2, "zh_TW"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x8
 
-    const-string/jumbo v2, "th_TH"
+    const-string v2, "th_TH"
 
     aput-object v2, v0, v1
 
     sput-object v0, Landroid/miui/LocaleComparator;->TOP_LOCALES:[Ljava/lang/String;
 
-    .line 23
     :goto_0
     sget-object v0, Landroid/miui/LocaleComparator;->TOP_LOCALES:[Ljava/lang/String;
 
@@ -105,15 +102,14 @@
 
     return-void
 
-    .line 19
     :cond_0
     new-array v0, v5, [Ljava/lang/String;
 
-    const-string/jumbo v1, "zh_CN"
+    const-string v1, "zh_CN"
 
     aput-object v1, v0, v2
 
-    const-string/jumbo v1, "zh_TW"
+    const-string v1, "zh_TW"
 
     aput-object v1, v0, v3
 
@@ -130,7 +126,6 @@
     .locals 0
 
     .prologue
-    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -144,18 +139,15 @@
     .param p2, "rhs"    # Lcom/android/internal/app/LocalePicker$LocaleInfo;
 
     .prologue
-    .line 36
     invoke-virtual {p0, p1}, Landroid/miui/LocaleComparator;->findTopLocale(Lcom/android/internal/app/LocalePicker$LocaleInfo;)I
 
     move-result v0
 
-    .line 37
     .local v0, "lpos":I
     invoke-virtual {p0, p2}, Landroid/miui/LocaleComparator;->findTopLocale(Lcom/android/internal/app/LocalePicker$LocaleInfo;)I
 
     move-result v1
 
-    .line 38
     .local v1, "rpos":I
     if-ne v0, v1, :cond_0
 
@@ -178,7 +170,6 @@
     .param p2, "x1"    # Ljava/lang/Object;
 
     .prologue
-    .line 12
     check-cast p1, Lcom/android/internal/app/LocalePicker$LocaleInfo;
 
     .end local p1    # "x0":Ljava/lang/Object;
@@ -197,7 +188,6 @@
     .param p1, "localeInfo"    # Lcom/android/internal/app/LocalePicker$LocaleInfo;
 
     .prologue
-    .line 26
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -208,7 +198,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 27
     sget-object v1, Landroid/miui/LocaleComparator;->TOP_LOCALES:[Ljava/lang/String;
 
     aget-object v1, v1, v0
@@ -227,19 +216,16 @@
 
     if-eqz v1, :cond_0
 
-    .line 31
     .end local v0    # "i":I
     :goto_1
     return v0
 
-    .line 26
     .restart local v0    # "i":I
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 31
     :cond_1
     sget v0, Landroid/miui/LocaleComparator;->NON_TOP_LOCALE_INDEX:I
 

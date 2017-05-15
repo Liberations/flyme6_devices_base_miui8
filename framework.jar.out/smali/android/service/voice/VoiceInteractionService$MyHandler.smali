@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 103
     iput-object p1, p0, Landroid/service/voice/VoiceInteractionService$MyHandler;->this$0:Landroid/service/voice/VoiceInteractionService;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,19 +37,15 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 106
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 120
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
-    .line 122
     :goto_0
     return-void
 
-    .line 108
     :pswitch_0
     iget-object v0, p0, Landroid/service/voice/VoiceInteractionService$MyHandler;->this$0:Landroid/service/voice/VoiceInteractionService;
 
@@ -58,7 +53,6 @@
 
     goto :goto_0
 
-    .line 111
     :pswitch_1
     iget-object v0, p0, Landroid/service/voice/VoiceInteractionService$MyHandler;->this$0:Landroid/service/voice/VoiceInteractionService;
 
@@ -67,7 +61,6 @@
 
     goto :goto_0
 
-    .line 114
     :pswitch_2
     iget-object v0, p0, Landroid/service/voice/VoiceInteractionService$MyHandler;->this$0:Landroid/service/voice/VoiceInteractionService;
 
@@ -76,7 +69,6 @@
 
     goto :goto_0
 
-    .line 117
     :pswitch_3
     iget-object v0, p0, Landroid/service/voice/VoiceInteractionService$MyHandler;->this$0:Landroid/service/voice/VoiceInteractionService;
 
@@ -84,7 +76,6 @@
 
     goto :goto_0
 
-    .line 106
     nop
 
     :pswitch_data_0

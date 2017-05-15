@@ -55,33 +55,27 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 850
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 831
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v2, p0, Lmiui/maml/ScreenElementRoot$ExtraResource;->mResources:Ljava/util/ArrayList;
 
-    .line 832
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v2, p0, Lmiui/maml/ScreenElementRoot$ExtraResource;->mScales:Ljava/util/ArrayList;
 
-    .line 851
     new-instance v0, Lmiui/maml/ScreenElementRoot$ExtraResource$Resource;
 
     invoke-direct {v0, p0}, Lmiui/maml/ScreenElementRoot$ExtraResource$Resource;-><init>(Lmiui/maml/ScreenElementRoot$ExtraResource;)V
 
-    .line 852
     .local v0, "defaultRes":Lmiui/maml/ScreenElementRoot$ExtraResource$Resource;
     iput p2, v0, Lmiui/maml/ScreenElementRoot$ExtraResource$Resource;->mDensity:I
 
-    .line 853
     invoke-static {p2}, Lmiui/maml/ResourceManager;->translateDensity(I)I
 
     move-result v2
@@ -92,25 +86,20 @@
 
     iput v2, v0, Lmiui/maml/ScreenElementRoot$ExtraResource$Resource;->mScreenWidth:I
 
-    .line 855
     iput v5, v0, Lmiui/maml/ScreenElementRoot$ExtraResource$Resource;->mSizeType:I
 
-    .line 856
     const/4 v2, 0x0
 
     iput-object v2, v0, Lmiui/maml/ScreenElementRoot$ExtraResource$Resource;->mPath:Ljava/lang/String;
 
-    .line 857
     const/high16 v2, 0x3f800000    # 1.0f
 
     iput v2, v0, Lmiui/maml/ScreenElementRoot$ExtraResource$Resource;->mScale:F
 
-    .line 858
     iget-object v2, p0, Lmiui/maml/ScreenElementRoot$ExtraResource;->mResources:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 860
     iget-object v2, p0, Lmiui/maml/ScreenElementRoot$ExtraResource;->mResources:Ljava/util/ArrayList;
 
     const-string v3, "extraResourcesDensity"
@@ -123,7 +112,6 @@
 
     invoke-direct {p0, v2, v3, v4}, Lmiui/maml/ScreenElementRoot$ExtraResource;->inflateMetrics(Ljava/util/ArrayList;Ljava/lang/String;Lmiui/maml/ScreenElementRoot$ExtraResource$MetricsType;)V
 
-    .line 861
     iget-object v2, p0, Lmiui/maml/ScreenElementRoot$ExtraResource;->mResources:Ljava/util/ArrayList;
 
     const-string v3, "extraResourcesScreenWidth"
@@ -136,7 +124,6 @@
 
     invoke-direct {p0, v2, v3, v4}, Lmiui/maml/ScreenElementRoot$ExtraResource;->inflateMetrics(Ljava/util/ArrayList;Ljava/lang/String;Lmiui/maml/ScreenElementRoot$ExtraResource$MetricsType;)V
 
-    .line 862
     iget-object v2, p0, Lmiui/maml/ScreenElementRoot$ExtraResource;->mResources:Ljava/util/ArrayList;
 
     const-string v3, "extraResources"
@@ -149,16 +136,13 @@
 
     invoke-direct {p0, v2, v3, v4}, Lmiui/maml/ScreenElementRoot$ExtraResource;->inflateMetrics(Ljava/util/ArrayList;Ljava/lang/String;Lmiui/maml/ScreenElementRoot$ExtraResource$MetricsType;)V
 
-    .line 864
     new-instance v1, Lmiui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;
 
     invoke-direct {v1, p0}, Lmiui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;-><init>(Lmiui/maml/ScreenElementRoot$ExtraResource;)V
 
-    .line 865
     .local v1, "defaultScale":Lmiui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;
     iput p2, v1, Lmiui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;->mDensity:I
 
-    .line 866
     invoke-static {p2}, Lmiui/maml/ResourceManager;->translateDensity(I)I
 
     move-result v2
@@ -169,20 +153,16 @@
 
     iput v2, v1, Lmiui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;->mScreenWidth:I
 
-    .line 868
     iput v5, v1, Lmiui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;->mSizeType:I
 
-    .line 869
     const/high16 v2, -0x40800000    # -1.0f
 
     iput v2, v1, Lmiui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;->mScale:F
 
-    .line 870
     iget-object v2, p0, Lmiui/maml/ScreenElementRoot$ExtraResource;->mScales:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 872
     iget-object v2, p0, Lmiui/maml/ScreenElementRoot$ExtraResource;->mScales:Ljava/util/ArrayList;
 
     const-string v3, "extraScaleByDensity"
@@ -195,7 +175,6 @@
 
     invoke-direct {p0, v2, v3, v4}, Lmiui/maml/ScreenElementRoot$ExtraResource;->inflateMetrics(Ljava/util/ArrayList;Ljava/lang/String;Lmiui/maml/ScreenElementRoot$ExtraResource$MetricsType;)V
 
-    .line 873
     iget-object v2, p0, Lmiui/maml/ScreenElementRoot$ExtraResource;->mScales:Ljava/util/ArrayList;
 
     const-string v3, "extraScaleByScreenWidth"
@@ -208,7 +187,6 @@
 
     invoke-direct {p0, v2, v3, v4}, Lmiui/maml/ScreenElementRoot$ExtraResource;->inflateMetrics(Ljava/util/ArrayList;Ljava/lang/String;Lmiui/maml/ScreenElementRoot$ExtraResource$MetricsType;)V
 
-    .line 874
     iget-object v2, p0, Lmiui/maml/ScreenElementRoot$ExtraResource;->mScales:Ljava/util/ArrayList;
 
     const-string v3, "extraScales"
@@ -221,7 +199,6 @@
 
     invoke-direct {p0, v2, v3, v4}, Lmiui/maml/ScreenElementRoot$ExtraResource;->inflateMetrics(Ljava/util/ArrayList;Ljava/lang/String;Lmiui/maml/ScreenElementRoot$ExtraResource$MetricsType;)V
 
-    .line 875
     return-void
 .end method
 
@@ -230,7 +207,6 @@
     .param p0, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 721
     invoke-static {p0}, Lmiui/maml/ScreenElementRoot$ExtraResource;->parseSizeType(Ljava/lang/String;)I
 
     move-result v0
@@ -256,7 +232,6 @@
     .end annotation
 
     .prologue
-    .line 878
     .local p1, "metrics":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lmiui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;>;"
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -264,14 +239,12 @@
 
     if-nez v6, :cond_2
 
-    .line 879
     const-string v6, ","
 
     invoke-virtual {p2, v6}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v4
 
-    .line 880
     .local v4, "resources":[Ljava/lang/String;
     move-object v0, v4
 
@@ -287,14 +260,12 @@
 
     aget-object v5, v0, v2
 
-    .line 882
     .local v5, "str":Ljava/lang/String;
     :try_start_0
     iget-object v6, p0, Lmiui/maml/ScreenElementRoot$ExtraResource;->mResources:Ljava/util/ArrayList;
 
     if-ne p1, v6, :cond_1
 
-    .line 883
     new-instance v6, Lmiui/maml/ScreenElementRoot$ExtraResource$Resource;
 
     invoke-virtual {v5}, Ljava/lang/String;->trim()Ljava/lang/String;
@@ -305,20 +276,17 @@
 
     invoke-virtual {p1, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 880
     :cond_0
     :goto_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 884
     :cond_1
     iget-object v6, p0, Lmiui/maml/ScreenElementRoot$ExtraResource;->mScales:Ljava/util/ArrayList;
 
     if-ne p1, v6, :cond_0
 
-    .line 885
     new-instance v6, Lmiui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;
 
     invoke-virtual {v5}, Ljava/lang/String;->trim()Ljava/lang/String;
@@ -333,11 +301,9 @@
 
     goto :goto_1
 
-    .line 887
     :catch_0
     move-exception v1
 
-    .line 888
     .local v1, "e":Ljava/lang/IllegalArgumentException;
     const-string v6, "ScreenElementRoot"
 
@@ -363,7 +329,6 @@
 
     goto :goto_1
 
-    .line 892
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v1    # "e":Ljava/lang/IllegalArgumentException;
     .end local v2    # "i$":I
@@ -379,10 +344,8 @@
     .param p0, "str"    # Ljava/lang/String;
 
     .prologue
-    .line 895
     const/4 v0, 0x0
 
-    .line 896
     .local v0, "size":I
     const-string v1, "small"
 
@@ -392,15 +355,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 897
     const/4 v0, 0x1
 
-    .line 905
     :cond_0
     :goto_0
     return v0
 
-    .line 898
     :cond_1
     const-string v1, "normal"
 
@@ -410,12 +370,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 899
     const/4 v0, 0x2
 
     goto :goto_0
 
-    .line 900
     :cond_2
     const-string v1, "large"
 
@@ -425,14 +383,12 @@
 
     if-eqz v1, :cond_3
 
-    .line 901
     const/4 v0, 0x3
 
     goto :goto_0
 
-    .line 902
     :cond_3
-    const-string/jumbo v1, "xlarge"
+    const-string v1, "xlarge"
 
     invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -440,7 +396,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 903
     const/4 v0, 0x4
 
     goto :goto_0
@@ -465,25 +420,20 @@
     .end annotation
 
     .prologue
-    .line 920
     .local p4, "metrics":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lmiui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;>;"
     const/4 v7, 0x0
 
-    .line 921
     .local v7, "result":Lmiui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;
     const v5, 0x7fffffff
 
-    .line 922
     .local v5, "minDiffDen":I
     const v6, 0x7fffffff
 
-    .line 923
     .local v6, "minDiffSw":I
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 924
     .local v0, "candidates":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lmiui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;>;"
     invoke-virtual {p4}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -504,7 +454,6 @@
 
     check-cast v4, Lmiui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;
 
-    .line 926
     .local v4, "m":Lmiui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;
     iget v8, v4, Lmiui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;->mSizeType:I
 
@@ -514,7 +463,6 @@
 
     if-ne v8, p3, :cond_0
 
-    .line 929
     :cond_1
     iget v8, v4, Lmiui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;->mDensity:I
 
@@ -524,14 +472,11 @@
 
     move-result v1
 
-    .line 930
     .local v1, "diffDen":I
     if-ge v1, v5, :cond_2
 
-    .line 931
     move v5, v1
 
-    .line 932
     iget v8, v4, Lmiui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;->mScreenWidth:I
 
     sub-int v8, p2, v8
@@ -540,19 +485,15 @@
 
     move-result v6
 
-    .line 933
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 934
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 935
     :cond_2
     if-ne v1, v5, :cond_0
 
-    .line 936
     iget v8, v4, Lmiui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;->mScreenWidth:I
 
     sub-int v8, p2, v8
@@ -561,31 +502,24 @@
 
     move-result v2
 
-    .line 937
     .local v2, "diffSw":I
     if-ge v2, v6, :cond_3
 
-    .line 938
     move v6, v2
 
-    .line 939
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 940
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 941
     :cond_3
     if-ne v2, v6, :cond_0
 
-    .line 942
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 946
     .end local v1    # "diffDen":I
     .end local v2    # "diffSw":I
     .end local v4    # "m":Lmiui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;
@@ -608,28 +542,23 @@
 
     check-cast v4, Lmiui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;
 
-    .line 947
     .restart local v4    # "m":Lmiui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;
     iget v8, v4, Lmiui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;->mSizeType:I
 
     if-ne v8, p3, :cond_7
 
-    .line 948
     move-object v7, v4
 
-    .line 954
     .end local v4    # "m":Lmiui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;
     :cond_6
     return-object v7
 
-    .line 950
     .restart local v4    # "m":Lmiui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;
     :cond_7
     iget v8, v4, Lmiui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;->mSizeType:I
 
     if-nez v8, :cond_5
 
-    .line 951
     move-object v7, v4
 
     goto :goto_1
@@ -642,7 +571,6 @@
     .param p3, "targetSizeType"    # I
 
     .prologue
-    .line 910
     iget-object v0, p0, Lmiui/maml/ScreenElementRoot$ExtraResource;->mResources:Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1, p2, p3, v0}, Lmiui/maml/ScreenElementRoot$ExtraResource;->findMetrics(IIILjava/util/ArrayList;)Lmiui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;
@@ -661,7 +589,6 @@
     .param p3, "targetSizeType"    # I
 
     .prologue
-    .line 915
     iget-object v0, p0, Lmiui/maml/ScreenElementRoot$ExtraResource;->mScales:Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1, p2, p3, v0}, Lmiui/maml/ScreenElementRoot$ExtraResource;->findMetrics(IIILjava/util/ArrayList;)Lmiui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;

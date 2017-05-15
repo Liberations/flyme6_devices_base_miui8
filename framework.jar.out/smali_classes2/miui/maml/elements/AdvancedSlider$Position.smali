@@ -39,19 +39,15 @@
     .param p5, "baseY"    # Lmiui/maml/data/Expression;
 
     .prologue
-    .line 699
     iput-object p1, p0, Lmiui/maml/elements/AdvancedSlider$Position;->this$0:Lmiui/maml/elements/AdvancedSlider;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 700
     iput-object p4, p0, Lmiui/maml/elements/AdvancedSlider$Position;->mBaseX:Lmiui/maml/data/Expression;
 
-    .line 701
     iput-object p5, p0, Lmiui/maml/elements/AdvancedSlider$Position;->mBaseY:Lmiui/maml/data/Expression;
 
-    .line 702
-    const-string/jumbo v0, "x"
+    const-string v0, "x"
 
     invoke-virtual {p1, p3, v0}, Lmiui/maml/elements/AdvancedSlider;->getAttr(Lorg/w3c/dom/Element;Ljava/lang/String;)Ljava/lang/String;
 
@@ -63,8 +59,7 @@
 
     iput-object v0, p0, Lmiui/maml/elements/AdvancedSlider$Position;->mX:Lmiui/maml/data/Expression;
 
-    .line 703
-    const-string/jumbo v0, "y"
+    const-string v0, "y"
 
     invoke-virtual {p1, p3, v0}, Lmiui/maml/elements/AdvancedSlider;->getAttr(Lorg/w3c/dom/Element;Ljava/lang/String;)Ljava/lang/String;
 
@@ -76,7 +71,6 @@
 
     iput-object v0, p0, Lmiui/maml/elements/AdvancedSlider$Position;->mY:Lmiui/maml/data/Expression;
 
-    .line 704
     return-void
 .end method
 
@@ -88,7 +82,6 @@
     .prologue
     const-wide/16 v2, 0x0
 
-    .line 707
     iget-object v4, p0, Lmiui/maml/elements/AdvancedSlider$Position;->this$0:Lmiui/maml/elements/AdvancedSlider;
 
     iget-object v0, p0, Lmiui/maml/elements/AdvancedSlider$Position;->mX:Lmiui/maml/data/Expression;
@@ -136,7 +129,6 @@
     .prologue
     const-wide/16 v2, 0x0
 
-    .line 712
     iget-object v4, p0, Lmiui/maml/elements/AdvancedSlider$Position;->this$0:Lmiui/maml/elements/AdvancedSlider;
 
     iget-object v0, p0, Lmiui/maml/elements/AdvancedSlider$Position;->mY:Lmiui/maml/data/Expression;

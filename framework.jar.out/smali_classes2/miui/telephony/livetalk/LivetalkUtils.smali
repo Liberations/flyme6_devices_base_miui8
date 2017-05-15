@@ -138,7 +138,6 @@
     .locals 1
 
     .prologue
-    .line 60
     const/4 v0, 0x0
 
     sput v0, Lmiui/telephony/livetalk/LivetalkUtils;->LIVETALK_NUMBER_POOL_VERSION:I
@@ -150,7 +149,6 @@
     .locals 0
 
     .prologue
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -161,12 +159,10 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 511
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 512
     .local v0, "resolver":Landroid/content/ContentResolver;
     const-string v1, "need_prompt"
 
@@ -174,7 +170,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 513
     return-void
 .end method
 
@@ -185,12 +180,10 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 290
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 291
     .local v0, "resolver":Landroid/content/ContentResolver;
     const-string v2, "internal_dial_avaiable"
 
@@ -216,12 +209,10 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 300
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 301
     .local v0, "resolver":Landroid/content/ContentResolver;
     const-string v2, "international_dial_avaiable"
 
@@ -245,12 +236,10 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 482
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 483
     .local v0, "resolver":Landroid/content/ContentResolver;
     const-string v1, "recent_country_remain_mins"
 
@@ -280,12 +269,10 @@
     .end annotation
 
     .prologue
-    .line 556
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 557
     .local v0, "resolver":Landroid/content/ContentResolver;
     const-string v3, "safe_center_cleaner_title"
 
@@ -293,7 +280,6 @@
 
     move-result-object v2
 
-    .line 558
     .local v2, "title":Ljava/lang/String;
     const-string v3, "safe_center_cleaner_summary"
 
@@ -301,7 +287,6 @@
 
     move-result-object v1
 
-    .line 559
     .local v1, "summary":Ljava/lang/String;
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -315,12 +300,10 @@
 
     if-nez v3, :cond_0
 
-    .line 560
     new-instance v3, Landroid/util/Pair;
 
     invoke-direct {v3, v2, v1}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 562
     :goto_0
     return-object v3
 
@@ -335,12 +318,10 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 340
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 341
     .local v0, "resolver":Landroid/content/ContentResolver;
     const-string v1, "livetalk_dial_range"
 
@@ -374,12 +355,10 @@
 
     const/4 v9, 0x1
 
-    .line 385
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v6
 
-    .line 386
     .local v6, "resolver":Landroid/content/ContentResolver;
     sget v11, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -387,30 +366,24 @@
 
     if-ge v11, v12, :cond_0
 
-    .line 387
     invoke-static {v6, p0}, Lmiui/telephony/livetalk/LivetalkUtils;->getLivetalkinfoForKK(Landroid/content/ContentResolver;Landroid/content/Context;)Landroid/util/Pair;
 
     move-result-object v9
 
-    .line 433
     :goto_0
     return-object v9
 
-    .line 389
     :cond_0
     const-string v8, ""
 
-    .line 390
     .local v8, "title":Ljava/lang/String;
     const-string v7, ""
 
-    .line 391
     .local v7, "summary":Ljava/lang/String;
     invoke-static {p0}, Lmiui/telephony/livetalk/LivetalkUtils;->getLivetalkStatus(Landroid/content/Context;)I
 
     move-result v4
 
-    .line 392
     .local v4, "livetalkStatus":I
     const-string v11, "livetalk_enabled"
 
@@ -422,7 +395,6 @@
 
     move v2, v9
 
-    .line 393
     .local v2, "isLivetalkEnable":Z
     :goto_1
     const-string v11, "livetalk_use_current_account"
@@ -435,7 +407,6 @@
 
     move v3, v9
 
-    .line 395
     .local v3, "isLivetalkUseCurrentAccount":Z
     :goto_2
     const-string v11, "livetalk_switch_state"
@@ -448,7 +419,6 @@
 
     move v1, v9
 
-    .line 397
     .local v1, "isLivetakSwitchOn":Z
     :goto_3
     const-string v11, "livetalk_dial_range"
@@ -457,7 +427,6 @@
 
     move-result v0
 
-    .line 399
     .local v0, "dialRange":I
     if-ne v9, v4, :cond_5
 
@@ -465,13 +434,10 @@
 
     if-eqz v3, :cond_5
 
-    .line 400
     if-eqz v1, :cond_4
 
-    .line 401
     packed-switch v0, :pswitch_data_0
 
-    .line 416
     :goto_4
     const v11, 0x110700af
 
@@ -507,7 +473,6 @@
 
     move-result-object v7
 
-    .line 419
     new-instance v9, Landroid/util/Pair;
 
     invoke-direct {v9, v8, v7}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
@@ -521,24 +486,20 @@
     :cond_1
     move v2, v10
 
-    .line 392
     goto :goto_1
 
     .restart local v2    # "isLivetalkEnable":Z
     :cond_2
     move v3, v10
 
-    .line 393
     goto :goto_2
 
     .restart local v3    # "isLivetalkUseCurrentAccount":Z
     :cond_3
     move v1, v10
 
-    .line 395
     goto :goto_3
 
-    .line 403
     .restart local v0    # "dialRange":I
     .restart local v1    # "isLivetakSwitchOn":Z
     :pswitch_0
@@ -548,10 +509,8 @@
 
     move-result-object v8
 
-    .line 404
     goto :goto_4
 
-    .line 406
     :pswitch_1
     const v11, 0x110700ac
 
@@ -559,10 +518,8 @@
 
     move-result-object v8
 
-    .line 407
     goto :goto_4
 
-    .line 409
     :pswitch_2
     const v11, 0x110700ad
 
@@ -572,7 +529,6 @@
 
     goto :goto_4
 
-    .line 414
     :cond_4
     const v11, 0x110700ab
 
@@ -582,7 +538,6 @@
 
     goto :goto_4
 
-    .line 420
     :cond_5
     if-ne v9, v4, :cond_b
 
@@ -590,7 +545,6 @@
 
     if-nez v3, :cond_b
 
-    .line 422
     :cond_6
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -606,7 +560,6 @@
 
     move-result-object v5
 
-    .line 423
     .local v5, "locale":Ljava/lang/String;
     const-string v9, "CN"
 
@@ -623,7 +576,6 @@
 
     move-result-object v8
 
-    .line 425
     const-string v9, "CN"
 
     invoke-virtual {v9, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -639,7 +591,6 @@
 
     move-result-object v7
 
-    .line 427
     invoke-static {v8}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v9
@@ -652,7 +603,6 @@
 
     if-eqz v9, :cond_8
 
-    .line 428
     :cond_7
     const v9, 0x110700b0
 
@@ -660,14 +610,12 @@
 
     move-result-object v8
 
-    .line 429
     const v9, 0x110700b1
 
     invoke-virtual {p0, v9}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 431
     :cond_8
     new-instance v9, Landroid/util/Pair;
 
@@ -675,26 +623,22 @@
 
     goto/16 :goto_0
 
-    .line 423
     :cond_9
     const-string v9, "enable_livetalk_title_en"
 
     goto :goto_5
 
-    .line 425
     :cond_a
     const-string v9, "enable_livetalk_summary_en"
 
     goto :goto_6
 
-    .line 433
     .end local v5    # "locale":Ljava/lang/String;
     :cond_b
     const/4 v9, 0x0
 
     goto/16 :goto_0
 
-    .line 401
     nop
 
     :pswitch_data_0
@@ -710,23 +654,19 @@
     .param p0, "fromView"    # I
 
     .prologue
-    .line 263
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 264
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "com.miui.livetalk.MY_LIVETALK_VIEW"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 265
     const-string v1, "fromView"
 
     invoke-virtual {v0, v1, p0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 266
     return-object v0
 .end method
 
@@ -747,12 +687,10 @@
     .end annotation
 
     .prologue
-    .line 532
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    .line 533
     .local v1, "resolver":Landroid/content/ContentResolver;
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -768,15 +706,12 @@
 
     move-result-object v0
 
-    .line 534
     .local v0, "locale":Ljava/lang/String;
     const-string v3, ""
 
-    .line 535
     .local v3, "title":Ljava/lang/String;
     const-string v2, ""
 
-    .line 536
     .local v2, "summary":Ljava/lang/String;
     const-string v4, "CN"
 
@@ -786,21 +721,18 @@
 
     if-eqz v4, :cond_0
 
-    .line 537
     const-string v4, "safe_center_optimize_title_cn"
 
     invoke-static {v1, v4}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 538
     const-string v4, "safe_center_optimize_summary_cn"
 
     invoke-static {v1, v4}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 543
     :goto_0
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -814,16 +746,13 @@
 
     if-nez v4, :cond_1
 
-    .line 544
     new-instance v4, Landroid/util/Pair;
 
     invoke-direct {v4, v3, v2}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 546
     :goto_1
     return-object v4
 
-    .line 540
     :cond_0
     const-string v4, "safe_center_optimize_title_en"
 
@@ -831,7 +760,6 @@
 
     move-result-object v3
 
-    .line 541
     const-string v4, "safe_center_optimize_summary_en"
 
     invoke-static {v1, v4}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
@@ -840,7 +768,6 @@
 
     goto :goto_0
 
-    .line 546
     :cond_1
     const/4 v4, 0x0
 
@@ -852,12 +779,10 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 376
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 377
     .local v0, "resolver":Landroid/content/ContentResolver;
     const-string v1, "livetalk_service_status"
 
@@ -875,22 +800,18 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 188
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
-    .line 189
     .local v2, "resolver":Landroid/content/ContentResolver;
     invoke-static {p0}, Lmiui/telephony/livetalk/LivetalkUtils;->supportLivetalk(Landroid/content/Context;)Z
 
     move-result v1
 
-    .line 190
     .local v1, "isSupport":Z
     const/4 v0, 0x1
 
-    .line 191
     .local v0, "defaultValue":I
     if-eqz v1, :cond_0
 
@@ -932,14 +853,11 @@
 
     const/4 v7, 0x1
 
-    .line 439
     const-string v6, ""
 
-    .line 440
     .local v6, "title":Ljava/lang/String;
     const-string v5, ""
 
-    .line 441
     .local v5, "summary":Ljava/lang/String;
     invoke-static {p1}, Lmiui/telephony/livetalk/LivetalkUtils;->getLivetalkStatus(Landroid/content/Context;)I
 
@@ -953,7 +871,6 @@
 
     if-eqz v9, :cond_6
 
-    .line 442
     const-string v9, "internal_dial_enable"
 
     invoke-static {p0, v9, v7}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
@@ -964,7 +881,6 @@
 
     move v2, v7
 
-    .line 444
     .local v2, "isInternalAvaiable":Z
     :goto_0
     const-string v9, "international_dial_enable"
@@ -977,14 +893,12 @@
 
     move v3, v7
 
-    .line 446
     .local v3, "isInternationalAvaiable":Z
     :goto_1
     invoke-static {p1}, Lmiui/telephony/livetalk/LivetalkUtils;->getRemainMins(Landroid/content/Context;)I
 
     move-result v0
 
-    .line 447
     .local v0, "internalMin":I
     const-string v9, "recent_country_remain_mins"
 
@@ -992,20 +906,17 @@
 
     move-result v1
 
-    .line 449
     .local v1, "internationMin":I
     if-nez v2, :cond_3
 
     if-nez v3, :cond_3
 
-    .line 450
     const v9, 0x110700ab
 
     invoke-virtual {p1, v9}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 458
     :cond_0
     :goto_2
     const v9, 0x110700af
@@ -1030,12 +941,10 @@
 
     move-result-object v5
 
-    .line 460
     new-instance v7, Landroid/util/Pair;
 
     invoke-direct {v7, v6, v5}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 473
     .end local v0    # "internalMin":I
     .end local v1    # "internationMin":I
     .end local v2    # "isInternalAvaiable":Z
@@ -1046,17 +955,14 @@
     :cond_1
     move v2, v8
 
-    .line 442
     goto :goto_0
 
     .restart local v2    # "isInternalAvaiable":Z
     :cond_2
     move v3, v8
 
-    .line 444
     goto :goto_1
 
-    .line 451
     .restart local v0    # "internalMin":I
     .restart local v1    # "internationMin":I
     .restart local v3    # "isInternationalAvaiable":Z
@@ -1065,7 +971,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 452
     const v9, 0x110700ae
 
     invoke-virtual {p1, v9}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -1074,11 +979,9 @@
 
     goto :goto_2
 
-    .line 453
     :cond_4
     if-eqz v2, :cond_5
 
-    .line 454
     const v9, 0x110700ac
 
     invoke-virtual {p1, v9}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -1087,11 +990,9 @@
 
     goto :goto_2
 
-    .line 455
     :cond_5
     if-eqz v3, :cond_0
 
-    .line 456
     const v9, 0x110700ad
 
     invoke-virtual {p1, v9}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -1100,7 +1001,6 @@
 
     goto :goto_2
 
-    .line 461
     .end local v0    # "internalMin":I
     .end local v1    # "internationMin":I
     .end local v2    # "isInternalAvaiable":Z
@@ -1118,7 +1018,6 @@
 
     if-nez v7, :cond_b
 
-    .line 462
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v7
@@ -1133,7 +1032,6 @@
 
     move-result-object v4
 
-    .line 463
     .local v4, "locale":Ljava/lang/String;
     const-string v7, "CN"
 
@@ -1150,7 +1048,6 @@
 
     move-result-object v6
 
-    .line 465
     const-string v7, "CN"
 
     invoke-virtual {v7, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1166,7 +1063,6 @@
 
     move-result-object v5
 
-    .line 467
     invoke-static {v6}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v7
@@ -1179,7 +1075,6 @@
 
     if-eqz v7, :cond_8
 
-    .line 468
     :cond_7
     const v7, 0x110700b0
 
@@ -1187,14 +1082,12 @@
 
     move-result-object v6
 
-    .line 469
     const v7, 0x110700b1
 
     invoke-virtual {p1, v7}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 471
     :cond_8
     new-instance v7, Landroid/util/Pair;
 
@@ -1202,19 +1095,16 @@
 
     goto :goto_3
 
-    .line 463
     :cond_9
     const-string v7, "enable_livetalk_title_en"
 
     goto :goto_4
 
-    .line 465
     :cond_a
     const-string v7, "enable_livetalk_summary_en"
 
     goto :goto_5
 
-    .line 473
     .end local v4    # "locale":Ljava/lang/String;
     :cond_b
     const/4 v7, 0x0
@@ -1227,23 +1117,19 @@
     .param p0, "fromView"    # I
 
     .prologue
-    .line 271
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 272
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "com.miui.livetalk.PURCHASE_VIEW"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 273
     const-string v1, "fromView"
 
     invoke-virtual {v0, v1, p0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 274
     return-object v0
 .end method
 
@@ -1252,12 +1138,10 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 257
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 258
     .local v0, "resolver":Landroid/content/ContentResolver;
     const-string v1, "livetalk_remain_minutes"
 
@@ -1275,12 +1159,10 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 233
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    .line 234
     .local v1, "resolver":Landroid/content/ContentResolver;
     invoke-static {}, Lmiui/telephony/TelephonyManager;->getDefault()Lmiui/telephony/TelephonyManager;
 
@@ -1290,11 +1172,9 @@
 
     move-result v3
 
-    .line 235
     .local v3, "slotCount":I
     new-array v2, v3, [I
 
-    .line 236
     .local v2, "simActivateState":[I
     const/4 v0, 0x0
 
@@ -1302,7 +1182,6 @@
     :goto_0
     if-ge v0, v3, :cond_0
 
-    .line 237
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1329,12 +1208,10 @@
 
     aput v4, v2, v0
 
-    .line 236
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 239
     :cond_0
     return-object v2
 .end method
@@ -1344,12 +1221,10 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 243
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    .line 244
     .local v1, "resolver":Landroid/content/ContentResolver;
     invoke-static {}, Lmiui/telephony/TelephonyManager;->getDefault()Lmiui/telephony/TelephonyManager;
 
@@ -1359,22 +1234,18 @@
 
     move-result v3
 
-    .line 245
     .local v3, "slotCount":I
     new-array v2, v3, [Ljava/lang/String;
 
-    .line 246
     .local v2, "simNumber":[Ljava/lang/String;
     const/4 v0, 0x0
 
-    .line 247
     .local v0, "i":I
     const/4 v0, 0x0
 
     :goto_0
     if-ge v0, v3, :cond_0
 
-    .line 248
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1399,12 +1270,10 @@
 
     aput-object v4, v2, v0
 
-    .line 247
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 250
     :cond_0
     return-object v2
 .end method
@@ -1414,23 +1283,19 @@
     .param p0, "fromView"    # I
 
     .prologue
-    .line 278
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 279
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "com.miui.livetalk.WELCOME_VIEW"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 280
     const-string v1, "fromView"
 
     invoke-virtual {v0, v1, p0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 281
     return-object v0
 .end method
 
@@ -1441,12 +1306,10 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 358
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 359
     .local v0, "resolver":Landroid/content/ContentResolver;
     const-string v2, "internal_dial_enable"
 
@@ -1472,12 +1335,10 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 367
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 368
     .local v0, "resolver":Landroid/content/ContentResolver;
     const-string v2, "international_dial_enable"
 
@@ -1501,14 +1362,11 @@
     .param p0, "number"    # Ljava/lang/String;
 
     .prologue
-    .line 117
     const/4 v4, 0x0
 
-    .line 118
     .local v4, "result":Z
     sget-object v3, Lmiui/telephony/livetalk/LivetalkUtils;->sCallBackNumbers:[Ljava/lang/String;
 
-    .line 119
     .local v3, "numberArray":[Ljava/lang/String;
     if-eqz p0, :cond_0
 
@@ -1522,7 +1380,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 120
     move-object v0, v3
 
     .local v0, "arr$":[Ljava/lang/String;
@@ -1537,7 +1394,6 @@
 
     aget-object v5, v0, v1
 
-    .line 121
     .local v5, "suffix":Ljava/lang/String;
     if-eqz v5, :cond_1
 
@@ -1547,10 +1403,8 @@
 
     if-ltz v6, :cond_1
 
-    .line 122
     const/4 v4, 0x1
 
-    .line 128
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v1    # "i$":I
     .end local v2    # "len$":I
@@ -1590,10 +1444,8 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 130
     return v4
 
-    .line 120
     .restart local v0    # "arr$":[Ljava/lang/String;
     .restart local v1    # "i$":I
     .restart local v2    # "len$":I
@@ -1613,12 +1465,10 @@
 
     const/4 v2, 0x0
 
-    .line 225
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 226
     .local v0, "resolver":Landroid/content/ContentResolver;
     const-string v3, "livetalk_enabled"
 
@@ -1644,12 +1494,10 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 332
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 333
     .local v0, "resolver":Landroid/content/ContentResolver;
     const-string v2, "livetalk_switch_state"
 
@@ -1677,12 +1525,10 @@
 
     const/4 v2, 0x0
 
-    .line 349
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 350
     .local v0, "resolver":Landroid/content/ContentResolver;
     const-string v3, "livetalk_use_current_account"
 
@@ -1710,12 +1556,10 @@
 
     const/4 v2, 0x1
 
-    .line 491
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    .line 492
     .local v1, "resolver":Landroid/content/ContentResolver;
     const-string v4, "need_prompt"
 
@@ -1727,7 +1571,6 @@
 
     move v0, v2
 
-    .line 493
     .local v0, "isNeedPrompt":Z
     :goto_0
     invoke-static {p0}, Lmiui/telephony/livetalk/LivetalkUtils;->getLivetalkStatus(Landroid/content/Context;)I
@@ -1751,14 +1594,12 @@
     :cond_0
     move v0, v3
 
-    .line 492
     goto :goto_0
 
     .restart local v0    # "isNeedPrompt":Z
     :cond_1
     move v2, v3
 
-    .line 493
     goto :goto_1
 .end method
 
@@ -1769,7 +1610,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 520
     invoke-static {p0}, Lmiui/telephony/livetalk/LivetalkUtils;->getLivetalkStatus(Landroid/content/Context;)I
 
     move-result v1
@@ -1802,12 +1642,10 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 502
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 503
     .local v0, "resolver":Landroid/content/ContentResolver;
     const-string v1, "need_prompt"
 
@@ -1815,7 +1653,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 504
     return-void
 .end method
 
@@ -1825,12 +1662,10 @@
     .param p1, "isEnable"    # Z
 
     .prologue
-    .line 311
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 312
     .local v0, "resolver":Landroid/content/ContentResolver;
     const-string v2, "internal_dial_enable"
 
@@ -1841,10 +1676,8 @@
     :goto_0
     invoke-static {v0, v2, v1}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 314
     return-void
 
-    .line 312
     :cond_0
     const/4 v1, 0x0
 
@@ -1857,12 +1690,10 @@
     .param p1, "isEnable"    # Z
 
     .prologue
-    .line 323
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 324
     .local v0, "resolver":Landroid/content/ContentResolver;
     const-string v2, "international_dial_enable"
 
@@ -1873,10 +1704,8 @@
     :goto_0
     invoke-static {v0, v2, v1}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 326
     return-void
 
-    .line 324
     :cond_0
     const/4 v1, 0x0
 
@@ -1890,30 +1719,25 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 199
     sget-boolean v4, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     if-eqz v4, :cond_1
 
-    .line 218
     :cond_0
     :goto_0
     return v3
 
-    .line 202
     :cond_1
     sget-boolean v4, Lmiui/os/Build;->IS_CTA_BUILD:Z
 
     if-nez v4, :cond_0
 
-    .line 205
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v4
 
     if-nez v4, :cond_0
 
-    .line 209
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -1927,15 +1751,12 @@
 
     move-result-object v0
 
-    .line 211
     .local v0, "applicationInfo":Landroid/content/pm/ApplicationInfo;
     iget-object v1, v0, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
 
-    .line 212
     .local v1, "bundle":Landroid/os/Bundle;
     if-eqz v1, :cond_0
 
-    .line 213
     const-string v4, "support_livetalk"
 
     invoke-virtual {v1, v4}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
@@ -1946,13 +1767,11 @@
 
     goto :goto_0
 
-    .line 215
     .end local v0    # "applicationInfo":Landroid/content/pm/ApplicationInfo;
     .end local v1    # "bundle":Landroid/os/Bundle;
     :catch_0
     move-exception v2
 
-    .line 216
     .local v2, "e":Ljava/lang/Exception;
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -1964,15 +1783,12 @@
     .param p0, "numberPool"    # Lorg/json/JSONArray;
 
     .prologue
-    .line 156
     if-nez p0, :cond_1
 
-    .line 169
     :cond_0
     :goto_0
     return-void
 
-    .line 159
     :cond_1
     invoke-virtual {p0}, Lorg/json/JSONArray;->length()I
 
@@ -1982,10 +1798,8 @@
 
     sput-object v2, Lmiui/telephony/livetalk/LivetalkUtils;->sCallBackNumbers:[Ljava/lang/String;
 
-    .line 160
     const/4 v1, 0x0
 
-    .line 162
     .local v1, "i":I
     :goto_1
     :try_start_0
@@ -1995,7 +1809,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 163
     sget-object v2, Lmiui/telephony/livetalk/LivetalkUtils;->sCallBackNumbers:[Ljava/lang/String;
 
     invoke-virtual {p0, v1}, Lorg/json/JSONArray;->getString(I)Ljava/lang/String;
@@ -2006,16 +1819,13 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 164
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 166
     :catch_0
     move-exception v0
 
-    .line 167
     .local v0, "e":Lorg/json/JSONException;
     invoke-virtual {v0}, Lorg/json/JSONException;->printStackTrace()V
 
@@ -2033,24 +1843,19 @@
     .end annotation
 
     .prologue
-    .line 172
     if-nez p0, :cond_0
 
-    .line 182
     :goto_0
     return-void
 
-    .line 175
     :cond_0
     invoke-virtual {p0}, Lorg/json/JSONArray;->length()I
 
     move-result v2
 
-    .line 176
     .local v2, "len":I
     new-array v0, v2, [Ljava/lang/String;
 
-    .line 177
     .local v0, "arr":[Ljava/lang/String;
     const/4 v1, 0x0
 
@@ -2058,23 +1863,19 @@
     :goto_1
     if-ge v1, v2, :cond_1
 
-    .line 178
     invoke-virtual {p0, v1}, Lorg/json/JSONArray;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
     aput-object v3, v0, v1
 
-    .line 177
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 180
     :cond_1
     sput-object v0, Lmiui/telephony/livetalk/LivetalkUtils;->sCallBackNumbers:[Ljava/lang/String;
 
-    .line 181
     sput p1, Lmiui/telephony/livetalk/LivetalkUtils;->LIVETALK_NUMBER_POOL_VERSION:I
 
     goto :goto_0
@@ -2087,7 +1888,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 135
     if-eqz p0, :cond_0
 
     invoke-interface {p0}, Landroid/database/Cursor;->getCount()I
@@ -2096,12 +1896,10 @@
 
     if-nez v3, :cond_1
 
-    .line 151
     :cond_0
     :goto_0
     return v2
 
-    .line 139
     :cond_1
     :try_start_0
     invoke-interface {p0}, Landroid/database/Cursor;->getCount()I
@@ -2112,10 +1910,8 @@
 
     sput-object v3, Lmiui/telephony/livetalk/LivetalkUtils;->sCallBackNumbers:[Ljava/lang/String;
 
-    .line 140
     invoke-interface {p0}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 141
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -2126,7 +1922,6 @@
 
     if-ge v1, v3, :cond_2
 
-    .line 142
     sget-object v3, Lmiui/telephony/livetalk/LivetalkUtils;->sCallBackNumbers:[Ljava/lang/String;
 
     const-string v4, "number"
@@ -2141,39 +1936,32 @@
 
     aput-object v4, v3, v1
 
-    .line 143
     invoke-interface {p0}, Landroid/database/Cursor;->moveToNext()Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 141
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 145
     :cond_2
     const/4 v2, 0x1
 
-    .line 149
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
 
     goto :goto_0
 
-    .line 146
     .end local v1    # "i":I
     :catch_0
     move-exception v0
 
-    .line 147
     .local v0, "e":Ljava/lang/Exception;
     :try_start_1
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 149
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
 
     goto :goto_0

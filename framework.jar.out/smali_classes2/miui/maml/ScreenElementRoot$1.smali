@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 694
     iput-object p1, p0, Lmiui/maml/ScreenElementRoot$1;->this$0:Lmiui/maml/ScreenElementRoot;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,28 +40,23 @@
     .param p1, "e"    # Lmiui/maml/elements/ScreenElement;
 
     .prologue
-    .line 699
     instance-of v1, p1, Lmiui/maml/elements/FramerateController;
 
     if-eqz v1, :cond_0
 
-    .line 701
     invoke-virtual {p1}, Lmiui/maml/elements/ScreenElement;->getRendererController()Lmiui/maml/RendererController;
 
     move-result-object v0
 
-    .line 702
     .local v0, "c":Lmiui/maml/RendererController;
     if-eqz v0, :cond_0
 
     move-object v1, p1
 
-    .line 703
     check-cast v1, Lmiui/maml/elements/FramerateController;
 
     invoke-virtual {v0, v1}, Lmiui/maml/RendererController;->addFramerateController(Lmiui/maml/elements/FramerateController;)V
 
-    .line 708
     .end local v0    # "c":Lmiui/maml/RendererController;
     :cond_0
     instance-of v1, p1, Lmiui/maml/elements/ElementGroupRC;
@@ -73,7 +67,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 709
     :cond_1
     iget-object v1, p0, Lmiui/maml/ScreenElementRoot$1;->this$0:Lmiui/maml/ScreenElementRoot;
 
@@ -88,7 +81,6 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 711
     :cond_2
     return-void
 .end method

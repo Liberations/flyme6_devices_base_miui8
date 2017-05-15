@@ -91,7 +91,6 @@
     .locals 1
 
     .prologue
-    .line 22
     const/4 v0, 0x5
 
     new-array v0, v0, [I
@@ -119,12 +118,10 @@
     .param p1, "m"    # Lmiui/maml/data/VariableUpdaterManager;
 
     .prologue
-    .line 83
     sget-object v0, Lmiui/maml/data/DateTimeVariableUpdater$Accuracy;->Minute:Lmiui/maml/data/DateTimeVariableUpdater$Accuracy;
 
     invoke-direct {p0, p1, v0}, Lmiui/maml/data/DateTimeVariableUpdater;-><init>(Lmiui/maml/data/VariableUpdaterManager;Lmiui/maml/data/DateTimeVariableUpdater$Accuracy;)V
 
-    .line 84
     return-void
 .end method
 
@@ -134,34 +131,28 @@
     .param p2, "accuracy"    # Ljava/lang/String;
 
     .prologue
-    .line 87
     sget-object v5, Lmiui/maml/NotifierManager;->TYPE_TIME_CHANGED:Ljava/lang/String;
 
     invoke-direct {p0, p1, v5}, Lmiui/maml/data/NotifierVariableUpdater;-><init>(Lmiui/maml/data/VariableUpdaterManager;Ljava/lang/String;)V
 
-    .line 53
     new-instance v5, Lmiui/date/Calendar;
 
     invoke-direct {v5}, Lmiui/date/Calendar;-><init>()V
 
     iput-object v5, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiui/date/Calendar;
 
-    .line 59
     const/4 v5, -0x1
 
     iput v5, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mTimeFormat:I
 
-    .line 76
     new-instance v5, Lmiui/maml/data/DateTimeVariableUpdater$1;
 
     invoke-direct {v5, p0}, Lmiui/maml/data/DateTimeVariableUpdater$1;-><init>(Lmiui/maml/data/DateTimeVariableUpdater;)V
 
     iput-object v5, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mTimeUpdater:Ljava/lang/Runnable;
 
-    .line 88
     const/4 v1, 0x0
 
-    .line 89
     .local v1, "acc":Lmiui/maml/data/DateTimeVariableUpdater$Accuracy;
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -169,7 +160,6 @@
 
     if-nez v5, :cond_1
 
-    .line 90
     invoke-static {}, Lmiui/maml/data/DateTimeVariableUpdater$Accuracy;->values()[Lmiui/maml/data/DateTimeVariableUpdater$Accuracy;
 
     move-result-object v2
@@ -186,7 +176,6 @@
 
     aget-object v0, v2, v3
 
-    .line 91
     .local v0, "a":Lmiui/maml/data/DateTimeVariableUpdater$Accuracy;
     invoke-virtual {v0}, Lmiui/maml/data/DateTimeVariableUpdater$Accuracy;->name()Ljava/lang/String;
 
@@ -198,16 +187,13 @@
 
     if-eqz v5, :cond_0
 
-    .line 92
     move-object v1, v0
 
-    .line 90
     :cond_0
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 95
     .end local v0    # "a":Lmiui/maml/data/DateTimeVariableUpdater$Accuracy;
     .end local v2    # "arr$":[Lmiui/maml/data/DateTimeVariableUpdater$Accuracy;
     .end local v3    # "i$":I
@@ -215,10 +201,8 @@
     :cond_1
     if-nez v1, :cond_2
 
-    .line 96
     sget-object v1, Lmiui/maml/data/DateTimeVariableUpdater$Accuracy;->Minute:Lmiui/maml/data/DateTimeVariableUpdater$Accuracy;
 
-    .line 97
     const-string v5, "DateTimeVariableUpdater"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -241,11 +225,9 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 99
     :cond_2
     invoke-direct {p0, v1}, Lmiui/maml/data/DateTimeVariableUpdater;->initInner(Lmiui/maml/data/DateTimeVariableUpdater$Accuracy;)V
 
-    .line 100
     return-void
 .end method
 
@@ -255,34 +237,28 @@
     .param p2, "accuracy"    # Lmiui/maml/data/DateTimeVariableUpdater$Accuracy;
 
     .prologue
-    .line 103
     sget-object v0, Lmiui/maml/NotifierManager;->TYPE_TIME_CHANGED:Ljava/lang/String;
 
     invoke-direct {p0, p1, v0}, Lmiui/maml/data/NotifierVariableUpdater;-><init>(Lmiui/maml/data/VariableUpdaterManager;Ljava/lang/String;)V
 
-    .line 53
     new-instance v0, Lmiui/date/Calendar;
 
     invoke-direct {v0}, Lmiui/date/Calendar;-><init>()V
 
     iput-object v0, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiui/date/Calendar;
 
-    .line 59
     const/4 v0, -0x1
 
     iput v0, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mTimeFormat:I
 
-    .line 76
     new-instance v0, Lmiui/maml/data/DateTimeVariableUpdater$1;
 
     invoke-direct {v0, p0}, Lmiui/maml/data/DateTimeVariableUpdater$1;-><init>(Lmiui/maml/data/DateTimeVariableUpdater;)V
 
     iput-object v0, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mTimeUpdater:Ljava/lang/Runnable;
 
-    .line 104
     invoke-direct {p0, p2}, Lmiui/maml/data/DateTimeVariableUpdater;->initInner(Lmiui/maml/data/DateTimeVariableUpdater$Accuracy;)V
 
-    .line 105
     return-void
 .end method
 
@@ -291,7 +267,6 @@
     .param p0, "x0"    # Lmiui/maml/data/DateTimeVariableUpdater;
 
     .prologue
-    .line 14
     invoke-direct {p0}, Lmiui/maml/data/DateTimeVariableUpdater;->checkUpdateTime()V
 
     return-void
@@ -303,7 +278,6 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 216
     invoke-virtual {p0}, Lmiui/maml/data/DateTimeVariableUpdater;->getContext()Lmiui/maml/ScreenContext;
 
     move-result-object v9
@@ -316,18 +290,15 @@
 
     invoke-virtual {v9, v10}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 218
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
 
-    .line 219
     .local v4, "currentTimeMillis":J
     iget-object v9, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiui/date/Calendar;
 
     invoke-virtual {v9, v4, v5}, Lmiui/date/Calendar;->setTimeInMillis(J)Lmiui/date/Calendar;
 
-    .line 221
     sget-object v0, Lmiui/maml/data/DateTimeVariableUpdater;->fields:[I
 
     .local v0, "arr$":[I
@@ -342,13 +313,11 @@
 
     aget v1, v0, v6
 
-    .line 222
     .local v1, "f":I
     iget v9, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mTimeAccuracyField:I
 
     if-ne v1, v9, :cond_4
 
-    .line 227
     .end local v1    # "f":I
     :cond_0
     invoke-virtual {p0}, Lmiui/maml/data/DateTimeVariableUpdater;->getContext()Lmiui/maml/ScreenContext;
@@ -365,7 +334,6 @@
 
     const/4 v8, 0x1
 
-    .line 230
     .local v8, "timeFormat":I
     :cond_1
     iget-object v9, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiui/date/Calendar;
@@ -374,7 +342,6 @@
 
     move-result-wide v2
 
-    .line 231
     .local v2, "currentTime":J
     iget-wide v10, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mCurrentTime:J
 
@@ -386,11 +353,9 @@
 
     if-eq v9, v8, :cond_3
 
-    .line 232
     :cond_2
     iput-wide v2, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mCurrentTime:J
 
-    .line 233
     iget-wide v10, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mCurrentTime:J
 
     iget-wide v12, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mTimeAccuracy:J
@@ -399,10 +364,8 @@
 
     iput-wide v10, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mNextUpdateTime:J
 
-    .line 234
     iput v8, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mTimeFormat:I
 
-    .line 235
     iget-object v9, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mTimeFormatVar:Lmiui/maml/data/IndexedVariable;
 
     iget v10, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mTimeFormat:I
@@ -411,14 +374,12 @@
 
     invoke-virtual {v9, v10, v11}, Lmiui/maml/data/IndexedVariable;->set(D)V
 
-    .line 236
     invoke-virtual {p0}, Lmiui/maml/data/DateTimeVariableUpdater;->getRoot()Lmiui/maml/ScreenElementRoot;
 
     move-result-object v9
 
     invoke-virtual {v9}, Lmiui/maml/ScreenElementRoot;->requestUpdate()V
 
-    .line 238
     :cond_3
     invoke-virtual {p0}, Lmiui/maml/data/DateTimeVariableUpdater;->getContext()Lmiui/maml/ScreenContext;
 
@@ -436,10 +397,8 @@
 
     invoke-virtual {v9, v10, v12, v13}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 239
     return-void
 
-    .line 224
     .end local v2    # "currentTime":J
     .end local v8    # "timeFormat":I
     .restart local v1    # "f":I
@@ -448,7 +407,6 @@
 
     invoke-virtual {v9, v1, v8}, Lmiui/date/Calendar;->set(II)Lmiui/date/Calendar;
 
-    .line 221
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_0
@@ -460,25 +418,21 @@
     .param p1, "inTimeInMillis"    # J
 
     .prologue
-    .line 202
     sget-object v0, Lmiui/maml/data/DateTimeVariableUpdater;->sCalendar:Lmiui/date/Calendar;
 
     if-nez v0, :cond_0
 
-    .line 203
     new-instance v0, Lmiui/date/Calendar;
 
     invoke-direct {v0}, Lmiui/date/Calendar;-><init>()V
 
     sput-object v0, Lmiui/maml/data/DateTimeVariableUpdater;->sCalendar:Lmiui/date/Calendar;
 
-    .line 205
     :cond_0
     sget-object v0, Lmiui/maml/data/DateTimeVariableUpdater;->sCalendar:Lmiui/date/Calendar;
 
     invoke-virtual {v0, p1, p2}, Lmiui/date/Calendar;->setTimeInMillis(J)Lmiui/date/Calendar;
 
-    .line 206
     sget-object v0, Lmiui/maml/data/DateTimeVariableUpdater;->sCalendar:Lmiui/date/Calendar;
 
     invoke-virtual {v0, p0}, Lmiui/date/Calendar;->format(Ljava/lang/CharSequence;)Ljava/lang/String;
@@ -499,7 +453,6 @@
 
     const/4 v4, 0x1
 
-    .line 108
     const-string v1, "DateTimeVariableUpdater"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -526,7 +479,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 109
     sget-object v1, Lmiui/maml/data/DateTimeVariableUpdater$2;->$SwitchMap$miui$maml$data$DateTimeVariableUpdater$Accuracy:[I
 
     invoke-virtual {p1}, Lmiui/maml/data/DateTimeVariableUpdater$Accuracy;->ordinal()I
@@ -537,13 +489,10 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 127
     iput-wide v6, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mTimeAccuracy:J
 
-    .line 128
     iput v5, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mTimeAccuracyField:I
 
-    .line 132
     :goto_0
     invoke-virtual {p0}, Lmiui/maml/data/DateTimeVariableUpdater;->getContext()Lmiui/maml/ScreenContext;
 
@@ -551,17 +500,15 @@
 
     iget-object v0, v1, Lmiui/maml/ScreenContext;->mVariables:Lmiui/maml/data/Variables;
 
-    .line 133
     .local v0, "vars":Lmiui/maml/data/Variables;
     new-instance v1, Lmiui/maml/data/IndexedVariable;
 
-    const-string/jumbo v2, "year"
+    const-string v2, "year"
 
     invoke-direct {v1, v2, v0, v4}, Lmiui/maml/data/IndexedVariable;-><init>(Ljava/lang/String;Lmiui/maml/data/Variables;Z)V
 
     iput-object v1, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mYear:Lmiui/maml/data/IndexedVariable;
 
-    .line 134
     new-instance v1, Lmiui/maml/data/IndexedVariable;
 
     const-string v2, "month"
@@ -570,7 +517,6 @@
 
     iput-object v1, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mMonth:Lmiui/maml/data/IndexedVariable;
 
-    .line 135
     new-instance v1, Lmiui/maml/data/IndexedVariable;
 
     const-string v2, "month1"
@@ -579,7 +525,6 @@
 
     iput-object v1, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mMonth1:Lmiui/maml/data/IndexedVariable;
 
-    .line 136
     new-instance v1, Lmiui/maml/data/IndexedVariable;
 
     const-string v2, "date"
@@ -588,25 +533,22 @@
 
     iput-object v1, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mDate:Lmiui/maml/data/IndexedVariable;
 
-    .line 138
     new-instance v1, Lmiui/maml/data/IndexedVariable;
 
-    const-string/jumbo v2, "year_lunar"
+    const-string v2, "year_lunar"
 
     invoke-direct {v1, v2, v0, v4}, Lmiui/maml/data/IndexedVariable;-><init>(Ljava/lang/String;Lmiui/maml/data/Variables;Z)V
 
     iput-object v1, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mYearLunar:Lmiui/maml/data/IndexedVariable;
 
-    .line 139
     new-instance v1, Lmiui/maml/data/IndexedVariable;
 
-    const-string/jumbo v2, "year_lunar1864"
+    const-string v2, "year_lunar1864"
 
     invoke-direct {v1, v2, v0, v4}, Lmiui/maml/data/IndexedVariable;-><init>(Ljava/lang/String;Lmiui/maml/data/Variables;Z)V
 
     iput-object v1, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mYearLunar1864:Lmiui/maml/data/IndexedVariable;
 
-    .line 140
     new-instance v1, Lmiui/maml/data/IndexedVariable;
 
     const-string v2, "month_lunar"
@@ -615,7 +557,6 @@
 
     iput-object v1, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mMonthLunar:Lmiui/maml/data/IndexedVariable;
 
-    .line 141
     new-instance v1, Lmiui/maml/data/IndexedVariable;
 
     const-string v2, "month_lunar_leap"
@@ -624,7 +565,6 @@
 
     iput-object v1, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mMonthLunarLeap:Lmiui/maml/data/IndexedVariable;
 
-    .line 142
     new-instance v1, Lmiui/maml/data/IndexedVariable;
 
     const-string v2, "date_lunar"
@@ -633,7 +573,6 @@
 
     iput-object v1, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mDateLunar:Lmiui/maml/data/IndexedVariable;
 
-    .line 144
     new-instance v1, Lmiui/maml/data/IndexedVariable;
 
     const-string v2, "day_of_week"
@@ -642,7 +581,6 @@
 
     iput-object v1, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mDayOfWeek:Lmiui/maml/data/IndexedVariable;
 
-    .line 145
     new-instance v1, Lmiui/maml/data/IndexedVariable;
 
     const-string v2, "ampm"
@@ -651,7 +589,6 @@
 
     iput-object v1, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mAmPm:Lmiui/maml/data/IndexedVariable;
 
-    .line 146
     new-instance v1, Lmiui/maml/data/IndexedVariable;
 
     const-string v2, "hour12"
@@ -660,7 +597,6 @@
 
     iput-object v1, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mHour12:Lmiui/maml/data/IndexedVariable;
 
-    .line 147
     new-instance v1, Lmiui/maml/data/IndexedVariable;
 
     const-string v2, "hour24"
@@ -669,7 +605,6 @@
 
     iput-object v1, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mHour24:Lmiui/maml/data/IndexedVariable;
 
-    .line 148
     new-instance v1, Lmiui/maml/data/IndexedVariable;
 
     const-string v2, "minute"
@@ -678,7 +613,6 @@
 
     iput-object v1, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mMinute:Lmiui/maml/data/IndexedVariable;
 
-    .line 149
     new-instance v1, Lmiui/maml/data/IndexedVariable;
 
     const-string v2, "second"
@@ -687,7 +621,6 @@
 
     iput-object v1, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mSecond:Lmiui/maml/data/IndexedVariable;
 
-    .line 150
     new-instance v1, Lmiui/maml/data/IndexedVariable;
 
     const-string v2, "time"
@@ -696,7 +629,6 @@
 
     iput-object v1, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mTime:Lmiui/maml/data/IndexedVariable;
 
-    .line 151
     new-instance v1, Lmiui/maml/data/IndexedVariable;
 
     const-string v2, "time_sys"
@@ -705,7 +637,6 @@
 
     iput-object v1, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mTimeSys:Lmiui/maml/data/IndexedVariable;
 
-    .line 152
     iget-object v1, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mTimeSys:Lmiui/maml/data/IndexedVariable;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -716,7 +647,6 @@
 
     invoke-virtual {v1, v2, v3}, Lmiui/maml/data/IndexedVariable;->set(D)V
 
-    .line 153
     new-instance v1, Lmiui/maml/data/IndexedVariable;
 
     const-string v2, "next_alarm_time"
@@ -727,7 +657,6 @@
 
     iput-object v1, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mNextAlarm:Lmiui/maml/data/IndexedVariable;
 
-    .line 155
     new-instance v1, Lmiui/maml/data/IndexedVariable;
 
     const-string v2, "time_format"
@@ -736,59 +665,49 @@
 
     iput-object v1, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mTimeFormatVar:Lmiui/maml/data/IndexedVariable;
 
-    .line 156
     return-void
 
-    .line 111
     .end local v0    # "vars":Lmiui/maml/data/Variables;
     :pswitch_0
     const-wide/32 v2, 0x5265c00
 
     iput-wide v2, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mTimeAccuracy:J
 
-    .line 112
     const/16 v1, 0x9
 
     iput v1, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mTimeAccuracyField:I
 
     goto/16 :goto_0
 
-    .line 115
     :pswitch_1
     const-wide/32 v2, 0x36ee80
 
     iput-wide v2, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mTimeAccuracy:J
 
-    .line 116
     const/16 v1, 0x12
 
     iput v1, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mTimeAccuracyField:I
 
     goto/16 :goto_0
 
-    .line 119
     :pswitch_2
     iput-wide v6, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mTimeAccuracy:J
 
-    .line 120
     iput v5, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mTimeAccuracyField:I
 
     goto/16 :goto_0
 
-    .line 123
     :pswitch_3
     const-wide/16 v2, 0x3e8
 
     iput-wide v2, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mTimeAccuracy:J
 
-    .line 124
     const/16 v1, 0x15
 
     iput v1, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mTimeAccuracyField:I
 
     goto/16 :goto_0
 
-    .line 109
     nop
 
     :pswitch_data_0
@@ -804,7 +723,6 @@
     .locals 3
 
     .prologue
-    .line 210
     invoke-virtual {p0}, Lmiui/maml/data/DateTimeVariableUpdater;->getContext()Lmiui/maml/ScreenContext;
 
     move-result-object v1
@@ -821,13 +739,11 @@
 
     move-result-object v0
 
-    .line 212
     .local v0, "nextAlarm":Ljava/lang/String;
     iget-object v1, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mNextAlarm:Lmiui/maml/data/IndexedVariable;
 
     invoke-virtual {v1, v0}, Lmiui/maml/data/IndexedVariable;->set(Ljava/lang/Object;)Z
 
-    .line 213
     return-void
 .end method
 
@@ -837,12 +753,10 @@
     .prologue
     const/16 v10, 0x12
 
-    .line 242
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
-    .line 243
     .local v2, "currentTimeMillis":J
     iget-object v7, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mTimeSys:Lmiui/maml/data/IndexedVariable;
 
@@ -850,12 +764,10 @@
 
     invoke-virtual {v7, v8, v9}, Lmiui/maml/data/IndexedVariable;->set(D)V
 
-    .line 245
     const-wide/16 v8, 0x3e8
 
     div-long v0, v2, v8
 
-    .line 246
     .local v0, "currentTime":J
     iget-wide v8, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mLastUpdatedTime:J
 
@@ -863,12 +775,10 @@
 
     if-eqz v7, :cond_0
 
-    .line 247
     iget-object v7, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiui/date/Calendar;
 
     invoke-virtual {v7, v2, v3}, Lmiui/date/Calendar;->setTimeInMillis(J)Lmiui/date/Calendar;
 
-    .line 249
     iget-object v7, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiui/date/Calendar;
 
     const/4 v8, 0x1
@@ -877,7 +787,6 @@
 
     move-result v6
 
-    .line 250
     .local v6, "year":I
     iget-object v7, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiui/date/Calendar;
 
@@ -887,7 +796,6 @@
 
     move-result v5
 
-    .line 251
     .local v5, "month":I
     iget-object v7, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiui/date/Calendar;
 
@@ -897,7 +805,6 @@
 
     move-result v4
 
-    .line 252
     .local v4, "date":I
     iget-object v7, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mAmPm:Lmiui/maml/data/IndexedVariable;
 
@@ -913,7 +820,6 @@
 
     invoke-virtual {v7, v8, v9}, Lmiui/maml/data/IndexedVariable;->set(D)V
 
-    .line 253
     iget-object v7, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mHour24:Lmiui/maml/data/IndexedVariable;
 
     iget-object v8, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiui/date/Calendar;
@@ -926,7 +832,6 @@
 
     invoke-virtual {v7, v8, v9}, Lmiui/maml/data/IndexedVariable;->set(D)V
 
-    .line 254
     iget-object v7, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mHour12:Lmiui/maml/data/IndexedVariable;
 
     iget-object v8, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiui/date/Calendar;
@@ -941,7 +846,6 @@
 
     invoke-virtual {v7, v8, v9}, Lmiui/maml/data/IndexedVariable;->set(D)V
 
-    .line 255
     iget-object v7, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mMinute:Lmiui/maml/data/IndexedVariable;
 
     iget-object v8, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiui/date/Calendar;
@@ -956,21 +860,18 @@
 
     invoke-virtual {v7, v8, v9}, Lmiui/maml/data/IndexedVariable;->set(D)V
 
-    .line 256
     iget-object v7, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mYear:Lmiui/maml/data/IndexedVariable;
 
     int-to-double v8, v6
 
     invoke-virtual {v7, v8, v9}, Lmiui/maml/data/IndexedVariable;->set(D)V
 
-    .line 257
     iget-object v7, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mMonth:Lmiui/maml/data/IndexedVariable;
 
     int-to-double v8, v5
 
     invoke-virtual {v7, v8, v9}, Lmiui/maml/data/IndexedVariable;->set(D)V
 
-    .line 258
     iget-object v7, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mMonth1:Lmiui/maml/data/IndexedVariable;
 
     add-int/lit8 v8, v5, 0x1
@@ -979,14 +880,12 @@
 
     invoke-virtual {v7, v8, v9}, Lmiui/maml/data/IndexedVariable;->set(D)V
 
-    .line 259
     iget-object v7, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mDate:Lmiui/maml/data/IndexedVariable;
 
     int-to-double v8, v4
 
     invoke-virtual {v7, v8, v9}, Lmiui/maml/data/IndexedVariable;->set(D)V
 
-    .line 261
     iget-object v7, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mDayOfWeek:Lmiui/maml/data/IndexedVariable;
 
     iget-object v8, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiui/date/Calendar;
@@ -1001,7 +900,6 @@
 
     invoke-virtual {v7, v8, v9}, Lmiui/maml/data/IndexedVariable;->set(D)V
 
-    .line 262
     iget-object v7, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mSecond:Lmiui/maml/data/IndexedVariable;
 
     iget-object v8, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiui/date/Calendar;
@@ -1016,7 +914,6 @@
 
     invoke-virtual {v7, v8, v9}, Lmiui/maml/data/IndexedVariable;->set(D)V
 
-    .line 264
     iget-object v7, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mYearLunar:Lmiui/maml/data/IndexedVariable;
 
     iget-object v8, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiui/date/Calendar;
@@ -1031,7 +928,6 @@
 
     invoke-virtual {v7, v8, v9}, Lmiui/maml/data/IndexedVariable;->set(D)V
 
-    .line 265
     iget-object v7, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mMonthLunar:Lmiui/maml/data/IndexedVariable;
 
     iget-object v8, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiui/date/Calendar;
@@ -1046,7 +942,6 @@
 
     invoke-virtual {v7, v8, v9}, Lmiui/maml/data/IndexedVariable;->set(D)V
 
-    .line 266
     iget-object v7, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mDateLunar:Lmiui/maml/data/IndexedVariable;
 
     iget-object v8, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiui/date/Calendar;
@@ -1061,7 +956,6 @@
 
     invoke-virtual {v7, v8, v9}, Lmiui/maml/data/IndexedVariable;->set(D)V
 
-    .line 267
     iget-object v7, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mYearLunar1864:Lmiui/maml/data/IndexedVariable;
 
     iget-object v8, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiui/date/Calendar;
@@ -1076,7 +970,6 @@
 
     invoke-virtual {v7, v8, v9}, Lmiui/maml/data/IndexedVariable;->set(D)V
 
-    .line 268
     iget-object v7, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mMonthLunarLeap:Lmiui/maml/data/IndexedVariable;
 
     iget-object v8, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiui/date/Calendar;
@@ -1091,10 +984,8 @@
 
     invoke-virtual {v7, v8, v9}, Lmiui/maml/data/IndexedVariable;->set(D)V
 
-    .line 270
     iput-wide v0, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mLastUpdatedTime:J
 
-    .line 272
     .end local v4    # "date":I
     .end local v5    # "month":I
     .end local v6    # "year":I
@@ -1108,20 +999,16 @@
     .locals 2
 
     .prologue
-    .line 194
     invoke-super {p0}, Lmiui/maml/data/NotifierVariableUpdater;->finish()V
 
-    .line 195
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mLastUpdatedTime:J
 
-    .line 196
     const/4 v0, 0x0
 
     sput-object v0, Lmiui/maml/data/DateTimeVariableUpdater;->sCalendar:Lmiui/date/Calendar;
 
-    .line 197
     invoke-virtual {p0}, Lmiui/maml/data/DateTimeVariableUpdater;->getContext()Lmiui/maml/ScreenContext;
 
     move-result-object v0
@@ -1134,7 +1021,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 198
     return-void
 .end method
 
@@ -1142,19 +1028,14 @@
     .locals 0
 
     .prologue
-    .line 159
     invoke-super {p0}, Lmiui/maml/data/NotifierVariableUpdater;->init()V
 
-    .line 161
     invoke-direct {p0}, Lmiui/maml/data/DateTimeVariableUpdater;->refreshAlarm()V
 
-    .line 162
     invoke-direct {p0}, Lmiui/maml/data/DateTimeVariableUpdater;->updateTime()V
 
-    .line 163
     invoke-direct {p0}, Lmiui/maml/data/DateTimeVariableUpdater;->checkUpdateTime()V
 
-    .line 164
     return-void
 .end method
 
@@ -1165,13 +1046,10 @@
     .param p3, "o"    # Ljava/lang/Object;
 
     .prologue
-    .line 276
     invoke-virtual {p0}, Lmiui/maml/data/DateTimeVariableUpdater;->resetCalendar()V
 
-    .line 277
     invoke-direct {p0}, Lmiui/maml/data/DateTimeVariableUpdater;->checkUpdateTime()V
 
-    .line 278
     return-void
 .end method
 
@@ -1179,10 +1057,8 @@
     .locals 2
 
     .prologue
-    .line 189
     invoke-super {p0}, Lmiui/maml/data/NotifierVariableUpdater;->pause()V
 
-    .line 190
     invoke-virtual {p0}, Lmiui/maml/data/DateTimeVariableUpdater;->getContext()Lmiui/maml/ScreenContext;
 
     move-result-object v0
@@ -1195,7 +1071,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 191
     return-void
 .end method
 
@@ -1203,26 +1078,22 @@
     .locals 1
 
     .prologue
-    .line 182
     new-instance v0, Lmiui/date/Calendar;
 
     invoke-direct {v0}, Lmiui/date/Calendar;-><init>()V
 
     iput-object v0, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiui/date/Calendar;
 
-    .line 183
     sget-object v0, Lmiui/maml/data/DateTimeVariableUpdater;->sCalendar:Lmiui/date/Calendar;
 
     if-eqz v0, :cond_0
 
-    .line 184
     new-instance v0, Lmiui/date/Calendar;
 
     invoke-direct {v0}, Lmiui/date/Calendar;-><init>()V
 
     sput-object v0, Lmiui/maml/data/DateTimeVariableUpdater;->sCalendar:Lmiui/date/Calendar;
 
-    .line 186
     :cond_0
     return-void
 .end method
@@ -1231,19 +1102,14 @@
     .locals 0
 
     .prologue
-    .line 173
     invoke-super {p0}, Lmiui/maml/data/NotifierVariableUpdater;->resume()V
 
-    .line 174
     invoke-direct {p0}, Lmiui/maml/data/DateTimeVariableUpdater;->refreshAlarm()V
 
-    .line 177
     invoke-virtual {p0}, Lmiui/maml/data/DateTimeVariableUpdater;->resetCalendar()V
 
-    .line 178
     invoke-direct {p0}, Lmiui/maml/data/DateTimeVariableUpdater;->checkUpdateTime()V
 
-    .line 179
     return-void
 .end method
 
@@ -1252,19 +1118,15 @@
     .param p1, "currentTime"    # J
 
     .prologue
-    .line 167
     invoke-super {p0, p1, p2}, Lmiui/maml/data/NotifierVariableUpdater;->tick(J)V
 
-    .line 168
     iget-object v0, p0, Lmiui/maml/data/DateTimeVariableUpdater;->mTime:Lmiui/maml/data/IndexedVariable;
 
     long-to-double v2, p1
 
     invoke-virtual {v0, v2, v3}, Lmiui/maml/data/IndexedVariable;->set(D)V
 
-    .line 169
     invoke-direct {p0}, Lmiui/maml/data/DateTimeVariableUpdater;->updateTime()V
 
-    .line 170
     return-void
 .end method

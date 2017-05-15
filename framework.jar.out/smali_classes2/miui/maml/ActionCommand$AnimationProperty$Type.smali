@@ -52,7 +52,6 @@
 
     const/4 v2, 0x0
 
-    .line 1217
     new-instance v0, Lmiui/maml/ActionCommand$AnimationProperty$Type;
 
     const-string v1, "INVALID"
@@ -61,7 +60,6 @@
 
     sput-object v0, Lmiui/maml/ActionCommand$AnimationProperty$Type;->INVALID:Lmiui/maml/ActionCommand$AnimationProperty$Type;
 
-    .line 1218
     new-instance v0, Lmiui/maml/ActionCommand$AnimationProperty$Type;
 
     const-string v1, "PLAY"
@@ -70,7 +68,6 @@
 
     sput-object v0, Lmiui/maml/ActionCommand$AnimationProperty$Type;->PLAY:Lmiui/maml/ActionCommand$AnimationProperty$Type;
 
-    .line 1219
     new-instance v0, Lmiui/maml/ActionCommand$AnimationProperty$Type;
 
     const-string v1, "PAUSE"
@@ -79,7 +76,6 @@
 
     sput-object v0, Lmiui/maml/ActionCommand$AnimationProperty$Type;->PAUSE:Lmiui/maml/ActionCommand$AnimationProperty$Type;
 
-    .line 1220
     new-instance v0, Lmiui/maml/ActionCommand$AnimationProperty$Type;
 
     const-string v1, "RESUME"
@@ -88,7 +84,6 @@
 
     sput-object v0, Lmiui/maml/ActionCommand$AnimationProperty$Type;->RESUME:Lmiui/maml/ActionCommand$AnimationProperty$Type;
 
-    .line 1221
     new-instance v0, Lmiui/maml/ActionCommand$AnimationProperty$Type;
 
     const-string v1, "PLAY_WITH_PARAMS"
@@ -97,7 +92,6 @@
 
     sput-object v0, Lmiui/maml/ActionCommand$AnimationProperty$Type;->PLAY_WITH_PARAMS:Lmiui/maml/ActionCommand$AnimationProperty$Type;
 
-    .line 1216
     const/4 v0, 0x5
 
     new-array v0, v0, [Lmiui/maml/ActionCommand$AnimationProperty$Type;
@@ -136,7 +130,6 @@
     .end annotation
 
     .prologue
-    .line 1216
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -147,7 +140,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 1216
     const-class v0, Lmiui/maml/ActionCommand$AnimationProperty$Type;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -163,7 +155,6 @@
     .locals 1
 
     .prologue
-    .line 1216
     sget-object v0, Lmiui/maml/ActionCommand$AnimationProperty$Type;->$VALUES:[Lmiui/maml/ActionCommand$AnimationProperty$Type;
 
     invoke-virtual {v0}, [Lmiui/maml/ActionCommand$AnimationProperty$Type;->clone()Ljava/lang/Object;

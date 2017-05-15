@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Looper;
 
     .prologue
-    .line 101
     iput-object p1, p0, Landroid/app/ActivityView$1;->this$0:Landroid/app/ActivityView;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -39,17 +38,14 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 104
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
-    .line 105
     iget v1, p1, Landroid/os/Message;->what:I
 
     const/4 v2, 0x1
 
     if-ne v1, v2, :cond_0
 
-    .line 107
     :try_start_0
     iget-object v1, p0, Landroid/app/ActivityView$1;->this$0:Landroid/app/ActivityView;
 
@@ -76,15 +72,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 114
     :cond_0
     return-void
 
-    .line 109
     :catch_0
     move-exception v0
 
-    .line 110
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 

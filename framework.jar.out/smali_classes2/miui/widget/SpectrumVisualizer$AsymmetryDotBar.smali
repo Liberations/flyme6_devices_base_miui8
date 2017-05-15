@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 401
     iput-object p1, p0, Lmiui/widget/SpectrumVisualizer$AsymmetryDotBar;->this$0:Lmiui/widget/SpectrumVisualizer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "index"    # I
 
     .prologue
-    .line 404
     iget-object v0, p0, Lmiui/widget/SpectrumVisualizer$AsymmetryDotBar;->this$0:Lmiui/widget/SpectrumVisualizer;
 
     iget v0, v0, Lmiui/widget/SpectrumVisualizer;->mDotbarHeight:I
@@ -83,7 +81,6 @@
 
     mul-int v5, v0, v1
 
-    .line 405
     .local v5, "top":I
     iget-object v0, p0, Lmiui/widget/SpectrumVisualizer$AsymmetryDotBar;->this$0:Lmiui/widget/SpectrumVisualizer;
 
@@ -91,7 +88,6 @@
 
     if-ge v5, v0, :cond_0
 
-    .line 406
     iget-object v0, p0, Lmiui/widget/SpectrumVisualizer$AsymmetryDotBar;->this$0:Lmiui/widget/SpectrumVisualizer;
 
     iget-object v1, v0, Lmiui/widget/SpectrumVisualizer;->mPixels:[I
@@ -132,7 +128,6 @@
 
     invoke-virtual/range {v0 .. v9}, Landroid/graphics/Canvas;->drawBitmap([IIIIIIIZLandroid/graphics/Paint;)V
 
-    .line 416
     :cond_0
     return-void
 .end method

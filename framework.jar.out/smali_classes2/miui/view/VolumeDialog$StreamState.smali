@@ -31,7 +31,6 @@
     .locals 0
 
     .prologue
-    .line 957
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -42,7 +41,6 @@
     .param p0, "x0"    # Lmiui/view/VolumeDialog$StreamState;
 
     .prologue
-    .line 957
     iget v0, p0, Lmiui/view/VolumeDialog$StreamState;->level:I
 
     return v0
@@ -53,7 +51,6 @@
     .param p0, "x0"    # Lmiui/view/VolumeDialog$StreamState;
 
     .prologue
-    .line 957
     iget v0, p0, Lmiui/view/VolumeDialog$StreamState;->levelMax:I
 
     return v0
@@ -64,7 +61,6 @@
     .param p0, "x0"    # Lmiui/view/VolumeDialog$StreamState;
 
     .prologue
-    .line 957
     iget-boolean v0, p0, Lmiui/view/VolumeDialog$StreamState;->muted:Z
 
     return v0
@@ -75,7 +71,6 @@
     .param p0, "x0"    # Lmiui/view/VolumeDialog$StreamState;
 
     .prologue
-    .line 957
     iget-boolean v0, p0, Lmiui/view/VolumeDialog$StreamState;->muteSupported:Z
 
     return v0
@@ -86,7 +81,6 @@
     .param p0, "x0"    # Lmiui/view/VolumeDialog$StreamState;
 
     .prologue
-    .line 957
     iget v0, p0, Lmiui/view/VolumeDialog$StreamState;->levelMin:I
 
     return v0
@@ -99,12 +93,10 @@
     .param p2, "delegate"    # Lmiui/view/VolumeDialog$VolumePanelDelegate;
 
     .prologue
-    .line 975
     new-instance v1, Lmiui/view/VolumeDialog$StreamState;
 
     invoke-direct {v1}, Lmiui/view/VolumeDialog$StreamState;-><init>()V
 
-    .line 976
     .local v1, "ret":Lmiui/view/VolumeDialog$StreamState;
     const-string v2, "audio"
 
@@ -114,7 +106,6 @@
 
     check-cast v0, Landroid/media/AudioManager;
 
-    .line 977
     .local v0, "am":Landroid/media/AudioManager;
     invoke-virtual {v0, p1}, Landroid/media/AudioManager;->getStreamVolume(I)I
 
@@ -122,49 +113,42 @@
 
     iput v2, v1, Lmiui/view/VolumeDialog$StreamState;->level:I
 
-    .line 978
     invoke-virtual {v0, p1}, Landroid/media/AudioManager;->getStreamMaxVolume(I)I
 
     move-result v2
 
     iput v2, v1, Lmiui/view/VolumeDialog$StreamState;->levelMax:I
 
-    .line 979
     invoke-interface {p2, p1}, Lmiui/view/VolumeDialog$VolumePanelDelegate;->getStreamMinVolume(I)I
 
     move-result v2
 
     iput v2, v1, Lmiui/view/VolumeDialog$StreamState;->levelMin:I
 
-    .line 980
     invoke-virtual {v0, p1}, Landroid/media/AudioManager;->isStreamMute(I)Z
 
     move-result v2
 
     iput-boolean v2, v1, Lmiui/view/VolumeDialog$StreamState;->muted:Z
 
-    .line 981
     invoke-interface {p2, p1}, Lmiui/view/VolumeDialog$VolumePanelDelegate;->isStreamAffectedByMute(I)Z
 
     move-result v2
 
     iput-boolean v2, v1, Lmiui/view/VolumeDialog$StreamState;->muteSupported:Z
 
-    .line 983
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v3, 0x17
 
     if-ge v2, v3, :cond_1
 
-    .line 984
     const/4 v2, 0x6
 
     if-eq p1, v2, :cond_0
 
     if-nez p1, :cond_1
 
-    .line 985
     :cond_0
     iget v2, v1, Lmiui/view/VolumeDialog$StreamState;->level:I
 
@@ -172,14 +156,12 @@
 
     iput v2, v1, Lmiui/view/VolumeDialog$StreamState;->level:I
 
-    .line 986
     iget v2, v1, Lmiui/view/VolumeDialog$StreamState;->levelMax:I
 
     add-int/lit8 v2, v2, 0x1
 
     iput v2, v1, Lmiui/view/VolumeDialog$StreamState;->levelMax:I
 
-    .line 990
     :cond_1
     return-object v1
 .end method
@@ -190,37 +172,30 @@
     .locals 2
 
     .prologue
-    .line 965
     new-instance v0, Lmiui/view/VolumeDialog$StreamState;
 
     invoke-direct {v0}, Lmiui/view/VolumeDialog$StreamState;-><init>()V
 
-    .line 966
     .local v0, "ret":Lmiui/view/VolumeDialog$StreamState;
     iget v1, p0, Lmiui/view/VolumeDialog$StreamState;->level:I
 
     iput v1, v0, Lmiui/view/VolumeDialog$StreamState;->level:I
 
-    .line 967
     iget v1, p0, Lmiui/view/VolumeDialog$StreamState;->levelMin:I
 
     iput v1, v0, Lmiui/view/VolumeDialog$StreamState;->levelMin:I
 
-    .line 968
     iget v1, p0, Lmiui/view/VolumeDialog$StreamState;->levelMax:I
 
     iput v1, v0, Lmiui/view/VolumeDialog$StreamState;->levelMax:I
 
-    .line 969
     iget-boolean v1, p0, Lmiui/view/VolumeDialog$StreamState;->muted:Z
 
     iput-boolean v1, v0, Lmiui/view/VolumeDialog$StreamState;->muted:Z
 
-    .line 970
     iget-boolean v1, p0, Lmiui/view/VolumeDialog$StreamState;->muteSupported:Z
 
     iput-boolean v1, v0, Lmiui/view/VolumeDialog$StreamState;->muteSupported:Z
 
-    .line 971
     return-object v0
 .end method

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 87
     iput-object p1, p0, Lmiui/maml/data/LocationBinder$1;->this$0:Lmiui/maml/data/LocationBinder;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,13 +40,11 @@
     .param p1, "location"    # Landroid/location/Location;
 
     .prologue
-    .line 103
     iget-object v0, p0, Lmiui/maml/data/LocationBinder$1;->this$0:Lmiui/maml/data/LocationBinder;
 
     # invokes: Lmiui/maml/data/LocationBinder;->updateLocation(Landroid/location/Location;)V
     invoke-static {v0, p1}, Lmiui/maml/data/LocationBinder;->access$000(Lmiui/maml/data/LocationBinder;Landroid/location/Location;)V
 
-    .line 104
     return-void
 .end method
 
@@ -56,7 +53,6 @@
     .param p1, "provider"    # Ljava/lang/String;
 
     .prologue
-    .line 99
     return-void
 .end method
 
@@ -65,7 +61,6 @@
     .param p1, "provider"    # Ljava/lang/String;
 
     .prologue
-    .line 95
     return-void
 .end method
 
@@ -76,6 +71,5 @@
     .param p3, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 91
     return-void
 .end method

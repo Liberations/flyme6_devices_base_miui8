@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -18,7 +17,6 @@
     .locals 1
 
     .prologue
-    .line 9
     invoke-static {}, Landroid/ddm/DdmHandleAppName;->getAppName()Ljava/lang/String;
 
     move-result-object v0

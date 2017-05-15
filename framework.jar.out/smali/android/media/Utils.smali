@@ -12,7 +12,6 @@
     .locals 0
 
     .prologue
-    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,7 +35,6 @@
     .end annotation
 
     .prologue
-    .line 168
     .local p0, "range":Landroid/util/Range;, "Landroid/util/Range<Ljava/lang/Integer;>;"
     invoke-virtual {p0}, Landroid/util/Range;->getLower()Ljava/lang/Comparable;
 
@@ -96,7 +94,6 @@
     .end annotation
 
     .prologue
-    .line 92
     .local p0, "ranges":[Landroid/util/Range;, "[Landroid/util/Range<TT;>;"
     .local p1, "value":Ljava/lang/Comparable;, "TT;"
     invoke-static {p1, p1}, Landroid/util/Range;->create(Ljava/lang/Comparable;Ljava/lang/Comparable;)Landroid/util/Range;
@@ -120,7 +117,6 @@
     .param p1, "den"    # I
 
     .prologue
-    .line 174
     add-int v0, p0, p1
 
     add-int/lit8 v0, v0, -0x1
@@ -136,7 +132,6 @@
     .param p2, "den"    # J
 
     .prologue
-    .line 178
     add-long v0, p0, p2
 
     const-wide/16 v2, 0x1
@@ -166,13 +161,11 @@
     .end annotation
 
     .prologue
-    .line 132
     .local p0, "range":Landroid/util/Range;, "Landroid/util/Range<Ljava/lang/Integer;>;"
     const/4 v0, 0x1
 
     if-ne p1, v0, :cond_0
 
-    .line 135
     .end local p0    # "range":Landroid/util/Range;, "Landroid/util/Range<Ljava/lang/Integer;>;"
     :goto_0
     return-object p0
@@ -238,7 +231,6 @@
     .end annotation
 
     .prologue
-    .line 143
     .local p0, "range":Landroid/util/Range;, "Landroid/util/Range<Ljava/lang/Long;>;"
     const-wide/16 v0, 0x1
 
@@ -246,7 +238,6 @@
 
     if-nez v0, :cond_0
 
-    .line 146
     .end local p0    # "range":Landroid/util/Range;, "Landroid/util/Range<Ljava/lang/Long;>;"
     :goto_0
     return-object p0
@@ -300,55 +291,42 @@
     .param p1, "b"    # I
 
     .prologue
-    .line 110
     if-nez p0, :cond_0
 
     if-nez p1, :cond_0
 
-    .line 111
     const/4 v1, 0x1
 
-    .line 124
     :goto_0
     return v1
 
-    .line 113
     :cond_0
     if-gez p1, :cond_1
 
-    .line 114
     neg-int p1, p1
 
-    .line 116
     :cond_1
     if-gez p0, :cond_2
 
-    .line 117
     neg-int p0, p0
 
-    .line 119
     :cond_2
     :goto_1
     if-eqz p0, :cond_3
 
-    .line 120
     rem-int v0, p1, p0
 
-    .line 121
     .local v0, "c":I
     move p1, p0
 
-    .line 122
     move p0, v0
 
-    .line 123
     goto :goto_1
 
     .end local v0    # "c":I
     :cond_3
     move v1, p1
 
-    .line 124
     goto :goto_0
 .end method
 
@@ -366,7 +344,6 @@
     .end annotation
 
     .prologue
-    .line 192
     double-to-int v0, p0
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -407,18 +384,15 @@
     .end annotation
 
     .prologue
-    .line 60
     .local p0, "one":[Landroid/util/Range;, "[Landroid/util/Range<TT;>;"
     .local p1, "another":[Landroid/util/Range;, "[Landroid/util/Range<TT;>;"
     const/4 v2, 0x0
 
-    .line 61
     .local v2, "ix":I
     new-instance v5, Ljava/util/Vector;
 
     invoke-direct {v5}, Ljava/util/Vector;-><init>()V
 
-    .line 62
     .local v5, "result":Ljava/util/Vector;, "Ljava/util/Vector<Landroid/util/Range<TT;>;>;"
     move-object v0, p1
 
@@ -434,7 +408,6 @@
 
     aget-object v4, v0, v1
 
-    .line 63
     .local v4, "range":Landroid/util/Range;, "Landroid/util/Range<TT;>;"
     :goto_1
     array-length v6, p0
@@ -457,12 +430,10 @@
 
     if-gez v6, :cond_0
 
-    .line 65
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 67
     :cond_0
     :goto_2
     array-length v6, p0
@@ -485,7 +456,6 @@
 
     if-gez v6, :cond_1
 
-    .line 69
     aget-object v6, p0, v2
 
     invoke-virtual {v4, v6}, Landroid/util/Range;->intersect(Landroid/util/Range;)Landroid/util/Range;
@@ -494,18 +464,15 @@
 
     invoke-virtual {v5, v6}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
-    .line 70
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
-    .line 72
     :cond_1
     array-length v6, p0
 
     if-ne v2, v6, :cond_3
 
-    .line 79
     .end local v4    # "range":Landroid/util/Range;, "Landroid/util/Range<TT;>;"
     :cond_2
     invoke-virtual {v5}, Ljava/util/Vector;->size()I
@@ -522,7 +489,6 @@
 
     return-object v6
 
-    .line 75
     .restart local v4    # "range":Landroid/util/Range;, "Landroid/util/Range<TT;>;"
     :cond_3
     aget-object v6, p0, v2
@@ -541,7 +507,6 @@
 
     if-gtz v6, :cond_4
 
-    .line 76
     aget-object v6, p0, v2
 
     invoke-virtual {v4, v6}, Landroid/util/Range;->intersect(Landroid/util/Range;)Landroid/util/Range;
@@ -550,7 +515,6 @@
 
     invoke-virtual {v5, v6}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
-    .line 62
     :cond_4
     add-int/lit8 v1, v1, 0x1
 
@@ -563,22 +527,19 @@
     .param p1, "b"    # I
 
     .prologue
-    .line 185
     if-eqz p0, :cond_0
 
     if-nez p1, :cond_1
 
-    .line 186
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "lce is not defined for zero arguments"
+    const-string v1, "lce is not defined for zero arguments"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 188
     :cond_1
     int-to-long v0, p0
 
@@ -611,7 +572,6 @@
     .end annotation
 
     .prologue
-    .line 196
     double-to-long v0, p0
 
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -654,7 +614,6 @@
     .end annotation
 
     .prologue
-    .line 229
     .local p1, "fallback":Landroid/util/Range;, "Landroid/util/Range<Ljava/lang/Integer;>;"
     :try_start_0
     move-object v0, p0
@@ -663,7 +622,6 @@
 
     move-object v3, v0
 
-    .line 230
     .local v3, "s":Ljava/lang/String;
     const/16 v5, 0x2d
 
@@ -671,11 +629,9 @@
 
     move-result v2
 
-    .line 231
     .local v2, "ix":I
     if-ltz v2, :cond_0
 
-    .line 232
     const/4 v5, 0x0
 
     invoke-virtual {v3, v5, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
@@ -712,14 +668,12 @@
 
     move-result-object p1
 
-    .line 245
     .end local v2    # "ix":I
     .end local v3    # "s":Ljava/lang/String;
     .end local p1    # "fallback":Landroid/util/Range;, "Landroid/util/Range<Ljava/lang/Integer;>;"
     :goto_0
     return-object p1
 
-    .line 236
     .restart local v2    # "ix":I
     .restart local v3    # "s":Ljava/lang/String;
     .restart local p1    # "fallback":Landroid/util/Range;, "Landroid/util/Range<Ljava/lang/Integer;>;"
@@ -728,7 +682,6 @@
 
     move-result v4
 
-    .line 237
     .local v4, "value":I
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -749,23 +702,19 @@
 
     goto :goto_0
 
-    .line 240
     .end local v2    # "ix":I
     .end local v3    # "s":Ljava/lang/String;
     .end local v4    # "value":I
     :catch_0
     move-exception v1
 
-    .line 241
     .local v1, "e":Ljava/lang/NullPointerException;
     goto :goto_0
 
-    .line 242
     .end local v1    # "e":Ljava/lang/NullPointerException;
     :catch_1
     move-exception v5
 
-    .line 244
     :goto_1
     const-string v5, "Utils"
 
@@ -797,13 +746,11 @@
 
     goto :goto_0
 
-    .line 239
     :catch_2
     move-exception v5
 
     goto :goto_1
 
-    .line 238
     :catch_3
     move-exception v5
 
@@ -816,15 +763,12 @@
     .param p1, "fallback"    # I
 
     .prologue
-    .line 212
     if-nez p0, :cond_0
 
-    .line 224
     .end local p1    # "fallback":I
     :goto_0
     return p1
 
-    .line 216
     .restart local p1    # "fallback":I
     :cond_0
     :try_start_0
@@ -834,7 +778,6 @@
 
     move-object v2, v0
 
-    .line 217
     .local v2, "s":Ljava/lang/String;
     invoke-static {v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
     :try_end_0
@@ -846,21 +789,17 @@
 
     goto :goto_0
 
-    .line 220
     .end local v2    # "s":Ljava/lang/String;
     :catch_0
     move-exception v1
 
-    .line 221
     .local v1, "e":Ljava/lang/NullPointerException;
     goto :goto_0
 
-    .line 219
     .end local v1    # "e":Ljava/lang/NullPointerException;
     :catch_1
     move-exception v3
 
-    .line 223
     :goto_1
     const-string v3, "Utils"
 
@@ -892,7 +831,6 @@
 
     goto :goto_0
 
-    .line 218
     :catch_2
     move-exception v3
 
@@ -918,7 +856,6 @@
     .end annotation
 
     .prologue
-    .line 250
     .local p1, "fallback":Landroid/util/Range;, "Landroid/util/Range<Ljava/lang/Long;>;"
     :try_start_0
     move-object v0, p0
@@ -927,7 +864,6 @@
 
     move-object v4, v0
 
-    .line 251
     .local v4, "s":Ljava/lang/String;
     const/16 v5, 0x2d
 
@@ -935,11 +871,9 @@
 
     move-result v3
 
-    .line 252
     .local v3, "ix":I
     if-ltz v3, :cond_0
 
-    .line 253
     const/4 v5, 0x0
 
     invoke-virtual {v4, v5, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
@@ -976,14 +910,12 @@
 
     move-result-object p1
 
-    .line 266
     .end local v3    # "ix":I
     .end local v4    # "s":Ljava/lang/String;
     .end local p1    # "fallback":Landroid/util/Range;, "Landroid/util/Range<Ljava/lang/Long;>;"
     :goto_0
     return-object p1
 
-    .line 257
     .restart local v3    # "ix":I
     .restart local v4    # "s":Ljava/lang/String;
     .restart local p1    # "fallback":Landroid/util/Range;, "Landroid/util/Range<Ljava/lang/Long;>;"
@@ -992,7 +924,6 @@
 
     move-result-wide v6
 
-    .line 258
     .local v6, "value":J
     invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -1013,23 +944,19 @@
 
     goto :goto_0
 
-    .line 261
     .end local v3    # "ix":I
     .end local v4    # "s":Ljava/lang/String;
     .end local v6    # "value":J
     :catch_0
     move-exception v2
 
-    .line 262
     .local v2, "e":Ljava/lang/NullPointerException;
     goto :goto_0
 
-    .line 263
     .end local v2    # "e":Ljava/lang/NullPointerException;
     :catch_1
     move-exception v5
 
-    .line 265
     :goto_1
     const-string v5, "Utils"
 
@@ -1061,13 +988,11 @@
 
     goto :goto_0
 
-    .line 260
     :catch_2
     move-exception v5
 
     goto :goto_1
 
-    .line 259
     :catch_3
     move-exception v5
 
@@ -1093,7 +1018,6 @@
     .end annotation
 
     .prologue
-    .line 271
     .local p1, "fallback":Landroid/util/Range;, "Landroid/util/Range<Landroid/util/Rational;>;"
     :try_start_0
     move-object v0, p0
@@ -1102,7 +1026,6 @@
 
     move-object v3, v0
 
-    .line 272
     .local v3, "s":Ljava/lang/String;
     const/16 v5, 0x2d
 
@@ -1110,11 +1033,9 @@
 
     move-result v2
 
-    .line 273
     .local v2, "ix":I
     if-ltz v2, :cond_0
 
-    .line 274
     const/4 v5, 0x0
 
     invoke-virtual {v3, v5, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
@@ -1139,14 +1060,12 @@
 
     move-result-object p1
 
-    .line 287
     .end local v2    # "ix":I
     .end local v3    # "s":Ljava/lang/String;
     .end local p1    # "fallback":Landroid/util/Range;, "Landroid/util/Range<Landroid/util/Rational;>;"
     :goto_0
     return-object p1
 
-    .line 278
     .restart local v2    # "ix":I
     .restart local v3    # "s":Ljava/lang/String;
     .restart local p1    # "fallback":Landroid/util/Range;, "Landroid/util/Range<Landroid/util/Rational;>;"
@@ -1155,7 +1074,6 @@
 
     move-result-object v4
 
-    .line 279
     .local v4, "value":Landroid/util/Rational;
     invoke-static {v4, v4}, Landroid/util/Range;->create(Ljava/lang/Comparable;Ljava/lang/Comparable;)Landroid/util/Range;
     :try_end_0
@@ -1168,23 +1086,19 @@
 
     goto :goto_0
 
-    .line 282
     .end local v2    # "ix":I
     .end local v3    # "s":Ljava/lang/String;
     .end local v4    # "value":Landroid/util/Rational;
     :catch_0
     move-exception v1
 
-    .line 283
     .local v1, "e":Ljava/lang/NullPointerException;
     goto :goto_0
 
-    .line 284
     .end local v1    # "e":Ljava/lang/NullPointerException;
     :catch_1
     move-exception v5
 
-    .line 286
     :goto_1
     const-string v5, "Utils"
 
@@ -1216,13 +1130,11 @@
 
     goto :goto_0
 
-    .line 281
     :catch_2
     move-exception v5
 
     goto :goto_1
 
-    .line 280
     :catch_3
     move-exception v5
 
@@ -1235,7 +1147,6 @@
     .param p1, "fallback"    # Landroid/util/Size;
 
     .prologue
-    .line 201
     :try_start_0
     move-object v0, p0
 
@@ -1251,26 +1162,21 @@
 
     move-result-object p1
 
-    .line 208
     .end local p1    # "fallback":Landroid/util/Size;
     :goto_0
     return-object p1
 
-    .line 204
     .restart local p1    # "fallback":Landroid/util/Size;
     :catch_0
     move-exception v1
 
-    .line 205
     .local v1, "e":Ljava/lang/NullPointerException;
     goto :goto_0
 
-    .line 203
     .end local v1    # "e":Ljava/lang/NullPointerException;
     :catch_1
     move-exception v2
 
-    .line 207
     :goto_1
     const-string v2, "Utils"
 
@@ -1302,7 +1208,6 @@
 
     goto :goto_0
 
-    .line 202
     :catch_2
     move-exception v2
 
@@ -1328,7 +1233,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 292
     :try_start_0
     move-object v0, p0
 
@@ -1336,7 +1240,6 @@
 
     move-object v3, v0
 
-    .line 293
     .local v3, "s":Ljava/lang/String;
     const/16 v6, 0x2d
 
@@ -1344,11 +1247,9 @@
 
     move-result v2
 
-    .line 294
     .local v2, "ix":I
     if-ltz v2, :cond_0
 
-    .line 295
     const/4 v6, 0x0
 
     invoke-virtual {v3, v6, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
@@ -1373,13 +1274,11 @@
 
     move-result-object v5
 
-    .line 308
     .end local v2    # "ix":I
     .end local v3    # "s":Ljava/lang/String;
     :goto_0
     return-object v5
 
-    .line 299
     .restart local v2    # "ix":I
     .restart local v3    # "s":Ljava/lang/String;
     :cond_0
@@ -1387,7 +1286,6 @@
 
     move-result-object v4
 
-    .line 300
     .local v4, "value":Landroid/util/Size;
     invoke-static {v4, v4}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
     :try_end_0
@@ -1400,23 +1298,19 @@
 
     goto :goto_0
 
-    .line 303
     .end local v2    # "ix":I
     .end local v3    # "s":Ljava/lang/String;
     .end local v4    # "value":Landroid/util/Size;
     :catch_0
     move-exception v1
 
-    .line 304
     .local v1, "e":Ljava/lang/NullPointerException;
     goto :goto_0
 
-    .line 305
     .end local v1    # "e":Ljava/lang/NullPointerException;
     :catch_1
     move-exception v6
 
-    .line 307
     :goto_1
     const-string v6, "Utils"
 
@@ -1448,13 +1342,11 @@
 
     goto :goto_0
 
-    .line 302
     :catch_2
     move-exception v6
 
     goto :goto_1
 
-    .line 301
     :catch_3
     move-exception v6
 
@@ -1480,11 +1372,9 @@
     .end annotation
 
     .prologue
-    .line 159
     .local p0, "range":Landroid/util/Range;, "Landroid/util/Range<Landroid/util/Rational;>;"
     if-ne p1, p2, :cond_0
 
-    .line 162
     .end local p0    # "range":Landroid/util/Range;, "Landroid/util/Range<Landroid/util/Rational;>;"
     :goto_0
     return-object p0
@@ -1525,19 +1415,15 @@
     .param p2, "den"    # I
 
     .prologue
-    .line 150
     invoke-static {p1, p2}, Landroid/media/Utils;->gcd(II)I
 
     move-result v0
 
-    .line 151
     .local v0, "common":I
     div-int/2addr p1, v0
 
-    .line 152
     div-int/2addr p2, v0
 
-    .line 153
     new-instance v1, Landroid/util/Rational;
 
     invoke-virtual {p0}, Landroid/util/Rational;->getNumerator()I
@@ -1582,7 +1468,6 @@
     .end annotation
 
     .prologue
-    .line 38
     .local p0, "ranges":[Landroid/util/Range;, "[Landroid/util/Range<TT;>;"
     new-instance v0, Landroid/media/Utils$1;
 
@@ -1590,6 +1475,5 @@
 
     invoke-static {p0, v0}, Ljava/util/Arrays;->sort([Ljava/lang/Object;Ljava/util/Comparator;)V
 
-    .line 50
     return-void
 .end method

@@ -9,9 +9,7 @@
     .param p1, "detailMessage"    # Ljava/lang/String;
 
     .prologue
-    .line 11
     invoke-direct {p0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    .line 12
     return-void
 .end method

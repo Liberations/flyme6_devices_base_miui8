@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,12 +46,10 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 44
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 45
     .local v2, "responseCode":I
     new-instance v1, Lcom/android/internal/widget/VerifyCredentialResponse;
 
@@ -60,13 +57,11 @@
 
     invoke-direct {v1, v2, v4, v5, v5}, Lcom/android/internal/widget/VerifyCredentialResponse;-><init>(II[BLcom/android/internal/widget/VerifyCredentialResponse$1;)V
 
-    .line 46
     .local v1, "response":Lcom/android/internal/widget/VerifyCredentialResponse;
     const/4 v4, 0x1
 
     if-ne v2, v4, :cond_1
 
-    .line 47
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
@@ -74,32 +69,25 @@
     # invokes: Lcom/android/internal/widget/VerifyCredentialResponse;->setTimeout(I)V
     invoke-static {v1, v4}, Lcom/android/internal/widget/VerifyCredentialResponse;->access$100(Lcom/android/internal/widget/VerifyCredentialResponse;I)V
 
-    .line 56
     :cond_0
     :goto_0
     return-object v1
 
-    .line 48
     :cond_1
     if-nez v2, :cond_0
 
-    .line 49
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 50
     .local v3, "size":I
     if-lez v3, :cond_0
 
-    .line 51
     new-array v0, v3, [B
 
-    .line 52
     .local v0, "payload":[B
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readByteArray([B)V
 
-    .line 53
     # invokes: Lcom/android/internal/widget/VerifyCredentialResponse;->setPayload([B)V
     invoke-static {v1, v0}, Lcom/android/internal/widget/VerifyCredentialResponse;->access$200(Lcom/android/internal/widget/VerifyCredentialResponse;[B)V
 
@@ -111,7 +99,6 @@
     .param p1, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 41
     invoke-virtual {p0, p1}, Lcom/android/internal/widget/VerifyCredentialResponse$1;->createFromParcel(Landroid/os/Parcel;)Lcom/android/internal/widget/VerifyCredentialResponse;
 
     move-result-object v0
@@ -124,7 +111,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 61
     new-array v0, p1, [Lcom/android/internal/widget/VerifyCredentialResponse;
 
     return-object v0
@@ -135,7 +121,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 41
     invoke-virtual {p0, p1}, Lcom/android/internal/widget/VerifyCredentialResponse$1;->newArray(I)[Lcom/android/internal/widget/VerifyCredentialResponse;
 
     move-result-object v0

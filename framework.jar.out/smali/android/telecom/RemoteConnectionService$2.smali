@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 342
     iput-object p1, p0, Landroid/telecom/RemoteConnectionService$2;->this$0:Landroid/telecom/RemoteConnectionService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 5
 
     .prologue
-    .line 345
     iget-object v2, p0, Landroid/telecom/RemoteConnectionService$2;->this$0:Landroid/telecom/RemoteConnectionService;
 
     # getter for: Landroid/telecom/RemoteConnectionService;->mConnectionById:Ljava/util/Map;
@@ -70,13 +68,11 @@
 
     check-cast v0, Landroid/telecom/RemoteConnection;
 
-    .line 346
     .local v0, "c":Landroid/telecom/RemoteConnection;
     invoke-virtual {v0}, Landroid/telecom/RemoteConnection;->setDestroyed()V
 
     goto :goto_0
 
-    .line 348
     .end local v0    # "c":Landroid/telecom/RemoteConnection;
     :cond_0
     iget-object v2, p0, Landroid/telecom/RemoteConnectionService$2;->this$0:Landroid/telecom/RemoteConnectionService;
@@ -107,13 +103,11 @@
 
     check-cast v0, Landroid/telecom/RemoteConference;
 
-    .line 349
     .local v0, "c":Landroid/telecom/RemoteConference;
     invoke-virtual {v0}, Landroid/telecom/RemoteConference;->setDestroyed()V
 
     goto :goto_1
 
-    .line 351
     .end local v0    # "c":Landroid/telecom/RemoteConference;
     :cond_1
     iget-object v2, p0, Landroid/telecom/RemoteConnectionService$2;->this$0:Landroid/telecom/RemoteConnectionService;
@@ -125,7 +119,6 @@
 
     invoke-interface {v2}, Ljava/util/Map;->clear()V
 
-    .line 352
     iget-object v2, p0, Landroid/telecom/RemoteConnectionService$2;->this$0:Landroid/telecom/RemoteConnectionService;
 
     # getter for: Landroid/telecom/RemoteConnectionService;->mConferenceById:Ljava/util/Map;
@@ -135,7 +128,6 @@
 
     invoke-interface {v2}, Ljava/util/Map;->clear()V
 
-    .line 353
     iget-object v2, p0, Landroid/telecom/RemoteConnectionService$2;->this$0:Landroid/telecom/RemoteConnectionService;
 
     # getter for: Landroid/telecom/RemoteConnectionService;->mPendingConnections:Ljava/util/Set;
@@ -145,7 +137,6 @@
 
     invoke-interface {v2}, Ljava/util/Set;->clear()V
 
-    .line 354
     iget-object v2, p0, Landroid/telecom/RemoteConnectionService$2;->this$0:Landroid/telecom/RemoteConnectionService;
 
     # getter for: Landroid/telecom/RemoteConnectionService;->mOutgoingConnectionServiceRpc:Lcom/android/internal/telecom/IConnectionService;
@@ -168,6 +159,5 @@
 
     invoke-interface {v2, v3, v4}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 355
     return-void
 .end method

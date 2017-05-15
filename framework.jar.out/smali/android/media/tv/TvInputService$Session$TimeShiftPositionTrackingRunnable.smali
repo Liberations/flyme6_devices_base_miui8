@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1404
     iput-object p1, p0, Landroid/media/tv/TvInputService$Session$TimeShiftPositionTrackingRunnable;->this$0:Landroid/media/tv/TvInputService$Session;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Landroid/media/tv/TvInputService$1;
 
     .prologue
-    .line 1404
     invoke-direct {p0, p1}, Landroid/media/tv/TvInputService$Session$TimeShiftPositionTrackingRunnable;-><init>(Landroid/media/tv/TvInputService$Session;)V
 
     return-void
@@ -52,14 +50,12 @@
     .locals 8
 
     .prologue
-    .line 1407
     iget-object v4, p0, Landroid/media/tv/TvInputService$Session$TimeShiftPositionTrackingRunnable;->this$0:Landroid/media/tv/TvInputService$Session;
 
     invoke-virtual {v4}, Landroid/media/tv/TvInputService$Session;->onTimeShiftGetStartPosition()J
 
     move-result-wide v2
 
-    .line 1408
     .local v2, "startPositionMs":J
     iget-object v4, p0, Landroid/media/tv/TvInputService$Session$TimeShiftPositionTrackingRunnable;->this$0:Landroid/media/tv/TvInputService$Session;
 
@@ -72,19 +68,16 @@
 
     if-eqz v4, :cond_0
 
-    .line 1409
     iget-object v4, p0, Landroid/media/tv/TvInputService$Session$TimeShiftPositionTrackingRunnable;->this$0:Landroid/media/tv/TvInputService$Session;
 
     # setter for: Landroid/media/tv/TvInputService$Session;->mStartPositionMs:J
     invoke-static {v4, v2, v3}, Landroid/media/tv/TvInputService$Session;->access$902(Landroid/media/tv/TvInputService$Session;J)J
 
-    .line 1410
     iget-object v4, p0, Landroid/media/tv/TvInputService$Session$TimeShiftPositionTrackingRunnable;->this$0:Landroid/media/tv/TvInputService$Session;
 
     # invokes: Landroid/media/tv/TvInputService$Session;->notifyTimeShiftStartPositionChanged(J)V
     invoke-static {v4, v2, v3}, Landroid/media/tv/TvInputService$Session;->access$1000(Landroid/media/tv/TvInputService$Session;J)V
 
-    .line 1412
     :cond_0
     iget-object v4, p0, Landroid/media/tv/TvInputService$Session$TimeShiftPositionTrackingRunnable;->this$0:Landroid/media/tv/TvInputService$Session;
 
@@ -92,7 +85,6 @@
 
     move-result-wide v0
 
-    .line 1413
     .local v0, "currentPositionMs":J
     iget-object v4, p0, Landroid/media/tv/TvInputService$Session$TimeShiftPositionTrackingRunnable;->this$0:Landroid/media/tv/TvInputService$Session;
 
@@ -105,7 +97,6 @@
 
     if-gez v4, :cond_1
 
-    .line 1414
     const-string v4, "TvInputService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -151,7 +142,7 @@
 
     move-result-object v5
 
-    const-string/jumbo v6, "position."
+    const-string v6, "position."
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -163,7 +154,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1417
     iget-object v4, p0, Landroid/media/tv/TvInputService$Session$TimeShiftPositionTrackingRunnable;->this$0:Landroid/media/tv/TvInputService$Session;
 
     # getter for: Landroid/media/tv/TvInputService$Session;->mStartPositionMs:J
@@ -171,7 +161,6 @@
 
     move-result-wide v0
 
-    .line 1419
     :cond_1
     iget-object v4, p0, Landroid/media/tv/TvInputService$Session$TimeShiftPositionTrackingRunnable;->this$0:Landroid/media/tv/TvInputService$Session;
 
@@ -184,19 +173,16 @@
 
     if-eqz v4, :cond_2
 
-    .line 1420
     iget-object v4, p0, Landroid/media/tv/TvInputService$Session$TimeShiftPositionTrackingRunnable;->this$0:Landroid/media/tv/TvInputService$Session;
 
     # setter for: Landroid/media/tv/TvInputService$Session;->mCurrentPositionMs:J
     invoke-static {v4, v0, v1}, Landroid/media/tv/TvInputService$Session;->access$1102(Landroid/media/tv/TvInputService$Session;J)J
 
-    .line 1421
     iget-object v4, p0, Landroid/media/tv/TvInputService$Session$TimeShiftPositionTrackingRunnable;->this$0:Landroid/media/tv/TvInputService$Session;
 
     # invokes: Landroid/media/tv/TvInputService$Session;->notifyTimeShiftCurrentPositionChanged(J)V
     invoke-static {v4, v0, v1}, Landroid/media/tv/TvInputService$Session;->access$1200(Landroid/media/tv/TvInputService$Session;J)V
 
-    .line 1423
     :cond_2
     iget-object v4, p0, Landroid/media/tv/TvInputService$Session$TimeShiftPositionTrackingRunnable;->this$0:Landroid/media/tv/TvInputService$Session;
 
@@ -211,7 +197,6 @@
 
     invoke-virtual {v4, v5}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 1424
     iget-object v4, p0, Landroid/media/tv/TvInputService$Session$TimeShiftPositionTrackingRunnable;->this$0:Landroid/media/tv/TvInputService$Session;
 
     iget-object v4, v4, Landroid/media/tv/TvInputService$Session;->mHandler:Landroid/os/Handler;
@@ -227,6 +212,5 @@
 
     invoke-virtual {v4, v5, v6, v7}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 1426
     return-void
 .end method

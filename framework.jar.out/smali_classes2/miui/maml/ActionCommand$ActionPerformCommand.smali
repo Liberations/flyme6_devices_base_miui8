@@ -31,10 +31,8 @@
     .param p2, "ele"    # Lorg/w3c/dom/Element;
 
     .prologue
-    .line 1482
     invoke-direct {p0, p1, p2}, Lmiui/maml/ActionCommand$TargetCommand;-><init>(Lmiui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
 
-    .line 1483
     const-string v0, "action"
 
     invoke-interface {p2, v0}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -43,7 +41,6 @@
 
     iput-object v0, p0, Lmiui/maml/ActionCommand$ActionPerformCommand;->mAction:Ljava/lang/String;
 
-    .line 1484
     iget-object v0, p0, Lmiui/maml/ActionCommand$ActionPerformCommand;->mAction:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -52,12 +49,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 1485
     const/4 v0, 0x0
 
     iput-object v0, p0, Lmiui/maml/ActionCommand$ActionPerformCommand;->mAction:Ljava/lang/String;
 
-    .line 1486
     invoke-virtual {p0}, Lmiui/maml/ActionCommand$ActionPerformCommand;->getVariables()Lmiui/maml/data/Variables;
 
     move-result-object v0
@@ -74,7 +69,6 @@
 
     iput-object v0, p0, Lmiui/maml/ActionCommand$ActionPerformCommand;->mActionExp:Lmiui/maml/data/Expression;
 
-    .line 1488
     :cond_0
     return-void
 .end method
@@ -85,53 +79,44 @@
     .locals 3
 
     .prologue
-    .line 1492
     invoke-virtual {p0}, Lmiui/maml/ActionCommand$ActionPerformCommand;->getTarget()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lmiui/maml/elements/ScreenElement;
 
-    .line 1493
     .local v1, "target":Lmiui/maml/elements/ScreenElement;
     if-nez v1, :cond_1
 
-    .line 1504
     :cond_0
     :goto_0
     return-void
 
-    .line 1496
     :cond_1
     iget-object v2, p0, Lmiui/maml/ActionCommand$ActionPerformCommand;->mAction:Ljava/lang/String;
 
     if-eqz v2, :cond_2
 
-    .line 1497
     iget-object v2, p0, Lmiui/maml/ActionCommand$ActionPerformCommand;->mAction:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Lmiui/maml/elements/ScreenElement;->performAction(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 1498
     :cond_2
     iget-object v2, p0, Lmiui/maml/ActionCommand$ActionPerformCommand;->mActionExp:Lmiui/maml/data/Expression;
 
     if-eqz v2, :cond_0
 
-    .line 1499
     iget-object v2, p0, Lmiui/maml/ActionCommand$ActionPerformCommand;->mActionExp:Lmiui/maml/data/Expression;
 
     invoke-virtual {v2}, Lmiui/maml/data/Expression;->evaluateStr()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1500
     .local v0, "s":Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 1501
     invoke-virtual {v1, v0}, Lmiui/maml/elements/ScreenElement;->performAction(Ljava/lang/String;)V
 
     goto :goto_0

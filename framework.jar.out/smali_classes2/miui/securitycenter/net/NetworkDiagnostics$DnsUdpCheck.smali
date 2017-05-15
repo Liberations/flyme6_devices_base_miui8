@@ -43,33 +43,27 @@
     .param p4, "timeoutMs"    # J
 
     .prologue
-    .line 266
     invoke-direct/range {p0 .. p5}, Lmiui/securitycenter/net/NetworkDiagnostics$SimpleSocketCheck;-><init>(Landroid/net/Network;Landroid/net/LinkProperties;Ljava/net/InetAddress;J)V
 
-    .line 261
     new-instance v0, Ljava/util/Random;
 
     invoke-direct {v0}, Ljava/util/Random;-><init>()V
 
     iput-object v0, p0, Lmiui/securitycenter/net/NetworkDiagnostics$DnsUdpCheck;->mRandom:Ljava/util/Random;
 
-    .line 269
     iget v0, p0, Lmiui/securitycenter/net/NetworkDiagnostics$DnsUdpCheck;->mAddressFamily:I
 
     sget v1, Landroid/system/OsConstants;->AF_INET6:I
 
     if-ne v0, v1, :cond_0
 
-    .line 270
     const/16 v0, 0x1c
 
     iput v0, p0, Lmiui/securitycenter/net/NetworkDiagnostics$DnsUdpCheck;->mQueryType:I
 
-    .line 274
     :goto_0
     return-void
 
-    .line 272
     :cond_0
     const/4 v0, 0x1
 
@@ -93,14 +87,12 @@
 
     const/4 v4, 0x0
 
-    .line 318
     sget-object v1, Ljava/nio/charset/StandardCharsets;->US_ASCII:Ljava/nio/charset/Charset;
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
 
     move-result-object v0
 
-    .line 319
     .local v0, "rnd":[B
     const/16 v1, 0x36
 
@@ -411,10 +403,8 @@
     .locals 15
 
     .prologue
-    .line 277
     const/4 v12, 0x0
 
-    .line 279
     .local v12, "ret":Z
     :try_start_0
     sget v2, Landroid/system/OsConstants;->SOCK_DGRAM:I
@@ -434,7 +424,6 @@
     .catch Landroid/system/ErrnoException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_5
 
-    .line 286
     iget-object v1, p0, Lmiui/securitycenter/net/NetworkDiagnostics$DnsUdpCheck;->mRandom:Ljava/util/Random;
 
     const v2, 0xdbba0
@@ -455,17 +444,14 @@
 
     move-result-object v14
 
-    .line 290
     .local v14, "sixRandomDigits":Ljava/lang/String;
     invoke-direct {p0, v14}, Lmiui/securitycenter/net/NetworkDiagnostics$DnsUdpCheck;->getDnsQueryPacket(Ljava/lang/String;)[B
 
     move-result-object v9
 
-    .line 292
     .local v9, "dnsPacket":[B
     const/4 v0, 0x0
 
-    .line 293
     .local v0, "count":I
     :goto_0
     # invokes: Lmiui/securitycenter/net/NetworkDiagnostics;->now()J
@@ -483,10 +469,8 @@
 
     if-gez v1, :cond_0
 
-    .line 294
     add-int/lit8 v0, v0, 0x1
 
-    .line 296
     :try_start_1
     iget-object v1, p0, Lmiui/securitycenter/net/NetworkDiagnostics$DnsUdpCheck;->mFileDescriptor:Ljava/io/FileDescriptor;
 
@@ -499,7 +483,6 @@
     .catch Landroid/system/ErrnoException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/io/InterruptedIOException; {:try_start_1 .. :try_end_1} :catch_4
 
-    .line 303
     const/16 v1, 0x200
 
     :try_start_2
@@ -507,7 +490,6 @@
 
     move-result-object v11
 
-    .line 304
     .local v11, "reply":Ljava/nio/ByteBuffer;
     iget-object v1, p0, Lmiui/securitycenter/net/NetworkDiagnostics$DnsUdpCheck;->mFileDescriptor:Ljava/io/FileDescriptor;
 
@@ -516,10 +498,8 @@
     .catch Landroid/system/ErrnoException; {:try_start_2 .. :try_end_2} :catch_2
     .catch Ljava/io/InterruptedIOException; {:try_start_2 .. :try_end_2} :catch_3
 
-    .line 306
     const/4 v12, 0x1
 
-    .line 313
     .end local v11    # "reply":Ljava/nio/ByteBuffer;
     :cond_0
     :goto_1
@@ -527,7 +507,6 @@
 
     move v13, v12
 
-    .line 314
     .end local v0    # "count":I
     .end local v9    # "dnsPacket":[B
     .end local v12    # "ret":Z
@@ -536,13 +515,11 @@
     :goto_2
     return v13
 
-    .line 280
     .end local v13    # "ret":I
     .restart local v12    # "ret":Z
     :catch_0
     move-exception v10
 
-    .line 281
     .local v10, "e":Ljava/lang/Exception;
     :goto_3
     const-string v1, "NetworkDiagnostics"
@@ -553,11 +530,9 @@
 
     move v13, v12
 
-    .line 282
     .restart local v13    # "ret":I
     goto :goto_2
 
-    .line 297
     .end local v10    # "e":Ljava/lang/Exception;
     .end local v13    # "ret":I
     .restart local v0    # "count":I
@@ -566,7 +541,6 @@
     :catch_1
     move-exception v10
 
-    .line 298
     .restart local v10    # "e":Ljava/lang/Exception;
     :goto_4
     const-string v1, "NetworkDiagnostics"
@@ -577,30 +551,25 @@
 
     goto :goto_1
 
-    .line 308
     .end local v10    # "e":Ljava/lang/Exception;
     :catch_2
     move-exception v10
 
-    .line 309
     .restart local v10    # "e":Ljava/lang/Exception;
     :goto_5
     goto :goto_0
 
-    .line 308
     .end local v10    # "e":Ljava/lang/Exception;
     :catch_3
     move-exception v10
 
     goto :goto_5
 
-    .line 297
     :catch_4
     move-exception v10
 
     goto :goto_4
 
-    .line 280
     .end local v0    # "count":I
     .end local v9    # "dnsPacket":[B
     .end local v14    # "sixRandomDigits":Ljava/lang/String;

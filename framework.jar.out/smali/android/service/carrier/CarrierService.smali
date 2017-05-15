@@ -27,10 +27,8 @@
     .locals 2
 
     .prologue
-    .line 57
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
-    .line 58
     new-instance v0, Landroid/service/carrier/CarrierService$ICarrierServiceWrapper;
 
     const/4 v1, 0x0
@@ -39,13 +37,11 @@
 
     iput-object v0, p0, Landroid/service/carrier/CarrierService;->mStubWrapper:Landroid/service/carrier/ICarrierService$Stub;
 
-    .line 59
     sget-object v0, Landroid/service/carrier/CarrierService;->sRegistry:Lcom/android/internal/telephony/ITelephonyRegistry;
 
     if-nez v0, :cond_0
 
-    .line 60
-    const-string/jumbo v0, "telephony.registry"
+    const-string v0, "telephony.registry"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -57,7 +53,6 @@
 
     sput-object v0, Landroid/service/carrier/CarrierService;->sRegistry:Lcom/android/internal/telephony/ITelephonyRegistry;
 
-    .line 63
     :cond_0
     return-void
 .end method
@@ -69,7 +64,6 @@
     .param p1, "active"    # Z
 
     .prologue
-    .line 119
     :try_start_0
     sget-object v0, Landroid/service/carrier/CarrierService;->sRegistry:Lcom/android/internal/telephony/ITelephonyRegistry;
 
@@ -82,12 +76,10 @@
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 121
     :cond_0
     :goto_0
     return-void
 
-    .line 120
     :catch_0
     move-exception v0
 
@@ -104,7 +96,6 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 130
     iget-object v0, p0, Landroid/service/carrier/CarrierService;->mStubWrapper:Landroid/service/carrier/ICarrierService$Stub;
 
     return-object v0

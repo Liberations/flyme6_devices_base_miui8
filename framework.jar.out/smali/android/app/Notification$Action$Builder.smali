@@ -45,7 +45,6 @@
     .end annotation
 
     .prologue
-    .line 1006
     const-string v0, ""
 
     invoke-static {v0, p1}, Landroid/graphics/drawable/Icon;->createWithResource(Ljava/lang/String;I)Landroid/graphics/drawable/Icon;
@@ -66,7 +65,6 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/app/Notification$Action$Builder;-><init>(Landroid/graphics/drawable/Icon;Ljava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Landroid/app/RemoteInput;)V
 
-    .line 1007
     return-void
 .end method
 
@@ -75,7 +73,6 @@
     .param p1, "action"    # Landroid/app/Notification$Action;
 
     .prologue
-    .line 1025
     invoke-virtual {p1}, Landroid/app/Notification$Action;->getIcon()Landroid/graphics/drawable/Icon;
 
     move-result-object v1
@@ -101,7 +98,6 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/app/Notification$Action$Builder;-><init>(Landroid/graphics/drawable/Icon;Ljava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Landroid/app/RemoteInput;)V
 
-    .line 1027
     return-void
 .end method
 
@@ -112,7 +108,6 @@
     .param p3, "intent"    # Landroid/app/PendingIntent;
 
     .prologue
-    .line 1016
     new-instance v4, Landroid/os/Bundle;
 
     invoke-direct {v4}, Landroid/os/Bundle;-><init>()V
@@ -129,7 +124,6 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/app/Notification$Action$Builder;-><init>(Landroid/graphics/drawable/Icon;Ljava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Landroid/app/RemoteInput;)V
 
-    .line 1017
     return-void
 .end method
 
@@ -142,25 +136,18 @@
     .param p5, "remoteInputs"    # [Landroid/app/RemoteInput;
 
     .prologue
-    .line 1030
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1031
     iput-object p1, p0, Landroid/app/Notification$Action$Builder;->mIcon:Landroid/graphics/drawable/Icon;
 
-    .line 1032
     iput-object p2, p0, Landroid/app/Notification$Action$Builder;->mTitle:Ljava/lang/CharSequence;
 
-    .line 1033
     iput-object p3, p0, Landroid/app/Notification$Action$Builder;->mIntent:Landroid/app/PendingIntent;
 
-    .line 1034
     iput-object p4, p0, Landroid/app/Notification$Action$Builder;->mExtras:Landroid/os/Bundle;
 
-    .line 1035
     if-eqz p5, :cond_0
 
-    .line 1036
     new-instance v0, Ljava/util/ArrayList;
 
     array-length v1, p5
@@ -169,12 +156,10 @@
 
     iput-object v0, p0, Landroid/app/Notification$Action$Builder;->mRemoteInputs:Ljava/util/ArrayList;
 
-    .line 1037
     iget-object v0, p0, Landroid/app/Notification$Action$Builder;->mRemoteInputs:Ljava/util/ArrayList;
 
     invoke-static {v0, p5}, Ljava/util/Collections;->addAll(Ljava/util/Collection;[Ljava/lang/Object;)Z
 
-    .line 1039
     :cond_0
     return-void
 .end method
@@ -186,15 +171,12 @@
     .param p1, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 1049
     if-eqz p1, :cond_0
 
-    .line 1050
     iget-object v0, p0, Landroid/app/Notification$Action$Builder;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1}, Landroid/os/Bundle;->putAll(Landroid/os/Bundle;)V
 
-    .line 1052
     :cond_0
     return-object p0
 .end method
@@ -204,25 +186,21 @@
     .param p1, "remoteInput"    # Landroid/app/RemoteInput;
 
     .prologue
-    .line 1072
     iget-object v0, p0, Landroid/app/Notification$Action$Builder;->mRemoteInputs:Ljava/util/ArrayList;
 
     if-nez v0, :cond_0
 
-    .line 1073
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/app/Notification$Action$Builder;->mRemoteInputs:Ljava/util/ArrayList;
 
-    .line 1075
     :cond_0
     iget-object v0, p0, Landroid/app/Notification$Action$Builder;->mRemoteInputs:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1076
     return-object p0
 .end method
 
@@ -232,7 +210,6 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 1094
     iget-object v0, p0, Landroid/app/Notification$Action$Builder;->mRemoteInputs:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_0
@@ -255,7 +232,6 @@
 
     move-object v5, v0
 
-    .line 1096
     .local v5, "remoteInputs":[Landroid/app/RemoteInput;
     :goto_0
     new-instance v0, Landroid/app/Notification$Action;
@@ -276,7 +252,6 @@
     :cond_0
     move-object v5, v6
 
-    .line 1094
     goto :goto_0
 .end method
 
@@ -285,10 +260,8 @@
     .param p1, "extender"    # Landroid/app/Notification$Action$Extender;
 
     .prologue
-    .line 1084
     invoke-interface {p1, p0}, Landroid/app/Notification$Action$Extender;->extend(Landroid/app/Notification$Action$Builder;)Landroid/app/Notification$Action$Builder;
 
-    .line 1085
     return-object p0
 .end method
 
@@ -296,7 +269,6 @@
     .locals 1
 
     .prologue
-    .line 1061
     iget-object v0, p0, Landroid/app/Notification$Action$Builder;->mExtras:Landroid/os/Bundle;
 
     return-object v0

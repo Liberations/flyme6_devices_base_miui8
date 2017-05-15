@@ -21,7 +21,6 @@
     .locals 1
 
     .prologue
-    .line 59
     new-instance v0, Landroid/bluetooth/SdpRecord$1;
 
     invoke-direct {v0}, Landroid/bluetooth/SdpRecord$1;-><init>()V
@@ -37,16 +36,12 @@
     .param p2, "record"    # [B
 
     .prologue
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
     iput-object p2, p0, Landroid/bluetooth/SdpRecord;->mRawData:[B
 
-    .line 37
     iput p1, p0, Landroid/bluetooth/SdpRecord;->mRawSize:I
 
-    .line 38
     return-void
 .end method
 
@@ -55,29 +50,24 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 41
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/bluetooth/SdpRecord;->mRawSize:I
 
-    .line 42
     iget v0, p0, Landroid/bluetooth/SdpRecord;->mRawSize:I
 
     new-array v0, v0, [B
 
     iput-object v0, p0, Landroid/bluetooth/SdpRecord;->mRawData:[B
 
-    .line 43
     iget-object v0, p0, Landroid/bluetooth/SdpRecord;->mRawData:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readByteArray([B)V
 
-    .line 45
     return-void
 .end method
 
@@ -87,7 +77,6 @@
     .locals 1
 
     .prologue
-    .line 49
     const/4 v0, 0x0
 
     return v0
@@ -97,7 +86,6 @@
     .locals 1
 
     .prologue
-    .line 70
     iget-object v0, p0, Landroid/bluetooth/SdpRecord;->mRawData:[B
 
     return-object v0
@@ -107,7 +95,6 @@
     .locals 1
 
     .prologue
-    .line 74
     iget v0, p0, Landroid/bluetooth/SdpRecord;->mRawSize:I
 
     return v0
@@ -117,7 +104,6 @@
     .locals 2
 
     .prologue
-    .line 31
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -169,16 +155,13 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 54
     iget v0, p0, Landroid/bluetooth/SdpRecord;->mRawSize:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 55
     iget-object v0, p0, Landroid/bluetooth/SdpRecord;->mRawData:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByteArray([B)V
 
-    .line 58
     return-void
 .end method

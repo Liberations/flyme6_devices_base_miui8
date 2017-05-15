@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 377
     iput-object p1, p0, Lmiui/maml/util/ConfigFile$4$1;->this$1:Lmiui/maml/util/ConfigFile$4;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,12 +42,10 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 380
     invoke-interface {p1}, Lorg/w3c/dom/Element;->getNodeName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 381
     .local v1, "tag":Ljava/lang/String;
     const-string v4, "id"
 
@@ -56,7 +53,6 @@
 
     move-result-object v0
 
-    .line 382
     .local v0, "id":Ljava/lang/String;
     const-string v4, "StringInput"
 
@@ -66,7 +62,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 383
     iget-object v4, p0, Lmiui/maml/util/ConfigFile$4$1;->this$1:Lmiui/maml/util/ConfigFile$4;
 
     iget-object v4, v4, Lmiui/maml/util/ConfigFile$4;->this$0:Lmiui/maml/util/ConfigFile;
@@ -79,12 +74,10 @@
 
     invoke-virtual {v4, v0, v5}, Lmiui/maml/util/ConfigFile;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 397
     :cond_0
     :goto_0
     return-void
 
-    .line 384
     :cond_1
     const-string v4, "CheckBox"
 
@@ -94,7 +87,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 385
     iget-object v4, p0, Lmiui/maml/util/ConfigFile$4$1;->this$1:Lmiui/maml/util/ConfigFile$4;
 
     iget-object v5, v4, Lmiui/maml/util/ConfigFile$4;->this$0:Lmiui/maml/util/ConfigFile;
@@ -125,7 +117,6 @@
 
     goto :goto_1
 
-    .line 386
     :cond_3
     const-string v4, "NumberInput"
 
@@ -135,7 +126,6 @@
 
     if-eqz v4, :cond_4
 
-    .line 387
     const-string v4, "default"
 
     invoke-static {p1, v4, v5}, Lmiui/maml/util/Utils;->getAttrAsFloat(Lorg/w3c/dom/Element;Ljava/lang/String;F)F
@@ -144,7 +134,6 @@
 
     float-to-double v2, v4
 
-    .line 388
     .local v2, "number":D
     iget-object v4, p0, Lmiui/maml/util/ConfigFile$4$1;->this$1:Lmiui/maml/util/ConfigFile$4;
 
@@ -158,7 +147,6 @@
 
     goto :goto_0
 
-    .line 389
     .end local v2    # "number":D
     :cond_4
     const-string v4, "StringChoice"
@@ -169,7 +157,6 @@
 
     if-eqz v4, :cond_5
 
-    .line 390
     iget-object v4, p0, Lmiui/maml/util/ConfigFile$4$1;->this$1:Lmiui/maml/util/ConfigFile$4;
 
     iget-object v4, v4, Lmiui/maml/util/ConfigFile$4;->this$0:Lmiui/maml/util/ConfigFile;
@@ -184,7 +171,6 @@
 
     goto :goto_0
 
-    .line 391
     :cond_5
     const-string v4, "NumberChoice"
 
@@ -194,7 +180,6 @@
 
     if-eqz v4, :cond_6
 
-    .line 392
     const-string v4, "default"
 
     invoke-static {p1, v4, v5}, Lmiui/maml/util/Utils;->getAttrAsFloat(Lorg/w3c/dom/Element;Ljava/lang/String;F)F
@@ -203,7 +188,6 @@
 
     float-to-double v2, v4
 
-    .line 393
     .restart local v2    # "number":D
     iget-object v4, p0, Lmiui/maml/util/ConfigFile$4$1;->this$1:Lmiui/maml/util/ConfigFile$4;
 
@@ -217,7 +201,6 @@
 
     goto :goto_0
 
-    .line 394
     .end local v2    # "number":D
     :cond_6
     const-string v4, "AppPicker"
@@ -228,7 +211,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 395
     iget-object v4, p0, Lmiui/maml/util/ConfigFile$4$1;->this$1:Lmiui/maml/util/ConfigFile$4;
 
     iget-object v4, v4, Lmiui/maml/util/ConfigFile$4;->this$0:Lmiui/maml/util/ConfigFile;

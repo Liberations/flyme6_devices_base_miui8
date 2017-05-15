@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 640
     iput-object p1, p0, Lmiui/view/VolumeDialog$5;->this$0:Lmiui/view/VolumeDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 643
     iget-object v0, p0, Lmiui/view/VolumeDialog$5;->this$0:Lmiui/view/VolumeDialog;
 
     # getter for: Lmiui/view/VolumeDialog;->mExpandAnimating:Z
@@ -51,11 +49,9 @@
 
     if-eqz v0, :cond_0
 
-    .line 647
     :goto_0
     return-void
 
-    .line 646
     :cond_0
     iget-object v1, p0, Lmiui/view/VolumeDialog$5;->this$0:Lmiui/view/VolumeDialog;
 

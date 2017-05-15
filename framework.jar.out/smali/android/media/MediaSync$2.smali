@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 583
     iput-object p1, p0, Landroid/media/MediaSync$2;->this$0:Landroid/media/MediaSync;
 
     iput-object p2, p0, Landroid/media/MediaSync$2;->val$sync:Landroid/media/MediaSync;
@@ -48,7 +47,6 @@
     .locals 4
 
     .prologue
-    .line 586
     iget-object v1, p0, Landroid/media/MediaSync$2;->this$0:Landroid/media/MediaSync;
 
     # getter for: Landroid/media/MediaSync;->mCallbackLock:Ljava/lang/Object;
@@ -58,7 +56,6 @@
 
     monitor-enter v2
 
-    .line 587
     :try_start_0
     iget-object v1, p0, Landroid/media/MediaSync$2;->this$0:Landroid/media/MediaSync;
 
@@ -67,7 +64,6 @@
 
     move-result-object v0
 
-    .line 588
     .local v0, "callback":Landroid/media/MediaSync$Callback;
     iget-object v1, p0, Landroid/media/MediaSync$2;->this$0:Landroid/media/MediaSync;
 
@@ -99,25 +95,20 @@
 
     if-eq v1, v3, :cond_2
 
-    .line 592
     :cond_0
     monitor-exit v2
 
-    .line 599
     :cond_1
     :goto_0
     return-void
 
-    .line 594
     :cond_2
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 595
     if-eqz v0, :cond_1
 
-    .line 596
     iget-object v1, p0, Landroid/media/MediaSync$2;->val$sync:Landroid/media/MediaSync;
 
     iget-object v2, p0, Landroid/media/MediaSync$2;->val$audioBuffer:Landroid/media/MediaSync$AudioBuffer;
@@ -132,7 +123,6 @@
 
     goto :goto_0
 
-    .line 594
     .end local v0    # "callback":Landroid/media/MediaSync$Callback;
     :catchall_0
     move-exception v1

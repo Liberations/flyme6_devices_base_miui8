@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 148
     iput-object p1, p0, Landroid/service/trust/TrustAgentService$1;->this$0:Landroid/service/trust/TrustAgentService;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,17 +37,14 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 150
     iget v3, p1, Landroid/os/Message;->what:I
 
     packed-switch v3, :pswitch_data_0
 
-    .line 177
     :cond_0
     :goto_0
     return-void
 
-    .line 152
     :pswitch_0
     iget-object v4, p0, Landroid/service/trust/TrustAgentService$1;->this$0:Landroid/service/trust/TrustAgentService;
 
@@ -68,13 +64,11 @@
 
     goto :goto_1
 
-    .line 155
     :pswitch_1
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/service/trust/TrustAgentService$ConfigurationData;
 
-    .line 156
     .local v0, "data":Landroid/service/trust/TrustAgentService$ConfigurationData;
     iget-object v3, p0, Landroid/service/trust/TrustAgentService$1;->this$0:Landroid/service/trust/TrustAgentService;
 
@@ -84,13 +78,11 @@
 
     move-result v2
 
-    .line 157
     .local v2, "result":Z
     iget-object v3, v0, Landroid/service/trust/TrustAgentService$ConfigurationData;->token:Landroid/os/IBinder;
 
     if-eqz v3, :cond_0
 
-    .line 159
     :try_start_0
     iget-object v3, p0, Landroid/service/trust/TrustAgentService$1;->this$0:Landroid/service/trust/TrustAgentService;
 
@@ -103,7 +95,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 160
     :try_start_1
     iget-object v3, p0, Landroid/service/trust/TrustAgentService$1;->this$0:Landroid/service/trust/TrustAgentService;
 
@@ -116,7 +107,6 @@
 
     invoke-interface {v3, v2, v5}, Landroid/service/trust/ITrustAgentServiceCallback;->onConfigureCompleted(ZLandroid/os/IBinder;)V
 
-    .line 161
     monitor-exit v4
 
     goto :goto_0
@@ -133,11 +123,9 @@
     :try_end_2
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 162
     :catch_0
     move-exception v1
 
-    .line 163
     .local v1, "e":Landroid/os/RemoteException;
     iget-object v3, p0, Landroid/service/trust/TrustAgentService$1;->this$0:Landroid/service/trust/TrustAgentService;
 
@@ -148,7 +136,6 @@
 
     goto :goto_0
 
-    .line 168
     .end local v0    # "data":Landroid/service/trust/TrustAgentService$ConfigurationData;
     .end local v1    # "e":Landroid/os/RemoteException;
     .end local v2    # "result":Z
@@ -159,7 +146,6 @@
 
     goto :goto_0
 
-    .line 171
     :pswitch_3
     iget-object v3, p0, Landroid/service/trust/TrustAgentService$1;->this$0:Landroid/service/trust/TrustAgentService;
 
@@ -167,7 +153,6 @@
 
     goto :goto_0
 
-    .line 174
     :pswitch_4
     iget-object v3, p0, Landroid/service/trust/TrustAgentService$1;->this$0:Landroid/service/trust/TrustAgentService;
 
@@ -175,7 +160,6 @@
 
     goto :goto_0
 
-    .line 150
     nop
 
     :pswitch_data_0

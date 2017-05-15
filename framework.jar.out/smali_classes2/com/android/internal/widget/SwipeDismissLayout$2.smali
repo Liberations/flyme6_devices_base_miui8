@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 91
     iput-object p1, p0, Lcom/android/internal/widget/SwipeDismissLayout$2;->this$0:Lcom/android/internal/widget/SwipeDismissLayout;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 94
     iget-object v0, p0, Lcom/android/internal/widget/SwipeDismissLayout$2;->this$0:Lcom/android/internal/widget/SwipeDismissLayout;
 
     # getter for: Lcom/android/internal/widget/SwipeDismissLayout;->mDismissed:Z
@@ -49,23 +47,19 @@
 
     if-eqz v0, :cond_0
 
-    .line 95
     iget-object v0, p0, Lcom/android/internal/widget/SwipeDismissLayout$2;->this$0:Lcom/android/internal/widget/SwipeDismissLayout;
 
     # invokes: Lcom/android/internal/widget/SwipeDismissLayout;->dismiss()V
     invoke-static {v0}, Lcom/android/internal/widget/SwipeDismissLayout;->access$200(Lcom/android/internal/widget/SwipeDismissLayout;)V
 
-    .line 99
     :goto_0
     iget-object v0, p0, Lcom/android/internal/widget/SwipeDismissLayout$2;->this$0:Lcom/android/internal/widget/SwipeDismissLayout;
 
     # invokes: Lcom/android/internal/widget/SwipeDismissLayout;->resetMembers()V
     invoke-static {v0}, Lcom/android/internal/widget/SwipeDismissLayout;->access$300(Lcom/android/internal/widget/SwipeDismissLayout;)V
 
-    .line 100
     return-void
 
-    .line 97
     :cond_0
     iget-object v0, p0, Lcom/android/internal/widget/SwipeDismissLayout$2;->this$0:Lcom/android/internal/widget/SwipeDismissLayout;
 

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 76
     iput-object p1, p0, Lmiui/maml/data/DateTimeVariableUpdater$1;->this$0:Lmiui/maml/data/DateTimeVariableUpdater;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,12 +39,10 @@
     .locals 1
 
     .prologue
-    .line 78
     iget-object v0, p0, Lmiui/maml/data/DateTimeVariableUpdater$1;->this$0:Lmiui/maml/data/DateTimeVariableUpdater;
 
     # invokes: Lmiui/maml/data/DateTimeVariableUpdater;->checkUpdateTime()V
     invoke-static {v0}, Lmiui/maml/data/DateTimeVariableUpdater;->access$000(Lmiui/maml/data/DateTimeVariableUpdater;)V
 
-    .line 79
     return-void
 .end method

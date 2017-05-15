@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 41
     iput-object p1, p0, Lmiui/maml/RenderUpdater$1;->this$0:Lmiui/maml/RenderUpdater;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 6
 
     .prologue
-    .line 44
     iget-object v2, p0, Lmiui/maml/RenderUpdater$1;->this$0:Lmiui/maml/RenderUpdater;
 
     const/4 v3, 0x0
@@ -48,12 +46,10 @@
     # setter for: Lmiui/maml/RenderUpdater;->mSignaled:Z
     invoke-static {v2, v3}, Lmiui/maml/RenderUpdater;->access$002(Lmiui/maml/RenderUpdater;Z)Z
 
-    .line 45
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 46
     .local v0, "currentTime":J
     iget-object v2, p0, Lmiui/maml/RenderUpdater$1;->this$0:Lmiui/maml/RenderUpdater;
 
@@ -70,12 +66,10 @@
 
     iput-wide v4, v2, Lmiui/maml/RenderUpdater;->mNextUpdateInterval:J
 
-    .line 47
     iget-object v2, p0, Lmiui/maml/RenderUpdater$1;->this$0:Lmiui/maml/RenderUpdater;
 
     iput-wide v0, v2, Lmiui/maml/RenderUpdater;->mLastUpdateTime:J
 
-    .line 48
     iget-object v2, p0, Lmiui/maml/RenderUpdater$1;->this$0:Lmiui/maml/RenderUpdater;
 
     iget-boolean v2, v2, Lmiui/maml/RenderUpdater;->mPendingRender:Z
@@ -110,7 +104,6 @@
 
     if-gez v2, :cond_0
 
-    .line 49
     iget-object v2, p0, Lmiui/maml/RenderUpdater$1;->this$0:Lmiui/maml/RenderUpdater;
 
     # getter for: Lmiui/maml/RenderUpdater;->mHandler:Landroid/os/Handler;
@@ -131,7 +124,6 @@
 
     invoke-virtual {v2, v3, v4, v5}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 51
     :cond_0
     return-void
 .end method

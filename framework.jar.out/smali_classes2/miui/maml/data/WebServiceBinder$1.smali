@@ -27,7 +27,6 @@
     .locals 3
 
     .prologue
-    .line 837
     invoke-static {}, Lmiui/maml/data/WebServiceBinder$RequestMethod;->values()[Lmiui/maml/data/WebServiceBinder$RequestMethod;
 
     move-result-object v0
@@ -69,7 +68,6 @@
     :try_end_1
     .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_9
 
-    .line 741
     :goto_1
     invoke-static {}, Lmiui/maml/data/WebServiceBinder$ResponseProtocol;->values()[Lmiui/maml/data/WebServiceBinder$ResponseProtocol;
 
@@ -144,7 +142,6 @@
     :try_end_5
     .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
 
-    .line 313
     :goto_5
     invoke-static {}, Lmiui/maml/elements/ListScreenElement$ColumnInfo$Type;->values()[Lmiui/maml/elements/ListScreenElement$ColumnInfo$Type;
 
@@ -263,7 +260,6 @@
 
     goto :goto_6
 
-    .line 741
     :catch_5
     move-exception v0
 
@@ -284,7 +280,6 @@
 
     goto :goto_2
 
-    .line 837
     :catch_9
     move-exception v0
 

@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 1307
     iput-object p1, p0, Lcom/miui/whetstone/PowerKeeperPolicy$ParoleCheck$1;->this$1:Lcom/miui/whetstone/PowerKeeperPolicy$ParoleCheck;
 
     iput-object p2, p0, Lcom/miui/whetstone/PowerKeeperPolicy$ParoleCheck$1;->val$this$0:Lcom/miui/whetstone/PowerKeeperPolicy;
@@ -45,7 +44,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 1310
     iget-object v0, p0, Lcom/miui/whetstone/PowerKeeperPolicy$ParoleCheck$1;->this$1:Lcom/miui/whetstone/PowerKeeperPolicy$ParoleCheck;
 
     # getter for: Lcom/miui/whetstone/PowerKeeperPolicy$ParoleCheck;->mParoleLock:Ljava/lang/Object;
@@ -55,7 +53,6 @@
 
     monitor-enter v1
 
-    .line 1311
     :try_start_0
     iget-object v0, p0, Lcom/miui/whetstone/PowerKeeperPolicy$ParoleCheck$1;->this$1:Lcom/miui/whetstone/PowerKeeperPolicy$ParoleCheck;
 
@@ -68,7 +65,6 @@
 
     return v0
 
-    .line 1312
     :catchall_0
     move-exception v0
 

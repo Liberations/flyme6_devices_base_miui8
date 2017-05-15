@@ -23,7 +23,6 @@
     .locals 2
 
     .prologue
-    .line 81
     new-instance v0, Lcom/miui/whetstone/WhetstoneSysInfoManager;
 
     const/4 v1, 0x0
@@ -39,7 +38,6 @@
     .locals 0
 
     .prologue
-    .line 80
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -49,7 +47,6 @@
     .locals 1
 
     .prologue
-    .line 80
     sget-object v0, Lcom/miui/whetstone/WhetstoneSysInfoManager$Holder;->INSTANCE:Lcom/miui/whetstone/WhetstoneSysInfoManager;
 
     return-object v0

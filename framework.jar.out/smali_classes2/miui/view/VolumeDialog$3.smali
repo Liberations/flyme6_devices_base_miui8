@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 446
     iput-object p1, p0, Lmiui/view/VolumeDialog$3;->this$0:Lmiui/view/VolumeDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 449
     iget-object v0, p0, Lmiui/view/VolumeDialog$3;->this$0:Lmiui/view/VolumeDialog;
 
     const/4 v1, 0x0
@@ -48,12 +46,10 @@
     # setter for: Lmiui/view/VolumeDialog;->mExpandAnimating:Z
     invoke-static {v0, v1}, Lmiui/view/VolumeDialog;->access$1302(Lmiui/view/VolumeDialog;Z)Z
 
-    .line 450
     iget-object v0, p0, Lmiui/view/VolumeDialog$3;->this$0:Lmiui/view/VolumeDialog;
 
     # invokes: Lmiui/view/VolumeDialog;->updateExpandButtonH()V
     invoke-static {v0}, Lmiui/view/VolumeDialog;->access$1400(Lmiui/view/VolumeDialog;)V
 
-    .line 451
     return-void
 .end method

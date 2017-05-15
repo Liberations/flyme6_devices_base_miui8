@@ -47,20 +47,16 @@
     .param p2, "root"    # Lmiui/maml/ScreenElementRoot;
 
     .prologue
-    .line 57
     invoke-direct {p0, p1, p2}, Lmiui/maml/data/VariableBinder;-><init>(Lorg/w3c/dom/Element;Lmiui/maml/ScreenElementRoot;)V
 
-    .line 33
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lmiui/maml/data/FileBinder;->mVariables:Ljava/util/ArrayList;
 
-    .line 58
     invoke-direct {p0, p1}, Lmiui/maml/data/FileBinder;->load(Lorg/w3c/dom/Element;)V
 
-    .line 59
     return-void
 .end method
 
@@ -69,21 +65,17 @@
     .param p1, "node"    # Lorg/w3c/dom/Element;
 
     .prologue
-    .line 86
     if-nez p1, :cond_0
 
-    .line 87
     const-string v2, "FileBinder"
 
     const-string v3, "FileBinder node is null"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 99
     :goto_0
     return-void
 
-    .line 90
     :cond_0
     const-string v2, "filter"
 
@@ -95,7 +87,6 @@
 
     move-result-object v1
 
-    .line 91
     .local v1, "filter":Ljava/lang/String;
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -108,7 +99,6 @@
     :goto_1
     iput-object v2, p0, Lmiui/maml/data/FileBinder;->mFilters:[Ljava/lang/String;
 
-    .line 92
     invoke-virtual {p0}, Lmiui/maml/data/FileBinder;->getVariables()Lmiui/maml/data/Variables;
 
     move-result-object v2
@@ -123,7 +113,6 @@
 
     move-result-object v0
 
-    .line 93
     .local v0, "dirExp":Lmiui/maml/data/Expression;
     new-instance v2, Lmiui/maml/util/TextFormatter;
 
@@ -141,7 +130,6 @@
 
     iput-object v2, p0, Lmiui/maml/data/FileBinder;->mDirFormatter:Lmiui/maml/util/TextFormatter;
 
-    .line 94
     iget-object v2, p0, Lmiui/maml/data/FileBinder;->mName:Ljava/lang/String;
 
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -150,7 +138,6 @@
 
     if-nez v2, :cond_1
 
-    .line 95
     new-instance v2, Lmiui/maml/data/IndexedVariable;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -185,13 +172,11 @@
 
     iput-object v2, p0, Lmiui/maml/data/FileBinder;->mCountVar:Lmiui/maml/data/IndexedVariable;
 
-    .line 98
     :cond_1
     invoke-virtual {p0, p1}, Lmiui/maml/data/FileBinder;->loadVariables(Lorg/w3c/dom/Element;)V
 
     goto :goto_0
 
-    .line 91
     .end local v0    # "dirExp":Lmiui/maml/data/Expression;
     :cond_2
     const-string v2, ","
@@ -207,14 +192,12 @@
     .locals 6
 
     .prologue
-    .line 111
     iget-object v4, p0, Lmiui/maml/data/FileBinder;->mFiles:[Ljava/lang/String;
 
     if-nez v4, :cond_1
 
     const/4 v0, 0x0
 
-    .line 112
     .local v0, "count":I
     :goto_0
     iget-object v4, p0, Lmiui/maml/data/FileBinder;->mVariables:Ljava/util/ArrayList;
@@ -238,13 +221,11 @@
 
     check-cast v3, Lmiui/maml/data/FileBinder$Variable;
 
-    .line 113
     .local v3, "v":Lmiui/maml/data/FileBinder$Variable;
     iget-object v4, v3, Lmiui/maml/data/FileBinder$Variable;->mIndex:Lmiui/maml/data/Expression;
 
     if-eqz v4, :cond_0
 
-    .line 115
     iget-object v4, v3, Lmiui/maml/data/FileBinder$Variable;->mIndex:Lmiui/maml/data/Expression;
 
     invoke-virtual {v4}, Lmiui/maml/data/Expression;->evaluate()D
@@ -253,7 +234,6 @@
 
     double-to-int v2, v4
 
-    .line 116
     .local v2, "index":I
     if-nez v0, :cond_2
 
@@ -264,7 +244,6 @@
 
     goto :goto_1
 
-    .line 111
     .end local v0    # "count":I
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v2    # "index":I
@@ -276,7 +255,6 @@
 
     goto :goto_0
 
-    .line 116
     .restart local v0    # "count":I
     .restart local v1    # "i$":Ljava/util/Iterator;
     .restart local v2    # "index":I
@@ -290,7 +268,6 @@
 
     goto :goto_2
 
-    .line 118
     .end local v2    # "index":I
     .end local v3    # "v":Lmiui/maml/data/FileBinder$Variable;
     :cond_3
@@ -304,12 +281,10 @@
     .param p1, "v"    # Lmiui/maml/data/FileBinder$Variable;
 
     .prologue
-    .line 107
     iget-object v0, p0, Lmiui/maml/data/FileBinder;->mVariables:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 108
     return-void
 .end method
 
@@ -317,13 +292,10 @@
     .locals 0
 
     .prologue
-    .line 62
     invoke-super {p0}, Lmiui/maml/data/VariableBinder;->init()V
 
-    .line 63
     invoke-virtual {p0}, Lmiui/maml/data/FileBinder;->refresh()V
 
-    .line 64
     return-void
 .end method
 
@@ -332,7 +304,6 @@
     .param p1, "child"    # Lorg/w3c/dom/Element;
 
     .prologue
-    .line 103
     new-instance v0, Lmiui/maml/data/FileBinder$Variable;
 
     invoke-virtual {p0}, Lmiui/maml/data/FileBinder;->getVariables()Lmiui/maml/data/Variables;
@@ -349,7 +320,6 @@
     .param p1, "x0"    # Lorg/w3c/dom/Element;
 
     .prologue
-    .line 22
     invoke-virtual {p0, p1}, Lmiui/maml/data/FileBinder;->onLoadVariable(Lorg/w3c/dom/Element;)Lmiui/maml/data/FileBinder$Variable;
 
     move-result-object v0
@@ -361,10 +331,8 @@
     .locals 6
 
     .prologue
-    .line 73
     invoke-super {p0}, Lmiui/maml/data/VariableBinder;->refresh()V
 
-    .line 74
     new-instance v1, Ljava/io/File;
 
     iget-object v2, p0, Lmiui/maml/data/FileBinder;->mDirFormatter:Lmiui/maml/util/TextFormatter;
@@ -375,7 +343,6 @@
 
     invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 75
     .local v1, "dir":Ljava/io/File;
     iget-object v2, p0, Lmiui/maml/data/FileBinder;->mFilters:[Ljava/lang/String;
 
@@ -388,28 +355,24 @@
     :goto_0
     iput-object v2, p0, Lmiui/maml/data/FileBinder;->mFiles:[Ljava/lang/String;
 
-    .line 76
     iget-object v2, p0, Lmiui/maml/data/FileBinder;->mFiles:[Ljava/lang/String;
 
     if-nez v2, :cond_2
 
     const/4 v0, 0x0
 
-    .line 77
     .local v0, "count":I
     :goto_1
     iget-object v2, p0, Lmiui/maml/data/FileBinder;->mCountVar:Lmiui/maml/data/IndexedVariable;
 
     if-eqz v2, :cond_0
 
-    .line 78
     iget-object v2, p0, Lmiui/maml/data/FileBinder;->mCountVar:Lmiui/maml/data/IndexedVariable;
 
     int-to-double v4, v0
 
     invoke-virtual {v2, v4, v5}, Lmiui/maml/data/IndexedVariable;->set(D)V
 
-    .line 80
     :cond_0
     const-string v2, "FileBinder"
 
@@ -433,13 +396,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 82
     invoke-direct {p0}, Lmiui/maml/data/FileBinder;->updateVariables()V
 
-    .line 83
     return-void
 
-    .line 75
     .end local v0    # "count":I
     :cond_1
     new-instance v2, Lmiui/maml/util/FilenameExtFilter;
@@ -454,7 +414,6 @@
 
     goto :goto_0
 
-    .line 76
     :cond_2
     iget-object v2, p0, Lmiui/maml/data/FileBinder;->mFiles:[Ljava/lang/String;
 
@@ -467,12 +426,9 @@
     .locals 0
 
     .prologue
-    .line 67
     invoke-super {p0}, Lmiui/maml/data/VariableBinder;->tick()V
 
-    .line 68
     invoke-direct {p0}, Lmiui/maml/data/FileBinder;->updateVariables()V
 
-    .line 69
     return-void
 .end method

@@ -414,7 +414,6 @@
     .locals 0
 
     .prologue
-    .line 3
     invoke-direct {p0}, Landroid/content/SystemIntent;-><init>()V
 
     return-void
@@ -424,19 +423,16 @@
     .locals 2
 
     .prologue
-    .line 409
     new-instance v0, Landroid/content/Intent;
 
-    const-string/jumbo v1, "miui.intent.action.MEMORY_CHECK_SERVICE"
+    const-string v1, "miui.intent.action.MEMORY_CHECK_SERVICE"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 410
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "com.miui.securitycenter"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 411
     return-object v0
 .end method

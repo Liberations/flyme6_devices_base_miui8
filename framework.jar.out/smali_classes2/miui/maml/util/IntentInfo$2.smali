@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 187
     invoke-static {}, Lmiui/maml/util/IntentInfo$Type;->values()[Lmiui/maml/util/IntentInfo$Type;
 
     move-result-object v0

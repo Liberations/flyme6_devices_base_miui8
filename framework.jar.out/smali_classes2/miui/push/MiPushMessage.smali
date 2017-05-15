@@ -82,10 +82,8 @@
     .locals 1
 
     .prologue
-    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 63
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -100,12 +98,10 @@
     .param p0, "bundle"    # Landroid/os/Bundle;
 
     .prologue
-    .line 223
     new-instance v0, Lmiui/push/MiPushMessage;
 
     invoke-direct {v0}, Lmiui/push/MiPushMessage;-><init>()V
 
-    .line 224
     .local v0, "message":Lmiui/push/MiPushMessage;
     const-string v1, "messageId"
 
@@ -115,7 +111,6 @@
 
     iput-object v1, v0, Lmiui/push/MiPushMessage;->messageId:Ljava/lang/String;
 
-    .line 225
     const-string v1, "messageType"
 
     invoke-virtual {p0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -124,7 +119,6 @@
 
     iput v1, v0, Lmiui/push/MiPushMessage;->messageType:I
 
-    .line 226
     const-string v1, "passThrough"
 
     invoke-virtual {p0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -133,7 +127,6 @@
 
     iput v1, v0, Lmiui/push/MiPushMessage;->passThrough:I
 
-    .line 227
     const-string v1, "alias"
 
     invoke-virtual {p0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -142,7 +135,6 @@
 
     iput-object v1, v0, Lmiui/push/MiPushMessage;->alias:Ljava/lang/String;
 
-    .line 228
     const-string v1, "topic"
 
     invoke-virtual {p0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -151,7 +143,6 @@
 
     iput-object v1, v0, Lmiui/push/MiPushMessage;->topic:Ljava/lang/String;
 
-    .line 229
     const-string v1, "content"
 
     invoke-virtual {p0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -160,7 +151,6 @@
 
     iput-object v1, v0, Lmiui/push/MiPushMessage;->content:Ljava/lang/String;
 
-    .line 230
     const-string v1, "description"
 
     invoke-virtual {p0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -169,7 +159,6 @@
 
     iput-object v1, v0, Lmiui/push/MiPushMessage;->description:Ljava/lang/String;
 
-    .line 231
     const-string v1, "title"
 
     invoke-virtual {p0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -178,7 +167,6 @@
 
     iput-object v1, v0, Lmiui/push/MiPushMessage;->title:Ljava/lang/String;
 
-    .line 232
     const-string v1, "isNotified"
 
     invoke-virtual {p0, v1}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
@@ -187,7 +175,6 @@
 
     iput-boolean v1, v0, Lmiui/push/MiPushMessage;->isNotified:Z
 
-    .line 233
     const-string v1, "notifyId"
 
     invoke-virtual {p0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -196,7 +183,6 @@
 
     iput v1, v0, Lmiui/push/MiPushMessage;->notifyId:I
 
-    .line 234
     const-string v1, "notifyType"
 
     invoke-virtual {p0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -205,7 +191,6 @@
 
     iput v1, v0, Lmiui/push/MiPushMessage;->notifyType:I
 
-    .line 235
     const-string v1, "category"
 
     invoke-virtual {p0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -214,7 +199,6 @@
 
     iput-object v1, v0, Lmiui/push/MiPushMessage;->category:Ljava/lang/String;
 
-    .line 236
     const-string v1, "extra"
 
     invoke-virtual {p0, v1}, Landroid/os/Bundle;->getSerializable(Ljava/lang/String;)Ljava/io/Serializable;
@@ -225,7 +209,6 @@
 
     iput-object v1, v0, Lmiui/push/MiPushMessage;->extra:Ljava/util/HashMap;
 
-    .line 237
     return-object v0
 .end method
 
@@ -235,7 +218,6 @@
     .locals 1
 
     .prologue
-    .line 90
     iget-object v0, p0, Lmiui/push/MiPushMessage;->alias:Ljava/lang/String;
 
     return-object v0
@@ -245,7 +227,6 @@
     .locals 1
 
     .prologue
-    .line 146
     iget-object v0, p0, Lmiui/push/MiPushMessage;->category:Ljava/lang/String;
 
     return-object v0
@@ -255,7 +236,6 @@
     .locals 1
 
     .prologue
-    .line 82
     iget-object v0, p0, Lmiui/push/MiPushMessage;->content:Ljava/lang/String;
 
     return-object v0
@@ -265,7 +245,6 @@
     .locals 1
 
     .prologue
-    .line 130
     iget-object v0, p0, Lmiui/push/MiPushMessage;->description:Ljava/lang/String;
 
     return-object v0
@@ -285,7 +264,6 @@
     .end annotation
 
     .prologue
-    .line 162
     iget-object v0, p0, Lmiui/push/MiPushMessage;->extra:Ljava/util/HashMap;
 
     return-object v0
@@ -295,7 +273,6 @@
     .locals 1
 
     .prologue
-    .line 66
     iget-object v0, p0, Lmiui/push/MiPushMessage;->messageId:Ljava/lang/String;
 
     return-object v0
@@ -305,7 +282,6 @@
     .locals 1
 
     .prologue
-    .line 74
     iget v0, p0, Lmiui/push/MiPushMessage;->messageType:I
 
     return v0
@@ -315,7 +291,6 @@
     .locals 1
 
     .prologue
-    .line 114
     iget v0, p0, Lmiui/push/MiPushMessage;->notifyId:I
 
     return v0
@@ -325,7 +300,6 @@
     .locals 1
 
     .prologue
-    .line 106
     iget v0, p0, Lmiui/push/MiPushMessage;->notifyType:I
 
     return v0
@@ -335,7 +309,6 @@
     .locals 1
 
     .prologue
-    .line 154
     iget v0, p0, Lmiui/push/MiPushMessage;->passThrough:I
 
     return v0
@@ -345,7 +318,6 @@
     .locals 1
 
     .prologue
-    .line 138
     iget-object v0, p0, Lmiui/push/MiPushMessage;->title:Ljava/lang/String;
 
     return-object v0
@@ -355,7 +327,6 @@
     .locals 1
 
     .prologue
-    .line 98
     iget-object v0, p0, Lmiui/push/MiPushMessage;->topic:Ljava/lang/String;
 
     return-object v0
@@ -365,7 +336,6 @@
     .locals 1
 
     .prologue
-    .line 122
     iget-boolean v0, p0, Lmiui/push/MiPushMessage;->isNotified:Z
 
     return v0
@@ -376,10 +346,8 @@
     .param p1, "alias"    # Ljava/lang/String;
 
     .prologue
-    .line 94
     iput-object p1, p0, Lmiui/push/MiPushMessage;->alias:Ljava/lang/String;
 
-    .line 95
     return-void
 .end method
 
@@ -388,10 +356,8 @@
     .param p1, "category"    # Ljava/lang/String;
 
     .prologue
-    .line 150
     iput-object p1, p0, Lmiui/push/MiPushMessage;->category:Ljava/lang/String;
 
-    .line 151
     return-void
 .end method
 
@@ -400,10 +366,8 @@
     .param p1, "content"    # Ljava/lang/String;
 
     .prologue
-    .line 86
     iput-object p1, p0, Lmiui/push/MiPushMessage;->content:Ljava/lang/String;
 
-    .line 87
     return-void
 .end method
 
@@ -412,10 +376,8 @@
     .param p1, "description"    # Ljava/lang/String;
 
     .prologue
-    .line 134
     iput-object p1, p0, Lmiui/push/MiPushMessage;->description:Ljava/lang/String;
 
-    .line 135
     return-void
 .end method
 
@@ -433,21 +395,17 @@
     .end annotation
 
     .prologue
-    .line 166
     .local p1, "extra":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     iget-object v0, p0, Lmiui/push/MiPushMessage;->extra:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
-    .line 167
     if-eqz p1, :cond_0
 
-    .line 168
     iget-object v0, p0, Lmiui/push/MiPushMessage;->extra:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->putAll(Ljava/util/Map;)V
 
-    .line 170
     :cond_0
     return-void
 .end method
@@ -457,10 +415,8 @@
     .param p1, "messageId"    # Ljava/lang/String;
 
     .prologue
-    .line 70
     iput-object p1, p0, Lmiui/push/MiPushMessage;->messageId:Ljava/lang/String;
 
-    .line 71
     return-void
 .end method
 
@@ -469,10 +425,8 @@
     .param p1, "messageType"    # I
 
     .prologue
-    .line 78
     iput p1, p0, Lmiui/push/MiPushMessage;->messageType:I
 
-    .line 79
     return-void
 .end method
 
@@ -481,10 +435,8 @@
     .param p1, "isNotified"    # Z
 
     .prologue
-    .line 126
     iput-boolean p1, p0, Lmiui/push/MiPushMessage;->isNotified:Z
 
-    .line 127
     return-void
 .end method
 
@@ -493,10 +445,8 @@
     .param p1, "notifyId"    # I
 
     .prologue
-    .line 118
     iput p1, p0, Lmiui/push/MiPushMessage;->notifyId:I
 
-    .line 119
     return-void
 .end method
 
@@ -505,10 +455,8 @@
     .param p1, "notifyType"    # I
 
     .prologue
-    .line 110
     iput p1, p0, Lmiui/push/MiPushMessage;->notifyType:I
 
-    .line 111
     return-void
 .end method
 
@@ -517,10 +465,8 @@
     .param p1, "passThrough"    # I
 
     .prologue
-    .line 158
     iput p1, p0, Lmiui/push/MiPushMessage;->passThrough:I
 
-    .line 159
     return-void
 .end method
 
@@ -529,10 +475,8 @@
     .param p1, "title"    # Ljava/lang/String;
 
     .prologue
-    .line 142
     iput-object p1, p0, Lmiui/push/MiPushMessage;->title:Ljava/lang/String;
 
-    .line 143
     return-void
 .end method
 
@@ -541,10 +485,8 @@
     .param p1, "topic"    # Ljava/lang/String;
 
     .prologue
-    .line 102
     iput-object p1, p0, Lmiui/push/MiPushMessage;->topic:Ljava/lang/String;
 
-    .line 103
     return-void
 .end method
 
@@ -552,12 +494,10 @@
     .locals 3
 
     .prologue
-    .line 181
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 182
     .local v0, "bundle":Landroid/os/Bundle;
     const-string v1, "messageId"
 
@@ -565,21 +505,18 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 184
     const-string v1, "passThrough"
 
     iget v2, p0, Lmiui/push/MiPushMessage;->passThrough:I
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 185
     const-string v1, "messageType"
 
     iget v2, p0, Lmiui/push/MiPushMessage;->messageType:I
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 187
     iget-object v1, p0, Lmiui/push/MiPushMessage;->alias:Ljava/lang/String;
 
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -588,14 +525,12 @@
 
     if-nez v1, :cond_0
 
-    .line 188
     const-string v1, "alias"
 
     iget-object v2, p0, Lmiui/push/MiPushMessage;->alias:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 191
     :cond_0
     iget-object v1, p0, Lmiui/push/MiPushMessage;->topic:Ljava/lang/String;
 
@@ -605,14 +540,12 @@
 
     if-nez v1, :cond_1
 
-    .line 192
     const-string v1, "topic"
 
     iget-object v2, p0, Lmiui/push/MiPushMessage;->topic:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 195
     :cond_1
     const-string v1, "content"
 
@@ -620,7 +553,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 197
     iget-object v1, p0, Lmiui/push/MiPushMessage;->description:Ljava/lang/String;
 
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -629,14 +561,12 @@
 
     if-nez v1, :cond_2
 
-    .line 198
     const-string v1, "description"
 
     iget-object v2, p0, Lmiui/push/MiPushMessage;->description:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 201
     :cond_2
     iget-object v1, p0, Lmiui/push/MiPushMessage;->title:Ljava/lang/String;
 
@@ -646,14 +576,12 @@
 
     if-nez v1, :cond_3
 
-    .line 202
     const-string v1, "title"
 
     iget-object v2, p0, Lmiui/push/MiPushMessage;->title:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 205
     :cond_3
     const-string v1, "isNotified"
 
@@ -661,21 +589,18 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 207
     const-string v1, "notifyId"
 
     iget v2, p0, Lmiui/push/MiPushMessage;->notifyId:I
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 208
     const-string v1, "notifyType"
 
     iget v2, p0, Lmiui/push/MiPushMessage;->notifyType:I
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 210
     iget-object v1, p0, Lmiui/push/MiPushMessage;->category:Ljava/lang/String;
 
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -684,27 +609,23 @@
 
     if-nez v1, :cond_4
 
-    .line 211
     const-string v1, "category"
 
     iget-object v2, p0, Lmiui/push/MiPushMessage;->category:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 214
     :cond_4
     iget-object v1, p0, Lmiui/push/MiPushMessage;->extra:Ljava/util/HashMap;
 
     if-eqz v1, :cond_5
 
-    .line 215
     const-string v1, "extra"
 
     iget-object v2, p0, Lmiui/push/MiPushMessage;->extra:Ljava/util/HashMap;
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putSerializable(Ljava/lang/String;Ljava/io/Serializable;)V
 
-    .line 218
     :cond_5
     return-object v0
 .end method
@@ -713,7 +634,6 @@
     .locals 2
 
     .prologue
-    .line 174
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -730,7 +650,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "},passThrough={"
+    const-string v1, "},passThrough={"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -742,7 +662,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "},alias={"
+    const-string v1, "},alias={"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -754,7 +674,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "},topic={"
+    const-string v1, "},topic={"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -766,7 +686,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "},content={"
+    const-string v1, "},content={"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -778,7 +698,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "},description={"
+    const-string v1, "},description={"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -790,7 +710,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "},title={"
+    const-string v1, "},title={"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -802,7 +722,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "},isNotified={"
+    const-string v1, "},isNotified={"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -814,7 +734,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "},notifyId={"
+    const-string v1, "},notifyId={"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -826,7 +746,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "},notifyType={"
+    const-string v1, "},notifyType={"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -838,7 +758,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "}, category={"
+    const-string v1, "}, category={"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -850,7 +770,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "}, extra={"
+    const-string v1, "}, extra={"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -862,7 +782,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

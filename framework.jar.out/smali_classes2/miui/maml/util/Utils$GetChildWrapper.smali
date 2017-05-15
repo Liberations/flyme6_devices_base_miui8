@@ -24,13 +24,10 @@
     .param p1, "ele"    # Lorg/w3c/dom/Element;
 
     .prologue
-    .line 68
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 69
     iput-object p1, p0, Lmiui/maml/util/Utils$GetChildWrapper;->mEle:Lorg/w3c/dom/Element;
 
-    .line 70
     return-void
 .end method
 
@@ -41,7 +38,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 77
     new-instance v0, Lmiui/maml/util/Utils$GetChildWrapper;
 
     iget-object v1, p0, Lmiui/maml/util/Utils$GetChildWrapper;->mEle:Lorg/w3c/dom/Element;
@@ -59,7 +55,6 @@
     .locals 1
 
     .prologue
-    .line 73
     iget-object v0, p0, Lmiui/maml/util/Utils$GetChildWrapper;->mEle:Lorg/w3c/dom/Element;
 
     return-object v0

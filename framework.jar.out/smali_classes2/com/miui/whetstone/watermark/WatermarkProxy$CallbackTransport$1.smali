@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 46
     iput-object p1, p0, Lcom/miui/whetstone/watermark/WatermarkProxy$CallbackTransport$1;->this$0:Lcom/miui/whetstone/watermark/WatermarkProxy$CallbackTransport;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,12 +37,10 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 49
     iget-object v0, p0, Lcom/miui/whetstone/watermark/WatermarkProxy$CallbackTransport$1;->this$0:Lcom/miui/whetstone/watermark/WatermarkProxy$CallbackTransport;
 
     # invokes: Lcom/miui/whetstone/watermark/WatermarkProxy$CallbackTransport;->_handleMessage(Landroid/os/Message;)V
     invoke-static {v0, p1}, Lcom/miui/whetstone/watermark/WatermarkProxy$CallbackTransport;->access$000(Lcom/miui/whetstone/watermark/WatermarkProxy$CallbackTransport;Landroid/os/Message;)V
 
-    .line 50
     return-void
 .end method

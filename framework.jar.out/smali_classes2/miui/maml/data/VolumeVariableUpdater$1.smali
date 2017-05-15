@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 41
     iput-object p1, p0, Lmiui/maml/data/VolumeVariableUpdater$1;->this$0:Lmiui/maml/data/VolumeVariableUpdater;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 4
 
     .prologue
-    .line 44
     iget-object v0, p0, Lmiui/maml/data/VolumeVariableUpdater$1;->this$0:Lmiui/maml/data/VolumeVariableUpdater;
 
     # getter for: Lmiui/maml/data/VolumeVariableUpdater;->mVolumeType:Lmiui/maml/data/IndexedVariable;
@@ -52,6 +50,5 @@
 
     invoke-virtual {v0, v2, v3}, Lmiui/maml/data/IndexedVariable;->set(D)V
 
-    .line 45
     return-void
 .end method

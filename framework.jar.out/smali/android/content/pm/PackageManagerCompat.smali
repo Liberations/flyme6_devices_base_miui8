@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,7 +31,6 @@
     .end annotation
 
     .prologue
-    .line 18
     invoke-virtual {p0, p1, p2}, Landroid/content/pm/PackageManager;->getInstalledPackages(II)Ljava/util/List;
 
     move-result-object v0
@@ -52,7 +50,6 @@
     .end annotation
 
     .prologue
-    .line 14
     invoke-virtual {p0, p1, p2}, Landroid/content/pm/PackageManager;->getPackageUid(Ljava/lang/String;I)I
 
     move-result v0

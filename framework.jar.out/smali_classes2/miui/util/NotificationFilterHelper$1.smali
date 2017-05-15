@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 81
     iput-object p1, p0, Lmiui/util/NotificationFilterHelper$1;->val$context:Landroid/content/Context;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 6
 
     .prologue
-    .line 84
     # getter for: Lmiui/util/NotificationFilterHelper;->sNetFilterMap:Ljava/util/HashMap;
     invoke-static {}, Lmiui/util/NotificationFilterHelper;->access$000()Ljava/util/HashMap;
 
@@ -48,7 +46,6 @@
 
     invoke-virtual {v4}, Ljava/util/HashMap;->clear()V
 
-    .line 85
     iget-object v4, p0, Lmiui/util/NotificationFilterHelper$1;->val$context:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -61,7 +58,6 @@
 
     move-result-object v2
 
-    .line 86
     .local v2, "packageInfoList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PackageInfo;>;"
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -82,24 +78,20 @@
 
     check-cast v1, Landroid/content/pm/PackageInfo;
 
-    .line 87
     .local v1, "packageInfo":Landroid/content/pm/PackageInfo;
     iget-object v4, v1, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     if-eqz v4, :cond_0
 
-    .line 88
     iget-object v4, v1, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget-object v3, v4, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
-    .line 89
     .local v3, "pkg":Ljava/lang/String;
     iget-object v4, p0, Lmiui/util/NotificationFilterHelper$1;->val$context:Landroid/content/Context;
 
     invoke-static {v4, v3}, Lmiui/util/NotificationFilterHelper;->loadAppNetFlagByPkg(Landroid/content/Context;Ljava/lang/String;)I
 
-    .line 90
     iget-object v4, v1, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget v4, v4, Landroid/content/pm/ApplicationInfo;->flags:I
@@ -108,14 +100,12 @@
 
     if-nez v4, :cond_0
 
-    .line 91
     iget-object v4, p0, Lmiui/util/NotificationFilterHelper$1;->val$context:Landroid/content/Context;
 
     invoke-static {v4, v3}, Lmiui/util/NotificationFilterHelper;->loadAppNetFlagByPkg(Landroid/content/Context;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 95
     .end local v1    # "packageInfo":Landroid/content/pm/PackageInfo;
     .end local v3    # "pkg":Ljava/lang/String;
     :cond_1

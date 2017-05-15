@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,7 +28,6 @@
     .locals 1
 
     .prologue
-    .line 51
     const/4 v0, 0x0
 
     return v0
@@ -39,7 +37,6 @@
     .locals 1
 
     .prologue
-    .line 58
     const/4 v0, 0x0
 
     return v0
@@ -61,14 +58,13 @@
     .locals 2
 
     .prologue
-    .line 63
     new-instance v0, Ljava/lang/StringBuilder;
 
     const/16 v1, 0x80
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    const-string/jumbo v1, "{id="
+    const-string v1, "{id="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

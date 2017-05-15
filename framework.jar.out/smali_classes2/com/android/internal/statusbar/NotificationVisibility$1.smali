@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 149
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "parcel"    # Landroid/os/Parcel;
 
     .prologue
-    .line 152
     # invokes: Lcom/android/internal/statusbar/NotificationVisibility;->obtain(Landroid/os/Parcel;)Lcom/android/internal/statusbar/NotificationVisibility;
     invoke-static {p1}, Lcom/android/internal/statusbar/NotificationVisibility;->access$000(Landroid/os/Parcel;)Lcom/android/internal/statusbar/NotificationVisibility;
 
@@ -59,7 +57,6 @@
     .param p1, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 149
     invoke-virtual {p0, p1}, Lcom/android/internal/statusbar/NotificationVisibility$1;->createFromParcel(Landroid/os/Parcel;)Lcom/android/internal/statusbar/NotificationVisibility;
 
     move-result-object v0
@@ -72,7 +69,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 157
     new-array v0, p1, [Lcom/android/internal/statusbar/NotificationVisibility;
 
     return-object v0
@@ -83,7 +79,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 149
     invoke-virtual {p0, p1}, Lcom/android/internal/statusbar/NotificationVisibility$1;->newArray(I)[Lcom/android/internal/statusbar/NotificationVisibility;
 
     move-result-object v0

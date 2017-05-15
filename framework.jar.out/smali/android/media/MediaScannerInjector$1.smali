@@ -20,7 +20,6 @@
     .param p1, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 49
     invoke-direct {p0, p1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -32,7 +31,6 @@
     .locals 2
 
     .prologue
-    .line 52
     new-instance v0, Landroid/media/MediaScannerInjector$1$1;
 
     invoke-virtual {p0}, Landroid/media/MediaScannerInjector$1;->getLooper()Landroid/os/Looper;
@@ -44,6 +42,5 @@
     # setter for: Landroid/media/MediaScannerInjector;->sHandler:Landroid/os/Handler;
     invoke-static {v0}, Landroid/media/MediaScannerInjector;->access$002(Landroid/os/Handler;)Landroid/os/Handler;
 
-    .line 65
     return-void
 .end method

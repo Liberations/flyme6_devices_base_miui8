@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 372
     iput-object p1, p0, Landroid/app/ActivityView$ActivityContainerCallback$1;->this$0:Landroid/app/ActivityView$ActivityContainerCallback;
 
     iput-object p2, p0, Landroid/app/ActivityView$ActivityContainerCallback$1;->val$callbackRef:Ljava/lang/ref/WeakReference;
@@ -48,7 +47,6 @@
     .locals 2
 
     .prologue
-    .line 375
     iget-object v1, p0, Landroid/app/ActivityView$ActivityContainerCallback$1;->val$callbackRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -57,16 +55,13 @@
 
     check-cast v0, Landroid/app/ActivityView$ActivityViewCallback;
 
-    .line 376
     .local v0, "callback":Landroid/app/ActivityView$ActivityViewCallback;
     if-eqz v0, :cond_0
 
-    .line 377
     iget-object v1, p0, Landroid/app/ActivityView$ActivityContainerCallback$1;->val$activityView:Landroid/app/ActivityView;
 
     invoke-virtual {v0, v1}, Landroid/app/ActivityView$ActivityViewCallback;->onAllActivitiesComplete(Landroid/app/ActivityView;)V
 
-    .line 379
     :cond_0
     return-void
 .end method

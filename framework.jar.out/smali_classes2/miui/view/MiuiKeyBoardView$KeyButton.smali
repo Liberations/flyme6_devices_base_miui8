@@ -20,10 +20,8 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 181
     invoke-direct {p0, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    .line 182
     return-void
 .end method
 
@@ -33,10 +31,8 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 185
     invoke-direct {p0, p1, p2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 186
     return-void
 .end method
 
@@ -47,10 +43,8 @@
     .param p3, "defStyle"    # I
 
     .prologue
-    .line 189
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 190
     return-void
 .end method
 
@@ -66,7 +60,6 @@
     .prologue
     const/high16 v2, 0x40000000    # 2.0f
 
-    .line 202
     sub-int v0, p3, p1
 
     invoke-static {v0, v2}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
@@ -81,10 +74,8 @@
 
     invoke-virtual {p0, v0, v1}, Lmiui/view/MiuiKeyBoardView$KeyButton;->measure(II)V
 
-    .line 204
     invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/TextView;->layout(IIII)V
 
-    .line 205
     return-void
 .end method
 
@@ -92,7 +83,6 @@
     .locals 1
 
     .prologue
-    .line 194
     invoke-virtual {p0}, Lmiui/view/MiuiKeyBoardView$KeyButton;->getTag()Ljava/lang/Object;
 
     move-result-object v0
@@ -101,7 +91,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 195
     invoke-virtual {p0}, Lmiui/view/MiuiKeyBoardView$KeyButton;->getTag()Ljava/lang/Object;
 
     move-result-object v0
@@ -110,10 +99,8 @@
 
     invoke-virtual {p0, v0}, Lmiui/view/MiuiKeyBoardView$KeyButton;->setText(Ljava/lang/CharSequence;)V
 
-    .line 197
     :cond_0
     invoke-super {p0}, Landroid/widget/TextView;->onFinishInflate()V
 
-    .line 198
     return-void
 .end method

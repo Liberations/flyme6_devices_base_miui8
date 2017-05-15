@@ -23,15 +23,12 @@
     .locals 2
 
     .prologue
-    .line 2254
     invoke-direct {p0}, Lorg/apache/miui/commons/lang3/builder/ToStringStyle;-><init>()V
 
-    .line 2255
     const-string v0, "["
 
     invoke-virtual {p0, v0}, Lorg/apache/miui/commons/lang3/builder/ToStringStyle$MultiLineToStringStyle;->setContentStart(Ljava/lang/String;)V
 
-    .line 2256
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -54,12 +51,10 @@
 
     invoke-virtual {p0, v0}, Lorg/apache/miui/commons/lang3/builder/ToStringStyle$MultiLineToStringStyle;->setFieldSeparator(Ljava/lang/String;)V
 
-    .line 2257
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lorg/apache/miui/commons/lang3/builder/ToStringStyle$MultiLineToStringStyle;->setFieldSeparatorAtStart(Z)V
 
-    .line 2258
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -82,7 +77,6 @@
 
     invoke-virtual {p0, v0}, Lorg/apache/miui/commons/lang3/builder/ToStringStyle$MultiLineToStringStyle;->setContentEnd(Ljava/lang/String;)V
 
-    .line 2259
     return-void
 .end method
 
@@ -90,7 +84,6 @@
     .locals 1
 
     .prologue
-    .line 2267
     sget-object v0, Lorg/apache/miui/commons/lang3/builder/ToStringStyle;->MULTI_LINE_STYLE:Lorg/apache/miui/commons/lang3/builder/ToStringStyle;
 
     return-object v0

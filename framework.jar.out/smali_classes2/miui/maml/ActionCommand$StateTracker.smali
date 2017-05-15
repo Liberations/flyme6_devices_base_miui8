@@ -33,19 +33,14 @@
 
     const/4 v0, 0x0
 
-    .line 291
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 293
     iput-boolean v0, p0, Lmiui/maml/ActionCommand$StateTracker;->mInTransition:Z
 
-    .line 295
     iput-object v1, p0, Lmiui/maml/ActionCommand$StateTracker;->mActualState:Ljava/lang/Boolean;
 
-    .line 297
     iput-object v1, p0, Lmiui/maml/ActionCommand$StateTracker;->mIntendedState:Ljava/lang/Boolean;
 
-    .line 303
     iput-boolean v0, p0, Lmiui/maml/ActionCommand$StateTracker;->mDeferredStateChangeRequestNeeded:Z
 
     return-void
@@ -63,16 +58,13 @@
     .prologue
     const/4 v0, 0x5
 
-    .line 397
     iget-boolean v1, p0, Lmiui/maml/ActionCommand$StateTracker;->mInTransition:Z
 
     if-eqz v1, :cond_0
 
-    .line 413
     :goto_0
     return v0
 
-    .line 407
     :cond_0
     invoke-virtual {p0, p1}, Lmiui/maml/ActionCommand$StateTracker;->getActualState(Landroid/content/Context;)I
 
@@ -82,19 +74,16 @@
 
     goto :goto_0
 
-    .line 409
     :pswitch_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 411
     :pswitch_1
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 407
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -106,7 +95,6 @@
     .locals 1
 
     .prologue
-    .line 387
     iget-object v0, p0, Lmiui/maml/ActionCommand$StateTracker;->mIntendedState:Ljava/lang/Boolean;
 
     if-eqz v0, :cond_0
@@ -146,14 +134,11 @@
 
     const/4 v3, 0x0
 
-    .line 349
     iget-boolean v0, p0, Lmiui/maml/ActionCommand$StateTracker;->mInTransition:Z
 
-    .line 350
     .local v0, "wasInTransition":Z
     packed-switch p2, :pswitch_data_0
 
-    .line 369
     :goto_0
     if-eqz v0, :cond_1
 
@@ -161,19 +146,16 @@
 
     if-nez v1, :cond_1
 
-    .line 370
     iget-boolean v1, p0, Lmiui/maml/ActionCommand$StateTracker;->mDeferredStateChangeRequestNeeded:Z
 
     if-eqz v1, :cond_1
 
-    .line 371
     const-string v1, "ActionCommand"
 
     const-string v2, "processing deferred state change"
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 372
     iget-object v1, p0, Lmiui/maml/ActionCommand$StateTracker;->mActualState:Ljava/lang/Boolean;
 
     if-eqz v1, :cond_2
@@ -192,27 +174,22 @@
 
     if-eqz v1, :cond_2
 
-    .line 373
     const-string v1, "ActionCommand"
 
     const-string v2, "... but intended state matches, so no changes."
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 378
     :cond_0
     :goto_1
     iput-boolean v3, p0, Lmiui/maml/ActionCommand$StateTracker;->mDeferredStateChangeRequestNeeded:Z
 
-    .line 381
     :cond_1
     return-void
 
-    .line 352
     :pswitch_0
     iput-boolean v3, p0, Lmiui/maml/ActionCommand$StateTracker;->mInTransition:Z
 
-    .line 353
     invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v1
@@ -221,11 +198,9 @@
 
     goto :goto_0
 
-    .line 356
     :pswitch_1
     iput-boolean v3, p0, Lmiui/maml/ActionCommand$StateTracker;->mInTransition:Z
 
-    .line 357
     invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v1
@@ -234,11 +209,9 @@
 
     goto :goto_0
 
-    .line 360
     :pswitch_2
     iput-boolean v4, p0, Lmiui/maml/ActionCommand$StateTracker;->mInTransition:Z
 
-    .line 361
     invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v1
@@ -247,11 +220,9 @@
 
     goto :goto_0
 
-    .line 364
     :pswitch_3
     iput-boolean v4, p0, Lmiui/maml/ActionCommand$StateTracker;->mInTransition:Z
 
-    .line 365
     invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v1
@@ -260,16 +231,13 @@
 
     goto :goto_0
 
-    .line 374
     :cond_2
     iget-object v1, p0, Lmiui/maml/ActionCommand$StateTracker;->mIntendedState:Ljava/lang/Boolean;
 
     if-eqz v1, :cond_0
 
-    .line 375
     iput-boolean v4, p0, Lmiui/maml/ActionCommand$StateTracker;->mInTransition:Z
 
-    .line 376
     iget-object v1, p0, Lmiui/maml/ActionCommand$StateTracker;->mIntendedState:Ljava/lang/Boolean;
 
     invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
@@ -280,7 +248,6 @@
 
     goto :goto_1
 
-    .line 350
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -297,20 +264,16 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 310
     invoke-virtual {p0, p1}, Lmiui/maml/ActionCommand$StateTracker;->getTriState(Landroid/content/Context;)I
 
     move-result v0
 
-    .line 311
     .local v0, "currentState":I
     const/4 v1, 0x0
 
-    .line 312
     .local v1, "newState":Z
     packed-switch v0, :pswitch_data_0
 
-    .line 325
     :cond_0
     :goto_0
     :pswitch_0
@@ -320,39 +283,30 @@
 
     iput-object v3, p0, Lmiui/maml/ActionCommand$StateTracker;->mIntendedState:Ljava/lang/Boolean;
 
-    .line 326
     iget-boolean v3, p0, Lmiui/maml/ActionCommand$StateTracker;->mInTransition:Z
 
     if-eqz v3, :cond_2
 
-    .line 331
     iput-boolean v2, p0, Lmiui/maml/ActionCommand$StateTracker;->mDeferredStateChangeRequestNeeded:Z
 
-    .line 336
     :goto_1
     return-void
 
-    .line 314
     :pswitch_1
     const/4 v1, 0x0
 
-    .line 315
     goto :goto_0
 
-    .line 317
     :pswitch_2
     const/4 v1, 0x1
 
-    .line 318
     goto :goto_0
 
-    .line 320
     :pswitch_3
     iget-object v3, p0, Lmiui/maml/ActionCommand$StateTracker;->mIntendedState:Ljava/lang/Boolean;
 
     if-eqz v3, :cond_0
 
-    .line 321
     iget-object v3, p0, Lmiui/maml/ActionCommand$StateTracker;->mIntendedState:Ljava/lang/Boolean;
 
     invoke-virtual {v3}, Ljava/lang/Boolean;->booleanValue()Z
@@ -371,16 +325,13 @@
 
     goto :goto_2
 
-    .line 333
     :cond_2
     iput-boolean v2, p0, Lmiui/maml/ActionCommand$StateTracker;->mInTransition:Z
 
-    .line 334
     invoke-virtual {p0, p1, v1}, Lmiui/maml/ActionCommand$StateTracker;->requestStateChange(Landroid/content/Context;Z)V
 
     goto :goto_1
 
-    .line 312
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_2

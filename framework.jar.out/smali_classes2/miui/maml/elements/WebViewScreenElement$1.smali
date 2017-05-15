@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 117
     iput-object p1, p0, Lmiui/maml/elements/WebViewScreenElement$1;->this$0:Lmiui/maml/elements/WebViewScreenElement;
 
     invoke-direct {p0}, Landroid/webkit/WebViewClient;-><init>()V
@@ -39,10 +38,8 @@
     .param p2, "url"    # Ljava/lang/String;
 
     .prologue
-    .line 119
     invoke-virtual {p1, p2}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
 
-    .line 120
     const/4 v0, 0x1
 
     return v0

@@ -129,10 +129,8 @@
 
     const/4 v5, 0x0
 
-    .line 54
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 68
     new-array v0, v6, [Landroid/content/pm/Signature;
 
     new-instance v1, Landroid/content/pm/Signature;
@@ -145,7 +143,6 @@
 
     iput-object v0, p0, Lmiui/content/pm/ExtraPackageManager$SignatureHolder;->MIUI_PLATFORM_SIGNATURES:[Landroid/content/pm/Signature;
 
-    .line 73
     new-array v0, v6, [Landroid/content/pm/Signature;
 
     new-instance v1, Landroid/content/pm/Signature;
@@ -158,7 +155,6 @@
 
     iput-object v0, p0, Lmiui/content/pm/ExtraPackageManager$SignatureHolder;->MIUI_MEDIA_SIGNATURES:[Landroid/content/pm/Signature;
 
-    .line 78
     new-array v0, v6, [Landroid/content/pm/Signature;
 
     new-instance v1, Landroid/content/pm/Signature;
@@ -171,7 +167,6 @@
 
     iput-object v0, p0, Lmiui/content/pm/ExtraPackageManager$SignatureHolder;->GOOGLE_SIGNATURES:[Landroid/content/pm/Signature;
 
-    .line 83
     new-array v0, v6, [Landroid/content/pm/Signature;
 
     new-instance v1, Landroid/content/pm/Signature;
@@ -184,12 +179,10 @@
 
     iput-object v0, p0, Lmiui/content/pm/ExtraPackageManager$SignatureHolder;->MITALK_SIGNATURES:[Landroid/content/pm/Signature;
 
-    .line 88
     const-string v0, "com.xiaomi.channel"
 
     iput-object v0, p0, Lmiui/content/pm/ExtraPackageManager$SignatureHolder;->MITALK_NAME:Ljava/lang/String;
 
-    .line 90
     new-array v0, v6, [Landroid/content/pm/Signature;
 
     new-instance v1, Landroid/content/pm/Signature;
@@ -202,22 +195,18 @@
 
     iput-object v0, p0, Lmiui/content/pm/ExtraPackageManager$SignatureHolder;->DUOKAN_READER_SIGNATURES:[Landroid/content/pm/Signature;
 
-    .line 95
     const-string v0, "com.duokan.reader"
 
     iput-object v0, p0, Lmiui/content/pm/ExtraPackageManager$SignatureHolder;->DUOKAN_READER_NAME:Ljava/lang/String;
 
-    .line 97
     const-string v0, "com.duokan.hdreader"
 
     iput-object v0, p0, Lmiui/content/pm/ExtraPackageManager$SignatureHolder;->DUOKAN_READER_HD_NAME:Ljava/lang/String;
 
-    .line 99
     const-string v0, "com.duokan.freereader"
 
     iput-object v0, p0, Lmiui/content/pm/ExtraPackageManager$SignatureHolder;->DUOKAN_FREE_READER:Ljava/lang/String;
 
-    .line 101
     new-array v0, v6, [Landroid/content/pm/Signature;
 
     new-instance v1, Landroid/content/pm/Signature;
@@ -230,12 +219,10 @@
 
     iput-object v0, p0, Lmiui/content/pm/ExtraPackageManager$SignatureHolder;->GAME_CENTER_SIGNATURES:[Landroid/content/pm/Signature;
 
-    .line 106
     const-string v0, "com.xiaomi.router"
 
     iput-object v0, p0, Lmiui/content/pm/ExtraPackageManager$SignatureHolder;->XIAOMI_ROUTER_NAME:Ljava/lang/String;
 
-    .line 108
     new-array v0, v6, [Landroid/content/pm/Signature;
 
     new-instance v1, Landroid/content/pm/Signature;
@@ -248,17 +235,14 @@
 
     iput-object v0, p0, Lmiui/content/pm/ExtraPackageManager$SignatureHolder;->XIAOMI_ROUTER_SIGNATURES:[Landroid/content/pm/Signature;
 
-    .line 113
     const-string v0, "com.xiaomi.gamecenter.sdk.service"
 
     iput-object v0, p0, Lmiui/content/pm/ExtraPackageManager$SignatureHolder;->GAME_CENTER_NAME:Ljava/lang/String;
 
-    .line 115
     const-string v0, "com.duokan.fiction"
 
     iput-object v0, p0, Lmiui/content/pm/ExtraPackageManager$SignatureHolder;->XIAOMI_FICTION_NAME:Ljava/lang/String;
 
-    .line 117
     new-array v0, v6, [Landroid/content/pm/Signature;
 
     new-instance v1, Landroid/content/pm/Signature;
@@ -271,17 +255,14 @@
 
     iput-object v0, p0, Lmiui/content/pm/ExtraPackageManager$SignatureHolder;->SMART_HOME_SIGNATURES:[Landroid/content/pm/Signature;
 
-    .line 122
     const-string v0, "com.xiaomi.smarthome"
 
     iput-object v0, p0, Lmiui/content/pm/ExtraPackageManager$SignatureHolder;->SMART_HOME_NAME:Ljava/lang/String;
 
-    .line 124
     const-string v0, "com.xiaomi.mitv.phone.tvassistant"
 
     iput-object v0, p0, Lmiui/content/pm/ExtraPackageManager$SignatureHolder;->XIAOMI_TV_ASSISTANT_NAME:Ljava/lang/String;
 
-    .line 126
     new-array v0, v6, [Landroid/content/pm/Signature;
 
     new-instance v1, Landroid/content/pm/Signature;
@@ -294,12 +275,10 @@
 
     iput-object v0, p0, Lmiui/content/pm/ExtraPackageManager$SignatureHolder;->XIAOMI_TV_ASSISTANT_SIGNATURES:[Landroid/content/pm/Signature;
 
-    .line 131
     const-string v0, "com.jeejen.family"
 
     iput-object v0, p0, Lmiui/content/pm/ExtraPackageManager$SignatureHolder;->SIMPLE_MODE_NAME:Ljava/lang/String;
 
-    .line 133
     new-array v0, v6, [Landroid/content/pm/Signature;
 
     new-instance v1, Landroid/content/pm/Signature;
@@ -312,12 +291,10 @@
 
     iput-object v0, p0, Lmiui/content/pm/ExtraPackageManager$SignatureHolder;->SIMPLE_MODE_SIGNATURES:[Landroid/content/pm/Signature;
 
-    .line 138
     const-string v0, "com.miui.mipub"
 
     iput-object v0, p0, Lmiui/content/pm/ExtraPackageManager$SignatureHolder;->MI_PUB_NAME:Ljava/lang/String;
 
-    .line 140
     new-array v0, v6, [Landroid/content/pm/Signature;
 
     new-instance v1, Landroid/content/pm/Signature;
@@ -330,12 +307,10 @@
 
     iput-object v0, p0, Lmiui/content/pm/ExtraPackageManager$SignatureHolder;->MI_PUB_SIGNATURES:[Landroid/content/pm/Signature;
 
-    .line 145
     const-string v0, "com.xiaomi.bbs"
 
     iput-object v0, p0, Lmiui/content/pm/ExtraPackageManager$SignatureHolder;->XIAOMI_BBS:Ljava/lang/String;
 
-    .line 146
     new-array v0, v6, [Landroid/content/pm/Signature;
 
     new-instance v1, Landroid/content/pm/Signature;
@@ -348,12 +323,10 @@
 
     iput-object v0, p0, Lmiui/content/pm/ExtraPackageManager$SignatureHolder;->XIAOMI_BBS_SIGNATURES:[Landroid/content/pm/Signature;
 
-    .line 151
     const-string v0, "com.mi.global.shop"
 
     iput-object v0, p0, Lmiui/content/pm/ExtraPackageManager$SignatureHolder;->MI_GLOBAL_SHOP:Ljava/lang/String;
 
-    .line 152
     new-array v0, v6, [Landroid/content/pm/Signature;
 
     new-instance v1, Landroid/content/pm/Signature;
@@ -366,12 +339,10 @@
 
     iput-object v0, p0, Lmiui/content/pm/ExtraPackageManager$SignatureHolder;->MI_GLOBAL_SHOP_SIGNATURES:[Landroid/content/pm/Signature;
 
-    .line 157
     const-string v0, "com.xiaomi.mitv.phone.tvassistant"
 
     iput-object v0, p0, Lmiui/content/pm/ExtraPackageManager$SignatureHolder;->MI_TV_ASSISTANT:Ljava/lang/String;
 
-    .line 158
     new-array v0, v6, [Landroid/content/pm/Signature;
 
     new-instance v1, Landroid/content/pm/Signature;
@@ -384,12 +355,10 @@
 
     iput-object v0, p0, Lmiui/content/pm/ExtraPackageManager$SignatureHolder;->MI_TV_ASSISTANT_SIGNATURES:[Landroid/content/pm/Signature;
 
-    .line 163
     const-string v0, "com.duokan.phone.remotecontroller"
 
     iput-object v0, p0, Lmiui/content/pm/ExtraPackageManager$SignatureHolder;->DUOKAN_REMOTE_CONTROLLER:Ljava/lang/String;
 
-    .line 164
     new-array v0, v6, [Landroid/content/pm/Signature;
 
     new-instance v1, Landroid/content/pm/Signature;
@@ -402,12 +371,10 @@
 
     iput-object v0, p0, Lmiui/content/pm/ExtraPackageManager$SignatureHolder;->DUOKAN_REMOTE_CONTROLLER_SIGNATURES:[Landroid/content/pm/Signature;
 
-    .line 169
     const-string v0, "com.xiaomi.facephoto"
 
     iput-object v0, p0, Lmiui/content/pm/ExtraPackageManager$SignatureHolder;->FACE_PHOTO:Ljava/lang/String;
 
-    .line 170
     new-array v0, v6, [Landroid/content/pm/Signature;
 
     new-instance v1, Landroid/content/pm/Signature;
@@ -420,22 +387,18 @@
 
     iput-object v0, p0, Lmiui/content/pm/ExtraPackageManager$SignatureHolder;->FACE_PHOTO_SIGNATURES:[Landroid/content/pm/Signature;
 
-    .line 175
     const-string v0, "com.mi.misupport"
 
     iput-object v0, p0, Lmiui/content/pm/ExtraPackageManager$SignatureHolder;->MI_SUPPORT:Ljava/lang/String;
 
-    .line 176
     iget-object v0, p0, Lmiui/content/pm/ExtraPackageManager$SignatureHolder;->MITALK_SIGNATURES:[Landroid/content/pm/Signature;
 
     iput-object v0, p0, Lmiui/content/pm/ExtraPackageManager$SignatureHolder;->MI_SUPPORT_SIGNATURES:[Landroid/content/pm/Signature;
 
-    .line 178
     const-string v0, "com.xiaomi.adecom"
 
     iput-object v0, p0, Lmiui/content/pm/ExtraPackageManager$SignatureHolder;->MIUI_ECOM:Ljava/lang/String;
 
-    .line 179
     new-array v0, v6, [Landroid/content/pm/Signature;
 
     new-instance v1, Landroid/content/pm/Signature;
@@ -448,32 +411,26 @@
 
     iput-object v0, p0, Lmiui/content/pm/ExtraPackageManager$SignatureHolder;->MIUI_ECOM_SIGNATURES:[Landroid/content/pm/Signature;
 
-    .line 184
     const-string v0, "com.wali.live"
 
     iput-object v0, p0, Lmiui/content/pm/ExtraPackageManager$SignatureHolder;->WALI_LIVE:Ljava/lang/String;
 
-    .line 185
     iget-object v0, p0, Lmiui/content/pm/ExtraPackageManager$SignatureHolder;->MITALK_SIGNATURES:[Landroid/content/pm/Signature;
 
     iput-object v0, p0, Lmiui/content/pm/ExtraPackageManager$SignatureHolder;->WALI_LIVE_SIGNATURES:[Landroid/content/pm/Signature;
 
-    .line 187
     const-string v0, "com.mi.global.bbs"
 
     iput-object v0, p0, Lmiui/content/pm/ExtraPackageManager$SignatureHolder;->MI_GLOBAL_BBS:Ljava/lang/String;
 
-    .line 188
     iget-object v0, p0, Lmiui/content/pm/ExtraPackageManager$SignatureHolder;->MI_GLOBAL_SHOP_SIGNATURES:[Landroid/content/pm/Signature;
 
     iput-object v0, p0, Lmiui/content/pm/ExtraPackageManager$SignatureHolder;->MI_GLOBAL_BBS_SIGNATURES:[Landroid/content/pm/Signature;
 
-    .line 190
     const-string v0, "com.kuaiest.video"
 
     iput-object v0, p0, Lmiui/content/pm/ExtraPackageManager$SignatureHolder;->MI_KUAI_VIDEO:Ljava/lang/String;
 
-    .line 191
     new-array v0, v6, [Landroid/content/pm/Signature;
 
     new-instance v1, Landroid/content/pm/Signature;
@@ -486,12 +443,10 @@
 
     iput-object v0, p0, Lmiui/content/pm/ExtraPackageManager$SignatureHolder;->MI_KUAI_VIDEO_SIGNATURES:[Landroid/content/pm/Signature;
 
-    .line 195
     const-string v0, "com.xiaomi.loan"
 
     iput-object v0, p0, Lmiui/content/pm/ExtraPackageManager$SignatureHolder;->XIAOMI_LOAN:Ljava/lang/String;
 
-    .line 196
     new-array v0, v6, [Landroid/content/pm/Signature;
 
     new-instance v1, Landroid/content/pm/Signature;
@@ -504,7 +459,6 @@
 
     iput-object v0, p0, Lmiui/content/pm/ExtraPackageManager$SignatureHolder;->XIAOMI_LOAN_SIGNATURES:[Landroid/content/pm/Signature;
 
-    .line 204
     const/4 v0, 0x4
 
     new-array v0, v0, [[Landroid/content/pm/Signature;
@@ -527,7 +481,6 @@
 
     iput-object v0, p0, Lmiui/content/pm/ExtraPackageManager$SignatureHolder;->TRUSTED_SIGNATURES:[[Landroid/content/pm/Signature;
 
-    .line 214
     const/16 v0, 0x16
 
     new-array v0, v0, [Lmiui/content/pm/ExtraPackageManager$SignatureHolder$WhiteListEntity;

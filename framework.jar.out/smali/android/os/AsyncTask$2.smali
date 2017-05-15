@@ -30,7 +30,6 @@
     .locals 1
 
     .prologue
-    .line 289
     .local p0, "this":Landroid/os/AsyncTask$2;, "Landroid/os/AsyncTask.2;"
     iput-object p1, p0, Landroid/os/AsyncTask$2;->this$0:Landroid/os/AsyncTask;
 
@@ -58,7 +57,6 @@
     .end annotation
 
     .prologue
-    .line 291
     .local p0, "this":Landroid/os/AsyncTask$2;, "Landroid/os/AsyncTask.2;"
     iget-object v1, p0, Landroid/os/AsyncTask$2;->this$0:Landroid/os/AsyncTask;
 
@@ -71,12 +69,10 @@
 
     invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 293
     const/16 v1, 0xa
 
     invoke-static {v1}, Landroid/os/Process;->setThreadPriority(I)V
 
-    .line 295
     iget-object v1, p0, Landroid/os/AsyncTask$2;->this$0:Landroid/os/AsyncTask;
 
     iget-object v2, p0, Landroid/os/AsyncTask$2;->mParams:[Ljava/lang/Object;
@@ -85,11 +81,9 @@
 
     move-result-object v0
 
-    .line 296
     .local v0, "result":Ljava/lang/Object;, "TResult;"
     invoke-static {}, Landroid/os/Binder;->flushPendingCommands()V
 
-    .line 297
     iget-object v1, p0, Landroid/os/AsyncTask$2;->this$0:Landroid/os/AsyncTask;
 
     # invokes: Landroid/os/AsyncTask;->postResult(Ljava/lang/Object;)Ljava/lang/Object;

@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,12 +19,10 @@
     .param p1, "locale"    # Ljava/util/Locale;
 
     .prologue
-    .line 32
     invoke-virtual {p0}, Landroid/speech/tts/TtsEngines;->getEngines()Ljava/util/List;
 
     move-result-object v2
 
-    .line 34
     .local v2, "engines":Ljava/util/List;, "Ljava/util/List<Landroid/speech/tts/TextToSpeech$EngineInfo;>;"
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -45,7 +42,6 @@
 
     check-cast v0, Landroid/speech/tts/TextToSpeech$EngineInfo;
 
-    .line 35
     .local v0, "engine":Landroid/speech/tts/TextToSpeech$EngineInfo;
     iget-object v4, v0, Landroid/speech/tts/TextToSpeech$EngineInfo;->name:Ljava/lang/String;
 
@@ -53,7 +49,6 @@
 
     move-result-object v1
 
-    .line 36
     .local v1, "engineDefaultLocale":Ljava/util/Locale;
     invoke-virtual {v1, p1}, Ljava/util/Locale;->equals(Ljava/lang/Object;)Z
 
@@ -61,10 +56,8 @@
 
     if-eqz v4, :cond_0
 
-    .line 37
     iget-object v4, v0, Landroid/speech/tts/TextToSpeech$EngineInfo;->name:Ljava/lang/String;
 
-    .line 41
     .end local v0    # "engine":Landroid/speech/tts/TextToSpeech$EngineInfo;
     .end local v1    # "engineDefaultLocale":Ljava/util/Locale;
     :goto_0
@@ -82,10 +75,8 @@
     .param p1, "locale"    # Ljava/util/Locale;
 
     .prologue
-    .line 16
     const-string v0, "com.baidu.duersdk.opensdk"
 
-    .line 17
     .local v0, "openSdkSpeechEngine":Ljava/lang/String;
     sget-object v1, Ljava/util/Locale;->SIMPLIFIED_CHINESE:Ljava/util/Locale;
 
@@ -103,7 +94,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 19
     :cond_0
     const-string v1, "com.baidu.duersdk.opensdk"
 
@@ -113,10 +103,8 @@
 
     if-eqz v1, :cond_1
 
-    .line 20
     const-string v1, "com.baidu.duersdk.opensdk"
 
-    .line 24
     :goto_0
     return-object v1
 

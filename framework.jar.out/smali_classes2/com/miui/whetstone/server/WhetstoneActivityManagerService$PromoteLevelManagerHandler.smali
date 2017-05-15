@@ -24,17 +24,14 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 459
     iput-object p1, p0, Lcom/miui/whetstone/server/WhetstoneActivityManagerService$PromoteLevelManagerHandler;->this$0:Lcom/miui/whetstone/server/WhetstoneActivityManagerService;
 
-    .line 460
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
     invoke-direct {p0, p2, v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
 
-    .line 461
     return-void
 .end method
 
@@ -45,22 +42,18 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 465
     iget v2, p1, Landroid/os/Message;->what:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 478
     :goto_0
     return-void
 
-    .line 467
     :pswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/String;
 
-    .line 468
     .local v0, "processName":Ljava/lang/String;
     iget v2, p1, Landroid/os/Message;->arg2:I
 
@@ -68,7 +61,6 @@
 
     move-result v1
 
-    .line 469
     .local v1, "userId":I
     iget-object v2, p0, Lcom/miui/whetstone/server/WhetstoneActivityManagerService$PromoteLevelManagerHandler;->this$0:Lcom/miui/whetstone/server/WhetstoneActivityManagerService;
 
@@ -77,7 +69,6 @@
 
     goto :goto_0
 
-    .line 472
     .end local v0    # "processName":Ljava/lang/String;
     .end local v1    # "userId":I
     :pswitch_1
@@ -88,7 +79,6 @@
 
     goto :goto_0
 
-    .line 475
     :pswitch_2
     iget v2, p1, Landroid/os/Message;->arg1:I
 
@@ -98,7 +88,6 @@
 
     goto :goto_0
 
-    .line 465
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

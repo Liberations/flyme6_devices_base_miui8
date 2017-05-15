@@ -32,23 +32,19 @@
     .end annotation
 
     .prologue
-    .line 21
     .local p1, "maps":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 19
     invoke-static {}, Lcom/google/android/collect/Maps;->newHashMap()Ljava/util/HashMap;
 
     move-result-object v0
 
     iput-object v0, p0, Lmiui/push/PushAttributes;->mAttrs:Ljava/util/Map;
 
-    .line 22
     iget-object v0, p0, Lmiui/push/PushAttributes;->mAttrs:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
 
-    .line 23
     return-void
 .end method
 
@@ -57,12 +53,10 @@
     .param p0, "plain"    # Ljava/lang/String;
 
     .prologue
-    .line 51
     invoke-static {}, Lcom/google/android/collect/Maps;->newHashMap()Ljava/util/HashMap;
 
     move-result-object v4
 
-    .line 52
     .local v4, "maps":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -70,14 +64,12 @@
 
     if-nez v7, :cond_1
 
-    .line 53
     const-string v7, ","
 
     invoke-virtual {p0, v7}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v6
 
-    .line 54
     .local v6, "parts":[Ljava/lang/String;
     move-object v0, v6
 
@@ -93,7 +85,6 @@
 
     aget-object v1, v0, v2
 
-    .line 55
     .local v1, "attr":Ljava/lang/String;
     const-string v7, ":"
 
@@ -101,7 +92,6 @@
 
     move-result-object v5
 
-    .line 56
     .local v5, "pair":[Ljava/lang/String;
     array-length v7, v5
 
@@ -109,7 +99,6 @@
 
     if-ne v7, v8, :cond_0
 
-    .line 57
     const/4 v7, 0x0
 
     aget-object v7, v5, v7
@@ -120,13 +109,11 @@
 
     invoke-virtual {v4, v7, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 54
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 61
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v1    # "attr":Ljava/lang/String;
     .end local v2    # "i$":I
@@ -148,7 +135,6 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 26
     iget-object v0, p0, Lmiui/push/PushAttributes;->mAttrs:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -164,12 +150,10 @@
     .locals 5
 
     .prologue
-    .line 30
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 31
     .local v3, "sb":Ljava/lang/StringBuilder;
     iget-object v4, p0, Lmiui/push/PushAttributes;->mAttrs:Ljava/util/Map;
 
@@ -177,7 +161,6 @@
 
     move-result-object v0
 
-    .line 32
     .local v0, "entries":Ljava/util/Set;, "Ljava/util/Set<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;>;"
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -197,7 +180,6 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 33
     .local v1, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->length()I
 
@@ -205,12 +187,10 @@
 
     if-lez v4, :cond_0
 
-    .line 34
     const/16 v4, 0x2c
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 36
     :cond_0
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -220,12 +200,10 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 37
     const/16 v4, 0x3a
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 38
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v4
@@ -236,7 +214,6 @@
 
     goto :goto_0
 
-    .line 40
     .end local v1    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_1
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -250,7 +227,6 @@
     .locals 1
 
     .prologue
-    .line 47
     invoke-virtual {p0}, Lmiui/push/PushAttributes;->toPlain()Ljava/lang/String;
 
     move-result-object v0

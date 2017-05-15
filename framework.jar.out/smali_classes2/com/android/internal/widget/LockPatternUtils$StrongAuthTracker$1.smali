@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1390
     iput-object p1, p0, Lcom/android/internal/widget/LockPatternUtils$StrongAuthTracker$1;->this$0:Lcom/android/internal/widget/LockPatternUtils$StrongAuthTracker;
 
     invoke-direct {p0}, Landroid/app/trust/IStrongAuthTracker$Stub;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 1394
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtils$StrongAuthTracker$1;->this$0:Lcom/android/internal/widget/LockPatternUtils$StrongAuthTracker;
 
     # getter for: Lcom/android/internal/widget/LockPatternUtils$StrongAuthTracker;->mHandler:Lcom/android/internal/widget/LockPatternUtils$StrongAuthTracker$H;
@@ -55,6 +53,5 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 1396
     return-void
 .end method

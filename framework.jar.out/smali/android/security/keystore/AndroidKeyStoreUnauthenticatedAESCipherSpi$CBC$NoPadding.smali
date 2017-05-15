@@ -19,12 +19,10 @@
     .locals 1
 
     .prologue
-    .line 69
     const/4 v0, 0x1
 
     invoke-direct {p0, v0}, Landroid/security/keystore/AndroidKeyStoreUnauthenticatedAESCipherSpi$CBC;-><init>(I)V
 
-    .line 70
     return-void
 .end method
 
@@ -39,7 +37,6 @@
     .end annotation
 
     .prologue
-    .line 67
     invoke-super {p0}, Landroid/security/keystore/AndroidKeyStoreUnauthenticatedAESCipherSpi$CBC;->finalize()V
 
     return-void

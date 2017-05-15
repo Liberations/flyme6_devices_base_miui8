@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1054
     iput-object p1, p0, Landroid/service/wallpaper/WallpaperService$Engine$3;->this$1:Landroid/service/wallpaper/WallpaperService$Engine;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "displayId"    # I
 
     .prologue
-    .line 1068
     return-void
 .end method
 
@@ -50,7 +48,6 @@
     .param p1, "displayId"    # I
 
     .prologue
-    .line 1057
     iget-object v0, p0, Landroid/service/wallpaper/WallpaperService$Engine$3;->this$1:Landroid/service/wallpaper/WallpaperService$Engine;
 
     iget-object v0, v0, Landroid/service/wallpaper/WallpaperService$Engine;->mDisplay:Landroid/view/Display;
@@ -61,12 +58,10 @@
 
     if-ne v0, p1, :cond_0
 
-    .line 1058
     iget-object v0, p0, Landroid/service/wallpaper/WallpaperService$Engine$3;->this$1:Landroid/service/wallpaper/WallpaperService$Engine;
 
     invoke-virtual {v0}, Landroid/service/wallpaper/WallpaperService$Engine;->reportVisibility()V
 
-    .line 1060
     :cond_0
     return-void
 .end method
@@ -76,6 +71,5 @@
     .param p1, "displayId"    # I
 
     .prologue
-    .line 1064
     return-void
 .end method

@@ -28,13 +28,10 @@
     .param p3, "isNumber"    # Z
 
     .prologue
-    .line 307
     invoke-direct {p0}, Lmiui/maml/data/Expression;-><init>()V
 
-    .line 308
     iput-object p2, p0, Lmiui/maml/data/Expression$VariableExpression;->mName:Ljava/lang/String;
 
-    .line 309
     new-instance v0, Lmiui/maml/data/IndexedVariable;
 
     iget-object v1, p0, Lmiui/maml/data/Expression$VariableExpression;->mName:Ljava/lang/String;
@@ -43,7 +40,6 @@
 
     iput-object v0, p0, Lmiui/maml/data/Expression$VariableExpression;->mIndexedVar:Lmiui/maml/data/IndexedVariable;
 
-    .line 313
     return-void
 .end method
 
@@ -53,7 +49,6 @@
     .locals 1
 
     .prologue
-    .line 316
     iget-object v0, p0, Lmiui/maml/data/Expression$VariableExpression;->mIndexedVar:Lmiui/maml/data/IndexedVariable;
 
     invoke-virtual {v0}, Lmiui/maml/data/IndexedVariable;->getIndex()I
@@ -67,7 +62,6 @@
     .locals 1
 
     .prologue
-    .line 324
     iget-object v0, p0, Lmiui/maml/data/Expression$VariableExpression;->mName:Ljava/lang/String;
 
     return-object v0
@@ -77,7 +71,6 @@
     .locals 1
 
     .prologue
-    .line 320
     iget-object v0, p0, Lmiui/maml/data/Expression$VariableExpression;->mIndexedVar:Lmiui/maml/data/IndexedVariable;
 
     invoke-virtual {v0}, Lmiui/maml/data/IndexedVariable;->getVersion()I

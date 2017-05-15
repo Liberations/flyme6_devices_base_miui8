@@ -11,7 +11,6 @@
     .locals 0
 
     .prologue
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,16 +31,13 @@
 
     const/high16 v1, 0x3f800000    # 1.0f
 
-    .line 8
     cmpl-float v2, p1, v0
 
     if-nez v2, :cond_0
 
-    .line 14
     :goto_0
     return v0
 
-    .line 10
     :cond_0
     cmpl-float v0, p1, v1
 
@@ -49,10 +45,8 @@
 
     move v0, v1
 
-    .line 11
     goto :goto_0
 
-    .line 12
     :cond_1
     const/high16 v0, 0x40000000    # 2.0f
 
@@ -62,7 +56,6 @@
 
     if-gez v0, :cond_2
 
-    .line 13
     const/high16 v0, 0x41200000    # 10.0f
 
     sub-float v1, p1, v1
@@ -81,7 +74,6 @@
 
     goto :goto_0
 
-    .line 14
     :cond_2
     const/high16 v0, -0x3ee00000    # -10.0f
 

@@ -16,10 +16,8 @@
     .param p2, "ele"    # Lorg/w3c/dom/Element;
 
     .prologue
-    .line 15
     invoke-direct {p0, p1}, Lmiui/maml/ActionCommand;-><init>(Lmiui/maml/elements/ScreenElement;)V
 
-    .line 17
     return-void
 .end method
 
@@ -29,6 +27,5 @@
     .locals 0
 
     .prologue
-    .line 22
     return-void
 .end method

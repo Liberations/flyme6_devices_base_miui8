@@ -33,10 +33,8 @@
     .locals 1
 
     .prologue
-    .line 482
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 484
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -53,7 +51,6 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 492
     iget-object v0, p0, Lmiui/maml/util/net/SimpleRequest$HeaderContent;->headers:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -79,7 +76,6 @@
     .end annotation
 
     .prologue
-    .line 496
     iget-object v0, p0, Lmiui/maml/util/net/SimpleRequest$HeaderContent;->headers:Ljava/util/Map;
 
     return-object v0
@@ -91,12 +87,10 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 488
     iget-object v0, p0, Lmiui/maml/util/net/SimpleRequest$HeaderContent;->headers:Ljava/util/Map;
 
     invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 489
     return-void
 .end method
 
@@ -114,13 +108,11 @@
     .end annotation
 
     .prologue
-    .line 500
     .local p1, "headers":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     iget-object v0, p0, Lmiui/maml/util/net/SimpleRequest$HeaderContent;->headers:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
 
-    .line 501
     return-void
 .end method
 
@@ -128,7 +120,6 @@
     .locals 2
 
     .prologue
-    .line 505
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

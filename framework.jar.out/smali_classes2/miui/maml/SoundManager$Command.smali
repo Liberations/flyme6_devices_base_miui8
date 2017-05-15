@@ -48,7 +48,6 @@
 
     const/4 v2, 0x0
 
-    .line 39
     new-instance v0, Lmiui/maml/SoundManager$Command;
 
     const-string v1, "Play"
@@ -57,7 +56,6 @@
 
     sput-object v0, Lmiui/maml/SoundManager$Command;->Play:Lmiui/maml/SoundManager$Command;
 
-    .line 40
     new-instance v0, Lmiui/maml/SoundManager$Command;
 
     const-string v1, "Pause"
@@ -66,7 +64,6 @@
 
     sput-object v0, Lmiui/maml/SoundManager$Command;->Pause:Lmiui/maml/SoundManager$Command;
 
-    .line 41
     new-instance v0, Lmiui/maml/SoundManager$Command;
 
     const-string v1, "Resume"
@@ -75,7 +72,6 @@
 
     sput-object v0, Lmiui/maml/SoundManager$Command;->Resume:Lmiui/maml/SoundManager$Command;
 
-    .line 42
     new-instance v0, Lmiui/maml/SoundManager$Command;
 
     const-string v1, "Stop"
@@ -84,7 +80,6 @@
 
     sput-object v0, Lmiui/maml/SoundManager$Command;->Stop:Lmiui/maml/SoundManager$Command;
 
-    .line 38
     const/4 v0, 0x4
 
     new-array v0, v0, [Lmiui/maml/SoundManager$Command;
@@ -119,7 +114,6 @@
     .end annotation
 
     .prologue
-    .line 38
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -130,7 +124,6 @@
     .param p0, "c"    # Ljava/lang/String;
 
     .prologue
-    .line 45
     const-string v0, "pause"
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -139,14 +132,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 46
     sget-object v0, Lmiui/maml/SoundManager$Command;->Pause:Lmiui/maml/SoundManager$Command;
 
-    .line 52
     :goto_0
     return-object v0
 
-    .line 47
     :cond_0
     const-string v0, "resume"
 
@@ -156,12 +146,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 48
     sget-object v0, Lmiui/maml/SoundManager$Command;->Resume:Lmiui/maml/SoundManager$Command;
 
     goto :goto_0
 
-    .line 49
     :cond_1
     const-string v0, "stop"
 
@@ -171,12 +159,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 50
     sget-object v0, Lmiui/maml/SoundManager$Command;->Stop:Lmiui/maml/SoundManager$Command;
 
     goto :goto_0
 
-    .line 52
     :cond_2
     sget-object v0, Lmiui/maml/SoundManager$Command;->Play:Lmiui/maml/SoundManager$Command;
 
@@ -188,7 +174,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 38
     const-class v0, Lmiui/maml/SoundManager$Command;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -204,7 +189,6 @@
     .locals 1
 
     .prologue
-    .line 38
     sget-object v0, Lmiui/maml/SoundManager$Command;->$VALUES:[Lmiui/maml/SoundManager$Command;
 
     invoke-virtual {v0}, [Lmiui/maml/SoundManager$Command;->clone()Ljava/lang/Object;

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 363
     iput-object p1, p0, Landroid/service/trust/TrustAgentService$TrustAgentServiceWrapper;->this$0:Landroid/service/trust/TrustAgentService;
 
     invoke-direct {p0}, Landroid/service/trust/ITrustAgentService$Stub;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Landroid/service/trust/TrustAgentService$1;
 
     .prologue
-    .line 363
     invoke-direct {p0, p1}, Landroid/service/trust/TrustAgentService$TrustAgentServiceWrapper;-><init>(Landroid/service/trust/TrustAgentService;)V
 
     return-void
@@ -61,7 +59,6 @@
     .end annotation
 
     .prologue
-    .line 376
     .local p1, "args":Ljava/util/List;, "Ljava/util/List<Landroid/os/PersistableBundle;>;"
     iget-object v0, p0, Landroid/service/trust/TrustAgentService$TrustAgentServiceWrapper;->this$0:Landroid/service/trust/TrustAgentService;
 
@@ -82,7 +79,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 378
     return-void
 .end method
 
@@ -95,7 +91,6 @@
     .end annotation
 
     .prologue
-    .line 382
     iget-object v0, p0, Landroid/service/trust/TrustAgentService$TrustAgentServiceWrapper;->this$0:Landroid/service/trust/TrustAgentService;
 
     # getter for: Landroid/service/trust/TrustAgentService;->mHandler:Landroid/os/Handler;
@@ -111,7 +106,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 383
     return-void
 .end method
 
@@ -124,7 +118,6 @@
     .end annotation
 
     .prologue
-    .line 387
     iget-object v0, p0, Landroid/service/trust/TrustAgentService$TrustAgentServiceWrapper;->this$0:Landroid/service/trust/TrustAgentService;
 
     # getter for: Landroid/service/trust/TrustAgentService;->mHandler:Landroid/os/Handler;
@@ -140,7 +133,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 388
     return-void
 .end method
 
@@ -148,7 +140,6 @@
     .locals 2
 
     .prologue
-    .line 371
     iget-object v0, p0, Landroid/service/trust/TrustAgentService$TrustAgentServiceWrapper;->this$0:Landroid/service/trust/TrustAgentService;
 
     # getter for: Landroid/service/trust/TrustAgentService;->mHandler:Landroid/os/Handler;
@@ -160,7 +151,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 372
     return-void
 .end method
 
@@ -173,7 +163,6 @@
 
     const/4 v2, 0x0
 
-    .line 366
     iget-object v0, p0, Landroid/service/trust/TrustAgentService$TrustAgentServiceWrapper;->this$0:Landroid/service/trust/TrustAgentService;
 
     # getter for: Landroid/service/trust/TrustAgentService;->mHandler:Landroid/os/Handler;
@@ -192,13 +181,11 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 367
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 366
     goto :goto_0
 .end method
 
@@ -207,7 +194,6 @@
     .param p1, "callback"    # Landroid/service/trust/ITrustAgentServiceCallback;
 
     .prologue
-    .line 392
     iget-object v1, p0, Landroid/service/trust/TrustAgentService$TrustAgentServiceWrapper;->this$0:Landroid/service/trust/TrustAgentService;
 
     # getter for: Landroid/service/trust/TrustAgentService;->mLock:Ljava/lang/Object;
@@ -217,14 +203,12 @@
 
     monitor-enter v2
 
-    .line 393
     :try_start_0
     iget-object v1, p0, Landroid/service/trust/TrustAgentService$TrustAgentServiceWrapper;->this$0:Landroid/service/trust/TrustAgentService;
 
     # setter for: Landroid/service/trust/TrustAgentService;->mCallback:Landroid/service/trust/ITrustAgentServiceCallback;
     invoke-static {v1, p1}, Landroid/service/trust/TrustAgentService;->access$102(Landroid/service/trust/TrustAgentService;Landroid/service/trust/ITrustAgentServiceCallback;)Landroid/service/trust/ITrustAgentServiceCallback;
 
-    .line 396
     iget-object v1, p0, Landroid/service/trust/TrustAgentService$TrustAgentServiceWrapper;->this$0:Landroid/service/trust/TrustAgentService;
 
     # getter for: Landroid/service/trust/TrustAgentService;->mManagingTrust:Z
@@ -236,7 +220,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 398
     :try_start_1
     iget-object v1, p0, Landroid/service/trust/TrustAgentService$TrustAgentServiceWrapper;->this$0:Landroid/service/trust/TrustAgentService;
 
@@ -257,7 +240,6 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 403
     :cond_0
     :goto_0
     :try_start_2
@@ -270,7 +252,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 404
     iget-object v1, p0, Landroid/service/trust/TrustAgentService$TrustAgentServiceWrapper;->this$0:Landroid/service/trust/TrustAgentService;
 
     # getter for: Landroid/service/trust/TrustAgentService;->mPendingGrantTrustTask:Ljava/lang/Runnable;
@@ -280,7 +261,6 @@
 
     invoke-interface {v1}, Ljava/lang/Runnable;->run()V
 
-    .line 405
     iget-object v1, p0, Landroid/service/trust/TrustAgentService$TrustAgentServiceWrapper;->this$0:Landroid/service/trust/TrustAgentService;
 
     const/4 v3, 0x0
@@ -288,18 +268,14 @@
     # setter for: Landroid/service/trust/TrustAgentService;->mPendingGrantTrustTask:Ljava/lang/Runnable;
     invoke-static {v1, v3}, Landroid/service/trust/TrustAgentService;->access$602(Landroid/service/trust/TrustAgentService;Ljava/lang/Runnable;)Ljava/lang/Runnable;
 
-    .line 407
     :cond_1
     monitor-exit v2
 
-    .line 408
     return-void
 
-    .line 399
     :catch_0
     move-exception v0
 
-    .line 400
     .local v0, "e":Landroid/os/RemoteException;
     iget-object v1, p0, Landroid/service/trust/TrustAgentService$TrustAgentServiceWrapper;->this$0:Landroid/service/trust/TrustAgentService;
 
@@ -310,7 +286,6 @@
 
     goto :goto_0
 
-    .line 407
     .end local v0    # "e":Landroid/os/RemoteException;
     :catchall_0
     move-exception v1

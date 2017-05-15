@@ -33,13 +33,10 @@
     .param p1, "service"    # Landroid/os/IBinder;
 
     .prologue
-    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 23
     iput-object p1, p0, Lmiui/hareware/display/DisplayFeatureServiceProxy;->mService:Landroid/os/IBinder;
 
-    .line 25
     :try_start_0
     iget-object v0, p0, Lmiui/hareware/display/DisplayFeatureServiceProxy;->mService:Landroid/os/IBinder;
 
@@ -49,7 +46,6 @@
 
     iput-object v0, p0, Lmiui/hareware/display/DisplayFeatureServiceProxy;->mDescriptor:Ljava/lang/String;
 
-    .line 26
     iget-object v0, p0, Lmiui/hareware/display/DisplayFeatureServiceProxy;->mDescriptor:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -58,19 +54,16 @@
 
     if-eqz v0, :cond_0
 
-    .line 27
     const-string v0, "miui.hardware.display.IDisplayFeatureService"
 
     iput-object v0, p0, Lmiui/hareware/display/DisplayFeatureServiceProxy;->mDescriptor:Ljava/lang/String;
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 31
     :cond_0
     :goto_0
     return-void
 
-    .line 29
     :catch_0
     move-exception v0
 
@@ -88,29 +81,24 @@
     .end annotation
 
     .prologue
-    .line 69
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 70
     .local v1, "data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v5
 
-    .line 71
     .local v5, "reply":Landroid/os/Parcel;
     const/4 v6, -0x1
 
-    .line 73
     .local v6, "result":I
     :try_start_0
     iget-object v7, p0, Lmiui/hareware/display/DisplayFeatureServiceProxy;->mDescriptor:Ljava/lang/String;
 
     invoke-virtual {v1, v7}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 74
     move-object v0, p2
 
     .local v0, "arr$":[I
@@ -125,16 +113,13 @@
 
     aget v4, v0, v2
 
-    .line 75
     .local v4, "param":I
     invoke-virtual {v1, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 74
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 77
     .end local v4    # "param":I
     :cond_0
     iget-object v7, p0, Lmiui/hareware/display/DisplayFeatureServiceProxy;->mService:Landroid/os/IBinder;
@@ -147,27 +132,21 @@
 
     if-eqz v7, :cond_1
 
-    .line 78
     invoke-virtual {v5}, Landroid/os/Parcel;->readException()V
 
-    .line 79
     invoke-virtual {v5}, Landroid/os/Parcel;->readInt()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result v6
 
-    .line 82
     :cond_1
     invoke-virtual {v5}, Landroid/os/Parcel;->recycle()V
 
-    .line 83
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 85
     return v6
 
-    .line 82
     .end local v0    # "arr$":[I
     .end local v2    # "i$":I
     .end local v3    # "len$":I
@@ -176,7 +155,6 @@
 
     invoke-virtual {v5}, Landroid/os/Parcel;->recycle()V
 
-    .line 83
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
     throw v7
@@ -198,7 +176,6 @@
     .prologue
     const/4 v2, 0x3
 
-    .line 45
     new-array v0, v2, [I
 
     const/4 v1, 0x0
@@ -231,7 +208,6 @@
     .end annotation
 
     .prologue
-    .line 55
     const/4 v0, 0x5
 
     const/4 v1, 0x2
@@ -264,7 +240,6 @@
     .end annotation
 
     .prologue
-    .line 50
     const/4 v0, 0x4
 
     const/4 v1, 0x2
@@ -299,7 +274,6 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 35
     const/4 v0, 0x2
 
     new-array v0, v0, [I
@@ -330,7 +304,6 @@
     .prologue
     const/4 v2, 0x2
 
-    .line 40
     new-array v0, v2, [I
 
     const/4 v1, 0x0
@@ -361,7 +334,6 @@
     .end annotation
 
     .prologue
-    .line 65
     const/16 v0, 0x64
 
     const/4 v1, 0x4
@@ -402,7 +374,6 @@
     .end annotation
 
     .prologue
-    .line 60
     const/4 v0, 0x6
 
     const/4 v1, 0x2

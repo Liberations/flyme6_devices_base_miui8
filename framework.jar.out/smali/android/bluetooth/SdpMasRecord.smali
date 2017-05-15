@@ -39,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 139
     new-instance v0, Landroid/bluetooth/SdpMasRecord$1;
 
     invoke-direct {v0}, Landroid/bluetooth/SdpMasRecord$1;-><init>()V
@@ -60,31 +59,22 @@
     .param p7, "service_name"    # Ljava/lang/String;
 
     .prologue
-    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 43
     iput p1, p0, Landroid/bluetooth/SdpMasRecord;->mMasInstanceId:I
 
-    .line 44
     iput p2, p0, Landroid/bluetooth/SdpMasRecord;->mL2capPsm:I
 
-    .line 45
     iput p3, p0, Landroid/bluetooth/SdpMasRecord;->mRfcommChannelNumber:I
 
-    .line 46
     iput p4, p0, Landroid/bluetooth/SdpMasRecord;->mProfileVersion:I
 
-    .line 47
     iput p5, p0, Landroid/bluetooth/SdpMasRecord;->mSupportedFeatures:I
 
-    .line 48
     iput p6, p0, Landroid/bluetooth/SdpMasRecord;->mSupportedMessageTypes:I
 
-    .line 49
     iput-object p7, p0, Landroid/bluetooth/SdpMasRecord;->mServiceName:Ljava/lang/String;
 
-    .line 50
     return-void
 .end method
 
@@ -93,59 +83,50 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 52
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 53
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/bluetooth/SdpMasRecord;->mMasInstanceId:I
 
-    .line 54
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/bluetooth/SdpMasRecord;->mL2capPsm:I
 
-    .line 55
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/bluetooth/SdpMasRecord;->mRfcommChannelNumber:I
 
-    .line 56
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/bluetooth/SdpMasRecord;->mProfileVersion:I
 
-    .line 57
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/bluetooth/SdpMasRecord;->mSupportedFeatures:I
 
-    .line 58
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/bluetooth/SdpMasRecord;->mSupportedMessageTypes:I
 
-    .line 59
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/bluetooth/SdpMasRecord;->mServiceName:Ljava/lang/String;
 
-    .line 60
     return-void
 .end method
 
@@ -155,7 +136,6 @@
     .locals 1
 
     .prologue
-    .line 64
     const/4 v0, 0x0
 
     return v0
@@ -165,7 +145,6 @@
     .locals 1
 
     .prologue
-    .line 72
     iget v0, p0, Landroid/bluetooth/SdpMasRecord;->mL2capPsm:I
 
     return v0
@@ -175,7 +154,6 @@
     .locals 1
 
     .prologue
-    .line 68
     iget v0, p0, Landroid/bluetooth/SdpMasRecord;->mMasInstanceId:I
 
     return v0
@@ -185,7 +163,6 @@
     .locals 1
 
     .prologue
-    .line 80
     iget v0, p0, Landroid/bluetooth/SdpMasRecord;->mProfileVersion:I
 
     return v0
@@ -195,7 +172,6 @@
     .locals 1
 
     .prologue
-    .line 76
     iget v0, p0, Landroid/bluetooth/SdpMasRecord;->mRfcommChannelNumber:I
 
     return v0
@@ -205,7 +181,6 @@
     .locals 1
 
     .prologue
-    .line 96
     iget-object v0, p0, Landroid/bluetooth/SdpMasRecord;->mServiceName:Ljava/lang/String;
 
     return-object v0
@@ -215,7 +190,6 @@
     .locals 1
 
     .prologue
-    .line 84
     iget v0, p0, Landroid/bluetooth/SdpMasRecord;->mSupportedFeatures:I
 
     return v0
@@ -225,7 +199,6 @@
     .locals 1
 
     .prologue
-    .line 88
     iget v0, p0, Landroid/bluetooth/SdpMasRecord;->mSupportedMessageTypes:I
 
     return v0
@@ -236,7 +209,6 @@
     .param p1, "msg"    # I
 
     .prologue
-    .line 92
     iget v0, p0, Landroid/bluetooth/SdpMasRecord;->mSupportedMessageTypes:I
 
     and-int/2addr v0, p1
@@ -260,16 +232,13 @@
     .prologue
     const/4 v3, -0x1
 
-    .line 113
     const-string v0, "Bluetooth MAS SDP Record:\n"
 
-    .line 115
     .local v0, "ret":Ljava/lang/String;
     iget v1, p0, Landroid/bluetooth/SdpMasRecord;->mMasInstanceId:I
 
     if-eq v1, v3, :cond_0
 
-    .line 116
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -300,13 +269,11 @@
 
     move-result-object v0
 
-    .line 118
     :cond_0
     iget v1, p0, Landroid/bluetooth/SdpMasRecord;->mRfcommChannelNumber:I
 
     if-eq v1, v3, :cond_1
 
-    .line 119
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -337,13 +304,11 @@
 
     move-result-object v0
 
-    .line 121
     :cond_1
     iget v1, p0, Landroid/bluetooth/SdpMasRecord;->mL2capPsm:I
 
     if-eq v1, v3, :cond_2
 
-    .line 122
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -374,13 +339,11 @@
 
     move-result-object v0
 
-    .line 124
     :cond_2
     iget-object v1, p0, Landroid/bluetooth/SdpMasRecord;->mServiceName:Ljava/lang/String;
 
     if-eqz v1, :cond_3
 
-    .line 125
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -411,13 +374,11 @@
 
     move-result-object v0
 
-    .line 127
     :cond_3
     iget v1, p0, Landroid/bluetooth/SdpMasRecord;->mProfileVersion:I
 
     if-eq v1, v3, :cond_4
 
-    .line 128
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -448,13 +409,11 @@
 
     move-result-object v0
 
-    .line 130
     :cond_4
     iget v1, p0, Landroid/bluetooth/SdpMasRecord;->mSupportedMessageTypes:I
 
     if-eq v1, v3, :cond_5
 
-    .line 131
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -485,13 +444,11 @@
 
     move-result-object v0
 
-    .line 133
     :cond_5
     iget v1, p0, Landroid/bluetooth/SdpMasRecord;->mSupportedFeatures:I
 
     if-eq v1, v3, :cond_6
 
-    .line 134
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -522,7 +479,6 @@
 
     move-result-object v0
 
-    .line 136
     :cond_6
     return-object v0
 .end method
@@ -533,41 +489,33 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 102
     iget v0, p0, Landroid/bluetooth/SdpMasRecord;->mMasInstanceId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 103
     iget v0, p0, Landroid/bluetooth/SdpMasRecord;->mL2capPsm:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 104
     iget v0, p0, Landroid/bluetooth/SdpMasRecord;->mRfcommChannelNumber:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 105
     iget v0, p0, Landroid/bluetooth/SdpMasRecord;->mProfileVersion:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 106
     iget v0, p0, Landroid/bluetooth/SdpMasRecord;->mSupportedFeatures:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 107
     iget v0, p0, Landroid/bluetooth/SdpMasRecord;->mSupportedMessageTypes:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 108
     iget-object v0, p0, Landroid/bluetooth/SdpMasRecord;->mServiceName:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 110
     return-void
 .end method

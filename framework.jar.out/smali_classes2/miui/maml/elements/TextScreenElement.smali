@@ -92,7 +92,6 @@
     .locals 1
 
     .prologue
-    .line 41
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -108,22 +107,18 @@
     .param p2, "root"    # Lmiui/maml/ScreenElementRoot;
 
     .prologue
-    .line 97
     invoke-direct {p0, p1, p2}, Lmiui/maml/elements/AnimatedScreenElement;-><init>(Lorg/w3c/dom/Element;Lmiui/maml/ScreenElementRoot;)V
 
-    .line 49
     new-instance v0, Landroid/text/TextPaint;
 
     invoke-direct {v0}, Landroid/text/TextPaint;-><init>()V
 
     iput-object v0, p0, Lmiui/maml/elements/TextScreenElement;->mPaint:Landroid/text/TextPaint;
 
-    .line 54
     const v0, 0x7f7fffff    # Float.MAX_VALUE
 
     iput v0, p0, Lmiui/maml/elements/TextScreenElement;->mMarqueePos:F
 
-    .line 82
     const-wide/high16 v0, 0x4032000000000000L    # 18.0
 
     invoke-virtual {p0, v0, v1}, Lmiui/maml/elements/TextScreenElement;->scale(D)F
@@ -132,10 +127,8 @@
 
     iput v0, p0, Lmiui/maml/elements/TextScreenElement;->mTextSize:F
 
-    .line 98
     invoke-direct {p0, p1}, Lmiui/maml/elements/TextScreenElement;->load(Lorg/w3c/dom/Element;)V
 
-    .line 99
     return-void
 .end method
 
@@ -143,10 +136,8 @@
     .locals 3
 
     .prologue
-    .line 317
     sget-object v0, Landroid/text/Layout$Alignment;->ALIGN_NORMAL:Landroid/text/Layout$Alignment;
 
-    .line 318
     .local v0, "align":Landroid/text/Layout$Alignment;
     sget-object v1, Lmiui/maml/elements/TextScreenElement$1;->$SwitchMap$miui$maml$elements$ScreenElement$Align:[I
 
@@ -160,31 +151,24 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 329
     :goto_0
     return-object v0
 
-    .line 320
     :pswitch_0
     sget-object v0, Landroid/text/Layout$Alignment;->ALIGN_LEFT:Landroid/text/Layout$Alignment;
 
-    .line 321
     goto :goto_0
 
-    .line 323
     :pswitch_1
     sget-object v0, Landroid/text/Layout$Alignment;->ALIGN_CENTER:Landroid/text/Layout$Alignment;
 
-    .line 324
     goto :goto_0
 
-    .line 326
     :pswitch_2
     sget-object v0, Landroid/text/Layout$Alignment;->ALIGN_RIGHT:Landroid/text/Layout$Alignment;
 
     goto :goto_0
 
-    .line 318
     nop
 
     :pswitch_data_0
@@ -204,26 +188,21 @@
 
     const/4 v8, 0x0
 
-    .line 102
     if-nez p1, :cond_0
 
-    .line 137
     :goto_0
     return-void
 
-    .line 105
     :cond_0
     invoke-virtual {p0}, Lmiui/maml/elements/TextScreenElement;->getVariables()Lmiui/maml/data/Variables;
 
     move-result-object v3
 
-    .line 106
     .local v3, "vars":Lmiui/maml/data/Variables;
     iget-boolean v4, p0, Lmiui/maml/elements/TextScreenElement;->mHasName:Z
 
     if-eqz v4, :cond_1
 
-    .line 107
     new-instance v4, Lmiui/maml/data/IndexedVariable;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -256,7 +235,6 @@
 
     iput-object v4, p0, Lmiui/maml/elements/TextScreenElement;->mTextWidthVar:Lmiui/maml/data/IndexedVariable;
 
-    .line 108
     new-instance v4, Lmiui/maml/data/IndexedVariable;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -289,7 +267,6 @@
 
     iput-object v4, p0, Lmiui/maml/elements/TextScreenElement;->mTextHeightVar:Lmiui/maml/data/IndexedVariable;
 
-    .line 110
     :cond_1
     iget-object v4, p0, Lmiui/maml/elements/TextScreenElement;->mStyle:Lmiui/maml/StylesManager$Style;
 
@@ -299,7 +276,6 @@
 
     iput-object v4, p0, Lmiui/maml/elements/TextScreenElement;->mFormatter:Lmiui/maml/util/TextFormatter;
 
-    .line 111
     iget-object v4, p0, Lmiui/maml/elements/TextScreenElement;->mStyle:Lmiui/maml/StylesManager$Style;
 
     invoke-static {v3, p1, v4}, Lmiui/maml/util/ColorParser;->fromElement(Lmiui/maml/data/Variables;Lorg/w3c/dom/Element;Lmiui/maml/StylesManager$Style;)Lmiui/maml/util/ColorParser;
@@ -308,7 +284,6 @@
 
     iput-object v4, p0, Lmiui/maml/elements/TextScreenElement;->mColorParser:Lmiui/maml/util/ColorParser;
 
-    .line 112
     const-string v4, "size"
 
     invoke-virtual {p0, p1, v4}, Lmiui/maml/elements/TextScreenElement;->getAttr(Lorg/w3c/dom/Element;Ljava/lang/String;)Ljava/lang/String;
@@ -321,7 +296,6 @@
 
     iput-object v4, p0, Lmiui/maml/elements/TextScreenElement;->mSizeExpression:Lmiui/maml/data/Expression;
 
-    .line 113
     const-string v4, "marqueeSpeed"
 
     const/4 v5, 0x0
@@ -332,7 +306,6 @@
 
     iput v4, p0, Lmiui/maml/elements/TextScreenElement;->mMarqueeSpeed:I
 
-    .line 114
     const-string v4, "spacingMult"
 
     const/high16 v5, 0x3f800000    # 1.0f
@@ -343,7 +316,6 @@
 
     iput v4, p0, Lmiui/maml/elements/TextScreenElement;->mSpacingMult:F
 
-    .line 115
     const-string v4, "spacingAdd"
 
     invoke-virtual {p0, p1, v4, v8}, Lmiui/maml/elements/TextScreenElement;->getAttrAsFloat(Lorg/w3c/dom/Element;Ljava/lang/String;F)F
@@ -352,7 +324,6 @@
 
     iput v4, p0, Lmiui/maml/elements/TextScreenElement;->mSpacingAdd:F
 
-    .line 116
     const-string v4, "marqueeGap"
 
     const/4 v5, 0x2
@@ -363,7 +334,6 @@
 
     iput v4, p0, Lmiui/maml/elements/TextScreenElement;->mMarqueeGap:I
 
-    .line 117
     const-string v4, "multiLine"
 
     invoke-virtual {p0, p1, v4}, Lmiui/maml/elements/TextScreenElement;->getAttr(Lorg/w3c/dom/Element;Ljava/lang/String;)Ljava/lang/String;
@@ -376,7 +346,6 @@
 
     iput-boolean v4, p0, Lmiui/maml/elements/TextScreenElement;->mMultiLine:Z
 
-    .line 118
     const-string v4, "enableFontScale"
 
     invoke-virtual {p0, p1, v4}, Lmiui/maml/elements/TextScreenElement;->getAttr(Lorg/w3c/dom/Element;Ljava/lang/String;)Ljava/lang/String;
@@ -389,14 +358,12 @@
 
     iput-boolean v4, p0, Lmiui/maml/elements/TextScreenElement;->mFontScaleEnabled:Z
 
-    .line 119
     const-string v4, "fontFamily"
 
     invoke-virtual {p0, p1, v4}, Lmiui/maml/elements/TextScreenElement;->getAttr(Lorg/w3c/dom/Element;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 120
     .local v1, "fontFamily":Ljava/lang/String;
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -404,7 +371,6 @@
 
     if-nez v4, :cond_2
 
-    .line 121
     const-string v4, "fontStyle"
 
     invoke-virtual {p0, p1, v4}, Lmiui/maml/elements/TextScreenElement;->getAttr(Lorg/w3c/dom/Element;Ljava/lang/String;)Ljava/lang/String;
@@ -415,7 +381,6 @@
 
     move-result v2
 
-    .line 122
     .local v2, "fontStyle":I
     iget-object v4, p0, Lmiui/maml/elements/TextScreenElement;->mPaint:Landroid/text/TextPaint;
 
@@ -425,7 +390,6 @@
 
     invoke-virtual {v4, v5}, Landroid/text/TextPaint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
 
-    .line 128
     .end local v2    # "fontStyle":I
     :goto_1
     iget-object v4, p0, Lmiui/maml/elements/TextScreenElement;->mPaint:Landroid/text/TextPaint;
@@ -436,7 +400,6 @@
 
     invoke-virtual {v4, v5}, Landroid/text/TextPaint;->setColor(I)V
 
-    .line 129
     iget-object v4, p0, Lmiui/maml/elements/TextScreenElement;->mPaint:Landroid/text/TextPaint;
 
     const-wide/high16 v6, 0x4032000000000000L    # 18.0
@@ -447,12 +410,10 @@
 
     invoke-virtual {v4, v5}, Landroid/text/TextPaint;->setTextSize(F)V
 
-    .line 130
     iget-object v4, p0, Lmiui/maml/elements/TextScreenElement;->mPaint:Landroid/text/TextPaint;
 
     invoke-virtual {v4, v9}, Landroid/text/TextPaint;->setAntiAlias(Z)V
 
-    .line 132
     const-string v4, "shadowRadius"
 
     invoke-virtual {p0, p1, v4, v8}, Lmiui/maml/elements/TextScreenElement;->getAttrAsFloat(Lorg/w3c/dom/Element;Ljava/lang/String;F)F
@@ -461,7 +422,6 @@
 
     iput v4, p0, Lmiui/maml/elements/TextScreenElement;->mShadowRadius:F
 
-    .line 133
     const-string v4, "shadowDx"
 
     invoke-virtual {p0, p1, v4, v8}, Lmiui/maml/elements/TextScreenElement;->getAttrAsFloat(Lorg/w3c/dom/Element;Ljava/lang/String;F)F
@@ -470,7 +430,6 @@
 
     iput v4, p0, Lmiui/maml/elements/TextScreenElement;->mShadowDx:F
 
-    .line 134
     const-string v4, "shadowDy"
 
     invoke-virtual {p0, p1, v4, v8}, Lmiui/maml/elements/TextScreenElement;->getAttrAsFloat(Lorg/w3c/dom/Element;Ljava/lang/String;F)F
@@ -479,7 +438,6 @@
 
     iput v4, p0, Lmiui/maml/elements/TextScreenElement;->mShadowDy:F
 
-    .line 135
     const-string v4, "shadowColor"
 
     iget-object v5, p0, Lmiui/maml/elements/TextScreenElement;->mStyle:Lmiui/maml/StylesManager$Style;
@@ -490,7 +448,6 @@
 
     iput-object v4, p0, Lmiui/maml/elements/TextScreenElement;->mShadowColorParser:Lmiui/maml/util/ColorParser;
 
-    .line 136
     iget-object v4, p0, Lmiui/maml/elements/TextScreenElement;->mPaint:Landroid/text/TextPaint;
 
     iget v5, p0, Lmiui/maml/elements/TextScreenElement;->mShadowRadius:F
@@ -507,7 +464,6 @@
 
     goto/16 :goto_0
 
-    .line 124
     :cond_2
     const-string v4, "bold"
 
@@ -519,13 +475,11 @@
 
     move-result v0
 
-    .line 125
     .local v0, "bold":Z
     iget-object v4, p0, Lmiui/maml/elements/TextScreenElement;->mPaint:Landroid/text/TextPaint;
 
     invoke-virtual {v4, v0}, Landroid/text/TextPaint;->setFakeBoldText(Z)V
 
-    .line 126
     iget-object v4, p0, Lmiui/maml/elements/TextScreenElement;->mPaint:Landroid/text/TextPaint;
 
     invoke-virtual {p0}, Lmiui/maml/elements/TextScreenElement;->getContext()Lmiui/maml/ScreenContext;
@@ -556,7 +510,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 140
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -571,12 +524,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 149
     :cond_0
     :goto_0
     return v0
 
-    .line 142
     :cond_1
     const-string v1, "bold"
 
@@ -586,12 +537,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 143
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 144
     :cond_2
     const-string v1, "italic"
 
@@ -601,12 +550,10 @@
 
     if-eqz v1, :cond_3
 
-    .line 145
     const/4 v0, 0x2
 
     goto :goto_0
 
-    .line 146
     :cond_3
     const-string v1, "bold_italic"
 
@@ -616,7 +563,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 147
     const/4 v0, 0x3
 
     goto :goto_0
@@ -626,12 +572,10 @@
     .locals 2
 
     .prologue
-    .line 307
     iget-object v0, p0, Lmiui/maml/elements/TextScreenElement;->mSizeExpression:Lmiui/maml/data/Expression;
 
     if-eqz v0, :cond_1
 
-    .line 308
     iget-object v0, p0, Lmiui/maml/elements/TextScreenElement;->mSizeExpression:Lmiui/maml/data/Expression;
 
     invoke-virtual {p0, v0}, Lmiui/maml/elements/TextScreenElement;->evaluate(Lmiui/maml/data/Expression;)D
@@ -644,12 +588,10 @@
 
     iput v0, p0, Lmiui/maml/elements/TextScreenElement;->mTextSize:F
 
-    .line 309
     iget-boolean v0, p0, Lmiui/maml/elements/TextScreenElement;->mFontScaleEnabled:Z
 
     if-eqz v0, :cond_0
 
-    .line 310
     iget v0, p0, Lmiui/maml/elements/TextScreenElement;->mTextSize:F
 
     iget-object v1, p0, Lmiui/maml/elements/TextScreenElement;->mRoot:Lmiui/maml/ScreenElementRoot;
@@ -662,7 +604,6 @@
 
     iput v0, p0, Lmiui/maml/elements/TextScreenElement;->mTextSize:F
 
-    .line 312
     :cond_0
     iget-object v0, p0, Lmiui/maml/elements/TextScreenElement;->mPaint:Landroid/text/TextPaint;
 
@@ -670,7 +611,6 @@
 
     invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setTextSize(F)V
 
-    .line 314
     :cond_1
     return-void
 .end method
@@ -679,12 +619,10 @@
     .locals 6
 
     .prologue
-    .line 287
     const/4 v3, 0x0
 
     iput v3, p0, Lmiui/maml/elements/TextScreenElement;->mTextWidth:F
 
-    .line 288
     iget-object v3, p0, Lmiui/maml/elements/TextScreenElement;->mText:Ljava/lang/String;
 
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -693,12 +631,10 @@
 
     if-nez v3, :cond_2
 
-    .line 289
     iget-boolean v3, p0, Lmiui/maml/elements/TextScreenElement;->mMultiLine:Z
 
     if-eqz v3, :cond_1
 
-    .line 290
     iget-object v3, p0, Lmiui/maml/elements/TextScreenElement;->mText:Ljava/lang/String;
 
     const-string v4, "\n"
@@ -707,7 +643,6 @@
 
     move-result-object v1
 
-    .line 291
     .local v1, "lines":[Ljava/lang/String;
     const/4 v0, 0x0
 
@@ -717,7 +652,6 @@
 
     if-ge v0, v3, :cond_2
 
-    .line 292
     iget-object v3, p0, Lmiui/maml/elements/TextScreenElement;->mPaint:Landroid/text/TextPaint;
 
     aget-object v4, v1, v0
@@ -726,7 +660,6 @@
 
     move-result v2
 
-    .line 293
     .local v2, "w":F
     iget v3, p0, Lmiui/maml/elements/TextScreenElement;->mTextWidth:F
 
@@ -734,16 +667,13 @@
 
     if-lez v3, :cond_0
 
-    .line 294
     iput v2, p0, Lmiui/maml/elements/TextScreenElement;->mTextWidth:F
 
-    .line 291
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 298
     .end local v0    # "i":I
     .end local v1    # "lines":[Ljava/lang/String;
     .end local v2    # "w":F
@@ -758,13 +688,11 @@
 
     iput v3, p0, Lmiui/maml/elements/TextScreenElement;->mTextWidth:F
 
-    .line 301
     :cond_2
     iget-boolean v3, p0, Lmiui/maml/elements/TextScreenElement;->mHasName:Z
 
     if-eqz v3, :cond_3
 
-    .line 302
     iget-object v3, p0, Lmiui/maml/elements/TextScreenElement;->mTextWidthVar:Lmiui/maml/data/IndexedVariable;
 
     iget v4, p0, Lmiui/maml/elements/TextScreenElement;->mTextWidth:F
@@ -777,7 +705,6 @@
 
     invoke-virtual {v3, v4, v5}, Lmiui/maml/data/IndexedVariable;->set(D)V
 
-    .line 304
     :cond_3
     return-void
 .end method
@@ -789,7 +716,6 @@
     .param p1, "c"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 154
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lmiui/maml/elements/TextScreenElement;->mText:Ljava/lang/String;
@@ -800,11 +726,9 @@
 
     if-eqz v3, :cond_0
 
-    .line 212
     :goto_0
     return-void
 
-    .line 157
     :cond_0
     move-object/from16 v0, p0
 
@@ -816,7 +740,6 @@
 
     invoke-virtual {v3, v4}, Landroid/text/TextPaint;->setColor(I)V
 
-    .line 158
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lmiui/maml/elements/TextScreenElement;->mPaint:Landroid/text/TextPaint;
@@ -839,7 +762,6 @@
 
     invoke-virtual {v3, v4}, Landroid/text/TextPaint;->setAlpha(I)V
 
-    .line 159
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lmiui/maml/elements/TextScreenElement;->mPaint:Landroid/text/TextPaint;
@@ -862,12 +784,10 @@
 
     invoke-virtual {v3, v4, v7, v8, v9}, Landroid/text/TextPaint;->setShadowLayer(FFFI)V
 
-    .line 161
     invoke-virtual/range {p0 .. p0}, Lmiui/maml/elements/TextScreenElement;->getWidth()F
 
     move-result v21
 
-    .line 162
     .local v21, "width":F
     const/4 v3, 0x0
 
@@ -877,7 +797,6 @@
 
     const/16 v19, 0x1
 
-    .line 163
     .local v19, "specifyWidth":Z
     :goto_1
     const/4 v3, 0x0
@@ -894,7 +813,6 @@
 
     if-lez v3, :cond_2
 
-    .line 164
     :cond_1
     move-object/from16 v0, p0
 
@@ -902,13 +820,11 @@
 
     move/from16 v21, v0
 
-    .line 167
     :cond_2
     invoke-virtual/range {p0 .. p0}, Lmiui/maml/elements/TextScreenElement;->getHeight()F
 
     move-result v15
 
-    .line 168
     .local v15, "height":F
     move-object/from16 v0, p0
 
@@ -918,7 +834,6 @@
 
     move-result v17
 
-    .line 169
     .local v17, "lineHeight":F
     const/4 v3, 0x0
 
@@ -926,12 +841,10 @@
 
     if-gez v3, :cond_3
 
-    .line 170
     move-object/from16 v0, p0
 
     iget v15, v0, Lmiui/maml/elements/TextScreenElement;->mTextHeight:F
 
-    .line 172
     :cond_3
     const/4 v3, 0x0
 
@@ -943,7 +856,6 @@
 
     move-result v22
 
-    .line 173
     .local v22, "x":F
     const/4 v3, 0x0
 
@@ -953,26 +865,20 @@
 
     move-result v23
 
-    .line 175
     .local v23, "y":F
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 177
     const/4 v12, 0x0
 
-    .line 178
     .local v12, "extendLeft":F
     const/4 v13, 0x0
 
-    .line 179
     .local v13, "extendRight":F
     const/4 v14, 0x0
 
-    .line 180
     .local v14, "extendTop":F
     const/4 v11, 0x0
 
-    .line 181
     .local v11, "extendBottom":F
     move-object/from16 v0, p0
 
@@ -984,7 +890,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 182
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
@@ -1001,7 +906,6 @@
 
     move-result v12
 
-    .line 183
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
@@ -1018,7 +922,6 @@
 
     move-result v13
 
-    .line 184
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
@@ -1035,7 +938,6 @@
 
     move-result v14
 
-    .line 185
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
@@ -1052,7 +954,6 @@
 
     move-result v11
 
-    .line 188
     :cond_4
     move-object/from16 v0, p1
 
@@ -1062,7 +963,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 189
     if-eqz v19, :cond_5
 
     const/4 v12, 0x0
@@ -1083,14 +983,12 @@
 
     invoke-virtual {v0, v12, v14, v3, v4}, Landroid/graphics/Canvas;->clipRect(FFFF)Z
 
-    .line 192
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lmiui/maml/elements/TextScreenElement;->mTextLayout:Landroid/text/StaticLayout;
 
     if-eqz v3, :cond_7
 
-    .line 193
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lmiui/maml/elements/TextScreenElement;->mTextLayout:Landroid/text/StaticLayout;
@@ -1099,7 +997,6 @@
 
     move-result v10
 
-    .line 194
     .local v10, "count":I
     const/4 v3, 0x1
 
@@ -1111,7 +1008,6 @@
 
     if-eqz v3, :cond_9
 
-    .line 195
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lmiui/maml/elements/TextScreenElement;->mTextLayout:Landroid/text/StaticLayout;
@@ -1122,7 +1018,6 @@
 
     move-result v5
 
-    .line 196
     .local v5, "start":I
     move-object/from16 v0, p0
 
@@ -1134,7 +1029,6 @@
 
     move-result v6
 
-    .line 197
     .local v6, "end":I
     move-object/from16 v0, p0
 
@@ -1146,7 +1040,6 @@
 
     move-result v20
 
-    .line 198
     .local v20, "top":I
     move-object/from16 v0, p0
 
@@ -1158,7 +1051,6 @@
 
     move-result v16
 
-    .line 199
     .local v16, "left":F
     move-object/from16 v0, p0
 
@@ -1184,7 +1076,6 @@
 
     invoke-virtual/range {v3 .. v9}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;IIFFLandroid/graphics/Paint;)V
 
-    .line 200
     move-object/from16 v0, p0
 
     iget v3, v0, Lmiui/maml/elements/TextScreenElement;->mMarqueePos:F
@@ -1195,7 +1086,6 @@
 
     if-eqz v3, :cond_7
 
-    .line 201
     move-object/from16 v0, p0
 
     iget v3, v0, Lmiui/maml/elements/TextScreenElement;->mMarqueePos:F
@@ -1220,13 +1110,11 @@
 
     add-float v18, v3, v4
 
-    .line 202
     .local v18, "nextPos":F
     cmpg-float v3, v18, v21
 
     if-gez v3, :cond_7
 
-    .line 203
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lmiui/maml/elements/TextScreenElement;->mText:Ljava/lang/String;
@@ -1247,7 +1135,6 @@
 
     invoke-virtual {v0, v3, v4, v7, v8}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
-    .line 211
     .end local v5    # "start":I
     .end local v6    # "end":I
     .end local v10    # "count":I
@@ -1260,7 +1147,6 @@
 
     goto/16 :goto_0
 
-    .line 162
     .end local v11    # "extendBottom":F
     .end local v14    # "extendTop":F
     .end local v15    # "height":F
@@ -1273,7 +1159,6 @@
 
     goto/16 :goto_1
 
-    .line 207
     .restart local v10    # "count":I
     .restart local v11    # "extendBottom":F
     .restart local v14    # "extendTop":F
@@ -1299,30 +1184,24 @@
     .param p1, "currentTime"    # J
 
     .prologue
-    .line 230
     sget-object v18, Lmiui/maml/elements/TextScreenElement;->mLock:Ljava/lang/Object;
 
     monitor-enter v18
 
-    .line 231
     :try_start_0
     invoke-super/range {p0 .. p2}, Lmiui/maml/elements/AnimatedScreenElement;->doTick(J)V
 
-    .line 232
     invoke-virtual/range {p0 .. p0}, Lmiui/maml/elements/TextScreenElement;->isVisible()Z
 
     move-result v4
 
     if-nez v4, :cond_0
 
-    .line 233
     monitor-exit v18
 
-    .line 284
     :goto_0
     return-void
 
-    .line 235
     :cond_0
     const/4 v4, 0x0
 
@@ -1330,12 +1209,10 @@
 
     iput-boolean v4, v0, Lmiui/maml/elements/TextScreenElement;->mShouldMarquee:Z
 
-    .line 236
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lmiui/maml/elements/TextScreenElement;->mText:Ljava/lang/String;
 
-    .line 237
     .local v14, "preText":Ljava/lang/String;
     invoke-virtual/range {p0 .. p0}, Lmiui/maml/elements/TextScreenElement;->getText()Ljava/lang/String;
 
@@ -1345,7 +1222,6 @@
 
     iput-object v4, v0, Lmiui/maml/elements/TextScreenElement;->mText:Ljava/lang/String;
 
-    .line 238
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lmiui/maml/elements/TextScreenElement;->mText:Ljava/lang/String;
@@ -1356,22 +1232,18 @@
 
     if-eqz v4, :cond_1
 
-    .line 239
     const/4 v4, 0x0
 
     move-object/from16 v0, p0
 
     iput-object v4, v0, Lmiui/maml/elements/TextScreenElement;->mTextLayout:Landroid/text/StaticLayout;
 
-    .line 240
     invoke-direct/range {p0 .. p0}, Lmiui/maml/elements/TextScreenElement;->updateTextWidth()V
 
-    .line 241
     monitor-exit v18
 
     goto :goto_0
 
-    .line 282
     .end local v14    # "preText":Ljava/lang/String;
     :catchall_0
     move-exception v4
@@ -1382,7 +1254,6 @@
 
     throw v4
 
-    .line 244
     .restart local v14    # "preText":Ljava/lang/String;
     :cond_1
     :try_start_1
@@ -1390,11 +1261,9 @@
 
     iget v15, v0, Lmiui/maml/elements/TextScreenElement;->mTextSize:F
 
-    .line 245
     .local v15, "preTextSize":F
     invoke-direct/range {p0 .. p0}, Lmiui/maml/elements/TextScreenElement;->updateTextSize()V
 
-    .line 247
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lmiui/maml/elements/TextScreenElement;->mText:Ljava/lang/String;
@@ -1416,21 +1285,17 @@
     :cond_2
     const/16 v16, 0x1
 
-    .line 248
     .local v16, "textChanged":Z
     :goto_1
     if-eqz v16, :cond_3
 
-    .line 249
     invoke-direct/range {p0 .. p0}, Lmiui/maml/elements/TextScreenElement;->updateTextWidth()V
 
-    .line 252
     :cond_3
     invoke-virtual/range {p0 .. p0}, Lmiui/maml/elements/TextScreenElement;->getWidth()F
 
     move-result v17
 
-    .line 253
     .local v17, "width":F
     move-object/from16 v0, p0
 
@@ -1454,7 +1319,6 @@
 
     const/4 v13, 0x1
 
-    .line 254
     .local v13, "marquee":Z
     :goto_2
     move-object/from16 v0, p0
@@ -1476,7 +1340,6 @@
 
     iget v12, v0, Lmiui/maml/elements/TextScreenElement;->mTextWidth:F
 
-    .line 256
     .local v12, "layoutWidth":F
     :goto_3
     move-object/from16 v0, p0
@@ -1495,13 +1358,11 @@
 
     if-eqz v4, :cond_7
 
-    .line 257
     :cond_5
     move-object/from16 v0, p0
 
     iput v12, v0, Lmiui/maml/elements/TextScreenElement;->mLayoutWidth:F
 
-    .line 258
     new-instance v4, Landroid/text/StaticLayout;
 
     move-object/from16 v0, p0
@@ -1544,7 +1405,6 @@
 
     iput-object v4, v0, Lmiui/maml/elements/TextScreenElement;->mTextLayout:Landroid/text/StaticLayout;
 
-    .line 260
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lmiui/maml/elements/TextScreenElement;->mTextLayout:Landroid/text/StaticLayout;
@@ -1567,14 +1427,12 @@
 
     iput v4, v0, Lmiui/maml/elements/TextScreenElement;->mTextHeight:F
 
-    .line 261
     move-object/from16 v0, p0
 
     iget-boolean v4, v0, Lmiui/maml/elements/TextScreenElement;->mHasName:Z
 
     if-eqz v4, :cond_6
 
-    .line 262
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lmiui/maml/elements/TextScreenElement;->mTextHeightVar:Lmiui/maml/data/IndexedVariable;
@@ -1593,7 +1451,6 @@
 
     invoke-virtual {v4, v6, v7}, Lmiui/maml/data/IndexedVariable;->set(D)V
 
-    .line 264
     :cond_6
     const v4, 0x7f7fffff    # Float.MAX_VALUE
 
@@ -1601,11 +1458,9 @@
 
     iput v4, v0, Lmiui/maml/elements/TextScreenElement;->mMarqueePos:F
 
-    .line 267
     :cond_7
     if-eqz v13, :cond_9
 
-    .line 269
     move-object/from16 v0, p0
 
     iget v4, v0, Lmiui/maml/elements/TextScreenElement;->mMarqueePos:F
@@ -1616,14 +1471,12 @@
 
     if-nez v4, :cond_d
 
-    .line 271
     const/high16 v4, 0x42480000    # 50.0f
 
     move-object/from16 v0, p0
 
     iput v4, v0, Lmiui/maml/elements/TextScreenElement;->mMarqueePos:F
 
-    .line 278
     :cond_8
     :goto_4
     move-wide/from16 v0, p1
@@ -1632,20 +1485,17 @@
 
     iput-wide v0, v2, Lmiui/maml/elements/TextScreenElement;->mPreviousTime:J
 
-    .line 279
     const/4 v4, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v4, v0, Lmiui/maml/elements/TextScreenElement;->mShouldMarquee:Z
 
-    .line 282
     :cond_9
     monitor-exit v18
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 283
     move-object/from16 v0, p0
 
     iget-boolean v4, v0, Lmiui/maml/elements/TextScreenElement;->mShouldMarquee:Z
@@ -1661,7 +1511,6 @@
 
     goto/16 :goto_0
 
-    .line 247
     .end local v12    # "layoutWidth":F
     .end local v13    # "marquee":Z
     .end local v16    # "textChanged":Z
@@ -1671,7 +1520,6 @@
 
     goto/16 :goto_1
 
-    .line 253
     .restart local v16    # "textChanged":Z
     .restart local v17    # "width":F
     :cond_b
@@ -1683,10 +1531,8 @@
     :cond_c
     move/from16 v12, v17
 
-    .line 254
     goto/16 :goto_3
 
-    .line 273
     .restart local v12    # "layoutWidth":F
     :cond_d
     :try_start_2
@@ -1720,7 +1566,6 @@
 
     iput v4, v0, Lmiui/maml/elements/TextScreenElement;->mMarqueePos:F
 
-    .line 274
     move-object/from16 v0, p0
 
     iget v4, v0, Lmiui/maml/elements/TextScreenElement;->mMarqueePos:F
@@ -1735,7 +1580,6 @@
 
     if-gez v4, :cond_8
 
-    .line 275
     move-object/from16 v0, p0
 
     iget v4, v0, Lmiui/maml/elements/TextScreenElement;->mMarqueePos:F
@@ -1768,7 +1612,6 @@
 
     goto :goto_4
 
-    .line 283
     :cond_e
     const/4 v4, 0x0
 
@@ -1781,21 +1624,16 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 221
     invoke-super {p0}, Lmiui/maml/elements/AnimatedScreenElement;->finish()V
 
-    .line 222
     iput-object v0, p0, Lmiui/maml/elements/TextScreenElement;->mText:Ljava/lang/String;
 
-    .line 223
     iput-object v0, p0, Lmiui/maml/elements/TextScreenElement;->mSetText:Ljava/lang/String;
 
-    .line 224
     const v0, 0x7f7fffff    # Float.MAX_VALUE
 
     iput v0, p0, Lmiui/maml/elements/TextScreenElement;->mMarqueePos:F
 
-    .line 225
     return-void
 .end method
 
@@ -1803,7 +1641,6 @@
     .locals 1
 
     .prologue
-    .line 367
     iget-object v0, p0, Lmiui/maml/elements/TextScreenElement;->mColorParser:Lmiui/maml/util/ColorParser;
 
     invoke-virtual {v0}, Lmiui/maml/util/ColorParser;->getColor()I
@@ -1817,7 +1654,6 @@
     .locals 1
 
     .prologue
-    .line 339
     iget-object v0, p0, Lmiui/maml/elements/TextScreenElement;->mFormatter:Lmiui/maml/util/TextFormatter;
 
     invoke-virtual {v0}, Lmiui/maml/util/TextFormatter;->getFormat()Ljava/lang/String;
@@ -1831,12 +1667,10 @@
     .locals 2
 
     .prologue
-    .line 382
     invoke-super {p0}, Lmiui/maml/elements/AnimatedScreenElement;->getHeight()F
 
     move-result v0
 
-    .line 383
     .local v0, "height":F
     const/4 v1, 0x0
 
@@ -1844,10 +1678,8 @@
 
     if-gtz v1, :cond_0
 
-    .line 384
     iget v0, p0, Lmiui/maml/elements/TextScreenElement;->mTextHeight:F
 
-    .line 386
     :cond_0
     return v0
 .end method
@@ -1856,7 +1688,6 @@
     .locals 1
 
     .prologue
-    .line 371
     iget-object v0, p0, Lmiui/maml/elements/TextScreenElement;->mShadowColorParser:Lmiui/maml/util/ColorParser;
 
     invoke-virtual {v0}, Lmiui/maml/util/ColorParser;->getColor()I
@@ -1870,20 +1701,16 @@
     .locals 3
 
     .prologue
-    .line 351
     iget-object v1, p0, Lmiui/maml/elements/TextScreenElement;->mSetText:Ljava/lang/String;
 
     if-eqz v1, :cond_1
 
-    .line 352
     iget-object v0, p0, Lmiui/maml/elements/TextScreenElement;->mSetText:Ljava/lang/String;
 
-    .line 363
     :cond_0
     :goto_0
     return-object v0
 
-    .line 356
     :cond_1
     iget-object v1, p0, Lmiui/maml/elements/TextScreenElement;->mFormatter:Lmiui/maml/util/TextFormatter;
 
@@ -1891,11 +1718,9 @@
 
     move-result-object v0
 
-    .line 357
     .local v0, "text":Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 358
     const-string v1, "\\n"
 
     const-string v2, "\n"
@@ -1904,12 +1729,10 @@
 
     move-result-object v0
 
-    .line 359
     iget-boolean v1, p0, Lmiui/maml/elements/TextScreenElement;->mMultiLine:Z
 
     if-nez v1, :cond_0
 
-    .line 360
     const-string v1, "\n"
 
     const-string v2, " "
@@ -1925,12 +1748,10 @@
     .locals 2
 
     .prologue
-    .line 376
     invoke-super {p0}, Lmiui/maml/elements/AnimatedScreenElement;->getWidth()F
 
     move-result v0
 
-    .line 377
     .local v0, "width":F
     const/4 v1, 0x0
 
@@ -1949,10 +1770,8 @@
     .locals 0
 
     .prologue
-    .line 216
     invoke-super {p0}, Lmiui/maml/elements/AnimatedScreenElement;->init()V
 
-    .line 217
     return-void
 .end method
 
@@ -1961,10 +1780,8 @@
     .param p1, "visible"    # Z
 
     .prologue
-    .line 334
     invoke-super {p0, p1}, Lmiui/maml/elements/AnimatedScreenElement;->onVisibilityChange(Z)V
 
-    .line 335
     iget-boolean v0, p0, Lmiui/maml/elements/TextScreenElement;->mShouldMarquee:Z
 
     if-eqz v0, :cond_0
@@ -1976,10 +1793,8 @@
     :goto_0
     invoke-virtual {p0, v0}, Lmiui/maml/elements/TextScreenElement;->requestFramerate(F)V
 
-    .line 336
     return-void
 
-    .line 335
     :cond_0
     const/4 v0, 0x0
 
@@ -1991,12 +1806,10 @@
     .param p1, "params"    # [Ljava/lang/Object;
 
     .prologue
-    .line 343
     iget-object v0, p0, Lmiui/maml/elements/TextScreenElement;->mFormatter:Lmiui/maml/util/TextFormatter;
 
     invoke-virtual {v0, p1}, Lmiui/maml/util/TextFormatter;->setParams([Ljava/lang/Object;)V
 
-    .line 344
     return-void
 .end method
 
@@ -2005,9 +1818,7 @@
     .param p1, "text"    # Ljava/lang/String;
 
     .prologue
-    .line 347
     iput-object p1, p0, Lmiui/maml/elements/TextScreenElement;->mSetText:Ljava/lang/String;
 
-    .line 348
     return-void
 .end method

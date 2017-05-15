@@ -48,18 +48,14 @@
     .local p2, "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const/4 v0, 0x0
 
-    .line 6189
     iput-object p1, p0, Landroid/widget/Editor$PhraseAdapter;->this$0:Landroid/widget/Editor;
 
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
-    .line 6186
     iput-object v0, p0, Landroid/widget/Editor$PhraseAdapter;->mInflater:Landroid/view/LayoutInflater;
 
-    .line 6187
     iput-object v0, p0, Landroid/widget/Editor$PhraseAdapter;->mPhraseList:Ljava/util/ArrayList;
 
-    .line 6190
     # getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
     invoke-static {p1}, Landroid/widget/Editor;->access$800(Landroid/widget/Editor;)Landroid/widget/TextView;
 
@@ -79,10 +75,8 @@
 
     iput-object v0, p0, Landroid/widget/Editor$PhraseAdapter;->mInflater:Landroid/view/LayoutInflater;
 
-    .line 6192
     iput-object p2, p0, Landroid/widget/Editor$PhraseAdapter;->mPhraseList:Ljava/util/ArrayList;
 
-    .line 6193
     return-void
 .end method
 
@@ -92,7 +86,6 @@
     .locals 1
 
     .prologue
-    .line 6197
     iget-object v0, p0, Landroid/widget/Editor$PhraseAdapter;->mPhraseList:Ljava/util/ArrayList;
 
     if-nez v0, :cond_0
@@ -117,7 +110,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 6202
     iget-object v0, p0, Landroid/widget/Editor$PhraseAdapter;->mPhraseList:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_0
@@ -130,11 +122,9 @@
 
     if-lt p1, v0, :cond_1
 
-    .line 6203
     :cond_0
     const/4 v0, 0x0
 
-    .line 6206
     :goto_0
     return-object v0
 
@@ -153,7 +143,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 6211
     int-to-long v0, p1
 
     return-wide v0
@@ -170,14 +159,11 @@
 
     const/4 v3, 0x0
 
-    .line 6216
     const/4 v0, 0x0
 
-    .line 6218
     .local v0, "textView":Landroid/widget/TextView;
     if-nez p2, :cond_0
 
-    .line 6219
     iget-object v1, p0, Landroid/widget/Editor$PhraseAdapter;->mInflater:Landroid/view/LayoutInflater;
 
     const v2, 0x1103000f
@@ -189,7 +175,6 @@
     .end local v0    # "textView":Landroid/widget/TextView;
     check-cast v0, Landroid/widget/TextView;
 
-    .line 6224
     .restart local v0    # "textView":Landroid/widget/TextView;
     :goto_0
     invoke-virtual {p0, p1}, Landroid/widget/Editor$PhraseAdapter;->getItem(I)Ljava/lang/Object;
@@ -200,14 +185,12 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 6225
     invoke-virtual {p0}, Landroid/widget/Editor$PhraseAdapter;->getCount()I
 
     move-result v1
 
     if-ne v1, v4, :cond_1
 
-    .line 6227
     invoke-virtual {v0}, Landroid/widget/TextView;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
@@ -216,23 +199,19 @@
 
     invoke-virtual {v1, v2}, Landroid/graphics/drawable/Drawable;->setLevel(I)Z
 
-    .line 6239
     :goto_1
     return-object v0
 
     :cond_0
     move-object v0, p2
 
-    .line 6222
     check-cast v0, Landroid/widget/TextView;
 
     goto :goto_0
 
-    .line 6228
     :cond_1
     if-nez p1, :cond_2
 
-    .line 6230
     invoke-virtual {v0}, Landroid/widget/TextView;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
@@ -241,7 +220,6 @@
 
     goto :goto_1
 
-    .line 6231
     :cond_2
     invoke-virtual {p0}, Landroid/widget/Editor$PhraseAdapter;->getCount()I
 
@@ -251,7 +229,6 @@
 
     if-ne p1, v1, :cond_3
 
-    .line 6233
     invoke-virtual {v0}, Landroid/widget/TextView;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
@@ -262,7 +239,6 @@
 
     goto :goto_1
 
-    .line 6236
     :cond_3
     invoke-virtual {v0}, Landroid/widget/TextView;->getBackground()Landroid/graphics/drawable/Drawable;
 

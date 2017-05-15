@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 248
     iput-object p1, p0, Lcom/android/internal/widget/ViewPager$3;->this$0:Lcom/android/internal/widget/ViewPager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 250
     iget-object v0, p0, Lcom/android/internal/widget/ViewPager$3;->this$0:Lcom/android/internal/widget/ViewPager;
 
     const/4 v1, 0x0
@@ -48,11 +46,9 @@
     # invokes: Lcom/android/internal/widget/ViewPager;->setScrollState(I)V
     invoke-static {v0, v1}, Lcom/android/internal/widget/ViewPager;->access$000(Lcom/android/internal/widget/ViewPager;I)V
 
-    .line 251
     iget-object v0, p0, Lcom/android/internal/widget/ViewPager$3;->this$0:Lcom/android/internal/widget/ViewPager;
 
     invoke-virtual {v0}, Lcom/android/internal/widget/ViewPager;->populate()V
 
-    .line 252
     return-void
 .end method

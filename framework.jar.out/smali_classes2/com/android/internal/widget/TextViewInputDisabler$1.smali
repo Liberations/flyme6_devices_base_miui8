@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 32
     iput-object p1, p0, Lcom/android/internal/widget/TextViewInputDisabler$1;->this$0:Lcom/android/internal/widget/TextViewInputDisabler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,7 +45,6 @@
     .param p6, "dend"    # I
 
     .prologue
-    .line 36
     const-string v0, ""
 
     return-object v0

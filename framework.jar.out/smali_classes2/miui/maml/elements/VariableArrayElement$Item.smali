@@ -28,20 +28,16 @@
     .param p2, "value"    # Ljava/lang/Object;
 
     .prologue
-    .line 141
     iput-object p1, p0, Lmiui/maml/elements/VariableArrayElement$Item;->this$0:Lmiui/maml/elements/VariableArrayElement;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 142
     iput-object p2, p0, Lmiui/maml/elements/VariableArrayElement$Item;->mValue:Ljava/lang/Object;
 
-    .line 143
     const/4 v0, 0x0
 
     iput-object v0, p0, Lmiui/maml/elements/VariableArrayElement$Item;->mExpression:Lmiui/maml/data/Expression;
 
-    .line 144
     return-void
 .end method
 
@@ -51,15 +47,12 @@
     .param p3, "ele"    # Lorg/w3c/dom/Element;
 
     .prologue
-    .line 126
     iput-object p1, p0, Lmiui/maml/elements/VariableArrayElement$Item;->this$0:Lmiui/maml/elements/VariableArrayElement;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 127
     if-eqz p3, :cond_0
 
-    .line 128
     const-string v1, "expression"
 
     invoke-interface {p3, v1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -72,14 +65,12 @@
 
     iput-object v1, p0, Lmiui/maml/elements/VariableArrayElement$Item;->mExpression:Lmiui/maml/data/Expression;
 
-    .line 129
-    const-string/jumbo v1, "value"
+    const-string v1, "value"
 
     invoke-interface {p3, v1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 130
     .local v0, "valueStr":Ljava/lang/String;
     iget-object v1, p1, Lmiui/maml/elements/VariableArrayElement;->mType:Lmiui/maml/elements/VariableArrayElement$Type;
 
@@ -87,7 +78,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 132
     :try_start_0
     invoke-static {v0}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
 
@@ -101,20 +91,17 @@
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 139
     .end local v0    # "valueStr":Ljava/lang/String;
     :cond_0
     :goto_0
     return-void
 
-    .line 136
     .restart local v0    # "valueStr":Ljava/lang/String;
     :cond_1
     iput-object v0, p0, Lmiui/maml/elements/VariableArrayElement$Item;->mValue:Ljava/lang/Object;
 
     goto :goto_0
 
-    .line 133
     :catch_0
     move-exception v1
 
@@ -129,12 +116,10 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 157
     iget-object v1, p0, Lmiui/maml/elements/VariableArrayElement$Item;->mExpression:Lmiui/maml/data/Expression;
 
     if-eqz v1, :cond_2
 
-    .line 158
     iget-object v1, p0, Lmiui/maml/elements/VariableArrayElement$Item;->mExpression:Lmiui/maml/data/Expression;
 
     invoke-virtual {v1}, Lmiui/maml/data/Expression;->isNull()Z
@@ -143,12 +128,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 160
     :cond_0
     :goto_0
     return-object v0
 
-    .line 158
     :cond_1
     iget-object v0, p0, Lmiui/maml/elements/VariableArrayElement$Item;->mExpression:Lmiui/maml/data/Expression;
 
@@ -162,7 +145,6 @@
 
     goto :goto_0
 
-    .line 160
     :cond_2
     iget-object v1, p0, Lmiui/maml/elements/VariableArrayElement$Item;->mValue:Ljava/lang/Object;
 
@@ -189,19 +171,16 @@
     .locals 1
 
     .prologue
-    .line 151
     iget-object v0, p0, Lmiui/maml/elements/VariableArrayElement$Item;->mExpression:Lmiui/maml/data/Expression;
 
     if-eqz v0, :cond_0
 
-    .line 152
     iget-object v0, p0, Lmiui/maml/elements/VariableArrayElement$Item;->mExpression:Lmiui/maml/data/Expression;
 
     invoke-virtual {v0}, Lmiui/maml/data/Expression;->evaluateStr()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 153
     :goto_0
     return-object v0
 
@@ -228,7 +207,6 @@
     .locals 1
 
     .prologue
-    .line 147
     iget-object v0, p0, Lmiui/maml/elements/VariableArrayElement$Item;->mExpression:Lmiui/maml/data/Expression;
 
     if-eqz v0, :cond_0

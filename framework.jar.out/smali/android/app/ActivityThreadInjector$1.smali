@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 78
     iput-object p1, p0, Landroid/app/ActivityThreadInjector$1;->val$context:Landroid/content/Context;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 7
 
     .prologue
-    .line 82
     :try_start_0
     iget-object v4, p0, Landroid/app/ActivityThreadInjector$1;->val$context:Landroid/content/Context;
 
@@ -50,7 +48,6 @@
 
     move-result-object v0
 
-    .line 84
     .local v0, "a":Landroid/content/res/TypedArray;
     const/4 v4, 0x1
 
@@ -60,18 +57,15 @@
 
     move-result v1
 
-    .line 86
     .local v1, "backgroundResource":I
     if-eqz v1, :cond_0
 
-    .line 87
     sget v4, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v5, 0x17
 
     if-le v4, v5, :cond_1
 
-    .line 88
     const-string v4, "android.content.res.ResourcesImpl"
 
     const/4 v5, 0x0
@@ -80,7 +74,6 @@
 
     move-result-object v2
 
-    .line 89
     .local v2, "clasz":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iget-object v4, p0, Landroid/app/ActivityThreadInjector$1;->val$context:Landroid/content/Context;
 
@@ -88,7 +81,7 @@
 
     move-result-object v4
 
-    const-string/jumbo v5, "mResourcesImpl"
+    const-string v5, "mResourcesImpl"
 
     invoke-static {v4, v5, v2}, Lmiui/util/ReflectionUtils;->tryGetObjectField(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Class;)Lmiui/util/ObjectReference;
 
@@ -98,9 +91,8 @@
 
     move-result-object v3
 
-    .line 90
     .local v3, "resImpl":Ljava/lang/Object;
-    const-string/jumbo v4, "mCaching"
+    const-string v4, "mCaching"
 
     const/4 v5, 0x1
 
@@ -110,7 +102,6 @@
 
     invoke-static {v3, v4, v5}, Lmiui/util/ReflectionUtils;->trySetObjectField(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 91
     iget-object v4, p0, Landroid/app/ActivityThreadInjector$1;->val$context:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -119,8 +110,7 @@
 
     invoke-virtual {v4, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
-    .line 92
-    const-string/jumbo v4, "mCaching"
+    const-string v4, "mCaching"
 
     const/4 v5, 0x0
 
@@ -130,20 +120,17 @@
 
     invoke-static {v3, v4, v5}, Lmiui/util/ReflectionUtils;->trySetObjectField(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 99
     .end local v2    # "clasz":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     .end local v3    # "resImpl":Ljava/lang/Object;
     :cond_0
     :goto_0
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 103
     .end local v0    # "a":Landroid/content/res/TypedArray;
     .end local v1    # "backgroundResource":I
     :goto_1
     return-void
 
-    .line 94
     .restart local v0    # "a":Landroid/content/res/TypedArray;
     .restart local v1    # "backgroundResource":I
     :cond_1
@@ -153,7 +140,7 @@
 
     move-result-object v4
 
-    const-string/jumbo v5, "mCaching"
+    const-string v5, "mCaching"
 
     const/4 v6, 0x1
 
@@ -163,7 +150,6 @@
 
     invoke-static {v4, v5, v6}, Lmiui/util/ReflectionUtils;->trySetObjectField(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 95
     iget-object v4, p0, Landroid/app/ActivityThreadInjector$1;->val$context:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -172,14 +158,13 @@
 
     invoke-virtual {v4, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
-    .line 96
     iget-object v4, p0, Landroid/app/ActivityThreadInjector$1;->val$context:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
-    const-string/jumbo v5, "mCaching"
+    const-string v5, "mCaching"
 
     const/4 v6, 0x0
 
@@ -193,7 +178,6 @@
 
     goto :goto_0
 
-    .line 100
     .end local v0    # "a":Landroid/content/res/TypedArray;
     .end local v1    # "backgroundResource":I
     :catch_0

@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 272
     iput-object p1, p0, Lmiui/maml/elements/WebViewScreenElement$8;->this$0:Lmiui/maml/elements/WebViewScreenElement;
 
     iput-boolean p2, p0, Lmiui/maml/elements/WebViewScreenElement$8;->val$pause:Z
@@ -44,12 +43,10 @@
     .locals 1
 
     .prologue
-    .line 274
     iget-boolean v0, p0, Lmiui/maml/elements/WebViewScreenElement$8;->val$pause:Z
 
     if-eqz v0, :cond_0
 
-    .line 275
     iget-object v0, p0, Lmiui/maml/elements/WebViewScreenElement$8;->this$0:Lmiui/maml/elements/WebViewScreenElement;
 
     # getter for: Lmiui/maml/elements/WebViewScreenElement;->mWebView:Landroid/webkit/WebView;
@@ -59,11 +56,9 @@
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->onPause()V
 
-    .line 279
     :goto_0
     return-void
 
-    .line 277
     :cond_0
     iget-object v0, p0, Lmiui/maml/elements/WebViewScreenElement$8;->this$0:Lmiui/maml/elements/WebViewScreenElement;
 

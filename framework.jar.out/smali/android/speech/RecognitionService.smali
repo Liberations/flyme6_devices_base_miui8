@@ -44,29 +44,24 @@
     .locals 1
 
     .prologue
-    .line 39
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
-    .line 60
     new-instance v0, Landroid/speech/RecognitionService$RecognitionServiceBinder;
 
     invoke-direct {v0, p0}, Landroid/speech/RecognitionService$RecognitionServiceBinder;-><init>(Landroid/speech/RecognitionService;)V
 
     iput-object v0, p0, Landroid/speech/RecognitionService;->mBinder:Landroid/speech/RecognitionService$RecognitionServiceBinder;
 
-    .line 66
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/speech/RecognitionService;->mCurrentCallback:Landroid/speech/RecognitionService$Callback;
 
-    .line 76
     new-instance v0, Landroid/speech/RecognitionService$1;
 
     invoke-direct {v0, p0}, Landroid/speech/RecognitionService$1;-><init>(Landroid/speech/RecognitionService;)V
 
     iput-object v0, p0, Landroid/speech/RecognitionService;->mHandler:Landroid/os/Handler;
 
-    .line 334
     return-void
 .end method
 
@@ -78,7 +73,6 @@
     .param p3, "x3"    # I
 
     .prologue
-    .line 39
     invoke-direct {p0, p1, p2, p3}, Landroid/speech/RecognitionService;->dispatchStartListening(Landroid/content/Intent;Landroid/speech/IRecognitionListener;I)V
 
     return-void
@@ -90,7 +84,6 @@
     .param p1, "x1"    # Landroid/speech/IRecognitionListener;
 
     .prologue
-    .line 39
     invoke-direct {p0, p1}, Landroid/speech/RecognitionService;->dispatchStopListening(Landroid/speech/IRecognitionListener;)V
 
     return-void
@@ -102,7 +95,6 @@
     .param p1, "x1"    # Landroid/speech/IRecognitionListener;
 
     .prologue
-    .line 39
     invoke-direct {p0, p1}, Landroid/speech/RecognitionService;->dispatchCancel(Landroid/speech/IRecognitionListener;)V
 
     return-void
@@ -113,7 +105,6 @@
     .param p0, "x0"    # Landroid/speech/RecognitionService;
 
     .prologue
-    .line 39
     invoke-direct {p0}, Landroid/speech/RecognitionService;->dispatchClearCallback()V
 
     return-void
@@ -124,7 +115,6 @@
     .param p0, "x0"    # Landroid/speech/RecognitionService;
 
     .prologue
-    .line 39
     iget-object v0, p0, Landroid/speech/RecognitionService;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -136,7 +126,6 @@
     .param p1, "x1"    # Landroid/speech/IRecognitionListener;
 
     .prologue
-    .line 39
     invoke-direct {p0, p1}, Landroid/speech/RecognitionService;->checkPermissions(Landroid/speech/IRecognitionListener;)Z
 
     move-result v0
@@ -149,7 +138,6 @@
     .param p1, "listener"    # Landroid/speech/IRecognitionListener;
 
     .prologue
-    .line 177
     const-string v1, "android.permission.RECORD_AUDIO"
 
     invoke-virtual {p0, v1}, Landroid/speech/RecognitionService;->checkCallingOrSelfPermission(Ljava/lang/String;)I
@@ -158,14 +146,11 @@
 
     if-nez v1, :cond_0
 
-    .line 179
     const/4 v1, 0x1
 
-    .line 187
     :goto_0
     return v1
 
-    .line 182
     :cond_0
     :try_start_0
     const-string v1, "RecognitionService"
@@ -174,28 +159,24 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 183
     const/16 v1, 0x9
 
     invoke-interface {p1, v1}, Landroid/speech/IRecognitionListener;->onError(I)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 187
     :goto_1
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 184
     :catch_0
     move-exception v0
 
-    .line 185
     .local v0, "re":Landroid/os/RemoteException;
     const-string v1, "RecognitionService"
 
-    const-string/jumbo v2, "sending ERROR_INSUFFICIENT_PERMISSIONS message failed"
+    const-string v2, "sending ERROR_INSUFFICIENT_PERMISSIONS message failed"
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
@@ -207,16 +188,13 @@
     .param p1, "listener"    # Landroid/speech/IRecognitionListener;
 
     .prologue
-    .line 141
     iget-object v0, p0, Landroid/speech/RecognitionService;->mCurrentCallback:Landroid/speech/RecognitionService$Callback;
 
     if-nez v0, :cond_0
 
-    .line 150
     :goto_0
     return-void
 
-    .line 143
     :cond_0
     iget-object v0, p0, Landroid/speech/RecognitionService;->mCurrentCallback:Landroid/speech/RecognitionService$Callback;
 
@@ -235,7 +213,6 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 144
     const-string v0, "RecognitionService"
 
     const-string v1, "cancel called by client who did not call startListening - ignoring"
@@ -244,13 +221,11 @@
 
     goto :goto_0
 
-    .line 146
     :cond_1
     iget-object v0, p0, Landroid/speech/RecognitionService;->mCurrentCallback:Landroid/speech/RecognitionService$Callback;
 
     invoke-virtual {p0, v0}, Landroid/speech/RecognitionService;->onCancel(Landroid/speech/RecognitionService$Callback;)V
 
-    .line 147
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/speech/RecognitionService;->mCurrentCallback:Landroid/speech/RecognitionService$Callback;
@@ -262,12 +237,10 @@
     .locals 1
 
     .prologue
-    .line 153
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/speech/RecognitionService;->mCurrentCallback:Landroid/speech/RecognitionService$Callback;
 
-    .line 154
     return-void
 .end method
 
@@ -278,12 +251,10 @@
     .param p3, "callingUid"    # I
 
     .prologue
-    .line 99
     iget-object v2, p0, Landroid/speech/RecognitionService;->mCurrentCallback:Landroid/speech/RecognitionService$Callback;
 
     if-nez v2, :cond_0
 
-    .line 102
     :try_start_0
     invoke-interface {p2}, Landroid/speech/IRecognitionListener;->asBinder()Landroid/os/IBinder;
 
@@ -299,7 +270,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 112
     new-instance v2, Landroid/speech/RecognitionService$Callback;
 
     const/4 v3, 0x0
@@ -308,20 +278,16 @@
 
     iput-object v2, p0, Landroid/speech/RecognitionService;->mCurrentCallback:Landroid/speech/RecognitionService$Callback;
 
-    .line 113
     iget-object v2, p0, Landroid/speech/RecognitionService;->mCurrentCallback:Landroid/speech/RecognitionService$Callback;
 
     invoke-virtual {p0, p1, v2}, Landroid/speech/RecognitionService;->onStartListening(Landroid/content/Intent;Landroid/speech/RecognitionService$Callback;)V
 
-    .line 122
     :goto_0
     return-void
 
-    .line 108
     :catch_0
     move-exception v1
 
-    .line 109
     .local v1, "re":Landroid/os/RemoteException;
     const-string v2, "RecognitionService"
 
@@ -331,7 +297,6 @@
 
     goto :goto_0
 
-    .line 116
     .end local v1    # "re":Landroid/os/RemoteException;
     :cond_0
     const/16 v2, 0x8
@@ -341,7 +306,6 @@
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 120
     :goto_1
     const-string v2, "RecognitionService"
 
@@ -351,15 +315,13 @@
 
     goto :goto_0
 
-    .line 117
     :catch_1
     move-exception v0
 
-    .line 118
     .local v0, "e":Landroid/os/RemoteException;
     const-string v2, "RecognitionService"
 
-    const-string/jumbo v3, "onError call from startListening failed"
+    const-string v3, "onError call from startListening failed"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -371,29 +333,24 @@
     .param p1, "listener"    # Landroid/speech/IRecognitionListener;
 
     .prologue
-    .line 126
     :try_start_0
     iget-object v1, p0, Landroid/speech/RecognitionService;->mCurrentCallback:Landroid/speech/RecognitionService$Callback;
 
     if-nez v1, :cond_0
 
-    .line 127
     const/4 v1, 0x5
 
     invoke-interface {p1, v1}, Landroid/speech/IRecognitionListener;->onError(I)V
 
-    .line 128
     const-string v1, "RecognitionService"
 
-    const-string/jumbo v2, "stopListening called with no preceding startListening - ignoring"
+    const-string v2, "stopListening called with no preceding startListening - ignoring"
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 138
     :goto_0
     return-void
 
-    .line 129
     :cond_0
     iget-object v1, p0, Landroid/speech/RecognitionService;->mCurrentCallback:Landroid/speech/RecognitionService$Callback;
 
@@ -412,15 +369,13 @@
 
     if-eq v1, v2, :cond_1
 
-    .line 130
     const/16 v1, 0x8
 
     invoke-interface {p1, v1}, Landroid/speech/IRecognitionListener;->onError(I)V
 
-    .line 131
     const-string v1, "RecognitionService"
 
-    const-string/jumbo v2, "stopListening called by other caller than startListening - ignoring"
+    const-string v2, "stopListening called by other caller than startListening - ignoring"
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
@@ -428,21 +383,18 @@
 
     goto :goto_0
 
-    .line 135
     :catch_0
     move-exception v0
 
-    .line 136
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "RecognitionService"
 
-    const-string/jumbo v2, "onError call from stopListening failed"
+    const-string v2, "onError call from stopListening failed"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 133
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_1
     :try_start_1
@@ -462,7 +414,6 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 215
     iget-object v0, p0, Landroid/speech/RecognitionService;->mBinder:Landroid/speech/RecognitionService$RecognitionServiceBinder;
 
     return-object v0
@@ -475,20 +426,16 @@
     .locals 1
 
     .prologue
-    .line 221
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/speech/RecognitionService;->mCurrentCallback:Landroid/speech/RecognitionService$Callback;
 
-    .line 222
     iget-object v0, p0, Landroid/speech/RecognitionService;->mBinder:Landroid/speech/RecognitionService$RecognitionServiceBinder;
 
     invoke-virtual {v0}, Landroid/speech/RecognitionService$RecognitionServiceBinder;->clearReference()V
 
-    .line 223
     invoke-super {p0}, Landroid/app/Service;->onDestroy()V
 
-    .line 224
     return-void
 .end method
 

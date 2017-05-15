@@ -39,16 +39,12 @@
     .param p2, "timeout"    # J
 
     .prologue
-    .line 54
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 56
     iput-object p1, p0, Landroid/util/NtpTrustedTime;->mServer:Ljava/lang/String;
 
-    .line 57
     iput-wide p2, p0, Landroid/util/NtpTrustedTime;->mTimeout:J
 
-    .line 58
     return-void
 .end method
 
@@ -57,7 +53,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 61
     const-class v10, Landroid/util/NtpTrustedTime;
 
     monitor-enter v10
@@ -67,18 +62,15 @@
 
     if-nez v7, :cond_0
 
-    .line 62
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 63
     .local v1, "res":Landroid/content/res/Resources;
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
-    .line 65
     .local v4, "resolver":Landroid/content/ContentResolver;
     const v7, 0x104003a
 
@@ -86,7 +78,6 @@
 
     move-result-object v0
 
-    .line 67
     .local v0, "defaultServer":Ljava/lang/String;
     const v7, 0x10e007e
 
@@ -96,7 +87,6 @@
 
     int-to-long v2, v7
 
-    .line 70
     .local v2, "defaultTimeout":J
     const-string v7, "ntp_server"
 
@@ -104,7 +94,6 @@
 
     move-result-object v5
 
-    .line 72
     .local v5, "secureServer":Ljava/lang/String;
     const-string v7, "ntp_timeout"
 
@@ -112,13 +101,11 @@
 
     move-result-wide v8
 
-    .line 75
     .local v8, "timeout":J
     if-eqz v5, :cond_1
 
     move-object v6, v5
 
-    .line 76
     .local v6, "server":Ljava/lang/String;
     :goto_0
     new-instance v7, Landroid/util/NtpTrustedTime;
@@ -127,10 +114,8 @@
 
     sput-object v7, Landroid/util/NtpTrustedTime;->sSingleton:Landroid/util/NtpTrustedTime;
 
-    .line 77
     sput-object p0, Landroid/util/NtpTrustedTime;->sContext:Landroid/content/Context;
 
-    .line 80
     .end local v0    # "defaultServer":Ljava/lang/String;
     .end local v1    # "res":Landroid/content/res/Resources;
     .end local v2    # "defaultTimeout":J
@@ -156,10 +141,8 @@
     :cond_1
     move-object v6, v0
 
-    .line 75
     goto :goto_0
 
-    .line 61
     .end local v0    # "defaultServer":Ljava/lang/String;
     .end local v1    # "res":Landroid/content/res/Resources;
     .end local v2    # "defaultTimeout":J
@@ -180,12 +163,10 @@
     .locals 4
 
     .prologue
-    .line 156
     iget-boolean v0, p0, Landroid/util/NtpTrustedTime;->mHasCache:Z
 
     if-nez v0, :cond_0
 
-    .line 157
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Missing authoritative time source"
@@ -194,7 +175,6 @@
 
     throw v0
 
-    .line 163
     :cond_0
     iget-wide v0, p0, Landroid/util/NtpTrustedTime;->mCachedNtpTime:J
 
@@ -215,7 +195,6 @@
 
     const/4 v3, 0x0
 
-    .line 85
     iget-object v2, p0, Landroid/util/NtpTrustedTime;->mServer:Ljava/lang/String;
 
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -226,21 +205,17 @@
 
     move v2, v3
 
-    .line 113
     :goto_0
     return v2
 
-    .line 91
     :cond_0
     monitor-enter p0
 
-    .line 92
     :try_start_0
     iget-object v2, p0, Landroid/util/NtpTrustedTime;->mCM:Landroid/net/ConnectivityManager;
 
     if-nez v2, :cond_1
 
-    .line 93
     sget-object v2, Landroid/util/NtpTrustedTime;->sContext:Landroid/content/Context;
 
     const-string v5, "connectivity"
@@ -253,20 +228,17 @@
 
     iput-object v2, p0, Landroid/util/NtpTrustedTime;->mCM:Landroid/net/ConnectivityManager;
 
-    .line 95
     :cond_1
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 97
     iget-object v2, p0, Landroid/util/NtpTrustedTime;->mCM:Landroid/net/ConnectivityManager;
 
     if-nez v2, :cond_3
 
     const/4 v1, 0x0
 
-    .line 98
     .local v1, "ni":Landroid/net/NetworkInfo;
     :goto_1
     if-eqz v1, :cond_2
@@ -280,10 +252,8 @@
     :cond_2
     move v2, v3
 
-    .line 100
     goto :goto_0
 
-    .line 95
     .end local v1    # "ni":Landroid/net/NetworkInfo;
     :catchall_0
     move-exception v2
@@ -295,7 +265,6 @@
 
     throw v2
 
-    .line 97
     :cond_3
     iget-object v2, p0, Landroid/util/NtpTrustedTime;->mCM:Landroid/net/ConnectivityManager;
 
@@ -305,14 +274,12 @@
 
     goto :goto_1
 
-    .line 105
     .restart local v1    # "ni":Landroid/net/NetworkInfo;
     :cond_4
     new-instance v0, Landroid/net/SntpClient;
 
     invoke-direct {v0}, Landroid/net/SntpClient;-><init>()V
 
-    .line 106
     .local v0, "client":Landroid/net/SntpClient;
     iget-object v2, p0, Landroid/util/NtpTrustedTime;->mServer:Ljava/lang/String;
 
@@ -326,24 +293,20 @@
 
     if-eqz v2, :cond_5
 
-    .line 107
     iput-boolean v4, p0, Landroid/util/NtpTrustedTime;->mHasCache:Z
 
-    .line 108
     invoke-virtual {v0}, Landroid/net/SntpClient;->getNtpTime()J
 
     move-result-wide v2
 
     iput-wide v2, p0, Landroid/util/NtpTrustedTime;->mCachedNtpTime:J
 
-    .line 109
     invoke-virtual {v0}, Landroid/net/SntpClient;->getNtpTimeReference()J
 
     move-result-wide v2
 
     iput-wide v2, p0, Landroid/util/NtpTrustedTime;->mCachedNtpElapsedRealtime:J
 
-    .line 110
     invoke-virtual {v0}, Landroid/net/SntpClient;->getRoundTripTime()J
 
     move-result-wide v2
@@ -356,13 +319,11 @@
 
     move v2, v4
 
-    .line 111
     goto :goto_0
 
     :cond_5
     move v2, v3
 
-    .line 113
     goto :goto_0
 .end method
 
@@ -370,12 +331,10 @@
     .locals 4
 
     .prologue
-    .line 138
     iget-boolean v0, p0, Landroid/util/NtpTrustedTime;->mHasCache:Z
 
     if-eqz v0, :cond_0
 
-    .line 139
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
@@ -384,7 +343,6 @@
 
     sub-long/2addr v0, v2
 
-    .line 141
     :goto_0
     return-wide v0
 
@@ -398,15 +356,12 @@
     .locals 2
 
     .prologue
-    .line 147
     iget-boolean v0, p0, Landroid/util/NtpTrustedTime;->mHasCache:Z
 
     if-eqz v0, :cond_0
 
-    .line 148
     iget-wide v0, p0, Landroid/util/NtpTrustedTime;->mCachedNtpCertainty:J
 
-    .line 150
     :goto_0
     return-wide v0
 
@@ -420,7 +375,6 @@
     .locals 2
 
     .prologue
-    .line 168
     iget-wide v0, p0, Landroid/util/NtpTrustedTime;->mCachedNtpTime:J
 
     return-wide v0
@@ -430,7 +384,6 @@
     .locals 2
 
     .prologue
-    .line 172
     iget-wide v0, p0, Landroid/util/NtpTrustedTime;->mCachedNtpElapsedRealtime:J
 
     return-wide v0
@@ -440,7 +393,6 @@
     .locals 3
 
     .prologue
-    .line 125
     const-string v0, "NtpTrustedTime"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -471,7 +423,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 126
     iget-object v0, p0, Landroid/util/NtpTrustedTime;->mServer:Ljava/lang/String;
 
     return-object v0
@@ -481,7 +432,6 @@
     .locals 1
 
     .prologue
-    .line 133
     iget-boolean v0, p0, Landroid/util/NtpTrustedTime;->mHasCache:Z
 
     return v0
@@ -492,7 +442,6 @@
     .param p1, "server"    # Ljava/lang/String;
 
     .prologue
-    .line 119
     const-string v0, "NtpTrustedTime"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -521,13 +470,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 120
     if-eqz p1, :cond_0
 
-    .line 121
     iput-object p1, p0, Landroid/util/NtpTrustedTime;->mServer:Ljava/lang/String;
 
-    .line 123
     :cond_0
     return-void
 .end method

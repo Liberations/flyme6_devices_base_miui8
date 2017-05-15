@@ -45,32 +45,24 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 351
     iput-object p1, p0, Lmiui/maml/elements/BitmapProvider$UriProvider$LoaderAsyncTask;->this$0:Lmiui/maml/elements/BitmapProvider$UriProvider;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
-    .line 345
     const/4 v0, 0x0
 
     iput-object v0, p0, Lmiui/maml/elements/BitmapProvider$UriProvider$LoaderAsyncTask;->mUri:Ljava/lang/String;
 
-    .line 347
     iput v1, p0, Lmiui/maml/elements/BitmapProvider$UriProvider$LoaderAsyncTask;->mWidth:I
 
-    .line 349
     iput v1, p0, Lmiui/maml/elements/BitmapProvider$UriProvider$LoaderAsyncTask;->mHeight:I
 
-    .line 352
     iput-object p2, p0, Lmiui/maml/elements/BitmapProvider$UriProvider$LoaderAsyncTask;->mUri:Ljava/lang/String;
 
-    .line 353
     iput p3, p0, Lmiui/maml/elements/BitmapProvider$UriProvider$LoaderAsyncTask;->mWidth:I
 
-    .line 354
     iput p4, p0, Lmiui/maml/elements/BitmapProvider$UriProvider$LoaderAsyncTask;->mHeight:I
 
-    .line 355
     return-void
 .end method
 
@@ -81,7 +73,6 @@
     .param p1, "params"    # [Ljava/lang/Object;
 
     .prologue
-    .line 359
     iget-object v1, p0, Lmiui/maml/elements/BitmapProvider$UriProvider$LoaderAsyncTask;->this$0:Lmiui/maml/elements/BitmapProvider$UriProvider;
 
     iget-object v2, p0, Lmiui/maml/elements/BitmapProvider$UriProvider$LoaderAsyncTask;->mUri:Ljava/lang/String;
@@ -98,11 +89,9 @@
 
     move-result-object v0
 
-    .line 360
     .local v0, "bmp":Landroid/graphics/Bitmap;
     if-nez v0, :cond_0
 
-    .line 361
     const-string v1, "BitmapProvider"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -127,7 +116,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 363
     :cond_0
     iget-object v1, p0, Lmiui/maml/elements/BitmapProvider$UriProvider$LoaderAsyncTask;->this$0:Lmiui/maml/elements/BitmapProvider$UriProvider;
 
@@ -138,7 +126,6 @@
 
     monitor-enter v2
 
-    .line 364
     :try_start_0
     iget-object v1, p0, Lmiui/maml/elements/BitmapProvider$UriProvider$LoaderAsyncTask;->mUri:Ljava/lang/String;
 
@@ -155,14 +142,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 365
     iget-object v1, p0, Lmiui/maml/elements/BitmapProvider$UriProvider$LoaderAsyncTask;->this$0:Lmiui/maml/elements/BitmapProvider$UriProvider;
 
     iget-object v1, v1, Lmiui/maml/elements/BitmapProvider$UriProvider;->mVersionedBitmap:Lmiui/maml/elements/BitmapProvider$VersionedBitmap;
 
     invoke-virtual {v1, v0}, Lmiui/maml/elements/BitmapProvider$VersionedBitmap;->setBitmap(Landroid/graphics/Bitmap;)Z
 
-    .line 366
     iget-object v1, p0, Lmiui/maml/elements/BitmapProvider$UriProvider$LoaderAsyncTask;->this$0:Lmiui/maml/elements/BitmapProvider$UriProvider;
 
     iget-object v3, p0, Lmiui/maml/elements/BitmapProvider$UriProvider$LoaderAsyncTask;->this$0:Lmiui/maml/elements/BitmapProvider$UriProvider;
@@ -175,14 +160,12 @@
     # setter for: Lmiui/maml/elements/BitmapProvider$UriProvider;->mCachedBitmapUri:Ljava/lang/String;
     invoke-static {v1, v3}, Lmiui/maml/elements/BitmapProvider$UriProvider;->access$302(Lmiui/maml/elements/BitmapProvider$UriProvider;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 368
     iget-object v1, p0, Lmiui/maml/elements/BitmapProvider$UriProvider$LoaderAsyncTask;->this$0:Lmiui/maml/elements/BitmapProvider$UriProvider;
 
     iget-object v1, v1, Lmiui/maml/elements/BitmapProvider$UriProvider;->mRoot:Lmiui/maml/ScreenElementRoot;
 
     invoke-virtual {v1}, Lmiui/maml/ScreenElementRoot;->requestUpdate()V
 
-    .line 369
     iget-object v1, p0, Lmiui/maml/elements/BitmapProvider$UriProvider$LoaderAsyncTask;->this$0:Lmiui/maml/elements/BitmapProvider$UriProvider;
 
     const/4 v3, 0x0
@@ -190,14 +173,11 @@
     # setter for: Lmiui/maml/elements/BitmapProvider$UriProvider;->mCurLoadingBitmapUri:Ljava/lang/String;
     invoke-static {v1, v3}, Lmiui/maml/elements/BitmapProvider$UriProvider;->access$202(Lmiui/maml/elements/BitmapProvider$UriProvider;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 371
     :cond_1
     monitor-exit v2
 
-    .line 372
     return-object v0
 
-    .line 371
     :catchall_0
     move-exception v1
 
@@ -213,7 +193,6 @@
     .param p1, "x0"    # [Ljava/lang/Object;
 
     .prologue
-    .line 343
     invoke-virtual {p0, p1}, Lmiui/maml/elements/BitmapProvider$UriProvider$LoaderAsyncTask;->doInBackground([Ljava/lang/Object;)Landroid/graphics/Bitmap;
 
     move-result-object v0

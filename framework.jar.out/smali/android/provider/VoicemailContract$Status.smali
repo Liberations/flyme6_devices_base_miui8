@@ -62,7 +62,6 @@
     .locals 1
 
     .prologue
-    .line 334
     const-string v0, "content://com.android.voicemail/status"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -78,10 +77,8 @@
     .locals 0
 
     .prologue
-    .line 341
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 342
     return-void
 .end method
 
@@ -90,14 +87,13 @@
     .param p0, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 456
     sget-object v0, Landroid/provider/VoicemailContract$Status;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-virtual {v0}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
 
     move-result-object v0
 
-    const-string/jumbo v1, "source_package"
+    const-string v1, "source_package"
 
     invoke-virtual {v0, v1, p0}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
@@ -116,10 +112,8 @@
     .param p1, "statusUri"    # Landroid/net/Uri;
 
     .prologue
-    .line 498
     const/4 v6, 0x0
 
-    .line 500
     .local v6, "cursor":Landroid/database/Cursor;
     const/4 v2, 0x0
 
@@ -138,7 +132,6 @@
 
     move-result-object v6
 
-    .line 501
     if-eqz v6, :cond_1
 
     invoke-interface {v6}, Landroid/database/Cursor;->getCount()I
@@ -151,7 +144,6 @@
 
     const/4 v0, 0x1
 
-    .line 503
     :goto_0
     if-eqz v6, :cond_0
 
@@ -160,13 +152,11 @@
     :cond_0
     return v0
 
-    .line 501
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 503
     :catchall_0
     move-exception v0
 
@@ -189,12 +179,10 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 473
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 474
     .local v0, "contentResolver":Landroid/content/ContentResolver;
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
@@ -204,15 +192,13 @@
 
     move-result-object v1
 
-    .line 475
     .local v1, "statusUri":Landroid/net/Uri;
     new-instance v2, Landroid/content/ContentValues;
 
     invoke-direct {v2}, Landroid/content/ContentValues;-><init>()V
 
-    .line 476
     .local v2, "values":Landroid/content/ContentValues;
-    const-string/jumbo v3, "phone_account_component_name"
+    const-string v3, "phone_account_component_name"
 
     invoke-virtual {p1}, Landroid/telecom/PhoneAccountHandle;->getComponentName()Landroid/content/ComponentName;
 
@@ -224,8 +210,7 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 478
-    const-string/jumbo v3, "phone_account_id"
+    const-string v3, "phone_account_id"
 
     invoke-virtual {p1}, Landroid/telecom/PhoneAccountHandle;->getId()Ljava/lang/String;
 
@@ -233,7 +218,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 479
     const-string v3, "configuration_state"
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -242,7 +226,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 480
     const-string v3, "data_channel_state"
 
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -251,8 +234,7 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 481
-    const-string/jumbo v3, "notification_channel_state"
+    const-string v3, "notification_channel_state"
 
     invoke-static {p4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -260,21 +242,17 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 483
     invoke-static {v0, v1}, Landroid/provider/VoicemailContract$Status;->isStatusPresent(Landroid/content/ContentResolver;Landroid/net/Uri;)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 484
     invoke-virtual {v0, v1, v2, v5, v5}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 488
     :goto_0
     return-void
 
-    .line 486
     :cond_0
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
 

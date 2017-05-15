@@ -26,7 +26,6 @@
     .locals 1
 
     .prologue
-    .line 22
     const/4 v0, 0x0
 
     sput-object v0, Lcom/miui/whetstone/watermark/WatermarkProxy;->sInstance:Lcom/miui/whetstone/watermark/WatermarkProxy;
@@ -39,13 +38,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
     iput-object p1, p0, Lcom/miui/whetstone/watermark/WatermarkProxy;->mContext:Landroid/content/Context;
 
-    .line 33
     return-void
 .end method
 
@@ -54,7 +50,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 25
     const-class v1, Lcom/miui/whetstone/watermark/WatermarkProxy;
 
     monitor-enter v1
@@ -64,14 +59,12 @@
 
     if-nez v0, :cond_0
 
-    .line 26
     new-instance v0, Lcom/miui/whetstone/watermark/WatermarkProxy;
 
     invoke-direct {v0, p0}, Lcom/miui/whetstone/watermark/WatermarkProxy;-><init>(Landroid/content/Context;)V
 
     sput-object v0, Lcom/miui/whetstone/watermark/WatermarkProxy;->sInstance:Lcom/miui/whetstone/watermark/WatermarkProxy;
 
-    .line 28
     :cond_0
     sget-object v0, Lcom/miui/whetstone/watermark/WatermarkProxy;->sInstance:Lcom/miui/whetstone/watermark/WatermarkProxy;
     :try_end_0
@@ -81,7 +74,6 @@
 
     return-object v0
 
-    .line 25
     :catchall_0
     move-exception v0
 
@@ -99,21 +91,18 @@
     .param p3, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 104
     const-string v0, "WatermarkProxy"
 
     const-string v1, "decodeWatermark"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 105
     new-instance v0, Lcom/miui/whetstone/watermark/WatermarkProxy$CallbackTransport;
 
     invoke-direct {v0, p2, p3}, Lcom/miui/whetstone/watermark/WatermarkProxy$CallbackTransport;-><init>(Lcom/miui/whetstone/watermark/WatermarkCallback;Landroid/os/Looper;)V
 
     invoke-static {p1, v0}, Lcom/miui/whetstone/WhetstoneManager;->decodeWatermark(Landroid/graphics/Bitmap;Lcom/miui/whetstone/watermark/IWatermarkCallback;)V
 
-    .line 106
     return-void
 .end method
 
@@ -125,20 +114,17 @@
     .param p4, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 99
     const-string v0, "WatermarkProxy"
 
     const-string v1, "encodeWatermark"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 100
     new-instance v0, Lcom/miui/whetstone/watermark/WatermarkProxy$CallbackTransport;
 
     invoke-direct {v0, p3, p4}, Lcom/miui/whetstone/watermark/WatermarkProxy$CallbackTransport;-><init>(Lcom/miui/whetstone/watermark/WatermarkCallback;Landroid/os/Looper;)V
 
     invoke-static {p1, p2, v0}, Lcom/miui/whetstone/WhetstoneManager;->encodeWatermark(Landroid/graphics/Bitmap;Ljava/lang/String;Lcom/miui/whetstone/watermark/IWatermarkCallback;)V
 
-    .line 101
     return-void
 .end method

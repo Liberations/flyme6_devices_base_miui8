@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,8 +19,7 @@
     .locals 1
 
     .prologue
-    .line 15
-    const-string/jumbo v0, "mobile_data"
+    const-string v0, "mobile_data"
 
     invoke-static {v0}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -35,8 +33,7 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 25
-    const-string/jumbo v1, "phone"
+    const-string v1, "phone"
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -44,7 +41,6 @@
 
     check-cast v0, Landroid/telephony/TelephonyManager;
 
-    .line 27
     .local v0, "telephony":Landroid/telephony/TelephonyManager;
     invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getSubscriberId()Ljava/lang/String;
 
@@ -58,7 +54,6 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 19
     const-string v1, "connectivity"
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -67,7 +62,6 @@
 
     check-cast v0, Landroid/net/ConnectivityManager;
 
-    .line 21
     .local v0, "cm":Landroid/net/ConnectivityManager;
     invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getMobileDataEnabled()Z
 
@@ -81,6 +75,5 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 32
     return-void
 .end method

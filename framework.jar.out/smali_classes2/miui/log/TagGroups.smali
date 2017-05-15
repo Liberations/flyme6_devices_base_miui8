@@ -32,7 +32,6 @@
 
     const/4 v8, 0x0
 
-    .line 14
     new-instance v4, Lmiui/log/TagGroup;
 
     const-string v5, "Broadcast"
@@ -47,7 +46,6 @@
 
     sput-object v4, Lmiui/log/TagGroups;->TagGroupBroadcast:Lmiui/log/TagGroup;
 
-    .line 18
     new-array v4, v9, [Lmiui/log/TagGroup;
 
     sget-object v5, Lmiui/log/TagGroups;->TagGroupBroadcast:Lmiui/log/TagGroup;
@@ -56,14 +54,12 @@
 
     sput-object v4, Lmiui/log/TagGroups;->allTagGroups:[Lmiui/log/TagGroup;
 
-    .line 21
     new-instance v4, Ljava/util/HashMap;
 
     invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
 
     sput-object v4, Lmiui/log/TagGroups;->tagGroupMap:Ljava/util/HashMap;
 
-    .line 24
     sget-object v0, Lmiui/log/TagGroups;->allTagGroups:[Lmiui/log/TagGroup;
 
     .local v0, "arr$":[Lmiui/log/TagGroup;
@@ -78,7 +74,6 @@
 
     aget-object v3, v0, v1
 
-    .line 25
     .local v3, "tagGroup":Lmiui/log/TagGroup;
     sget-object v4, Lmiui/log/TagGroups;->tagGroupMap:Ljava/util/HashMap;
 
@@ -86,12 +81,10 @@
 
     invoke-virtual {v4, v5, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 24
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 27
     .end local v3    # "tagGroup":Lmiui/log/TagGroup;
     :cond_0
     return-void
@@ -101,7 +94,6 @@
     .locals 0
 
     .prologue
-    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -112,7 +104,6 @@
     .param p0, "groupName"    # Ljava/lang/String;
 
     .prologue
-    .line 30
     sget-object v0, Lmiui/log/TagGroups;->tagGroupMap:Ljava/util/HashMap;
 
     invoke-virtual {v0, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -129,7 +120,6 @@
     .param p0, "groupName"    # Ljava/lang/String;
 
     .prologue
-    .line 34
     sget-object v1, Lmiui/log/TagGroups;->tagGroupMap:Ljava/util/HashMap;
 
     invoke-virtual {v1, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -138,7 +128,6 @@
 
     check-cast v0, Lmiui/log/TagGroup;
 
-    .line 35
     .local v0, "group":Lmiui/log/TagGroup;
     if-nez v0, :cond_0
 
@@ -160,7 +149,6 @@
     .param p0, "groupName"    # Ljava/lang/String;
 
     .prologue
-    .line 46
     sget-object v1, Lmiui/log/TagGroups;->tagGroupMap:Ljava/util/HashMap;
 
     invoke-virtual {v1, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -169,14 +157,11 @@
 
     check-cast v0, Lmiui/log/TagGroup;
 
-    .line 47
     .local v0, "group":Lmiui/log/TagGroup;
     if-eqz v0, :cond_0
 
-    .line 48
     invoke-virtual {v0}, Lmiui/log/TagGroup;->switchOff()V
 
-    .line 50
     :cond_0
     return-void
 .end method
@@ -186,7 +171,6 @@
     .param p0, "groupName"    # Ljava/lang/String;
 
     .prologue
-    .line 39
     sget-object v1, Lmiui/log/TagGroups;->tagGroupMap:Ljava/util/HashMap;
 
     invoke-virtual {v1, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -195,14 +179,11 @@
 
     check-cast v0, Lmiui/log/TagGroup;
 
-    .line 40
     .local v0, "group":Lmiui/log/TagGroup;
     if-eqz v0, :cond_0
 
-    .line 41
     invoke-virtual {v0}, Lmiui/log/TagGroup;->switchOn()V
 
-    .line 43
     :cond_0
     return-void
 .end method

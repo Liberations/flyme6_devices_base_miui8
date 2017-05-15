@@ -42,18 +42,13 @@
     .prologue
     const/16 v0, 0xff
 
-    .line 4608
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4626
     iput v0, p0, Lcom/android/internal/policy/PhoneWindow$DrawableFeatureState;->alpha:I
 
-    .line 4628
     iput v0, p0, Lcom/android/internal/policy/PhoneWindow$DrawableFeatureState;->curAlpha:I
 
-    .line 4609
     iput p1, p0, Lcom/android/internal/policy/PhoneWindow$DrawableFeatureState;->featureId:I
 
-    .line 4610
     return-void
 .end method

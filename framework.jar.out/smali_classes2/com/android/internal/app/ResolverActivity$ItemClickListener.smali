@@ -30,19 +30,16 @@
     .param p2, "page"    # I
 
     .prologue
-    .line 1694
     iput-object p1, p0, Lcom/android/internal/app/ResolverActivity$ItemClickListener;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1695
     add-int/lit8 v0, p2, -0x1
 
     mul-int/lit8 v0, v0, 0x8
 
     iput v0, p0, Lcom/android/internal/app/ResolverActivity$ItemClickListener;->start:I
 
-    .line 1696
     return-void
 .end method
 
@@ -67,7 +64,6 @@
     .local p1, "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     const/4 v3, 0x1
 
-    .line 1700
     instance-of v4, p1, Landroid/widget/ListView;
 
     if-eqz v4, :cond_1
@@ -77,27 +73,22 @@
     .end local p1    # "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     move-object v2, p1
 
-    .line 1701
     .local v2, "listView":Landroid/widget/ListView;
     :goto_0
     if-eqz v2, :cond_0
 
-    .line 1702
     invoke-virtual {v2}, Landroid/widget/ListView;->getHeaderViewsCount()I
 
     move-result v4
 
     sub-int/2addr p3, v4
 
-    .line 1704
     :cond_0
     if-gez p3, :cond_2
 
-    .line 1712
     :goto_1
     return-void
 
-    .line 1700
     .end local v2    # "listView":Landroid/widget/ListView;
     .restart local p1    # "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     :cond_1
@@ -105,7 +96,6 @@
 
     goto :goto_0
 
-    .line 1708
     .end local p1    # "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     .restart local v2    # "listView":Landroid/widget/ListView;
     :cond_2
@@ -119,7 +109,6 @@
 
     check-cast v1, Landroid/widget/CheckBox;
 
-    .line 1709
     .local v1, "alwaysOption":Landroid/widget/CheckBox;
     invoke-virtual {v1}, Landroid/widget/CheckBox;->getVisibility()I
 
@@ -135,7 +124,6 @@
 
     move v0, v3
 
-    .line 1711
     .local v0, "always":Z
     :goto_2
     iget-object v4, p0, Lcom/android/internal/app/ResolverActivity$ItemClickListener;->this$0:Lcom/android/internal/app/ResolverActivity;
@@ -148,7 +136,6 @@
 
     goto :goto_1
 
-    .line 1709
     .end local v0    # "always":Z
     :cond_3
     const/4 v0, 0x0
@@ -175,7 +162,6 @@
     .local p1, "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     const/4 v2, 0x1
 
-    .line 1716
     instance-of v3, p1, Landroid/widget/ListView;
 
     if-eqz v3, :cond_1
@@ -185,30 +171,24 @@
     .end local p1    # "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     move-object v0, p1
 
-    .line 1717
     .local v0, "listView":Landroid/widget/ListView;
     :goto_0
     if-eqz v0, :cond_0
 
-    .line 1718
     invoke-virtual {v0}, Landroid/widget/ListView;->getHeaderViewsCount()I
 
     move-result v3
 
     sub-int/2addr p3, v3
 
-    .line 1720
     :cond_0
     if-gez p3, :cond_2
 
-    .line 1722
     const/4 v2, 0x0
 
-    .line 1726
     :goto_1
     return v2
 
-    .line 1716
     .end local v0    # "listView":Landroid/widget/ListView;
     .restart local p1    # "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     :cond_1
@@ -216,7 +196,6 @@
 
     goto :goto_0
 
-    .line 1724
     .end local p1    # "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     .restart local v0    # "listView":Landroid/widget/ListView;
     :cond_2
@@ -235,7 +214,6 @@
 
     move-result-object v1
 
-    .line 1725
     .local v1, "ri":Landroid/content/pm/ResolveInfo;
     iget-object v3, p0, Lcom/android/internal/app/ResolverActivity$ItemClickListener;->this$0:Lcom/android/internal/app/ResolverActivity;
 

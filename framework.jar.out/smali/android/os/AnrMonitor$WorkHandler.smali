@@ -26,12 +26,10 @@
     .param p1, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 577
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;)V
 
-    .line 578
     return-void
 .end method
 
@@ -42,23 +40,19 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 582
     iget v8, p1, Landroid/os/Message;->what:I
 
     packed-switch v8, :pswitch_data_0
 
-    .line 624
     :cond_0
     :goto_0
     return-void
 
-    .line 584
     :pswitch_0
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v1
 
-    .line 585
     .local v1, "data":Landroid/os/Bundle;
     if-eqz v1, :cond_0
 
@@ -75,23 +69,20 @@
 
     if-nez v8, :cond_0
 
-    .line 586
-    const-string/jumbo v8, "monitor_msg"
+    const-string v8, "monitor_msg"
 
-    const-string/jumbo v9, "no monitor message"
+    const-string v9, "no monitor message"
 
     invoke-virtual {v1, v8, v9}, Landroid/os/Bundle;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 588
     .local v3, "monitorMsg":Ljava/lang/String;
     :try_start_0
     new-instance v4, Lorg/json/JSONObject;
 
     invoke-direct {v4}, Lorg/json/JSONObject;-><init>()V
 
-    .line 589
     .local v4, "object":Lorg/json/JSONObject;
     const-string v8, "dump_service"
 
@@ -99,36 +90,30 @@
 
     invoke-virtual {v4, v8, v9}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 591
     new-instance v0, Lorg/json/JSONArray;
 
     invoke-direct {v0}, Lorg/json/JSONArray;-><init>()V
 
-    .line 592
     .local v0, "args":Lorg/json/JSONArray;
     new-instance v5, Lorg/json/JSONObject;
 
     invoke-direct {v5}, Lorg/json/JSONObject;-><init>()V
 
-    .line 593
     .local v5, "opt1":Lorg/json/JSONObject;
-    const-string/jumbo v8, "opt"
+    const-string v8, "opt"
 
     const-string v9, "dump-app-trace"
 
     invoke-virtual {v5, v8, v9}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 594
     invoke-virtual {v0, v5}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
 
-    .line 595
     new-instance v6, Lorg/json/JSONObject;
 
     invoke-direct {v6}, Lorg/json/JSONObject;-><init>()V
 
-    .line 596
     .local v6, "opt2":Lorg/json/JSONObject;
-    const-string/jumbo v8, "opt"
+    const-string v8, "opt"
 
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -210,15 +195,12 @@
 
     invoke-virtual {v6, v8, v9}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 601
     invoke-virtual {v0, v6}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
 
-    .line 602
     const-string v8, "args"
 
     invoke-virtual {v4, v8, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 603
     invoke-static {}, Lmiui/mqsas/sdk/MQSEventManagerDelegate;->getInstance()Lmiui/mqsas/sdk/MQSEventManagerDelegate;
 
     move-result-object v8
@@ -235,7 +217,6 @@
 
     goto/16 :goto_0
 
-    .line 605
     .end local v0    # "args":Lorg/json/JSONArray;
     .end local v4    # "object":Lorg/json/JSONObject;
     .end local v5    # "opt1":Lorg/json/JSONObject;
@@ -243,13 +224,11 @@
     :catch_0
     move-exception v2
 
-    .line 606
     .local v2, "e":Ljava/lang/Exception;
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
     goto/16 :goto_0
 
-    .line 612
     .end local v1    # "data":Landroid/os/Bundle;
     .end local v2    # "e":Ljava/lang/Exception;
     .end local v3    # "monitorMsg":Ljava/lang/String;
@@ -259,7 +238,6 @@
 
     check-cast v7, Ljava/lang/String;
 
-    .line 613
     .local v7, "reportContent":Ljava/lang/String;
     invoke-static {v7}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -274,7 +252,6 @@
 
     if-eqz v8, :cond_0
 
-    .line 614
     invoke-static {}, Lmiui/mqsas/sdk/MQSEventManagerDelegate;->getInstance()Lmiui/mqsas/sdk/MQSEventManagerDelegate;
 
     move-result-object v8
@@ -287,22 +264,19 @@
 
     goto/16 :goto_0
 
-    .line 617
     .end local v7    # "reportContent":Ljava/lang/String;
     :catch_1
     move-exception v2
 
-    .line 618
     .restart local v2    # "e":Ljava/lang/Exception;
     const-string v8, "AnrMonitor"
 
-    const-string/jumbo v9, "report record error."
+    const-string v9, "report record error."
 
     invoke-static {v8, v9, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto/16 :goto_0
 
-    .line 582
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

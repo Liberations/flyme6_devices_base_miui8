@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 140
     iput-object p1, p0, Lmiui/util/ScreenshotUtils$1;->val$shortComponentName:Ljava/lang/String;
 
     iput p2, p0, Lmiui/util/ScreenshotUtils$1;->val$rotation:I
@@ -52,7 +51,6 @@
     .locals 4
 
     .prologue
-    .line 142
     iget-object v0, p0, Lmiui/util/ScreenshotUtils$1;->val$shortComponentName:Ljava/lang/String;
 
     iget v1, p0, Lmiui/util/ScreenshotUtils$1;->val$rotation:I
@@ -64,6 +62,5 @@
     # invokes: Lmiui/util/ScreenshotUtils;->screenShotAndSave(Ljava/lang/String;IZZ)V
     invoke-static {v0, v1, v2, v3}, Lmiui/util/ScreenshotUtils;->access$000(Ljava/lang/String;IZZ)V
 
-    .line 143
     return-void
 .end method

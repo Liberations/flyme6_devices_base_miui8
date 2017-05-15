@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 428
     iput-object p1, p0, Lmiui/maml/MamlConfigSettings$CheckboxItem;->this$0:Lmiui/maml/MamlConfigSettings;
 
     const/4 v0, 0x0
@@ -39,7 +38,6 @@
     .param p2, "x1"    # Lmiui/maml/MamlConfigSettings$1;
 
     .prologue
-    .line 428
     invoke-direct {p0, p1}, Lmiui/maml/MamlConfigSettings$CheckboxItem;-><init>(Lmiui/maml/MamlConfigSettings;)V
 
     return-void
@@ -52,16 +50,13 @@
     .param p1, "objValue"    # Ljava/lang/Object;
 
     .prologue
-    .line 442
     const/4 v0, 0x0
 
-    .line 443
     .local v0, "isTrue":Z
     instance-of v1, p1, Ljava/lang/Boolean;
 
     if-eqz v1, :cond_1
 
-    .line 444
     check-cast p1, Ljava/lang/Boolean;
 
     .end local p1    # "objValue":Ljava/lang/Object;
@@ -69,7 +64,6 @@
 
     move-result v0
 
-    .line 448
     :cond_0
     :goto_0
     iget-object v1, p0, Lmiui/maml/MamlConfigSettings$CheckboxItem;->this$0:Lmiui/maml/MamlConfigSettings;
@@ -92,19 +86,16 @@
     :goto_1
     invoke-virtual {v2, v3, v1}, Lmiui/maml/util/ConfigFile;->putNumber(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 449
     const/4 v1, 0x1
 
     return v1
 
-    .line 445
     .restart local p1    # "objValue":Ljava/lang/Object;
     :cond_1
     instance-of v1, p1, Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
-    .line 446
     const-string v1, "1"
 
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -113,7 +104,6 @@
 
     goto :goto_0
 
-    .line 448
     .end local p1    # "objValue":Ljava/lang/Object;
     :cond_2
     const-string v1, "0"
@@ -126,7 +116,6 @@
     .param p1, "c"    # Landroid/content/Context;
 
     .prologue
-    .line 432
     new-instance v0, Landroid/preference/CheckBoxPreference;
 
     invoke-direct {v0, p1}, Landroid/preference/CheckBoxPreference;-><init>(Landroid/content/Context;)V
@@ -139,7 +128,6 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 437
     iget-object v0, p0, Lmiui/maml/MamlConfigSettings$CheckboxItem;->mPreference:Landroid/preference/Preference;
 
     check-cast v0, Landroid/preference/CheckBoxPreference;
@@ -152,6 +140,5 @@
 
     invoke-virtual {v0, v1}, Landroid/preference/CheckBoxPreference;->setChecked(Z)V
 
-    .line 438
     return-void
 .end method

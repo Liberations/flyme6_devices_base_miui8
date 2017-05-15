@@ -38,7 +38,6 @@
     .locals 1
 
     .prologue
-    .line 259
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
@@ -53,7 +52,6 @@
     .param p1, "service"    # Lcom/android/internal/os/IDropBoxManagerService;
 
     .prologue
-    .line 252
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Landroid/os/DropBoxManager;->mService:Lcom/android/internal/os/IDropBoxManagerService;
@@ -70,7 +68,6 @@
     .param p3, "flags"    # I
 
     .prologue
-    .line 281
     if-nez p2, :cond_0
 
     new-instance v0, Ljava/lang/NullPointerException;
@@ -81,7 +78,6 @@
 
     throw v0
 
-    .line 282
     :cond_0
     :try_start_0
     iget-object v6, p0, Landroid/os/DropBoxManager;->mService:Lcom/android/internal/os/IDropBoxManagerService;
@@ -102,11 +98,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 283
     :goto_0
     return-void
 
-    .line 282
     :catch_0
     move-exception v0
 
@@ -125,7 +119,6 @@
     .end annotation
 
     .prologue
-    .line 295
     if-nez p2, :cond_0
 
     new-instance v1, Ljava/lang/NullPointerException;
@@ -136,7 +129,6 @@
 
     throw v1
 
-    .line 296
     :cond_0
     new-instance v0, Landroid/os/DropBoxManager$Entry;
 
@@ -150,7 +142,6 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/os/DropBoxManager$Entry;-><init>(Ljava/lang/String;JLjava/io/File;I)V
 
-    .line 298
     .local v0, "entry":Landroid/os/DropBoxManager$Entry;
     :try_start_0
     iget-object v1, p0, Landroid/os/DropBoxManager;->mService:Lcom/android/internal/os/IDropBoxManagerService;
@@ -160,18 +151,14 @@
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 302
     invoke-virtual {v0}, Landroid/os/DropBoxManager$Entry;->close()V
 
-    .line 304
     :goto_0
     return-void
 
-    .line 299
     :catch_0
     move-exception v1
 
-    .line 302
     invoke-virtual {v0}, Landroid/os/DropBoxManager$Entry;->close()V
 
     goto :goto_0
@@ -190,7 +177,6 @@
     .param p2, "data"    # Ljava/lang/String;
 
     .prologue
-    .line 270
     :try_start_0
     iget-object v0, p0, Landroid/os/DropBoxManager;->mService:Lcom/android/internal/os/IDropBoxManagerService;
 
@@ -204,11 +190,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 271
     :goto_0
     return-void
 
-    .line 270
     :catch_0
     move-exception v0
 
@@ -221,7 +205,6 @@
     .param p2, "msec"    # J
 
     .prologue
-    .line 328
     :try_start_0
     iget-object v1, p0, Landroid/os/DropBoxManager;->mService:Lcom/android/internal/os/IDropBoxManagerService;
 
@@ -248,7 +231,6 @@
     .param p1, "tag"    # Ljava/lang/String;
 
     .prologue
-    .line 315
     :try_start_0
     iget-object v1, p0, Landroid/os/DropBoxManager;->mService:Lcom/android/internal/os/IDropBoxManagerService;
 

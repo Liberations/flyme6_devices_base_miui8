@@ -12,7 +12,6 @@
     .locals 0
 
     .prologue
-    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -23,7 +22,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 15
     const-string v0, "com.miui.hybrid.hook.WRITE_PERMISSION"
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->checkCallingPermission(Ljava/lang/String;)I

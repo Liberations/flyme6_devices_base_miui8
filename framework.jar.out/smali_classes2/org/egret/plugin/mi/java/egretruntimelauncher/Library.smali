@@ -32,10 +32,8 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 19
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 21
     :try_start_0
     const-string v2, "name"
 
@@ -45,7 +43,6 @@
 
     iput-object v2, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/Library;->zipName:Ljava/lang/String;
 
-    .line 22
     const-string v2, "md5"
 
     invoke-virtual {p1, v2}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -54,8 +51,7 @@
 
     iput-object v2, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/Library;->libraryCheckSum:Ljava/lang/String;
 
-    .line 23
-    const-string/jumbo v2, "zip"
+    const-string v2, "zip"
 
     invoke-virtual {p1, v2}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -63,21 +59,17 @@
 
     iput-object v2, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/Library;->zipCheckSum:Ljava/lang/String;
 
-    .line 24
     iget-object v2, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/Library;->zipName:Ljava/lang/String;
 
     if-nez v2, :cond_0
 
-    .line 25
     const/4 v2, 0x0
 
     iput-object v2, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/Library;->libraryName:Ljava/lang/String;
 
-    .line 38
     :goto_0
     return-void
 
-    .line 28
     :cond_0
     iget-object v2, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/Library;->zipName:Ljava/lang/String;
 
@@ -87,7 +79,6 @@
 
     iput-object v2, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/Library;->url:Ljava/lang/String;
 
-    .line 29
     iget-object v2, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/Library;->zipName:Ljava/lang/String;
 
     const-string v4, ".zip"
@@ -96,7 +87,6 @@
 
     move-result v1
 
-    .line 30
     .local v1, "end":I
     if-gez v1, :cond_1
 
@@ -109,30 +99,23 @@
 
     goto :goto_0
 
-    .line 31
     .end local v1    # "end":I
     :catch_0
     move-exception v0
 
-    .line 32
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 33
     iput-object v3, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/Library;->zipName:Ljava/lang/String;
 
-    .line 34
     iput-object v3, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/Library;->libraryName:Ljava/lang/String;
 
-    .line 35
     iput-object v3, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/Library;->libraryCheckSum:Ljava/lang/String;
 
-    .line 36
     iput-object v3, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/Library;->zipCheckSum:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 30
     .end local v0    # "e":Ljava/lang/Exception;
     .restart local v1    # "end":I
     :cond_1
@@ -156,17 +139,13 @@
     .param p2, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 41
     if-nez p1, :cond_0
 
-    .line 42
     const/4 v0, 0x0
 
-    .line 47
     :goto_0
     return-object v0
 
-    .line 44
     :cond_0
     const-string v0, "/"
 
@@ -176,7 +155,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 45
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -195,7 +173,6 @@
 
     goto :goto_0
 
-    .line 47
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -228,7 +205,6 @@
     .locals 1
 
     .prologue
-    .line 56
     iget-object v0, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/Library;->libraryCheckSum:Ljava/lang/String;
 
     return-object v0
@@ -238,7 +214,6 @@
     .locals 1
 
     .prologue
-    .line 64
     iget-object v0, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/Library;->libraryName:Ljava/lang/String;
 
     return-object v0
@@ -248,7 +223,6 @@
     .locals 1
 
     .prologue
-    .line 68
     iget-object v0, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/Library;->url:Ljava/lang/String;
 
     return-object v0
@@ -258,7 +232,6 @@
     .locals 1
 
     .prologue
-    .line 60
     iget-object v0, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/Library;->zipCheckSum:Ljava/lang/String;
 
     return-object v0
@@ -268,7 +241,6 @@
     .locals 1
 
     .prologue
-    .line 52
     iget-object v0, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/Library;->zipName:Ljava/lang/String;
 
     return-object v0

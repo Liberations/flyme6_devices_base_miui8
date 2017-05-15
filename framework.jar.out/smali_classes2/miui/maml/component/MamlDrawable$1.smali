@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 23
     iput-object p1, p0, Lmiui/maml/component/MamlDrawable$1;->this$0:Lmiui/maml/component/MamlDrawable;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,12 +39,10 @@
     .locals 1
 
     .prologue
-    .line 26
     iget-object v0, p0, Lmiui/maml/component/MamlDrawable$1;->this$0:Lmiui/maml/component/MamlDrawable;
 
     # invokes: Lmiui/maml/component/MamlDrawable;->doPause()V
     invoke-static {v0}, Lmiui/maml/component/MamlDrawable;->access$000(Lmiui/maml/component/MamlDrawable;)V
 
-    .line 27
     return-void
 .end method

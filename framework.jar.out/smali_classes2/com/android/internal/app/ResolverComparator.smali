@@ -84,17 +84,14 @@
     .param p3, "referrerPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 67
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 64
     new-instance v1, Ljava/util/LinkedHashMap;
 
     invoke-direct {v1}, Ljava/util/LinkedHashMap;-><init>()V
 
     iput-object v1, p0, Lcom/android/internal/app/ResolverComparator;->mScoredTargets:Ljava/util/LinkedHashMap;
 
-    .line 68
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -111,12 +108,10 @@
 
     iput-object v1, p0, Lcom/android/internal/app/ResolverComparator;->mCollator:Ljava/text/Collator;
 
-    .line 69
     invoke-virtual {p2}, Landroid/content/Intent;->getScheme()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 70
     .local v0, "scheme":Ljava/lang/String;
     const-string v1, "http"
 
@@ -140,17 +135,14 @@
     :goto_0
     iput-boolean v1, p0, Lcom/android/internal/app/ResolverComparator;->mHttp:Z
 
-    .line 71
     iput-object p3, p0, Lcom/android/internal/app/ResolverComparator;->mReferrerPackage:Ljava/lang/String;
 
-    .line 73
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/android/internal/app/ResolverComparator;->mPm:Landroid/content/pm/PackageManager;
 
-    .line 74
     const-string v1, "usagestats"
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -161,14 +153,12 @@
 
     iput-object v1, p0, Lcom/android/internal/app/ResolverComparator;->mUsm:Landroid/app/usage/UsageStatsManager;
 
-    .line 76
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
     iput-wide v2, p0, Lcom/android/internal/app/ResolverComparator;->mCurrentTime:J
 
-    .line 77
     iget-wide v2, p0, Lcom/android/internal/app/ResolverComparator;->mCurrentTime:J
 
     const-wide/32 v4, 0x48190800
@@ -177,7 +167,6 @@
 
     iput-wide v2, p0, Lcom/android/internal/app/ResolverComparator;->mSinceTime:J
 
-    .line 78
     iget-object v1, p0, Lcom/android/internal/app/ResolverComparator;->mUsm:Landroid/app/usage/UsageStatsManager;
 
     iget-wide v2, p0, Lcom/android/internal/app/ResolverComparator;->mSinceTime:J
@@ -190,10 +179,8 @@
 
     iput-object v1, p0, Lcom/android/internal/app/ResolverComparator;->mStats:Ljava/util/Map;
 
-    .line 79
     return-void
 
-    .line 70
     :cond_1
     const/4 v1, 0x0
 
@@ -207,7 +194,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 146
     if-eqz p0, :cond_0
 
     invoke-virtual {p0}, Lcom/android/internal/app/ResolverActivity$ResolvedComponentInfo;->getCount()I
@@ -216,7 +202,6 @@
 
     if-lez v1, :cond_0
 
-    .line 147
     invoke-virtual {p0, v0}, Lcom/android/internal/app/ResolverActivity$ResolvedComponentInfo;->getResolveInfoAt(I)Landroid/content/pm/ResolveInfo;
 
     move-result-object v1
@@ -233,7 +218,6 @@
 
     const/4 v0, 0x1
 
-    .line 150
     :cond_0
     return v0
 .end method
@@ -246,14 +230,12 @@
     .param p2, "rhsp"    # Lcom/android/internal/app/ResolverActivity$ResolvedComponentInfo;
 
     .prologue
-    .line 155
     const/4 v9, 0x0
 
     invoke-virtual {p1, v9}, Lcom/android/internal/app/ResolverActivity$ResolvedComponentInfo;->getResolveInfoAt(I)Landroid/content/pm/ResolveInfo;
 
     move-result-object v1
 
-    .line 156
     .local v1, "lhs":Landroid/content/pm/ResolveInfo;
     const/4 v9, 0x0
 
@@ -261,7 +243,6 @@
 
     move-result-object v4
 
-    .line 159
     .local v4, "rhs":Landroid/content/pm/ResolveInfo;
     iget v9, v1, Landroid/content/pm/ResolveInfo;->targetUserId:I
 
@@ -269,27 +250,22 @@
 
     if-eq v9, v10, :cond_0
 
-    .line 160
     const/4 v9, 0x1
 
-    .line 191
     :goto_0
     return v9
 
-    .line 163
     :cond_0
     iget-boolean v9, p0, Lcom/android/internal/app/ResolverComparator;->mHttp:Z
 
     if-eqz v9, :cond_2
 
-    .line 167
     iget v9, v1, Landroid/content/pm/ResolveInfo;->match:I
 
     invoke-static {v9}, Lcom/android/internal/app/ResolverActivity;->isSpecificUriMatch(I)Z
 
     move-result v2
 
-    .line 168
     .local v2, "lhsSpecific":Z
     iget v9, v4, Landroid/content/pm/ResolveInfo;->match:I
 
@@ -297,11 +273,9 @@
 
     move-result v5
 
-    .line 169
     .local v5, "rhsSpecific":Z
     if-eq v2, v5, :cond_2
 
-    .line 170
     if-eqz v2, :cond_1
 
     const/4 v9, -0x1
@@ -313,7 +287,6 @@
 
     goto :goto_0
 
-    .line 174
     .end local v2    # "lhsSpecific":Z
     .end local v5    # "rhsSpecific":Z
     :cond_2
@@ -321,7 +294,6 @@
 
     if-eqz v9, :cond_4
 
-    .line 175
     iget-object v9, p0, Lcom/android/internal/app/ResolverComparator;->mScoredTargets:Ljava/util/LinkedHashMap;
 
     new-instance v10, Landroid/content/ComponentName;
@@ -342,7 +314,6 @@
 
     check-cast v3, Lcom/android/internal/app/ResolverComparator$ScoredTarget;
 
-    .line 177
     .local v3, "lhsTarget":Lcom/android/internal/app/ResolverComparator$ScoredTarget;
     iget-object v9, p0, Lcom/android/internal/app/ResolverComparator;->mScoredTargets:Ljava/util/LinkedHashMap;
 
@@ -364,7 +335,6 @@
 
     check-cast v6, Lcom/android/internal/app/ResolverComparator$ScoredTarget;
 
-    .line 179
     .local v6, "rhsTarget":Lcom/android/internal/app/ResolverComparator$ScoredTarget;
     iget v9, v6, Lcom/android/internal/app/ResolverComparator$ScoredTarget;->score:F
 
@@ -372,7 +342,6 @@
 
     sub-float v0, v9, v10
 
-    .line 181
     .local v0, "diff":F
     const/4 v9, 0x0
 
@@ -380,7 +349,6 @@
 
     if-eqz v9, :cond_4
 
-    .line 182
     const/4 v9, 0x0
 
     cmpl-float v9, v0, v9
@@ -396,7 +364,6 @@
 
     goto :goto_0
 
-    .line 186
     .end local v0    # "diff":F
     .end local v3    # "lhsTarget":Lcom/android/internal/app/ResolverComparator$ScoredTarget;
     .end local v6    # "rhsTarget":Lcom/android/internal/app/ResolverComparator$ScoredTarget;
@@ -407,7 +374,6 @@
 
     move-result-object v7
 
-    .line 187
     .local v7, "sa":Ljava/lang/CharSequence;
     if-nez v7, :cond_5
 
@@ -415,7 +381,6 @@
 
     iget-object v7, v9, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
 
-    .line 188
     :cond_5
     iget-object v9, p0, Lcom/android/internal/app/ResolverComparator;->mPm:Landroid/content/pm/PackageManager;
 
@@ -423,7 +388,6 @@
 
     move-result-object v8
 
-    .line 189
     .local v8, "sb":Ljava/lang/CharSequence;
     if-nez v8, :cond_6
 
@@ -431,7 +395,6 @@
 
     iget-object v8, v9, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
 
-    .line 191
     :cond_6
     iget-object v9, p0, Lcom/android/internal/app/ResolverComparator;->mCollator:Ljava/text/Collator;
 
@@ -464,7 +427,6 @@
     .param p2, "x1"    # Ljava/lang/Object;
 
     .prologue
-    .line 45
     check-cast p1, Lcom/android/internal/app/ResolverActivity$ResolvedComponentInfo;
 
     .end local p1    # "x0":Ljava/lang/Object;
@@ -491,7 +453,6 @@
     .end annotation
 
     .prologue
-    .line 82
     .local p1, "targets":Ljava/util/List;, "Ljava/util/List<Lcom/android/internal/app/ResolverActivity$ResolvedComponentInfo;>;"
     move-object/from16 v0, p0
 
@@ -501,7 +462,6 @@
 
     invoke-virtual/range {v22 .. v22}, Ljava/util/LinkedHashMap;->clear()V
 
-    .line 84
     move-object/from16 v0, p0
 
     iget-wide v0, v0, Lcom/android/internal/app/ResolverComparator;->mCurrentTime:J
@@ -512,21 +472,17 @@
 
     sub-long v16, v22, v24
 
-    .line 86
     .local v16, "recentSinceTime":J
     const-wide/16 v22, 0x1
 
     add-long v8, v16, v22
 
-    .line 87
     .local v8, "mostRecentlyUsedTime":J
     const-wide/16 v10, 0x1
 
-    .line 88
     .local v10, "mostTimeSpent":J
     const/4 v7, 0x1
 
-    .line 90
     .local v7, "mostLaunched":I
     invoke-interface/range {p1 .. p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -547,7 +503,6 @@
 
     check-cast v18, Lcom/android/internal/app/ResolverActivity$ResolvedComponentInfo;
 
-    .line 91
     .local v18, "target":Lcom/android/internal/app/ResolverActivity$ResolvedComponentInfo;
     new-instance v15, Lcom/android/internal/app/ResolverComparator$ScoredTarget;
 
@@ -571,7 +526,6 @@
 
     invoke-direct {v15, v0}, Lcom/android/internal/app/ResolverComparator$ScoredTarget;-><init>(Landroid/content/pm/ComponentInfo;)V
 
-    .line 93
     .local v15, "scoredTarget":Lcom/android/internal/app/ResolverComparator$ScoredTarget;
     move-object/from16 v0, p0
 
@@ -591,7 +545,6 @@
 
     invoke-virtual {v0, v1, v15}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 94
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/app/ResolverComparator;->mStats:Ljava/util/Map;
@@ -614,11 +567,9 @@
 
     check-cast v12, Landroid/app/usage/UsageStats;
 
-    .line 95
     .local v12, "pkStats":Landroid/app/usage/UsageStats;
     if-eqz v12, :cond_0
 
-    .line 99
     move-object/from16 v0, v18
 
     iget-object v0, v0, Lcom/android/internal/app/ResolverActivity$ResolvedComponentInfo;->name:Landroid/content/ComponentName;
@@ -647,49 +598,39 @@
 
     if-nez v22, :cond_1
 
-    .line 101
     invoke-virtual {v12}, Landroid/app/usage/UsageStats;->getLastTimeUsed()J
 
     move-result-wide v4
 
-    .line 102
     .local v4, "lastTimeUsed":J
     iput-wide v4, v15, Lcom/android/internal/app/ResolverComparator$ScoredTarget;->lastTimeUsed:J
 
-    .line 103
     cmp-long v22, v4, v8
 
     if-lez v22, :cond_1
 
-    .line 104
     move-wide v8, v4
 
-    .line 107
     .end local v4    # "lastTimeUsed":J
     :cond_1
     invoke-virtual {v12}, Landroid/app/usage/UsageStats;->getTotalTimeInForeground()J
 
     move-result-wide v20
 
-    .line 108
     .local v20, "timeSpent":J
     move-wide/from16 v0, v20
 
     iput-wide v0, v15, Lcom/android/internal/app/ResolverComparator$ScoredTarget;->timeSpent:J
 
-    .line 109
     cmp-long v22, v20, v10
 
     if-lez v22, :cond_2
 
-    .line 110
     move-wide/from16 v10, v20
 
-    .line 112
     :cond_2
     iget v6, v12, Landroid/app/usage/UsageStats;->mLaunchCount:I
 
-    .line 113
     .local v6, "launched":I
     int-to-long v0, v6
 
@@ -699,15 +640,12 @@
 
     iput-wide v0, v15, Lcom/android/internal/app/ResolverComparator$ScoredTarget;->launchCount:J
 
-    .line 114
     if-le v6, v7, :cond_0
 
-    .line 115
     move v7, v6
 
     goto/16 :goto_0
 
-    .line 128
     .end local v6    # "launched":I
     .end local v12    # "pkStats":Landroid/app/usage/UsageStats;
     .end local v15    # "scoredTarget":Lcom/android/internal/app/ResolverComparator$ScoredTarget;
@@ -741,7 +679,6 @@
 
     check-cast v18, Lcom/android/internal/app/ResolverComparator$ScoredTarget;
 
-    .line 129
     .local v18, "target":Lcom/android/internal/app/ResolverComparator$ScoredTarget;
     move-object/from16 v0, v18
 
@@ -773,7 +710,6 @@
 
     div-float v13, v22, v23
 
-    .line 131
     .local v13, "recency":F
     mul-float v22, v13, v13
 
@@ -781,7 +717,6 @@
 
     mul-float v14, v22, v23
 
-    .line 132
     .local v14, "recencyScore":F
     move-object/from16 v0, v18
 
@@ -801,7 +736,6 @@
 
     div-float v19, v22, v23
 
-    .line 133
     .local v19, "usageTimeScore":F
     move-object/from16 v0, v18
 
@@ -821,7 +755,6 @@
 
     div-float v3, v22, v23
 
-    .line 135
     .local v3, "launchCountScore":F
     add-float v22, v14, v19
 
@@ -835,7 +768,6 @@
 
     goto :goto_1
 
-    .line 143
     .end local v3    # "launchCountScore":F
     .end local v13    # "recency":F
     .end local v14    # "recencyScore":F
@@ -850,7 +782,6 @@
     .param p1, "name"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 195
     iget-object v1, p0, Lcom/android/internal/app/ResolverComparator;->mScoredTargets:Ljava/util/LinkedHashMap;
 
     invoke-virtual {v1, p1}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -859,14 +790,11 @@
 
     check-cast v0, Lcom/android/internal/app/ResolverComparator$ScoredTarget;
 
-    .line 196
     .local v0, "target":Lcom/android/internal/app/ResolverComparator$ScoredTarget;
     if-eqz v0, :cond_0
 
-    .line 197
     iget v1, v0, Lcom/android/internal/app/ResolverComparator$ScoredTarget;->score:F
 
-    .line 199
     :goto_0
     return v1
 

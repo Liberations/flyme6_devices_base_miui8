@@ -21,7 +21,6 @@
     .param p2, "tag"    # Ljava/lang/Object;
 
     .prologue
-    .line 961
     const/16 v1, 0x10
 
     if-eqz p2, :cond_0
@@ -33,10 +32,8 @@
     :goto_0
     invoke-direct {p0, p1, v1, v0}, Landroid/os/StrictMode$StrictModeViolation;-><init>(IILjava/lang/String;)V
 
-    .line 962
     return-void
 
-    .line 961
     :cond_0
     const/4 v0, 0x0
 

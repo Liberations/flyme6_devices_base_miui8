@@ -18,7 +18,6 @@
     .locals 0
 
     .prologue
-    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,14 +27,11 @@
     .locals 9
 
     .prologue
-    .line 178
     const-string v3, "/system/lib/hw/gralloc."
 
-    .line 179
     .local v3, "halPrefix32":Ljava/lang/String;
     const-string v4, "/system/lib64/hw/gralloc."
 
-    .line 180
     .local v4, "halPrefix64":Ljava/lang/String;
     const-string v6, "ro.board.platform"
 
@@ -45,7 +41,6 @@
 
     move-result-object v5
 
-    .line 181
     .local v5, "platform":Ljava/lang/String;
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -69,7 +64,6 @@
 
     move-result-object v1
 
-    .line 182
     .local v1, "gralloc32":Ljava/lang/String;
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -93,12 +87,10 @@
 
     move-result-object v2
 
-    .line 185
     .local v2, "gralloc64":Ljava/lang/String;
     :try_start_0
     invoke-static {v1}, Ljava/lang/System;->load(Ljava/lang/String;)V
 
-    .line 186
     new-instance v6, Ljava/io/File;
 
     invoke-direct {v6, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -109,21 +101,17 @@
 
     if-eqz v6, :cond_0
 
-    .line 187
     invoke-static {v2}, Ljava/lang/System;->load(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/UnsatisfiedLinkError; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 192
     :cond_0
     :goto_0
     return-void
 
-    .line 189
     :catch_0
     move-exception v0
 
-    .line 190
     .local v0, "e":Ljava/lang/UnsatisfiedLinkError;
     const-string v6, "Zygote"
 
@@ -154,12 +142,10 @@
     .locals 24
 
     .prologue
-    .line 77
     invoke-static {}, Ldalvik/system/VMRuntime;->getRuntime()Ldalvik/system/VMRuntime;
 
     move-result-object v10
 
-    .line 78
     .local v10, "runtime":Ldalvik/system/VMRuntime;
     const-string v17, "Zygote"
 
@@ -167,7 +153,6 @@
 
     invoke-static/range {v17 .. v18}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 79
     invoke-static {}, Ljava/lang/ClassLoader;->getSystemClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object v17
@@ -178,22 +163,18 @@
 
     move-result-object v8
 
-    .line 81
     .local v8, "is":Ljava/io/InputStream;
     if-nez v8, :cond_0
 
-    .line 82
     const-string v17, "Zygote"
 
     const-string v18, "Couldn\'t find preloaded-miui-classes."
 
     invoke-static/range {v17 .. v18}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 174
     :goto_0
     return-void
 
-    .line 84
     :cond_0
     const-string v17, "Zygote"
 
@@ -201,12 +182,10 @@
 
     invoke-static/range {v17 .. v18}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 85
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v12
 
-    .line 88
     .local v12, "startTime":J
     const-class v17, Lcom/android/internal/os/ZygoteInit;
 
@@ -218,7 +197,6 @@
 
     move-result-object v15
 
-    .line 90
     .local v15, "unprivileged_gid":Lmiui/util/ObjectReference;, "Lmiui/util/ObjectReference<Ljava/lang/Integer;>;"
     const-class v17, Lcom/android/internal/os/ZygoteInit;
 
@@ -230,7 +208,6 @@
 
     move-result-object v16
 
-    .line 92
     .local v16, "unprivileged_uid":Lmiui/util/ObjectReference;, "Lmiui/util/ObjectReference<Ljava/lang/Integer;>;"
     const-class v18, Lcom/android/internal/os/ZygoteInit;
 
@@ -266,7 +243,6 @@
 
     invoke-static/range {v18 .. v21}, Lmiui/util/ReflectionUtils;->tryCallStaticMethod(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Object;)Lmiui/util/ObjectReference;
 
-    .line 94
     const-class v18, Lcom/android/internal/os/ZygoteInit;
 
     const-string v19, "setEffectiveGroup"
@@ -301,12 +277,10 @@
 
     invoke-static/range {v18 .. v21}, Lmiui/util/ReflectionUtils;->tryCallStaticMethod(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Object;)Lmiui/util/ObjectReference;
 
-    .line 99
     invoke-virtual {v10}, Ldalvik/system/VMRuntime;->getTargetHeapUtilization()F
 
     move-result v6
 
-    .line 100
     .local v6, "defaultUtilization":F
     const v17, 0x3f4ccccd    # 0.8f
 
@@ -314,16 +288,12 @@
 
     invoke-virtual {v10, v0}, Ldalvik/system/VMRuntime;->setTargetHeapUtilization(F)F
 
-    .line 103
     invoke-static {}, Ljava/lang/System;->gc()V
 
-    .line 104
     invoke-virtual {v10}, Ldalvik/system/VMRuntime;->runFinalizationSync()V
 
-    .line 105
     invoke-static {}, Landroid/os/Debug;->startAllocCounting()V
 
-    .line 108
     :try_start_0
     new-instance v4, Ljava/io/BufferedReader;
 
@@ -341,11 +311,9 @@
 
     invoke-direct {v4, v0, v1}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;I)V
 
-    .line 111
     .local v4, "br":Ljava/io/BufferedReader;
     const/4 v5, 0x0
 
-    .line 113
     .local v5, "count":I
     :cond_1
     :goto_1
@@ -356,12 +324,10 @@
     .local v9, "line":Ljava/lang/String;
     if-eqz v9, :cond_5
 
-    .line 115
     invoke-virtual {v9}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v9
 
-    .line 116
     const-string v17, "#"
 
     move-object/from16 v0, v17
@@ -385,11 +351,9 @@
 
     if-nez v17, :cond_1
 
-    .line 124
     :try_start_1
     invoke-static {v9}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
-    .line 125
     const-class v17, Lcom/android/internal/os/ZygoteInit;
 
     const-string v18, "PRELOAD_GC_THRESHOLD"
@@ -400,7 +364,6 @@
 
     move-result-object v14
 
-    .line 127
     .local v14, "threshold":Lmiui/util/ObjectReference;, "Lmiui/util/ObjectReference<Ljava/lang/Integer;>;"
     invoke-static {}, Landroid/os/Debug;->getGlobalAllocSize()I
 
@@ -422,13 +385,10 @@
 
     if-le v0, v1, :cond_2
 
-    .line 132
     invoke-static {}, Ljava/lang/System;->gc()V
 
-    .line 133
     invoke-virtual {v10}, Ldalvik/system/VMRuntime;->runFinalizationSync()V
 
-    .line 134
     invoke-static {}, Landroid/os/Debug;->resetGlobalAllocSize()V
     :try_end_1
     .catch Ljava/lang/ClassNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
@@ -437,18 +397,15 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 136
     :cond_2
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_1
 
-    .line 137
     .end local v14    # "threshold":Lmiui/util/ObjectReference;, "Lmiui/util/ObjectReference<Ljava/lang/Integer;>;"
     :catch_0
     move-exception v7
 
-    .line 138
     .local v7, "e":Ljava/lang/ClassNotFoundException;
     :try_start_2
     const-string v17, "Zygote"
@@ -480,7 +437,6 @@
 
     goto :goto_1
 
-    .line 155
     .end local v4    # "br":Ljava/io/BufferedReader;
     .end local v5    # "count":I
     .end local v7    # "e":Ljava/lang/ClassNotFoundException;
@@ -488,7 +444,6 @@
     :catch_1
     move-exception v7
 
-    .line 156
     .local v7, "e":Ljava/io/IOException;
     :try_start_3
     const-string v17, "Zygote"
@@ -503,19 +458,14 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 158
     invoke-static {v8}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 160
     invoke-virtual {v10, v6}, Ldalvik/system/VMRuntime;->setTargetHeapUtilization(F)F
 
-    .line 163
     invoke-virtual {v10}, Ldalvik/system/VMRuntime;->preloadDexCaches()V
 
-    .line 165
     invoke-static {}, Landroid/os/Debug;->stopAllocCounting()V
 
-    .line 168
     const-class v18, Lcom/android/internal/os/ZygoteInit;
 
     const-string v19, "setEffectiveGroup"
@@ -550,7 +500,6 @@
 
     invoke-static/range {v18 .. v21}, Lmiui/util/ReflectionUtils;->tryCallStaticMethod(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Object;)Lmiui/util/ObjectReference;
 
-    .line 170
     const-class v18, Lcom/android/internal/os/ZygoteInit;
 
     const-string v19, "setEffectiveGroup"
@@ -587,7 +536,6 @@
 
     goto/16 :goto_0
 
-    .line 139
     .end local v7    # "e":Ljava/io/IOException;
     .restart local v4    # "br":Ljava/io/BufferedReader;
     .restart local v5    # "count":I
@@ -595,7 +543,6 @@
     :catch_2
     move-exception v7
 
-    .line 140
     .local v7, "e":Ljava/lang/UnsatisfiedLinkError;
     :try_start_4
     const-string v17, "Zygote"
@@ -639,7 +586,6 @@
 
     goto/16 :goto_1
 
-    .line 158
     .end local v4    # "br":Ljava/io/BufferedReader;
     .end local v5    # "count":I
     .end local v7    # "e":Ljava/lang/UnsatisfiedLinkError;
@@ -651,16 +597,12 @@
 
     invoke-static {v8}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 160
     invoke-virtual {v10, v6}, Ldalvik/system/VMRuntime;->setTargetHeapUtilization(F)F
 
-    .line 163
     invoke-virtual {v10}, Ldalvik/system/VMRuntime;->preloadDexCaches()V
 
-    .line 165
     invoke-static {}, Landroid/os/Debug;->stopAllocCounting()V
 
-    .line 168
     const-class v19, Lcom/android/internal/os/ZygoteInit;
 
     const-string v20, "setEffectiveGroup"
@@ -695,7 +637,6 @@
 
     invoke-static/range {v19 .. v22}, Lmiui/util/ReflectionUtils;->tryCallStaticMethod(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Object;)Lmiui/util/ObjectReference;
 
-    .line 170
     const-class v19, Lcom/android/internal/os/ZygoteInit;
 
     const-string v20, "setEffectiveGroup"
@@ -732,14 +673,12 @@
 
     throw v18
 
-    .line 141
     .restart local v4    # "br":Ljava/io/BufferedReader;
     .restart local v5    # "count":I
     .restart local v9    # "line":Ljava/lang/String;
     :catch_3
     move-exception v11
 
-    .line 142
     .local v11, "t":Ljava/lang/Throwable;
     :try_start_5
     const-string v17, "Zygote"
@@ -776,20 +715,17 @@
 
     invoke-static {v0, v1, v11}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 143
     instance-of v0, v11, Ljava/lang/Error;
 
     move/from16 v17, v0
 
     if-eqz v17, :cond_3
 
-    .line 144
     check-cast v11, Ljava/lang/Error;
 
     .end local v11    # "t":Ljava/lang/Throwable;
     throw v11
 
-    .line 146
     .restart local v11    # "t":Ljava/lang/Throwable;
     :cond_3
     instance-of v0, v11, Ljava/lang/RuntimeException;
@@ -798,13 +734,11 @@
 
     if-eqz v17, :cond_4
 
-    .line 147
     check-cast v11, Ljava/lang/RuntimeException;
 
     .end local v11    # "t":Ljava/lang/Throwable;
     throw v11
 
-    .line 149
     .restart local v11    # "t":Ljava/lang/Throwable;
     :cond_4
     new-instance v17, Ljava/lang/RuntimeException;
@@ -815,7 +749,6 @@
 
     throw v17
 
-    .line 153
     .end local v11    # "t":Ljava/lang/Throwable;
     :cond_5
     const-string v17, "Zygote"
@@ -871,19 +804,14 @@
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_1
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 158
     invoke-static {v8}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 160
     invoke-virtual {v10, v6}, Ldalvik/system/VMRuntime;->setTargetHeapUtilization(F)F
 
-    .line 163
     invoke-virtual {v10}, Ldalvik/system/VMRuntime;->preloadDexCaches()V
 
-    .line 165
     invoke-static {}, Landroid/os/Debug;->stopAllocCounting()V
 
-    .line 168
     const-class v18, Lcom/android/internal/os/ZygoteInit;
 
     const-string v19, "setEffectiveGroup"
@@ -918,7 +846,6 @@
 
     invoke-static/range {v18 .. v21}, Lmiui/util/ReflectionUtils;->tryCallStaticMethod(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Object;)Lmiui/util/ObjectReference;
 
-    .line 170
     const-class v18, Lcom/android/internal/os/ZygoteInit;
 
     const-string v19, "setEffectiveGroup"
@@ -960,7 +887,6 @@
     .locals 3
 
     .prologue
-    .line 58
     :try_start_0
     const-string v1, "miui.util.MiuiFeatureUtils"
 
@@ -968,17 +894,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 62
     .local v0, "e":Ljava/lang/Exception;
     :goto_0
     return-void
 
-    .line 59
     .end local v0    # "e":Ljava/lang/Exception;
     :catch_0
     move-exception v0
 
-    .line 60
     .restart local v0    # "e":Ljava/lang/Exception;
     const-string v1, "Zygote"
 
@@ -994,8 +917,7 @@
     .param p0, "resources"    # Landroid/content/res/Resources;
 
     .prologue
-    .line 34
-    const-string/jumbo v3, "zygote_secondary"
+    const-string v3, "zygote_secondary"
 
     sget-object v6, Lcom/android/internal/os/ZygoteInitInjector;->processName:Ljava/lang/String;
 
@@ -1005,24 +927,20 @@
 
     if-eqz v3, :cond_0
 
-    .line 35
     const-string v3, "Zygote"
 
     const-string v6, "skip the second zygote 32 preload miui resource"
 
     invoke-static {v3, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 53
     :goto_0
     return-void
 
-    .line 40
     :cond_0
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v4
 
-    .line 41
     .local v4, "startTime":J
     sget v3, Lmiui/R$array;->preloaded_drawables:I
 
@@ -1030,7 +948,6 @@
 
     move-result-object v1
 
-    .line 42
     .local v1, "ar":Landroid/content/res/TypedArray;
     const-class v3, Lcom/android/internal/os/ZygoteInit;
 
@@ -1058,15 +975,12 @@
 
     move-result-object v2
 
-    .line 44
     .local v2, "result":Lmiui/util/ObjectReference;, "Lmiui/util/ObjectReference<Ljava/lang/Integer;>;"
     const/4 v0, 0x0
 
-    .line 45
     .local v0, "N":I
     if-eqz v2, :cond_1
 
-    .line 46
     invoke-virtual {v2}, Lmiui/util/ObjectReference;->get()Ljava/lang/Object;
 
     move-result-object v3
@@ -1077,11 +991,9 @@
 
     move-result v0
 
-    .line 48
     :cond_1
     invoke-virtual {v1}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 49
     const-string v3, "Zygote"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -1126,7 +1038,6 @@
 
     invoke-static {v3, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 52
     invoke-static {}, Lcom/android/internal/os/ZygoteInitInjector;->preloadMiuiFeatures()V
 
     goto :goto_0
@@ -1136,8 +1047,7 @@
     .locals 2
 
     .prologue
-    .line 69
-    const-string/jumbo v0, "zygote_secondary"
+    const-string v0, "zygote_secondary"
 
     sget-object v1, Lcom/android/internal/os/ZygoteInitInjector;->processName:Ljava/lang/String;
 
@@ -1147,22 +1057,18 @@
 
     if-nez v0, :cond_0
 
-    .line 70
     const-string v0, "themeutils_jni"
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    .line 71
     const-string v0, "shell"
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    .line 72
     const-string v0, "shell_jni"
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    .line 74
     :cond_0
     return-void
 .end method
@@ -1172,9 +1078,7 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 65
     sput-object p0, Lcom/android/internal/os/ZygoteInitInjector;->processName:Ljava/lang/String;
 
-    .line 66
     return-void
 .end method

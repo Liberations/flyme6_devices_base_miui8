@@ -89,7 +89,6 @@
     .locals 1
 
     .prologue
-    .line 1510
     new-instance v0, Landroid/app/assist/AssistStructure$1;
 
     invoke-direct {v0}, Landroid/app/assist/AssistStructure$1;-><init>()V
@@ -103,41 +102,34 @@
     .locals 1
 
     .prologue
-    .line 1339
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/app/assist/AssistStructure;->mWindowNodes:Ljava/util/ArrayList;
 
-    .line 47
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/app/assist/AssistStructure;->mPendingAsyncChildren:Ljava/util/ArrayList;
 
-    .line 52
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroid/app/assist/AssistStructure;->mTmpRect:Landroid/graphics/Rect;
 
-    .line 1340
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/app/assist/AssistStructure;->mHaveData:Z
 
-    .line 1341
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/app/assist/AssistStructure;->mActivityComponent:Landroid/content/ComponentName;
 
-    .line 1342
     return-void
 .end method
 
@@ -146,43 +138,36 @@
     .param p1, "activity"    # Landroid/app/Activity;
 
     .prologue
-    .line 1328
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v3, p0, Landroid/app/assist/AssistStructure;->mWindowNodes:Ljava/util/ArrayList;
 
-    .line 47
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v3, p0, Landroid/app/assist/AssistStructure;->mPendingAsyncChildren:Ljava/util/ArrayList;
 
-    .line 52
     new-instance v3, Landroid/graphics/Rect;
 
     invoke-direct {v3}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v3, p0, Landroid/app/assist/AssistStructure;->mTmpRect:Landroid/graphics/Rect;
 
-    .line 1329
     const/4 v3, 0x1
 
     iput-boolean v3, p0, Landroid/app/assist/AssistStructure;->mHaveData:Z
 
-    .line 1330
     invoke-virtual {p1}, Landroid/app/Activity;->getComponentName()Landroid/content/ComponentName;
 
     move-result-object v3
 
     iput-object v3, p0, Landroid/app/assist/AssistStructure;->mActivityComponent:Landroid/content/ComponentName;
 
-    .line 1331
     invoke-static {}, Landroid/view/WindowManagerGlobal;->getInstance()Landroid/view/WindowManagerGlobal;
 
     move-result-object v3
@@ -195,7 +180,6 @@
 
     move-result-object v2
 
-    .line 1333
     .local v2, "views":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/view/ViewRootImpl;>;"
     const/4 v0, 0x0
 
@@ -207,14 +191,12 @@
 
     if-ge v0, v3, :cond_0
 
-    .line 1334
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroid/view/ViewRootImpl;
 
-    .line 1335
     .local v1, "root":Landroid/view/ViewRootImpl;
     iget-object v3, p0, Landroid/app/assist/AssistStructure;->mWindowNodes:Ljava/util/ArrayList;
 
@@ -224,12 +206,10 @@
 
     invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1333
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1337
     .end local v1    # "root":Landroid/view/ViewRootImpl;
     :cond_0
     return-void
@@ -240,38 +220,32 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 1345
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/app/assist/AssistStructure;->mWindowNodes:Ljava/util/ArrayList;
 
-    .line 47
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/app/assist/AssistStructure;->mPendingAsyncChildren:Ljava/util/ArrayList;
 
-    .line 52
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroid/app/assist/AssistStructure;->mTmpRect:Landroid/graphics/Rect;
 
-    .line 1346
     invoke-virtual {p1}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/app/assist/AssistStructure;->mReceiveChannel:Landroid/os/IBinder;
 
-    .line 1347
     return-void
 .end method
 
@@ -281,19 +255,16 @@
     .locals 2
 
     .prologue
-    .line 1487
     iget-object v0, p0, Landroid/app/assist/AssistStructure;->mSendChannel:Landroid/app/assist/AssistStructure$SendChannel;
 
     if-eqz v0, :cond_0
 
-    .line 1488
     iget-object v0, p0, Landroid/app/assist/AssistStructure;->mSendChannel:Landroid/app/assist/AssistStructure$SendChannel;
 
     const/4 v1, 0x0
 
     iput-object v1, v0, Landroid/app/assist/AssistStructure$SendChannel;->mAssistStructure:Landroid/app/assist/AssistStructure;
 
-    .line 1490
     :cond_0
     return-void
 .end method
@@ -302,7 +273,6 @@
     .locals 1
 
     .prologue
-    .line 1493
     const/4 v0, 0x0
 
     return v0
@@ -312,7 +282,6 @@
     .locals 6
 
     .prologue
-    .line 1351
     const-string v3, "AssistStructure"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -341,12 +310,10 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1352
     invoke-virtual {p0}, Landroid/app/assist/AssistStructure;->getWindowNodeCount()I
 
     move-result v0
 
-    .line 1353
     .local v0, "N":I
     const/4 v1, 0x0
 
@@ -354,12 +321,10 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 1354
     invoke-virtual {p0, v1}, Landroid/app/assist/AssistStructure;->getWindowNodeAt(I)Landroid/app/assist/AssistStructure$WindowNode;
 
     move-result-object v2
 
-    .line 1355
     .local v2, "node":Landroid/app/assist/AssistStructure$WindowNode;
     const-string v3, "AssistStructure"
 
@@ -419,7 +384,7 @@
 
     move-result-object v4
 
-    const-string/jumbo v5, "x"
+    const-string v5, "x"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -459,7 +424,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1357
     const-string v3, "  "
 
     invoke-virtual {v2}, Landroid/app/assist/AssistStructure$WindowNode;->getRootViewNode()Landroid/app/assist/AssistStructure$ViewNode;
@@ -468,12 +432,10 @@
 
     invoke-virtual {p0, v3, v4}, Landroid/app/assist/AssistStructure;->dump(Ljava/lang/String;Landroid/app/assist/AssistStructure$ViewNode;)V
 
-    .line 1353
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 1359
     .end local v2    # "node":Landroid/app/assist/AssistStructure$WindowNode;
     :cond_0
     return-void
@@ -485,7 +447,6 @@
     .param p2, "node"    # Landroid/app/assist/AssistStructure$ViewNode;
 
     .prologue
-    .line 1362
     const-string v20, "AssistStructure"
 
     new-instance v21, Ljava/lang/StringBuilder;
@@ -542,7 +503,7 @@
 
     move-result-object v21
 
-    const-string/jumbo v22, "x"
+    const-string v22, "x"
 
     invoke-virtual/range {v21 .. v22}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -582,21 +543,17 @@
 
     invoke-static/range {v20 .. v21}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1364
     invoke-virtual/range {p2 .. p2}, Landroid/app/assist/AssistStructure$ViewNode;->getId()I
 
     move-result v12
 
-    .line 1365
     .local v12, "id":I
     if-eqz v12, :cond_1
 
-    .line 1366
     new-instance v15, Ljava/lang/StringBuilder;
 
     invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1367
     .local v15, "sb":Ljava/lang/StringBuilder;
     move-object/from16 v0, p1
 
@@ -616,27 +573,22 @@
 
     invoke-virtual {v15, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1368
     invoke-virtual/range {p2 .. p2}, Landroid/app/assist/AssistStructure$ViewNode;->getIdEntry()Ljava/lang/String;
 
     move-result-object v8
 
-    .line 1369
     .local v8, "entry":Ljava/lang/String;
     if-eqz v8, :cond_0
 
-    .line 1370
     invoke-virtual/range {p2 .. p2}, Landroid/app/assist/AssistStructure$ViewNode;->getIdType()Ljava/lang/String;
 
     move-result-object v19
 
-    .line 1371
     .local v19, "type":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/app/assist/AssistStructure$ViewNode;->getIdPackage()Ljava/lang/String;
 
     move-result-object v14
 
-    .line 1372
     .local v14, "pkg":Ljava/lang/String;
     const-string v20, " "
 
@@ -656,7 +608,6 @@
 
     invoke-virtual {v15, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1373
     const-string v20, "/"
 
     move-object/from16 v0, v20
@@ -665,7 +616,6 @@
 
     invoke-virtual {v15, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1375
     .end local v14    # "pkg":Ljava/lang/String;
     .end local v19    # "type":Ljava/lang/String;
     :cond_0
@@ -677,7 +627,6 @@
 
     invoke-static/range {v20 .. v21}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1377
     .end local v8    # "entry":Ljava/lang/String;
     .end local v15    # "sb":Ljava/lang/StringBuilder;
     :cond_1
@@ -685,19 +634,16 @@
 
     move-result v16
 
-    .line 1378
     .local v16, "scrollX":I
     invoke-virtual/range {p2 .. p2}, Landroid/app/assist/AssistStructure$ViewNode;->getScrollY()I
 
     move-result v17
 
-    .line 1379
     .local v17, "scrollY":I
     if-nez v16, :cond_2
 
     if-eqz v17, :cond_3
 
-    .line 1380
     :cond_2
     const-string v20, "AssistStructure"
 
@@ -747,17 +693,14 @@
 
     invoke-static/range {v20 .. v21}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1382
     :cond_3
     invoke-virtual/range {p2 .. p2}, Landroid/app/assist/AssistStructure$ViewNode;->getTransformation()Landroid/graphics/Matrix;
 
     move-result-object v13
 
-    .line 1383
     .local v13, "matrix":Landroid/graphics/Matrix;
     if-eqz v13, :cond_4
 
-    .line 1384
     const-string v20, "AssistStructure"
 
     new-instance v21, Ljava/lang/StringBuilder;
@@ -790,13 +733,11 @@
 
     invoke-static/range {v20 .. v21}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1386
     :cond_4
     invoke-virtual/range {p2 .. p2}, Landroid/app/assist/AssistStructure$ViewNode;->getElevation()F
 
     move-result v7
 
-    .line 1387
     .local v7, "elevation":F
     const/16 v20, 0x0
 
@@ -804,7 +745,6 @@
 
     if-eqz v20, :cond_5
 
-    .line 1388
     const-string v20, "AssistStructure"
 
     new-instance v21, Ljava/lang/StringBuilder;
@@ -837,13 +777,11 @@
 
     invoke-static/range {v20 .. v21}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1390
     :cond_5
     invoke-virtual/range {p2 .. p2}, Landroid/app/assist/AssistStructure$ViewNode;->getAlpha()F
 
     move-result v3
 
-    .line 1391
     .local v3, "alpha":F
     const/16 v20, 0x0
 
@@ -851,7 +789,6 @@
 
     if-eqz v20, :cond_6
 
-    .line 1392
     const-string v20, "AssistStructure"
 
     new-instance v21, Ljava/lang/StringBuilder;
@@ -884,17 +821,14 @@
 
     invoke-static/range {v20 .. v21}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1394
     :cond_6
     invoke-virtual/range {p2 .. p2}, Landroid/app/assist/AssistStructure$ViewNode;->getContentDescription()Ljava/lang/CharSequence;
 
     move-result-object v5
 
-    .line 1395
     .local v5, "contentDescription":Ljava/lang/CharSequence;
     if-eqz v5, :cond_7
 
-    .line 1396
     const-string v20, "AssistStructure"
 
     new-instance v21, Ljava/lang/StringBuilder;
@@ -927,17 +861,14 @@
 
     invoke-static/range {v20 .. v21}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1398
     :cond_7
     invoke-virtual/range {p2 .. p2}, Landroid/app/assist/AssistStructure$ViewNode;->getText()Ljava/lang/CharSequence;
 
     move-result-object v18
 
-    .line 1399
     .local v18, "text":Ljava/lang/CharSequence;
     if-eqz v18, :cond_8
 
-    .line 1400
     const-string v20, "AssistStructure"
 
     new-instance v21, Ljava/lang/StringBuilder;
@@ -1000,7 +931,6 @@
 
     invoke-static/range {v20 .. v21}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1402
     const-string v20, "AssistStructure"
 
     new-instance v21, Ljava/lang/StringBuilder;
@@ -1049,7 +979,6 @@
 
     invoke-static/range {v20 .. v21}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1404
     const-string v20, "AssistStructure"
 
     new-instance v21, Ljava/lang/StringBuilder;
@@ -1106,17 +1035,14 @@
 
     invoke-static/range {v20 .. v21}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1407
     :cond_8
     invoke-virtual/range {p2 .. p2}, Landroid/app/assist/AssistStructure$ViewNode;->getHint()Ljava/lang/String;
 
     move-result-object v10
 
-    .line 1408
     .local v10, "hint":Ljava/lang/String;
     if-eqz v10, :cond_9
 
-    .line 1409
     const-string v20, "AssistStructure"
 
     new-instance v21, Ljava/lang/StringBuilder;
@@ -1149,17 +1075,14 @@
 
     invoke-static/range {v20 .. v21}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1411
     :cond_9
     invoke-virtual/range {p2 .. p2}, Landroid/app/assist/AssistStructure$ViewNode;->getExtras()Landroid/os/Bundle;
 
     move-result-object v9
 
-    .line 1412
     .local v9, "extras":Landroid/os/Bundle;
     if-eqz v9, :cond_a
 
-    .line 1413
     const-string v20, "AssistStructure"
 
     new-instance v21, Ljava/lang/StringBuilder;
@@ -1192,7 +1115,6 @@
 
     invoke-static/range {v20 .. v21}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1415
     :cond_a
     invoke-virtual/range {p2 .. p2}, Landroid/app/assist/AssistStructure$ViewNode;->isAssistBlocked()Z
 
@@ -1200,7 +1122,6 @@
 
     if-eqz v20, :cond_b
 
-    .line 1416
     const-string v20, "AssistStructure"
 
     new-instance v21, Ljava/lang/StringBuilder;
@@ -1227,17 +1148,14 @@
 
     invoke-static/range {v20 .. v21}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1418
     :cond_b
     invoke-virtual/range {p2 .. p2}, Landroid/app/assist/AssistStructure$ViewNode;->getChildCount()I
 
     move-result v2
 
-    .line 1419
     .local v2, "NCHILDREN":I
     if-lez v2, :cond_c
 
-    .line 1420
     const-string v20, "AssistStructure"
 
     new-instance v21, Ljava/lang/StringBuilder;
@@ -1264,7 +1182,6 @@
 
     invoke-static/range {v20 .. v21}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1421
     new-instance v20, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v20 .. v20}, Ljava/lang/StringBuilder;-><init>()V
@@ -1287,7 +1204,6 @@
 
     move-result-object v6
 
-    .line 1422
     .local v6, "cprefix":Ljava/lang/String;
     const/4 v11, 0x0
 
@@ -1295,25 +1211,21 @@
     :goto_0
     if-ge v11, v2, :cond_c
 
-    .line 1423
     move-object/from16 v0, p2
 
     invoke-virtual {v0, v11}, Landroid/app/assist/AssistStructure$ViewNode;->getChildAt(I)Landroid/app/assist/AssistStructure$ViewNode;
 
     move-result-object v4
 
-    .line 1424
     .local v4, "cnode":Landroid/app/assist/AssistStructure$ViewNode;
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v6, v4}, Landroid/app/assist/AssistStructure;->dump(Ljava/lang/String;Landroid/app/assist/AssistStructure$ViewNode;)V
 
-    .line 1422
     add-int/lit8 v11, v11, 0x1
 
     goto :goto_0
 
-    .line 1427
     .end local v4    # "cnode":Landroid/app/assist/AssistStructure$ViewNode;
     .end local v6    # "cprefix":Ljava/lang/String;
     .end local v11    # "i":I
@@ -1325,29 +1237,24 @@
     .locals 2
 
     .prologue
-    .line 1456
     iget-boolean v1, p0, Landroid/app/assist/AssistStructure;->mHaveData:Z
 
     if-eqz v1, :cond_0
 
-    .line 1462
     :goto_0
     return-void
 
-    .line 1459
     :cond_0
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Landroid/app/assist/AssistStructure;->mHaveData:Z
 
-    .line 1460
     new-instance v0, Landroid/app/assist/AssistStructure$ParcelTransferReader;
 
     iget-object v1, p0, Landroid/app/assist/AssistStructure;->mReceiveChannel:Landroid/os/IBinder;
 
     invoke-direct {v0, p0, v1}, Landroid/app/assist/AssistStructure$ParcelTransferReader;-><init>(Landroid/app/assist/AssistStructure;Landroid/os/IBinder;)V
 
-    .line 1461
     .local v0, "reader":Landroid/app/assist/AssistStructure$ParcelTransferReader;
     invoke-virtual {v0}, Landroid/app/assist/AssistStructure$ParcelTransferReader;->go()V
 
@@ -1358,10 +1265,8 @@
     .locals 1
 
     .prologue
-    .line 1433
     invoke-virtual {p0}, Landroid/app/assist/AssistStructure;->ensureData()V
 
-    .line 1434
     iget-object v0, p0, Landroid/app/assist/AssistStructure;->mActivityComponent:Landroid/content/ComponentName;
 
     return-object v0
@@ -1372,10 +1277,8 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 1450
     invoke-virtual {p0}, Landroid/app/assist/AssistStructure;->ensureData()V
 
-    .line 1451
     iget-object v0, p0, Landroid/app/assist/AssistStructure;->mWindowNodes:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1391,10 +1294,8 @@
     .locals 1
 
     .prologue
-    .line 1441
     invoke-virtual {p0}, Landroid/app/assist/AssistStructure;->ensureData()V
 
-    .line 1442
     iget-object v0, p0, Landroid/app/assist/AssistStructure;->mWindowNodes:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -1408,14 +1309,11 @@
     .locals 10
 
     .prologue
-    .line 1465
     const/4 v4, 0x0
 
-    .line 1466
     .local v4, "skipStructure":Z
     monitor-enter p0
 
-    .line 1467
     :try_start_0
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
@@ -1425,7 +1323,6 @@
 
     add-long v0, v6, v8
 
-    .line 1469
     .local v0, "endTime":J
     :goto_0
     iget-object v5, p0, Landroid/app/assist/AssistStructure;->mPendingAsyncChildren:Ljava/util/ArrayList;
@@ -1447,7 +1344,6 @@
 
     if-gez v5, :cond_0
 
-    .line 1471
     sub-long v6, v0, v2
 
     :try_start_1
@@ -1458,13 +1354,11 @@
 
     goto :goto_0
 
-    .line 1472
     :catch_0
     move-exception v5
 
     goto :goto_0
 
-    .line 1475
     .end local v2    # "now":J
     :cond_0
     :try_start_2
@@ -1476,7 +1370,6 @@
 
     if-lez v5, :cond_1
 
-    .line 1477
     const-string v5, "AssistStructure"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -1511,14 +1404,11 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1479
     const/4 v4, 0x1
 
-    .line 1481
     :cond_1
     monitor-exit p0
 
-    .line 1482
     if-nez v4, :cond_2
 
     const/4 v5, 0x1
@@ -1526,7 +1416,6 @@
     :goto_1
     return v5
 
-    .line 1481
     .end local v0    # "endTime":J
     :catchall_0
     move-exception v5
@@ -1537,7 +1426,6 @@
 
     throw v5
 
-    .line 1482
     .restart local v0    # "endTime":J
     :cond_2
     const/4 v5, 0x0
@@ -1551,34 +1439,28 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 1497
     iget-boolean v0, p0, Landroid/app/assist/AssistStructure;->mHaveData:Z
 
     if-eqz v0, :cond_1
 
-    .line 1500
     iget-object v0, p0, Landroid/app/assist/AssistStructure;->mSendChannel:Landroid/app/assist/AssistStructure$SendChannel;
 
     if-nez v0, :cond_0
 
-    .line 1501
     new-instance v0, Landroid/app/assist/AssistStructure$SendChannel;
 
     invoke-direct {v0, p0}, Landroid/app/assist/AssistStructure$SendChannel;-><init>(Landroid/app/assist/AssistStructure;)V
 
     iput-object v0, p0, Landroid/app/assist/AssistStructure;->mSendChannel:Landroid/app/assist/AssistStructure$SendChannel;
 
-    .line 1503
     :cond_0
     iget-object v0, p0, Landroid/app/assist/AssistStructure;->mSendChannel:Landroid/app/assist/AssistStructure$SendChannel;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
-    .line 1508
     :goto_0
     return-void
 
-    .line 1506
     :cond_1
     iget-object v0, p0, Landroid/app/assist/AssistStructure;->mReceiveChannel:Landroid/os/IBinder;
 

@@ -12,10 +12,8 @@
     .locals 1
 
     .prologue
-    .line 41
     invoke-direct {p0}, Ljavax/crypto/SecretKeyFactorySpi;-><init>()V
 
-    .line 43
     invoke-static {}, Landroid/security/KeyStore;->getInstance()Landroid/security/KeyStore;
 
     move-result-object v0
@@ -32,12 +30,10 @@
     .param p2, "keyAliasInKeystore"    # Ljava/lang/String;
 
     .prologue
-    .line 74
     new-instance v26, Landroid/security/keymaster/KeyCharacteristics;
 
     invoke-direct/range {v26 .. v26}, Landroid/security/keymaster/KeyCharacteristics;-><init>()V
 
-    .line 75
     .local v26, "keyCharacteristics":Landroid/security/keymaster/KeyCharacteristics;
     const/4 v4, 0x0
 
@@ -53,7 +49,6 @@
 
     move-result v23
 
-    .line 77
     .local v23, "errorCode":I
     const/4 v4, 0x1
 
@@ -61,7 +56,6 @@
 
     if-eq v0, v4, :cond_0
 
-    .line 78
     new-instance v4, Ljava/security/ProviderException;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -90,7 +84,6 @@
 
     throw v4
 
-    .line 93
     :cond_0
     :try_start_0
     move-object/from16 v0, v26
@@ -105,10 +98,8 @@
 
     if-eqz v4, :cond_1
 
-    .line 94
     const/4 v6, 0x1
 
-    .line 95
     .local v6, "insideSecureHardware":Z
     move-object/from16 v0, v26
 
@@ -128,7 +119,6 @@
 
     move-result v7
 
-    .line 104
     .local v7, "origin":I
     :goto_0
     const v4, 0x30000003
@@ -143,7 +133,6 @@
 
     move-result-wide v28
 
-    .line 106
     .local v28, "keySizeUnsigned":J
     const-wide/16 v4, -0x1
 
@@ -151,7 +140,6 @@
 
     if-nez v4, :cond_3
 
-    .line 107
     new-instance v4, Ljava/security/ProviderException;
 
     const-string v5, "Key size not available"
@@ -162,14 +150,12 @@
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 148
     .end local v6    # "insideSecureHardware":Z
     .end local v7    # "origin":I
     .end local v28    # "keySizeUnsigned":J
     :catch_0
     move-exception v20
 
-    .line 149
     .local v20, "e":Ljava/lang/IllegalArgumentException;
     new-instance v4, Ljava/security/ProviderException;
 
@@ -181,7 +167,6 @@
 
     throw v4
 
-    .line 97
     .end local v20    # "e":Ljava/lang/IllegalArgumentException;
     :cond_1
     :try_start_1
@@ -197,10 +182,8 @@
 
     if-eqz v4, :cond_2
 
-    .line 98
     const/4 v6, 0x0
 
-    .line 99
     .restart local v6    # "insideSecureHardware":Z
     move-object/from16 v0, v26
 
@@ -223,7 +206,6 @@
     .restart local v7    # "origin":I
     goto :goto_0
 
-    .line 102
     .end local v6    # "insideSecureHardware":Z
     .end local v7    # "origin":I
     :cond_2
@@ -235,7 +217,6 @@
 
     throw v4
 
-    .line 108
     .restart local v6    # "insideSecureHardware":Z
     .restart local v7    # "origin":I
     .restart local v28    # "keySizeUnsigned":J
@@ -246,7 +227,6 @@
 
     if-lez v4, :cond_4
 
-    .line 109
     new-instance v4, Ljava/security/ProviderException;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -283,13 +263,11 @@
 
     throw v4
 
-    .line 111
     :cond_4
     move-wide/from16 v0, v28
 
     long-to-int v8, v0
 
-    .line 112
     .local v8, "keySize":I
     const v4, 0x20000001
 
@@ -303,19 +281,16 @@
 
     move-result v12
 
-    .line 115
     .local v12, "purposes":I
     new-instance v22, Ljava/util/ArrayList;
 
     invoke-direct/range {v22 .. v22}, Ljava/util/ArrayList;-><init>()V
 
-    .line 116
     .local v22, "encryptionPaddingsList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     new-instance v33, Ljava/util/ArrayList;
 
     invoke-direct/range {v33 .. v33}, Ljava/util/ArrayList;-><init>()V
 
-    .line 118
     .local v33, "signaturePaddingsList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const v4, 0x20000006
 
@@ -349,14 +324,12 @@
 
     move-result v30
 
-    .line 120
     .local v30, "keymasterPadding":I
     :try_start_2
     invoke-static/range {v30 .. v30}, Landroid/security/keystore/KeyProperties$EncryptionPadding;->fromKeymaster(I)Ljava/lang/String;
 
     move-result-object v25
 
-    .line 122
     .local v25, "jcaPadding":Ljava/lang/String;
     move-object/from16 v0, v22
 
@@ -368,19 +341,16 @@
 
     goto :goto_1
 
-    .line 123
     .end local v25    # "jcaPadding":Ljava/lang/String;
     :catch_1
     move-exception v20
 
-    .line 125
     .restart local v20    # "e":Ljava/lang/IllegalArgumentException;
     :try_start_3
     invoke-static/range {v30 .. v30}, Landroid/security/keystore/KeyProperties$SignaturePadding;->fromKeymaster(I)Ljava/lang/String;
 
     move-result-object v32
 
-    .line 127
     .local v32, "padding":Ljava/lang/String;
     move-object/from16 v0, v33
 
@@ -392,12 +362,10 @@
 
     goto :goto_1
 
-    .line 128
     .end local v32    # "padding":Ljava/lang/String;
     :catch_2
     move-exception v21
 
-    .line 129
     .local v21, "e2":Ljava/lang/IllegalArgumentException;
     :try_start_4
     new-instance v4, Ljava/security/ProviderException;
@@ -428,7 +396,6 @@
 
     throw v4
 
-    .line 135
     .end local v20    # "e":Ljava/lang/IllegalArgumentException;
     .end local v21    # "e2":Ljava/lang/IllegalArgumentException;
     .end local v30    # "keymasterPadding":I
@@ -447,7 +414,6 @@
 
     check-cast v13, [Ljava/lang/String;
 
-    .line 137
     .local v13, "encryptionPaddings":[Ljava/lang/String;
     invoke-interface/range {v33 .. v33}, Ljava/util/List;->size()I
 
@@ -463,7 +429,6 @@
 
     check-cast v14, [Ljava/lang/String;
 
-    .line 140
     .local v14, "signaturePaddings":[Ljava/lang/String;
     const v4, 0x20000005
 
@@ -477,7 +442,6 @@
 
     move-result-object v15
 
-    .line 142
     .local v15, "digests":[Ljava/lang/String;
     const v4, 0x20000004
 
@@ -491,7 +455,6 @@
 
     move-result-object v16
 
-    .line 144
     .local v16, "blockModes":[Ljava/lang/String;
     move-object/from16 v0, v26
 
@@ -507,7 +470,6 @@
 
     move-result v31
 
-    .line 146
     .local v31, "keymasterSwEnforcedUserAuthenticators":I
     move-object/from16 v0, v26
 
@@ -525,7 +487,6 @@
 
     move-result v27
 
-    .line 152
     .local v27, "keymasterHwEnforcedUserAuthenticators":I
     const v4, 0x60000190
 
@@ -535,7 +496,6 @@
 
     move-result-object v9
 
-    .line 153
     .local v9, "keyValidityStart":Ljava/util/Date;
     const v4, 0x60000191
 
@@ -545,7 +505,6 @@
 
     move-result-object v10
 
-    .line 155
     .local v10, "keyValidityForOriginationEnd":Ljava/util/Date;
     const v4, 0x60000192
 
@@ -555,7 +514,6 @@
 
     move-result-object v11
 
-    .line 157
     .local v11, "keyValidityForConsumptionEnd":Ljava/util/Date;
     const v4, 0x700001f7
 
@@ -569,7 +527,6 @@
 
     const/16 v17, 0x1
 
-    .line 159
     .local v17, "userAuthenticationRequired":Z
     :goto_2
     const v4, 0x300001f9
@@ -584,7 +541,6 @@
 
     move-result-wide v34
 
-    .line 161
     .local v34, "userAuthenticationValidityDurationSeconds":J
     const-wide/32 v4, 0x7fffffff
 
@@ -592,7 +548,6 @@
 
     if-lez v4, :cond_7
 
-    .line 162
     new-instance v4, Ljava/security/ProviderException;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -629,7 +584,6 @@
 
     throw v4
 
-    .line 157
     .end local v17    # "userAuthenticationRequired":Z
     .end local v34    # "userAuthenticationValidityDurationSeconds":J
     :cond_6
@@ -637,7 +591,6 @@
 
     goto :goto_2
 
-    .line 165
     .restart local v17    # "userAuthenticationRequired":Z
     .restart local v34    # "userAuthenticationValidityDurationSeconds":J
     :cond_7
@@ -649,7 +602,6 @@
 
     const/16 v19, 0x1
 
-    .line 169
     .local v19, "userAuthenticationRequirementEnforcedBySecureHardware":Z
     :goto_3
     new-instance v4, Landroid/security/keystore/KeyInfo;
@@ -666,7 +618,6 @@
 
     return-object v4
 
-    .line 165
     .end local v19    # "userAuthenticationRequirementEnforcedBySecureHardware":Z
     :cond_8
     const/16 v19, 0x0
@@ -686,7 +637,6 @@
     .end annotation
 
     .prologue
-    .line 188
     new-instance v0, Ljava/security/spec/InvalidKeySpecException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -729,25 +679,21 @@
     .end annotation
 
     .prologue
-    .line 48
     if-nez p2, :cond_0
 
-    .line 49
     new-instance v2, Ljava/security/spec/InvalidKeySpecException;
 
-    const-string/jumbo v3, "keySpecClass == null"
+    const-string v3, "keySpecClass == null"
 
     invoke-direct {v2, v3}, Ljava/security/spec/InvalidKeySpecException;-><init>(Ljava/lang/String;)V
 
     throw v2
 
-    .line 51
     :cond_0
     instance-of v2, p1, Landroid/security/keystore/AndroidKeyStoreSecretKey;
 
     if-nez v2, :cond_2
 
-    .line 52
     new-instance v3, Ljava/security/spec/InvalidKeySpecException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -784,11 +730,10 @@
     throw v3
 
     :cond_1
-    const-string/jumbo v2, "null"
+    const-string v2, "null"
 
     goto :goto_0
 
-    .line 55
     :cond_2
     const-class v2, Ljavax/crypto/spec/SecretKeySpec;
 
@@ -798,7 +743,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 56
     new-instance v2, Ljava/security/spec/InvalidKeySpecException;
 
     const-string v3, "Key material export of Android KeyStore keys is not supported"
@@ -807,7 +751,6 @@
 
     throw v2
 
-    .line 59
     :cond_3
     const-class v2, Landroid/security/keystore/KeyInfo;
 
@@ -817,7 +760,6 @@
 
     if-nez v2, :cond_4
 
-    .line 60
     new-instance v2, Ljava/security/spec/InvalidKeySpecException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -846,7 +788,6 @@
 
     throw v2
 
-    .line 62
     :cond_4
     check-cast p1, Landroid/security/keystore/AndroidKeyStoreKey;
 
@@ -855,7 +796,6 @@
 
     move-result-object v1
 
-    .line 64
     .local v1, "keyAliasInKeystore":Ljava/lang/String;
     const-string v2, "USRSKEY_"
 
@@ -865,7 +805,6 @@
 
     if-eqz v2, :cond_5
 
-    .line 65
     const-string v2, "USRSKEY_"
 
     invoke-virtual {v2}, Ljava/lang/String;->length()I
@@ -876,7 +815,6 @@
 
     move-result-object v0
 
-    .line 70
     .local v0, "entryAlias":Ljava/lang/String;
     iget-object v2, p0, Landroid/security/keystore/AndroidKeyStoreSecretKeyFactorySpi;->mKeyStore:Landroid/security/KeyStore;
 
@@ -886,7 +824,6 @@
 
     return-object v2
 
-    .line 67
     .end local v0    # "entryAlias":Ljava/lang/String;
     :cond_5
     new-instance v2, Ljava/security/spec/InvalidKeySpecException;
@@ -924,25 +861,21 @@
     .end annotation
 
     .prologue
-    .line 195
     if-nez p1, :cond_0
 
-    .line 196
     new-instance v0, Ljava/security/InvalidKeyException;
 
-    const-string/jumbo v1, "key == null"
+    const-string v1, "key == null"
 
     invoke-direct {v0, v1}, Ljava/security/InvalidKeyException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 197
     :cond_0
     instance-of v0, p1, Landroid/security/keystore/AndroidKeyStoreSecretKey;
 
     if-nez v0, :cond_1
 
-    .line 198
     new-instance v0, Ljava/security/InvalidKeyException;
 
     const-string v1, "To import a secret key into Android Keystore, use KeyStore.setEntry"
@@ -951,7 +884,6 @@
 
     throw v0
 
-    .line 202
     :cond_1
     return-object p1
 .end method

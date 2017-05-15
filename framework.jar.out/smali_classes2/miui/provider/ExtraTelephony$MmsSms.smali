@@ -67,7 +67,6 @@
     .locals 1
 
     .prologue
-    .line 871
     const-string v0, "content://mms-sms/message/preview"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -76,7 +75,6 @@
 
     sput-object v0, Lmiui/provider/ExtraTelephony$MmsSms;->CONTENT_PREVIEW_URI:Landroid/net/Uri;
 
-    .line 877
     const-string v0, "content://mms-sms/locked/all"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -85,7 +83,6 @@
 
     sput-object v0, Lmiui/provider/ExtraTelephony$MmsSms;->CONTENT_ALL_LOCKED_URI:Landroid/net/Uri;
 
-    .line 880
     const-string v0, "content://mms-sms/expired"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -94,7 +91,6 @@
 
     sput-object v0, Lmiui/provider/ExtraTelephony$MmsSms;->CONTENT_EXPIRED_URI:Landroid/net/Uri;
 
-    .line 883
     const-string v0, "content://mms-sms/recent-recipients"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -103,7 +99,6 @@
 
     sput-object v0, Lmiui/provider/ExtraTelephony$MmsSms;->CONTENT_RECENT_RECIPIENTS_URI:Landroid/net/Uri;
 
-    .line 889
     const-string v0, "content://mms-sms/blocked"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -112,7 +107,6 @@
 
     sput-object v0, Lmiui/provider/ExtraTelephony$MmsSms;->BLOCKED_CONVERSATION_CONTENT_URI:Landroid/net/Uri;
 
-    .line 894
     const-string v0, "content://mms-sms/blocked-thread"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -128,7 +122,6 @@
     .locals 0
 
     .prologue
-    .line 869
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

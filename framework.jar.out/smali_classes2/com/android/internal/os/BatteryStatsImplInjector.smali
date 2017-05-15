@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,10 +18,8 @@
     .param p0, "NameAndReason"    # Ljava/lang/String;
 
     .prologue
-    .line 15
     if-eqz p0, :cond_0
 
-    .line 16
     const-string v0, "#for#"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
@@ -37,7 +34,6 @@
 
     move-result-object p0
 
-    .line 18
     .end local p0    # "NameAndReason":Ljava/lang/String;
     :cond_0
     return-object p0

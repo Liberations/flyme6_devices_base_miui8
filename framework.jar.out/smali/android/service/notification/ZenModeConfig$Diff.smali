@@ -32,10 +32,8 @@
     .locals 1
 
     .prologue
-    .line 1289
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1290
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -52,7 +50,6 @@
     .param p2, "x2"    # Ljava/lang/String;
 
     .prologue
-    .line 1289
     invoke-direct {p0, p1, p2}, Landroid/service/notification/ZenModeConfig$Diff;->addLine(Ljava/lang/String;Ljava/lang/String;)Landroid/service/notification/ZenModeConfig$Diff;
 
     move-result-object v0
@@ -66,7 +63,6 @@
     .param p2, "action"    # Ljava/lang/String;
 
     .prologue
-    .line 1306
     iget-object v0, p0, Landroid/service/notification/ZenModeConfig$Diff;->lines:Ljava/util/ArrayList;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -93,7 +89,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1307
     return-object p0
 .end method
 
@@ -106,7 +101,6 @@
     .param p3, "to"    # Ljava/lang/Object;
 
     .prologue
-    .line 1315
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -144,7 +138,6 @@
     .param p4, "to"    # Ljava/lang/Object;
 
     .prologue
-    .line 1311
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -178,14 +171,12 @@
     .locals 4
 
     .prologue
-    .line 1294
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v3, "Diff["
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 1295
     .local v2, "sb":Ljava/lang/StringBuilder;
     iget-object v3, p0, Landroid/service/notification/ZenModeConfig$Diff;->lines:Ljava/util/ArrayList;
 
@@ -193,7 +184,6 @@
 
     move-result v0
 
-    .line 1296
     .local v0, "N":I
     const/4 v1, 0x0
 
@@ -201,15 +191,12 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 1297
     if-lez v1, :cond_0
 
-    .line 1298
     const/16 v3, 0x2c
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 1300
     :cond_0
     iget-object v3, p0, Landroid/service/notification/ZenModeConfig$Diff;->lines:Ljava/util/ArrayList;
 
@@ -221,12 +208,10 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1296
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 1302
     :cond_1
     const/16 v3, 0x5d
 

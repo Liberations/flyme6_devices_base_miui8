@@ -40,7 +40,6 @@
 
     const/4 v2, 0x0
 
-    .line 38
     new-instance v0, Lmiui/maml/elements/VariableArrayElement$Type;
 
     const-string v1, "DOUBLE"
@@ -49,7 +48,6 @@
 
     sput-object v0, Lmiui/maml/elements/VariableArrayElement$Type;->DOUBLE:Lmiui/maml/elements/VariableArrayElement$Type;
 
-    .line 39
     new-instance v0, Lmiui/maml/elements/VariableArrayElement$Type;
 
     const-string v1, "STRING"
@@ -58,7 +56,6 @@
 
     sput-object v0, Lmiui/maml/elements/VariableArrayElement$Type;->STRING:Lmiui/maml/elements/VariableArrayElement$Type;
 
-    .line 37
     const/4 v0, 0x2
 
     new-array v0, v0, [Lmiui/maml/elements/VariableArrayElement$Type;
@@ -85,7 +82,6 @@
     .end annotation
 
     .prologue
-    .line 37
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -96,7 +92,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 37
     const-class v0, Lmiui/maml/elements/VariableArrayElement$Type;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -112,7 +107,6 @@
     .locals 1
 
     .prologue
-    .line 37
     sget-object v0, Lmiui/maml/elements/VariableArrayElement$Type;->$VALUES:[Lmiui/maml/elements/VariableArrayElement$Type;
 
     invoke-virtual {v0}, [Lmiui/maml/elements/VariableArrayElement$Type;->clone()Ljava/lang/Object;

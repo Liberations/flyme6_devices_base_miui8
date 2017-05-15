@@ -26,7 +26,6 @@
     .param p4, "x2"    # Z
 
     .prologue
-    .line 54
     iput-object p1, p0, Lmiui/maml/component/MamlDrawable$3;->this$0:Lmiui/maml/component/MamlDrawable;
 
     invoke-direct {p0, p2, p3, p4}, Lmiui/maml/RenderUpdater;-><init>(Lmiui/maml/ScreenElementRoot;Landroid/os/Handler;Z)V
@@ -40,7 +39,6 @@
     .locals 4
 
     .prologue
-    .line 57
     iget-object v0, p0, Lmiui/maml/component/MamlDrawable$3;->this$0:Lmiui/maml/component/MamlDrawable;
 
     # getter for: Lmiui/maml/component/MamlDrawable;->mHandler:Landroid/os/Handler;
@@ -57,7 +55,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 58
     iget-object v0, p0, Lmiui/maml/component/MamlDrawable$3;->this$0:Lmiui/maml/component/MamlDrawable;
 
     # getter for: Lmiui/maml/component/MamlDrawable;->mHandler:Landroid/os/Handler;
@@ -76,7 +73,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 59
     iget-object v0, p0, Lmiui/maml/component/MamlDrawable$3;->this$0:Lmiui/maml/component/MamlDrawable;
 
     # getter for: Lmiui/maml/component/MamlDrawable;->mHandler:Landroid/os/Handler;
@@ -93,6 +89,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 60
     return-void
 .end method

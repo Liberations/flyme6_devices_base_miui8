@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 45
     invoke-static {}, Lmiui/maml/data/SettingsBinder$Category;->values()[Lmiui/maml/data/SettingsBinder$Category;
 
     move-result-object v0

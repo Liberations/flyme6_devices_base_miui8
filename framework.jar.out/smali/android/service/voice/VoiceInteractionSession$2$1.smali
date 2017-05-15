@@ -30,7 +30,6 @@
     .param p2, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 229
     iput-object p1, p0, Landroid/service/voice/VoiceInteractionSession$2$1;->this$1:Landroid/service/voice/VoiceInteractionSession$2;
 
     iput-object p3, p0, Landroid/service/voice/VoiceInteractionSession$2$1;->val$structure:Landroid/app/assist/AssistStructure;
@@ -50,16 +49,13 @@
     .locals 8
 
     .prologue
-    .line 232
     const/4 v4, 0x0
 
-    .line 233
     .local v4, "failure":Ljava/lang/Throwable;
     iget-object v0, p0, Landroid/service/voice/VoiceInteractionSession$2$1;->val$structure:Landroid/app/assist/AssistStructure;
 
     if-eqz v0, :cond_0
 
-    .line 235
     :try_start_0
     iget-object v0, p0, Landroid/service/voice/VoiceInteractionSession$2$1;->val$structure:Landroid/app/assist/AssistStructure;
 
@@ -67,7 +63,6 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 241
     :cond_0
     :goto_0
     iget-object v0, p0, Landroid/service/voice/VoiceInteractionSession$2$1;->this$1:Landroid/service/voice/VoiceInteractionSession$2;
@@ -99,14 +94,11 @@
 
     invoke-virtual {v7, v0}, Lcom/android/internal/os/HandlerCaller;->sendMessage(Landroid/os/Message;)V
 
-    .line 243
     return-void
 
-    .line 236
     :catch_0
     move-exception v6
 
-    .line 237
     .local v6, "e":Ljava/lang/Throwable;
     const-string v0, "VoiceInteractionSession"
 
@@ -114,12 +106,10 @@
 
     invoke-static {v0, v1, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 238
     move-object v4, v6
 
     goto :goto_0
 
-    .line 241
     .end local v6    # "e":Ljava/lang/Throwable;
     :cond_1
     const/4 v3, 0x0

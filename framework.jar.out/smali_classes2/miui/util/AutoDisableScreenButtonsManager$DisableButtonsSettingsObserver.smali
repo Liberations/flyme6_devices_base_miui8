@@ -24,13 +24,10 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 284
     iput-object p1, p0, Lmiui/util/AutoDisableScreenButtonsManager$DisableButtonsSettingsObserver;->this$0:Lmiui/util/AutoDisableScreenButtonsManager;
 
-    .line 285
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 286
     return-void
 .end method
 
@@ -40,7 +37,6 @@
     .locals 4
 
     .prologue
-    .line 304
     iget-object v1, p0, Lmiui/util/AutoDisableScreenButtonsManager$DisableButtonsSettingsObserver;->this$0:Lmiui/util/AutoDisableScreenButtonsManager;
 
     # getter for: Lmiui/util/AutoDisableScreenButtonsManager;->mContext:Landroid/content/Context;
@@ -52,7 +48,6 @@
 
     move-result-object v0
 
-    .line 305
     .local v0, "resolver":Landroid/content/ContentResolver;
     const-string v1, "screen_buttons_state"
 
@@ -66,7 +61,6 @@
 
     invoke-virtual {v0, v1, v2, p0, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 307
     return-void
 .end method
 
@@ -77,7 +71,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 290
     iget-object v2, p0, Lmiui/util/AutoDisableScreenButtonsManager$DisableButtonsSettingsObserver;->this$0:Lmiui/util/AutoDisableScreenButtonsManager;
 
     # getter for: Lmiui/util/AutoDisableScreenButtonsManager;->mContext:Landroid/content/Context;
@@ -89,7 +82,6 @@
 
     move-result-object v1
 
-    .line 291
     .local v1, "resolver":Landroid/content/ContentResolver;
     const-string v2, "screen_buttons_state"
 
@@ -104,15 +96,12 @@
 
     move-result v0
 
-    .line 293
     .local v0, "btnState":I
     packed-switch v0, :pswitch_data_0
 
-    .line 301
     :goto_0
     return-void
 
-    .line 295
     :pswitch_0
     iget-object v2, p0, Lmiui/util/AutoDisableScreenButtonsManager$DisableButtonsSettingsObserver;->this$0:Lmiui/util/AutoDisableScreenButtonsManager;
 
@@ -121,7 +110,6 @@
 
     goto :goto_0
 
-    .line 298
     :pswitch_1
     iget-object v2, p0, Lmiui/util/AutoDisableScreenButtonsManager$DisableButtonsSettingsObserver;->this$0:Lmiui/util/AutoDisableScreenButtonsManager;
 
@@ -132,7 +120,6 @@
 
     goto :goto_0
 
-    .line 293
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 82
     iput-object p1, p0, Lmiui/maml/elements/ViewHolderScreenElement$1;->this$0:Lmiui/maml/elements/ViewHolderScreenElement;
 
     iput-boolean p2, p0, Lmiui/maml/elements/ViewHolderScreenElement$1;->val$b:Z
@@ -44,7 +43,6 @@
     .locals 3
 
     .prologue
-    .line 84
     iget-object v0, p0, Lmiui/maml/elements/ViewHolderScreenElement$1;->this$0:Lmiui/maml/elements/ViewHolderScreenElement;
 
     invoke-virtual {v0}, Lmiui/maml/elements/ViewHolderScreenElement;->getView()Landroid/view/View;
@@ -62,10 +60,8 @@
 
     invoke-virtual {v1, v0, v2}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
 
-    .line 85
     return-void
 
-    .line 84
     :cond_0
     const/4 v0, 0x0
 

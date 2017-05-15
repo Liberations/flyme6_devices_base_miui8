@@ -22,14 +22,12 @@
     .locals 3
 
     .prologue
-    .line 9
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lmiui/maml/util/ReflectionHelper;->PRIMITIVE_TYPE:Ljava/util/HashMap;
 
-    .line 11
     sget-object v0, Lmiui/maml/util/ReflectionHelper;->PRIMITIVE_TYPE:Ljava/util/HashMap;
 
     const-string v1, "byte"
@@ -38,7 +36,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 12
     sget-object v0, Lmiui/maml/util/ReflectionHelper;->PRIMITIVE_TYPE:Ljava/util/HashMap;
 
     const-string v1, "short"
@@ -47,7 +44,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 13
     sget-object v0, Lmiui/maml/util/ReflectionHelper;->PRIMITIVE_TYPE:Ljava/util/HashMap;
 
     const-string v1, "int"
@@ -56,7 +52,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 14
     sget-object v0, Lmiui/maml/util/ReflectionHelper;->PRIMITIVE_TYPE:Ljava/util/HashMap;
 
     const-string v1, "long"
@@ -65,7 +60,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 15
     sget-object v0, Lmiui/maml/util/ReflectionHelper;->PRIMITIVE_TYPE:Ljava/util/HashMap;
 
     const-string v1, "char"
@@ -74,7 +68,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 16
     sget-object v0, Lmiui/maml/util/ReflectionHelper;->PRIMITIVE_TYPE:Ljava/util/HashMap;
 
     const-string v1, "boolean"
@@ -83,7 +76,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 17
     sget-object v0, Lmiui/maml/util/ReflectionHelper;->PRIMITIVE_TYPE:Ljava/util/HashMap;
 
     const-string v1, "float"
@@ -92,7 +84,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 18
     sget-object v0, Lmiui/maml/util/ReflectionHelper;->PRIMITIVE_TYPE:Ljava/util/HashMap;
 
     const-string v1, "double"
@@ -101,7 +92,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 19
     sget-object v0, Lmiui/maml/util/ReflectionHelper;->PRIMITIVE_TYPE:Ljava/util/HashMap;
 
     const-string v1, "byte[]"
@@ -110,7 +100,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 20
     sget-object v0, Lmiui/maml/util/ReflectionHelper;->PRIMITIVE_TYPE:Ljava/util/HashMap;
 
     const-string v1, "short[]"
@@ -119,7 +108,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 21
     sget-object v0, Lmiui/maml/util/ReflectionHelper;->PRIMITIVE_TYPE:Ljava/util/HashMap;
 
     const-string v1, "int[]"
@@ -128,7 +116,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 22
     sget-object v0, Lmiui/maml/util/ReflectionHelper;->PRIMITIVE_TYPE:Ljava/util/HashMap;
 
     const-string v1, "long[]"
@@ -137,7 +124,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 23
     sget-object v0, Lmiui/maml/util/ReflectionHelper;->PRIMITIVE_TYPE:Ljava/util/HashMap;
 
     const-string v1, "char[]"
@@ -146,7 +132,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 24
     sget-object v0, Lmiui/maml/util/ReflectionHelper;->PRIMITIVE_TYPE:Ljava/util/HashMap;
 
     const-string v1, "boolean[]"
@@ -155,7 +140,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 25
     sget-object v0, Lmiui/maml/util/ReflectionHelper;->PRIMITIVE_TYPE:Ljava/util/HashMap;
 
     const-string v1, "float[]"
@@ -164,7 +148,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 26
     sget-object v0, Lmiui/maml/util/ReflectionHelper;->PRIMITIVE_TYPE:Ljava/util/HashMap;
 
     const-string v1, "double[]"
@@ -173,7 +156,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 27
     return-void
 .end method
 
@@ -181,7 +163,6 @@
     .locals 0
 
     .prologue
-    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -195,7 +176,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 49
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -208,12 +188,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 57
     :cond_0
     :goto_0
     return-object v0
 
-    .line 52
     :cond_1
     :try_start_0
     invoke-static {p0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
@@ -230,19 +208,16 @@
 
     goto :goto_0
 
-    .line 55
     :catch_0
     move-exception v1
 
     goto :goto_0
 
-    .line 54
     :catch_1
     move-exception v1
 
     goto :goto_0
 
-    .line 53
     :catch_2
     move-exception v1
 
@@ -263,7 +238,6 @@
     .end annotation
 
     .prologue
-    .line 41
     :try_start_0
     invoke-static {p0}, Lmiui/maml/util/ReflectionHelper;->strTypeToClassThrows(Ljava/lang/String;)Ljava/lang/Class;
     :try_end_0
@@ -271,15 +245,12 @@
 
     move-result-object v0
 
-    .line 44
     :goto_0
     return-object v0
 
-    .line 42
     :catch_0
     move-exception v0
 
-    .line 44
     const/4 v0, 0x0
 
     goto :goto_0
@@ -305,7 +276,6 @@
     .end annotation
 
     .prologue
-    .line 61
     sget-object v0, Lmiui/maml/util/ReflectionHelper;->PRIMITIVE_TYPE:Ljava/util/HashMap;
 
     invoke-virtual {v0, p0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
@@ -314,7 +284,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 62
     sget-object v0, Lmiui/maml/util/ReflectionHelper;->PRIMITIVE_TYPE:Ljava/util/HashMap;
 
     invoke-virtual {v0, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -323,7 +292,6 @@
 
     check-cast v0, Ljava/lang/Class;
 
-    .line 64
     .end local p0    # "type":Ljava/lang/String;
     :goto_0
     return-object v0
@@ -389,23 +357,18 @@
     .end annotation
 
     .prologue
-    .line 30
     if-nez p0, :cond_1
 
-    .line 31
     const/4 v1, 0x0
 
-    .line 36
     :cond_0
     return-object v1
 
-    .line 32
     :cond_1
     array-length v2, p0
 
     new-array v1, v2, [Ljava/lang/Class;
 
-    .line 33
     .local v1, "paramClass":[Ljava/lang/Class;, "[Ljava/lang/Class<*>;"
     const/4 v0, 0x0
 
@@ -415,7 +378,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 34
     aget-object v2, p0, v0
 
     invoke-static {v2}, Lmiui/maml/util/ReflectionHelper;->strTypeToClassThrows(Ljava/lang/String;)Ljava/lang/Class;
@@ -424,7 +386,6 @@
 
     aput-object v2, v1, v0
 
-    .line 33
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0

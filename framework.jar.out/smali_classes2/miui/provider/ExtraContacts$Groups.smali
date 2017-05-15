@@ -33,7 +33,6 @@
     .locals 0
 
     .prologue
-    .line 1096
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -46,10 +45,8 @@
     .param p2, "title"    # Ljava/lang/String;
 
     .prologue
-    .line 1124
     const/4 v0, 0x0
 
-    .line 1125
     .local v0, "result":Ljava/lang/String;
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -57,7 +54,6 @@
 
     if-nez v1, :cond_4
 
-    .line 1126
     const-string v1, "Contacts"
 
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -66,18 +62,15 @@
 
     if-eqz v1, :cond_0
 
-    .line 1127
     const v1, 0x110700be
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1141
     :goto_0
     return-object v0
 
-    .line 1128
     :cond_0
     const-string v1, "Friends"
 
@@ -87,7 +80,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 1129
     const v1, 0x110700bf
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -96,7 +88,6 @@
 
     goto :goto_0
 
-    .line 1130
     :cond_1
     const-string v1, "Family"
 
@@ -106,7 +97,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 1131
     const v1, 0x110700c0
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -115,7 +105,6 @@
 
     goto :goto_0
 
-    .line 1132
     :cond_2
     const-string v1, "Coworkers"
 
@@ -125,7 +114,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 1133
     const v1, 0x110700c1
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -134,13 +122,11 @@
 
     goto :goto_0
 
-    .line 1135
     :cond_3
     move-object v0, p1
 
     goto :goto_0
 
-    .line 1138
     :cond_4
     move-object v0, p2
 

@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 63
     invoke-static {}, Lmiui/maml/util/ColorParser$ExpressionType;->values()[Lmiui/maml/util/ColorParser$ExpressionType;
 
     move-result-object v0

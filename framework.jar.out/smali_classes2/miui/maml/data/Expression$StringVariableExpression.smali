@@ -21,12 +21,10 @@
     .param p2, "exp"    # Ljava/lang/String;
 
     .prologue
-    .line 353
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lmiui/maml/data/Expression$VariableExpression;-><init>(Lmiui/maml/data/Variables;Ljava/lang/String;Z)V
 
-    .line 354
     return-void
 .end method
 
@@ -38,20 +36,16 @@
     .prologue
     const-wide/16 v2, 0x0
 
-    .line 358
     invoke-virtual {p0}, Lmiui/maml/data/Expression$StringVariableExpression;->evaluateStr()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 359
     .local v1, "str":Ljava/lang/String;
     if-nez v1, :cond_0
 
-    .line 364
     :goto_0
     return-wide v2
 
-    .line 362
     :cond_0
     :try_start_0
     invoke-static {v1}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
@@ -62,11 +56,9 @@
 
     goto :goto_0
 
-    .line 363
     :catch_0
     move-exception v0
 
-    .line 364
     .local v0, "e":Ljava/lang/NumberFormatException;
     goto :goto_0
 .end method
@@ -75,7 +67,6 @@
     .locals 1
 
     .prologue
-    .line 370
     iget-object v0, p0, Lmiui/maml/data/Expression$StringVariableExpression;->mIndexedVar:Lmiui/maml/data/IndexedVariable;
 
     invoke-virtual {v0}, Lmiui/maml/data/IndexedVariable;->getString()Ljava/lang/String;
@@ -89,7 +80,6 @@
     .locals 1
 
     .prologue
-    .line 375
     iget-object v0, p0, Lmiui/maml/data/Expression$StringVariableExpression;->mIndexedVar:Lmiui/maml/data/IndexedVariable;
 
     invoke-virtual {v0}, Lmiui/maml/data/IndexedVariable;->isNull()Z

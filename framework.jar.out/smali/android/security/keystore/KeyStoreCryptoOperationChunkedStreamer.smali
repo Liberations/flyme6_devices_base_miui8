@@ -41,12 +41,10 @@
     .param p1, "operation"    # Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer$Stream;
 
     .prologue
-    .line 82
     const/high16 v0, 0x10000
 
     invoke-direct {p0, p1, v0}, Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer;-><init>(Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer$Stream;I)V
 
-    .line 83
     return-void
 .end method
 
@@ -56,21 +54,16 @@
     .param p2, "maxChunkSize"    # I
 
     .prologue
-    .line 85
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 75
     sget-object v0, Llibcore/util/EmptyArray;->BYTE:[B
 
     iput-object v0, p0, Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer;->mBuffered:[B
 
-    .line 86
     iput-object p1, p0, Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer;->mKeyStoreStream:Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer$Stream;
 
-    .line 87
     iput p2, p0, Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer;->mMaxChunkSize:I
 
-    .line 88
     return-void
 .end method
 
@@ -90,22 +83,17 @@
     .end annotation
 
     .prologue
-    .line 210
     if-nez p3, :cond_0
 
-    .line 212
     sget-object p1, Llibcore/util/EmptyArray;->BYTE:[B
 
-    .line 213
     const/4 p2, 0x0
 
-    .line 217
     :cond_0
     invoke-virtual {p0, p1, p2, p3}, Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer;->update([BII)[B
 
     move-result-object v1
 
-    .line 218
     .local v1, "output":[B
     invoke-virtual {p0}, Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer;->flush()[B
 
@@ -115,25 +103,21 @@
 
     move-result-object v1
 
-    .line 220
     iget-object v2, p0, Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer;->mKeyStoreStream:Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer$Stream;
 
     invoke-interface {v2, p4, p5}, Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer$Stream;->finish([B[B)Landroid/security/keymaster/OperationResult;
 
     move-result-object v0
 
-    .line 221
     .local v0, "opResult":Landroid/security/keymaster/OperationResult;
     if-nez v0, :cond_1
 
-    .line 222
     new-instance v2, Landroid/security/keystore/KeyStoreConnectException;
 
     invoke-direct {v2}, Landroid/security/keystore/KeyStoreConnectException;-><init>()V
 
     throw v2
 
-    .line 223
     :cond_1
     iget v2, v0, Landroid/security/keymaster/OperationResult;->resultCode:I
 
@@ -141,7 +125,6 @@
 
     if-eq v2, v3, :cond_2
 
-    .line 224
     iget v2, v0, Landroid/security/keymaster/OperationResult;->resultCode:I
 
     invoke-static {v2}, Landroid/security/KeyStore;->getKeyStoreException(I)Landroid/security/KeyStoreException;
@@ -150,7 +133,6 @@
 
     throw v2
 
-    .line 226
     :cond_2
     iget-wide v2, p0, Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer;->mProducedOutputSizeBytes:J
 
@@ -164,7 +146,6 @@
 
     iput-wide v2, p0, Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer;->mProducedOutputSizeBytes:J
 
-    .line 228
     iget-object v2, v0, Landroid/security/keymaster/OperationResult;->output:[B
 
     invoke-static {v1, v2}, Landroid/security/keystore/ArrayUtils;->concat([B[B)[B
@@ -187,23 +168,18 @@
 
     const/4 v8, 0x0
 
-    .line 232
     iget v5, p0, Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer;->mBufferedLength:I
 
     if-gtz v5, :cond_0
 
-    .line 233
     sget-object v4, Llibcore/util/EmptyArray;->BYTE:[B
 
-    .line 302
     :goto_0
     return-object v4
 
-    .line 238
     :cond_0
     const/4 v0, 0x0
 
-    .line 239
     .local v0, "bufferedOutput":Ljava/io/ByteArrayOutputStream;
     :cond_1
     :goto_1
@@ -211,7 +187,6 @@
 
     if-lez v5, :cond_4
 
-    .line 240
     iget-object v5, p0, Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer;->mBuffered:[B
 
     iget v6, p0, Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer;->mBufferedOffset:I
@@ -222,7 +197,6 @@
 
     move-result-object v1
 
-    .line 241
     .local v1, "chunk":[B
     iget-object v5, p0, Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer;->mKeyStoreStream:Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer$Stream;
 
@@ -230,24 +204,20 @@
 
     move-result-object v3
 
-    .line 242
     .local v3, "opResult":Landroid/security/keymaster/OperationResult;
     if-nez v3, :cond_2
 
-    .line 243
     new-instance v5, Landroid/security/keystore/KeyStoreConnectException;
 
     invoke-direct {v5}, Landroid/security/keystore/KeyStoreConnectException;-><init>()V
 
     throw v5
 
-    .line 244
     :cond_2
     iget v5, v3, Landroid/security/keymaster/OperationResult;->resultCode:I
 
     if-eq v5, v9, :cond_3
 
-    .line 245
     iget v5, v3, Landroid/security/keymaster/OperationResult;->resultCode:I
 
     invoke-static {v5}, Landroid/security/KeyStore;->getKeyStoreException(I)Landroid/security/KeyStoreException;
@@ -256,13 +226,11 @@
 
     throw v5
 
-    .line 248
     :cond_3
     iget v5, v3, Landroid/security/keymaster/OperationResult;->inputConsumed:I
 
     if-gtz v5, :cond_5
 
-    .line 293
     .end local v1    # "chunk":[B
     .end local v3    # "opResult":Landroid/security/keymaster/OperationResult;
     :cond_4
@@ -270,7 +238,6 @@
 
     if-lez v5, :cond_b
 
-    .line 294
     new-instance v6, Landroid/security/KeyStoreException;
 
     const/16 v7, -0x15
@@ -328,7 +295,6 @@
 
     throw v6
 
-    .line 253
     .restart local v1    # "chunk":[B
     .restart local v3    # "opResult":Landroid/security/keymaster/OperationResult;
     :cond_5
@@ -338,18 +304,14 @@
 
     if-lt v5, v6, :cond_6
 
-    .line 255
     sget-object v5, Llibcore/util/EmptyArray;->BYTE:[B
 
     iput-object v5, p0, Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer;->mBuffered:[B
 
-    .line 256
     iput v8, p0, Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer;->mBufferedOffset:I
 
-    .line 257
     iput v8, p0, Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer;->mBufferedLength:I
 
-    .line 265
     :goto_3
     iget v5, v3, Landroid/security/keymaster/OperationResult;->inputConsumed:I
 
@@ -357,7 +319,6 @@
 
     if-le v5, v6, :cond_7
 
-    .line 266
     new-instance v5, Landroid/security/KeyStoreException;
 
     const/16 v6, -0x3e8
@@ -398,16 +359,13 @@
 
     throw v5
 
-    .line 260
     :cond_6
     iput-object v1, p0, Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer;->mBuffered:[B
 
-    .line 261
     iget v5, v3, Landroid/security/keymaster/OperationResult;->inputConsumed:I
 
     iput v5, p0, Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer;->mBufferedOffset:I
 
-    .line 262
     array-length v5, v1
 
     iget v6, v3, Landroid/security/keymaster/OperationResult;->inputConsumed:I
@@ -418,7 +376,6 @@
 
     goto :goto_3
 
-    .line 271
     :cond_7
     iget-object v5, v3, Landroid/security/keymaster/OperationResult;->output:[B
 
@@ -430,15 +387,12 @@
 
     if-lez v5, :cond_1
 
-    .line 273
     if-nez v0, :cond_9
 
-    .line 275
     iget v5, p0, Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer;->mBufferedLength:I
 
     if-nez v5, :cond_8
 
-    .line 277
     iget-wide v6, p0, Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer;->mProducedOutputSizeBytes:J
 
     iget-object v5, v3, Landroid/security/keymaster/OperationResult;->output:[B
@@ -451,19 +405,16 @@
 
     iput-wide v6, p0, Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer;->mProducedOutputSizeBytes:J
 
-    .line 278
     iget-object v4, v3, Landroid/security/keymaster/OperationResult;->output:[B
 
     goto/16 :goto_0
 
-    .line 281
     :cond_8
     new-instance v0, Ljava/io/ByteArrayOutputStream;
 
     .end local v0    # "bufferedOutput":Ljava/io/ByteArrayOutputStream;
     invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 286
     .restart local v0    # "bufferedOutput":Ljava/io/ByteArrayOutputStream;
     :cond_9
     :try_start_0
@@ -475,11 +426,9 @@
 
     goto/16 :goto_1
 
-    .line 287
     :catch_0
     move-exception v2
 
-    .line 288
     .local v2, "e":Ljava/io/IOException;
     new-instance v5, Ljava/security/ProviderException;
 
@@ -489,7 +438,6 @@
 
     throw v5
 
-    .line 294
     .end local v1    # "chunk":[B
     .end local v2    # "e":Ljava/io/IOException;
     .end local v3    # "opResult":Landroid/security/keymaster/OperationResult;
@@ -498,7 +446,6 @@
 
     goto/16 :goto_2
 
-    .line 300
     :cond_b
     if-eqz v0, :cond_c
 
@@ -506,7 +453,6 @@
 
     move-result-object v4
 
-    .line 301
     .local v4, "result":[B
     :goto_4
     iget-wide v6, p0, Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer;->mProducedOutputSizeBytes:J
@@ -521,7 +467,6 @@
 
     goto/16 :goto_0
 
-    .line 300
     .end local v4    # "result":[B
     :cond_c
     sget-object v4, Llibcore/util/EmptyArray;->BYTE:[B
@@ -533,7 +478,6 @@
     .locals 2
 
     .prologue
-    .line 307
     iget-wide v0, p0, Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer;->mConsumedInputSizeBytes:J
 
     return-wide v0
@@ -543,7 +487,6 @@
     .locals 2
 
     .prologue
-    .line 312
     iget-wide v0, p0, Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer;->mProducedOutputSizeBytes:J
 
     return-wide v0
@@ -561,27 +504,21 @@
     .end annotation
 
     .prologue
-    .line 92
     if-nez p3, :cond_0
 
-    .line 94
     sget-object v10, Llibcore/util/EmptyArray;->BYTE:[B
 
-    .line 204
     :goto_0
     return-object v10
 
-    .line 97
     :cond_0
     const/4 v6, 0x0
 
-    .line 99
     .local v6, "bufferedOutput":Ljava/io/ByteArrayOutputStream;
     :cond_1
     :goto_1
     if-lez p3, :cond_c
 
-    .line 102
     iget v0, p0, Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer;->mBufferedLength:I
 
     add-int/2addr v0, p3
@@ -590,14 +527,12 @@
 
     if-le v0, v1, :cond_2
 
-    .line 105
     iget v0, p0, Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer;->mMaxChunkSize:I
 
     iget v1, p0, Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer;->mBufferedLength:I
 
     sub-int v5, v0, v1
 
-    .line 106
     .local v5, "inputBytesInChunk":I
     iget-object v0, p0, Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer;->mBuffered:[B
 
@@ -613,15 +548,12 @@
 
     move-result-object v7
 
-    .line 124
     .local v7, "chunk":[B
     :goto_2
     add-int/2addr p2, v5
 
-    .line 125
     sub-int/2addr p3, v5
 
-    .line 126
     iget-wide v0, p0, Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer;->mConsumedInputSizeBytes:J
 
     int-to-long v2, v5
@@ -630,25 +562,21 @@
 
     iput-wide v0, p0, Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer;->mConsumedInputSizeBytes:J
 
-    .line 128
     iget-object v0, p0, Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer;->mKeyStoreStream:Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer$Stream;
 
     invoke-interface {v0, v7}, Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer$Stream;->update([B)Landroid/security/keymaster/OperationResult;
 
     move-result-object v9
 
-    .line 129
     .local v9, "opResult":Landroid/security/keymaster/OperationResult;
     if-nez v9, :cond_4
 
-    .line 130
     new-instance v0, Landroid/security/keystore/KeyStoreConnectException;
 
     invoke-direct {v0}, Landroid/security/keystore/KeyStoreConnectException;-><init>()V
 
     throw v0
 
-    .line 110
     .end local v5    # "inputBytesInChunk":I
     .end local v7    # "chunk":[B
     .end local v9    # "opResult":Landroid/security/keymaster/OperationResult;
@@ -663,23 +591,19 @@
 
     if-ne p3, v0, :cond_3
 
-    .line 114
     move-object v7, p1
 
-    .line 115
     .restart local v7    # "chunk":[B
     array-length v5, p1
 
     .restart local v5    # "inputBytesInChunk":I
     goto :goto_2
 
-    .line 118
     .end local v5    # "inputBytesInChunk":I
     .end local v7    # "chunk":[B
     :cond_3
     move v5, p3
 
-    .line 119
     .restart local v5    # "inputBytesInChunk":I
     iget-object v0, p0, Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer;->mBuffered:[B
 
@@ -698,7 +622,6 @@
     .restart local v7    # "chunk":[B
     goto :goto_2
 
-    .line 131
     .restart local v9    # "opResult":Landroid/security/keymaster/OperationResult;
     :cond_4
     iget v0, v9, Landroid/security/keymaster/OperationResult;->resultCode:I
@@ -707,7 +630,6 @@
 
     if-eq v0, v1, :cond_5
 
-    .line 132
     iget v0, v9, Landroid/security/keymaster/OperationResult;->resultCode:I
 
     invoke-static {v0}, Landroid/security/KeyStore;->getKeyStoreException(I)Landroid/security/KeyStoreException;
@@ -716,7 +638,6 @@
 
     throw v0
 
-    .line 135
     :cond_5
     iget v0, v9, Landroid/security/keymaster/OperationResult;->inputConsumed:I
 
@@ -724,22 +645,18 @@
 
     if-ne v0, v1, :cond_6
 
-    .line 137
     sget-object v0, Llibcore/util/EmptyArray;->BYTE:[B
 
     iput-object v0, p0, Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer;->mBuffered:[B
 
-    .line 138
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer;->mBufferedOffset:I
 
-    .line 139
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer;->mBufferedLength:I
 
-    .line 164
     :goto_3
     iget-object v0, v9, Landroid/security/keymaster/OperationResult;->output:[B
 
@@ -751,19 +668,15 @@
 
     if-lez v0, :cond_1
 
-    .line 165
     if-lez p3, :cond_a
 
-    .line 167
     if-nez v6, :cond_1
 
-    .line 168
     new-instance v6, Ljava/io/ByteArrayOutputStream;
 
     .end local v6    # "bufferedOutput":Ljava/io/ByteArrayOutputStream;
     invoke-direct {v6}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 170
     .restart local v6    # "bufferedOutput":Ljava/io/ByteArrayOutputStream;
     :try_start_0
     iget-object v0, v9, Landroid/security/keymaster/OperationResult;->output:[B
@@ -774,11 +687,9 @@
 
     goto :goto_1
 
-    .line 171
     :catch_0
     move-exception v8
 
-    .line 172
     .local v8, "e":Ljava/io/IOException;
     new-instance v0, Ljava/security/ProviderException;
 
@@ -788,17 +699,14 @@
 
     throw v0
 
-    .line 140
     .end local v8    # "e":Ljava/io/IOException;
     :cond_6
     iget v0, v9, Landroid/security/keymaster/OperationResult;->inputConsumed:I
 
     if-gtz v0, :cond_8
 
-    .line 142
     if-lez p3, :cond_7
 
-    .line 146
     new-instance v0, Landroid/security/KeyStoreException;
 
     const/16 v1, -0x3e8
@@ -833,23 +741,19 @@
 
     throw v0
 
-    .line 150
     :cond_7
     iput-object v7, p0, Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer;->mBuffered:[B
 
-    .line 151
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer;->mBufferedOffset:I
 
-    .line 152
     array-length v0, v7
 
     iput v0, p0, Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer;->mBufferedLength:I
 
     goto :goto_3
 
-    .line 153
     :cond_8
     iget v0, v9, Landroid/security/keymaster/OperationResult;->inputConsumed:I
 
@@ -857,15 +761,12 @@
 
     if-ge v0, v1, :cond_9
 
-    .line 155
     iput-object v7, p0, Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer;->mBuffered:[B
 
-    .line 156
     iget v0, v9, Landroid/security/keymaster/OperationResult;->inputConsumed:I
 
     iput v0, p0, Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer;->mBufferedOffset:I
 
-    .line 157
     array-length v0, v7
 
     iget v1, v9, Landroid/security/keymaster/OperationResult;->inputConsumed:I
@@ -876,7 +777,6 @@
 
     goto :goto_3
 
-    .line 159
     :cond_9
     new-instance v0, Landroid/security/KeyStoreException;
 
@@ -918,14 +818,11 @@
 
     throw v0
 
-    .line 178
     :cond_a
     if-nez v6, :cond_b
 
-    .line 180
     iget-object v10, v9, Landroid/security/keymaster/OperationResult;->output:[B
 
-    .line 190
     .local v10, "result":[B
     :goto_4
     iget-wide v0, p0, Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer;->mProducedOutputSizeBytes:J
@@ -940,7 +837,6 @@
 
     goto/16 :goto_0
 
-    .line 184
     .end local v10    # "result":[B
     :cond_b
     :try_start_1
@@ -950,7 +846,6 @@
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 188
     invoke-virtual {v6}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object v10
@@ -958,12 +853,10 @@
     .restart local v10    # "result":[B
     goto :goto_4
 
-    .line 185
     .end local v10    # "result":[B
     :catch_1
     move-exception v8
 
-    .line 186
     .restart local v8    # "e":Ljava/io/IOException;
     new-instance v0, Ljava/security/ProviderException;
 
@@ -973,7 +866,6 @@
 
     throw v0
 
-    .line 197
     .end local v5    # "inputBytesInChunk":I
     .end local v7    # "chunk":[B
     .end local v8    # "e":Ljava/io/IOException;
@@ -981,10 +873,8 @@
     :cond_c
     if-nez v6, :cond_d
 
-    .line 199
     sget-object v10, Llibcore/util/EmptyArray;->BYTE:[B
 
-    .line 203
     .restart local v10    # "result":[B
     :goto_5
     iget-wide v0, p0, Landroid/security/keystore/KeyStoreCryptoOperationChunkedStreamer;->mProducedOutputSizeBytes:J
@@ -999,7 +889,6 @@
 
     goto/16 :goto_0
 
-    .line 201
     .end local v10    # "result":[B
     :cond_d
     invoke-virtual {v6}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B

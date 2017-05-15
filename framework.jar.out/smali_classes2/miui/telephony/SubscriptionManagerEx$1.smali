@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 112
     iput-object p1, p0, Lmiui/telephony/SubscriptionManagerEx$1;->this$0:Lmiui/telephony/SubscriptionManagerEx;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 115
     const-string v0, "org.codeaurora.intent.action.ACTION_UICC_MANUAL_PROVISION_STATUS_CHANGED"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -52,12 +50,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 116
     iget-object v0, p0, Lmiui/telephony/SubscriptionManagerEx$1;->this$0:Lmiui/telephony/SubscriptionManagerEx;
 
     invoke-virtual {v0}, Lmiui/telephony/SubscriptionManagerEx;->onSubscriptionInfoChanged()V
 
-    .line 118
     :cond_0
     return-void
 .end method

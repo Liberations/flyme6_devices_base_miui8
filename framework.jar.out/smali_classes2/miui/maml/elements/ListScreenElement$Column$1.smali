@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 261
     iput-object p1, p0, Lmiui/maml/elements/ListScreenElement$Column$1;->this$0:Lmiui/maml/elements/ListScreenElement$Column;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "objects"    # [Ljava/lang/Object;
 
     .prologue
-    .line 264
     iget-object v0, p0, Lmiui/maml/elements/ListScreenElement$Column$1;->this$0:Lmiui/maml/elements/ListScreenElement$Column;
 
     iget-object v0, v0, Lmiui/maml/elements/ListScreenElement$Column;->mList:Lmiui/maml/elements/ListScreenElement;
@@ -52,6 +50,5 @@
 
     invoke-virtual {v0, v1, p1}, Lmiui/maml/elements/ListScreenElement;->addColumn(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 265
     return-void
 .end method

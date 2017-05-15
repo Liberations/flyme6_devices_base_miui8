@@ -19,7 +19,6 @@
     .locals 1
 
     .prologue
-    .line 22
     sget v0, Landroid/util/DisplayMetrics;->DENSITY_DEVICE:I
 
     sput v0, Landroid/util/MiuiDisplayMetrics;->DENSITY_DEVICE:I
@@ -31,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 36
     const-string v0, "ro.sf.lcd_density"
 
     const/16 v1, 0xa0
@@ -57,7 +54,6 @@
     .locals 1
 
     .prologue
-    .line 28
     const/16 v0, 0x1b8
 
     return v0
@@ -70,12 +66,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 43
     invoke-static {}, Landroid/util/MiuiDisplayMetrics;->getFactoryDeviceDensity()I
 
     move-result v1
 
-    .line 44
     .local v1, "factoryDensity":I
     int-to-float v3, v1
 
@@ -101,7 +95,6 @@
 
     if-gtz v3, :cond_0
 
-    .line 45
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v3
@@ -112,11 +105,9 @@
 
     iget v0, v3, Landroid/util/DisplayMetrics;->densityDpi:I
 
-    .line 46
     .local v0, "currentDensity":I
     if-eq v0, p0, :cond_0
 
-    .line 47
     const-string v3, "persist.miui.density_v2"
 
     invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -125,7 +116,6 @@
 
     invoke-static {v3, v4}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 48
     const-string v3, "persist.miui.density_v2"
 
     const/4 v4, -0x1
@@ -138,7 +128,6 @@
 
     const/4 v2, 0x1
 
-    .line 51
     .end local v0    # "currentDensity":I
     :cond_0
     return v2

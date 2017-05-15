@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 21
     iput-object p1, p0, Lmiui/view/AutoDisableScreenbuttonsFloatView$1;->this$0:Lmiui/view/AutoDisableScreenbuttonsFloatView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,11 +39,9 @@
     .locals 1
 
     .prologue
-    .line 23
     iget-object v0, p0, Lmiui/view/AutoDisableScreenbuttonsFloatView$1;->this$0:Lmiui/view/AutoDisableScreenbuttonsFloatView;
 
     invoke-virtual {v0}, Lmiui/view/AutoDisableScreenbuttonsFloatView;->dismiss()V
 
-    .line 24
     return-void
 .end method

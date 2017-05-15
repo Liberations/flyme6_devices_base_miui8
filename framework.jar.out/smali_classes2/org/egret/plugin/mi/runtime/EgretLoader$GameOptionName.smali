@@ -37,7 +37,6 @@
     .locals 0
 
     .prologue
-    .line 34
     iput-object p1, p0, Lorg/egret/plugin/mi/runtime/EgretLoader$GameOptionName;->this$0:Lorg/egret/plugin/mi/runtime/EgretLoader;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

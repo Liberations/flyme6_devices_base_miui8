@@ -35,7 +35,6 @@
     .locals 13
 
     .prologue
-    .line 712
     const-string v9, "\\p{InCombiningDiacriticalMarks}+"
 
     invoke-static {v9}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -44,31 +43,24 @@
 
     sput-object v9, Lorg/apache/miui/commons/lang3/StringUtils$InitStripAccents;->sunPattern:Ljava/util/regex/Pattern;
 
-    .line 717
     sget-object v9, Lorg/apache/miui/commons/lang3/StringUtils$InitStripAccents;->sunPattern:Ljava/util/regex/Pattern;
 
     sput-object v9, Lorg/apache/miui/commons/lang3/StringUtils$InitStripAccents;->java6Pattern:Ljava/util/regex/Pattern;
 
-    .line 721
     const/4 v2, 0x0
 
-    .line 722
     .local v2, "_java6NormalizerFormNFD":Ljava/lang/Object;
     const/4 v1, 0x0
 
-    .line 723
     .local v1, "_java6NormalizeMethod":Ljava/lang/reflect/Method;
     const/4 v3, 0x0
 
-    .line 724
     .local v3, "_sunDecomposeMethod":Ljava/lang/reflect/Method;
     const/4 v0, 0x0
 
-    .line 725
     .local v0, "_java6Exception":Ljava/lang/Throwable;
     const/4 v4, 0x0
 
-    .line 729
     .local v4, "_sunException":Ljava/lang/Throwable;
     :try_start_0
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
@@ -85,7 +77,6 @@
 
     move-result-object v8
 
-    .line 731
     .local v8, "normalizerFormClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const-string v9, "NFD"
 
@@ -99,7 +90,6 @@
 
     move-result-object v2
 
-    .line 732
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v9
@@ -114,7 +104,6 @@
 
     move-result-object v7
 
-    .line 734
     .local v7, "normalizerClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const-string v9, "normalize"
 
@@ -138,37 +127,28 @@
 
     move-result-object v1
 
-    .line 751
     .end local v2    # "_java6NormalizerFormNFD":Ljava/lang/Object;
     .end local v7    # "normalizerClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     .end local v8    # "normalizerFormClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :goto_0
     sput-object v0, Lorg/apache/miui/commons/lang3/StringUtils$InitStripAccents;->java6Exception:Ljava/lang/Throwable;
 
-    .line 752
     sput-object v2, Lorg/apache/miui/commons/lang3/StringUtils$InitStripAccents;->java6NormalizerFormNFD:Ljava/lang/Object;
 
-    .line 753
     sput-object v1, Lorg/apache/miui/commons/lang3/StringUtils$InitStripAccents;->java6NormalizeMethod:Ljava/lang/reflect/Method;
 
-    .line 754
     sput-object v4, Lorg/apache/miui/commons/lang3/StringUtils$InitStripAccents;->sunException:Ljava/lang/Throwable;
 
-    .line 755
     sput-object v3, Lorg/apache/miui/commons/lang3/StringUtils$InitStripAccents;->sunDecomposeMethod:Ljava/lang/reflect/Method;
 
-    .line 756
     return-void
 
-    .line 736
     :catch_0
     move-exception v5
 
-    .line 738
     .local v5, "e1":Ljava/lang/Exception;
     move-object v0, v5
 
-    .line 741
     :try_start_1
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
@@ -184,7 +164,6 @@
 
     move-result-object v7
 
-    .line 743
     .restart local v7    # "normalizerClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const-string v9, "decompose"
 
@@ -218,12 +197,10 @@
 
     goto :goto_0
 
-    .line 745
     .end local v7    # "normalizerClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :catch_1
     move-exception v6
 
-    .line 746
     .local v6, "e2":Ljava/lang/Exception;
     move-object v4, v6
 
@@ -234,7 +211,6 @@
     .locals 0
 
     .prologue
-    .line 708
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -244,7 +220,6 @@
     .locals 1
 
     .prologue
-    .line 708
     sget-object v0, Lorg/apache/miui/commons/lang3/StringUtils$InitStripAccents;->java6NormalizeMethod:Ljava/lang/reflect/Method;
 
     return-object v0
@@ -254,7 +229,6 @@
     .locals 1
 
     .prologue
-    .line 708
     sget-object v0, Lorg/apache/miui/commons/lang3/StringUtils$InitStripAccents;->sunDecomposeMethod:Ljava/lang/reflect/Method;
 
     return-object v0
@@ -264,7 +238,6 @@
     .locals 1
 
     .prologue
-    .line 708
     sget-object v0, Lorg/apache/miui/commons/lang3/StringUtils$InitStripAccents;->java6Exception:Ljava/lang/Throwable;
 
     return-object v0
@@ -274,7 +247,6 @@
     .locals 1
 
     .prologue
-    .line 708
     sget-object v0, Lorg/apache/miui/commons/lang3/StringUtils$InitStripAccents;->sunException:Ljava/lang/Throwable;
 
     return-object v0
@@ -284,7 +256,6 @@
     .locals 1
 
     .prologue
-    .line 708
     sget-object v0, Lorg/apache/miui/commons/lang3/StringUtils$InitStripAccents;->java6NormalizerFormNFD:Ljava/lang/Object;
 
     return-object v0
@@ -294,7 +265,6 @@
     .locals 1
 
     .prologue
-    .line 708
     sget-object v0, Lorg/apache/miui/commons/lang3/StringUtils$InitStripAccents;->java6Pattern:Ljava/util/regex/Pattern;
 
     return-object v0
@@ -304,7 +274,6 @@
     .locals 1
 
     .prologue
-    .line 708
     sget-object v0, Lorg/apache/miui/commons/lang3/StringUtils$InitStripAccents;->sunPattern:Ljava/util/regex/Pattern;
 
     return-object v0

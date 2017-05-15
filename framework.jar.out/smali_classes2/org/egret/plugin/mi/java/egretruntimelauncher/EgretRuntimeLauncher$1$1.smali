@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 167
     iput-object p1, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLauncher$1$1;->this$1:Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLauncher$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "message"    # Ljava/lang/String;
 
     .prologue
-    .line 184
     iget-object v0, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLauncher$1$1;->this$1:Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLauncher$1;
 
     iget-object v0, v0, Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLauncher$1;->this$0:Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLauncher;
@@ -49,7 +47,6 @@
     # invokes: Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLauncher;->handleError(Ljava/lang/String;)V
     invoke-static {v0, p1}, Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLauncher;->access$100(Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLauncher;Ljava/lang/String;)V
 
-    .line 185
     return-void
 .end method
 
@@ -59,7 +56,6 @@
     .param p2, "length"    # I
 
     .prologue
-    .line 180
     return-void
 .end method
 
@@ -68,10 +64,8 @@
     .param p1, "content"    # Ljava/lang/String;
 
     .prologue
-    .line 171
     if-nez p1, :cond_0
 
-    .line 172
     iget-object v0, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLauncher$1$1;->this$1:Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLauncher$1;
 
     iget-object v0, v0, Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLauncher$1;->this$0:Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLauncher;
@@ -81,11 +75,9 @@
     # invokes: Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLauncher;->handleError(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLauncher;->access$100(Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLauncher;Ljava/lang/String;)V
 
-    .line 176
     :goto_0
     return-void
 
-    .line 175
     :cond_0
     iget-object v0, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLauncher$1$1;->this$1:Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLauncher$1;
 

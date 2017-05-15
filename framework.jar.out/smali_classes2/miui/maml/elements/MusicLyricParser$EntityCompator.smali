@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 455
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -46,7 +45,6 @@
     .param p2, "x1"    # Ljava/lang/Object;
 
     .prologue
-    .line 455
     check-cast p1, Lmiui/maml/elements/MusicLyricParser$LyricEntity;
 
     .end local p1    # "x0":Ljava/lang/Object;
@@ -66,7 +64,6 @@
     .param p2, "obj2"    # Lmiui/maml/elements/MusicLyricParser$LyricEntity;
 
     .prologue
-    .line 458
     iget v0, p1, Lmiui/maml/elements/MusicLyricParser$LyricEntity;->time:I
 
     iget v1, p2, Lmiui/maml/elements/MusicLyricParser$LyricEntity;->time:I

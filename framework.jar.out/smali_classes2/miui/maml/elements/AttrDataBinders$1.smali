@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 39
     iput-object p1, p0, Lmiui/maml/elements/AttrDataBinders$1;->this$0:Lmiui/maml/elements/AttrDataBinders;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "child"    # Lorg/w3c/dom/Element;
 
     .prologue
-    .line 43
     :try_start_0
     iget-object v1, p0, Lmiui/maml/elements/AttrDataBinders$1;->this$0:Lmiui/maml/elements/AttrDataBinders;
 
@@ -62,15 +60,12 @@
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 47
     :goto_0
     return-void
 
-    .line 44
     :catch_0
     move-exception v0
 
-    .line 45
     .local v0, "e":Ljava/lang/IllegalArgumentException;
     const-string v1, "AttrDataBinders"
 

@@ -27,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 258
     iput-object p1, p0, Lmiui/maml/elements/MusicLyricParser$Lyric$LyricLine;->this$0:Lmiui/maml/elements/MusicLyricParser$Lyric;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

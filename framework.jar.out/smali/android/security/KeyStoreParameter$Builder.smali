@@ -27,13 +27,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 111
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 112
     if-nez p1, :cond_0
 
-    .line 113
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "context == null"
@@ -42,7 +39,6 @@
 
     throw v0
 
-    .line 115
     :cond_0
     return-void
 .end method
@@ -53,7 +49,6 @@
     .locals 3
 
     .prologue
-    .line 148
     new-instance v0, Landroid/security/KeyStoreParameter;
 
     iget v1, p0, Landroid/security/KeyStoreParameter$Builder;->mFlags:I
@@ -70,21 +65,17 @@
     .param p1, "required"    # Z
 
     .prologue
-    .line 132
     if-eqz p1, :cond_0
 
-    .line 133
     iget v0, p0, Landroid/security/KeyStoreParameter$Builder;->mFlags:I
 
     or-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Landroid/security/KeyStoreParameter$Builder;->mFlags:I
 
-    .line 137
     :goto_0
     return-object p0
 
-    .line 135
     :cond_0
     iget v0, p0, Landroid/security/KeyStoreParameter$Builder;->mFlags:I
 

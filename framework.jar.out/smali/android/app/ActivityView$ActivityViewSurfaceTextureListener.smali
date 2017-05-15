@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 298
     iput-object p1, p0, Landroid/app/ActivityView$ActivityViewSurfaceTextureListener;->this$0:Landroid/app/ActivityView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Landroid/app/ActivityView$1;
 
     .prologue
-    .line 298
     invoke-direct {p0, p1}, Landroid/app/ActivityView$ActivityViewSurfaceTextureListener;-><init>(Landroid/app/ActivityView;)V
 
     return-void
@@ -55,7 +53,6 @@
     .param p3, "height"    # I
 
     .prologue
-    .line 302
     iget-object v0, p0, Landroid/app/ActivityView$ActivityViewSurfaceTextureListener;->this$0:Landroid/app/ActivityView;
 
     # getter for: Landroid/app/ActivityView;->mActivityContainer:Landroid/app/ActivityView$ActivityContainerWrapper;
@@ -65,31 +62,26 @@
 
     if-nez v0, :cond_1
 
-    .line 313
     :cond_0
     :goto_0
     return-void
 
-    .line 307
     :cond_1
     iget-object v0, p0, Landroid/app/ActivityView$ActivityViewSurfaceTextureListener;->this$0:Landroid/app/ActivityView;
 
     # setter for: Landroid/app/ActivityView;->mWidth:I
     invoke-static {v0, p2}, Landroid/app/ActivityView;->access$202(Landroid/app/ActivityView;I)I
 
-    .line 308
     iget-object v0, p0, Landroid/app/ActivityView$ActivityViewSurfaceTextureListener;->this$0:Landroid/app/ActivityView;
 
     # setter for: Landroid/app/ActivityView;->mHeight:I
     invoke-static {v0, p3}, Landroid/app/ActivityView;->access$302(Landroid/app/ActivityView;I)I
 
-    .line 309
     iget-object v0, p0, Landroid/app/ActivityView$ActivityViewSurfaceTextureListener;->this$0:Landroid/app/ActivityView;
 
     # invokes: Landroid/app/ActivityView;->attachToSurfaceWhenReady()V
     invoke-static {v0}, Landroid/app/ActivityView;->access$400(Landroid/app/ActivityView;)V
 
-    .line 310
     iget-object v0, p0, Landroid/app/ActivityView$ActivityViewSurfaceTextureListener;->this$0:Landroid/app/ActivityView;
 
     # getter for: Landroid/app/ActivityView;->mActivityViewCallback:Landroid/app/ActivityView$ActivityViewCallback;
@@ -99,7 +91,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 311
     iget-object v0, p0, Landroid/app/ActivityView$ActivityViewSurfaceTextureListener;->this$0:Landroid/app/ActivityView;
 
     # getter for: Landroid/app/ActivityView;->mActivityViewCallback:Landroid/app/ActivityView$ActivityViewCallback;
@@ -123,7 +114,6 @@
 
     const/4 v6, 0x1
 
-    .line 326
     iget-object v1, p0, Landroid/app/ActivityView$ActivityViewSurfaceTextureListener;->this$0:Landroid/app/ActivityView;
 
     # getter for: Landroid/app/ActivityView;->mActivityContainer:Landroid/app/ActivityView$ActivityContainerWrapper;
@@ -133,12 +123,10 @@
 
     if-nez v1, :cond_1
 
-    .line 341
     :cond_0
     :goto_0
     return v6
 
-    .line 330
     :cond_1
     iget-object v1, p0, Landroid/app/ActivityView$ActivityViewSurfaceTextureListener;->this$0:Landroid/app/ActivityView;
 
@@ -149,13 +137,11 @@
 
     invoke-virtual {v1}, Landroid/view/Surface;->release()V
 
-    .line 331
     iget-object v1, p0, Landroid/app/ActivityView$ActivityViewSurfaceTextureListener;->this$0:Landroid/app/ActivityView;
 
     # setter for: Landroid/app/ActivityView;->mSurface:Landroid/view/Surface;
     invoke-static {v1, v2}, Landroid/app/ActivityView;->access$602(Landroid/app/ActivityView;Landroid/view/Surface;)Landroid/view/Surface;
 
-    .line 333
     :try_start_0
     iget-object v1, p0, Landroid/app/ActivityView$ActivityViewSurfaceTextureListener;->this$0:Landroid/app/ActivityView;
 
@@ -190,7 +176,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 338
     iget-object v1, p0, Landroid/app/ActivityView$ActivityViewSurfaceTextureListener;->this$0:Landroid/app/ActivityView;
 
     # getter for: Landroid/app/ActivityView;->mActivityViewCallback:Landroid/app/ActivityView$ActivityViewCallback;
@@ -200,7 +185,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 339
     iget-object v1, p0, Landroid/app/ActivityView$ActivityViewSurfaceTextureListener;->this$0:Landroid/app/ActivityView;
 
     # getter for: Landroid/app/ActivityView;->mActivityViewCallback:Landroid/app/ActivityView$ActivityViewCallback;
@@ -214,11 +198,9 @@
 
     goto :goto_0
 
-    .line 334
     :catch_0
     move-exception v0
 
-    .line 335
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -252,7 +234,6 @@
     .param p3, "height"    # I
 
     .prologue
-    .line 318
     iget-object v0, p0, Landroid/app/ActivityView$ActivityViewSurfaceTextureListener;->this$0:Landroid/app/ActivityView;
 
     # getter for: Landroid/app/ActivityView;->mActivityContainer:Landroid/app/ActivityView$ActivityContainerWrapper;
@@ -262,7 +243,6 @@
 
     if-nez v0, :cond_0
 
-    .line 322
     :cond_0
     return-void
 .end method
@@ -272,6 +252,5 @@
     .param p1, "surfaceTexture"    # Landroid/graphics/SurfaceTexture;
 
     .prologue
-    .line 347
     return-void
 .end method

@@ -24,7 +24,6 @@
     .param p1, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 86
     iput-object p2, p0, Lmiui/telephony/PhoneDebug$2;->val$cr:Landroid/content/ContentResolver;
 
     invoke-direct {p0, p1}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -43,7 +42,6 @@
 
     const/4 v2, 0x0
 
-    .line 89
     iget-object v4, p0, Lmiui/telephony/PhoneDebug$2;->val$cr:Landroid/content/ContentResolver;
 
     const-string v5, "phone_debug_flag"
@@ -68,7 +66,6 @@
     :cond_1
     sput-boolean v2, Lmiui/telephony/PhoneDebug;->VDBG:Z
 
-    .line 90
     sget-boolean v2, Lmiui/telephony/PhoneDebug;->VDBG:Z
 
     if-eqz v2, :cond_2
@@ -97,7 +94,6 @@
 
     invoke-static {v2, v3}, Landroid/telephony/Rlog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 91
     :cond_2
     # getter for: Lmiui/telephony/PhoneDebug;->sListeners:Ljava/util/List;
     invoke-static {}, Lmiui/telephony/PhoneDebug;->access$100()Ljava/util/List;
@@ -106,7 +102,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 92
     # getter for: Lmiui/telephony/PhoneDebug;->sListeners:Ljava/util/List;
     invoke-static {}, Lmiui/telephony/PhoneDebug;->access$100()Ljava/util/List;
 
@@ -130,13 +125,11 @@
 
     check-cast v1, Lmiui/telephony/PhoneDebug$Listener;
 
-    .line 93
     .local v1, "l":Lmiui/telephony/PhoneDebug$Listener;
     invoke-interface {v1}, Lmiui/telephony/PhoneDebug$Listener;->onDebugChanged()V
 
     goto :goto_0
 
-    .line 96
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v1    # "l":Lmiui/telephony/PhoneDebug$Listener;
     :cond_3

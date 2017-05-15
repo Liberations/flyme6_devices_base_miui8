@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 131
     iput-object p1, p0, Lcom/android/internal/app/PlatLogoActivity$4$1;->this$1:Lcom/android/internal/app/PlatLogoActivity$4;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .prologue
     const-wide/16 v4, 0x0
 
-    .line 134
     iget-object v2, p0, Lcom/android/internal/app/PlatLogoActivity$4$1;->this$1:Lcom/android/internal/app/PlatLogoActivity$4;
 
     iget-object v2, v2, Lcom/android/internal/app/PlatLogoActivity$4;->this$0:Lcom/android/internal/app/PlatLogoActivity;
@@ -56,11 +54,9 @@
 
     const/4 v2, 0x0
 
-    .line 163
     :goto_0
     return v2
 
-    .line 136
     :cond_0
     iget-object v2, p0, Lcom/android/internal/app/PlatLogoActivity$4$1;->this$1:Lcom/android/internal/app/PlatLogoActivity$4;
 
@@ -70,7 +66,6 @@
 
     move-result-object v0
 
-    .line 137
     .local v0, "cr":Landroid/content/ContentResolver;
     const-string v2, "egg_mode"
 
@@ -82,7 +77,6 @@
 
     if-nez v2, :cond_1
 
-    .line 141
     :try_start_0
     const-string v2, "egg_mode"
 
@@ -94,7 +88,6 @@
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 148
     :cond_1
     :goto_1
     iget-object v2, p0, Lcom/android/internal/app/PlatLogoActivity$4$1;->this$1:Lcom/android/internal/app/PlatLogoActivity$4;
@@ -107,16 +100,13 @@
 
     invoke-virtual {v2, v3}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
-    .line 163
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 144
     :catch_0
     move-exception v1
 
-    .line 145
     .local v1, "e":Ljava/lang/RuntimeException;
     const-string v2, "PlatLogoActivity"
 

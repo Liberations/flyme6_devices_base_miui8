@@ -48,7 +48,6 @@
 
     const/4 v2, 0x0
 
-    .line 32
     new-instance v0, Lmiui/maml/util/ColorParser$ExpressionType;
 
     const-string v1, "CONST"
@@ -57,7 +56,6 @@
 
     sput-object v0, Lmiui/maml/util/ColorParser$ExpressionType;->CONST:Lmiui/maml/util/ColorParser$ExpressionType;
 
-    .line 33
     new-instance v0, Lmiui/maml/util/ColorParser$ExpressionType;
 
     const-string v1, "VARIABLE"
@@ -66,7 +64,6 @@
 
     sput-object v0, Lmiui/maml/util/ColorParser$ExpressionType;->VARIABLE:Lmiui/maml/util/ColorParser$ExpressionType;
 
-    .line 34
     new-instance v0, Lmiui/maml/util/ColorParser$ExpressionType;
 
     const-string v1, "ARGB"
@@ -75,7 +72,6 @@
 
     sput-object v0, Lmiui/maml/util/ColorParser$ExpressionType;->ARGB:Lmiui/maml/util/ColorParser$ExpressionType;
 
-    .line 35
     new-instance v0, Lmiui/maml/util/ColorParser$ExpressionType;
 
     const-string v1, "INVALID"
@@ -84,7 +80,6 @@
 
     sput-object v0, Lmiui/maml/util/ColorParser$ExpressionType;->INVALID:Lmiui/maml/util/ColorParser$ExpressionType;
 
-    .line 31
     const/4 v0, 0x4
 
     new-array v0, v0, [Lmiui/maml/util/ColorParser$ExpressionType;
@@ -119,7 +114,6 @@
     .end annotation
 
     .prologue
-    .line 31
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -130,7 +124,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 31
     const-class v0, Lmiui/maml/util/ColorParser$ExpressionType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -146,7 +139,6 @@
     .locals 1
 
     .prologue
-    .line 31
     sget-object v0, Lmiui/maml/util/ColorParser$ExpressionType;->$VALUES:[Lmiui/maml/util/ColorParser$ExpressionType;
 
     invoke-virtual {v0}, [Lmiui/maml/util/ColorParser$ExpressionType;->clone()Ljava/lang/Object;

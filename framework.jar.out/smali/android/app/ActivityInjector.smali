@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,8 +18,7 @@
     .param p0, "activity"    # Landroid/app/Activity;
 
     .prologue
-    .line 11
-    const-string/jumbo v1, "security"
+    const-string v1, "security"
 
     invoke-virtual {p0, v1}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -28,7 +26,6 @@
 
     check-cast v0, Lmiui/security/SecurityManager;
 
-    .line 12
     .local v0, "securityManager":Lmiui/security/SecurityManager;
     invoke-virtual {p0}, Landroid/app/Activity;->getUserId()I
 
@@ -36,6 +33,5 @@
 
     invoke-virtual {v0, p0, v1}, Lmiui/security/SecurityManager;->checkAccessControl(Landroid/app/Activity;I)V
 
-    .line 13
     return-void
 .end method

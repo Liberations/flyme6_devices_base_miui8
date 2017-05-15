@@ -26,10 +26,8 @@
     .locals 0
 
     .prologue
-    .line 596
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 597
     return-void
 .end method
 
@@ -37,7 +35,6 @@
     .locals 1
 
     .prologue
-    .line 605
     sget-object v0, Lorg/apache/miui/commons/lang3/ObjectUtils;->NULL:Lorg/apache/miui/commons/lang3/ObjectUtils$Null;
 
     return-object v0

@@ -33,7 +33,6 @@
     .param p3, "x1"    # Landroid/os/Handler;
 
     .prologue
-    .line 1728
     .local p4, "x2":Landroid/accounts/AccountManagerCallback;, "Landroid/accounts/AccountManagerCallback<Landroid/os/Bundle;>;"
     iput-object p1, p0, Landroid/accounts/AccountManager$14;->this$0:Landroid/accounts/AccountManager;
 
@@ -61,12 +60,10 @@
     .end annotation
 
     .prologue
-    .line 1730
     const/16 v0, 0x1f
 
     invoke-static {v0}, Landroid/util/SeempLog;->record(I)I
 
-    .line 1731
     iget-object v0, p0, Landroid/accounts/AccountManager$14;->this$0:Landroid/accounts/AccountManager;
 
     # getter for: Landroid/accounts/AccountManager;->mService:Landroid/accounts/IAccountManager;
@@ -91,10 +88,8 @@
 
     invoke-interface/range {v0 .. v5}, Landroid/accounts/IAccountManager;->confirmCredentialsAsUser(Landroid/accounts/IAccountManagerResponse;Landroid/accounts/Account;Landroid/os/Bundle;ZI)V
 
-    .line 1733
     return-void
 
-    .line 1731
     :cond_0
     const/4 v4, 0x0
 

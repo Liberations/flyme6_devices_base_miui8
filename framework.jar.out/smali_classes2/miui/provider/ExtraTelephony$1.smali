@@ -44,7 +44,6 @@
     .locals 0
 
     .prologue
-    .line 1629
     iput-object p1, p0, Lmiui/provider/ExtraTelephony$1;->val$context:Landroid/content/Context;
 
     iput-object p2, p0, Lmiui/provider/ExtraTelephony$1;->val$num:Ljava/lang/String;
@@ -71,14 +70,12 @@
     .end annotation
 
     .prologue
-    .line 1633
     iget-object v2, p0, Lmiui/provider/ExtraTelephony$1;->val$context:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    .line 1634
     .local v1, "resolver":Landroid/content/ContentResolver;
     sget-object v3, Lmiui/provider/ExtraTelephony$Judge;->CALL_CONTENT_URI:Landroid/net/Uri;
 
@@ -135,7 +132,6 @@
 
     move-result v0
 
-    .line 1641
     .local v0, "callBlockType":I
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -143,7 +139,6 @@
 
     return-object v2
 
-    .line 1634
     .end local v0    # "callBlockType":I
     :cond_0
     const-string v2, ""
@@ -170,7 +165,6 @@
     .end annotation
 
     .prologue
-    .line 1629
     invoke-virtual {p0}, Lmiui/provider/ExtraTelephony$1;->call()Ljava/lang/Integer;
 
     move-result-object v0

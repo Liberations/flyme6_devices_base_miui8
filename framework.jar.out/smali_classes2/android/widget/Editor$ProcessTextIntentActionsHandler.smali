@@ -20,10 +20,8 @@
     .param p1, "editor"    # Landroid/widget/Editor;
 
     .prologue
-    .line 6156
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 6157
     return-void
 .end method
 
@@ -33,7 +31,6 @@
     .param p2, "x1"    # Landroid/widget/Editor$1;
 
     .prologue
-    .line 6154
     invoke-direct {p0, p1}, Landroid/widget/Editor$ProcessTextIntentActionsHandler;-><init>(Landroid/widget/Editor;)V
 
     return-void
@@ -45,7 +42,6 @@
     .locals 0
 
     .prologue
-    .line 6163
     return-void
 .end method
 
@@ -54,7 +50,6 @@
     .param p1, "nodeInfo"    # Landroid/view/accessibility/AccessibilityNodeInfo;
 
     .prologue
-    .line 6171
     return-void
 .end method
 
@@ -63,7 +58,6 @@
     .param p1, "actionId"    # I
 
     .prologue
-    .line 6180
     const/4 v0, 0x0
 
     return v0

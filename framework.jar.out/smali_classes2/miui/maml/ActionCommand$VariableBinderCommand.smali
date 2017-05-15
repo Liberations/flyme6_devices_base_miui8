@@ -39,15 +39,12 @@
     .param p2, "ele"    # Lorg/w3c/dom/Element;
 
     .prologue
-    .line 852
     invoke-direct {p0, p1}, Lmiui/maml/ActionCommand;-><init>(Lmiui/maml/elements/ScreenElement;)V
 
-    .line 845
     sget-object v1, Lmiui/maml/ActionCommand$VariableBinderCommand$Command;->Invalid:Lmiui/maml/ActionCommand$VariableBinderCommand$Command;
 
     iput-object v1, p0, Lmiui/maml/ActionCommand$VariableBinderCommand;->mCommand:Lmiui/maml/ActionCommand$VariableBinderCommand$Command;
 
-    .line 853
     const-string v1, "name"
 
     invoke-interface {p2, v1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -56,14 +53,12 @@
 
     iput-object v1, p0, Lmiui/maml/ActionCommand$VariableBinderCommand;->mName:Ljava/lang/String;
 
-    .line 854
     const-string v1, "command"
 
     invoke-interface {p2, v1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 855
     .local v0, "command":Ljava/lang/String;
     const-string v1, "refresh"
 
@@ -73,12 +68,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 856
     sget-object v1, Lmiui/maml/ActionCommand$VariableBinderCommand$Command;->Refresh:Lmiui/maml/ActionCommand$VariableBinderCommand$Command;
 
     iput-object v1, p0, Lmiui/maml/ActionCommand$VariableBinderCommand;->mCommand:Lmiui/maml/ActionCommand$VariableBinderCommand$Command;
 
-    .line 858
     :cond_0
     return-void
 .end method
@@ -89,12 +82,10 @@
     .locals 2
 
     .prologue
-    .line 867
     iget-object v0, p0, Lmiui/maml/ActionCommand$VariableBinderCommand;->mBinder:Lmiui/maml/data/VariableBinder;
 
     if-eqz v0, :cond_0
 
-    .line 868
     sget-object v0, Lmiui/maml/ActionCommand$1;->$SwitchMap$miui$maml$ActionCommand$VariableBinderCommand$Command:[I
 
     iget-object v1, p0, Lmiui/maml/ActionCommand$VariableBinderCommand;->mCommand:Lmiui/maml/ActionCommand$VariableBinderCommand$Command;
@@ -107,12 +98,10 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 874
     :cond_0
     :goto_0
     return-void
 
-    .line 870
     :pswitch_0
     iget-object v0, p0, Lmiui/maml/ActionCommand$VariableBinderCommand;->mBinder:Lmiui/maml/data/VariableBinder;
 
@@ -120,7 +109,6 @@
 
     goto :goto_0
 
-    .line 868
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -131,7 +119,6 @@
     .locals 2
 
     .prologue
-    .line 862
     invoke-virtual {p0}, Lmiui/maml/ActionCommand$VariableBinderCommand;->getRoot()Lmiui/maml/ScreenElementRoot;
 
     move-result-object v0
@@ -144,6 +131,5 @@
 
     iput-object v0, p0, Lmiui/maml/ActionCommand$VariableBinderCommand;->mBinder:Lmiui/maml/data/VariableBinder;
 
-    .line 863
     return-void
 .end method

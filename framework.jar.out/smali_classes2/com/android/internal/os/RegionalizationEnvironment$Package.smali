@@ -30,19 +30,14 @@
     .param p3, "storage"    # Ljava/lang/String;
 
     .prologue
-    .line 252
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 253
     iput-object p1, p0, Lcom/android/internal/os/RegionalizationEnvironment$Package;->mName:Ljava/lang/String;
 
-    .line 254
     iput p2, p0, Lcom/android/internal/os/RegionalizationEnvironment$Package;->mPriority:I
 
-    .line 255
     iput-object p3, p0, Lcom/android/internal/os/RegionalizationEnvironment$Package;->mStorage:Ljava/lang/String;
 
-    .line 256
     return-void
 .end method
 
@@ -52,7 +47,6 @@
     .locals 3
 
     .prologue
-    .line 271
     new-instance v0, Ljava/io/File;
 
     iget-object v1, p0, Lcom/android/internal/os/RegionalizationEnvironment$Package;->mStorage:Ljava/lang/String;
@@ -68,7 +62,6 @@
     .locals 2
 
     .prologue
-    .line 275
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -102,7 +95,6 @@
     .locals 1
 
     .prologue
-    .line 259
     iget-object v0, p0, Lcom/android/internal/os/RegionalizationEnvironment$Package;->mName:Ljava/lang/String;
 
     return-object v0
@@ -112,7 +104,6 @@
     .locals 1
 
     .prologue
-    .line 263
     iget v0, p0, Lcom/android/internal/os/RegionalizationEnvironment$Package;->mPriority:I
 
     return v0
@@ -122,7 +113,6 @@
     .locals 1
 
     .prologue
-    .line 267
     iget-object v0, p0, Lcom/android/internal/os/RegionalizationEnvironment$Package;->mStorage:Ljava/lang/String;
 
     return-object v0

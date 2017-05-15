@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -21,12 +20,10 @@
     .param p2, "style"    # Lmiui/maml/StylesManager$Style;
 
     .prologue
-    .line 12
     invoke-interface {p0, p1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 13
     .local v0, "text":Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -36,20 +33,16 @@
 
     move-object v1, v0
 
-    .line 18
     :goto_0
     return-object v1
 
-    .line 15
     :cond_0
     if-eqz p2, :cond_1
 
-    .line 16
     invoke-virtual {p2, p1}, Lmiui/maml/StylesManager$Style;->getAttr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 18
     :cond_1
     if-eqz v0, :cond_2
 

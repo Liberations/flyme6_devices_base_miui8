@@ -27,14 +27,12 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 216
     const-string v0, "ring_mode"
 
     const-string v1, "android.media.RINGER_MODE_CHANGED"
 
     invoke-direct {p0, p1, v0, v1}, Lmiui/maml/ActionCommand$NotificationReceiver;-><init>(Lmiui/maml/elements/ScreenElement;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 213
     new-instance v0, Lmiui/maml/ActionCommand$ModeToggleHelper;
 
     const/4 v1, 0x0
@@ -43,7 +41,6 @@
 
     iput-object v0, p0, Lmiui/maml/ActionCommand$RingModeCommand;->mToggleHelper:Lmiui/maml/ActionCommand$ModeToggleHelper;
 
-    .line 217
     iget-object v0, p0, Lmiui/maml/ActionCommand$RingModeCommand;->mToggleHelper:Lmiui/maml/ActionCommand$ModeToggleHelper;
 
     const-string v1, "normal"
@@ -52,7 +49,6 @@
 
     invoke-virtual {v0, v1, v2}, Lmiui/maml/ActionCommand$ModeToggleHelper;->addMode(Ljava/lang/String;I)V
 
-    .line 218
     iget-object v0, p0, Lmiui/maml/ActionCommand$RingModeCommand;->mToggleHelper:Lmiui/maml/ActionCommand$ModeToggleHelper;
 
     const-string v1, "silent"
@@ -61,16 +57,14 @@
 
     invoke-virtual {v0, v1, v2}, Lmiui/maml/ActionCommand$ModeToggleHelper;->addMode(Ljava/lang/String;I)V
 
-    .line 219
     iget-object v0, p0, Lmiui/maml/ActionCommand$RingModeCommand;->mToggleHelper:Lmiui/maml/ActionCommand$ModeToggleHelper;
 
-    const-string/jumbo v1, "vibrate"
+    const-string v1, "vibrate"
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v1, v2}, Lmiui/maml/ActionCommand$ModeToggleHelper;->addMode(Ljava/lang/String;I)V
 
-    .line 220
     iget-object v0, p0, Lmiui/maml/ActionCommand$RingModeCommand;->mToggleHelper:Lmiui/maml/ActionCommand$ModeToggleHelper;
 
     invoke-virtual {v0, p2}, Lmiui/maml/ActionCommand$ModeToggleHelper;->build(Ljava/lang/String;)Z
@@ -79,7 +73,6 @@
 
     if-nez v0, :cond_0
 
-    .line 221
     const-string v0, "ActionCommand"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -102,7 +95,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 224
     :cond_0
     return-void
 .end method
@@ -113,35 +105,29 @@
     .locals 2
 
     .prologue
-    .line 228
     iget-object v1, p0, Lmiui/maml/ActionCommand$RingModeCommand;->mAudioManager:Landroid/media/AudioManager;
 
     if-nez v1, :cond_0
 
-    .line 235
     :goto_0
     return-void
 
-    .line 231
     :cond_0
     iget-object v1, p0, Lmiui/maml/ActionCommand$RingModeCommand;->mToggleHelper:Lmiui/maml/ActionCommand$ModeToggleHelper;
 
     invoke-virtual {v1}, Lmiui/maml/ActionCommand$ModeToggleHelper;->click()V
 
-    .line 232
     iget-object v1, p0, Lmiui/maml/ActionCommand$RingModeCommand;->mToggleHelper:Lmiui/maml/ActionCommand$ModeToggleHelper;
 
     invoke-virtual {v1}, Lmiui/maml/ActionCommand$ModeToggleHelper;->getModeId()I
 
     move-result v0
 
-    .line 233
     .local v0, "mode":I
     iget-object v1, p0, Lmiui/maml/ActionCommand$RingModeCommand;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {v1, v0}, Landroid/media/AudioManager;->setRingerMode(I)V
 
-    .line 234
     invoke-virtual {p0, v0}, Lmiui/maml/ActionCommand$RingModeCommand;->updateState(I)V
 
     goto :goto_0
@@ -151,12 +137,10 @@
     .locals 2
 
     .prologue
-    .line 239
     iget-object v0, p0, Lmiui/maml/ActionCommand$RingModeCommand;->mAudioManager:Landroid/media/AudioManager;
 
     if-nez v0, :cond_0
 
-    .line 240
     iget-object v0, p0, Lmiui/maml/ActionCommand$RingModeCommand;->mScreenElement:Lmiui/maml/elements/ScreenElement;
 
     invoke-virtual {v0}, Lmiui/maml/elements/ScreenElement;->getContext()Lmiui/maml/ScreenContext;
@@ -175,17 +159,14 @@
 
     iput-object v0, p0, Lmiui/maml/ActionCommand$RingModeCommand;->mAudioManager:Landroid/media/AudioManager;
 
-    .line 243
     :cond_0
     iget-object v0, p0, Lmiui/maml/ActionCommand$RingModeCommand;->mAudioManager:Landroid/media/AudioManager;
 
     if-nez v0, :cond_1
 
-    .line 246
     :goto_0
     return-void
 
-    .line 245
     :cond_1
     iget-object v0, p0, Lmiui/maml/ActionCommand$RingModeCommand;->mAudioManager:Landroid/media/AudioManager;
 

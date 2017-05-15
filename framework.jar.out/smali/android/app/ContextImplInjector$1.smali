@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 20
     invoke-direct {p0}, Landroid/app/SystemServiceRegistry$CachedServiceFetcher;-><init>()V
 
     return-void
@@ -41,7 +40,6 @@
     .param p1, "x0"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 20
     invoke-virtual {p0, p1}, Landroid/app/ContextImplInjector$1;->createService(Landroid/app/ContextImpl;)Lmiui/security/SecurityManager;
 
     move-result-object v0
@@ -54,31 +52,25 @@
     .param p1, "ctx"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 23
-    const-string/jumbo v2, "security"
+    const-string v2, "security"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 24
     .local v0, "b":Landroid/os/IBinder;
     if-nez v0, :cond_0
 
-    .line 25
     const/4 v2, 0x0
 
-    .line 28
     :goto_0
     return-object v2
 
-    .line 27
     :cond_0
     invoke-static {v0}, Lmiui/security/ISecurityManager$Stub;->asInterface(Landroid/os/IBinder;)Lmiui/security/ISecurityManager;
 
     move-result-object v1
 
-    .line 28
     .local v1, "service":Lmiui/security/ISecurityManager;
     new-instance v2, Lmiui/security/SecurityManager;
 

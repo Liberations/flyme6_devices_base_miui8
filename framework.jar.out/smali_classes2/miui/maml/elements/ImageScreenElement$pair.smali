@@ -48,7 +48,6 @@
     .locals 0
 
     .prologue
-    .line 467
     .local p0, "this":Lmiui/maml/elements/ImageScreenElement$pair;, "Lmiui/maml/elements/ImageScreenElement$pair<TT1;TT2;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -60,7 +59,6 @@
     .param p1, "x0"    # Lmiui/maml/elements/ImageScreenElement$1;
 
     .prologue
-    .line 467
     .local p0, "this":Lmiui/maml/elements/ImageScreenElement$pair;, "Lmiui/maml/elements/ImageScreenElement$pair<TT1;TT2;>;"
     invoke-direct {p0}, Lmiui/maml/elements/ImageScreenElement$pair;-><init>()V
 

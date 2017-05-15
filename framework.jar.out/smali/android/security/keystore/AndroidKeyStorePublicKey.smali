@@ -18,17 +18,14 @@
     .param p3, "x509EncodedForm"    # [B
 
     .prologue
-    .line 32
     invoke-direct {p0, p1, p2}, Landroid/security/keystore/AndroidKeyStoreKey;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 33
     invoke-static {p3}, Landroid/security/keystore/ArrayUtils;->cloneIfNotEmpty([B)[B
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/security/keystore/AndroidKeyStorePublicKey;->mEncoded:[B
 
-    .line 34
     return-void
 .end method
 
@@ -43,15 +40,12 @@
 
     const/4 v2, 0x0
 
-    .line 56
     if-ne p0, p1, :cond_1
 
-    .line 69
     :cond_0
     :goto_0
     return v1
 
-    .line 59
     :cond_1
     invoke-super {p0, p1}, Landroid/security/keystore/AndroidKeyStoreKey;->equals(Ljava/lang/Object;)Z
 
@@ -61,10 +55,8 @@
 
     move v1, v2
 
-    .line 60
     goto :goto_0
 
-    .line 62
     :cond_2
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -78,16 +70,13 @@
 
     move v1, v2
 
-    .line 63
     goto :goto_0
 
     :cond_3
     move-object v0, p1
 
-    .line 65
     check-cast v0, Landroid/security/keystore/AndroidKeyStorePublicKey;
 
-    .line 66
     .local v0, "other":Landroid/security/keystore/AndroidKeyStorePublicKey;
     iget-object v3, p0, Landroid/security/keystore/AndroidKeyStorePublicKey;->mEncoded:[B
 
@@ -101,7 +90,6 @@
 
     move v1, v2
 
-    .line 67
     goto :goto_0
 .end method
 
@@ -109,7 +97,6 @@
     .locals 1
 
     .prologue
-    .line 43
     iget-object v0, p0, Landroid/security/keystore/AndroidKeyStorePublicKey;->mEncoded:[B
 
     invoke-static {v0}, Landroid/security/keystore/ArrayUtils;->cloneIfNotEmpty([B)[B
@@ -123,7 +110,6 @@
     .locals 1
 
     .prologue
-    .line 38
     const-string v0, "X.509"
 
     return-object v0
@@ -133,16 +119,13 @@
     .locals 4
 
     .prologue
-    .line 48
     const/16 v0, 0x1f
 
-    .line 49
     .local v0, "prime":I
     invoke-super {p0}, Landroid/security/keystore/AndroidKeyStoreKey;->hashCode()I
 
     move-result v1
 
-    .line 50
     .local v1, "result":I
     mul-int/lit8 v2, v1, 0x1f
 
@@ -154,6 +137,5 @@
 
     add-int v1, v2, v3
 
-    .line 51
     return v1
 .end method

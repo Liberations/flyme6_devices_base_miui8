@@ -59,14 +59,12 @@
     .locals 1
 
     .prologue
-    .line 78
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Landroid/webkit/WebViewFactory;->sProviderLock:Ljava/lang/Object;
 
-    .line 79
     const/4 v0, 0x0
 
     sput-boolean v0, Landroid/webkit/WebViewFactory;->sAddressSpaceReserved:Z
@@ -78,10 +76,8 @@
     .locals 0
 
     .prologue
-    .line 54
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 460
     return-void
 .end method
 
@@ -89,7 +85,6 @@
     .locals 1
 
     .prologue
-    .line 54
     invoke-static {}, Landroid/webkit/WebViewFactory;->getUpdateService()Landroid/webkit/IWebViewUpdateService;
 
     move-result-object v0
@@ -101,7 +96,6 @@
     .locals 1
 
     .prologue
-    .line 54
     sget-boolean v0, Landroid/webkit/WebViewFactory;->sAddressSpaceReserved:Z
 
     return v0
@@ -115,7 +109,6 @@
     .param p3, "x3"    # Ljava/lang/String;
 
     .prologue
-    .line 54
     invoke-static {p0, p1, p2, p3}, Landroid/webkit/WebViewFactory;->nativeCreateRelroFile(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v0
@@ -131,21 +124,18 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 427
     if-eqz p0, :cond_2
 
     sget-object v0, Landroid/os/Build;->SUPPORTED_64_BIT_ABIS:[Ljava/lang/String;
 
     aget-object v4, v0, v1
 
-    .line 431
     .local v4, "abi":Ljava/lang/String;
     :goto_0
     new-instance v6, Landroid/webkit/WebViewFactory$1;
 
     invoke-direct {v6, v4, p0}, Landroid/webkit/WebViewFactory$1;-><init>(Ljava/lang/String;Z)V
 
-    .line 444
     .local v6, "crashHandler":Ljava/lang/Runnable;
     if-eqz p1, :cond_0
 
@@ -162,7 +152,6 @@
 
     if-nez v0, :cond_3
 
-    .line 446
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -174,11 +163,9 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 453
     :catch_0
     move-exception v8
 
-    .line 455
     .local v8, "t":Ljava/lang/Throwable;
     const-string v0, "WebViewFactory"
 
@@ -202,15 +189,12 @@
 
     invoke-static {v0, v1, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 456
     invoke-interface {v6}, Ljava/lang/Runnable;->run()V
 
-    .line 458
     .end local v8    # "t":Ljava/lang/Throwable;
     :cond_1
     return-void
 
-    .line 427
     .end local v4    # "abi":Ljava/lang/String;
     .end local v6    # "crashHandler":Ljava/lang/Runnable;
     :cond_2
@@ -220,7 +204,6 @@
 
     goto :goto_0
 
-    .line 449
     .restart local v4    # "abi":Ljava/lang/String;
     .restart local v6    # "crashHandler":Ljava/lang/Runnable;
     :cond_3
@@ -265,7 +248,6 @@
 
     move-result v7
 
-    .line 452
     .local v7, "pid":I
     if-gtz v7, :cond_1
 
@@ -284,7 +266,6 @@
     .locals 4
 
     .prologue
-    .line 105
     invoke-static {}, Landroid/app/AppGlobals;->getInitialApplication()Landroid/app/Application;
 
     move-result-object v2
@@ -293,7 +274,6 @@
 
     move-result-object v1
 
-    .line 107
     .local v1, "pm":Landroid/content/pm/PackageManager;
     :try_start_0
     invoke-static {}, Landroid/webkit/WebViewFactory;->getWebViewPackageName()Ljava/lang/String;
@@ -310,11 +290,9 @@
 
     return-object v2
 
-    .line 108
     :catch_0
     move-exception v0
 
-    .line 109
     .local v0, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     new-instance v2, Landroid/webkit/WebViewFactory$MissingWebViewPackageException;
 
@@ -342,12 +320,10 @@
     .end annotation
 
     .prologue
-    .line 218
     invoke-static {}, Landroid/app/AppGlobals;->getInitialApplication()Landroid/app/Application;
 
     move-result-object v2
 
-    .line 221
     .local v2, "initialApplication":Landroid/app/Application;
     :try_start_0
     sget-object v4, Landroid/webkit/WebViewFactory;->sPackageInfo:Landroid/content/pm/PackageInfo;
@@ -360,7 +336,6 @@
 
     move-result-object v3
 
-    .line 224
     .local v3, "webViewContext":Landroid/content/Context;
     invoke-virtual {v2}, Landroid/app/Application;->getAssets()Landroid/content/res/AssetManager;
 
@@ -374,12 +349,10 @@
 
     invoke-virtual {v4, v5}, Landroid/content/res/AssetManager;->addAssetPath(Ljava/lang/String;)I
 
-    .line 226
     invoke-virtual {v3}, Landroid/content/Context;->getClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object v0
 
-    .line 227
     .local v0, "clazzLoader":Ljava/lang/ClassLoader;
     const-wide/16 v4, 0x10
 
@@ -389,7 +362,6 @@
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 229
     :try_start_1
     const-string v4, "com.android.webview.chromium.WebViewChromiumFactoryProvider"
 
@@ -401,7 +373,6 @@
 
     move-result-object v4
 
-    .line 232
     const-wide/16 v6, 0x10
 
     :try_start_2
@@ -420,13 +391,11 @@
     :try_end_2
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 234
     .end local v0    # "clazzLoader":Ljava/lang/ClassLoader;
     .end local v3    # "webViewContext":Landroid/content/Context;
     :catch_0
     move-exception v1
 
-    .line 235
     .local v1, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     new-instance v4, Landroid/webkit/WebViewFactory$MissingWebViewPackageException;
 
@@ -442,7 +411,6 @@
     .param p2, "nativeLibFileName"    # Ljava/lang/String;
 
     .prologue
-    .line 357
     :try_start_0
     new-instance v7, Ljava/util/zip/ZipFile;
 
@@ -453,7 +421,6 @@
     .local v7, "z":Ljava/util/zip/ZipFile;
     const/4 v9, 0x0
 
-    .line 358
     move-object v1, p1
 
     .local v1, "arr$":[Ljava/lang/String;
@@ -469,7 +436,6 @@
 
     aget-object v0, v1, v4
 
-    .line 359
     .local v0, "abi":Ljava/lang/String;
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -499,13 +465,11 @@
 
     move-result-object v3
 
-    .line 360
     .local v3, "entry":Ljava/lang/String;
     invoke-virtual {v7, v3}, Ljava/util/zip/ZipFile;->getEntry(Ljava/lang/String;)Ljava/util/zip/ZipEntry;
 
     move-result-object v2
 
-    .line 361
     .local v2, "e":Ljava/util/zip/ZipEntry;
     if-eqz v2, :cond_2
 
@@ -515,7 +479,6 @@
 
     if-nez v8, :cond_2
 
-    .line 363
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -541,7 +504,6 @@
 
     move-result-object v8
 
-    .line 366
     if-eqz v7, :cond_0
 
     if-eqz v9, :cond_1
@@ -552,7 +514,6 @@
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_0
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 369
     .end local v0    # "abi":Ljava/lang/String;
     .end local v2    # "e":Ljava/util/zip/ZipEntry;
     .end local v3    # "entry":Ljava/lang/String;
@@ -560,7 +521,6 @@
     :goto_1
     return-object v8
 
-    .line 366
     .restart local v0    # "abi":Ljava/lang/String;
     .restart local v2    # "e":Ljava/util/zip/ZipEntry;
     .restart local v3    # "entry":Ljava/lang/String;
@@ -586,7 +546,6 @@
     :catch_1
     move-exception v2
 
-    .line 367
     .local v2, "e":Ljava/io/IOException;
     new-instance v8, Landroid/webkit/WebViewFactory$MissingWebViewPackageException;
 
@@ -594,7 +553,6 @@
 
     throw v8
 
-    .line 366
     .restart local v0    # "abi":Ljava/lang/String;
     .restart local v1    # "arr$":[Ljava/lang/String;
     .local v2, "e":Ljava/util/zip/ZipEntry;
@@ -610,13 +568,11 @@
 
     goto :goto_1
 
-    .line 358
     :cond_2
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    .line 366
     .end local v0    # "abi":Ljava/lang/String;
     .end local v2    # "e":Ljava/util/zip/ZipEntry;
     .end local v3    # "entry":Ljava/lang/String;
@@ -631,14 +587,12 @@
     .catch Ljava/lang/Throwable; {:try_start_5 .. :try_end_5} :catch_2
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_1
 
-    .line 369
     :cond_4
     :goto_2
     const-string v8, ""
 
     goto :goto_1
 
-    .line 366
     :catch_2
     move-exception v6
 
@@ -656,7 +610,6 @@
 
     goto :goto_2
 
-    .line 357
     .end local v4    # "i$":I
     .end local v5    # "len$":I
     :catch_3
@@ -667,7 +620,6 @@
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
 
-    .line 366
     :catchall_0
     move-exception v9
 
@@ -719,7 +671,6 @@
     .locals 1
 
     .prologue
-    .line 129
     sget-object v0, Landroid/webkit/WebViewFactory;->sPackageInfo:Landroid/content/pm/PackageInfo;
 
     return-object v0
@@ -729,12 +680,10 @@
     .locals 9
 
     .prologue
-    .line 145
     sget-object v5, Landroid/webkit/WebViewFactory;->sProviderLock:Ljava/lang/Object;
 
     monitor-enter v5
 
-    .line 148
     :try_start_0
     sget-object v4, Landroid/webkit/WebViewFactory;->sProviderInstance:Landroid/webkit/WebViewFactoryProvider;
 
@@ -744,14 +693,12 @@
 
     monitor-exit v5
 
-    .line 175
     .local v1, "oldPolicy":Landroid/os/StrictMode$ThreadPolicy;
     .local v2, "providerClass":Ljava/lang/Class;, "Ljava/lang/Class<Landroid/webkit/WebViewFactoryProvider;>;"
     .local v3, "uid":I
     :goto_0
     return-object v4
 
-    .line 150
     .end local v1    # "oldPolicy":Landroid/os/StrictMode$ThreadPolicy;
     .end local v2    # "providerClass":Ljava/lang/Class;, "Ljava/lang/Class<Landroid/webkit/WebViewFactoryProvider;>;"
     .end local v3    # "uid":I
@@ -760,7 +707,6 @@
 
     move-result v3
 
-    .line 151
     .restart local v3    # "uid":I
     if-eqz v3, :cond_1
 
@@ -770,7 +716,6 @@
 
     if-ne v3, v4, :cond_2
 
-    .line 152
     :cond_1
     new-instance v4, Ljava/lang/UnsupportedOperationException;
 
@@ -780,7 +725,6 @@
 
     throw v4
 
-    .line 177
     :catchall_0
     move-exception v4
 
@@ -790,7 +734,6 @@
 
     throw v4
 
-    .line 156
     :cond_2
     :goto_flyme_0
     const-wide/16 v6, 0x10
@@ -802,19 +745,16 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 158
     :try_start_2
     invoke-static {}, Landroid/webkit/WebViewFactory;->getProviderClass()Ljava/lang/Class;
 
     move-result-object v2
 
-    .line 160
     .restart local v2    # "providerClass":Ljava/lang/Class;, "Ljava/lang/Class<Landroid/webkit/WebViewFactoryProvider;>;"
     invoke-static {}, Landroid/os/StrictMode;->allowThreadDiskReads()Landroid/os/StrictMode$ThreadPolicy;
 
     move-result-object v1
 
-    .line 161
     .restart local v1    # "oldPolicy":Landroid/os/StrictMode$ThreadPolicy;
     const-wide/16 v6, 0x10
 
@@ -824,7 +764,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 163
     const/4 v4, 0x1
 
     :try_start_3
@@ -860,24 +799,20 @@
 
     sput-object v4, Landroid/webkit/WebViewFactory;->sProviderInstance:Landroid/webkit/WebViewFactoryProvider;
 
-    .line 166
     sget-object v4, Landroid/webkit/WebViewFactory;->sProviderInstance:Landroid/webkit/WebViewFactoryProvider;
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 171
     const-wide/16 v6, 0x10
 
     :try_start_4
     invoke-static {v6, v7}, Landroid/os/Trace;->traceEnd(J)V
 
-    .line 172
     invoke-static {v1}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
-    .line 175
     const-wide/16 v6, 0x10
 
     :try_start_5
@@ -889,11 +824,9 @@
 
     goto :goto_0
 
-    .line 167
     :catch_0
     move-exception v0
 
-    .line 168
     .local v0, "e":Ljava/lang/Exception;
     :try_start_6
     const-string v4, "WebViewFactory"
@@ -902,7 +835,6 @@
 
     invoke-static {v4, v6, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 169
     new-instance v4, Landroid/util/AndroidRuntimeException;
 
     invoke-direct {v4, v0}, Landroid/util/AndroidRuntimeException;-><init>(Ljava/lang/Exception;)V
@@ -911,7 +843,6 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-    .line 171
     .end local v0    # "e":Ljava/lang/Exception;
     :catchall_1
     move-exception v4
@@ -921,14 +852,12 @@
     :try_start_7
     invoke-static {v6, v7}, Landroid/os/Trace;->traceEnd(J)V
 
-    .line 172
     invoke-static {v1}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
 
     throw v4
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_2
 
-    .line 175
     .end local v1    # "oldPolicy":Landroid/os/StrictMode$ThreadPolicy;
     .end local v2    # "providerClass":Ljava/lang/Class;, "Ljava/lang/Class<Landroid/webkit/WebViewFactoryProvider;>;"
     :catchall_2
@@ -957,7 +886,6 @@
     .end annotation
 
     .prologue
-    .line 183
     :try_start_0
     invoke-static {}, Landroid/webkit/WebViewFactory;->fetchPackageInfo()Landroid/content/pm/PackageInfo;
 
@@ -965,7 +893,6 @@
 
     sput-object v1, Landroid/webkit/WebViewFactory;->sPackageInfo:Landroid/content/pm/PackageInfo;
 
-    .line 184
     const-string v1, "WebViewFactory"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1026,22 +953,18 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 187
     const-wide/16 v2, 0x10
 
     const-string v1, "WebViewFactory.loadNativeLibrary()"
 
     invoke-static {v2, v3, v1}, Landroid/os/Trace;->traceBegin(JLjava/lang/String;)V
 
-    .line 188
     invoke-static {}, Landroid/webkit/WebViewFactory;->loadNativeLibrary()I
 
-    .line 189
     const-wide/16 v2, 0x10
 
     invoke-static {v2, v3}, Landroid/os/Trace;->traceEnd(J)V
 
-    .line 191
     const-wide/16 v2, 0x10
 
     const-string v1, "WebViewFactory.getChromiumProviderClass()"
@@ -1050,7 +973,6 @@
     :try_end_0
     .catch Landroid/webkit/WebViewFactory$MissingWebViewPackageException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 193
     :try_start_1
     invoke-static {}, Landroid/webkit/WebViewFactory;->getChromiumProviderClass()Ljava/lang/Class;
     :try_end_1
@@ -1059,7 +981,6 @@
 
     move-result-object v1
 
-    .line 198
     const-wide/16 v2, 0x10
 
     :try_start_2
@@ -1067,17 +988,14 @@
     :try_end_2
     .catch Landroid/webkit/WebViewFactory$MissingWebViewPackageException; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 206
     .local v0, "e":Landroid/webkit/WebViewFactory$MissingWebViewPackageException;
     :goto_0
     return-object v1
 
-    .line 194
     .end local v0    # "e":Landroid/webkit/WebViewFactory$MissingWebViewPackageException;
     :catch_0
     move-exception v0
 
-    .line 195
     .local v0, "e":Ljava/lang/ClassNotFoundException;
     :try_start_3
     const-string v1, "WebViewFactory"
@@ -1086,7 +1004,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 196
     new-instance v1, Landroid/util/AndroidRuntimeException;
 
     invoke-direct {v1, v0}, Landroid/util/AndroidRuntimeException;-><init>(Ljava/lang/Exception;)V
@@ -1095,7 +1012,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 198
     :catchall_0
     move-exception v1
 
@@ -1108,11 +1024,9 @@
     :try_end_4
     .catch Landroid/webkit/WebViewFactory$MissingWebViewPackageException; {:try_start_4 .. :try_end_4} :catch_1
 
-    .line 200
     :catch_1
     move-exception v0
 
-    .line 206
     .local v0, "e":Landroid/webkit/WebViewFactory$MissingWebViewPackageException;
     :try_start_5
     const-string v1, "com.android.webview.nullwebview.NullWebViewFactoryProvider"
@@ -1125,18 +1039,15 @@
 
     goto :goto_0
 
-    .line 207
     :catch_2
     move-exception v1
 
-    .line 210
     const-string v1, "WebViewFactory"
 
     const-string v2, "Chromium WebView package does not exist"
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 211
     new-instance v1, Landroid/util/AndroidRuntimeException;
 
     invoke-direct {v1, v0}, Landroid/util/AndroidRuntimeException;-><init>(Ljava/lang/Exception;)V
@@ -1148,8 +1059,7 @@
     .locals 1
 
     .prologue
-    .line 529
-    const-string/jumbo v0, "webviewupdate"
+    const-string v0, "webviewupdate"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -1166,19 +1076,16 @@
     .locals 1
 
     .prologue
-    .line 115
     sget-object v0, Landroid/webkit/WebViewFactory;->sPackageInfo:Landroid/content/pm/PackageInfo;
 
     if-nez v0, :cond_0
 
-    .line 116
     invoke-static {}, Landroid/webkit/WebViewFactory;->fetchPackageInfo()Landroid/content/pm/PackageInfo;
 
     move-result-object v0
 
     iget-object v0, v0, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
-    .line 118
     :goto_0
     return-object v0
 
@@ -1195,12 +1102,10 @@
     .param p0, "ai"    # Landroid/content/pm/ApplicationInfo;
 
     .prologue
-    .line 123
     iget-object v0, p0, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
 
     if-eqz v0, :cond_0
 
-    .line 124
     iget-object v0, p0, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
 
     const-string v1, "com.android.webview.WebViewLibrary"
@@ -1209,7 +1114,6 @@
 
     move-result-object v0
 
-    .line 125
     :goto_0
     return-object v0
 
@@ -1223,18 +1127,15 @@
     .locals 8
 
     .prologue
-    .line 374
     invoke-static {}, Landroid/webkit/WebViewFactory;->getWebViewApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v1
 
-    .line 375
     .local v1, "ai":Landroid/content/pm/ApplicationInfo;
     invoke-static {v1}, Landroid/webkit/WebViewFactory;->getWebViewLibrary(Landroid/content/pm/ApplicationInfo;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 379
     .local v0, "NATIVE_LIB_FILE_NAME":Ljava/lang/String;
     iget-object v6, v1, Landroid/content/pm/ApplicationInfo;->primaryCpuAbi:Ljava/lang/String;
 
@@ -1242,7 +1143,6 @@
 
     move-result v5
 
-    .line 380
     .local v5, "primaryArchIs64bit":Z
     iget-object v6, v1, Landroid/content/pm/ApplicationInfo;->secondaryCpuAbi:Ljava/lang/String;
 
@@ -1252,17 +1152,13 @@
 
     if-nez v6, :cond_3
 
-    .line 382
     if-eqz v5, :cond_2
 
-    .line 384
     iget-object v4, v1, Landroid/content/pm/ApplicationInfo;->nativeLibraryDir:Ljava/lang/String;
 
-    .line 385
     .local v4, "path64":Ljava/lang/String;
     iget-object v3, v1, Landroid/content/pm/ApplicationInfo;->secondaryNativeLibraryDir:Ljava/lang/String;
 
-    .line 403
     .local v3, "path32":Ljava/lang/String;
     :goto_0
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -1271,7 +1167,6 @@
 
     if-nez v6, :cond_0
 
-    .line 404
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1294,12 +1189,10 @@
 
     move-result-object v3
 
-    .line 405
     new-instance v2, Ljava/io/File;
 
     invoke-direct {v2, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 406
     .local v2, "f":Ljava/io/File;
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
@@ -1307,7 +1200,6 @@
 
     if-nez v6, :cond_0
 
-    .line 407
     iget-object v6, v1, Landroid/content/pm/ApplicationInfo;->sourceDir:Ljava/lang/String;
 
     sget-object v7, Landroid/os/Build;->SUPPORTED_32_BIT_ABIS:[Ljava/lang/String;
@@ -1316,7 +1208,6 @@
 
     move-result-object v3
 
-    .line 412
     .end local v2    # "f":Ljava/io/File;
     :cond_0
     invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -1325,7 +1216,6 @@
 
     if-nez v6, :cond_1
 
-    .line 413
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1348,12 +1238,10 @@
 
     move-result-object v4
 
-    .line 414
     new-instance v2, Ljava/io/File;
 
     invoke-direct {v2, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 415
     .restart local v2    # "f":Ljava/io/File;
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
@@ -1361,7 +1249,6 @@
 
     if-nez v6, :cond_1
 
-    .line 416
     iget-object v6, v1, Landroid/content/pm/ApplicationInfo;->sourceDir:Ljava/lang/String;
 
     sget-object v7, Landroid/os/Build;->SUPPORTED_64_BIT_ABIS:[Ljava/lang/String;
@@ -1370,7 +1257,6 @@
 
     move-result-object v4
 
-    .line 423
     .end local v2    # "f":Ljava/io/File;
     :cond_1
     const/4 v6, 0x2
@@ -1387,42 +1273,35 @@
 
     return-object v6
 
-    .line 388
     .end local v3    # "path32":Ljava/lang/String;
     .end local v4    # "path64":Ljava/lang/String;
     :cond_2
     iget-object v4, v1, Landroid/content/pm/ApplicationInfo;->secondaryNativeLibraryDir:Ljava/lang/String;
 
-    .line 389
     .restart local v4    # "path64":Ljava/lang/String;
     iget-object v3, v1, Landroid/content/pm/ApplicationInfo;->nativeLibraryDir:Ljava/lang/String;
 
     .restart local v3    # "path32":Ljava/lang/String;
     goto :goto_0
 
-    .line 391
     .end local v3    # "path32":Ljava/lang/String;
     .end local v4    # "path64":Ljava/lang/String;
     :cond_3
     if-eqz v5, :cond_4
 
-    .line 393
     iget-object v4, v1, Landroid/content/pm/ApplicationInfo;->nativeLibraryDir:Ljava/lang/String;
 
-    .line 394
     .restart local v4    # "path64":Ljava/lang/String;
     const-string v3, ""
 
     .restart local v3    # "path32":Ljava/lang/String;
     goto :goto_0
 
-    .line 397
     .end local v3    # "path32":Ljava/lang/String;
     .end local v4    # "path64":Ljava/lang/String;
     :cond_4
     iget-object v3, v1, Landroid/content/pm/ApplicationInfo;->nativeLibraryDir:Ljava/lang/String;
 
-    .line 398
     .restart local v3    # "path32":Ljava/lang/String;
     const-string v4, ""
 
@@ -1434,7 +1313,6 @@
     .locals 2
 
     .prologue
-    .line 100
     invoke-static {}, Landroid/app/AppGlobals;->getInitialApplication()Landroid/app/Application;
 
     move-result-object v0
@@ -1452,27 +1330,22 @@
     .locals 7
 
     .prologue
-    .line 498
     sget-boolean v3, Landroid/webkit/WebViewFactory;->sAddressSpaceReserved:Z
 
     if-nez v3, :cond_1
 
-    .line 499
     const-string v3, "WebViewFactory"
 
     const-string v4, "can\'t load with relro file; address space not reserved"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 500
     const/4 v2, 0x2
 
-    .line 524
     :cond_0
     :goto_0
     return v2
 
-    .line 504
     :cond_1
     :try_start_0
     invoke-static {}, Landroid/webkit/WebViewFactory;->getUpdateService()Landroid/webkit/IWebViewUpdateService;
@@ -1491,13 +1364,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 511
     :try_start_1
     invoke-static {}, Landroid/webkit/WebViewFactory;->getWebViewNativeLibraryPaths()[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 512
     .local v0, "args":[Ljava/lang/String;
     const/4 v3, 0x0
 
@@ -1515,11 +1386,9 @@
 
     move-result v2
 
-    .line 516
     .local v2, "result":I
     if-eqz v2, :cond_0
 
-    .line 517
     const-string v3, "WebViewFactory"
 
     const-string v4, "failed to load with relro file, proceeding without"
@@ -1530,12 +1399,10 @@
 
     goto :goto_0
 
-    .line 522
     .end local v2    # "result":I
     :catch_0
     move-exception v1
 
-    .line 523
     .local v1, "e":Landroid/webkit/WebViewFactory$MissingWebViewPackageException;
     const-string v3, "WebViewFactory"
 
@@ -1543,18 +1410,15 @@
 
     invoke-static {v3, v4, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 524
     const/4 v2, 0x4
 
     goto :goto_0
 
-    .line 505
     .end local v0    # "args":[Ljava/lang/String;
     .end local v1    # "e":Landroid/webkit/WebViewFactory$MissingWebViewPackageException;
     :catch_1
     move-exception v1
 
-    .line 506
     .local v1, "e":Landroid/os/RemoteException;
     const-string v3, "WebViewFactory"
 
@@ -1562,7 +1426,6 @@
 
     invoke-static {v3, v4, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 507
     const/4 v2, 0x3
 
     goto :goto_0
@@ -1573,14 +1436,12 @@
     .param p0, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 137
     invoke-static {}, Landroid/webkit/WebViewFactory;->fetchPackageInfo()Landroid/content/pm/PackageInfo;
 
     move-result-object v0
 
     sput-object v0, Landroid/webkit/WebViewFactory;->sPackageInfo:Landroid/content/pm/PackageInfo;
 
-    .line 138
     if-eqz p0, :cond_0
 
     sget-object v0, Landroid/webkit/WebViewFactory;->sPackageInfo:Landroid/content/pm/PackageInfo;
@@ -1593,12 +1454,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 139
     invoke-static {}, Landroid/webkit/WebViewFactory;->loadNativeLibrary()I
 
     move-result v0
 
-    .line 141
     :goto_0
     return v0
 
@@ -1621,23 +1480,18 @@
     .locals 21
 
     .prologue
-    .line 300
     const/4 v7, 0x0
 
-    .line 302
     .local v7, "nativeLibs":[Ljava/lang/String;
     :try_start_0
     invoke-static {}, Landroid/webkit/WebViewFactory;->getWebViewNativeLibraryPaths()[Ljava/lang/String;
 
     move-result-object v7
 
-    .line 303
     if-eqz v7, :cond_4
 
-    .line 304
     const-wide/16 v8, 0x0
 
-    .line 306
     .local v8, "newVmSize":J
     move-object v2, v7
 
@@ -1653,7 +1507,6 @@
 
     aget-object v10, v2, v5
 
-    .line 307
     .local v10, "path":Ljava/lang/String;
     if-eqz v10, :cond_0
 
@@ -1663,20 +1516,17 @@
 
     if-eqz v15, :cond_1
 
-    .line 306
     :cond_0
     :goto_1
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_0
 
-    .line 309
     :cond_1
     new-instance v4, Ljava/io/File;
 
     invoke-direct {v4, v10}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 310
     .local v4, "f":Ljava/io/File;
     invoke-virtual {v4}, Ljava/io/File;->exists()Z
 
@@ -1684,7 +1534,6 @@
 
     if-eqz v15, :cond_2
 
-    .line 311
     invoke-virtual {v4}, Ljava/io/File;->length()J
 
     move-result-wide v16
@@ -1695,10 +1544,8 @@
 
     move-result-wide v8
 
-    .line 312
     goto :goto_1
 
-    .line 314
     :cond_2
     const-string v15, "!/"
 
@@ -1708,14 +1555,12 @@
 
     if-eqz v15, :cond_3
 
-    .line 315
     const-string v15, "!/"
 
     invoke-static {v10, v15}, Landroid/text/TextUtils;->split(Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v11
 
-    .line 316
     .local v11, "split":[Ljava/lang/String;
     array-length v15, v11
     :try_end_0
@@ -1727,7 +1572,6 @@
 
     if-ne v15, v0, :cond_3
 
-    .line 317
     :try_start_1
     new-instance v14, Ljava/util/zip/ZipFile;
 
@@ -1743,7 +1587,6 @@
     .local v14, "z":Ljava/util/zip/ZipFile;
     const/16 v16, 0x0
 
-    .line 318
     const/4 v15, 0x1
 
     :try_start_2
@@ -1753,7 +1596,6 @@
 
     move-result-object v3
 
-    .line 319
     .local v3, "e":Ljava/util/zip/ZipEntry;
     if-eqz v3, :cond_6
 
@@ -1763,7 +1605,6 @@
 
     if-nez v15, :cond_6
 
-    .line 320
     invoke-virtual {v3}, Ljava/util/zip/ZipEntry;->getSize()J
 
     move-result-wide v18
@@ -1777,7 +1618,6 @@
 
     move-result-wide v8
 
-    .line 323
     if-eqz v14, :cond_0
 
     if-eqz v16, :cond_5
@@ -1804,14 +1644,12 @@
 
     goto :goto_1
 
-    .line 324
     .end local v3    # "e":Ljava/util/zip/ZipEntry;
     .end local v13    # "x2":Ljava/lang/Throwable;
     .end local v14    # "z":Ljava/util/zip/ZipFile;
     :catch_1
     move-exception v3
 
-    .line 325
     .local v3, "e":Ljava/io/IOException;
     :try_start_5
     const-string v15, "WebViewFactory"
@@ -1848,7 +1686,6 @@
 
     invoke-static {v15, v0, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 329
     .end local v3    # "e":Ljava/io/IOException;
     .end local v11    # "split":[Ljava/lang/String;
     :cond_3
@@ -1881,7 +1718,6 @@
 
     goto/16 :goto_1
 
-    .line 345
     .end local v2    # "arr$":[Ljava/lang/String;
     .end local v4    # "f":Ljava/io/File;
     .end local v5    # "i$":I
@@ -1891,7 +1727,6 @@
     :catch_2
     move-exception v12
 
-    .line 347
     .local v12, "t":Ljava/lang/Throwable;
     const-string v15, "WebViewFactory"
 
@@ -1901,16 +1736,13 @@
 
     invoke-static {v15, v0, v12}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 349
     .end local v12    # "t":Ljava/lang/Throwable;
     :cond_4
     :goto_3
     invoke-static {v7}, Landroid/webkit/WebViewFactory;->prepareWebViewInSystemServer([Ljava/lang/String;)V
 
-    .line 350
     return-void
 
-    .line 323
     .restart local v2    # "arr$":[Ljava/lang/String;
     .local v3, "e":Ljava/util/zip/ZipEntry;
     .restart local v4    # "f":Ljava/io/File;
@@ -1962,7 +1794,6 @@
 
     goto :goto_2
 
-    .line 317
     .end local v3    # "e":Ljava/util/zip/ZipEntry;
     :catch_4
     move-exception v15
@@ -1972,7 +1803,6 @@
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_0
 
-    .line 323
     :catchall_0
     move-exception v16
 
@@ -2017,7 +1847,6 @@
 
     goto :goto_5
 
-    .line 340
     .end local v4    # "f":Ljava/io/File;
     .end local v10    # "path":Ljava/lang/String;
     .end local v11    # "split":[Ljava/lang/String;
@@ -2034,7 +1863,6 @@
 
     move-result-wide v8
 
-    .line 341
     const-string v15, "WebViewFactory"
 
     new-instance v16, Ljava/lang/StringBuilder;
@@ -2059,7 +1887,6 @@
 
     invoke-static/range {v15 .. v16}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 342
     const-string v15, "persist.sys.webview.vmsize"
 
     invoke-static {v8, v9}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
@@ -2072,7 +1899,6 @@
 
     goto :goto_3
 
-    .line 323
     .restart local v4    # "f":Ljava/io/File;
     .restart local v10    # "path":Ljava/lang/String;
     .restart local v11    # "split":[Ljava/lang/String;
@@ -2087,10 +1913,8 @@
     .locals 4
 
     .prologue
-    .line 272
     const/4 v0, 0x0
 
-    .line 274
     .local v0, "nativePaths":[Ljava/lang/String;
     :try_start_0
     invoke-static {}, Landroid/webkit/WebViewFactory;->getWebViewNativeLibraryPaths()[Ljava/lang/String;
@@ -2099,18 +1923,14 @@
 
     move-result-object v0
 
-    .line 279
     :goto_0
     invoke-static {v0}, Landroid/webkit/WebViewFactory;->prepareWebViewInSystemServer([Ljava/lang/String;)V
 
-    .line 280
     return-void
 
-    .line 275
     :catch_0
     move-exception v1
 
-    .line 277
     .local v1, "t":Ljava/lang/Throwable;
     const-string v2, "WebViewFactory"
 
@@ -2126,19 +1946,16 @@
     .param p0, "nativeLibraryPaths"    # [Ljava/lang/String;
 
     .prologue
-    .line 288
     sget-object v0, Landroid/os/Build;->SUPPORTED_32_BIT_ABIS:[Ljava/lang/String;
 
     array-length v0, v0
 
     if-lez v0, :cond_0
 
-    .line 290
     const/4 v0, 0x0
 
     invoke-static {v0, p0}, Landroid/webkit/WebViewFactory;->createRelroFile(Z[Ljava/lang/String;)V
 
-    .line 293
     :cond_0
     sget-object v0, Landroid/os/Build;->SUPPORTED_64_BIT_ABIS:[Ljava/lang/String;
 
@@ -2146,12 +1963,10 @@
 
     if-lez v0, :cond_1
 
-    .line 295
     const/4 v0, 0x1
 
     invoke-static {v0, p0}, Landroid/webkit/WebViewFactory;->createRelroFile(Z[Ljava/lang/String;)V
 
-    .line 297
     :cond_1
     return-void
 .end method
@@ -2160,13 +1975,11 @@
     .locals 6
 
     .prologue
-    .line 245
     :try_start_0
-    const-string/jumbo v3, "webviewchromium_loader"
+    const-string v3, "webviewchromium_loader"
 
     invoke-static {v3}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    .line 246
     const-string v3, "persist.sys.webview.vmsize"
 
     const-wide/32 v4, 0x6400000
@@ -2175,7 +1988,6 @@
 
     move-result-wide v0
 
-    .line 249
     .local v0, "addressSpaceToReserve":J
     invoke-static {v0, v1}, Landroid/webkit/WebViewFactory;->nativeReserveAddressSpace(J)Z
 
@@ -2183,16 +1995,13 @@
 
     sput-boolean v3, Landroid/webkit/WebViewFactory;->sAddressSpaceReserved:Z
 
-    .line 251
     sget-boolean v3, Landroid/webkit/WebViewFactory;->sAddressSpaceReserved:Z
 
     if-eqz v3, :cond_0
 
-    .line 263
     :goto_0
     return-void
 
-    .line 256
     :cond_0
     const-string v3, "WebViewFactory"
 
@@ -2226,11 +2035,9 @@
 
     goto :goto_0
 
-    .line 259
     :catch_0
     move-exception v2
 
-    .line 261
     .local v2, "t":Ljava/lang/Throwable;
     const-string v3, "WebViewFactory"
 

@@ -598,7 +598,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 112
     const-string v0, "ro.telephony.default_network"
 
     invoke-static {v2}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;

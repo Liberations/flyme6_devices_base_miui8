@@ -32,7 +32,6 @@
     .locals 1
 
     .prologue
-    .line 194
     const-string v0, "content://rms"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -41,7 +40,6 @@
 
     sput-object v0, Landroid/juphoon/provider/RmsDefine$Rms;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 195
     const-string v0, "content://rms/rms_log"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -57,7 +55,6 @@
     .locals 0
 
     .prologue
-    .line 182
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -68,7 +65,6 @@
     .param p0, "messageType"    # I
 
     .prologue
-    .line 200
     const/4 v0, 0x5
 
     if-eq p0, v0, :cond_0
@@ -105,7 +101,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 187
     sget-object v1, Landroid/juphoon/provider/RmsDefine$Rms;->CONTENT_URI:Landroid/net/Uri;
 
     const-string v5, "date DESC"
@@ -131,7 +126,6 @@
     .param p3, "orderBy"    # Ljava/lang/String;
 
     .prologue
-    .line 191
     sget-object v1, Landroid/juphoon/provider/RmsDefine$Rms;->CONTENT_URI:Landroid/net/Uri;
 
     const/4 v4, 0x0

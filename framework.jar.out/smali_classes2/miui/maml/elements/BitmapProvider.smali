@@ -35,10 +35,8 @@
     .param p1, "root"    # Lmiui/maml/ScreenElementRoot;
 
     .prologue
-    .line 109
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
     new-instance v0, Lmiui/maml/elements/BitmapProvider$VersionedBitmap;
 
     const/4 v1, 0x0
@@ -47,10 +45,8 @@
 
     iput-object v0, p0, Lmiui/maml/elements/BitmapProvider;->mVersionedBitmap:Lmiui/maml/elements/BitmapProvider$VersionedBitmap;
 
-    .line 110
     iput-object p1, p0, Lmiui/maml/elements/BitmapProvider;->mRoot:Lmiui/maml/ScreenElementRoot;
 
-    .line 111
     return-void
 .end method
 
@@ -60,10 +56,8 @@
     .param p1, "maxNumOfPixels"    # I
 
     .prologue
-    .line 495
     const/4 v0, 0x1
 
-    .line 496
     .local v0, "finalSize":I
     iget v1, p0, Landroid/graphics/BitmapFactory$Options;->outHeight:I
 
@@ -83,7 +77,6 @@
 
     move-result-wide v2
 
-    .line 497
     .local v2, "size":D
     :goto_0
     mul-int/lit8 v1, v0, 0x2
@@ -94,12 +87,10 @@
 
     if-gtz v1, :cond_0
 
-    .line 498
     mul-int/lit8 v0, v0, 0x2
 
     goto :goto_0
 
-    .line 500
     :cond_0
     return v0
 .end method
@@ -110,7 +101,6 @@
     .param p1, "type"    # Ljava/lang/String;
 
     .prologue
-    .line 82
     const-string v2, "ResourceImage"
 
     invoke-static {p1, v2}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
@@ -119,17 +109,14 @@
 
     if-eqz v2, :cond_1
 
-    .line 83
     new-instance v1, Lmiui/maml/elements/BitmapProvider$ResourceImageProvider;
 
     invoke-direct {v1, p0}, Lmiui/maml/elements/BitmapProvider$ResourceImageProvider;-><init>(Lmiui/maml/ScreenElementRoot;)V
 
-    .line 106
     :cond_0
     :goto_0
     return-object v1
 
-    .line 84
     :cond_1
     const-string v2, "VirtualScreen"
 
@@ -139,14 +126,12 @@
 
     if-eqz v2, :cond_2
 
-    .line 85
     new-instance v1, Lmiui/maml/elements/BitmapProvider$VirtualScreenProvider;
 
     invoke-direct {v1, p0}, Lmiui/maml/elements/BitmapProvider$VirtualScreenProvider;-><init>(Lmiui/maml/ScreenElementRoot;)V
 
     goto :goto_0
 
-    .line 86
     :cond_2
     const-string v2, "ApplicationIcon"
 
@@ -156,14 +141,12 @@
 
     if-eqz v2, :cond_3
 
-    .line 87
     new-instance v1, Lmiui/maml/elements/BitmapProvider$AppIconProvider;
 
     invoke-direct {v1, p0}, Lmiui/maml/elements/BitmapProvider$AppIconProvider;-><init>(Lmiui/maml/ScreenElementRoot;)V
 
     goto :goto_0
 
-    .line 88
     :cond_3
     const-string v2, "FileSystem"
 
@@ -173,14 +156,12 @@
 
     if-eqz v2, :cond_4
 
-    .line 89
     new-instance v1, Lmiui/maml/elements/BitmapProvider$FileSystemProvider;
 
     invoke-direct {v1, p0}, Lmiui/maml/elements/BitmapProvider$FileSystemProvider;-><init>(Lmiui/maml/ScreenElementRoot;)V
 
     goto :goto_0
 
-    .line 90
     :cond_4
     const-string v2, "Uri"
 
@@ -190,14 +171,12 @@
 
     if-eqz v2, :cond_5
 
-    .line 91
     new-instance v1, Lmiui/maml/elements/BitmapProvider$UriProvider;
 
     invoke-direct {v1, p0}, Lmiui/maml/elements/BitmapProvider$UriProvider;-><init>(Lmiui/maml/ScreenElementRoot;)V
 
     goto :goto_0
 
-    .line 92
     :cond_5
     const-string v2, "BitmapHolder"
 
@@ -207,14 +186,12 @@
 
     if-eqz v2, :cond_6
 
-    .line 93
     new-instance v1, Lmiui/maml/elements/BitmapProvider$BitmapHolderProvider;
 
     invoke-direct {v1, p0}, Lmiui/maml/elements/BitmapProvider$BitmapHolderProvider;-><init>(Lmiui/maml/ScreenElementRoot;)V
 
     goto :goto_0
 
-    .line 94
     :cond_6
     const-string v2, "BitmapVar"
 
@@ -224,14 +201,12 @@
 
     if-eqz v2, :cond_7
 
-    .line 95
     new-instance v1, Lmiui/maml/elements/BitmapProvider$BitmapVariableProvider;
 
     invoke-direct {v1, p0}, Lmiui/maml/elements/BitmapProvider$BitmapVariableProvider;-><init>(Lmiui/maml/ScreenElementRoot;)V
 
     goto :goto_0
 
-    .line 98
     :cond_7
     invoke-virtual {p0}, Lmiui/maml/ScreenElementRoot;->getContext()Lmiui/maml/ScreenContext;
 
@@ -245,20 +220,16 @@
 
     check-cast v0, Lmiui/maml/ObjectFactory$BitmapProviderFactory;
 
-    .line 100
     .local v0, "f":Lmiui/maml/ObjectFactory$BitmapProviderFactory;
     if-eqz v0, :cond_8
 
-    .line 101
     invoke-virtual {v0, p0, p1}, Lmiui/maml/ObjectFactory$BitmapProviderFactory;->create(Lmiui/maml/ScreenElementRoot;Ljava/lang/String;)Lmiui/maml/elements/BitmapProvider;
 
     move-result-object v1
 
-    .line 102
     .local v1, "provider":Lmiui/maml/elements/BitmapProvider;
     if-nez v1, :cond_0
 
-    .line 106
     .end local v1    # "provider":Lmiui/maml/elements/BitmapProvider;
     :cond_8
     new-instance v1, Lmiui/maml/elements/BitmapProvider$ResourceImageProvider;
@@ -274,12 +245,10 @@
     .locals 1
 
     .prologue
-    .line 121
     iget-object v0, p0, Lmiui/maml/elements/BitmapProvider;->mVersionedBitmap:Lmiui/maml/elements/BitmapProvider$VersionedBitmap;
 
     invoke-virtual {v0}, Lmiui/maml/elements/BitmapProvider$VersionedBitmap;->reset()V
 
-    .line 122
     return-void
 .end method
 
@@ -291,7 +260,6 @@
     .param p4, "h"    # I
 
     .prologue
-    .line 125
     iget-object v0, p0, Lmiui/maml/elements/BitmapProvider;->mVersionedBitmap:Lmiui/maml/elements/BitmapProvider$VersionedBitmap;
 
     return-object v0
@@ -306,18 +274,14 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 468
     const/4 v1, 0x0
 
-    .line 469
     .local v1, "in1":Ljava/io/InputStream;
     const/4 v2, 0x0
 
-    .line 470
     .local v2, "in2":Ljava/io/InputStream;
     const/4 v3, 0x0
 
-    .line 472
     .local v3, "options":Landroid/graphics/BitmapFactory$Options;
     :try_start_0
     iget-object v6, p0, Lmiui/maml/elements/BitmapProvider;->mRoot:Lmiui/maml/ScreenElementRoot;
@@ -336,12 +300,10 @@
 
     move-result-object v1
 
-    .line 473
     if-lez p2, :cond_0
 
     if-lez p3, :cond_0
 
-    .line 474
     new-instance v4, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v4}, Landroid/graphics/BitmapFactory$Options;-><init>()V
@@ -349,7 +311,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 475
     .end local v3    # "options":Landroid/graphics/BitmapFactory$Options;
     .local v4, "options":Landroid/graphics/BitmapFactory$Options;
     const/4 v6, 0x1
@@ -357,12 +318,10 @@
     :try_start_1
     iput-boolean v6, v4, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 476
     const/4 v6, 0x0
 
     invoke-static {v1, v6, v4}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
-    .line 477
     mul-int v6, p2, p3
 
     invoke-static {v4, v6}, Lmiui/maml/elements/BitmapProvider;->computeSampleSize(Landroid/graphics/BitmapFactory$Options;I)I
@@ -371,18 +330,14 @@
 
     iput v6, v4, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
-    .line 478
     const/4 v6, 0x0
 
     iput-boolean v6, v4, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 479
     iput p3, v4, Landroid/graphics/BitmapFactory$Options;->outHeight:I
 
-    .line 480
     iput p2, v4, Landroid/graphics/BitmapFactory$Options;->outWidth:I
 
-    .line 481
     iget-object v6, p0, Lmiui/maml/elements/BitmapProvider;->mRoot:Lmiui/maml/ScreenElementRoot;
 
     invoke-virtual {v6}, Lmiui/maml/ScreenElementRoot;->getContext()Lmiui/maml/ScreenContext;
@@ -399,7 +354,6 @@
 
     move-result-object v2
 
-    .line 482
     const/4 v6, 0x0
 
     invoke-static {v2, v6, v4}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
@@ -409,10 +363,8 @@
 
     move-result-object v5
 
-    .line 489
     invoke-static {v1}, Lmiui/maml/util/net/IOUtils;->closeQuietly(Ljava/io/InputStream;)V
 
-    .line 490
     invoke-static {v2}, Lmiui/maml/util/net/IOUtils;->closeQuietly(Ljava/io/InputStream;)V
 
     move-object v3, v4
@@ -422,7 +374,6 @@
     :goto_0
     return-object v5
 
-    .line 484
     :cond_0
     const/4 v6, 0x0
 
@@ -434,19 +385,15 @@
 
     move-result-object v5
 
-    .line 489
     invoke-static {v1}, Lmiui/maml/util/net/IOUtils;->closeQuietly(Ljava/io/InputStream;)V
 
-    .line 490
     invoke-static {v2}, Lmiui/maml/util/net/IOUtils;->closeQuietly(Ljava/io/InputStream;)V
 
     goto :goto_0
 
-    .line 485
     :catch_0
     move-exception v0
 
-    .line 486
     .local v0, "e":Ljava/lang/Exception;
     :goto_1
     :try_start_3
@@ -458,15 +405,12 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 489
     invoke-static {v1}, Lmiui/maml/util/net/IOUtils;->closeQuietly(Ljava/io/InputStream;)V
 
-    .line 490
     invoke-static {v2}, Lmiui/maml/util/net/IOUtils;->closeQuietly(Ljava/io/InputStream;)V
 
     goto :goto_0
 
-    .line 489
     .end local v0    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v5
@@ -474,12 +418,10 @@
     :goto_2
     invoke-static {v1}, Lmiui/maml/util/net/IOUtils;->closeQuietly(Ljava/io/InputStream;)V
 
-    .line 490
     invoke-static {v2}, Lmiui/maml/util/net/IOUtils;->closeQuietly(Ljava/io/InputStream;)V
 
     throw v5
 
-    .line 489
     .end local v3    # "options":Landroid/graphics/BitmapFactory$Options;
     .restart local v4    # "options":Landroid/graphics/BitmapFactory$Options;
     :catchall_1
@@ -491,7 +433,6 @@
     .restart local v3    # "options":Landroid/graphics/BitmapFactory$Options;
     goto :goto_2
 
-    .line 485
     .end local v3    # "options":Landroid/graphics/BitmapFactory$Options;
     .restart local v4    # "options":Landroid/graphics/BitmapFactory$Options;
     :catch_1
@@ -509,10 +450,8 @@
     .param p1, "src"    # Ljava/lang/String;
 
     .prologue
-    .line 114
     invoke-virtual {p0}, Lmiui/maml/elements/BitmapProvider;->reset()V
 
-    .line 115
     return-void
 .end method
 
@@ -520,6 +459,5 @@
     .locals 0
 
     .prologue
-    .line 118
     return-void
 .end method

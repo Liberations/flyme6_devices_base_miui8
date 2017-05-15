@@ -29,19 +29,14 @@
     .param p3, "userHandle"    # Landroid/os/UserHandle;
 
     .prologue
-    .line 132
     iput-object p1, p0, Lmiui/securityspace/CrossUserPickerActivity$CrossUserContextWrapper;->this$0:Lmiui/securityspace/CrossUserPickerActivity;
 
-    .line 133
     invoke-direct {p0, p2}, Landroid/content/ContextWrapper;-><init>(Landroid/content/Context;)V
 
-    .line 134
     iput-object p2, p0, Lmiui/securityspace/CrossUserPickerActivity$CrossUserContextWrapper;->mBase:Landroid/content/Context;
 
-    .line 135
     iput-object p3, p0, Lmiui/securityspace/CrossUserPickerActivity$CrossUserContextWrapper;->mCrossUser:Landroid/os/UserHandle;
 
-    .line 136
     return-void
 .end method
 
@@ -51,7 +46,6 @@
     .locals 2
 
     .prologue
-    .line 140
     iget-object v0, p0, Lmiui/securityspace/CrossUserPickerActivity$CrossUserContextWrapper;->mBase:Landroid/content/Context;
 
     iget-object v1, p0, Lmiui/securityspace/CrossUserPickerActivity$CrossUserContextWrapper;->mCrossUser:Landroid/os/UserHandle;

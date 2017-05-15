@@ -129,32 +129,26 @@
     .locals 1
 
     .prologue
-    .line 2220
-    const-string/jumbo v0, "resister_find_device_sim_number"
+    const-string v0, "resister_find_device_sim_number"
 
     sput-object v0, Landroid/provider/MiuiSettings$Secure;->REGISTER_FIND_DEVICE_SIM_NUMBER:Ljava/lang/String;
 
-    .line 2226
-    const-string/jumbo v0, "unlock_failed_attempts"
+    const-string v0, "unlock_failed_attempts"
 
     sput-object v0, Landroid/provider/MiuiSettings$Secure;->UNLOCK_FAILED_ATTEMPTS:Ljava/lang/String;
 
-    .line 2232
-    const-string/jumbo v0, "permanently_lock_sim_change"
+    const-string v0, "permanently_lock_sim_change"
 
     sput-object v0, Landroid/provider/MiuiSettings$Secure;->PERMANENTLY_LOCK_SIM_CHANGE:Ljava/lang/String;
 
-    .line 2242
     const-string v0, "find_device_pin_lock"
 
     sput-object v0, Landroid/provider/MiuiSettings$Secure;->FIND_DEVICE_PIN_LOCK:Ljava/lang/String;
 
-    .line 2252
     const-string v0, "force_close_dialog_enabled"
 
     sput-object v0, Landroid/provider/MiuiSettings$Secure;->FORCE_CLOCE_DIALOG_ENABLED:Ljava/lang/String;
 
-    .line 2386
     const-string v0, "app_encrypt_password"
 
     sput-object v0, Landroid/provider/MiuiSettings$Secure;->APP_ENCRYPT_PASSWORD:Ljava/lang/String;
@@ -166,7 +160,6 @@
     .locals 0
 
     .prologue
-    .line 2159
     invoke-direct {p0}, Landroid/provider/SystemSettings$Secure;-><init>()V
 
     return-void
@@ -177,7 +170,6 @@
     .param p0, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 2159
     invoke-static {p0}, Landroid/provider/MiuiSettings$Secure;->buildNewPasswordIntent(Ljava/lang/String;)Landroid/content/Intent;
 
     move-result-object v0
@@ -190,27 +182,23 @@
     .param p0, "businessKey"    # Ljava/lang/String;
 
     .prologue
-    .line 2559
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.app.action.SET_NEW_PASSWORD"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 2560
     .local v0, "intent":Landroid/content/Intent;
-    const-string/jumbo v1, "set_keyguard_password"
+    const-string v1, "set_keyguard_password"
 
     const/4 v2, 0x0
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 2561
     const-string v1, "common_password_business_key"
 
     invoke-virtual {v0, v1, p0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 2562
     return-object v0
 .end method
 
@@ -220,22 +208,18 @@
     .param p1, "allow"    # Z
 
     .prologue
-    .line 2666
     if-eqz p1, :cond_0
 
     const/4 v0, 0x1
 
-    .line 2667
     .local v0, "enable":I
     :goto_0
-    const-string/jumbo v1, "http_invoke_app"
+    const-string v1, "http_invoke_app"
 
     invoke-static {p0, v1, v0}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 2668
     return-void
 
-    .line 2666
     .end local v0    # "enable":I
     :cond_0
     const/4 v0, 0x0
@@ -249,22 +233,18 @@
     .param p1, "allow"    # Z
 
     .prologue
-    .line 2650
     if-eqz p1, :cond_0
 
     const/4 v0, 0x1
 
-    .line 2651
     .local v0, "enable":I
     :goto_0
-    const-string/jumbo v1, "upload_debug_log_pref"
+    const-string v1, "upload_debug_log_pref"
 
     invoke-static {p0, v1, v0}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 2652
     return-void
 
-    .line 2650
     .end local v0    # "enable":I
     :cond_0
     const/4 v0, 0x0
@@ -278,22 +258,18 @@
     .param p1, "allow"    # Z
 
     .prologue
-    .line 2634
     if-eqz p1, :cond_0
 
     const/4 v0, 0x1
 
-    .line 2635
     .local v0, "enable":I
     :goto_0
-    const-string/jumbo v1, "upload_log_pref"
+    const-string v1, "upload_log_pref"
 
     invoke-static {p0, v1, v0}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 2636
     return-void
 
-    .line 2634
     .end local v0    # "enable":I
     :cond_0
     const/4 v0, 0x0
@@ -312,7 +288,6 @@
 
     const/4 v2, 0x0
 
-    .line 2499
     if-eqz p2, :cond_0
 
     move v0, v1
@@ -343,20 +318,17 @@
     .param p0, "cr"    # Landroid/content/ContentResolver;
 
     .prologue
-    .line 2488
     sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     if-eqz v0, :cond_0
 
-    .line 2489
     const/4 v0, 0x0
 
-    .line 2492
     :goto_0
     return v0
 
     :cond_0
-    const-string/jumbo v0, "tst_support"
+    const-string v0, "tst_support"
 
     const/4 v1, -0x1
 
@@ -372,12 +344,10 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 2513
     invoke-static {p0}, Lmiui/util/LockPatternUtilsWrapper;->getActivePasswordQuality(Landroid/content/Context;)I
 
     move-result v0
 
-    .line 2514
     .local v0, "quality":I
     if-eqz v0, :cond_0
 
@@ -402,8 +372,7 @@
 
     const/4 v1, 0x0
 
-    .line 2521
-    const-string/jumbo v2, "miui_keyguard"
+    const-string v2, "miui_keyguard"
 
     invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -411,14 +380,12 @@
 
     if-eqz v2, :cond_2
 
-    .line 2522
     invoke-static {p0}, Lmiui/util/LockPatternUtilsWrapper;->getActivePasswordQuality(Landroid/content/Context;)I
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 2525
     :cond_0
     :goto_0
     return v0
@@ -426,10 +393,8 @@
     :cond_1
     move v0, v1
 
-    .line 2522
     goto :goto_0
 
-    .line 2525
     :cond_2
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -454,7 +419,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 2533
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
@@ -482,7 +446,6 @@
 
     const/4 v0, 0x1
 
-    .line 2258
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -500,22 +463,18 @@
 
     if-ne v0, v2, :cond_0
 
-    .line 2262
     :goto_0
     return v0
 
     :cond_0
     move v0, v1
 
-    .line 2258
     goto :goto_0
 
-    .line 2260
     :catch_0
     move-exception v2
 
-    .line 2262
-    const-string/jumbo v2, "user"
+    const-string v2, "user"
 
     sget-object v3, Lmiui/os/Build;->TYPE:Ljava/lang/String;
 
@@ -555,17 +514,15 @@
 
     const/4 v2, 0x1
 
-    .line 2674
     sget-boolean v3, Lmiui/os/Build;->IS_CTS_BUILD:Z
 
     if-eqz v3, :cond_0
 
     move v0, v1
 
-    .line 2675
     .local v0, "default_value":I
     :goto_0
-    const-string/jumbo v3, "http_invoke_app"
+    const-string v3, "http_invoke_app"
 
     invoke-static {p0, v3, v0}, Landroid/provider/Settings$Secure;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -580,14 +537,12 @@
     :cond_0
     move v0, v2
 
-    .line 2674
     goto :goto_0
 
     .restart local v0    # "default_value":I
     :cond_1
     move v2, v1
 
-    .line 2675
     goto :goto_1
 .end method
 
@@ -598,14 +553,13 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 2469
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    const-string/jumbo v1, "is_second_space"
+    const-string v1, "is_second_space"
 
     invoke-static {p0, v1, v0}, Landroid/provider/Settings$Secure;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -628,7 +582,6 @@
 
     const/4 v1, 0x1
 
-    .line 2658
     invoke-static {p0}, Landroid/provider/MiuiSettings$Secure;->isUserExperienceProgramEnable(Landroid/content/ContentResolver;)Z
 
     move-result v3
@@ -637,10 +590,9 @@
 
     move v0, v1
 
-    .line 2659
     .local v0, "default_value":I
     :goto_0
-    const-string/jumbo v3, "upload_debug_log_pref"
+    const-string v3, "upload_debug_log_pref"
 
     invoke-static {p0, v3, v0}, Landroid/provider/Settings$Secure;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -655,14 +607,12 @@
     :cond_0
     move v0, v2
 
-    .line 2658
     goto :goto_0
 
     .restart local v0    # "default_value":I
     :cond_1
     move v1, v2
 
-    .line 2659
     goto :goto_1
 .end method
 
@@ -675,17 +625,15 @@
 
     const/4 v1, 0x1
 
-    .line 2642
     sget-boolean v3, Lmiui/os/Build;->IS_DEVELOPMENT_VERSION:Z
 
     if-eqz v3, :cond_0
 
     move v0, v1
 
-    .line 2643
     .local v0, "default_value":I
     :goto_0
-    const-string/jumbo v3, "upload_log_pref"
+    const-string v3, "upload_log_pref"
 
     invoke-static {p0, v3, v0}, Landroid/provider/Settings$Secure;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -700,14 +648,12 @@
     :cond_0
     move v0, v2
 
-    .line 2642
     goto :goto_0
 
     .restart local v0    # "default_value":I
     :cond_1
     move v1, v2
 
-    .line 2643
     goto :goto_1
 .end method
 
@@ -718,7 +664,6 @@
     .param p2, "value"    # Z
 
     .prologue
-    .line 2506
     if-eqz p2, :cond_0
 
     const/4 v0, 0x1
@@ -726,10 +671,8 @@
     :goto_0
     invoke-static {p0, p1, v0}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 2507
     return-void
 
-    .line 2506
     :cond_0
     const/4 v0, 0x0
 
@@ -742,18 +685,15 @@
     .param p1, "ctaSupport"    # I
 
     .prologue
-    .line 2477
     sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     if-eqz v0, :cond_0
 
-    .line 2482
     :goto_0
     return-void
 
-    .line 2481
     :cond_0
-    const-string/jumbo v0, "tst_support"
+    const-string v0, "tst_support"
 
     invoke-static {p0, v0, p1}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
@@ -772,12 +712,10 @@
 
     const/4 v4, 0x0
 
-    .line 2609
     new-instance v0, Landroid/provider/MiuiSettings$Secure$3;
 
     invoke-direct {v0, p0, p2, p1}, Landroid/provider/MiuiSettings$Secure$3;-><init>(Landroid/app/Activity;Ljava/lang/String;Landroid/content/DialogInterface$OnClickListener;)V
 
-    .line 2621
     .local v0, "listener":Landroid/content/DialogInterface$OnClickListener;
     new-instance v1, Landroid/app/AlertDialog$Builder;
 
@@ -839,7 +777,6 @@
 
     invoke-virtual {v1}, Landroid/app/AlertDialog;->show()V
 
-    .line 2628
     return-void
 .end method
 
@@ -849,7 +786,6 @@
     .param p1, "listener"    # Landroid/content/DialogInterface$OnClickListener;
 
     .prologue
-    .line 2567
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
     invoke-direct {v0, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
@@ -896,7 +832,6 @@
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->show()V
 
-    .line 2574
     return-void
 .end method
 
@@ -908,24 +843,20 @@
     .param p3, "setPasswordRequestCode"    # I
 
     .prologue
-    .line 2584
     :try_start_0
     new-instance v0, Landroid/provider/MiuiSettings$Secure$2;
 
     invoke-direct {v0, p0, p2, p3, p1}, Landroid/provider/MiuiSettings$Secure$2;-><init>(Landroid/app/Activity;Ljava/lang/String;ILandroid/content/DialogInterface$OnClickListener;)V
 
-    .line 2596
     .local v0, "listener":Landroid/content/DialogInterface$OnClickListener;
     invoke-static {p0, v0}, Landroid/provider/MiuiSettings$Secure;->showConfirmDialog(Landroid/app/Activity;Landroid/content/DialogInterface$OnClickListener;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2600
     .end local v0    # "listener":Landroid/content/DialogInterface$OnClickListener;
     :goto_0
     return-void
 
-    .line 2597
     :catch_0
     move-exception v1
 
@@ -940,12 +871,10 @@
     .param p3, "setPasswordRequestCode"    # I
 
     .prologue
-    .line 2543
     new-instance v0, Landroid/provider/MiuiSettings$Secure$1;
 
     invoke-direct {v0, p0, p2, p3, p1}, Landroid/provider/MiuiSettings$Secure$1;-><init>(Landroid/app/Fragment;Ljava/lang/String;ILandroid/content/DialogInterface$OnClickListener;)V
 
-    .line 2555
     .local v0, "listener":Landroid/content/DialogInterface$OnClickListener;
     invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
@@ -953,6 +882,5 @@
 
     invoke-static {v1, v0}, Landroid/provider/MiuiSettings$Secure;->showConfirmDialog(Landroid/app/Activity;Landroid/content/DialogInterface$OnClickListener;)V
 
-    .line 2556
     return-void
 .end method

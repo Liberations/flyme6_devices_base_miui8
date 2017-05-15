@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 381
     iput-object p1, p0, Lmiui/view/MiuiKeyBoardView$2;->this$0:Lmiui/view/MiuiKeyBoardView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 383
     iget-object v0, p0, Lmiui/view/MiuiKeyBoardView$2;->this$0:Lmiui/view/MiuiKeyBoardView;
 
     const/4 v1, 0x0
@@ -48,6 +46,5 @@
     # invokes: Lmiui/view/MiuiKeyBoardView;->showPreviewAnim(Z)V
     invoke-static {v0, v1}, Lmiui/view/MiuiKeyBoardView;->access$100(Lmiui/view/MiuiKeyBoardView;Z)V
 
-    .line 384
     return-void
 .end method

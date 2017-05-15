@@ -33,10 +33,8 @@
     .locals 2
 
     .prologue
-    .line 76
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
-    .line 78
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -81,12 +79,10 @@
 
     iput-object v0, p0, Landroid/service/chooser/ChooserTargetService;->TAG:Ljava/lang/String;
 
-    .line 101
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/service/chooser/ChooserTargetService;->mWrapper:Landroid/service/chooser/ChooserTargetService$IChooserTargetServiceWrapper;
 
-    .line 137
     return-void
 .end method
 
@@ -99,7 +95,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 126
     const-string v1, "android.service.chooser.ChooserTargetService"
 
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -112,24 +107,20 @@
 
     if-nez v1, :cond_0
 
-    .line 134
     :goto_0
     return-object v0
 
-    .line 131
     :cond_0
     iget-object v1, p0, Landroid/service/chooser/ChooserTargetService;->mWrapper:Landroid/service/chooser/ChooserTargetService$IChooserTargetServiceWrapper;
 
     if-nez v1, :cond_1
 
-    .line 132
     new-instance v1, Landroid/service/chooser/ChooserTargetService$IChooserTargetServiceWrapper;
 
     invoke-direct {v1, p0, v0}, Landroid/service/chooser/ChooserTargetService$IChooserTargetServiceWrapper;-><init>(Landroid/service/chooser/ChooserTargetService;Landroid/service/chooser/ChooserTargetService$1;)V
 
     iput-object v1, p0, Landroid/service/chooser/ChooserTargetService;->mWrapper:Landroid/service/chooser/ChooserTargetService$IChooserTargetServiceWrapper;
 
-    .line 134
     :cond_1
     iget-object v0, p0, Landroid/service/chooser/ChooserTargetService;->mWrapper:Landroid/service/chooser/ChooserTargetService$IChooserTargetServiceWrapper;
 

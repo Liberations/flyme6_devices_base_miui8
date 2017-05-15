@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 517
     invoke-static {}, Lmiui/maml/elements/AdvancedSlider$State;->values()[Lmiui/maml/elements/AdvancedSlider$State;
 
     move-result-object v0

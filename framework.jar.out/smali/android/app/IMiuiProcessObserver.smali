@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 6
     invoke-direct {p0}, Landroid/app/IProcessObserver$Stub;-><init>()V
 
     return-void

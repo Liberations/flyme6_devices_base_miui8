@@ -48,66 +48,56 @@
     .locals 2
 
     .prologue
-    .line 54
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 49
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
     iput-object v0, p0, Lmiui/util/SystemAnalytics$Action;->mContent:Lorg/json/JSONObject;
 
-    .line 50
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
     iput-object v0, p0, Lmiui/util/SystemAnalytics$Action;->mExtra:Lorg/json/JSONObject;
 
-    .line 52
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lmiui/util/SystemAnalytics$Action;->sKeywords:Ljava/util/Set;
 
-    .line 55
     iget-object v0, p0, Lmiui/util/SystemAnalytics$Action;->sKeywords:Ljava/util/Set;
 
     const-string v1, "_event_id_"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 56
     iget-object v0, p0, Lmiui/util/SystemAnalytics$Action;->sKeywords:Ljava/util/Set;
 
     const-string v1, "_category_"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 57
     iget-object v0, p0, Lmiui/util/SystemAnalytics$Action;->sKeywords:Ljava/util/Set;
 
     const-string v1, "_action_"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 58
     iget-object v0, p0, Lmiui/util/SystemAnalytics$Action;->sKeywords:Ljava/util/Set;
 
     const-string v1, "_label_"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 59
     iget-object v0, p0, Lmiui/util/SystemAnalytics$Action;->sKeywords:Ljava/util/Set;
 
     const-string v1, "_value_"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 60
     return-void
 .end method
 
@@ -116,7 +106,6 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 145
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -131,7 +120,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 146
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -162,7 +150,6 @@
 
     throw v0
 
-    .line 148
     :cond_0
     return-void
 .end method
@@ -175,14 +162,12 @@
     .param p2, "value"    # I
 
     .prologue
-    .line 92
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 94
     :try_start_0
     iget-object v1, p0, Lmiui/util/SystemAnalytics$Action;->mContent:Lorg/json/JSONObject;
 
@@ -190,16 +175,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 99
     :cond_0
     :goto_0
     return-void
 
-    .line 95
     :catch_0
     move-exception v0
 
-    .line 96
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -212,14 +194,12 @@
     .param p2, "value"    # J
 
     .prologue
-    .line 102
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 104
     :try_start_0
     iget-object v1, p0, Lmiui/util/SystemAnalytics$Action;->mContent:Lorg/json/JSONObject;
 
@@ -227,16 +207,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 109
     :cond_0
     :goto_0
     return-void
 
-    .line 105
     :catch_0
     move-exception v0
 
-    .line 106
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -249,14 +226,12 @@
     .param p2, "value"    # Ljava/lang/Object;
 
     .prologue
-    .line 112
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 114
     :try_start_0
     iget-object v1, p0, Lmiui/util/SystemAnalytics$Action;->mContent:Lorg/json/JSONObject;
 
@@ -264,16 +239,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 119
     :cond_0
     :goto_0
     return-void
 
-    .line 115
     :catch_0
     move-exception v0
 
-    .line 116
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -285,15 +257,12 @@
     .param p1, "json"    # Lorg/json/JSONObject;
 
     .prologue
-    .line 122
     if-eqz p1, :cond_0
 
-    .line 123
     invoke-virtual {p1}, Lorg/json/JSONObject;->keys()Ljava/util/Iterator;
 
     move-result-object v1
 
-    .line 124
     .local v1, "it":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -302,7 +271,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 125
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v3
@@ -311,11 +279,9 @@
 
     move-result-object v2
 
-    .line 126
     .local v2, "key":Ljava/lang/String;
     invoke-direct {p0, v2}, Lmiui/util/SystemAnalytics$Action;->ensureKey(Ljava/lang/String;)V
 
-    .line 128
     :try_start_0
     iget-object v3, p0, Lmiui/util/SystemAnalytics$Action;->mContent:Lorg/json/JSONObject;
 
@@ -329,17 +295,14 @@
 
     goto :goto_0
 
-    .line 129
     :catch_0
     move-exception v0
 
-    .line 130
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 134
     .end local v0    # "e":Ljava/lang/Exception;
     .end local v1    # "it":Ljava/util/Iterator;
     .end local v2    # "key":Ljava/lang/String;
@@ -352,12 +315,10 @@
     .param p1, "eventId"    # Ljava/lang/String;
 
     .prologue
-    .line 63
     const-string v0, "_event_id_"
 
     invoke-virtual {p0, v0, p1}, Lmiui/util/SystemAnalytics$Action;->addContent(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 64
     return-object p0
 .end method
 
@@ -367,7 +328,6 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 138
     :try_start_0
     iget-object v1, p0, Lmiui/util/SystemAnalytics$Action;->mExtra:Lorg/json/JSONObject;
 
@@ -375,15 +335,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 142
     :goto_0
     return-void
 
-    .line 139
     :catch_0
     move-exception v0
 
-    .line 140
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -396,13 +353,10 @@
     .param p2, "value"    # I
 
     .prologue
-    .line 74
     invoke-direct {p0, p1}, Lmiui/util/SystemAnalytics$Action;->ensureKey(Ljava/lang/String;)V
 
-    .line 75
     invoke-virtual {p0, p1, p2}, Lmiui/util/SystemAnalytics$Action;->addContent(Ljava/lang/String;I)V
 
-    .line 76
     return-object p0
 .end method
 
@@ -412,13 +366,10 @@
     .param p2, "value"    # J
 
     .prologue
-    .line 80
     invoke-direct {p0, p1}, Lmiui/util/SystemAnalytics$Action;->ensureKey(Ljava/lang/String;)V
 
-    .line 81
     invoke-virtual {p0, p1, p2, p3}, Lmiui/util/SystemAnalytics$Action;->addContent(Ljava/lang/String;J)V
 
-    .line 82
     return-object p0
 .end method
 
@@ -428,13 +379,10 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 86
     invoke-direct {p0, p1}, Lmiui/util/SystemAnalytics$Action;->ensureKey(Ljava/lang/String;)V
 
-    .line 87
     invoke-virtual {p0, p1, p2}, Lmiui/util/SystemAnalytics$Action;->addContent(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 88
     return-object p0
 .end method
 
@@ -444,13 +392,10 @@
     .param p2, "value"    # Lorg/json/JSONObject;
 
     .prologue
-    .line 68
     invoke-direct {p0, p1}, Lmiui/util/SystemAnalytics$Action;->ensureKey(Ljava/lang/String;)V
 
-    .line 69
     invoke-virtual {p0, p1, p2}, Lmiui/util/SystemAnalytics$Action;->addContent(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 70
     return-object p0
 .end method
 
@@ -458,7 +403,6 @@
     .locals 1
 
     .prologue
-    .line 151
     iget-object v0, p0, Lmiui/util/SystemAnalytics$Action;->mContent:Lorg/json/JSONObject;
 
     return-object v0
@@ -468,7 +412,6 @@
     .locals 1
 
     .prologue
-    .line 155
     iget-object v0, p0, Lmiui/util/SystemAnalytics$Action;->mExtra:Lorg/json/JSONObject;
 
     return-object v0

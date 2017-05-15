@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 827
     iput-object p1, p0, Lmiui/view/VolumeDialog$SafetyWarningDialog$1;->this$1:Lmiui/view/VolumeDialog$SafetyWarningDialog;
 
     iput-object p2, p0, Lmiui/view/VolumeDialog$SafetyWarningDialog$1;->val$this$0:Lmiui/view/VolumeDialog;
@@ -46,7 +45,6 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 829
     iget-object v0, p0, Lmiui/view/VolumeDialog$SafetyWarningDialog$1;->this$1:Lmiui/view/VolumeDialog$SafetyWarningDialog;
 
     iget-object v0, v0, Lmiui/view/VolumeDialog$SafetyWarningDialog;->this$0:Lmiui/view/VolumeDialog;
@@ -58,6 +56,5 @@
 
     invoke-interface {v0}, Lmiui/view/VolumeDialog$VolumePanelDelegate;->disableSafeMediaVolume()V
 
-    .line 830
     return-void
 .end method

@@ -56,7 +56,6 @@
     .locals 1
 
     .prologue
-    .line 74
     new-instance v0, Landroid/bluetooth/BleScanWrapper$1;
 
     invoke-direct {v0}, Landroid/bluetooth/BleScanWrapper$1;-><init>()V
@@ -91,27 +90,20 @@
     .end annotation
 
     .prologue
-    .line 24
     .local p3, "filters":Ljava/util/List;, "Ljava/util/List<Landroid/bluetooth/le/ScanFilter;>;"
     .local p4, "resultStorages":Ljava/util/List;, "Ljava/util/List<Ljava/util/List<Landroid/bluetooth/le/ResultStorageDescriptor;>;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 25
     iput p1, p0, Landroid/bluetooth/BleScanWrapper;->mClientIf:I
 
-    .line 26
     iput-object p2, p0, Landroid/bluetooth/BleScanWrapper;->mSettings:Landroid/bluetooth/le/ScanSettings;
 
-    .line 27
     iput-object p3, p0, Landroid/bluetooth/BleScanWrapper;->mFilters:Ljava/util/List;
 
-    .line 28
     iput-object p4, p0, Landroid/bluetooth/BleScanWrapper;->mResultStorages:Ljava/util/List;
 
-    .line 29
     iput-object p5, p0, Landroid/bluetooth/BleScanWrapper;->mOpPackageName:Ljava/lang/String;
 
-    .line 30
     return-void
 .end method
 
@@ -120,24 +112,20 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 42
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Landroid/bluetooth/BleScanWrapper;->mClientIf:I
 
-    .line 43
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 44
     sget-object v1, Landroid/bluetooth/le/ScanSettings;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v1, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -148,7 +136,6 @@
 
     iput-object v1, p0, Landroid/bluetooth/BleScanWrapper;->mSettings:Landroid/bluetooth/le/ScanSettings;
 
-    .line 48
     :goto_0
     sget-object v1, Landroid/bluetooth/le/ScanFilter;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -158,7 +145,6 @@
 
     iput-object v1, p0, Landroid/bluetooth/BleScanWrapper;->mFilters:Ljava/util/List;
 
-    .line 49
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
@@ -167,7 +153,6 @@
 
     move-result-object v0
 
-    .line 50
     .local v0, "cl":Ljava/lang/ClassLoader;
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readArrayList(Ljava/lang/ClassLoader;)Ljava/util/ArrayList;
 
@@ -175,17 +160,14 @@
 
     iput-object v1, p0, Landroid/bluetooth/BleScanWrapper;->mResultStorages:Ljava/util/List;
 
-    .line 51
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Landroid/bluetooth/BleScanWrapper;->mOpPackageName:Ljava/lang/String;
 
-    .line 52
     return-void
 
-    .line 46
     .end local v0    # "cl":Ljava/lang/ClassLoader;
     :cond_0
     const/4 v1, 0x0
@@ -201,7 +183,6 @@
     .param p2, "x1"    # Landroid/bluetooth/BleScanWrapper$1;
 
     .prologue
-    .line 16
     invoke-direct {p0, p1}, Landroid/bluetooth/BleScanWrapper;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -213,7 +194,6 @@
     .locals 1
 
     .prologue
-    .line 56
     const/4 v0, 0x0
 
     return v0
@@ -228,15 +208,12 @@
 
     const/4 v2, 0x0
 
-    .line 93
     if-ne p0, p1, :cond_1
 
-    .line 100
     :cond_0
     :goto_0
     return v1
 
-    .line 96
     :cond_1
     if-eqz p1, :cond_2
 
@@ -253,16 +230,13 @@
     :cond_2
     move v1, v2
 
-    .line 97
     goto :goto_0
 
     :cond_3
     move-object v0, p1
 
-    .line 99
     check-cast v0, Landroid/bluetooth/BleScanWrapper;
 
-    .line 100
     .local v0, "other":Landroid/bluetooth/BleScanWrapper;
     iget v3, p0, Landroid/bluetooth/BleScanWrapper;->mClientIf:I
 
@@ -279,7 +253,6 @@
     .locals 3
 
     .prologue
-    .line 105
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -311,7 +284,6 @@
     .end annotation
 
     .prologue
-    .line 33
     iget v1, p0, Landroid/bluetooth/BleScanWrapper;->mClientIf:I
 
     const/4 v2, 0x0
@@ -330,7 +302,6 @@
 
     invoke-interface/range {v0 .. v6}, Landroid/bluetooth/IBluetoothGatt;->startScan(IZLandroid/bluetooth/le/ScanSettings;Ljava/util/List;Ljava/util/List;Ljava/lang/String;)V
 
-    .line 35
     return-void
 .end method
 
@@ -344,14 +315,12 @@
     .end annotation
 
     .prologue
-    .line 38
     iget v0, p0, Landroid/bluetooth/BleScanWrapper;->mClientIf:I
 
     const/4 v1, 0x0
 
     invoke-interface {p1, v0, v1}, Landroid/bluetooth/IBluetoothGatt;->stopScan(IZ)V
 
-    .line 39
     return-void
 .end method
 
@@ -359,7 +328,6 @@
     .locals 2
 
     .prologue
-    .line 88
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -407,46 +375,37 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 61
     iget v0, p0, Landroid/bluetooth/BleScanWrapper;->mClientIf:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 62
     iget-object v0, p0, Landroid/bluetooth/BleScanWrapper;->mSettings:Landroid/bluetooth/le/ScanSettings;
 
     if-eqz v0, :cond_0
 
-    .line 63
     const/4 v0, 0x1
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 64
     iget-object v0, p0, Landroid/bluetooth/BleScanWrapper;->mSettings:Landroid/bluetooth/le/ScanSettings;
 
     invoke-virtual {v0, p1, v1}, Landroid/bluetooth/le/ScanSettings;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 68
     :goto_0
     iget-object v0, p0, Landroid/bluetooth/BleScanWrapper;->mFilters:Ljava/util/List;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeTypedList(Ljava/util/List;)V
 
-    .line 69
     iget-object v0, p0, Landroid/bluetooth/BleScanWrapper;->mResultStorages:Ljava/util/List;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeList(Ljava/util/List;)V
 
-    .line 70
     iget-object v0, p0, Landroid/bluetooth/BleScanWrapper;->mOpPackageName:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 71
     return-void
 
-    .line 66
     :cond_0
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 

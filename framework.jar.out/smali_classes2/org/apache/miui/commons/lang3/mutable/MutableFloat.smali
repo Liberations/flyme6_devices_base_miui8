@@ -36,10 +36,8 @@
     .locals 0
 
     .prologue
-    .line 45
     invoke-direct {p0}, Ljava/lang/Number;-><init>()V
 
-    .line 46
     return-void
 .end method
 
@@ -48,13 +46,10 @@
     .param p1, "value"    # F
 
     .prologue
-    .line 54
     invoke-direct {p0}, Ljava/lang/Number;-><init>()V
 
-    .line 55
     iput p1, p0, Lorg/apache/miui/commons/lang3/mutable/MutableFloat;->value:F
 
-    .line 56
     return-void
 .end method
 
@@ -63,17 +58,14 @@
     .param p1, "value"    # Ljava/lang/Number;
 
     .prologue
-    .line 65
     invoke-direct {p0}, Ljava/lang/Number;-><init>()V
 
-    .line 66
     invoke-virtual {p1}, Ljava/lang/Number;->floatValue()F
 
     move-result v0
 
     iput v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableFloat;->value:F
 
-    .line 67
     return-void
 .end method
 
@@ -87,17 +79,14 @@
     .end annotation
 
     .prologue
-    .line 77
     invoke-direct {p0}, Ljava/lang/Number;-><init>()V
 
-    .line 78
     invoke-static {p1}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
     move-result v0
 
     iput v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableFloat;->value:F
 
-    .line 79
     return-void
 .end method
 
@@ -108,14 +97,12 @@
     .param p1, "operand"    # F
 
     .prologue
-    .line 156
     iget v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableFloat;->value:F
 
     add-float/2addr v0, p1
 
     iput v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableFloat;->value:F
 
-    .line 157
     return-void
 .end method
 
@@ -124,7 +111,6 @@
     .param p1, "operand"    # Ljava/lang/Number;
 
     .prologue
-    .line 167
     iget v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableFloat;->value:F
 
     invoke-virtual {p1}, Ljava/lang/Number;->floatValue()F
@@ -135,7 +121,6 @@
 
     iput v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableFloat;->value:F
 
-    .line 168
     return-void
 .end method
 
@@ -144,7 +129,6 @@
     .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
-    .line 29
     check-cast p1, Lorg/apache/miui/commons/lang3/mutable/MutableFloat;
 
     .end local p1    # "x0":Ljava/lang/Object;
@@ -160,10 +144,8 @@
     .param p1, "other"    # Lorg/apache/miui/commons/lang3/mutable/MutableFloat;
 
     .prologue
-    .line 299
     iget v0, p1, Lorg/apache/miui/commons/lang3/mutable/MutableFloat;->value:F
 
-    .line 300
     .local v0, "anotherVal":F
     iget v1, p0, Lorg/apache/miui/commons/lang3/mutable/MutableFloat;->value:F
 
@@ -178,7 +160,6 @@
     .locals 2
 
     .prologue
-    .line 145
     iget v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableFloat;->value:F
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -187,7 +168,6 @@
 
     iput v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableFloat;->value:F
 
-    .line 146
     return-void
 .end method
 
@@ -195,7 +175,6 @@
     .locals 2
 
     .prologue
-    .line 230
     iget v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableFloat;->value:F
 
     float-to-double v0, v0
@@ -208,7 +187,6 @@
     .param p1, "obj"    # Ljava/lang/Object;
 
     .prologue
-    .line 277
     instance-of v0, p1, Lorg/apache/miui/commons/lang3/mutable/MutableFloat;
 
     if-eqz v0, :cond_0
@@ -245,7 +223,6 @@
     .locals 1
 
     .prologue
-    .line 220
     iget v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableFloat;->value:F
 
     return v0
@@ -255,7 +232,6 @@
     .locals 1
 
     .prologue
-    .line 88
     iget v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableFloat;->value:F
 
     invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -269,7 +245,6 @@
     .locals 1
 
     .prologue
-    .line 29
     invoke-virtual {p0}, Lorg/apache/miui/commons/lang3/mutable/MutableFloat;->getValue()Ljava/lang/Float;
 
     move-result-object v0
@@ -281,7 +256,6 @@
     .locals 1
 
     .prologue
-    .line 288
     iget v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableFloat;->value:F
 
     invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
@@ -295,7 +269,6 @@
     .locals 2
 
     .prologue
-    .line 136
     iget v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableFloat;->value:F
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -304,7 +277,6 @@
 
     iput v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableFloat;->value:F
 
-    .line 137
     return-void
 .end method
 
@@ -312,7 +284,6 @@
     .locals 1
 
     .prologue
-    .line 200
     iget v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableFloat;->value:F
 
     float-to-int v0, v0
@@ -324,7 +295,6 @@
     .locals 1
 
     .prologue
-    .line 126
     iget v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableFloat;->value:F
 
     invoke-static {v0}, Ljava/lang/Float;->isInfinite(F)Z
@@ -338,7 +308,6 @@
     .locals 1
 
     .prologue
-    .line 117
     iget v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableFloat;->value:F
 
     invoke-static {v0}, Ljava/lang/Float;->isNaN(F)Z
@@ -352,7 +321,6 @@
     .locals 2
 
     .prologue
-    .line 210
     iget v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableFloat;->value:F
 
     float-to-long v0, v0
@@ -365,10 +333,8 @@
     .param p1, "value"    # F
 
     .prologue
-    .line 97
     iput p1, p0, Lorg/apache/miui/commons/lang3/mutable/MutableFloat;->value:F
 
-    .line 98
     return-void
 .end method
 
@@ -377,14 +343,12 @@
     .param p1, "value"    # Ljava/lang/Number;
 
     .prologue
-    .line 107
     invoke-virtual {p1}, Ljava/lang/Number;->floatValue()F
 
     move-result v0
 
     iput v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableFloat;->value:F
 
-    .line 108
     return-void
 .end method
 
@@ -393,7 +357,6 @@
     .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
-    .line 29
     check-cast p1, Ljava/lang/Number;
 
     .end local p1    # "x0":Ljava/lang/Object;
@@ -407,14 +370,12 @@
     .param p1, "operand"    # F
 
     .prologue
-    .line 177
     iget v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableFloat;->value:F
 
     sub-float/2addr v0, p1
 
     iput v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableFloat;->value:F
 
-    .line 178
     return-void
 .end method
 
@@ -423,7 +384,6 @@
     .param p1, "operand"    # Ljava/lang/Number;
 
     .prologue
-    .line 188
     iget v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableFloat;->value:F
 
     invoke-virtual {p1}, Ljava/lang/Number;->floatValue()F
@@ -434,7 +394,6 @@
 
     iput v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableFloat;->value:F
 
-    .line 189
     return-void
 .end method
 
@@ -442,7 +401,6 @@
     .locals 1
 
     .prologue
-    .line 240
     invoke-virtual {p0}, Lorg/apache/miui/commons/lang3/mutable/MutableFloat;->floatValue()F
 
     move-result v0
@@ -458,7 +416,6 @@
     .locals 1
 
     .prologue
-    .line 311
     iget v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableFloat;->value:F
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(F)Ljava/lang/String;

@@ -62,12 +62,10 @@
     .locals 1
 
     .prologue
-    .line 65
     const-string v0, "DevicePolicy"
 
     sput-object v0, Landroid/app/admin/DeviceAdminReceiver;->TAG:Ljava/lang/String;
 
-    .line 66
     const/4 v0, 0x0
 
     sput-boolean v0, Landroid/app/admin/DeviceAdminReceiver;->localLOGV:Z
@@ -79,7 +77,6 @@
     .locals 0
 
     .prologue
-    .line 64
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -92,19 +89,15 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 293
     iget-object v0, p0, Landroid/app/admin/DeviceAdminReceiver;->mManager:Landroid/app/admin/DevicePolicyManager;
 
     if-eqz v0, :cond_0
 
-    .line 294
     iget-object v0, p0, Landroid/app/admin/DeviceAdminReceiver;->mManager:Landroid/app/admin/DevicePolicyManager;
 
-    .line 298
     :goto_0
     return-object v0
 
-    .line 296
     :cond_0
     const-string v0, "device_policy"
 
@@ -116,7 +109,6 @@
 
     iput-object v0, p0, Landroid/app/admin/DeviceAdminReceiver;->mManager:Landroid/app/admin/DevicePolicyManager;
 
-    .line 298
     iget-object v0, p0, Landroid/app/admin/DeviceAdminReceiver;->mManager:Landroid/app/admin/DevicePolicyManager;
 
     goto :goto_0
@@ -127,19 +119,15 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 307
     iget-object v0, p0, Landroid/app/admin/DeviceAdminReceiver;->mWho:Landroid/content/ComponentName;
 
     if-eqz v0, :cond_0
 
-    .line 308
     iget-object v0, p0, Landroid/app/admin/DeviceAdminReceiver;->mWho:Landroid/content/ComponentName;
 
-    .line 311
     :goto_0
     return-object v0
 
-    .line 310
     :cond_0
     new-instance v0, Landroid/content/ComponentName;
 
@@ -151,7 +139,6 @@
 
     iput-object v0, p0, Landroid/app/admin/DeviceAdminReceiver;->mWho:Landroid/content/ComponentName;
 
-    .line 311
     iget-object v0, p0, Landroid/app/admin/DeviceAdminReceiver;->mWho:Landroid/content/ComponentName;
 
     goto :goto_0
@@ -166,7 +153,6 @@
     .param p5, "alias"    # Ljava/lang/String;
 
     .prologue
-    .line 493
     const/4 v0, 0x0
 
     return-object v0
@@ -178,7 +164,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 342
     const/4 v0, 0x0
 
     return-object v0
@@ -190,7 +175,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 354
     return-void
 .end method
 
@@ -200,7 +184,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 328
     return-void
 .end method
 
@@ -211,7 +194,6 @@
     .param p3, "pkg"    # Ljava/lang/String;
 
     .prologue
-    .line 467
     return-void
 .end method
 
@@ -221,7 +203,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 476
     return-void
 .end method
 
@@ -231,7 +212,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 366
     return-void
 .end method
 
@@ -241,7 +221,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 409
     return-void
 .end method
 
@@ -251,7 +230,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 377
     return-void
 .end method
 
@@ -261,7 +239,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 388
     return-void
 .end method
 
@@ -271,7 +248,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 434
     return-void
 .end method
 
@@ -281,7 +257,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 457
     return-void
 .end method
 
@@ -291,12 +266,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 519
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v10
 
-    .line 521
     .local v10, "action":Ljava/lang/String;
     const-string v4, "android.app.action.ACTION_PASSWORD_CHANGED"
 
@@ -306,15 +279,12 @@
 
     if-eqz v4, :cond_1
 
-    .line 522
     invoke-virtual/range {p0 .. p2}, Landroid/app/admin/DeviceAdminReceiver;->onPasswordChanged(Landroid/content/Context;Landroid/content/Intent;)V
 
-    .line 558
     :cond_0
     :goto_0
     return-void
 
-    .line 523
     :cond_1
     const-string v4, "android.app.action.ACTION_PASSWORD_FAILED"
 
@@ -324,12 +294,10 @@
 
     if-eqz v4, :cond_2
 
-    .line 524
     invoke-virtual/range {p0 .. p2}, Landroid/app/admin/DeviceAdminReceiver;->onPasswordFailed(Landroid/content/Context;Landroid/content/Intent;)V
 
     goto :goto_0
 
-    .line 525
     :cond_2
     const-string v4, "android.app.action.ACTION_PASSWORD_SUCCEEDED"
 
@@ -339,12 +307,10 @@
 
     if-eqz v4, :cond_3
 
-    .line 526
     invoke-virtual/range {p0 .. p2}, Landroid/app/admin/DeviceAdminReceiver;->onPasswordSucceeded(Landroid/content/Context;Landroid/content/Intent;)V
 
     goto :goto_0
 
-    .line 527
     :cond_3
     const-string v4, "android.app.action.DEVICE_ADMIN_ENABLED"
 
@@ -354,12 +320,10 @@
 
     if-eqz v4, :cond_4
 
-    .line 528
     invoke-virtual/range {p0 .. p2}, Landroid/app/admin/DeviceAdminReceiver;->onEnabled(Landroid/content/Context;Landroid/content/Intent;)V
 
     goto :goto_0
 
-    .line 529
     :cond_4
     const-string v4, "android.app.action.DEVICE_ADMIN_DISABLE_REQUESTED"
 
@@ -369,16 +333,13 @@
 
     if-eqz v4, :cond_5
 
-    .line 530
     invoke-virtual/range {p0 .. p2}, Landroid/app/admin/DeviceAdminReceiver;->onDisableRequested(Landroid/content/Context;Landroid/content/Intent;)Ljava/lang/CharSequence;
 
     move-result-object v16
 
-    .line 531
     .local v16, "res":Ljava/lang/CharSequence;
     if-eqz v16, :cond_0
 
-    .line 532
     const/4 v4, 0x1
 
     move-object/from16 v0, p0
@@ -387,7 +348,6 @@
 
     move-result-object v12
 
-    .line 533
     .local v12, "extras":Landroid/os/Bundle;
     const-string v4, "android.app.extra.DISABLE_WARNING"
 
@@ -397,7 +357,6 @@
 
     goto :goto_0
 
-    .line 535
     .end local v12    # "extras":Landroid/os/Bundle;
     .end local v16    # "res":Ljava/lang/CharSequence;
     :cond_5
@@ -409,12 +368,10 @@
 
     if-eqz v4, :cond_6
 
-    .line 536
     invoke-virtual/range {p0 .. p2}, Landroid/app/admin/DeviceAdminReceiver;->onDisabled(Landroid/content/Context;Landroid/content/Intent;)V
 
     goto :goto_0
 
-    .line 537
     :cond_6
     const-string v4, "android.app.action.ACTION_PASSWORD_EXPIRING"
 
@@ -424,12 +381,10 @@
 
     if-eqz v4, :cond_7
 
-    .line 538
     invoke-virtual/range {p0 .. p2}, Landroid/app/admin/DeviceAdminReceiver;->onPasswordExpiring(Landroid/content/Context;Landroid/content/Intent;)V
 
     goto :goto_0
 
-    .line 539
     :cond_7
     const-string v4, "android.app.action.PROFILE_PROVISIONING_COMPLETE"
 
@@ -439,12 +394,10 @@
 
     if-eqz v4, :cond_8
 
-    .line 540
     invoke-virtual/range {p0 .. p2}, Landroid/app/admin/DeviceAdminReceiver;->onProfileProvisioningComplete(Landroid/content/Context;Landroid/content/Intent;)V
 
     goto :goto_0
 
-    .line 541
     :cond_8
     const-string v4, "android.app.action.CHOOSE_PRIVATE_KEY_ALIAS"
 
@@ -454,7 +407,6 @@
 
     if-eqz v4, :cond_9
 
-    .line 542
     const-string v4, "android.app.extra.CHOOSE_PRIVATE_KEY_SENDER_UID"
 
     const/4 v5, -0x1
@@ -465,7 +417,6 @@
 
     move-result v7
 
-    .line 543
     .local v7, "uid":I
     const-string v4, "android.app.extra.CHOOSE_PRIVATE_KEY_URI"
 
@@ -477,7 +428,6 @@
 
     check-cast v8, Landroid/net/Uri;
 
-    .line 544
     .local v8, "uri":Landroid/net/Uri;
     const-string v4, "android.app.extra.CHOOSE_PRIVATE_KEY_ALIAS"
 
@@ -494,12 +444,10 @@
 
     move-object/from16 v6, p2
 
-    .line 545
     invoke-virtual/range {v4 .. v9}, Landroid/app/admin/DeviceAdminReceiver;->onChoosePrivateKeyAlias(Landroid/content/Context;Landroid/content/Intent;ILandroid/net/Uri;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v11
 
-    .line 546
     .local v11, "chosenAlias":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -507,7 +455,6 @@
 
     goto/16 :goto_0
 
-    .line 547
     .end local v7    # "uid":I
     .end local v8    # "uri":Landroid/net/Uri;
     .end local v9    # "alias":Ljava/lang/String;
@@ -521,7 +468,6 @@
 
     if-eqz v4, :cond_a
 
-    .line 548
     const-string v4, "android.app.extra.LOCK_TASK_PACKAGE"
 
     move-object/from16 v0, p2
@@ -530,7 +476,6 @@
 
     move-result-object v13
 
-    .line 549
     .local v13, "pkg":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -542,7 +487,6 @@
 
     goto/16 :goto_0
 
-    .line 550
     .end local v13    # "pkg":Ljava/lang/String;
     :cond_a
     const-string v4, "android.app.action.LOCK_TASK_EXITING"
@@ -553,12 +497,10 @@
 
     if-eqz v4, :cond_b
 
-    .line 551
     invoke-virtual/range {p0 .. p2}, Landroid/app/admin/DeviceAdminReceiver;->onLockTaskModeExiting(Landroid/content/Context;Landroid/content/Intent;)V
 
     goto/16 :goto_0
 
-    .line 552
     :cond_b
     const-string v4, "android.app.action.READY_FOR_USER_INITIALIZATION"
 
@@ -568,12 +510,10 @@
 
     if-eqz v4, :cond_c
 
-    .line 553
     invoke-virtual/range {p0 .. p2}, Landroid/app/admin/DeviceAdminReceiver;->onReadyForUserInitialization(Landroid/content/Context;Landroid/content/Intent;)V
 
     goto/16 :goto_0
 
-    .line 554
     :cond_c
     const-string v4, "android.app.action.NOTIFY_PENDING_SYSTEM_UPDATE"
 
@@ -583,7 +523,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 555
     const-string v4, "android.app.extra.SYSTEM_UPDATE_RECEIVED_TIME"
 
     const-wide/16 v18, -0x1
@@ -596,7 +535,6 @@
 
     move-result-wide v14
 
-    .line 556
     .local v14, "receivedTime":J
     move-object/from16 v0, p0
 
@@ -616,6 +554,5 @@
     .param p3, "receivedTime"    # J
 
     .prologue
-    .line 510
     return-void
 .end method

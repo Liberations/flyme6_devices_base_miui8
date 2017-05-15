@@ -56,7 +56,6 @@
     .locals 0
 
     .prologue
-    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -67,12 +66,10 @@
     .param p0, "length"    # I
 
     .prologue
-    .line 46
     if-gtz p0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 47
     :goto_0
     return v0
 
@@ -93,12 +90,10 @@
     .param p0, "length"    # S
 
     .prologue
-    .line 41
     const v1, 0xffff
 
     and-int v0, p0, v1
 
-    .line 42
     .local v0, "intLength":I
     invoke-static {v0}, Landroid/net/netlink/NetlinkConstants;->alignedLengthOf(I)I
 
@@ -112,12 +107,10 @@
     .param p0, "buffer"    # Ljava/nio/ByteBuffer;
 
     .prologue
-    .line 63
     if-nez p0, :cond_0
 
     const-string v0, "(null)"
 
-    .line 64
     :goto_0
     return-object v0
 
@@ -146,12 +139,10 @@
     .param p0, "bytes"    # [B
 
     .prologue
-    .line 58
     if-nez p0, :cond_0
 
     const-string v0, "(null)"
 
-    .line 59
     :goto_0
     return-object v0
 
@@ -168,18 +159,15 @@
     .param p0, "family"    # I
 
     .prologue
-    .line 51
     sget v0, Landroid/system/OsConstants;->AF_INET:I
 
     if-ne p0, v0, :cond_0
 
     const-string v0, "AF_INET"
 
-    .line 54
     :goto_0
     return-object v0
 
-    .line 52
     :cond_0
     sget v0, Landroid/system/OsConstants;->AF_INET6:I
 
@@ -189,7 +177,6 @@
 
     goto :goto_0
 
-    .line 53
     :cond_1
     sget v0, Landroid/system/OsConstants;->AF_NETLINK:I
 
@@ -199,7 +186,6 @@
 
     goto :goto_0
 
-    .line 54
     :cond_2
     invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -213,15 +199,13 @@
     .param p0, "nlm_type"    # S
 
     .prologue
-    .line 94
     sparse-switch p0, :sswitch_data_0
 
-    .line 117
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "unknown RTM type: "
+    const-string v1, "unknown RTM type: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -242,133 +226,111 @@
     :goto_0
     return-object v0
 
-    .line 95
     :sswitch_0
     const-string v0, "NLMSG_NOOP"
 
     goto :goto_0
 
-    .line 96
     :sswitch_1
     const-string v0, "NLMSG_ERROR"
 
     goto :goto_0
 
-    .line 97
     :sswitch_2
     const-string v0, "NLMSG_DONE"
 
     goto :goto_0
 
-    .line 98
     :sswitch_3
     const-string v0, "NLMSG_OVERRUN"
 
     goto :goto_0
 
-    .line 99
     :sswitch_4
     const-string v0, "RTM_NEWLINK"
 
     goto :goto_0
 
-    .line 100
     :sswitch_5
     const-string v0, "RTM_DELLINK"
 
     goto :goto_0
 
-    .line 101
     :sswitch_6
     const-string v0, "RTM_GETLINK"
 
     goto :goto_0
 
-    .line 102
     :sswitch_7
     const-string v0, "RTM_SETLINK"
 
     goto :goto_0
 
-    .line 103
     :sswitch_8
     const-string v0, "RTM_NEWADDR"
 
     goto :goto_0
 
-    .line 104
     :sswitch_9
     const-string v0, "RTM_DELADDR"
 
     goto :goto_0
 
-    .line 105
     :sswitch_a
     const-string v0, "RTM_GETADDR"
 
     goto :goto_0
 
-    .line 106
     :sswitch_b
     const-string v0, "RTM_NEWROUTE"
 
     goto :goto_0
 
-    .line 107
     :sswitch_c
     const-string v0, "RTM_DELROUTE"
 
     goto :goto_0
 
-    .line 108
     :sswitch_d
     const-string v0, "RTM_GETROUTE"
 
     goto :goto_0
 
-    .line 109
     :sswitch_e
     const-string v0, "RTM_NEWNEIGH"
 
     goto :goto_0
 
-    .line 110
     :sswitch_f
     const-string v0, "RTM_DELNEIGH"
 
     goto :goto_0
 
-    .line 111
     :sswitch_10
     const-string v0, "RTM_GETNEIGH"
 
     goto :goto_0
 
-    .line 112
     :sswitch_11
     const-string v0, "RTM_NEWRULE"
 
     goto :goto_0
 
-    .line 113
     :sswitch_12
     const-string v0, "RTM_DELRULE"
 
     goto :goto_0
 
-    .line 114
     :sswitch_13
     const-string v0, "RTM_GETRULE"
 
     goto :goto_0
 
-    .line 115
     :sswitch_14
     const-string v0, "RTM_NEWNDUSEROPT"
 
     goto :goto_0
 
-    .line 94
     nop
 
     :sswitch_data_0

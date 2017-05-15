@@ -28,17 +28,14 @@
     .param p1, "c"    # Landroid/content/Context;
 
     .prologue
-    .line 335
     invoke-direct {p0, p1}, Lmiui/maml/NotifierManager$BaseNotifier;-><init>(Landroid/content/Context;)V
 
-    .line 322
     new-instance v0, Lmiui/maml/NotifierManager$BroadcastNotifier$1;
 
     invoke-direct {v0, p0}, Lmiui/maml/NotifierManager$BroadcastNotifier$1;-><init>(Lmiui/maml/NotifierManager$BroadcastNotifier;)V
 
     iput-object v0, p0, Lmiui/maml/NotifierManager$BroadcastNotifier;->mIntentReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 336
     return-void
 .end method
 
@@ -48,20 +45,16 @@
     .param p2, "action"    # Ljava/lang/String;
 
     .prologue
-    .line 339
     invoke-direct {p0, p1}, Lmiui/maml/NotifierManager$BaseNotifier;-><init>(Landroid/content/Context;)V
 
-    .line 322
     new-instance v0, Lmiui/maml/NotifierManager$BroadcastNotifier$1;
 
     invoke-direct {v0, p0}, Lmiui/maml/NotifierManager$BroadcastNotifier$1;-><init>(Lmiui/maml/NotifierManager$BroadcastNotifier;)V
 
     iput-object v0, p0, Lmiui/maml/NotifierManager$BroadcastNotifier;->mIntentReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 340
     iput-object p2, p0, Lmiui/maml/NotifierManager$BroadcastNotifier;->mAction:Ljava/lang/String;
 
-    .line 341
     return-void
 .end method
 
@@ -71,12 +64,10 @@
     .locals 2
 
     .prologue
-    .line 366
     invoke-virtual {p0}, Lmiui/maml/NotifierManager$BroadcastNotifier;->getIntentAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 367
     .local v0, "action":Ljava/lang/String;
     if-nez v0, :cond_0
 
@@ -97,7 +88,6 @@
     .locals 1
 
     .prologue
-    .line 371
     iget-object v0, p0, Lmiui/maml/NotifierManager$BroadcastNotifier;->mAction:Ljava/lang/String;
 
     return-object v0
@@ -107,37 +97,31 @@
     .locals 4
 
     .prologue
-    .line 345
     iget-object v1, p0, Lmiui/maml/NotifierManager$BroadcastNotifier;->mIntentFilter:Landroid/content/IntentFilter;
 
     if-nez v1, :cond_0
 
-    .line 346
     invoke-virtual {p0}, Lmiui/maml/NotifierManager$BroadcastNotifier;->createIntentFilter()Landroid/content/IntentFilter;
 
     move-result-object v1
 
     iput-object v1, p0, Lmiui/maml/NotifierManager$BroadcastNotifier;->mIntentFilter:Landroid/content/IntentFilter;
 
-    .line 347
     :cond_0
     iget-object v1, p0, Lmiui/maml/NotifierManager$BroadcastNotifier;->mIntentFilter:Landroid/content/IntentFilter;
 
     if-nez v1, :cond_2
 
-    .line 348
     const-string v1, "NotifierManager"
 
     const-string v2, "onRegister: mIntentFilter is null"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 355
     :cond_1
     :goto_0
     return-void
 
-    .line 351
     :cond_2
     iget-object v1, p0, Lmiui/maml/NotifierManager$BroadcastNotifier;->mContext:Landroid/content/Context;
 
@@ -149,11 +133,9 @@
 
     move-result-object v0
 
-    .line 352
     .local v0, "intent":Landroid/content/Intent;
     if-eqz v0, :cond_1
 
-    .line 353
     iget-object v1, p0, Lmiui/maml/NotifierManager$BroadcastNotifier;->mContext:Landroid/content/Context;
 
     const/4 v2, 0x0
@@ -167,7 +149,6 @@
     .locals 2
 
     .prologue
-    .line 360
     :try_start_0
     iget-object v0, p0, Lmiui/maml/NotifierManager$BroadcastNotifier;->mContext:Landroid/content/Context;
 
@@ -177,11 +158,9 @@
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 363
     :goto_0
     return-void
 
-    .line 361
     :catch_0
     move-exception v0
 

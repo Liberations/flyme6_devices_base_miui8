@@ -46,18 +46,14 @@
     .prologue
     const/4 v1, -0x2
 
-    .line 473
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/net/Uri$AbstractHierarchicalUri;-><init>(Landroid/net/Uri$1;)V
 
-    .line 495
     iput v1, p0, Landroid/net/Uri$StringUri;->cachedSsi:I
 
-    .line 505
     iput v1, p0, Landroid/net/Uri$StringUri;->cachedFsi:I
 
-    .line 536
     # getter for: Landroid/net/Uri;->NOT_CACHED:Ljava/lang/String;
     invoke-static {}, Landroid/net/Uri;->access$300()Ljava/lang/String;
 
@@ -65,23 +61,19 @@
 
     iput-object v0, p0, Landroid/net/Uri$StringUri;->scheme:Ljava/lang/String;
 
-    .line 474
     if-nez p1, :cond_0
 
-    .line 475
     new-instance v0, Ljava/lang/NullPointerException;
 
-    const-string/jumbo v1, "uriString"
+    const-string v1, "uriString"
 
     invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 478
     :cond_0
     iput-object p1, p0, Landroid/net/Uri$StringUri;->uriString:Ljava/lang/String;
 
-    .line 479
     return-void
 .end method
 
@@ -91,7 +83,6 @@
     .param p2, "x1"    # Landroid/net/Uri$1;
 
     .prologue
-    .line 465
     invoke-direct {p0, p1}, Landroid/net/Uri$StringUri;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -101,7 +92,6 @@
     .locals 3
 
     .prologue
-    .line 509
     iget v0, p0, Landroid/net/Uri$StringUri;->cachedFsi:I
 
     const/4 v1, -0x2
@@ -135,7 +125,6 @@
     .locals 2
 
     .prologue
-    .line 499
     iget v0, p0, Landroid/net/Uri$StringUri;->cachedSsi:I
 
     const/4 v1, -0x2
@@ -165,12 +154,10 @@
     .locals 3
 
     .prologue
-    .line 576
     iget-object v1, p0, Landroid/net/Uri$StringUri;->authority:Landroid/net/Uri$Part;
 
     if-nez v1, :cond_0
 
-    .line 577
     iget-object v1, p0, Landroid/net/Uri$StringUri;->uriString:Ljava/lang/String;
 
     invoke-direct {p0}, Landroid/net/Uri$StringUri;->findSchemeSeparator()I
@@ -181,7 +168,6 @@
 
     move-result-object v0
 
-    .line 579
     .local v0, "encodedAuthority":Ljava/lang/String;
     invoke-static {v0}, Landroid/net/Uri$Part;->fromEncoded(Ljava/lang/String;)Landroid/net/Uri$Part;
 
@@ -189,7 +175,6 @@
 
     iput-object v1, p0, Landroid/net/Uri$StringUri;->authority:Landroid/net/Uri$Part;
 
-    .line 582
     .end local v0    # "encodedAuthority":Ljava/lang/String;
     :goto_0
     return-object v1
@@ -204,7 +189,6 @@
     .locals 1
 
     .prologue
-    .line 678
     iget-object v0, p0, Landroid/net/Uri$StringUri;->fragment:Landroid/net/Uri$Part;
 
     if-nez v0, :cond_0
@@ -232,7 +216,6 @@
     .locals 1
 
     .prologue
-    .line 596
     iget-object v0, p0, Landroid/net/Uri$StringUri;->path:Landroid/net/Uri$PathPart;
 
     if-nez v0, :cond_0
@@ -260,7 +243,6 @@
     .locals 1
 
     .prologue
-    .line 641
     iget-object v0, p0, Landroid/net/Uri$StringUri;->query:Landroid/net/Uri$Part;
 
     if-nez v0, :cond_0
@@ -288,7 +270,6 @@
     .locals 1
 
     .prologue
-    .line 552
     iget-object v0, p0, Landroid/net/Uri$StringUri;->ssp:Landroid/net/Uri$Part;
 
     if-nez v0, :cond_0
@@ -320,12 +301,10 @@
     .prologue
     const/16 v3, 0x2f
 
-    .line 708
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v1
 
-    .line 711
     .local v1, "length":I
     add-int/lit8 v2, p1, 0x2
 
@@ -347,27 +326,22 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 718
     add-int/lit8 v0, p1, 0x3
 
-    .line 719
     .local v0, "end":I
     :goto_0
     if-ge v0, v1, :cond_0
 
-    .line 720
     invoke-virtual {p0, v0}, Ljava/lang/String;->charAt(I)C
 
     move-result v2
 
     sparse-switch v2, :sswitch_data_0
 
-    .line 726
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 729
     :cond_0
     :sswitch_0
     add-int/lit8 v2, p1, 0x3
@@ -376,7 +350,6 @@
 
     move-result-object v2
 
-    .line 731
     .end local v0    # "end":I
     :goto_1
     return-object v2
@@ -386,7 +359,6 @@
 
     goto :goto_1
 
-    .line 720
     nop
 
     :sswitch_data_0
@@ -401,12 +373,10 @@
     .locals 3
 
     .prologue
-    .line 687
     invoke-direct {p0}, Landroid/net/Uri$StringUri;->findFragmentSeparator()I
 
     move-result v0
 
-    .line 688
     .local v0, "fsi":I
     const/4 v1, -0x1
 
@@ -435,22 +405,18 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 614
     iget-object v2, p0, Landroid/net/Uri$StringUri;->uriString:Ljava/lang/String;
 
-    .line 615
     .local v2, "uriString":Ljava/lang/String;
     invoke-direct {p0}, Landroid/net/Uri$StringUri;->findSchemeSeparator()I
 
     move-result v1
 
-    .line 618
     .local v1, "ssi":I
     const/4 v4, -0x1
 
     if-le v1, v4, :cond_3
 
-    .line 620
     add-int/lit8 v4, v1, 0x1
 
     invoke-virtual {v2}, Ljava/lang/String;->length()I
@@ -461,24 +427,20 @@
 
     const/4 v0, 0x1
 
-    .line 621
     .local v0, "schemeOnly":Z
     :goto_0
     if-eqz v0, :cond_2
 
-    .line 635
     .end local v0    # "schemeOnly":Z
     :cond_0
     :goto_1
     return-object v3
 
-    .line 620
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 627
     .restart local v0    # "schemeOnly":Z
     :cond_2
     add-int/lit8 v4, v1, 0x1
@@ -491,7 +453,6 @@
 
     if-ne v4, v5, :cond_0
 
-    .line 635
     .end local v0    # "schemeOnly":Z
     :cond_3
     invoke-static {v2, v1}, Landroid/net/Uri$StringUri;->parsePath(Ljava/lang/String;I)Ljava/lang/String;
@@ -509,12 +470,10 @@
     .prologue
     const/16 v4, 0x2f
 
-    .line 745
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
 
-    .line 749
     .local v0, "length":I
     add-int/lit8 v3, p1, 0x2
 
@@ -536,63 +495,51 @@
 
     if-ne v3, v4, :cond_0
 
-    .line 753
     add-int/lit8 v2, p1, 0x3
 
-    .line 754
     .local v2, "pathStart":I
     :goto_0
     if-ge v2, v0, :cond_1
 
-    .line 755
     invoke-virtual {p0, v2}, Ljava/lang/String;->charAt(I)C
 
     move-result v3
 
     sparse-switch v3, :sswitch_data_0
 
-    .line 762
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 758
     :sswitch_0
     const-string v3, ""
 
-    .line 780
     :goto_1
     return-object v3
 
-    .line 766
     .end local v2    # "pathStart":I
     :cond_0
     add-int/lit8 v2, p1, 0x1
 
-    .line 770
     .restart local v2    # "pathStart":I
     :cond_1
     :sswitch_1
     move v1, v2
 
-    .line 771
     .local v1, "pathEnd":I
     :goto_2
     if-ge v1, v0, :cond_2
 
-    .line 772
     invoke-virtual {p0, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v3
 
     sparse-switch v3, :sswitch_data_1
 
-    .line 777
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
 
-    .line 780
     :cond_2
     :sswitch_2
     invoke-virtual {p0, v2, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
@@ -601,7 +548,6 @@
 
     goto :goto_1
 
-    .line 755
     nop
 
     :sswitch_data_0
@@ -611,7 +557,6 @@
         0x3f -> :sswitch_0
     .end sparse-switch
 
-    .line 772
     :sswitch_data_1
     .sparse-switch
         0x23 -> :sswitch_2
@@ -627,7 +572,6 @@
 
     const/4 v6, -0x1
 
-    .line 652
     iget-object v3, p0, Landroid/net/Uri$StringUri;->uriString:Ljava/lang/String;
 
     const/16 v4, 0x3f
@@ -640,26 +584,21 @@
 
     move-result v1
 
-    .line 653
     .local v1, "qsi":I
     if-ne v1, v6, :cond_1
 
-    .line 668
     :cond_0
     :goto_0
     return-object v2
 
-    .line 657
     :cond_1
     invoke-direct {p0}, Landroid/net/Uri$StringUri;->findFragmentSeparator()I
 
     move-result v0
 
-    .line 659
     .local v0, "fsi":I
     if-ne v0, v6, :cond_2
 
-    .line 660
     iget-object v2, p0, Landroid/net/Uri$StringUri;->uriString:Ljava/lang/String;
 
     add-int/lit8 v3, v1, 0x1
@@ -670,11 +609,9 @@
 
     goto :goto_0
 
-    .line 663
     :cond_2
     if-lt v0, v1, :cond_0
 
-    .line 668
     iget-object v2, p0, Landroid/net/Uri$StringUri;->uriString:Ljava/lang/String;
 
     add-int/lit8 v3, v1, 0x1
@@ -690,12 +627,10 @@
     .locals 3
 
     .prologue
-    .line 545
     invoke-direct {p0}, Landroid/net/Uri$StringUri;->findSchemeSeparator()I
 
     move-result v0
 
-    .line 546
     .local v0, "ssi":I
     const/4 v1, -0x1
 
@@ -722,18 +657,15 @@
     .locals 4
 
     .prologue
-    .line 564
     invoke-direct {p0}, Landroid/net/Uri$StringUri;->findSchemeSeparator()I
 
     move-result v1
 
-    .line 565
     .local v1, "ssi":I
     invoke-direct {p0}, Landroid/net/Uri$StringUri;->findFragmentSeparator()I
 
     move-result v0
 
-    .line 568
     .local v0, "fsi":I
     const/4 v2, -0x1
 
@@ -767,7 +699,6 @@
     .param p0, "parcel"    # Landroid/os/Parcel;
 
     .prologue
-    .line 482
     new-instance v0, Landroid/net/Uri$StringUri;
 
     invoke-virtual {p0}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -785,14 +716,12 @@
     .locals 2
 
     .prologue
-    .line 784
     invoke-virtual {p0}, Landroid/net/Uri$StringUri;->isHierarchical()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 785
     new-instance v0, Landroid/net/Uri$Builder;
 
     invoke-direct {v0}, Landroid/net/Uri$Builder;-><init>()V
@@ -837,7 +766,6 @@
 
     move-result-object v0
 
-    .line 792
     :goto_0
     return-object v0
 
@@ -877,7 +805,6 @@
     .locals 1
 
     .prologue
-    .line 486
     const/4 v0, 0x0
 
     return v0
@@ -887,7 +814,6 @@
     .locals 1
 
     .prologue
-    .line 590
     invoke-direct {p0}, Landroid/net/Uri$StringUri;->getAuthorityPart()Landroid/net/Uri$Part;
 
     move-result-object v0
@@ -903,7 +829,6 @@
     .locals 1
 
     .prologue
-    .line 586
     invoke-direct {p0}, Landroid/net/Uri$StringUri;->getAuthorityPart()Landroid/net/Uri$Part;
 
     move-result-object v0
@@ -919,7 +844,6 @@
     .locals 1
 
     .prologue
-    .line 683
     invoke-direct {p0}, Landroid/net/Uri$StringUri;->getFragmentPart()Landroid/net/Uri$Part;
 
     move-result-object v0
@@ -935,7 +859,6 @@
     .locals 1
 
     .prologue
-    .line 606
     invoke-direct {p0}, Landroid/net/Uri$StringUri;->getPathPart()Landroid/net/Uri$PathPart;
 
     move-result-object v0
@@ -951,7 +874,6 @@
     .locals 1
 
     .prologue
-    .line 646
     invoke-direct {p0}, Landroid/net/Uri$StringUri;->getQueryPart()Landroid/net/Uri$Part;
 
     move-result-object v0
@@ -967,7 +889,6 @@
     .locals 1
 
     .prologue
-    .line 556
     invoke-direct {p0}, Landroid/net/Uri$StringUri;->getSsp()Landroid/net/Uri$Part;
 
     move-result-object v0
@@ -983,7 +904,6 @@
     .locals 1
 
     .prologue
-    .line 692
     invoke-direct {p0}, Landroid/net/Uri$StringUri;->getFragmentPart()Landroid/net/Uri$Part;
 
     move-result-object v0
@@ -999,7 +919,6 @@
     .locals 1
 
     .prologue
-    .line 602
     invoke-direct {p0}, Landroid/net/Uri$StringUri;->getPathPart()Landroid/net/Uri$PathPart;
 
     move-result-object v0
@@ -1024,7 +943,6 @@
     .end annotation
 
     .prologue
-    .line 610
     invoke-direct {p0}, Landroid/net/Uri$StringUri;->getPathPart()Landroid/net/Uri$PathPart;
 
     move-result-object v0
@@ -1040,7 +958,6 @@
     .locals 1
 
     .prologue
-    .line 672
     invoke-direct {p0}, Landroid/net/Uri$StringUri;->getQueryPart()Landroid/net/Uri$Part;
 
     move-result-object v0
@@ -1056,7 +973,6 @@
     .locals 3
 
     .prologue
-    .line 540
     iget-object v1, p0, Landroid/net/Uri$StringUri;->scheme:Ljava/lang/String;
 
     # getter for: Landroid/net/Uri;->NOT_CACHED:Ljava/lang/String;
@@ -1068,7 +984,6 @@
 
     const/4 v0, 0x1
 
-    .line 541
     .local v0, "cached":Z
     :goto_0
     if-eqz v0, :cond_1
@@ -1078,14 +993,12 @@
     :goto_1
     return-object v1
 
-    .line 540
     .end local v0    # "cached":Z
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 541
     .restart local v0    # "cached":Z
     :cond_1
     invoke-direct {p0}, Landroid/net/Uri$StringUri;->parseScheme()Ljava/lang/String;
@@ -1101,7 +1014,6 @@
     .locals 1
 
     .prologue
-    .line 560
     invoke-direct {p0}, Landroid/net/Uri$StringUri;->getSsp()Landroid/net/Uri$Part;
 
     move-result-object v0
@@ -1121,23 +1033,19 @@
 
     const/4 v2, 0x0
 
-    .line 515
     invoke-direct {p0}, Landroid/net/Uri$StringUri;->findSchemeSeparator()I
 
     move-result v0
 
-    .line 517
     .local v0, "ssi":I
     const/4 v3, -0x1
 
     if-ne v0, v3, :cond_1
 
-    .line 528
     :cond_0
     :goto_0
     return v1
 
-    .line 522
     :cond_1
     iget-object v3, p0, Landroid/net/Uri$StringUri;->uriString:Ljava/lang/String;
 
@@ -1151,10 +1059,8 @@
 
     move v1, v2
 
-    .line 524
     goto :goto_0
 
-    .line 528
     :cond_2
     iget-object v3, p0, Landroid/net/Uri$StringUri;->uriString:Ljava/lang/String;
 
@@ -1177,7 +1083,6 @@
     .locals 2
 
     .prologue
-    .line 533
     invoke-direct {p0}, Landroid/net/Uri$StringUri;->findSchemeSeparator()I
 
     move-result v0
@@ -1201,7 +1106,6 @@
     .locals 1
 
     .prologue
-    .line 696
     iget-object v0, p0, Landroid/net/Uri$StringUri;->uriString:Ljava/lang/String;
 
     return-object v0
@@ -1213,16 +1117,13 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 490
     const/4 v0, 0x1
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 491
     iget-object v0, p0, Landroid/net/Uri$StringUri;->uriString:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 492
     return-void
 .end method

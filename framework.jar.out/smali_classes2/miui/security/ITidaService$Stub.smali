@@ -42,15 +42,12 @@
     .locals 1
 
     .prologue
-    .line 17
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 18
     const-string v0, "miui.security.ITidaService"
 
     invoke-virtual {p0, p0, v0}, Lmiui/security/ITidaService$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 19
     return-void
 .end method
 
@@ -59,17 +56,13 @@
     .param p0, "obj"    # Landroid/os/IBinder;
 
     .prologue
-    .line 26
     if-nez p0, :cond_0
 
-    .line 27
     const/4 v0, 0x0
 
-    .line 33
     :goto_0
     return-object v0
 
-    .line 29
     :cond_0
     const-string v1, "miui.security.ITidaService"
 
@@ -77,7 +70,6 @@
 
     move-result-object v0
 
-    .line 30
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -85,12 +77,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 31
     check-cast v0, Lmiui/security/ITidaService;
 
     goto :goto_0
 
-    .line 33
     :cond_1
     new-instance v0, Lmiui/security/ITidaService$Stub$Proxy;
 
@@ -106,7 +96,6 @@
     .locals 0
 
     .prologue
-    .line 37
     return-object p0
 .end method
 
@@ -127,10 +116,8 @@
 
     const/4 v4, 0x1
 
-    .line 41
     sparse-switch p1, :sswitch_data_0
 
-    .line 105
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v4
@@ -138,7 +125,6 @@
     :goto_0
     return v4
 
-    .line 45
     :sswitch_0
     const-string v3, "miui.security.ITidaService"
 
@@ -146,28 +132,23 @@
 
     goto :goto_0
 
-    .line 50
     :sswitch_1
     const-string v5, "miui.security.ITidaService"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 52
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 53
     .local v0, "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v0}, Lmiui/security/ITidaService$Stub;->contains(Ljava/lang/String;)Z
 
     move-result v2
 
-    .line 54
     .local v2, "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 55
     if-eqz v2, :cond_0
 
     move v3, v4
@@ -177,7 +158,6 @@
 
     goto :goto_0
 
-    .line 60
     .end local v0    # "_arg0":Ljava/lang/String;
     .end local v2    # "_result":Z
     :sswitch_2
@@ -185,45 +165,36 @@
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 62
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 64
     .restart local v0    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 65
     .local v1, "_arg1":Ljava/lang/String;
     invoke-virtual {p0, v0, v1}, Lmiui/security/ITidaService$Stub;->generateKeyPair(Ljava/lang/String;Ljava/lang/String;)Lmiui/security/KeyPairParcel;
 
     move-result-object v2
 
-    .line 66
     .local v2, "_result":Lmiui/security/KeyPairParcel;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 67
     if-eqz v2, :cond_1
 
-    .line 68
     invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 69
     invoke-virtual {v2, p3, v4}, Lmiui/security/KeyPairParcel;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto :goto_0
 
-    .line 72
     :cond_1
     invoke-virtual {p3, v3}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_0
 
-    .line 78
     .end local v0    # "_arg0":Ljava/lang/String;
     .end local v1    # "_arg1":Ljava/lang/String;
     .end local v2    # "_result":Lmiui/security/KeyPairParcel;
@@ -232,27 +203,22 @@
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 80
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 82
     .restart local v0    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 83
     .restart local v1    # "_arg1":Ljava/lang/String;
     invoke-virtual {p0, v0, v1}, Lmiui/security/ITidaService$Stub;->signInit(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 84
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
-    .line 89
     .end local v0    # "_arg0":Ljava/lang/String;
     .end local v1    # "_arg1":Ljava/lang/String;
     :sswitch_4
@@ -260,42 +226,34 @@
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 91
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 92
     .restart local v0    # "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v0}, Lmiui/security/ITidaService$Stub;->signUpdate(Ljava/lang/String;)V
 
-    .line 93
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
-    .line 98
     .end local v0    # "_arg0":Ljava/lang/String;
     :sswitch_5
     const-string v3, "miui.security.ITidaService"
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 99
     invoke-virtual {p0}, Lmiui/security/ITidaService$Stub;->sign()[B
 
     move-result-object v2
 
-    .line 100
     .local v2, "_result":[B
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 101
     invoke-virtual {p3, v2}, Landroid/os/Parcel;->writeByteArray([B)V
 
     goto :goto_0
 
-    .line 41
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1

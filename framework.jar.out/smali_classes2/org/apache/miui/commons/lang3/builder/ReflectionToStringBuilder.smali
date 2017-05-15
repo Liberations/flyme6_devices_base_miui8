@@ -28,21 +28,16 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 386
     invoke-direct {p0, p1}, Lorg/apache/miui/commons/lang3/builder/ToStringBuilder;-><init>(Ljava/lang/Object;)V
 
-    .line 352
     iput-boolean v0, p0, Lorg/apache/miui/commons/lang3/builder/ReflectionToStringBuilder;->appendStatics:Z
 
-    .line 357
     iput-boolean v0, p0, Lorg/apache/miui/commons/lang3/builder/ReflectionToStringBuilder;->appendTransients:Z
 
-    .line 369
     const/4 v0, 0x0
 
     iput-object v0, p0, Lorg/apache/miui/commons/lang3/builder/ReflectionToStringBuilder;->upToClass:Ljava/lang/Class;
 
-    .line 387
     return-void
 .end method
 
@@ -54,21 +49,16 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 406
     invoke-direct {p0, p1, p2}, Lorg/apache/miui/commons/lang3/builder/ToStringBuilder;-><init>(Ljava/lang/Object;Lorg/apache/miui/commons/lang3/builder/ToStringStyle;)V
 
-    .line 352
     iput-boolean v0, p0, Lorg/apache/miui/commons/lang3/builder/ReflectionToStringBuilder;->appendStatics:Z
 
-    .line 357
     iput-boolean v0, p0, Lorg/apache/miui/commons/lang3/builder/ReflectionToStringBuilder;->appendTransients:Z
 
-    .line 369
     const/4 v0, 0x0
 
     iput-object v0, p0, Lorg/apache/miui/commons/lang3/builder/ReflectionToStringBuilder;->upToClass:Ljava/lang/Class;
 
-    .line 407
     return-void
 .end method
 
@@ -81,21 +71,16 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 432
     invoke-direct {p0, p1, p2, p3}, Lorg/apache/miui/commons/lang3/builder/ToStringBuilder;-><init>(Ljava/lang/Object;Lorg/apache/miui/commons/lang3/builder/ToStringStyle;Ljava/lang/StringBuffer;)V
 
-    .line 352
     iput-boolean v0, p0, Lorg/apache/miui/commons/lang3/builder/ReflectionToStringBuilder;->appendStatics:Z
 
-    .line 357
     iput-boolean v0, p0, Lorg/apache/miui/commons/lang3/builder/ReflectionToStringBuilder;->appendTransients:Z
 
-    .line 369
     const/4 v0, 0x0
 
     iput-object v0, p0, Lorg/apache/miui/commons/lang3/builder/ReflectionToStringBuilder;->upToClass:Ljava/lang/Class;
 
-    .line 433
     return-void
 .end method
 
@@ -122,30 +107,22 @@
     .local p4, "reflectUpToClass":Ljava/lang/Class;, "Ljava/lang/Class<-TT;>;"
     const/4 v0, 0x0
 
-    .line 457
     invoke-direct {p0, p1, p2, p3}, Lorg/apache/miui/commons/lang3/builder/ToStringBuilder;-><init>(Ljava/lang/Object;Lorg/apache/miui/commons/lang3/builder/ToStringStyle;Ljava/lang/StringBuffer;)V
 
-    .line 352
     iput-boolean v0, p0, Lorg/apache/miui/commons/lang3/builder/ReflectionToStringBuilder;->appendStatics:Z
 
-    .line 357
     iput-boolean v0, p0, Lorg/apache/miui/commons/lang3/builder/ReflectionToStringBuilder;->appendTransients:Z
 
-    .line 369
     const/4 v0, 0x0
 
     iput-object v0, p0, Lorg/apache/miui/commons/lang3/builder/ReflectionToStringBuilder;->upToClass:Ljava/lang/Class;
 
-    .line 458
     invoke-virtual {p0, p4}, Lorg/apache/miui/commons/lang3/builder/ReflectionToStringBuilder;->setUpToClass(Ljava/lang/Class;)V
 
-    .line 459
     invoke-virtual {p0, p5}, Lorg/apache/miui/commons/lang3/builder/ReflectionToStringBuilder;->setAppendTransients(Z)V
 
-    .line 460
     invoke-virtual {p0, p6}, Lorg/apache/miui/commons/lang3/builder/ReflectionToStringBuilder;->setAppendStatics(Z)V
 
-    .line 461
     return-void
 .end method
 
@@ -163,14 +140,11 @@
     .end annotation
 
     .prologue
-    .line 310
     .local p0, "collection":Ljava/util/Collection;, "Ljava/util/Collection<Ljava/lang/String;>;"
     if-nez p0, :cond_0
 
-    .line 311
     sget-object v0, Lorg/apache/miui/commons/lang3/ArrayUtils;->EMPTY_STRING_ARRAY:[Ljava/lang/String;
 
-    .line 313
     :goto_0
     return-object v0
 
@@ -191,14 +165,12 @@
     .param p0, "array"    # [Ljava/lang/Object;
 
     .prologue
-    .line 326
     new-instance v4, Ljava/util/ArrayList;
 
     array-length v5, p0
 
     invoke-direct {v4, v5}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 327
     .local v4, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     move-object v0, p0
 
@@ -214,24 +186,20 @@
 
     aget-object v1, v0, v2
 
-    .line 328
     .local v1, "e":Ljava/lang/Object;
     if-eqz v1, :cond_0
 
-    .line 329
     invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v5
 
     invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 327
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 332
     .end local v1    # "e":Ljava/lang/Object;
     :cond_1
     sget-object v5, Lorg/apache/miui/commons/lang3/ArrayUtils;->EMPTY_STRING_ARRAY:[Ljava/lang/String;
@@ -254,7 +222,6 @@
 
     const/4 v0, 0x0
 
-    .line 114
     invoke-static {p0, v1, v0, v0, v1}, Lorg/apache/miui/commons/lang3/builder/ReflectionToStringBuilder;->toString(Ljava/lang/Object;Lorg/apache/miui/commons/lang3/builder/ToStringStyle;ZZLjava/lang/Class;)Ljava/lang/String;
 
     move-result-object v0
@@ -270,7 +237,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 146
     const/4 v0, 0x0
 
     invoke-static {p0, p1, v1, v1, v0}, Lorg/apache/miui/commons/lang3/builder/ReflectionToStringBuilder;->toString(Ljava/lang/Object;Lorg/apache/miui/commons/lang3/builder/ToStringStyle;ZZLjava/lang/Class;)Ljava/lang/String;
@@ -287,7 +253,6 @@
     .param p2, "outputTransients"    # Z
 
     .prologue
-    .line 184
     const/4 v0, 0x0
 
     const/4 v1, 0x0
@@ -307,7 +272,6 @@
     .param p3, "outputStatics"    # Z
 
     .prologue
-    .line 230
     const/4 v0, 0x0
 
     invoke-static {p0, p1, p2, p3, v0}, Lorg/apache/miui/commons/lang3/builder/ReflectionToStringBuilder;->toString(Ljava/lang/Object;Lorg/apache/miui/commons/lang3/builder/ToStringStyle;ZZLjava/lang/Class;)Ljava/lang/String;
@@ -336,7 +300,6 @@
     .end annotation
 
     .prologue
-    .line 283
     .local p0, "object":Ljava/lang/Object;, "TT;"
     .local p4, "reflectUpToClass":Ljava/lang/Class;, "Ljava/lang/Class<-TT;>;"
     new-instance v0, Lorg/apache/miui/commons/lang3/builder/ReflectionToStringBuilder;
@@ -378,7 +341,6 @@
     .end annotation
 
     .prologue
-    .line 297
     .local p1, "excludeFieldNames":Ljava/util/Collection;, "Ljava/util/Collection<Ljava/lang/String;>;"
     invoke-static {p1}, Lorg/apache/miui/commons/lang3/builder/ReflectionToStringBuilder;->toNoNullStringArray(Ljava/util/Collection;)[Ljava/lang/String;
 
@@ -397,7 +359,6 @@
     .param p1, "excludeFieldNames"    # [Ljava/lang/String;
 
     .prologue
-    .line 346
     new-instance v0, Lorg/apache/miui/commons/lang3/builder/ReflectionToStringBuilder;
 
     invoke-direct {v0, p0}, Lorg/apache/miui/commons/lang3/builder/ReflectionToStringBuilder;-><init>(Ljava/lang/Object;)V
@@ -422,7 +383,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 476
     invoke-virtual {p1}, Ljava/lang/reflect/Field;->getName()Ljava/lang/String;
 
     move-result-object v1
@@ -437,12 +397,10 @@
 
     if-eq v1, v2, :cond_1
 
-    .line 493
     :cond_0
     :goto_0
     return v0
 
-    .line 480
     :cond_1
     invoke-virtual {p1}, Ljava/lang/reflect/Field;->getModifiers()I
 
@@ -460,7 +418,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 484
     :cond_2
     invoke-virtual {p1}, Ljava/lang/reflect/Field;->getModifiers()I
 
@@ -478,7 +435,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 488
     :cond_3
     iget-object v1, p0, Lorg/apache/miui/commons/lang3/builder/ReflectionToStringBuilder;->excludeFieldNames:[Ljava/lang/String;
 
@@ -496,7 +452,6 @@
 
     if-gez v1, :cond_0
 
-    .line 493
     :cond_4
     const/4 v0, 0x1
 
@@ -514,7 +469,6 @@
     .end annotation
 
     .prologue
-    .line 510
     .local p1, "clazz":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {p1}, Ljava/lang/Class;->isArray()Z
 
@@ -522,30 +476,25 @@
 
     if-eqz v8, :cond_1
 
-    .line 511
     invoke-virtual {p0}, Lorg/apache/miui/commons/lang3/builder/ReflectionToStringBuilder;->getObject()Ljava/lang/Object;
 
     move-result-object v8
 
     invoke-virtual {p0, v8}, Lorg/apache/miui/commons/lang3/builder/ReflectionToStringBuilder;->reflectionAppendArray(Ljava/lang/Object;)Lorg/apache/miui/commons/lang3/builder/ReflectionToStringBuilder;
 
-    .line 533
     :cond_0
     return-void
 
-    .line 514
     :cond_1
     invoke-virtual {p1}, Ljava/lang/Class;->getDeclaredFields()[Ljava/lang/reflect/Field;
 
     move-result-object v5
 
-    .line 515
     .local v5, "fields":[Ljava/lang/reflect/Field;
     const/4 v8, 0x1
 
     invoke-static {v5, v8}, Ljava/lang/reflect/AccessibleObject;->setAccessible([Ljava/lang/reflect/AccessibleObject;Z)V
 
-    .line 516
     move-object v0, v5
 
     .local v0, "arr$":[Ljava/lang/reflect/Field;
@@ -560,13 +509,11 @@
 
     aget-object v2, v0, v6
 
-    .line 517
     .local v2, "field":Ljava/lang/reflect/Field;
     invoke-virtual {v2}, Ljava/lang/reflect/Field;->getName()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 518
     .local v3, "fieldName":Ljava/lang/String;
     invoke-virtual {p0, v2}, Lorg/apache/miui/commons/lang3/builder/ReflectionToStringBuilder;->accept(Ljava/lang/reflect/Field;)Z
 
@@ -574,30 +521,25 @@
 
     if-eqz v8, :cond_2
 
-    .line 522
     :try_start_0
     invoke-virtual {p0, v2}, Lorg/apache/miui/commons/lang3/builder/ReflectionToStringBuilder;->getValue(Ljava/lang/reflect/Field;)Ljava/lang/Object;
 
     move-result-object v4
 
-    .line 523
     .local v4, "fieldValue":Ljava/lang/Object;
     invoke-virtual {p0, v3, v4}, Lorg/apache/miui/commons/lang3/builder/ReflectionToStringBuilder;->append(Ljava/lang/String;Ljava/lang/Object;)Lorg/apache/miui/commons/lang3/builder/ToStringBuilder;
     :try_end_0
     .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 516
     .end local v4    # "fieldValue":Ljava/lang/Object;
     :cond_2
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_0
 
-    .line 524
     :catch_0
     move-exception v1
 
-    .line 529
     .local v1, "ex":Ljava/lang/IllegalAccessException;
     new-instance v8, Ljava/lang/InternalError;
 
@@ -632,7 +574,6 @@
     .locals 1
 
     .prologue
-    .line 539
     iget-object v0, p0, Lorg/apache/miui/commons/lang3/builder/ReflectionToStringBuilder;->excludeFieldNames:[Ljava/lang/String;
 
     invoke-virtual {v0}, [Ljava/lang/String;->clone()Ljava/lang/Object;
@@ -655,7 +596,6 @@
     .end annotation
 
     .prologue
-    .line 550
     iget-object v0, p0, Lorg/apache/miui/commons/lang3/builder/ReflectionToStringBuilder;->upToClass:Ljava/lang/Class;
 
     return-object v0
@@ -672,7 +612,6 @@
     .end annotation
 
     .prologue
-    .line 570
     invoke-virtual {p0}, Lorg/apache/miui/commons/lang3/builder/ReflectionToStringBuilder;->getObject()Ljava/lang/Object;
 
     move-result-object v0
@@ -688,7 +627,6 @@
     .locals 1
 
     .prologue
-    .line 582
     iget-boolean v0, p0, Lorg/apache/miui/commons/lang3/builder/ReflectionToStringBuilder;->appendStatics:Z
 
     return v0
@@ -698,7 +636,6 @@
     .locals 1
 
     .prologue
-    .line 593
     iget-boolean v0, p0, Lorg/apache/miui/commons/lang3/builder/ReflectionToStringBuilder;->appendTransients:Z
 
     return v0
@@ -709,7 +646,6 @@
     .param p1, "array"    # Ljava/lang/Object;
 
     .prologue
-    .line 606
     invoke-virtual {p0}, Lorg/apache/miui/commons/lang3/builder/ReflectionToStringBuilder;->getStyle()Lorg/apache/miui/commons/lang3/builder/ToStringStyle;
 
     move-result-object v0
@@ -722,7 +658,6 @@
 
     invoke-virtual {v0, v1, v2, p1}, Lorg/apache/miui/commons/lang3/builder/ToStringStyle;->reflectionAppendArrayDetail(Ljava/lang/StringBuffer;Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 607
     return-object p0
 .end method
 
@@ -731,10 +666,8 @@
     .param p1, "appendStatics"    # Z
 
     .prologue
-    .line 620
     iput-boolean p1, p0, Lorg/apache/miui/commons/lang3/builder/ReflectionToStringBuilder;->appendStatics:Z
 
-    .line 621
     return-void
 .end method
 
@@ -743,10 +676,8 @@
     .param p1, "appendTransients"    # Z
 
     .prologue
-    .line 632
     iput-boolean p1, p0, Lorg/apache/miui/commons/lang3/builder/ReflectionToStringBuilder;->appendTransients:Z
 
-    .line 633
     return-void
 .end method
 
@@ -755,19 +686,15 @@
     .param p1, "excludeFieldNamesParam"    # [Ljava/lang/String;
 
     .prologue
-    .line 643
     if-nez p1, :cond_0
 
-    .line 644
     const/4 v0, 0x0
 
     iput-object v0, p0, Lorg/apache/miui/commons/lang3/builder/ReflectionToStringBuilder;->excludeFieldNames:[Ljava/lang/String;
 
-    .line 650
     :goto_0
     return-object p0
 
-    .line 647
     :cond_0
     invoke-static {p1}, Lorg/apache/miui/commons/lang3/builder/ReflectionToStringBuilder;->toNoNullStringArray([Ljava/lang/Object;)[Ljava/lang/String;
 
@@ -775,7 +702,6 @@
 
     iput-object v0, p0, Lorg/apache/miui/commons/lang3/builder/ReflectionToStringBuilder;->excludeFieldNames:[Ljava/lang/String;
 
-    .line 648
     iget-object v0, p0, Lorg/apache/miui/commons/lang3/builder/ReflectionToStringBuilder;->excludeFieldNames:[Ljava/lang/String;
 
     invoke-static {v0}, Ljava/util/Arrays;->sort([Ljava/lang/Object;)V
@@ -794,16 +720,13 @@
     .end annotation
 
     .prologue
-    .line 662
     .local p1, "clazz":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     if-eqz p1, :cond_0
 
-    .line 663
     invoke-virtual {p0}, Lorg/apache/miui/commons/lang3/builder/ReflectionToStringBuilder;->getObject()Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 664
     .local v0, "object":Ljava/lang/Object;
     if-eqz v0, :cond_0
 
@@ -813,7 +736,6 @@
 
     if-nez v1, :cond_0
 
-    .line 665
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "Specified class is not a superclass of the object"
@@ -822,12 +744,10 @@
 
     throw v1
 
-    .line 668
     .end local v0    # "object":Ljava/lang/Object;
     :cond_0
     iput-object p1, p0, Lorg/apache/miui/commons/lang3/builder/ReflectionToStringBuilder;->upToClass:Ljava/lang/Class;
 
-    .line 669
     return-void
 .end method
 
@@ -835,14 +755,12 @@
     .locals 2
 
     .prologue
-    .line 680
     invoke-virtual {p0}, Lorg/apache/miui/commons/lang3/builder/ReflectionToStringBuilder;->getObject()Ljava/lang/Object;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 681
     invoke-virtual {p0}, Lorg/apache/miui/commons/lang3/builder/ReflectionToStringBuilder;->getStyle()Lorg/apache/miui/commons/lang3/builder/ToStringStyle;
 
     move-result-object v1
@@ -851,11 +769,9 @@
 
     move-result-object v1
 
-    .line 689
     :goto_0
     return-object v1
 
-    .line 683
     :cond_0
     invoke-virtual {p0}, Lorg/apache/miui/commons/lang3/builder/ReflectionToStringBuilder;->getObject()Ljava/lang/Object;
 
@@ -865,11 +781,9 @@
 
     move-result-object v0
 
-    .line 684
     .local v0, "clazz":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {p0, v0}, Lorg/apache/miui/commons/lang3/builder/ReflectionToStringBuilder;->appendFieldsIn(Ljava/lang/Class;)V
 
-    .line 685
     :goto_1
     invoke-virtual {v0}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
 
@@ -883,17 +797,14 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 686
     invoke-virtual {v0}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 687
     invoke-virtual {p0, v0}, Lorg/apache/miui/commons/lang3/builder/ReflectionToStringBuilder;->appendFieldsIn(Ljava/lang/Class;)V
 
     goto :goto_1
 
-    .line 689
     :cond_1
     invoke-super {p0}, Lorg/apache/miui/commons/lang3/builder/ToStringBuilder;->toString()Ljava/lang/String;
 

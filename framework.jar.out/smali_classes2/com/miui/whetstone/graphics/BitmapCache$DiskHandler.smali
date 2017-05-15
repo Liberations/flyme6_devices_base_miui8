@@ -24,13 +24,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 200
     iput-object p1, p0, Lcom/miui/whetstone/graphics/BitmapCache$DiskHandler;->this$0:Lcom/miui/whetstone/graphics/BitmapCache;
 
-    .line 201
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 202
     return-void
 .end method
 
@@ -41,17 +38,14 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 206
     const/4 v1, -0x2
 
     invoke-static {v1}, Landroid/os/Process;->setThreadPriority(I)V
 
-    .line 208
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 233
     :pswitch_0
     const-string v1, "WhetstoneBitmapCache"
 
@@ -75,16 +69,13 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 235
     :goto_0
     const/16 v1, 0xa
 
     invoke-static {v1}, Landroid/os/Process;->setThreadPriority(I)V
 
-    .line 236
     return-void
 
-    .line 210
     :pswitch_1
     iget-object v2, p0, Lcom/miui/whetstone/graphics/BitmapCache$DiskHandler;->this$0:Lcom/miui/whetstone/graphics/BitmapCache;
 
@@ -96,71 +87,60 @@
 
     goto :goto_0
 
-    .line 213
     :pswitch_2
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/miui/whetstone/graphics/BitmapCache$HandleCallback;
 
-    .line 214
     .local v0, "cb":Lcom/miui/whetstone/graphics/BitmapCache$HandleCallback;
     invoke-interface {v0}, Lcom/miui/whetstone/graphics/BitmapCache$HandleCallback;->callback()V
 
     goto :goto_0
 
-    .line 217
     .end local v0    # "cb":Lcom/miui/whetstone/graphics/BitmapCache$HandleCallback;
     :pswitch_3
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/miui/whetstone/graphics/BitmapCache$HandleCallback;
 
-    .line 218
     .restart local v0    # "cb":Lcom/miui/whetstone/graphics/BitmapCache$HandleCallback;
     invoke-interface {v0}, Lcom/miui/whetstone/graphics/BitmapCache$HandleCallback;->callback()V
 
     goto :goto_0
 
-    .line 221
     .end local v0    # "cb":Lcom/miui/whetstone/graphics/BitmapCache$HandleCallback;
     :pswitch_4
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/miui/whetstone/graphics/BitmapCache$HandleCallback;
 
-    .line 222
     .restart local v0    # "cb":Lcom/miui/whetstone/graphics/BitmapCache$HandleCallback;
     invoke-interface {v0}, Lcom/miui/whetstone/graphics/BitmapCache$HandleCallback;->callback()V
 
     goto :goto_0
 
-    .line 225
     .end local v0    # "cb":Lcom/miui/whetstone/graphics/BitmapCache$HandleCallback;
     :pswitch_5
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/miui/whetstone/graphics/BitmapCache$HandleCallback;
 
-    .line 226
     .restart local v0    # "cb":Lcom/miui/whetstone/graphics/BitmapCache$HandleCallback;
     invoke-interface {v0}, Lcom/miui/whetstone/graphics/BitmapCache$HandleCallback;->callback()V
 
     goto :goto_0
 
-    .line 229
     .end local v0    # "cb":Lcom/miui/whetstone/graphics/BitmapCache$HandleCallback;
     :pswitch_6
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/miui/whetstone/graphics/BitmapCache$HandleCallback;
 
-    .line 230
     .restart local v0    # "cb":Lcom/miui/whetstone/graphics/BitmapCache$HandleCallback;
     invoke-interface {v0}, Lcom/miui/whetstone/graphics/BitmapCache$HandleCallback;->callback()V
 
     goto :goto_0
 
-    .line 208
     nop
 
     :pswitch_data_0

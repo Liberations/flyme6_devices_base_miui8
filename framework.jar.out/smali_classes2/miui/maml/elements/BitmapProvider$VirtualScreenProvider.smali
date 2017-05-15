@@ -28,10 +28,8 @@
     .param p1, "root"    # Lmiui/maml/ScreenElementRoot;
 
     .prologue
-    .line 247
     invoke-direct {p0, p1}, Lmiui/maml/elements/BitmapProvider;-><init>(Lmiui/maml/ScreenElementRoot;)V
 
-    .line 248
     return-void
 .end method
 
@@ -45,7 +43,6 @@
     .param p4, "h"    # I
 
     .prologue
-    .line 265
     iget-object v1, p0, Lmiui/maml/elements/BitmapProvider$VirtualScreenProvider;->mVersionedBitmap:Lmiui/maml/elements/BitmapProvider$VersionedBitmap;
 
     iget-object v0, p0, Lmiui/maml/elements/BitmapProvider$VirtualScreenProvider;->mVirtualScreen:Lmiui/maml/elements/VirtualScreen;
@@ -61,12 +58,10 @@
     :goto_0
     invoke-virtual {v1, v0}, Lmiui/maml/elements/BitmapProvider$VersionedBitmap;->setBitmap(Landroid/graphics/Bitmap;)Z
 
-    .line 266
     iget-object v0, p0, Lmiui/maml/elements/BitmapProvider$VirtualScreenProvider;->mVersionedBitmap:Lmiui/maml/elements/BitmapProvider$VersionedBitmap;
 
     return-object v0
 
-    .line 265
     :cond_0
     const/4 v0, 0x0
 
@@ -78,29 +73,24 @@
     .param p1, "src"    # Ljava/lang/String;
 
     .prologue
-    .line 256
     invoke-super {p0, p1}, Lmiui/maml/elements/BitmapProvider;->init(Ljava/lang/String;)V
 
-    .line 257
     iget-object v1, p0, Lmiui/maml/elements/BitmapProvider$VirtualScreenProvider;->mRoot:Lmiui/maml/ScreenElementRoot;
 
     invoke-virtual {v1, p1}, Lmiui/maml/ScreenElementRoot;->findElement(Ljava/lang/String;)Lmiui/maml/elements/ScreenElement;
 
     move-result-object v0
 
-    .line 258
     .local v0, "se":Lmiui/maml/elements/ScreenElement;
     instance-of v1, v0, Lmiui/maml/elements/VirtualScreen;
 
     if-eqz v1, :cond_0
 
-    .line 259
     check-cast v0, Lmiui/maml/elements/VirtualScreen;
 
     .end local v0    # "se":Lmiui/maml/elements/ScreenElement;
     iput-object v0, p0, Lmiui/maml/elements/BitmapProvider$VirtualScreenProvider;->mVirtualScreen:Lmiui/maml/elements/VirtualScreen;
 
-    .line 261
     :cond_0
     return-void
 .end method

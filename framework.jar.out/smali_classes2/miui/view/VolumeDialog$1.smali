@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 126
     iput-object p1, p0, Lmiui/view/VolumeDialog$1;->this$0:Lmiui/view/VolumeDialog;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 128
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 129
     .local v0, "action":Ljava/lang/String;
     const-string v1, "android.media.RINGER_MODE_CHANGED"
 
@@ -54,7 +51,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 130
     const-string v1, "android.media.EXTRA_RINGER_MODE"
 
     const/4 v2, -0x1
@@ -67,7 +63,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 131
     iget-object v1, p0, Lmiui/view/VolumeDialog$1;->this$0:Lmiui/view/VolumeDialog;
 
     # getter for: Lmiui/view/VolumeDialog;->mHandler:Lmiui/view/VolumeDialog$H;
@@ -92,7 +87,6 @@
 
     invoke-virtual {v1, v2, v4, v5}, Lmiui/view/VolumeDialog$H;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 134
     :cond_0
     return-void
 .end method

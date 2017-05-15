@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 150
     iput-object p1, p0, Lmiui/telephony/SubscriptionManagerEx$3;->this$0:Lmiui/telephony/SubscriptionManagerEx;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 3
 
     .prologue
-    .line 153
     const-string v0, "SubMgr"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -69,7 +67,6 @@
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 154
     iget-object v0, p0, Lmiui/telephony/SubscriptionManagerEx$3;->this$0:Lmiui/telephony/SubscriptionManagerEx;
 
     const/4 v1, 0x0
@@ -77,6 +74,5 @@
     # invokes: Lmiui/telephony/SubscriptionManagerEx;->initSubscriptionListener(Z)V
     invoke-static {v0, v1}, Lmiui/telephony/SubscriptionManagerEx;->access$100(Lmiui/telephony/SubscriptionManagerEx;Z)V
 
-    .line 155
     return-void
 .end method

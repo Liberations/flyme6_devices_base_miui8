@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 466
     iput-object p1, p0, Landroid/media/Ringtone$MyOnCompletionListener;->this$0:Landroid/media/Ringtone;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "mp"    # Landroid/media/MediaPlayer;
 
     .prologue
-    .line 469
     # getter for: Landroid/media/Ringtone;->sActiveRingtones:Ljava/util/ArrayList;
     invoke-static {}, Landroid/media/Ringtone;->access$000()Ljava/util/ArrayList;
 
@@ -49,7 +47,6 @@
 
     monitor-enter v1
 
-    .line 470
     :try_start_0
     # getter for: Landroid/media/Ringtone;->sActiveRingtones:Ljava/util/ArrayList;
     invoke-static {}, Landroid/media/Ringtone;->access$000()Ljava/util/ArrayList;
@@ -60,13 +57,10 @@
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 471
     monitor-exit v1
 
-    .line 472
     return-void
 
-    .line 471
     :catchall_0
     move-exception v0
 

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 64
     iput-object p1, p0, Lmiui/maml/elements/AttrDataBinders$AttrDataBinder$Binder;->this$0:Lmiui/maml/elements/AttrDataBinders$AttrDataBinder;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lmiui/maml/elements/AttrDataBinders$1;
 
     .prologue
-    .line 64
     invoke-direct {p0, p1}, Lmiui/maml/elements/AttrDataBinders$AttrDataBinder$Binder;-><init>(Lmiui/maml/elements/AttrDataBinders$AttrDataBinder;)V
 
     return-void

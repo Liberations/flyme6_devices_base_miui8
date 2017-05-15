@@ -715,7 +715,6 @@
     .locals 3
 
     .prologue
-    .line 794
     const/16 v0, 0x20
 
     new-array v0, v0, [Ljava/lang/String;
@@ -914,14 +913,12 @@
 
     sput-object v0, Landroid/view/KeyEvent;->META_SYMBOLIC_NAMES:[Ljava/lang/String;
 
-    .line 1197
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Landroid/view/KeyEvent;->gRecyclerLock:Ljava/lang/Object;
 
-    .line 2898
     new-instance v0, Landroid/view/KeyEvent$1;
 
     invoke-direct {v0}, Landroid/view/KeyEvent$1;-><init>()V
@@ -935,10 +932,8 @@
     .locals 0
 
     .prologue
-    .line 1275
     invoke-direct {p0}, Landroid/view/InputEvent;-><init>()V
 
-    .line 1276
     return-void
 .end method
 
@@ -948,26 +943,20 @@
     .param p2, "code"    # I
 
     .prologue
-    .line 1285
     invoke-direct {p0}, Landroid/view/InputEvent;-><init>()V
 
-    .line 1286
     iput p1, p0, Landroid/view/KeyEvent;->mAction:I
 
-    .line 1287
     iput p2, p0, Landroid/view/KeyEvent;->mKeyCode:I
 
-    .line 1288
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/view/KeyEvent;->mRepeatCount:I
 
-    .line 1289
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/view/KeyEvent;->mDeviceId:I
 
-    .line 1290
     return-void
 .end method
 
@@ -980,30 +969,22 @@
     .param p7, "repeat"    # I
 
     .prologue
-    .line 1306
     invoke-direct {p0}, Landroid/view/InputEvent;-><init>()V
 
-    .line 1307
     iput-wide p1, p0, Landroid/view/KeyEvent;->mDownTime:J
 
-    .line 1308
     iput-wide p3, p0, Landroid/view/KeyEvent;->mEventTime:J
 
-    .line 1309
     iput p5, p0, Landroid/view/KeyEvent;->mAction:I
 
-    .line 1310
     iput p6, p0, Landroid/view/KeyEvent;->mKeyCode:I
 
-    .line 1311
     iput p7, p0, Landroid/view/KeyEvent;->mRepeatCount:I
 
-    .line 1312
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/view/KeyEvent;->mDeviceId:I
 
-    .line 1313
     return-void
 .end method
 
@@ -1017,33 +998,24 @@
     .param p8, "metaState"    # I
 
     .prologue
-    .line 1330
     invoke-direct {p0}, Landroid/view/InputEvent;-><init>()V
 
-    .line 1331
     iput-wide p1, p0, Landroid/view/KeyEvent;->mDownTime:J
 
-    .line 1332
     iput-wide p3, p0, Landroid/view/KeyEvent;->mEventTime:J
 
-    .line 1333
     iput p5, p0, Landroid/view/KeyEvent;->mAction:I
 
-    .line 1334
     iput p6, p0, Landroid/view/KeyEvent;->mKeyCode:I
 
-    .line 1335
     iput p7, p0, Landroid/view/KeyEvent;->mRepeatCount:I
 
-    .line 1336
     iput p8, p0, Landroid/view/KeyEvent;->mMetaState:I
 
-    .line 1337
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/view/KeyEvent;->mDeviceId:I
 
-    .line 1338
     return-void
 .end method
 
@@ -1059,34 +1031,24 @@
     .param p10, "scancode"    # I
 
     .prologue
-    .line 1358
     invoke-direct {p0}, Landroid/view/InputEvent;-><init>()V
 
-    .line 1359
     iput-wide p1, p0, Landroid/view/KeyEvent;->mDownTime:J
 
-    .line 1360
     iput-wide p3, p0, Landroid/view/KeyEvent;->mEventTime:J
 
-    .line 1361
     iput p5, p0, Landroid/view/KeyEvent;->mAction:I
 
-    .line 1362
     iput p6, p0, Landroid/view/KeyEvent;->mKeyCode:I
 
-    .line 1363
     iput p7, p0, Landroid/view/KeyEvent;->mRepeatCount:I
 
-    .line 1364
     iput p8, p0, Landroid/view/KeyEvent;->mMetaState:I
 
-    .line 1365
     iput p9, p0, Landroid/view/KeyEvent;->mDeviceId:I
 
-    .line 1366
     iput p10, p0, Landroid/view/KeyEvent;->mScanCode:I
 
-    .line 1367
     return-void
 .end method
 
@@ -1103,37 +1065,26 @@
     .param p11, "flags"    # I
 
     .prologue
-    .line 1388
     invoke-direct {p0}, Landroid/view/InputEvent;-><init>()V
 
-    .line 1389
     iput-wide p1, p0, Landroid/view/KeyEvent;->mDownTime:J
 
-    .line 1390
     iput-wide p3, p0, Landroid/view/KeyEvent;->mEventTime:J
 
-    .line 1391
     iput p5, p0, Landroid/view/KeyEvent;->mAction:I
 
-    .line 1392
     iput p6, p0, Landroid/view/KeyEvent;->mKeyCode:I
 
-    .line 1393
     iput p7, p0, Landroid/view/KeyEvent;->mRepeatCount:I
 
-    .line 1394
     iput p8, p0, Landroid/view/KeyEvent;->mMetaState:I
 
-    .line 1395
     iput p9, p0, Landroid/view/KeyEvent;->mDeviceId:I
 
-    .line 1396
     iput p10, p0, Landroid/view/KeyEvent;->mScanCode:I
 
-    .line 1397
     iput p11, p0, Landroid/view/KeyEvent;->mFlags:I
 
-    .line 1398
     return-void
 .end method
 
@@ -1151,40 +1102,28 @@
     .param p12, "source"    # I
 
     .prologue
-    .line 1420
     invoke-direct {p0}, Landroid/view/InputEvent;-><init>()V
 
-    .line 1421
     iput-wide p1, p0, Landroid/view/KeyEvent;->mDownTime:J
 
-    .line 1422
     iput-wide p3, p0, Landroid/view/KeyEvent;->mEventTime:J
 
-    .line 1423
     iput p5, p0, Landroid/view/KeyEvent;->mAction:I
 
-    .line 1424
     iput p6, p0, Landroid/view/KeyEvent;->mKeyCode:I
 
-    .line 1425
     iput p7, p0, Landroid/view/KeyEvent;->mRepeatCount:I
 
-    .line 1426
     iput p8, p0, Landroid/view/KeyEvent;->mMetaState:I
 
-    .line 1427
     iput p9, p0, Landroid/view/KeyEvent;->mDeviceId:I
 
-    .line 1428
     iput p10, p0, Landroid/view/KeyEvent;->mScanCode:I
 
-    .line 1429
     iput p11, p0, Landroid/view/KeyEvent;->mFlags:I
 
-    .line 1430
     iput p12, p0, Landroid/view/KeyEvent;->mSource:I
 
-    .line 1431
     return-void
 .end method
 
@@ -1198,41 +1137,30 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1445
     invoke-direct {p0}, Landroid/view/InputEvent;-><init>()V
 
-    .line 1446
     iput-wide p1, p0, Landroid/view/KeyEvent;->mDownTime:J
 
-    .line 1447
     iput-wide p1, p0, Landroid/view/KeyEvent;->mEventTime:J
 
-    .line 1448
     iput-object p3, p0, Landroid/view/KeyEvent;->mCharacters:Ljava/lang/String;
 
-    .line 1449
     const/4 v0, 0x2
 
     iput v0, p0, Landroid/view/KeyEvent;->mAction:I
 
-    .line 1450
     iput v1, p0, Landroid/view/KeyEvent;->mKeyCode:I
 
-    .line 1451
     iput v1, p0, Landroid/view/KeyEvent;->mRepeatCount:I
 
-    .line 1452
     iput p4, p0, Landroid/view/KeyEvent;->mDeviceId:I
 
-    .line 1453
     iput p5, p0, Landroid/view/KeyEvent;->mFlags:I
 
-    .line 1454
     const/16 v0, 0x101
 
     iput v0, p0, Landroid/view/KeyEvent;->mSource:I
 
-    .line 1455
     return-void
 .end method
 
@@ -1241,80 +1169,68 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 2915
     invoke-direct {p0}, Landroid/view/InputEvent;-><init>()V
 
-    .line 2916
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/view/KeyEvent;->mDeviceId:I
 
-    .line 2917
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/view/KeyEvent;->mSource:I
 
-    .line 2918
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/view/KeyEvent;->mAction:I
 
-    .line 2919
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/view/KeyEvent;->mKeyCode:I
 
-    .line 2920
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/view/KeyEvent;->mRepeatCount:I
 
-    .line 2921
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/view/KeyEvent;->mMetaState:I
 
-    .line 2922
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/view/KeyEvent;->mScanCode:I
 
-    .line 2923
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/view/KeyEvent;->mFlags:I
 
-    .line 2924
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/view/KeyEvent;->mDownTime:J
 
-    .line 2925
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/view/KeyEvent;->mEventTime:J
 
-    .line 2926
     return-void
 .end method
 
@@ -1323,65 +1239,52 @@
     .param p1, "origEvent"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 1460
     invoke-direct {p0}, Landroid/view/InputEvent;-><init>()V
 
-    .line 1461
     iget-wide v0, p1, Landroid/view/KeyEvent;->mDownTime:J
 
     iput-wide v0, p0, Landroid/view/KeyEvent;->mDownTime:J
 
-    .line 1462
     iget-wide v0, p1, Landroid/view/KeyEvent;->mEventTime:J
 
     iput-wide v0, p0, Landroid/view/KeyEvent;->mEventTime:J
 
-    .line 1463
     iget v0, p1, Landroid/view/KeyEvent;->mAction:I
 
     iput v0, p0, Landroid/view/KeyEvent;->mAction:I
 
-    .line 1464
     iget v0, p1, Landroid/view/KeyEvent;->mKeyCode:I
 
     iput v0, p0, Landroid/view/KeyEvent;->mKeyCode:I
 
-    .line 1465
     iget v0, p1, Landroid/view/KeyEvent;->mRepeatCount:I
 
     iput v0, p0, Landroid/view/KeyEvent;->mRepeatCount:I
 
-    .line 1466
     iget v0, p1, Landroid/view/KeyEvent;->mMetaState:I
 
     iput v0, p0, Landroid/view/KeyEvent;->mMetaState:I
 
-    .line 1467
     iget v0, p1, Landroid/view/KeyEvent;->mDeviceId:I
 
     iput v0, p0, Landroid/view/KeyEvent;->mDeviceId:I
 
-    .line 1468
     iget v0, p1, Landroid/view/KeyEvent;->mSource:I
 
     iput v0, p0, Landroid/view/KeyEvent;->mSource:I
 
-    .line 1469
     iget v0, p1, Landroid/view/KeyEvent;->mScanCode:I
 
     iput v0, p0, Landroid/view/KeyEvent;->mScanCode:I
 
-    .line 1470
     iget v0, p1, Landroid/view/KeyEvent;->mFlags:I
 
     iput v0, p0, Landroid/view/KeyEvent;->mFlags:I
 
-    .line 1471
     iget-object v0, p1, Landroid/view/KeyEvent;->mCharacters:Ljava/lang/String;
 
     iput-object v0, p0, Landroid/view/KeyEvent;->mCharacters:Ljava/lang/String;
 
-    .line 1472
     return-void
 .end method
 
@@ -1391,58 +1294,46 @@
     .param p2, "action"    # I
 
     .prologue
-    .line 1632
     invoke-direct {p0}, Landroid/view/InputEvent;-><init>()V
 
-    .line 1633
     iget-wide v0, p1, Landroid/view/KeyEvent;->mDownTime:J
 
     iput-wide v0, p0, Landroid/view/KeyEvent;->mDownTime:J
 
-    .line 1634
     iget-wide v0, p1, Landroid/view/KeyEvent;->mEventTime:J
 
     iput-wide v0, p0, Landroid/view/KeyEvent;->mEventTime:J
 
-    .line 1635
     iput p2, p0, Landroid/view/KeyEvent;->mAction:I
 
-    .line 1636
     iget v0, p1, Landroid/view/KeyEvent;->mKeyCode:I
 
     iput v0, p0, Landroid/view/KeyEvent;->mKeyCode:I
 
-    .line 1637
     iget v0, p1, Landroid/view/KeyEvent;->mRepeatCount:I
 
     iput v0, p0, Landroid/view/KeyEvent;->mRepeatCount:I
 
-    .line 1638
     iget v0, p1, Landroid/view/KeyEvent;->mMetaState:I
 
     iput v0, p0, Landroid/view/KeyEvent;->mMetaState:I
 
-    .line 1639
     iget v0, p1, Landroid/view/KeyEvent;->mDeviceId:I
 
     iput v0, p0, Landroid/view/KeyEvent;->mDeviceId:I
 
-    .line 1640
     iget v0, p1, Landroid/view/KeyEvent;->mSource:I
 
     iput v0, p0, Landroid/view/KeyEvent;->mSource:I
 
-    .line 1641
     iget v0, p1, Landroid/view/KeyEvent;->mScanCode:I
 
     iput v0, p0, Landroid/view/KeyEvent;->mScanCode:I
 
-    .line 1642
     iget v0, p1, Landroid/view/KeyEvent;->mFlags:I
 
     iput v0, p0, Landroid/view/KeyEvent;->mFlags:I
 
-    .line 1645
     return-void
 .end method
 
@@ -1455,61 +1346,48 @@
     .end annotation
 
     .prologue
-    .line 1486
     invoke-direct {p0}, Landroid/view/InputEvent;-><init>()V
 
-    .line 1487
     iget-wide v0, p1, Landroid/view/KeyEvent;->mDownTime:J
 
     iput-wide v0, p0, Landroid/view/KeyEvent;->mDownTime:J
 
-    .line 1488
     iput-wide p2, p0, Landroid/view/KeyEvent;->mEventTime:J
 
-    .line 1489
     iget v0, p1, Landroid/view/KeyEvent;->mAction:I
 
     iput v0, p0, Landroid/view/KeyEvent;->mAction:I
 
-    .line 1490
     iget v0, p1, Landroid/view/KeyEvent;->mKeyCode:I
 
     iput v0, p0, Landroid/view/KeyEvent;->mKeyCode:I
 
-    .line 1491
     iput p4, p0, Landroid/view/KeyEvent;->mRepeatCount:I
 
-    .line 1492
     iget v0, p1, Landroid/view/KeyEvent;->mMetaState:I
 
     iput v0, p0, Landroid/view/KeyEvent;->mMetaState:I
 
-    .line 1493
     iget v0, p1, Landroid/view/KeyEvent;->mDeviceId:I
 
     iput v0, p0, Landroid/view/KeyEvent;->mDeviceId:I
 
-    .line 1494
     iget v0, p1, Landroid/view/KeyEvent;->mSource:I
 
     iput v0, p0, Landroid/view/KeyEvent;->mSource:I
 
-    .line 1495
     iget v0, p1, Landroid/view/KeyEvent;->mScanCode:I
 
     iput v0, p0, Landroid/view/KeyEvent;->mScanCode:I
 
-    .line 1496
     iget v0, p1, Landroid/view/KeyEvent;->mFlags:I
 
     iput v0, p0, Landroid/view/KeyEvent;->mFlags:I
 
-    .line 1497
     iget-object v0, p1, Landroid/view/KeyEvent;->mCharacters:Ljava/lang/String;
 
     iput-object v0, p0, Landroid/view/KeyEvent;->mCharacters:Ljava/lang/String;
 
-    .line 1498
     return-void
 .end method
 
@@ -1519,7 +1397,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 81
     iget v0, p0, Landroid/view/KeyEvent;->mFlags:I
 
     or-int/2addr v0, p1
@@ -1534,10 +1411,8 @@
     .param p0, "action"    # I
 
     .prologue
-    .line 2812
     packed-switch p0, :pswitch_data_0
 
-    .line 2820
     invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v0
@@ -1545,25 +1420,21 @@
     :goto_0
     return-object v0
 
-    .line 2814
     :pswitch_0
     const-string v0, "ACTION_DOWN"
 
     goto :goto_0
 
-    .line 2816
     :pswitch_1
     const-string v0, "ACTION_UP"
 
     goto :goto_0
 
-    .line 2818
     :pswitch_2
     const-string v0, "ACTION_MULTIPLE"
 
     goto :goto_0
 
-    .line 2812
     nop
 
     :pswitch_data_0
@@ -1580,7 +1451,6 @@
     .param p1, "action"    # I
 
     .prologue
-    .line 1655
     new-instance v0, Landroid/view/KeyEvent;
 
     invoke-direct {v0, p0, p1}, Landroid/view/KeyEvent;-><init>(Landroid/view/KeyEvent;I)V
@@ -1594,17 +1464,14 @@
     .param p1, "flags"    # I
 
     .prologue
-    .line 1666
     new-instance v0, Landroid/view/KeyEvent;
 
     invoke-direct {v0, p0}, Landroid/view/KeyEvent;-><init>(Landroid/view/KeyEvent;)V
 
-    .line 1667
     .end local p0    # "event":Landroid/view/KeyEvent;
     .local v0, "event":Landroid/view/KeyEvent;
     iput p1, v0, Landroid/view/KeyEvent;->mFlags:I
 
-    .line 1668
     return-object v0
 .end method
 
@@ -1615,7 +1482,6 @@
     .param p3, "newRepeat"    # I
 
     .prologue
-    .line 1603
     new-instance v0, Landroid/view/KeyEvent;
 
     invoke-direct {v0, p0, p1, p2, p3}, Landroid/view/KeyEvent;-><init>(Landroid/view/KeyEvent;JI)V
@@ -1631,22 +1497,17 @@
     .param p4, "newFlags"    # I
 
     .prologue
-    .line 1619
     new-instance v0, Landroid/view/KeyEvent;
 
     invoke-direct {v0, p0}, Landroid/view/KeyEvent;-><init>(Landroid/view/KeyEvent;)V
 
-    .line 1620
     .local v0, "ret":Landroid/view/KeyEvent;
     iput-wide p1, v0, Landroid/view/KeyEvent;->mEventTime:J
 
-    .line 1621
     iput p3, v0, Landroid/view/KeyEvent;->mRepeatCount:I
 
-    .line 1622
     iput p4, v0, Landroid/view/KeyEvent;->mFlags:I
 
-    .line 1623
     return-object v0
 .end method
 
@@ -1655,7 +1516,6 @@
     .param p0, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 2912
     new-instance v0, Landroid/view/KeyEvent;
 
     invoke-direct {v0, p0}, Landroid/view/KeyEvent;-><init>(Landroid/os/Parcel;)V
@@ -1669,7 +1529,6 @@
     .param p1, "c"    # I
 
     .prologue
-    .line 1190
     invoke-static {p0, p1}, Landroid/view/KeyCharacterMap;->getDeadChar(II)I
 
     move-result v0
@@ -1681,7 +1540,6 @@
     .locals 1
 
     .prologue
-    .line 1181
     const/16 v0, 0x113
 
     return v0
@@ -1691,7 +1549,6 @@
     .locals 1
 
     .prologue
-    .line 1973
     const v0, 0x770ff
 
     return v0
@@ -1702,22 +1559,18 @@
     .param p0, "keyCode"    # I
 
     .prologue
-    .line 1754
     sparse-switch p0, :sswitch_data_0
 
-    .line 1759
     const/4 v0, 0x0
 
     :goto_0
     return v0
 
-    .line 1757
     :sswitch_0
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 1754
     nop
 
     :sswitch_data_0
@@ -1732,22 +1585,18 @@
     .param p0, "keyCode"    # I
 
     .prologue
-    .line 1712
     sparse-switch p0, :sswitch_data_0
 
-    .line 1746
     const/4 v0, 0x0
 
     :goto_0
     return v0
 
-    .line 1744
     :sswitch_0
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 1712
     nop
 
     :sswitch_data_0
@@ -1791,22 +1640,18 @@
     .param p0, "keyCode"    # I
 
     .prologue
-    .line 1770
     sparse-switch p0, :sswitch_data_0
 
-    .line 1784
     const/4 v0, 0x0
 
     :goto_0
     return v0
 
-    .line 1782
     :sswitch_0
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 1770
     nop
 
     :sswitch_data_0
@@ -1830,7 +1675,6 @@
     .param p0, "keyCode"    # I
 
     .prologue
-    .line 1843
     const/16 v0, 0x75
 
     if-eq p0, v0, :cond_0
@@ -1856,22 +1700,18 @@
     .param p0, "keyCode"    # I
 
     .prologue
-    .line 1993
     sparse-switch p0, :sswitch_data_0
 
-    .line 2007
     const/4 v0, 0x0
 
     :goto_0
     return v0
 
-    .line 2005
     :sswitch_0
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 1993
     nop
 
     :sswitch_data_0
@@ -1895,22 +1735,18 @@
     .param p0, "keyCode"    # I
 
     .prologue
-    .line 1792
     sparse-switch p0, :sswitch_data_0
 
-    .line 1823
     const/4 v0, 0x0
 
     :goto_0
     return v0
 
-    .line 1820
     :sswitch_0
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 1792
     nop
 
     :sswitch_data_0
@@ -1950,22 +1786,18 @@
     .param p0, "keyCode"    # I
 
     .prologue
-    .line 1828
     sparse-switch p0, :sswitch_data_0
 
-    .line 1838
     const/4 v0, 0x0
 
     :goto_0
     return v0
 
-    .line 1836
     :sswitch_0
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 1828
     nop
 
     :sswitch_data_0
@@ -1981,7 +1813,6 @@
     .param p0, "symbolicName"    # Ljava/lang/String;
 
     .prologue
-    .line 2848
     const-string v2, "KEYCODE_"
 
     invoke-virtual {p0, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -1990,7 +1821,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 2849
     const-string v2, "KEYCODE_"
 
     invoke-virtual {v2}, Ljava/lang/String;->length()I
@@ -2001,21 +1831,17 @@
 
     move-result-object p0
 
-    .line 2850
     invoke-static {p0}, Landroid/view/KeyEvent;->nativeKeyCodeFromString(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 2851
     .local v1, "keyCode":I
     if-lez v1, :cond_0
 
-    .line 2858
     .end local v1    # "keyCode":I
     :goto_0
     return v1
 
-    .line 2856
     :cond_0
     const/16 v2, 0xa
 
@@ -2028,11 +1854,9 @@
 
     goto :goto_0
 
-    .line 2857
     :catch_0
     move-exception v0
 
-    .line 2858
     .local v0, "ex":Ljava/lang/NumberFormatException;
     const/4 v1, 0x0
 
@@ -2044,12 +1868,10 @@
     .param p0, "keyCode"    # I
 
     .prologue
-    .line 2835
     invoke-static {p0}, Landroid/view/KeyEvent;->nativeKeyCodeToString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2836
     .local v0, "symbolicName":Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -2095,33 +1917,27 @@
 
     const/4 v3, 0x0
 
-    .line 2133
     and-int v4, p1, p2
 
     if-eqz v4, :cond_0
 
     move v1, v2
 
-    .line 2134
     .local v1, "wantBasic":Z
     :goto_0
     or-int v0, p3, p4
 
-    .line 2135
     .local v0, "directional":I
     and-int v4, p1, v0
 
     if-eqz v4, :cond_1
 
-    .line 2137
     .local v2, "wantLeftOrRight":Z
     :goto_1
     if-eqz v1, :cond_4
 
-    .line 2138
     if-eqz v2, :cond_2
 
-    .line 2139
     new-instance v3, Ljava/lang/IllegalArgumentException;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2184,7 +2000,6 @@
     :cond_0
     move v1, v3
 
-    .line 2133
     goto :goto_0
 
     .restart local v0    # "directional":I
@@ -2192,28 +2007,23 @@
     :cond_1
     move v2, v3
 
-    .line 2135
     goto :goto_1
 
-    .line 2143
     .restart local v2    # "wantLeftOrRight":Z
     :cond_2
     xor-int/lit8 v3, v0, -0x1
 
     and-int/2addr p0, v3
 
-    .line 2147
     .end local p0    # "metaState":I
     :cond_3
     :goto_2
     return p0
 
-    .line 2144
     .restart local p0    # "metaState":I
     :cond_4
     if-eqz v2, :cond_3
 
-    .line 2145
     xor-int/lit8 v3, p2, -0x1
 
     and-int/2addr p0, v3
@@ -2229,14 +2039,12 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 2112
     const v1, 0x700f00
 
     and-int/2addr v1, p1
 
     if-eqz v1, :cond_0
 
-    .line 2113
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "modifiers must not contain META_CAPS_LOCK_ON, META_NUM_LOCK_ON, META_SCROLL_LOCK_ON, META_CAP_LOCKED, META_ALT_LOCKED, META_SYM_LOCKED, or META_SELECTING"
@@ -2245,7 +2053,6 @@
 
     throw v0
 
-    .line 2119
     :cond_0
     invoke-static {p0}, Landroid/view/KeyEvent;->normalizeMetaState(I)I
 
@@ -2255,7 +2062,6 @@
 
     and-int p0, v1, v2
 
-    .line 2120
     const/16 v1, 0x40
 
     const/16 v2, 0x80
@@ -2264,7 +2070,6 @@
 
     move-result p0
 
-    .line 2122
     const/4 v1, 0x2
 
     const/16 v2, 0x10
@@ -2275,7 +2080,6 @@
 
     move-result p0
 
-    .line 2124
     const/16 v1, 0x1000
 
     const/16 v2, 0x2000
@@ -2286,7 +2090,6 @@
 
     move-result p0
 
-    .line 2126
     const/high16 v1, 0x10000
 
     const/high16 v2, 0x20000
@@ -2297,7 +2100,6 @@
 
     move-result p0
 
-    .line 2128
     if-ne p0, p1, :cond_1
 
     :goto_0
@@ -2314,7 +2116,6 @@
     .param p0, "metaState"    # I
 
     .prologue
-    .line 2076
     invoke-static {p0}, Landroid/view/KeyEvent;->normalizeMetaState(I)I
 
     move-result v0
@@ -2341,81 +2142,64 @@
     .param p0, "metaState"    # I
 
     .prologue
-    .line 2873
     if-nez p0, :cond_1
 
-    .line 2874
     const-string v2, "0"
 
-    .line 2895
     :cond_0
     :goto_0
     return-object v2
 
-    .line 2876
     :cond_1
     const/4 v3, 0x0
 
-    .line 2877
     .local v3, "result":Ljava/lang/StringBuilder;
     const/4 v0, 0x0
 
-    .line 2878
     .local v0, "i":I
     :goto_1
     if-eqz p0, :cond_5
 
-    .line 2879
     and-int/lit8 v4, p0, 0x1
 
     if-eqz v4, :cond_3
 
     const/4 v1, 0x1
 
-    .line 2880
     .local v1, "isSet":Z
     :goto_2
     ushr-int/lit8 p0, p0, 0x1
 
-    .line 2881
     if-eqz v1, :cond_2
 
-    .line 2882
     sget-object v4, Landroid/view/KeyEvent;->META_SYMBOLIC_NAMES:[Ljava/lang/String;
 
     aget-object v2, v4, v0
 
-    .line 2883
     .local v2, "name":Ljava/lang/String;
     if-nez v3, :cond_4
 
-    .line 2884
     if-eqz p0, :cond_0
 
-    .line 2887
     new-instance v3, Ljava/lang/StringBuilder;
 
     .end local v3    # "result":Ljava/lang/StringBuilder;
     invoke-direct {v3, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 2893
     .end local v2    # "name":Ljava/lang/String;
     .restart local v3    # "result":Ljava/lang/StringBuilder;
     :cond_2
     :goto_3
     add-int/lit8 v0, v0, 0x1
 
-    .line 2894
     goto :goto_1
 
-    .line 2879
     .end local v1    # "isSet":Z
     :cond_3
     const/4 v1, 0x0
 
     goto :goto_2
 
-    .line 2889
     .restart local v1    # "isSet":Z
     .restart local v2    # "name":Ljava/lang/String;
     :cond_4
@@ -2423,12 +2207,10 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 2890
     invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_3
 
-    .line 2895
     .end local v1    # "isSet":Z
     .end local v2    # "name":Ljava/lang/String;
     :cond_5
@@ -2450,33 +2232,26 @@
     .param p0, "metaState"    # I
 
     .prologue
-    .line 2036
     and-int/lit16 v0, p0, 0xc0
 
     if-eqz v0, :cond_0
 
-    .line 2037
     or-int/lit8 p0, p0, 0x1
 
-    .line 2039
     :cond_0
     and-int/lit8 v0, p0, 0x30
 
     if-eqz v0, :cond_1
 
-    .line 2040
     or-int/lit8 p0, p0, 0x2
 
-    .line 2042
     :cond_1
     and-int/lit16 v0, p0, 0x6000
 
     if-eqz v0, :cond_2
 
-    .line 2043
     or-int/lit16 p0, p0, 0x1000
 
-    .line 2045
     :cond_2
     const/high16 v0, 0x60000
 
@@ -2484,41 +2259,33 @@
 
     if-eqz v0, :cond_3
 
-    .line 2046
     const/high16 v0, 0x10000
 
     or-int/2addr p0, v0
 
-    .line 2048
     :cond_3
     and-int/lit16 v0, p0, 0x100
 
     if-eqz v0, :cond_4
 
-    .line 2049
     const/high16 v0, 0x100000
 
     or-int/2addr p0, v0
 
-    .line 2051
     :cond_4
     and-int/lit16 v0, p0, 0x200
 
     if-eqz v0, :cond_5
 
-    .line 2052
     or-int/lit8 p0, p0, 0x2
 
-    .line 2054
     :cond_5
     and-int/lit16 v0, p0, 0x400
 
     if-eqz v0, :cond_6
 
-    .line 2055
     or-int/lit8 p0, p0, 0x4
 
-    .line 2057
     :cond_6
     const v0, 0x7770ff
 
@@ -2531,20 +2298,16 @@
     .locals 3
 
     .prologue
-    .line 1502
     sget-object v2, Landroid/view/KeyEvent;->gRecyclerLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 1503
     :try_start_0
     sget-object v0, Landroid/view/KeyEvent;->gRecyclerTop:Landroid/view/KeyEvent;
 
-    .line 1504
     .local v0, "ev":Landroid/view/KeyEvent;
     if-nez v0, :cond_0
 
-    .line 1505
     new-instance v0, Landroid/view/KeyEvent;
 
     .end local v0    # "ev":Landroid/view/KeyEvent;
@@ -2552,40 +2315,33 @@
 
     monitor-exit v2
 
-    .line 1512
     .restart local v0    # "ev":Landroid/view/KeyEvent;
     :goto_0
     return-object v0
 
-    .line 1507
     :cond_0
     iget-object v1, v0, Landroid/view/KeyEvent;->mNext:Landroid/view/KeyEvent;
 
     sput-object v1, Landroid/view/KeyEvent;->gRecyclerTop:Landroid/view/KeyEvent;
 
-    .line 1508
     sget v1, Landroid/view/KeyEvent;->gRecyclerUsed:I
 
     add-int/lit8 v1, v1, -0x1
 
     sput v1, Landroid/view/KeyEvent;->gRecyclerUsed:I
 
-    .line 1509
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1510
     const/4 v1, 0x0
 
     iput-object v1, v0, Landroid/view/KeyEvent;->mNext:Landroid/view/KeyEvent;
 
-    .line 1511
     invoke-virtual {v0}, Landroid/view/KeyEvent;->prepareForReuse()V
 
     goto :goto_0
 
-    .line 1509
     :catchall_0
     move-exception v1
 
@@ -2612,46 +2368,33 @@
     .param p12, "characters"    # Ljava/lang/String;
 
     .prologue
-    .line 1523
     invoke-static {}, Landroid/view/KeyEvent;->obtain()Landroid/view/KeyEvent;
 
     move-result-object v0
 
-    .line 1524
     .local v0, "ev":Landroid/view/KeyEvent;
     iput-wide p0, v0, Landroid/view/KeyEvent;->mDownTime:J
 
-    .line 1525
     iput-wide p2, v0, Landroid/view/KeyEvent;->mEventTime:J
 
-    .line 1526
     iput p4, v0, Landroid/view/KeyEvent;->mAction:I
 
-    .line 1527
     iput p5, v0, Landroid/view/KeyEvent;->mKeyCode:I
 
-    .line 1528
     iput p6, v0, Landroid/view/KeyEvent;->mRepeatCount:I
 
-    .line 1529
     iput p7, v0, Landroid/view/KeyEvent;->mMetaState:I
 
-    .line 1530
     iput p8, v0, Landroid/view/KeyEvent;->mDeviceId:I
 
-    .line 1531
     iput p9, v0, Landroid/view/KeyEvent;->mScanCode:I
 
-    .line 1532
     iput p10, v0, Landroid/view/KeyEvent;->mFlags:I
 
-    .line 1533
     iput p11, v0, Landroid/view/KeyEvent;->mSource:I
 
-    .line 1534
     iput-object p12, v0, Landroid/view/KeyEvent;->mCharacters:Ljava/lang/String;
 
-    .line 1535
     return-object v0
 .end method
 
@@ -2660,68 +2403,55 @@
     .param p0, "other"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 1544
     invoke-static {}, Landroid/view/KeyEvent;->obtain()Landroid/view/KeyEvent;
 
     move-result-object v0
 
-    .line 1545
     .local v0, "ev":Landroid/view/KeyEvent;
     iget-wide v2, p0, Landroid/view/KeyEvent;->mDownTime:J
 
     iput-wide v2, v0, Landroid/view/KeyEvent;->mDownTime:J
 
-    .line 1546
     iget-wide v2, p0, Landroid/view/KeyEvent;->mEventTime:J
 
     iput-wide v2, v0, Landroid/view/KeyEvent;->mEventTime:J
 
-    .line 1547
     iget v1, p0, Landroid/view/KeyEvent;->mAction:I
 
     iput v1, v0, Landroid/view/KeyEvent;->mAction:I
 
-    .line 1548
     iget v1, p0, Landroid/view/KeyEvent;->mKeyCode:I
 
     iput v1, v0, Landroid/view/KeyEvent;->mKeyCode:I
 
-    .line 1549
     iget v1, p0, Landroid/view/KeyEvent;->mRepeatCount:I
 
     iput v1, v0, Landroid/view/KeyEvent;->mRepeatCount:I
 
-    .line 1550
     iget v1, p0, Landroid/view/KeyEvent;->mMetaState:I
 
     iput v1, v0, Landroid/view/KeyEvent;->mMetaState:I
 
-    .line 1551
     iget v1, p0, Landroid/view/KeyEvent;->mDeviceId:I
 
     iput v1, v0, Landroid/view/KeyEvent;->mDeviceId:I
 
-    .line 1552
     iget v1, p0, Landroid/view/KeyEvent;->mScanCode:I
 
     iput v1, v0, Landroid/view/KeyEvent;->mScanCode:I
 
-    .line 1553
     iget v1, p0, Landroid/view/KeyEvent;->mFlags:I
 
     iput v1, v0, Landroid/view/KeyEvent;->mFlags:I
 
-    .line 1554
     iget v1, p0, Landroid/view/KeyEvent;->mSource:I
 
     iput v1, v0, Landroid/view/KeyEvent;->mSource:I
 
-    .line 1555
     iget-object v1, p0, Landroid/view/KeyEvent;->mCharacters:Ljava/lang/String;
 
     iput-object v1, v0, Landroid/view/KeyEvent;->mCharacters:Ljava/lang/String;
 
-    .line 1556
     return-object v0
 .end method
 
@@ -2731,14 +2461,12 @@
     .locals 1
 
     .prologue
-    .line 2337
     iget v0, p0, Landroid/view/KeyEvent;->mFlags:I
 
     or-int/lit8 v0, v0, 0x20
 
     iput v0, p0, Landroid/view/KeyEvent;->mFlags:I
 
-    .line 2338
     return-void
 .end method
 
@@ -2746,7 +2474,6 @@
     .locals 1
 
     .prologue
-    .line 81
     invoke-virtual {p0}, Landroid/view/KeyEvent;->copy()Landroid/view/KeyEvent;
 
     move-result-object v0
@@ -2758,7 +2485,6 @@
     .locals 1
 
     .prologue
-    .line 1562
     invoke-static {p0}, Landroid/view/KeyEvent;->obtain(Landroid/view/KeyEvent;)Landroid/view/KeyEvent;
 
     move-result-object v0
@@ -2775,7 +2501,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 2622
     invoke-virtual {p0, p1, v0, v0}, Landroid/view/KeyEvent;->dispatch(Landroid/view/KeyEvent$Callback;Landroid/view/KeyEvent$DispatcherState;Ljava/lang/Object;)Z
 
     move-result v0
@@ -2794,19 +2519,16 @@
 
     const/4 v2, 0x0
 
-    .line 2638
     iget v4, p0, Landroid/view/KeyEvent;->mAction:I
 
     packed-switch v4, :pswitch_data_0
 
     move v3, v2
 
-    .line 2688
     :cond_0
     :goto_0
     return v3
 
-    .line 2640
     :pswitch_0
     iget v4, p0, Landroid/view/KeyEvent;->mFlags:I
 
@@ -2816,18 +2538,15 @@
 
     iput v4, p0, Landroid/view/KeyEvent;->mFlags:I
 
-    .line 2643
     iget v4, p0, Landroid/view/KeyEvent;->mKeyCode:I
 
     invoke-interface {p1, v4, p0}, Landroid/view/KeyEvent$Callback;->onKeyDown(ILandroid/view/KeyEvent;)Z
 
     move-result v3
 
-    .line 2644
     .local v3, "res":Z
     if-eqz p2, :cond_0
 
-    .line 2645
     if-eqz v3, :cond_1
 
     iget v4, p0, Landroid/view/KeyEvent;->mRepeatCount:I
@@ -2842,12 +2561,10 @@
 
     if-eqz v4, :cond_1
 
-    .line 2647
     invoke-virtual {p2, p0, p3}, Landroid/view/KeyEvent$DispatcherState;->startTracking(Landroid/view/KeyEvent;Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 2648
     :cond_1
     invoke-virtual {p0}, Landroid/view/KeyEvent;->isLongPress()Z
 
@@ -2861,7 +2578,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 2650
     :try_start_0
     iget v4, p0, Landroid/view/KeyEvent;->mKeyCode:I
 
@@ -2871,25 +2587,20 @@
 
     if-eqz v4, :cond_0
 
-    .line 2652
     invoke-virtual {p2, p0}, Landroid/view/KeyEvent$DispatcherState;->performedLongPress(Landroid/view/KeyEvent;)V
     :try_end_0
     .catch Ljava/lang/AbstractMethodError; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2653
     const/4 v3, 0x1
 
     goto :goto_0
 
-    .line 2664
     .end local v3    # "res":Z
     :pswitch_1
     if-eqz p2, :cond_2
 
-    .line 2665
     invoke-virtual {p2, p0}, Landroid/view/KeyEvent$DispatcherState;->handleUpEvent(Landroid/view/KeyEvent;)V
 
-    .line 2667
     :cond_2
     iget v4, p0, Landroid/view/KeyEvent;->mKeyCode:I
 
@@ -2899,15 +2610,12 @@
 
     goto :goto_0
 
-    .line 2669
     :pswitch_2
     iget v1, p0, Landroid/view/KeyEvent;->mRepeatCount:I
 
-    .line 2670
     .local v1, "count":I
     iget v0, p0, Landroid/view/KeyEvent;->mKeyCode:I
 
-    .line 2671
     .local v0, "code":I
     invoke-interface {p1, v0, v1, p0}, Landroid/view/KeyEvent$Callback;->onKeyMultiple(IILandroid/view/KeyEvent;)Z
 
@@ -2915,52 +2623,40 @@
 
     if-nez v4, :cond_0
 
-    .line 2674
     if-eqz v0, :cond_4
 
-    .line 2675
     iput v2, p0, Landroid/view/KeyEvent;->mAction:I
 
-    .line 2676
     iput v2, p0, Landroid/view/KeyEvent;->mRepeatCount:I
 
-    .line 2677
     invoke-interface {p1, v0, p0}, Landroid/view/KeyEvent$Callback;->onKeyDown(ILandroid/view/KeyEvent;)Z
 
     move-result v2
 
-    .line 2678
     .local v2, "handled":Z
     if-eqz v2, :cond_3
 
-    .line 2679
     iput v3, p0, Landroid/view/KeyEvent;->mAction:I
 
-    .line 2680
     invoke-interface {p1, v0, p0}, Landroid/view/KeyEvent$Callback;->onKeyUp(ILandroid/view/KeyEvent;)Z
 
-    .line 2682
     :cond_3
     const/4 v4, 0x2
 
     iput v4, p0, Landroid/view/KeyEvent;->mAction:I
 
-    .line 2683
     iput v1, p0, Landroid/view/KeyEvent;->mRepeatCount:I
 
     move v3, v2
 
-    .line 2684
     goto :goto_0
 
     .end local v2    # "handled":Z
     :cond_4
     move v3, v2
 
-    .line 2686
     goto :goto_0
 
-    .line 2655
     .end local v0    # "code":I
     .end local v1    # "count":I
     .restart local v3    # "res":Z
@@ -2969,7 +2665,6 @@
 
     goto :goto_0
 
-    .line 2638
     nop
 
     :pswitch_data_0
@@ -2984,7 +2679,6 @@
     .locals 1
 
     .prologue
-    .line 2319
     iget v0, p0, Landroid/view/KeyEvent;->mAction:I
 
     return v0
@@ -2994,7 +2688,6 @@
     .locals 1
 
     .prologue
-    .line 2387
     iget-object v0, p0, Landroid/view/KeyEvent;->mCharacters:Ljava/lang/String;
 
     return-object v0
@@ -3004,7 +2697,6 @@
     .locals 1
 
     .prologue
-    .line 1849
     iget v0, p0, Landroid/view/KeyEvent;->mDeviceId:I
 
     return v0
@@ -3014,7 +2706,6 @@
     .locals 2
 
     .prologue
-    .line 2491
     invoke-virtual {p0}, Landroid/view/KeyEvent;->getKeyCharacterMap()Landroid/view/KeyCharacterMap;
 
     move-result-object v0
@@ -3032,7 +2723,6 @@
     .locals 2
 
     .prologue
-    .line 2425
     iget-wide v0, p0, Landroid/view/KeyEvent;->mDownTime:J
 
     return-wide v0
@@ -3042,7 +2732,6 @@
     .locals 2
 
     .prologue
-    .line 2437
     iget-wide v0, p0, Landroid/view/KeyEvent;->mEventTime:J
 
     return-wide v0
@@ -3052,7 +2741,6 @@
     .locals 4
 
     .prologue
-    .line 2456
     iget-wide v0, p0, Landroid/view/KeyEvent;->mEventTime:J
 
     const-wide/32 v2, 0xf4240
@@ -3066,7 +2754,6 @@
     .locals 1
 
     .prologue
-    .line 1928
     iget v0, p0, Landroid/view/KeyEvent;->mFlags:I
 
     return v0
@@ -3076,7 +2763,6 @@
     .locals 1
 
     .prologue
-    .line 2481
     iget v0, p0, Landroid/view/KeyEvent;->mDeviceId:I
 
     invoke-static {v0}, Landroid/view/KeyCharacterMap;->load(I)Landroid/view/KeyCharacterMap;
@@ -3090,7 +2776,6 @@
     .locals 1
 
     .prologue
-    .line 2375
     iget v0, p0, Landroid/view/KeyEvent;->mKeyCode:I
 
     return v0
@@ -3103,7 +2788,6 @@
     .end annotation
 
     .prologue
-    .line 2553
     invoke-virtual {p0}, Landroid/view/KeyEvent;->getKeyCharacterMap()Landroid/view/KeyCharacterMap;
 
     move-result-object v0
@@ -3123,7 +2807,6 @@
     .end annotation
 
     .prologue
-    .line 2467
     iget v0, p0, Landroid/view/KeyEvent;->mDeviceId:I
 
     return v0
@@ -3134,7 +2817,6 @@
     .param p1, "chars"    # [C
 
     .prologue
-    .line 2568
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Landroid/view/KeyEvent;->getMatch([CI)C
@@ -3150,7 +2832,6 @@
     .param p2, "metaState"    # I
 
     .prologue
-    .line 2581
     invoke-virtual {p0}, Landroid/view/KeyEvent;->getKeyCharacterMap()Landroid/view/KeyCharacterMap;
 
     move-result-object v0
@@ -3168,7 +2849,6 @@
     .locals 1
 
     .prologue
-    .line 1899
     iget v0, p0, Landroid/view/KeyEvent;->mMetaState:I
 
     return v0
@@ -3178,7 +2858,6 @@
     .locals 2
 
     .prologue
-    .line 1919
     iget v0, p0, Landroid/view/KeyEvent;->mMetaState:I
 
     invoke-static {v0}, Landroid/view/KeyEvent;->normalizeMetaState(I)I
@@ -3196,7 +2875,6 @@
     .locals 2
 
     .prologue
-    .line 2605
     invoke-virtual {p0}, Landroid/view/KeyEvent;->getKeyCharacterMap()Landroid/view/KeyCharacterMap;
 
     move-result-object v0
@@ -3214,7 +2892,6 @@
     .locals 1
 
     .prologue
-    .line 2410
     iget v0, p0, Landroid/view/KeyEvent;->mRepeatCount:I
 
     return v0
@@ -3224,7 +2901,6 @@
     .locals 1
 
     .prologue
-    .line 2398
     iget v0, p0, Landroid/view/KeyEvent;->mScanCode:I
 
     return v0
@@ -3234,7 +2910,6 @@
     .locals 1
 
     .prologue
-    .line 1855
     iget v0, p0, Landroid/view/KeyEvent;->mSource:I
 
     return v0
@@ -3244,7 +2919,6 @@
     .locals 1
 
     .prologue
-    .line 2514
     iget v0, p0, Landroid/view/KeyEvent;->mMetaState:I
 
     invoke-virtual {p0, v0}, Landroid/view/KeyEvent;->getUnicodeChar(I)I
@@ -3259,7 +2933,6 @@
     .param p1, "metaState"    # I
 
     .prologue
-    .line 2538
     invoke-virtual {p0}, Landroid/view/KeyEvent;->getKeyCharacterMap()Landroid/view/KeyCharacterMap;
 
     move-result-object v0
@@ -3278,7 +2951,6 @@
     .param p1, "modifiers"    # I
 
     .prologue
-    .line 2197
     iget v0, p0, Landroid/view/KeyEvent;->mMetaState:I
 
     invoke-static {v0, p1}, Landroid/view/KeyEvent;->metaStateHasModifiers(II)Z
@@ -3292,7 +2964,6 @@
     .locals 1
 
     .prologue
-    .line 2166
     iget v0, p0, Landroid/view/KeyEvent;->mMetaState:I
 
     invoke-static {v0}, Landroid/view/KeyEvent;->metaStateHasNoModifiers(I)Z
@@ -3306,7 +2977,6 @@
     .locals 1
 
     .prologue
-    .line 2210
     iget v0, p0, Landroid/view/KeyEvent;->mMetaState:I
 
     and-int/lit8 v0, v0, 0x2
@@ -3328,7 +2998,6 @@
     .locals 1
 
     .prologue
-    .line 2327
     iget v0, p0, Landroid/view/KeyEvent;->mFlags:I
 
     and-int/lit8 v0, v0, 0x20
@@ -3350,7 +3019,6 @@
     .locals 2
 
     .prologue
-    .line 2285
     iget v0, p0, Landroid/view/KeyEvent;->mMetaState:I
 
     const/high16 v1, 0x100000
@@ -3374,7 +3042,6 @@
     .locals 1
 
     .prologue
-    .line 2248
     iget v0, p0, Landroid/view/KeyEvent;->mMetaState:I
 
     and-int/lit16 v0, v0, 0x1000
@@ -3398,7 +3065,6 @@
     .end annotation
 
     .prologue
-    .line 1693
     iget v0, p0, Landroid/view/KeyEvent;->mAction:I
 
     if-nez v0, :cond_0
@@ -3418,7 +3084,6 @@
     .locals 1
 
     .prologue
-    .line 2273
     iget v0, p0, Landroid/view/KeyEvent;->mMetaState:I
 
     and-int/lit8 v0, v0, 0x8
@@ -3440,7 +3105,6 @@
     .locals 1
 
     .prologue
-    .line 2365
     iget v0, p0, Landroid/view/KeyEvent;->mFlags:I
 
     and-int/lit16 v0, v0, 0x80
@@ -3462,7 +3126,6 @@
     .locals 2
 
     .prologue
-    .line 2261
     iget v0, p0, Landroid/view/KeyEvent;->mMetaState:I
 
     const/high16 v1, 0x10000
@@ -3486,7 +3149,6 @@
     .locals 2
 
     .prologue
-    .line 2297
     iget v0, p0, Landroid/view/KeyEvent;->mMetaState:I
 
     const/high16 v1, 0x200000
@@ -3510,7 +3172,6 @@
     .locals 2
 
     .prologue
-    .line 2614
     invoke-virtual {p0}, Landroid/view/KeyEvent;->getKeyCharacterMap()Landroid/view/KeyCharacterMap;
 
     move-result-object v0
@@ -3528,7 +3189,6 @@
     .locals 2
 
     .prologue
-    .line 2309
     iget v0, p0, Landroid/view/KeyEvent;->mMetaState:I
 
     const/high16 v1, 0x400000
@@ -3552,7 +3212,6 @@
     .locals 1
 
     .prologue
-    .line 2223
     iget v0, p0, Landroid/view/KeyEvent;->mMetaState:I
 
     and-int/lit8 v0, v0, 0x1
@@ -3574,7 +3233,6 @@
     .locals 1
 
     .prologue
-    .line 2235
     iget v0, p0, Landroid/view/KeyEvent;->mMetaState:I
 
     and-int/lit8 v0, v0, 0x4
@@ -3596,7 +3254,6 @@
     .locals 1
 
     .prologue
-    .line 1699
     iget v0, p0, Landroid/view/KeyEvent;->mKeyCode:I
 
     invoke-static {v0}, Landroid/view/KeyEvent;->isSystemKey(I)Z
@@ -3610,7 +3267,6 @@
     .locals 2
 
     .prologue
-    .line 1674
     iget v0, p0, Landroid/view/KeyEvent;->mFlags:I
 
     const/high16 v1, -0x80000000
@@ -3634,7 +3290,6 @@
     .locals 1
 
     .prologue
-    .line 2357
     iget v0, p0, Landroid/view/KeyEvent;->mFlags:I
 
     and-int/lit16 v0, v0, 0x200
@@ -3656,7 +3311,6 @@
     .locals 1
 
     .prologue
-    .line 1704
     iget v0, p0, Landroid/view/KeyEvent;->mKeyCode:I
 
     invoke-static {v0}, Landroid/view/KeyEvent;->isWakeKey(I)Z
@@ -3670,20 +3324,16 @@
     .locals 3
 
     .prologue
-    .line 1574
     invoke-super {p0}, Landroid/view/InputEvent;->recycle()V
 
-    .line 1575
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/view/KeyEvent;->mCharacters:Ljava/lang/String;
 
-    .line 1577
     sget-object v1, Landroid/view/KeyEvent;->gRecyclerLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 1578
     :try_start_0
     sget v0, Landroid/view/KeyEvent;->gRecyclerUsed:I
 
@@ -3691,29 +3341,23 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 1579
     sget v0, Landroid/view/KeyEvent;->gRecyclerUsed:I
 
     add-int/lit8 v0, v0, 0x1
 
     sput v0, Landroid/view/KeyEvent;->gRecyclerUsed:I
 
-    .line 1580
     sget-object v0, Landroid/view/KeyEvent;->gRecyclerTop:Landroid/view/KeyEvent;
 
     iput-object v0, p0, Landroid/view/KeyEvent;->mNext:Landroid/view/KeyEvent;
 
-    .line 1581
     sput-object p0, Landroid/view/KeyEvent;->gRecyclerTop:Landroid/view/KeyEvent;
 
-    .line 1583
     :cond_0
     monitor-exit v1
 
-    .line 1584
     return-void
 
-    .line 1583
     :catchall_0
     move-exception v0
 
@@ -3728,7 +3372,6 @@
     .locals 0
 
     .prologue
-    .line 1590
     return-void
 .end method
 
@@ -3737,10 +3380,8 @@
     .param p1, "source"    # I
 
     .prologue
-    .line 1861
     iput p1, p0, Landroid/view/KeyEvent;->mSource:I
 
-    .line 1862
     return-void
 .end method
 
@@ -3749,7 +3390,6 @@
     .param p1, "tainted"    # Z
 
     .prologue
-    .line 1680
     if-eqz p1, :cond_0
 
     iget v0, p0, Landroid/view/KeyEvent;->mFlags:I
@@ -3761,10 +3401,8 @@
     :goto_0
     iput v0, p0, Landroid/view/KeyEvent;->mFlags:I
 
-    .line 1681
     return-void
 
-    .line 1680
     :cond_0
     iget v0, p0, Landroid/view/KeyEvent;->mFlags:I
 
@@ -3779,7 +3417,6 @@
     .locals 2
 
     .prologue
-    .line 2348
     iget v0, p0, Landroid/view/KeyEvent;->mFlags:I
 
     const/high16 v1, 0x40000000    # 2.0f
@@ -3788,7 +3425,6 @@
 
     iput v0, p0, Landroid/view/KeyEvent;->mFlags:I
 
-    .line 2349
     return-void
 .end method
 
@@ -3796,12 +3432,10 @@
     .locals 4
 
     .prologue
-    .line 2785
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 2786
     .local v0, "msg":Ljava/lang/StringBuilder;
     const-string v1, "KeyEvent { action="
 
@@ -3817,7 +3451,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2787
     const-string v1, ", keyCode="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -3832,7 +3465,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2788
     const-string v1, ", scanCode="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -3843,12 +3475,10 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 2789
     iget-object v1, p0, Landroid/view/KeyEvent;->mCharacters:Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
-    .line 2790
     const-string v1, ", characters=\""
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -3865,7 +3495,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2792
     :cond_0
     const-string v1, ", metaState="
 
@@ -3881,7 +3510,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2793
     const-string v1, ", flags=0x"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -3896,7 +3524,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2794
     const-string v1, ", repeatCount="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -3907,7 +3534,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 2795
     const-string v1, ", eventTime="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -3918,7 +3544,6 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    .line 2796
     const-string v1, ", downTime="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -3929,7 +3554,6 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    .line 2797
     const-string v1, ", deviceId="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -3940,7 +3564,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 2798
     const-string v1, ", source=0x"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -3955,12 +3578,10 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2799
     const-string v1, " }"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2800
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -3974,61 +3595,49 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 2929
     const/4 v0, 0x2
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 2931
     iget v0, p0, Landroid/view/KeyEvent;->mDeviceId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 2932
     iget v0, p0, Landroid/view/KeyEvent;->mSource:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 2933
     iget v0, p0, Landroid/view/KeyEvent;->mAction:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 2934
     iget v0, p0, Landroid/view/KeyEvent;->mKeyCode:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 2935
     iget v0, p0, Landroid/view/KeyEvent;->mRepeatCount:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 2936
     iget v0, p0, Landroid/view/KeyEvent;->mMetaState:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 2937
     iget v0, p0, Landroid/view/KeyEvent;->mScanCode:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 2938
     iget v0, p0, Landroid/view/KeyEvent;->mFlags:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 2939
     iget-wide v0, p0, Landroid/view/KeyEvent;->mDownTime:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 2940
     iget-wide v0, p0, Landroid/view/KeyEvent;->mEventTime:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 2941
     return-void
 .end method

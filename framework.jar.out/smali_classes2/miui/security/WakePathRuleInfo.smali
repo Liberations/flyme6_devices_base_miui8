@@ -80,7 +80,6 @@
     .locals 1
 
     .prologue
-    .line 15
     const-class v0, Lmiui/security/WakePathRuleInfo;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -89,7 +88,6 @@
 
     sput-object v0, Lmiui/security/WakePathRuleInfo;->TAG:Ljava/lang/String;
 
-    .line 96
     new-instance v0, Lmiui/security/WakePathRuleInfo$1;
 
     invoke-direct {v0}, Lmiui/security/WakePathRuleInfo$1;-><init>()V
@@ -104,87 +102,74 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 106
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 107
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lmiui/security/WakePathRuleInfo;->mActionExpress:Ljava/lang/String;
 
-    .line 108
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lmiui/security/WakePathRuleInfo;->mActionExpressType:I
 
-    .line 109
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lmiui/security/WakePathRuleInfo;->mClassNameExpress:Ljava/lang/String;
 
-    .line 110
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lmiui/security/WakePathRuleInfo;->mClassNameExpressType:I
 
-    .line 111
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lmiui/security/WakePathRuleInfo;->mCallerExpress:Ljava/lang/String;
 
-    .line 112
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lmiui/security/WakePathRuleInfo;->mCallerExpressType:I
 
-    .line 113
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lmiui/security/WakePathRuleInfo;->mCalleeExpress:Ljava/lang/String;
 
-    .line 114
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lmiui/security/WakePathRuleInfo;->mCalleeExpressType:I
 
-    .line 115
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lmiui/security/WakePathRuleInfo;->mWakeType:I
 
-    .line 116
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lmiui/security/WakePathRuleInfo;->mUserSettings:I
 
-    .line 117
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lmiui/security/WakePathRuleInfo;->mHashCode:I
 
-    .line 118
     return-void
 .end method
 
@@ -194,7 +179,6 @@
     .param p2, "x1"    # Lmiui/security/WakePathRuleInfo$1;
 
     .prologue
-    .line 13
     invoke-direct {p0, p1}, Lmiui/security/WakePathRuleInfo;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -215,13 +199,10 @@
     .end annotation
 
     .prologue
-    .line 58
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 59
     iput-object p1, p0, Lmiui/security/WakePathRuleInfo;->mActionExpress:Ljava/lang/String;
 
-    .line 60
     iget-object v0, p0, Lmiui/security/WakePathRuleInfo;->mActionExpress:Ljava/lang/String;
 
     invoke-static {v0}, Lmiui/security/WakePathRuleInfo;->getExpressType(Ljava/lang/String;)I
@@ -230,10 +211,8 @@
 
     iput v0, p0, Lmiui/security/WakePathRuleInfo;->mActionExpressType:I
 
-    .line 61
     iput-object p2, p0, Lmiui/security/WakePathRuleInfo;->mClassNameExpress:Ljava/lang/String;
 
-    .line 62
     iget-object v0, p0, Lmiui/security/WakePathRuleInfo;->mClassNameExpress:Ljava/lang/String;
 
     invoke-static {v0}, Lmiui/security/WakePathRuleInfo;->getExpressType(Ljava/lang/String;)I
@@ -242,10 +221,8 @@
 
     iput v0, p0, Lmiui/security/WakePathRuleInfo;->mClassNameExpressType:I
 
-    .line 63
     iput-object p3, p0, Lmiui/security/WakePathRuleInfo;->mCallerExpress:Ljava/lang/String;
 
-    .line 64
     iget-object v0, p0, Lmiui/security/WakePathRuleInfo;->mCallerExpress:Ljava/lang/String;
 
     invoke-static {v0}, Lmiui/security/WakePathRuleInfo;->getExpressType(Ljava/lang/String;)I
@@ -254,10 +231,8 @@
 
     iput v0, p0, Lmiui/security/WakePathRuleInfo;->mCallerExpressType:I
 
-    .line 65
     iput-object p4, p0, Lmiui/security/WakePathRuleInfo;->mCalleeExpress:Ljava/lang/String;
 
-    .line 66
     iget-object v0, p0, Lmiui/security/WakePathRuleInfo;->mCalleeExpress:Ljava/lang/String;
 
     invoke-static {v0}, Lmiui/security/WakePathRuleInfo;->getExpressType(Ljava/lang/String;)I
@@ -266,31 +241,25 @@
 
     iput v0, p0, Lmiui/security/WakePathRuleInfo;->mCalleeExpressType:I
 
-    .line 67
     iput p5, p0, Lmiui/security/WakePathRuleInfo;->mWakeType:I
 
-    .line 68
     iput p6, p0, Lmiui/security/WakePathRuleInfo;->mUserSettings:I
 
-    .line 69
     iget v0, p0, Lmiui/security/WakePathRuleInfo;->mWakeType:I
 
     const/16 v1, 0x10
 
     if-ne v0, v1, :cond_0
 
-    .line 70
     invoke-static {p1, p2, p3, p4}, Lmiui/security/WakePathRuleInfo;->getHashCode(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
     iput v0, p0, Lmiui/security/WakePathRuleInfo;->mHashCode:I
 
-    .line 74
     :goto_0
     return-void
 
-    .line 72
     :cond_0
     const/4 v0, 0x0
 
@@ -312,17 +281,14 @@
 
     const/4 v1, 0x0
 
-    .line 261
     const/16 v2, 0x11
 
     if-ne p4, v2, :cond_1
 
-    .line 286
     :cond_0
     :goto_0
     return v0
 
-    .line 265
     :cond_1
     const-string v2, "*"
 
@@ -358,10 +324,8 @@
 
     move v0, v1
 
-    .line 267
     goto :goto_0
 
-    .line 270
     :cond_2
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -391,10 +355,8 @@
 
     move v0, v1
 
-    .line 271
     goto :goto_0
 
-    .line 274
     :cond_3
     const-string v2, "com.miui.home"
 
@@ -415,10 +377,8 @@
     :cond_4
     move v0, v1
 
-    .line 275
     goto :goto_0
 
-    .line 278
     :cond_5
     const-string v2, "android"
 
@@ -436,7 +396,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 279
     :cond_6
     const-string v2, "android"
 
@@ -448,10 +407,8 @@
 
     move v0, v1
 
-    .line 280
     goto :goto_0
 
-    .line 282
     :cond_7
     const-string v2, "*"
 
@@ -471,7 +428,6 @@
 
     move v0, v1
 
-    .line 283
     goto :goto_0
 .end method
 
@@ -484,10 +440,8 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 201
     packed-switch p1, :pswitch_data_0
 
-    .line 244
     :cond_0
     :pswitch_0
     const/4 v3, 0x1
@@ -496,7 +450,6 @@
     :goto_0
     return v3
 
-    .line 203
     :pswitch_1
     invoke-static {p0, p2}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
@@ -506,7 +459,6 @@
 
     goto :goto_0
 
-    .line 209
     :pswitch_2
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -516,7 +468,6 @@
 
     if-lt v4, v5, :cond_2
 
-    .line 210
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v4
@@ -527,7 +478,6 @@
 
     move-result-object p0
 
-    .line 213
     :cond_2
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -543,7 +493,6 @@
 
     goto :goto_0
 
-    .line 219
     :pswitch_3
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -557,25 +506,21 @@
 
     if-nez v4, :cond_1
 
-    .line 222
     const-string v4, "*"
 
     invoke-virtual {p0, v4}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 223
     .local v0, "index":I
     const/4 v4, -0x1
 
     if-eq v0, v4, :cond_1
 
-    .line 226
     invoke-virtual {p0, v3, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 227
     .local v2, "strStart":Ljava/lang/String;
     add-int/lit8 v4, v0, 0x1
 
@@ -583,7 +528,6 @@
 
     move-result-object v1
 
-    .line 228
     .local v1, "strEnd":Ljava/lang/String;
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -597,14 +541,12 @@
 
     if-nez v4, :cond_1
 
-    .line 232
     invoke-virtual {p2, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v4
 
     if-eqz v4, :cond_1
 
-    .line 236
     invoke-virtual {p2, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v4
@@ -613,7 +555,6 @@
 
     goto :goto_0
 
-    .line 201
     nop
 
     :pswitch_data_0
@@ -630,10 +571,8 @@
     .param p0, "express"    # Ljava/lang/String;
 
     .prologue
-    .line 187
     const/4 v0, 0x0
 
-    .line 188
     .local v0, "type":I
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -641,15 +580,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 189
     const/4 v0, 0x0
 
-    .line 197
     :cond_0
     :goto_0
     return v0
 
-    .line 190
     :cond_1
     const-string v1, "*"
 
@@ -659,12 +595,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 191
     const/4 v0, 0x2
 
     goto :goto_0
 
-    .line 192
     :cond_2
     const-string v1, "*"
 
@@ -674,12 +608,10 @@
 
     if-eqz v1, :cond_3
 
-    .line 193
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 194
     :cond_3
     const-string v1, "*"
 
@@ -689,7 +621,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 195
     const/4 v0, 0x3
 
     goto :goto_0
@@ -703,25 +634,19 @@
     .param p3, "calleeExpress"    # Ljava/lang/String;
 
     .prologue
-    .line 178
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 179
     .local v0, "strBuffer":Ljava/lang/StringBuffer;
     invoke-virtual {v0, p0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 180
     invoke-virtual {v0, p1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 181
     invoke-virtual {v0, p2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 182
     invoke-virtual {v0, p3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 183
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -739,7 +664,6 @@
     .locals 1
 
     .prologue
-    .line 78
     const/4 v0, 0x0
 
     return v0
@@ -752,7 +676,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 162
     iget v1, p0, Lmiui/security/WakePathRuleInfo;->mWakeType:I
 
     const/16 v2, 0x10
@@ -761,7 +684,6 @@
 
     if-nez p1, :cond_2
 
-    .line 163
     :cond_0
     sget-object v1, Lmiui/security/WakePathRuleInfo;->TAG:Ljava/lang/String;
 
@@ -797,7 +719,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 166
     :cond_1
     :goto_0
     return v0
@@ -819,15 +740,12 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 123
     if-nez p1, :cond_1
 
-    .line 134
     :cond_0
     :goto_0
     return v3
 
-    .line 128
     :cond_1
     :try_start_0
     move-object v0, p1
@@ -838,7 +756,6 @@
     :try_end_0
     .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 134
     .local v2, "info":Lmiui/security/WakePathRuleInfo;
     iget-object v4, p0, Lmiui/security/WakePathRuleInfo;->mActionExpress:Ljava/lang/String;
 
@@ -890,12 +807,10 @@
 
     goto :goto_0
 
-    .line 129
     .end local v2    # "info":Lmiui/security/WakePathRuleInfo;
     :catch_0
     move-exception v1
 
-    .line 130
     .local v1, "e":Ljava/lang/ClassCastException;
     invoke-virtual {v1}, Ljava/lang/ClassCastException;->printStackTrace()V
 
@@ -913,19 +828,16 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 142
     iget v1, p0, Lmiui/security/WakePathRuleInfo;->mWakeType:I
 
     and-int/2addr v1, p5
 
     if-nez v1, :cond_1
 
-    .line 158
     :cond_0
     :goto_0
     return v0
 
-    .line 146
     :cond_1
     iget-object v1, p0, Lmiui/security/WakePathRuleInfo;->mActionExpress:Ljava/lang/String;
 
@@ -937,7 +849,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 149
     iget-object v1, p0, Lmiui/security/WakePathRuleInfo;->mClassNameExpress:Ljava/lang/String;
 
     iget v2, p0, Lmiui/security/WakePathRuleInfo;->mClassNameExpressType:I
@@ -948,7 +859,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 152
     iget-object v1, p0, Lmiui/security/WakePathRuleInfo;->mCallerExpress:Ljava/lang/String;
 
     iget v2, p0, Lmiui/security/WakePathRuleInfo;->mCallerExpressType:I
@@ -959,7 +869,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 155
     iget-object v1, p0, Lmiui/security/WakePathRuleInfo;->mCalleeExpress:Ljava/lang/String;
 
     iget v2, p0, Lmiui/security/WakePathRuleInfo;->mCalleeExpressType:I
@@ -970,7 +879,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 158
     const/4 v0, 0x1
 
     goto :goto_0
@@ -980,7 +888,6 @@
     .locals 1
 
     .prologue
-    .line 248
     iget-object v0, p0, Lmiui/security/WakePathRuleInfo;->mCalleeExpress:Ljava/lang/String;
 
     return-object v0
@@ -990,7 +897,6 @@
     .locals 1
 
     .prologue
-    .line 252
     iget-object v0, p0, Lmiui/security/WakePathRuleInfo;->mCallerExpress:Ljava/lang/String;
 
     return-object v0
@@ -1000,7 +906,6 @@
     .locals 1
 
     .prologue
-    .line 256
     iget v0, p0, Lmiui/security/WakePathRuleInfo;->mUserSettings:I
 
     return v0
@@ -1010,7 +915,6 @@
     .locals 2
 
     .prologue
-    .line 171
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1100,61 +1004,49 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 83
     iget-object v0, p0, Lmiui/security/WakePathRuleInfo;->mActionExpress:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 84
     iget v0, p0, Lmiui/security/WakePathRuleInfo;->mActionExpressType:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 85
     iget-object v0, p0, Lmiui/security/WakePathRuleInfo;->mClassNameExpress:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 86
     iget v0, p0, Lmiui/security/WakePathRuleInfo;->mClassNameExpressType:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 87
     iget-object v0, p0, Lmiui/security/WakePathRuleInfo;->mCallerExpress:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 88
     iget v0, p0, Lmiui/security/WakePathRuleInfo;->mCallerExpressType:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 89
     iget-object v0, p0, Lmiui/security/WakePathRuleInfo;->mCalleeExpress:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 90
     iget v0, p0, Lmiui/security/WakePathRuleInfo;->mCalleeExpressType:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 91
     iget v0, p0, Lmiui/security/WakePathRuleInfo;->mWakeType:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 92
     iget v0, p0, Lmiui/security/WakePathRuleInfo;->mUserSettings:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 93
     iget v0, p0, Lmiui/security/WakePathRuleInfo;->mHashCode:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 94
     return-void
 .end method

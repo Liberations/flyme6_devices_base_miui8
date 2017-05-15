@@ -36,7 +36,6 @@
     .locals 1
 
     .prologue
-    .line 903
     new-instance v0, Landroid/widget/Spinner$SavedState$1;
 
     invoke-direct {v0}, Landroid/widget/Spinner$SavedState$1;-><init>()V
@@ -51,10 +50,8 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 893
     invoke-direct {p0, p1}, Landroid/widget/AbsSpinner$SavedState;-><init>(Landroid/os/Parcel;)V
 
-    .line 894
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result v0
@@ -66,10 +63,8 @@
     :goto_0
     iput-boolean v0, p0, Landroid/widget/Spinner$SavedState;->showDropdown:Z
 
-    .line 895
     return-void
 
-    .line 894
     :cond_0
     const/4 v0, 0x0
 
@@ -82,7 +77,6 @@
     .param p2, "x1"    # Landroid/widget/Spinner$1;
 
     .prologue
-    .line 885
     invoke-direct {p0, p1}, Landroid/widget/Spinner$SavedState;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -93,10 +87,8 @@
     .param p1, "superState"    # Landroid/os/Parcelable;
 
     .prologue
-    .line 889
     invoke-direct {p0, p1}, Landroid/widget/AbsSpinner$SavedState;-><init>(Landroid/os/Parcelable;)V
 
-    .line 890
     return-void
 .end method
 
@@ -108,10 +100,8 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 899
     invoke-super {p0, p1, p2}, Landroid/widget/AbsSpinner$SavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 900
     iget-boolean v0, p0, Landroid/widget/Spinner$SavedState;->showDropdown:Z
 
     if-eqz v0, :cond_0
@@ -123,10 +113,8 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 901
     return-void
 
-    .line 900
     :cond_0
     const/4 v0, 0x0
 

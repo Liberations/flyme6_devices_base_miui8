@@ -21,10 +21,8 @@
     .param p2, "mask"    # I
 
     .prologue
-    .line 89
     invoke-direct {p0, p1, p2}, Landroid/os/FileObserver;-><init>(Ljava/lang/String;I)V
 
-    .line 90
     return-void
 .end method
 
@@ -36,7 +34,6 @@
     .param p2, "path"    # Ljava/lang/String;
 
     .prologue
-    .line 94
     # getter for: Landroid/security/MiuiLockPatternUtils;->mMiuiLockPatternDatas:[Landroid/security/MiuiLockPatternUtils$MiuiLockPatternData;
     invoke-static {}, Landroid/security/MiuiLockPatternUtils;->access$000()[Landroid/security/MiuiLockPatternUtils$MiuiLockPatternData;
 
@@ -44,7 +41,6 @@
 
     array-length v2, v3
 
-    .line 95
     .local v2, "size":I
     const/4 v1, 0x0
 
@@ -52,7 +48,6 @@
     :goto_0
     if-ge v1, v2, :cond_2
 
-    .line 96
     # getter for: Landroid/security/MiuiLockPatternUtils;->mMiuiLockPatternDatas:[Landroid/security/MiuiLockPatternUtils$MiuiLockPatternData;
     invoke-static {}, Landroid/security/MiuiLockPatternUtils;->access$000()[Landroid/security/MiuiLockPatternUtils$MiuiLockPatternData;
 
@@ -60,7 +55,6 @@
 
     aget-object v0, v3, v1
 
-    .line 97
     .local v0, "data":Landroid/security/MiuiLockPatternUtils$MiuiLockPatternData;
     iget-object v3, v0, Landroid/security/MiuiLockPatternUtils$MiuiLockPatternData;->mLockFile:Ljava/lang/String;
 
@@ -78,7 +72,6 @@
 
     if-nez v3, :cond_0
 
-    .line 98
     const-string v3, "MiuiLockPatternUtils"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -91,7 +84,7 @@
 
     move-result-object v4
 
-    const-string/jumbo v5, "password file changed"
+    const-string v5, "password file changed"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -103,7 +96,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 99
     iget-object v4, v0, Landroid/security/MiuiLockPatternUtils$MiuiLockPatternData;->mHaveNonZeroFile:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     new-instance v3, Ljava/io/File;
@@ -127,19 +119,16 @@
     :goto_1
     invoke-virtual {v4, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 95
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 99
     :cond_1
     const/4 v3, 0x0
 
     goto :goto_1
 
-    .line 102
     .end local v0    # "data":Landroid/security/MiuiLockPatternUtils$MiuiLockPatternData;
     :cond_2
     return-void

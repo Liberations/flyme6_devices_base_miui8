@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 120
     iput-object p1, p0, Lorg/egret/plugin/mi/runtime/EgretLoader$1;->this$0:Lorg/egret/plugin/mi/runtime/EgretLoader;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "message"    # Ljava/lang/String;
 
     .prologue
-    .line 126
     return-void
 .end method
 
@@ -52,7 +50,6 @@
     .param p3, "length"    # I
 
     .prologue
-    .line 134
     const-string v0, "EgretLoader"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -97,7 +94,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 136
     return-void
 .end method
 
@@ -107,7 +103,6 @@
     .param p2, "length"    # I
 
     .prologue
-    .line 129
     const-string v0, "EgretLoader"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -148,7 +143,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 131
     return-void
 .end method
 
@@ -163,13 +157,11 @@
     .end annotation
 
     .prologue
-    .line 122
     .local p1, "gameEngineClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iget-object v0, p0, Lorg/egret/plugin/mi/runtime/EgretLoader$1;->this$0:Lorg/egret/plugin/mi/runtime/EgretLoader;
 
     # invokes: Lorg/egret/plugin/mi/runtime/EgretLoader;->startGame(Ljava/lang/Class;)V
     invoke-static {v0, p1}, Lorg/egret/plugin/mi/runtime/EgretLoader;->access$000(Lorg/egret/plugin/mi/runtime/EgretLoader;Ljava/lang/Class;)V
 
-    .line 123
     return-void
 .end method

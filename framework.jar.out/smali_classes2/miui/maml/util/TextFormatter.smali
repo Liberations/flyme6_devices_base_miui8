@@ -43,14 +43,12 @@
     .param p2, "text"    # Ljava/lang/String;
 
     .prologue
-    .line 38
     const-string v0, ""
 
     const-string v1, ""
 
     invoke-direct {p0, p1, p2, v0, v1}, Lmiui/maml/util/TextFormatter;-><init>(Lmiui/maml/data/Variables;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 39
     return-void
 .end method
 
@@ -61,12 +59,10 @@
     .param p3, "paras"    # Ljava/lang/String;
 
     .prologue
-    .line 42
     const-string v0, ""
 
     invoke-direct {p0, p1, v0, p2, p3}, Lmiui/maml/util/TextFormatter;-><init>(Lmiui/maml/data/Variables;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 43
     return-void
 .end method
 
@@ -82,13 +78,10 @@
 
     const/4 v2, 0x0
 
-    .line 45
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 49
     iput-object p2, p0, Lmiui/maml/util/TextFormatter;->mText:Ljava/lang/String;
 
-    .line 50
     iget-object v0, p0, Lmiui/maml/util/TextFormatter;->mText:Ljava/lang/String;
 
     const-string v1, "@"
@@ -99,7 +92,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 51
     iget-object v0, p0, Lmiui/maml/util/TextFormatter;->mText:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/String;->substring(I)Ljava/lang/String;
@@ -108,7 +100,6 @@
 
     iput-object v0, p0, Lmiui/maml/util/TextFormatter;->mText:Ljava/lang/String;
 
-    .line 52
     iget-object v0, p0, Lmiui/maml/util/TextFormatter;->mText:Ljava/lang/String;
 
     const-string v1, "@"
@@ -119,7 +110,6 @@
 
     if-nez v0, :cond_0
 
-    .line 53
     new-instance v0, Lmiui/maml/data/IndexedVariable;
 
     iget-object v1, p0, Lmiui/maml/util/TextFormatter;->mText:Ljava/lang/String;
@@ -128,11 +118,9 @@
 
     iput-object v0, p0, Lmiui/maml/util/TextFormatter;->mIndexedTextVar:Lmiui/maml/data/IndexedVariable;
 
-    .line 57
     :cond_0
     iput-object p3, p0, Lmiui/maml/util/TextFormatter;->mFormat:Ljava/lang/String;
 
-    .line 58
     iget-object v0, p0, Lmiui/maml/util/TextFormatter;->mFormat:Ljava/lang/String;
 
     const-string v1, "@"
@@ -143,7 +131,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 59
     iget-object v0, p0, Lmiui/maml/util/TextFormatter;->mFormat:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/String;->substring(I)Ljava/lang/String;
@@ -152,7 +139,6 @@
 
     iput-object v0, p0, Lmiui/maml/util/TextFormatter;->mFormat:Ljava/lang/String;
 
-    .line 60
     iget-object v0, p0, Lmiui/maml/util/TextFormatter;->mFormat:Ljava/lang/String;
 
     const-string v1, "@"
@@ -163,7 +149,6 @@
 
     if-nez v0, :cond_1
 
-    .line 61
     new-instance v0, Lmiui/maml/data/IndexedVariable;
 
     iget-object v1, p0, Lmiui/maml/util/TextFormatter;->mFormat:Ljava/lang/String;
@@ -172,7 +157,6 @@
 
     iput-object v0, p0, Lmiui/maml/util/TextFormatter;->mIndexedFormatVar:Lmiui/maml/data/IndexedVariable;
 
-    .line 65
     :cond_1
     invoke-static {p4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -180,19 +164,16 @@
 
     if-nez v0, :cond_2
 
-    .line 66
     invoke-static {p1, p4}, Lmiui/maml/util/TextFormatter$FormatPara;->buildArray(Lmiui/maml/data/Variables;Ljava/lang/String;)[Lmiui/maml/util/TextFormatter$FormatPara;
 
     move-result-object v0
 
     iput-object v0, p0, Lmiui/maml/util/TextFormatter;->mParas:[Lmiui/maml/util/TextFormatter$FormatPara;
 
-    .line 67
     iget-object v0, p0, Lmiui/maml/util/TextFormatter;->mParas:[Lmiui/maml/util/TextFormatter$FormatPara;
 
     if-eqz v0, :cond_2
 
-    .line 68
     iget-object v0, p0, Lmiui/maml/util/TextFormatter;->mParas:[Lmiui/maml/util/TextFormatter$FormatPara;
 
     array-length v0, v0
@@ -201,7 +182,6 @@
 
     iput-object v0, p0, Lmiui/maml/util/TextFormatter;->mParasValue:[Ljava/lang/Object;
 
-    .line 71
     :cond_2
     return-void
 .end method
@@ -216,16 +196,12 @@
     .param p6, "formatExp"    # Lmiui/maml/data/Expression;
 
     .prologue
-    .line 79
     invoke-direct {p0, p1, p2, p3, p4}, Lmiui/maml/util/TextFormatter;-><init>(Lmiui/maml/data/Variables;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 80
     iput-object p5, p0, Lmiui/maml/util/TextFormatter;->mTextExpression:Lmiui/maml/data/Expression;
 
-    .line 81
     iput-object p6, p0, Lmiui/maml/util/TextFormatter;->mFormatExpression:Lmiui/maml/data/Expression;
 
-    .line 82
     return-void
 .end method
 
@@ -236,7 +212,6 @@
     .param p3, "textExp"    # Lmiui/maml/data/Expression;
 
     .prologue
-    .line 74
     const-string v3, ""
 
     const-string v4, ""
@@ -253,7 +228,6 @@
 
     invoke-direct/range {v0 .. v6}, Lmiui/maml/util/TextFormatter;-><init>(Lmiui/maml/data/Variables;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmiui/maml/data/Expression;Lmiui/maml/data/Expression;)V
 
-    .line 75
     return-void
 .end method
 
@@ -268,7 +242,6 @@
     .param p6, "formatExpAttr"    # Ljava/lang/String;
 
     .prologue
-    .line 235
     new-instance v0, Lmiui/maml/util/TextFormatter;
 
     invoke-interface {p1, p2}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -313,14 +286,12 @@
     .param p2, "style"    # Lmiui/maml/StylesManager$Style;
 
     .prologue
-    .line 222
     const-string v0, "paras"
 
     invoke-static {p1, v0, p2}, Lmiui/maml/util/StyleHelper;->getAttr(Lorg/w3c/dom/Element;Ljava/lang/String;Lmiui/maml/StylesManager$Style;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 223
     .local v4, "params":Ljava/lang/String;
     invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -328,14 +299,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 224
     const-string v0, "params"
 
     invoke-static {p1, v0, p2}, Lmiui/maml/util/StyleHelper;->getAttr(Lorg/w3c/dom/Element;Ljava/lang/String;Lmiui/maml/StylesManager$Style;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 226
     :cond_0
     new-instance v0, Lmiui/maml/util/TextFormatter;
 
@@ -384,29 +353,24 @@
     .locals 1
 
     .prologue
-    .line 105
     iget-object v0, p0, Lmiui/maml/util/TextFormatter;->mFormatExpression:Lmiui/maml/data/Expression;
 
     if-eqz v0, :cond_0
 
-    .line 106
     iget-object v0, p0, Lmiui/maml/util/TextFormatter;->mFormatExpression:Lmiui/maml/data/Expression;
 
     invoke-virtual {v0}, Lmiui/maml/data/Expression;->evaluateStr()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 111
     :goto_0
     return-object v0
 
-    .line 108
     :cond_0
     iget-object v0, p0, Lmiui/maml/util/TextFormatter;->mIndexedFormatVar:Lmiui/maml/data/IndexedVariable;
 
     if-eqz v0, :cond_1
 
-    .line 109
     iget-object v0, p0, Lmiui/maml/util/TextFormatter;->mIndexedFormatVar:Lmiui/maml/data/IndexedVariable;
 
     invoke-virtual {v0}, Lmiui/maml/data/IndexedVariable;->getString()Ljava/lang/String;
@@ -415,7 +379,6 @@
 
     goto :goto_0
 
-    .line 111
     :cond_1
     iget-object v0, p0, Lmiui/maml/util/TextFormatter;->mFormat:Ljava/lang/String;
 
@@ -426,29 +389,24 @@
     .locals 5
 
     .prologue
-    .line 119
     iget-object v3, p0, Lmiui/maml/util/TextFormatter;->mTextExpression:Lmiui/maml/data/Expression;
 
     if-eqz v3, :cond_0
 
-    .line 120
     iget-object v3, p0, Lmiui/maml/util/TextFormatter;->mTextExpression:Lmiui/maml/data/Expression;
 
     invoke-virtual {v3}, Lmiui/maml/data/Expression;->evaluateStr()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 140
     :goto_0
     return-object v3
 
-    .line 122
     :cond_0
     invoke-virtual {p0}, Lmiui/maml/util/TextFormatter;->getFormat()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 123
     .local v1, "format":Ljava/lang/String;
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -456,12 +414,10 @@
 
     if-nez v3, :cond_2
 
-    .line 124
     iget-object v3, p0, Lmiui/maml/util/TextFormatter;->mParas:[Lmiui/maml/util/TextFormatter$FormatPara;
 
     if-eqz v3, :cond_1
 
-    .line 125
     const/4 v2, 0x0
 
     .local v2, "i":I
@@ -472,7 +428,6 @@
 
     if-ge v2, v3, :cond_1
 
-    .line 126
     iget-object v3, p0, Lmiui/maml/util/TextFormatter;->mParasValue:[Ljava/lang/Object;
 
     iget-object v4, p0, Lmiui/maml/util/TextFormatter;->mParas:[Lmiui/maml/util/TextFormatter$FormatPara;
@@ -485,19 +440,16 @@
 
     aput-object v4, v3, v2
 
-    .line 125
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 129
     .end local v2    # "i":I
     :cond_1
     iget-object v3, p0, Lmiui/maml/util/TextFormatter;->mParasValue:[Ljava/lang/Object;
 
     if-eqz v3, :cond_2
 
-    .line 131
     :try_start_0
     iget-object v3, p0, Lmiui/maml/util/TextFormatter;->mParasValue:[Ljava/lang/Object;
 
@@ -509,11 +461,9 @@
 
     goto :goto_0
 
-    .line 132
     :catch_0
     move-exception v0
 
-    .line 133
     .local v0, "e":Ljava/util/IllegalFormatException;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -535,14 +485,12 @@
 
     goto :goto_0
 
-    .line 137
     .end local v0    # "e":Ljava/util/IllegalFormatException;
     :cond_2
     iget-object v3, p0, Lmiui/maml/util/TextFormatter;->mIndexedTextVar:Lmiui/maml/data/IndexedVariable;
 
     if-eqz v3, :cond_3
 
-    .line 138
     iget-object v3, p0, Lmiui/maml/util/TextFormatter;->mIndexedTextVar:Lmiui/maml/data/IndexedVariable;
 
     invoke-virtual {v3}, Lmiui/maml/data/IndexedVariable;->getString()Ljava/lang/String;
@@ -551,7 +499,6 @@
 
     goto :goto_0
 
-    .line 140
     :cond_3
     iget-object v3, p0, Lmiui/maml/util/TextFormatter;->mText:Ljava/lang/String;
 
@@ -562,7 +509,6 @@
     .locals 1
 
     .prologue
-    .line 115
     iget-object v0, p0, Lmiui/maml/util/TextFormatter;->mFormat:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -587,29 +533,23 @@
     .param p1, "params"    # [Ljava/lang/Object;
 
     .prologue
-    .line 85
     if-eqz p1, :cond_2
 
-    .line 86
     const/4 v1, 0x0
 
     iput-object v1, p0, Lmiui/maml/util/TextFormatter;->mParas:[Lmiui/maml/util/TextFormatter$FormatPara;
 
-    .line 87
     array-length v0, p1
 
-    .line 88
     .local v0, "parasLength":I
     iget-object v1, p0, Lmiui/maml/util/TextFormatter;->mParasValue:[Ljava/lang/Object;
 
     if-nez v1, :cond_0
 
-    .line 89
     new-array v1, v0, [Ljava/lang/Object;
 
     iput-object v1, p0, Lmiui/maml/util/TextFormatter;->mParasValue:[Ljava/lang/Object;
 
-    .line 91
     :cond_0
     iget-object v1, p0, Lmiui/maml/util/TextFormatter;->mParasValue:[Ljava/lang/Object;
 
@@ -617,12 +557,10 @@
 
     if-ge v1, v0, :cond_1
 
-    .line 92
     iget-object v1, p0, Lmiui/maml/util/TextFormatter;->mParasValue:[Ljava/lang/Object;
 
     array-length v0, v1
 
-    .line 94
     :cond_1
     invoke-static {p1, v0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
 
@@ -630,7 +568,6 @@
 
     iput-object v1, p0, Lmiui/maml/util/TextFormatter;->mParasValue:[Ljava/lang/Object;
 
-    .line 96
     .end local v0    # "parasLength":I
     :cond_2
     return-void
@@ -641,14 +578,11 @@
     .param p1, "text"    # Ljava/lang/String;
 
     .prologue
-    .line 99
     iput-object p1, p0, Lmiui/maml/util/TextFormatter;->mText:Ljava/lang/String;
 
-    .line 101
     const-string v0, ""
 
     iput-object v0, p0, Lmiui/maml/util/TextFormatter;->mFormat:Ljava/lang/String;
 
-    .line 102
     return-void
 .end method

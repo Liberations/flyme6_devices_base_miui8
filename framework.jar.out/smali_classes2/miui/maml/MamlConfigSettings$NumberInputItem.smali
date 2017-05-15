@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 553
     iput-object p1, p0, Lmiui/maml/MamlConfigSettings$NumberInputItem;->this$0:Lmiui/maml/MamlConfigSettings;
 
     const/4 v0, 0x0
@@ -39,7 +38,6 @@
     .param p2, "x1"    # Lmiui/maml/MamlConfigSettings$1;
 
     .prologue
-    .line 553
     invoke-direct {p0, p1}, Lmiui/maml/MamlConfigSettings$NumberInputItem;-><init>(Lmiui/maml/MamlConfigSettings;)V
 
     return-void
@@ -50,10 +48,8 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 568
     const-wide/16 v0, 0x0
 
-    .line 570
     .local v0, "d":D
     :try_start_0
     invoke-static {p1}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
@@ -62,7 +58,6 @@
 
     move-result-wide v0
 
-    .line 574
     :goto_0
     invoke-static {v0, v1}, Lmiui/maml/util/Utils;->doubleToString(D)Ljava/lang/String;
 
@@ -70,7 +65,6 @@
 
     return-object v2
 
-    .line 571
     :catch_0
     move-exception v2
 
@@ -84,10 +78,8 @@
     .param p1, "objValue"    # Ljava/lang/Object;
 
     .prologue
-    .line 579
     const-wide/16 v0, 0x0
 
-    .line 581
     .local v0, "d":D
     :try_start_0
     check-cast p1, Ljava/lang/String;
@@ -99,12 +91,10 @@
 
     move-result-wide v0
 
-    .line 586
     invoke-static {v0, v1}, Lmiui/maml/util/Utils;->doubleToString(D)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 588
     .local v3, "value":Ljava/lang/String;
     iget-object v4, p0, Lmiui/maml/MamlConfigSettings$NumberInputItem;->this$0:Lmiui/maml/MamlConfigSettings;
 
@@ -121,21 +111,17 @@
 
     invoke-virtual {v4, v5, v3}, Lmiui/maml/util/ConfigFile;->putNumber(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 589
     invoke-virtual {p0, v3}, Lmiui/maml/MamlConfigSettings$NumberInputItem;->setValuePreview(Ljava/lang/String;)V
 
-    .line 591
     const/4 v4, 0x1
 
     .end local v3    # "value":Ljava/lang/String;
     :goto_0
     return v4
 
-    .line 582
     :catch_0
     move-exception v2
 
-    .line 583
     .local v2, "e":Ljava/lang/NumberFormatException;
     const/4 v4, 0x0
 
@@ -147,7 +133,6 @@
     .param p1, "c"    # Landroid/content/Context;
 
     .prologue
-    .line 557
     new-instance v0, Landroid/preference/EditTextPreference;
 
     invoke-direct {v0, p1}, Landroid/preference/EditTextPreference;-><init>(Landroid/content/Context;)V
@@ -160,10 +145,8 @@
     .param p1, "ele"    # Lorg/w3c/dom/Element;
 
     .prologue
-    .line 596
     invoke-super {p0, p1}, Lmiui/maml/MamlConfigSettings$VariableItem;->onBuild(Lorg/w3c/dom/Element;)V
 
-    .line 597
     iget-object v0, p0, Lmiui/maml/MamlConfigSettings$NumberInputItem;->mPreference:Landroid/preference/Preference;
 
     check-cast v0, Landroid/preference/EditTextPreference;
@@ -172,7 +155,6 @@
 
     invoke-virtual {v0, v1}, Landroid/preference/EditTextPreference;->setDialogTitle(Ljava/lang/CharSequence;)V
 
-    .line 598
     return-void
 .end method
 
@@ -181,21 +163,17 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 562
     invoke-direct {p0, p1}, Lmiui/maml/MamlConfigSettings$NumberInputItem;->getValueString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 563
     iget-object v0, p0, Lmiui/maml/MamlConfigSettings$NumberInputItem;->mPreference:Landroid/preference/Preference;
 
     check-cast v0, Landroid/preference/EditTextPreference;
 
     invoke-virtual {v0, p1}, Landroid/preference/EditTextPreference;->setText(Ljava/lang/String;)V
 
-    .line 564
     invoke-virtual {p0, p1}, Lmiui/maml/MamlConfigSettings$NumberInputItem;->setValuePreview(Ljava/lang/String;)V
 
-    .line 565
     return-void
 .end method

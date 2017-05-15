@@ -35,16 +35,12 @@
     .param p2, "keymasterPadding"    # I
 
     .prologue
-    .line 261
     invoke-direct {p0}, Landroid/security/keystore/AndroidKeyStoreCipherSpiBase;-><init>()V
 
-    .line 262
     iput p1, p0, Landroid/security/keystore/AndroidKeyStoreAuthenticatedAESCipherSpi;->mKeymasterBlockMode:I
 
-    .line 263
     iput p2, p0, Landroid/security/keystore/AndroidKeyStoreAuthenticatedAESCipherSpi;->mKeymasterPadding:I
 
-    .line 264
     return-void
 .end method
 
@@ -55,7 +51,6 @@
     .param p1, "keymasterArgs"    # Landroid/security/keymaster/KeymasterArguments;
 
     .prologue
-    .line 290
     invoke-virtual {p0}, Landroid/security/keystore/AndroidKeyStoreAuthenticatedAESCipherSpi;->isEncrypting()Z
 
     move-result v0
@@ -66,7 +61,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 292
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "IV has already been used. Reusing IV in encryption mode violates security best practices."
@@ -75,7 +69,6 @@
 
     throw v0
 
-    .line 297
     :cond_0
     const v0, 0x10000002
 
@@ -83,33 +76,28 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/security/keymaster/KeymasterArguments;->addEnum(II)V
 
-    .line 298
     const v0, 0x20000004
 
     iget v1, p0, Landroid/security/keystore/AndroidKeyStoreAuthenticatedAESCipherSpi;->mKeymasterBlockMode:I
 
     invoke-virtual {p1, v0, v1}, Landroid/security/keymaster/KeymasterArguments;->addEnum(II)V
 
-    .line 299
     const v0, 0x20000006
 
     iget v1, p0, Landroid/security/keystore/AndroidKeyStoreAuthenticatedAESCipherSpi;->mKeymasterPadding:I
 
     invoke-virtual {p1, v0, v1}, Landroid/security/keymaster/KeymasterArguments;->addEnum(II)V
 
-    .line 300
     iget-object v0, p0, Landroid/security/keystore/AndroidKeyStoreAuthenticatedAESCipherSpi;->mIv:[B
 
     if-eqz v0, :cond_1
 
-    .line 301
     const v0, -0x6ffffc17
 
     iget-object v1, p0, Landroid/security/keystore/AndroidKeyStoreAuthenticatedAESCipherSpi;->mIv:[B
 
     invoke-virtual {p1, v0, v1}, Landroid/security/keymaster/KeymasterArguments;->addBytes(I[B)V
 
-    .line 303
     :cond_1
     return-void
 .end method
@@ -118,7 +106,6 @@
     .locals 1
 
     .prologue
-    .line 325
     const/16 v0, 0x10
 
     return v0
@@ -128,7 +115,6 @@
     .locals 1
 
     .prologue
-    .line 330
     iget-object v0, p0, Landroid/security/keystore/AndroidKeyStoreAuthenticatedAESCipherSpi;->mIv:[B
 
     invoke-static {v0}, Landroid/security/keystore/ArrayUtils;->cloneIfNotEmpty([B)[B
@@ -142,7 +128,6 @@
     .locals 1
 
     .prologue
-    .line 338
     iget-object v0, p0, Landroid/security/keystore/AndroidKeyStoreAuthenticatedAESCipherSpi;->mIv:[B
 
     return-object v0
@@ -159,12 +144,10 @@
     .end annotation
 
     .prologue
-    .line 275
     instance-of v0, p2, Landroid/security/keystore/AndroidKeyStoreSecretKey;
 
     if-nez v0, :cond_1
 
-    .line 276
     new-instance v1, Ljava/security/InvalidKeyException;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -201,11 +184,10 @@
     throw v1
 
     :cond_0
-    const-string/jumbo v0, "null"
+    const-string v0, "null"
 
     goto :goto_0
 
-    .line 279
     :cond_1
     const-string v0, "AES"
 
@@ -219,7 +201,6 @@
 
     if-nez v0, :cond_2
 
-    .line 280
     new-instance v0, Ljava/security/InvalidKeyException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -266,14 +247,12 @@
 
     throw v0
 
-    .line 284
     :cond_2
     check-cast p2, Landroid/security/keystore/AndroidKeyStoreSecretKey;
 
     .end local p2    # "key":Ljava/security/Key;
     invoke-virtual {p0, p2}, Landroid/security/keystore/AndroidKeyStoreAuthenticatedAESCipherSpi;->setKey(Landroid/security/keystore/AndroidKeyStoreKey;)V
 
-    .line 285
     return-void
 .end method
 
@@ -282,12 +261,10 @@
     .param p1, "keymasterArgs"    # Landroid/security/keymaster/KeymasterArguments;
 
     .prologue
-    .line 308
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Landroid/security/keystore/AndroidKeyStoreAuthenticatedAESCipherSpi;->mIvHasBeenUsed:Z
 
-    .line 311
     const v1, -0x6ffffc17
 
     const/4 v2, 0x0
@@ -296,7 +273,6 @@
 
     move-result-object v0
 
-    .line 312
     .local v0, "returnedIv":[B
     if-eqz v0, :cond_0
 
@@ -304,23 +280,18 @@
 
     if-nez v1, :cond_0
 
-    .line 313
     const/4 v0, 0x0
 
-    .line 316
     :cond_0
     iget-object v1, p0, Landroid/security/keystore/AndroidKeyStoreAuthenticatedAESCipherSpi;->mIv:[B
 
     if-nez v1, :cond_2
 
-    .line 317
     iput-object v0, p0, Landroid/security/keystore/AndroidKeyStoreAuthenticatedAESCipherSpi;->mIv:[B
 
-    .line 321
     :cond_1
     return-void
 
-    .line 318
     :cond_2
     if-eqz v0, :cond_1
 
@@ -332,7 +303,6 @@
 
     if-nez v1, :cond_1
 
-    .line 319
     new-instance v1, Ljava/security/ProviderException;
 
     const-string v2, "IV in use differs from provided IV"
@@ -346,20 +316,16 @@
     .locals 1
 
     .prologue
-    .line 268
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/security/keystore/AndroidKeyStoreAuthenticatedAESCipherSpi;->mIv:[B
 
-    .line 269
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/security/keystore/AndroidKeyStoreAuthenticatedAESCipherSpi;->mIvHasBeenUsed:Z
 
-    .line 270
     invoke-super {p0}, Landroid/security/keystore/AndroidKeyStoreCipherSpiBase;->resetAll()V
 
-    .line 271
     return-void
 .end method
 
@@ -368,9 +334,7 @@
     .param p1, "iv"    # [B
 
     .prologue
-    .line 334
     iput-object p1, p0, Landroid/security/keystore/AndroidKeyStoreAuthenticatedAESCipherSpi;->mIv:[B
 
-    .line 335
     return-void
 .end method

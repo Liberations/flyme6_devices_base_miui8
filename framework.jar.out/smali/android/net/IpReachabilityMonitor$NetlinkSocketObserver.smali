@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 337
     iput-object p1, p0, Landroid/net/IpReachabilityMonitor$NetlinkSocketObserver;->this$0:Landroid/net/IpReachabilityMonitor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,7 +45,6 @@
     .param p2, "x1"    # Landroid/net/IpReachabilityMonitor$1;
 
     .prologue
-    .line 337
     invoke-direct {p0, p1}, Landroid/net/IpReachabilityMonitor$NetlinkSocketObserver;-><init>(Landroid/net/IpReachabilityMonitor;)V
 
     return-void
@@ -57,7 +55,6 @@
     .param p0, "x0"    # Landroid/net/IpReachabilityMonitor$NetlinkSocketObserver;
 
     .prologue
-    .line 337
     invoke-direct {p0}, Landroid/net/IpReachabilityMonitor$NetlinkSocketObserver;->clearNetlinkSocket()V
 
     return-void
@@ -67,17 +64,14 @@
     .locals 1
 
     .prologue
-    .line 375
     iget-object v0, p0, Landroid/net/IpReachabilityMonitor$NetlinkSocketObserver;->mSocket:Landroid/net/netlink/NetlinkSocket;
 
     if-eqz v0, :cond_0
 
-    .line 376
     iget-object v0, p0, Landroid/net/IpReachabilityMonitor$NetlinkSocketObserver;->mSocket:Landroid/net/netlink/NetlinkSocket;
 
     invoke-virtual {v0}, Landroid/net/netlink/NetlinkSocket;->close()V
 
-    .line 378
     :cond_0
     return-void
 .end method
@@ -88,12 +82,10 @@
     .param p2, "whenMs"    # J
 
     .prologue
-    .line 443
     invoke-virtual {p1}, Landroid/net/netlink/RtNetlinkNeighborMessage;->getNdHeader()Landroid/net/netlink/StructNdMsg;
 
     move-result-object v3
 
-    .line 444
     .local v3, "ndMsg":Landroid/net/netlink/StructNdMsg;
     if-eqz v3, :cond_0
 
@@ -108,18 +100,15 @@
 
     if-eq v6, v7, :cond_1
 
-    .line 483
     :cond_0
     :goto_0
     return-void
 
-    .line 448
     :cond_1
     invoke-virtual {p1}, Landroid/net/netlink/RtNetlinkNeighborMessage;->getDestination()Ljava/net/InetAddress;
 
     move-result-object v0
 
-    .line 449
     .local v0, "destination":Ljava/net/InetAddress;
     iget-object v6, p0, Landroid/net/IpReachabilityMonitor$NetlinkSocketObserver;->this$0:Landroid/net/IpReachabilityMonitor;
 
@@ -130,18 +119,15 @@
 
     if-eqz v6, :cond_0
 
-    .line 453
     invoke-virtual {p1}, Landroid/net/netlink/RtNetlinkNeighborMessage;->getHeader()Landroid/net/netlink/StructNlMsgHdr;
 
     move-result-object v6
 
     iget-short v2, v6, Landroid/net/netlink/StructNlMsgHdr;->nlmsg_type:S
 
-    .line 454
     .local v2, "msgType":S
     iget-short v4, v3, Landroid/net/netlink/StructNdMsg;->ndm_state:S
 
-    .line 455
     .local v4, "nudState":S
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -223,7 +209,7 @@
 
     move-result-object v6
 
-    const-string/jumbo v7, "}"
+    const-string v7, "}"
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -233,13 +219,11 @@
 
     move-result-object v1
 
-    .line 466
     .local v1, "eventMsg":Ljava/lang/String;
     const-string v6, "NetlinkSocketObserver"
 
     invoke-static {v6, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 469
     iget-object v6, p0, Landroid/net/IpReachabilityMonitor$NetlinkSocketObserver;->this$0:Landroid/net/IpReachabilityMonitor;
 
     # getter for: Landroid/net/IpReachabilityMonitor;->mLock:Ljava/lang/Object;
@@ -249,7 +233,6 @@
 
     monitor-enter v7
 
-    .line 470
     :try_start_0
     iget-object v6, p0, Landroid/net/IpReachabilityMonitor$NetlinkSocketObserver;->this$0:Landroid/net/IpReachabilityMonitor;
 
@@ -264,14 +247,12 @@
 
     if-eqz v6, :cond_2
 
-    .line 471
     const/16 v6, 0x1d
 
     if-ne v2, v6, :cond_3
 
     const/4 v5, 0x0
 
-    .line 475
     .local v5, "value":S
     :goto_1
     iget-object v6, p0, Landroid/net/IpReachabilityMonitor$NetlinkSocketObserver;->this$0:Landroid/net/IpReachabilityMonitor;
@@ -287,19 +268,16 @@
 
     invoke-interface {v6, v0, v8}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 477
     .end local v5    # "value":S
     :cond_2
     monitor-exit v7
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 479
     const/16 v6, 0x20
 
     if-ne v4, v6, :cond_0
 
-    .line 480
     const-string v6, "NetlinkSocketObserver"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -322,7 +300,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 481
     iget-object v6, p0, Landroid/net/IpReachabilityMonitor$NetlinkSocketObserver;->this$0:Landroid/net/IpReachabilityMonitor;
 
     # invokes: Landroid/net/IpReachabilityMonitor;->handleNeighborLost(Ljava/lang/String;)V
@@ -333,10 +310,8 @@
     :cond_3
     move v5, v4
 
-    .line 471
     goto :goto_1
 
-    .line 477
     :catchall_0
     move-exception v6
 
@@ -354,7 +329,6 @@
     .param p2, "whenMs"    # J
 
     .prologue
-    .line 412
     :goto_0
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->remaining()I
 
@@ -362,18 +336,15 @@
 
     if-lez v3, :cond_1
 
-    .line 413
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v1
 
-    .line 414
     .local v1, "position":I
     invoke-static {p1}, Landroid/net/netlink/NetlinkMessage;->parse(Ljava/nio/ByteBuffer;)Landroid/net/netlink/NetlinkMessage;
 
     move-result-object v0
 
-    .line 415
     .local v0, "nlMsg":Landroid/net/netlink/NetlinkMessage;
     if-eqz v0, :cond_0
 
@@ -383,18 +354,16 @@
 
     if-nez v3, :cond_2
 
-    .line 416
     :cond_0
     invoke-virtual {p1, v1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 417
     const-string v3, "NetlinkSocketObserver"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "unparsable netlink msg: "
+    const-string v5, "unparsable netlink msg: "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -414,14 +383,12 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 439
     .end local v0    # "nlMsg":Landroid/net/netlink/NetlinkMessage;
     .end local v1    # "position":I
     :cond_1
     :goto_1
     return-void
 
-    .line 421
     .restart local v0    # "nlMsg":Landroid/net/netlink/NetlinkMessage;
     .restart local v1    # "position":I
     :cond_2
@@ -431,18 +398,16 @@
 
     iget v2, v3, Landroid/net/netlink/StructNlMsgHdr;->nlmsg_pid:I
 
-    .line 422
     .local v2, "srcPortId":I
     if-eqz v2, :cond_3
 
-    .line 423
     const-string v3, "NetlinkSocketObserver"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "non-kernel source portId: "
+    const-string v5, "non-kernel source portId: "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -464,20 +429,18 @@
 
     goto :goto_1
 
-    .line 427
     :cond_3
     instance-of v3, v0, Landroid/net/netlink/NetlinkErrorMessage;
 
     if-eqz v3, :cond_4
 
-    .line 428
     const-string v3, "NetlinkSocketObserver"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "netlink error: "
+    const-string v5, "netlink error: "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -495,20 +458,18 @@
 
     goto :goto_0
 
-    .line 430
     :cond_4
     instance-of v3, v0, Landroid/net/netlink/RtNetlinkNeighborMessage;
 
     if-nez v3, :cond_5
 
-    .line 432
     const-string v3, "NetlinkSocketObserver"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "non-rtnetlink neighbor msg: "
+    const-string v5, "non-rtnetlink neighbor msg: "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -526,7 +487,6 @@
 
     goto/16 :goto_0
 
-    .line 437
     :cond_5
     check-cast v0, Landroid/net/netlink/RtNetlinkNeighborMessage;
 
@@ -545,7 +505,6 @@
     .end annotation
 
     .prologue
-    .line 400
     :try_start_0
     iget-object v1, p0, Landroid/net/IpReachabilityMonitor$NetlinkSocketObserver;->mSocket:Landroid/net/netlink/NetlinkSocket;
 
@@ -558,15 +517,12 @@
 
     move-result-object v1
 
-    .line 408
     :goto_0
     return-object v1
 
-    .line 403
     :catch_0
     move-exception v0
 
-    .line 404
     .local v0, "e":Landroid/system/ErrnoException;
     iget v1, v0, Landroid/system/ErrnoException;->errno:I
 
@@ -574,15 +530,12 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 405
     throw v0
 
-    .line 401
     .end local v0    # "e":Landroid/system/ErrnoException;
     :catch_1
     move-exception v1
 
-    .line 408
     :cond_0
     const/4 v1, 0x0
 
@@ -599,10 +552,8 @@
     .end annotation
 
     .prologue
-    .line 382
     invoke-direct {p0}, Landroid/net/IpReachabilityMonitor$NetlinkSocketObserver;->clearNetlinkSocket()V
 
-    .line 383
     new-instance v1, Landroid/net/netlink/NetlinkSocket;
 
     sget v2, Landroid/system/OsConstants;->NETLINK_ROUTE:I
@@ -611,7 +562,6 @@
 
     iput-object v1, p0, Landroid/net/IpReachabilityMonitor$NetlinkSocketObserver;->mSocket:Landroid/net/netlink/NetlinkSocket;
 
-    .line 385
     new-instance v0, Landroid/system/NetlinkSocketAddress;
 
     const/4 v1, 0x0
@@ -620,13 +570,11 @@
 
     invoke-direct {v0, v1, v2}, Landroid/system/NetlinkSocketAddress;-><init>(II)V
 
-    .line 387
     .local v0, "listenAddr":Landroid/system/NetlinkSocketAddress;
     iget-object v1, p0, Landroid/net/IpReachabilityMonitor$NetlinkSocketObserver;->mSocket:Landroid/net/netlink/NetlinkSocket;
 
     invoke-virtual {v1, v0}, Landroid/net/netlink/NetlinkSocket;->bind(Landroid/system/NetlinkSocketAddress;)V
 
-    .line 396
     return-void
 .end method
 
@@ -636,7 +584,6 @@
     .locals 7
 
     .prologue
-    .line 344
     iget-object v4, p0, Landroid/net/IpReachabilityMonitor$NetlinkSocketObserver;->this$0:Landroid/net/IpReachabilityMonitor;
 
     # getter for: Landroid/net/IpReachabilityMonitor;->mLock:Ljava/lang/Object;
@@ -658,14 +605,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 347
     :try_start_1
     invoke-direct {p0}, Landroid/net/IpReachabilityMonitor$NetlinkSocketObserver;->setupNetlinkSocket()V
     :try_end_1
     .catch Landroid/system/ErrnoException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/net/SocketException; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 354
     :cond_0
     :goto_0
     iget-object v4, p0, Landroid/net/IpReachabilityMonitor$NetlinkSocketObserver;->this$0:Landroid/net/IpReachabilityMonitor;
@@ -677,7 +622,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 356
     :try_start_2
     invoke-direct {p0}, Landroid/net/IpReachabilityMonitor$NetlinkSocketObserver;->recvKernelReply()Ljava/nio/ByteBuffer;
     :try_end_2
@@ -685,22 +629,18 @@
 
     move-result-object v0
 
-    .line 361
     .local v0, "byteBuffer":Ljava/nio/ByteBuffer;
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
-    .line 362
     .local v2, "whenMs":J
     if-eqz v0, :cond_0
 
-    .line 365
     invoke-direct {p0, v0, v2, v3}, Landroid/net/IpReachabilityMonitor$NetlinkSocketObserver;->parseNetlinkMessageBuffer(Ljava/nio/ByteBuffer;J)V
 
     goto :goto_0
 
-    .line 344
     .end local v0    # "byteBuffer":Ljava/nio/ByteBuffer;
     .end local v2    # "whenMs":J
     :catchall_0
@@ -713,11 +653,9 @@
 
     throw v4
 
-    .line 348
     :catch_0
     move-exception v1
 
-    .line 349
     .local v1, "e":Ljava/lang/Exception;
     :goto_1
     const-string v4, "NetlinkSocketObserver"
@@ -726,7 +664,6 @@
 
     invoke-static {v4, v5, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 350
     iget-object v4, p0, Landroid/net/IpReachabilityMonitor$NetlinkSocketObserver;->this$0:Landroid/net/IpReachabilityMonitor;
 
     # getter for: Landroid/net/IpReachabilityMonitor;->mLock:Ljava/lang/Object;
@@ -757,12 +694,10 @@
 
     throw v4
 
-    .line 357
     .end local v1    # "e":Ljava/lang/Exception;
     :catch_1
     move-exception v1
 
-    .line 358
     .local v1, "e":Landroid/system/ErrnoException;
     const-string v4, "NetlinkSocketObserver"
 
@@ -770,12 +705,10 @@
 
     invoke-static {v4, v5, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 368
     .end local v1    # "e":Landroid/system/ErrnoException;
     :cond_1
     invoke-direct {p0}, Landroid/net/IpReachabilityMonitor$NetlinkSocketObserver;->clearNetlinkSocket()V
 
-    .line 370
     iget-object v4, p0, Landroid/net/IpReachabilityMonitor$NetlinkSocketObserver;->this$0:Landroid/net/IpReachabilityMonitor;
 
     # getter for: Landroid/net/IpReachabilityMonitor;->mLock:Ljava/lang/Object;
@@ -795,10 +728,8 @@
 
     monitor-exit v5
 
-    .line 372
     return-void
 
-    .line 370
     :catchall_2
     move-exception v4
 
@@ -808,7 +739,6 @@
 
     throw v4
 
-    .line 348
     :catch_2
     move-exception v1
 

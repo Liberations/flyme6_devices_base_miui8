@@ -38,7 +38,6 @@
     .locals 2
 
     .prologue
-    .line 1505
     sget-object v0, Lmiui/provider/ExtraContacts$ConferenceCalls;->AUTHORITY_URI:Landroid/net/Uri;
 
     const-string v1, "conference_groups"
@@ -49,7 +48,6 @@
 
     sput-object v0, Lmiui/provider/ExtraContacts$ConferenceCalls$ConferenceColumns;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 1506
     sget-object v0, Lmiui/provider/ExtraContacts$ConferenceCalls;->AUTHORITY_URI:Landroid/net/Uri;
 
     const-string v1, "conference_groups/filter"
@@ -67,7 +65,6 @@
     .locals 0
 
     .prologue
-    .line 1504
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

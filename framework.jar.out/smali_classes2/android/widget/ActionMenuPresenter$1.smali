@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 101
     iput-object p1, p0, Landroid/widget/ActionMenuPresenter$1;->this$0:Landroid/widget/ActionMenuPresenter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 104
     iget-object v0, p0, Landroid/widget/ActionMenuPresenter$1;->this$0:Landroid/widget/ActionMenuPresenter;
 
     const/4 v1, 0x0
@@ -48,7 +46,6 @@
     # invokes: Landroid/widget/ActionMenuPresenter;->computeMenuItemAnimationInfo(Z)V
     invoke-static {v0, v1}, Landroid/widget/ActionMenuPresenter;->access$100(Landroid/widget/ActionMenuPresenter;Z)V
 
-    .line 105
     iget-object v0, p0, Landroid/widget/ActionMenuPresenter$1;->this$0:Landroid/widget/ActionMenuPresenter;
 
     # getter for: Landroid/widget/ActionMenuPresenter;->mMenuView:Lcom/android/internal/view/menu/MenuView;
@@ -64,13 +61,11 @@
 
     invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
-    .line 106
     iget-object v0, p0, Landroid/widget/ActionMenuPresenter$1;->this$0:Landroid/widget/ActionMenuPresenter;
 
     # invokes: Landroid/widget/ActionMenuPresenter;->runItemAnimations()V
     invoke-static {v0}, Landroid/widget/ActionMenuPresenter;->access$300(Landroid/widget/ActionMenuPresenter;)V
 
-    .line 107
     const/4 v0, 0x1
 
     return v0

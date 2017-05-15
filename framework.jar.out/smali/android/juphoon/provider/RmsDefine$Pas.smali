@@ -129,7 +129,6 @@
     .locals 1
 
     .prologue
-    .line 301
     const-string v0, "content://pas/pas"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -138,7 +137,6 @@
 
     sput-object v0, Landroid/juphoon/provider/RmsDefine$Pas;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 302
     const-string v0, "content://pas/pas_search"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -147,7 +145,6 @@
 
     sput-object v0, Landroid/juphoon/provider/RmsDefine$Pas;->CONTENT_URI_SEARCH:Landroid/net/Uri;
 
-    .line 303
     const-string v0, "content://pas/pas_history_message"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -163,7 +160,6 @@
     .locals 0
 
     .prologue
-    .line 294
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

@@ -31,10 +31,8 @@
     .locals 0
 
     .prologue
-    .line 121
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 122
     return-void
 .end method
 
@@ -44,7 +42,6 @@
     .locals 2
 
     .prologue
-    .line 150
     iget-object v1, p0, Landroid/media/tv/TvStreamConfig$Builder;->mStreamId:Ljava/lang/Integer;
 
     if-eqz v1, :cond_0
@@ -65,7 +62,6 @@
 
     if-nez v1, :cond_1
 
-    .line 152
     :cond_0
     new-instance v1, Ljava/lang/UnsupportedOperationException;
 
@@ -73,7 +69,6 @@
 
     throw v1
 
-    .line 155
     :cond_1
     new-instance v0, Landroid/media/tv/TvStreamConfig;
 
@@ -81,7 +76,6 @@
 
     invoke-direct {v0, v1}, Landroid/media/tv/TvStreamConfig;-><init>(Landroid/media/tv/TvStreamConfig$1;)V
 
-    .line 156
     .local v0, "config":Landroid/media/tv/TvStreamConfig;
     iget-object v1, p0, Landroid/media/tv/TvStreamConfig$Builder;->mStreamId:Ljava/lang/Integer;
 
@@ -92,7 +86,6 @@
     # setter for: Landroid/media/tv/TvStreamConfig;->mStreamId:I
     invoke-static {v0, v1}, Landroid/media/tv/TvStreamConfig;->access$102(Landroid/media/tv/TvStreamConfig;I)I
 
-    .line 157
     iget-object v1, p0, Landroid/media/tv/TvStreamConfig$Builder;->mType:Ljava/lang/Integer;
 
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
@@ -102,7 +95,6 @@
     # setter for: Landroid/media/tv/TvStreamConfig;->mType:I
     invoke-static {v0, v1}, Landroid/media/tv/TvStreamConfig;->access$202(Landroid/media/tv/TvStreamConfig;I)I
 
-    .line 158
     iget-object v1, p0, Landroid/media/tv/TvStreamConfig$Builder;->mMaxWidth:Ljava/lang/Integer;
 
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
@@ -112,7 +104,6 @@
     # setter for: Landroid/media/tv/TvStreamConfig;->mMaxWidth:I
     invoke-static {v0, v1}, Landroid/media/tv/TvStreamConfig;->access$302(Landroid/media/tv/TvStreamConfig;I)I
 
-    .line 159
     iget-object v1, p0, Landroid/media/tv/TvStreamConfig$Builder;->mMaxHeight:Ljava/lang/Integer;
 
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
@@ -122,7 +113,6 @@
     # setter for: Landroid/media/tv/TvStreamConfig;->mMaxHeight:I
     invoke-static {v0, v1}, Landroid/media/tv/TvStreamConfig;->access$402(Landroid/media/tv/TvStreamConfig;I)I
 
-    .line 160
     iget-object v1, p0, Landroid/media/tv/TvStreamConfig$Builder;->mGeneration:Ljava/lang/Integer;
 
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
@@ -132,7 +122,6 @@
     # setter for: Landroid/media/tv/TvStreamConfig;->mGeneration:I
     invoke-static {v0, v1}, Landroid/media/tv/TvStreamConfig;->access$502(Landroid/media/tv/TvStreamConfig;I)I
 
-    .line 161
     return-object v0
 .end method
 
@@ -141,14 +130,12 @@
     .param p1, "generation"    # I
 
     .prologue
-    .line 145
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/media/tv/TvStreamConfig$Builder;->mGeneration:Ljava/lang/Integer;
 
-    .line 146
     return-object p0
 .end method
 
@@ -157,14 +144,12 @@
     .param p1, "maxHeight"    # I
 
     .prologue
-    .line 140
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/media/tv/TvStreamConfig$Builder;->mMaxHeight:Ljava/lang/Integer;
 
-    .line 141
     return-object p0
 .end method
 
@@ -173,14 +158,12 @@
     .param p1, "maxWidth"    # I
 
     .prologue
-    .line 135
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/media/tv/TvStreamConfig$Builder;->mMaxWidth:Ljava/lang/Integer;
 
-    .line 136
     return-object p0
 .end method
 
@@ -189,14 +172,12 @@
     .param p1, "streamId"    # I
 
     .prologue
-    .line 125
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/media/tv/TvStreamConfig$Builder;->mStreamId:Ljava/lang/Integer;
 
-    .line 126
     return-object p0
 .end method
 
@@ -205,13 +186,11 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 130
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/media/tv/TvStreamConfig$Builder;->mType:Ljava/lang/Integer;
 
-    .line 131
     return-object p0
 .end method

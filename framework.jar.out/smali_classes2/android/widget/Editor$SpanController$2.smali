@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 2222
     iput-object p1, p0, Landroid/widget/Editor$SpanController$2;->this$1:Landroid/widget/Editor$SpanController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "span"    # Landroid/text/style/EasyEditSpan;
 
     .prologue
-    .line 2225
     iget-object v3, p0, Landroid/widget/Editor$SpanController$2;->this$1:Landroid/widget/Editor$SpanController;
 
     iget-object v3, v3, Landroid/widget/Editor$SpanController;->this$0:Landroid/widget/Editor;
@@ -57,25 +55,21 @@
 
     check-cast v0, Landroid/text/Editable;
 
-    .line 2226
     .local v0, "editable":Landroid/text/Editable;
     invoke-interface {v0, p1}, Landroid/text/Editable;->getSpanStart(Ljava/lang/Object;)I
 
     move-result v2
 
-    .line 2227
     .local v2, "start":I
     invoke-interface {v0, p1}, Landroid/text/Editable;->getSpanEnd(Ljava/lang/Object;)I
 
     move-result v1
 
-    .line 2228
     .local v1, "end":I
     if-ltz v2, :cond_0
 
     if-ltz v1, :cond_0
 
-    .line 2229
     iget-object v3, p0, Landroid/widget/Editor$SpanController$2;->this$1:Landroid/widget/Editor$SpanController;
 
     const/4 v4, 0x1
@@ -83,7 +77,6 @@
     # invokes: Landroid/widget/Editor$SpanController;->sendEasySpanNotification(ILandroid/text/style/EasyEditSpan;)V
     invoke-static {v3, v4, p1}, Landroid/widget/Editor$SpanController;->access$1200(Landroid/widget/Editor$SpanController;ILandroid/text/style/EasyEditSpan;)V
 
-    .line 2230
     iget-object v3, p0, Landroid/widget/Editor$SpanController$2;->this$1:Landroid/widget/Editor$SpanController;
 
     iget-object v3, v3, Landroid/widget/Editor$SpanController;->this$0:Landroid/widget/Editor;
@@ -95,10 +88,8 @@
 
     invoke-virtual {v3, v2, v1}, Landroid/widget/TextView;->deleteText_internal(II)V
 
-    .line 2232
     :cond_0
     invoke-interface {v0, p1}, Landroid/text/Editable;->removeSpan(Ljava/lang/Object;)V
 
-    .line 2233
     return-void
 .end method

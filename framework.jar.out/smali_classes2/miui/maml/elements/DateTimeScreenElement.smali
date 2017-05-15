@@ -30,15 +30,13 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 86
     invoke-direct {p0, p1, p2}, Lmiui/maml/elements/TextScreenElement;-><init>(Lorg/w3c/dom/Element;Lmiui/maml/ScreenElementRoot;)V
 
-    .line 87
     invoke-virtual {p0}, Lmiui/maml/elements/DateTimeScreenElement;->getVariables()Lmiui/maml/data/Variables;
 
     move-result-object v0
 
-    const-string/jumbo v1, "value"
+    const-string v1, "value"
 
     invoke-interface {p1, v1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -48,7 +46,6 @@
 
     move-result-object v8
 
-    .line 88
     .local v8, "valueExp":Lmiui/maml/data/Expression;
     new-instance v0, Lmiui/maml/elements/DateTimeScreenElement$DateFormatter;
 
@@ -58,7 +55,6 @@
 
     iput-object v0, p0, Lmiui/maml/elements/DateTimeScreenElement;->mDateFormatter:Lmiui/maml/elements/DateTimeScreenElement$DateFormatter;
 
-    .line 89
     const-string v0, "contentDescriptionFormat"
 
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -71,12 +67,10 @@
 
     if-nez v0, :cond_0
 
-    .line 90
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lmiui/maml/elements/DateTimeScreenElement;->mHasContentDescription:Z
 
-    .line 91
     invoke-virtual {p0}, Lmiui/maml/elements/DateTimeScreenElement;->getVariables()Lmiui/maml/data/Variables;
 
     move-result-object v0
@@ -95,7 +89,6 @@
 
     move-result-object v7
 
-    .line 92
     .local v7, "descriptionFormatter":Lmiui/maml/util/TextFormatter;
     new-instance v0, Lmiui/maml/elements/DateTimeScreenElement$DateFormatter;
 
@@ -103,7 +96,6 @@
 
     iput-object v0, p0, Lmiui/maml/elements/DateTimeScreenElement;->mDescriptionDateFormatter:Lmiui/maml/elements/DateTimeScreenElement$DateFormatter;
 
-    .line 94
     .end local v7    # "descriptionFormatter":Lmiui/maml/util/TextFormatter;
     :cond_0
     return-void
@@ -115,7 +107,6 @@
     .locals 1
 
     .prologue
-    .line 112
     iget-object v0, p0, Lmiui/maml/elements/DateTimeScreenElement;->mDescriptionDateFormatter:Lmiui/maml/elements/DateTimeScreenElement$DateFormatter;
 
     if-eqz v0, :cond_0
@@ -141,7 +132,6 @@
     .locals 1
 
     .prologue
-    .line 107
     iget-object v0, p0, Lmiui/maml/elements/DateTimeScreenElement;->mDateFormatter:Lmiui/maml/elements/DateTimeScreenElement$DateFormatter;
 
     invoke-virtual {v0}, Lmiui/maml/elements/DateTimeScreenElement$DateFormatter;->getText()Ljava/lang/String;
@@ -155,25 +145,20 @@
     .locals 1
 
     .prologue
-    .line 98
     invoke-super {p0}, Lmiui/maml/elements/TextScreenElement;->resume()V
 
-    .line 99
     iget-object v0, p0, Lmiui/maml/elements/DateTimeScreenElement;->mDateFormatter:Lmiui/maml/elements/DateTimeScreenElement$DateFormatter;
 
     invoke-virtual {v0}, Lmiui/maml/elements/DateTimeScreenElement$DateFormatter;->resetCalendar()V
 
-    .line 100
     iget-object v0, p0, Lmiui/maml/elements/DateTimeScreenElement;->mDescriptionDateFormatter:Lmiui/maml/elements/DateTimeScreenElement$DateFormatter;
 
     if-eqz v0, :cond_0
 
-    .line 101
     iget-object v0, p0, Lmiui/maml/elements/DateTimeScreenElement;->mDescriptionDateFormatter:Lmiui/maml/elements/DateTimeScreenElement$DateFormatter;
 
     invoke-virtual {v0}, Lmiui/maml/elements/DateTimeScreenElement$DateFormatter;->resetCalendar()V
 
-    .line 103
     :cond_0
     return-void
 .end method

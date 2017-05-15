@@ -22,10 +22,8 @@
     .param p3, "indexExp"    # Lmiui/maml/data/Expression;
 
     .prologue
-    .line 399
     invoke-direct {p0, p1, p2, p3}, Lmiui/maml/data/Expression$ArrayVariableExpression;-><init>(Lmiui/maml/data/Variables;Ljava/lang/String;Lmiui/maml/data/Expression;)V
 
-    .line 400
     return-void
 .end method
 
@@ -35,7 +33,6 @@
     .locals 4
 
     .prologue
-    .line 404
     iget-object v0, p0, Lmiui/maml/data/Expression$NumberArrayVariableExpression;->mIndexedVar:Lmiui/maml/data/IndexedVariable;
 
     iget-object v1, p0, Lmiui/maml/data/Expression$NumberArrayVariableExpression;->mIndexExp:Lmiui/maml/data/Expression;
@@ -57,7 +54,6 @@
     .locals 2
 
     .prologue
-    .line 409
     invoke-virtual {p0}, Lmiui/maml/data/Expression$NumberArrayVariableExpression;->evaluate()D
 
     move-result-wide v0
@@ -73,7 +69,6 @@
     .locals 4
 
     .prologue
-    .line 414
     iget-object v0, p0, Lmiui/maml/data/Expression$NumberArrayVariableExpression;->mIndexedVar:Lmiui/maml/data/IndexedVariable;
 
     iget-object v1, p0, Lmiui/maml/data/Expression$NumberArrayVariableExpression;->mIndexExp:Lmiui/maml/data/Expression;

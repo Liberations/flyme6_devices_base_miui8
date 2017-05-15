@@ -30,18 +30,13 @@
     .param p3, "gy"    # I
 
     .prologue
-    .line 77
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 78
     iput-object p1, p0, Lmiui/maml/util/ConfigFile$Gadget;->path:Ljava/lang/String;
 
-    .line 79
     iput p2, p0, Lmiui/maml/util/ConfigFile$Gadget;->x:I
 
-    .line 80
     iput p3, p0, Lmiui/maml/util/ConfigFile$Gadget;->y:I
 
-    .line 81
     return-void
 .end method

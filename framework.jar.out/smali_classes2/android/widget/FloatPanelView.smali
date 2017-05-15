@@ -33,13 +33,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 41
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 42
     invoke-direct {p0}, Landroid/widget/FloatPanelView;->init()V
 
-    .line 43
     return-void
 .end method
 
@@ -49,13 +46,10 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 36
     invoke-direct {p0, p1, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 37
     invoke-direct {p0}, Landroid/widget/FloatPanelView;->init()V
 
-    .line 38
     return-void
 .end method
 
@@ -66,13 +60,10 @@
     .param p3, "defStyle"    # I
 
     .prologue
-    .line 31
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 32
     invoke-direct {p0}, Landroid/widget/FloatPanelView;->init()V
 
-    .line 33
     return-void
 .end method
 
@@ -81,7 +72,6 @@
     .param p1, "resourceId"    # I
 
     .prologue
-    .line 51
     new-instance v0, Landroid/widget/ImageView;
 
     invoke-virtual {p0}, Landroid/widget/FloatPanelView;->getContext()Landroid/content/Context;
@@ -90,11 +80,9 @@
 
     invoke-direct {v0, v1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
-    .line 52
     .local v0, "i":Landroid/widget/ImageView;
     invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 53
     return-object v0
 .end method
 
@@ -102,7 +90,6 @@
     .locals 1
 
     .prologue
-    .line 46
     const v0, 0x110200cb
 
     invoke-direct {p0, v0}, Landroid/widget/FloatPanelView;->getImageView(I)Landroid/widget/ImageView;
@@ -111,7 +98,6 @@
 
     iput-object v0, p0, Landroid/widget/FloatPanelView;->mUpArrow:Landroid/widget/ImageView;
 
-    .line 47
     const v0, 0x110200ca
 
     invoke-direct {p0, v0}, Landroid/widget/FloatPanelView;->getImageView(I)Landroid/widget/ImageView;
@@ -120,7 +106,6 @@
 
     iput-object v0, p0, Landroid/widget/FloatPanelView;->mDownArrow:Landroid/widget/ImageView;
 
-    .line 48
     return-void
 .end method
 
@@ -130,7 +115,6 @@
     .locals 1
 
     .prologue
-    .line 69
     iget-object v0, p0, Landroid/widget/FloatPanelView;->mContent:Landroid/view/ViewGroup;
 
     return-object v0
@@ -145,10 +129,8 @@
     .param p5, "bottom"    # I
 
     .prologue
-    .line 135
     invoke-super/range {p0 .. p5}, Landroid/widget/FrameLayout;->onLayout(ZIIII)V
 
-    .line 136
     iget-object v5, p0, Landroid/widget/FloatPanelView;->mUpArrow:Landroid/widget/ImageView;
 
     if-eqz v5, :cond_0
@@ -161,7 +143,6 @@
 
     if-nez v5, :cond_1
 
-    .line 137
     :cond_0
     const-string v5, "FloatPanelView"
 
@@ -169,11 +150,9 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 170
     :goto_0
     return-void
 
-    .line 141
     :cond_1
     iget-object v5, p0, Landroid/widget/FloatPanelView;->mUpArrow:Landroid/widget/ImageView;
 
@@ -181,17 +160,14 @@
 
     invoke-virtual {v5, v6}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 142
     iget-object v5, p0, Landroid/widget/FloatPanelView;->mDownArrow:Landroid/widget/ImageView;
 
     const/16 v6, 0x8
 
     invoke-virtual {v5, v6}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 143
     const/4 v0, 0x0
 
-    .line 144
     .local v0, "arrow":Landroid/widget/ImageView;
     iget v5, p0, Landroid/widget/FloatPanelView;->mDirection:I
 
@@ -199,15 +175,12 @@
 
     if-ne v5, v6, :cond_4
 
-    .line 145
     iget-object v0, p0, Landroid/widget/FloatPanelView;->mUpArrow:Landroid/widget/ImageView;
 
-    .line 149
     :cond_2
     :goto_1
     if-eqz v0, :cond_8
 
-    .line 150
     invoke-virtual {v0}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v5
@@ -216,7 +189,6 @@
 
     move-result v2
 
-    .line 151
     .local v2, "arrowWidth":I
     invoke-virtual {v0}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
 
@@ -226,7 +198,6 @@
 
     move-result v1
 
-    .line 152
     .local v1, "arrowHeight":I
     iget v5, p0, Landroid/widget/FloatPanelView;->mDirection:I
 
@@ -236,14 +207,12 @@
 
     move v4, p3
 
-    .line 153
     .local v4, "t":I
     :goto_2
     const/4 v5, 0x0
 
     invoke-virtual {v0, v5}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 154
     sub-int v5, p4, p2
 
     sub-int/2addr v5, v2
@@ -256,7 +225,6 @@
 
     add-int v3, v5, v6
 
-    .line 155
     .local v3, "l":I
     iget-object v5, p0, Landroid/widget/FloatPanelView;->mContent:Landroid/view/ViewGroup;
 
@@ -270,7 +238,6 @@
 
     if-ge v3, v5, :cond_6
 
-    .line 156
     iget-object v5, p0, Landroid/widget/FloatPanelView;->mContent:Landroid/view/ViewGroup;
 
     invoke-virtual {v5}, Landroid/view/ViewGroup;->getLeft()I
@@ -281,7 +248,6 @@
 
     add-int v3, v5, v6
 
-    .line 160
     :cond_3
     :goto_3
     add-int v5, v3, v2
@@ -290,12 +256,10 @@
 
     invoke-virtual {v0, v3, v4, v5, v6}, Landroid/widget/ImageView;->layout(IIII)V
 
-    .line 161
     if-ne v4, p3, :cond_7
 
     move v4, v1
 
-    .line 162
     :goto_4
     iget-object v5, p0, Landroid/widget/FloatPanelView;->mContent:Landroid/view/ViewGroup;
 
@@ -331,7 +295,6 @@
 
     goto :goto_0
 
-    .line 146
     .end local v1    # "arrowHeight":I
     .end local v2    # "arrowWidth":I
     .end local v3    # "l":I
@@ -343,12 +306,10 @@
 
     if-ne v5, v6, :cond_2
 
-    .line 147
     iget-object v0, p0, Landroid/widget/FloatPanelView;->mDownArrow:Landroid/widget/ImageView;
 
     goto :goto_1
 
-    .line 152
     .restart local v1    # "arrowHeight":I
     .restart local v2    # "arrowWidth":I
     :cond_5
@@ -362,7 +323,6 @@
 
     goto :goto_2
 
-    .line 157
     .restart local v3    # "l":I
     .restart local v4    # "t":I
     :cond_6
@@ -374,7 +334,6 @@
 
     if-le v3, v5, :cond_3
 
-    .line 158
     sub-int v5, p4, v2
 
     iget v6, p0, Landroid/widget/FloatPanelView;->mRightRoundCorner:I
@@ -386,10 +345,8 @@
     :cond_7
     move v4, p3
 
-    .line 161
     goto :goto_4
 
-    .line 166
     .end local v1    # "arrowHeight":I
     .end local v2    # "arrowWidth":I
     .end local v3    # "l":I
@@ -448,10 +405,8 @@
     .param p2, "heightMeasureSpec"    # I
 
     .prologue
-    .line 122
     const/4 v0, 0x0
 
-    .line 123
     .local v0, "arrow":Landroid/widget/ImageView;
     iget v2, p0, Landroid/widget/FloatPanelView;->mDirection:I
 
@@ -459,24 +414,20 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 124
     iget-object v0, p0, Landroid/widget/FloatPanelView;->mUpArrow:Landroid/widget/ImageView;
 
-    .line 128
     :cond_0
     :goto_0
     if-nez v0, :cond_2
 
     const/4 v1, 0x0
 
-    .line 129
     .local v1, "arrowHeight":I
     :goto_1
     iget-object v2, p0, Landroid/widget/FloatPanelView;->mContent:Landroid/view/ViewGroup;
 
     invoke-virtual {v2, p1, p2}, Landroid/view/ViewGroup;->measure(II)V
 
-    .line 130
     iget-object v2, p0, Landroid/widget/FloatPanelView;->mContent:Landroid/view/ViewGroup;
 
     invoke-virtual {v2}, Landroid/view/ViewGroup;->getMeasuredWidth()I
@@ -493,10 +444,8 @@
 
     invoke-virtual {p0, v2, v3}, Landroid/widget/FloatPanelView;->setMeasuredDimension(II)V
 
-    .line 132
     return-void
 
-    .line 125
     .end local v1    # "arrowHeight":I
     :cond_1
     iget v2, p0, Landroid/widget/FloatPanelView;->mDirection:I
@@ -505,12 +454,10 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 126
     iget-object v0, p0, Landroid/widget/FloatPanelView;->mDownArrow:Landroid/widget/ImageView;
 
     goto :goto_0
 
-    .line 128
     :cond_2
     invoke-virtual {v0}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
 
@@ -528,18 +475,14 @@
     .param p1, "direction"    # I
 
     .prologue
-    .line 78
     iget v0, p0, Landroid/widget/FloatPanelView;->mDirection:I
 
     if-eq p1, v0, :cond_0
 
-    .line 79
     iput p1, p0, Landroid/widget/FloatPanelView;->mDirection:I
 
-    .line 80
     invoke-virtual {p0}, Landroid/widget/FloatPanelView;->requestLayout()V
 
-    .line 82
     :cond_0
     return-void
 .end method
@@ -549,34 +492,26 @@
     .param p1, "v"    # Landroid/view/ViewGroup;
 
     .prologue
-    .line 57
     iget-object v0, p0, Landroid/widget/FloatPanelView;->mContent:Landroid/view/ViewGroup;
 
     if-eq p1, v0, :cond_0
 
-    .line 58
     invoke-virtual {p0}, Landroid/widget/FloatPanelView;->removeAllViews()V
 
-    .line 59
     if-eqz p1, :cond_0
 
-    .line 60
     invoke-virtual {p0, p1}, Landroid/widget/FloatPanelView;->addView(Landroid/view/View;)V
 
-    .line 61
     iput-object p1, p0, Landroid/widget/FloatPanelView;->mContent:Landroid/view/ViewGroup;
 
-    .line 62
     iget-object v0, p0, Landroid/widget/FloatPanelView;->mUpArrow:Landroid/widget/ImageView;
 
     invoke-virtual {p0, v0}, Landroid/widget/FloatPanelView;->addView(Landroid/view/View;)V
 
-    .line 63
     iget-object v0, p0, Landroid/widget/FloatPanelView;->mDownArrow:Landroid/widget/ImageView;
 
     invoke-virtual {p0, v0}, Landroid/widget/FloatPanelView;->addView(Landroid/view/View;)V
 
-    .line 66
     :cond_0
     return-void
 .end method
@@ -586,18 +521,14 @@
     .param p1, "corner"    # I
 
     .prologue
-    .line 102
     iget v0, p0, Landroid/widget/FloatPanelView;->mLeftRoundCorner:I
 
     if-eq p1, v0, :cond_0
 
-    .line 103
     iput p1, p0, Landroid/widget/FloatPanelView;->mLeftRoundCorner:I
 
-    .line 104
     invoke-virtual {p0}, Landroid/widget/FloatPanelView;->requestLayout()V
 
-    .line 106
     :cond_0
     return-void
 .end method
@@ -607,18 +538,14 @@
     .param p1, "offset"    # I
 
     .prologue
-    .line 90
     iget v0, p0, Landroid/widget/FloatPanelView;->mOffset:I
 
     if-eq v0, p1, :cond_0
 
-    .line 91
     iput p1, p0, Landroid/widget/FloatPanelView;->mOffset:I
 
-    .line 92
     invoke-virtual {p0}, Landroid/widget/FloatPanelView;->requestLayout()V
 
-    .line 94
     :cond_0
     return-void
 .end method
@@ -628,18 +555,14 @@
     .param p1, "corner"    # I
 
     .prologue
-    .line 114
     iget v0, p0, Landroid/widget/FloatPanelView;->mRightRoundCorner:I
 
     if-eq p1, v0, :cond_0
 
-    .line 115
     iput p1, p0, Landroid/widget/FloatPanelView;->mRightRoundCorner:I
 
-    .line 116
     invoke-virtual {p0}, Landroid/widget/FloatPanelView;->requestLayout()V
 
-    .line 118
     :cond_0
     return-void
 .end method

@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 3440
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -43,7 +42,6 @@
     .param p1, "x0"    # Landroid/app/ActivityThread$1;
 
     .prologue
-    .line 3440
     invoke-direct {p0}, Landroid/app/ActivityThread$StopInfo;-><init>()V
 
     return-void
@@ -55,7 +53,6 @@
     .locals 5
 
     .prologue
-    .line 3449
     :try_start_0
     # getter for: Landroid/app/ActivityThread;->DEBUG_MEMORY_TRIM:Z
     invoke-static {}, Landroid/app/ActivityThread;->access$3600()Z
@@ -88,7 +85,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3450
     :cond_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -108,11 +104,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3454
     :goto_0
     return-void
 
-    .line 3452
     :catch_0
     move-exception v0
 

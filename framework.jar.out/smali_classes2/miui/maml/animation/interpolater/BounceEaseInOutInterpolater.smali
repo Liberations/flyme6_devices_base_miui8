@@ -11,7 +11,6 @@
     .locals 0
 
     .prologue
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,12 +27,10 @@
 
     const/high16 v2, 0x3f000000    # 0.5f
 
-    .line 8
     cmpg-float v0, p1, v2
 
     if-gez v0, :cond_0
 
-    .line 9
     mul-float v0, p1, v1
 
     invoke-static {v0}, Lmiui/maml/animation/interpolater/BounceEaseInInterpolater;->getInterpolationImp(F)F
@@ -42,7 +39,6 @@
 
     mul-float/2addr v0, v2
 
-    .line 11
     :goto_0
     return v0
 

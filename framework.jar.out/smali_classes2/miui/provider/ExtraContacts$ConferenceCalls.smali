@@ -39,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 1432
     const-string v0, "content://conference_calls"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -55,10 +54,8 @@
     .locals 0
 
     .prologue
-    .line 1429
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1528
     return-void
 .end method
 
@@ -84,7 +81,6 @@
     .end annotation
 
     .prologue
-    .line 1561
     .local p1, "numberList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const/4 v12, 0x0
 
@@ -134,31 +130,26 @@
     .end annotation
 
     .prologue
-    .line 1568
     .local p1, "numberList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-static {p1}, Lmiui/provider/ExtraContacts$ConferenceCalls;->computeConferenceCallNumber(Ljava/util/ArrayList;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1570
     .local v1, "conferenceCallNumber":Ljava/lang/String;
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
-    .line 1571
     .local v2, "contentResolver":Landroid/content/ContentResolver;
     new-instance v3, Landroid/content/ContentValues;
 
     invoke-direct {v3}, Landroid/content/ContentValues;-><init>()V
 
-    .line 1572
     .local v3, "values":Landroid/content/ContentValues;
     const-string v4, "number"
 
     invoke-virtual {v3, v4, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1573
     const-string v4, "type"
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -167,7 +158,6 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 1574
     const-string v4, "date"
 
     invoke-static {p3, p4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -176,7 +166,6 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 1575
     const-string v4, "duration"
 
     invoke-static {p5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -185,7 +174,6 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 1576
     const-string v4, "forwarded_call"
 
     invoke-static {p6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -194,7 +182,6 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 1577
     const-string v4, "simid"
 
     invoke-static {p7, p8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -203,7 +190,6 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 1578
     const-string v4, "phone_call_type"
 
     invoke-static/range {p9 .. p10}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -212,7 +198,6 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 1579
     const-string v4, "isSponsor"
 
     invoke-virtual {v3, v4}, Landroid/content/ContentValues;->containsKey(Ljava/lang/String;)Z
@@ -221,7 +206,6 @@
 
     if-nez v4, :cond_0
 
-    .line 1580
     const-string v5, "isSponsor"
 
     const/4 v4, 0x2
@@ -237,7 +221,6 @@
 
     invoke-virtual {v3, v5, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 1583
     :cond_0
     sget-object v4, Lmiui/provider/ExtraContacts$ConferenceCalls$CallsColumns;->CONTENT_URI:Landroid/net/Uri;
 
@@ -249,7 +232,6 @@
 
     return-object v4
 
-    .line 1580
     :cond_1
     const/4 v4, 0x0
 
@@ -270,11 +252,9 @@
     .end annotation
 
     .prologue
-    .line 1587
     .local p0, "numbers":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-static {p0}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
-    .line 1588
     const-string v0, ";"
 
     invoke-static {v0, p0}, Landroid/text/TextUtils;->join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;

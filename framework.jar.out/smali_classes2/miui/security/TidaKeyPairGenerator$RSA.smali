@@ -19,15 +19,12 @@
     .locals 1
 
     .prologue
-    .line 39
     invoke-direct {p0}, Lmiui/security/TidaKeyPairGenerator;-><init>()V
 
-    .line 40
     const-string v0, "RSA"
 
     iput-object v0, p0, Lmiui/security/TidaKeyPairGenerator$RSA;->mAlgorithm:Ljava/lang/String;
 
-    .line 42
     :try_start_0
     iget-object v0, p0, Lmiui/security/TidaKeyPairGenerator$RSA;->mAlgorithm:Ljava/lang/String;
 
@@ -39,11 +36,9 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 45
     :goto_0
     return-void
 
-    .line 43
     :catch_0
     move-exception v0
 

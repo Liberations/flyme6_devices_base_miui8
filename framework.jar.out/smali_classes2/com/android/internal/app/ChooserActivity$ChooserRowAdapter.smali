@@ -30,34 +30,28 @@
     .param p2, "wrappedAdapter"    # Lcom/android/internal/app/ChooserActivity$ChooserListAdapter;
 
     .prologue
-    .line 898
     iput-object p1, p0, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;->this$0:Lcom/android/internal/app/ChooserActivity;
 
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
-    .line 896
     const/4 v0, 0x4
 
     iput v0, p0, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;->mColumnCount:I
 
-    .line 899
     iput-object p2, p0, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;->mChooserListAdapter:Lcom/android/internal/app/ChooserActivity$ChooserListAdapter;
 
-    .line 900
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;->mLayoutInflater:Landroid/view/LayoutInflater;
 
-    .line 902
     new-instance v0, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter$1;
 
     invoke-direct {v0, p0, p1}, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter$1;-><init>(Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;Lcom/android/internal/app/ChooserActivity;)V
 
     invoke-virtual {p2, v0}, Lcom/android/internal/app/ChooserActivity$ChooserListAdapter;->registerDataSetObserver(Landroid/database/DataSetObserver;)V
 
-    .line 915
     return-void
 .end method
 
@@ -66,7 +60,6 @@
     .param p0, "x0"    # Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;
 
     .prologue
-    .line 893
     iget-object v0, p0, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;->mChooserListAdapter:Lcom/android/internal/app/ChooserActivity$ChooserListAdapter;
 
     return-object v0
@@ -82,12 +75,10 @@
     .prologue
     const/4 v9, 0x4
 
-    .line 966
     invoke-virtual {p0, p1}, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;->getFirstRowPosition(I)I
 
     move-result v4
 
-    .line 967
     .local v4, "start":I
     iget-object v7, p0, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;->mChooserListAdapter:Lcom/android/internal/app/ChooserActivity$ChooserListAdapter;
 
@@ -95,13 +86,11 @@
 
     move-result v5
 
-    .line 969
     .local v5, "startType":I
     add-int/lit8 v7, v4, 0x4
 
     add-int/lit8 v0, v7, -0x1
 
-    .line 970
     .local v0, "end":I
     :goto_0
     iget-object v7, p0, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;->mChooserListAdapter:Lcom/android/internal/app/ChooserActivity$ChooserListAdapter;
@@ -114,24 +103,20 @@
 
     if-lt v0, v4, :cond_0
 
-    .line 971
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    .line 974
     :cond_0
     aget-object v3, p2, v9
 
     check-cast v3, Landroid/view/ViewGroup;
 
-    .line 976
     .local v3, "row":Landroid/view/ViewGroup;
     const/4 v7, 0x1
 
     if-ne v5, v7, :cond_1
 
-    .line 977
     iget-object v7, p0, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;->this$0:Lcom/android/internal/app/ChooserActivity;
 
     const v8, 0x1060071
@@ -142,7 +127,6 @@
 
     invoke-virtual {v3, v7}, Landroid/view/ViewGroup;->setBackgroundColor(I)V
 
-    .line 982
     :goto_1
     const/4 v1, 0x0
 
@@ -150,51 +134,42 @@
     :goto_2
     if-ge v1, v9, :cond_3
 
-    .line 983
     aget-object v6, p2, v1
 
-    .line 984
     .local v6, "v":Landroid/view/View;
     add-int v7, v4, v1
 
     if-gt v7, v0, :cond_2
 
-    .line 985
     const/4 v7, 0x0
 
     invoke-virtual {v6, v7}, Landroid/view/View;->setVisibility(I)V
 
-    .line 986
     add-int v2, v4, v1
 
-    .line 987
     .local v2, "itemIndex":I
     iget-object v7, p0, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;->mChooserListAdapter:Lcom/android/internal/app/ChooserActivity$ChooserListAdapter;
 
     invoke-virtual {v7, v2, v6}, Lcom/android/internal/app/ChooserActivity$ChooserListAdapter;->bindView(ILandroid/view/View;)V
 
-    .line 990
     new-instance v7, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter$2;
 
     invoke-direct {v7, p0, v2}, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter$2;-><init>(Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;I)V
 
     invoke-virtual {v6, v7}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 996
     new-instance v7, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter$3;
 
     invoke-direct {v7, p0, v2}, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter$3;-><init>(Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;I)V
 
     invoke-virtual {v6, v7}, Landroid/view/View;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
-    .line 982
     .end local v2    # "itemIndex":I
     :goto_3
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
 
-    .line 979
     .end local v1    # "i":I
     .end local v6    # "v":Landroid/view/View;
     :cond_1
@@ -204,7 +179,6 @@
 
     goto :goto_1
 
-    .line 1005
     .restart local v1    # "i":I
     .restart local v6    # "v":Landroid/view/View;
     :cond_2
@@ -214,7 +188,6 @@
 
     goto :goto_3
 
-    .line 1008
     .end local v6    # "v":Landroid/view/View;
     :cond_3
     return-void
@@ -227,12 +200,10 @@
     .prologue
     const/4 v6, 0x4
 
-    .line 952
     const/4 v3, 0x5
 
     new-array v0, v3, [Landroid/view/View;
 
-    .line 954
     .local v0, "holder":[Landroid/view/View;
     iget-object v3, p0, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;->mLayoutInflater:Landroid/view/LayoutInflater;
 
@@ -246,7 +217,6 @@
 
     check-cast v2, Landroid/view/ViewGroup;
 
-    .line 956
     .local v2, "row":Landroid/view/ViewGroup;
     const/4 v1, 0x0
 
@@ -254,7 +224,6 @@
     :goto_0
     if-ge v1, v6, :cond_0
 
-    .line 957
     iget-object v3, p0, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;->mChooserListAdapter:Lcom/android/internal/app/ChooserActivity$ChooserListAdapter;
 
     invoke-virtual {v3, v2}, Lcom/android/internal/app/ChooserActivity$ChooserListAdapter;->createView(Landroid/view/ViewGroup;)Landroid/view/View;
@@ -263,24 +232,19 @@
 
     aput-object v3, v0, v1
 
-    .line 958
     aget-object v3, v0, v1
 
     invoke-virtual {v2, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    .line 956
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 960
     :cond_0
     invoke-virtual {v2, v0}, Landroid/view/ViewGroup;->setTag(Ljava/lang/Object;)V
 
-    .line 961
     aput-object v2, v0, v6
 
-    .line 962
     return-object v0
 .end method
 
@@ -290,7 +254,6 @@
     .prologue
     const/high16 v4, 0x40800000    # 4.0f
 
-    .line 919
     iget-object v0, p0, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;->mChooserListAdapter:Lcom/android/internal/app/ChooserActivity$ChooserListAdapter;
 
     invoke-virtual {v0}, Lcom/android/internal/app/ChooserActivity$ChooserListAdapter;->getCallerTargetCount()I
@@ -355,14 +318,12 @@
     .prologue
     const/high16 v6, 0x40800000    # 4.0f
 
-    .line 1011
     iget-object v4, p0, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;->mChooserListAdapter:Lcom/android/internal/app/ChooserActivity$ChooserListAdapter;
 
     invoke-virtual {v4}, Lcom/android/internal/app/ChooserActivity$ChooserListAdapter;->getCallerTargetCount()I
 
     move-result v0
 
-    .line 1012
     .local v0, "callerCount":I
     int-to-float v4, v0
 
@@ -376,18 +337,14 @@
 
     double-to-int v1, v4
 
-    .line 1014
     .local v1, "callerRows":I
     if-ge p1, v1, :cond_0
 
-    .line 1015
     mul-int/lit8 v4, p1, 0x4
 
-    .line 1025
     :goto_0
     return v4
 
-    .line 1018
     :cond_0
     iget-object v4, p0, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;->mChooserListAdapter:Lcom/android/internal/app/ChooserActivity$ChooserListAdapter;
 
@@ -395,7 +352,6 @@
 
     move-result v2
 
-    .line 1019
     .local v2, "serviceCount":I
     int-to-float v4, v2
 
@@ -409,13 +365,11 @@
 
     double-to-int v3, v4
 
-    .line 1021
     .local v3, "serviceRows":I
     add-int v4, v1, v3
 
     if-ge p1, v4, :cond_1
 
-    .line 1022
     sub-int v4, p1, v1
 
     mul-int/lit8 v4, v4, 0x4
@@ -424,7 +378,6 @@
 
     goto :goto_0
 
-    .line 1025
     :cond_1
     add-int v4, v0, v2
 
@@ -444,7 +397,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 929
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -457,7 +409,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 934
     int-to-long v0, p1
 
     return-wide v0
@@ -470,27 +421,22 @@
     .param p3, "parent"    # Landroid/view/ViewGroup;
 
     .prologue
-    .line 940
     if-nez p2, :cond_0
 
-    .line 941
     invoke-virtual {p0, p3}, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;->createViewHolder(Landroid/view/ViewGroup;)[Landroid/view/View;
 
     move-result-object v0
 
-    .line 945
     .local v0, "holder":[Landroid/view/View;
     :goto_0
     invoke-virtual {p0, p1, v0}, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;->bindViewHolder(I[Landroid/view/View;)V
 
-    .line 948
     const/4 v1, 0x4
 
     aget-object v1, v0, v1
 
     return-object v1
 
-    .line 943
     .end local v0    # "holder":[Landroid/view/View;
     :cond_0
     invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;

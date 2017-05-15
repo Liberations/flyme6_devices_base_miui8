@@ -16,10 +16,8 @@
     .locals 1
 
     .prologue
-    .line 32
     invoke-direct {p0}, Landroid/transition/VisibilityPropagation;-><init>()V
 
-    .line 35
     const/high16 v0, 0x40400000    # 3.0f
 
     iput v0, p0, Landroid/transition/CircularPropagation;->mPropagationSpeed:F
@@ -35,18 +33,15 @@
     .param p3, "y2"    # F
 
     .prologue
-    .line 101
     sub-float v4, p2, p0
 
     float-to-double v0, v4
 
-    .line 102
     .local v0, "x":D
     sub-float v4, p3, p1
 
     float-to-double v2, v4
 
-    .line 103
     .local v2, "y":D
     invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->hypot(DD)D
 
@@ -65,23 +60,18 @@
     .param p4, "endValues"    # Landroid/transition/TransitionValues;
 
     .prologue
-    .line 59
     if-nez p3, :cond_0
 
     if-nez p4, :cond_0
 
-    .line 60
     const-wide/16 v18, 0x0
 
-    .line 97
     :goto_0
     return-wide v18
 
-    .line 62
     :cond_0
     const/4 v2, 0x1
 
-    .line 64
     .local v2, "directionMultiplier":I
     if-eqz p4, :cond_1
 
@@ -95,15 +85,12 @@
 
     if-nez v18, :cond_3
 
-    .line 65
     :cond_1
     move-object/from16 v13, p3
 
-    .line 66
     .local v13, "positionValues":Landroid/transition/TransitionValues;
     const/4 v2, -0x1
 
-    .line 71
     :goto_1
     move-object/from16 v0, p0
 
@@ -111,7 +98,6 @@
 
     move-result v16
 
-    .line 72
     .local v16, "viewCenterX":I
     move-object/from16 v0, p0
 
@@ -119,28 +105,23 @@
 
     move-result v17
 
-    .line 74
     .local v17, "viewCenterY":I
     invoke-virtual/range {p2 .. p2}, Landroid/transition/Transition;->getEpicenter()Landroid/graphics/Rect;
 
     move-result-object v3
 
-    .line 77
     .local v3, "epicenter":Landroid/graphics/Rect;
     if-eqz v3, :cond_4
 
-    .line 78
     invoke-virtual {v3}, Landroid/graphics/Rect;->centerX()I
 
     move-result v10
 
-    .line 79
     .local v10, "epicenterX":I
     invoke-virtual {v3}, Landroid/graphics/Rect;->centerY()I
 
     move-result v11
 
-    .line 88
     .local v11, "epicenterY":I
     :goto_2
     move/from16 v0, v16
@@ -167,7 +148,6 @@
 
     move-result-wide v4
 
-    .line 89
     .local v4, "distance":D
     const/16 v18, 0x0
 
@@ -197,17 +177,14 @@
 
     move-result-wide v14
 
-    .line 90
     .local v14, "maxDistance":D
     div-double v6, v4, v14
 
-    .line 92
     .local v6, "distanceFraction":D
     invoke-virtual/range {p2 .. p2}, Landroid/transition/Transition;->getDuration()J
 
     move-result-wide v8
 
-    .line 93
     .local v8, "duration":J
     const-wide/16 v18, 0x0
 
@@ -215,10 +192,8 @@
 
     if-gez v18, :cond_2
 
-    .line 94
     const-wide/16 v8, 0x12c
 
-    .line 97
     :cond_2
     int-to-long v0, v2
 
@@ -254,7 +229,6 @@
 
     goto/16 :goto_0
 
-    .line 68
     .end local v3    # "epicenter":Landroid/graphics/Rect;
     .end local v4    # "distance":D
     .end local v6    # "distanceFraction":D
@@ -271,7 +245,6 @@
     .restart local v13    # "positionValues":Landroid/transition/TransitionValues;
     goto :goto_1
 
-    .line 81
     .restart local v3    # "epicenter":Landroid/graphics/Rect;
     .restart local v16    # "viewCenterX":I
     .restart local v17    # "viewCenterY":I
@@ -282,13 +255,11 @@
 
     new-array v12, v0, [I
 
-    .line 82
     .local v12, "loc":[I
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v12}, Landroid/view/ViewGroup;->getLocationOnScreen([I)V
 
-    .line 83
     const/16 v18, 0x0
 
     aget v18, v12, v18
@@ -317,7 +288,6 @@
 
     move-result v10
 
-    .line 85
     .restart local v10    # "epicenterX":I
     const/16 v18, 0x1
 
@@ -356,26 +326,22 @@
     .param p1, "propagationSpeed"    # F
 
     .prologue
-    .line 50
     const/4 v0, 0x0
 
     cmpl-float v0, p1, v0
 
     if-nez v0, :cond_0
 
-    .line 51
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "propagationSpeed may not be 0"
+    const-string v1, "propagationSpeed may not be 0"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 53
     :cond_0
     iput p1, p0, Landroid/transition/CircularPropagation;->mPropagationSpeed:F
 
-    .line 54
     return-void
 .end method

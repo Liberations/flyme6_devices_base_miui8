@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 627
     iput-object p1, p0, Lmiui/view/VolumeDialog$4;->this$0:Lmiui/view/VolumeDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "dialog"    # Landroid/content/DialogInterface;
 
     .prologue
-    .line 630
     iget-object v0, p0, Lmiui/view/VolumeDialog$4;->this$0:Lmiui/view/VolumeDialog;
 
     # getter for: Lmiui/view/VolumeDialog;->mSafetyWarningLock:Ljava/lang/Object;
@@ -51,7 +49,6 @@
 
     monitor-enter v1
 
-    .line 631
     :try_start_0
     iget-object v0, p0, Lmiui/view/VolumeDialog$4;->this$0:Lmiui/view/VolumeDialog;
 
@@ -60,13 +57,10 @@
     # setter for: Lmiui/view/VolumeDialog;->mSafetyWarning:Landroid/app/AlertDialog;
     invoke-static {v0, v2}, Lmiui/view/VolumeDialog;->access$2602(Lmiui/view/VolumeDialog;Landroid/app/AlertDialog;)Landroid/app/AlertDialog;
 
-    .line 632
     monitor-exit v1
 
-    .line 633
     return-void
 
-    .line 632
     :catchall_0
     move-exception v0
 

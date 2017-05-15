@@ -29,16 +29,12 @@
     .param p2, "vars"    # Lmiui/maml/data/Variables;
 
     .prologue
-    .line 1514
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1515
     iput-object p2, p0, Lmiui/maml/ActionCommand$ObjVar;->mVars:Lmiui/maml/data/Variables;
 
-    .line 1516
     move-object v2, p1
 
-    .line 1517
     .local v2, "rname":Ljava/lang/String;
     const/16 v3, 0x5b
 
@@ -46,11 +42,9 @@
 
     move-result v1
 
-    .line 1518
     .local v1, "pos":I
     if-lez v1, :cond_0
 
-    .line 1520
     const/4 v3, 0x0
 
     :try_start_0
@@ -58,7 +52,6 @@
 
     move-result-object v2
 
-    .line 1521
     add-int/lit8 v3, v1, 0x1
 
     invoke-virtual {p1}, Ljava/lang/String;->length()I
@@ -71,7 +64,6 @@
 
     move-result-object v0
 
-    .line 1522
     .local v0, "ide":Ljava/lang/String;
     invoke-static {p2, v0}, Lmiui/maml/data/Expression;->build(Lmiui/maml/data/Variables;Ljava/lang/String;)Lmiui/maml/data/Expression;
 
@@ -81,7 +73,6 @@
     :try_end_0
     .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1526
     .end local v0    # "ide":Ljava/lang/String;
     :cond_0
     :goto_0
@@ -91,10 +82,8 @@
 
     iput v3, p0, Lmiui/maml/ActionCommand$ObjVar;->mIndex:I
 
-    .line 1527
     return-void
 
-    .line 1523
     :catch_0
     move-exception v3
 
@@ -107,7 +96,6 @@
     .locals 4
 
     .prologue
-    .line 1530
     iget-object v2, p0, Lmiui/maml/ActionCommand$ObjVar;->mVars:Lmiui/maml/data/Variables;
 
     iget v3, p0, Lmiui/maml/ActionCommand$ObjVar;->mIndex:I
@@ -116,7 +104,6 @@
 
     move-result-object v1
 
-    .line 1531
     .local v1, "obj":Ljava/lang/Object;
     if-eqz v1, :cond_0
 
@@ -124,12 +111,10 @@
 
     if-eqz v2, :cond_0
 
-    .line 1532
     instance-of v2, v1, [Ljava/lang/Object;
 
     if-eqz v2, :cond_0
 
-    .line 1534
     :try_start_0
     check-cast v1, [Ljava/lang/Object;
 
@@ -148,16 +133,13 @@
     :try_end_0
     .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1540
     :cond_0
     :goto_0
     return-object v1
 
-    .line 1535
     :catch_0
     move-exception v0
 
-    .line 1536
     .local v0, "e":Ljava/lang/IndexOutOfBoundsException;
     const/4 v1, 0x0
 

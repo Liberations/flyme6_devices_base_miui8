@@ -198,10 +198,8 @@
     .locals 2
 
     .prologue
-    .line 567
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 568
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "There is no valid usage of this constructor"
@@ -216,10 +214,8 @@
     .param p1, "ignoredArgument"    # I
 
     .prologue
-    .line 575
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 576
     return-void
 .end method
 
@@ -231,27 +227,20 @@
     .param p4, "channelIndexMask"    # I
 
     .prologue
-    .line 583
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 584
     iput p1, p0, Landroid/media/AudioFormat;->mEncoding:I
 
-    .line 585
     iput p2, p0, Landroid/media/AudioFormat;->mSampleRate:I
 
-    .line 586
     iput p3, p0, Landroid/media/AudioFormat;->mChannelMask:I
 
-    .line 587
     iput p4, p0, Landroid/media/AudioFormat;->mChannelIndexMask:I
 
-    .line 588
     const/16 v0, 0xf
 
     iput v0, p0, Landroid/media/AudioFormat;->mPropertySetMask:I
 
-    .line 592
     return-void
 .end method
 
@@ -261,7 +250,6 @@
     .param p2, "x1"    # Landroid/media/AudioFormat$1;
 
     .prologue
-    .line 212
     invoke-direct {p0, p1}, Landroid/media/AudioFormat;-><init>(I)V
 
     return-void
@@ -272,7 +260,6 @@
     .param p0, "x0"    # Landroid/media/AudioFormat;
 
     .prologue
-    .line 212
     iget v0, p0, Landroid/media/AudioFormat;->mEncoding:I
 
     return v0
@@ -284,7 +271,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 212
     iput p1, p0, Landroid/media/AudioFormat;->mEncoding:I
 
     return p1
@@ -295,7 +281,6 @@
     .param p0, "x0"    # Landroid/media/AudioFormat;
 
     .prologue
-    .line 212
     iget v0, p0, Landroid/media/AudioFormat;->mSampleRate:I
 
     return v0
@@ -307,7 +292,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 212
     iput p1, p0, Landroid/media/AudioFormat;->mSampleRate:I
 
     return p1
@@ -318,7 +302,6 @@
     .param p0, "x0"    # Landroid/media/AudioFormat;
 
     .prologue
-    .line 212
     iget v0, p0, Landroid/media/AudioFormat;->mChannelMask:I
 
     return v0
@@ -330,7 +313,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 212
     iput p1, p0, Landroid/media/AudioFormat;->mChannelMask:I
 
     return p1
@@ -341,7 +323,6 @@
     .param p0, "x0"    # Landroid/media/AudioFormat;
 
     .prologue
-    .line 212
     iget v0, p0, Landroid/media/AudioFormat;->mChannelIndexMask:I
 
     return v0
@@ -353,7 +334,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 212
     iput p1, p0, Landroid/media/AudioFormat;->mChannelIndexMask:I
 
     return p1
@@ -364,7 +344,6 @@
     .param p0, "x0"    # Landroid/media/AudioFormat;
 
     .prologue
-    .line 212
     iget v0, p0, Landroid/media/AudioFormat;->mPropertySetMask:I
 
     return v0
@@ -376,7 +355,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 212
     iput p1, p0, Landroid/media/AudioFormat;->mPropertySetMask:I
 
     return p1
@@ -387,7 +365,6 @@
     .param p0, "mask"    # I
 
     .prologue
-    .line 385
     invoke-static {p0}, Ljava/lang/Integer;->bitCount(I)I
 
     move-result v0
@@ -400,7 +377,6 @@
     .param p0, "mask"    # I
 
     .prologue
-    .line 394
     invoke-static {p0}, Ljava/lang/Integer;->bitCount(I)I
 
     move-result v0
@@ -413,7 +389,6 @@
     .param p0, "javaMask"    # I
 
     .prologue
-    .line 403
     shr-int/lit8 v0, p0, 0x2
 
     return v0
@@ -424,7 +399,6 @@
     .param p0, "nativeMask"    # I
 
     .prologue
-    .line 413
     shl-int/lit8 v0, p0, 0x2
 
     return v0
@@ -435,17 +409,13 @@
     .param p0, "formats"    # [I
 
     .prologue
-    .line 549
     if-nez p0, :cond_0
 
-    .line 550
     const/4 v3, 0x0
 
-    .line 562
     :goto_0
     return-object v3
 
-    .line 552
     :cond_0
     array-length v3, p0
 
@@ -453,11 +423,9 @@
 
     move-result-object v1
 
-    .line 553
     .local v1, "myCopy":[I
     const/4 v2, 0x0
 
-    .line 554
     .local v2, "size":I
     const/4 v0, 0x0
 
@@ -467,7 +435,6 @@
 
     if-ge v0, v3, :cond_3
 
-    .line 555
     aget v3, v1, v0
 
     invoke-static {v3}, Landroid/media/AudioFormat;->isPublicEncoding(I)Z
@@ -476,25 +443,20 @@
 
     if-eqz v3, :cond_2
 
-    .line 556
     if-eq v2, v0, :cond_1
 
-    .line 557
     aget v3, v1, v0
 
     aput v3, v1, v2
 
-    .line 559
     :cond_1
     add-int/lit8 v2, v2, 0x1
 
-    .line 554
     :cond_2
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 562
     :cond_3
     invoke-static {v1, v2}, Ljava/util/Arrays;->copyOf([II)[I
 
@@ -508,10 +470,8 @@
     .param p0, "audioFormat"    # I
 
     .prologue
-    .line 446
     sparse-switch p0, :sswitch_data_0
 
-    .line 465
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -536,45 +496,37 @@
 
     throw v0
 
-    .line 448
     :sswitch_0
     const/4 v0, 0x1
 
-    .line 462
     :goto_0
     return v0
 
-    .line 451
     :sswitch_1
     const/4 v0, 0x2
 
     goto :goto_0
 
-    .line 453
     :sswitch_2
     const/4 v0, 0x4
 
     goto :goto_0
 
-    .line 455
     :sswitch_3
     const/16 v0, 0x20
 
     goto :goto_0
 
-    .line 457
     :sswitch_4
     const/16 v0, 0x3d
 
     goto :goto_0
 
-    .line 462
     :sswitch_5
     const/16 v0, 0x17
 
     goto :goto_0
 
-    .line 446
     nop
 
     :sswitch_data_0
@@ -602,12 +554,10 @@
     .end annotation
 
     .prologue
-    .line 364
     const/4 v0, 0x1
 
     if-ne p0, v0, :cond_0
 
-    .line 365
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Illegal CHANNEL_OUT_DEFAULT channel mask for input."
@@ -616,7 +566,6 @@
 
     throw v0
 
-    .line 368
     :cond_0
     invoke-static {p0}, Landroid/media/AudioFormat;->channelCountFromOutChannelMask(I)I
 
@@ -624,7 +573,6 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 374
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Unsupported channel configuration for input."
@@ -633,11 +581,9 @@
 
     throw v0
 
-    .line 370
     :pswitch_0
     const/16 v0, 0x10
 
-    .line 372
     :goto_0
     return v0
 
@@ -646,7 +592,6 @@
 
     goto :goto_0
 
-    .line 368
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -659,10 +604,8 @@
     .param p0, "audioFormat"    # I
 
     .prologue
-    .line 516
     sparse-switch p0, :sswitch_data_0
 
-    .line 539
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -687,11 +630,9 @@
 
     throw v0
 
-    .line 521
     :sswitch_0
     const/4 v0, 0x1
 
-    .line 536
     :goto_0
     return v0
 
@@ -700,7 +641,6 @@
 
     goto :goto_0
 
-    .line 516
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_0
@@ -729,22 +669,18 @@
     .param p0, "audioFormat"    # I
 
     .prologue
-    .line 499
     packed-switch p0, :pswitch_data_0
 
-    .line 509
     const/4 v0, 0x0
 
     :goto_0
     return v0
 
-    .line 507
     :pswitch_0
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 499
     nop
 
     :pswitch_data_0
@@ -764,22 +700,18 @@
     .param p0, "audioFormat"    # I
 
     .prologue
-    .line 472
     sparse-switch p0, :sswitch_data_0
 
-    .line 492
     const/4 v0, 0x0
 
     :goto_0
     return v0
 
-    .line 490
     :sswitch_0
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 472
     nop
 
     :sswitch_data_0
@@ -810,7 +742,6 @@
     .locals 3
 
     .prologue
-    .line 673
     invoke-virtual {p0}, Landroid/media/AudioFormat;->getChannelIndexMask()I
 
     move-result v2
@@ -819,7 +750,6 @@
 
     move-result v1
 
-    .line 674
     .local v1, "channelIndexCount":I
     invoke-virtual {p0}, Landroid/media/AudioFormat;->getChannelMask()I
 
@@ -829,25 +759,20 @@
 
     move-result v0
 
-    .line 675
     .local v0, "channelCount":I
     if-nez v0, :cond_1
 
-    .line 676
     move v0, v1
 
-    .line 680
     :cond_0
     :goto_0
     return v0
 
-    .line 677
     :cond_1
     if-eq v0, v1, :cond_0
 
     if-eqz v1, :cond_0
 
-    .line 678
     const/4 v0, 0x0
 
     goto :goto_0
@@ -857,17 +782,14 @@
     .locals 1
 
     .prologue
-    .line 661
     iget v0, p0, Landroid/media/AudioFormat;->mPropertySetMask:I
 
     and-int/lit8 v0, v0, 0x8
 
     if-nez v0, :cond_0
 
-    .line 662
     const/4 v0, 0x0
 
-    .line 664
     :goto_0
     return v0
 
@@ -881,17 +803,14 @@
     .locals 1
 
     .prologue
-    .line 646
     iget v0, p0, Landroid/media/AudioFormat;->mPropertySetMask:I
 
     and-int/lit8 v0, v0, 0x4
 
     if-nez v0, :cond_0
 
-    .line 647
     const/4 v0, 0x0
 
-    .line 649
     :goto_0
     return v0
 
@@ -905,17 +824,14 @@
     .locals 1
 
     .prologue
-    .line 619
     iget v0, p0, Landroid/media/AudioFormat;->mPropertySetMask:I
 
     and-int/lit8 v0, v0, 0x1
 
     if-nez v0, :cond_0
 
-    .line 620
     const/4 v0, 0x0
 
-    .line 622
     :goto_0
     return v0
 
@@ -929,7 +845,6 @@
     .locals 1
 
     .prologue
-    .line 685
     iget v0, p0, Landroid/media/AudioFormat;->mPropertySetMask:I
 
     return v0
@@ -939,17 +854,14 @@
     .locals 1
 
     .prologue
-    .line 631
     iget v0, p0, Landroid/media/AudioFormat;->mPropertySetMask:I
 
     and-int/lit8 v0, v0, 0x2
 
     if-nez v0, :cond_0
 
-    .line 632
     const/4 v0, 0x0
 
-    .line 634
     :goto_0
     return v0
 
@@ -963,7 +875,6 @@
     .locals 3
 
     .prologue
-    .line 901
     new-instance v0, Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;

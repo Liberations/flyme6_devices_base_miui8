@@ -43,7 +43,6 @@
     .locals 1
 
     .prologue
-    .line 33
     new-instance v0, Ljava/util/WeakHashMap;
 
     invoke-direct {v0}, Ljava/util/WeakHashMap;-><init>()V
@@ -57,7 +56,6 @@
     .locals 0
 
     .prologue
-    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -68,7 +66,6 @@
     .param p0, "size"    # Landroid/hardware/Camera$Size;
 
     .prologue
-    .line 77
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -79,7 +76,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "x"
+    const-string v1, "x"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -103,8 +100,7 @@
     .param p0, "params"    # Landroid/hardware/Camera$Parameters;
 
     .prologue
-    .line 60
-    const-string/jumbo v5, "remove_lower_perview_size_list"
+    const-string v5, "remove_lower_perview_size_list"
 
     invoke-static {v5}, Landroid/hardware/CameraInjector;->isInWhiteList(Ljava/lang/String;)Z
 
@@ -112,12 +108,10 @@
 
     if-eqz v5, :cond_2
 
-    .line 61
     invoke-virtual {p0}, Landroid/hardware/Camera$Parameters;->getSupportedPreviewSizes()Ljava/util/List;
 
     move-result-object v3
 
-    .line 62
     .local v3, "previewSizes":Ljava/util/List;, "Ljava/util/List<Landroid/hardware/Camera$Size;>;"
     new-instance v2, Ljava/util/ArrayList;
 
@@ -127,7 +121,6 @@
 
     invoke-direct {v2, v5}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 63
     .local v2, "newSizeList":Ljava/util/List;, "Ljava/util/List<Landroid/hardware/Camera$Size;>;"
     const-string v5, "extra_min_preview_size"
 
@@ -137,7 +130,6 @@
 
     move-result v1
 
-    .line 64
     .local v1, "minSize":I
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -158,7 +150,6 @@
 
     check-cast v4, Landroid/hardware/Camera$Size;
 
-    .line 65
     .local v4, "size":Landroid/hardware/Camera$Size;
     iget v5, v4, Landroid/hardware/Camera$Size;->width:I
 
@@ -168,12 +159,10 @@
 
     if-gt v1, v5, :cond_0
 
-    .line 66
     invoke-interface {v2, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 69
     .end local v4    # "size":Landroid/hardware/Camera$Size;
     :cond_1
     invoke-interface {v2}, Ljava/util/List;->size()I
@@ -186,8 +175,7 @@
 
     if-eq v5, v6, :cond_2
 
-    .line 70
-    const-string/jumbo v5, "preview-size-values"
+    const-string v5, "preview-size-values"
 
     invoke-static {v2}, Landroid/hardware/CameraInjector;->getValueString(Ljava/util/List;)Ljava/lang/String;
 
@@ -195,7 +183,6 @@
 
     invoke-virtual {p0, v5, v6}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 74
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v1    # "minSize":I
     .end local v2    # "newSizeList":Ljava/util/List;, "Ljava/util/List<Landroid/hardware/Camera$Size;>;"
@@ -218,16 +205,13 @@
     .end annotation
 
     .prologue
-    .line 125
     .local p0, "sizes":Ljava/util/List;, "Ljava/util/List<Landroid/hardware/Camera$Size;>;"
     if-eqz p0, :cond_2
 
-    .line 126
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 127
     .local v0, "buffer":Ljava/lang/StringBuilder;
     const/4 v1, 0x0
 
@@ -239,30 +223,25 @@
 
     if-ge v1, v3, :cond_1
 
-    .line 128
     invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Landroid/hardware/Camera$Size;
 
-    .line 129
     .local v2, "size":Landroid/hardware/Camera$Size;
     iget v3, v2, Landroid/hardware/Camera$Size;->width:I
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 130
     const/16 v3, 0x78
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 131
     iget v3, v2, Landroid/hardware/Camera$Size;->height:I
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 132
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v3
@@ -275,20 +254,17 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 127
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 134
     .end local v2    # "size":Landroid/hardware/Camera$Size;
     :cond_1
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 136
     .end local v0    # "buffer":Ljava/lang/StringBuilder;
     .end local v1    # "i":I
     :goto_1
@@ -306,12 +282,10 @@
     .param p1, "cameraId"    # I
 
     .prologue
-    .line 49
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 50
     .local v0, "info":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "camera-id"
 
@@ -321,12 +295,10 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 51
     sget-object v1, Landroid/hardware/CameraInjector;->sCameraInfoMap:Ljava/util/WeakHashMap;
 
     invoke-virtual {v1, p0, v0}, Ljava/util/WeakHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 52
     return-void
 .end method
 
@@ -335,18 +307,15 @@
     .param p0, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 36
     invoke-static {}, Landroid/app/ActivityThread;->currentPackageName()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 37
     .local v3, "processName":Ljava/lang/String;
     invoke-static {p0}, Lmiui/util/FeatureParser;->getStringArray(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v5
 
-    .line 38
     .local v5, "whitelist":[Ljava/lang/String;
     if-eqz v5, :cond_1
 
@@ -354,7 +323,6 @@
 
     if-lez v6, :cond_1
 
-    .line 39
     move-object v0, v5
 
     .local v0, "arr$":[Ljava/lang/String;
@@ -369,7 +337,6 @@
 
     aget-object v4, v0, v1
 
-    .line 40
     .local v4, "str":Ljava/lang/String;
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -377,10 +344,8 @@
 
     if-eqz v6, :cond_0
 
-    .line 41
     const/4 v6, 0x1
 
-    .line 45
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v1    # "i$":I
     .end local v2    # "len$":I
@@ -388,7 +353,6 @@
     :goto_1
     return v6
 
-    .line 39
     .restart local v0    # "arr$":[Ljava/lang/String;
     .restart local v1    # "i$":I
     .restart local v2    # "len$":I
@@ -398,7 +362,6 @@
 
     goto :goto_0
 
-    .line 45
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v1    # "i$":I
     .end local v2    # "len$":I
@@ -414,12 +377,10 @@
     .param p0, "camera"    # Landroid/hardware/Camera;
 
     .prologue
-    .line 55
     sget-object v0, Landroid/hardware/CameraInjector;->sCameraInfoMap:Ljava/util/WeakHashMap;
 
     invoke-virtual {v0, p0}, Ljava/util/WeakHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 56
     return-void
 .end method
 
@@ -431,7 +392,6 @@
     .prologue
     const/16 v3, 0x2d0
 
-    .line 82
     const-string v2, "add_still_beautify_list"
 
     invoke-static {v2}, Landroid/hardware/CameraInjector;->isInWhiteList(Ljava/lang/String;)Z
@@ -440,7 +400,7 @@
 
     if-eqz v2, :cond_1
 
-    const-string/jumbo v2, "xiaomi-still-beautify-values"
+    const-string v2, "xiaomi-still-beautify-values"
 
     invoke-virtual {p1, v2}, Landroid/hardware/Camera$Parameters;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -448,12 +408,10 @@
 
     if-nez v2, :cond_1
 
-    .line 84
     invoke-virtual {p1}, Landroid/hardware/Camera$Parameters;->getPreviewSize()Landroid/hardware/Camera$Size;
 
     move-result-object v1
 
-    .line 85
     .local v1, "size":Landroid/hardware/Camera$Size;
     if-eqz v1, :cond_1
 
@@ -465,9 +423,8 @@
 
     if-gt v2, v3, :cond_1
 
-    .line 86
     :cond_0
-    const-string/jumbo v2, "xiaomi-still-beautify-values"
+    const-string v2, "xiaomi-still-beautify-values"
 
     const-string v3, "extra_still_beautify_value"
 
@@ -477,7 +434,6 @@
 
     invoke-virtual {p1, v2, v3}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 91
     .end local v1    # "size":Landroid/hardware/Camera$Size;
     :cond_1
     sget-object v2, Landroid/hardware/CameraInjector;->sCameraInfoMap:Ljava/util/WeakHashMap;
@@ -488,12 +444,10 @@
 
     check-cast v0, Ljava/util/HashMap;
 
-    .line 92
     .local v0, "info":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     if-eqz v0, :cond_2
 
-    .line 93
-    const-string/jumbo v2, "preview-size"
+    const-string v2, "preview-size"
 
     invoke-virtual {p1}, Landroid/hardware/Camera$Parameters;->getPreviewSize()Landroid/hardware/Camera$Size;
 
@@ -505,8 +459,7 @@
 
     invoke-virtual {v0, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 94
-    const-string/jumbo v2, "picture-size"
+    const-string v2, "picture-size"
 
     invoke-virtual {p1}, Landroid/hardware/Camera$Parameters;->getPictureSize()Landroid/hardware/Camera$Size;
 
@@ -518,11 +471,9 @@
 
     invoke-virtual {v0, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 98
     :goto_0
     return-void
 
-    .line 96
     :cond_2
     const-string v2, "CameraInjector"
 
@@ -530,7 +481,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "setParametersEx: Lost camera info "
+    const-string v4, "setParametersEx: Lost camera info "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -554,7 +505,6 @@
     .param p0, "camera"    # Landroid/hardware/Camera;
 
     .prologue
-    .line 101
     sget-object v3, Landroid/hardware/CameraInjector;->sCameraInfoMap:Ljava/util/WeakHashMap;
 
     invoke-virtual {v3, p0}, Ljava/util/WeakHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -563,11 +513,9 @@
 
     check-cast v1, Ljava/util/HashMap;
 
-    .line 102
     .local v1, "info":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     if-eqz v1, :cond_0
 
-    .line 104
     const-string v3, "camera-id"
 
     invoke-virtual {v1, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -576,9 +524,8 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 105
     .local v0, "cameraId":Ljava/lang/String;
-    const-string/jumbo v3, "preview-size"
+    const-string v3, "preview-size"
 
     invoke-virtual {v1, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -586,7 +533,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 106
     .local v2, "previewSize":Ljava/lang/String;
     new-instance v3, Lcom/miui/whetstone/utils/WhetstoneActionBuilder;
 
@@ -600,7 +546,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "preview-size"
+    const-string v4, "preview-size"
 
     invoke-virtual {v3, v4, v2}, Lcom/miui/whetstone/utils/WhetstoneActionBuilder;->add(Ljava/lang/String;Ljava/lang/String;)Lcom/miui/whetstone/utils/WhetstoneActionBuilder;
 
@@ -612,13 +558,11 @@
 
     invoke-static {v3}, Lcom/miui/whetstone/WhetstoneManager;->analyticTrack(Lcom/miui/whetstone/WhetstoneAction;)V
 
-    .line 110
     .end local v0    # "cameraId":Ljava/lang/String;
     .end local v2    # "previewSize":Ljava/lang/String;
     :goto_0
     return-void
 
-    .line 108
     :cond_0
     const-string v3, "CameraInjector"
 
@@ -626,7 +570,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "startPreview: Lost camera info "
+    const-string v5, "startPreview: Lost camera info "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -650,7 +594,6 @@
     .param p0, "camera"    # Landroid/hardware/Camera;
 
     .prologue
-    .line 113
     sget-object v3, Landroid/hardware/CameraInjector;->sCameraInfoMap:Ljava/util/WeakHashMap;
 
     invoke-virtual {v3, p0}, Ljava/util/WeakHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -659,11 +602,9 @@
 
     check-cast v1, Ljava/util/HashMap;
 
-    .line 114
     .local v1, "info":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     if-eqz v1, :cond_0
 
-    .line 116
     const-string v3, "camera-id"
 
     invoke-virtual {v1, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -672,9 +613,8 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 117
     .local v0, "cameraId":Ljava/lang/String;
-    const-string/jumbo v3, "picture-size"
+    const-string v3, "picture-size"
 
     invoke-virtual {v1, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -682,7 +622,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 118
     .local v2, "pictureSize":Ljava/lang/String;
     new-instance v3, Lcom/miui/whetstone/utils/WhetstoneActionBuilder;
 
@@ -696,7 +635,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "picture-size"
+    const-string v4, "picture-size"
 
     invoke-virtual {v3, v4, v2}, Lcom/miui/whetstone/utils/WhetstoneActionBuilder;->add(Ljava/lang/String;Ljava/lang/String;)Lcom/miui/whetstone/utils/WhetstoneActionBuilder;
 
@@ -708,13 +647,11 @@
 
     invoke-static {v3}, Lcom/miui/whetstone/WhetstoneManager;->analyticTrack(Lcom/miui/whetstone/WhetstoneAction;)V
 
-    .line 122
     .end local v0    # "cameraId":Ljava/lang/String;
     .end local v2    # "pictureSize":Ljava/lang/String;
     :goto_0
     return-void
 
-    .line 120
     :cond_0
     const-string v3, "CameraInjector"
 
@@ -722,7 +659,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "takePicture: Lost camera info "
+    const-string v5, "takePicture: Lost camera info "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

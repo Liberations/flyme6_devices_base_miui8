@@ -166,7 +166,6 @@
     .locals 1
 
     .prologue
-    .line 1160
     new-instance v0, Landroid/location/GpsMeasurement$1;
 
     invoke-direct {v0}, Landroid/location/GpsMeasurement$1;-><init>()V
@@ -180,13 +179,10 @@
     .locals 0
 
     .prologue
-    .line 179
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 180
     invoke-direct {p0}, Landroid/location/GpsMeasurement;->initialize()V
 
-    .line 181
     return-void
 .end method
 
@@ -196,7 +192,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 29
     iput p1, p0, Landroid/location/GpsMeasurement;->mFlags:I
 
     return p1
@@ -208,7 +203,6 @@
     .param p1, "x1"    # D
 
     .prologue
-    .line 29
     iput-wide p1, p0, Landroid/location/GpsMeasurement;->mAccumulatedDeltaRangeInMeters:D
 
     return-wide p1
@@ -220,7 +214,6 @@
     .param p1, "x1"    # B
 
     .prologue
-    .line 29
     iput-byte p1, p0, Landroid/location/GpsMeasurement;->mPrn:B
 
     return p1
@@ -232,7 +225,6 @@
     .param p1, "x1"    # D
 
     .prologue
-    .line 29
     iput-wide p1, p0, Landroid/location/GpsMeasurement;->mAccumulatedDeltaRangeUncertaintyInMeters:D
 
     return-wide p1
@@ -244,7 +236,6 @@
     .param p1, "x1"    # D
 
     .prologue
-    .line 29
     iput-wide p1, p0, Landroid/location/GpsMeasurement;->mPseudorangeInMeters:D
 
     return-wide p1
@@ -256,7 +247,6 @@
     .param p1, "x1"    # D
 
     .prologue
-    .line 29
     iput-wide p1, p0, Landroid/location/GpsMeasurement;->mPseudorangeUncertaintyInMeters:D
 
     return-wide p1
@@ -268,7 +258,6 @@
     .param p1, "x1"    # D
 
     .prologue
-    .line 29
     iput-wide p1, p0, Landroid/location/GpsMeasurement;->mCodePhaseInChips:D
 
     return-wide p1
@@ -280,7 +269,6 @@
     .param p1, "x1"    # D
 
     .prologue
-    .line 29
     iput-wide p1, p0, Landroid/location/GpsMeasurement;->mCodePhaseUncertaintyInChips:D
 
     return-wide p1
@@ -292,7 +280,6 @@
     .param p1, "x1"    # F
 
     .prologue
-    .line 29
     iput p1, p0, Landroid/location/GpsMeasurement;->mCarrierFrequencyInHz:F
 
     return p1
@@ -304,7 +291,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 29
     iput-wide p1, p0, Landroid/location/GpsMeasurement;->mCarrierCycles:J
 
     return-wide p1
@@ -316,7 +302,6 @@
     .param p1, "x1"    # D
 
     .prologue
-    .line 29
     iput-wide p1, p0, Landroid/location/GpsMeasurement;->mCarrierPhase:D
 
     return-wide p1
@@ -328,7 +313,6 @@
     .param p1, "x1"    # D
 
     .prologue
-    .line 29
     iput-wide p1, p0, Landroid/location/GpsMeasurement;->mCarrierPhaseUncertainty:D
 
     return-wide p1
@@ -340,7 +324,6 @@
     .param p1, "x1"    # B
 
     .prologue
-    .line 29
     iput-byte p1, p0, Landroid/location/GpsMeasurement;->mLossOfLock:B
 
     return p1
@@ -352,7 +335,6 @@
     .param p1, "x1"    # D
 
     .prologue
-    .line 29
     iput-wide p1, p0, Landroid/location/GpsMeasurement;->mTimeOffsetInNs:D
 
     return-wide p1
@@ -364,7 +346,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 29
     iput p1, p0, Landroid/location/GpsMeasurement;->mBitNumber:I
 
     return p1
@@ -376,7 +357,6 @@
     .param p1, "x1"    # S
 
     .prologue
-    .line 29
     iput-short p1, p0, Landroid/location/GpsMeasurement;->mTimeFromLastBitInMs:S
 
     return p1
@@ -388,7 +368,6 @@
     .param p1, "x1"    # D
 
     .prologue
-    .line 29
     iput-wide p1, p0, Landroid/location/GpsMeasurement;->mDopplerShiftInHz:D
 
     return-wide p1
@@ -400,7 +379,6 @@
     .param p1, "x1"    # D
 
     .prologue
-    .line 29
     iput-wide p1, p0, Landroid/location/GpsMeasurement;->mDopplerShiftUncertaintyInHz:D
 
     return-wide p1
@@ -412,7 +390,6 @@
     .param p1, "x1"    # B
 
     .prologue
-    .line 29
     iput-byte p1, p0, Landroid/location/GpsMeasurement;->mMultipathIndicator:B
 
     return p1
@@ -424,7 +401,6 @@
     .param p1, "x1"    # D
 
     .prologue
-    .line 29
     iput-wide p1, p0, Landroid/location/GpsMeasurement;->mSnrInDb:D
 
     return-wide p1
@@ -436,7 +412,6 @@
     .param p1, "x1"    # D
 
     .prologue
-    .line 29
     iput-wide p1, p0, Landroid/location/GpsMeasurement;->mElevationInDeg:D
 
     return-wide p1
@@ -448,7 +423,6 @@
     .param p1, "x1"    # D
 
     .prologue
-    .line 29
     iput-wide p1, p0, Landroid/location/GpsMeasurement;->mElevationUncertaintyInDeg:D
 
     return-wide p1
@@ -460,7 +434,6 @@
     .param p1, "x1"    # D
 
     .prologue
-    .line 29
     iput-wide p1, p0, Landroid/location/GpsMeasurement;->mAzimuthInDeg:D
 
     return-wide p1
@@ -472,7 +445,6 @@
     .param p1, "x1"    # D
 
     .prologue
-    .line 29
     iput-wide p1, p0, Landroid/location/GpsMeasurement;->mAzimuthUncertaintyInDeg:D
 
     return-wide p1
@@ -484,7 +456,6 @@
     .param p1, "x1"    # S
 
     .prologue
-    .line 29
     iput-short p1, p0, Landroid/location/GpsMeasurement;->mState:S
 
     return p1
@@ -496,7 +467,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 29
     iput-boolean p1, p0, Landroid/location/GpsMeasurement;->mUsedInFix:Z
 
     return p1
@@ -508,7 +478,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 29
     iput-wide p1, p0, Landroid/location/GpsMeasurement;->mReceivedGpsTowInNs:J
 
     return-wide p1
@@ -520,7 +489,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 29
     iput-wide p1, p0, Landroid/location/GpsMeasurement;->mReceivedGpsTowUncertaintyInNs:J
 
     return-wide p1
@@ -532,7 +500,6 @@
     .param p1, "x1"    # D
 
     .prologue
-    .line 29
     iput-wide p1, p0, Landroid/location/GpsMeasurement;->mCn0InDbHz:D
 
     return-wide p1
@@ -544,7 +511,6 @@
     .param p1, "x1"    # D
 
     .prologue
-    .line 29
     iput-wide p1, p0, Landroid/location/GpsMeasurement;->mPseudorangeRateInMetersPerSec:D
 
     return-wide p1
@@ -556,7 +522,6 @@
     .param p1, "x1"    # D
 
     .prologue
-    .line 29
     iput-wide p1, p0, Landroid/location/GpsMeasurement;->mPseudorangeRateUncertaintyInMetersPerSec:D
 
     return-wide p1
@@ -568,7 +533,6 @@
     .param p1, "x1"    # S
 
     .prologue
-    .line 29
     iput-short p1, p0, Landroid/location/GpsMeasurement;->mAccumulatedDeltaRangeState:S
 
     return p1
@@ -578,25 +542,20 @@
     .locals 4
 
     .prologue
-    .line 441
     iget-short v2, p0, Landroid/location/GpsMeasurement;->mAccumulatedDeltaRangeState:S
 
     if-nez v2, :cond_0
 
-    .line 442
     const-string v2, "Unknown"
 
-    .line 461
     :goto_0
     return-object v2
 
-    .line 444
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 445
     .local v0, "builder":Ljava/lang/StringBuilder;
     iget-short v2, p0, Landroid/location/GpsMeasurement;->mAccumulatedDeltaRangeState:S
 
@@ -606,12 +565,10 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 446
     const-string v2, "Valid|"
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 448
     :cond_1
     iget-short v2, p0, Landroid/location/GpsMeasurement;->mAccumulatedDeltaRangeState:S
 
@@ -621,12 +578,10 @@
 
     if-ne v2, v3, :cond_2
 
-    .line 449
     const-string v2, "Reset|"
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 451
     :cond_2
     iget-short v2, p0, Landroid/location/GpsMeasurement;->mAccumulatedDeltaRangeState:S
 
@@ -636,39 +591,32 @@
 
     if-ne v2, v3, :cond_3
 
-    .line 452
     const-string v2, "CycleSlip|"
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 454
     :cond_3
     iget-short v2, p0, Landroid/location/GpsMeasurement;->mAccumulatedDeltaRangeState:S
 
     and-int/lit8 v1, v2, -0x8
 
-    .line 455
     .local v1, "remainingStates":I
     if-lez v1, :cond_4
 
-    .line 456
     const-string v2, "Other("
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 457
     invoke-static {v1}, Ljava/lang/Integer;->toBinaryString(I)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 458
     const-string v2, ")|"
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 460
     :cond_4
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
 
@@ -678,7 +626,6 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->deleteCharAt(I)Ljava/lang/StringBuilder;
 
-    .line 461
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
@@ -690,12 +637,10 @@
     .locals 2
 
     .prologue
-    .line 795
     iget-byte v0, p0, Landroid/location/GpsMeasurement;->mLossOfLock:B
 
     packed-switch v0, :pswitch_data_0
 
-    .line 803
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -725,25 +670,21 @@
     :goto_0
     return-object v0
 
-    .line 797
     :pswitch_0
     const-string v0, "Unknown"
 
     goto :goto_0
 
-    .line 799
     :pswitch_1
     const-string v0, "Ok"
 
     goto :goto_0
 
-    .line 801
     :pswitch_2
     const-string v0, "CycleSlip"
 
     goto :goto_0
 
-    .line 795
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -756,12 +697,10 @@
     .locals 2
 
     .prologue
-    .line 960
     iget-byte v0, p0, Landroid/location/GpsMeasurement;->mMultipathIndicator:B
 
     packed-switch v0, :pswitch_data_0
 
-    .line 968
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -791,25 +730,21 @@
     :goto_0
     return-object v0
 
-    .line 962
     :pswitch_0
     const-string v0, "Unknown"
 
     goto :goto_0
 
-    .line 964
     :pswitch_1
     const-string v0, "Detected"
 
     goto :goto_0
 
-    .line 966
     :pswitch_2
     const-string v0, "NotUsed"
 
     goto :goto_0
 
-    .line 960
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -822,25 +757,20 @@
     .locals 4
 
     .prologue
-    .line 289
     iget-short v2, p0, Landroid/location/GpsMeasurement;->mState:S
 
     if-nez v2, :cond_0
 
-    .line 290
     const-string v2, "Unknown"
 
-    .line 315
     :goto_0
     return-object v2
 
-    .line 292
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 293
     .local v0, "builder":Ljava/lang/StringBuilder;
     iget-short v2, p0, Landroid/location/GpsMeasurement;->mState:S
 
@@ -850,12 +780,10 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 294
     const-string v2, "CodeLock|"
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 296
     :cond_1
     iget-short v2, p0, Landroid/location/GpsMeasurement;->mState:S
 
@@ -865,12 +793,10 @@
 
     if-ne v2, v3, :cond_2
 
-    .line 297
     const-string v2, "BitSync|"
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 299
     :cond_2
     iget-short v2, p0, Landroid/location/GpsMeasurement;->mState:S
 
@@ -880,12 +806,10 @@
 
     if-ne v2, v3, :cond_3
 
-    .line 300
     const-string v2, "SubframeSync|"
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 302
     :cond_3
     iget-short v2, p0, Landroid/location/GpsMeasurement;->mState:S
 
@@ -895,12 +819,10 @@
 
     if-ne v2, v3, :cond_4
 
-    .line 303
     const-string v2, "TowDecoded|"
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 305
     :cond_4
     iget-short v2, p0, Landroid/location/GpsMeasurement;->mState:S
 
@@ -910,39 +832,32 @@
 
     if-ne v2, v3, :cond_5
 
-    .line 306
     const-string v2, "MsecAmbiguous"
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 308
     :cond_5
     iget-short v2, p0, Landroid/location/GpsMeasurement;->mState:S
 
     and-int/lit8 v1, v2, -0x20
 
-    .line 309
     .local v1, "remainingStates":I
     if-lez v1, :cond_6
 
-    .line 310
     const-string v2, "Other("
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 311
     invoke-static {v1}, Ljava/lang/Integer;->toBinaryString(I)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 312
     const-string v2, ")|"
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 314
     :cond_6
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
 
@@ -952,7 +867,6 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->deleteCharAt(I)Ljava/lang/StringBuilder;
 
-    .line 315
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
@@ -968,111 +882,78 @@
 
     const/4 v2, 0x0
 
-    .line 1368
     iput v2, p0, Landroid/location/GpsMeasurement;->mFlags:I
 
-    .line 1369
     const/16 v0, -0x80
 
     invoke-virtual {p0, v0}, Landroid/location/GpsMeasurement;->setPrn(B)V
 
-    .line 1370
     const-wide/high16 v0, -0x3c20000000000000L    # -9.223372036854776E18
 
     invoke-virtual {p0, v0, v1}, Landroid/location/GpsMeasurement;->setTimeOffsetInNs(D)V
 
-    .line 1371
     invoke-virtual {p0, v2}, Landroid/location/GpsMeasurement;->setState(S)V
 
-    .line 1372
     const-wide/high16 v0, -0x8000000000000000L
 
     invoke-virtual {p0, v0, v1}, Landroid/location/GpsMeasurement;->setReceivedGpsTowInNs(J)V
 
-    .line 1373
     const-wide v0, 0x7fffffffffffffffL
 
     invoke-virtual {p0, v0, v1}, Landroid/location/GpsMeasurement;->setReceivedGpsTowUncertaintyInNs(J)V
 
-    .line 1374
     invoke-virtual {p0, v4, v5}, Landroid/location/GpsMeasurement;->setCn0InDbHz(D)V
 
-    .line 1375
     invoke-virtual {p0, v4, v5}, Landroid/location/GpsMeasurement;->setPseudorangeRateInMetersPerSec(D)V
 
-    .line 1376
     invoke-virtual {p0, v4, v5}, Landroid/location/GpsMeasurement;->setPseudorangeRateUncertaintyInMetersPerSec(D)V
 
-    .line 1377
     invoke-virtual {p0, v2}, Landroid/location/GpsMeasurement;->setAccumulatedDeltaRangeState(S)V
 
-    .line 1378
     invoke-virtual {p0, v4, v5}, Landroid/location/GpsMeasurement;->setAccumulatedDeltaRangeInMeters(D)V
 
-    .line 1379
     invoke-virtual {p0, v4, v5}, Landroid/location/GpsMeasurement;->setAccumulatedDeltaRangeUncertaintyInMeters(D)V
 
-    .line 1380
     invoke-virtual {p0}, Landroid/location/GpsMeasurement;->resetPseudorangeInMeters()V
 
-    .line 1381
     invoke-virtual {p0}, Landroid/location/GpsMeasurement;->resetPseudorangeUncertaintyInMeters()V
 
-    .line 1382
     invoke-virtual {p0}, Landroid/location/GpsMeasurement;->resetCodePhaseInChips()V
 
-    .line 1383
     invoke-virtual {p0}, Landroid/location/GpsMeasurement;->resetCodePhaseUncertaintyInChips()V
 
-    .line 1384
     invoke-virtual {p0}, Landroid/location/GpsMeasurement;->resetCarrierFrequencyInHz()V
 
-    .line 1385
     invoke-virtual {p0}, Landroid/location/GpsMeasurement;->resetCarrierCycles()V
 
-    .line 1386
     invoke-virtual {p0}, Landroid/location/GpsMeasurement;->resetCarrierPhase()V
 
-    .line 1387
     invoke-virtual {p0}, Landroid/location/GpsMeasurement;->resetCarrierPhaseUncertainty()V
 
-    .line 1388
     invoke-virtual {p0, v2}, Landroid/location/GpsMeasurement;->setLossOfLock(B)V
 
-    .line 1389
     invoke-virtual {p0}, Landroid/location/GpsMeasurement;->resetBitNumber()V
 
-    .line 1390
     invoke-virtual {p0}, Landroid/location/GpsMeasurement;->resetTimeFromLastBitInMs()V
 
-    .line 1391
     invoke-virtual {p0}, Landroid/location/GpsMeasurement;->resetDopplerShiftInHz()V
 
-    .line 1392
     invoke-virtual {p0}, Landroid/location/GpsMeasurement;->resetDopplerShiftUncertaintyInHz()V
 
-    .line 1393
     invoke-virtual {p0, v2}, Landroid/location/GpsMeasurement;->setMultipathIndicator(B)V
 
-    .line 1394
     invoke-virtual {p0}, Landroid/location/GpsMeasurement;->resetSnrInDb()V
 
-    .line 1395
     invoke-virtual {p0}, Landroid/location/GpsMeasurement;->resetElevationInDeg()V
 
-    .line 1396
     invoke-virtual {p0}, Landroid/location/GpsMeasurement;->resetElevationUncertaintyInDeg()V
 
-    .line 1397
     invoke-virtual {p0}, Landroid/location/GpsMeasurement;->resetAzimuthInDeg()V
 
-    .line 1398
     invoke-virtual {p0}, Landroid/location/GpsMeasurement;->resetAzimuthUncertaintyInDeg()V
 
-    .line 1399
     invoke-virtual {p0, v2}, Landroid/location/GpsMeasurement;->setUsedInFix(Z)V
 
-    .line 1400
     return-void
 .end method
 
@@ -1081,7 +962,6 @@
     .param p1, "flag"    # I
 
     .prologue
-    .line 1411
     iget v0, p0, Landroid/location/GpsMeasurement;->mFlags:I
 
     and-int/2addr v0, p1
@@ -1104,7 +984,6 @@
     .param p1, "flag"    # I
 
     .prologue
-    .line 1407
     iget v0, p0, Landroid/location/GpsMeasurement;->mFlags:I
 
     xor-int/lit8 v1, p1, -0x1
@@ -1113,7 +992,6 @@
 
     iput v0, p0, Landroid/location/GpsMeasurement;->mFlags:I
 
-    .line 1408
     return-void
 .end method
 
@@ -1122,14 +1000,12 @@
     .param p1, "flag"    # I
 
     .prologue
-    .line 1403
     iget v0, p0, Landroid/location/GpsMeasurement;->mFlags:I
 
     or-int/2addr v0, p1
 
     iput v0, p0, Landroid/location/GpsMeasurement;->mFlags:I
 
-    .line 1404
     return-void
 .end method
 
@@ -1139,7 +1015,6 @@
     .locals 1
 
     .prologue
-    .line 1244
     const/4 v0, 0x0
 
     return v0
@@ -1149,7 +1024,6 @@
     .locals 2
 
     .prologue
-    .line 476
     iget-wide v0, p0, Landroid/location/GpsMeasurement;->mAccumulatedDeltaRangeInMeters:D
 
     return-wide v0
@@ -1159,7 +1033,6 @@
     .locals 1
 
     .prologue
-    .line 426
     iget-short v0, p0, Landroid/location/GpsMeasurement;->mAccumulatedDeltaRangeState:S
 
     return v0
@@ -1169,7 +1042,6 @@
     .locals 2
 
     .prologue
-    .line 493
     iget-wide v0, p0, Landroid/location/GpsMeasurement;->mAccumulatedDeltaRangeUncertaintyInMeters:D
 
     return-wide v0
@@ -1179,7 +1051,6 @@
     .locals 2
 
     .prologue
-    .line 1089
     iget-wide v0, p0, Landroid/location/GpsMeasurement;->mAzimuthInDeg:D
 
     return-wide v0
@@ -1189,7 +1060,6 @@
     .locals 2
 
     .prologue
-    .line 1124
     iget-wide v0, p0, Landroid/location/GpsMeasurement;->mAzimuthUncertaintyInDeg:D
 
     return-wide v0
@@ -1199,7 +1069,6 @@
     .locals 1
 
     .prologue
-    .line 820
     iget v0, p0, Landroid/location/GpsMeasurement;->mBitNumber:I
 
     return v0
@@ -1209,7 +1078,6 @@
     .locals 2
 
     .prologue
-    .line 687
     iget-wide v0, p0, Landroid/location/GpsMeasurement;->mCarrierCycles:J
 
     return-wide v0
@@ -1219,7 +1087,6 @@
     .locals 1
 
     .prologue
-    .line 654
     iget v0, p0, Landroid/location/GpsMeasurement;->mCarrierFrequencyInHz:F
 
     return v0
@@ -1229,7 +1096,6 @@
     .locals 2
 
     .prologue
-    .line 724
     iget-wide v0, p0, Landroid/location/GpsMeasurement;->mCarrierPhase:D
 
     return-wide v0
@@ -1239,7 +1105,6 @@
     .locals 2
 
     .prologue
-    .line 757
     iget-wide v0, p0, Landroid/location/GpsMeasurement;->mCarrierPhaseUncertainty:D
 
     return-wide v0
@@ -1249,7 +1114,6 @@
     .locals 2
 
     .prologue
-    .line 361
     iget-wide v0, p0, Landroid/location/GpsMeasurement;->mCn0InDbHz:D
 
     return-wide v0
@@ -1259,7 +1123,6 @@
     .locals 2
 
     .prologue
-    .line 588
     iget-wide v0, p0, Landroid/location/GpsMeasurement;->mCodePhaseInChips:D
 
     return-wide v0
@@ -1269,7 +1132,6 @@
     .locals 2
 
     .prologue
-    .line 621
     iget-wide v0, p0, Landroid/location/GpsMeasurement;->mCodePhaseUncertaintyInChips:D
 
     return-wide v0
@@ -1279,7 +1141,6 @@
     .locals 2
 
     .prologue
-    .line 889
     iget-wide v0, p0, Landroid/location/GpsMeasurement;->mDopplerShiftInHz:D
 
     return-wide v0
@@ -1289,7 +1150,6 @@
     .locals 2
 
     .prologue
-    .line 922
     iget-wide v0, p0, Landroid/location/GpsMeasurement;->mDopplerShiftUncertaintyInHz:D
 
     return-wide v0
@@ -1299,7 +1159,6 @@
     .locals 2
 
     .prologue
-    .line 1019
     iget-wide v0, p0, Landroid/location/GpsMeasurement;->mElevationInDeg:D
 
     return-wide v0
@@ -1309,7 +1168,6 @@
     .locals 2
 
     .prologue
-    .line 1054
     iget-wide v0, p0, Landroid/location/GpsMeasurement;->mElevationUncertaintyInDeg:D
 
     return-wide v0
@@ -1319,7 +1177,6 @@
     .locals 1
 
     .prologue
-    .line 780
     iget-byte v0, p0, Landroid/location/GpsMeasurement;->mLossOfLock:B
 
     return v0
@@ -1329,7 +1186,6 @@
     .locals 1
 
     .prologue
-    .line 945
     iget-byte v0, p0, Landroid/location/GpsMeasurement;->mMultipathIndicator:B
 
     return v0
@@ -1339,7 +1195,6 @@
     .locals 1
 
     .prologue
-    .line 235
     iget-byte v0, p0, Landroid/location/GpsMeasurement;->mPrn:B
 
     return v0
@@ -1349,7 +1204,6 @@
     .locals 2
 
     .prologue
-    .line 519
     iget-wide v0, p0, Landroid/location/GpsMeasurement;->mPseudorangeInMeters:D
 
     return-wide v0
@@ -1359,7 +1213,6 @@
     .locals 2
 
     .prologue
-    .line 385
     iget-wide v0, p0, Landroid/location/GpsMeasurement;->mPseudorangeRateInMetersPerSec:D
 
     return-wide v0
@@ -1369,7 +1222,6 @@
     .locals 2
 
     .prologue
-    .line 410
     iget-wide v0, p0, Landroid/location/GpsMeasurement;->mPseudorangeRateUncertaintyInMetersPerSec:D
 
     return-wide v0
@@ -1379,7 +1231,6 @@
     .locals 2
 
     .prologue
-    .line 553
     iget-wide v0, p0, Landroid/location/GpsMeasurement;->mPseudorangeUncertaintyInMeters:D
 
     return-wide v0
@@ -1389,7 +1240,6 @@
     .locals 2
 
     .prologue
-    .line 330
     iget-wide v0, p0, Landroid/location/GpsMeasurement;->mReceivedGpsTowInNs:J
 
     return-wide v0
@@ -1399,7 +1249,6 @@
     .locals 2
 
     .prologue
-    .line 344
     iget-wide v0, p0, Landroid/location/GpsMeasurement;->mReceivedGpsTowUncertaintyInNs:J
 
     return-wide v0
@@ -1409,7 +1258,6 @@
     .locals 2
 
     .prologue
-    .line 985
     iget-wide v0, p0, Landroid/location/GpsMeasurement;->mSnrInDb:D
 
     return-wide v0
@@ -1419,7 +1267,6 @@
     .locals 1
 
     .prologue
-    .line 274
     iget-short v0, p0, Landroid/location/GpsMeasurement;->mState:S
 
     return v0
@@ -1429,7 +1276,6 @@
     .locals 1
 
     .prologue
-    .line 853
     iget-short v0, p0, Landroid/location/GpsMeasurement;->mTimeFromLastBitInMs:S
 
     return v0
@@ -1439,7 +1285,6 @@
     .locals 2
 
     .prologue
-    .line 257
     iget-wide v0, p0, Landroid/location/GpsMeasurement;->mTimeOffsetInNs:D
 
     return-wide v0
@@ -1449,7 +1294,6 @@
     .locals 1
 
     .prologue
-    .line 1077
     const/16 v0, 0x8
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->isFlagSet(I)Z
@@ -1463,7 +1307,6 @@
     .locals 1
 
     .prologue
-    .line 1112
     const/16 v0, 0x10
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->isFlagSet(I)Z
@@ -1477,7 +1320,6 @@
     .locals 1
 
     .prologue
-    .line 811
     const/16 v0, 0x2000
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->isFlagSet(I)Z
@@ -1491,7 +1333,6 @@
     .locals 1
 
     .prologue
-    .line 677
     const/16 v0, 0x400
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->isFlagSet(I)Z
@@ -1505,7 +1346,6 @@
     .locals 1
 
     .prologue
-    .line 644
     const/16 v0, 0x200
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->isFlagSet(I)Z
@@ -1519,7 +1359,6 @@
     .locals 1
 
     .prologue
-    .line 710
     const/16 v0, 0x800
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->isFlagSet(I)Z
@@ -1533,7 +1372,6 @@
     .locals 1
 
     .prologue
-    .line 747
     const/16 v0, 0x1000
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->isFlagSet(I)Z
@@ -1547,7 +1385,6 @@
     .locals 1
 
     .prologue
-    .line 576
     const/16 v0, 0x80
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->isFlagSet(I)Z
@@ -1561,7 +1398,6 @@
     .locals 1
 
     .prologue
-    .line 611
     const/16 v0, 0x100
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->isFlagSet(I)Z
@@ -1575,7 +1411,6 @@
     .locals 1
 
     .prologue
-    .line 876
     const v0, 0x8000
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->isFlagSet(I)Z
@@ -1589,7 +1424,6 @@
     .locals 1
 
     .prologue
-    .line 912
     const/high16 v0, 0x10000
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->isFlagSet(I)Z
@@ -1603,7 +1437,6 @@
     .locals 1
 
     .prologue
-    .line 1008
     const/4 v0, 0x2
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->isFlagSet(I)Z
@@ -1617,7 +1450,6 @@
     .locals 1
 
     .prologue
-    .line 1042
     const/4 v0, 0x4
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->isFlagSet(I)Z
@@ -1631,7 +1463,6 @@
     .locals 1
 
     .prologue
-    .line 509
     const/16 v0, 0x20
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->isFlagSet(I)Z
@@ -1645,7 +1476,6 @@
     .locals 1
 
     .prologue
-    .line 542
     const/16 v0, 0x40
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->isFlagSet(I)Z
@@ -1659,7 +1489,6 @@
     .locals 1
 
     .prologue
-    .line 976
     const/4 v0, 0x1
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->isFlagSet(I)Z
@@ -1673,7 +1502,6 @@
     .locals 1
 
     .prologue
-    .line 843
     const/16 v0, 0x4000
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->isFlagSet(I)Z
@@ -1687,7 +1515,6 @@
     .locals 1
 
     .prologue
-    .line 402
     const/high16 v0, 0x40000
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->isFlagSet(I)Z
@@ -1711,7 +1538,6 @@
     .locals 1
 
     .prologue
-    .line 1150
     iget-boolean v0, p0, Landroid/location/GpsMeasurement;->mUsedInFix:Z
 
     return v0
@@ -1721,10 +1547,8 @@
     .locals 0
 
     .prologue
-    .line 227
     invoke-direct {p0}, Landroid/location/GpsMeasurement;->initialize()V
 
-    .line 228
     return-void
 .end method
 
@@ -1732,17 +1556,14 @@
     .locals 2
 
     .prologue
-    .line 1104
     const/16 v0, 0x8
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->resetFlag(I)V
 
-    .line 1105
     const-wide/high16 v0, 0x7ff8000000000000L    # NaN
 
     iput-wide v0, p0, Landroid/location/GpsMeasurement;->mAzimuthInDeg:D
 
-    .line 1106
     return-void
 .end method
 
@@ -1750,17 +1571,14 @@
     .locals 2
 
     .prologue
-    .line 1139
     const/16 v0, 0x10
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->resetFlag(I)V
 
-    .line 1140
     const-wide/high16 v0, 0x7ff8000000000000L    # NaN
 
     iput-wide v0, p0, Landroid/location/GpsMeasurement;->mAzimuthUncertaintyInDeg:D
 
-    .line 1141
     return-void
 .end method
 
@@ -1768,17 +1586,14 @@
     .locals 1
 
     .prologue
-    .line 835
     const/16 v0, 0x2000
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->resetFlag(I)V
 
-    .line 836
     const/high16 v0, -0x80000000
 
     iput v0, p0, Landroid/location/GpsMeasurement;->mBitNumber:I
 
-    .line 837
     return-void
 .end method
 
@@ -1786,17 +1601,14 @@
     .locals 2
 
     .prologue
-    .line 702
     const/16 v0, 0x400
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->resetFlag(I)V
 
-    .line 703
     const-wide/high16 v0, -0x8000000000000000L
 
     iput-wide v0, p0, Landroid/location/GpsMeasurement;->mCarrierCycles:J
 
-    .line 704
     return-void
 .end method
 
@@ -1804,17 +1616,14 @@
     .locals 1
 
     .prologue
-    .line 669
     const/16 v0, 0x200
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->resetFlag(I)V
 
-    .line 670
     const/high16 v0, 0x7fc00000    # NaNf
 
     iput v0, p0, Landroid/location/GpsMeasurement;->mCarrierFrequencyInHz:F
 
-    .line 671
     return-void
 .end method
 
@@ -1822,17 +1631,14 @@
     .locals 2
 
     .prologue
-    .line 739
     const/16 v0, 0x800
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->resetFlag(I)V
 
-    .line 740
     const-wide/high16 v0, 0x7ff8000000000000L    # NaN
 
     iput-wide v0, p0, Landroid/location/GpsMeasurement;->mCarrierPhase:D
 
-    .line 741
     return-void
 .end method
 
@@ -1840,17 +1646,14 @@
     .locals 2
 
     .prologue
-    .line 772
     const/16 v0, 0x1000
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->resetFlag(I)V
 
-    .line 773
     const-wide/high16 v0, 0x7ff8000000000000L    # NaN
 
     iput-wide v0, p0, Landroid/location/GpsMeasurement;->mCarrierPhaseUncertainty:D
 
-    .line 774
     return-void
 .end method
 
@@ -1858,17 +1661,14 @@
     .locals 2
 
     .prologue
-    .line 603
     const/16 v0, 0x80
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->resetFlag(I)V
 
-    .line 604
     const-wide/high16 v0, 0x7ff8000000000000L    # NaN
 
     iput-wide v0, p0, Landroid/location/GpsMeasurement;->mCodePhaseInChips:D
 
-    .line 605
     return-void
 .end method
 
@@ -1876,17 +1676,14 @@
     .locals 2
 
     .prologue
-    .line 636
     const/16 v0, 0x100
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->resetFlag(I)V
 
-    .line 637
     const-wide/high16 v0, 0x7ff8000000000000L    # NaN
 
     iput-wide v0, p0, Landroid/location/GpsMeasurement;->mCodePhaseUncertaintyInChips:D
 
-    .line 638
     return-void
 .end method
 
@@ -1894,17 +1691,14 @@
     .locals 2
 
     .prologue
-    .line 904
     const v0, 0x8000
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->resetFlag(I)V
 
-    .line 905
     const-wide/high16 v0, 0x7ff8000000000000L    # NaN
 
     iput-wide v0, p0, Landroid/location/GpsMeasurement;->mDopplerShiftInHz:D
 
-    .line 906
     return-void
 .end method
 
@@ -1912,17 +1706,14 @@
     .locals 2
 
     .prologue
-    .line 937
     const/high16 v0, 0x10000
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->resetFlag(I)V
 
-    .line 938
     const-wide/high16 v0, 0x7ff8000000000000L    # NaN
 
     iput-wide v0, p0, Landroid/location/GpsMeasurement;->mDopplerShiftUncertaintyInHz:D
 
-    .line 939
     return-void
 .end method
 
@@ -1930,17 +1721,14 @@
     .locals 2
 
     .prologue
-    .line 1034
     const/4 v0, 0x2
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->resetFlag(I)V
 
-    .line 1035
     const-wide/high16 v0, 0x7ff8000000000000L    # NaN
 
     iput-wide v0, p0, Landroid/location/GpsMeasurement;->mElevationInDeg:D
 
-    .line 1036
     return-void
 .end method
 
@@ -1948,17 +1736,14 @@
     .locals 2
 
     .prologue
-    .line 1069
     const/4 v0, 0x4
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->resetFlag(I)V
 
-    .line 1070
     const-wide/high16 v0, 0x7ff8000000000000L    # NaN
 
     iput-wide v0, p0, Landroid/location/GpsMeasurement;->mElevationUncertaintyInDeg:D
 
-    .line 1071
     return-void
 .end method
 
@@ -1966,17 +1751,14 @@
     .locals 2
 
     .prologue
-    .line 534
     const/16 v0, 0x20
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->resetFlag(I)V
 
-    .line 535
     const-wide/high16 v0, 0x7ff8000000000000L    # NaN
 
     iput-wide v0, p0, Landroid/location/GpsMeasurement;->mPseudorangeInMeters:D
 
-    .line 536
     return-void
 .end method
 
@@ -1984,17 +1766,14 @@
     .locals 2
 
     .prologue
-    .line 568
     const/16 v0, 0x40
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->resetFlag(I)V
 
-    .line 569
     const-wide/high16 v0, 0x7ff8000000000000L    # NaN
 
     iput-wide v0, p0, Landroid/location/GpsMeasurement;->mPseudorangeUncertaintyInMeters:D
 
-    .line 570
     return-void
 .end method
 
@@ -2002,17 +1781,14 @@
     .locals 2
 
     .prologue
-    .line 1000
     const/4 v0, 0x1
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->resetFlag(I)V
 
-    .line 1001
     const-wide/high16 v0, 0x7ff8000000000000L    # NaN
 
     iput-wide v0, p0, Landroid/location/GpsMeasurement;->mSnrInDb:D
 
-    .line 1002
     return-void
 .end method
 
@@ -2020,17 +1796,14 @@
     .locals 1
 
     .prologue
-    .line 868
     const/16 v0, 0x4000
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->resetFlag(I)V
 
-    .line 869
     const/16 v0, -0x8000
 
     iput-short v0, p0, Landroid/location/GpsMeasurement;->mTimeFromLastBitInMs:S
 
-    .line 870
     return-void
 .end method
 
@@ -2039,167 +1812,134 @@
     .param p1, "measurement"    # Landroid/location/GpsMeasurement;
 
     .prologue
-    .line 187
     iget v0, p1, Landroid/location/GpsMeasurement;->mFlags:I
 
     iput v0, p0, Landroid/location/GpsMeasurement;->mFlags:I
 
-    .line 188
     iget-byte v0, p1, Landroid/location/GpsMeasurement;->mPrn:B
 
     iput-byte v0, p0, Landroid/location/GpsMeasurement;->mPrn:B
 
-    .line 189
     iget-wide v0, p1, Landroid/location/GpsMeasurement;->mTimeOffsetInNs:D
 
     iput-wide v0, p0, Landroid/location/GpsMeasurement;->mTimeOffsetInNs:D
 
-    .line 190
     iget-short v0, p1, Landroid/location/GpsMeasurement;->mState:S
 
     iput-short v0, p0, Landroid/location/GpsMeasurement;->mState:S
 
-    .line 191
     iget-wide v0, p1, Landroid/location/GpsMeasurement;->mReceivedGpsTowInNs:J
 
     iput-wide v0, p0, Landroid/location/GpsMeasurement;->mReceivedGpsTowInNs:J
 
-    .line 192
     iget-wide v0, p1, Landroid/location/GpsMeasurement;->mReceivedGpsTowUncertaintyInNs:J
 
     iput-wide v0, p0, Landroid/location/GpsMeasurement;->mReceivedGpsTowUncertaintyInNs:J
 
-    .line 193
     iget-wide v0, p1, Landroid/location/GpsMeasurement;->mCn0InDbHz:D
 
     iput-wide v0, p0, Landroid/location/GpsMeasurement;->mCn0InDbHz:D
 
-    .line 194
     iget-wide v0, p1, Landroid/location/GpsMeasurement;->mPseudorangeRateInMetersPerSec:D
 
     iput-wide v0, p0, Landroid/location/GpsMeasurement;->mPseudorangeRateInMetersPerSec:D
 
-    .line 195
     iget-wide v0, p1, Landroid/location/GpsMeasurement;->mPseudorangeRateUncertaintyInMetersPerSec:D
 
     iput-wide v0, p0, Landroid/location/GpsMeasurement;->mPseudorangeRateUncertaintyInMetersPerSec:D
 
-    .line 197
     iget-short v0, p1, Landroid/location/GpsMeasurement;->mAccumulatedDeltaRangeState:S
 
     iput-short v0, p0, Landroid/location/GpsMeasurement;->mAccumulatedDeltaRangeState:S
 
-    .line 198
     iget-wide v0, p1, Landroid/location/GpsMeasurement;->mAccumulatedDeltaRangeInMeters:D
 
     iput-wide v0, p0, Landroid/location/GpsMeasurement;->mAccumulatedDeltaRangeInMeters:D
 
-    .line 199
     iget-wide v0, p1, Landroid/location/GpsMeasurement;->mAccumulatedDeltaRangeUncertaintyInMeters:D
 
     iput-wide v0, p0, Landroid/location/GpsMeasurement;->mAccumulatedDeltaRangeUncertaintyInMeters:D
 
-    .line 201
     iget-wide v0, p1, Landroid/location/GpsMeasurement;->mPseudorangeInMeters:D
 
     iput-wide v0, p0, Landroid/location/GpsMeasurement;->mPseudorangeInMeters:D
 
-    .line 202
     iget-wide v0, p1, Landroid/location/GpsMeasurement;->mPseudorangeUncertaintyInMeters:D
 
     iput-wide v0, p0, Landroid/location/GpsMeasurement;->mPseudorangeUncertaintyInMeters:D
 
-    .line 203
     iget-wide v0, p1, Landroid/location/GpsMeasurement;->mCodePhaseInChips:D
 
     iput-wide v0, p0, Landroid/location/GpsMeasurement;->mCodePhaseInChips:D
 
-    .line 204
     iget-wide v0, p1, Landroid/location/GpsMeasurement;->mCodePhaseUncertaintyInChips:D
 
     iput-wide v0, p0, Landroid/location/GpsMeasurement;->mCodePhaseUncertaintyInChips:D
 
-    .line 205
     iget v0, p1, Landroid/location/GpsMeasurement;->mCarrierFrequencyInHz:F
 
     iput v0, p0, Landroid/location/GpsMeasurement;->mCarrierFrequencyInHz:F
 
-    .line 206
     iget-wide v0, p1, Landroid/location/GpsMeasurement;->mCarrierCycles:J
 
     iput-wide v0, p0, Landroid/location/GpsMeasurement;->mCarrierCycles:J
 
-    .line 207
     iget-wide v0, p1, Landroid/location/GpsMeasurement;->mCarrierPhase:D
 
     iput-wide v0, p0, Landroid/location/GpsMeasurement;->mCarrierPhase:D
 
-    .line 208
     iget-wide v0, p1, Landroid/location/GpsMeasurement;->mCarrierPhaseUncertainty:D
 
     iput-wide v0, p0, Landroid/location/GpsMeasurement;->mCarrierPhaseUncertainty:D
 
-    .line 209
     iget-byte v0, p1, Landroid/location/GpsMeasurement;->mLossOfLock:B
 
     iput-byte v0, p0, Landroid/location/GpsMeasurement;->mLossOfLock:B
 
-    .line 210
     iget v0, p1, Landroid/location/GpsMeasurement;->mBitNumber:I
 
     iput v0, p0, Landroid/location/GpsMeasurement;->mBitNumber:I
 
-    .line 211
     iget-short v0, p1, Landroid/location/GpsMeasurement;->mTimeFromLastBitInMs:S
 
     iput-short v0, p0, Landroid/location/GpsMeasurement;->mTimeFromLastBitInMs:S
 
-    .line 212
     iget-wide v0, p1, Landroid/location/GpsMeasurement;->mDopplerShiftInHz:D
 
     iput-wide v0, p0, Landroid/location/GpsMeasurement;->mDopplerShiftInHz:D
 
-    .line 213
     iget-wide v0, p1, Landroid/location/GpsMeasurement;->mDopplerShiftUncertaintyInHz:D
 
     iput-wide v0, p0, Landroid/location/GpsMeasurement;->mDopplerShiftUncertaintyInHz:D
 
-    .line 214
     iget-byte v0, p1, Landroid/location/GpsMeasurement;->mMultipathIndicator:B
 
     iput-byte v0, p0, Landroid/location/GpsMeasurement;->mMultipathIndicator:B
 
-    .line 215
     iget-wide v0, p1, Landroid/location/GpsMeasurement;->mSnrInDb:D
 
     iput-wide v0, p0, Landroid/location/GpsMeasurement;->mSnrInDb:D
 
-    .line 216
     iget-wide v0, p1, Landroid/location/GpsMeasurement;->mElevationInDeg:D
 
     iput-wide v0, p0, Landroid/location/GpsMeasurement;->mElevationInDeg:D
 
-    .line 217
     iget-wide v0, p1, Landroid/location/GpsMeasurement;->mElevationUncertaintyInDeg:D
 
     iput-wide v0, p0, Landroid/location/GpsMeasurement;->mElevationUncertaintyInDeg:D
 
-    .line 218
     iget-wide v0, p1, Landroid/location/GpsMeasurement;->mAzimuthInDeg:D
 
     iput-wide v0, p0, Landroid/location/GpsMeasurement;->mAzimuthInDeg:D
 
-    .line 219
     iget-wide v0, p1, Landroid/location/GpsMeasurement;->mAzimuthUncertaintyInDeg:D
 
     iput-wide v0, p0, Landroid/location/GpsMeasurement;->mAzimuthUncertaintyInDeg:D
 
-    .line 220
     iget-boolean v0, p1, Landroid/location/GpsMeasurement;->mUsedInFix:Z
 
     iput-boolean v0, p0, Landroid/location/GpsMeasurement;->mUsedInFix:Z
 
-    .line 221
     return-void
 .end method
 
@@ -2208,10 +1948,8 @@
     .param p1, "value"    # D
 
     .prologue
-    .line 483
     iput-wide p1, p0, Landroid/location/GpsMeasurement;->mAccumulatedDeltaRangeInMeters:D
 
-    .line 484
     return-void
 .end method
 
@@ -2220,10 +1958,8 @@
     .param p1, "value"    # S
 
     .prologue
-    .line 433
     iput-short p1, p0, Landroid/location/GpsMeasurement;->mAccumulatedDeltaRangeState:S
 
-    .line 434
     return-void
 .end method
 
@@ -2232,10 +1968,8 @@
     .param p1, "value"    # D
 
     .prologue
-    .line 502
     iput-wide p1, p0, Landroid/location/GpsMeasurement;->mAccumulatedDeltaRangeUncertaintyInMeters:D
 
-    .line 503
     return-void
 .end method
 
@@ -2244,15 +1978,12 @@
     .param p1, "value"    # D
 
     .prologue
-    .line 1096
     const/16 v0, 0x8
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->setFlag(I)V
 
-    .line 1097
     iput-wide p1, p0, Landroid/location/GpsMeasurement;->mAzimuthInDeg:D
 
-    .line 1098
     return-void
 .end method
 
@@ -2261,15 +1992,12 @@
     .param p1, "value"    # D
 
     .prologue
-    .line 1131
     const/16 v0, 0x10
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->setFlag(I)V
 
-    .line 1132
     iput-wide p1, p0, Landroid/location/GpsMeasurement;->mAzimuthUncertaintyInDeg:D
 
-    .line 1133
     return-void
 .end method
 
@@ -2278,15 +2006,12 @@
     .param p1, "bitNumber"    # I
 
     .prologue
-    .line 827
     const/16 v0, 0x2000
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->setFlag(I)V
 
-    .line 828
     iput p1, p0, Landroid/location/GpsMeasurement;->mBitNumber:I
 
-    .line 829
     return-void
 .end method
 
@@ -2295,15 +2020,12 @@
     .param p1, "value"    # J
 
     .prologue
-    .line 694
     const/16 v0, 0x400
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->setFlag(I)V
 
-    .line 695
     iput-wide p1, p0, Landroid/location/GpsMeasurement;->mCarrierCycles:J
 
-    .line 696
     return-void
 .end method
 
@@ -2312,15 +2034,12 @@
     .param p1, "carrierFrequencyInHz"    # F
 
     .prologue
-    .line 661
     const/16 v0, 0x200
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->setFlag(I)V
 
-    .line 662
     iput p1, p0, Landroid/location/GpsMeasurement;->mCarrierFrequencyInHz:F
 
-    .line 663
     return-void
 .end method
 
@@ -2329,15 +2048,12 @@
     .param p1, "value"    # D
 
     .prologue
-    .line 731
     const/16 v0, 0x800
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->setFlag(I)V
 
-    .line 732
     iput-wide p1, p0, Landroid/location/GpsMeasurement;->mCarrierPhase:D
 
-    .line 733
     return-void
 .end method
 
@@ -2346,15 +2062,12 @@
     .param p1, "value"    # D
 
     .prologue
-    .line 764
     const/16 v0, 0x1000
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->setFlag(I)V
 
-    .line 765
     iput-wide p1, p0, Landroid/location/GpsMeasurement;->mCarrierPhaseUncertainty:D
 
-    .line 766
     return-void
 .end method
 
@@ -2363,10 +2076,8 @@
     .param p1, "value"    # D
 
     .prologue
-    .line 368
     iput-wide p1, p0, Landroid/location/GpsMeasurement;->mCn0InDbHz:D
 
-    .line 369
     return-void
 .end method
 
@@ -2375,15 +2086,12 @@
     .param p1, "value"    # D
 
     .prologue
-    .line 595
     const/16 v0, 0x80
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->setFlag(I)V
 
-    .line 596
     iput-wide p1, p0, Landroid/location/GpsMeasurement;->mCodePhaseInChips:D
 
-    .line 597
     return-void
 .end method
 
@@ -2392,15 +2100,12 @@
     .param p1, "value"    # D
 
     .prologue
-    .line 628
     const/16 v0, 0x100
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->setFlag(I)V
 
-    .line 629
     iput-wide p1, p0, Landroid/location/GpsMeasurement;->mCodePhaseUncertaintyInChips:D
 
-    .line 630
     return-void
 .end method
 
@@ -2409,15 +2114,12 @@
     .param p1, "value"    # D
 
     .prologue
-    .line 896
     const v0, 0x8000
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->setFlag(I)V
 
-    .line 897
     iput-wide p1, p0, Landroid/location/GpsMeasurement;->mDopplerShiftInHz:D
 
-    .line 898
     return-void
 .end method
 
@@ -2426,15 +2128,12 @@
     .param p1, "value"    # D
 
     .prologue
-    .line 929
     const/high16 v0, 0x10000
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->setFlag(I)V
 
-    .line 930
     iput-wide p1, p0, Landroid/location/GpsMeasurement;->mDopplerShiftUncertaintyInHz:D
 
-    .line 931
     return-void
 .end method
 
@@ -2443,15 +2142,12 @@
     .param p1, "elevationInDeg"    # D
 
     .prologue
-    .line 1026
     const/4 v0, 0x2
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->setFlag(I)V
 
-    .line 1027
     iput-wide p1, p0, Landroid/location/GpsMeasurement;->mElevationInDeg:D
 
-    .line 1028
     return-void
 .end method
 
@@ -2460,15 +2156,12 @@
     .param p1, "value"    # D
 
     .prologue
-    .line 1061
     const/4 v0, 0x4
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->setFlag(I)V
 
-    .line 1062
     iput-wide p1, p0, Landroid/location/GpsMeasurement;->mElevationUncertaintyInDeg:D
 
-    .line 1063
     return-void
 .end method
 
@@ -2477,10 +2170,8 @@
     .param p1, "value"    # B
 
     .prologue
-    .line 787
     iput-byte p1, p0, Landroid/location/GpsMeasurement;->mLossOfLock:B
 
-    .line 788
     return-void
 .end method
 
@@ -2489,10 +2180,8 @@
     .param p1, "value"    # B
 
     .prologue
-    .line 952
     iput-byte p1, p0, Landroid/location/GpsMeasurement;->mMultipathIndicator:B
 
-    .line 953
     return-void
 .end method
 
@@ -2501,10 +2190,8 @@
     .param p1, "value"    # B
 
     .prologue
-    .line 242
     iput-byte p1, p0, Landroid/location/GpsMeasurement;->mPrn:B
 
-    .line 243
     return-void
 .end method
 
@@ -2513,15 +2200,12 @@
     .param p1, "value"    # D
 
     .prologue
-    .line 526
     const/16 v0, 0x20
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->setFlag(I)V
 
-    .line 527
     iput-wide p1, p0, Landroid/location/GpsMeasurement;->mPseudorangeInMeters:D
 
-    .line 528
     return-void
 .end method
 
@@ -2530,10 +2214,8 @@
     .param p1, "value"    # D
 
     .prologue
-    .line 392
     iput-wide p1, p0, Landroid/location/GpsMeasurement;->mPseudorangeRateInMetersPerSec:D
 
-    .line 393
     return-void
 .end method
 
@@ -2542,10 +2224,8 @@
     .param p1, "value"    # D
 
     .prologue
-    .line 417
     iput-wide p1, p0, Landroid/location/GpsMeasurement;->mPseudorangeRateUncertaintyInMetersPerSec:D
 
-    .line 418
     return-void
 .end method
 
@@ -2554,15 +2234,12 @@
     .param p1, "value"    # D
 
     .prologue
-    .line 560
     const/16 v0, 0x40
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->setFlag(I)V
 
-    .line 561
     iput-wide p1, p0, Landroid/location/GpsMeasurement;->mPseudorangeUncertaintyInMeters:D
 
-    .line 562
     return-void
 .end method
 
@@ -2571,10 +2248,8 @@
     .param p1, "value"    # J
 
     .prologue
-    .line 337
     iput-wide p1, p0, Landroid/location/GpsMeasurement;->mReceivedGpsTowInNs:J
 
-    .line 338
     return-void
 .end method
 
@@ -2583,10 +2258,8 @@
     .param p1, "value"    # J
 
     .prologue
-    .line 351
     iput-wide p1, p0, Landroid/location/GpsMeasurement;->mReceivedGpsTowUncertaintyInNs:J
 
-    .line 352
     return-void
 .end method
 
@@ -2595,15 +2268,12 @@
     .param p1, "snrInDb"    # D
 
     .prologue
-    .line 992
     const/4 v0, 0x1
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->setFlag(I)V
 
-    .line 993
     iput-wide p1, p0, Landroid/location/GpsMeasurement;->mSnrInDb:D
 
-    .line 994
     return-void
 .end method
 
@@ -2612,10 +2282,8 @@
     .param p1, "value"    # S
 
     .prologue
-    .line 281
     iput-short p1, p0, Landroid/location/GpsMeasurement;->mState:S
 
-    .line 282
     return-void
 .end method
 
@@ -2624,15 +2292,12 @@
     .param p1, "value"    # S
 
     .prologue
-    .line 860
     const/16 v0, 0x4000
 
     invoke-direct {p0, v0}, Landroid/location/GpsMeasurement;->setFlag(I)V
 
-    .line 861
     iput-short p1, p0, Landroid/location/GpsMeasurement;->mTimeFromLastBitInMs:S
 
-    .line 862
     return-void
 .end method
 
@@ -2641,10 +2306,8 @@
     .param p1, "value"    # D
 
     .prologue
-    .line 264
     iput-wide p1, p0, Landroid/location/GpsMeasurement;->mTimeOffsetInNs:D
 
-    .line 265
     return-void
 .end method
 
@@ -2653,10 +2316,8 @@
     .param p1, "value"    # Z
 
     .prologue
-    .line 1157
     iput-boolean p1, p0, Landroid/location/GpsMeasurement;->mUsedInFix:Z
 
-    .line 1158
     return-void
 .end method
 
@@ -2674,14 +2335,11 @@
 
     const/4 v10, 0x0
 
-    .line 1249
     const-string v1, "   %-29s = %s\n"
 
-    .line 1250
     .local v1, "format":Ljava/lang/String;
     const-string v2, "   %-29s = %-25s   %-40s = %s\n"
 
-    .line 1251
     .local v2, "formatWithUncertainty":Ljava/lang/String;
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2689,7 +2347,6 @@
 
     invoke-direct {v0, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 1253
     .local v0, "builder":Ljava/lang/StringBuilder;
     const-string v3, "   %-29s = %s\n"
 
@@ -2713,7 +2370,6 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1255
     const-string v3, "   %-29s = %s\n"
 
     new-array v5, v12, [Ljava/lang/Object;
@@ -2736,7 +2392,6 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1257
     const-string v3, "   %-29s = %s\n"
 
     new-array v5, v12, [Ljava/lang/Object;
@@ -2757,7 +2412,6 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1259
     const-string v3, "   %-29s = %-25s   %-40s = %s\n"
 
     const/4 v5, 0x4
@@ -2794,7 +2448,6 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1266
     const-string v3, "   %-29s = %s\n"
 
     new-array v5, v12, [Ljava/lang/Object;
@@ -2817,7 +2470,6 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1268
     const-string v3, "   %-29s = %-25s   %-40s = %s\n"
 
     const/4 v5, 0x4
@@ -2854,7 +2506,6 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1274
     const-string v3, "   %-29s = %s\n"
 
     new-array v5, v12, [Ljava/lang/Object;
@@ -2879,7 +2530,6 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1279
     const-string v3, "   %-29s = %s\n"
 
     new-array v5, v12, [Ljava/lang/Object;
@@ -2900,7 +2550,6 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1284
     const-string v3, "   %-29s = %-25s   %-40s = %s\n"
 
     const/4 v5, 0x4
@@ -2937,7 +2586,6 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1291
     const-string v5, "   %-29s = %-25s   %-40s = %s\n"
 
     const/4 v3, 0x4
@@ -2988,7 +2636,6 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1298
     const-string v5, "   %-29s = %-25s   %-40s = %s\n"
 
     const/4 v3, 0x4
@@ -3039,7 +2686,6 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1305
     const-string v5, "   %-29s = %s\n"
 
     new-array v6, v12, [Ljava/lang/Object;
@@ -3069,7 +2715,6 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1310
     const-string v5, "   %-29s = %s\n"
 
     new-array v6, v12, [Ljava/lang/Object;
@@ -3099,7 +2744,6 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1315
     const-string v5, "   %-29s = %-25s   %-40s = %s\n"
 
     const/4 v3, 0x4
@@ -3150,7 +2794,6 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1322
     const-string v3, "   %-29s = %s\n"
 
     new-array v5, v12, [Ljava/lang/Object;
@@ -3171,7 +2814,6 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1324
     const-string v5, "   %-29s = %s\n"
 
     new-array v6, v12, [Ljava/lang/Object;
@@ -3201,7 +2843,6 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1329
     const-string v5, "   %-29s = %s\n"
 
     new-array v6, v12, [Ljava/lang/Object;
@@ -3231,7 +2872,6 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1334
     const-string v5, "   %-29s = %-25s   %-40s = %s\n"
 
     const/4 v3, 0x4
@@ -3282,7 +2922,6 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1341
     const-string v3, "   %-29s = %s\n"
 
     new-array v5, v12, [Ljava/lang/Object;
@@ -3303,7 +2942,6 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1343
     const-string v5, "   %-29s = %s\n"
 
     new-array v6, v12, [Ljava/lang/Object;
@@ -3333,7 +2971,6 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1348
     const-string v5, "   %-29s = %-25s   %-40s = %s\n"
 
     const/4 v3, 0x4
@@ -3384,7 +3021,6 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1355
     const-string v5, "   %-29s = %-25s   %-40s = %s\n"
 
     const/4 v3, 0x4
@@ -3435,7 +3071,6 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1362
     const-string v3, "   %-29s = %s\n"
 
     new-array v4, v12, [Ljava/lang/Object;
@@ -3458,7 +3093,6 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1364
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
@@ -3468,7 +3102,6 @@
     :cond_1
     move-object v3, v4
 
-    .line 1291
     goto/16 :goto_0
 
     :cond_2
@@ -3479,7 +3112,6 @@
     :cond_3
     move-object v3, v4
 
-    .line 1298
     goto/16 :goto_2
 
     :cond_4
@@ -3490,19 +3122,16 @@
     :cond_5
     move-object v3, v4
 
-    .line 1305
     goto/16 :goto_4
 
     :cond_6
     move-object v3, v4
 
-    .line 1310
     goto/16 :goto_5
 
     :cond_7
     move-object v3, v4
 
-    .line 1315
     goto/16 :goto_6
 
     :cond_8
@@ -3513,19 +3142,16 @@
     :cond_9
     move-object v3, v4
 
-    .line 1324
     goto/16 :goto_8
 
     :cond_a
     move-object v3, v4
 
-    .line 1329
     goto/16 :goto_9
 
     :cond_b
     move-object v3, v4
 
-    .line 1334
     goto/16 :goto_a
 
     :cond_c
@@ -3536,13 +3162,11 @@
     :cond_d
     move-object v3, v4
 
-    .line 1343
     goto/16 :goto_c
 
     :cond_e
     move-object v3, v4
 
-    .line 1348
     goto/16 :goto_d
 
     :cond_f
@@ -3553,7 +3177,6 @@
     :cond_10
     move-object v3, v4
 
-    .line 1355
     goto :goto_f
 .end method
 
@@ -3563,162 +3186,130 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 1208
     iget v0, p0, Landroid/location/GpsMeasurement;->mFlags:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1209
     iget-byte v0, p0, Landroid/location/GpsMeasurement;->mPrn:B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 1210
     iget-wide v0, p0, Landroid/location/GpsMeasurement;->mTimeOffsetInNs:D
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeDouble(D)V
 
-    .line 1211
     iget-short v0, p0, Landroid/location/GpsMeasurement;->mState:S
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1212
     iget-wide v0, p0, Landroid/location/GpsMeasurement;->mReceivedGpsTowInNs:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 1213
     iget-wide v0, p0, Landroid/location/GpsMeasurement;->mReceivedGpsTowUncertaintyInNs:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 1214
     iget-wide v0, p0, Landroid/location/GpsMeasurement;->mCn0InDbHz:D
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeDouble(D)V
 
-    .line 1215
     iget-wide v0, p0, Landroid/location/GpsMeasurement;->mPseudorangeRateInMetersPerSec:D
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeDouble(D)V
 
-    .line 1216
     iget-wide v0, p0, Landroid/location/GpsMeasurement;->mPseudorangeRateUncertaintyInMetersPerSec:D
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeDouble(D)V
 
-    .line 1217
     iget-short v0, p0, Landroid/location/GpsMeasurement;->mAccumulatedDeltaRangeState:S
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1218
     iget-wide v0, p0, Landroid/location/GpsMeasurement;->mAccumulatedDeltaRangeInMeters:D
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeDouble(D)V
 
-    .line 1219
     iget-wide v0, p0, Landroid/location/GpsMeasurement;->mAccumulatedDeltaRangeUncertaintyInMeters:D
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeDouble(D)V
 
-    .line 1220
     iget-wide v0, p0, Landroid/location/GpsMeasurement;->mPseudorangeInMeters:D
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeDouble(D)V
 
-    .line 1221
     iget-wide v0, p0, Landroid/location/GpsMeasurement;->mPseudorangeUncertaintyInMeters:D
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeDouble(D)V
 
-    .line 1222
     iget-wide v0, p0, Landroid/location/GpsMeasurement;->mCodePhaseInChips:D
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeDouble(D)V
 
-    .line 1223
     iget-wide v0, p0, Landroid/location/GpsMeasurement;->mCodePhaseUncertaintyInChips:D
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeDouble(D)V
 
-    .line 1224
     iget v0, p0, Landroid/location/GpsMeasurement;->mCarrierFrequencyInHz:F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
 
-    .line 1225
     iget-wide v0, p0, Landroid/location/GpsMeasurement;->mCarrierCycles:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 1226
     iget-wide v0, p0, Landroid/location/GpsMeasurement;->mCarrierPhase:D
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeDouble(D)V
 
-    .line 1227
     iget-wide v0, p0, Landroid/location/GpsMeasurement;->mCarrierPhaseUncertainty:D
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeDouble(D)V
 
-    .line 1228
     iget-byte v0, p0, Landroid/location/GpsMeasurement;->mLossOfLock:B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 1229
     iget v0, p0, Landroid/location/GpsMeasurement;->mBitNumber:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1230
     iget-short v0, p0, Landroid/location/GpsMeasurement;->mTimeFromLastBitInMs:S
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1231
     iget-wide v0, p0, Landroid/location/GpsMeasurement;->mDopplerShiftInHz:D
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeDouble(D)V
 
-    .line 1232
     iget-wide v0, p0, Landroid/location/GpsMeasurement;->mDopplerShiftUncertaintyInHz:D
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeDouble(D)V
 
-    .line 1233
     iget-byte v0, p0, Landroid/location/GpsMeasurement;->mMultipathIndicator:B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 1234
     iget-wide v0, p0, Landroid/location/GpsMeasurement;->mSnrInDb:D
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeDouble(D)V
 
-    .line 1235
     iget-wide v0, p0, Landroid/location/GpsMeasurement;->mElevationInDeg:D
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeDouble(D)V
 
-    .line 1236
     iget-wide v0, p0, Landroid/location/GpsMeasurement;->mElevationUncertaintyInDeg:D
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeDouble(D)V
 
-    .line 1237
     iget-wide v0, p0, Landroid/location/GpsMeasurement;->mAzimuthInDeg:D
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeDouble(D)V
 
-    .line 1238
     iget-wide v0, p0, Landroid/location/GpsMeasurement;->mAzimuthUncertaintyInDeg:D
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeDouble(D)V
 
-    .line 1239
     iget-boolean v0, p0, Landroid/location/GpsMeasurement;->mUsedInFix:Z
 
     if-eqz v0, :cond_0
@@ -3728,10 +3319,8 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1240
     return-void
 
-    .line 1239
     :cond_0
     const/4 v0, 0x0
 

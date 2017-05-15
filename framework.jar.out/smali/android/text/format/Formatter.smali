@@ -30,10 +30,8 @@
     .locals 0
 
     .prologue
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 43
     return-void
 .end method
 
@@ -45,7 +43,6 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 57
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -56,7 +53,6 @@
 
     iget-object v0, v1, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
 
-    .line 58
     .local v0, "locale":Ljava/util/Locale;
     invoke-static {v0}, Landroid/text/TextUtils;->getLayoutDirectionFromLocale(Ljava/util/Locale;)I
 
@@ -64,7 +60,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 59
     invoke-static {v2}, Landroid/text/BidiFormatter;->getInstance(Z)Landroid/text/BidiFormatter;
 
     move-result-object v1
@@ -73,7 +68,6 @@
 
     move-result-object p1
 
-    .line 61
     .end local p1    # "source":Ljava/lang/String;
     :cond_0
     return-object p1
@@ -86,20 +80,16 @@
     .param p3, "flags"    # I
 
     .prologue
-    .line 101
     move-wide/from16 v0, p1
 
     long-to-float v4, v0
 
-    .line 102
     .local v4, "result":F
     const v10, 0x1040077
 
-    .line 103
     .local v10, "suffix":I
     const-wide/16 v2, 0x1
 
-    .line 104
     .local v2, "mult":J
     const/high16 v12, 0x44610000    # 900.0f
 
@@ -107,18 +97,14 @@
 
     if-lez v12, :cond_0
 
-    .line 105
     const v10, 0x1040078
 
-    .line 106
     const-wide/16 v2, 0x400
 
-    .line 107
     const/high16 v12, 0x44800000    # 1024.0f
 
     div-float/2addr v4, v12
 
-    .line 109
     :cond_0
     const/high16 v12, 0x44610000    # 900.0f
 
@@ -126,18 +112,14 @@
 
     if-lez v12, :cond_1
 
-    .line 110
     const v10, 0x1040079
 
-    .line 111
     const-wide/32 v2, 0x100000
 
-    .line 112
     const/high16 v12, 0x44800000    # 1024.0f
 
     div-float/2addr v4, v12
 
-    .line 114
     :cond_1
     const/high16 v12, 0x44610000    # 900.0f
 
@@ -145,18 +127,14 @@
 
     if-lez v12, :cond_2
 
-    .line 115
     const v10, 0x104007a
 
-    .line 116
     const-wide/32 v2, 0x40000000
 
-    .line 117
     const/high16 v12, 0x44800000    # 1024.0f
 
     div-float/2addr v4, v12
 
-    .line 119
     :cond_2
     const/high16 v12, 0x44610000    # 900.0f
 
@@ -164,18 +142,14 @@
 
     if-lez v12, :cond_3
 
-    .line 120
     const v10, 0x104007b
 
-    .line 121
     const-wide v2, 0x10000000000L
 
-    .line 122
     const/high16 v12, 0x44800000    # 1024.0f
 
     div-float/2addr v4, v12
 
-    .line 124
     :cond_3
     const/high16 v12, 0x44610000    # 900.0f
 
@@ -183,18 +157,14 @@
 
     if-lez v12, :cond_4
 
-    .line 125
     const v10, 0x104007c
 
-    .line 126
     const-wide/high16 v2, 0x4000000000000L
 
-    .line 127
     const/high16 v12, 0x44800000    # 1024.0f
 
     div-float/2addr v4, v12
 
-    .line 134
     :cond_4
     const/high16 v12, 0x3f800000    # 1.0f
 
@@ -202,14 +172,11 @@
 
     if-gez v12, :cond_5
 
-    .line 135
     const/16 v5, 0x64
 
-    .line 136
     .local v5, "roundFactor":I
     const-string v6, "%.2f"
 
-    .line 157
     .local v6, "roundFormat":Ljava/lang/String;
     :goto_0
     const/4 v12, 0x1
@@ -228,7 +195,6 @@
 
     move-result-object v7
 
-    .line 161
     .local v7, "roundedString":Ljava/lang/String;
     and-int/lit8 v12, p3, 0x2
 
@@ -236,7 +202,6 @@
 
     const-wide/16 v8, 0x0
 
-    .line 165
     .local v8, "roundedBytes":J
     :goto_1
     move-object/from16 v0, p0
@@ -245,7 +210,6 @@
 
     move-result-object v11
 
-    .line 167
     .local v11, "units":Ljava/lang/String;
     new-instance v12, Landroid/text/format/Formatter$BytesResult;
 
@@ -253,7 +217,6 @@
 
     return-object v12
 
-    .line 137
     .end local v5    # "roundFactor":I
     .end local v6    # "roundFormat":Ljava/lang/String;
     .end local v7    # "roundedString":Ljava/lang/String;
@@ -266,35 +229,29 @@
 
     if-gez v12, :cond_7
 
-    .line 138
     and-int/lit8 v12, p3, 0x1
 
     if-eqz v12, :cond_6
 
-    .line 139
     const/16 v5, 0xa
 
-    .line 140
     .restart local v5    # "roundFactor":I
     const-string v6, "%.1f"
 
     .restart local v6    # "roundFormat":Ljava/lang/String;
     goto :goto_0
 
-    .line 142
     .end local v5    # "roundFactor":I
     .end local v6    # "roundFormat":Ljava/lang/String;
     :cond_6
     const/16 v5, 0x64
 
-    .line 143
     .restart local v5    # "roundFactor":I
     const-string v6, "%.2f"
 
     .restart local v6    # "roundFormat":Ljava/lang/String;
     goto :goto_0
 
-    .line 145
     .end local v5    # "roundFactor":I
     .end local v6    # "roundFormat":Ljava/lang/String;
     :cond_7
@@ -304,48 +261,40 @@
 
     if-gez v12, :cond_9
 
-    .line 146
     and-int/lit8 v12, p3, 0x1
 
     if-eqz v12, :cond_8
 
-    .line 147
     const/4 v5, 0x1
 
-    .line 148
     .restart local v5    # "roundFactor":I
     const-string v6, "%.0f"
 
     .restart local v6    # "roundFormat":Ljava/lang/String;
     goto :goto_0
 
-    .line 150
     .end local v5    # "roundFactor":I
     .end local v6    # "roundFormat":Ljava/lang/String;
     :cond_8
     const/16 v5, 0x64
 
-    .line 151
     .restart local v5    # "roundFactor":I
     const-string v6, "%.2f"
 
     .restart local v6    # "roundFormat":Ljava/lang/String;
     goto :goto_0
 
-    .line 154
     .end local v5    # "roundFactor":I
     .end local v6    # "roundFormat":Ljava/lang/String;
     :cond_9
     const/4 v5, 0x1
 
-    .line 155
     .restart local v5    # "roundFactor":I
     const-string v6, "%.0f"
 
     .restart local v6    # "roundFormat":Ljava/lang/String;
     goto :goto_0
 
-    .line 161
     .restart local v7    # "roundedString":Ljava/lang/String;
     :cond_a
     int-to-float v12, v5
@@ -375,17 +324,13 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 78
     if-nez p0, :cond_0
 
-    .line 79
     const-string v1, ""
 
-    .line 82
     :goto_0
     return-object v1
 
-    .line 81
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -395,7 +340,6 @@
 
     move-result-object v0
 
-    .line 82
     .local v0, "res":Landroid/text/format/Formatter$BytesResult;
     const v1, 0x104007d
 
@@ -431,7 +375,6 @@
     .end annotation
 
     .prologue
-    .line 180
     invoke-static {p0}, Landroid/net/NetworkUtils;->intToInetAddress(I)Ljava/net/InetAddress;
 
     move-result-object v0
@@ -449,12 +392,10 @@
     .param p1, "millis"    # J
 
     .prologue
-    .line 197
     const-wide/16 v6, 0x3e8
 
     div-long v4, p1, v6
 
-    .line 199
     .local v4, "secondsLong":J
     const/4 v0, 0x0
 
@@ -464,7 +405,6 @@
     .local v1, "hours":I
     const/4 v2, 0x0
 
-    .line 200
     .local v2, "minutes":I
     const-wide/32 v6, 0x15180
 
@@ -472,14 +412,12 @@
 
     if-ltz v6, :cond_0
 
-    .line 201
     const-wide/32 v6, 0x15180
 
     div-long v6, v4, v6
 
     long-to-int v0, v6
 
-    .line 202
     const v6, 0x15180
 
     mul-int/2addr v6, v0
@@ -488,7 +426,6 @@
 
     sub-long/2addr v4, v6
 
-    .line 204
     :cond_0
     const-wide/16 v6, 0xe10
 
@@ -496,21 +433,18 @@
 
     if-ltz v6, :cond_1
 
-    .line 205
     const-wide/16 v6, 0xe10
 
     div-long v6, v4, v6
 
     long-to-int v1, v6
 
-    .line 206
     mul-int/lit16 v6, v1, 0xe10
 
     int-to-long v6, v6
 
     sub-long/2addr v4, v6
 
-    .line 208
     :cond_1
     const-wide/16 v6, 0x3c
 
@@ -518,38 +452,32 @@
 
     if-ltz v6, :cond_2
 
-    .line 209
     const-wide/16 v6, 0x3c
 
     div-long v6, v4, v6
 
     long-to-int v2, v6
 
-    .line 210
     mul-int/lit8 v6, v2, 0x3c
 
     int-to-long v6, v6
 
     sub-long/2addr v4, v6
 
-    .line 212
     :cond_2
     long-to-int v3, v4
 
-    .line 214
     .local v3, "seconds":I
     const/4 v6, 0x2
 
     if-lt v0, v6, :cond_3
 
-    .line 215
     add-int/lit8 v6, v1, 0xc
 
     div-int/lit8 v6, v6, 0x18
 
     add-int/2addr v0, v6
 
-    .line 216
     const v6, 0x104007e
 
     const/4 v7, 0x1
@@ -568,20 +496,16 @@
 
     move-result-object v6
 
-    .line 245
     :goto_0
     return-object v6
 
-    .line 217
     :cond_3
     if-lez v0, :cond_5
 
-    .line 218
     const/4 v6, 0x1
 
     if-ne v1, v6, :cond_4
 
-    .line 219
     const v6, 0x1040080
 
     const/4 v7, 0x2
@@ -610,7 +534,6 @@
 
     goto :goto_0
 
-    .line 221
     :cond_4
     const v6, 0x104007f
 
@@ -640,20 +563,17 @@
 
     goto :goto_0
 
-    .line 222
     :cond_5
     const/4 v6, 0x2
 
     if-lt v1, v6, :cond_6
 
-    .line 223
     add-int/lit8 v6, v2, 0x1e
 
     div-int/lit8 v6, v6, 0x3c
 
     add-int/2addr v1, v6
 
-    .line 224
     const v6, 0x1040081
 
     const/4 v7, 0x1
@@ -674,16 +594,13 @@
 
     goto :goto_0
 
-    .line 225
     :cond_6
     if-lez v1, :cond_8
 
-    .line 226
     const/4 v6, 0x1
 
     if-ne v2, v6, :cond_7
 
-    .line 227
     const v6, 0x1040083
 
     const/4 v7, 0x2
@@ -712,7 +629,6 @@
 
     goto :goto_0
 
-    .line 230
     :cond_7
     const v6, 0x1040082
 
@@ -742,20 +658,17 @@
 
     goto/16 :goto_0
 
-    .line 232
     :cond_8
     const/4 v6, 0x2
 
     if-lt v2, v6, :cond_9
 
-    .line 233
     add-int/lit8 v6, v3, 0x1e
 
     div-int/lit8 v6, v6, 0x3c
 
     add-int/2addr v2, v6
 
-    .line 234
     const v6, 0x1040084
 
     const/4 v7, 0x1
@@ -776,16 +689,13 @@
 
     goto/16 :goto_0
 
-    .line 235
     :cond_9
     if-lez v2, :cond_b
 
-    .line 236
     const/4 v6, 0x1
 
     if-ne v3, v6, :cond_a
 
-    .line 237
     const v6, 0x1040087
 
     const/4 v7, 0x2
@@ -814,7 +724,6 @@
 
     goto/16 :goto_0
 
-    .line 240
     :cond_a
     const v6, 0x1040086
 
@@ -844,13 +753,11 @@
 
     goto/16 :goto_0
 
-    .line 242
     :cond_b
     const/4 v6, 0x1
 
     if-ne v3, v6, :cond_c
 
-    .line 243
     const v6, 0x1040089
 
     const/4 v7, 0x1
@@ -871,7 +778,6 @@
 
     goto/16 :goto_0
 
-    .line 245
     :cond_c
     const v6, 0x1040088
 
@@ -908,14 +814,12 @@
 
     const/4 v5, 0x0
 
-    .line 258
     add-long v2, p1, v6
 
     sub-long/2addr v2, v8
 
     div-long v0, v2, v6
 
-    .line 260
     .local v0, "minutesRoundedUp":J
     const-wide/16 v2, 0x0
 
@@ -923,7 +827,6 @@
 
     if-nez v2, :cond_0
 
-    .line 261
     const v2, 0x1040084
 
     new-array v3, v4, [Ljava/lang/Object;
@@ -938,17 +841,14 @@
 
     move-result-object v2
 
-    .line 266
     :goto_0
     return-object v2
 
-    .line 262
     :cond_0
     cmp-long v2, v0, v8
 
     if-nez v2, :cond_1
 
-    .line 263
     const v2, 0x1040085
 
     new-array v3, v4, [Ljava/lang/Object;
@@ -965,7 +865,6 @@
 
     goto :goto_0
 
-    .line 266
     :cond_1
     mul-long v2, v0, v6
 
@@ -984,17 +883,13 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 91
     if-nez p0, :cond_0
 
-    .line 92
     const-string v1, ""
 
-    .line 95
     :goto_0
     return-object v1
 
-    .line 94
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -1004,7 +899,6 @@
 
     move-result-object v0
 
-    .line 95
     .local v0, "res":Landroid/text/format/Formatter$BytesResult;
     const v1, 0x104007d
 

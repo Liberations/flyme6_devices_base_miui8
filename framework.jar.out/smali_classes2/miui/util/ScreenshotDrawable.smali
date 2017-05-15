@@ -37,14 +37,12 @@
     .locals 2
 
     .prologue
-    .line 31
     const/4 v0, 0x2
 
     new-array v0, v0, [I
 
     sput-object v0, Lmiui/util/ScreenshotDrawable;->sTempLoc:[I
 
-    .line 33
     const-string v0, "ro.miui.has_real_blur"
 
     const/4 v1, 0x0
@@ -55,7 +53,6 @@
 
     sput-boolean v0, Lmiui/util/ScreenshotDrawable;->sHasRealBlur:Z
 
-    .line 34
     const-string v0, "oled"
 
     const-string v1, "ro.display.type"
@@ -78,10 +75,8 @@
     .param p1, "ownerView"    # Landroid/view/View;
 
     .prologue
-    .line 45
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
-    .line 41
     new-instance v0, Landroid/graphics/Paint;
 
     const/4 v1, 0x3
@@ -90,17 +85,14 @@
 
     iput-object v0, p0, Lmiui/util/ScreenshotDrawable;->mPaint:Landroid/graphics/Paint;
 
-    .line 42
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lmiui/util/ScreenshotDrawable;->mSrcRect:Landroid/graphics/Rect;
 
-    .line 46
     iput-object p1, p0, Lmiui/util/ScreenshotDrawable;->mOwnerView:Landroid/view/View;
 
-    .line 47
     invoke-virtual {p1}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -118,10 +110,8 @@
 
     iput v0, p0, Lmiui/util/ScreenshotDrawable;->mBgColor:I
 
-    .line 48
     return-void
 
-    .line 47
     :cond_0
     const v0, 0x110d000e
 
@@ -133,7 +123,6 @@
     .param p0, "x0"    # Lmiui/util/ScreenshotDrawable;
 
     .prologue
-    .line 29
     iget-object v0, p0, Lmiui/util/ScreenshotDrawable;->mOwnerView:Landroid/view/View;
 
     return-object v0
@@ -144,7 +133,6 @@
     .param p0, "x0"    # Lmiui/util/ScreenshotDrawable;
 
     .prologue
-    .line 29
     iget-object v0, p0, Lmiui/util/ScreenshotDrawable;->mBluredBitmap:Landroid/graphics/Bitmap;
 
     return-object v0
@@ -156,7 +144,6 @@
     .param p1, "x1"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 29
     iput-object p1, p0, Lmiui/util/ScreenshotDrawable;->mBluredBitmap:Landroid/graphics/Bitmap;
 
     return-object p1
@@ -168,7 +155,6 @@
     .param p2, "alpha"    # I
 
     .prologue
-    .line 102
     invoke-static {p1}, Landroid/graphics/Color;->alpha(I)I
 
     move-result v0
@@ -195,7 +181,6 @@
     .param p2, "isUpdate"    # Z
 
     .prologue
-    .line 51
     check-cast p1, Landroid/view/WindowManager$LayoutParams;
 
     .end local p1    # "params":Landroid/view/ViewGroup$LayoutParams;
@@ -205,7 +190,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 52
     invoke-virtual {p0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
@@ -214,12 +198,10 @@
 
     if-nez v1, :cond_0
 
-    .line 53
     new-instance v0, Lmiui/util/ScreenshotDrawable;
 
     invoke-direct {v0, p0}, Lmiui/util/ScreenshotDrawable;-><init>(Landroid/view/View;)V
 
-    .line 54
     .local v0, "screenshotDrawable":Lmiui/util/ScreenshotDrawable;
     invoke-virtual {p0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
 
@@ -227,16 +209,13 @@
 
     invoke-virtual {v0, v1}, Lmiui/util/ScreenshotDrawable;->setOriginalDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 55
     invoke-virtual {p0, v0}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 60
     .end local v0    # "screenshotDrawable":Lmiui/util/ScreenshotDrawable;
     :cond_0
     :goto_0
     return-void
 
-    .line 57
     :cond_1
     if-eqz p2, :cond_0
 
@@ -248,7 +227,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 58
     invoke-virtual {p0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
@@ -266,16 +244,13 @@
     .locals 7
 
     .prologue
-    .line 63
     sget-boolean v2, Lmiui/util/ScreenshotDrawable;->sHasRealBlur:Z
 
     if-eqz v2, :cond_0
 
-    .line 72
     :goto_0
     return-void
 
-    .line 66
     :cond_0
     :try_start_0
     iget-object v2, p0, Lmiui/util/ScreenshotDrawable;->mOwnerView:Landroid/view/View;
@@ -302,7 +277,6 @@
 
     move-result-object v1
 
-    .line 67
     .local v1, "screenshot":Landroid/graphics/Bitmap;
     iget-object v2, p0, Lmiui/util/ScreenshotDrawable;->mBluredBitmap:Landroid/graphics/Bitmap;
 
@@ -334,12 +308,10 @@
 
     goto :goto_0
 
-    .line 69
     .end local v1    # "screenshot":Landroid/graphics/Bitmap;
     :catch_0
     move-exception v0
 
-    .line 70
     .local v0, "ex":Ljava/lang/Throwable;
     const-string v2, "ScreenshotDrawable"
 
@@ -359,7 +331,6 @@
 
     const/4 v2, 0x0
 
-    .line 152
     iget-object v0, p0, Lmiui/util/ScreenshotDrawable;->mVisibilityChangeAnimator:Landroid/animation/ValueAnimator;
 
     if-eqz v0, :cond_0
@@ -372,16 +343,13 @@
 
     if-eqz v0, :cond_0
 
-    .line 153
     iget-object v0, p0, Lmiui/util/ScreenshotDrawable;->mVisibilityChangeAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->end()V
 
-    .line 156
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 157
     new-array v0, v1, [I
 
     fill-array-data v0, :array_0
@@ -392,10 +360,8 @@
 
     iput-object v0, p0, Lmiui/util/ScreenshotDrawable;->mVisibilityChangeAnimator:Landroid/animation/ValueAnimator;
 
-    .line 158
     invoke-virtual {p0, v2}, Lmiui/util/ScreenshotDrawable;->setAlpha(I)V
 
-    .line 173
     :goto_0
     iget-object v0, p0, Lmiui/util/ScreenshotDrawable;->mVisibilityChangeAnimator:Landroid/animation/ValueAnimator;
 
@@ -403,20 +369,16 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 174
     iget-object v0, p0, Lmiui/util/ScreenshotDrawable;->mVisibilityChangeAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0, p0}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 175
     iget-object v0, p0, Lmiui/util/ScreenshotDrawable;->mVisibilityChangeAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
 
-    .line 176
     return-void
 
-    .line 160
     :cond_1
     new-array v0, v1, [I
 
@@ -438,7 +400,6 @@
 
     iput-object v0, p0, Lmiui/util/ScreenshotDrawable;->mVisibilityChangeAnimator:Landroid/animation/ValueAnimator;
 
-    .line 161
     iget-object v0, p0, Lmiui/util/ScreenshotDrawable;->mVisibilityChangeAnimator:Landroid/animation/ValueAnimator;
 
     new-instance v1, Lmiui/util/ScreenshotDrawable$2;
@@ -449,7 +410,6 @@
 
     goto :goto_0
 
-    .line 157
     nop
 
     :array_0
@@ -466,12 +426,10 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 84
     iget-object v4, p0, Lmiui/util/ScreenshotDrawable;->mBluredBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v4, :cond_1
 
-    .line 85
     iget-object v4, p0, Lmiui/util/ScreenshotDrawable;->mSrcRect:Landroid/graphics/Rect;
 
     invoke-virtual {v4}, Landroid/graphics/Rect;->isEmpty()Z
@@ -480,14 +438,12 @@
 
     if-eqz v4, :cond_0
 
-    .line 86
     iget-object v4, p0, Lmiui/util/ScreenshotDrawable;->mOwnerView:Landroid/view/View;
 
     sget-object v5, Lmiui/util/ScreenshotDrawable;->sTempLoc:[I
 
     invoke-virtual {v4, v5}, Landroid/view/View;->getLocationOnScreen([I)V
 
-    .line 87
     sget-object v4, Lmiui/util/ScreenshotDrawable;->sTempLoc:[I
 
     const/4 v5, 0x0
@@ -498,7 +454,6 @@
 
     div-int v1, v4, v5
 
-    .line 88
     .local v1, "left":I
     sget-object v4, Lmiui/util/ScreenshotDrawable;->sTempLoc:[I
 
@@ -510,7 +465,6 @@
 
     div-int v2, v4, v5
 
-    .line 89
     .local v2, "top":I
     invoke-virtual {p0}, Lmiui/util/ScreenshotDrawable;->getBounds()Landroid/graphics/Rect;
 
@@ -524,7 +478,6 @@
 
     div-int v3, v4, v5
 
-    .line 90
     .local v3, "width":I
     invoke-virtual {p0}, Lmiui/util/ScreenshotDrawable;->getBounds()Landroid/graphics/Rect;
 
@@ -538,7 +491,6 @@
 
     div-int v0, v4, v5
 
-    .line 91
     .local v0, "height":I
     iget-object v4, p0, Lmiui/util/ScreenshotDrawable;->mSrcRect:Landroid/graphics/Rect;
 
@@ -548,7 +500,6 @@
 
     invoke-virtual {v4, v1, v2, v5, v6}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 93
     .end local v0    # "height":I
     .end local v1    # "left":I
     .end local v2    # "top":I
@@ -566,7 +517,6 @@
 
     invoke-virtual {p1, v4, v5, v6, v7}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
-    .line 95
     :cond_1
     iget v4, p0, Lmiui/util/ScreenshotDrawable;->mBgColor:I
 
@@ -582,17 +532,14 @@
 
     invoke-virtual {p1, v4}, Landroid/graphics/Canvas;->drawColor(I)V
 
-    .line 96
     iget-object v4, p0, Lmiui/util/ScreenshotDrawable;->mOriginalDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v4, :cond_2
 
-    .line 97
     iget-object v4, p0, Lmiui/util/ScreenshotDrawable;->mOriginalDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v4, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 99
     :cond_2
     return-void
 .end method
@@ -601,7 +548,6 @@
     .locals 1
 
     .prologue
-    .line 203
     const/4 v0, 0x0
 
     return v0
@@ -611,7 +557,6 @@
     .locals 1
 
     .prologue
-    .line 79
     iget-object v0, p0, Lmiui/util/ScreenshotDrawable;->mOriginalDrawable:Landroid/graphics/drawable/Drawable;
 
     return-object v0
@@ -622,7 +567,6 @@
     .param p1, "animation"    # Landroid/animation/ValueAnimator;
 
     .prologue
-    .line 209
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -635,7 +579,6 @@
 
     invoke-virtual {p0, v0}, Lmiui/util/ScreenshotDrawable;->setAlpha(I)V
 
-    .line 210
     return-void
 .end method
 
@@ -645,10 +588,8 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 130
     const/4 v2, 0x0
 
-    .line 131
     .local v2, "hasWinEnterAnimator":Z
     iget-object v4, p0, Lmiui/util/ScreenshotDrawable;->mOwnerView:Landroid/view/View;
 
@@ -664,7 +605,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 132
     iget-object v4, p0, Lmiui/util/ScreenshotDrawable;->mOwnerView:Landroid/view/View;
 
     invoke-virtual {v4}, Landroid/view/View;->getRootView()Landroid/view/View;
@@ -677,13 +617,11 @@
 
     check-cast v3, Landroid/view/WindowManager$LayoutParams;
 
-    .line 133
     .local v3, "lp":Landroid/view/WindowManager$LayoutParams;
     iget v4, v3, Landroid/view/WindowManager$LayoutParams;->windowAnimations:I
 
     if-eqz v4, :cond_0
 
-    .line 134
     iget-object v4, p0, Lmiui/util/ScreenshotDrawable;->mOwnerView:Landroid/view/View;
 
     invoke-virtual {v4}, Landroid/view/View;->getContext()Landroid/content/Context;
@@ -698,29 +636,24 @@
 
     move-result-object v1
 
-    .line 136
     .local v1, "attrs":Landroid/content/res/TypedArray;
     invoke-virtual {v1, v7, v7}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v0
 
-    .line 137
     .local v0, "anim":I
     invoke-virtual {v1}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 138
     if-eqz v0, :cond_0
 
     const/4 v2, 0x1
 
-    .line 141
     .end local v0    # "anim":I
     .end local v1    # "attrs":Landroid/content/res/TypedArray;
     .end local v3    # "lp":Landroid/view/WindowManager$LayoutParams;
     :cond_0
     if-eqz v2, :cond_2
 
-    .line 142
     iget-object v4, p0, Lmiui/util/ScreenshotDrawable;->mVisibilityChangeAnimator:Landroid/animation/ValueAnimator;
 
     if-eqz v4, :cond_1
@@ -733,22 +666,18 @@
 
     if-eqz v4, :cond_1
 
-    .line 143
     iget-object v4, p0, Lmiui/util/ScreenshotDrawable;->mVisibilityChangeAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v4}, Landroid/animation/ValueAnimator;->end()V
 
-    .line 145
     :cond_1
     const/16 v4, 0xff
 
     invoke-virtual {p0, v4}, Lmiui/util/ScreenshotDrawable;->setAlpha(I)V
 
-    .line 149
     :goto_0
     return-void
 
-    .line 147
     :cond_2
     const/4 v4, 0x1
 
@@ -762,26 +691,21 @@
     .param p1, "alpha"    # I
 
     .prologue
-    .line 190
     iget-object v0, p0, Lmiui/util/ScreenshotDrawable;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 191
     iget-object v0, p0, Lmiui/util/ScreenshotDrawable;->mOriginalDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_0
 
-    .line 192
     iget-object v0, p0, Lmiui/util/ScreenshotDrawable;->mOriginalDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    .line 194
     :cond_0
     invoke-virtual {p0}, Lmiui/util/ScreenshotDrawable;->invalidateSelf()V
 
-    .line 195
     return-void
 .end method
 
@@ -793,25 +717,20 @@
     .param p4, "bottom"    # I
 
     .prologue
-    .line 180
     invoke-super {p0, p1, p2, p3, p4}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 182
     iget-object v0, p0, Lmiui/util/ScreenshotDrawable;->mSrcRect:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->setEmpty()V
 
-    .line 183
     iget-object v0, p0, Lmiui/util/ScreenshotDrawable;->mOriginalDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_0
 
-    .line 184
     iget-object v0, p0, Lmiui/util/ScreenshotDrawable;->mOriginalDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 186
     :cond_0
     return-void
 .end method
@@ -821,7 +740,6 @@
     .param p1, "cf"    # Landroid/graphics/ColorFilter;
 
     .prologue
-    .line 199
     return-void
 .end method
 
@@ -830,10 +748,8 @@
     .param p1, "originalDrawable"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 75
     iput-object p1, p0, Lmiui/util/ScreenshotDrawable;->mOriginalDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 76
     return-void
 .end method
 
@@ -843,10 +759,8 @@
     .param p2, "restart"    # Z
 
     .prologue
-    .line 107
     if-eqz p1, :cond_0
 
-    .line 108
     iget-object v0, p0, Lmiui/util/ScreenshotDrawable;->mOwnerView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getRootView()Landroid/view/View;
@@ -861,7 +775,6 @@
 
     if-nez v0, :cond_1
 
-    .line 109
     iget-object v0, p0, Lmiui/util/ScreenshotDrawable;->mOwnerView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getRootView()Landroid/view/View;
@@ -874,16 +787,13 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
 
-    .line 121
     :goto_0
     iget-object v0, p0, Lmiui/util/ScreenshotDrawable;->mSrcRect:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->setEmpty()V
 
-    .line 122
     invoke-direct {p0}, Lmiui/util/ScreenshotDrawable;->rebuildBluredBitmap()V
 
-    .line 124
     :cond_0
     invoke-super {p0, p1, p2}, Landroid/graphics/drawable/Drawable;->setVisible(ZZ)Z
 
@@ -891,7 +801,6 @@
 
     return v0
 
-    .line 119
     :cond_1
     invoke-virtual {p0}, Lmiui/util/ScreenshotDrawable;->processShow()V
 

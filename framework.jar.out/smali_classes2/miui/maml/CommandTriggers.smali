@@ -29,23 +29,18 @@
     .param p2, "ele"    # Lmiui/maml/elements/ScreenElement;
 
     .prologue
-    .line 17
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 15
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lmiui/maml/CommandTriggers;->mTriggers:Ljava/util/ArrayList;
 
-    .line 18
     if-eqz p1, :cond_0
 
-    .line 19
     invoke-direct {p0, p1, p2}, Lmiui/maml/CommandTriggers;->load(Lorg/w3c/dom/Element;Lmiui/maml/elements/ScreenElement;)V
 
-    .line 20
     :cond_0
     return-void
 .end method
@@ -56,12 +51,10 @@
     .param p2, "ele"    # Lmiui/maml/elements/ScreenElement;
 
     .prologue
-    .line 66
     invoke-interface {p1}, Lorg/w3c/dom/Element;->getChildNodes()Lorg/w3c/dom/NodeList;
 
     move-result-object v0
 
-    .line 67
     .local v0, "children":Lorg/w3c/dom/NodeList;
     const/4 v1, 0x0
 
@@ -73,7 +66,6 @@
 
     if-ge v1, v3, :cond_2
 
-    .line 68
     invoke-interface {v0, v1}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
 
     move-result-object v3
@@ -86,14 +78,12 @@
 
     if-ne v3, v4, :cond_0
 
-    .line 69
     invoke-interface {v0, v1}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
 
     move-result-object v2
 
     check-cast v2, Lorg/w3c/dom/Element;
 
-    .line 70
     .local v2, "item":Lorg/w3c/dom/Element;
     invoke-interface {v2}, Lorg/w3c/dom/Element;->getNodeName()Ljava/lang/String;
 
@@ -107,7 +97,6 @@
 
     if-nez v3, :cond_1
 
-    .line 67
     .end local v2    # "item":Lorg/w3c/dom/Element;
     :cond_0
     :goto_1
@@ -115,7 +104,6 @@
 
     goto :goto_0
 
-    .line 73
     .restart local v2    # "item":Lorg/w3c/dom/Element;
     :cond_1
     iget-object v3, p0, Lmiui/maml/CommandTriggers;->mTriggers:Ljava/util/ArrayList;
@@ -128,7 +116,6 @@
 
     goto :goto_1
 
-    .line 76
     .end local v2    # "item":Lorg/w3c/dom/Element;
     :cond_2
     return-void
@@ -141,12 +128,10 @@
     .param p1, "t"    # Lmiui/maml/CommandTrigger;
 
     .prologue
-    .line 53
     iget-object v0, p0, Lmiui/maml/CommandTriggers;->mTriggers:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 54
     return-void
 .end method
 
@@ -155,7 +140,6 @@
     .param p1, "action"    # Ljava/lang/String;
 
     .prologue
-    .line 57
     iget-object v2, p0, Lmiui/maml/CommandTriggers;->mTriggers:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -176,7 +160,6 @@
 
     check-cast v1, Lmiui/maml/CommandTrigger;
 
-    .line 58
     .local v1, "t":Lmiui/maml/CommandTrigger;
     invoke-virtual {v1, p1}, Lmiui/maml/CommandTrigger;->isAction(Ljava/lang/String;)Z
 
@@ -184,7 +167,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 61
     .end local v1    # "t":Lmiui/maml/CommandTrigger;
     :goto_0
     return-object v1
@@ -199,7 +181,6 @@
     .locals 3
 
     .prologue
-    .line 35
     iget-object v2, p0, Lmiui/maml/CommandTriggers;->mTriggers:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -220,13 +201,11 @@
 
     check-cast v1, Lmiui/maml/CommandTrigger;
 
-    .line 36
     .local v1, "t":Lmiui/maml/CommandTrigger;
     invoke-virtual {v1}, Lmiui/maml/CommandTrigger;->finish()V
 
     goto :goto_0
 
-    .line 38
     .end local v1    # "t":Lmiui/maml/CommandTrigger;
     :cond_0
     return-void
@@ -236,7 +215,6 @@
     .locals 3
 
     .prologue
-    .line 29
     iget-object v2, p0, Lmiui/maml/CommandTriggers;->mTriggers:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -257,13 +235,11 @@
 
     check-cast v1, Lmiui/maml/CommandTrigger;
 
-    .line 30
     .local v1, "t":Lmiui/maml/CommandTrigger;
     invoke-virtual {v1}, Lmiui/maml/CommandTrigger;->init()V
 
     goto :goto_0
 
-    .line 32
     .end local v1    # "t":Lmiui/maml/CommandTrigger;
     :cond_0
     return-void
@@ -274,7 +250,6 @@
     .param p1, "action"    # Ljava/lang/String;
 
     .prologue
-    .line 23
     iget-object v2, p0, Lmiui/maml/CommandTriggers;->mTriggers:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -295,13 +270,11 @@
 
     check-cast v1, Lmiui/maml/CommandTrigger;
 
-    .line 24
     .local v1, "t":Lmiui/maml/CommandTrigger;
     invoke-virtual {v1, p1}, Lmiui/maml/CommandTrigger;->onAction(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 26
     .end local v1    # "t":Lmiui/maml/CommandTrigger;
     :cond_0
     return-void
@@ -311,7 +284,6 @@
     .locals 3
 
     .prologue
-    .line 41
     iget-object v2, p0, Lmiui/maml/CommandTriggers;->mTriggers:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -332,13 +304,11 @@
 
     check-cast v1, Lmiui/maml/CommandTrigger;
 
-    .line 42
     .local v1, "t":Lmiui/maml/CommandTrigger;
     invoke-virtual {v1}, Lmiui/maml/CommandTrigger;->pause()V
 
     goto :goto_0
 
-    .line 44
     .end local v1    # "t":Lmiui/maml/CommandTrigger;
     :cond_0
     return-void
@@ -348,7 +318,6 @@
     .locals 3
 
     .prologue
-    .line 47
     iget-object v2, p0, Lmiui/maml/CommandTriggers;->mTriggers:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -369,13 +338,11 @@
 
     check-cast v1, Lmiui/maml/CommandTrigger;
 
-    .line 48
     .local v1, "t":Lmiui/maml/CommandTrigger;
     invoke-virtual {v1}, Lmiui/maml/CommandTrigger;->resume()V
 
     goto :goto_0
 
-    .line 50
     .end local v1    # "t":Lmiui/maml/CommandTrigger;
     :cond_0
     return-void

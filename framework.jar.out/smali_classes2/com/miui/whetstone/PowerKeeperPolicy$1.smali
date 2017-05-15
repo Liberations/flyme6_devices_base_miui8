@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 612
     iput-object p1, p0, Lcom/miui/whetstone/PowerKeeperPolicy$1;->this$0:Lcom/miui/whetstone/PowerKeeperPolicy;
 
     iput-object p2, p0, Lcom/miui/whetstone/PowerKeeperPolicy$1;->val$b:Landroid/os/IBinder;
@@ -44,14 +43,12 @@
     .locals 2
 
     .prologue
-    .line 615
     iget-object v0, p0, Lcom/miui/whetstone/PowerKeeperPolicy$1;->val$b:Landroid/os/IBinder;
 
     const/4 v1, 0x0
 
     invoke-interface {v0, p0, v1}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 616
     iget-object v0, p0, Lcom/miui/whetstone/PowerKeeperPolicy$1;->this$0:Lcom/miui/whetstone/PowerKeeperPolicy;
 
     const/4 v1, 0x0
@@ -59,19 +56,16 @@
     # setter for: Lcom/miui/whetstone/PowerKeeperPolicy;->sPowerKeeperService:Lcom/miui/whetstone/IPowerKeeperClient;
     invoke-static {v0, v1}, Lcom/miui/whetstone/PowerKeeperPolicy;->access$002(Lcom/miui/whetstone/PowerKeeperPolicy;Lcom/miui/whetstone/IPowerKeeperClient;)Lcom/miui/whetstone/IPowerKeeperClient;
 
-    .line 617
     const-string v0, "PowerKeeperPolicy"
 
     const-string v1, "powerkeeper died, reset handle to null"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 618
     iget-object v0, p0, Lcom/miui/whetstone/PowerKeeperPolicy$1;->this$0:Lcom/miui/whetstone/PowerKeeperPolicy;
 
     # invokes: Lcom/miui/whetstone/PowerKeeperPolicy;->restoreFakeGpsStatus()V
     invoke-static {v0}, Lcom/miui/whetstone/PowerKeeperPolicy;->access$100(Lcom/miui/whetstone/PowerKeeperPolicy;)V
 
-    .line 619
     return-void
 .end method

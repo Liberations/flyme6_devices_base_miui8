@@ -54,7 +54,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 47
     const-string v0, "ro.regionalization.support"
 
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
@@ -63,26 +62,22 @@
 
     sput-boolean v0, Lcom/android/internal/os/RegionalizationEnvironment;->SUPPORTED:Z
 
-    .line 51
     const/4 v0, 0x0
 
     sput-object v0, Lcom/android/internal/os/RegionalizationEnvironment;->mRegionalizationService:Lcom/android/internal/os/IRegionalizationService;
 
-    .line 55
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v0, Lcom/android/internal/os/RegionalizationEnvironment;->mPackages:Ljava/util/ArrayList;
 
-    .line 56
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v0, Lcom/android/internal/os/RegionalizationEnvironment;->mExcludedApps:Ljava/util/ArrayList;
 
-    .line 58
     sput-boolean v1, Lcom/android/internal/os/RegionalizationEnvironment;->isLoaded:Z
 
     return-void
@@ -92,10 +87,8 @@
     .locals 0
 
     .prologue
-    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 247
     return-void
 .end method
 
@@ -112,12 +105,10 @@
     .end annotation
 
     .prologue
-    .line 101
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 102
     .local v0, "directories":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/io/File;>;"
     sget-object v3, Lcom/android/internal/os/RegionalizationEnvironment;->mPackages:Ljava/util/ArrayList;
 
@@ -139,7 +130,6 @@
 
     check-cast v2, Lcom/android/internal/os/RegionalizationEnvironment$Package;
 
-    .line 104
     .local v2, "p":Lcom/android/internal/os/RegionalizationEnvironment$Package;
     const-string v3, "RegionalizationEnvironment"
 
@@ -181,7 +171,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 105
     invoke-virtual {v2}, Lcom/android/internal/os/RegionalizationEnvironment$Package;->getDirectory()Ljava/io/File;
 
     move-result-object v3
@@ -190,7 +179,6 @@
 
     goto :goto_0
 
-    .line 107
     .end local v2    # "p":Lcom/android/internal/os/RegionalizationEnvironment$Package;
     :cond_0
     return-object v0
@@ -209,12 +197,10 @@
     .end annotation
 
     .prologue
-    .line 90
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 91
     .local v2, "packages":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     sget-object v3, Lcom/android/internal/os/RegionalizationEnvironment;->mPackages:Ljava/util/ArrayList;
 
@@ -236,7 +222,6 @@
 
     check-cast v1, Lcom/android/internal/os/RegionalizationEnvironment$Package;
 
-    .line 92
     .local v1, "p":Lcom/android/internal/os/RegionalizationEnvironment$Package;
     invoke-virtual {v1}, Lcom/android/internal/os/RegionalizationEnvironment$Package;->getName()Ljava/lang/String;
 
@@ -246,7 +231,6 @@
 
     goto :goto_0
 
-    .line 94
     .end local v1    # "p":Lcom/android/internal/os/RegionalizationEnvironment$Package;
     :cond_0
     return-object v2
@@ -256,7 +240,6 @@
     .locals 1
 
     .prologue
-    .line 83
     sget-object v0, Lcom/android/internal/os/RegionalizationEnvironment;->mPackages:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -270,7 +253,6 @@
     .locals 1
 
     .prologue
-    .line 129
     sget-object v0, Lcom/android/internal/os/RegionalizationEnvironment;->mRegionalizationService:Lcom/android/internal/os/IRegionalizationService;
 
     return-object v0
@@ -280,7 +262,6 @@
     .locals 7
 
     .prologue
-    .line 136
     sget-object v4, Lcom/android/internal/os/RegionalizationEnvironment;->mPackages:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -301,13 +282,11 @@
 
     check-cast v2, Lcom/android/internal/os/RegionalizationEnvironment$Package;
 
-    .line 137
     .local v2, "pack":Lcom/android/internal/os/RegionalizationEnvironment$Package;
     invoke-virtual {v2}, Lcom/android/internal/os/RegionalizationEnvironment$Package;->getStoragePos()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 138
     .local v3, "pos":Ljava/lang/String;
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -315,20 +294,17 @@
 
     if-nez v4, :cond_0
 
-    .line 147
     .end local v2    # "pack":Lcom/android/internal/os/RegionalizationEnvironment$Package;
     .end local v3    # "pos":Ljava/lang/String;
     :goto_0
     return-object v3
 
-    .line 142
     :cond_1
     :try_start_0
     sget-object v4, Lcom/android/internal/os/RegionalizationEnvironment;->mPackages:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->clear()V
 
-    .line 143
     new-instance v4, Ljava/io/IOException;
 
     const-string v5, "Read wrong package for Carrier!"
@@ -339,11 +315,9 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 144
     :catch_0
     move-exception v0
 
-    .line 145
     .local v0, "e":Ljava/io/IOException;
     const-string v4, "RegionalizationEnvironment"
 
@@ -371,7 +345,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 147
     const-string v3, ""
 
     goto :goto_0
@@ -381,14 +354,12 @@
     .locals 2
 
     .prologue
-    .line 60
     const-string v1, "regionalization"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 61
     .local v0, "iBinder":Landroid/os/IBinder;
     invoke-static {v0}, Lcom/android/internal/os/IRegionalizationService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/internal/os/IRegionalizationService;
 
@@ -396,23 +367,18 @@
 
     sput-object v1, Lcom/android/internal/os/RegionalizationEnvironment;->mRegionalizationService:Lcom/android/internal/os/IRegionalizationService;
 
-    .line 62
     sget-object v1, Lcom/android/internal/os/RegionalizationEnvironment;->mRegionalizationService:Lcom/android/internal/os/IRegionalizationService;
 
     if-eqz v1, :cond_0
 
-    .line 63
     invoke-static {}, Lcom/android/internal/os/RegionalizationEnvironment;->loadSwitchedPackages()V
 
-    .line 64
     invoke-static {}, Lcom/android/internal/os/RegionalizationEnvironment;->loadExcludedApplist()V
 
-    .line 65
     const/4 v1, 0x1
 
     sput-boolean v1, Lcom/android/internal/os/RegionalizationEnvironment;->isLoaded:Z
 
-    .line 67
     :cond_0
     return-void
 .end method
@@ -422,21 +388,17 @@
     .param p0, "appName"    # Ljava/lang/String;
 
     .prologue
-    .line 114
     invoke-static {}, Lcom/android/internal/os/RegionalizationEnvironment;->getPackagesCount()I
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 115
     const/4 v0, 0x0
 
-    .line 121
     :goto_0
     return v0
 
-    .line 118
     :cond_0
     const-string v0, ".apk"
 
@@ -446,7 +408,6 @@
 
     if-nez v0, :cond_1
 
-    .line 119
     sget-object v0, Lcom/android/internal/os/RegionalizationEnvironment;->mExcludedApps:Ljava/util/ArrayList;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -473,7 +434,6 @@
 
     goto :goto_0
 
-    .line 121
     :cond_1
     sget-object v0, Lcom/android/internal/os/RegionalizationEnvironment;->mExcludedApps:Ljava/util/ArrayList;
 
@@ -488,7 +448,6 @@
     .locals 1
 
     .prologue
-    .line 73
     sget-boolean v0, Lcom/android/internal/os/RegionalizationEnvironment;->SUPPORTED:Z
 
     if-eqz v0, :cond_0
@@ -497,10 +456,8 @@
 
     if-nez v0, :cond_0
 
-    .line 74
     invoke-static {}, Lcom/android/internal/os/RegionalizationEnvironment;->init()V
 
-    .line 76
     :cond_0
     sget-boolean v0, Lcom/android/internal/os/RegionalizationEnvironment;->SUPPORTED:Z
 
@@ -511,28 +468,24 @@
     .locals 13
 
     .prologue
-    .line 217
     const-string v10, "RegionalizationEnvironment"
 
     const-string v11, "loadExcludedApps!"
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 219
     invoke-static {}, Lcom/android/internal/os/RegionalizationEnvironment;->getPackagesCount()I
 
     move-result v10
 
     if-nez v10, :cond_1
 
-    .line 245
     .local v3, "contents":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     .local v5, "excListFilePath":Ljava/lang/String;
     .local v8, "pack":Lcom/android/internal/os/RegionalizationEnvironment$Package;
     :cond_0
     return-void
 
-    .line 221
     .end local v3    # "contents":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     .end local v5    # "excListFilePath":Ljava/lang/String;
     .end local v8    # "pack":Lcom/android/internal/os/RegionalizationEnvironment$Package;
@@ -560,7 +513,6 @@
     .end local v8    # "pack":Lcom/android/internal/os/RegionalizationEnvironment$Package;
     check-cast v8, Lcom/android/internal/os/RegionalizationEnvironment$Package;
 
-    .line 222
     .restart local v8    # "pack":Lcom/android/internal/os/RegionalizationEnvironment$Package;
     const-string v10, "RegionalizationEnvironment"
 
@@ -590,16 +542,13 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 223
     invoke-virtual {v8}, Lcom/android/internal/os/RegionalizationEnvironment$Package;->getExcludedListFilePath()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 224
     .restart local v5    # "excListFilePath":Ljava/lang/String;
     const/4 v3, 0x0
 
-    .line 226
     .restart local v3    # "contents":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     :try_start_0
     sget-object v10, Lcom/android/internal/os/RegionalizationEnvironment;->mRegionalizationService:Lcom/android/internal/os/IRegionalizationService;
@@ -618,7 +567,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 231
     :goto_0
     if-eqz v3, :cond_2
 
@@ -628,7 +576,6 @@
 
     if-lez v10, :cond_2
 
-    .line 232
     invoke-virtual {v3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v7
@@ -648,7 +595,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 233
     .local v2, "content":Ljava/lang/String;
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -656,27 +602,23 @@
 
     if-nez v10, :cond_3
 
-    .line 234
     const-string v10, "/"
 
     invoke-virtual {v2, v10}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;)I
 
     move-result v9
 
-    .line 235
     .local v9, "pos":I
     const/4 v10, -0x1
 
     if-eq v9, v10, :cond_3
 
-    .line 236
     add-int/lit8 v10, v9, 0x1
 
     invoke-virtual {v2, v10}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 237
     .local v1, "apkName":Ljava/lang/String;
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -692,14 +634,12 @@
 
     if-nez v10, :cond_3
 
-    .line 238
     sget-object v10, Lcom/android/internal/os/RegionalizationEnvironment;->mExcludedApps:Ljava/util/ArrayList;
 
     invoke-virtual {v10, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 228
     .end local v1    # "apkName":Ljava/lang/String;
     .end local v2    # "content":Ljava/lang/String;
     .end local v7    # "i$":Ljava/util/Iterator;
@@ -707,7 +647,6 @@
     :catch_0
     move-exception v4
 
-    .line 229
     .local v4, "e":Landroid/os/RemoteException;
     invoke-virtual {v4}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -718,17 +657,14 @@
     .locals 13
 
     .prologue
-    .line 152
     const-string v10, "RegionalizationEnvironment"
 
     const-string v11, "load packages for Carrier!"
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 155
     const/4 v1, 0x0
 
-    .line 157
     .local v1, "contents":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     :try_start_0
     sget-object v10, Lcom/android/internal/os/RegionalizationEnvironment;->mRegionalizationService:Lcom/android/internal/os/IRegionalizationService;
@@ -750,7 +686,6 @@
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 163
     :goto_0
     if-eqz v1, :cond_0
 
@@ -761,7 +696,6 @@
 
     if-lez v10, :cond_0
 
-    .line 165
     const/4 v10, 0x0
 
     invoke-virtual {v1, v10}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -778,7 +712,6 @@
 
     if-nez v10, :cond_1
 
-    .line 166
     new-instance v10, Ljava/io/IOException;
 
     const-string v11, "Can\'t read storage pos for Carrier package!"
@@ -789,11 +722,9 @@
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 210
     :catch_0
     move-exception v2
 
-    .line 211
     .local v2, "e":Ljava/io/IOException;
     const-string v10, "RegionalizationEnvironment"
 
@@ -821,23 +752,19 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 213
     .end local v2    # "e":Ljava/io/IOException;
     :cond_0
     return-void
 
-    .line 159
     :catch_1
     move-exception v2
 
-    .line 160
     .local v2, "e":Landroid/os/RemoteException;
     :try_start_2
     invoke-virtual {v2}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 168
     .end local v2    # "e":Landroid/os/RemoteException;
     :cond_1
     const/4 v10, 0x0
@@ -858,7 +785,6 @@
 
     move-result-object v9
 
-    .line 169
     .local v9, "storagePos":Ljava/lang/String;
     invoke-static {v9}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -866,7 +792,6 @@
 
     if-eqz v10, :cond_2
 
-    .line 170
     new-instance v10, Ljava/io/IOException;
 
     const-string v11, "Storage pos for Carrier package is wrong!"
@@ -875,11 +800,9 @@
 
     throw v10
 
-    .line 174
     :cond_2
     const-string v7, "^packCount=[0-9]$"
 
-    .line 175
     .local v7, "packNumRegularExpresstion":Ljava/lang/String;
     const/4 v10, 0x1
 
@@ -895,7 +818,6 @@
 
     if-nez v10, :cond_3
 
-    .line 176
     new-instance v10, Ljava/io/IOException;
 
     const-string v11, "Can\'t read package count of Carrier!"
@@ -904,7 +826,6 @@
 
     throw v10
 
-    .line 178
     :cond_3
     const/4 v10, 0x1
 
@@ -928,7 +849,6 @@
 
     move-result v6
 
-    .line 180
     .local v6, "packNum":I
     if-lez v6, :cond_4
 
@@ -938,7 +858,6 @@
 
     if-gt v10, v6, :cond_5
 
-    .line 181
     :cond_4
     new-instance v10, Ljava/io/IOException;
 
@@ -948,7 +867,6 @@
 
     throw v10
 
-    .line 184
     :cond_5
     const/4 v4, 0x2
 
@@ -958,10 +876,8 @@
 
     if-ge v4, v10, :cond_0
 
-    .line 185
     const-string v8, "^strSpec[0-9]=\\w+$"
 
-    .line 186
     .local v8, "packRegularExpresstion":Ljava/lang/String;
     invoke-virtual {v1, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -975,7 +891,6 @@
 
     if-eqz v10, :cond_8
 
-    .line 187
     invoke-virtual {v1, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v10
@@ -994,7 +909,6 @@
 
     move-result-object v5
 
-    .line 188
     .local v5, "packName":Ljava/lang/String;
     invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
     :try_end_2
@@ -1004,10 +918,8 @@
 
     if-nez v10, :cond_6
 
-    .line 189
     const/4 v3, 0x0
 
-    .line 191
     .local v3, "exists":Z
     :try_start_3
     sget-object v10, Lcom/android/internal/os/RegionalizationEnvironment;->mRegionalizationService:Lcom/android/internal/os/IRegionalizationService;
@@ -1041,11 +953,9 @@
 
     move-result v3
 
-    .line 197
     :goto_2
     if-eqz v3, :cond_7
 
-    .line 198
     :try_start_4
     sget-object v10, Lcom/android/internal/os/RegionalizationEnvironment;->mPackages:Ljava/util/ArrayList;
 
@@ -1055,32 +965,27 @@
 
     invoke-virtual {v10, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 184
     .end local v3    # "exists":Z
     :cond_6
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_1
 
-    .line 193
     .restart local v3    # "exists":Z
     :catch_2
     move-exception v2
 
-    .line 194
     .restart local v2    # "e":Landroid/os/RemoteException;
     invoke-virtual {v2}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_2
 
-    .line 200
     .end local v2    # "e":Landroid/os/RemoteException;
     :cond_7
     sget-object v10, Lcom/android/internal/os/RegionalizationEnvironment;->mPackages:Ljava/util/ArrayList;
 
     invoke-virtual {v10}, Ljava/util/ArrayList;->clear()V
 
-    .line 201
     new-instance v10, Ljava/io/IOException;
 
     const-string v11, "Read wrong packages for Carrier!"
@@ -1089,7 +994,6 @@
 
     throw v10
 
-    .line 205
     .end local v3    # "exists":Z
     .end local v5    # "packName":Ljava/lang/String;
     :cond_8
@@ -1097,7 +1001,6 @@
 
     invoke-virtual {v10}, Ljava/util/ArrayList;->clear()V
 
-    .line 206
     new-instance v10, Ljava/io/IOException;
 
     const-string v11, "Read wrong packages for Carrier!"

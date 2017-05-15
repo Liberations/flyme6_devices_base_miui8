@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 52
     iput-object p1, p0, Lmiui/maml/elements/WindowScreenElement$1;->this$0:Lmiui/maml/elements/WindowScreenElement;
 
     iput-boolean p2, p0, Lmiui/maml/elements/WindowScreenElement$1;->val$_v:Z
@@ -44,22 +43,18 @@
     .locals 1
 
     .prologue
-    .line 54
     iget-boolean v0, p0, Lmiui/maml/elements/WindowScreenElement$1;->val$_v:Z
 
     if-eqz v0, :cond_0
 
-    .line 55
     iget-object v0, p0, Lmiui/maml/elements/WindowScreenElement$1;->this$0:Lmiui/maml/elements/WindowScreenElement;
 
     # invokes: Lmiui/maml/elements/WindowScreenElement;->addView()V
     invoke-static {v0}, Lmiui/maml/elements/WindowScreenElement;->access$000(Lmiui/maml/elements/WindowScreenElement;)V
 
-    .line 59
     :goto_0
     return-void
 
-    .line 57
     :cond_0
     iget-object v0, p0, Lmiui/maml/elements/WindowScreenElement$1;->this$0:Lmiui/maml/elements/WindowScreenElement;
 

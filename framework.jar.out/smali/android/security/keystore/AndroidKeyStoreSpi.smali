@@ -24,10 +24,8 @@
     .locals 0
 
     .prologue
-    .line 83
     invoke-direct {p0}, Ljava/security/KeyStoreSpi;-><init>()V
 
-    .line 977
     return-void
 .end method
 
@@ -37,25 +35,20 @@
     .param p2, "encodedCert"    # [B
 
     .prologue
-    .line 179
     invoke-static {p2}, Landroid/security/keystore/AndroidKeyStoreSpi;->toCertificate([B)Ljava/security/cert/X509Certificate;
 
     move-result-object v0
 
-    .line 180
     .local v0, "cert":Ljava/security/cert/X509Certificate;
     if-nez v0, :cond_1
 
-    .line 182
     const/4 v0, 0x0
 
-    .line 198
     .end local v0    # "cert":Ljava/security/cert/X509Certificate;
     :cond_0
     :goto_0
     return-object v0
 
-    .line 185
     .restart local v0    # "cert":Ljava/security/cert/X509Certificate;
     :cond_1
     new-instance v2, Ljava/lang/StringBuilder;
@@ -76,7 +69,6 @@
 
     move-result-object v1
 
-    .line 186
     .local v1, "privateKeyAlias":Ljava/lang/String;
     iget-object v2, p0, Landroid/security/keystore/AndroidKeyStoreSpi;->mKeyStore:Landroid/security/KeyStore;
 
@@ -86,7 +78,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 192
     invoke-static {v1, v0}, Landroid/security/keystore/AndroidKeyStoreSpi;->wrapIntoKeyStoreCertificate(Ljava/lang/String;Ljava/security/cert/X509Certificate;)Landroid/security/keystore/AndroidKeyStoreSpi$KeyStoreX509Certificate;
 
     move-result-object v0
@@ -99,7 +90,6 @@
     .param p1, "encodedCert"    # [B
 
     .prologue
-    .line 162
     invoke-static {p1}, Landroid/security/keystore/AndroidKeyStoreSpi;->toCertificate([B)Ljava/security/cert/X509Certificate;
 
     move-result-object v0
@@ -127,12 +117,10 @@
 
     const/4 v5, 0x0
 
-    .line 288
     invoke-interface {p0}, Ljava/security/PrivateKey;->getAlgorithm()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 290
     .local v0, "keyAlgorithm":Ljava/lang/String;
     const-string v2, "EC"
 
@@ -142,14 +130,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 291
     new-instance v1, Landroid/security/keystore/KeyProtection$Builder;
 
     const/16 v2, 0xc
 
     invoke-direct {v1, v2}, Landroid/security/keystore/KeyProtection$Builder;-><init>(I)V
 
-    .line 296
     .local v1, "specBuilder":Landroid/security/keystore/KeyProtection$Builder;
     const/4 v2, 0x6
 
@@ -183,18 +169,15 @@
 
     invoke-virtual {v1, v2}, Landroid/security/keystore/KeyProtection$Builder;->setDigests([Ljava/lang/String;)Landroid/security/keystore/KeyProtection$Builder;
 
-    .line 334
     :goto_0
     invoke-virtual {v1, v5}, Landroid/security/keystore/KeyProtection$Builder;->setUserAuthenticationRequired(Z)Landroid/security/keystore/KeyProtection$Builder;
 
-    .line 336
     invoke-virtual {v1}, Landroid/security/keystore/KeyProtection$Builder;->build()Landroid/security/keystore/KeyProtection;
 
     move-result-object v2
 
     return-object v2
 
-    .line 303
     .end local v1    # "specBuilder":Landroid/security/keystore/KeyProtection$Builder;
     :cond_0
     const-string v2, "RSA"
@@ -205,14 +188,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 304
     new-instance v1, Landroid/security/keystore/KeyProtection$Builder;
 
     const/16 v2, 0xf
 
     invoke-direct {v1, v2}, Landroid/security/keystore/KeyProtection$Builder;-><init>(I)V
 
-    .line 311
     .restart local v1    # "specBuilder":Landroid/security/keystore/KeyProtection$Builder;
     const/4 v2, 0x7
 
@@ -252,7 +233,6 @@
 
     invoke-virtual {v1, v2}, Landroid/security/keystore/KeyProtection$Builder;->setDigests([Ljava/lang/String;)Landroid/security/keystore/KeyProtection$Builder;
 
-    .line 321
     new-array v2, v8, [Ljava/lang/String;
 
     const-string v3, "NoPadding"
@@ -269,7 +249,6 @@
 
     invoke-virtual {v1, v2}, Landroid/security/keystore/KeyProtection$Builder;->setEncryptionPaddings([Ljava/lang/String;)Landroid/security/keystore/KeyProtection$Builder;
 
-    .line 325
     new-array v2, v7, [Ljava/lang/String;
 
     const-string v3, "PKCS1"
@@ -282,12 +261,10 @@
 
     invoke-virtual {v1, v2}, Landroid/security/keystore/KeyProtection$Builder;->setSignaturePaddings([Ljava/lang/String;)Landroid/security/keystore/KeyProtection$Builder;
 
-    .line 330
     invoke-virtual {v1, v5}, Landroid/security/keystore/KeyProtection$Builder;->setRandomizedEncryptionRequired(Z)Landroid/security/keystore/KeyProtection$Builder;
 
     goto :goto_0
 
-    .line 332
     .end local v1    # "specBuilder":Landroid/security/keystore/KeyProtection$Builder;
     :cond_1
     new-instance v2, Ljava/security/KeyStoreException;
@@ -320,14 +297,12 @@
     .param p1, "alias"    # Ljava/lang/String;
 
     .prologue
-    .line 238
     iget-object v2, p0, Landroid/security/keystore/AndroidKeyStoreSpi;->mKeyStore:Landroid/security/KeyStore;
 
     invoke-virtual {v2, p1}, Landroid/security/KeyStore;->getmtime(Ljava/lang/String;)J
 
     move-result-wide v0
 
-    .line 239
     .local v0, "epochMillis":J
     const-wide/16 v2, -0x1
 
@@ -335,10 +310,8 @@
 
     if-nez v2, :cond_0
 
-    .line 240
     const/4 v2, 0x0
 
-    .line 243
     :goto_0
     return-object v2
 
@@ -363,7 +336,6 @@
     .end annotation
 
     .prologue
-    .line 773
     iget-object v7, p0, Landroid/security/keystore/AndroidKeyStoreSpi;->mKeyStore:Landroid/security/KeyStore;
 
     const-string v8, ""
@@ -372,20 +344,16 @@
 
     move-result-object v6
 
-    .line 774
     .local v6, "rawAliases":[Ljava/lang/String;
     if-nez v6, :cond_1
 
-    .line 775
     new-instance v1, Ljava/util/HashSet;
 
     invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
 
-    .line 789
     :cond_0
     return-object v1
 
-    .line 778
     :cond_1
     new-instance v1, Ljava/util/HashSet;
 
@@ -393,7 +361,6 @@
 
     invoke-direct {v1, v7}, Ljava/util/HashSet;-><init>(I)V
 
-    .line 779
     .local v1, "aliases":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     move-object v2, v6
 
@@ -409,7 +376,6 @@
 
     aget-object v0, v2, v3
 
-    .line 780
     .local v0, "alias":Ljava/lang/String;
     const/16 v7, 0x5f
 
@@ -417,7 +383,6 @@
 
     move-result v4
 
-    .line 781
     .local v4, "idx":I
     const/4 v7, -0x1
 
@@ -429,7 +394,6 @@
 
     if-gt v7, v4, :cond_3
 
-    .line 782
     :cond_2
     const-string v7, "AndroidKeyStore"
 
@@ -437,7 +401,7 @@
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v9, "invalid alias: "
+    const-string v9, "invalid alias: "
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -453,13 +417,11 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 779
     :goto_1
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 786
     :cond_3
     new-instance v7, Ljava/lang/String;
 
@@ -481,10 +443,8 @@
     .param p1, "alias"    # Ljava/lang/String;
 
     .prologue
-    .line 840
     if-nez p1, :cond_0
 
-    .line 841
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "alias == null"
@@ -493,7 +453,6 @@
 
     throw v0
 
-    .line 844
     :cond_0
     iget-object v0, p0, Landroid/security/keystore/AndroidKeyStoreSpi;->mKeyStore:Landroid/security/KeyStore;
 
@@ -527,7 +486,6 @@
     .param p1, "alias"    # Ljava/lang/String;
 
     .prologue
-    .line 820
     invoke-direct {p0, p1}, Landroid/security/keystore/AndroidKeyStoreSpi;->isPrivateKeyEntry(Ljava/lang/String;)Z
 
     move-result v0
@@ -557,10 +515,8 @@
     .param p1, "alias"    # Ljava/lang/String;
 
     .prologue
-    .line 824
     if-nez p1, :cond_0
 
-    .line 825
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "alias == null"
@@ -569,7 +525,6 @@
 
     throw v0
 
-    .line 828
     :cond_0
     iget-object v0, p0, Landroid/security/keystore/AndroidKeyStoreSpi;->mKeyStore:Landroid/security/KeyStore;
 
@@ -603,10 +558,8 @@
     .param p1, "alias"    # Ljava/lang/String;
 
     .prologue
-    .line 832
     if-nez p1, :cond_0
 
-    .line 833
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "alias == null"
@@ -615,7 +568,6 @@
 
     throw v0
 
-    .line 836
     :cond_0
     iget-object v0, p0, Landroid/security/keystore/AndroidKeyStoreSpi;->mKeyStore:Landroid/security/KeyStore;
 
@@ -657,19 +609,15 @@
     .end annotation
 
     .prologue
-    .line 341
     const/4 v7, 0x0
 
-    .line 343
     .local v7, "flags":I
     if-nez p4, :cond_2
 
-    .line 344
     invoke-static/range {p2 .. p2}, Landroid/security/keystore/AndroidKeyStoreSpi;->getLegacyKeyProtectionParameter(Ljava/security/PrivateKey;)Landroid/security/keystore/KeyProtection;
 
     move-result-object v27
 
-    .line 361
     .local v27, "spec":Landroid/security/keystore/KeyProtection;
     :cond_0
     :goto_0
@@ -681,7 +629,6 @@
 
     if-nez v2, :cond_5
 
-    .line 362
     :cond_1
     new-instance v2, Ljava/security/KeyStoreException;
 
@@ -691,7 +638,6 @@
 
     throw v2
 
-    .line 345
     .end local v27    # "spec":Landroid/security/keystore/KeyProtection;
     :cond_2
     move-object/from16 v0, p4
@@ -700,7 +646,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 346
     invoke-static/range {p2 .. p2}, Landroid/security/keystore/AndroidKeyStoreSpi;->getLegacyKeyProtectionParameter(Ljava/security/PrivateKey;)Landroid/security/keystore/KeyProtection;
 
     move-result-object v27
@@ -708,10 +653,8 @@
     .restart local v27    # "spec":Landroid/security/keystore/KeyProtection;
     move-object/from16 v21, p4
 
-    .line 347
     check-cast v21, Landroid/security/KeyStoreParameter;
 
-    .line 348
     .local v21, "legacySpec":Landroid/security/KeyStoreParameter;
     invoke-virtual/range {v21 .. v21}, Landroid/security/KeyStoreParameter;->isEncryptionRequired()Z
 
@@ -719,12 +662,10 @@
 
     if-eqz v2, :cond_0
 
-    .line 349
     const/4 v7, 0x1
 
     goto :goto_0
 
-    .line 351
     .end local v21    # "legacySpec":Landroid/security/KeyStoreParameter;
     .end local v27    # "spec":Landroid/security/keystore/KeyProtection;
     :cond_3
@@ -736,13 +677,11 @@
 
     move-object/from16 v27, p4
 
-    .line 352
     check-cast v27, Landroid/security/keystore/KeyProtection;
 
     .restart local v27    # "spec":Landroid/security/keystore/KeyProtection;
     goto :goto_0
 
-    .line 354
     .end local v27    # "spec":Landroid/security/keystore/KeyProtection;
     :cond_4
     new-instance v2, Ljava/security/KeyStoreException;
@@ -809,7 +748,6 @@
 
     throw v2
 
-    .line 366
     .restart local v27    # "spec":Landroid/security/keystore/KeyProtection;
     :cond_5
     move-object/from16 v0, p3
@@ -820,7 +758,6 @@
 
     move-object/from16 v31, v0
 
-    .line 367
     .local v31, "x509chain":[Ljava/security/cert/X509Certificate;
     const/4 v15, 0x0
 
@@ -832,7 +769,6 @@
 
     if-ge v15, v2, :cond_8
 
-    .line 368
     const-string v2, "X.509"
 
     aget-object v3, p3, v15
@@ -847,7 +783,6 @@
 
     if-nez v2, :cond_6
 
-    .line 369
     new-instance v2, Ljava/security/KeyStoreException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -872,7 +807,6 @@
 
     throw v2
 
-    .line 373
     :cond_6
     aget-object v2, p3, v15
 
@@ -880,7 +814,6 @@
 
     if-nez v2, :cond_7
 
-    .line 374
     new-instance v2, Ljava/security/KeyStoreException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -905,7 +838,6 @@
 
     throw v2
 
-    .line 378
     :cond_7
     aget-object v2, p3, v15
 
@@ -913,12 +845,10 @@
 
     aput-object v2, v31, v15
 
-    .line 367
     add-int/lit8 v15, v15, 0x1
 
     goto :goto_1
 
-    .line 383
     :cond_8
     const/4 v2, 0x0
 
@@ -931,7 +861,6 @@
 
     move-result-object v30
 
-    .line 394
     .local v30, "userCertBytes":[B
     move-object/from16 v0, p3
 
@@ -941,7 +870,6 @@
 
     if-le v2, v3, :cond_a
 
-    .line 399
     move-object/from16 v0, v31
 
     array-length v2, v0
@@ -950,11 +878,9 @@
 
     new-array v11, v2, [[B
 
-    .line 400
     .local v11, "certsBytes":[[B
     const/16 v29, 0x0
 
-    .line 401
     .local v29, "totalCertLength":I
     const/4 v15, 0x0
 
@@ -963,7 +889,6 @@
 
     if-ge v15, v2, :cond_9
 
-    .line 403
     add-int/lit8 v2, v15, 0x1
 
     :try_start_1
@@ -975,7 +900,6 @@
 
     aput-object v2, v11, v15
 
-    .line 404
     aget-object v2, v11, v15
 
     array-length v2, v2
@@ -984,19 +908,16 @@
 
     add-int v29, v29, v2
 
-    .line 401
     add-int/lit8 v15, v15, 0x1
 
     goto :goto_2
 
-    .line 384
     .end local v11    # "certsBytes":[[B
     .end local v29    # "totalCertLength":I
     .end local v30    # "userCertBytes":[B
     :catch_0
     move-exception v13
 
-    .line 385
     .local v13, "e":Ljava/security/cert/CertificateEncodingException;
     new-instance v2, Ljava/security/KeyStoreException;
 
@@ -1006,7 +927,6 @@
 
     throw v2
 
-    .line 405
     .end local v13    # "e":Ljava/security/cert/CertificateEncodingException;
     .restart local v11    # "certsBytes":[[B
     .restart local v29    # "totalCertLength":I
@@ -1014,7 +934,6 @@
     :catch_1
     move-exception v13
 
-    .line 406
     .restart local v13    # "e":Ljava/security/cert/CertificateEncodingException;
     new-instance v2, Ljava/security/KeyStoreException;
 
@@ -1040,18 +959,15 @@
 
     throw v2
 
-    .line 414
     .end local v13    # "e":Ljava/security/cert/CertificateEncodingException;
     :cond_9
     move/from16 v0, v29
 
     new-array v12, v0, [B
 
-    .line 415
     .local v12, "chainBytes":[B
     const/16 v23, 0x0
 
-    .line 416
     .local v23, "outputOffset":I
     const/4 v15, 0x0
 
@@ -1060,12 +976,10 @@
 
     if-ge v15, v2, :cond_b
 
-    .line 417
     aget-object v2, v11, v15
 
     array-length v10, v2
 
-    .line 418
     .local v10, "certLength":I
     aget-object v2, v11, v15
 
@@ -1075,20 +989,16 @@
 
     invoke-static {v2, v3, v12, v0, v10}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 419
     add-int v23, v23, v10
 
-    .line 420
     const/4 v2, 0x0
 
     aput-object v2, v11, v15
 
-    .line 416
     add-int/lit8 v15, v15, 0x1
 
     goto :goto_3
 
-    .line 423
     .end local v10    # "certLength":I
     .end local v11    # "certsBytes":[[B
     .end local v12    # "chainBytes":[B
@@ -1097,7 +1007,6 @@
     :cond_a
     const/4 v12, 0x0
 
-    .line 427
     .restart local v12    # "chainBytes":[B
     :cond_b
     move-object/from16 v0, p2
@@ -1108,14 +1017,12 @@
 
     move-object/from16 v2, p2
 
-    .line 428
     check-cast v2, Landroid/security/keystore/AndroidKeyStoreKey;
 
     invoke-virtual {v2}, Landroid/security/keystore/AndroidKeyStoreKey;->getAlias()Ljava/lang/String;
 
     move-result-object v24
 
-    .line 436
     .local v24, "pkeyAlias":Ljava/lang/String;
     :goto_4
     if-eqz v24, :cond_f
@@ -1130,7 +1037,6 @@
 
     if-eqz v2, :cond_f
 
-    .line 437
     const-string v2, "USRPKEY_"
 
     invoke-virtual {v2}, Ljava/lang/String;->length()I
@@ -1143,7 +1049,6 @@
 
     move-result-object v18
 
-    .line 438
     .local v18, "keySubalias":Ljava/lang/String;
     move-object/from16 v0, p1
 
@@ -1155,7 +1060,6 @@
 
     if-nez v2, :cond_d
 
-    .line 439
     new-instance v2, Ljava/security/KeyStoreException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1194,7 +1098,6 @@
 
     throw v2
 
-    .line 430
     .end local v18    # "keySubalias":Ljava/lang/String;
     .end local v24    # "pkeyAlias":Ljava/lang/String;
     :cond_c
@@ -1203,30 +1106,24 @@
     .restart local v24    # "pkeyAlias":Ljava/lang/String;
     goto :goto_4
 
-    .line 442
     .restart local v18    # "keySubalias":Ljava/lang/String;
     :cond_d
     const/16 v26, 0x0
 
-    .line 443
     .local v26, "shouldReplacePrivateKey":Z
     const/4 v4, 0x0
 
-    .line 444
     .local v4, "importArgs":Landroid/security/keymaster/KeymasterArguments;
     const/4 v6, 0x0
 
-    .line 513
     .end local v18    # "keySubalias":Ljava/lang/String;
     .local v6, "pkcs8EncodedPrivateKeyBytes":[B
     :goto_5
     const/16 v28, 0x0
 
-    .line 516
     .local v28, "success":Z
     if-eqz v26, :cond_16
 
-    .line 519
     :try_start_2
     move-object/from16 v0, p0
 
@@ -1236,12 +1133,10 @@
 
     invoke-static {v2, v0}, Landroid/security/Credentials;->deleteAllTypesForAlias(Landroid/security/KeyStore;Ljava/lang/String;)Z
 
-    .line 520
     new-instance v8, Landroid/security/keymaster/KeyCharacteristics;
 
     invoke-direct {v8}, Landroid/security/keymaster/KeyCharacteristics;-><init>()V
 
-    .line 521
     .local v8, "resultingKeyCharacteristics":Landroid/security/keymaster/KeyCharacteristics;
     move-object/from16 v0, p0
 
@@ -1273,13 +1168,11 @@
 
     move-result v14
 
-    .line 528
     .local v14, "errorCode":I
     const/4 v2, 0x1
 
     if-eq v14, v2, :cond_17
 
-    .line 529
     new-instance v2, Ljava/security/KeyStoreException;
 
     const-string v3, "Failed to store private key"
@@ -1294,7 +1187,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 555
     .end local v8    # "resultingKeyCharacteristics":Landroid/security/keymaster/KeyCharacteristics;
     .end local v14    # "errorCode":I
     :catchall_0
@@ -1302,10 +1194,8 @@
 
     if-nez v28, :cond_e
 
-    .line 556
     if-eqz v26, :cond_1c
 
-    .line 557
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/security/keystore/AndroidKeyStoreSpi;->mKeyStore:Landroid/security/KeyStore;
@@ -1314,12 +1204,10 @@
 
     invoke-static {v3, v0}, Landroid/security/Credentials;->deleteAllTypesForAlias(Landroid/security/KeyStore;Ljava/lang/String;)Z
 
-    .line 560
     :cond_e
     :goto_6
     throw v2
 
-    .line 446
     .end local v4    # "importArgs":Landroid/security/keymaster/KeymasterArguments;
     .end local v6    # "pkcs8EncodedPrivateKeyBytes":[B
     .end local v26    # "shouldReplacePrivateKey":Z
@@ -1327,13 +1215,11 @@
     :cond_f
     const/16 v26, 0x1
 
-    .line 448
     .restart local v26    # "shouldReplacePrivateKey":Z
     invoke-interface/range {p2 .. p2}, Ljava/security/PrivateKey;->getFormat()Ljava/lang/String;
 
     move-result-object v17
 
-    .line 449
     .local v17, "keyFormat":Ljava/lang/String;
     if-eqz v17, :cond_10
 
@@ -1347,7 +1233,6 @@
 
     if-nez v2, :cond_11
 
-    .line 450
     :cond_10
     new-instance v2, Ljava/security/KeyStoreException;
 
@@ -1387,17 +1272,14 @@
 
     throw v2
 
-    .line 457
     :cond_11
     invoke-interface/range {p2 .. p2}, Ljava/security/PrivateKey;->getEncoded()[B
 
     move-result-object v6
 
-    .line 458
     .restart local v6    # "pkcs8EncodedPrivateKeyBytes":[B
     if-nez v6, :cond_12
 
-    .line 459
     new-instance v2, Ljava/security/KeyStoreException;
 
     const-string v3, "Private key did not export any key material"
@@ -1406,13 +1288,11 @@
 
     throw v2
 
-    .line 462
     :cond_12
     new-instance v4, Landroid/security/keymaster/KeymasterArguments;
 
     invoke-direct {v4}, Landroid/security/keymaster/KeymasterArguments;-><init>()V
 
-    .line 464
     .restart local v4    # "importArgs":Landroid/security/keymaster/KeymasterArguments;
     const v2, 0x10000002
 
@@ -1427,12 +1307,10 @@
 
     invoke-virtual {v4, v2, v3}, Landroid/security/keymaster/KeymasterArguments;->addEnum(II)V
 
-    .line 467
     invoke-virtual/range {v27 .. v27}, Landroid/security/keystore/KeyProtection;->getPurposes()I
 
     move-result v25
 
-    .line 468
     .local v25, "purposes":I
     const v2, 0x20000001
 
@@ -1442,14 +1320,12 @@
 
     invoke-virtual {v4, v2, v3}, Landroid/security/keymaster/KeymasterArguments;->addEnums(I[I)V
 
-    .line 470
     invoke-virtual/range {v27 .. v27}, Landroid/security/keystore/KeyProtection;->isDigestsSpecified()Z
 
     move-result v2
 
     if-eqz v2, :cond_13
 
-    .line 471
     const v2, 0x20000005
 
     invoke-virtual/range {v27 .. v27}, Landroid/security/keystore/KeyProtection;->getDigests()[Ljava/lang/String;
@@ -1462,7 +1338,6 @@
 
     invoke-virtual {v4, v2, v3}, Landroid/security/keymaster/KeymasterArguments;->addEnums(I[I)V
 
-    .line 475
     :cond_13
     const v2, 0x20000004
 
@@ -1476,7 +1351,6 @@
 
     invoke-virtual {v4, v2, v3}, Landroid/security/keymaster/KeymasterArguments;->addEnums(I[I)V
 
-    .line 477
     invoke-virtual/range {v27 .. v27}, Landroid/security/keystore/KeyProtection;->getEncryptionPaddings()[Ljava/lang/String;
 
     move-result-object v2
@@ -1485,7 +1359,6 @@
 
     move-result-object v19
 
-    .line 480
     .local v19, "keymasterEncryptionPaddings":[I
     and-int/lit8 v2, v25, 0x1
 
@@ -1497,7 +1370,6 @@
 
     if-eqz v2, :cond_15
 
-    .line 482
     move-object/from16 v9, v19
 
     .local v9, "arr$":[I
@@ -1518,7 +1390,6 @@
 
     aget v20, v9, v16
 
-    .line 483
     .local v20, "keymasterPadding":I
     invoke-static/range {v20 .. v20}, Landroid/security/keystore/KeymasterUtils;->isKeymasterPaddingSchemeIndCpaCompatibleWithAsymmetricCrypto(I)Z
 
@@ -1526,7 +1397,6 @@
 
     if-nez v2, :cond_14
 
-    .line 486
     new-instance v2, Ljava/security/KeyStoreException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1564,7 +1434,6 @@
     .catch Ljava/lang/IllegalArgumentException; {:try_start_3 .. :try_end_3} :catch_2
     .catch Ljava/lang/IllegalStateException; {:try_start_3 .. :try_end_3} :catch_3
 
-    .line 507
     .end local v9    # "arr$":[I
     .end local v16    # "i$":I
     .end local v19    # "keymasterEncryptionPaddings":[I
@@ -1574,7 +1443,6 @@
     :catch_2
     move-exception v13
 
-    .line 508
     .local v13, "e":Ljava/lang/RuntimeException;
     :goto_8
     new-instance v2, Ljava/security/KeyStoreException;
@@ -1583,7 +1451,6 @@
 
     throw v2
 
-    .line 482
     .end local v13    # "e":Ljava/lang/RuntimeException;
     .restart local v9    # "arr$":[I
     .restart local v16    # "i$":I
@@ -1596,7 +1463,6 @@
 
     goto :goto_7
 
-    .line 495
     .end local v9    # "arr$":[I
     .end local v16    # "i$":I
     .end local v20    # "keymasterPadding":I
@@ -1609,7 +1475,6 @@
 
     invoke-virtual {v4, v2, v0}, Landroid/security/keymaster/KeymasterArguments;->addEnums(I[I)V
 
-    .line 496
     const v2, 0x20000006
 
     invoke-virtual/range {v27 .. v27}, Landroid/security/keystore/KeyProtection;->getSignaturePaddings()[Ljava/lang/String;
@@ -1622,7 +1487,6 @@
 
     invoke-virtual {v4, v2, v3}, Landroid/security/keymaster/KeymasterArguments;->addEnums(I[I)V
 
-    .line 498
     invoke-virtual/range {v27 .. v27}, Landroid/security/keystore/KeyProtection;->isUserAuthenticationRequired()Z
 
     move-result v2
@@ -1633,7 +1497,6 @@
 
     invoke-static {v4, v2, v3}, Landroid/security/keystore/KeymasterUtils;->addUserAuthArgs(Landroid/security/keymaster/KeymasterArguments;ZI)V
 
-    .line 501
     const v2, 0x60000190
 
     invoke-virtual/range {v27 .. v27}, Landroid/security/keystore/KeyProtection;->getKeyValidityStart()Ljava/util/Date;
@@ -1642,7 +1505,6 @@
 
     invoke-virtual {v4, v2, v3}, Landroid/security/keymaster/KeymasterArguments;->addDateIfNotNull(ILjava/util/Date;)V
 
-    .line 503
     const v2, 0x60000191
 
     invoke-virtual/range {v27 .. v27}, Landroid/security/keystore/KeyProtection;->getKeyValidityForOriginationEnd()Ljava/util/Date;
@@ -1651,7 +1513,6 @@
 
     invoke-virtual {v4, v2, v3}, Landroid/security/keymaster/KeymasterArguments;->addDateIfNotNull(ILjava/util/Date;)V
 
-    .line 505
     const v2, 0x60000192
 
     invoke-virtual/range {v27 .. v27}, Landroid/security/keystore/KeyProtection;->getKeyValidityForConsumptionEnd()Ljava/util/Date;
@@ -1665,7 +1526,6 @@
 
     goto/16 :goto_5
 
-    .line 507
     .end local v19    # "keymasterEncryptionPaddings":[I
     .end local v25    # "purposes":I
     :catch_3
@@ -1673,7 +1533,6 @@
 
     goto :goto_8
 
-    .line 534
     .end local v17    # "keyFormat":Ljava/lang/String;
     .restart local v28    # "success":Z
     :cond_16
@@ -1686,7 +1545,6 @@
 
     invoke-static {v2, v0}, Landroid/security/Credentials;->deleteCertificateTypesForAlias(Landroid/security/KeyStore;Ljava/lang/String;)Z
 
-    .line 535
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/security/keystore/AndroidKeyStoreSpi;->mKeyStore:Landroid/security/KeyStore;
@@ -1695,7 +1553,6 @@
 
     invoke-static {v2, v0}, Landroid/security/Credentials;->deleteSecretKeyTypeForAlias(Landroid/security/KeyStore;Ljava/lang/String;)Z
 
-    .line 539
     :cond_17
     move-object/from16 v0, p0
 
@@ -1729,13 +1586,11 @@
 
     move-result v14
 
-    .line 541
     .restart local v14    # "errorCode":I
     const/4 v2, 0x1
 
     if-eq v14, v2, :cond_18
 
-    .line 542
     new-instance v2, Ljava/security/KeyStoreException;
 
     const-string v3, "Failed to store certificate #0"
@@ -1748,7 +1603,6 @@
 
     throw v2
 
-    .line 547
     :cond_18
     move-object/from16 v0, p0
 
@@ -1780,12 +1634,10 @@
 
     move-result v14
 
-    .line 549
     const/4 v2, 0x1
 
     if-eq v14, v2, :cond_19
 
-    .line 550
     new-instance v2, Ljava/security/KeyStoreException;
 
     const-string v3, "Failed to store certificate chain"
@@ -1800,17 +1652,13 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 553
     :cond_19
     const/16 v28, 0x1
 
-    .line 555
     if-nez v28, :cond_1a
 
-    .line 556
     if-eqz v26, :cond_1b
 
-    .line 557
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/security/keystore/AndroidKeyStoreSpi;->mKeyStore:Landroid/security/KeyStore;
@@ -1819,12 +1667,10 @@
 
     invoke-static {v2, v0}, Landroid/security/Credentials;->deleteAllTypesForAlias(Landroid/security/KeyStore;Ljava/lang/String;)Z
 
-    .line 564
     :cond_1a
     :goto_9
     return-void
 
-    .line 559
     :cond_1b
     move-object/from16 v0, p0
 
@@ -1834,7 +1680,6 @@
 
     invoke-static {v2, v0}, Landroid/security/Credentials;->deleteCertificateTypesForAlias(Landroid/security/KeyStore;Ljava/lang/String;)Z
 
-    .line 560
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/security/keystore/AndroidKeyStoreSpi;->mKeyStore:Landroid/security/KeyStore;
@@ -1845,7 +1690,6 @@
 
     goto :goto_9
 
-    .line 559
     .end local v14    # "errorCode":I
     :cond_1c
     move-object/from16 v0, p0
@@ -1856,7 +1700,6 @@
 
     invoke-static {v3, v0}, Landroid/security/Credentials;->deleteCertificateTypesForAlias(Landroid/security/KeyStore;Ljava/lang/String;)Z
 
-    .line 560
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/security/keystore/AndroidKeyStoreSpi;->mKeyStore:Landroid/security/KeyStore;
@@ -1880,7 +1723,6 @@
     .end annotation
 
     .prologue
-    .line 569
     if-eqz p3, :cond_0
 
     move-object/from16 v0, p3
@@ -1889,7 +1731,6 @@
 
     if-nez v2, :cond_0
 
-    .line 570
     new-instance v2, Ljava/security/KeyStoreException;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1941,10 +1782,8 @@
     :cond_0
     move-object/from16 v23, p3
 
-    .line 574
     check-cast v23, Landroid/security/keystore/KeyProtection;
 
-    .line 576
     .local v23, "params":Landroid/security/keystore/KeyProtection;
     move-object/from16 v0, p2
 
@@ -1952,7 +1791,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 579
     check-cast p2, Landroid/security/keystore/AndroidKeyStoreSecretKey;
 
     .end local p2    # "key":Ljavax/crypto/SecretKey;
@@ -1960,11 +1798,9 @@
 
     move-result-object v3
 
-    .line 580
     .local v3, "keyAliasInKeystore":Ljava/lang/String;
     if-nez v3, :cond_1
 
-    .line 581
     new-instance v2, Ljava/security/KeyStoreException;
 
     const-string v5, "KeyStore-backed secret key does not have an alias"
@@ -1973,7 +1809,6 @@
 
     throw v2
 
-    .line 583
     :cond_1
     const-string v2, "USRSKEY_"
 
@@ -1983,7 +1818,6 @@
 
     if-nez v2, :cond_2
 
-    .line 584
     new-instance v2, Ljava/security/KeyStoreException;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -2008,7 +1842,6 @@
 
     throw v2
 
-    .line 587
     :cond_2
     const-string v2, "USRSKEY_"
 
@@ -2020,7 +1853,6 @@
 
     move-result-object v13
 
-    .line 589
     .local v13, "keyEntryAlias":Ljava/lang/String;
     move-object/from16 v0, p1
 
@@ -2030,7 +1862,6 @@
 
     if-nez v2, :cond_3
 
-    .line 590
     new-instance v2, Ljava/security/KeyStoreException;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -2067,11 +1898,9 @@
 
     throw v2
 
-    .line 594
     :cond_3
     if-eqz v23, :cond_12
 
-    .line 595
     new-instance v2, Ljava/security/KeyStoreException;
 
     const-string v5, "Modifying KeyStore-backed key using protection parameters not supported"
@@ -2080,14 +1909,12 @@
 
     throw v2
 
-    .line 601
     .end local v3    # "keyAliasInKeystore":Ljava/lang/String;
     .end local v13    # "keyEntryAlias":Ljava/lang/String;
     .restart local p2    # "key":Ljavax/crypto/SecretKey;
     :cond_4
     if-nez v23, :cond_5
 
-    .line 602
     new-instance v2, Ljava/security/KeyStoreException;
 
     const-string v5, "Protection parameters must be specified when importing a symmetric key"
@@ -2096,17 +1923,14 @@
 
     throw v2
 
-    .line 607
     :cond_5
     invoke-interface/range {p2 .. p2}, Ljavax/crypto/SecretKey;->getFormat()Ljava/lang/String;
 
     move-result-object v14
 
-    .line 608
     .local v14, "keyExportFormat":Ljava/lang/String;
     if-nez v14, :cond_6
 
-    .line 609
     new-instance v2, Ljava/security/KeyStoreException;
 
     const-string v5, "Only secret keys that export their key material are supported"
@@ -2115,7 +1939,6 @@
 
     throw v2
 
-    .line 611
     :cond_6
     const-string v2, "RAW"
 
@@ -2125,7 +1948,6 @@
 
     if-nez v2, :cond_7
 
-    .line 612
     new-instance v2, Ljava/security/KeyStoreException;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -2150,17 +1972,14 @@
 
     throw v2
 
-    .line 615
     :cond_7
     invoke-interface/range {p2 .. p2}, Ljavax/crypto/SecretKey;->getEncoded()[B
 
     move-result-object v6
 
-    .line 616
     .local v6, "keyMaterial":[B
     if-nez v6, :cond_8
 
-    .line 617
     new-instance v2, Ljava/security/KeyStoreException;
 
     const-string v5, "Key did not export its key material despite supporting RAW format export"
@@ -2169,13 +1988,11 @@
 
     throw v2
 
-    .line 621
     :cond_8
     new-instance v4, Landroid/security/keymaster/KeymasterArguments;
 
     invoke-direct {v4}, Landroid/security/keymaster/KeymasterArguments;-><init>()V
 
-    .line 623
     .local v4, "args":Landroid/security/keymaster/KeymasterArguments;
     :try_start_0
     invoke-interface/range {p2 .. p2}, Ljavax/crypto/SecretKey;->getAlgorithm()Ljava/lang/String;
@@ -2186,18 +2003,15 @@
 
     move-result v15
 
-    .line 625
     .local v15, "keymasterAlgorithm":I
     const v2, 0x10000002
 
     invoke-virtual {v4, v2, v15}, Landroid/security/keymaster/KeymasterArguments;->addEnum(II)V
 
-    .line 628
     const/16 v2, 0x80
 
     if-ne v15, v2, :cond_b
 
-    .line 634
     invoke-interface/range {p2 .. p2}, Ljavax/crypto/SecretKey;->getAlgorithm()Ljava/lang/String;
 
     move-result-object v2
@@ -2206,7 +2020,6 @@
 
     move-result v20
 
-    .line 636
     .local v20, "keymasterImpliedDigest":I
     const/4 v2, -0x1
 
@@ -2214,7 +2027,6 @@
 
     if-ne v0, v2, :cond_9
 
-    .line 637
     new-instance v2, Ljava/security/ProviderException;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -2246,13 +2058,11 @@
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 711
     .end local v15    # "keymasterAlgorithm":I
     .end local v20    # "keymasterImpliedDigest":I
     :catch_0
     move-exception v10
 
-    .line 712
     .local v10, "e":Ljava/lang/RuntimeException;
     :goto_0
     new-instance v2, Ljava/security/KeyStoreException;
@@ -2261,7 +2071,6 @@
 
     throw v2
 
-    .line 641
     .end local v10    # "e":Ljava/lang/RuntimeException;
     .restart local v15    # "keymasterAlgorithm":I
     .restart local v20    # "keymasterImpliedDigest":I
@@ -2277,7 +2086,6 @@
 
     aput v20, v18, v2
 
-    .line 642
     .local v18, "keymasterDigests":[I
     invoke-virtual/range {v23 .. v23}, Landroid/security/keystore/KeyProtection;->isDigestsSpecified()Z
 
@@ -2285,7 +2093,6 @@
 
     if-eqz v2, :cond_c
 
-    .line 645
     invoke-virtual/range {v23 .. v23}, Landroid/security/keystore/KeyProtection;->getDigests()[Ljava/lang/String;
 
     move-result-object v2
@@ -2294,7 +2101,6 @@
 
     move-result-object v19
 
-    .line 647
     .local v19, "keymasterDigestsFromParams":[I
     move-object/from16 v0, v19
 
@@ -2312,7 +2118,6 @@
 
     if-eq v2, v0, :cond_c
 
-    .line 649
     :cond_a
     new-instance v2, Ljava/security/KeyStoreException;
 
@@ -2374,7 +2179,6 @@
 
     throw v2
 
-    .line 711
     .end local v15    # "keymasterAlgorithm":I
     .end local v18    # "keymasterDigests":[I
     .end local v19    # "keymasterDigestsFromParams":[I
@@ -2384,7 +2188,6 @@
 
     goto :goto_0
 
-    .line 658
     .restart local v15    # "keymasterAlgorithm":I
     :cond_b
     invoke-virtual/range {v23 .. v23}, Landroid/security/keystore/KeyProtection;->isDigestsSpecified()Z
@@ -2393,7 +2196,6 @@
 
     if-eqz v2, :cond_d
 
-    .line 659
     invoke-virtual/range {v23 .. v23}, Landroid/security/keystore/KeyProtection;->getDigests()[Ljava/lang/String;
 
     move-result-object v2
@@ -2402,7 +2204,6 @@
 
     move-result-object v18
 
-    .line 664
     .restart local v18    # "keymasterDigests":[I
     :cond_c
     :goto_1
@@ -2412,12 +2213,10 @@
 
     invoke-virtual {v4, v2, v0}, Landroid/security/keymaster/KeymasterArguments;->addEnums(I[I)V
 
-    .line 666
     invoke-virtual/range {v23 .. v23}, Landroid/security/keystore/KeyProtection;->getPurposes()I
 
     move-result v24
 
-    .line 667
     .local v24, "purposes":I
     invoke-virtual/range {v23 .. v23}, Landroid/security/keystore/KeyProtection;->getBlockModes()[Ljava/lang/String;
 
@@ -2427,7 +2226,6 @@
 
     move-result-object v17
 
-    .line 669
     .local v17, "keymasterBlockModes":[I
     and-int/lit8 v2, v24, 0x1
 
@@ -2439,7 +2237,6 @@
 
     if-eqz v2, :cond_f
 
-    .line 671
     move-object/from16 v9, v17
 
     .local v9, "arr$":[I
@@ -2458,7 +2255,6 @@
 
     aget v16, v9, v12
 
-    .line 672
     .local v16, "keymasterBlockMode":I
     invoke-static/range {v16 .. v16}, Landroid/security/keystore/KeymasterUtils;->isKeymasterBlockModeIndCpaCompatibleWithSymmetricCrypto(I)Z
 
@@ -2466,7 +2262,6 @@
 
     if-nez v2, :cond_e
 
-    .line 674
     new-instance v2, Ljava/security/KeyStoreException;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -2501,7 +2296,6 @@
 
     throw v2
 
-    .line 661
     .end local v9    # "arr$":[I
     .end local v12    # "i$":I
     .end local v16    # "keymasterBlockMode":I
@@ -2515,7 +2309,6 @@
     .restart local v18    # "keymasterDigests":[I
     goto :goto_1
 
-    .line 671
     .restart local v9    # "arr$":[I
     .restart local v12    # "i$":I
     .restart local v16    # "keymasterBlockMode":I
@@ -2527,7 +2320,6 @@
 
     goto :goto_2
 
-    .line 682
     .end local v9    # "arr$":[I
     .end local v12    # "i$":I
     .end local v16    # "keymasterBlockMode":I
@@ -2541,14 +2333,12 @@
 
     invoke-virtual {v4, v2, v5}, Landroid/security/keymaster/KeymasterArguments;->addEnums(I[I)V
 
-    .line 684
     const v2, 0x20000004
 
     move-object/from16 v0, v17
 
     invoke-virtual {v4, v2, v0}, Landroid/security/keymaster/KeymasterArguments;->addEnums(I[I)V
 
-    .line 685
     invoke-virtual/range {v23 .. v23}, Landroid/security/keystore/KeyProtection;->getSignaturePaddings()[Ljava/lang/String;
 
     move-result-object v2
@@ -2557,7 +2347,6 @@
 
     if-lez v2, :cond_10
 
-    .line 686
     new-instance v2, Ljava/security/KeyStoreException;
 
     const-string v5, "Signature paddings not supported for symmetric keys"
@@ -2566,7 +2355,6 @@
 
     throw v2
 
-    .line 688
     :cond_10
     invoke-virtual/range {v23 .. v23}, Landroid/security/keystore/KeyProtection;->getEncryptionPaddings()[Ljava/lang/String;
 
@@ -2576,7 +2364,6 @@
 
     move-result-object v21
 
-    .line 690
     .local v21, "keymasterPaddings":[I
     const v2, 0x20000006
 
@@ -2584,7 +2371,6 @@
 
     invoke-virtual {v4, v2, v0}, Landroid/security/keymaster/KeymasterArguments;->addEnums(I[I)V
 
-    .line 691
     invoke-virtual/range {v23 .. v23}, Landroid/security/keystore/KeyProtection;->isUserAuthenticationRequired()Z
 
     move-result v2
@@ -2595,14 +2381,12 @@
 
     invoke-static {v4, v2, v5}, Landroid/security/keystore/KeymasterUtils;->addUserAuthArgs(Landroid/security/keymaster/KeymasterArguments;ZI)V
 
-    .line 694
     move-object/from16 v0, v17
 
     move-object/from16 v1, v18
 
     invoke-static {v4, v15, v0, v1}, Landroid/security/keystore/KeymasterUtils;->addMinMacLengthAuthorizationIfNecessary(Landroid/security/keymaster/KeymasterArguments;I[I[I)V
 
-    .line 699
     const v2, 0x60000190
 
     invoke-virtual/range {v23 .. v23}, Landroid/security/keystore/KeyProtection;->getKeyValidityStart()Ljava/util/Date;
@@ -2611,7 +2395,6 @@
 
     invoke-virtual {v4, v2, v5}, Landroid/security/keymaster/KeymasterArguments;->addDateIfNotNull(ILjava/util/Date;)V
 
-    .line 701
     const v2, 0x60000191
 
     invoke-virtual/range {v23 .. v23}, Landroid/security/keystore/KeyProtection;->getKeyValidityForOriginationEnd()Ljava/util/Date;
@@ -2620,7 +2403,6 @@
 
     invoke-virtual {v4, v2, v5}, Landroid/security/keymaster/KeymasterArguments;->addDateIfNotNull(ILjava/util/Date;)V
 
-    .line 703
     const v2, 0x60000192
 
     invoke-virtual/range {v23 .. v23}, Landroid/security/keystore/KeyProtection;->getKeyValidityForConsumptionEnd()Ljava/util/Date;
@@ -2629,7 +2411,6 @@
 
     invoke-virtual {v4, v2, v5}, Landroid/security/keymaster/KeymasterArguments;->addDateIfNotNull(ILjava/util/Date;)V
 
-    .line 706
     and-int/lit8 v2, v24, 0x1
 
     if-eqz v2, :cond_11
@@ -2640,7 +2421,6 @@
 
     if-nez v2, :cond_11
 
-    .line 709
     const v2, 0x70000007
 
     invoke-virtual {v4, v2}, Landroid/security/keymaster/KeymasterArguments;->addBoolean(I)V
@@ -2648,7 +2428,6 @@
     .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/lang/IllegalStateException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 715
     :cond_11
     move-object/from16 v0, p0
 
@@ -2658,7 +2437,6 @@
 
     invoke-static {v2, v0}, Landroid/security/Credentials;->deleteAllTypesForAlias(Landroid/security/KeyStore;Ljava/lang/String;)Z
 
-    .line 716
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2679,7 +2457,6 @@
 
     move-result-object v3
 
-    .line 717
     .restart local v3    # "keyAliasInKeystore":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -2697,13 +2474,11 @@
 
     move-result v11
 
-    .line 724
     .local v11, "errorCode":I
     const/4 v2, 0x1
 
     if-eq v11, v2, :cond_12
 
-    .line 725
     new-instance v2, Ljava/security/KeyStoreException;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -2728,7 +2503,6 @@
 
     throw v2
 
-    .line 728
     .end local v4    # "args":Landroid/security/keymaster/KeymasterArguments;
     .end local v6    # "keyMaterial":[B
     .end local v11    # "errorCode":I
@@ -2748,7 +2522,6 @@
     .param p0, "bytes"    # [B
 
     .prologue
-    .line 216
     :try_start_0
     const-string v2, "X.509"
 
@@ -2756,7 +2529,6 @@
 
     move-result-object v0
 
-    .line 217
     .local v0, "certFactory":Ljava/security/cert/CertificateFactory;
     new-instance v2, Ljava/io/ByteArrayInputStream;
 
@@ -2770,16 +2542,13 @@
     :try_end_0
     .catch Ljava/security/cert/CertificateException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 221
     .end local v0    # "certFactory":Ljava/security/cert/CertificateFactory;
     :goto_0
     return-object v2
 
-    .line 219
     :catch_0
     move-exception v1
 
-    .line 220
     .local v1, "e":Ljava/security/cert/CertificateException;
     const-string v2, "AndroidKeyStore"
 
@@ -2787,7 +2556,6 @@
 
     invoke-static {v2, v3, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 221
     const/4 v2, 0x0
 
     goto :goto_0
@@ -2807,7 +2575,6 @@
     .end annotation
 
     .prologue
-    .line 228
     :try_start_0
     const-string v2, "X.509"
 
@@ -2815,7 +2582,6 @@
 
     move-result-object v0
 
-    .line 229
     .local v0, "certFactory":Ljava/security/cert/CertificateFactory;
     new-instance v2, Ljava/io/ByteArrayInputStream;
 
@@ -2827,16 +2593,13 @@
 
     move-result-object v2
 
-    .line 233
     .end local v0    # "certFactory":Ljava/security/cert/CertificateFactory;
     :goto_0
     return-object v2
 
-    .line 231
     :catch_0
     move-exception v1
 
-    .line 232
     .local v1, "e":Ljava/security/cert/CertificateException;
     const-string v2, "AndroidKeyStore"
 
@@ -2844,7 +2607,6 @@
 
     invoke-static {v2, v3, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 233
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
@@ -2858,7 +2620,6 @@
     .param p1, "certificate"    # Ljava/security/cert/X509Certificate;
 
     .prologue
-    .line 210
     if-eqz p1, :cond_0
 
     new-instance v0, Landroid/security/keystore/AndroidKeyStoreSpi$KeyStoreX509Certificate;
@@ -2889,7 +2650,6 @@
     .end annotation
 
     .prologue
-    .line 794
     invoke-direct {p0}, Landroid/security/keystore/AndroidKeyStoreSpi;->getUniqueAliases()Ljava/util/Set;
 
     move-result-object v0
@@ -2906,10 +2666,8 @@
     .param p1, "alias"    # Ljava/lang/String;
 
     .prologue
-    .line 799
     if-nez p1, :cond_0
 
-    .line 800
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "alias == null"
@@ -2918,7 +2676,6 @@
 
     throw v0
 
-    .line 803
     :cond_0
     iget-object v0, p0, Landroid/security/keystore/AndroidKeyStoreSpi;->mKeyStore:Landroid/security/KeyStore;
 
@@ -3046,18 +2803,15 @@
     .end annotation
 
     .prologue
-    .line 762
     invoke-virtual {p0, p1}, Landroid/security/keystore/AndroidKeyStoreSpi;->engineContainsAlias(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 770
     :cond_0
     return-void
 
-    .line 767
     :cond_1
     iget-object v0, p0, Landroid/security/keystore/AndroidKeyStoreSpi;->mKeyStore:Landroid/security/KeyStore;
 
@@ -3067,7 +2821,6 @@
 
     if-nez v0, :cond_0
 
-    .line 768
     new-instance v0, Ljava/security/KeyStoreException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3098,10 +2851,8 @@
     .param p1, "alias"    # Ljava/lang/String;
 
     .prologue
-    .line 140
     if-nez p1, :cond_0
 
-    .line 141
     new-instance v1, Ljava/lang/NullPointerException;
 
     const-string v2, "alias == null"
@@ -3110,7 +2861,6 @@
 
     throw v1
 
-    .line 144
     :cond_0
     iget-object v1, p0, Landroid/security/keystore/AndroidKeyStoreSpi;->mKeyStore:Landroid/security/KeyStore;
 
@@ -3136,20 +2886,16 @@
 
     move-result-object v0
 
-    .line 145
     .local v0, "encodedCert":[B
     if-eqz v0, :cond_1
 
-    .line 146
     invoke-direct {p0, p1, v0}, Landroid/security/keystore/AndroidKeyStoreSpi;->getCertificateForPrivateKeyEntry(Ljava/lang/String;[B)Ljava/security/cert/Certificate;
 
     move-result-object v1
 
-    .line 155
     :goto_0
     return-object v1
 
-    .line 149
     :cond_1
     iget-object v1, p0, Landroid/security/keystore/AndroidKeyStoreSpi;->mKeyStore:Landroid/security/KeyStore;
 
@@ -3175,17 +2921,14 @@
 
     move-result-object v0
 
-    .line 150
     if-eqz v0, :cond_2
 
-    .line 151
     invoke-direct {p0, v0}, Landroid/security/keystore/AndroidKeyStoreSpi;->getCertificateForTrustedCertificateEntry([B)Ljava/security/cert/Certificate;
 
     move-result-object v1
 
     goto :goto_0
 
-    .line 155
     :cond_2
     const/4 v1, 0x0
 
@@ -3199,16 +2942,13 @@
     .prologue
     const/4 v10, 0x0
 
-    .line 854
     if-nez p1, :cond_0
 
     move-object v0, v10
 
-    .line 917
     :goto_0
     return-object v0
 
-    .line 857
     :cond_0
     const-string v11, "X.509"
 
@@ -3224,10 +2964,8 @@
 
     move-object v0, v10
 
-    .line 859
     goto :goto_0
 
-    .line 863
     :cond_1
     :try_start_0
     invoke-virtual {p1}, Ljava/security/cert/Certificate;->getEncoded()[B
@@ -3236,16 +2974,13 @@
 
     move-result-object v9
 
-    .line 867
     .local v9, "targetCertBytes":[B
     if-nez v9, :cond_2
 
     move-object v0, v10
 
-    .line 868
     goto :goto_0
 
-    .line 864
     .end local v9    # "targetCertBytes":[B
     :catch_0
     move-exception v5
@@ -3253,10 +2988,8 @@
     .local v5, "e":Ljava/security/cert/CertificateEncodingException;
     move-object v0, v10
 
-    .line 865
     goto :goto_0
 
-    .line 871
     .end local v5    # "e":Ljava/security/cert/CertificateEncodingException;
     .restart local v9    # "targetCertBytes":[B
     :cond_2
@@ -3264,7 +2997,6 @@
 
     invoke-direct {v8}, Ljava/util/HashSet;-><init>()V
 
-    .line 879
     .local v8, "nonCaEntries":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     iget-object v11, p0, Landroid/security/keystore/AndroidKeyStoreSpi;->mKeyStore:Landroid/security/KeyStore;
 
@@ -3274,11 +3006,9 @@
 
     move-result-object v3
 
-    .line 880
     .local v3, "certAliases":[Ljava/lang/String;
     if-eqz v3, :cond_5
 
-    .line 881
     move-object v1, v3
 
     .local v1, "arr$":[Ljava/lang/String;
@@ -3293,7 +3023,6 @@
 
     aget-object v0, v1, v6
 
-    .line 882
     .local v0, "alias":Ljava/lang/String;
     iget-object v11, p0, Landroid/security/keystore/AndroidKeyStoreSpi;->mKeyStore:Landroid/security/KeyStore;
 
@@ -3319,21 +3048,17 @@
 
     move-result-object v4
 
-    .line 883
     .local v4, "certBytes":[B
     if-nez v4, :cond_4
 
-    .line 881
     :cond_3
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_1
 
-    .line 887
     :cond_4
     invoke-interface {v8, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 889
     invoke-static {v4, v9}, Ljava/util/Arrays;->equals([B[B)Z
 
     move-result v11
@@ -3342,7 +3067,6 @@
 
     goto :goto_0
 
-    .line 899
     .end local v0    # "alias":Ljava/lang/String;
     .end local v1    # "arr$":[Ljava/lang/String;
     .end local v4    # "certBytes":[B
@@ -3357,11 +3081,9 @@
 
     move-result-object v2
 
-    .line 900
     .local v2, "caAliases":[Ljava/lang/String;
     if-eqz v3, :cond_8
 
-    .line 901
     move-object v1, v2
 
     .restart local v1    # "arr$":[Ljava/lang/String;
@@ -3376,7 +3098,6 @@
 
     aget-object v0, v1, v6
 
-    .line 902
     .restart local v0    # "alias":Ljava/lang/String;
     invoke-interface {v8, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
@@ -3384,13 +3105,11 @@
 
     if-eqz v11, :cond_7
 
-    .line 901
     :cond_6
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_2
 
-    .line 906
     :cond_7
     iget-object v11, p0, Landroid/security/keystore/AndroidKeyStoreSpi;->mKeyStore:Landroid/security/KeyStore;
 
@@ -3416,11 +3135,9 @@
 
     move-result-object v4
 
-    .line 907
     .restart local v4    # "certBytes":[B
     if-eqz v4, :cond_6
 
-    .line 911
     invoke-static {v4, v9}, Ljava/util/Arrays;->equals([B[B)Z
 
     move-result v11
@@ -3437,7 +3154,6 @@
     :cond_8
     move-object v0, v10
 
-    .line 917
     goto/16 :goto_0
 .end method
 
@@ -3446,10 +3162,8 @@
     .param p1, "alias"    # Ljava/lang/String;
 
     .prologue
-    .line 107
     if-nez p1, :cond_0
 
-    .line 108
     new-instance v7, Ljava/lang/NullPointerException;
 
     const-string v8, "alias == null"
@@ -3458,7 +3172,6 @@
 
     throw v7
 
-    .line 111
     :cond_0
     invoke-virtual {p0, p1}, Landroid/security/keystore/AndroidKeyStoreSpi;->engineGetCertificate(Ljava/lang/String;)Ljava/security/cert/Certificate;
 
@@ -3466,18 +3179,14 @@
 
     check-cast v6, Ljava/security/cert/X509Certificate;
 
-    .line 112
     .local v6, "leaf":Ljava/security/cert/X509Certificate;
     if-nez v6, :cond_1
 
-    .line 113
     const/4 v2, 0x0
 
-    .line 135
     :goto_0
     return-object v2
 
-    .line 118
     :cond_1
     iget-object v7, p0, Landroid/security/keystore/AndroidKeyStoreSpi;->mKeyStore:Landroid/security/KeyStore;
 
@@ -3503,16 +3212,13 @@
 
     move-result-object v0
 
-    .line 119
     .local v0, "caBytes":[B
     if-eqz v0, :cond_2
 
-    .line 120
     invoke-static {v0}, Landroid/security/keystore/AndroidKeyStoreSpi;->toCertificates([B)Ljava/util/Collection;
 
     move-result-object v1
 
-    .line 122
     .local v1, "caChain":Ljava/util/Collection;, "Ljava/util/Collection<Ljava/security/cert/X509Certificate;>;"
     invoke-interface {v1}, Ljava/util/Collection;->size()I
 
@@ -3522,17 +3228,14 @@
 
     new-array v2, v7, [Ljava/security/cert/Certificate;
 
-    .line 124
     .local v2, "caList":[Ljava/security/cert/Certificate;
     invoke-interface {v1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object v5
 
-    .line 125
     .local v5, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/security/cert/X509Certificate;>;"
     const/4 v3, 0x1
 
-    .line 126
     .local v3, "i":I
     :goto_1
     invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
@@ -3541,7 +3244,6 @@
 
     if-eqz v7, :cond_3
 
-    .line 127
     add-int/lit8 v4, v3, 0x1
 
     .end local v3    # "i":I
@@ -3560,7 +3262,6 @@
     .restart local v3    # "i":I
     goto :goto_1
 
-    .line 130
     .end local v1    # "caChain":Ljava/util/Collection;, "Ljava/util/Collection<Ljava/security/cert/X509Certificate;>;"
     .end local v2    # "caList":[Ljava/security/cert/Certificate;
     .end local v3    # "i":I
@@ -3570,7 +3271,6 @@
 
     new-array v2, v7, [Ljava/security/cert/Certificate;
 
-    .line 133
     .restart local v2    # "caList":[Ljava/security/cert/Certificate;
     :cond_3
     const/4 v7, 0x0
@@ -3585,10 +3285,8 @@
     .param p1, "alias"    # Ljava/lang/String;
 
     .prologue
-    .line 248
     if-nez p1, :cond_0
 
-    .line 249
     new-instance v1, Ljava/lang/NullPointerException;
 
     const-string v2, "alias == null"
@@ -3597,7 +3295,6 @@
 
     throw v1
 
-    .line 252
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -3621,17 +3318,14 @@
 
     move-result-object v0
 
-    .line 253
     .local v0, "d":Ljava/util/Date;
     if-eqz v0, :cond_1
 
     move-object v1, v0
 
-    .line 267
     :goto_0
     return-object v1
 
-    .line 257
     :cond_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -3655,15 +3349,12 @@
 
     move-result-object v0
 
-    .line 258
     if-eqz v0, :cond_2
 
     move-object v1, v0
 
-    .line 259
     goto :goto_0
 
-    .line 262
     :cond_2
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -3687,15 +3378,12 @@
 
     move-result-object v0
 
-    .line 263
     if-eqz v0, :cond_3
 
     move-object v1, v0
 
-    .line 264
     goto :goto_0
 
-    .line 267
     :cond_3
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -3734,14 +3422,12 @@
     .end annotation
 
     .prologue
-    .line 91
     invoke-direct {p0, p1}, Landroid/security/keystore/AndroidKeyStoreSpi;->isPrivateKeyEntry(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 92
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -3760,7 +3446,6 @@
 
     move-result-object v0
 
-    .line 93
     .local v0, "privateKeyAlias":Ljava/lang/String;
     iget-object v2, p0, Landroid/security/keystore/AndroidKeyStoreSpi;->mKeyStore:Landroid/security/KeyStore;
 
@@ -3768,12 +3453,10 @@
 
     move-result-object v2
 
-    .line 101
     .end local v0    # "privateKeyAlias":Ljava/lang/String;
     :goto_0
     return-object v2
 
-    .line 95
     :cond_0
     invoke-direct {p0, p1}, Landroid/security/keystore/AndroidKeyStoreSpi;->isSecretKeyEntry(Ljava/lang/String;)Z
 
@@ -3781,7 +3464,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 96
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -3800,7 +3482,6 @@
 
     move-result-object v1
 
-    .line 97
     .local v1, "secretKeyAlias":Ljava/lang/String;
     iget-object v2, p0, Landroid/security/keystore/AndroidKeyStoreSpi;->mKeyStore:Landroid/security/KeyStore;
 
@@ -3810,7 +3491,6 @@
 
     goto :goto_0
 
-    .line 101
     .end local v1    # "secretKeyAlias":Ljava/lang/String;
     :cond_1
     const/4 v2, 0x0
@@ -3823,7 +3503,6 @@
     .param p1, "alias"    # Ljava/lang/String;
 
     .prologue
-    .line 849
     invoke-direct {p0, p1}, Landroid/security/keystore/AndroidKeyStoreSpi;->isKeyEntry(Ljava/lang/String;)Z
 
     move-result v0
@@ -3852,7 +3531,6 @@
     .param p1, "alias"    # Ljava/lang/String;
 
     .prologue
-    .line 816
     invoke-direct {p0, p1}, Landroid/security/keystore/AndroidKeyStoreSpi;->isKeyEntry(Ljava/lang/String;)Z
 
     move-result v0
@@ -3873,10 +3551,8 @@
     .end annotation
 
     .prologue
-    .line 929
     if-eqz p1, :cond_0
 
-    .line 930
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "InputStream not supported"
@@ -3885,20 +3561,17 @@
 
     throw v0
 
-    .line 933
     :cond_0
     if-eqz p2, :cond_1
 
-    .line 934
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "password not supported"
+    const-string v1, "password not supported"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 938
     :cond_1
     invoke-static {}, Landroid/security/KeyStore;->getInstance()Landroid/security/KeyStore;
 
@@ -3906,7 +3579,6 @@
 
     iput-object v0, p0, Landroid/security/keystore/AndroidKeyStoreSpi;->mKeyStore:Landroid/security/KeyStore;
 
-    .line 939
     return-void
 .end method
 
@@ -3921,14 +3593,12 @@
     .end annotation
 
     .prologue
-    .line 738
     invoke-direct {p0, p1}, Landroid/security/keystore/AndroidKeyStoreSpi;->isKeyEntry(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 739
     new-instance v2, Ljava/security/KeyStoreException;
 
     const-string v3, "Entry exists and is not a trusted certificate"
@@ -3937,11 +3607,9 @@
 
     throw v2
 
-    .line 743
     :cond_0
     if-nez p2, :cond_1
 
-    .line 744
     new-instance v2, Ljava/lang/NullPointerException;
 
     const-string v3, "cert == null"
@@ -3950,7 +3618,6 @@
 
     throw v2
 
-    .line 749
     :cond_1
     :try_start_0
     invoke-virtual {p2}, Ljava/security/cert/Certificate;->getEncoded()[B
@@ -3959,7 +3626,6 @@
 
     move-result-object v1
 
-    .line 754
     .local v1, "encoded":[B
     iget-object v2, p0, Landroid/security/keystore/AndroidKeyStoreSpi;->mKeyStore:Landroid/security/KeyStore;
 
@@ -3991,7 +3657,6 @@
 
     if-nez v2, :cond_2
 
-    .line 756
     new-instance v2, Ljava/security/KeyStoreException;
 
     const-string v3, "Couldn\'t insert certificate; is KeyStore initialized?"
@@ -4000,12 +3665,10 @@
 
     throw v2
 
-    .line 750
     .end local v1    # "encoded":[B
     :catch_0
     move-exception v0
 
-    .line 751
     .local v0, "e":Ljava/security/cert/CertificateEncodingException;
     new-instance v2, Ljava/security/KeyStoreException;
 
@@ -4013,7 +3676,6 @@
 
     throw v2
 
-    .line 758
     .end local v0    # "e":Ljava/security/cert/CertificateEncodingException;
     .restart local v1    # "encoded":[B
     :cond_2
@@ -4032,10 +3694,8 @@
     .end annotation
 
     .prologue
-    .line 944
     if-nez p2, :cond_0
 
-    .line 945
     new-instance v3, Ljava/security/KeyStoreException;
 
     const-string v4, "entry == null"
@@ -4044,23 +3704,19 @@
 
     throw v3
 
-    .line 948
     :cond_0
     iget-object v3, p0, Landroid/security/keystore/AndroidKeyStoreSpi;->mKeyStore:Landroid/security/KeyStore;
 
     invoke-static {v3, p1}, Landroid/security/Credentials;->deleteAllTypesForAlias(Landroid/security/KeyStore;Ljava/lang/String;)Z
 
-    .line 950
     instance-of v3, p2, Ljava/security/KeyStore$TrustedCertificateEntry;
 
     if-eqz v3, :cond_1
 
     move-object v2, p2
 
-    .line 951
     check-cast v2, Ljava/security/KeyStore$TrustedCertificateEntry;
 
-    .line 953
     .local v2, "trE":Ljava/security/KeyStore$TrustedCertificateEntry;
     invoke-virtual {v2}, Ljava/security/KeyStore$TrustedCertificateEntry;->getTrustedCertificate()Ljava/security/cert/Certificate;
 
@@ -4068,12 +3724,10 @@
 
     invoke-virtual {p0, p1, v3}, Landroid/security/keystore/AndroidKeyStoreSpi;->engineSetCertificateEntry(Ljava/lang/String;Ljava/security/cert/Certificate;)V
 
-    .line 968
     .end local v2    # "trE":Ljava/security/KeyStore$TrustedCertificateEntry;
     :goto_0
     return-void
 
-    .line 957
     :cond_1
     instance-of v3, p2, Ljava/security/KeyStore$PrivateKeyEntry;
 
@@ -4081,10 +3735,8 @@
 
     move-object v0, p2
 
-    .line 958
     check-cast v0, Ljava/security/KeyStore$PrivateKeyEntry;
 
-    .line 959
     .local v0, "prE":Ljava/security/KeyStore$PrivateKeyEntry;
     invoke-virtual {v0}, Ljava/security/KeyStore$PrivateKeyEntry;->getPrivateKey()Ljava/security/PrivateKey;
 
@@ -4098,7 +3750,6 @@
 
     goto :goto_0
 
-    .line 960
     .end local v0    # "prE":Ljava/security/KeyStore$PrivateKeyEntry;
     :cond_2
     instance-of v3, p2, Ljava/security/KeyStore$SecretKeyEntry;
@@ -4107,10 +3758,8 @@
 
     move-object v1, p2
 
-    .line 961
     check-cast v1, Ljava/security/KeyStore$SecretKeyEntry;
 
-    .line 962
     .local v1, "secE":Ljava/security/KeyStore$SecretKeyEntry;
     invoke-virtual {v1}, Ljava/security/KeyStore$SecretKeyEntry;->getSecretKey()Ljavax/crypto/SecretKey;
 
@@ -4120,7 +3769,6 @@
 
     goto :goto_0
 
-    .line 964
     .end local v1    # "secE":Ljava/security/KeyStore$SecretKeyEntry;
     :cond_3
     new-instance v3, Ljava/security/KeyStoreException;
@@ -4163,14 +3811,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 273
     if-eqz p3, :cond_0
 
     array-length v0, p3
 
     if-lez v0, :cond_0
 
-    .line 274
     new-instance v0, Ljava/security/KeyStoreException;
 
     const-string v1, "entries cannot be protected with passwords"
@@ -4179,30 +3825,25 @@
 
     throw v0
 
-    .line 277
     :cond_0
     instance-of v0, p2, Ljava/security/PrivateKey;
 
     if-eqz v0, :cond_1
 
-    .line 278
     check-cast p2, Ljava/security/PrivateKey;
 
     .end local p2    # "key":Ljava/security/Key;
     invoke-direct {p0, p1, p2, p4, v1}, Landroid/security/keystore/AndroidKeyStoreSpi;->setPrivateKeyEntry(Ljava/lang/String;Ljava/security/PrivateKey;[Ljava/security/cert/Certificate;Ljava/security/KeyStore$ProtectionParameter;)V
 
-    .line 284
     :goto_0
     return-void
 
-    .line 279
     .restart local p2    # "key":Ljava/security/Key;
     :cond_1
     instance-of v0, p2, Ljavax/crypto/SecretKey;
 
     if-eqz v0, :cond_2
 
-    .line 280
     check-cast p2, Ljavax/crypto/SecretKey;
 
     .end local p2    # "key":Ljava/security/Key;
@@ -4210,7 +3851,6 @@
 
     goto :goto_0
 
-    .line 282
     .restart local p2    # "key":Ljava/security/Key;
     :cond_2
     new-instance v0, Ljava/security/KeyStoreException;
@@ -4234,7 +3874,6 @@
     .end annotation
 
     .prologue
-    .line 733
     new-instance v0, Ljava/security/KeyStoreException;
 
     const-string v1, "Operation not supported because key encoding is unknown"
@@ -4248,7 +3887,6 @@
     .locals 1
 
     .prologue
-    .line 811
     invoke-direct {p0}, Landroid/security/keystore/AndroidKeyStoreSpi;->getUniqueAliases()Ljava/util/Set;
 
     move-result-object v0
@@ -4273,7 +3911,6 @@
     .end annotation
 
     .prologue
-    .line 923
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "Can not serialize AndroidKeyStore to OutputStream"

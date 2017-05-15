@@ -39,10 +39,8 @@
     .param p2, "ele"    # Lorg/w3c/dom/Element;
 
     .prologue
-    .line 1299
     invoke-direct {p0, p1}, Lmiui/maml/ActionCommand;-><init>(Lmiui/maml/elements/ScreenElement;)V
 
-    .line 1300
     const-string v1, "target"
 
     invoke-interface {p2, v1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -51,7 +49,6 @@
 
     iput-object v1, p0, Lmiui/maml/ActionCommand$TargetCommand;->mTargetName:Ljava/lang/String;
 
-    .line 1301
     iget-object v1, p0, Lmiui/maml/ActionCommand$TargetCommand;->mTargetName:Ljava/lang/String;
 
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -60,12 +57,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 1302
     const/4 v1, 0x0
 
     iput-object v1, p0, Lmiui/maml/ActionCommand$TargetCommand;->mTargetName:Ljava/lang/String;
 
-    .line 1305
     :cond_0
     invoke-virtual {p0}, Lmiui/maml/ActionCommand$TargetCommand;->getVariables()Lmiui/maml/data/Variables;
 
@@ -83,20 +78,17 @@
 
     iput-object v1, p0, Lmiui/maml/ActionCommand$TargetCommand;->mTargetIndex:Lmiui/maml/data/Expression;
 
-    .line 1306
     const-string v1, "targetType"
 
     invoke-interface {p2, v1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1307
     .local v0, "type":Ljava/lang/String;
     sget-object v1, Lmiui/maml/ActionCommand$TargetCommand$TargetType;->SCREEN_ELEMENT:Lmiui/maml/ActionCommand$TargetCommand$TargetType;
 
     iput-object v1, p0, Lmiui/maml/ActionCommand$TargetCommand;->mTargetType:Lmiui/maml/ActionCommand$TargetCommand$TargetType;
 
-    .line 1308
     const-string v1, "element"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -105,12 +97,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 1309
     sget-object v1, Lmiui/maml/ActionCommand$TargetCommand$TargetType;->SCREEN_ELEMENT:Lmiui/maml/ActionCommand$TargetCommand$TargetType;
 
     iput-object v1, p0, Lmiui/maml/ActionCommand$TargetCommand;->mTargetType:Lmiui/maml/ActionCommand$TargetCommand$TargetType;
 
-    .line 1315
     :cond_1
     :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
@@ -151,12 +141,10 @@
 
     iput-object v1, p0, Lmiui/maml/ActionCommand$TargetCommand;->mLogStr:Ljava/lang/String;
 
-    .line 1316
     return-void
 
-    .line 1310
     :cond_2
-    const-string/jumbo v1, "var"
+    const-string v1, "var"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -164,14 +152,12 @@
 
     if-eqz v1, :cond_3
 
-    .line 1311
     sget-object v1, Lmiui/maml/ActionCommand$TargetCommand$TargetType;->VARIABLE:Lmiui/maml/ActionCommand$TargetCommand$TargetType;
 
     iput-object v1, p0, Lmiui/maml/ActionCommand$TargetCommand;->mTargetType:Lmiui/maml/ActionCommand$TargetCommand$TargetType;
 
     goto :goto_0
 
-    .line 1312
     :cond_3
     const-string v1, "ctor"
 
@@ -181,7 +167,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 1313
     sget-object v1, Lmiui/maml/ActionCommand$TargetCommand$TargetType;->CONSTRUCTOR:Lmiui/maml/ActionCommand$TargetCommand$TargetType;
 
     iput-object v1, p0, Lmiui/maml/ActionCommand$TargetCommand;->mTargetType:Lmiui/maml/ActionCommand$TargetCommand$TargetType;
@@ -197,7 +182,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1351
     sget-object v1, Lmiui/maml/ActionCommand$1;->$SwitchMap$miui$maml$ActionCommand$TargetCommand$TargetType:[I
 
     iget-object v3, p0, Lmiui/maml/ActionCommand$TargetCommand;->mTargetType:Lmiui/maml/ActionCommand$TargetCommand$TargetType;
@@ -212,12 +196,10 @@
 
     move-object v0, v2
 
-    .line 1376
     :cond_0
     :goto_0
     return-object v0
 
-    .line 1353
     :pswitch_0
     iget-object v1, p0, Lmiui/maml/ActionCommand$TargetCommand;->mTarget:Ljava/lang/Object;
 
@@ -227,7 +209,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 1354
     iget-object v1, p0, Lmiui/maml/ActionCommand$TargetCommand;->mTarget:Ljava/lang/Object;
 
     check-cast v1, Lmiui/maml/elements/ElementGroup;
@@ -246,19 +227,16 @@
 
     goto :goto_0
 
-    .line 1356
     :cond_1
     iget-object v0, p0, Lmiui/maml/ActionCommand$TargetCommand;->mTarget:Ljava/lang/Object;
 
     goto :goto_0
 
-    .line 1359
     :pswitch_1
     iget-object v1, p0, Lmiui/maml/ActionCommand$TargetCommand;->mTarget:Ljava/lang/Object;
 
     if-eqz v1, :cond_3
 
-    .line 1360
     invoke-virtual {p0}, Lmiui/maml/ActionCommand$TargetCommand;->getVariables()Lmiui/maml/data/Variables;
 
     move-result-object v3
@@ -275,13 +253,11 @@
 
     move-result-object v0
 
-    .line 1361
     .local v0, "obj":Ljava/lang/Object;
     iget-object v1, p0, Lmiui/maml/ActionCommand$TargetCommand;->mTargetIndex:Lmiui/maml/data/Expression;
 
     if-eqz v1, :cond_0
 
-    .line 1362
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
@@ -292,7 +268,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 1363
     iget-object v1, p0, Lmiui/maml/ActionCommand$TargetCommand;->mTargetIndex:Lmiui/maml/data/Expression;
 
     invoke-virtual {v1}, Lmiui/maml/data/Expression;->evaluate()D
@@ -307,7 +282,6 @@
 
     goto :goto_0
 
-    .line 1365
     :cond_2
     const-string v1, "ActionCommand"
 
@@ -333,17 +307,14 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1367
     iput-object v2, p0, Lmiui/maml/ActionCommand$TargetCommand;->mTargetIndex:Lmiui/maml/data/Expression;
 
     .end local v0    # "obj":Ljava/lang/Object;
     :cond_3
     move-object v0, v2
 
-    .line 1372
     goto :goto_0
 
-    .line 1351
     nop
 
     :pswitch_data_0
@@ -357,10 +328,8 @@
     .locals 4
 
     .prologue
-    .line 1320
     invoke-super {p0}, Lmiui/maml/ActionCommand;->init()V
 
-    .line 1321
     sget-object v1, Lmiui/maml/ActionCommand$1;->$SwitchMap$miui$maml$ActionCommand$TargetCommand$TargetType:[I
 
     iget-object v2, p0, Lmiui/maml/ActionCommand$TargetCommand;->mTargetType:Lmiui/maml/ActionCommand$TargetCommand$TargetType;
@@ -373,18 +342,15 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 1348
     :cond_0
     :goto_0
     return-void
 
-    .line 1323
     :pswitch_0
     iget-object v1, p0, Lmiui/maml/ActionCommand$TargetCommand;->mTarget:Ljava/lang/Object;
 
     if-nez v1, :cond_0
 
-    .line 1324
     invoke-virtual {p0}, Lmiui/maml/ActionCommand$TargetCommand;->getRoot()Lmiui/maml/ScreenElementRoot;
 
     move-result-object v1
@@ -395,14 +361,11 @@
 
     move-result-object v0
 
-    .line 1325
     .local v0, "targetElement":Lmiui/maml/elements/ScreenElement;
     iput-object v0, p0, Lmiui/maml/ActionCommand$TargetCommand;->mTarget:Ljava/lang/Object;
 
-    .line 1326
     if-nez v0, :cond_1
 
-    .line 1327
     const-string v1, "ActionCommand"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -429,20 +392,17 @@
 
     goto :goto_0
 
-    .line 1328
     :cond_1
     iget-object v1, p0, Lmiui/maml/ActionCommand$TargetCommand;->mTargetIndex:Lmiui/maml/data/Expression;
 
     if-eqz v1, :cond_0
 
-    .line 1329
     invoke-static {v0}, Lmiui/maml/elements/ElementGroup;->isArrayGroup(Lmiui/maml/elements/ScreenElement;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 1330
     const-string v1, "ActionCommand"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -467,21 +427,18 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1332
     const/4 v1, 0x0
 
     iput-object v1, p0, Lmiui/maml/ActionCommand$TargetCommand;->mTargetIndex:Lmiui/maml/data/Expression;
 
     goto :goto_0
 
-    .line 1338
     .end local v0    # "targetElement":Lmiui/maml/elements/ScreenElement;
     :pswitch_1
     iget-object v1, p0, Lmiui/maml/ActionCommand$TargetCommand;->mTargetName:Ljava/lang/String;
 
     if-eqz v1, :cond_2
 
-    .line 1340
     invoke-virtual {p0}, Lmiui/maml/ActionCommand$TargetCommand;->getVariables()Lmiui/maml/data/Variables;
 
     move-result-object v1
@@ -500,7 +457,6 @@
 
     goto :goto_0
 
-    .line 1342
     :cond_2
     const-string v1, "ActionCommand"
 
@@ -510,7 +466,6 @@
 
     goto :goto_0
 
-    .line 1321
     nop
 
     :pswitch_data_0

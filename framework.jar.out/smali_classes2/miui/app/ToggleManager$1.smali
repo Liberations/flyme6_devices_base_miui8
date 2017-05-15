@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 987
     iput-object p1, p0, Lmiui/app/ToggleManager$1;->this$0:Lmiui/app/ToggleManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 989
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 990
     .local v0, "action":Ljava/lang/String;
     const-string v1, "android.net.wifi.WIFI_STATE_CHANGED"
 
@@ -62,18 +59,15 @@
 
     if-eqz v1, :cond_2
 
-    .line 992
     :cond_0
     iget-object v1, p0, Lmiui/app/ToggleManager$1;->this$0:Lmiui/app/ToggleManager;
 
     invoke-virtual {v1, p2}, Lmiui/app/ToggleManager;->updateWifiToggle(Landroid/content/Intent;)V
 
-    .line 1004
     :cond_1
     :goto_0
     return-void
 
-    .line 993
     :cond_2
     const-string v1, "android.bluetooth.adapter.action.STATE_CHANGED"
 
@@ -83,14 +77,12 @@
 
     if-eqz v1, :cond_3
 
-    .line 994
     iget-object v1, p0, Lmiui/app/ToggleManager$1;->this$0:Lmiui/app/ToggleManager;
 
     invoke-virtual {v1}, Lmiui/app/ToggleManager;->updateBluetoothToggle()V
 
     goto :goto_0
 
-    .line 995
     :cond_3
     const-string v1, "android.media.RINGER_MODE_CHANGED"
 
@@ -100,19 +92,16 @@
 
     if-eqz v1, :cond_4
 
-    .line 996
     iget-object v1, p0, Lmiui/app/ToggleManager$1;->this$0:Lmiui/app/ToggleManager;
 
     invoke-virtual {v1}, Lmiui/app/ToggleManager;->updateRingerToggle()V
 
-    .line 997
     iget-object v1, p0, Lmiui/app/ToggleManager$1;->this$0:Lmiui/app/ToggleManager;
 
     invoke-virtual {v1}, Lmiui/app/ToggleManager;->updateVibrateToggle()V
 
     goto :goto_0
 
-    .line 998
     :cond_4
     const-string v1, "android.intent.action.AIRPLANE_MODE"
 
@@ -122,7 +111,6 @@
 
     if-eqz v1, :cond_5
 
-    .line 999
     iget-object v1, p0, Lmiui/app/ToggleManager$1;->this$0:Lmiui/app/ToggleManager;
 
     # invokes: Lmiui/app/ToggleManager;->updateFlightModeToggle()V
@@ -130,7 +118,6 @@
 
     goto :goto_0
 
-    .line 1000
     :cond_5
     const-string v1, "android.intent.action.SIM_STATE_CHANGED"
 
@@ -140,7 +127,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 1001
     iget-object v2, p0, Lmiui/app/ToggleManager$1;->this$0:Lmiui/app/ToggleManager;
 
     invoke-static {}, Lmiui/telephony/TelephonyManager;->getDefault()Lmiui/telephony/TelephonyManager;
@@ -159,7 +145,6 @@
     # setter for: Lmiui/app/ToggleManager;->mIsSimMissing:Z
     invoke-static {v2, v1}, Lmiui/app/ToggleManager;->access$102(Lmiui/app/ToggleManager;Z)Z
 
-    .line 1002
     iget-object v1, p0, Lmiui/app/ToggleManager$1;->this$0:Lmiui/app/ToggleManager;
 
     # invokes: Lmiui/app/ToggleManager;->updateDataToggle()V
@@ -167,7 +152,6 @@
 
     goto :goto_0
 
-    .line 1001
     :cond_6
     const/4 v1, 0x0
 

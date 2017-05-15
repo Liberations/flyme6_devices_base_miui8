@@ -39,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 702
     new-instance v0, Landroid/hardware/radio/RadioManager$BandConfig$1;
 
     invoke-direct {v0}, Landroid/hardware/radio/RadioManager$BandConfig$1;-><init>()V
@@ -58,10 +57,8 @@
     .param p5, "spacing"    # I
 
     .prologue
-    .line 651
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 652
     new-instance v0, Landroid/hardware/radio/RadioManager$BandDescriptor;
 
     move v1, p1
@@ -78,7 +75,6 @@
 
     iput-object v0, p0, Landroid/hardware/radio/RadioManager$BandConfig;->mDescriptor:Landroid/hardware/radio/RadioManager$BandDescriptor;
 
-    .line 653
     return-void
 .end method
 
@@ -87,13 +83,10 @@
     .param p1, "descriptor"    # Landroid/hardware/radio/RadioManager$BandDescriptor;
 
     .prologue
-    .line 647
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 648
     iput-object p1, p0, Landroid/hardware/radio/RadioManager$BandConfig;->mDescriptor:Landroid/hardware/radio/RadioManager$BandDescriptor;
 
-    .line 649
     return-void
 .end method
 
@@ -102,10 +95,8 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 655
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 656
     new-instance v0, Landroid/hardware/radio/RadioManager$BandDescriptor;
 
     const/4 v1, 0x0
@@ -114,7 +105,6 @@
 
     iput-object v0, p0, Landroid/hardware/radio/RadioManager$BandConfig;->mDescriptor:Landroid/hardware/radio/RadioManager$BandDescriptor;
 
-    .line 657
     return-void
 .end method
 
@@ -124,7 +114,6 @@
     .param p2, "x1"    # Landroid/hardware/radio/RadioManager$1;
 
     .prologue
-    .line 643
     invoke-direct {p0, p1}, Landroid/hardware/radio/RadioManager$BandConfig;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -136,7 +125,6 @@
     .locals 1
 
     .prologue
-    .line 720
     const/4 v0, 0x0
 
     return v0
@@ -151,15 +139,12 @@
 
     const/4 v2, 0x0
 
-    .line 738
     if-ne p0, p1, :cond_1
 
-    .line 745
     :cond_0
     :goto_0
     return v1
 
-    .line 740
     :cond_1
     instance-of v3, p1, Landroid/hardware/radio/RadioManager$BandConfig;
 
@@ -167,16 +152,13 @@
 
     move v1, v2
 
-    .line 741
     goto :goto_0
 
     :cond_2
     move-object v0, p1
 
-    .line 742
     check-cast v0, Landroid/hardware/radio/RadioManager$BandConfig;
 
-    .line 743
     .local v0, "other":Landroid/hardware/radio/RadioManager$BandConfig;
     iget-object v3, p0, Landroid/hardware/radio/RadioManager$BandConfig;->mDescriptor:Landroid/hardware/radio/RadioManager$BandDescriptor;
 
@@ -188,7 +170,6 @@
 
     move v1, v2
 
-    .line 744
     goto :goto_0
 .end method
 
@@ -196,7 +177,6 @@
     .locals 1
 
     .prologue
-    .line 660
     iget-object v0, p0, Landroid/hardware/radio/RadioManager$BandConfig;->mDescriptor:Landroid/hardware/radio/RadioManager$BandDescriptor;
 
     return-object v0
@@ -206,7 +186,6 @@
     .locals 1
 
     .prologue
-    .line 684
     iget-object v0, p0, Landroid/hardware/radio/RadioManager$BandConfig;->mDescriptor:Landroid/hardware/radio/RadioManager$BandDescriptor;
 
     invoke-virtual {v0}, Landroid/hardware/radio/RadioManager$BandDescriptor;->getLowerLimit()I
@@ -220,7 +199,6 @@
     .locals 1
 
     .prologue
-    .line 667
     iget-object v0, p0, Landroid/hardware/radio/RadioManager$BandConfig;->mDescriptor:Landroid/hardware/radio/RadioManager$BandDescriptor;
 
     invoke-virtual {v0}, Landroid/hardware/radio/RadioManager$BandDescriptor;->getRegion()I
@@ -234,7 +212,6 @@
     .locals 1
 
     .prologue
-    .line 698
     iget-object v0, p0, Landroid/hardware/radio/RadioManager$BandConfig;->mDescriptor:Landroid/hardware/radio/RadioManager$BandDescriptor;
 
     invoke-virtual {v0}, Landroid/hardware/radio/RadioManager$BandDescriptor;->getSpacing()I
@@ -248,7 +225,6 @@
     .locals 1
 
     .prologue
-    .line 677
     iget-object v0, p0, Landroid/hardware/radio/RadioManager$BandConfig;->mDescriptor:Landroid/hardware/radio/RadioManager$BandDescriptor;
 
     invoke-virtual {v0}, Landroid/hardware/radio/RadioManager$BandDescriptor;->getType()I
@@ -262,7 +238,6 @@
     .locals 1
 
     .prologue
-    .line 691
     iget-object v0, p0, Landroid/hardware/radio/RadioManager$BandConfig;->mDescriptor:Landroid/hardware/radio/RadioManager$BandDescriptor;
 
     invoke-virtual {v0}, Landroid/hardware/radio/RadioManager$BandDescriptor;->getUpperLimit()I
@@ -276,14 +251,11 @@
     .locals 3
 
     .prologue
-    .line 730
     const/16 v0, 0x1f
 
-    .line 731
     .local v0, "prime":I
     const/4 v1, 0x1
 
-    .line 732
     .local v1, "result":I
     iget-object v2, p0, Landroid/hardware/radio/RadioManager$BandConfig;->mDescriptor:Landroid/hardware/radio/RadioManager$BandDescriptor;
 
@@ -293,7 +265,6 @@
 
     add-int/lit8 v1, v2, 0x1f
 
-    .line 733
     return v1
 .end method
 
@@ -301,7 +272,6 @@
     .locals 2
 
     .prologue
-    .line 725
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -341,11 +311,9 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 715
     iget-object v0, p0, Landroid/hardware/radio/RadioManager$BandConfig;->mDescriptor:Landroid/hardware/radio/RadioManager$BandDescriptor;
 
     invoke-virtual {v0, p1, p2}, Landroid/hardware/radio/RadioManager$BandDescriptor;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 716
     return-void
 .end method

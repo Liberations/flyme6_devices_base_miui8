@@ -22,10 +22,8 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 34
     invoke-direct {p0, p1}, Landroid/widget/ViewAnimator;-><init>(Landroid/content/Context;)V
 
-    .line 31
     new-instance v0, Ljava/util/ArrayList;
 
     const/4 v1, 0x1
@@ -34,7 +32,6 @@
 
     iput-object v0, p0, Lcom/android/internal/widget/DialogViewAnimator;->mMatchParentChildren:Ljava/util/ArrayList;
 
-    .line 35
     return-void
 .end method
 
@@ -44,10 +41,8 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 38
     invoke-direct {p0, p1, p2}, Landroid/widget/ViewAnimator;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 31
     new-instance v0, Ljava/util/ArrayList;
 
     const/4 v1, 0x1
@@ -56,7 +51,6 @@
 
     iput-object v0, p0, Lcom/android/internal/widget/DialogViewAnimator;->mMatchParentChildren:Ljava/util/ArrayList;
 
-    .line 39
     return-void
 .end method
 
@@ -68,7 +62,6 @@
     .param p2, "heightMeasureSpec"    # I
 
     .prologue
-    .line 43
     invoke-static/range {p1 .. p1}, Landroid/view/View$MeasureSpec;->getMode(I)I
 
     move-result v2
@@ -88,26 +81,21 @@
     :cond_0
     const/16 v20, 0x1
 
-    .line 47
     .local v20, "measureMatchParentChildren":Z
     :goto_0
     const/16 v18, 0x0
 
-    .line 48
     .local v18, "maxHeight":I
     const/16 v19, 0x0
 
-    .line 49
     .local v19, "maxWidth":I
     const/4 v9, 0x0
 
-    .line 53
     .local v9, "childState":I
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/widget/DialogViewAnimator;->getChildCount()I
 
     move-result v11
 
-    .line 54
     .local v11, "count":I
     const/4 v13, 0x0
 
@@ -115,14 +103,12 @@
     :goto_1
     if-ge v13, v11, :cond_a
 
-    .line 55
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v13}, Lcom/android/internal/widget/DialogViewAnimator;->getChildAt(I)Landroid/view/View;
 
     move-result-object v3
 
-    .line 56
     .local v3, "child":Landroid/view/View;
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/widget/DialogViewAnimator;->getMeasureAllChildren()Z
 
@@ -138,7 +124,6 @@
 
     if-eq v2, v4, :cond_6
 
-    .line 57
     :cond_1
     invoke-virtual {v3}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -146,7 +131,6 @@
 
     check-cast v14, Landroid/widget/FrameLayout$LayoutParams;
 
-    .line 58
     .local v14, "lp":Landroid/widget/FrameLayout$LayoutParams;
     iget v2, v14, Landroid/widget/FrameLayout$LayoutParams;->width:I
 
@@ -156,7 +140,6 @@
 
     const/16 v17, 0x1
 
-    .line 59
     .local v17, "matchWidth":Z
     :goto_2
     iget v2, v14, Landroid/widget/FrameLayout$LayoutParams;->height:I
@@ -167,7 +150,6 @@
 
     const/16 v16, 0x1
 
-    .line 60
     .local v16, "matchHeight":Z
     :goto_3
     if-eqz v20, :cond_3
@@ -176,7 +158,6 @@
 
     if-eqz v16, :cond_3
 
-    .line 61
     :cond_2
     move-object/from16 v0, p0
 
@@ -184,7 +165,6 @@
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 64
     :cond_3
     const/4 v5, 0x0
 
@@ -198,16 +178,13 @@
 
     invoke-virtual/range {v2 .. v7}, Lcom/android/internal/widget/DialogViewAnimator;->measureChildWithMargins(Landroid/view/View;IIII)V
 
-    .line 68
     const/16 v21, 0x0
 
-    .line 70
     .local v21, "state":I
     if-eqz v20, :cond_4
 
     if-nez v17, :cond_4
 
-    .line 71
     invoke-virtual {v3}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v2
@@ -226,7 +203,6 @@
 
     move-result v19
 
-    .line 73
     invoke-virtual {v3}, Landroid/view/View;->getMeasuredWidthAndState()I
 
     move-result v2
@@ -237,13 +213,11 @@
 
     or-int v21, v21, v2
 
-    .line 76
     :cond_4
     if-eqz v20, :cond_5
 
     if-nez v16, :cond_5
 
-    .line 77
     invoke-virtual {v3}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v2
@@ -262,7 +236,6 @@
 
     move-result v18
 
-    .line 79
     invoke-virtual {v3}, Landroid/view/View;->getMeasuredHeightAndState()I
 
     move-result v2
@@ -273,7 +246,6 @@
 
     or-int v21, v21, v2
 
-    .line 83
     :cond_5
     move/from16 v0, v21
 
@@ -281,7 +253,6 @@
 
     move-result v9
 
-    .line 54
     .end local v14    # "lp":Landroid/widget/FrameLayout$LayoutParams;
     .end local v16    # "matchHeight":Z
     .end local v17    # "matchWidth":Z
@@ -291,7 +262,6 @@
 
     goto/16 :goto_1
 
-    .line 43
     .end local v3    # "child":Landroid/view/View;
     .end local v9    # "childState":I
     .end local v11    # "count":I
@@ -304,7 +274,6 @@
 
     goto/16 :goto_0
 
-    .line 58
     .restart local v3    # "child":Landroid/view/View;
     .restart local v9    # "childState":I
     .restart local v11    # "count":I
@@ -318,14 +287,12 @@
 
     goto :goto_2
 
-    .line 59
     .restart local v17    # "matchWidth":Z
     :cond_9
     const/16 v16, 0x0
 
     goto :goto_3
 
-    .line 88
     .end local v3    # "child":Landroid/view/View;
     .end local v14    # "lp":Landroid/widget/FrameLayout$LayoutParams;
     .end local v17    # "matchWidth":Z
@@ -342,7 +309,6 @@
 
     add-int v19, v19, v2
 
-    .line 89
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/widget/DialogViewAnimator;->getPaddingTop()I
 
     move-result v2
@@ -355,7 +321,6 @@
 
     add-int v18, v18, v2
 
-    .line 92
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/widget/DialogViewAnimator;->getSuggestedMinimumHeight()I
 
     move-result v2
@@ -366,7 +331,6 @@
 
     move-result v18
 
-    .line 93
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/widget/DialogViewAnimator;->getSuggestedMinimumWidth()I
 
     move-result v2
@@ -377,16 +341,13 @@
 
     move-result v19
 
-    .line 96
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/widget/DialogViewAnimator;->getForeground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v12
 
-    .line 97
     .local v12, "drawable":Landroid/graphics/drawable/Drawable;
     if-eqz v12, :cond_b
 
-    .line 98
     invoke-virtual {v12}, Landroid/graphics/drawable/Drawable;->getMinimumHeight()I
 
     move-result v2
@@ -397,7 +358,6 @@
 
     move-result v18
 
-    .line 99
     invoke-virtual {v12}, Landroid/graphics/drawable/Drawable;->getMinimumWidth()I
 
     move-result v2
@@ -408,7 +368,6 @@
 
     move-result v19
 
-    .line 102
     :cond_b
     move/from16 v0, v19
 
@@ -432,7 +391,6 @@
 
     invoke-virtual {v0, v2, v4}, Lcom/android/internal/widget/DialogViewAnimator;->setMeasuredDimension(II)V
 
-    .line 107
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/widget/DialogViewAnimator;->mMatchParentChildren:Ljava/util/ArrayList;
@@ -441,14 +399,12 @@
 
     move-result v15
 
-    .line 108
     .local v15, "matchCount":I
     const/4 v13, 0x0
 
     :goto_4
     if-ge v13, v15, :cond_e
 
-    .line 109
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/widget/DialogViewAnimator;->mMatchParentChildren:Ljava/util/ArrayList;
@@ -459,7 +415,6 @@
 
     check-cast v3, Landroid/view/View;
 
-    .line 110
     .restart local v3    # "child":Landroid/view/View;
     invoke-virtual {v3}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -467,7 +422,6 @@
 
     check-cast v14, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 113
     .local v14, "lp":Landroid/view/ViewGroup$MarginLayoutParams;
     iget v2, v14, Landroid/view/ViewGroup$MarginLayoutParams;->width:I
 
@@ -475,7 +429,6 @@
 
     if-ne v2, v4, :cond_c
 
-    .line 114
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/widget/DialogViewAnimator;->getMeasuredWidth()I
 
     move-result v2
@@ -506,7 +459,6 @@
 
     move-result v10
 
-    .line 125
     .local v10, "childWidthMeasureSpec":I
     :goto_5
     iget v2, v14, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
@@ -515,7 +467,6 @@
 
     if-ne v2, v4, :cond_d
 
-    .line 126
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/widget/DialogViewAnimator;->getMeasuredHeight()I
 
     move-result v2
@@ -546,17 +497,14 @@
 
     move-result v8
 
-    .line 136
     .local v8, "childHeightMeasureSpec":I
     :goto_6
     invoke-virtual {v3, v10, v8}, Landroid/view/View;->measure(II)V
 
-    .line 108
     add-int/lit8 v13, v13, 0x1
 
     goto :goto_4
 
-    .line 119
     .end local v8    # "childHeightMeasureSpec":I
     .end local v10    # "childWidthMeasureSpec":I
     :cond_c
@@ -589,7 +537,6 @@
     .restart local v10    # "childWidthMeasureSpec":I
     goto :goto_5
 
-    .line 131
     :cond_d
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/widget/DialogViewAnimator;->getPaddingTop()I
 
@@ -620,7 +567,6 @@
     .restart local v8    # "childHeightMeasureSpec":I
     goto :goto_6
 
-    .line 139
     .end local v3    # "child":Landroid/view/View;
     .end local v8    # "childHeightMeasureSpec":I
     .end local v10    # "childWidthMeasureSpec":I
@@ -632,6 +578,5 @@
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
 
-    .line 140
     return-void
 .end method

@@ -8,10 +8,8 @@
     .locals 0
 
     .prologue
-    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 42
     return-void
 .end method
 
@@ -37,21 +35,18 @@
 
     const/4 v3, 0x0
 
-    .line 200
     const-string v1, "EnumClass must be defined."
 
     new-array v4, v3, [Ljava/lang/Object;
 
     invoke-static {p0, v1, v4}, Lorg/apache/miui/commons/lang3/Validate;->notNull(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 202
     invoke-virtual {p0}, Ljava/lang/Class;->getEnumConstants()[Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, [Ljava/lang/Enum;
 
-    .line 203
     .local v0, "constants":[Ljava/lang/Enum;, "[TE;"
     if-eqz v0, :cond_0
 
@@ -66,7 +61,6 @@
 
     invoke-static {v1, v4, v5}, Lorg/apache/miui/commons/lang3/Validate;->isTrue(ZLjava/lang/String;[Ljava/lang/Object;)V
 
-    .line 204
     array-length v1, v0
 
     if-gt v1, v7, :cond_1
@@ -104,19 +98,16 @@
 
     invoke-static {v1, v4, v5}, Lorg/apache/miui/commons/lang3/Validate;->isTrue(ZLjava/lang/String;[Ljava/lang/Object;)V
 
-    .line 207
     return-object p0
 
     :cond_0
     move v1, v3
 
-    .line 203
     goto :goto_0
 
     :cond_1
     move v1, v3
 
-    .line 204
     goto :goto_1
 .end method
 
@@ -135,18 +126,14 @@
     .end annotation
 
     .prologue
-    .line 136
     .local p0, "enumClass":Ljava/lang/Class;, "Ljava/lang/Class<TE;>;"
     .local p1, "values":Ljava/lang/Iterable;, "Ljava/lang/Iterable<TE;>;"
     invoke-static {p0}, Lorg/apache/miui/commons/lang3/EnumUtils;->checkBitVectorable(Ljava/lang/Class;)Ljava/lang/Class;
 
-    .line 137
     invoke-static {p1}, Lorg/apache/miui/commons/lang3/Validate;->notNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 138
     const-wide/16 v2, 0x0
 
-    .line 139
     .local v2, "total":J
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -166,7 +153,6 @@
 
     check-cast v0, Ljava/lang/Enum;
 
-    .line 140
     .local v0, "constant":Ljava/lang/Enum;, "TE;"
     const/4 v4, 0x1
 
@@ -180,10 +166,8 @@
 
     or-long/2addr v2, v4
 
-    .line 141
     goto :goto_0
 
-    .line 142
     .end local v0    # "constant":Ljava/lang/Enum;, "TE;"
     :cond_0
     return-wide v2
@@ -202,12 +186,10 @@
     .end annotation
 
     .prologue
-    .line 162
     .local p0, "enumClass":Ljava/lang/Class;, "Ljava/lang/Class<TE;>;"
     .local p1, "values":[Ljava/lang/Enum;, "[TE;"
     invoke-static {p1}, Lorg/apache/miui/commons/lang3/Validate;->noNullElements([Ljava/lang/Object;)[Ljava/lang/Object;
 
-    .line 163
     invoke-static {p1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
@@ -238,14 +220,11 @@
     .local p0, "enumClass":Ljava/lang/Class;, "Ljava/lang/Class<TE;>;"
     const/4 v1, 0x0
 
-    .line 109
     if-nez p1, :cond_0
 
-    .line 115
     :goto_0
     return-object v1
 
-    .line 113
     :cond_0
     :try_start_0
     invoke-static {p0, p1}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -256,11 +235,9 @@
 
     goto :goto_0
 
-    .line 114
     :catch_0
     move-exception v0
 
-    .line 115
     .local v0, "ex":Ljava/lang/IllegalArgumentException;
     goto :goto_0
 .end method
@@ -280,7 +257,6 @@
     .end annotation
 
     .prologue
-    .line 71
     .local p0, "enumClass":Ljava/lang/Class;, "Ljava/lang/Class<TE;>;"
     new-instance v0, Ljava/util/ArrayList;
 
@@ -314,13 +290,11 @@
     .end annotation
 
     .prologue
-    .line 54
     .local p0, "enumClass":Ljava/lang/Class;, "Ljava/lang/Class<TE;>;"
     new-instance v4, Ljava/util/LinkedHashMap;
 
     invoke-direct {v4}, Ljava/util/LinkedHashMap;-><init>()V
 
-    .line 55
     .local v4, "map":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;TE;>;"
     invoke-virtual {p0}, Ljava/lang/Class;->getEnumConstants()[Ljava/lang/Object;
 
@@ -340,7 +314,6 @@
 
     aget-object v1, v0, v2
 
-    .line 56
     .local v1, "e":Ljava/lang/Enum;, "TE;"
     invoke-virtual {v1}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
@@ -348,12 +321,10 @@
 
     invoke-interface {v4, v5, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 55
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 58
     .end local v1    # "e":Ljava/lang/Enum;, "TE;"
     :cond_0
     return-object v4
@@ -378,30 +349,24 @@
     .local p0, "enumClass":Ljava/lang/Class;, "Ljava/lang/Class<TE;>;"
     const/4 v1, 0x0
 
-    .line 86
     if-nez p1, :cond_0
 
-    .line 93
     :goto_0
     return v1
 
-    .line 90
     :cond_0
     :try_start_0
     invoke-static {p0, p1}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 91
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 92
     :catch_0
     move-exception v0
 
-    .line 93
     .local v0, "ex":Ljava/lang/IllegalArgumentException;
     goto :goto_0
 .end method
@@ -422,7 +387,6 @@
     .end annotation
 
     .prologue
-    .line 180
     .local p0, "enumClass":Ljava/lang/Class;, "Ljava/lang/Class<TE;>;"
     invoke-static {p0}, Lorg/apache/miui/commons/lang3/EnumUtils;->checkBitVectorable(Ljava/lang/Class;)Ljava/lang/Class;
 
@@ -434,13 +398,11 @@
 
     check-cast v2, [Ljava/lang/Enum;
 
-    .line 181
     .local v2, "constants":[Ljava/lang/Enum;, "[TE;"
     invoke-static {p0}, Ljava/util/EnumSet;->noneOf(Ljava/lang/Class;)Ljava/util/EnumSet;
 
     move-result-object v5
 
-    .line 182
     .local v5, "results":Ljava/util/EnumSet;, "Ljava/util/EnumSet<TE;>;"
     move-object v0, v2
 
@@ -456,7 +418,6 @@
 
     aget-object v1, v0, v3
 
-    .line 183
     .local v1, "constant":Ljava/lang/Enum;, "TE;"
     const/4 v6, 0x1
 
@@ -476,16 +437,13 @@
 
     if-eqz v6, :cond_0
 
-    .line 184
     invoke-virtual {v5, v1}, Ljava/util/EnumSet;->add(Ljava/lang/Object;)Z
 
-    .line 182
     :cond_0
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 187
     .end local v1    # "constant":Ljava/lang/Enum;, "TE;"
     :cond_1
     return-object v5

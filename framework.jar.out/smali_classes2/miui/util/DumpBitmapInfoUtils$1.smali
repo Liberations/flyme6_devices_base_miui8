@@ -35,7 +35,6 @@
     .locals 0
 
     .prologue
-    .line 130
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -49,7 +48,6 @@
     .param p2, "x1"    # Ljava/lang/Object;
 
     .prologue
-    .line 130
     check-cast p1, Ljava/util/Map$Entry;
 
     .end local p1    # "x0":Ljava/lang/Object;
@@ -82,7 +80,6 @@
     .end annotation
 
     .prologue
-    .line 132
     .local p1, "e1":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Landroid/graphics/Bitmap;Ljava/lang/CharSequence;>;"
     .local p2, "e2":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Landroid/graphics/Bitmap;Ljava/lang/CharSequence;>;"
     invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;

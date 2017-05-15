@@ -27,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 242
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,7 +37,6 @@
     .param p1, "x0"    # Lmiui/maml/elements/MusicControlScreenElement$1;
 
     .prologue
-    .line 242
     invoke-direct {p0}, Lmiui/maml/elements/MusicControlScreenElement$AlbumInfo;-><init>()V
 
     return-void
@@ -53,14 +51,12 @@
     .param p3, "album"    # Ljava/lang/String;
 
     .prologue
-    .line 248
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 249
     :cond_0
     if-eqz p2, :cond_1
 
@@ -68,7 +64,6 @@
 
     move-result-object p2
 
-    .line 250
     :cond_1
     if-eqz p3, :cond_2
 
@@ -76,7 +71,6 @@
 
     move-result-object p3
 
-    .line 251
     :cond_2
     iget-object v1, p0, Lmiui/maml/elements/MusicControlScreenElement$AlbumInfo;->title:Ljava/lang/String;
 
@@ -105,25 +99,19 @@
     :cond_3
     const/4 v0, 0x1
 
-    .line 254
     .local v0, "change":Z
     :goto_0
     if-eqz v0, :cond_4
 
-    .line 255
     iput-object p1, p0, Lmiui/maml/elements/MusicControlScreenElement$AlbumInfo;->title:Ljava/lang/String;
 
-    .line 256
     iput-object p2, p0, Lmiui/maml/elements/MusicControlScreenElement$AlbumInfo;->artist:Ljava/lang/String;
 
-    .line 257
     iput-object p3, p0, Lmiui/maml/elements/MusicControlScreenElement$AlbumInfo;->album:Ljava/lang/String;
 
-    .line 259
     :cond_4
     return v0
 
-    .line 251
     .end local v0    # "change":Z
     :cond_5
     const/4 v0, 0x0

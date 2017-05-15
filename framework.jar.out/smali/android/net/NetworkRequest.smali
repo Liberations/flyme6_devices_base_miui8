@@ -40,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 223
     new-instance v0, Landroid/net/NetworkRequest$1;
 
     invoke-direct {v0}, Landroid/net/NetworkRequest$1;-><init>()V
@@ -57,30 +56,23 @@
     .param p3, "rId"    # I
 
     .prologue
-    .line 52
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 53
     if-nez p1, :cond_0
 
-    .line 54
     new-instance v0, Ljava/lang/NullPointerException;
 
     invoke-direct {v0}, Ljava/lang/NullPointerException;-><init>()V
 
     throw v0
 
-    .line 56
     :cond_0
     iput p3, p0, Landroid/net/NetworkRequest;->requestId:I
 
-    .line 57
     iput-object p1, p0, Landroid/net/NetworkRequest;->networkCapabilities:Landroid/net/NetworkCapabilities;
 
-    .line 58
     iput p2, p0, Landroid/net/NetworkRequest;->legacyType:I
 
-    .line 59
     return-void
 .end method
 
@@ -89,10 +81,8 @@
     .param p1, "that"    # Landroid/net/NetworkRequest;
 
     .prologue
-    .line 64
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 65
     new-instance v0, Landroid/net/NetworkCapabilities;
 
     iget-object v1, p1, Landroid/net/NetworkRequest;->networkCapabilities:Landroid/net/NetworkCapabilities;
@@ -101,17 +91,14 @@
 
     iput-object v0, p0, Landroid/net/NetworkRequest;->networkCapabilities:Landroid/net/NetworkCapabilities;
 
-    .line 66
     iget v0, p1, Landroid/net/NetworkRequest;->requestId:I
 
     iput v0, p0, Landroid/net/NetworkRequest;->requestId:I
 
-    .line 67
     iget v0, p1, Landroid/net/NetworkRequest;->legacyType:I
 
     iput v0, p0, Landroid/net/NetworkRequest;->legacyType:I
 
-    .line 68
     return-void
 .end method
 
@@ -121,7 +108,6 @@
     .locals 1
 
     .prologue
-    .line 216
     const/4 v0, 0x0
 
     return v0
@@ -134,12 +120,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 243
     instance-of v2, p1, Landroid/net/NetworkRequest;
 
     if-nez v2, :cond_1
 
-    .line 245
     :cond_0
     :goto_0
     return v1
@@ -147,10 +131,8 @@
     :cond_1
     move-object v0, p1
 
-    .line 244
     check-cast v0, Landroid/net/NetworkRequest;
 
-    .line 245
     .local v0, "that":Landroid/net/NetworkRequest;
     iget v2, v0, Landroid/net/NetworkRequest;->legacyType:I
 
@@ -197,7 +179,6 @@
     .locals 2
 
     .prologue
-    .line 253
     iget v0, p0, Landroid/net/NetworkRequest;->requestId:I
 
     iget v1, p0, Landroid/net/NetworkRequest;->legacyType:I
@@ -223,7 +204,6 @@
     .locals 2
 
     .prologue
-    .line 238
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -287,21 +267,17 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 219
     iget-object v0, p0, Landroid/net/NetworkRequest;->networkCapabilities:Landroid/net/NetworkCapabilities;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 220
     iget v0, p0, Landroid/net/NetworkRequest;->legacyType:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 221
     iget v0, p0, Landroid/net/NetworkRequest;->requestId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 222
     return-void
 .end method

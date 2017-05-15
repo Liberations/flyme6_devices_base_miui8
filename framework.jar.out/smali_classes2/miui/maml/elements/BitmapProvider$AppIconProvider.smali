@@ -32,10 +32,8 @@
     .param p1, "root"    # Lmiui/maml/ScreenElementRoot;
 
     .prologue
-    .line 134
     invoke-direct {p0, p1}, Lmiui/maml/elements/BitmapProvider;-><init>(Lmiui/maml/ScreenElementRoot;)V
 
-    .line 135
     return-void
 .end method
 
@@ -51,7 +49,6 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 160
     iget-object v2, p0, Lmiui/maml/elements/BitmapProvider$AppIconProvider;->mVersionedBitmap:Lmiui/maml/elements/BitmapProvider$VersionedBitmap;
 
     invoke-virtual {v2}, Lmiui/maml/elements/BitmapProvider$VersionedBitmap;->getBitmap()Landroid/graphics/Bitmap;
@@ -64,7 +61,6 @@
 
     if-nez v2, :cond_0
 
-    .line 162
     :try_start_0
     iget-object v2, p0, Lmiui/maml/elements/BitmapProvider$AppIconProvider;->mRoot:Lmiui/maml/ScreenElementRoot;
 
@@ -90,13 +86,11 @@
 
     move-result-object v0
 
-    .line 164
     .local v0, "d":Landroid/graphics/drawable/Drawable;
     instance-of v2, v0, Landroid/graphics/drawable/BitmapDrawable;
 
     if-eqz v2, :cond_1
 
-    .line 165
     iget-object v2, p0, Lmiui/maml/elements/BitmapProvider$AppIconProvider;->mVersionedBitmap:Lmiui/maml/elements/BitmapProvider$VersionedBitmap;
 
     check-cast v0, Landroid/graphics/drawable/BitmapDrawable;
@@ -110,14 +104,12 @@
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 174
     :cond_0
     :goto_0
     iget-object v2, p0, Lmiui/maml/elements/BitmapProvider$AppIconProvider;->mVersionedBitmap:Lmiui/maml/elements/BitmapProvider$VersionedBitmap;
 
     return-object v2
 
-    .line 167
     .restart local v0    # "d":Landroid/graphics/drawable/Drawable;
     :cond_1
     const/4 v2, 0x1
@@ -129,12 +121,10 @@
 
     goto :goto_0
 
-    .line 169
     .end local v0    # "d":Landroid/graphics/drawable/Drawable;
     :catch_0
     move-exception v1
 
-    .line 170
     .local v1, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v2, "BitmapProvider"
 
@@ -158,7 +148,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 171
     iput-boolean v6, p0, Lmiui/maml/elements/BitmapProvider$AppIconProvider;->mNoIcon:Z
 
     goto :goto_0
@@ -173,27 +162,22 @@
 
     const/4 v4, 0x1
 
-    .line 141
     invoke-super {p0, p1}, Lmiui/maml/elements/BitmapProvider;->init(Ljava/lang/String;)V
 
-    .line 142
     iput-boolean v3, p0, Lmiui/maml/elements/BitmapProvider$AppIconProvider;->mNoIcon:Z
 
-    .line 143
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 144
     const-string v1, ","
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 145
     .local v0, "name":[Ljava/lang/String;
     array-length v1, v0
 
@@ -201,22 +185,18 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 146
     aget-object v1, v0, v3
 
     iput-object v1, p0, Lmiui/maml/elements/BitmapProvider$AppIconProvider;->mPkg:Ljava/lang/String;
 
-    .line 147
     aget-object v1, v0, v4
 
     iput-object v1, p0, Lmiui/maml/elements/BitmapProvider$AppIconProvider;->mCls:Ljava/lang/String;
 
-    .line 156
     .end local v0    # "name":[Ljava/lang/String;
     :goto_0
     return-void
 
-    .line 149
     .restart local v0    # "name":[Ljava/lang/String;
     :cond_0
     const-string v1, "BitmapProvider"
@@ -241,12 +221,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 150
     iput-boolean v4, p0, Lmiui/maml/elements/BitmapProvider$AppIconProvider;->mNoIcon:Z
 
     goto :goto_0
 
-    .line 153
     .end local v0    # "name":[Ljava/lang/String;
     :cond_1
     const-string v1, "BitmapProvider"
@@ -271,7 +249,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 154
     iput-boolean v4, p0, Lmiui/maml/elements/BitmapProvider$AppIconProvider;->mNoIcon:Z
 
     goto :goto_0

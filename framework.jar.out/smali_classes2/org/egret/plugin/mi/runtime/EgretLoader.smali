@@ -46,37 +46,31 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 54
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 55
     const-string v0, "EgretLoader"
 
     const-string v1, "EgretLoader(Context context)"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 56
     invoke-direct {p0, p1}, Lorg/egret/plugin/mi/runtime/EgretLoader;->checkContext(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 57
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lorg/egret/plugin/mi/runtime/EgretLoader;->options:Ljava/util/HashMap;
 
-    .line 58
     check-cast p1, Landroid/app/Activity;
 
     .end local p1    # "context":Landroid/content/Context;
     iput-object p1, p0, Lorg/egret/plugin/mi/runtime/EgretLoader;->activity:Landroid/app/Activity;
 
-    .line 60
     :cond_0
     return-void
 .end method
@@ -87,7 +81,6 @@
     .param p1, "x1"    # Ljava/lang/Class;
 
     .prologue
-    .line 20
     invoke-direct {p0, p1}, Lorg/egret/plugin/mi/runtime/EgretLoader;->startGame(Ljava/lang/Class;)V
 
     return-void
@@ -98,7 +91,6 @@
     .param p0, "x0"    # Lorg/egret/plugin/mi/runtime/EgretLoader;
 
     .prologue
-    .line 20
     invoke-direct {p0}, Lorg/egret/plugin/mi/runtime/EgretLoader;->startGameEngine()V
 
     return-void
@@ -111,7 +103,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 243
     invoke-direct {p0, p1, v0, v0}, Lorg/egret/plugin/mi/runtime/EgretLoader;->callGameEngineMethod(Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -140,19 +131,16 @@
     .local p2, "params":[Ljava/lang/Class;, "[Ljava/lang/Class<*>;"
     const/4 v2, 0x0
 
-    .line 248
     if-eqz p1, :cond_0
 
     iget-object v3, p0, Lorg/egret/plugin/mi/runtime/EgretLoader;->gameEngine:Ljava/lang/Object;
 
     if-nez v3, :cond_1
 
-    .line 258
     :cond_0
     :goto_0
     return-object v2
 
-    .line 253
     :cond_1
     :try_start_0
     iget-object v3, p0, Lorg/egret/plugin/mi/runtime/EgretLoader;->gameEngine:Ljava/lang/Object;
@@ -165,7 +153,6 @@
 
     move-result-object v1
 
-    .line 255
     .local v1, "method":Ljava/lang/reflect/Method;
     iget-object v3, p0, Lorg/egret/plugin/mi/runtime/EgretLoader;->gameEngine:Ljava/lang/Object;
 
@@ -177,12 +164,10 @@
 
     goto :goto_0
 
-    .line 256
     .end local v1    # "method":Ljava/lang/reflect/Method;
     :catch_0
     move-exception v0
 
-    .line 257
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -197,14 +182,12 @@
 
     const/4 v3, 0x0
 
-    .line 173
     new-array v1, v4, [Ljava/lang/Class;
 
     const-class v2, Landroid/content/Context;
 
     aput-object v2, v1, v3
 
-    .line 174
     .local v1, "params":[Ljava/lang/Class;, "[Ljava/lang/Class<*>;"
     new-array v0, v4, [Ljava/lang/Object;
 
@@ -212,13 +195,11 @@
 
     aput-object v2, v0, v3
 
-    .line 175
     .local v0, "args":[Ljava/lang/Object;
     const-string v2, "game_engine_init"
 
     invoke-direct {p0, v2, v1, v0}, Lorg/egret/plugin/mi/runtime/EgretLoader;->callGameEngineMethod(Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 176
     return-void
 .end method
 
@@ -230,12 +211,10 @@
 
     const/4 v8, 0x0
 
-    .line 162
     new-instance v3, Ljava/util/HashMap;
 
     invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
 
-    .line 163
     .local v3, "optionSet":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Object;>;"
     iget-object v5, p0, Lorg/egret/plugin/mi/runtime/EgretLoader;->options:Ljava/util/HashMap;
 
@@ -261,7 +240,6 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 164
     .local v1, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -273,7 +251,6 @@
 
     invoke-virtual {v3, v5, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 165
     const-string v6, "EgretLoader"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -314,7 +291,6 @@
 
     goto :goto_0
 
-    .line 167
     .end local v1    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_0
     new-array v4, v9, [Ljava/lang/Class;
@@ -323,19 +299,16 @@
 
     aput-object v5, v4, v8
 
-    .line 168
     .local v4, "params":[Ljava/lang/Class;, "[Ljava/lang/Class<*>;"
     new-array v0, v9, [Ljava/lang/Object;
 
     aput-object v3, v0, v8
 
-    .line 169
     .local v0, "args":[Ljava/lang/Object;
     const-string v5, "game_engine_set_options"
 
     invoke-direct {p0, v5, v4, v0}, Lorg/egret/plugin/mi/runtime/EgretLoader;->callGameEngineMethod(Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 170
     return-void
 .end method
 
@@ -343,7 +316,6 @@
     .locals 2
 
     .prologue
-    .line 179
     const-string v1, "game_engine_get_view"
 
     invoke-direct {p0, v1}, Lorg/egret/plugin/mi/runtime/EgretLoader;->callGameEngineMethod(Ljava/lang/String;)Ljava/lang/Object;
@@ -352,19 +324,15 @@
 
     check-cast v0, Landroid/view/View;
 
-    .line 180
     .local v0, "view":Landroid/view/View;
     if-eqz v0, :cond_0
 
-    .line 181
     invoke-direct {p0}, Lorg/egret/plugin/mi/runtime/EgretLoader;->setScreenOrientation()V
 
-    .line 182
     iget-object v1, p0, Lorg/egret/plugin/mi/runtime/EgretLoader;->activity:Landroid/app/Activity;
 
     invoke-virtual {v1, v0}, Landroid/app/Activity;->setContentView(Landroid/view/View;)V
 
-    .line 184
     :cond_0
     return-void
 .end method
@@ -378,7 +346,6 @@
 
     const/4 v2, 0x0
 
-    .line 63
     const-class v4, Landroid/app/Activity;
 
     invoke-virtual {v4, p1}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
@@ -387,11 +354,9 @@
 
     if-nez v4, :cond_0
 
-    .line 73
     :goto_0
     return v2
 
-    .line 67
     :cond_0
     :try_start_0
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -414,7 +379,6 @@
 
     move-result-object v1
 
-    .line 70
     .local v1, "method":Ljava/lang/reflect/Method;
     const/4 v4, 0x1
 
@@ -430,15 +394,12 @@
 
     move v2, v3
 
-    .line 71
     goto :goto_0
 
-    .line 72
     .end local v1    # "method":Ljava/lang/reflect/Method;
     :catch_0
     move-exception v0
 
-    .line 73
     .local v0, "e":Ljava/lang/Exception;
     goto :goto_0
 .end method
@@ -447,22 +408,18 @@
     .locals 2
 
     .prologue
-    .line 235
     iget-object v0, p0, Lorg/egret/plugin/mi/runtime/EgretLoader;->gameEngine:Ljava/lang/Object;
 
     if-nez v0, :cond_0
 
-    .line 236
     const-string v0, "EgretLoader"
 
     const-string v1, "Egret game engine is null"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 237
     const/4 v0, 0x1
 
-    .line 239
     :goto_0
     return v0
 
@@ -476,7 +433,6 @@
     .locals 2
 
     .prologue
-    .line 187
     iget-object v0, p0, Lorg/egret/plugin/mi/runtime/EgretLoader;->options:Ljava/util/HashMap;
 
     const-string v1, "egret.runtime.screenOrientation"
@@ -505,18 +461,15 @@
 
     if-eqz v0, :cond_0
 
-    .line 189
     iget-object v0, p0, Lorg/egret/plugin/mi/runtime/EgretLoader;->activity:Landroid/app/Activity;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->setRequestedOrientation(I)V
 
-    .line 195
     :goto_0
     return-void
 
-    .line 192
     :cond_0
     iget-object v0, p0, Lorg/egret/plugin/mi/runtime/EgretLoader;->activity:Landroid/app/Activity;
 
@@ -538,7 +491,6 @@
     .end annotation
 
     .prologue
-    .line 142
     .local p1, "gameEngineClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :try_start_0
     invoke-virtual {p1}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
@@ -549,7 +501,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 148
     iget-object v1, p0, Lorg/egret/plugin/mi/runtime/EgretLoader;->activity:Landroid/app/Activity;
 
     new-instance v2, Lorg/egret/plugin/mi/runtime/EgretLoader$2;
@@ -558,15 +509,12 @@
 
     invoke-virtual {v1, v2}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 153
     :goto_0
     return-void
 
-    .line 143
     :catch_0
     move-exception v0
 
-    .line 144
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -577,16 +525,12 @@
     .locals 0
 
     .prologue
-    .line 156
     invoke-direct {p0}, Lorg/egret/plugin/mi/runtime/EgretLoader;->callSetGameOptions()V
 
-    .line 157
     invoke-direct {p0}, Lorg/egret/plugin/mi/runtime/EgretLoader;->callInitRuntime()V
 
-    .line 158
     invoke-direct {p0}, Lorg/egret/plugin/mi/runtime/EgretLoader;->callSetRuntimeView()V
 
-    .line 159
     return-void
 .end method
 
@@ -596,22 +540,18 @@
     .locals 2
 
     .prologue
-    .line 227
     iget-object v0, p0, Lorg/egret/plugin/mi/runtime/EgretLoader;->activity:Landroid/app/Activity;
 
     if-nez v0, :cond_0
 
-    .line 228
     const-string v0, "EgretLoader"
 
     const-string v1, "The context is not activity"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 229
     const/4 v0, 0x1
 
-    .line 231
     :goto_0
     return v0
 
@@ -628,7 +568,6 @@
     .end annotation
 
     .prologue
-    .line 105
     const-string v0, "EgretLoader"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -651,7 +590,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 106
     return-void
 .end method
 
@@ -659,14 +597,12 @@
     .locals 2
 
     .prologue
-    .line 198
     const-string v0, "EgretLoader"
 
     const-string v1, "onPause()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 199
     invoke-virtual {p0}, Lorg/egret/plugin/mi/runtime/EgretLoader;->checkEgretContext()Z
 
     move-result v0
@@ -679,12 +615,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 203
     :cond_0
     :goto_0
     return-void
 
-    .line 202
     :cond_1
     const-string v0, "game_engine_onPause"
 
@@ -697,14 +631,12 @@
     .locals 2
 
     .prologue
-    .line 206
     const-string v0, "EgretLoader"
 
     const-string v1, "onResume()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 207
     invoke-virtual {p0}, Lorg/egret/plugin/mi/runtime/EgretLoader;->checkEgretContext()Z
 
     move-result v0
@@ -717,12 +649,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 211
     :cond_0
     :goto_0
     return-void
 
-    .line 210
     :cond_1
     const-string v0, "game_engine_onResume"
 
@@ -735,14 +665,12 @@
     .locals 2
 
     .prologue
-    .line 214
     const-string v0, "EgretLoader"
 
     const-string v1, "stop()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 215
     invoke-virtual {p0}, Lorg/egret/plugin/mi/runtime/EgretLoader;->checkEgretContext()Z
 
     move-result v0
@@ -755,18 +683,15 @@
 
     if-eqz v0, :cond_1
 
-    .line 220
     :cond_0
     :goto_0
     return-void
 
-    .line 218
     :cond_1
     const-string v0, "game_engine_onStop"
 
     invoke-direct {p0, v0}, Lorg/egret/plugin/mi/runtime/EgretLoader;->callGameEngineMethod(Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 219
     const/4 v0, 0x0
 
     iput-object v0, p0, Lorg/egret/plugin/mi/runtime/EgretLoader;->gameEngine:Ljava/lang/Object;
@@ -782,7 +707,6 @@
     .end annotation
 
     .prologue
-    .line 79
     const-string v0, "EgretLoader"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -815,18 +739,15 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 80
     invoke-virtual {p0}, Lorg/egret/plugin/mi/runtime/EgretLoader;->checkEgretContext()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 92
     :goto_0
     return-void
 
-    .line 83
     :cond_0
     const-string v0, "gameId"
 
@@ -836,10 +757,8 @@
 
     if-eqz v0, :cond_2
 
-    .line 84
     const-string p1, "egret.runtime.gameId"
 
-    .line 91
     :cond_1
     :goto_1
     iget-object v0, p0, Lorg/egret/plugin/mi/runtime/EgretLoader;->options:Ljava/util/HashMap;
@@ -848,7 +767,6 @@
 
     goto :goto_0
 
-    .line 85
     :cond_2
     const-string v0, "gameUrl"
 
@@ -858,10 +776,8 @@
 
     if-eqz v0, :cond_1
 
-    .line 86
     const-string p1, "egret.runtime.loaderUrl"
 
-    .line 87
     iget-object v0, p0, Lorg/egret/plugin/mi/runtime/EgretLoader;->options:Ljava/util/HashMap;
 
     const-string v1, "egret.runtime.updateUrl"
@@ -872,7 +788,6 @@
 
     if-nez v0, :cond_1
 
-    .line 88
     iget-object v0, p0, Lorg/egret/plugin/mi/runtime/EgretLoader;->options:Ljava/util/HashMap;
 
     const-string v1, "egret.runtime.updateUrl"
@@ -889,7 +804,6 @@
     .end annotation
 
     .prologue
-    .line 96
     const-string v0, "landscape"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -898,7 +812,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 97
     iget-object v0, p0, Lorg/egret/plugin/mi/runtime/EgretLoader;->options:Ljava/util/HashMap;
 
     const-string v1, "egret.runtime.screenOrientation"
@@ -907,11 +820,9 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 101
     :goto_0
     return-void
 
-    .line 99
     :cond_0
     iget-object v0, p0, Lorg/egret/plugin/mi/runtime/EgretLoader;->options:Ljava/util/HashMap;
 
@@ -931,7 +842,6 @@
     .end annotation
 
     .prologue
-    .line 110
     const-string v0, "EgretLoader"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -954,18 +864,15 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 111
     invoke-virtual {p0}, Lorg/egret/plugin/mi/runtime/EgretLoader;->checkEgretContext()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 138
     :goto_0
     return-void
 
-    .line 114
     :cond_0
     new-instance v0, Ljava/io/File;
 
@@ -983,7 +890,6 @@
 
     move-result-object v2
 
-    .line 116
     .local v2, "egretRoot":Ljava/lang/String;
     iget-object v0, p0, Lorg/egret/plugin/mi/runtime/EgretLoader;->options:Ljava/util/HashMap;
 
@@ -991,7 +897,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 117
     iget-object v0, p0, Lorg/egret/plugin/mi/runtime/EgretLoader;->options:Ljava/util/HashMap;
 
     const-string v1, "egret.runtime.libraryLoaderType"
@@ -1000,7 +905,6 @@
 
     invoke-virtual {v0, v1, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 118
     new-instance v0, Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLauncher;
 
     iget-object v1, p0, Lorg/egret/plugin/mi/runtime/EgretLoader;->activity:Landroid/app/Activity;
@@ -1015,7 +919,6 @@
 
     iput-object v0, p0, Lorg/egret/plugin/mi/runtime/EgretLoader;->launcher:Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLauncher;
 
-    .line 120
     iget-object v0, p0, Lorg/egret/plugin/mi/runtime/EgretLoader;->launcher:Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLauncher;
 
     new-instance v1, Lorg/egret/plugin/mi/runtime/EgretLoader$1;
@@ -1031,9 +934,7 @@
     .locals 0
 
     .prologue
-    .line 223
     invoke-virtual {p0}, Lorg/egret/plugin/mi/runtime/EgretLoader;->onStop()V
 
-    .line 224
     return-void
 .end method

@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,23 +21,19 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 13
     if-eqz p0, :cond_0
 
     if-nez p1, :cond_1
 
-    .line 17
     :cond_0
     :goto_0
     return v1
 
-    .line 16
     :cond_1
     invoke-static {p0}, Lorg/egret/plugin/mi/android/util/launcher/Md5Util;->md5(Ljava/io/File;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 17
     .local v0, "hash":Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -58,24 +53,20 @@
     .param p0, "md"    # [B
 
     .prologue
-    .line 49
     const/16 v5, 0x10
 
     new-array v1, v5, [C
 
     fill-array-data v1, :array_0
 
-    .line 51
     .local v1, "hexDigits":[C
     array-length v3, p0
 
-    .line 52
     .local v3, "j":I
     mul-int/lit8 v5, v3, 0x2
 
     new-array v4, v5, [C
 
-    .line 53
     .local v4, "str":[C
     const/4 v2, 0x0
 
@@ -83,10 +74,8 @@
     :goto_0
     if-ge v2, v3, :cond_0
 
-    .line 54
     aget-byte v0, p0, v2
 
-    .line 55
     .local v0, "hex":B
     mul-int/lit8 v5, v2, 0x2
 
@@ -98,7 +87,6 @@
 
     aput-char v6, v4, v5
 
-    .line 56
     mul-int/lit8 v5, v2, 0x2
 
     add-int/lit8 v5, v5, 0x1
@@ -109,12 +97,10 @@
 
     aput-char v6, v4, v5
 
-    .line 53
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 58
     .end local v0    # "hex":B
     :cond_0
     new-instance v5, Ljava/lang/String;
@@ -123,7 +109,6 @@
 
     return-object v5
 
-    .line 49
     :array_0
     .array-data 2
         0x30s
@@ -152,23 +137,19 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 21
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
     move-result v7
 
     if-nez v7, :cond_1
 
-    .line 44
     :cond_0
     :goto_0
     return-object v6
 
-    .line 24
     :cond_1
     const/4 v3, 0x0
 
-    .line 26
     .local v3, "in":Ljava/io/FileInputStream;
     :try_start_0
     const-string v7, "MD5"
@@ -177,7 +158,6 @@
 
     move-result-object v5
 
-    .line 27
     .local v5, "md5":Ljava/security/MessageDigest;
     new-instance v4, Ljava/io/FileInputStream;
 
@@ -186,7 +166,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_4
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 29
     .end local v3    # "in":Ljava/io/FileInputStream;
     .local v4, "in":Ljava/io/FileInputStream;
     const/16 v7, 0x400
@@ -194,7 +173,6 @@
     :try_start_1
     new-array v1, v7, [B
 
-    .line 30
     .local v1, "buffer":[B
     :goto_1
     invoke-virtual {v4, v1}, Ljava/io/FileInputStream;->read([B)I
@@ -204,7 +182,6 @@
     .local v0, "b":I
     if-lez v0, :cond_2
 
-    .line 31
     const/4 v7, 0x0
 
     invoke-virtual {v5, v1, v7, v0}, Ljava/security/MessageDigest;->update([BII)V
@@ -214,7 +191,6 @@
 
     goto :goto_1
 
-    .line 34
     .end local v0    # "b":I
     .end local v1    # "buffer":[B
     :catch_0
@@ -222,7 +198,6 @@
 
     move-object v3, v4
 
-    .line 35
     .end local v4    # "in":Ljava/io/FileInputStream;
     .end local v5    # "md5":Ljava/security/MessageDigest;
     .local v2, "e":Ljava/lang/Exception;
@@ -233,10 +208,8 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 39
     if-eqz v3, :cond_0
 
-    .line 40
     :try_start_3
     invoke-virtual {v3}, Ljava/io/FileInputStream;->close()V
     :try_end_3
@@ -244,17 +217,14 @@
 
     goto :goto_0
 
-    .line 42
     :catch_1
     move-exception v2
 
-    .line 43
     .local v2, "e":Ljava/io/IOException;
     invoke-virtual {v2}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 33
     .end local v2    # "e":Ljava/io/IOException;
     .end local v3    # "in":Ljava/io/FileInputStream;
     .restart local v0    # "b":I
@@ -274,10 +244,8 @@
 
     move-result-object v6
 
-    .line 39
     if-eqz v4, :cond_0
 
-    .line 40
     :try_start_5
     invoke-virtual {v4}, Ljava/io/FileInputStream;->close()V
     :try_end_5
@@ -285,17 +253,14 @@
 
     goto :goto_0
 
-    .line 42
     :catch_2
     move-exception v2
 
-    .line 43
     .restart local v2    # "e":Ljava/io/IOException;
     invoke-virtual {v2}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 38
     .end local v0    # "b":I
     .end local v1    # "buffer":[B
     .end local v2    # "e":Ljava/io/IOException;
@@ -305,32 +270,26 @@
     :catchall_0
     move-exception v6
 
-    .line 39
     :goto_3
     if-eqz v3, :cond_3
 
-    .line 40
     :try_start_6
     invoke-virtual {v3}, Ljava/io/FileInputStream;->close()V
     :try_end_6
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_3
 
-    .line 44
     :cond_3
     :goto_4
     throw v6
 
-    .line 42
     :catch_3
     move-exception v2
 
-    .line 43
     .restart local v2    # "e":Ljava/io/IOException;
     invoke-virtual {v2}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_4
 
-    .line 38
     .end local v2    # "e":Ljava/io/IOException;
     .end local v3    # "in":Ljava/io/FileInputStream;
     .restart local v4    # "in":Ljava/io/FileInputStream;
@@ -344,7 +303,6 @@
     .restart local v3    # "in":Ljava/io/FileInputStream;
     goto :goto_3
 
-    .line 34
     .end local v5    # "md5":Ljava/security/MessageDigest;
     :catch_4
     move-exception v2

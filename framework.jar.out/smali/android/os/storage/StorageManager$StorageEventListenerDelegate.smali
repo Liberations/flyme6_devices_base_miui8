@@ -44,20 +44,16 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 113
     invoke-direct {p0}, Landroid/os/storage/IMountServiceListener$Stub;-><init>()V
 
-    .line 114
     iput-object p1, p0, Landroid/os/storage/StorageManager$StorageEventListenerDelegate;->mCallback:Landroid/os/storage/StorageEventListener;
 
-    .line 115
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0, p2, p0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;)V
 
     iput-object v0, p0, Landroid/os/storage/StorageManager$StorageEventListenerDelegate;->mHandler:Landroid/os/Handler;
 
-    .line 116
     return-void
 .end method
 
@@ -70,27 +66,22 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 120
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/internal/os/SomeArgs;
 
-    .line 121
     .local v0, "args":Lcom/android/internal/os/SomeArgs;
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 148
     invoke-virtual {v0}, Lcom/android/internal/os/SomeArgs;->recycle()V
 
-    .line 149
     const/4 v1, 0x0
 
     :goto_0
     return v1
 
-    .line 123
     :pswitch_0
     iget-object v5, p0, Landroid/os/storage/StorageManager$StorageEventListenerDelegate;->mCallback:Landroid/os/storage/StorageEventListener;
 
@@ -108,15 +99,12 @@
 
     invoke-virtual {v5, v1, v2, v3}, Landroid/os/storage/StorageEventListener;->onStorageStateChanged(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 125
     invoke-virtual {v0}, Lcom/android/internal/os/SomeArgs;->recycle()V
 
     move v1, v4
 
-    .line 126
     goto :goto_0
 
-    .line 128
     :pswitch_1
     iget-object v2, p0, Landroid/os/storage/StorageManager$StorageEventListenerDelegate;->mCallback:Landroid/os/storage/StorageEventListener;
 
@@ -130,15 +118,12 @@
 
     invoke-virtual {v2, v1, v3, v5}, Landroid/os/storage/StorageEventListener;->onVolumeStateChanged(Landroid/os/storage/VolumeInfo;II)V
 
-    .line 129
     invoke-virtual {v0}, Lcom/android/internal/os/SomeArgs;->recycle()V
 
     move v1, v4
 
-    .line 130
     goto :goto_0
 
-    .line 132
     :pswitch_2
     iget-object v2, p0, Landroid/os/storage/StorageManager$StorageEventListenerDelegate;->mCallback:Landroid/os/storage/StorageEventListener;
 
@@ -148,15 +133,12 @@
 
     invoke-virtual {v2, v1}, Landroid/os/storage/StorageEventListener;->onVolumeRecordChanged(Landroid/os/storage/VolumeRecord;)V
 
-    .line 133
     invoke-virtual {v0}, Lcom/android/internal/os/SomeArgs;->recycle()V
 
     move v1, v4
 
-    .line 134
     goto :goto_0
 
-    .line 136
     :pswitch_3
     iget-object v2, p0, Landroid/os/storage/StorageManager$StorageEventListenerDelegate;->mCallback:Landroid/os/storage/StorageEventListener;
 
@@ -166,15 +148,12 @@
 
     invoke-virtual {v2, v1}, Landroid/os/storage/StorageEventListener;->onVolumeForgotten(Ljava/lang/String;)V
 
-    .line 137
     invoke-virtual {v0}, Lcom/android/internal/os/SomeArgs;->recycle()V
 
     move v1, v4
 
-    .line 138
     goto :goto_0
 
-    .line 140
     :pswitch_4
     iget-object v2, p0, Landroid/os/storage/StorageManager$StorageEventListenerDelegate;->mCallback:Landroid/os/storage/StorageEventListener;
 
@@ -186,15 +165,12 @@
 
     invoke-virtual {v2, v1, v3}, Landroid/os/storage/StorageEventListener;->onDiskScanned(Landroid/os/storage/DiskInfo;I)V
 
-    .line 141
     invoke-virtual {v0}, Lcom/android/internal/os/SomeArgs;->recycle()V
 
     move v1, v4
 
-    .line 142
     goto :goto_0
 
-    .line 144
     :pswitch_5
     iget-object v2, p0, Landroid/os/storage/StorageManager$StorageEventListenerDelegate;->mCallback:Landroid/os/storage/StorageEventListener;
 
@@ -204,15 +180,12 @@
 
     invoke-virtual {v2, v1}, Landroid/os/storage/StorageEventListener;->onDiskDestroyed(Landroid/os/storage/DiskInfo;)V
 
-    .line 145
     invoke-virtual {v0}, Lcom/android/internal/os/SomeArgs;->recycle()V
 
     move v1, v4
 
-    .line 146
     goto :goto_0
 
-    .line 121
     nop
 
     :pswitch_data_0
@@ -236,16 +209,13 @@
     .end annotation
 
     .prologue
-    .line 199
     invoke-static {}, Lcom/android/internal/os/SomeArgs;->obtain()Lcom/android/internal/os/SomeArgs;
 
     move-result-object v0
 
-    .line 200
     .local v0, "args":Lcom/android/internal/os/SomeArgs;
     iput-object p1, v0, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
 
-    .line 201
     iget-object v1, p0, Landroid/os/storage/StorageManager$StorageEventListenerDelegate;->mHandler:Landroid/os/Handler;
 
     const/4 v2, 0x6
@@ -256,7 +226,6 @@
 
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 202
     return-void
 .end method
 
@@ -266,19 +235,15 @@
     .param p2, "volumeCount"    # I
 
     .prologue
-    .line 191
     invoke-static {}, Lcom/android/internal/os/SomeArgs;->obtain()Lcom/android/internal/os/SomeArgs;
 
     move-result-object v0
 
-    .line 192
     .local v0, "args":Lcom/android/internal/os/SomeArgs;
     iput-object p1, v0, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
 
-    .line 193
     iput p2, v0, Lcom/android/internal/os/SomeArgs;->argi2:I
 
-    .line 194
     iget-object v1, p0, Landroid/os/storage/StorageManager$StorageEventListenerDelegate;->mHandler:Landroid/os/Handler;
 
     const/4 v2, 0x5
@@ -289,7 +254,6 @@
 
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 195
     return-void
 .end method
 
@@ -300,22 +264,17 @@
     .param p3, "newState"    # Ljava/lang/String;
 
     .prologue
-    .line 159
     invoke-static {}, Lcom/android/internal/os/SomeArgs;->obtain()Lcom/android/internal/os/SomeArgs;
 
     move-result-object v0
 
-    .line 160
     .local v0, "args":Lcom/android/internal/os/SomeArgs;
     iput-object p1, v0, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
 
-    .line 161
     iput-object p2, v0, Lcom/android/internal/os/SomeArgs;->arg2:Ljava/lang/Object;
 
-    .line 162
     iput-object p3, v0, Lcom/android/internal/os/SomeArgs;->arg3:Ljava/lang/Object;
 
-    .line 163
     iget-object v1, p0, Landroid/os/storage/StorageManager$StorageEventListenerDelegate;->mHandler:Landroid/os/Handler;
 
     const/4 v2, 0x1
@@ -326,7 +285,6 @@
 
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 164
     return-void
 .end method
 
@@ -340,7 +298,6 @@
     .end annotation
 
     .prologue
-    .line 155
     return-void
 .end method
 
@@ -349,16 +306,13 @@
     .param p1, "fsUuid"    # Ljava/lang/String;
 
     .prologue
-    .line 184
     invoke-static {}, Lcom/android/internal/os/SomeArgs;->obtain()Lcom/android/internal/os/SomeArgs;
 
     move-result-object v0
 
-    .line 185
     .local v0, "args":Lcom/android/internal/os/SomeArgs;
     iput-object p1, v0, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
 
-    .line 186
     iget-object v1, p0, Landroid/os/storage/StorageManager$StorageEventListenerDelegate;->mHandler:Landroid/os/Handler;
 
     const/4 v2, 0x4
@@ -369,7 +323,6 @@
 
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 187
     return-void
 .end method
 
@@ -378,16 +331,13 @@
     .param p1, "rec"    # Landroid/os/storage/VolumeRecord;
 
     .prologue
-    .line 177
     invoke-static {}, Lcom/android/internal/os/SomeArgs;->obtain()Lcom/android/internal/os/SomeArgs;
 
     move-result-object v0
 
-    .line 178
     .local v0, "args":Lcom/android/internal/os/SomeArgs;
     iput-object p1, v0, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
 
-    .line 179
     iget-object v1, p0, Landroid/os/storage/StorageManager$StorageEventListenerDelegate;->mHandler:Landroid/os/Handler;
 
     const/4 v2, 0x3
@@ -398,7 +348,6 @@
 
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 180
     return-void
 .end method
 
@@ -409,22 +358,17 @@
     .param p3, "newState"    # I
 
     .prologue
-    .line 168
     invoke-static {}, Lcom/android/internal/os/SomeArgs;->obtain()Lcom/android/internal/os/SomeArgs;
 
     move-result-object v0
 
-    .line 169
     .local v0, "args":Lcom/android/internal/os/SomeArgs;
     iput-object p1, v0, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
 
-    .line 170
     iput p2, v0, Lcom/android/internal/os/SomeArgs;->argi2:I
 
-    .line 171
     iput p3, v0, Lcom/android/internal/os/SomeArgs;->argi3:I
 
-    .line 172
     iget-object v1, p0, Landroid/os/storage/StorageManager$StorageEventListenerDelegate;->mHandler:Landroid/os/Handler;
 
     const/4 v2, 0x2
@@ -435,6 +379,5 @@
 
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 173
     return-void
 .end method

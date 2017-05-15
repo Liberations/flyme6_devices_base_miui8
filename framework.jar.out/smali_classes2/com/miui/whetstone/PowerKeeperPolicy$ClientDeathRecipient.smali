@@ -29,15 +29,12 @@
     .param p2, "bleScanWrapper"    # Landroid/bluetooth/BleScanWrapper;
 
     .prologue
-    .line 1259
     iput-object p1, p0, Lcom/miui/whetstone/PowerKeeperPolicy$ClientDeathRecipient;->this$0:Lcom/miui/whetstone/PowerKeeperPolicy;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1260
     iput-object p2, p0, Lcom/miui/whetstone/PowerKeeperPolicy$ClientDeathRecipient;->mBleScanWrapper:Landroid/bluetooth/BleScanWrapper;
 
-    .line 1261
     return-void
 .end method
 
@@ -47,7 +44,6 @@
     .locals 6
 
     .prologue
-    .line 1265
     # getter for: Lcom/miui/whetstone/PowerKeeperPolicy;->DEBUG:Z
     invoke-static {}, Lcom/miui/whetstone/PowerKeeperPolicy;->access$800()Z
 
@@ -85,7 +81,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1266
     :cond_0
     iget-object v3, p0, Lcom/miui/whetstone/PowerKeeperPolicy$ClientDeathRecipient;->this$0:Lcom/miui/whetstone/PowerKeeperPolicy;
 
@@ -96,7 +91,6 @@
 
     monitor-enter v4
 
-    .line 1267
     :try_start_0
     iget-object v3, p0, Lcom/miui/whetstone/PowerKeeperPolicy$ClientDeathRecipient;->this$0:Lcom/miui/whetstone/PowerKeeperPolicy;
 
@@ -105,7 +99,6 @@
 
     move-result v2
 
-    .line 1268
     .local v2, "leScanAllowedBefore":Z
     iget-object v3, p0, Lcom/miui/whetstone/PowerKeeperPolicy$ClientDeathRecipient;->this$0:Lcom/miui/whetstone/PowerKeeperPolicy;
 
@@ -122,17 +115,13 @@
 
     check-cast v0, Lcom/miui/whetstone/PowerKeeperPolicy$Client;
 
-    .line 1269
     .local v0, "client":Lcom/miui/whetstone/PowerKeeperPolicy$Client;
     if-eqz v0, :cond_1
 
-    .line 1270
     invoke-virtual {v0}, Lcom/miui/whetstone/PowerKeeperPolicy$Client;->unlinkToDeath()V
 
-    .line 1271
     invoke-virtual {v0}, Lcom/miui/whetstone/PowerKeeperPolicy$Client;->clearResource()V
 
-    .line 1272
     iget-object v3, p0, Lcom/miui/whetstone/PowerKeeperPolicy$ClientDeathRecipient;->this$0:Lcom/miui/whetstone/PowerKeeperPolicy;
 
     # getter for: Lcom/miui/whetstone/PowerKeeperPolicy;->mClientMap:Ljava/util/Map;
@@ -144,7 +133,6 @@
 
     invoke-interface {v3, v5}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1274
     :cond_1
     iget-object v3, p0, Lcom/miui/whetstone/PowerKeeperPolicy$ClientDeathRecipient;->this$0:Lcom/miui/whetstone/PowerKeeperPolicy;
 
@@ -153,7 +141,6 @@
 
     move-result v1
 
-    .line 1275
     .local v1, "leScanAllowedAfter":Z
     if-eqz v2, :cond_2
 
@@ -172,13 +159,11 @@
 
     if-nez v3, :cond_2
 
-    .line 1276
     iget-object v3, p0, Lcom/miui/whetstone/PowerKeeperPolicy$ClientDeathRecipient;->this$0:Lcom/miui/whetstone/PowerKeeperPolicy;
 
     # invokes: Lcom/miui/whetstone/PowerKeeperPolicy;->stopLeScanAllLocked()V
     invoke-static {v3}, Lcom/miui/whetstone/PowerKeeperPolicy;->access$1200(Lcom/miui/whetstone/PowerKeeperPolicy;)V
 
-    .line 1278
     :cond_2
     if-nez v1, :cond_3
 
@@ -195,7 +180,6 @@
 
     if-nez v3, :cond_3
 
-    .line 1279
     iget-object v3, p0, Lcom/miui/whetstone/PowerKeeperPolicy$ClientDeathRecipient;->this$0:Lcom/miui/whetstone/PowerKeeperPolicy;
 
     # getter for: Lcom/miui/whetstone/PowerKeeperPolicy;->mParoleCheck:Lcom/miui/whetstone/PowerKeeperPolicy$ParoleCheck;
@@ -205,14 +189,11 @@
 
     invoke-virtual {v3}, Lcom/miui/whetstone/PowerKeeperPolicy$ParoleCheck;->startParoleCheck()V
 
-    .line 1281
     :cond_3
     monitor-exit v4
 
-    .line 1282
     return-void
 
-    .line 1281
     .end local v0    # "client":Lcom/miui/whetstone/PowerKeeperPolicy$Client;
     .end local v1    # "leScanAllowedAfter":Z
     .end local v2    # "leScanAllowedBefore":Z

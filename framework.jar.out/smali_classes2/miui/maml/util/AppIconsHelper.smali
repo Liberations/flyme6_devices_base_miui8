@@ -22,7 +22,6 @@
     .locals 1
 
     .prologue
-    .line 31
     new-instance v0, Lmiui/maml/util/AppIconsHelper$1;
 
     invoke-direct {v0}, Lmiui/maml/util/AppIconsHelper$1;-><init>()V
@@ -36,10 +35,8 @@
     .locals 0
 
     .prologue
-    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 41
     return-void
 .end method
 
@@ -48,7 +45,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 111
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -57,25 +53,20 @@
 
     move-result-object v0
 
-    .line 112
     .local v0, "con":Landroid/content/res/Configuration;
     iget-object v2, v0, Landroid/content/res/Configuration;->extraConfig:Landroid/content/res/MiuiConfiguration;
 
     iget v1, v2, Landroid/content/res/MiuiConfiguration;->themeChanged:I
 
-    .line 113
     .local v1, "version":I
     sget v2, Lmiui/maml/util/AppIconsHelper;->mThemeChanged:I
 
     if-le v1, v2, :cond_0
 
-    .line 114
     invoke-static {}, Lmiui/maml/util/AppIconsHelper;->clearCache()V
 
-    .line 115
     sput v1, Lmiui/maml/util/AppIconsHelper;->mThemeChanged:I
 
-    .line 117
     :cond_0
     return-void
 .end method
@@ -84,10 +75,8 @@
     .locals 0
 
     .prologue
-    .line 44
     invoke-static {}, Lmiui/maml/RenderThread;->globalThreadStop()V
 
-    .line 45
     return-void
 .end method
 
@@ -95,17 +84,14 @@
     .locals 1
 
     .prologue
-    .line 120
     sget-object v0, Lmiui/maml/util/AppIconsHelper;->mRendererCoreCache:Lmiui/maml/util/RendererCoreCache;
 
     if-eqz v0, :cond_0
 
-    .line 121
     sget-object v0, Lmiui/maml/util/AppIconsHelper;->mRendererCoreCache:Lmiui/maml/util/RendererCoreCache;
 
     invoke-virtual {v0}, Lmiui/maml/util/RendererCoreCache;->clear()V
 
-    .line 122
     :cond_0
     return-void
 .end method
@@ -117,7 +103,6 @@
     .param p2, "pm"    # Landroid/content/pm/PackageManager;
 
     .prologue
-    .line 57
     const-wide/16 v0, 0x0
 
     invoke-static {p0, p1, p2, v0, v1}, Lmiui/maml/util/AppIconsHelper;->getIconDrawable(Landroid/content/Context;Landroid/content/pm/PackageItemInfo;Landroid/content/pm/PackageManager;J)Landroid/graphics/drawable/Drawable;
@@ -135,14 +120,11 @@
     .param p3, "cacheTime"    # J
 
     .prologue
-    .line 61
     iget-object v2, p1, Landroid/content/pm/PackageItemInfo;->packageName:Ljava/lang/String;
 
-    .line 68
     .local v2, "packageName":Ljava/lang/String;
     const/4 v3, 0x0
 
-    .line 69
     .local v3, "activityName":Ljava/lang/String;
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -154,7 +136,6 @@
 
     if-nez v0, :cond_1
 
-    .line 70
     :cond_0
     iget-object v3, p1, Landroid/content/pm/PackageItemInfo;->name:Ljava/lang/String;
 
@@ -165,16 +146,13 @@
 
     move-wide v4, p3
 
-    .line 72
     invoke-static/range {v0 .. v5}, Lmiui/maml/util/AppIconsHelper;->getIconDrawable(Landroid/content/Context;Landroid/content/pm/PackageItemInfo;Ljava/lang/String;Ljava/lang/String;J)Landroid/graphics/drawable/Drawable;
 
     move-result-object v6
 
-    .line 73
     .local v6, "d":Landroid/graphics/drawable/Drawable;
     if-eqz v6, :cond_2
 
-    .line 75
     .end local v6    # "d":Landroid/graphics/drawable/Drawable;
     :goto_0
     return-object v6
@@ -197,12 +175,10 @@
     .param p4, "cacheTime"    # J
 
     .prologue
-    .line 90
     sget-object v1, Lmiui/maml/util/AppIconsHelper;->mRendererCoreCache:Lmiui/maml/util/RendererCoreCache;
 
     if-nez v1, :cond_0
 
-    .line 91
     new-instance v1, Lmiui/maml/util/RendererCoreCache;
 
     new-instance v3, Landroid/os/Handler;
@@ -213,12 +189,10 @@
 
     sput-object v1, Lmiui/maml/util/AppIconsHelper;->mRendererCoreCache:Lmiui/maml/util/RendererCoreCache;
 
-    .line 95
     :cond_0
     :try_start_0
     invoke-static {p0}, Lmiui/maml/util/AppIconsHelper;->checkVersion(Landroid/content/Context;)V
 
-    .line 96
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -235,7 +209,6 @@
 
     move-result-object v2
 
-    .line 97
     .local v2, "key":Ljava/lang/String;
     sget-object v1, Lmiui/maml/util/AppIconsHelper;->mRendererCoreCache:Lmiui/maml/util/RendererCoreCache;
 
@@ -243,16 +216,13 @@
 
     move-result-object v9
 
-    .line 98
     .local v9, "ri":Lmiui/maml/util/RendererCoreCache$RendererCoreInfo;
     if-nez v9, :cond_1
 
-    .line 99
     invoke-static {p1, p2, p3}, Lmiui/content/res/IconCustomizer;->getFancyIconRelativePath(Landroid/content/pm/PackageItemInfo;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
-    .line 100
     .local v8, "fancyIconRelativePath":Ljava/lang/String;
     sget-object v1, Lmiui/maml/util/AppIconsHelper;->mRendererCoreCache:Lmiui/maml/util/RendererCoreCache;
 
@@ -270,7 +240,6 @@
 
     move-result-object v9
 
-    .line 103
     .end local v8    # "fancyIconRelativePath":Ljava/lang/String;
     :cond_1
     if-eqz v9, :cond_2
@@ -287,13 +256,11 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 106
     .end local v2    # "key":Ljava/lang/String;
     .end local v9    # "ri":Lmiui/maml/util/RendererCoreCache$RendererCoreInfo;
     :goto_0
     return-object v1
 
-    .line 103
     .restart local v2    # "key":Ljava/lang/String;
     .restart local v9    # "ri":Lmiui/maml/util/RendererCoreCache$RendererCoreInfo;
     :cond_2
@@ -301,13 +268,11 @@
 
     goto :goto_0
 
-    .line 104
     .end local v2    # "key":Ljava/lang/String;
     .end local v9    # "ri":Lmiui/maml/util/RendererCoreCache$RendererCoreInfo;
     :catch_0
     move-exception v0
 
-    .line 105
     .local v0, "e":Ljava/lang/Exception;
     const-string v1, "MAML AppIconsHelper"
 
@@ -317,7 +282,6 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 106
     const/4 v1, 0x0
 
     goto :goto_0
@@ -330,7 +294,6 @@
     .param p2, "pm"    # Landroid/content/pm/PackageManager;
 
     .prologue
-    .line 48
     const-wide/16 v0, 0x0
 
     invoke-static {p0, p1, p2, v0, v1}, Lmiui/maml/util/AppIconsHelper;->getIconDrawable(Landroid/content/Context;Landroid/content/pm/ResolveInfo;Landroid/content/pm/PackageManager;J)Landroid/graphics/drawable/Drawable;
@@ -348,14 +311,12 @@
     .param p3, "cacheTime"    # J
 
     .prologue
-    .line 52
     iget-object v1, p1, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     if-eqz v1, :cond_0
 
     iget-object v0, p1, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
-    .line 53
     .local v0, "ci":Landroid/content/pm/ComponentInfo;
     :goto_0
     invoke-static {p0, v0, p2, p3, p4}, Lmiui/maml/util/AppIconsHelper;->getIconDrawable(Landroid/content/Context;Landroid/content/pm/PackageItemInfo;Landroid/content/pm/PackageManager;J)Landroid/graphics/drawable/Drawable;
@@ -364,7 +325,6 @@
 
     return-object v1
 
-    .line 52
     .end local v0    # "ci":Landroid/content/pm/ComponentInfo;
     :cond_0
     iget-object v0, p1, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
@@ -380,17 +340,14 @@
     .param p3, "cacheTime"    # J
 
     .prologue
-    .line 79
     const/4 v1, 0x0
 
-    .line 81
     .local v1, "info":Landroid/content/pm/PackageItemInfo;
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v6
 
-    .line 82
     .local v6, "pm":Landroid/content/pm/PackageManager;
     new-instance v0, Landroid/content/ComponentName;
 
@@ -414,14 +371,12 @@
 
     move-wide v4, p3
 
-    .line 85
     invoke-static/range {v0 .. v5}, Lmiui/maml/util/AppIconsHelper;->getIconDrawable(Landroid/content/Context;Landroid/content/pm/PackageItemInfo;Ljava/lang/String;Ljava/lang/String;J)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     return-object v0
 
-    .line 83
     :catch_0
     move-exception v0
 

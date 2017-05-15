@@ -37,19 +37,14 @@
     .param p3, "ivRequired"    # Z
 
     .prologue
-    .line 107
     invoke-direct {p0}, Landroid/security/keystore/AndroidKeyStoreCipherSpiBase;-><init>()V
 
-    .line 108
     iput p1, p0, Landroid/security/keystore/AndroidKeyStoreUnauthenticatedAESCipherSpi;->mKeymasterBlockMode:I
 
-    .line 109
     iput p2, p0, Landroid/security/keystore/AndroidKeyStoreUnauthenticatedAESCipherSpi;->mKeymasterPadding:I
 
-    .line 110
     iput-boolean p3, p0, Landroid/security/keystore/AndroidKeyStoreUnauthenticatedAESCipherSpi;->mIvRequired:Z
 
-    .line 111
     return-void
 .end method
 
@@ -60,7 +55,6 @@
     .param p1, "keymasterArgs"    # Landroid/security/keymaster/KeymasterArguments;
 
     .prologue
-    .line 242
     invoke-virtual {p0}, Landroid/security/keystore/AndroidKeyStoreUnauthenticatedAESCipherSpi;->isEncrypting()Z
 
     move-result v0
@@ -75,7 +69,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 244
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "IV has already been used. Reusing IV in encryption mode violates security best practices."
@@ -84,7 +77,6 @@
 
     throw v0
 
-    .line 249
     :cond_0
     const v0, 0x10000002
 
@@ -92,21 +84,18 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/security/keymaster/KeymasterArguments;->addEnum(II)V
 
-    .line 250
     const v0, 0x20000004
 
     iget v1, p0, Landroid/security/keystore/AndroidKeyStoreUnauthenticatedAESCipherSpi;->mKeymasterBlockMode:I
 
     invoke-virtual {p1, v0, v1}, Landroid/security/keymaster/KeymasterArguments;->addEnum(II)V
 
-    .line 251
     const v0, 0x20000006
 
     iget v1, p0, Landroid/security/keystore/AndroidKeyStoreUnauthenticatedAESCipherSpi;->mKeymasterPadding:I
 
     invoke-virtual {p1, v0, v1}, Landroid/security/keymaster/KeymasterArguments;->addEnum(II)V
 
-    .line 252
     iget-boolean v0, p0, Landroid/security/keystore/AndroidKeyStoreUnauthenticatedAESCipherSpi;->mIvRequired:Z
 
     if-eqz v0, :cond_1
@@ -115,14 +104,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 253
     const v0, -0x6ffffc17
 
     iget-object v1, p0, Landroid/security/keystore/AndroidKeyStoreUnauthenticatedAESCipherSpi;->mIv:[B
 
     invoke-virtual {p1, v0, v1}, Landroid/security/keymaster/KeymasterArguments;->addBytes(I[B)V
 
-    .line 255
     :cond_1
     return-void
 .end method
@@ -131,7 +118,6 @@
     .locals 1
 
     .prologue
-    .line 284
     const/16 v0, 0x10
 
     return v0
@@ -141,7 +127,6 @@
     .locals 1
 
     .prologue
-    .line 294
     iget-object v0, p0, Landroid/security/keystore/AndroidKeyStoreUnauthenticatedAESCipherSpi;->mIv:[B
 
     invoke-static {v0}, Landroid/security/keystore/ArrayUtils;->cloneIfNotEmpty([B)[B
@@ -156,7 +141,6 @@
     .param p1, "inputLen"    # I
 
     .prologue
-    .line 289
     add-int/lit8 v0, p1, 0x30
 
     return v0
@@ -168,17 +152,14 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 300
     iget-boolean v2, p0, Landroid/security/keystore/AndroidKeyStoreUnauthenticatedAESCipherSpi;->mIvRequired:Z
 
     if-nez v2, :cond_1
 
-    .line 317
     :cond_0
     :goto_0
     return-object v1
 
-    .line 303
     :cond_1
     iget-object v2, p0, Landroid/security/keystore/AndroidKeyStoreUnauthenticatedAESCipherSpi;->mIv:[B
 
@@ -190,7 +171,6 @@
 
     if-lez v2, :cond_0
 
-    .line 305
     :try_start_0
     const-string v2, "AES"
 
@@ -198,7 +178,6 @@
 
     move-result-object v1
 
-    .line 306
     .local v1, "params":Ljava/security/AlgorithmParameters;
     new-instance v2, Ljavax/crypto/spec/IvParameterSpec;
 
@@ -213,12 +192,10 @@
 
     goto :goto_0
 
-    .line 308
     .end local v1    # "params":Ljava/security/AlgorithmParameters;
     :catch_0
     move-exception v0
 
-    .line 309
     .local v0, "e":Ljava/security/NoSuchAlgorithmException;
     new-instance v2, Ljava/security/ProviderException;
 
@@ -228,12 +205,10 @@
 
     throw v2
 
-    .line 311
     .end local v0    # "e":Ljava/security/NoSuchAlgorithmException;
     :catch_1
     move-exception v0
 
-    .line 312
     .local v0, "e":Ljava/security/spec/InvalidParameterSpecException;
     new-instance v2, Ljava/security/ProviderException;
 
@@ -248,7 +223,6 @@
     .locals 1
 
     .prologue
-    .line 226
     iget-boolean v0, p0, Landroid/security/keystore/AndroidKeyStoreUnauthenticatedAESCipherSpi;->mIvRequired:Z
 
     if-eqz v0, :cond_0
@@ -263,10 +237,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 228
     const/16 v0, 0x10
 
-    .line 231
     :goto_0
     return v0
 
@@ -280,7 +252,6 @@
     .locals 1
 
     .prologue
-    .line 236
     const/4 v0, 0x0
 
     return v0
@@ -295,16 +266,13 @@
     .end annotation
 
     .prologue
-    .line 141
     iget-boolean v0, p0, Landroid/security/keystore/AndroidKeyStoreUnauthenticatedAESCipherSpi;->mIvRequired:Z
 
     if-nez v0, :cond_1
 
-    .line 150
     :cond_0
     return-void
 
-    .line 146
     :cond_1
     invoke-virtual {p0}, Landroid/security/keystore/AndroidKeyStoreUnauthenticatedAESCipherSpi;->isEncrypting()Z
 
@@ -312,7 +280,6 @@
 
     if-nez v0, :cond_0
 
-    .line 147
     new-instance v0, Ljava/security/InvalidKeyException;
 
     const-string v1, "IV required when decrypting. Use IvParameterSpec or AlgorithmParameters to provide it."
@@ -332,15 +299,12 @@
     .end annotation
 
     .prologue
-    .line 183
     iget-boolean v2, p0, Landroid/security/keystore/AndroidKeyStoreUnauthenticatedAESCipherSpi;->mIvRequired:Z
 
     if-nez v2, :cond_0
 
-    .line 184
     if-eqz p1, :cond_4
 
-    .line 185
     new-instance v2, Ljava/security/InvalidAlgorithmParameterException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -365,18 +329,15 @@
 
     throw v2
 
-    .line 191
     :cond_0
     if-nez p1, :cond_1
 
-    .line 192
     invoke-virtual {p0}, Landroid/security/keystore/AndroidKeyStoreUnauthenticatedAESCipherSpi;->isEncrypting()Z
 
     move-result v2
 
     if-nez v2, :cond_4
 
-    .line 194
     new-instance v2, Ljava/security/InvalidAlgorithmParameterException;
 
     const-string v3, "IV required when decrypting. Use IvParameterSpec or AlgorithmParameters to provide it."
@@ -385,7 +346,6 @@
 
     throw v2
 
-    .line 200
     :cond_1
     const-string v2, "AES"
 
@@ -399,7 +359,6 @@
 
     if-nez v2, :cond_2
 
-    .line 201
     new-instance v2, Ljava/security/InvalidAlgorithmParameterException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -434,7 +393,6 @@
 
     throw v2
 
-    .line 208
     :cond_2
     :try_start_0
     const-class v2, Ljavax/crypto/spec/IvParameterSpec;
@@ -447,7 +405,6 @@
     :try_end_0
     .catch Ljava/security/spec/InvalidParameterSpecException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 218
     .local v1, "ivSpec":Ljavax/crypto/spec/IvParameterSpec;
     invoke-virtual {v1}, Ljavax/crypto/spec/IvParameterSpec;->getIV()[B
 
@@ -455,12 +412,10 @@
 
     iput-object v2, p0, Landroid/security/keystore/AndroidKeyStoreUnauthenticatedAESCipherSpi;->mIv:[B
 
-    .line 219
     iget-object v2, p0, Landroid/security/keystore/AndroidKeyStoreUnauthenticatedAESCipherSpi;->mIv:[B
 
     if-nez v2, :cond_4
 
-    .line 220
     new-instance v2, Ljava/security/InvalidAlgorithmParameterException;
 
     const-string v3, "Null IV in AlgorithmParameters"
@@ -469,12 +424,10 @@
 
     throw v2
 
-    .line 209
     .end local v1    # "ivSpec":Ljavax/crypto/spec/IvParameterSpec;
     :catch_0
     move-exception v0
 
-    .line 210
     .local v0, "e":Ljava/security/spec/InvalidParameterSpecException;
     invoke-virtual {p0}, Landroid/security/keystore/AndroidKeyStoreUnauthenticatedAESCipherSpi;->isEncrypting()Z
 
@@ -482,7 +435,6 @@
 
     if-nez v2, :cond_3
 
-    .line 212
     new-instance v2, Ljava/security/InvalidAlgorithmParameterException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -507,13 +459,11 @@
 
     throw v2
 
-    .line 215
     :cond_3
     const/4 v2, 0x0
 
     iput-object v2, p0, Landroid/security/keystore/AndroidKeyStoreUnauthenticatedAESCipherSpi;->mIv:[B
 
-    .line 222
     .end local v0    # "e":Ljava/security/spec/InvalidParameterSpecException;
     :cond_4
     return-void
@@ -529,15 +479,12 @@
     .end annotation
 
     .prologue
-    .line 155
     iget-boolean v0, p0, Landroid/security/keystore/AndroidKeyStoreUnauthenticatedAESCipherSpi;->mIvRequired:Z
 
     if-nez v0, :cond_0
 
-    .line 156
     if-eqz p1, :cond_3
 
-    .line 157
     new-instance v0, Ljava/security/InvalidAlgorithmParameterException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -562,18 +509,15 @@
 
     throw v0
 
-    .line 163
     :cond_0
     if-nez p1, :cond_1
 
-    .line 164
     invoke-virtual {p0}, Landroid/security/keystore/AndroidKeyStoreUnauthenticatedAESCipherSpi;->isEncrypting()Z
 
     move-result v0
 
     if-nez v0, :cond_3
 
-    .line 166
     new-instance v0, Ljava/security/InvalidAlgorithmParameterException;
 
     const-string v1, "IvParameterSpec must be provided when decrypting"
@@ -582,13 +526,11 @@
 
     throw v0
 
-    .line 171
     :cond_1
     instance-of v0, p1, Ljavax/crypto/spec/IvParameterSpec;
 
     if-nez v0, :cond_2
 
-    .line 172
     new-instance v0, Ljava/security/InvalidAlgorithmParameterException;
 
     const-string v1, "Only IvParameterSpec supported"
@@ -597,7 +539,6 @@
 
     throw v0
 
-    .line 174
     :cond_2
     check-cast p1, Ljavax/crypto/spec/IvParameterSpec;
 
@@ -608,12 +549,10 @@
 
     iput-object v0, p0, Landroid/security/keystore/AndroidKeyStoreUnauthenticatedAESCipherSpi;->mIv:[B
 
-    .line 175
     iget-object v0, p0, Landroid/security/keystore/AndroidKeyStoreUnauthenticatedAESCipherSpi;->mIv:[B
 
     if-nez v0, :cond_3
 
-    .line 176
     new-instance v0, Ljava/security/InvalidAlgorithmParameterException;
 
     const-string v1, "Null IV in IvParameterSpec"
@@ -622,7 +561,6 @@
 
     throw v0
 
-    .line 178
     :cond_3
     return-void
 .end method
@@ -638,12 +576,10 @@
     .end annotation
 
     .prologue
-    .line 127
     instance-of v0, p2, Landroid/security/keystore/AndroidKeyStoreSecretKey;
 
     if-nez v0, :cond_1
 
-    .line 128
     new-instance v1, Ljava/security/InvalidKeyException;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -680,11 +616,10 @@
     throw v1
 
     :cond_0
-    const-string/jumbo v0, "null"
+    const-string v0, "null"
 
     goto :goto_0
 
-    .line 131
     :cond_1
     const-string v0, "AES"
 
@@ -698,7 +633,6 @@
 
     if-nez v0, :cond_2
 
-    .line 132
     new-instance v0, Ljava/security/InvalidKeyException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -745,14 +679,12 @@
 
     throw v0
 
-    .line 136
     :cond_2
     check-cast p2, Landroid/security/keystore/AndroidKeyStoreSecretKey;
 
     .end local p2    # "key":Ljava/security/Key;
     invoke-virtual {p0, p2}, Landroid/security/keystore/AndroidKeyStoreUnauthenticatedAESCipherSpi;->setKey(Landroid/security/keystore/AndroidKeyStoreKey;)V
 
-    .line 137
     return-void
 .end method
 
@@ -761,12 +693,10 @@
     .param p1, "keymasterArgs"    # Landroid/security/keymaster/KeymasterArguments;
 
     .prologue
-    .line 260
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Landroid/security/keystore/AndroidKeyStoreUnauthenticatedAESCipherSpi;->mIvHasBeenUsed:Z
 
-    .line 263
     const v1, -0x6ffffc17
 
     const/4 v2, 0x0
@@ -775,7 +705,6 @@
 
     move-result-object v0
 
-    .line 264
     .local v0, "returnedIv":[B
     if-eqz v0, :cond_0
 
@@ -783,28 +712,22 @@
 
     if-nez v1, :cond_0
 
-    .line 265
     const/4 v0, 0x0
 
-    .line 268
     :cond_0
     iget-boolean v1, p0, Landroid/security/keystore/AndroidKeyStoreUnauthenticatedAESCipherSpi;->mIvRequired:Z
 
     if-eqz v1, :cond_3
 
-    .line 269
     iget-object v1, p0, Landroid/security/keystore/AndroidKeyStoreUnauthenticatedAESCipherSpi;->mIv:[B
 
     if-nez v1, :cond_2
 
-    .line 270
     iput-object v0, p0, Landroid/security/keystore/AndroidKeyStoreUnauthenticatedAESCipherSpi;->mIv:[B
 
-    .line 280
     :cond_1
     return-void
 
-    .line 271
     :cond_2
     if-eqz v0, :cond_1
 
@@ -816,7 +739,6 @@
 
     if-nez v1, :cond_1
 
-    .line 272
     new-instance v1, Ljava/security/ProviderException;
 
     const-string v2, "IV in use differs from provided IV"
@@ -825,11 +747,9 @@
 
     throw v1
 
-    .line 275
     :cond_3
     if-eqz v0, :cond_1
 
-    .line 276
     new-instance v1, Ljava/security/ProviderException;
 
     const-string v2, "IV in use despite IV not being used by this transformation"
@@ -843,20 +763,16 @@
     .locals 1
 
     .prologue
-    .line 115
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/security/keystore/AndroidKeyStoreUnauthenticatedAESCipherSpi;->mIv:[B
 
-    .line 116
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/security/keystore/AndroidKeyStoreUnauthenticatedAESCipherSpi;->mIvHasBeenUsed:Z
 
-    .line 117
     invoke-super {p0}, Landroid/security/keystore/AndroidKeyStoreCipherSpiBase;->resetAll()V
 
-    .line 118
     return-void
 .end method
 
@@ -864,9 +780,7 @@
     .locals 0
 
     .prologue
-    .line 122
     invoke-super {p0}, Landroid/security/keystore/AndroidKeyStoreCipherSpiBase;->resetWhilePreservingInitState()V
 
-    .line 123
     return-void
 .end method

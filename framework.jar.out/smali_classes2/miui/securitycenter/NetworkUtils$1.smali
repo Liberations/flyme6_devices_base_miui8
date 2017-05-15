@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 68
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,7 +34,6 @@
     .param p1, "reason"    # I
 
     .prologue
-    .line 76
     const-string v0, "OverLayUtil"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -58,7 +56,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 77
     return-void
 .end method
 
@@ -66,13 +63,11 @@
     .locals 2
 
     .prologue
-    .line 71
     const-string v0, "OverLayUtil"
 
     const-string v1, "save  wifi configuration success!"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 72
     return-void
 .end method

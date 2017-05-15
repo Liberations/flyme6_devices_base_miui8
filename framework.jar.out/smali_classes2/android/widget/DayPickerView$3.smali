@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 407
     iput-object p1, p0, Landroid/widget/DayPickerView$3;->this$0:Landroid/widget/DayPickerView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 411
     iget-object v3, p0, Landroid/widget/DayPickerView$3;->this$0:Landroid/widget/DayPickerView;
 
     # getter for: Landroid/widget/DayPickerView;->mPrevButton:Landroid/widget/ImageButton;
@@ -51,10 +49,8 @@
 
     if-ne p1, v3, :cond_1
 
-    .line 412
     const/4 v1, -0x1
 
-    .line 421
     .local v1, "direction":I
     :goto_0
     iget-object v3, p0, Landroid/widget/DayPickerView$3;->this$0:Landroid/widget/DayPickerView;
@@ -72,7 +68,6 @@
 
     const/4 v0, 0x1
 
-    .line 425
     .local v0, "animate":Z
     :goto_1
     iget-object v3, p0, Landroid/widget/DayPickerView$3;->this$0:Landroid/widget/DayPickerView;
@@ -88,7 +83,6 @@
 
     add-int v2, v3, v1
 
-    .line 426
     .local v2, "nextItem":I
     iget-object v3, p0, Landroid/widget/DayPickerView$3;->this$0:Landroid/widget/DayPickerView;
 
@@ -99,14 +93,12 @@
 
     invoke-virtual {v3, v2, v0}, Lcom/android/internal/widget/ViewPager;->setCurrentItem(IZ)V
 
-    .line 427
     .end local v0    # "animate":Z
     .end local v1    # "direction":I
     .end local v2    # "nextItem":I
     :cond_0
     return-void
 
-    .line 413
     :cond_1
     iget-object v3, p0, Landroid/widget/DayPickerView$3;->this$0:Landroid/widget/DayPickerView;
 
@@ -117,13 +109,11 @@
 
     if-ne p1, v3, :cond_0
 
-    .line 414
     const/4 v1, 0x1
 
     .restart local v1    # "direction":I
     goto :goto_0
 
-    .line 421
     :cond_2
     const/4 v0, 0x0
 

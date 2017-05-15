@@ -39,23 +39,19 @@
     .param p2, "ele"    # Lorg/w3c/dom/Element;
 
     .prologue
-    .line 1949
     invoke-direct {p0, p1, p2}, Lmiui/maml/ActionCommand$MultiCommand;-><init>(Lmiui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
 
-    .line 1951
     const-string v2, "indexName"
 
     invoke-interface {p2, v2}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1952
     .local v0, "indexName":Ljava/lang/String;
     invoke-virtual {p0}, Lmiui/maml/ActionCommand$LoopCommand;->getVariables()Lmiui/maml/data/Variables;
 
     move-result-object v1
 
-    .line 1953
     .local v1, "variables":Lmiui/maml/data/Variables;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -63,7 +59,6 @@
 
     if-nez v2, :cond_0
 
-    .line 1954
     new-instance v2, Lmiui/maml/data/IndexedVariable;
 
     const/4 v3, 0x1
@@ -72,7 +67,6 @@
 
     iput-object v2, p0, Lmiui/maml/ActionCommand$LoopCommand;->mIndexVar:Lmiui/maml/data/IndexedVariable;
 
-    .line 1956
     :cond_0
     const-string v2, "begin"
 
@@ -86,7 +80,6 @@
 
     iput-object v2, p0, Lmiui/maml/ActionCommand$LoopCommand;->mBeginExp:Lmiui/maml/data/Expression;
 
-    .line 1957
     const-string v2, "count"
 
     invoke-interface {p2, v2}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -99,12 +92,10 @@
 
     iput-object v2, p0, Lmiui/maml/ActionCommand$LoopCommand;->mCountExp:Lmiui/maml/data/Expression;
 
-    .line 1958
     iget-object v2, p0, Lmiui/maml/ActionCommand$LoopCommand;->mCountExp:Lmiui/maml/data/Expression;
 
     if-nez v2, :cond_1
 
-    .line 1959
     const-string v2, "end"
 
     invoke-interface {p2, v2}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -117,7 +108,6 @@
 
     iput-object v2, p0, Lmiui/maml/ActionCommand$LoopCommand;->mEndExp:Lmiui/maml/data/Expression;
 
-    .line 1961
     :cond_1
     const-string v2, "loopCondition"
 
@@ -131,7 +121,6 @@
 
     iput-object v2, p0, Lmiui/maml/ActionCommand$LoopCommand;->mConditionExp:Lmiui/maml/data/Expression;
 
-    .line 1962
     return-void
 .end method
 
@@ -145,14 +134,12 @@
 
     const/4 v5, 0x0
 
-    .line 1966
     iget-object v6, p0, Lmiui/maml/ActionCommand$LoopCommand;->mBeginExp:Lmiui/maml/data/Expression;
 
     if-nez v6, :cond_2
 
     move v1, v5
 
-    .line 1967
     .local v1, "begin":I
     :goto_0
     iget-object v6, p0, Lmiui/maml/ActionCommand$LoopCommand;->mCountExp:Lmiui/maml/data/Expression;
@@ -171,7 +158,6 @@
 
     add-int/lit8 v2, v5, -0x1
 
-    .line 1969
     .local v2, "end":I
     :goto_1
     sub-int v5, v2, v1
@@ -182,7 +168,6 @@
 
     if-lez v5, :cond_0
 
-    .line 1970
     const-string v5, "ActionCommand"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -217,7 +202,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1972
     :cond_0
     move v4, v1
 
@@ -225,7 +209,6 @@
     :goto_2
     if-gt v4, v2, :cond_1
 
-    .line 1973
     iget-object v5, p0, Lmiui/maml/ActionCommand$LoopCommand;->mConditionExp:Lmiui/maml/data/Expression;
 
     if-eqz v5, :cond_5
@@ -242,11 +225,9 @@
 
     if-gtz v5, :cond_5
 
-    .line 1984
     :cond_1
     return-void
 
-    .line 1966
     .end local v1    # "begin":I
     .end local v2    # "end":I
     .end local v4    # "idx":I
@@ -261,7 +242,6 @@
 
     goto :goto_0
 
-    .line 1967
     .restart local v1    # "begin":I
     :cond_3
     iget-object v6, p0, Lmiui/maml/ActionCommand$LoopCommand;->mEndExp:Lmiui/maml/data/Expression;
@@ -283,7 +263,6 @@
 
     goto :goto_1
 
-    .line 1976
     .restart local v2    # "end":I
     .restart local v4    # "idx":I
     :cond_5
@@ -291,14 +270,12 @@
 
     if-eqz v5, :cond_6
 
-    .line 1977
     iget-object v5, p0, Lmiui/maml/ActionCommand$LoopCommand;->mIndexVar:Lmiui/maml/data/IndexedVariable;
 
     int-to-double v6, v4
 
     invoke-virtual {v5, v6, v7}, Lmiui/maml/data/IndexedVariable;->set(D)V
 
-    .line 1979
     :cond_6
     iget-object v5, p0, Lmiui/maml/ActionCommand$LoopCommand;->mCommands:Ljava/util/ArrayList;
 
@@ -306,7 +283,6 @@
 
     move-result v0
 
-    .line 1980
     .local v0, "N":I
     const/4 v3, 0x0
 
@@ -314,7 +290,6 @@
     :goto_3
     if-ge v3, v0, :cond_7
 
-    .line 1981
     iget-object v5, p0, Lmiui/maml/ActionCommand$LoopCommand;->mCommands:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -325,12 +300,10 @@
 
     invoke-virtual {v5}, Lmiui/maml/ActionCommand;->perform()V
 
-    .line 1980
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_3
 
-    .line 1972
     :cond_7
     add-int/lit8 v4, v4, 0x1
 

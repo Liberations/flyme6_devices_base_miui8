@@ -24,7 +24,6 @@
     .locals 1
 
     .prologue
-    .line 22
     new-instance v0, Lcom/miui/internal/telephony/phonenumber/ChineseTelocation;
 
     invoke-direct {v0}, Lcom/miui/internal/telephony/phonenumber/ChineseTelocation;-><init>()V
@@ -38,10 +37,8 @@
     .locals 0
 
     .prologue
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 28
     return-void
 .end method
 
@@ -50,7 +47,6 @@
     .param p0, "x0"    # Lcom/miui/internal/telephony/phonenumber/ChineseTelocation;
 
     .prologue
-    .line 17
     invoke-direct {p0}, Lcom/miui/internal/telephony/phonenumber/ChineseTelocation;->updateTelocationSetting()V
 
     return-void
@@ -61,10 +57,8 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 130
     const/4 v1, 0x0
 
-    .line 131
     .local v1, "countryIso":Ljava/lang/String;
     const-string v4, "country_detector"
 
@@ -74,31 +68,25 @@
 
     check-cast v2, Landroid/location/CountryDetector;
 
-    .line 133
     .local v2, "detector":Landroid/location/CountryDetector;
     if-eqz v2, :cond_0
 
-    .line 134
     invoke-virtual {v2}, Landroid/location/CountryDetector;->detectCountry()Landroid/location/Country;
 
     move-result-object v0
 
-    .line 135
     .local v0, "country":Landroid/location/Country;
     if-eqz v0, :cond_2
 
-    .line 136
     invoke-virtual {v0}, Landroid/location/Country;->getCountryIso()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 141
     .end local v0    # "country":Landroid/location/Country;
     :cond_0
     :goto_0
     if-nez v1, :cond_1
 
-    .line 142
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
@@ -109,18 +97,15 @@
 
     iget-object v3, v4, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
 
-    .line 143
     .local v3, "locale":Ljava/util/Locale;
     invoke-virtual {v3}, Ljava/util/Locale;->getCountry()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 145
     .end local v3    # "locale":Ljava/util/Locale;
     :cond_1
     return-object v1
 
-    .line 138
     .restart local v0    # "country":Landroid/location/Country;
     :cond_2
     const-string v4, "ChineseTelocation"
@@ -136,7 +121,6 @@
     .locals 1
 
     .prologue
-    .line 39
     sget-object v0, Lcom/miui/internal/telephony/phonenumber/ChineseTelocation;->sInstance:Lcom/miui/internal/telephony/phonenumber/ChineseTelocation;
 
     return-object v0
@@ -147,26 +131,21 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 47
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/miui/internal/telephony/phonenumber/ChineseTelocation;->mContext:Landroid/content/Context;
 
-    .line 48
     iget-object v1, p0, Lcom/miui/internal/telephony/phonenumber/ChineseTelocation;->mContext:Landroid/content/Context;
 
     if-nez v1, :cond_0
 
-    .line 49
     iput-object p1, p0, Lcom/miui/internal/telephony/phonenumber/ChineseTelocation;->mContext:Landroid/content/Context;
 
-    .line 51
     :cond_0
     invoke-direct {p0}, Lcom/miui/internal/telephony/phonenumber/ChineseTelocation;->updateTelocationSetting()V
 
-    .line 53
     new-instance v0, Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/miui/internal/telephony/phonenumber/ChineseTelocation;->mContext:Landroid/content/Context;
@@ -177,7 +156,6 @@
 
     invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 54
     .local v0, "handler":Landroid/os/Handler;
     new-instance v1, Lcom/miui/internal/telephony/phonenumber/ChineseTelocation$1;
 
@@ -185,7 +163,6 @@
 
     iput-object v1, p0, Lcom/miui/internal/telephony/phonenumber/ChineseTelocation;->mSettingObserver:Landroid/database/ContentObserver;
 
-    .line 62
     iget-object v1, p0, Lcom/miui/internal/telephony/phonenumber/ChineseTelocation;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -204,7 +181,6 @@
 
     invoke-virtual {v1, v2, v3, v4}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 65
     return-void
 .end method
 
@@ -212,7 +188,6 @@
     .locals 1
 
     .prologue
-    .line 43
     iget-object v0, p0, Lcom/miui/internal/telephony/phonenumber/ChineseTelocation;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -225,7 +200,6 @@
 
     iput-boolean v0, p0, Lcom/miui/internal/telephony/phonenumber/ChineseTelocation;->mAllowTelocation:Z
 
-    .line 44
     return-void
 .end method
 
@@ -240,12 +214,10 @@
     .end annotation
 
     .prologue
-    .line 32
     iget-object v0, p0, Lcom/miui/internal/telephony/phonenumber/ChineseTelocation;->mSettingObserver:Landroid/database/ContentObserver;
 
     if-eqz v0, :cond_0
 
-    .line 33
     iget-object v0, p0, Lcom/miui/internal/telephony/phonenumber/ChineseTelocation;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -256,11 +228,9 @@
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
-    .line 35
     :cond_0
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    .line 36
     return-void
 .end method
 
@@ -271,7 +241,6 @@
     .param p3, "length"    # I
 
     .prologue
-    .line 101
     invoke-static {}, Lmiui/telephony/phonenumber/ChineseTelocationConverter;->getInstance()Lmiui/telephony/phonenumber/ChineseTelocationConverter;
 
     move-result-object v0
@@ -291,31 +260,26 @@
     .param p4, "locale"    # Ljava/util/Locale;
 
     .prologue
-    .line 109
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 110
     invoke-static {}, Lmiui/telephony/phonenumber/CountryCode;->getUserDefinedCountryCode()Ljava/lang/String;
 
     move-result-object p2
 
-    .line 111
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 112
     invoke-static {}, Lmiui/telephony/phonenumber/CountryCode;->getIccCountryCode()Ljava/lang/String;
 
     move-result-object p2
 
-    .line 116
     :cond_0
     :try_start_0
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -324,7 +288,6 @@
 
     if-nez v0, :cond_1
 
-    .line 117
     invoke-static {}, Lcom/android/i18n/phonenumbers/geocoding/PhoneNumberOfflineGeocoder;->getInstance()Lcom/android/i18n/phonenumbers/geocoding/PhoneNumberOfflineGeocoder;
 
     move-result-object v0
@@ -351,15 +314,12 @@
 
     move-result-object v0
 
-    .line 126
     :goto_0
     return-object v0
 
-    .line 124
     :catch_0
     move-exception v0
 
-    .line 126
     :cond_1
     const-string v0, ""
 
@@ -375,41 +335,32 @@
     .param p5, "withAreaCode"    # Z
 
     .prologue
-    .line 68
     iget-object v2, p0, Lcom/miui/internal/telephony/phonenumber/ChineseTelocation;->mContext:Landroid/content/Context;
 
     if-nez v2, :cond_0
 
-    .line 69
     invoke-direct {p0, p1}, Lcom/miui/internal/telephony/phonenumber/ChineseTelocation;->initObserver(Landroid/content/Context;)V
 
-    .line 72
     :cond_0
     iget-boolean v2, p0, Lcom/miui/internal/telephony/phonenumber/ChineseTelocation;->mAllowTelocation:Z
 
     if-nez v2, :cond_2
 
-    .line 73
     const-string v1, ""
 
-    .line 83
     :cond_1
     :goto_0
     return-object v1
 
-    .line 75
     :cond_2
     const-string v1, ""
 
-    .line 76
     .local v1, "location":Ljava/lang/String;
     const/4 v0, -0x1
 
-    .line 77
     .local v0, "id":I
     if-eqz p5, :cond_3
 
-    .line 78
     invoke-static {}, Lmiui/telephony/phonenumber/ChineseTelocationConverter;->getInstance()Lmiui/telephony/phonenumber/ChineseTelocationConverter;
 
     move-result-object v2
@@ -420,11 +371,9 @@
 
     move-result v0
 
-    .line 80
     :cond_3
     if-lez v0, :cond_1
 
-    .line 81
     invoke-static {}, Lmiui/telephony/phonenumber/ChineseTelocationConverter;->getInstance()Lmiui/telephony/phonenumber/ChineseTelocationConverter;
 
     move-result-object v2
@@ -445,37 +394,29 @@
     .param p5, "isNormalMobileNumber"    # Z
 
     .prologue
-    .line 87
     iget-object v1, p0, Lcom/miui/internal/telephony/phonenumber/ChineseTelocation;->mContext:Landroid/content/Context;
 
     if-nez v1, :cond_0
 
-    .line 88
     invoke-direct {p0, p1}, Lcom/miui/internal/telephony/phonenumber/ChineseTelocation;->initObserver(Landroid/content/Context;)V
 
-    .line 90
     :cond_0
     iget-boolean v1, p0, Lcom/miui/internal/telephony/phonenumber/ChineseTelocation;->mAllowTelocation:Z
 
     if-nez v1, :cond_1
 
-    .line 91
     const-string v0, ""
 
-    .line 97
     :goto_0
     return-object v0
 
-    .line 93
     :cond_1
     if-nez p5, :cond_2
 
-    .line 94
     const-string v0, ""
 
     goto :goto_0
 
-    .line 96
     :cond_2
     invoke-static {}, Lmiui/telephony/phonenumber/ChineseTelocationConverter;->getInstance()Lmiui/telephony/phonenumber/ChineseTelocationConverter;
 
@@ -485,7 +426,6 @@
 
     move-result-object v0
 
-    .line 97
     .local v0, "operator":Ljava/lang/String;
     goto :goto_0
 .end method
@@ -497,7 +437,6 @@
     .param p3, "length"    # I
 
     .prologue
-    .line 105
     invoke-static {}, Lmiui/telephony/phonenumber/ChineseTelocationConverter;->getInstance()Lmiui/telephony/phonenumber/ChineseTelocationConverter;
 
     move-result-object v0

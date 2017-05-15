@@ -51,13 +51,11 @@
 
     const/4 v2, 0x0
 
-    .line 29
     const-string v0, "FilePinner"
 
     sput-object v0, Landroid/app/FilePinner;->TAG:Ljava/lang/String;
 
-    .line 30
-    const-string/jumbo v0, "persist.sys.pinappfile"
+    const-string v0, "persist.sys.pinappfile"
 
     invoke-static {v0, v2}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
@@ -65,10 +63,8 @@
 
     sput-boolean v0, Landroid/app/FilePinner;->enablePinAppFile:Z
 
-    .line 32
     sput-boolean v1, Landroid/app/FilePinner;->mIsSelectedApp:Z
 
-    .line 33
     new-array v0, v1, [Ljava/lang/String;
 
     const-string v1, " "
@@ -77,10 +73,8 @@
 
     sput-object v0, Landroid/app/FilePinner;->mAppsToPin:[Ljava/lang/String;
 
-    .line 34
     sput-boolean v2, Landroid/app/FilePinner;->mPinFileDone:Z
 
-    .line 41
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
@@ -94,10 +88,8 @@
     .locals 0
 
     .prologue
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 173
     return-void
 .end method
 
@@ -107,7 +99,6 @@
     .param p1, "x1"    # Landroid/app/LoadedApk;
 
     .prologue
-    .line 28
     invoke-static {p0, p1}, Landroid/app/FilePinner;->getFilesToPin(Landroid/content/pm/ApplicationInfo;Landroid/app/LoadedApk;)Ljava/util/ArrayList;
 
     move-result-object v0
@@ -121,7 +112,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 28
     invoke-static {p0, p1}, Landroid/app/FilePinner;->recordHotPages(Ljava/util/ArrayList;Z)V
 
     return-void
@@ -145,29 +135,23 @@
     .end annotation
 
     .prologue
-    .line 44
     new-instance v9, Ljava/util/ArrayList;
 
     invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
 
-    .line 47
     .local v9, "filesToPin":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-virtual/range {p0 .. p0}, Landroid/content/pm/ApplicationInfo;->getBaseCodePath()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 48
     .local v2, "baseApk":Ljava/lang/String;
     if-eqz v2, :cond_1
 
-    .line 49
     const-string v1, "arm"
 
-    .line 50
     .local v1, "arch":Ljava/lang/String;
     invoke-virtual {v9, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 51
     move-object/from16 v0, p0
 
     iget-object v14, v0, Landroid/content/pm/ApplicationInfo;->primaryCpuAbi:Ljava/lang/String;
@@ -184,7 +168,6 @@
 
     if-eqz v14, :cond_0
 
-    .line 53
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -203,11 +186,9 @@
 
     move-result-object v1
 
-    .line 56
     :cond_0
     const/4 v3, 0x0
 
-    .line 57
     .local v3, "baseOdex":Ljava/lang/String;
     sget v14, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -215,7 +196,6 @@
 
     if-lt v14, v15, :cond_4
 
-    .line 59
     :try_start_0
     const-class v14, Ldalvik/system/DexFile;
 
@@ -245,7 +225,6 @@
 
     move-result-object v10
 
-    .line 61
     .local v10, "method":Ljava/lang/reflect/Method;
     const/4 v14, 0x0
 
@@ -273,15 +252,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 68
     .end local v10    # "method":Ljava/lang/reflect/Method;
     :goto_0
     if-eqz v3, :cond_1
 
-    .line 69
     invoke-virtual {v9, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 75
     .end local v1    # "arch":Ljava/lang/String;
     .end local v3    # "baseOdex":Ljava/lang/String;
     :cond_1
@@ -290,13 +266,11 @@
 
     move-result-object v4
 
-    .line 76
     .local v4, "cl":Ljava/lang/ClassLoader;
     instance-of v14, v4, Ldalvik/system/BaseDexClassLoader;
 
     if-eqz v14, :cond_3
 
-    .line 77
     check-cast v4, Ldalvik/system/BaseDexClassLoader;
 
     .end local v4    # "cl":Ljava/lang/ClassLoader;
@@ -304,15 +278,12 @@
 
     move-result-object v5
 
-    .line 78
     .local v5, "clName":Ljava/lang/String;
     const/4 v13, 0x0
 
-    .line 79
     .local v13, "startIdx":I
     const/4 v8, 0x0
 
-    .line 80
     .local v8, "endIdx":I
     :cond_2
     :goto_1
@@ -320,21 +291,18 @@
 
     if-eq v13, v14, :cond_3
 
-    .line 81
     const-string v14, "dex file \""
 
     invoke-virtual {v5, v14, v8}, Ljava/lang/String;->indexOf(Ljava/lang/String;I)I
 
     move-result v13
 
-    .line 82
     const-string v14, "\","
 
     invoke-virtual {v5, v14, v13}, Ljava/lang/String;->indexOf(Ljava/lang/String;I)I
 
     move-result v8
 
-    .line 83
     const/4 v14, -0x1
 
     if-eq v13, v14, :cond_2
@@ -343,14 +311,12 @@
 
     if-eq v8, v14, :cond_2
 
-    .line 84
     add-int/lit8 v14, v13, 0xa
 
     invoke-virtual {v5, v14, v8}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 85
     .local v6, "dexPath":Ljava/lang/String;
     const-string v14, "dex/"
 
@@ -358,22 +324,18 @@
 
     move-result v12
 
-    .line 86
     .local v12, "p":I
     if-ltz v12, :cond_2
 
-    .line 87
     new-instance v11, Ljava/lang/StringBuffer;
 
     invoke-direct {v11, v6}, Ljava/lang/StringBuffer;-><init>(Ljava/lang/String;)V
 
-    .line 88
     .local v11, "odexPath":Ljava/lang/StringBuffer;
-    const-string/jumbo v14, "o"
+    const-string v14, "o"
 
     invoke-virtual {v11, v12, v14}, Ljava/lang/StringBuffer;->insert(ILjava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 89
     invoke-virtual {v11}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v14
@@ -384,7 +346,6 @@
 
     goto :goto_1
 
-    .line 95
     .end local v5    # "clName":Ljava/lang/String;
     .end local v6    # "dexPath":Ljava/lang/String;
     .end local v8    # "endIdx":I
@@ -394,7 +355,6 @@
     :catch_0
     move-exception v7
 
-    .line 96
     .local v7, "e":Ljava/lang/Exception;
     sget-object v14, Landroid/app/FilePinner;->TAG:Ljava/lang/String;
 
@@ -402,18 +362,15 @@
 
     invoke-static {v14, v15}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 99
     .end local v7    # "e":Ljava/lang/Exception;
     :cond_3
     return-object v9
 
-    .line 62
     .restart local v1    # "arch":Ljava/lang/String;
     .restart local v3    # "baseOdex":Ljava/lang/String;
     :catch_1
     move-exception v7
 
-    .line 63
     .restart local v7    # "e":Ljava/lang/Exception;
     sget-object v14, Landroid/app/FilePinner;->TAG:Ljava/lang/String;
 
@@ -423,7 +380,6 @@
 
     goto :goto_0
 
-    .line 66
     .end local v7    # "e":Ljava/lang/Exception;
     :cond_4
     new-instance v14, Ljava/lang/StringBuilder;
@@ -472,7 +428,6 @@
 
     const/4 v7, 0x0
 
-    .line 195
     sget-boolean v5, Landroid/app/FilePinner;->enablePinAppFile:Z
 
     if-eqz v5, :cond_0
@@ -489,25 +444,20 @@
 
     if-nez p1, :cond_1
 
-    .line 239
     :cond_0
     :goto_0
     return-void
 
-    .line 200
     :cond_1
     invoke-virtual {p0}, Landroid/app/Application;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v0
 
-    .line 201
     .local v0, "appInfo":Landroid/content/pm/ApplicationInfo;
     if-eqz v0, :cond_0
 
-    .line 205
     if-eqz p2, :cond_2
 
-    .line 207
     const v5, 0x1070060
 
     :try_start_0
@@ -519,26 +469,22 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 213
     :cond_2
     :goto_1
     sget-object v5, Landroid/app/FilePinner;->mAppsToPin:[Ljava/lang/String;
 
     if-eqz v5, :cond_5
 
-    .line 214
     sget-object v5, Landroid/app/FilePinner;->mAppsToPin:[Ljava/lang/String;
 
     array-length v3, v5
 
-    .line 215
     .local v3, "i":I
     :cond_3
     add-int/lit8 v3, v3, -0x1
 
     if-ltz v3, :cond_4
 
-    .line 216
     sget-object v5, Landroid/app/FilePinner;->mAppsToPin:[Ljava/lang/String;
 
     aget-object v5, v5, v3
@@ -557,21 +503,17 @@
 
     if-eqz v5, :cond_3
 
-    .line 220
     :cond_4
     if-gez v3, :cond_6
 
-    .line 221
     sput-boolean v7, Landroid/app/FilePinner;->mIsSelectedApp:Z
 
     goto :goto_0
 
-    .line 208
     .end local v3    # "i":I
     :catch_0
     move-exception v1
 
-    .line 209
     .local v1, "e":Ljava/lang/Exception;
     sget-object v5, Landroid/app/FilePinner;->TAG:Ljava/lang/String;
 
@@ -581,51 +523,42 @@
 
     goto :goto_1
 
-    .line 225
     .end local v1    # "e":Ljava/lang/Exception;
     :cond_5
     sput-boolean v7, Landroid/app/FilePinner;->mIsSelectedApp:Z
 
     goto :goto_0
 
-    .line 229
     .restart local v3    # "i":I
     :cond_6
     sget v5, Landroid/app/FilePinner;->mPageProfileCount:I
 
     if-ge v5, v8, :cond_0
 
-    .line 230
     sget v5, Landroid/app/FilePinner;->mPageProfileCount:I
 
     add-int/lit8 v5, v5, 0x1
 
     sput v5, Landroid/app/FilePinner;->mPageProfileCount:I
 
-    .line 231
     const/4 v2, 0x0
 
-    .line 232
     .local v2, "goodToLock":Z
     sget v5, Landroid/app/FilePinner;->mPageProfileCount:I
 
     if-ne v5, v8, :cond_7
 
-    .line 233
     const/4 v2, 0x1
 
-    .line 234
     const/4 v5, 0x1
 
     sput-boolean v5, Landroid/app/FilePinner;->mPinFileDone:Z
 
-    .line 236
     :cond_7
     new-instance v4, Landroid/app/FilePinner$PinTask;
 
     invoke-direct {v4, v0, p1, v2}, Landroid/app/FilePinner$PinTask;-><init>(Landroid/content/pm/ApplicationInfo;Landroid/app/LoadedApk;Z)V
 
-    .line 237
     .local v4, "pinTask":Landroid/app/FilePinner$PinTask;
     invoke-static {}, Lcom/android/internal/os/BackgroundThread;->getHandler()Landroid/os/Handler;
 
@@ -652,11 +585,9 @@
     .end annotation
 
     .prologue
-    .line 103
     .local p0, "filesToPin":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const/16 v26, 0x0
 
-    .line 105
     .local v26, "totalLockSize":I
     const/16 v20, 0x0
 
@@ -670,16 +601,13 @@
 
     if-ge v0, v2, :cond_8
 
-    .line 106
     new-instance v8, Ljava/io/FileDescriptor;
 
     invoke-direct {v8}, Ljava/io/FileDescriptor;-><init>()V
 
-    .line 108
     .local v8, "fd":Ljava/io/FileDescriptor;
     const/high16 v11, 0x80000
 
-    .line 109
     .local v11, "LOCAL_O_CLOEXEC":I
     move-object/from16 v0, p0
 
@@ -691,7 +619,6 @@
 
     check-cast v24, Ljava/lang/String;
 
-    .line 111
     .local v24, "pf":Ljava/lang/String;
     :try_start_0
     sget v2, Landroid/system/OsConstants;->O_RDONLY:I
@@ -710,12 +637,10 @@
 
     move-result-object v8
 
-    .line 115
     invoke-static {v8}, Landroid/system/Os;->fstat(Ljava/io/FileDescriptor;)Landroid/system/StructStat;
 
     move-result-object v25
 
-    .line 117
     .local v25, "sb":Landroid/system/StructStat;
     const-wide/16 v2, 0x0
 
@@ -733,7 +658,6 @@
 
     move-result-wide v12
 
-    .line 119
     .local v12, "address":J
     move-object/from16 v0, v25
 
@@ -749,7 +673,6 @@
 
     move/from16 v27, v0
 
-    .line 120
     .local v27, "vecSize":I
     move/from16 v0, v27
 
@@ -757,7 +680,6 @@
 
     move-object/from16 v28, v0
 
-    .line 121
     .local v28, "vector":[B
     move-object/from16 v0, v25
 
@@ -767,7 +689,6 @@
 
     invoke-static {v12, v13, v2, v3, v0}, Landroid/system/Os;->mincore(JJ[B)V
 
-    .line 123
     sget-object v2, Landroid/app/FilePinner;->mfileCaheVecs:Landroid/util/ArrayMap;
 
     move-object/from16 v0, v24
@@ -778,11 +699,9 @@
 
     check-cast v17, [B
 
-    .line 124
     .local v17, "currentCacheVec":[B
     if-eqz v17, :cond_2
 
-    .line 125
     const/16 v23, 0x0
 
     .local v23, "pageIndex":I
@@ -793,7 +712,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 126
     aget-byte v2, v17, v23
 
     aget-byte v3, v28, v23
@@ -804,12 +722,10 @@
 
     aput-byte v2, v17, v23
 
-    .line 125
     add-int/lit8 v23, v23, 0x1
 
     goto :goto_1
 
-    .line 128
     :cond_0
     sget-object v2, Landroid/app/FilePinner;->mfileCaheVecs:Landroid/util/ArrayMap;
 
@@ -819,12 +735,10 @@
 
     invoke-virtual {v2, v0, v1}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 133
     .end local v23    # "pageIndex":I
     :goto_2
     if-nez p1, :cond_3
 
-    .line 134
     move-object/from16 v0, v25
 
     iget-wide v2, v0, Landroid/system/StructStat;->st_size:J
@@ -834,20 +748,17 @@
     .catch Landroid/system/ErrnoException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 162
     invoke-virtual {v8}, Ljava/io/FileDescriptor;->valid()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 164
     :try_start_1
     invoke-static {v8}, Landroid/system/Os;->close(Ljava/io/FileDescriptor;)V
     :try_end_1
     .catch Landroid/system/ErrnoException; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 105
     .end local v12    # "address":J
     .end local v17    # "currentCacheVec":[B
     .end local v25    # "sb":Landroid/system/StructStat;
@@ -859,7 +770,6 @@
 
     goto/16 :goto_0
 
-    .line 130
     .restart local v12    # "address":J
     .restart local v17    # "currentCacheVec":[B
     .restart local v25    # "sb":Landroid/system/StructStat;
@@ -880,7 +790,6 @@
 
     goto :goto_2
 
-    .line 159
     .end local v12    # "address":J
     .end local v17    # "currentCacheVec":[B
     .end local v25    # "sb":Landroid/system/StructStat;
@@ -889,7 +798,6 @@
     :catch_0
     move-exception v18
 
-    .line 160
     .local v18, "e":Landroid/system/ErrnoException;
     :try_start_3
     sget-object v2, Landroid/app/FilePinner;->TAG:Ljava/lang/String;
@@ -920,14 +828,12 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 162
     invoke-virtual {v8}, Ljava/io/FileDescriptor;->valid()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 164
     :try_start_4
     invoke-static {v8}, Landroid/system/Os;->close(Ljava/io/FileDescriptor;)V
     :try_end_4
@@ -935,11 +841,9 @@
 
     goto :goto_3
 
-    .line 165
     :catch_1
     move-exception v19
 
-    .line 166
     .local v19, "eClose":Landroid/system/ErrnoException;
     sget-object v2, Landroid/app/FilePinner;->TAG:Ljava/lang/String;
 
@@ -969,7 +873,6 @@
 
     goto :goto_3
 
-    .line 165
     .end local v18    # "e":Landroid/system/ErrnoException;
     .end local v19    # "eClose":Landroid/system/ErrnoException;
     .restart local v12    # "address":J
@@ -980,7 +883,6 @@
     :catch_2
     move-exception v19
 
-    .line 166
     .restart local v19    # "eClose":Landroid/system/ErrnoException;
     sget-object v2, Landroid/app/FilePinner;->TAG:Ljava/lang/String;
 
@@ -1010,20 +912,16 @@
 
     goto :goto_3
 
-    .line 138
     .end local v19    # "eClose":Landroid/system/ErrnoException;
     :cond_3
     const/16 v22, 0x0
 
-    .line 139
     .local v22, "pageCount":I
     const/16 v16, 0x0
 
-    .line 140
     .local v16, "cachedSize":I
     const/16 v21, 0x0
 
-    .line 141
     .local v21, "lockCount":I
     :goto_4
     move/from16 v0, v22
@@ -1032,7 +930,6 @@
 
     if-ge v0, v1, :cond_6
 
-    .line 142
     :try_start_5
     aget-byte v2, v17, v22
 
@@ -1040,20 +937,16 @@
 
     if-lez v2, :cond_5
 
-    .line 143
     add-int/lit8 v21, v21, 0x1
 
-    .line 155
     :cond_4
     add-int/lit8 v22, v22, 0x1
 
     goto :goto_4
 
-    .line 145
     :cond_5
     if-lez v21, :cond_4
 
-    .line 146
     sub-int v2, v22, v21
 
     mul-int/lit16 v2, v2, 0x1000
@@ -1070,23 +963,18 @@
 
     invoke-static {v2, v3, v4, v5}, Landroid/system/Os;->mlock(JJ)V
 
-    .line 147
     add-int v16, v16, v21
 
-    .line 148
     add-int v26, v26, v21
 
-    .line 149
     const/16 v21, 0x0
 
-    .line 150
     const/16 v2, 0x3200
 
     move/from16 v0, v26
 
     if-le v0, v2, :cond_4
 
-    .line 157
     :cond_6
     mul-int/lit8 v2, v16, 0x64
 
@@ -1098,7 +986,6 @@
 
     div-double v14, v2, v4
 
-    .line 158
     .local v14, "cachedPerc":D
     sget-object v2, Landroid/app/FilePinner;->TAG:Ljava/lang/String;
 
@@ -1143,14 +1030,12 @@
     .catch Landroid/system/ErrnoException; {:try_start_5 .. :try_end_5} :catch_0
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 162
     invoke-virtual {v8}, Ljava/io/FileDescriptor;->valid()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 164
     :try_start_6
     invoke-static {v8}, Landroid/system/Os;->close(Ljava/io/FileDescriptor;)V
     :try_end_6
@@ -1158,11 +1043,9 @@
 
     goto/16 :goto_3
 
-    .line 165
     :catch_3
     move-exception v19
 
-    .line 166
     .restart local v19    # "eClose":Landroid/system/ErrnoException;
     sget-object v2, Landroid/app/FilePinner;->TAG:Ljava/lang/String;
 
@@ -1192,7 +1075,6 @@
 
     goto/16 :goto_3
 
-    .line 162
     .end local v12    # "address":J
     .end local v14    # "cachedPerc":D
     .end local v16    # "cachedSize":I
@@ -1212,22 +1094,18 @@
 
     if-eqz v3, :cond_7
 
-    .line 164
     :try_start_7
     invoke-static {v8}, Landroid/system/Os;->close(Ljava/io/FileDescriptor;)V
     :try_end_7
     .catch Landroid/system/ErrnoException; {:try_start_7 .. :try_end_7} :catch_4
 
-    .line 167
     :cond_7
     :goto_5
     throw v2
 
-    .line 165
     :catch_4
     move-exception v19
 
-    .line 166
     .restart local v19    # "eClose":Landroid/system/ErrnoException;
     sget-object v3, Landroid/app/FilePinner;->TAG:Ljava/lang/String;
 
@@ -1257,7 +1135,6 @@
 
     goto :goto_5
 
-    .line 171
     .end local v8    # "fd":Ljava/io/FileDescriptor;
     .end local v11    # "LOCAL_O_CLOEXEC":I
     .end local v19    # "eClose":Landroid/system/ErrnoException;

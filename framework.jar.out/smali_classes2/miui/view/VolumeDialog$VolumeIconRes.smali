@@ -30,19 +30,14 @@
     .param p3, "mIcon"    # I
 
     .prologue
-    .line 932
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 933
     iput p1, p0, Lmiui/view/VolumeDialog$VolumeIconRes;->normalIconRes:I
 
-    .line 934
     iput p2, p0, Lmiui/view/VolumeDialog$VolumeIconRes;->selectedIconRes:I
 
-    .line 935
     iput p3, p0, Lmiui/view/VolumeDialog$VolumeIconRes;->mutedIconRes:I
 
-    .line 936
     return-void
 .end method
 
@@ -54,7 +49,6 @@
     .param p4, "x3"    # Lmiui/view/VolumeDialog$1;
 
     .prologue
-    .line 927
     invoke-direct {p0, p1, p2, p3}, Lmiui/view/VolumeDialog$VolumeIconRes;-><init>(III)V
 
     return-void

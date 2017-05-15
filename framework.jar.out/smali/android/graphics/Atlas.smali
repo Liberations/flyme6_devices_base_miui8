@@ -33,12 +33,10 @@
     .param p3, "height"    # I
 
     .prologue
-    .line 84
     const/4 v0, 0x2
 
     invoke-direct {p0, p1, p2, p3, v0}, Landroid/graphics/Atlas;-><init>(Landroid/graphics/Atlas$Type;III)V
 
-    .line 85
     return-void
 .end method
 
@@ -50,17 +48,14 @@
     .param p4, "flags"    # I
 
     .prologue
-    .line 100
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 101
     invoke-static {p1, p2, p3, p4}, Landroid/graphics/Atlas;->findPolicy(Landroid/graphics/Atlas$Type;III)Landroid/graphics/Atlas$Policy;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/graphics/Atlas;->mPolicy:Landroid/graphics/Atlas$Policy;
 
-    .line 102
     return-void
 .end method
 
@@ -74,7 +69,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 138
     sget-object v0, Landroid/graphics/Atlas$1;->$SwitchMap$android$graphics$Atlas$Type:[I
 
     invoke-virtual {p0}, Landroid/graphics/Atlas$Type;->ordinal()I
@@ -87,11 +81,9 @@
 
     move-object v0, v1
 
-    .line 152
     :goto_0
     return-object v0
 
-    .line 140
     :pswitch_0
     new-instance v0, Landroid/graphics/Atlas$SlicePolicy;
 
@@ -103,7 +95,6 @@
 
     goto :goto_0
 
-    .line 143
     :pswitch_1
     new-instance v0, Landroid/graphics/Atlas$SlicePolicy;
 
@@ -115,7 +106,6 @@
 
     goto :goto_0
 
-    .line 146
     :pswitch_2
     new-instance v0, Landroid/graphics/Atlas$SlicePolicy;
 
@@ -127,7 +117,6 @@
 
     goto :goto_0
 
-    .line 149
     :pswitch_3
     new-instance v0, Landroid/graphics/Atlas$SlicePolicy;
 
@@ -139,7 +128,6 @@
 
     goto :goto_0
 
-    .line 138
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -157,7 +145,6 @@
     .param p2, "height"    # I
 
     .prologue
-    .line 116
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, p2, v0}, Landroid/graphics/Atlas;->pack(IILandroid/graphics/Atlas$Entry;)Landroid/graphics/Atlas$Entry;
@@ -174,7 +161,6 @@
     .param p3, "entry"    # Landroid/graphics/Atlas$Entry;
 
     .prologue
-    .line 133
     if-nez p3, :cond_0
 
     new-instance p3, Landroid/graphics/Atlas$Entry;
@@ -182,7 +168,6 @@
     .end local p3    # "entry":Landroid/graphics/Atlas$Entry;
     invoke-direct {p3}, Landroid/graphics/Atlas$Entry;-><init>()V
 
-    .line 134
     .restart local p3    # "entry":Landroid/graphics/Atlas$Entry;
     :cond_0
     iget-object v0, p0, Landroid/graphics/Atlas;->mPolicy:Landroid/graphics/Atlas$Policy;

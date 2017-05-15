@@ -39,37 +39,30 @@
     .locals 1
 
     .prologue
-    .line 50
     iput-object p1, p0, Lcom/android/internal/alsa/AlsaCardsParser$AlsaCardRecord;->this$0:Lcom/android/internal/alsa/AlsaCardsParser;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 44
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/internal/alsa/AlsaCardsParser$AlsaCardRecord;->mCardNum:I
 
-    .line 45
     const-string v0, ""
 
     iput-object v0, p0, Lcom/android/internal/alsa/AlsaCardsParser$AlsaCardRecord;->mField1:Ljava/lang/String;
 
-    .line 46
     const-string v0, ""
 
     iput-object v0, p0, Lcom/android/internal/alsa/AlsaCardsParser$AlsaCardRecord;->mCardName:Ljava/lang/String;
 
-    .line 47
     const-string v0, ""
 
     iput-object v0, p0, Lcom/android/internal/alsa/AlsaCardsParser$AlsaCardRecord;->mCardDescription:Ljava/lang/String;
 
-    .line 48
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/alsa/AlsaCardsParser$AlsaCardRecord;->mIsUsb:Z
 
-    .line 50
     return-void
 .end method
 
@@ -87,18 +80,14 @@
 
     const/4 v4, 0x0
 
-    .line 53
     const/4 v3, 0x0
 
-    .line 54
     .local v3, "tokenIndex":I
     const/4 v0, 0x0
 
-    .line 56
     .local v0, "delimIndex":I
     if-nez p2, :cond_1
 
-    .line 58
     # getter for: Lcom/android/internal/alsa/AlsaCardsParser;->mTokenizer:Lcom/android/internal/alsa/LineTokenizer;
     invoke-static {}, Lcom/android/internal/alsa/AlsaCardsParser;->access$000()Lcom/android/internal/alsa/LineTokenizer;
 
@@ -108,7 +97,6 @@
 
     move-result v3
 
-    .line 59
     # getter for: Lcom/android/internal/alsa/AlsaCardsParser;->mTokenizer:Lcom/android/internal/alsa/LineTokenizer;
     invoke-static {}, Lcom/android/internal/alsa/AlsaCardsParser;->access$000()Lcom/android/internal/alsa/LineTokenizer;
 
@@ -118,7 +106,6 @@
 
     move-result v0
 
-    .line 63
     :try_start_0
     invoke-virtual {p1, v3, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
@@ -132,7 +119,6 @@
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 71
     # getter for: Lcom/android/internal/alsa/AlsaCardsParser;->mTokenizer:Lcom/android/internal/alsa/LineTokenizer;
     invoke-static {}, Lcom/android/internal/alsa/AlsaCardsParser;->access$000()Lcom/android/internal/alsa/LineTokenizer;
 
@@ -142,7 +128,6 @@
 
     move-result v3
 
-    .line 72
     # getter for: Lcom/android/internal/alsa/AlsaCardsParser;->mTokenizer:Lcom/android/internal/alsa/LineTokenizer;
     invoke-static {}, Lcom/android/internal/alsa/AlsaCardsParser;->access$000()Lcom/android/internal/alsa/LineTokenizer;
 
@@ -152,14 +137,12 @@
 
     move-result v0
 
-    .line 73
     invoke-virtual {p1, v3, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v4
 
     iput-object v4, p0, Lcom/android/internal/alsa/AlsaCardsParser$AlsaCardRecord;->mField1:Ljava/lang/String;
 
-    .line 76
     # getter for: Lcom/android/internal/alsa/AlsaCardsParser;->mTokenizer:Lcom/android/internal/alsa/LineTokenizer;
     invoke-static {}, Lcom/android/internal/alsa/AlsaCardsParser;->access$000()Lcom/android/internal/alsa/LineTokenizer;
 
@@ -169,7 +152,6 @@
 
     move-result v3
 
-    .line 77
     invoke-virtual {p1, v3}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v4
@@ -180,15 +162,12 @@
     :goto_0
     move v4, v5
 
-    .line 91
     :goto_1
     return v4
 
-    .line 64
     :catch_0
     move-exception v1
 
-    .line 65
     .local v1, "e":Ljava/lang/NumberFormatException;
     const-string v5, "AlsaCardRecord"
 
@@ -240,12 +219,10 @@
 
     goto :goto_1
 
-    .line 80
     .end local v1    # "e":Ljava/lang/NumberFormatException;
     :cond_1
     if-ne p2, v5, :cond_0
 
-    .line 81
     # getter for: Lcom/android/internal/alsa/AlsaCardsParser;->mTokenizer:Lcom/android/internal/alsa/LineTokenizer;
     invoke-static {}, Lcom/android/internal/alsa/AlsaCardsParser;->access$000()Lcom/android/internal/alsa/LineTokenizer;
 
@@ -255,17 +232,14 @@
 
     move-result v3
 
-    .line 82
     if-eq v3, v7, :cond_0
 
-    .line 83
     const-string v6, "at usb-"
 
     invoke-virtual {p1, v6}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v2
 
-    .line 84
     .local v2, "keyIndex":I
     if-eq v2, v7, :cond_2
 
@@ -274,12 +248,10 @@
     :cond_2
     iput-boolean v4, p0, Lcom/android/internal/alsa/AlsaCardsParser$AlsaCardRecord;->mIsUsb:Z
 
-    .line 85
     iget-boolean v4, p0, Lcom/android/internal/alsa/AlsaCardsParser$AlsaCardRecord;->mIsUsb:Z
 
     if-eqz v4, :cond_0
 
-    .line 86
     add-int/lit8 v4, v2, -0x1
 
     invoke-virtual {p1, v3, v4}, Ljava/lang/String;->substring(II)Ljava/lang/String;
@@ -295,7 +267,6 @@
     .locals 2
 
     .prologue
-    .line 95
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

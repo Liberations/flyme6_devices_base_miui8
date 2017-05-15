@@ -65,41 +65,33 @@
     .end annotation
 
     .prologue
-    .line 101
     .local p2, "entityList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lmiui/maml/elements/MusicLyricParser$LyricEntity;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 369
     new-instance v0, Lmiui/maml/elements/MusicLyricParser$Lyric$LyricLocator;
 
     invoke-direct {v0, p0}, Lmiui/maml/elements/MusicLyricParser$Lyric$LyricLocator;-><init>(Lmiui/maml/elements/MusicLyricParser$Lyric;)V
 
     iput-object v0, p0, Lmiui/maml/elements/MusicLyricParser$Lyric;->mLyricLocator:Lmiui/maml/elements/MusicLyricParser$Lyric$LyricLocator;
 
-    .line 102
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lmiui/maml/elements/MusicLyricParser$Lyric;->mOpenTime:J
 
-    .line 103
     iput-object p1, p0, Lmiui/maml/elements/MusicLyricParser$Lyric;->mHeader:Lmiui/maml/elements/MusicLyricParser$LyricHeader;
 
-    .line 104
     iget-object v0, p0, Lmiui/maml/elements/MusicLyricParser$Lyric;->mHeader:Lmiui/maml/elements/MusicLyricParser$LyricHeader;
 
     iget v0, v0, Lmiui/maml/elements/MusicLyricParser$LyricHeader;->offset:I
 
     iput v0, p0, Lmiui/maml/elements/MusicLyricParser$Lyric;->mOriginHeaderOffset:I
 
-    .line 105
     iput-object p2, p0, Lmiui/maml/elements/MusicLyricParser$Lyric;->mEntityList:Ljava/util/ArrayList;
 
-    .line 106
     iput-boolean p3, p0, Lmiui/maml/elements/MusicLyricParser$Lyric;->mIsModified:Z
 
-    .line 107
     new-instance v0, Lmiui/maml/elements/MusicLyricParser$LyricEntity;
 
     const/4 v1, -0x1
@@ -110,7 +102,6 @@
 
     iput-object v0, p0, Lmiui/maml/elements/MusicLyricParser$Lyric;->EMPTY_BEFORE:Lmiui/maml/elements/MusicLyricParser$LyricEntity;
 
-    .line 108
     new-instance v0, Lmiui/maml/elements/MusicLyricParser$LyricEntity;
 
     invoke-virtual {p2}, Ljava/util/ArrayList;->size()I
@@ -123,7 +114,6 @@
 
     iput-object v0, p0, Lmiui/maml/elements/MusicLyricParser$Lyric;->EMPTY_AFTER:Lmiui/maml/elements/MusicLyricParser$LyricEntity;
 
-    .line 109
     return-void
 .end method
 
@@ -132,7 +122,6 @@
     .param p0, "x0"    # Lmiui/maml/elements/MusicLyricParser$Lyric;
 
     .prologue
-    .line 85
     iget-object v0, p0, Lmiui/maml/elements/MusicLyricParser$Lyric;->mEntityList:Ljava/util/ArrayList;
 
     return-object v0
@@ -144,10 +133,8 @@
     .param p2, "percent"    # D
 
     .prologue
-    .line 156
     const-wide/16 v2, 0x0
 
-    .line 157
     .local v2, "time":J
     invoke-virtual {p0}, Lmiui/maml/elements/MusicLyricParser$Lyric;->size()I
 
@@ -155,11 +142,9 @@
 
     add-int/lit8 v0, v1, -0x1
 
-    .line 158
     .local v0, "maxLine":I
     if-lt p1, v0, :cond_0
 
-    .line 159
     iget-object v1, p0, Lmiui/maml/elements/MusicLyricParser$Lyric;->mEntityList:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -186,11 +171,9 @@
 
     add-long v2, v4, v6
 
-    .line 165
     :goto_0
     return-wide v2
 
-    .line 162
     :cond_0
     iget-object v1, p0, Lmiui/maml/elements/MusicLyricParser$Lyric;->mEntityList:Ljava/util/ArrayList;
 
@@ -246,7 +229,6 @@
     .param p1, "offset"    # I
 
     .prologue
-    .line 112
     iget-object v0, p0, Lmiui/maml/elements/MusicLyricParser$Lyric;->mHeader:Lmiui/maml/elements/MusicLyricParser$LyricHeader;
 
     iget v1, v0, Lmiui/maml/elements/MusicLyricParser$LyricHeader;->offset:I
@@ -255,12 +237,10 @@
 
     iput v1, v0, Lmiui/maml/elements/MusicLyricParser$LyricHeader;->offset:I
 
-    .line 113
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lmiui/maml/elements/MusicLyricParser$Lyric;->mIsModified:Z
 
-    .line 114
     return-void
 .end method
 
@@ -271,12 +251,10 @@
     .param p3, "percent"    # D
 
     .prologue
-    .line 169
     invoke-virtual/range {p0 .. p0}, Lmiui/maml/elements/MusicLyricParser$Lyric;->size()I
 
     move-result v7
 
-    .line 170
     .local v7, "maxLine":I
     if-ltz p2, :cond_0
 
@@ -296,12 +274,10 @@
 
     if-le v12, v7, :cond_1
 
-    .line 191
     :cond_0
     :goto_0
     return-void
 
-    .line 175
     :cond_1
     move-object/from16 v0, p1
 
@@ -317,7 +293,6 @@
 
     move-result-wide v4
 
-    .line 176
     .local v4, "currentTime":J
     move-object/from16 v0, p0
 
@@ -329,11 +304,9 @@
 
     move-result-wide v8
 
-    .line 177
     .local v8, "newTime":J
     const/4 v6, 0x1
 
-    .line 178
     .local v6, "isOffsetDelay":Z
     move-object/from16 v0, p1
 
@@ -359,11 +332,9 @@
 
     if-lez v12, :cond_3
 
-    .line 180
     :cond_2
     const/4 v6, 0x0
 
-    .line 182
     :cond_3
     if-nez v6, :cond_4
 
@@ -371,7 +342,6 @@
 
     if-gtz v12, :cond_0
 
-    .line 185
     :cond_4
     if-eqz v6, :cond_5
 
@@ -379,11 +349,9 @@
 
     if-ltz v12, :cond_0
 
-    .line 189
     :cond_5
     sub-long v10, v4, v8
 
-    .line 190
     .local v10, "offset":J
     long-to-int v12, v10
 
@@ -398,7 +366,6 @@
     .locals 5
 
     .prologue
-    .line 242
     iget-object v4, p0, Lmiui/maml/elements/MusicLyricParser$Lyric;->mEntityList:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->isEmpty()Z
@@ -407,21 +374,17 @@
 
     if-eqz v4, :cond_1
 
-    .line 256
     :cond_0
     return-void
 
-    .line 245
     :cond_1
     iget-object v0, p0, Lmiui/maml/elements/MusicLyricParser$Lyric;->mEntityList:Ljava/util/ArrayList;
 
-    .line 247
     .local v0, "el":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lmiui/maml/elements/MusicLyricParser$LyricEntity;>;"
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v3
 
-    .line 248
     .local v3, "len":I
     if-lez v3, :cond_0
 
@@ -439,25 +402,21 @@
 
     if-nez v4, :cond_0
 
-    .line 252
     const/4 v2, 0x0
 
     .local v2, "i":I
     :goto_0
     if-ge v2, v3, :cond_0
 
-    .line 253
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lmiui/maml/elements/MusicLyricParser$LyricEntity;
 
-    .line 254
     .local v1, "entity":Lmiui/maml/elements/MusicLyricParser$LyricEntity;
     invoke-virtual {v1}, Lmiui/maml/elements/MusicLyricParser$LyricEntity;->decorate()V
 
-    .line 252
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
@@ -468,7 +427,6 @@
     .param p1, "position"    # J
 
     .prologue
-    .line 384
     iget-object v0, p0, Lmiui/maml/elements/MusicLyricParser$Lyric;->mLyricLocator:Lmiui/maml/elements/MusicLyricParser$Lyric$LyricLocator;
 
     invoke-virtual {v0, p1, p2}, Lmiui/maml/elements/MusicLyricParser$Lyric$LyricLocator;->getAfterLines(J)Ljava/lang/String;
@@ -483,7 +441,6 @@
     .param p1, "position"    # J
 
     .prologue
-    .line 380
     iget-object v0, p0, Lmiui/maml/elements/MusicLyricParser$Lyric;->mLyricLocator:Lmiui/maml/elements/MusicLyricParser$Lyric$LyricLocator;
 
     invoke-virtual {v0, p1, p2}, Lmiui/maml/elements/MusicLyricParser$Lyric$LyricLocator;->getBeforeLines(J)Ljava/lang/String;
@@ -498,7 +455,6 @@
     .param p1, "position"    # J
 
     .prologue
-    .line 388
     iget-object v0, p0, Lmiui/maml/elements/MusicLyricParser$Lyric;->mLyricLocator:Lmiui/maml/elements/MusicLyricParser$Lyric$LyricLocator;
 
     invoke-virtual {v0, p1, p2}, Lmiui/maml/elements/MusicLyricParser$Lyric$LyricLocator;->getLastLine(J)Ljava/lang/String;
@@ -513,7 +469,6 @@
     .param p1, "position"    # J
 
     .prologue
-    .line 376
     iget-object v0, p0, Lmiui/maml/elements/MusicLyricParser$Lyric;->mLyricLocator:Lmiui/maml/elements/MusicLyricParser$Lyric$LyricLocator;
 
     invoke-virtual {v0, p1, p2}, Lmiui/maml/elements/MusicLyricParser$Lyric$LyricLocator;->getLine(J)Ljava/lang/String;
@@ -528,21 +483,16 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 194
     const/4 v0, 0x0
 
-    .line 195
     .local v0, "entity":Lmiui/maml/elements/MusicLyricParser$LyricEntity;
     if-gez p1, :cond_0
 
-    .line 196
     iget-object v0, p0, Lmiui/maml/elements/MusicLyricParser$Lyric;->EMPTY_BEFORE:Lmiui/maml/elements/MusicLyricParser$LyricEntity;
 
-    .line 203
     :goto_0
     return-object v0
 
-    .line 197
     :cond_0
     iget-object v1, p0, Lmiui/maml/elements/MusicLyricParser$Lyric;->mEntityList:Ljava/util/ArrayList;
 
@@ -552,12 +502,10 @@
 
     if-lt p1, v1, :cond_1
 
-    .line 198
     iget-object v0, p0, Lmiui/maml/elements/MusicLyricParser$Lyric;->EMPTY_AFTER:Lmiui/maml/elements/MusicLyricParser$LyricEntity;
 
     goto :goto_0
 
-    .line 200
     :cond_1
     iget-object v1, p0, Lmiui/maml/elements/MusicLyricParser$Lyric;->mEntityList:Ljava/util/ArrayList;
 
@@ -577,12 +525,10 @@
     .param p1, "time"    # J
 
     .prologue
-    .line 129
     iget-object v8, p0, Lmiui/maml/elements/MusicLyricParser$Lyric;->mHeader:Lmiui/maml/elements/MusicLyricParser$LyricHeader;
 
     iget v1, v8, Lmiui/maml/elements/MusicLyricParser$LyricHeader;->offset:I
 
-    .line 131
     .local v1, "offset":I
     iget-object v8, p0, Lmiui/maml/elements/MusicLyricParser$Lyric;->mEntityList:Ljava/util/ArrayList;
 
@@ -604,7 +550,6 @@
 
     if-lez v8, :cond_0
 
-    .line 132
     new-instance v8, Lmiui/maml/elements/MusicLyricParser$LyricShot;
 
     const/4 v9, 0x0
@@ -613,11 +558,9 @@
 
     invoke-direct {v8, v9, v10, v11}, Lmiui/maml/elements/MusicLyricParser$LyricShot;-><init>(ID)V
 
-    .line 152
     :goto_0
     return-object v8
 
-    .line 135
     :cond_0
     const/4 v0, 0x1
 
@@ -631,7 +574,6 @@
 
     if-ge v0, v8, :cond_3
 
-    .line 136
     iget-object v8, p0, Lmiui/maml/elements/MusicLyricParser$Lyric;->mEntityList:Ljava/util/ArrayList;
 
     invoke-virtual {v8, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -644,7 +586,6 @@
 
     add-int v7, v8, v1
 
-    .line 137
     .local v7, "timeThis":I
     int-to-long v8, v7
 
@@ -652,7 +593,6 @@
 
     if-lez v8, :cond_2
 
-    .line 138
     iget-object v8, p0, Lmiui/maml/elements/MusicLyricParser$Lyric;->mEntityList:Ljava/util/ArrayList;
 
     add-int/lit8 v9, v0, -0x1
@@ -667,15 +607,12 @@
 
     add-int v6, v8, v1
 
-    .line 139
     .local v6, "timePrev":I
     const-wide/16 v2, 0x0
 
-    .line 140
     .local v2, "percent":D
     if-le v7, v6, :cond_1
 
-    .line 141
     int-to-long v8, v6
 
     sub-long v8, p1, v8
@@ -688,7 +625,6 @@
 
     div-double v2, v8, v10
 
-    .line 143
     :cond_1
     new-instance v8, Lmiui/maml/elements/MusicLyricParser$LyricShot;
 
@@ -698,7 +634,6 @@
 
     goto :goto_0
 
-    .line 135
     .end local v2    # "percent":D
     .end local v6    # "timePrev":I
     :cond_2
@@ -706,7 +641,6 @@
 
     goto :goto_1
 
-    .line 146
     .end local v7    # "timeThis":I
     :cond_3
     iget-object v8, p0, Lmiui/maml/elements/MusicLyricParser$Lyric;->mEntityList:Ljava/util/ArrayList;
@@ -729,7 +663,6 @@
 
     int-to-long v4, v8
 
-    .line 147
     .local v4, "timeLast":J
     sub-long v8, p1, v4
 
@@ -739,7 +672,6 @@
 
     if-gez v8, :cond_4
 
-    .line 148
     sub-long v8, p1, v4
 
     long-to-double v8, v8
@@ -748,7 +680,6 @@
 
     div-double v2, v8, v10
 
-    .line 149
     .restart local v2    # "percent":D
     new-instance v8, Lmiui/maml/elements/MusicLyricParser$LyricShot;
 
@@ -762,7 +693,6 @@
 
     goto :goto_0
 
-    .line 152
     .end local v2    # "percent":D
     :cond_4
     new-instance v8, Lmiui/maml/elements/MusicLyricParser$LyricShot;
@@ -785,7 +715,6 @@
     .param p1, "position"    # J
 
     .prologue
-    .line 392
     iget-object v0, p0, Lmiui/maml/elements/MusicLyricParser$Lyric;->mLyricLocator:Lmiui/maml/elements/MusicLyricParser$Lyric$LyricLocator;
 
     invoke-virtual {v0, p1, p2}, Lmiui/maml/elements/MusicLyricParser$Lyric$LyricLocator;->getNextLine(J)Ljava/lang/String;
@@ -799,7 +728,6 @@
     .locals 2
 
     .prologue
-    .line 208
     iget-wide v0, p0, Lmiui/maml/elements/MusicLyricParser$Lyric;->mOpenTime:J
 
     return-wide v0
@@ -818,7 +746,6 @@
     .end annotation
 
     .prologue
-    .line 212
     iget-object v4, p0, Lmiui/maml/elements/MusicLyricParser$Lyric;->mEntityList:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->isEmpty()Z
@@ -827,14 +754,11 @@
 
     if-eqz v4, :cond_1
 
-    .line 213
     const/4 v2, 0x0
 
-    .line 222
     :cond_0
     return-object v2
 
-    .line 215
     :cond_1
     new-instance v2, Ljava/util/ArrayList;
 
@@ -846,7 +770,6 @@
 
     invoke-direct {v2, v4}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 218
     .local v2, "lyricArr":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/CharSequence;>;"
     iget-object v4, p0, Lmiui/maml/elements/MusicLyricParser$Lyric;->mEntityList:Ljava/util/ArrayList;
 
@@ -868,11 +791,9 @@
 
     check-cast v3, Lmiui/maml/elements/MusicLyricParser$LyricEntity;
 
-    .line 219
     .local v3, "lyricEntity":Lmiui/maml/elements/MusicLyricParser$LyricEntity;
     iget-object v1, v3, Lmiui/maml/elements/MusicLyricParser$LyricEntity;->lyric:Ljava/lang/CharSequence;
 
-    .line 220
     .local v1, "lyric":Ljava/lang/CharSequence;
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -883,7 +804,6 @@
     .locals 7
 
     .prologue
-    .line 226
     iget-object v5, p0, Lmiui/maml/elements/MusicLyricParser$Lyric;->mEntityList:Ljava/util/ArrayList;
 
     invoke-virtual {v5}, Ljava/util/ArrayList;->isEmpty()Z
@@ -892,14 +812,11 @@
 
     if-eqz v5, :cond_1
 
-    .line 227
     const/4 v4, 0x0
 
-    .line 234
     :cond_0
     return-object v4
 
-    .line 229
     :cond_1
     iget-object v5, p0, Lmiui/maml/elements/MusicLyricParser$Lyric;->mEntityList:Ljava/util/ArrayList;
 
@@ -909,11 +826,9 @@
 
     new-array v4, v5, [I
 
-    .line 230
     .local v4, "timeArr":[I
     const/4 v0, 0x0
 
-    .line 231
     .local v0, "i":I
     iget-object v5, p0, Lmiui/maml/elements/MusicLyricParser$Lyric;->mEntityList:Ljava/util/ArrayList;
 
@@ -935,7 +850,6 @@
 
     check-cast v3, Lmiui/maml/elements/MusicLyricParser$LyricEntity;
 
-    .line 232
     .local v3, "lyricEntity":Lmiui/maml/elements/MusicLyricParser$LyricEntity;
     add-int/lit8 v1, v0, 0x1
 
@@ -953,7 +867,6 @@
 
     move v0, v1
 
-    .line 233
     .end local v1    # "i":I
     .restart local v0    # "i":I
     goto :goto_0
@@ -963,7 +876,6 @@
     .locals 1
 
     .prologue
-    .line 121
     iget-boolean v0, p0, Lmiui/maml/elements/MusicLyricParser$Lyric;->mIsModified:Z
 
     return v0
@@ -973,12 +885,10 @@
     .locals 1
 
     .prologue
-    .line 238
     iget-object v0, p0, Lmiui/maml/elements/MusicLyricParser$Lyric;->mEntityList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 239
     return-void
 .end method
 
@@ -986,14 +896,12 @@
     .locals 2
 
     .prologue
-    .line 117
     iget-object v0, p0, Lmiui/maml/elements/MusicLyricParser$Lyric;->mHeader:Lmiui/maml/elements/MusicLyricParser$LyricHeader;
 
     iget v1, p0, Lmiui/maml/elements/MusicLyricParser$Lyric;->mOriginHeaderOffset:I
 
     iput v1, v0, Lmiui/maml/elements/MusicLyricParser$LyricHeader;->offset:I
 
-    .line 118
     return-void
 .end method
 
@@ -1011,13 +919,11 @@
     .end annotation
 
     .prologue
-    .line 372
     .local p2, "lyric":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/CharSequence;>;"
     iget-object v0, p0, Lmiui/maml/elements/MusicLyricParser$Lyric;->mLyricLocator:Lmiui/maml/elements/MusicLyricParser$Lyric$LyricLocator;
 
     invoke-virtual {v0, p1, p2}, Lmiui/maml/elements/MusicLyricParser$Lyric$LyricLocator;->set([ILjava/util/ArrayList;)V
 
-    .line 373
     return-void
 .end method
 
@@ -1025,7 +931,6 @@
     .locals 1
 
     .prologue
-    .line 125
     iget-object v0, p0, Lmiui/maml/elements/MusicLyricParser$Lyric;->mEntityList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I

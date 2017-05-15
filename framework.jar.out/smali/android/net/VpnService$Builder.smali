@@ -47,33 +47,28 @@
     .locals 2
 
     .prologue
-    .line 409
     iput-object p1, p0, Landroid/net/VpnService$Builder;->this$0:Landroid/net/VpnService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 405
     new-instance v0, Lcom/android/internal/net/VpnConfig;
 
     invoke-direct {v0}, Lcom/android/internal/net/VpnConfig;-><init>()V
 
     iput-object v0, p0, Landroid/net/VpnService$Builder;->mConfig:Lcom/android/internal/net/VpnConfig;
 
-    .line 406
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/net/VpnService$Builder;->mAddresses:Ljava/util/List;
 
-    .line 407
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/net/VpnService$Builder;->mRoutes:Ljava/util/List;
 
-    .line 410
     iget-object v0, p0, Landroid/net/VpnService$Builder;->mConfig:Lcom/android/internal/net/VpnConfig;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -86,7 +81,6 @@
 
     iput-object v1, v0, Lcom/android/internal/net/VpnConfig;->user:Ljava/lang/String;
 
-    .line 411
     return-void
 .end method
 
@@ -100,8 +94,7 @@
     .end annotation
 
     .prologue
-    .line 603
-    const-string/jumbo v2, "package"
+    const-string v2, "package"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -111,7 +104,6 @@
 
     move-result-object v1
 
-    .line 606
     .local v1, "pm":Landroid/content/pm/IPackageManager;
     const/4 v2, 0x0
 
@@ -124,14 +116,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 610
     return-void
 
-    .line 607
     :catch_0
     move-exception v0
 
-    .line 608
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v2, Ljava/lang/IllegalStateException;
 
@@ -148,7 +137,6 @@
     .param p2, "prefixLength"    # I
 
     .prologue
-    .line 481
     invoke-static {p1}, Ljava/net/InetAddress;->parseNumericAddress(Ljava/lang/String;)Ljava/net/InetAddress;
 
     move-result-object v0
@@ -166,18 +154,15 @@
     .param p2, "prefixLength"    # I
 
     .prologue
-    .line 459
     # invokes: Landroid/net/VpnService;->check(Ljava/net/InetAddress;I)V
     invoke-static {p1, p2}, Landroid/net/VpnService;->access$100(Ljava/net/InetAddress;I)V
 
-    .line 461
     invoke-virtual {p1}, Ljava/net/InetAddress;->isAnyLocalAddress()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 462
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Bad address"
@@ -186,7 +171,6 @@
 
     throw v0
 
-    .line 464
     :cond_0
     iget-object v0, p0, Landroid/net/VpnService$Builder;->mAddresses:Ljava/util/List;
 
@@ -196,12 +180,10 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 465
     iget-object v0, p0, Landroid/net/VpnService$Builder;->mConfig:Lcom/android/internal/net/VpnConfig;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/net/VpnConfig;->updateAllowedFamilies(Ljava/net/InetAddress;)V
 
-    .line 466
     return-object p0
 .end method
 
@@ -215,14 +197,12 @@
     .end annotation
 
     .prologue
-    .line 635
     iget-object v0, p0, Landroid/net/VpnService$Builder;->mConfig:Lcom/android/internal/net/VpnConfig;
 
     iget-object v0, v0, Lcom/android/internal/net/VpnConfig;->disallowedApplications:Ljava/util/List;
 
     if-eqz v0, :cond_0
 
-    .line 636
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "addDisallowedApplication already called"
@@ -231,18 +211,15 @@
 
     throw v0
 
-    .line 638
     :cond_0
     invoke-direct {p0, p1}, Landroid/net/VpnService$Builder;->verifyApp(Ljava/lang/String;)V
 
-    .line 639
     iget-object v0, p0, Landroid/net/VpnService$Builder;->mConfig:Lcom/android/internal/net/VpnConfig;
 
     iget-object v0, v0, Lcom/android/internal/net/VpnConfig;->allowedApplications:Ljava/util/List;
 
     if-nez v0, :cond_1
 
-    .line 640
     iget-object v0, p0, Landroid/net/VpnService$Builder;->mConfig:Lcom/android/internal/net/VpnConfig;
 
     new-instance v1, Ljava/util/ArrayList;
@@ -251,7 +228,6 @@
 
     iput-object v1, v0, Lcom/android/internal/net/VpnConfig;->allowedApplications:Ljava/util/List;
 
-    .line 642
     :cond_1
     iget-object v0, p0, Landroid/net/VpnService$Builder;->mConfig:Lcom/android/internal/net/VpnConfig;
 
@@ -259,7 +235,6 @@
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 643
     return-object p0
 .end method
 
@@ -273,14 +248,12 @@
     .end annotation
 
     .prologue
-    .line 667
     iget-object v0, p0, Landroid/net/VpnService$Builder;->mConfig:Lcom/android/internal/net/VpnConfig;
 
     iget-object v0, v0, Lcom/android/internal/net/VpnConfig;->allowedApplications:Ljava/util/List;
 
     if-eqz v0, :cond_0
 
-    .line 668
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "addAllowedApplication already called"
@@ -289,18 +262,15 @@
 
     throw v0
 
-    .line 670
     :cond_0
     invoke-direct {p0, p1}, Landroid/net/VpnService$Builder;->verifyApp(Ljava/lang/String;)V
 
-    .line 671
     iget-object v0, p0, Landroid/net/VpnService$Builder;->mConfig:Lcom/android/internal/net/VpnConfig;
 
     iget-object v0, v0, Lcom/android/internal/net/VpnConfig;->disallowedApplications:Ljava/util/List;
 
     if-nez v0, :cond_1
 
-    .line 672
     iget-object v0, p0, Landroid/net/VpnService$Builder;->mConfig:Lcom/android/internal/net/VpnConfig;
 
     new-instance v1, Ljava/util/ArrayList;
@@ -309,7 +279,6 @@
 
     iput-object v1, v0, Lcom/android/internal/net/VpnConfig;->disallowedApplications:Ljava/util/List;
 
-    .line 674
     :cond_1
     iget-object v0, p0, Landroid/net/VpnService$Builder;->mConfig:Lcom/android/internal/net/VpnConfig;
 
@@ -317,7 +286,6 @@
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 675
     return-object p0
 .end method
 
@@ -326,7 +294,6 @@
     .param p1, "address"    # Ljava/lang/String;
 
     .prologue
-    .line 558
     invoke-static {p1}, Ljava/net/InetAddress;->parseNumericAddress(Ljava/lang/String;)Ljava/net/InetAddress;
 
     move-result-object v0
@@ -343,7 +310,6 @@
     .param p1, "address"    # Ljava/net/InetAddress;
 
     .prologue
-    .line 536
     invoke-virtual {p1}, Ljava/net/InetAddress;->isLoopbackAddress()Z
 
     move-result v0
@@ -356,7 +322,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 537
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -366,7 +331,6 @@
 
     throw v0
 
-    .line 539
     :cond_1
     iget-object v0, p0, Landroid/net/VpnService$Builder;->mConfig:Lcom/android/internal/net/VpnConfig;
 
@@ -374,7 +338,6 @@
 
     if-nez v0, :cond_2
 
-    .line 540
     iget-object v0, p0, Landroid/net/VpnService$Builder;->mConfig:Lcom/android/internal/net/VpnConfig;
 
     new-instance v1, Ljava/util/ArrayList;
@@ -383,7 +346,6 @@
 
     iput-object v1, v0, Lcom/android/internal/net/VpnConfig;->dnsServers:Ljava/util/List;
 
-    .line 542
     :cond_2
     iget-object v0, p0, Landroid/net/VpnService$Builder;->mConfig:Lcom/android/internal/net/VpnConfig;
 
@@ -395,7 +357,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 543
     return-object p0
 .end method
 
@@ -405,7 +366,6 @@
     .param p2, "prefixLength"    # I
 
     .prologue
-    .line 522
     invoke-static {p1}, Ljava/net/InetAddress;->parseNumericAddress(Ljava/lang/String;)Ljava/net/InetAddress;
 
     move-result-object v0
@@ -423,26 +383,21 @@
     .param p2, "prefixLength"    # I
 
     .prologue
-    .line 494
     # invokes: Landroid/net/VpnService;->check(Ljava/net/InetAddress;I)V
     invoke-static {p1, p2}, Landroid/net/VpnService;->access$100(Ljava/net/InetAddress;I)V
 
-    .line 496
     div-int/lit8 v1, p2, 0x8
 
-    .line 497
     .local v1, "offset":I
     invoke-virtual {p1}, Ljava/net/InetAddress;->getAddress()[B
 
     move-result-object v0
 
-    .line 498
     .local v0, "bytes":[B
     array-length v2, v0
 
     if-ge v1, v2, :cond_1
 
-    .line 499
     aget-byte v2, v0, v1
 
     rem-int/lit8 v3, p2, 0x8
@@ -458,12 +413,10 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 500
     aget-byte v2, v0, v1
 
     if-eqz v2, :cond_0
 
-    .line 501
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string v3, "Bad address"
@@ -472,13 +425,11 @@
 
     throw v2
 
-    .line 499
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 505
     :cond_1
     iget-object v2, p0, Landroid/net/VpnService$Builder;->mRoutes:Ljava/util/List;
 
@@ -494,12 +445,10 @@
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 506
     iget-object v2, p0, Landroid/net/VpnService$Builder;->mConfig:Lcom/android/internal/net/VpnConfig;
 
     invoke-virtual {v2, p1}, Lcom/android/internal/net/VpnConfig;->updateAllowedFamilies(Ljava/net/InetAddress;)V
 
-    .line 507
     return-object p0
 .end method
 
@@ -508,14 +457,12 @@
     .param p1, "domain"    # Ljava/lang/String;
 
     .prologue
-    .line 565
     iget-object v0, p0, Landroid/net/VpnService$Builder;->mConfig:Lcom/android/internal/net/VpnConfig;
 
     iget-object v0, v0, Lcom/android/internal/net/VpnConfig;->searchDomains:Ljava/util/List;
 
     if-nez v0, :cond_0
 
-    .line 566
     iget-object v0, p0, Landroid/net/VpnService$Builder;->mConfig:Lcom/android/internal/net/VpnConfig;
 
     new-instance v1, Ljava/util/ArrayList;
@@ -524,7 +471,6 @@
 
     iput-object v1, v0, Lcom/android/internal/net/VpnConfig;->searchDomains:Ljava/util/List;
 
-    .line 568
     :cond_0
     iget-object v0, p0, Landroid/net/VpnService$Builder;->mConfig:Lcom/android/internal/net/VpnConfig;
 
@@ -532,7 +478,6 @@
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 569
     return-object p0
 .end method
 
@@ -540,14 +485,12 @@
     .locals 2
 
     .prologue
-    .line 689
     iget-object v0, p0, Landroid/net/VpnService$Builder;->mConfig:Lcom/android/internal/net/VpnConfig;
 
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Lcom/android/internal/net/VpnConfig;->allowBypass:Z
 
-    .line 690
     return-object p0
 .end method
 
@@ -558,34 +501,28 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 591
     sget v0, Landroid/system/OsConstants;->AF_INET:I
 
     if-ne p1, v0, :cond_0
 
-    .line 592
     iget-object v0, p0, Landroid/net/VpnService$Builder;->mConfig:Lcom/android/internal/net/VpnConfig;
 
     iput-boolean v1, v0, Lcom/android/internal/net/VpnConfig;->allowIPv4:Z
 
-    .line 599
     :goto_0
     return-object p0
 
-    .line 593
     :cond_0
     sget v0, Landroid/system/OsConstants;->AF_INET6:I
 
     if-ne p1, v0, :cond_1
 
-    .line 594
     iget-object v0, p0, Landroid/net/VpnService$Builder;->mConfig:Lcom/android/internal/net/VpnConfig;
 
     iput-boolean v1, v0, Lcom/android/internal/net/VpnConfig;->allowIPv6:Z
 
     goto :goto_0
 
-    .line 596
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -634,21 +571,18 @@
     .locals 3
 
     .prologue
-    .line 765
     iget-object v1, p0, Landroid/net/VpnService$Builder;->mConfig:Lcom/android/internal/net/VpnConfig;
 
     iget-object v2, p0, Landroid/net/VpnService$Builder;->mAddresses:Ljava/util/List;
 
     iput-object v2, v1, Lcom/android/internal/net/VpnConfig;->addresses:Ljava/util/List;
 
-    .line 766
     iget-object v1, p0, Landroid/net/VpnService$Builder;->mConfig:Lcom/android/internal/net/VpnConfig;
 
     iget-object v2, p0, Landroid/net/VpnService$Builder;->mRoutes:Ljava/util/List;
 
     iput-object v2, v1, Lcom/android/internal/net/VpnConfig;->routes:Ljava/util/List;
 
-    .line 769
     :try_start_0
     # invokes: Landroid/net/VpnService;->getService()Landroid/net/IConnectivityManager;
     invoke-static {}, Landroid/net/VpnService;->access$200()Landroid/net/IConnectivityManager;
@@ -665,11 +599,9 @@
 
     return-object v1
 
-    .line 770
     :catch_0
     move-exception v0
 
-    .line 771
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/IllegalStateException;
 
@@ -683,12 +615,10 @@
     .param p1, "blocking"    # Z
 
     .prologue
-    .line 703
     iget-object v0, p0, Landroid/net/VpnService$Builder;->mConfig:Lcom/android/internal/net/VpnConfig;
 
     iput-boolean p1, v0, Lcom/android/internal/net/VpnConfig;->blocking:Z
 
-    .line 704
     return-object p0
 .end method
 
@@ -697,12 +627,10 @@
     .param p1, "intent"    # Landroid/app/PendingIntent;
 
     .prologue
-    .line 429
     iget-object v0, p0, Landroid/net/VpnService$Builder;->mConfig:Lcom/android/internal/net/VpnConfig;
 
     iput-object p1, v0, Lcom/android/internal/net/VpnConfig;->configureIntent:Landroid/app/PendingIntent;
 
-    .line 430
     return-object p0
 .end method
 
@@ -711,10 +639,8 @@
     .param p1, "mtu"    # I
 
     .prologue
-    .line 441
     if-gtz p1, :cond_0
 
-    .line 442
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Bad mtu"
@@ -723,13 +649,11 @@
 
     throw v0
 
-    .line 444
     :cond_0
     iget-object v0, p0, Landroid/net/VpnService$Builder;->mConfig:Lcom/android/internal/net/VpnConfig;
 
     iput p1, v0, Lcom/android/internal/net/VpnConfig;->mtu:I
 
-    .line 445
     return-object p0
 .end method
 
@@ -738,12 +662,10 @@
     .param p1, "session"    # Ljava/lang/String;
 
     .prologue
-    .line 419
     iget-object v0, p0, Landroid/net/VpnService$Builder;->mConfig:Lcom/android/internal/net/VpnConfig;
 
     iput-object p1, v0, Lcom/android/internal/net/VpnConfig;->session:Ljava/lang/String;
 
-    .line 420
     return-object p0
 .end method
 
@@ -752,7 +674,6 @@
     .param p1, "networks"    # [Landroid/net/Network;
 
     .prologue
-    .line 717
     iget-object v1, p0, Landroid/net/VpnService$Builder;->mConfig:Lcom/android/internal/net/VpnConfig;
 
     if-eqz p1, :cond_0
@@ -766,10 +687,8 @@
     :goto_0
     iput-object v0, v1, Lcom/android/internal/net/VpnConfig;->underlyingNetworks:[Landroid/net/Network;
 
-    .line 718
     return-object p0
 
-    .line 717
     :cond_0
     const/4 v0, 0x0
 

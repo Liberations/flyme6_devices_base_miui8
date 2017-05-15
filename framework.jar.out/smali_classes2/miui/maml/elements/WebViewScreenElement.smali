@@ -56,13 +56,10 @@
 
     const/4 v7, -0x1
 
-    .line 114
     invoke-direct {p0, p1, p2}, Lmiui/maml/elements/AnimatedScreenElement;-><init>(Lorg/w3c/dom/Element;Lmiui/maml/ScreenElementRoot;)V
 
-    .line 42
     iput v9, p0, Lmiui/maml/elements/WebViewScreenElement;->mUseNetwork:I
 
-    .line 115
     invoke-virtual {p2}, Lmiui/maml/ScreenElementRoot;->getContext()Lmiui/maml/ScreenContext;
 
     move-result-object v4
@@ -71,7 +68,6 @@
 
     iput-object v4, p0, Lmiui/maml/elements/WebViewScreenElement;->mWindowContext:Landroid/content/Context;
 
-    .line 116
     new-instance v4, Landroid/webkit/WebView;
 
     iget-object v5, p0, Lmiui/maml/elements/WebViewScreenElement;->mWindowContext:Landroid/content/Context;
@@ -80,7 +76,6 @@
 
     iput-object v4, p0, Lmiui/maml/elements/WebViewScreenElement;->mWebView:Landroid/webkit/WebView;
 
-    .line 117
     iget-object v4, p0, Lmiui/maml/elements/WebViewScreenElement;->mWebView:Landroid/webkit/WebView;
 
     new-instance v5, Lmiui/maml/elements/WebViewScreenElement$1;
@@ -89,7 +84,6 @@
 
     invoke-virtual {v4, v5}, Landroid/webkit/WebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
 
-    .line 123
     iget-object v4, p0, Lmiui/maml/elements/WebViewScreenElement;->mWebView:Landroid/webkit/WebView;
 
     new-instance v5, Lmiui/maml/elements/WebViewScreenElement$2;
@@ -98,7 +92,6 @@
 
     invoke-virtual {v4, v5}, Landroid/webkit/WebView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 130
     iget-object v4, p0, Lmiui/maml/elements/WebViewScreenElement;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v4}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
@@ -107,21 +100,18 @@
 
     invoke-virtual {v4, v8}, Landroid/webkit/WebSettings;->setJavaScriptEnabled(Z)V
 
-    .line 131
     iget-object v4, p0, Lmiui/maml/elements/WebViewScreenElement;->mWebView:Landroid/webkit/WebView;
 
     const/16 v5, 0x64
 
     invoke-virtual {v4, v5}, Landroid/webkit/WebView;->setInitialScale(I)V
 
-    .line 132
     const-string v4, "userAgent"
 
     invoke-interface {p1, v4}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 133
     .local v0, "ua":Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -129,7 +119,6 @@
 
     if-nez v4, :cond_0
 
-    .line 134
     iget-object v4, p0, Lmiui/maml/elements/WebViewScreenElement;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v4}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
@@ -138,7 +127,6 @@
 
     invoke-virtual {v4, v0}, Landroid/webkit/WebSettings;->setUserAgentString(Ljava/lang/String;)V
 
-    .line 136
     :cond_0
     iget-object v4, p0, Lmiui/maml/elements/WebViewScreenElement;->mWebView:Landroid/webkit/WebView;
 
@@ -152,14 +140,12 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/webkit/WebView;->addJavascriptInterface(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 137
     new-instance v4, Landroid/view/ViewGroup$LayoutParams;
 
     invoke-direct {v4, v7, v7}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
     iput-object v4, p0, Lmiui/maml/elements/WebViewScreenElement;->mLayoutParams:Landroid/view/ViewGroup$LayoutParams;
 
-    .line 139
     invoke-virtual {p0}, Lmiui/maml/elements/WebViewScreenElement;->getContext()Lmiui/maml/ScreenContext;
 
     move-result-object v4
@@ -170,12 +156,10 @@
 
     iput-object v4, p0, Lmiui/maml/elements/WebViewScreenElement;->mHandler:Landroid/os/Handler;
 
-    .line 140
     invoke-virtual {p0}, Lmiui/maml/elements/WebViewScreenElement;->getVariables()Lmiui/maml/data/Variables;
 
     move-result-object v3
 
-    .line 141
     .local v3, "vars":Lmiui/maml/data/Variables;
     const-string v4, "uriExp"
 
@@ -187,7 +171,6 @@
 
     move-result-object v1
 
-    .line 142
     .local v1, "uriExp":Lmiui/maml/data/Expression;
     new-instance v4, Lmiui/maml/util/TextFormatter;
 
@@ -201,7 +184,6 @@
 
     iput-object v4, p0, Lmiui/maml/elements/WebViewScreenElement;->mUriFormatter:Lmiui/maml/util/TextFormatter;
 
-    .line 144
     const-string v4, "cachePage"
 
     invoke-interface {p1, v4}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -214,14 +196,12 @@
 
     iput-boolean v4, p0, Lmiui/maml/elements/WebViewScreenElement;->mCachePage:Z
 
-    .line 145
     const-string v4, "useNetwork"
 
     invoke-interface {p1, v4}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 146
     .local v2, "useNetwork":Ljava/lang/String;
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -237,17 +217,14 @@
 
     if-eqz v4, :cond_2
 
-    .line 147
     :cond_1
     iput v9, p0, Lmiui/maml/elements/WebViewScreenElement;->mUseNetwork:I
 
-    .line 154
     :goto_0
     return-void
 
-    .line 148
     :cond_2
-    const-string/jumbo v4, "wifi"
+    const-string v4, "wifi"
 
     invoke-virtual {v4, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -255,12 +232,10 @@
 
     if-eqz v4, :cond_3
 
-    .line 149
     iput v8, p0, Lmiui/maml/elements/WebViewScreenElement;->mUseNetwork:I
 
     goto :goto_0
 
-    .line 151
     :cond_3
     invoke-static {v3, v2}, Lmiui/maml/data/Expression;->build(Lmiui/maml/data/Variables;Ljava/lang/String;)Lmiui/maml/data/Expression;
 
@@ -276,7 +251,6 @@
     .param p0, "x0"    # Lmiui/maml/elements/WebViewScreenElement;
 
     .prologue
-    .line 26
     iget-object v0, p0, Lmiui/maml/elements/WebViewScreenElement;->mWebView:Landroid/webkit/WebView;
 
     return-object v0
@@ -287,7 +261,6 @@
     .param p0, "x0"    # Lmiui/maml/elements/WebViewScreenElement;
 
     .prologue
-    .line 26
     iget-boolean v0, p0, Lmiui/maml/elements/WebViewScreenElement;->mViewAdded:Z
 
     return v0
@@ -299,7 +272,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 26
     iput-boolean p1, p0, Lmiui/maml/elements/WebViewScreenElement;->mViewAdded:Z
 
     return p1
@@ -310,7 +282,6 @@
     .param p0, "x0"    # Lmiui/maml/elements/WebViewScreenElement;
 
     .prologue
-    .line 26
     iget-object v0, p0, Lmiui/maml/elements/WebViewScreenElement;->mLayoutParams:Landroid/view/ViewGroup$LayoutParams;
 
     return-object v0
@@ -322,7 +293,6 @@
     .param p1, "x1"    # Landroid/view/ViewGroup$LayoutParams;
 
     .prologue
-    .line 26
     invoke-direct {p0, p1}, Lmiui/maml/elements/WebViewScreenElement;->updateLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Z
 
     move-result v0
@@ -335,7 +305,6 @@
     .param p0, "x0"    # Lmiui/maml/elements/WebViewScreenElement;
 
     .prologue
-    .line 26
     iget-boolean v0, p0, Lmiui/maml/elements/WebViewScreenElement;->mCachePage:Z
 
     return v0
@@ -347,25 +316,21 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 223
     iget v1, p0, Lmiui/maml/elements/WebViewScreenElement;->mUseNetwork:I
 
     const/4 v2, 0x2
 
     if-ne v1, v2, :cond_1
 
-    .line 229
     :cond_0
     :goto_0
     return v0
 
-    .line 225
     :cond_1
     iget v1, p0, Lmiui/maml/elements/WebViewScreenElement;->mUseNetwork:I
 
     if-ne v1, v0, :cond_2
 
-    .line 226
     invoke-static {}, Lmiui/net/ConnectivityHelper;->getInstance()Lmiui/net/ConnectivityHelper;
 
     move-result-object v1
@@ -376,7 +341,6 @@
 
     if-nez v1, :cond_0
 
-    .line 229
     :cond_2
     const/4 v0, 0x0
 
@@ -387,7 +351,6 @@
     .locals 2
 
     .prologue
-    .line 301
     iget-object v0, p0, Lmiui/maml/elements/WebViewScreenElement;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lmiui/maml/elements/WebViewScreenElement$10;
@@ -396,7 +359,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 312
     return-void
 .end method
 
@@ -404,7 +366,6 @@
     .locals 2
 
     .prologue
-    .line 284
     iget-boolean v0, p0, Lmiui/maml/elements/WebViewScreenElement;->mViewAdded:Z
 
     if-eqz v0, :cond_0
@@ -413,7 +374,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 285
     :cond_0
     iget-object v0, p0, Lmiui/maml/elements/WebViewScreenElement;->mHandler:Landroid/os/Handler;
 
@@ -423,7 +383,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 298
     :cond_1
     return-void
 .end method
@@ -433,7 +392,6 @@
     .param p1, "pause"    # Z
 
     .prologue
-    .line 272
     iget-object v0, p0, Lmiui/maml/elements/WebViewScreenElement;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lmiui/maml/elements/WebViewScreenElement$8;
@@ -442,7 +400,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 281
     return-void
 .end method
 
@@ -451,10 +408,8 @@
     .param p1, "lp"    # Landroid/view/ViewGroup$LayoutParams;
 
     .prologue
-    .line 328
     const/4 v0, 0x0
 
-    .line 329
     .local v0, "changed":Z
     invoke-virtual {p0}, Lmiui/maml/elements/WebViewScreenElement;->getWidth()F
 
@@ -462,19 +417,15 @@
 
     float-to-int v2, v3
 
-    .line 330
     .local v2, "width":I
     iget v3, p1, Landroid/view/ViewGroup$LayoutParams;->width:I
 
     if-eq v3, v2, :cond_0
 
-    .line 331
     iput v2, p1, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 332
     const/4 v0, 0x1
 
-    .line 334
     :cond_0
     invoke-virtual {p0}, Lmiui/maml/elements/WebViewScreenElement;->getHeight()F
 
@@ -482,19 +433,15 @@
 
     float-to-int v1, v3
 
-    .line 335
     .local v1, "height":I
     iget v3, p1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
     if-eq v3, v1, :cond_1
 
-    .line 336
     iput v1, p1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 337
     const/4 v0, 0x1
 
-    .line 339
     :cond_1
     return v0
 .end method
@@ -503,34 +450,28 @@
     .locals 4
 
     .prologue
-    .line 315
     iget-boolean v2, p0, Lmiui/maml/elements/WebViewScreenElement;->mViewAdded:Z
 
     if-eqz v2, :cond_0
 
-    .line 316
     invoke-virtual {p0}, Lmiui/maml/elements/WebViewScreenElement;->getAbsoluteLeft()F
 
     move-result v0
 
-    .line 317
     .local v0, "x":F
     iget-object v2, p0, Lmiui/maml/elements/WebViewScreenElement;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v2, v0}, Landroid/webkit/WebView;->setX(F)V
 
-    .line 318
     invoke-virtual {p0}, Lmiui/maml/elements/WebViewScreenElement;->getAbsoluteTop()F
 
     move-result v1
 
-    .line 319
     .local v1, "y":F
     iget-object v2, p0, Lmiui/maml/elements/WebViewScreenElement;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v2, v1}, Landroid/webkit/WebView;->setY(F)V
 
-    .line 321
     iget-object v2, p0, Lmiui/maml/elements/WebViewScreenElement;->mLayoutParams:Landroid/view/ViewGroup$LayoutParams;
 
     invoke-direct {p0, v2}, Lmiui/maml/elements/WebViewScreenElement;->updateLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Z
@@ -539,14 +480,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 322
     iget-object v2, p0, Lmiui/maml/elements/WebViewScreenElement;->mWebView:Landroid/webkit/WebView;
 
     iget-object v3, p0, Lmiui/maml/elements/WebViewScreenElement;->mLayoutParams:Landroid/view/ViewGroup$LayoutParams;
 
     invoke-virtual {v2, v3}, Landroid/webkit/WebView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 325
     .end local v0    # "x":F
     .end local v1    # "y":F
     :cond_0
@@ -560,7 +499,6 @@
     .param p1, "c"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 344
     return-void
 .end method
 
@@ -569,17 +507,14 @@
     .param p1, "currentTime"    # J
 
     .prologue
-    .line 234
     invoke-super {p0, p1, p2}, Lmiui/maml/elements/AnimatedScreenElement;->doTick(J)V
 
-    .line 236
     iget-object v1, p0, Lmiui/maml/elements/WebViewScreenElement;->mUriFormatter:Lmiui/maml/util/TextFormatter;
 
     invoke-virtual {v1}, Lmiui/maml/util/TextFormatter;->getText()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 237
     .local v0, "url":Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -595,7 +530,6 @@
 
     if-nez v1, :cond_0
 
-    .line 238
     const-string v1, "MAML WebViewScreenElement"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -618,14 +552,11 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 239
     invoke-virtual {p0, v0}, Lmiui/maml/elements/WebViewScreenElement;->loadUrl(Ljava/lang/String;)V
 
-    .line 241
     :cond_0
     invoke-direct {p0}, Lmiui/maml/elements/WebViewScreenElement;->updateView()V
 
-    .line 242
     return-void
 .end method
 
@@ -633,23 +564,18 @@
     .locals 1
 
     .prologue
-    .line 173
     invoke-super {p0}, Lmiui/maml/elements/AnimatedScreenElement;->finish()V
 
-    .line 174
     invoke-direct {p0}, Lmiui/maml/elements/WebViewScreenElement;->finishWebView()V
 
-    .line 175
     iget-boolean v0, p0, Lmiui/maml/elements/WebViewScreenElement;->mCachePage:Z
 
     if-nez v0, :cond_0
 
-    .line 176
     const/4 v0, 0x0
 
     iput-object v0, p0, Lmiui/maml/elements/WebViewScreenElement;->mCurUrl:Ljava/lang/String;
 
-    .line 178
     :cond_0
     return-void
 .end method
@@ -658,7 +584,6 @@
     .locals 2
 
     .prologue
-    .line 215
     iget-object v0, p0, Lmiui/maml/elements/WebViewScreenElement;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lmiui/maml/elements/WebViewScreenElement$6;
@@ -667,7 +592,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 220
     return-void
 .end method
 
@@ -675,15 +599,12 @@
     .locals 2
 
     .prologue
-    .line 158
     invoke-super {p0}, Lmiui/maml/elements/AnimatedScreenElement;->init()V
 
-    .line 160
     iget-object v0, p0, Lmiui/maml/elements/WebViewScreenElement;->mUseNetworkExp:Lmiui/maml/data/Expression;
 
     if-eqz v0, :cond_0
 
-    .line 161
     iget-object v0, p0, Lmiui/maml/elements/WebViewScreenElement;->mUseNetworkExp:Lmiui/maml/data/Expression;
 
     invoke-virtual {v0}, Lmiui/maml/data/Expression;->evaluate()D
@@ -694,7 +615,6 @@
 
     iput v0, p0, Lmiui/maml/elements/WebViewScreenElement;->mUseNetwork:I
 
-    .line 164
     :cond_0
     iget-object v0, p0, Lmiui/maml/elements/WebViewScreenElement;->mRoot:Lmiui/maml/ScreenElementRoot;
 
@@ -704,14 +624,11 @@
 
     if-eqz v0, :cond_1
 
-    .line 165
     invoke-direct {p0}, Lmiui/maml/elements/WebViewScreenElement;->initWebView()V
 
-    .line 169
     :goto_0
     return-void
 
-    .line 167
     :cond_1
     const-string v0, "MAML WebViewScreenElement"
 
@@ -727,7 +644,6 @@
     .param p1, "url"    # Ljava/lang/String;
 
     .prologue
-    .line 185
     invoke-direct {p0}, Lmiui/maml/elements/WebViewScreenElement;->canUseNetwork()Z
 
     move-result v0
@@ -742,7 +658,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 186
     const-string v0, "MAML WebViewScreenElement"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -765,15 +680,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 196
     :goto_0
     return-void
 
-    .line 190
     :cond_0
     iput-object p1, p0, Lmiui/maml/elements/WebViewScreenElement;->mCurUrl:Ljava/lang/String;
 
-    .line 191
     iget-object v0, p0, Lmiui/maml/elements/WebViewScreenElement;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lmiui/maml/elements/WebViewScreenElement$3;
@@ -790,13 +702,10 @@
     .param p1, "visible"    # Z
 
     .prologue
-    .line 246
     invoke-super {p0, p1}, Lmiui/maml/elements/AnimatedScreenElement;->onVisibilityChange(Z)V
 
-    .line 247
     move v0, p1
 
-    .line 248
     .local v0, "_v":Z
     iget-object v1, p0, Lmiui/maml/elements/WebViewScreenElement;->mHandler:Landroid/os/Handler;
 
@@ -806,7 +715,6 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 253
     return-void
 .end method
 
@@ -814,20 +722,16 @@
     .locals 1
 
     .prologue
-    .line 257
     invoke-super {p0}, Lmiui/maml/elements/AnimatedScreenElement;->pause()V
 
-    .line 258
     iget-boolean v0, p0, Lmiui/maml/elements/WebViewScreenElement;->mViewAdded:Z
 
     if-eqz v0, :cond_0
 
-    .line 259
     const/4 v0, 0x1
 
     invoke-direct {p0, v0}, Lmiui/maml/elements/WebViewScreenElement;->pauseWebView(Z)V
 
-    .line 261
     :cond_0
     return-void
 .end method
@@ -836,7 +740,6 @@
     .locals 2
 
     .prologue
-    .line 207
     iget-object v0, p0, Lmiui/maml/elements/WebViewScreenElement;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lmiui/maml/elements/WebViewScreenElement$5;
@@ -845,7 +748,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 212
     return-void
 .end method
 
@@ -854,7 +756,6 @@
     .param p1, "c"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 182
     return-void
 .end method
 
@@ -862,20 +763,16 @@
     .locals 1
 
     .prologue
-    .line 265
     invoke-super {p0}, Lmiui/maml/elements/AnimatedScreenElement;->resume()V
 
-    .line 266
     iget-boolean v0, p0, Lmiui/maml/elements/WebViewScreenElement;->mViewAdded:Z
 
     if-eqz v0, :cond_0
 
-    .line 267
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lmiui/maml/elements/WebViewScreenElement;->pauseWebView(Z)V
 
-    .line 269
     :cond_0
     return-void
 .end method
@@ -885,7 +782,6 @@
     .param p1, "jsfun"    # Ljava/lang/String;
 
     .prologue
-    .line 199
     iget-object v0, p0, Lmiui/maml/elements/WebViewScreenElement;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lmiui/maml/elements/WebViewScreenElement$4;
@@ -894,6 +790,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 204
     return-void
 .end method

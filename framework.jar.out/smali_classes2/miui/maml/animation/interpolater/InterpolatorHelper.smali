@@ -23,29 +23,24 @@
     .param p3, "easeExp"    # Ljava/lang/String;
 
     .prologue
-    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 30
     invoke-static {p2}, Lmiui/maml/animation/interpolater/InterpolatorFactory;->create(Ljava/lang/String;)Landroid/view/animation/Interpolator;
 
     move-result-object v0
 
     iput-object v0, p0, Lmiui/maml/animation/interpolater/InterpolatorHelper;->mInterpolator:Landroid/view/animation/Interpolator;
 
-    .line 31
     invoke-static {p1, p3}, Lmiui/maml/data/Expression;->build(Lmiui/maml/data/Variables;Ljava/lang/String;)Lmiui/maml/data/Expression;
 
     move-result-object v0
 
     iput-object v0, p0, Lmiui/maml/animation/interpolater/InterpolatorHelper;->mEaseExp:Lmiui/maml/data/Expression;
 
-    .line 32
     iget-object v0, p0, Lmiui/maml/animation/interpolater/InterpolatorHelper;->mEaseExp:Lmiui/maml/data/Expression;
 
     if-eqz v0, :cond_0
 
-    .line 33
     new-instance v0, Lmiui/maml/data/IndexedVariable;
 
     const-string v1, "__ratio"
@@ -56,7 +51,6 @@
 
     iput-object v0, p0, Lmiui/maml/animation/interpolater/InterpolatorHelper;->mRatioVar:Lmiui/maml/data/IndexedVariable;
 
-    .line 35
     :cond_0
     return-void
 .end method
@@ -68,7 +62,6 @@
     .param p2, "easeExp"    # Ljava/lang/String;
 
     .prologue
-    .line 24
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -81,10 +74,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 25
     const/4 v0, 0x0
 
-    .line 26
     :goto_0
     return-object v0
 
@@ -102,7 +93,6 @@
     .param p1, "node"    # Lorg/w3c/dom/Element;
 
     .prologue
-    .line 20
     const-string v0, "easeType"
 
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -129,19 +119,16 @@
     .param p1, "ratio"    # F
 
     .prologue
-    .line 38
     iget-object v0, p0, Lmiui/maml/animation/interpolater/InterpolatorHelper;->mEaseExp:Lmiui/maml/data/Expression;
 
     if-eqz v0, :cond_1
 
-    .line 39
     iget-object v0, p0, Lmiui/maml/animation/interpolater/InterpolatorHelper;->mRatioVar:Lmiui/maml/data/IndexedVariable;
 
     float-to-double v2, p1
 
     invoke-virtual {v0, v2, v3}, Lmiui/maml/data/IndexedVariable;->set(D)V
 
-    .line 40
     iget-object v0, p0, Lmiui/maml/animation/interpolater/InterpolatorHelper;->mEaseExp:Lmiui/maml/data/Expression;
 
     invoke-virtual {v0}, Lmiui/maml/data/Expression;->evaluate()D
@@ -150,20 +137,17 @@
 
     double-to-float p1, v0
 
-    .line 44
     .end local p1    # "ratio":F
     :cond_0
     :goto_0
     return p1
 
-    .line 41
     .restart local p1    # "ratio":F
     :cond_1
     iget-object v0, p0, Lmiui/maml/animation/interpolater/InterpolatorHelper;->mInterpolator:Landroid/view/animation/Interpolator;
 
     if-eqz v0, :cond_0
 
-    .line 42
     iget-object v0, p0, Lmiui/maml/animation/interpolater/InterpolatorHelper;->mInterpolator:Landroid/view/animation/Interpolator;
 
     invoke-interface {v0, p1}, Landroid/view/animation/Interpolator;->getInterpolation(F)F
@@ -177,7 +161,6 @@
     .locals 1
 
     .prologue
-    .line 48
     iget-object v0, p0, Lmiui/maml/animation/interpolater/InterpolatorHelper;->mEaseExp:Lmiui/maml/data/Expression;
 
     if-nez v0, :cond_0

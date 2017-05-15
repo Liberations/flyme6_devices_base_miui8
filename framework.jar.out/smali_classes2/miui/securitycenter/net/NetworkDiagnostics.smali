@@ -27,7 +27,6 @@
     .locals 1
 
     .prologue
-    .line 85
     const-string v0, "8.8.8.8"
 
     invoke-static {v0}, Landroid/net/NetworkUtils;->numericToInetAddress(Ljava/lang/String;)Ljava/net/InetAddress;
@@ -36,7 +35,6 @@
 
     sput-object v0, Lmiui/securitycenter/net/NetworkDiagnostics;->TEST_DNS4:Ljava/net/InetAddress;
 
-    .line 86
     const-string v0, "2001:4860:4860::8888"
 
     invoke-static {v0}, Landroid/net/NetworkUtils;->numericToInetAddress(Ljava/lang/String;)Ljava/net/InetAddress;
@@ -52,10 +50,8 @@
     .locals 0
 
     .prologue
-    .line 82
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 253
     return-void
 .end method
 
@@ -63,7 +59,6 @@
     .locals 2
 
     .prologue
-    .line 82
     invoke-static {}, Lmiui/securitycenter/net/NetworkDiagnostics;->now()J
 
     move-result-wide v0
@@ -76,7 +71,6 @@
     .param p0, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 82
     invoke-static {p0}, Lmiui/securitycenter/net/NetworkDiagnostics;->getInterfaceIndex(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v0
@@ -93,7 +87,6 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 378
     if-eqz p0, :cond_0
 
     invoke-virtual {p2}, Ljava/lang/Long;->longValue()J
@@ -106,7 +99,6 @@
 
     if-nez v2, :cond_1
 
-    .line 379
     :cond_0
     const-string v2, "NetworkDiagnostics"
 
@@ -114,16 +106,13 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 380
     invoke-static {v6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v2
 
-    .line 397
     :goto_0
     return-object v2
 
-    .line 383
     :cond_1
     const-string v2, "connectivity"
 
@@ -133,30 +122,25 @@
 
     check-cast v0, Landroid/net/ConnectivityManager;
 
-    .line 384
     .local v0, "cm":Landroid/net/ConnectivityManager;
     if-nez v0, :cond_2
 
-    .line 385
     invoke-static {v6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v2
 
     goto :goto_0
 
-    .line 388
     :cond_2
     invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveLinkProperties()Landroid/net/LinkProperties;
 
     move-result-object v1
 
-    .line 389
     .local v1, "lp":Landroid/net/LinkProperties;
     if-nez p1, :cond_4
 
     if-eqz v1, :cond_4
 
-    .line 390
     invoke-virtual {v1}, Landroid/net/LinkProperties;->hasGlobalIPv6Address()Z
 
     move-result v2
@@ -169,11 +153,9 @@
 
     if-eqz v2, :cond_5
 
-    .line 391
     :cond_3
     sget-object p1, Lmiui/securitycenter/net/NetworkDiagnostics;->TEST_DNS4:Ljava/net/InetAddress;
 
-    .line 397
     :cond_4
     :goto_1
     invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetwork()Landroid/net/Network;
@@ -190,7 +172,6 @@
 
     goto :goto_0
 
-    .line 393
     :cond_5
     sget-object p1, Lmiui/securitycenter/net/NetworkDiagnostics;->TEST_DNS6:Ljava/net/InetAddress;
 
@@ -206,7 +187,6 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 339
     if-eqz p0, :cond_0
 
     invoke-virtual {p2}, Ljava/lang/Long;->longValue()J
@@ -219,7 +199,6 @@
 
     if-nez v2, :cond_1
 
-    .line 340
     :cond_0
     const-string v2, "NetworkDiagnostics"
 
@@ -227,16 +206,13 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 341
     invoke-static {v6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v2
 
-    .line 358
     :goto_0
     return-object v2
 
-    .line 344
     :cond_1
     const-string v2, "connectivity"
 
@@ -246,30 +222,25 @@
 
     check-cast v0, Landroid/net/ConnectivityManager;
 
-    .line 345
     .local v0, "cm":Landroid/net/ConnectivityManager;
     if-nez v0, :cond_2
 
-    .line 346
     invoke-static {v6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v2
 
     goto :goto_0
 
-    .line 349
     :cond_2
     invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveLinkProperties()Landroid/net/LinkProperties;
 
     move-result-object v1
 
-    .line 350
     .local v1, "lp":Landroid/net/LinkProperties;
     if-nez p1, :cond_4
 
     if-eqz v1, :cond_4
 
-    .line 351
     invoke-virtual {v1}, Landroid/net/LinkProperties;->hasGlobalIPv6Address()Z
 
     move-result v2
@@ -282,11 +253,9 @@
 
     if-eqz v2, :cond_5
 
-    .line 352
     :cond_3
     sget-object p1, Ljava/net/Inet6Address;->LOOPBACK:Ljava/net/InetAddress;
 
-    .line 358
     :cond_4
     :goto_1
     invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetwork()Landroid/net/Network;
@@ -307,7 +276,6 @@
 
     goto :goto_0
 
-    .line 354
     :cond_5
     sget-object p1, Ljava/net/Inet4Address;->LOOPBACK:Ljava/net/InetAddress;
 
@@ -324,7 +292,6 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 402
     if-eqz p0, :cond_0
 
     if-eqz p1, :cond_0
@@ -342,7 +309,6 @@
 
     if-nez v1, :cond_1
 
-    .line 403
     :cond_0
     const-string v1, "NetworkDiagnostics"
 
@@ -352,17 +318,14 @@
 
     move v1, v7
 
-    .line 413
     :goto_0
     return v1
 
-    .line 407
     :cond_1
     new-instance v2, Landroid/net/LinkProperties;
 
     invoke-direct {v2, p1}, Landroid/net/LinkProperties;-><init>(Landroid/net/LinkProperties;)V
 
-    .line 408
     .local v2, "newLp":Landroid/net/LinkProperties;
     new-instance v0, Lmiui/securitycenter/net/NetworkDiagnostics$DnsUdpCheck;
 
@@ -376,7 +339,6 @@
 
     invoke-direct/range {v0 .. v5}, Lmiui/securitycenter/net/NetworkDiagnostics$DnsUdpCheck;-><init>(Landroid/net/Network;Landroid/net/LinkProperties;Ljava/net/InetAddress;J)V
 
-    .line 409
     .local v0, "dnsCheck":Lmiui/securitycenter/net/NetworkDiagnostics$DnsUdpCheck;
     invoke-virtual {v0}, Lmiui/securitycenter/net/NetworkDiagnostics$DnsUdpCheck;->call()Z
     :try_end_0
@@ -386,13 +348,11 @@
 
     goto :goto_0
 
-    .line 410
     .end local v0    # "dnsCheck":Lmiui/securitycenter/net/NetworkDiagnostics$DnsUdpCheck;
     .end local v2    # "newLp":Landroid/net/LinkProperties;
     :catch_0
     move-exception v6
 
-    .line 411
     .local v6, "e":Ljava/lang/Exception;
     const-string v1, "NetworkDiagnostics"
 
@@ -402,7 +362,6 @@
 
     move v1, v7
 
-    .line 413
     goto :goto_0
 .end method
 
@@ -411,13 +370,11 @@
     .param p0, "ifname"    # Ljava/lang/String;
 
     .prologue
-    .line 95
     :try_start_0
     invoke-static {p0}, Ljava/net/NetworkInterface;->getByName(Ljava/lang/String;)Ljava/net/NetworkInterface;
 
     move-result-object v1
 
-    .line 96
     .local v1, "ni":Ljava/net/NetworkInterface;
     invoke-virtual {v1}, Ljava/net/NetworkInterface;->getIndex()I
 
@@ -430,23 +387,19 @@
 
     move-result-object v2
 
-    .line 98
     .end local v1    # "ni":Ljava/net/NetworkInterface;
     :goto_0
     return-object v2
 
-    .line 97
     :catch_0
     move-exception v0
 
-    .line 98
     .local v0, "e":Ljava/lang/Exception;
     :goto_1
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 97
     .end local v0    # "e":Ljava/lang/Exception;
     :catch_1
     move-exception v0
@@ -464,7 +417,6 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 363
     if-eqz p0, :cond_0
 
     if-eqz p1, :cond_0
@@ -477,7 +429,6 @@
 
     if-nez v1, :cond_1
 
-    .line 364
     :cond_0
     :try_start_0
     const-string v1, "NetworkDiagnostics"
@@ -488,17 +439,14 @@
 
     move v1, v7
 
-    .line 374
     :goto_0
     return v1
 
-    .line 368
     :cond_1
     new-instance v2, Landroid/net/LinkProperties;
 
     invoke-direct {v2, p1}, Landroid/net/LinkProperties;-><init>(Landroid/net/LinkProperties;)V
 
-    .line 369
     .local v2, "newLp":Landroid/net/LinkProperties;
     new-instance v0, Lmiui/securitycenter/net/NetworkDiagnostics$IcmpCheck;
 
@@ -510,7 +458,6 @@
 
     invoke-direct/range {v0 .. v5}, Lmiui/securitycenter/net/NetworkDiagnostics$IcmpCheck;-><init>(Landroid/net/Network;Landroid/net/LinkProperties;Ljava/net/InetAddress;J)V
 
-    .line 370
     .local v0, "icmpCheck":Lmiui/securitycenter/net/NetworkDiagnostics$IcmpCheck;
     invoke-virtual {v0}, Lmiui/securitycenter/net/NetworkDiagnostics$IcmpCheck;->call()Z
     :try_end_0
@@ -520,13 +467,11 @@
 
     goto :goto_0
 
-    .line 371
     .end local v0    # "icmpCheck":Lmiui/securitycenter/net/NetworkDiagnostics$IcmpCheck;
     .end local v2    # "newLp":Landroid/net/LinkProperties;
     :catch_0
     move-exception v6
 
-    .line 372
     .local v6, "e":Ljava/lang/Exception;
     const-string v1, "NetworkDiagnostics"
 
@@ -536,7 +481,6 @@
 
     move v1, v7
 
-    .line 374
     goto :goto_0
 .end method
 
@@ -544,7 +488,6 @@
     .locals 2
 
     .prologue
-    .line 90
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0

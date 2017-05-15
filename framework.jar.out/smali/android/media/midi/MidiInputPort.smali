@@ -37,38 +37,30 @@
     .param p4, "portNumber"    # I
 
     .prologue
-    .line 52
     const/16 v0, 0x3f7
 
     invoke-direct {p0, v0}, Landroid/media/midi/MidiReceiver;-><init>(I)V
 
-    .line 44
     invoke-static {}, Ldalvik/system/CloseGuard;->get()Ldalvik/system/CloseGuard;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/media/midi/MidiInputPort;->mGuard:Ldalvik/system/CloseGuard;
 
-    .line 48
     const/16 v0, 0x400
 
     new-array v0, v0, [B
 
     iput-object v0, p0, Landroid/media/midi/MidiInputPort;->mBuffer:[B
 
-    .line 54
     iput-object p1, p0, Landroid/media/midi/MidiInputPort;->mDeviceServer:Landroid/media/midi/IMidiDeviceServer;
 
-    .line 55
     iput-object p2, p0, Landroid/media/midi/MidiInputPort;->mToken:Landroid/os/IBinder;
 
-    .line 56
     iput-object p3, p0, Landroid/media/midi/MidiInputPort;->mParcelFileDescriptor:Landroid/os/ParcelFileDescriptor;
 
-    .line 57
     iput p4, p0, Landroid/media/midi/MidiInputPort;->mPortNumber:I
 
-    .line 58
     new-instance v0, Ljava/io/FileOutputStream;
 
     invoke-virtual {p3}, Landroid/os/ParcelFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
@@ -79,14 +71,12 @@
 
     iput-object v0, p0, Landroid/media/midi/MidiInputPort;->mOutputStream:Ljava/io/FileOutputStream;
 
-    .line 59
     iget-object v0, p0, Landroid/media/midi/MidiInputPort;->mGuard:Ldalvik/system/CloseGuard;
 
     const-string v1, "close"
 
     invoke-virtual {v0, v1}, Ldalvik/system/CloseGuard;->open(Ljava/lang/String;)V
 
-    .line 60
     return-void
 .end method
 
@@ -98,10 +88,8 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 63
     invoke-direct {p0, v0, v0, p1, p2}, Landroid/media/midi/MidiInputPort;-><init>(Landroid/media/midi/IMidiDeviceServer;Landroid/os/IBinder;Landroid/os/ParcelFileDescriptor;I)V
 
-    .line 64
     return-void
 .end method
 
@@ -113,12 +101,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 106
     iget-object v2, p0, Landroid/media/midi/MidiInputPort;->mGuard:Ldalvik/system/CloseGuard;
 
     monitor-enter v2
 
-    .line 108
     :try_start_0
     iget-object v3, p0, Landroid/media/midi/MidiInputPort;->mBuffer:[B
 
@@ -126,11 +112,9 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 109
     :try_start_1
     iget-object v0, p0, Landroid/media/midi/MidiInputPort;->mParcelFileDescriptor:Landroid/os/ParcelFileDescriptor;
 
-    .line 110
     .local v0, "pfd":Landroid/os/ParcelFileDescriptor;
     if-nez v0, :cond_0
 
@@ -145,12 +129,10 @@
 
     move-object v0, v1
 
-    .line 119
     .end local v0    # "pfd":Landroid/os/ParcelFileDescriptor;
     :goto_0
     return-object v0
 
-    .line 111
     .restart local v0    # "pfd":Landroid/os/ParcelFileDescriptor;
     :cond_0
     :try_start_3
@@ -158,33 +140,27 @@
 
     invoke-static {v1}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 112
     const/4 v1, 0x0
 
     iput-object v1, p0, Landroid/media/midi/MidiInputPort;->mParcelFileDescriptor:Landroid/os/ParcelFileDescriptor;
 
-    .line 113
     const/4 v1, 0x0
 
     iput-object v1, p0, Landroid/media/midi/MidiInputPort;->mOutputStream:Ljava/io/FileOutputStream;
 
-    .line 114
     monitor-exit v3
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 118
     const/4 v1, 0x1
 
     :try_start_4
     iput-boolean v1, p0, Landroid/media/midi/MidiInputPort;->mIsClosed:Z
 
-    .line 119
     monitor-exit v2
 
     goto :goto_0
 
-    .line 120
     .end local v0    # "pfd":Landroid/os/ParcelFileDescriptor;
     :catchall_0
     move-exception v1
@@ -195,7 +171,6 @@
 
     throw v1
 
-    .line 114
     :catchall_1
     move-exception v1
 
@@ -219,12 +194,10 @@
     .end annotation
 
     .prologue
-    .line 135
     iget-object v2, p0, Landroid/media/midi/MidiInputPort;->mGuard:Ldalvik/system/CloseGuard;
 
     monitor-enter v2
 
-    .line 136
     :try_start_0
     iget-boolean v1, p0, Landroid/media/midi/MidiInputPort;->mIsClosed:Z
 
@@ -232,62 +205,51 @@
 
     monitor-exit v2
 
-    .line 157
     :goto_0
     return-void
 
-    .line 137
     :cond_0
     iget-object v1, p0, Landroid/media/midi/MidiInputPort;->mGuard:Ldalvik/system/CloseGuard;
 
     invoke-virtual {v1}, Ldalvik/system/CloseGuard;->close()V
 
-    .line 138
     iget-object v3, p0, Landroid/media/midi/MidiInputPort;->mBuffer:[B
 
     monitor-enter v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 139
     :try_start_1
     iget-object v1, p0, Landroid/media/midi/MidiInputPort;->mParcelFileDescriptor:Landroid/os/ParcelFileDescriptor;
 
     if-eqz v1, :cond_1
 
-    .line 140
     iget-object v1, p0, Landroid/media/midi/MidiInputPort;->mParcelFileDescriptor:Landroid/os/ParcelFileDescriptor;
 
     invoke-virtual {v1}, Landroid/os/ParcelFileDescriptor;->close()V
 
-    .line 141
     const/4 v1, 0x0
 
     iput-object v1, p0, Landroid/media/midi/MidiInputPort;->mParcelFileDescriptor:Landroid/os/ParcelFileDescriptor;
 
-    .line 143
     :cond_1
     iget-object v1, p0, Landroid/media/midi/MidiInputPort;->mOutputStream:Ljava/io/FileOutputStream;
 
     if-eqz v1, :cond_2
 
-    .line 144
     iget-object v1, p0, Landroid/media/midi/MidiInputPort;->mOutputStream:Ljava/io/FileOutputStream;
 
     invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
 
-    .line 145
     const/4 v1, 0x0
 
     iput-object v1, p0, Landroid/media/midi/MidiInputPort;->mOutputStream:Ljava/io/FileOutputStream;
 
-    .line 147
     :cond_2
     monitor-exit v3
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 148
     :try_start_2
     iget-object v1, p0, Landroid/media/midi/MidiInputPort;->mDeviceServer:Landroid/media/midi/IMidiDeviceServer;
     :try_end_2
@@ -295,7 +257,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 150
     :try_start_3
     iget-object v1, p0, Landroid/media/midi/MidiInputPort;->mDeviceServer:Landroid/media/midi/IMidiDeviceServer;
 
@@ -306,7 +267,6 @@
     .catch Landroid/os/RemoteException; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 155
     :cond_3
     :goto_1
     const/4 v1, 0x1
@@ -314,7 +274,6 @@
     :try_start_4
     iput-boolean v1, p0, Landroid/media/midi/MidiInputPort;->mIsClosed:Z
 
-    .line 156
     monitor-exit v2
 
     goto :goto_0
@@ -328,7 +287,6 @@
 
     throw v1
 
-    .line 147
     :catchall_1
     move-exception v1
 
@@ -340,11 +298,9 @@
     :try_start_6
     throw v1
 
-    .line 151
     :catch_0
     move-exception v0
 
-    .line 152
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "MidiInputPort"
 
@@ -366,29 +322,23 @@
     .end annotation
 
     .prologue
-    .line 162
     :try_start_0
     iget-object v0, p0, Landroid/media/midi/MidiInputPort;->mGuard:Ldalvik/system/CloseGuard;
 
     invoke-virtual {v0}, Ldalvik/system/CloseGuard;->warnIfOpen()V
 
-    .line 164
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/media/midi/MidiInputPort;->mDeviceServer:Landroid/media/midi/IMidiDeviceServer;
 
-    .line 165
     invoke-virtual {p0}, Landroid/media/midi/MidiInputPort;->close()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 167
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    .line 169
     return-void
 
-    .line 167
     :catchall_0
     move-exception v0
 
@@ -401,7 +351,6 @@
     .locals 1
 
     .prologue
-    .line 130
     iget-object v0, p0, Landroid/media/midi/MidiInputPort;->mDeviceServer:Landroid/media/midi/IMidiDeviceServer;
 
     return-object v0
@@ -411,7 +360,6 @@
     .locals 1
 
     .prologue
-    .line 72
     iget v0, p0, Landroid/media/midi/MidiInputPort;->mPortNumber:I
 
     return v0
@@ -421,7 +369,6 @@
     .locals 1
 
     .prologue
-    .line 125
     iget-object v0, p0, Landroid/media/midi/MidiInputPort;->mToken:Landroid/os/IBinder;
 
     return-object v0
@@ -436,18 +383,15 @@
     .end annotation
 
     .prologue
-    .line 95
     iget-object v2, p0, Landroid/media/midi/MidiInputPort;->mBuffer:[B
 
     monitor-enter v2
 
-    .line 96
     :try_start_0
     iget-object v1, p0, Landroid/media/midi/MidiInputPort;->mOutputStream:Ljava/io/FileOutputStream;
 
     if-nez v1, :cond_0
 
-    .line 97
     new-instance v1, Ljava/io/IOException;
 
     const-string v3, "MidiInputPort is closed"
@@ -456,7 +400,6 @@
 
     throw v1
 
-    .line 101
     :catchall_0
     move-exception v1
 
@@ -466,7 +409,6 @@
 
     throw v1
 
-    .line 99
     :cond_0
     :try_start_1
     iget-object v1, p0, Landroid/media/midi/MidiInputPort;->mBuffer:[B
@@ -475,7 +417,6 @@
 
     move-result v0
 
-    .line 100
     .local v0, "length":I
     iget-object v1, p0, Landroid/media/midi/MidiInputPort;->mOutputStream:Ljava/io/FileOutputStream;
 
@@ -485,12 +426,10 @@
 
     invoke-virtual {v1, v3, v4, v0}, Ljava/io/FileOutputStream;->write([BII)V
 
-    .line 101
     monitor-exit v2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 102
     return-void
 .end method
 
@@ -507,7 +446,6 @@
     .end annotation
 
     .prologue
-    .line 77
     if-ltz p2, :cond_0
 
     if-ltz p3, :cond_0
@@ -518,23 +456,20 @@
 
     if-le v1, v2, :cond_1
 
-    .line 78
     :cond_0
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v2, "offset or count out of range"
+    const-string v2, "offset or count out of range"
 
     invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 80
     :cond_1
     const/16 v1, 0x3f7
 
     if-le p3, v1, :cond_2
 
-    .line 81
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "count exceeds max message size"
@@ -543,19 +478,16 @@
 
     throw v1
 
-    .line 84
     :cond_2
     iget-object v7, p0, Landroid/media/midi/MidiInputPort;->mBuffer:[B
 
     monitor-enter v7
 
-    .line 85
     :try_start_0
     iget-object v1, p0, Landroid/media/midi/MidiInputPort;->mOutputStream:Ljava/io/FileOutputStream;
 
     if-nez v1, :cond_3
 
-    .line 86
     new-instance v1, Ljava/io/IOException;
 
     const-string v2, "MidiInputPort is closed"
@@ -564,7 +496,6 @@
 
     throw v1
 
-    .line 90
     :catchall_0
     move-exception v1
 
@@ -574,7 +505,6 @@
 
     throw v1
 
-    .line 88
     :cond_3
     :try_start_1
     iget-object v6, p0, Landroid/media/midi/MidiInputPort;->mBuffer:[B
@@ -591,7 +521,6 @@
 
     move-result v0
 
-    .line 89
     .local v0, "length":I
     iget-object v1, p0, Landroid/media/midi/MidiInputPort;->mOutputStream:Ljava/io/FileOutputStream;
 
@@ -601,11 +530,9 @@
 
     invoke-virtual {v1, v2, v3, v0}, Ljava/io/FileOutputStream;->write([BII)V
 
-    .line 90
     monitor-exit v7
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 91
     return-void
 .end method

@@ -19,14 +19,11 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 44
     iput-object p1, p0, Lcom/android/internal/app/AssistUtils;->mContext:Landroid/content/Context;
 
-    .line 45
-    const-string/jumbo v0, "voiceinteraction"
+    const-string v0, "voiceinteraction"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -38,7 +35,6 @@
 
     iput-object v0, p0, Lcom/android/internal/app/AssistUtils;->mVoiceInteractionManagerService:Lcom/android/internal/app/IVoiceInteractionManagerService;
 
-    .line 47
     return-void
 .end method
 
@@ -50,7 +46,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 74
     :try_start_0
     iget-object v2, p0, Lcom/android/internal/app/AssistUtils;->mVoiceInteractionManagerService:Lcom/android/internal/app/IVoiceInteractionManagerService;
 
@@ -68,16 +63,13 @@
 
     const/4 v1, 0x1
 
-    .line 78
     :cond_0
     :goto_0
     return v1
 
-    .line 76
     :catch_0
     move-exception v0
 
-    .line 77
     .local v0, "e":Landroid/os/RemoteException;
     const-string v2, "AssistUtils"
 
@@ -94,7 +86,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 84
     :try_start_0
     iget-object v2, p0, Lcom/android/internal/app/AssistUtils;->mVoiceInteractionManagerService:Lcom/android/internal/app/IVoiceInteractionManagerService;
 
@@ -112,16 +103,13 @@
 
     const/4 v1, 0x1
 
-    .line 88
     :cond_0
     :goto_0
     return v1
 
-    .line 86
     :catch_0
     move-exception v0
 
-    .line 87
     .local v0, "e":Landroid/os/RemoteException;
     const-string v2, "AssistUtils"
 
@@ -138,13 +126,11 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 94
     :try_start_0
     iget-object v2, p0, Lcom/android/internal/app/AssistUtils;->mVoiceInteractionManagerService:Lcom/android/internal/app/IVoiceInteractionManagerService;
 
     if-eqz v2, :cond_0
 
-    .line 95
     iget-object v2, p0, Lcom/android/internal/app/AssistUtils;->mVoiceInteractionManagerService:Lcom/android/internal/app/IVoiceInteractionManagerService;
 
     invoke-interface {v2}, Lcom/android/internal/app/IVoiceInteractionManagerService;->getActiveServiceComponentName()Landroid/content/ComponentName;
@@ -153,16 +139,13 @@
 
     move-result-object v1
 
-    .line 101
     :cond_0
     :goto_0
     return-object v1
 
-    .line 99
     :catch_0
     move-exception v0
 
-    .line 100
     .local v0, "e":Landroid/os/RemoteException;
     const-string v2, "AssistUtils"
 
@@ -178,7 +161,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 136
     iget-object v4, p0, Lcom/android/internal/app/AssistUtils;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -191,20 +173,16 @@
 
     move-result-object v3
 
-    .line 138
     .local v3, "setting":Ljava/lang/String;
     if-eqz v3, :cond_0
 
-    .line 139
     invoke-static {v3}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
     move-result-object v4
 
-    .line 156
     :goto_0
     return-object v4
 
-    .line 143
     :cond_0
     invoke-virtual {p0}, Lcom/android/internal/app/AssistUtils;->activeServiceSupportsAssistGesture()Z
 
@@ -212,14 +190,12 @@
 
     if-eqz v4, :cond_1
 
-    .line 144
     invoke-virtual {p0}, Lcom/android/internal/app/AssistUtils;->getActiveServiceComponentName()Landroid/content/ComponentName;
 
     move-result-object v4
 
     goto :goto_0
 
-    .line 147
     :cond_1
     iget-object v4, p0, Lcom/android/internal/app/AssistUtils;->mContext:Landroid/content/Context;
 
@@ -237,7 +213,6 @@
 
     move-result-object v1
 
-    .line 149
     .local v1, "intent":Landroid/content/Intent;
     iget-object v4, p0, Lcom/android/internal/app/AssistUtils;->mContext:Landroid/content/Context;
 
@@ -245,7 +220,6 @@
 
     move-result-object v2
 
-    .line 150
     .local v2, "pm":Landroid/content/pm/PackageManager;
     const/high16 v4, 0x10000
 
@@ -253,11 +227,9 @@
 
     move-result-object v0
 
-    .line 152
     .local v0, "info":Landroid/content/pm/ResolveInfo;
     if-eqz v0, :cond_2
 
-    .line 153
     new-instance v4, Landroid/content/ComponentName;
 
     iget-object v5, v0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
@@ -274,7 +246,6 @@
 
     goto :goto_0
 
-    .line 156
     :cond_2
     const/4 v4, 0x0
 
@@ -285,29 +256,24 @@
     .locals 3
 
     .prologue
-    .line 117
     :try_start_0
     iget-object v1, p0, Lcom/android/internal/app/AssistUtils;->mVoiceInteractionManagerService:Lcom/android/internal/app/IVoiceInteractionManagerService;
 
     if-eqz v1, :cond_0
 
-    .line 118
     iget-object v1, p0, Lcom/android/internal/app/AssistUtils;->mVoiceInteractionManagerService:Lcom/android/internal/app/IVoiceInteractionManagerService;
 
     invoke-interface {v1}, Lcom/android/internal/app/IVoiceInteractionManagerService;->hideCurrentSession()V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 123
     :cond_0
     :goto_0
     return-void
 
-    .line 120
     :catch_0
     move-exception v0
 
-    .line 121
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "AssistUtils"
 
@@ -324,7 +290,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 107
     :try_start_0
     iget-object v2, p0, Lcom/android/internal/app/AssistUtils;->mVoiceInteractionManagerService:Lcom/android/internal/app/IVoiceInteractionManagerService;
 
@@ -342,16 +307,13 @@
 
     const/4 v1, 0x1
 
-    .line 111
     :cond_0
     :goto_0
     return v1
 
-    .line 109
     :catch_0
     move-exception v0
 
-    .line 110
     .local v0, "e":Landroid/os/RemoteException;
     const-string v2, "AssistUtils"
 
@@ -366,29 +328,24 @@
     .locals 3
 
     .prologue
-    .line 64
     :try_start_0
     iget-object v1, p0, Lcom/android/internal/app/AssistUtils;->mVoiceInteractionManagerService:Lcom/android/internal/app/IVoiceInteractionManagerService;
 
     if-eqz v1, :cond_0
 
-    .line 65
     iget-object v1, p0, Lcom/android/internal/app/AssistUtils;->mVoiceInteractionManagerService:Lcom/android/internal/app/IVoiceInteractionManagerService;
 
     invoke-interface {v1}, Lcom/android/internal/app/IVoiceInteractionManagerService;->launchVoiceAssistFromKeyguard()V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 70
     :cond_0
     :goto_0
     return-void
 
-    .line 67
     :catch_0
     move-exception v0
 
-    .line 68
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "AssistUtils"
 
@@ -403,29 +360,24 @@
     .locals 3
 
     .prologue
-    .line 127
     :try_start_0
     iget-object v1, p0, Lcom/android/internal/app/AssistUtils;->mVoiceInteractionManagerService:Lcom/android/internal/app/IVoiceInteractionManagerService;
 
     if-eqz v1, :cond_0
 
-    .line 128
     iget-object v1, p0, Lcom/android/internal/app/AssistUtils;->mVoiceInteractionManagerService:Lcom/android/internal/app/IVoiceInteractionManagerService;
 
     invoke-interface {v1}, Lcom/android/internal/app/IVoiceInteractionManagerService;->onLockscreenShown()V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 133
     :cond_0
     :goto_0
     return-void
 
-    .line 130
     :catch_0
     move-exception v0
 
-    .line 131
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "AssistUtils"
 
@@ -444,13 +396,11 @@
     .param p4, "activityToken"    # Landroid/os/IBinder;
 
     .prologue
-    .line 52
     :try_start_0
     iget-object v1, p0, Lcom/android/internal/app/AssistUtils;->mVoiceInteractionManagerService:Lcom/android/internal/app/IVoiceInteractionManagerService;
 
     if-eqz v1, :cond_0
 
-    .line 53
     iget-object v1, p0, Lcom/android/internal/app/AssistUtils;->mVoiceInteractionManagerService:Lcom/android/internal/app/IVoiceInteractionManagerService;
 
     invoke-interface {v1, p1, p2, p3, p4}, Lcom/android/internal/app/IVoiceInteractionManagerService;->showSessionForActiveService(Landroid/os/Bundle;ILcom/android/internal/app/IVoiceInteractionSessionShowCallback;Landroid/os/IBinder;)Z
@@ -459,15 +409,12 @@
 
     move-result v1
 
-    .line 59
     :goto_0
     return v1
 
-    .line 56
     :catch_0
     move-exception v0
 
-    .line 57
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "AssistUtils"
 
@@ -475,7 +422,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 59
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0

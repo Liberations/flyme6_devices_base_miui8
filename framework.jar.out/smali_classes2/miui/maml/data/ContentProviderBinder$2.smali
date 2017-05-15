@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 262
     invoke-static {}, Lmiui/maml/elements/ListScreenElement$ColumnInfo$Type;->values()[Lmiui/maml/elements/ListScreenElement$ColumnInfo$Type;
 
     move-result-object v0

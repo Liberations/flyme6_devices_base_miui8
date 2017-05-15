@@ -36,7 +36,6 @@
     .param p3, "x1"    # I
 
     .prologue
-    .line 1321
     iput-object p1, p0, Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarOverflowPanel$3;->this$0:Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarOverflowPanel;
 
     iput-object p4, p0, Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarOverflowPanel$3;->val$context:Landroid/content/Context;
@@ -52,13 +51,10 @@
     .param p2, "convertView"    # Landroid/view/View;
 
     .prologue
-    .line 1359
     if-eqz p2, :cond_0
 
-    .line 1360
     move-object v0, p2
 
-    .line 1365
     .local v0, "menuButton":Landroid/view/View;
     :goto_0
     invoke-virtual {p0, p1}, Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarOverflowPanel$3;->getItem(I)Ljava/lang/Object;
@@ -67,7 +63,6 @@
 
     check-cast v1, Landroid/view/MenuItem;
 
-    .line 1366
     .local v1, "menuItem":Landroid/view/MenuItem;
     const v2, 0x1020054
 
@@ -83,7 +78,6 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 1369
     iget-object v2, p0, Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarOverflowPanel$3;->this$0:Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarOverflowPanel;
 
     # getter for: Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarOverflowPanel;->mOverflowWidth:I
@@ -93,10 +87,8 @@
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setMinimumWidth(I)V
 
-    .line 1370
     return-object v0
 
-    .line 1362
     .end local v0    # "menuButton":Landroid/view/View;
     .end local v1    # "menuItem":Landroid/view/MenuItem;
     :cond_0
@@ -124,15 +116,12 @@
     .param p2, "convertView"    # Landroid/view/View;
 
     .prologue
-    .line 1345
     if-eqz p2, :cond_0
 
     move-object v0, p2
 
-    .line 1346
     check-cast v0, Landroid/widget/TextView;
 
-    .line 1350
     .local v0, "menuButton":Landroid/widget/TextView;
     :goto_0
     invoke-virtual {p0, p1}, Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarOverflowPanel$3;->getItem(I)Ljava/lang/Object;
@@ -141,7 +130,6 @@
 
     check-cast v1, Landroid/view/MenuItem;
 
-    .line 1351
     .local v1, "menuItem":Landroid/view/MenuItem;
     invoke-interface {v1}, Landroid/view/MenuItem;->getTitle()Ljava/lang/CharSequence;
 
@@ -149,14 +137,12 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1352
     invoke-interface {v1}, Landroid/view/MenuItem;->getTitle()Ljava/lang/CharSequence;
 
     move-result-object v2
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 1353
     iget-object v2, p0, Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarOverflowPanel$3;->this$0:Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarOverflowPanel;
 
     # getter for: Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarOverflowPanel;->mOverflowWidth:I
@@ -166,10 +152,8 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setMinimumWidth(I)V
 
-    .line 1354
     return-object v0
 
-    .line 1348
     .end local v0    # "menuButton":Landroid/widget/TextView;
     .end local v1    # "menuItem":Landroid/view/MenuItem;
     :cond_0
@@ -191,7 +175,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 1329
     invoke-virtual {p0, p1}, Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarOverflowPanel$3;->getItem(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -205,10 +188,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 1330
     const/4 v0, 0x1
 
-    .line 1332
     :goto_0
     return v0
 
@@ -225,7 +206,6 @@
     .param p3, "parent"    # Landroid/view/ViewGroup;
 
     .prologue
-    .line 1337
     invoke-virtual {p0, p1}, Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarOverflowPanel$3;->getItemViewType(I)I
 
     move-result v0
@@ -234,12 +214,10 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 1338
     invoke-direct {p0, p1, p2}, Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarOverflowPanel$3;->getIconOnlyView(ILandroid/view/View;)Landroid/view/View;
 
     move-result-object v0
 
-    .line 1340
     :goto_0
     return-object v0
 
@@ -255,7 +233,6 @@
     .locals 1
 
     .prologue
-    .line 1324
     const/4 v0, 0x2
 
     return v0

@@ -21,7 +21,6 @@
     .param p9, "gains"    # [Landroid/media/AudioGain;
 
     .prologue
-    .line 36
     move-object v0, p0
 
     move-object v1, p1
@@ -42,10 +41,8 @@
 
     invoke-direct/range {v0 .. v8}, Landroid/media/AudioPort;-><init>(Landroid/media/AudioHandle;ILjava/lang/String;[I[I[I[I[Landroid/media/AudioGain;)V
 
-    .line 38
     iput p2, p0, Landroid/media/AudioMixPort;->mIoHandle:I
 
-    .line 39
     return-void
 .end method
 
@@ -59,7 +56,6 @@
     .param p4, "gain"    # Landroid/media/AudioGainConfig;
 
     .prologue
-    .line 47
     new-instance v0, Landroid/media/AudioMixPortConfig;
 
     move-object v1, p0
@@ -85,7 +81,6 @@
     .param p4, "x3"    # Landroid/media/AudioGainConfig;
 
     .prologue
-    .line 29
     invoke-virtual {p0, p1, p2, p3, p4}, Landroid/media/AudioMixPort;->buildConfig(IIILandroid/media/AudioGainConfig;)Landroid/media/AudioMixPortConfig;
 
     move-result-object v0
@@ -100,14 +95,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 59
     if-eqz p1, :cond_0
 
     instance-of v2, p1, Landroid/media/AudioMixPort;
 
     if-nez v2, :cond_1
 
-    .line 67
     :cond_0
     :goto_0
     return v1
@@ -115,10 +108,8 @@
     :cond_1
     move-object v0, p1
 
-    .line 62
     check-cast v0, Landroid/media/AudioMixPort;
 
-    .line 63
     .local v0, "other":Landroid/media/AudioMixPort;
     iget v2, p0, Landroid/media/AudioMixPort;->mIoHandle:I
 
@@ -128,7 +119,6 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 67
     invoke-super {p0, p1}, Landroid/media/AudioPort;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -140,7 +130,6 @@
     .locals 1
 
     .prologue
-    .line 54
     iget v0, p0, Landroid/media/AudioMixPort;->mIoHandle:I
 
     return v0

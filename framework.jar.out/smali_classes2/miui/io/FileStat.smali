@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,7 +18,6 @@
     .param p0, "path"    # Ljava/lang/String;
 
     .prologue
-    .line 20
     :try_start_0
     sget-object v1, Llibcore/io/Libcore;->os:Llibcore/io/Os;
 
@@ -35,15 +33,12 @@
 
     mul-long/2addr v2, v4
 
-    .line 22
     :goto_0
     return-wide v2
 
-    .line 21
     :catch_0
     move-exception v0
 
-    .line 22
     .local v0, "e":Ljava/lang/Exception;
     const-wide/16 v2, 0x0
 

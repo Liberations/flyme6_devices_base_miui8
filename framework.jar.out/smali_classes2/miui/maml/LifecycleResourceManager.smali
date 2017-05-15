@@ -27,16 +27,12 @@
     .param p4, "checkTime"    # J
 
     .prologue
-    .line 20
     invoke-direct {p0, p1}, Lmiui/maml/ResourceManager;-><init>(Lmiui/maml/ResourceLoader;)V
 
-    .line 21
     iput-wide p2, p0, Lmiui/maml/LifecycleResourceManager;->mInactiveTime:J
 
-    .line 22
     iput-wide p4, p0, Lmiui/maml/LifecycleResourceManager;->mCheckTime:J
 
-    .line 23
     return-void
 .end method
 
@@ -46,12 +42,10 @@
     .locals 14
 
     .prologue
-    .line 26
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
-    .line 27
     .local v2, "currentTimeMillis":J
     sget-wide v8, Lmiui/maml/LifecycleResourceManager;->mLastCheckCacheTime:J
 
@@ -63,11 +57,9 @@
 
     if-gez v7, :cond_0
 
-    .line 46
     :goto_0
     return-void
 
-    .line 30
     :cond_0
     const-string v7, "LifecycleResourceManager"
 
@@ -75,18 +67,15 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 31
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 32
     .local v5, "mToBeRemoved":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     iget-object v8, p0, Lmiui/maml/LifecycleResourceManager;->mBitmapsCache:Landroid/util/LruCache;
 
     monitor-enter v8
 
-    .line 33
     :try_start_0
     iget-object v7, p0, Lmiui/maml/LifecycleResourceManager;->mBitmapsCache:Landroid/util/LruCache;
 
@@ -117,7 +106,6 @@
 
     check-cast v4, Ljava/lang/String;
 
-    .line 34
     .local v4, "key":Ljava/lang/String;
     iget-object v7, p0, Lmiui/maml/LifecycleResourceManager;->mBitmapsCache:Landroid/util/LruCache;
 
@@ -127,7 +115,6 @@
 
     check-cast v0, Lmiui/maml/ResourceManager$BitmapInfo;
 
-    .line 35
     .local v0, "bi":Lmiui/maml/ResourceManager$BitmapInfo;
     if-eqz v0, :cond_1
 
@@ -141,12 +128,10 @@
 
     if-lez v7, :cond_1
 
-    .line 36
     invoke-virtual {v5, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 44
     .end local v0    # "bi":Lmiui/maml/ResourceManager$BitmapInfo;
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v4    # "key":Ljava/lang/String;
@@ -159,7 +144,6 @@
 
     throw v7
 
-    .line 40
     .restart local v1    # "i$":Ljava/util/Iterator;
     :cond_2
     :try_start_1
@@ -180,7 +164,6 @@
 
     check-cast v6, Ljava/lang/String;
 
-    .line 41
     .local v6, "s":Ljava/lang/String;
     const-string v7, "LifecycleResourceManager"
 
@@ -204,21 +187,18 @@
 
     invoke-static {v7, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 42
     iget-object v7, p0, Lmiui/maml/LifecycleResourceManager;->mBitmapsCache:Landroid/util/LruCache;
 
     invoke-virtual {v7, v6}, Landroid/util/LruCache;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_2
 
-    .line 44
     .end local v6    # "s":Ljava/lang/String;
     :cond_3
     monitor-exit v8
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 45
     sput-wide v2, Lmiui/maml/LifecycleResourceManager;->mLastCheckCacheTime:J
 
     goto :goto_0
@@ -229,17 +209,13 @@
     .param p1, "keepResource"    # Z
 
     .prologue
-    .line 55
     if-eqz p1, :cond_0
 
-    .line 56
     invoke-virtual {p0}, Lmiui/maml/LifecycleResourceManager;->checkCache()V
 
-    .line 58
     :cond_0
     invoke-super {p0, p1}, Lmiui/maml/ResourceManager;->finish(Z)V
 
-    .line 59
     return-void
 .end method
 
@@ -247,9 +223,7 @@
     .locals 0
 
     .prologue
-    .line 50
     invoke-virtual {p0}, Lmiui/maml/LifecycleResourceManager;->checkCache()V
 
-    .line 51
     return-void
 .end method

@@ -40,11 +40,9 @@
     .locals 0
 
     .prologue
-    .line 45
     .local p0, "this":Lorg/apache/miui/commons/lang3/mutable/MutableObject;, "Lorg/apache/miui/commons/lang3/mutable/MutableObject<TT;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 46
     return-void
 .end method
 
@@ -57,15 +55,12 @@
     .end annotation
 
     .prologue
-    .line 54
     .local p0, "this":Lorg/apache/miui/commons/lang3/mutable/MutableObject;, "Lorg/apache/miui/commons/lang3/mutable/MutableObject<TT;>;"
     .local p1, "value":Ljava/lang/Object;, "TT;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 55
     iput-object p1, p0, Lorg/apache/miui/commons/lang3/mutable/MutableObject;->value:Ljava/lang/Object;
 
-    .line 56
     return-void
 .end method
 
@@ -79,24 +74,19 @@
     .local p0, "this":Lorg/apache/miui/commons/lang3/mutable/MutableObject;, "Lorg/apache/miui/commons/lang3/mutable/MutableObject<TT;>;"
     const/4 v1, 0x0
 
-    .line 92
     if-nez p1, :cond_1
 
-    .line 102
     :cond_0
     :goto_0
     return v1
 
-    .line 95
     :cond_1
     if-ne p0, p1, :cond_2
 
-    .line 96
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 98
     :cond_2
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -110,10 +100,8 @@
 
     move-object v0, p1
 
-    .line 99
     check-cast v0, Lorg/apache/miui/commons/lang3/mutable/MutableObject;
 
-    .line 100
     .local v0, "that":Lorg/apache/miui/commons/lang3/mutable/MutableObject;, "Lorg/apache/miui/commons/lang3/mutable/MutableObject<*>;"
     iget-object v1, p0, Lorg/apache/miui/commons/lang3/mutable/MutableObject;->value:Ljava/lang/Object;
 
@@ -135,7 +123,6 @@
     .end annotation
 
     .prologue
-    .line 65
     .local p0, "this":Lorg/apache/miui/commons/lang3/mutable/MutableObject;, "Lorg/apache/miui/commons/lang3/mutable/MutableObject<TT;>;"
     iget-object v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableObject;->value:Ljava/lang/Object;
 
@@ -146,7 +133,6 @@
     .locals 1
 
     .prologue
-    .line 113
     .local p0, "this":Lorg/apache/miui/commons/lang3/mutable/MutableObject;, "Lorg/apache/miui/commons/lang3/mutable/MutableObject<TT;>;"
     iget-object v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableObject;->value:Ljava/lang/Object;
 
@@ -176,12 +162,10 @@
     .end annotation
 
     .prologue
-    .line 74
     .local p0, "this":Lorg/apache/miui/commons/lang3/mutable/MutableObject;, "Lorg/apache/miui/commons/lang3/mutable/MutableObject<TT;>;"
     .local p1, "value":Ljava/lang/Object;, "TT;"
     iput-object p1, p0, Lorg/apache/miui/commons/lang3/mutable/MutableObject;->value:Ljava/lang/Object;
 
-    .line 75
     return-void
 .end method
 
@@ -189,7 +173,6 @@
     .locals 1
 
     .prologue
-    .line 124
     .local p0, "this":Lorg/apache/miui/commons/lang3/mutable/MutableObject;, "Lorg/apache/miui/commons/lang3/mutable/MutableObject<TT;>;"
     iget-object v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableObject;->value:Ljava/lang/Object;
 

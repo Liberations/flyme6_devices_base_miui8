@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 84
     iput-object p1, p0, Landroid/hardware/camera2/legacy/LegacyFaceDetectMapper$1;->this$0:Landroid/hardware/camera2/legacy/LegacyFaceDetectMapper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,12 +41,10 @@
     .param p2, "camera"    # Landroid/hardware/Camera;
 
     .prologue
-    .line 88
     if-nez p1, :cond_1
 
     const/4 v0, 0x0
 
-    .line 89
     .local v0, "lengthFaces":I
     :goto_0
     iget-object v1, p0, Landroid/hardware/camera2/legacy/LegacyFaceDetectMapper$1;->this$0:Landroid/hardware/camera2/legacy/LegacyFaceDetectMapper;
@@ -59,7 +56,6 @@
 
     monitor-enter v2
 
-    .line 90
     :try_start_0
     iget-object v1, p0, Landroid/hardware/camera2/legacy/LegacyFaceDetectMapper$1;->this$0:Landroid/hardware/camera2/legacy/LegacyFaceDetectMapper;
 
@@ -70,48 +66,41 @@
 
     if-eqz v1, :cond_2
 
-    .line 91
     iget-object v1, p0, Landroid/hardware/camera2/legacy/LegacyFaceDetectMapper$1;->this$0:Landroid/hardware/camera2/legacy/LegacyFaceDetectMapper;
 
     # setter for: Landroid/hardware/camera2/legacy/LegacyFaceDetectMapper;->mFaces:[Landroid/hardware/Camera$Face;
     invoke-static {v1, p1}, Landroid/hardware/camera2/legacy/LegacyFaceDetectMapper;->access$202(Landroid/hardware/camera2/legacy/LegacyFaceDetectMapper;[Landroid/hardware/Camera$Face;)[Landroid/hardware/Camera$Face;
 
-    .line 98
     :cond_0
     :goto_1
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 103
     return-void
 
-    .line 88
     .end local v0    # "lengthFaces":I
     :cond_1
     array-length v0, p1
 
     goto :goto_0
 
-    .line 92
     .restart local v0    # "lengthFaces":I
     :cond_2
     if-lez v0, :cond_0
 
-    .line 94
     :try_start_1
     # getter for: Landroid/hardware/camera2/legacy/LegacyFaceDetectMapper;->TAG:Ljava/lang/String;
     invoke-static {}, Landroid/hardware/camera2/legacy/LegacyFaceDetectMapper;->access$300()Ljava/lang/String;
 
     move-result-object v1
 
-    const-string/jumbo v3, "onFaceDetection - Ignored some incoming faces sinceface detection was disabled"
+    const-string v3, "onFaceDetection - Ignored some incoming faces sinceface detection was disabled"
 
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
 
-    .line 98
     :catchall_0
     move-exception v1
 

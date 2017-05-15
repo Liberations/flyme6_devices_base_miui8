@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 148
     iput-object p1, p0, Lorg/egret/plugin/mi/runtime/EgretLoader$2;->this$0:Lorg/egret/plugin/mi/runtime/EgretLoader;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,12 +39,10 @@
     .locals 1
 
     .prologue
-    .line 150
     iget-object v0, p0, Lorg/egret/plugin/mi/runtime/EgretLoader$2;->this$0:Lorg/egret/plugin/mi/runtime/EgretLoader;
 
     # invokes: Lorg/egret/plugin/mi/runtime/EgretLoader;->startGameEngine()V
     invoke-static {v0}, Lorg/egret/plugin/mi/runtime/EgretLoader;->access$100(Lorg/egret/plugin/mi/runtime/EgretLoader;)V
 
-    .line 151
     return-void
 .end method

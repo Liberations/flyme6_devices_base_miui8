@@ -102,62 +102,52 @@
     .locals 2
 
     .prologue
-    .line 55
     const-string v0, "miui_bak"
 
     sput-object v0, Lmiui/app/backup/BackupManager;->DOMAIN_BAK:Ljava/lang/String;
 
-    .line 56
     const-string v0, "miui_meta"
 
     sput-object v0, Lmiui/app/backup/BackupManager;->DOMAIN_META:Ljava/lang/String;
 
-    .line 57
     const-string v0, "miui_att"
 
     sput-object v0, Lmiui/app/backup/BackupManager;->DOMAIN_ATTACH:Ljava/lang/String;
 
-    .line 58
     const-string v0, "miui_end"
 
     sput-object v0, Lmiui/app/backup/BackupManager;->DOMAIN_END:Ljava/lang/String;
 
-    .line 111
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     sput-object v0, Lmiui/app/backup/BackupManager;->mSystemAppWhiteSet:Ljava/util/HashSet;
 
-    .line 113
     sget-object v0, Lmiui/app/backup/BackupManager;->mSystemAppWhiteSet:Ljava/util/HashSet;
 
     const-string v1, "com.android.browser"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 140
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     sput-object v0, Lmiui/app/backup/BackupManager;->sProgRecordAppSet:Ljava/util/HashSet;
 
-    .line 143
     sget-object v0, Lmiui/app/backup/BackupManager;->sProgRecordAppSet:Ljava/util/HashSet;
 
     const-string v1, "com.android.contacts"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 144
     sget-object v0, Lmiui/app/backup/BackupManager;->sProgRecordAppSet:Ljava/util/HashSet;
 
     const-string v1, "com.android.mms"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 145
     return-void
 .end method
 
@@ -166,32 +156,26 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 161
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 74
     const/4 v0, 0x0
 
     iput-object v0, p0, Lmiui/app/backup/BackupManager;->mTransactionLatch:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 75
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lmiui/app/backup/BackupManager;->mBackupRestoreLatch:Ljava/lang/Object;
 
-    .line 79
     new-instance v0, Landroid/os/Binder;
 
     invoke-direct {v0}, Landroid/os/Binder;-><init>()V
 
     iput-object v0, p0, Lmiui/app/backup/BackupManager;->mICaller:Landroid/os/IBinder;
 
-    .line 162
     iput-object p1, p0, Lmiui/app/backup/BackupManager;->mContext:Landroid/content/Context;
 
-    .line 163
     const-string v0, "MiuiBackup"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -204,7 +188,6 @@
 
     iput-object v0, p0, Lmiui/app/backup/BackupManager;->mService:Lmiui/app/backup/IBackupManager;
 
-    .line 164
     return-void
 .end method
 
@@ -213,7 +196,6 @@
     .param p0, "x0"    # Lmiui/app/backup/BackupManager;
 
     .prologue
-    .line 26
     iget-object v0, p0, Lmiui/app/backup/BackupManager;->mTransactionLatch:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     return-object v0
@@ -225,7 +207,6 @@
     .param p1, "x1"    # Ljava/util/concurrent/atomic/AtomicBoolean;
 
     .prologue
-    .line 26
     iput-object p1, p0, Lmiui/app/backup/BackupManager;->mTransactionLatch:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     return-object p1
@@ -236,7 +217,6 @@
     .param p0, "x0"    # Lmiui/app/backup/BackupManager;
 
     .prologue
-    .line 26
     iget-object v0, p0, Lmiui/app/backup/BackupManager;->mBackupRestoreListener:Lmiui/app/backup/BackupManager$BackupRestoreListener;
 
     return-object v0
@@ -247,7 +227,6 @@
     .param p0, "x0"    # Lmiui/app/backup/BackupManager;
 
     .prologue
-    .line 26
     iget-object v0, p0, Lmiui/app/backup/BackupManager;->mPips:[Landroid/os/ParcelFileDescriptor;
 
     return-object v0
@@ -258,7 +237,6 @@
     .param p0, "x0"    # Lmiui/app/backup/BackupManager;
 
     .prologue
-    .line 26
     iget-object v0, p0, Lmiui/app/backup/BackupManager;->mBackupRestoreLatch:Ljava/lang/Object;
 
     return-object v0
@@ -269,25 +247,21 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 153
     sget-object v1, Lmiui/app/backup/BackupManager;->sWRInstance:Ljava/lang/ref/WeakReference;
 
     if-nez v1, :cond_1
 
     const/4 v0, 0x0
 
-    .line 154
     .local v0, "instance":Lmiui/app/backup/BackupManager;
     :goto_0
     if-nez v0, :cond_0
 
-    .line 155
     new-instance v0, Lmiui/app/backup/BackupManager;
 
     .end local v0    # "instance":Lmiui/app/backup/BackupManager;
     invoke-direct {v0, p0}, Lmiui/app/backup/BackupManager;-><init>(Landroid/content/Context;)V
 
-    .line 156
     .restart local v0    # "instance":Lmiui/app/backup/BackupManager;
     new-instance v1, Ljava/lang/ref/WeakReference;
 
@@ -295,11 +269,9 @@
 
     sput-object v1, Lmiui/app/backup/BackupManager;->sWRInstance:Ljava/lang/ref/WeakReference;
 
-    .line 158
     :cond_0
     return-object v0
 
-    .line 153
     .end local v0    # "instance":Lmiui/app/backup/BackupManager;
     :cond_1
     sget-object v1, Lmiui/app/backup/BackupManager;->sWRInstance:Ljava/lang/ref/WeakReference;
@@ -321,7 +293,6 @@
     .param p1, "feature"    # I
 
     .prologue
-    .line 149
     sget-object v0, Lmiui/app/backup/BackupManager;->sProgRecordAppSet:Ljava/util/HashSet;
 
     invoke-virtual {v0, p0}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
@@ -337,16 +308,13 @@
     .param p1, "pkg"    # Ljava/lang/String;
 
     .prologue
-    .line 118
     const/4 v1, 0x0
 
-    .line 119
     .local v1, "isSysApp":Z
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v2
 
-    .line 121
     .local v2, "pm":Landroid/content/pm/PackageManager;
     const/16 v3, 0x40
 
@@ -355,7 +323,6 @@
 
     move-result-object v0
 
-    .line 122
     .local v0, "info":Landroid/content/pm/PackageInfo;
     invoke-static {v0}, Lmiui/app/backup/BackupManager;->isSysAppForBackup(Landroid/content/pm/PackageInfo;)Z
     :try_end_0
@@ -363,12 +330,10 @@
 
     move-result v1
 
-    .line 125
     .end local v0    # "info":Landroid/content/pm/PackageInfo;
     :goto_0
     return v1
 
-    .line 123
     :catch_0
     move-exception v3
 
@@ -380,10 +345,8 @@
     .param p0, "info"    # Landroid/content/pm/PackageInfo;
 
     .prologue
-    .line 130
     const/4 v0, 0x0
 
-    .line 131
     .local v0, "isSysApp":Z
     if-eqz p0, :cond_1
 
@@ -391,7 +354,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 132
     iget-object v1, p0, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget v1, v1, Landroid/content/pm/ApplicationInfo;->flags:I
@@ -412,11 +374,9 @@
 
     if-eqz v1, :cond_1
 
-    .line 134
     :cond_0
     const/4 v0, 0x1
 
-    .line 137
     :cond_1
     return v0
 .end method
@@ -428,13 +388,11 @@
     .param p1, "stateObserver"    # Lmiui/app/backup/IBackupServiceStateObserver;
 
     .prologue
-    .line 83
     :try_start_0
     iget-boolean v1, p0, Lmiui/app/backup/BackupManager;->mIsAcquired:Z
 
     if-nez v1, :cond_0
 
-    .line 84
     iget-object v1, p0, Lmiui/app/backup/BackupManager;->mService:Lmiui/app/backup/IBackupManager;
 
     iget-object v2, p0, Lmiui/app/backup/BackupManager;->mICaller:Landroid/os/IBinder;
@@ -447,18 +405,15 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 89
     :cond_0
     :goto_0
     iget-boolean v1, p0, Lmiui/app/backup/BackupManager;->mIsAcquired:Z
 
     return v1
 
-    .line 86
     :catch_0
     move-exception v0
 
-    .line 87
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -476,12 +431,10 @@
     .param p7, "l"    # Lmiui/app/backup/BackupManager$BackupRestoreListener;
 
     .prologue
-    .line 167
     iget-boolean v1, p0, Lmiui/app/backup/BackupManager;->mIsAcquired:Z
 
     if-nez v1, :cond_0
 
-    .line 168
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string v2, "You must acquire first to use the backup or restore service"
@@ -490,18 +443,15 @@
 
     throw v1
 
-    .line 171
     :cond_0
     move-object/from16 v0, p7
 
     iput-object v0, p0, Lmiui/app/backup/BackupManager;->mBackupRestoreListener:Lmiui/app/backup/BackupManager$BackupRestoreListener;
 
-    .line 172
     iget-object v1, p0, Lmiui/app/backup/BackupManager;->mService:Lmiui/app/backup/IBackupManager;
 
     if-eqz v1, :cond_2
 
-    .line 174
     :try_start_0
     invoke-static {}, Landroid/os/ParcelFileDescriptor;->createPipe()[Landroid/os/ParcelFileDescriptor;
 
@@ -509,7 +459,6 @@
 
     iput-object v1, p0, Lmiui/app/backup/BackupManager;->mPips:[Landroid/os/ParcelFileDescriptor;
 
-    .line 175
     iget-object v12, p0, Lmiui/app/backup/BackupManager;->mBackupRestoreLatch:Ljava/lang/Object;
 
     monitor-enter v12
@@ -519,7 +468,6 @@
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_5
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 176
     :try_start_1
     iget-object v1, p0, Lmiui/app/backup/BackupManager;->mService:Lmiui/app/backup/IBackupManager;
 
@@ -555,22 +503,18 @@
 
     invoke-interface/range {v1 .. v10}, Lmiui/app/backup/IBackupManager;->backupPackage(Landroid/os/ParcelFileDescriptor;Landroid/os/ParcelFileDescriptor;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ZZLmiui/app/backup/IPackageBackupRestoreObserver;)V
 
-    .line 180
     iget-object v1, p0, Lmiui/app/backup/BackupManager;->mBackupRestoreLatch:Ljava/lang/Object;
 
     invoke-virtual {v1}, Ljava/lang/Object;->wait()V
 
-    .line 181
     monitor-exit v12
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 189
     iget-object v1, p0, Lmiui/app/backup/BackupManager;->mPips:[Landroid/os/ParcelFileDescriptor;
 
     if-eqz v1, :cond_2
 
-    .line 191
     :try_start_2
     iget-object v1, p0, Lmiui/app/backup/BackupManager;->mPips:[Landroid/os/ParcelFileDescriptor;
 
@@ -580,7 +524,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 192
     iget-object v1, p0, Lmiui/app/backup/BackupManager;->mPips:[Landroid/os/ParcelFileDescriptor;
 
     const/4 v2, 0x0
@@ -589,7 +532,6 @@
 
     invoke-virtual {v1}, Landroid/os/ParcelFileDescriptor;->close()V
 
-    .line 194
     :cond_1
     iget-object v1, p0, Lmiui/app/backup/BackupManager;->mPips:[Landroid/os/ParcelFileDescriptor;
 
@@ -599,7 +541,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 195
     iget-object v1, p0, Lmiui/app/backup/BackupManager;->mPips:[Landroid/os/ParcelFileDescriptor;
 
     const/4 v2, 0x1
@@ -610,12 +551,10 @@
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 205
     :cond_2
     :goto_0
     return-void
 
-    .line 181
     :catchall_0
     move-exception v1
 
@@ -632,11 +571,9 @@
     .catch Ljava/lang/InterruptedException; {:try_start_4 .. :try_end_4} :catch_5
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 182
     :catch_0
     move-exception v11
 
-    .line 183
     .local v11, "e":Ljava/io/IOException;
     :try_start_5
     const-string v1, "Backup:BackupManager"
@@ -647,12 +584,10 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 189
     iget-object v1, p0, Lmiui/app/backup/BackupManager;->mPips:[Landroid/os/ParcelFileDescriptor;
 
     if-eqz v1, :cond_2
 
-    .line 191
     :try_start_6
     iget-object v1, p0, Lmiui/app/backup/BackupManager;->mPips:[Landroid/os/ParcelFileDescriptor;
 
@@ -662,7 +597,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 192
     iget-object v1, p0, Lmiui/app/backup/BackupManager;->mPips:[Landroid/os/ParcelFileDescriptor;
 
     const/4 v2, 0x0
@@ -671,7 +605,6 @@
 
     invoke-virtual {v1}, Landroid/os/ParcelFileDescriptor;->close()V
 
-    .line 194
     :cond_3
     iget-object v1, p0, Lmiui/app/backup/BackupManager;->mPips:[Landroid/os/ParcelFileDescriptor;
 
@@ -681,7 +614,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 195
     iget-object v1, p0, Lmiui/app/backup/BackupManager;->mPips:[Landroid/os/ParcelFileDescriptor;
 
     const/4 v2, 0x1
@@ -694,11 +626,9 @@
 
     goto :goto_0
 
-    .line 197
     :catch_1
     move-exception v11
 
-    .line 198
     const-string v1, "Backup:BackupManager"
 
     const-string v2, "IOException"
@@ -707,12 +637,10 @@
 
     goto :goto_0
 
-    .line 197
     .end local v11    # "e":Ljava/io/IOException;
     :catch_2
     move-exception v11
 
-    .line 198
     .restart local v11    # "e":Ljava/io/IOException;
     const-string v1, "Backup:BackupManager"
 
@@ -722,12 +650,10 @@
 
     goto :goto_0
 
-    .line 184
     .end local v11    # "e":Ljava/io/IOException;
     :catch_3
     move-exception v11
 
-    .line 185
     .local v11, "e":Landroid/os/RemoteException;
     :try_start_7
     const-string v1, "Backup:BackupManager"
@@ -738,12 +664,10 @@
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_1
 
-    .line 189
     iget-object v1, p0, Lmiui/app/backup/BackupManager;->mPips:[Landroid/os/ParcelFileDescriptor;
 
     if-eqz v1, :cond_2
 
-    .line 191
     :try_start_8
     iget-object v1, p0, Lmiui/app/backup/BackupManager;->mPips:[Landroid/os/ParcelFileDescriptor;
 
@@ -753,7 +677,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 192
     iget-object v1, p0, Lmiui/app/backup/BackupManager;->mPips:[Landroid/os/ParcelFileDescriptor;
 
     const/4 v2, 0x0
@@ -762,7 +685,6 @@
 
     invoke-virtual {v1}, Landroid/os/ParcelFileDescriptor;->close()V
 
-    .line 194
     :cond_4
     iget-object v1, p0, Lmiui/app/backup/BackupManager;->mPips:[Landroid/os/ParcelFileDescriptor;
 
@@ -772,7 +694,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 195
     iget-object v1, p0, Lmiui/app/backup/BackupManager;->mPips:[Landroid/os/ParcelFileDescriptor;
 
     const/4 v2, 0x1
@@ -785,11 +706,9 @@
 
     goto :goto_0
 
-    .line 197
     :catch_4
     move-exception v11
 
-    .line 198
     .local v11, "e":Ljava/io/IOException;
     const-string v1, "Backup:BackupManager"
 
@@ -799,12 +718,10 @@
 
     goto :goto_0
 
-    .line 186
     .end local v11    # "e":Ljava/io/IOException;
     :catch_5
     move-exception v11
 
-    .line 187
     .local v11, "e":Ljava/lang/InterruptedException;
     :try_start_9
     const-string v1, "Backup:BackupManager"
@@ -815,12 +732,10 @@
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_1
 
-    .line 189
     iget-object v1, p0, Lmiui/app/backup/BackupManager;->mPips:[Landroid/os/ParcelFileDescriptor;
 
     if-eqz v1, :cond_2
 
-    .line 191
     :try_start_a
     iget-object v1, p0, Lmiui/app/backup/BackupManager;->mPips:[Landroid/os/ParcelFileDescriptor;
 
@@ -830,7 +745,6 @@
 
     if-eqz v1, :cond_5
 
-    .line 192
     iget-object v1, p0, Lmiui/app/backup/BackupManager;->mPips:[Landroid/os/ParcelFileDescriptor;
 
     const/4 v2, 0x0
@@ -839,7 +753,6 @@
 
     invoke-virtual {v1}, Landroid/os/ParcelFileDescriptor;->close()V
 
-    .line 194
     :cond_5
     iget-object v1, p0, Lmiui/app/backup/BackupManager;->mPips:[Landroid/os/ParcelFileDescriptor;
 
@@ -849,7 +762,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 195
     iget-object v1, p0, Lmiui/app/backup/BackupManager;->mPips:[Landroid/os/ParcelFileDescriptor;
 
     const/4 v2, 0x1
@@ -862,11 +774,9 @@
 
     goto/16 :goto_0
 
-    .line 197
     :catch_6
     move-exception v11
 
-    .line 198
     .local v11, "e":Ljava/io/IOException;
     const-string v1, "Backup:BackupManager"
 
@@ -876,7 +786,6 @@
 
     goto/16 :goto_0
 
-    .line 189
     .end local v11    # "e":Ljava/io/IOException;
     :catchall_1
     move-exception v1
@@ -885,7 +794,6 @@
 
     if-eqz v2, :cond_7
 
-    .line 191
     :try_start_b
     iget-object v2, p0, Lmiui/app/backup/BackupManager;->mPips:[Landroid/os/ParcelFileDescriptor;
 
@@ -895,7 +803,6 @@
 
     if-eqz v2, :cond_6
 
-    .line 192
     iget-object v2, p0, Lmiui/app/backup/BackupManager;->mPips:[Landroid/os/ParcelFileDescriptor;
 
     const/4 v3, 0x0
@@ -904,7 +811,6 @@
 
     invoke-virtual {v2}, Landroid/os/ParcelFileDescriptor;->close()V
 
-    .line 194
     :cond_6
     iget-object v2, p0, Lmiui/app/backup/BackupManager;->mPips:[Landroid/os/ParcelFileDescriptor;
 
@@ -914,7 +820,6 @@
 
     if-eqz v2, :cond_7
 
-    .line 195
     iget-object v2, p0, Lmiui/app/backup/BackupManager;->mPips:[Landroid/os/ParcelFileDescriptor;
 
     const/4 v3, 0x1
@@ -925,16 +830,13 @@
     :try_end_b
     .catch Ljava/io/IOException; {:try_start_b .. :try_end_b} :catch_7
 
-    .line 199
     :cond_7
     :goto_1
     throw v1
 
-    .line 197
     :catch_7
     move-exception v11
 
-    .line 198
     .restart local v11    # "e":Ljava/io/IOException;
     const-string v2, "Backup:BackupManager"
 
@@ -949,7 +851,6 @@
     .locals 3
 
     .prologue
-    .line 282
     :try_start_0
     iget-object v1, p0, Lmiui/app/backup/BackupManager;->mService:Lmiui/app/backup/IBackupManager;
 
@@ -959,15 +860,12 @@
 
     move-result-object v1
 
-    .line 286
     :goto_0
     return-object v1
 
-    .line 283
     :catch_0
     move-exception v0
 
-    .line 284
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "Backup:BackupManager"
 
@@ -975,7 +873,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 286
     const/4 v1, 0x0
 
     goto :goto_0
@@ -985,7 +882,6 @@
     .locals 3
 
     .prologue
-    .line 273
     :try_start_0
     iget-object v1, p0, Lmiui/app/backup/BackupManager;->mService:Lmiui/app/backup/IBackupManager;
 
@@ -995,15 +891,12 @@
 
     move-result v1
 
-    .line 277
     :goto_0
     return v1
 
-    .line 274
     :catch_0
     move-exception v0
 
-    .line 275
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "Backup:BackupManager"
 
@@ -1011,7 +904,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 277
     const/4 v1, -0x1
 
     goto :goto_0
@@ -1021,7 +913,6 @@
     .locals 3
 
     .prologue
-    .line 291
     :try_start_0
     iget-object v1, p0, Lmiui/app/backup/BackupManager;->mService:Lmiui/app/backup/IBackupManager;
 
@@ -1031,15 +922,12 @@
 
     move-result v1
 
-    .line 295
     :goto_0
     return v1
 
-    .line 292
     :catch_0
     move-exception v0
 
-    .line 293
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "Backup:BackupManager"
 
@@ -1047,7 +935,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 295
     const/4 v1, -0x1
 
     goto :goto_0
@@ -1057,10 +944,8 @@
     .locals 3
 
     .prologue
-    .line 102
     const/4 v1, 0x0
 
-    .line 104
     .local v1, "isIdle":Z
     :try_start_0
     iget-object v2, p0, Lmiui/app/backup/BackupManager;->mService:Lmiui/app/backup/IBackupManager;
@@ -1071,15 +956,12 @@
 
     move-result v1
 
-    .line 108
     :goto_0
     return v1
 
-    .line 105
     :catch_0
     move-exception v0
 
-    .line 106
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -1091,7 +973,6 @@
     .param p1, "stateObserver"    # Lmiui/app/backup/IBackupServiceStateObserver;
 
     .prologue
-    .line 94
     :try_start_0
     iget-object v1, p0, Lmiui/app/backup/BackupManager;->mService:Lmiui/app/backup/IBackupManager;
 
@@ -1099,20 +980,16 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 98
     :goto_0
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lmiui/app/backup/BackupManager;->mIsAcquired:Z
 
-    .line 99
     return-void
 
-    .line 95
     :catch_0
     move-exception v0
 
-    .line 96
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -1129,12 +1006,10 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 208
     iget-boolean v3, p0, Lmiui/app/backup/BackupManager;->mIsAcquired:Z
 
     if-nez v3, :cond_0
 
-    .line 209
     new-instance v3, Ljava/lang/RuntimeException;
 
     const-string v4, "You must acquire first to use the backup or restore service"
@@ -1143,14 +1018,11 @@
 
     throw v3
 
-    .line 212
     :cond_0
     iput-object p4, p0, Lmiui/app/backup/BackupManager;->mBackupRestoreListener:Lmiui/app/backup/BackupManager$BackupRestoreListener;
 
-    .line 213
     const/4 v1, 0x0
 
-    .line 215
     .local v1, "pipe":[Landroid/os/ParcelFileDescriptor;
     :try_start_0
     iget-object v4, p0, Lmiui/app/backup/BackupManager;->mBackupRestoreLatch:Ljava/lang/Object;
@@ -1162,18 +1034,15 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_5
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 216
     :try_start_1
     invoke-static {}, Landroid/os/ParcelFileDescriptor;->createPipe()[Landroid/os/ParcelFileDescriptor;
 
     move-result-object v1
 
-    .line 217
     const/4 v3, 0x1
 
     aget-object v2, v1, v3
 
-    .line 218
     .local v2, "writeSide":Landroid/os/ParcelFileDescriptor;
     new-instance v3, Lmiui/app/backup/BackupManager$1;
 
@@ -1181,7 +1050,6 @@
 
     invoke-virtual {v3}, Lmiui/app/backup/BackupManager$1;->start()V
 
-    .line 250
     iget-object v3, p0, Lmiui/app/backup/BackupManager;->mService:Lmiui/app/backup/IBackupManager;
 
     const/4 v5, 0x0
@@ -1196,24 +1064,20 @@
 
     invoke-interface {v3, v5, p2, p3, v6}, Lmiui/app/backup/IBackupManager;->restoreFile(Landroid/os/ParcelFileDescriptor;Ljava/lang/String;ZLmiui/app/backup/IPackageBackupRestoreObserver;)V
 
-    .line 252
     iget-object v3, p0, Lmiui/app/backup/BackupManager;->mBackupRestoreLatch:Ljava/lang/Object;
 
     invoke-virtual {v3}, Ljava/lang/Object;->wait()V
 
-    .line 253
     monitor-exit v4
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 261
     if-eqz v1, :cond_1
 
     aget-object v3, v1, v8
 
     if-eqz v3, :cond_1
 
-    .line 263
     const/4 v3, 0x0
 
     :try_start_2
@@ -1223,13 +1087,11 @@
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 269
     .end local v2    # "writeSide":Landroid/os/ParcelFileDescriptor;
     :cond_1
     :goto_0
     return-void
 
-    .line 253
     :catchall_0
     move-exception v3
 
@@ -1246,11 +1108,9 @@
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_5
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 254
     :catch_0
     move-exception v0
 
-    .line 255
     .local v0, "e":Landroid/os/RemoteException;
     :try_start_5
     const-string v3, "Backup:BackupManager"
@@ -1261,14 +1121,12 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 261
     if-eqz v1, :cond_1
 
     aget-object v3, v1, v8
 
     if-eqz v3, :cond_1
 
-    .line 263
     const/4 v3, 0x0
 
     :try_start_6
@@ -1280,11 +1138,9 @@
 
     goto :goto_0
 
-    .line 264
     :catch_1
     move-exception v0
 
-    .line 265
     .local v0, "e":Ljava/io/IOException;
     const-string v3, "Backup:BackupManager"
 
@@ -1294,13 +1150,11 @@
 
     goto :goto_0
 
-    .line 264
     .end local v0    # "e":Ljava/io/IOException;
     .restart local v2    # "writeSide":Landroid/os/ParcelFileDescriptor;
     :catch_2
     move-exception v0
 
-    .line 265
     .restart local v0    # "e":Ljava/io/IOException;
     const-string v3, "Backup:BackupManager"
 
@@ -1310,13 +1164,11 @@
 
     goto :goto_0
 
-    .line 256
     .end local v0    # "e":Ljava/io/IOException;
     .end local v2    # "writeSide":Landroid/os/ParcelFileDescriptor;
     :catch_3
     move-exception v0
 
-    .line 257
     .local v0, "e":Ljava/lang/InterruptedException;
     :try_start_7
     const-string v3, "Backup:BackupManager"
@@ -1327,14 +1179,12 @@
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_1
 
-    .line 261
     if-eqz v1, :cond_1
 
     aget-object v3, v1, v8
 
     if-eqz v3, :cond_1
 
-    .line 263
     const/4 v3, 0x0
 
     :try_start_8
@@ -1346,11 +1196,9 @@
 
     goto :goto_0
 
-    .line 264
     :catch_4
     move-exception v0
 
-    .line 265
     .local v0, "e":Ljava/io/IOException;
     const-string v3, "Backup:BackupManager"
 
@@ -1360,12 +1208,10 @@
 
     goto :goto_0
 
-    .line 258
     .end local v0    # "e":Ljava/io/IOException;
     :catch_5
     move-exception v0
 
-    .line 259
     .restart local v0    # "e":Ljava/io/IOException;
     :try_start_9
     const-string v3, "Backup:BackupManager"
@@ -1376,14 +1222,12 @@
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_1
 
-    .line 261
     if-eqz v1, :cond_1
 
     aget-object v3, v1, v8
 
     if-eqz v3, :cond_1
 
-    .line 263
     const/4 v3, 0x0
 
     :try_start_a
@@ -1395,11 +1239,9 @@
 
     goto :goto_0
 
-    .line 264
     :catch_6
     move-exception v0
 
-    .line 265
     const-string v3, "Backup:BackupManager"
 
     const-string v4, "IOException"
@@ -1408,7 +1250,6 @@
 
     goto :goto_0
 
-    .line 261
     .end local v0    # "e":Ljava/io/IOException;
     :catchall_1
     move-exception v3
@@ -1419,7 +1260,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 263
     const/4 v4, 0x0
 
     :try_start_b
@@ -1429,16 +1269,13 @@
     :try_end_b
     .catch Ljava/io/IOException; {:try_start_b .. :try_end_b} :catch_7
 
-    .line 266
     :cond_2
     :goto_1
     throw v3
 
-    .line 264
     :catch_7
     move-exception v0
 
-    .line 265
     .restart local v0    # "e":Ljava/io/IOException;
     const-string v4, "Backup:BackupManager"
 
@@ -1456,7 +1293,6 @@
     .param p3, "total"    # I
 
     .prologue
-    .line 316
     :try_start_0
     iget-object v2, p0, Lmiui/app/backup/BackupManager;->mService:Lmiui/app/backup/IBackupManager;
 
@@ -1464,7 +1300,6 @@
 
     move-result-object v1
 
-    .line 317
     .local v1, "pkg":Ljava/lang/String;
     iget-object v2, p0, Lmiui/app/backup/BackupManager;->mContext:Landroid/content/Context;
 
@@ -1478,24 +1313,20 @@
 
     if-eqz v2, :cond_0
 
-    .line 318
     iget-object v2, p0, Lmiui/app/backup/BackupManager;->mService:Lmiui/app/backup/IBackupManager;
 
     invoke-interface {v2, p1, p2, p3}, Lmiui/app/backup/IBackupManager;->setCustomProgress(III)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 323
     .end local v1    # "pkg":Ljava/lang/String;
     :cond_0
     :goto_0
     return-void
 
-    .line 320
     :catch_0
     move-exception v0
 
-    .line 321
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -1507,7 +1338,6 @@
     .param p1, "isNeedBeKilled"    # Z
 
     .prologue
-    .line 300
     :try_start_0
     iget-object v1, p0, Lmiui/app/backup/BackupManager;->mService:Lmiui/app/backup/IBackupManager;
 
@@ -1521,15 +1351,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 304
     :goto_0
     return-void
 
-    .line 301
     :catch_0
     move-exception v0
 
-    .line 302
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "Backup:BackupManager"
 
@@ -1545,7 +1372,6 @@
     .param p1, "errCode"    # I
 
     .prologue
-    .line 308
     :try_start_0
     iget-object v1, p0, Lmiui/app/backup/BackupManager;->mService:Lmiui/app/backup/IBackupManager;
 
@@ -1553,15 +1379,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 312
     :goto_0
     return-void
 
-    .line 309
     :catch_0
     move-exception v0
 
-    .line 310
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 

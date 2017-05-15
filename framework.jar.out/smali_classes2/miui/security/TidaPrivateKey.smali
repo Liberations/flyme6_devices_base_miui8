@@ -16,13 +16,10 @@
     .param p1, "alias"    # Ljava/lang/String;
 
     .prologue
-    .line 9
     invoke-direct {p0}, Lmiui/security/TidaKey;-><init>()V
 
-    .line 10
     iput-object p1, p0, Lmiui/security/TidaPrivateKey;->mAlias:Ljava/lang/String;
 
-    .line 11
     return-void
 .end method
 
@@ -32,7 +29,6 @@
     .locals 1
 
     .prologue
-    .line 14
     iget-object v0, p0, Lmiui/security/TidaPrivateKey;->mAlias:Ljava/lang/String;
 
     return-object v0

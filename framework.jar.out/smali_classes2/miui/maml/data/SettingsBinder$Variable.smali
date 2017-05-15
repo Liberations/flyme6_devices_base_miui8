@@ -29,13 +29,10 @@
     .param p3, "var"    # Lmiui/maml/data/Variables;
 
     .prologue
-    .line 34
     iput-object p1, p0, Lmiui/maml/data/SettingsBinder$Variable;->this$0:Lmiui/maml/data/SettingsBinder;
 
-    .line 35
     invoke-direct {p0, p2, p3}, Lmiui/maml/data/VariableBinder$Variable;-><init>(Lorg/w3c/dom/Element;Lmiui/maml/data/Variables;)V
 
-    .line 36
     const-string v0, "secure"
 
     const-string v1, "category"
@@ -55,7 +52,6 @@
     :goto_0
     iput-object v0, p0, Lmiui/maml/data/SettingsBinder$Variable;->mCategory:Lmiui/maml/data/SettingsBinder$Category;
 
-    .line 37
     const-string v0, "key"
 
     invoke-interface {p2, v0}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -64,10 +60,8 @@
 
     iput-object v0, p0, Lmiui/maml/data/SettingsBinder$Variable;->mKey:Ljava/lang/String;
 
-    .line 38
     return-void
 
-    .line 36
     :cond_0
     sget-object v0, Lmiui/maml/data/SettingsBinder$Category;->System:Lmiui/maml/data/SettingsBinder$Category;
 
@@ -80,7 +74,6 @@
     .locals 6
 
     .prologue
-    .line 45
     sget-object v1, Lmiui/maml/data/SettingsBinder$1;->$SwitchMap$miui$maml$data$SettingsBinder$Category:[I
 
     iget-object v2, p0, Lmiui/maml/data/SettingsBinder$Variable;->mCategory:Lmiui/maml/data/SettingsBinder$Category;
@@ -93,11 +86,9 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 83
     :goto_0
     return-void
 
-    .line 47
     :pswitch_0
     iget v1, p0, Lmiui/maml/data/SettingsBinder$Variable;->mType:I
 
@@ -105,7 +96,6 @@
 
     goto :goto_0
 
-    .line 49
     :pswitch_1
     iget-object v1, p0, Lmiui/maml/data/SettingsBinder$Variable;->this$0:Lmiui/maml/data/SettingsBinder;
 
@@ -120,7 +110,6 @@
 
     move-result-object v0
 
-    .line 50
     .local v0, "str":Ljava/lang/String;
     if-nez v0, :cond_0
 
@@ -132,7 +121,6 @@
 
     goto :goto_0
 
-    .line 54
     :pswitch_2
     iget-object v1, p0, Lmiui/maml/data/SettingsBinder$Variable;->this$0:Lmiui/maml/data/SettingsBinder;
 
@@ -157,7 +145,6 @@
 
     goto :goto_0
 
-    .line 57
     :pswitch_3
     iget-object v1, p0, Lmiui/maml/data/SettingsBinder$Variable;->this$0:Lmiui/maml/data/SettingsBinder;
 
@@ -182,7 +169,6 @@
 
     goto :goto_0
 
-    .line 60
     :pswitch_4
     iget-object v1, p0, Lmiui/maml/data/SettingsBinder$Variable;->this$0:Lmiui/maml/data/SettingsBinder;
 
@@ -207,7 +193,6 @@
 
     goto :goto_0
 
-    .line 65
     :pswitch_5
     iget v1, p0, Lmiui/maml/data/SettingsBinder$Variable;->mType:I
 
@@ -215,7 +200,6 @@
 
     goto :goto_0
 
-    .line 67
     :pswitch_6
     iget-object v1, p0, Lmiui/maml/data/SettingsBinder$Variable;->this$0:Lmiui/maml/data/SettingsBinder;
 
@@ -230,7 +214,6 @@
 
     move-result-object v0
 
-    .line 68
     .restart local v0    # "str":Ljava/lang/String;
     if-nez v0, :cond_1
 
@@ -242,7 +225,6 @@
 
     goto :goto_0
 
-    .line 72
     :pswitch_7
     iget-object v1, p0, Lmiui/maml/data/SettingsBinder$Variable;->this$0:Lmiui/maml/data/SettingsBinder;
 
@@ -267,7 +249,6 @@
 
     goto/16 :goto_0
 
-    .line 75
     :pswitch_8
     iget-object v1, p0, Lmiui/maml/data/SettingsBinder$Variable;->this$0:Lmiui/maml/data/SettingsBinder;
 
@@ -292,7 +273,6 @@
 
     goto/16 :goto_0
 
-    .line 78
     :pswitch_9
     iget-object v1, p0, Lmiui/maml/data/SettingsBinder$Variable;->this$0:Lmiui/maml/data/SettingsBinder;
 
@@ -317,7 +297,6 @@
 
     goto/16 :goto_0
 
-    .line 45
     nop
 
     :pswitch_data_0
@@ -326,7 +305,6 @@
         :pswitch_5
     .end packed-switch
 
-    .line 47
     :pswitch_data_1
     .packed-switch 0x2
         :pswitch_1
@@ -336,7 +314,6 @@
         :pswitch_2
     .end packed-switch
 
-    .line 65
     :pswitch_data_2
     .packed-switch 0x2
         :pswitch_6

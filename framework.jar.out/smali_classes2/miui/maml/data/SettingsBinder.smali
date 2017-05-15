@@ -30,10 +30,8 @@
     .param p2, "root"    # Lmiui/maml/ScreenElementRoot;
 
     .prologue
-    .line 87
     invoke-direct {p0, p1, p2}, Lmiui/maml/data/VariableBinder;-><init>(Lorg/w3c/dom/Element;Lmiui/maml/ScreenElementRoot;)V
 
-    .line 89
     iget-object v0, p0, Lmiui/maml/data/SettingsBinder;->mRoot:Lmiui/maml/ScreenElementRoot;
 
     invoke-virtual {v0}, Lmiui/maml/ScreenElementRoot;->getContext()Lmiui/maml/ScreenContext;
@@ -48,13 +46,10 @@
 
     iput-object v0, p0, Lmiui/maml/data/SettingsBinder;->mContentResolver:Landroid/content/ContentResolver;
 
-    .line 90
     if-eqz p1, :cond_0
 
-    .line 91
     invoke-virtual {p0, p1}, Lmiui/maml/data/SettingsBinder;->loadVariables(Lorg/w3c/dom/Element;)V
 
-    .line 92
     const-string v0, "false"
 
     const-string v1, "const"
@@ -74,11 +69,9 @@
     :goto_0
     iput-boolean v0, p0, Lmiui/maml/data/SettingsBinder;->mConst:Z
 
-    .line 94
     :cond_0
     return-void
 
-    .line 92
     :cond_1
     const/4 v0, 0x0
 
@@ -90,7 +83,6 @@
     .param p0, "x0"    # Lmiui/maml/data/SettingsBinder;
 
     .prologue
-    .line 20
     iget-object v0, p0, Lmiui/maml/data/SettingsBinder;->mContentResolver:Landroid/content/ContentResolver;
 
     return-object v0
@@ -103,7 +95,6 @@
     .param p1, "child"    # Lorg/w3c/dom/Element;
 
     .prologue
-    .line 111
     new-instance v0, Lmiui/maml/data/SettingsBinder$Variable;
 
     invoke-virtual {p0}, Lmiui/maml/data/SettingsBinder;->getContext()Lmiui/maml/ScreenContext;
@@ -122,7 +113,6 @@
     .param p1, "x0"    # Lorg/w3c/dom/Element;
 
     .prologue
-    .line 20
     invoke-virtual {p0, p1}, Lmiui/maml/data/SettingsBinder;->onLoadVariable(Lorg/w3c/dom/Element;)Lmiui/maml/data/SettingsBinder$Variable;
 
     move-result-object v0
@@ -134,13 +124,10 @@
     .locals 0
 
     .prologue
-    .line 105
     invoke-super {p0}, Lmiui/maml/data/VariableBinder;->refresh()V
 
-    .line 106
     invoke-virtual {p0}, Lmiui/maml/data/SettingsBinder;->startQuery()V
 
-    .line 107
     return-void
 .end method
 
@@ -148,18 +135,14 @@
     .locals 1
 
     .prologue
-    .line 98
     invoke-super {p0}, Lmiui/maml/data/VariableBinder;->resume()V
 
-    .line 99
     iget-boolean v0, p0, Lmiui/maml/data/SettingsBinder;->mConst:Z
 
     if-nez v0, :cond_0
 
-    .line 100
     invoke-virtual {p0}, Lmiui/maml/data/SettingsBinder;->startQuery()V
 
-    .line 101
     :cond_0
     return-void
 .end method
@@ -168,7 +151,6 @@
     .locals 3
 
     .prologue
-    .line 116
     iget-object v2, p0, Lmiui/maml/data/SettingsBinder;->mVariables:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -189,7 +171,6 @@
 
     check-cast v1, Lmiui/maml/data/VariableBinder$Variable;
 
-    .line 117
     .local v1, "v":Lmiui/maml/data/VariableBinder$Variable;
     check-cast v1, Lmiui/maml/data/SettingsBinder$Variable;
 
@@ -198,10 +179,8 @@
 
     goto :goto_0
 
-    .line 119
     :cond_0
     invoke-virtual {p0}, Lmiui/maml/data/SettingsBinder;->onUpdateComplete()V
 
-    .line 120
     return-void
 .end method

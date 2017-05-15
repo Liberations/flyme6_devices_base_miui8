@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 50
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,7 +32,6 @@
     .param p1, "x0"    # Lmiui/securitycenter/DualSim/DualSimInfoManagerWrapper$1;
 
     .prologue
-    .line 50
     invoke-direct {p0}, Lmiui/securitycenter/DualSim/DualSimInfoManagerWrapper$SimInfoChangeImpl;-><init>()V
 
     return-void
@@ -45,10 +43,8 @@
     .locals 0
 
     .prologue
-    .line 53
     # invokes: Lmiui/securitycenter/DualSim/DualSimInfoManagerWrapper;->broadcastSubscriptionsChanged()V
     invoke-static {}, Lmiui/securitycenter/DualSim/DualSimInfoManagerWrapper;->access$100()V
 
-    .line 54
     return-void
 .end method

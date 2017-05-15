@@ -34,19 +34,14 @@
     .param p3, "path"    # [Ljava/lang/String;
 
     .prologue
-    .line 57
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 58
     iput-object p1, p0, Landroid/content/pm/PackageHideManager$AppHideItem;->packageName:Ljava/lang/String;
 
-    .line 59
     iput-boolean p2, p0, Landroid/content/pm/PackageHideManager$AppHideItem;->isHide:Z
 
-    .line 60
     iput-object p3, p0, Landroid/content/pm/PackageHideManager$AppHideItem;->pathArray:[Ljava/lang/String;
 
-    .line 61
     return-void
 .end method
 
@@ -56,15 +51,12 @@
     .locals 2
 
     .prologue
-    .line 64
     iget-object v0, p0, Landroid/content/pm/PackageHideManager$AppHideItem;->pathArray:[Ljava/lang/String;
 
     if-nez v0, :cond_0
 
-    .line 65
     const/4 v0, 0x0
 
-    .line 67
     :goto_0
     return-object v0
 

@@ -129,7 +129,6 @@
     .locals 3
 
     .prologue
-    .line 23
     const-string v0, "content://wifi/wifi"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -138,7 +137,6 @@
 
     sput-object v0, Lmiui/provider/Wifi;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 29
     sget-object v0, Lmiui/provider/Wifi;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-virtual {v0}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
@@ -170,9 +168,7 @@
     .locals 0
 
     .prologue
-    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 291
     return-void
 .end method

@@ -66,21 +66,19 @@
 
     const/4 v2, 0x0
 
-    .line 67
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 17
     new-array v0, v6, [Ljava/lang/String;
 
     const-string v1, "system_server"
 
     aput-object v1, v0, v2
 
-    const-string/jumbo v1, "zygote"
+    const-string v1, "zygote"
 
     aput-object v1, v0, v3
 
-    const-string/jumbo v1, "zygote64"
+    const-string v1, "zygote64"
 
     aput-object v1, v0, v4
 
@@ -90,7 +88,6 @@
 
     iput-object v0, p0, Lmiui/mqsas/sdk/event/ExceptionEvent;->mVerytImportantProcesses:[Ljava/lang/String;
 
-    .line 24
     new-array v0, v6, [Ljava/lang/String;
 
     const-string v1, "com.android.systemui"
@@ -111,61 +108,48 @@
 
     iput-object v0, p0, Lmiui/mqsas/sdk/event/ExceptionEvent;->mImportantProcesses:[Ljava/lang/String;
 
-    .line 68
     invoke-virtual {p0}, Lmiui/mqsas/sdk/event/ExceptionEvent;->initType()V
 
-    .line 69
     const/4 v0, -0x1
 
     iput v0, p0, Lmiui/mqsas/sdk/event/ExceptionEvent;->mPid:I
 
-    .line 70
     const-string v0, ""
 
     iput-object v0, p0, Lmiui/mqsas/sdk/event/ExceptionEvent;->mProcessName:Ljava/lang/String;
 
-    .line 71
     const-string v0, ""
 
     iput-object v0, p0, Lmiui/mqsas/sdk/event/ExceptionEvent;->mPackageName:Ljava/lang/String;
 
-    .line 72
     iput-boolean v2, p0, Lmiui/mqsas/sdk/event/ExceptionEvent;->mIsSystem:Z
 
-    .line 73
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Lmiui/mqsas/sdk/event/ExceptionEvent;->mTimeStamp:J
 
-    .line 74
     const-string v0, ""
 
     iput-object v0, p0, Lmiui/mqsas/sdk/event/ExceptionEvent;->mSummary:Ljava/lang/String;
 
-    .line 75
     const-string v0, ""
 
     iput-object v0, p0, Lmiui/mqsas/sdk/event/ExceptionEvent;->mDetails:Ljava/lang/String;
 
-    .line 76
     const-string v0, ""
 
     iput-object v0, p0, Lmiui/mqsas/sdk/event/ExceptionEvent;->mDigest:Ljava/lang/String;
 
-    .line 77
     const-string v0, ""
 
     iput-object v0, p0, Lmiui/mqsas/sdk/event/ExceptionEvent;->mLogName:Ljava/lang/String;
 
-    .line 78
     const-string v0, ""
 
     iput-object v0, p0, Lmiui/mqsas/sdk/event/ExceptionEvent;->mKeyWord:Ljava/lang/String;
 
-    .line 79
     iput-boolean v2, p0, Lmiui/mqsas/sdk/event/ExceptionEvent;->mIsUpload:Z
 
-    .line 80
     return-void
 .end method
 
@@ -175,7 +159,6 @@
     .locals 1
 
     .prologue
-    .line 143
     iget-object v0, p0, Lmiui/mqsas/sdk/event/ExceptionEvent;->mDetails:Ljava/lang/String;
 
     return-object v0
@@ -185,7 +168,6 @@
     .locals 1
 
     .prologue
-    .line 151
     iget-object v0, p0, Lmiui/mqsas/sdk/event/ExceptionEvent;->mDigest:Ljava/lang/String;
 
     return-object v0
@@ -195,7 +177,6 @@
     .locals 1
 
     .prologue
-    .line 183
     const/4 v0, 0x2
 
     return v0
@@ -205,7 +186,6 @@
     .locals 1
 
     .prologue
-    .line 167
     iget-object v0, p0, Lmiui/mqsas/sdk/event/ExceptionEvent;->mKeyWord:Ljava/lang/String;
 
     return-object v0
@@ -215,7 +195,6 @@
     .locals 1
 
     .prologue
-    .line 159
     iget-object v0, p0, Lmiui/mqsas/sdk/event/ExceptionEvent;->mLogName:Ljava/lang/String;
 
     return-object v0
@@ -225,7 +204,6 @@
     .locals 1
 
     .prologue
-    .line 111
     iget-object v0, p0, Lmiui/mqsas/sdk/event/ExceptionEvent;->mPackageName:Ljava/lang/String;
 
     return-object v0
@@ -235,7 +213,6 @@
     .locals 1
 
     .prologue
-    .line 95
     iget v0, p0, Lmiui/mqsas/sdk/event/ExceptionEvent;->mPid:I
 
     return v0
@@ -245,7 +222,6 @@
     .locals 1
 
     .prologue
-    .line 103
     iget-object v0, p0, Lmiui/mqsas/sdk/event/ExceptionEvent;->mProcessName:Ljava/lang/String;
 
     return-object v0
@@ -255,7 +231,6 @@
     .locals 1
 
     .prologue
-    .line 135
     iget-object v0, p0, Lmiui/mqsas/sdk/event/ExceptionEvent;->mSummary:Ljava/lang/String;
 
     return-object v0
@@ -265,7 +240,6 @@
     .locals 2
 
     .prologue
-    .line 127
     iget-wide v0, p0, Lmiui/mqsas/sdk/event/ExceptionEvent;->mTimeStamp:J
 
     return-wide v0
@@ -275,7 +249,6 @@
     .locals 1
 
     .prologue
-    .line 83
     iget v0, p0, Lmiui/mqsas/sdk/event/ExceptionEvent;->mType:I
 
     return v0
@@ -285,12 +258,10 @@
     .locals 1
 
     .prologue
-    .line 91
     const/4 v0, -0x1
 
     iput v0, p0, Lmiui/mqsas/sdk/event/ExceptionEvent;->mType:I
 
-    .line 92
     return-void
 .end method
 
@@ -298,7 +269,6 @@
     .locals 1
 
     .prologue
-    .line 119
     iget-boolean v0, p0, Lmiui/mqsas/sdk/event/ExceptionEvent;->mIsSystem:Z
 
     return v0
@@ -308,7 +278,6 @@
     .locals 1
 
     .prologue
-    .line 175
     iget-boolean v0, p0, Lmiui/mqsas/sdk/event/ExceptionEvent;->mIsUpload:Z
 
     return v0
@@ -318,7 +287,6 @@
     .locals 5
 
     .prologue
-    .line 32
     iget-object v4, p0, Lmiui/mqsas/sdk/event/ExceptionEvent;->mProcessName:Ljava/lang/String;
 
     if-eqz v4, :cond_0
@@ -327,15 +295,12 @@
 
     if-nez v4, :cond_1
 
-    .line 33
     :cond_0
     const/4 v4, -0x1
 
-    .line 48
     :goto_0
     return v4
 
-    .line 36
     :cond_1
     iget-object v0, p0, Lmiui/mqsas/sdk/event/ExceptionEvent;->mVerytImportantProcesses:[Ljava/lang/String;
 
@@ -351,7 +316,6 @@
 
     aget-object v3, v0, v1
 
-    .line 37
     .local v3, "process":Ljava/lang/String;
     iget-object v4, p0, Lmiui/mqsas/sdk/event/ExceptionEvent;->mProcessName:Ljava/lang/String;
 
@@ -369,19 +333,16 @@
 
     if-eqz v4, :cond_3
 
-    .line 38
     :cond_2
     const/4 v4, 0x0
 
     goto :goto_0
 
-    .line 36
     :cond_3
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 42
     .end local v3    # "process":Ljava/lang/String;
     :cond_4
     iget-object v0, p0, Lmiui/mqsas/sdk/event/ExceptionEvent;->mImportantProcesses:[Ljava/lang/String;
@@ -395,7 +356,6 @@
 
     aget-object v3, v0, v1
 
-    .line 43
     .restart local v3    # "process":Ljava/lang/String;
     iget-object v4, p0, Lmiui/mqsas/sdk/event/ExceptionEvent;->mProcessName:Ljava/lang/String;
 
@@ -413,19 +373,16 @@
 
     if-eqz v4, :cond_6
 
-    .line 44
     :cond_5
     const/4 v4, 0x1
 
     goto :goto_0
 
-    .line 42
     :cond_6
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
 
-    .line 48
     .end local v3    # "process":Ljava/lang/String;
     :cond_7
     const/4 v4, 0x2
@@ -438,10 +395,8 @@
     .param p1, "mDetails"    # Ljava/lang/String;
 
     .prologue
-    .line 147
     iput-object p1, p0, Lmiui/mqsas/sdk/event/ExceptionEvent;->mDetails:Ljava/lang/String;
 
-    .line 148
     return-void
 .end method
 
@@ -450,10 +405,8 @@
     .param p1, "mDigest"    # Ljava/lang/String;
 
     .prologue
-    .line 155
     iput-object p1, p0, Lmiui/mqsas/sdk/event/ExceptionEvent;->mDigest:Ljava/lang/String;
 
-    .line 156
     return-void
 .end method
 
@@ -462,10 +415,8 @@
     .param p1, "mKeyWord"    # Ljava/lang/String;
 
     .prologue
-    .line 171
     iput-object p1, p0, Lmiui/mqsas/sdk/event/ExceptionEvent;->mKeyWord:Ljava/lang/String;
 
-    .line 172
     return-void
 .end method
 
@@ -474,10 +425,8 @@
     .param p1, "mLogName"    # Ljava/lang/String;
 
     .prologue
-    .line 163
     iput-object p1, p0, Lmiui/mqsas/sdk/event/ExceptionEvent;->mLogName:Ljava/lang/String;
 
-    .line 164
     return-void
 .end method
 
@@ -486,10 +435,8 @@
     .param p1, "mPackageName"    # Ljava/lang/String;
 
     .prologue
-    .line 115
     iput-object p1, p0, Lmiui/mqsas/sdk/event/ExceptionEvent;->mPackageName:Ljava/lang/String;
 
-    .line 116
     return-void
 .end method
 
@@ -498,10 +445,8 @@
     .param p1, "mPid"    # I
 
     .prologue
-    .line 99
     iput p1, p0, Lmiui/mqsas/sdk/event/ExceptionEvent;->mPid:I
 
-    .line 100
     return-void
 .end method
 
@@ -510,10 +455,8 @@
     .param p1, "mProcessName"    # Ljava/lang/String;
 
     .prologue
-    .line 107
     iput-object p1, p0, Lmiui/mqsas/sdk/event/ExceptionEvent;->mProcessName:Ljava/lang/String;
 
-    .line 108
     return-void
 .end method
 
@@ -522,10 +465,8 @@
     .param p1, "mSummary"    # Ljava/lang/String;
 
     .prologue
-    .line 139
     iput-object p1, p0, Lmiui/mqsas/sdk/event/ExceptionEvent;->mSummary:Ljava/lang/String;
 
-    .line 140
     return-void
 .end method
 
@@ -534,10 +475,8 @@
     .param p1, "system"    # Z
 
     .prologue
-    .line 123
     iput-boolean p1, p0, Lmiui/mqsas/sdk/event/ExceptionEvent;->mIsSystem:Z
 
-    .line 124
     return-void
 .end method
 
@@ -546,10 +485,8 @@
     .param p1, "mTimeStamp"    # J
 
     .prologue
-    .line 131
     iput-wide p1, p0, Lmiui/mqsas/sdk/event/ExceptionEvent;->mTimeStamp:J
 
-    .line 132
     return-void
 .end method
 
@@ -558,10 +495,8 @@
     .param p1, "mType"    # I
 
     .prologue
-    .line 87
     iput p1, p0, Lmiui/mqsas/sdk/event/ExceptionEvent;->mType:I
 
-    .line 88
     return-void
 .end method
 
@@ -570,9 +505,7 @@
     .param p1, "upload"    # Z
 
     .prologue
-    .line 179
     iput-boolean p1, p0, Lmiui/mqsas/sdk/event/ExceptionEvent;->mIsUpload:Z
 
-    .line 180
     return-void
 .end method

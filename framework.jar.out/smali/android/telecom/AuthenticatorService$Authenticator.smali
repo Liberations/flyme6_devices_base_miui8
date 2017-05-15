@@ -24,13 +24,10 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 51
     iput-object p1, p0, Landroid/telecom/AuthenticatorService$Authenticator;->this$0:Landroid/telecom/AuthenticatorService;
 
-    .line 52
     invoke-direct {p0, p2}, Landroid/accounts/AbstractAccountAuthenticator;-><init>(Landroid/content/Context;)V
 
-    .line 53
     return-void
 .end method
 
@@ -50,7 +47,6 @@
     .end annotation
 
     .prologue
-    .line 65
     const/4 v0, 0x0
 
     return-object v0
@@ -68,7 +64,6 @@
     .end annotation
 
     .prologue
-    .line 72
     const/4 v0, 0x0
 
     return-object v0
@@ -80,7 +75,6 @@
     .param p2, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 58
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -101,7 +95,6 @@
     .end annotation
 
     .prologue
-    .line 79
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -114,7 +107,6 @@
     .param p1, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 84
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -134,7 +126,6 @@
     .end annotation
 
     .prologue
-    .line 98
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -155,7 +146,6 @@
     .end annotation
 
     .prologue
-    .line 91
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V

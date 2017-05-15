@@ -33,7 +33,6 @@
     .locals 1
 
     .prologue
-    .line 22
     const/4 v0, 0x0
 
     sput-object v0, Lcom/miui/whetstone/component/ComponentHelper;->mExtraActivityManagerService:Ljava/lang/Class;
@@ -45,10 +44,8 @@
     .locals 0
 
     .prologue
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 27
     return-void
 .end method
 
@@ -57,17 +54,14 @@
     .param p0, "callingPid"    # I
 
     .prologue
-    .line 56
     sget-object v1, Lcom/miui/whetstone/component/ComponentHelper;->mExtraActivityManagerService:Ljava/lang/Class;
 
     if-eqz v1, :cond_1
 
-    .line 57
     sget-object v1, Lcom/miui/whetstone/component/ComponentHelper;->mGetCurAdjByPid:Ljava/lang/reflect/Method;
 
     if-nez v1, :cond_0
 
-    .line 59
     :try_start_0
     sget-object v1, Lcom/miui/whetstone/component/ComponentHelper;->mExtraActivityManagerService:Ljava/lang/Class;
 
@@ -91,14 +85,12 @@
     :try_end_0
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 66
     :cond_0
     :goto_0
     sget-object v1, Lcom/miui/whetstone/component/ComponentHelper;->mGetCurAdjByPid:Ljava/lang/reflect/Method;
 
     if-eqz v1, :cond_1
 
-    .line 68
     :try_start_1
     sget-object v1, Lcom/miui/whetstone/component/ComponentHelper;->mGetCurAdjByPid:Ljava/lang/reflect/Method;
 
@@ -128,15 +120,12 @@
 
     move-result v1
 
-    .line 74
     :goto_1
     return v1
 
-    .line 61
     :catch_0
     move-exception v0
 
-    .line 62
     .local v0, "e":Ljava/lang/NoSuchMethodException;
     const-string v1, "WhetstonePackageState"
 
@@ -148,12 +137,10 @@
 
     goto :goto_0
 
-    .line 69
     .end local v0    # "e":Ljava/lang/NoSuchMethodException;
     :catch_1
     move-exception v0
 
-    .line 70
     .local v0, "e":Ljava/lang/Exception;
     const-string v1, "WhetstonePackageState"
 
@@ -163,7 +150,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 74
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_1
     const v1, 0x7fffffff
@@ -182,11 +168,9 @@
     .end annotation
 
     .prologue
-    .line 30
     .local p0, "clazz":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     sput-object p0, Lcom/miui/whetstone/component/ComponentHelper;->mExtraActivityManagerService:Ljava/lang/Class;
 
-    .line 31
     return-void
 .end method
 
@@ -197,17 +181,14 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 34
     sget-object v1, Lcom/miui/whetstone/component/ComponentHelper;->mExtraActivityManagerService:Ljava/lang/Class;
 
     if-eqz v1, :cond_1
 
-    .line 35
     sget-object v1, Lcom/miui/whetstone/component/ComponentHelper;->mHasForegroundActivities:Ljava/lang/reflect/Method;
 
     if-nez v1, :cond_0
 
-    .line 37
     :try_start_0
     sget-object v1, Lcom/miui/whetstone/component/ComponentHelper;->mExtraActivityManagerService:Ljava/lang/Class;
 
@@ -231,14 +212,12 @@
     :try_end_0
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 44
     :cond_0
     :goto_0
     sget-object v1, Lcom/miui/whetstone/component/ComponentHelper;->mHasForegroundActivities:Ljava/lang/reflect/Method;
 
     if-eqz v1, :cond_1
 
-    .line 46
     :try_start_1
     sget-object v1, Lcom/miui/whetstone/component/ComponentHelper;->mHasForegroundActivities:Ljava/lang/reflect/Method;
 
@@ -268,15 +247,12 @@
 
     move-result v1
 
-    .line 52
     :goto_1
     return v1
 
-    .line 39
     :catch_0
     move-exception v0
 
-    .line 40
     .local v0, "e":Ljava/lang/NoSuchMethodException;
     const-string v1, "WhetstonePackageState"
 
@@ -288,12 +264,10 @@
 
     goto :goto_0
 
-    .line 47
     .end local v0    # "e":Ljava/lang/NoSuchMethodException;
     :catch_1
     move-exception v0
 
-    .line 48
     .local v0, "e":Ljava/lang/Exception;
     const-string v1, "WhetstonePackageState"
 
@@ -307,7 +281,6 @@
     :cond_1
     move v1, v2
 
-    .line 52
     goto :goto_1
 .end method
 
@@ -316,7 +289,6 @@
     .param p0, "callingUid"    # I
 
     .prologue
-    .line 78
     const/16 v0, 0x2710
 
     if-ge p0, v0, :cond_0
@@ -342,7 +314,6 @@
 
     const/4 v4, 0x1
 
-    .line 83
     :try_start_0
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
@@ -354,23 +325,19 @@
 
     move-result-object v0
 
-    .line 84
     .local v0, "applicationInfo":Landroid/content/pm/ApplicationInfo;
     if-nez v0, :cond_0
 
-    .line 91
     .end local v0    # "applicationInfo":Landroid/content/pm/ApplicationInfo;
     :goto_0
     return v4
 
-    .line 85
     .restart local v0    # "applicationInfo":Landroid/content/pm/ApplicationInfo;
     :cond_0
     iget v2, v0, Landroid/content/pm/ApplicationInfo;->flags:I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 86
     .local v2, "flags":I
     and-int/lit8 v5, v2, 0x1
 
@@ -388,13 +355,11 @@
 
     goto :goto_0
 
-    .line 88
     .end local v0    # "applicationInfo":Landroid/content/pm/ApplicationInfo;
     .end local v2    # "flags":I
     :catch_0
     move-exception v1
 
-    .line 89
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "WhetstonePackageState"
 

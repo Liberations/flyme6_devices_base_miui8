@@ -38,10 +38,8 @@
     .locals 0
 
     .prologue
-    .line 27
     invoke-direct {p0}, Lmiui/app/Activity;-><init>()V
 
-    .line 65
     return-void
 .end method
 
@@ -50,7 +48,6 @@
     .param p0, "x0"    # Lmiui/maml/ThirdAppPicker;
 
     .prologue
-    .line 27
     iget-object v0, p0, Lmiui/maml/ThirdAppPicker;->mAllApps:Ljava/util/List;
 
     return-object v0
@@ -61,7 +58,6 @@
     .param p0, "x0"    # Lmiui/maml/ThirdAppPicker;
 
     .prologue
-    .line 27
     iget-object v0, p0, Lmiui/maml/ThirdAppPicker;->mPackageManager:Landroid/content/pm/PackageManager;
 
     return-object v0
@@ -76,15 +72,12 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 38
     invoke-super {p0, p1}, Lmiui/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 39
     const v1, 0x11030003
 
     invoke-virtual {p0, v1}, Lmiui/maml/ThirdAppPicker;->setContentView(I)V
 
-    .line 41
     invoke-virtual {p0}, Lmiui/maml/ThirdAppPicker;->getActionBar()Lmiui/app/ActionBar;
 
     move-result-object v1
@@ -93,7 +86,6 @@
 
     invoke-virtual {v1, v2}, Lmiui/app/ActionBar;->setTitle(I)V
 
-    .line 42
     invoke-virtual {p0}, Lmiui/maml/ThirdAppPicker;->getActionBar()Lmiui/app/ActionBar;
 
     move-result-object v1
@@ -102,27 +94,23 @@
 
     invoke-virtual {v1, v2}, Lmiui/app/ActionBar;->setHomeButtonEnabled(Z)V
 
-    .line 44
     invoke-virtual {p0}, Lmiui/maml/ThirdAppPicker;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
 
     iput-object v1, p0, Lmiui/maml/ThirdAppPicker;->mPackageManager:Landroid/content/pm/PackageManager;
 
-    .line 45
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.MAIN"
 
     invoke-direct {v0, v1, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 46
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "android.intent.category.LAUNCHER"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 47
     iget-object v1, p0, Lmiui/maml/ThirdAppPicker;->mPackageManager:Landroid/content/pm/PackageManager;
 
     const/4 v2, 0x0
@@ -133,7 +121,6 @@
 
     iput-object v1, p0, Lmiui/maml/ThirdAppPicker;->mAllApps:Ljava/util/List;
 
-    .line 48
     iget-object v1, p0, Lmiui/maml/ThirdAppPicker;->mAllApps:Ljava/util/List;
 
     new-instance v2, Landroid/content/pm/ResolveInfo$DisplayNameComparator;
@@ -144,12 +131,10 @@
 
     invoke-static {v1, v2}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    .line 49
     iget-object v1, p0, Lmiui/maml/ThirdAppPicker;->mAllApps:Ljava/util/List;
 
     invoke-interface {v1, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 51
     const v1, 0x110b0017
 
     invoke-virtual {p0, v1}, Lmiui/maml/ThirdAppPicker;->findViewById(I)Landroid/view/View;
@@ -160,7 +145,6 @@
 
     iput-object v1, p0, Lmiui/maml/ThirdAppPicker;->mListView:Landroid/widget/ListView;
 
-    .line 52
     new-instance v1, Lmiui/maml/ThirdAppPicker$FileListAdapter;
 
     const v2, 0x11030002
@@ -171,19 +155,16 @@
 
     iput-object v1, p0, Lmiui/maml/ThirdAppPicker;->mListAdapter:Lmiui/maml/ThirdAppPicker$FileListAdapter;
 
-    .line 53
     iget-object v1, p0, Lmiui/maml/ThirdAppPicker;->mListView:Landroid/widget/ListView;
 
     iget-object v2, p0, Lmiui/maml/ThirdAppPicker;->mListAdapter:Lmiui/maml/ThirdAppPicker$FileListAdapter;
 
     invoke-virtual {v1, v2}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 54
     iget-object v1, p0, Lmiui/maml/ThirdAppPicker;->mListView:Landroid/widget/ListView;
 
     invoke-virtual {v1, p0}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 55
     return-void
 .end method
 
@@ -203,7 +184,6 @@
     .end annotation
 
     .prologue
-    .line 97
     .local p1, "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     iget-object v2, p0, Lmiui/maml/ThirdAppPicker;->mAllApps:Ljava/util/List;
 
@@ -213,17 +193,14 @@
 
     check-cast v1, Landroid/content/pm/ResolveInfo;
 
-    .line 98
     .local v1, "item":Landroid/content/pm/ResolveInfo;
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 99
     .local v0, "intent":Landroid/content/Intent;
     if-eqz v1, :cond_0
 
-    .line 100
     const-string v2, "name"
 
     iget-object v3, p0, Lmiui/maml/ThirdAppPicker;->mPackageManager:Landroid/content/pm/PackageManager;
@@ -234,7 +211,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/CharSequence;)Landroid/content/Intent;
 
-    .line 101
     iget-object v2, v1, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     iget-object v2, v2, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
@@ -245,7 +221,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 103
     :cond_0
     const/4 v2, -0x1
 
@@ -255,13 +230,10 @@
     :goto_0
     invoke-virtual {p0, v2, v0}, Lmiui/maml/ThirdAppPicker;->setResult(ILandroid/content/Intent;)V
 
-    .line 104
     invoke-virtual {p0}, Lmiui/maml/ThirdAppPicker;->finish()V
 
-    .line 105
     return-void
 
-    .line 103
     .restart local v0    # "intent":Landroid/content/Intent;
     :cond_1
     const/4 v0, 0x0
@@ -274,7 +246,6 @@
     .param p1, "item"    # Landroid/view/MenuItem;
 
     .prologue
-    .line 59
     invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
 
     move-result v0
@@ -283,10 +254,8 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 60
     invoke-virtual {p0}, Lmiui/maml/ThirdAppPicker;->finish()V
 
-    .line 62
     :cond_0
     invoke-super {p0, p1}, Lmiui/app/Activity;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
 

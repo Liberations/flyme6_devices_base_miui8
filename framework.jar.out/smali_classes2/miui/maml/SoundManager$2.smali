@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 125
     invoke-static {}, Lmiui/maml/SoundManager$Command;->values()[Lmiui/maml/SoundManager$Command;
 
     move-result-object v0

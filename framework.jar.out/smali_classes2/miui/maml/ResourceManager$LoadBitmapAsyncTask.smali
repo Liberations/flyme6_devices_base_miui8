@@ -39,15 +39,12 @@
     .param p2, "l"    # Lmiui/maml/ResourceManager$AsyncLoadListener;
 
     .prologue
-    .line 223
     iput-object p1, p0, Lmiui/maml/ResourceManager$LoadBitmapAsyncTask;->this$0:Lmiui/maml/ResourceManager;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
-    .line 224
     iput-object p2, p0, Lmiui/maml/ResourceManager$LoadBitmapAsyncTask;->mLoadListener:Lmiui/maml/ResourceManager$AsyncLoadListener;
 
-    .line 225
     return-void
 .end method
 
@@ -58,7 +55,6 @@
     .param p1, "x0"    # [Ljava/lang/Object;
 
     .prologue
-    .line 218
     check-cast p1, [Ljava/lang/String;
 
     .end local p1    # "x0":[Ljava/lang/Object;
@@ -74,19 +70,16 @@
     .param p1, "params"    # [Ljava/lang/String;
 
     .prologue
-    .line 229
     const/4 v0, 0x0
 
     aget-object v0, p1, v0
 
     iput-object v0, p0, Lmiui/maml/ResourceManager$LoadBitmapAsyncTask;->mSrc:Ljava/lang/String;
 
-    .line 230
     iget-object v0, p0, Lmiui/maml/ResourceManager$LoadBitmapAsyncTask;->mSrc:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    .line 231
     iget-object v0, p0, Lmiui/maml/ResourceManager$LoadBitmapAsyncTask;->this$0:Lmiui/maml/ResourceManager;
 
     iget-object v1, p0, Lmiui/maml/ResourceManager$LoadBitmapAsyncTask;->mSrc:Ljava/lang/String;
@@ -96,7 +89,6 @@
 
     move-result-object v0
 
-    .line 233
     :goto_0
     return-object v0
 
@@ -111,7 +103,6 @@
     .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
-    .line 218
     check-cast p1, Lmiui/maml/ResourceManager$BitmapInfo;
 
     .end local p1    # "x0":Ljava/lang/Object;
@@ -125,7 +116,6 @@
     .param p1, "result"    # Lmiui/maml/ResourceManager$BitmapInfo;
 
     .prologue
-    .line 238
     iget-object v0, p0, Lmiui/maml/ResourceManager$LoadBitmapAsyncTask;->this$0:Lmiui/maml/ResourceManager;
 
     # getter for: Lmiui/maml/ResourceManager;->mLoadingBitmaps:Ljava/util/HashSet;
@@ -135,7 +125,6 @@
 
     monitor-enter v1
 
-    .line 239
     :try_start_0
     iget-object v0, p0, Lmiui/maml/ResourceManager$LoadBitmapAsyncTask;->mLoadListener:Lmiui/maml/ResourceManager$AsyncLoadListener;
 
@@ -143,7 +132,6 @@
 
     invoke-interface {v0, v2, p1}, Lmiui/maml/ResourceManager$AsyncLoadListener;->onLoadComplete(Ljava/lang/String;Lmiui/maml/ResourceManager$BitmapInfo;)V
 
-    .line 240
     iget-object v0, p0, Lmiui/maml/ResourceManager$LoadBitmapAsyncTask;->this$0:Lmiui/maml/ResourceManager;
 
     # getter for: Lmiui/maml/ResourceManager;->mLoadingBitmaps:Ljava/util/HashSet;
@@ -155,13 +143,10 @@
 
     invoke-virtual {v0, v2}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
 
-    .line 241
     monitor-exit v1
 
-    .line 242
     return-void
 
-    .line 241
     :catchall_0
     move-exception v0
 

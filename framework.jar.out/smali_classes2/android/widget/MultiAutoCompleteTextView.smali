@@ -22,12 +22,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 61
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Landroid/widget/MultiAutoCompleteTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 62
     return-void
 .end method
 
@@ -37,12 +35,10 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 65
     const v0, 0x101006b
 
     invoke-direct {p0, p1, p2, v0}, Landroid/widget/MultiAutoCompleteTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 66
     return-void
 .end method
 
@@ -53,12 +49,10 @@
     .param p3, "defStyleAttr"    # I
 
     .prologue
-    .line 69
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, p3, v0}, Landroid/widget/MultiAutoCompleteTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    .line 70
     return-void
 .end method
 
@@ -70,10 +64,8 @@
     .param p4, "defStyleRes"    # I
 
     .prologue
-    .line 74
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/AutoCompleteTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    .line 75
     return-void
 .end method
 
@@ -85,18 +77,15 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 119
     invoke-virtual {p0}, Landroid/widget/MultiAutoCompleteTextView;->getText()Landroid/text/Editable;
 
     move-result-object v2
 
-    .line 121
     .local v2, "text":Landroid/text/Editable;
     invoke-virtual {p0}, Landroid/widget/MultiAutoCompleteTextView;->getSelectionEnd()I
 
     move-result v0
 
-    .line 122
     .local v0, "end":I
     if-ltz v0, :cond_0
 
@@ -104,12 +93,10 @@
 
     if-nez v4, :cond_1
 
-    .line 131
     :cond_0
     :goto_0
     return v3
 
-    .line 126
     :cond_1
     iget-object v4, p0, Landroid/widget/MultiAutoCompleteTextView;->mTokenizer:Landroid/widget/MultiAutoCompleteTextView$Tokenizer;
 
@@ -117,7 +104,6 @@
 
     move-result v1
 
-    .line 128
     .local v1, "start":I
     sub-int v4, v0, v1
 
@@ -127,7 +113,6 @@
 
     if-lt v4, v5, :cond_0
 
-    .line 129
     const/4 v3, 0x1
 
     goto :goto_0
@@ -137,7 +122,6 @@
     .locals 0
 
     .prologue
-    .line 77
     return-void
 .end method
 
@@ -145,7 +129,6 @@
     .locals 1
 
     .prologue
-    .line 205
     const-class v0, Landroid/widget/MultiAutoCompleteTextView;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -161,19 +144,16 @@
     .param p2, "keyCode"    # I
 
     .prologue
-    .line 95
     invoke-virtual {p0}, Landroid/widget/MultiAutoCompleteTextView;->enoughToFilter()Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 96
     invoke-virtual {p0}, Landroid/widget/MultiAutoCompleteTextView;->getSelectionEnd()I
 
     move-result v0
 
-    .line 97
     .local v0, "end":I
     iget-object v3, p0, Landroid/widget/MultiAutoCompleteTextView;->mTokenizer:Landroid/widget/MultiAutoCompleteTextView$Tokenizer;
 
@@ -181,31 +161,25 @@
 
     move-result v2
 
-    .line 99
     .local v2, "start":I
     invoke-virtual {p0, p1, v2, v0, p2}, Landroid/widget/MultiAutoCompleteTextView;->performFiltering(Ljava/lang/CharSequence;III)V
 
-    .line 108
     .end local v0    # "end":I
     .end local v2    # "start":I
     :cond_0
     :goto_0
     return-void
 
-    .line 101
     :cond_1
     invoke-virtual {p0}, Landroid/widget/MultiAutoCompleteTextView;->dismissDropDown()V
 
-    .line 103
     invoke-virtual {p0}, Landroid/widget/MultiAutoCompleteTextView;->getFilter()Landroid/widget/Filter;
 
     move-result-object v1
 
-    .line 104
     .local v1, "f":Landroid/widget/Filter;
     if-eqz v1, :cond_0
 
-    .line 105
     const/4 v3, 0x0
 
     invoke-virtual {v1, v3}, Landroid/widget/Filter;->filter(Ljava/lang/CharSequence;)V
@@ -221,7 +195,6 @@
     .param p4, "keyCode"    # I
 
     .prologue
-    .line 173
     invoke-virtual {p0}, Landroid/widget/MultiAutoCompleteTextView;->getFilter()Landroid/widget/Filter;
 
     move-result-object v0
@@ -232,7 +205,6 @@
 
     invoke-virtual {v0, v1, p0}, Landroid/widget/Filter;->filter(Ljava/lang/CharSequence;Landroid/widget/Filter$FilterListener;)V
 
-    .line 174
     return-void
 .end method
 
@@ -240,12 +212,10 @@
     .locals 8
 
     .prologue
-    .line 141
     invoke-virtual {p0}, Landroid/widget/MultiAutoCompleteTextView;->getValidator()Landroid/widget/AutoCompleteTextView$Validator;
 
     move-result-object v5
 
-    .line 143
     .local v5, "v":Landroid/widget/AutoCompleteTextView$Validator;
     if-eqz v5, :cond_0
 
@@ -253,17 +223,14 @@
 
     if-nez v6, :cond_1
 
-    .line 163
     :cond_0
     return-void
 
-    .line 147
     :cond_1
     invoke-virtual {p0}, Landroid/widget/MultiAutoCompleteTextView;->getText()Landroid/text/Editable;
 
     move-result-object v0
 
-    .line 148
     .local v0, "e":Landroid/text/Editable;
     invoke-virtual {p0}, Landroid/widget/MultiAutoCompleteTextView;->getText()Landroid/text/Editable;
 
@@ -273,19 +240,16 @@
 
     move-result v2
 
-    .line 149
     .local v2, "i":I
     :goto_0
     if-lez v2, :cond_0
 
-    .line 150
     iget-object v6, p0, Landroid/widget/MultiAutoCompleteTextView;->mTokenizer:Landroid/widget/MultiAutoCompleteTextView$Tokenizer;
 
     invoke-interface {v6, v0, v2}, Landroid/widget/MultiAutoCompleteTextView$Tokenizer;->findTokenStart(Ljava/lang/CharSequence;I)I
 
     move-result v3
 
-    .line 151
     .local v3, "start":I
     iget-object v6, p0, Landroid/widget/MultiAutoCompleteTextView;->mTokenizer:Landroid/widget/MultiAutoCompleteTextView$Tokenizer;
 
@@ -293,13 +257,11 @@
 
     move-result v1
 
-    .line 153
     .local v1, "end":I
     invoke-interface {v0, v3, v1}, Landroid/text/Editable;->subSequence(II)Ljava/lang/CharSequence;
 
     move-result-object v4
 
-    .line 154
     .local v4, "sub":Ljava/lang/CharSequence;
     invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -307,20 +269,16 @@
 
     if-eqz v6, :cond_3
 
-    .line 155
     const-string v6, ""
 
     invoke-interface {v0, v3, v2, v6}, Landroid/text/Editable;->replace(IILjava/lang/CharSequence;)Landroid/text/Editable;
 
-    .line 161
     :cond_2
     :goto_1
     move v2, v3
 
-    .line 162
     goto :goto_0
 
-    .line 156
     :cond_3
     invoke-interface {v5, v4}, Landroid/widget/AutoCompleteTextView$Validator;->isValid(Ljava/lang/CharSequence;)Z
 
@@ -328,7 +286,6 @@
 
     if-nez v6, :cond_2
 
-    .line 157
     iget-object v6, p0, Landroid/widget/MultiAutoCompleteTextView;->mTokenizer:Landroid/widget/MultiAutoCompleteTextView$Tokenizer;
 
     invoke-interface {v5, v4}, Landroid/widget/AutoCompleteTextView$Validator;->fixText(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
@@ -349,15 +306,12 @@
     .param p1, "text"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 191
     invoke-virtual {p0}, Landroid/widget/MultiAutoCompleteTextView;->clearComposingText()V
 
-    .line 193
     invoke-virtual {p0}, Landroid/widget/MultiAutoCompleteTextView;->getSelectionEnd()I
 
     move-result v1
 
-    .line 194
     .local v1, "end":I
     iget-object v4, p0, Landroid/widget/MultiAutoCompleteTextView;->mTokenizer:Landroid/widget/MultiAutoCompleteTextView$Tokenizer;
 
@@ -369,23 +323,19 @@
 
     move-result v3
 
-    .line 196
     .local v3, "start":I
     invoke-virtual {p0}, Landroid/widget/MultiAutoCompleteTextView;->getText()Landroid/text/Editable;
 
     move-result-object v0
 
-    .line 197
     .local v0, "editable":Landroid/text/Editable;
     invoke-static {v0, v3, v1}, Landroid/text/TextUtils;->substring(Ljava/lang/CharSequence;II)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 199
     .local v2, "original":Ljava/lang/String;
     invoke-static {v0, v3, v1, v2}, Landroid/text/method/QwertyKeyListener;->markAsReplaced(Landroid/text/Spannable;IILjava/lang/String;)V
 
-    .line 200
     iget-object v4, p0, Landroid/widget/MultiAutoCompleteTextView;->mTokenizer:Landroid/widget/MultiAutoCompleteTextView$Tokenizer;
 
     invoke-interface {v4, p1}, Landroid/widget/MultiAutoCompleteTextView$Tokenizer;->terminateToken(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
@@ -394,7 +344,6 @@
 
     invoke-interface {v0, v3, v1, v4}, Landroid/text/Editable;->replace(IILjava/lang/CharSequence;)Landroid/text/Editable;
 
-    .line 201
     return-void
 .end method
 
@@ -403,9 +352,7 @@
     .param p1, "t"    # Landroid/widget/MultiAutoCompleteTextView$Tokenizer;
 
     .prologue
-    .line 84
     iput-object p1, p0, Landroid/widget/MultiAutoCompleteTextView;->mTokenizer:Landroid/widget/MultiAutoCompleteTextView$Tokenizer;
 
-    .line 85
     return-void
 .end method

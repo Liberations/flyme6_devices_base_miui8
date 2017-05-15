@@ -14,7 +14,6 @@
     .locals 0
 
     .prologue
-    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -27,7 +26,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 66
     const-string v2, "getWifiStaSapConcurrency"
 
     const-class v3, Ljava/lang/Boolean;
@@ -38,7 +36,6 @@
 
     move-result-object v0
 
-    .line 68
     .local v0, "reference":Lmiui/util/ObjectReference;, "Lmiui/util/ObjectReference<Ljava/lang/Boolean;>;"
     if-nez v0, :cond_0
 
@@ -66,21 +63,17 @@
     .param p2, "showProvisioningUi"    # Z
 
     .prologue
-    .line 40
     const/4 v4, 0x0
 
-    .line 41
     .local v4, "result":Z
     const-class v0, Landroid/net/ConnectivityManager;
 
-    .line 43
     .local v0, "clazz":Ljava/lang/Class;
     const/4 v5, 0x3
 
     :try_start_0
     new-array v3, v5, [Ljava/lang/Class;
 
-    .line 44
     .local v3, "params":[Ljava/lang/Class;, "[Ljava/lang/Class<*>;"
     const/4 v5, 0x0
 
@@ -88,14 +81,12 @@
 
     aput-object v6, v3, v5
 
-    .line 45
     const/4 v5, 0x1
 
     sget-object v6, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
 
     aput-object v6, v3, v5
 
-    .line 46
     const/4 v5, 0x2
 
     const-string v6, "android.net.ConnectivityManager$OnStartTetheringCallback"
@@ -106,20 +97,17 @@
 
     aput-object v6, v3, v5
 
-    .line 47
     const-string v5, "startTethering"
 
     invoke-virtual {v0, v5, v3}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v2
 
-    .line 48
     .local v2, "method":Ljava/lang/reflect/Method;
     const/4 v5, 0x1
 
     invoke-virtual {v2, v5}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
-    .line 49
     const/4 v5, 0x3
 
     new-array v5, v5, [Ljava/lang/Object;
@@ -154,20 +142,16 @@
     .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_3
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_4
 
-    .line 50
     const/4 v4, 0x1
 
-    .line 62
     .end local v2    # "method":Ljava/lang/reflect/Method;
     .end local v3    # "params":[Ljava/lang/Class;, "[Ljava/lang/Class<*>;"
     :goto_0
     return v4
 
-    .line 51
     :catch_0
     move-exception v1
 
-    .line 52
     .local v1, "e":Ljava/lang/ClassNotFoundException;
     const-string v5, "WifiManagerReflector"
 
@@ -177,12 +161,10 @@
 
     goto :goto_0
 
-    .line 53
     .end local v1    # "e":Ljava/lang/ClassNotFoundException;
     :catch_1
     move-exception v1
 
-    .line 54
     .local v1, "e":Ljava/lang/NoSuchMethodException;
     const-string v5, "WifiManagerReflector"
 
@@ -192,12 +174,10 @@
 
     goto :goto_0
 
-    .line 55
     .end local v1    # "e":Ljava/lang/NoSuchMethodException;
     :catch_2
     move-exception v1
 
-    .line 56
     .local v1, "e":Ljava/lang/IllegalAccessException;
     const-string v5, "WifiManagerReflector"
 
@@ -207,12 +187,10 @@
 
     goto :goto_0
 
-    .line 57
     .end local v1    # "e":Ljava/lang/IllegalAccessException;
     :catch_3
     move-exception v1
 
-    .line 58
     .local v1, "e":Ljava/lang/reflect/InvocationTargetException;
     const-string v5, "WifiManagerReflector"
 
@@ -222,12 +200,10 @@
 
     goto :goto_0
 
-    .line 59
     .end local v1    # "e":Ljava/lang/reflect/InvocationTargetException;
     :catch_4
     move-exception v1
 
-    .line 60
     .local v1, "e":Ljava/lang/Exception;
     const-string v5, "WifiManagerReflector"
 
@@ -244,14 +220,11 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 20
     const/4 v3, 0x0
 
-    .line 21
     .local v3, "result":Z
     const-class v0, Landroid/net/ConnectivityManager;
 
-    .line 23
     .local v0, "clazz":Ljava/lang/Class;
     :try_start_0
     const-string v4, "stopTethering"
@@ -270,13 +243,11 @@
 
     move-result-object v2
 
-    .line 24
     .local v2, "method":Ljava/lang/reflect/Method;
     const/4 v4, 0x1
 
     invoke-virtual {v2, v4}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
-    .line 25
     const/4 v4, 0x1
 
     new-array v4, v4, [Ljava/lang/Object;
@@ -296,19 +267,15 @@
     .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_2
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_3
 
-    .line 26
     const/4 v3, 0x1
 
-    .line 36
     .end local v2    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return v3
 
-    .line 27
     :catch_0
     move-exception v1
 
-    .line 28
     .local v1, "e":Ljava/lang/NoSuchMethodException;
     const-string v4, "WifiManagerReflector"
 
@@ -318,12 +285,10 @@
 
     goto :goto_0
 
-    .line 29
     .end local v1    # "e":Ljava/lang/NoSuchMethodException;
     :catch_1
     move-exception v1
 
-    .line 30
     .local v1, "e":Ljava/lang/IllegalAccessException;
     const-string v4, "WifiManagerReflector"
 
@@ -333,12 +298,10 @@
 
     goto :goto_0
 
-    .line 31
     .end local v1    # "e":Ljava/lang/IllegalAccessException;
     :catch_2
     move-exception v1
 
-    .line 32
     .local v1, "e":Ljava/lang/reflect/InvocationTargetException;
     const-string v4, "WifiManagerReflector"
 
@@ -348,12 +311,10 @@
 
     goto :goto_0
 
-    .line 33
     .end local v1    # "e":Ljava/lang/reflect/InvocationTargetException;
     :catch_3
     move-exception v1
 
-    .line 34
     .local v1, "e":Ljava/lang/Exception;
     const-string v4, "WifiManagerReflector"
 

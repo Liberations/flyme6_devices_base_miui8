@@ -31,16 +31,12 @@
     .param p2, "str"    # Ljava/lang/String;
 
     .prologue
-    .line 57
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 58
     iput p1, p0, Lmiui/maml/elements/MusicLyricParser$LyricEntity;->time:I
 
-    .line 59
     iput-object p2, p0, Lmiui/maml/elements/MusicLyricParser$LyricEntity;->lyric:Ljava/lang/CharSequence;
 
-    .line 60
     return-void
 .end method
 
@@ -50,7 +46,6 @@
     .locals 4
 
     .prologue
-    .line 63
     const-string v0, "%s<br/>"
 
     const/4 v1, 0x1
@@ -73,7 +68,6 @@
 
     iput-object v0, p0, Lmiui/maml/elements/MusicLyricParser$LyricEntity;->lyric:Ljava/lang/CharSequence;
 
-    .line 64
     return-void
 .end method
 
@@ -81,7 +75,6 @@
     .locals 1
 
     .prologue
-    .line 67
     iget-object v0, p0, Lmiui/maml/elements/MusicLyricParser$LyricEntity;->lyric:Ljava/lang/CharSequence;
 
     instance-of v0, v0, Ljava/lang/String;

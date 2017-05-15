@@ -157,7 +157,6 @@
     .locals 1
 
     .prologue
-    .line 695
     new-instance v0, Landroid/os/Debug$MemoryInfo$1;
 
     invoke-direct {v0}, Landroid/os/Debug$MemoryInfo$1;-><init>()V
@@ -171,17 +170,14 @@
     .locals 1
 
     .prologue
-    .line 257
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 255
     const/16 v0, 0xaf
 
     new-array v0, v0, [I
 
     iput-object v0, p0, Landroid/os/Debug$MemoryInfo;->otherStats:[I
 
-    .line 258
     return-void
 .end method
 
@@ -190,20 +186,16 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 704
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 255
     const/16 v0, 0xaf
 
     new-array v0, v0, [I
 
     iput-object v0, p0, Landroid/os/Debug$MemoryInfo;->otherStats:[I
 
-    .line 705
     invoke-virtual {p0, p1}, Landroid/os/Debug$MemoryInfo;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 706
     return-void
 .end method
 
@@ -213,7 +205,6 @@
     .param p2, "x1"    # Landroid/os/Debug$1;
 
     .prologue
-    .line 114
     invoke-direct {p0, p1}, Landroid/os/Debug$MemoryInfo;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -224,166 +215,138 @@
     .param p0, "which"    # I
 
     .prologue
-    .line 363
     packed-switch p0, :pswitch_data_0
 
-    .line 389
     const-string v0, "????"
 
     :goto_0
     return-object v0
 
-    .line 364
     :pswitch_0
     const-string v0, "Dalvik Other"
 
     goto :goto_0
 
-    .line 365
     :pswitch_1
     const-string v0, "Stack"
 
     goto :goto_0
 
-    .line 366
     :pswitch_2
     const-string v0, "Cursor"
 
     goto :goto_0
 
-    .line 367
     :pswitch_3
     const-string v0, "Ashmem"
 
     goto :goto_0
 
-    .line 368
     :pswitch_4
     const-string v0, "Gfx dev"
 
     goto :goto_0
 
-    .line 369
     :pswitch_5
     const-string v0, "Other dev"
 
     goto :goto_0
 
-    .line 370
     :pswitch_6
     const-string v0, ".so mmap"
 
     goto :goto_0
 
-    .line 371
     :pswitch_7
     const-string v0, ".jar mmap"
 
     goto :goto_0
 
-    .line 372
     :pswitch_8
     const-string v0, ".apk mmap"
 
     goto :goto_0
 
-    .line 373
     :pswitch_9
     const-string v0, ".ttf mmap"
 
     goto :goto_0
 
-    .line 374
     :pswitch_a
     const-string v0, ".dex mmap"
 
     goto :goto_0
 
-    .line 375
     :pswitch_b
     const-string v0, ".oat mmap"
 
     goto :goto_0
 
-    .line 376
     :pswitch_c
     const-string v0, ".art mmap"
 
     goto :goto_0
 
-    .line 377
     :pswitch_d
     const-string v0, "Other mmap"
 
     goto :goto_0
 
-    .line 378
     :pswitch_e
     const-string v0, "EGL mtrack"
 
     goto :goto_0
 
-    .line 379
     :pswitch_f
     const-string v0, "GL mtrack"
 
     goto :goto_0
 
-    .line 380
     :pswitch_10
     const-string v0, "Other mtrack"
 
     goto :goto_0
 
-    .line 381
     :pswitch_11
     const-string v0, ".Heap"
 
     goto :goto_0
 
-    .line 382
     :pswitch_12
     const-string v0, ".LOS"
 
     goto :goto_0
 
-    .line 383
     :pswitch_13
     const-string v0, ".LinearAlloc"
 
     goto :goto_0
 
-    .line 384
     :pswitch_14
     const-string v0, ".GC"
 
     goto :goto_0
 
-    .line 385
     :pswitch_15
     const-string v0, ".JITCache"
 
     goto :goto_0
 
-    .line 386
     :pswitch_16
     const-string v0, ".Zygote"
 
     goto :goto_0
 
-    .line 387
     :pswitch_17
     const-string v0, ".NonMoving"
 
     goto :goto_0
 
-    .line 388
     :pswitch_18
     const-string v0, ".IndirectRef"
 
     goto :goto_0
 
-    .line 363
     nop
 
     :pswitch_data_0
@@ -422,7 +385,6 @@
     .locals 1
 
     .prologue
-    .line 642
     const/4 v0, 0x0
 
     return v0
@@ -433,7 +395,6 @@
     .param p1, "statName"    # Ljava/lang/String;
 
     .prologue
-    .line 475
     const/4 v0, -0x1
 
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
@@ -446,15 +407,13 @@
     :goto_0
     packed-switch v0, :pswitch_data_0
 
-    .line 495
     const/4 v0, 0x0
 
     :goto_1
     return-object v0
 
-    .line 475
     :sswitch_0
-    const-string/jumbo v1, "summary.java-heap"
+    const-string v1, "summary.java-heap"
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -467,7 +426,7 @@
     goto :goto_0
 
     :sswitch_1
-    const-string/jumbo v1, "summary.native-heap"
+    const-string v1, "summary.native-heap"
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -480,7 +439,7 @@
     goto :goto_0
 
     :sswitch_2
-    const-string/jumbo v1, "summary.code"
+    const-string v1, "summary.code"
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -493,7 +452,7 @@
     goto :goto_0
 
     :sswitch_3
-    const-string/jumbo v1, "summary.stack"
+    const-string v1, "summary.stack"
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -506,7 +465,7 @@
     goto :goto_0
 
     :sswitch_4
-    const-string/jumbo v1, "summary.graphics"
+    const-string v1, "summary.graphics"
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -519,7 +478,7 @@
     goto :goto_0
 
     :sswitch_5
-    const-string/jumbo v1, "summary.private-other"
+    const-string v1, "summary.private-other"
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -532,7 +491,7 @@
     goto :goto_0
 
     :sswitch_6
-    const-string/jumbo v1, "summary.system"
+    const-string v1, "summary.system"
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -545,7 +504,7 @@
     goto :goto_0
 
     :sswitch_7
-    const-string/jumbo v1, "summary.total-pss"
+    const-string v1, "summary.total-pss"
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -558,7 +517,7 @@
     goto :goto_0
 
     :sswitch_8
-    const-string/jumbo v1, "summary.total-swap"
+    const-string v1, "summary.total-swap"
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -570,7 +529,6 @@
 
     goto :goto_0
 
-    .line 477
     :pswitch_0
     invoke-virtual {p0}, Landroid/os/Debug$MemoryInfo;->getSummaryJavaHeap()I
 
@@ -582,7 +540,6 @@
 
     goto :goto_1
 
-    .line 479
     :pswitch_1
     invoke-virtual {p0}, Landroid/os/Debug$MemoryInfo;->getSummaryNativeHeap()I
 
@@ -594,7 +551,6 @@
 
     goto :goto_1
 
-    .line 481
     :pswitch_2
     invoke-virtual {p0}, Landroid/os/Debug$MemoryInfo;->getSummaryCode()I
 
@@ -606,7 +562,6 @@
 
     goto :goto_1
 
-    .line 483
     :pswitch_3
     invoke-virtual {p0}, Landroid/os/Debug$MemoryInfo;->getSummaryStack()I
 
@@ -618,7 +573,6 @@
 
     goto/16 :goto_1
 
-    .line 485
     :pswitch_4
     invoke-virtual {p0}, Landroid/os/Debug$MemoryInfo;->getSummaryGraphics()I
 
@@ -630,7 +584,6 @@
 
     goto/16 :goto_1
 
-    .line 487
     :pswitch_5
     invoke-virtual {p0}, Landroid/os/Debug$MemoryInfo;->getSummaryPrivateOther()I
 
@@ -642,7 +595,6 @@
 
     goto/16 :goto_1
 
-    .line 489
     :pswitch_6
     invoke-virtual {p0}, Landroid/os/Debug$MemoryInfo;->getSummarySystem()I
 
@@ -654,7 +606,6 @@
 
     goto/16 :goto_1
 
-    .line 491
     :pswitch_7
     invoke-virtual {p0}, Landroid/os/Debug$MemoryInfo;->getSummaryTotalPss()I
 
@@ -666,7 +617,6 @@
 
     goto/16 :goto_1
 
-    .line 493
     :pswitch_8
     invoke-virtual {p0}, Landroid/os/Debug$MemoryInfo;->getSummaryTotalSwap()I
 
@@ -678,7 +628,6 @@
 
     goto/16 :goto_1
 
-    .line 475
     :sswitch_data_0
     .sparse-switch
         -0x61279191 -> :sswitch_0
@@ -720,14 +669,12 @@
     .end annotation
 
     .prologue
-    .line 506
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 507
     .local v0, "stats":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
-    const-string/jumbo v1, "summary.java-heap"
+    const-string v1, "summary.java-heap"
 
     invoke-virtual {p0}, Landroid/os/Debug$MemoryInfo;->getSummaryJavaHeap()I
 
@@ -739,8 +686,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 508
-    const-string/jumbo v1, "summary.native-heap"
+    const-string v1, "summary.native-heap"
 
     invoke-virtual {p0}, Landroid/os/Debug$MemoryInfo;->getSummaryNativeHeap()I
 
@@ -752,8 +698,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 509
-    const-string/jumbo v1, "summary.code"
+    const-string v1, "summary.code"
 
     invoke-virtual {p0}, Landroid/os/Debug$MemoryInfo;->getSummaryCode()I
 
@@ -765,8 +710,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 510
-    const-string/jumbo v1, "summary.stack"
+    const-string v1, "summary.stack"
 
     invoke-virtual {p0}, Landroid/os/Debug$MemoryInfo;->getSummaryStack()I
 
@@ -778,8 +722,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 511
-    const-string/jumbo v1, "summary.graphics"
+    const-string v1, "summary.graphics"
 
     invoke-virtual {p0}, Landroid/os/Debug$MemoryInfo;->getSummaryGraphics()I
 
@@ -791,8 +734,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 512
-    const-string/jumbo v1, "summary.private-other"
+    const-string v1, "summary.private-other"
 
     invoke-virtual {p0}, Landroid/os/Debug$MemoryInfo;->getSummaryPrivateOther()I
 
@@ -804,8 +746,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 513
-    const-string/jumbo v1, "summary.system"
+    const-string v1, "summary.system"
 
     invoke-virtual {p0}, Landroid/os/Debug$MemoryInfo;->getSummarySystem()I
 
@@ -817,8 +758,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 514
-    const-string/jumbo v1, "summary.total-pss"
+    const-string v1, "summary.total-pss"
 
     invoke-virtual {p0}, Landroid/os/Debug$MemoryInfo;->getSummaryTotalPss()I
 
@@ -830,8 +770,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 515
-    const-string/jumbo v1, "summary.total-swap"
+    const-string v1, "summary.total-swap"
 
     invoke-virtual {p0}, Landroid/os/Debug$MemoryInfo;->getSummaryTotalSwap()I
 
@@ -843,7 +782,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 516
     return-object v0
 .end method
 
@@ -852,7 +790,6 @@
     .param p1, "which"    # I
 
     .prologue
-    .line 348
     invoke-virtual {p0, p1}, Landroid/os/Debug$MemoryInfo;->getOtherPrivateClean(I)I
 
     move-result v0
@@ -871,7 +808,6 @@
     .param p1, "which"    # I
 
     .prologue
-    .line 343
     iget-object v0, p0, Landroid/os/Debug$MemoryInfo;->otherStats:[I
 
     mul-int/lit8 v1, p1, 0x7
@@ -888,7 +824,6 @@
     .param p1, "which"    # I
 
     .prologue
-    .line 333
     iget-object v0, p0, Landroid/os/Debug$MemoryInfo;->otherStats:[I
 
     mul-int/lit8 v1, p1, 0x7
@@ -905,7 +840,6 @@
     .param p1, "which"    # I
 
     .prologue
-    .line 321
     iget-object v0, p0, Landroid/os/Debug$MemoryInfo;->otherStats:[I
 
     mul-int/lit8 v1, p1, 0x7
@@ -922,7 +856,6 @@
     .param p1, "which"    # I
 
     .prologue
-    .line 353
     iget-object v0, p0, Landroid/os/Debug$MemoryInfo;->otherStats:[I
 
     mul-int/lit8 v1, p1, 0x7
@@ -939,7 +872,6 @@
     .param p1, "which"    # I
 
     .prologue
-    .line 338
     iget-object v0, p0, Landroid/os/Debug$MemoryInfo;->otherStats:[I
 
     mul-int/lit8 v1, p1, 0x7
@@ -956,7 +888,6 @@
     .param p1, "which"    # I
 
     .prologue
-    .line 327
     iget-object v0, p0, Landroid/os/Debug$MemoryInfo;->otherStats:[I
 
     mul-int/lit8 v1, p1, 0x7
@@ -973,7 +904,6 @@
     .param p1, "which"    # I
 
     .prologue
-    .line 358
     iget-object v0, p0, Landroid/os/Debug$MemoryInfo;->otherStats:[I
 
     mul-int/lit8 v1, p1, 0x7
@@ -989,7 +919,6 @@
     .locals 2
 
     .prologue
-    .line 555
     const/4 v0, 0x6
 
     invoke-virtual {p0, v0}, Landroid/os/Debug$MemoryInfo;->getOtherPrivate(I)I
@@ -1043,7 +972,6 @@
     .locals 2
 
     .prologue
-    .line 588
     const/4 v0, 0x4
 
     invoke-virtual {p0, v0}, Landroid/os/Debug$MemoryInfo;->getOtherPrivate(I)I
@@ -1073,7 +1001,6 @@
     .locals 2
 
     .prologue
-    .line 534
     iget v0, p0, Landroid/os/Debug$MemoryInfo;->dalvikPrivateDirty:I
 
     const/16 v1, 0xc
@@ -1091,7 +1018,6 @@
     .locals 1
 
     .prologue
-    .line 546
     iget v0, p0, Landroid/os/Debug$MemoryInfo;->nativePrivateDirty:I
 
     return v0
@@ -1101,7 +1027,6 @@
     .locals 2
 
     .prologue
-    .line 599
     invoke-virtual {p0}, Landroid/os/Debug$MemoryInfo;->getTotalPrivateClean()I
 
     move-result v0
@@ -1149,7 +1074,6 @@
     .locals 1
 
     .prologue
-    .line 573
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Landroid/os/Debug$MemoryInfo;->getOtherPrivateDirty(I)I
@@ -1163,7 +1087,6 @@
     .locals 2
 
     .prologue
-    .line 615
     invoke-virtual {p0}, Landroid/os/Debug$MemoryInfo;->getTotalPss()I
 
     move-result v0
@@ -1187,7 +1110,6 @@
     .locals 1
 
     .prologue
-    .line 625
     invoke-virtual {p0}, Landroid/os/Debug$MemoryInfo;->getTotalPss()I
 
     move-result v0
@@ -1199,7 +1121,6 @@
     .locals 1
 
     .prologue
-    .line 638
     invoke-virtual {p0}, Landroid/os/Debug$MemoryInfo;->getTotalSwappedOut()I
 
     move-result v0
@@ -1211,7 +1132,6 @@
     .locals 2
 
     .prologue
-    .line 301
     iget v0, p0, Landroid/os/Debug$MemoryInfo;->dalvikPrivateClean:I
 
     iget v1, p0, Landroid/os/Debug$MemoryInfo;->nativePrivateClean:I
@@ -1229,7 +1149,6 @@
     .locals 2
 
     .prologue
-    .line 287
     iget v0, p0, Landroid/os/Debug$MemoryInfo;->dalvikPrivateDirty:I
 
     iget v1, p0, Landroid/os/Debug$MemoryInfo;->nativePrivateDirty:I
@@ -1247,7 +1166,6 @@
     .locals 2
 
     .prologue
-    .line 264
     iget v0, p0, Landroid/os/Debug$MemoryInfo;->dalvikPss:I
 
     iget v1, p0, Landroid/os/Debug$MemoryInfo;->nativePss:I
@@ -1265,7 +1183,6 @@
     .locals 2
 
     .prologue
-    .line 308
     iget v0, p0, Landroid/os/Debug$MemoryInfo;->dalvikSharedClean:I
 
     iget v1, p0, Landroid/os/Debug$MemoryInfo;->nativeSharedClean:I
@@ -1283,7 +1200,6 @@
     .locals 2
 
     .prologue
-    .line 294
     iget v0, p0, Landroid/os/Debug$MemoryInfo;->dalvikSharedDirty:I
 
     iget v1, p0, Landroid/os/Debug$MemoryInfo;->nativeSharedDirty:I
@@ -1301,7 +1217,6 @@
     .locals 2
 
     .prologue
-    .line 280
     iget v0, p0, Landroid/os/Debug$MemoryInfo;->dalvikSwappablePss:I
 
     iget v1, p0, Landroid/os/Debug$MemoryInfo;->nativeSwappablePss:I
@@ -1319,7 +1234,6 @@
     .locals 2
 
     .prologue
-    .line 316
     iget v0, p0, Landroid/os/Debug$MemoryInfo;->dalvikSwappedOut:I
 
     iget v1, p0, Landroid/os/Debug$MemoryInfo;->nativeSwappedOut:I
@@ -1337,7 +1251,6 @@
     .locals 2
 
     .prologue
-    .line 271
     iget v0, p0, Landroid/os/Debug$MemoryInfo;->dalvikPrivateClean:I
 
     iget v1, p0, Landroid/os/Debug$MemoryInfo;->dalvikPrivateDirty:I
@@ -1368,161 +1281,138 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 671
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/os/Debug$MemoryInfo;->dalvikPss:I
 
-    .line 672
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/os/Debug$MemoryInfo;->dalvikSwappablePss:I
 
-    .line 673
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/os/Debug$MemoryInfo;->dalvikPrivateDirty:I
 
-    .line 674
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/os/Debug$MemoryInfo;->dalvikSharedDirty:I
 
-    .line 675
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/os/Debug$MemoryInfo;->dalvikPrivateClean:I
 
-    .line 676
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/os/Debug$MemoryInfo;->dalvikSharedClean:I
 
-    .line 677
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/os/Debug$MemoryInfo;->dalvikSwappedOut:I
 
-    .line 678
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/os/Debug$MemoryInfo;->nativePss:I
 
-    .line 679
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/os/Debug$MemoryInfo;->nativeSwappablePss:I
 
-    .line 680
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/os/Debug$MemoryInfo;->nativePrivateDirty:I
 
-    .line 681
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/os/Debug$MemoryInfo;->nativeSharedDirty:I
 
-    .line 682
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/os/Debug$MemoryInfo;->nativePrivateClean:I
 
-    .line 683
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/os/Debug$MemoryInfo;->nativeSharedClean:I
 
-    .line 684
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/os/Debug$MemoryInfo;->nativeSwappedOut:I
 
-    .line 685
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/os/Debug$MemoryInfo;->otherPss:I
 
-    .line 686
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/os/Debug$MemoryInfo;->otherSwappablePss:I
 
-    .line 687
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/os/Debug$MemoryInfo;->otherPrivateDirty:I
 
-    .line 688
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/os/Debug$MemoryInfo;->otherSharedDirty:I
 
-    .line 689
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/os/Debug$MemoryInfo;->otherPrivateClean:I
 
-    .line 690
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/os/Debug$MemoryInfo;->otherSharedClean:I
 
-    .line 691
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/os/Debug$MemoryInfo;->otherSwappedOut:I
 
-    .line 692
     invoke-virtual {p1}, Landroid/os/Parcel;->createIntArray()[I
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/os/Debug$MemoryInfo;->otherStats:[I
 
-    .line 693
     return-void
 .end method
 
@@ -1532,116 +1422,93 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 646
     iget v0, p0, Landroid/os/Debug$MemoryInfo;->dalvikPss:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 647
     iget v0, p0, Landroid/os/Debug$MemoryInfo;->dalvikSwappablePss:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 648
     iget v0, p0, Landroid/os/Debug$MemoryInfo;->dalvikPrivateDirty:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 649
     iget v0, p0, Landroid/os/Debug$MemoryInfo;->dalvikSharedDirty:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 650
     iget v0, p0, Landroid/os/Debug$MemoryInfo;->dalvikPrivateClean:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 651
     iget v0, p0, Landroid/os/Debug$MemoryInfo;->dalvikSharedClean:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 652
     iget v0, p0, Landroid/os/Debug$MemoryInfo;->dalvikSwappedOut:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 653
     iget v0, p0, Landroid/os/Debug$MemoryInfo;->nativePss:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 654
     iget v0, p0, Landroid/os/Debug$MemoryInfo;->nativeSwappablePss:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 655
     iget v0, p0, Landroid/os/Debug$MemoryInfo;->nativePrivateDirty:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 656
     iget v0, p0, Landroid/os/Debug$MemoryInfo;->nativeSharedDirty:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 657
     iget v0, p0, Landroid/os/Debug$MemoryInfo;->nativePrivateClean:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 658
     iget v0, p0, Landroid/os/Debug$MemoryInfo;->nativeSharedClean:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 659
     iget v0, p0, Landroid/os/Debug$MemoryInfo;->nativeSwappedOut:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 660
     iget v0, p0, Landroid/os/Debug$MemoryInfo;->otherPss:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 661
     iget v0, p0, Landroid/os/Debug$MemoryInfo;->otherSwappablePss:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 662
     iget v0, p0, Landroid/os/Debug$MemoryInfo;->otherPrivateDirty:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 663
     iget v0, p0, Landroid/os/Debug$MemoryInfo;->otherSharedDirty:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 664
     iget v0, p0, Landroid/os/Debug$MemoryInfo;->otherPrivateClean:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 665
     iget v0, p0, Landroid/os/Debug$MemoryInfo;->otherSharedClean:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 666
     iget v0, p0, Landroid/os/Debug$MemoryInfo;->otherSwappedOut:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 667
     iget-object v0, p0, Landroid/os/Debug$MemoryInfo;->otherStats:[I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeIntArray([I)V
 
-    .line 668
     return-void
 .end method

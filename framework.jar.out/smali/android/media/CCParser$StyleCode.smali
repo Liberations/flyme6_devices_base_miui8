@@ -49,7 +49,6 @@
     .locals 3
 
     .prologue
-    .line 372
     const/16 v0, 0x8
 
     new-array v0, v0, [Ljava/lang/String;
@@ -113,16 +112,12 @@
     .param p2, "color"    # I
 
     .prologue
-    .line 396
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 397
     iput p1, p0, Landroid/media/CCParser$StyleCode;->mStyle:I
 
-    .line 398
     iput p2, p0, Landroid/media/CCParser$StyleCode;->mColor:I
 
-    .line 399
     return-void
 .end method
 
@@ -131,37 +126,29 @@
     .param p0, "data2"    # B
 
     .prologue
-    .line 380
     const/4 v1, 0x0
 
-    .line 381
     .local v1, "style":I
     shr-int/lit8 v2, p0, 0x1
 
     and-int/lit8 v0, v2, 0x7
 
-    .line 383
     .local v0, "color":I
     and-int/lit8 v2, p0, 0x1
 
     if-eqz v2, :cond_0
 
-    .line 384
     or-int/lit8 v1, v1, 0x2
 
-    .line 387
     :cond_0
     const/4 v2, 0x7
 
     if-ne v0, v2, :cond_1
 
-    .line 389
     const/4 v0, 0x0
 
-    .line 390
     or-int/lit8 v1, v1, 0x1
 
-    .line 393
     :cond_1
     new-instance v2, Landroid/media/CCParser$StyleCode;
 
@@ -176,7 +163,6 @@
     .locals 1
 
     .prologue
-    .line 410
     iget v0, p0, Landroid/media/CCParser$StyleCode;->mColor:I
 
     return v0
@@ -186,7 +172,6 @@
     .locals 1
 
     .prologue
-    .line 402
     iget v0, p0, Landroid/media/CCParser$StyleCode;->mStyle:I
 
     and-int/lit8 v0, v0, 0x1
@@ -208,7 +193,6 @@
     .locals 1
 
     .prologue
-    .line 406
     iget v0, p0, Landroid/media/CCParser$StyleCode;->mStyle:I
 
     and-int/lit8 v0, v0, 0x2
@@ -230,18 +214,15 @@
     .locals 3
 
     .prologue
-    .line 415
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 416
     .local v0, "str":Ljava/lang/StringBuilder;
-    const-string/jumbo v1, "{"
+    const-string v1, "{"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 417
     sget-object v1, Landroid/media/CCParser$StyleCode;->mColorMap:[Ljava/lang/String;
 
     iget v2, p0, Landroid/media/CCParser$StyleCode;->mColor:I
@@ -250,19 +231,16 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 418
     iget v1, p0, Landroid/media/CCParser$StyleCode;->mStyle:I
 
     and-int/lit8 v1, v1, 0x1
 
     if-eqz v1, :cond_0
 
-    .line 419
     const-string v1, ", ITALICS"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 421
     :cond_0
     iget v1, p0, Landroid/media/CCParser$StyleCode;->mStyle:I
 
@@ -270,18 +248,15 @@
 
     if-eqz v1, :cond_1
 
-    .line 422
     const-string v1, ", UNDERLINE"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 424
     :cond_1
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 426
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1

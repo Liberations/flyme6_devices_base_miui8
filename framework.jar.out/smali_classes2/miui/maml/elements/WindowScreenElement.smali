@@ -35,10 +35,8 @@
     .param p2, "root"    # Lmiui/maml/ScreenElementRoot;
 
     .prologue
-    .line 27
     invoke-direct {p0, p1, p2}, Lmiui/maml/elements/ElementGroupRC;-><init>(Lorg/w3c/dom/Element;Lmiui/maml/ScreenElementRoot;)V
 
-    .line 28
     invoke-virtual {p2}, Lmiui/maml/ScreenElementRoot;->getContext()Lmiui/maml/ScreenContext;
 
     move-result-object v0
@@ -47,7 +45,6 @@
 
     iput-object v0, p0, Lmiui/maml/elements/WindowScreenElement;->mWindowContext:Landroid/content/Context;
 
-    .line 30
     new-instance v0, Lmiui/maml/elements/WindowScreenElement$WindowView;
 
     iget-object v1, p0, Lmiui/maml/elements/WindowScreenElement;->mWindowContext:Landroid/content/Context;
@@ -56,10 +53,9 @@
 
     iput-object v0, p0, Lmiui/maml/elements/WindowScreenElement;->mView:Lmiui/maml/elements/WindowScreenElement$WindowView;
 
-    .line 31
     iget-object v0, p0, Lmiui/maml/elements/WindowScreenElement;->mWindowContext:Landroid/content/Context;
 
-    const-string/jumbo v1, "window"
+    const-string v1, "window"
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -69,7 +65,6 @@
 
     iput-object v0, p0, Lmiui/maml/elements/WindowScreenElement;->mWindowManager:Landroid/view/WindowManager;
 
-    .line 32
     new-instance v0, Landroid/view/WindowManager$LayoutParams;
 
     invoke-virtual {p2}, Lmiui/maml/ScreenElementRoot;->getWidth()F
@@ -88,21 +83,18 @@
 
     iput-object v0, p0, Lmiui/maml/elements/WindowScreenElement;->mLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
-    .line 33
     iget-object v0, p0, Lmiui/maml/elements/WindowScreenElement;->mLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
     const/4 v1, 0x1
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->format:I
 
-    .line 34
     iget-object v0, p0, Lmiui/maml/elements/WindowScreenElement;->mLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
     const/16 v1, 0x100
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    .line 35
     return-void
 .end method
 
@@ -111,7 +103,6 @@
     .param p0, "x0"    # Lmiui/maml/elements/WindowScreenElement;
 
     .prologue
-    .line 17
     invoke-direct {p0}, Lmiui/maml/elements/WindowScreenElement;->addView()V
 
     return-void
@@ -122,7 +113,6 @@
     .param p0, "x0"    # Lmiui/maml/elements/WindowScreenElement;
 
     .prologue
-    .line 17
     invoke-direct {p0}, Lmiui/maml/elements/WindowScreenElement;->removeView()V
 
     return-void
@@ -133,7 +123,6 @@
     .param p0, "x0"    # Lmiui/maml/elements/WindowScreenElement;
 
     .prologue
-    .line 17
     iget-object v0, p0, Lmiui/maml/elements/WindowScreenElement;->mView:Lmiui/maml/elements/WindowScreenElement$WindowView;
 
     return-object v0
@@ -143,12 +132,10 @@
     .locals 3
 
     .prologue
-    .line 64
     iget-boolean v0, p0, Lmiui/maml/elements/WindowScreenElement;->mViewAdded:Z
 
     if-nez v0, :cond_0
 
-    .line 65
     iget-object v0, p0, Lmiui/maml/elements/WindowScreenElement;->mWindowManager:Landroid/view/WindowManager;
 
     iget-object v1, p0, Lmiui/maml/elements/WindowScreenElement;->mView:Lmiui/maml/elements/WindowScreenElement$WindowView;
@@ -157,12 +144,10 @@
 
     invoke-interface {v0, v1, v2}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 66
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lmiui/maml/elements/WindowScreenElement;->mViewAdded:Z
 
-    .line 68
     :cond_0
     return-void
 .end method
@@ -171,24 +156,20 @@
     .locals 2
 
     .prologue
-    .line 71
     iget-boolean v0, p0, Lmiui/maml/elements/WindowScreenElement;->mViewAdded:Z
 
     if-eqz v0, :cond_0
 
-    .line 72
     iget-object v0, p0, Lmiui/maml/elements/WindowScreenElement;->mWindowManager:Landroid/view/WindowManager;
 
     iget-object v1, p0, Lmiui/maml/elements/WindowScreenElement;->mView:Lmiui/maml/elements/WindowScreenElement$WindowView;
 
     invoke-interface {v0, v1}, Landroid/view/WindowManager;->removeView(Landroid/view/View;)V
 
-    .line 73
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lmiui/maml/elements/WindowScreenElement;->mViewAdded:Z
 
-    .line 75
     :cond_0
     return-void
 .end method
@@ -199,20 +180,16 @@
     .locals 1
 
     .prologue
-    .line 39
     invoke-super {p0}, Lmiui/maml/elements/ElementGroupRC;->init()V
 
-    .line 40
     invoke-virtual {p0}, Lmiui/maml/elements/WindowScreenElement;->isVisible()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 41
     invoke-direct {p0}, Lmiui/maml/elements/WindowScreenElement;->addView()V
 
-    .line 43
     :cond_0
     return-void
 .end method
@@ -222,7 +199,6 @@
     .param p1, "c"    # Lmiui/maml/RendererController;
 
     .prologue
-    .line 127
     new-instance v0, Lmiui/maml/elements/WindowScreenElement$ProxyListener;
 
     const/4 v1, 0x0
@@ -231,7 +207,6 @@
 
     invoke-virtual {p1, v0}, Lmiui/maml/RendererController;->setListener(Lmiui/maml/RendererController$Listener;)V
 
-    .line 128
     return-void
 .end method
 
@@ -240,10 +215,8 @@
     .param p1, "visible"    # Z
 
     .prologue
-    .line 51
     move v0, p1
 
-    .line 52
     .local v0, "_v":Z
     invoke-virtual {p0}, Lmiui/maml/elements/WindowScreenElement;->getContext()Lmiui/maml/ScreenContext;
 
@@ -259,7 +232,6 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 61
     return-void
 .end method
 
@@ -268,6 +240,5 @@
     .param p1, "c"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 47
     return-void
 .end method

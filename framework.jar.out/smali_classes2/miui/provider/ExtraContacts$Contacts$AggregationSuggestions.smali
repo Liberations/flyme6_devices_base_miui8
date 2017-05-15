@@ -29,10 +29,8 @@
     .locals 0
 
     .prologue
-    .line 827
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 837
     return-void
 .end method
 
@@ -40,7 +38,6 @@
     .locals 1
 
     .prologue
-    .line 896
     new-instance v0, Lmiui/provider/ExtraContacts$Contacts$AggregationSuggestions$Builder;
 
     invoke-direct {v0}, Lmiui/provider/ExtraContacts$Contacts$AggregationSuggestions$Builder;-><init>()V

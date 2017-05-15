@@ -43,10 +43,8 @@
     .param p2, "ele"    # Lorg/w3c/dom/Element;
 
     .prologue
-    .line 758
     invoke-direct {p0, p1}, Lmiui/maml/ActionCommand;-><init>(Lmiui/maml/elements/ScreenElement;)V
 
-    .line 759
     const-string v1, "name"
 
     invoke-interface {p2, v1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -55,7 +53,6 @@
 
     iput-object v1, p0, Lmiui/maml/ActionCommand$VariableAssignmentCommand;->mName:Ljava/lang/String;
 
-    .line 760
     const-string v1, "persist"
 
     invoke-interface {p2, v1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -68,7 +65,6 @@
 
     iput-boolean v1, p0, Lmiui/maml/ActionCommand$VariableAssignmentCommand;->mPersist:Z
 
-    .line 761
     const-string v1, "requestUpdate"
 
     invoke-interface {p2, v1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -81,7 +77,6 @@
 
     iput-boolean v1, p0, Lmiui/maml/ActionCommand$VariableAssignmentCommand;->mRequestUpdate:Z
 
-    .line 763
     const-string v1, "type"
 
     invoke-interface {p2, v1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -94,7 +89,6 @@
 
     iput-object v1, p0, Lmiui/maml/ActionCommand$VariableAssignmentCommand;->mType:Lmiui/maml/data/VariableType;
 
-    .line 764
     iget-object v1, p0, Lmiui/maml/ActionCommand$VariableAssignmentCommand;->mName:Ljava/lang/String;
 
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -103,7 +97,6 @@
 
     if-nez v1, :cond_1
 
-    .line 765
     new-instance v1, Lmiui/maml/data/IndexedVariable;
 
     iget-object v2, p0, Lmiui/maml/ActionCommand$VariableAssignmentCommand;->mName:Ljava/lang/String;
@@ -122,13 +115,11 @@
 
     iput-object v1, p0, Lmiui/maml/ActionCommand$VariableAssignmentCommand;->mVar:Lmiui/maml/data/IndexedVariable;
 
-    .line 769
     :goto_0
     invoke-virtual {p1}, Lmiui/maml/elements/ScreenElement;->getVariables()Lmiui/maml/data/Variables;
 
     move-result-object v0
 
-    .line 770
     .local v0, "variables":Lmiui/maml/data/Variables;
     const-string v1, "expression"
 
@@ -142,7 +133,6 @@
 
     iput-object v1, p0, Lmiui/maml/ActionCommand$VariableAssignmentCommand;->mExpression:Lmiui/maml/data/Expression;
 
-    .line 772
     iget-object v1, p0, Lmiui/maml/ActionCommand$VariableAssignmentCommand;->mType:Lmiui/maml/data/VariableType;
 
     invoke-virtual {v1}, Lmiui/maml/data/VariableType;->isArray()Z
@@ -151,7 +141,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 773
     const-string v1, "index"
 
     invoke-interface {p2, v1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -164,8 +153,7 @@
 
     iput-object v1, p0, Lmiui/maml/ActionCommand$VariableAssignmentCommand;->mIndexExpression:Lmiui/maml/data/Expression;
 
-    .line 774
-    const-string/jumbo v1, "values"
+    const-string v1, "values"
 
     invoke-interface {p2, v1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -177,11 +165,9 @@
 
     iput-object v1, p0, Lmiui/maml/ActionCommand$VariableAssignmentCommand;->mArrayValues:[Lmiui/maml/data/Expression;
 
-    .line 776
     :cond_0
     return-void
 
-    .line 767
     .end local v0    # "variables":Lmiui/maml/data/Variables;
     :cond_1
     const-string v1, "ActionCommand"
@@ -203,12 +189,10 @@
 
     const/4 v13, 0x2
 
-    .line 780
     invoke-virtual {p0}, Lmiui/maml/ActionCommand$VariableAssignmentCommand;->getRoot()Lmiui/maml/ScreenElementRoot;
 
     move-result-object v5
 
-    .line 781
     .local v5, "root":Lmiui/maml/ScreenElementRoot;
     sget-object v10, Lmiui/maml/ActionCommand$1;->$SwitchMap$miui$maml$data$VariableType:[I
 
@@ -222,10 +206,8 @@
 
     packed-switch v10, :pswitch_data_0
 
-    .line 821
     const/4 v4, 0x0
 
-    .line 822
     .local v4, "obj":Ljava/lang/Object;
     iget-object v10, p0, Lmiui/maml/ActionCommand$VariableAssignmentCommand;->mExpression:Lmiui/maml/data/Expression;
 
@@ -237,14 +219,12 @@
 
     move-result-object v3
 
-    .line 823
     .local v3, "name":Ljava/lang/String;
     :goto_0
     invoke-virtual {p0}, Lmiui/maml/ActionCommand$VariableAssignmentCommand;->getVariables()Lmiui/maml/data/Variables;
 
     move-result-object v7
 
-    .line 824
     .local v7, "vars":Lmiui/maml/data/Variables;
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -258,24 +238,20 @@
 
     if-eqz v10, :cond_0
 
-    .line 825
     invoke-virtual {v7, v3}, Lmiui/maml/data/Variables;->get(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v4
 
-    .line 827
     .end local v4    # "obj":Ljava/lang/Object;
     :cond_0
     iget-object v10, p0, Lmiui/maml/ActionCommand$VariableAssignmentCommand;->mIndexExpression:Lmiui/maml/data/Expression;
 
     if-nez v10, :cond_8
 
-    .line 828
     iget-object v10, p0, Lmiui/maml/ActionCommand$VariableAssignmentCommand;->mVar:Lmiui/maml/data/IndexedVariable;
 
     invoke-virtual {v10, v4}, Lmiui/maml/data/IndexedVariable;->set(Ljava/lang/Object;)Z
 
-    .line 835
     .end local v3    # "name":Ljava/lang/String;
     .end local v7    # "vars":Lmiui/maml/data/Variables;
     :cond_1
@@ -284,33 +260,27 @@
 
     if-eqz v10, :cond_2
 
-    .line 836
     invoke-virtual {v5}, Lmiui/maml/ScreenElementRoot;->requestUpdate()V
 
-    .line 838
     :cond_2
     return-void
 
-    .line 783
     :pswitch_0
     iget-object v10, p0, Lmiui/maml/ActionCommand$VariableAssignmentCommand;->mExpression:Lmiui/maml/data/Expression;
 
     if-eqz v10, :cond_1
 
-    .line 784
     iget-object v10, p0, Lmiui/maml/ActionCommand$VariableAssignmentCommand;->mExpression:Lmiui/maml/data/Expression;
 
     invoke-virtual {v10}, Lmiui/maml/data/Expression;->evaluate()D
 
     move-result-wide v8
 
-    .line 785
     .local v8, "v":D
     iget-object v10, p0, Lmiui/maml/ActionCommand$VariableAssignmentCommand;->mVar:Lmiui/maml/data/IndexedVariable;
 
     invoke-virtual {v10, v8, v9}, Lmiui/maml/data/IndexedVariable;->set(D)V
 
-    .line 786
     iget-boolean v10, p0, Lmiui/maml/ActionCommand$VariableAssignmentCommand;->mPersist:Z
 
     if-eqz v10, :cond_1
@@ -321,7 +291,6 @@
 
     if-eqz v10, :cond_1
 
-    .line 787
     iget-object v10, p0, Lmiui/maml/ActionCommand$VariableAssignmentCommand;->mName:Ljava/lang/String;
 
     invoke-static {v8, v9}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
@@ -332,7 +301,6 @@
 
     goto :goto_1
 
-    .line 791
     .end local v8    # "v":D
     :pswitch_1
     iget-object v10, p0, Lmiui/maml/ActionCommand$VariableAssignmentCommand;->mIndexExpression:Lmiui/maml/data/Expression;
@@ -343,7 +311,6 @@
 
     if-eqz v10, :cond_3
 
-    .line 792
     iget-object v10, p0, Lmiui/maml/ActionCommand$VariableAssignmentCommand;->mVar:Lmiui/maml/data/IndexedVariable;
 
     iget-object v11, p0, Lmiui/maml/ActionCommand$VariableAssignmentCommand;->mIndexExpression:Lmiui/maml/data/Expression;
@@ -364,18 +331,15 @@
 
     goto :goto_1
 
-    .line 793
     :cond_3
     iget-object v10, p0, Lmiui/maml/ActionCommand$VariableAssignmentCommand;->mArrayValues:[Lmiui/maml/data/Expression;
 
     if-eqz v10, :cond_1
 
-    .line 794
     iget-object v10, p0, Lmiui/maml/ActionCommand$VariableAssignmentCommand;->mArrayValues:[Lmiui/maml/data/Expression;
 
     array-length v0, v10
 
-    .line 795
     .local v0, "N":I
     const/4 v2, 0x0
 
@@ -383,12 +347,10 @@
     :goto_2
     if-ge v2, v0, :cond_1
 
-    .line 796
     iget-object v10, p0, Lmiui/maml/ActionCommand$VariableAssignmentCommand;->mArrayValues:[Lmiui/maml/data/Expression;
 
     aget-object v1, v10, v2
 
-    .line 797
     .local v1, "ex":Lmiui/maml/data/Expression;
     iget-object v12, p0, Lmiui/maml/ActionCommand$VariableAssignmentCommand;->mVar:Lmiui/maml/data/IndexedVariable;
 
@@ -399,12 +361,10 @@
     :goto_3
     invoke-virtual {v12, v2, v10, v11}, Lmiui/maml/data/IndexedVariable;->setArr(ID)Z
 
-    .line 795
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
-    .line 797
     :cond_4
     invoke-virtual {v1}, Lmiui/maml/data/Expression;->evaluate()D
 
@@ -412,7 +372,6 @@
 
     goto :goto_3
 
-    .line 802
     .end local v0    # "N":I
     .end local v1    # "ex":Lmiui/maml/data/Expression;
     .end local v2    # "i":I
@@ -423,13 +382,11 @@
 
     move-result-object v6
 
-    .line 803
     .local v6, "str":Ljava/lang/String;
     iget-object v10, p0, Lmiui/maml/ActionCommand$VariableAssignmentCommand;->mVar:Lmiui/maml/data/IndexedVariable;
 
     invoke-virtual {v10, v6}, Lmiui/maml/data/IndexedVariable;->set(Ljava/lang/Object;)Z
 
-    .line 804
     iget-boolean v10, p0, Lmiui/maml/ActionCommand$VariableAssignmentCommand;->mPersist:Z
 
     if-eqz v10, :cond_1
@@ -440,14 +397,12 @@
 
     if-eqz v10, :cond_1
 
-    .line 805
     iget-object v10, p0, Lmiui/maml/ActionCommand$VariableAssignmentCommand;->mName:Ljava/lang/String;
 
     invoke-virtual {v5, v10, v6}, Lmiui/maml/ScreenElementRoot;->saveVar(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 809
     .end local v6    # "str":Ljava/lang/String;
     :pswitch_3
     iget-object v10, p0, Lmiui/maml/ActionCommand$VariableAssignmentCommand;->mIndexExpression:Lmiui/maml/data/Expression;
@@ -458,7 +413,6 @@
 
     if-eqz v10, :cond_5
 
-    .line 810
     iget-object v10, p0, Lmiui/maml/ActionCommand$VariableAssignmentCommand;->mVar:Lmiui/maml/data/IndexedVariable;
 
     iget-object v11, p0, Lmiui/maml/ActionCommand$VariableAssignmentCommand;->mIndexExpression:Lmiui/maml/data/Expression;
@@ -479,18 +433,15 @@
 
     goto/16 :goto_1
 
-    .line 811
     :cond_5
     iget-object v10, p0, Lmiui/maml/ActionCommand$VariableAssignmentCommand;->mArrayValues:[Lmiui/maml/data/Expression;
 
     if-eqz v10, :cond_1
 
-    .line 812
     iget-object v10, p0, Lmiui/maml/ActionCommand$VariableAssignmentCommand;->mArrayValues:[Lmiui/maml/data/Expression;
 
     array-length v0, v10
 
-    .line 813
     .restart local v0    # "N":I
     const/4 v2, 0x0
 
@@ -498,12 +449,10 @@
     :goto_4
     if-ge v2, v0, :cond_1
 
-    .line 814
     iget-object v10, p0, Lmiui/maml/ActionCommand$VariableAssignmentCommand;->mArrayValues:[Lmiui/maml/data/Expression;
 
     aget-object v1, v10, v2
 
-    .line 815
     .restart local v1    # "ex":Lmiui/maml/data/Expression;
     iget-object v12, p0, Lmiui/maml/ActionCommand$VariableAssignmentCommand;->mVar:Lmiui/maml/data/IndexedVariable;
 
@@ -514,12 +463,10 @@
     :goto_5
     invoke-virtual {v12, v2, v10}, Lmiui/maml/data/IndexedVariable;->setArr(ILjava/lang/Object;)Z
 
-    .line 813
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_4
 
-    .line 815
     :cond_6
     invoke-virtual {v1}, Lmiui/maml/data/Expression;->evaluateStr()Ljava/lang/String;
 
@@ -534,10 +481,8 @@
     :cond_7
     move-object v3, v11
 
-    .line 822
     goto/16 :goto_0
 
-    .line 830
     .end local v4    # "obj":Ljava/lang/Object;
     .restart local v3    # "name":Ljava/lang/String;
     .restart local v7    # "vars":Lmiui/maml/data/Variables;
@@ -556,7 +501,6 @@
 
     goto/16 :goto_1
 
-    .line 781
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

@@ -51,10 +51,8 @@
     .locals 1
 
     .prologue
-    .line 939
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 954
     const/4 v0, 0x1
 
     iput v0, p0, Lmiui/view/VolumeDialog$VolumeRow;->lastLevel:I
@@ -67,7 +65,6 @@
     .param p1, "x0"    # Lmiui/view/VolumeDialog$1;
 
     .prologue
-    .line 939
     invoke-direct {p0}, Lmiui/view/VolumeDialog$VolumeRow;-><init>()V
 
     return-void
@@ -78,7 +75,6 @@
     .param p0, "x0"    # Lmiui/view/VolumeDialog$VolumeRow;
 
     .prologue
-    .line 939
     iget-object v0, p0, Lmiui/view/VolumeDialog$VolumeRow;->icon:Landroid/widget/ImageButton;
 
     return-object v0
@@ -90,7 +86,6 @@
     .param p1, "x1"    # Landroid/widget/ImageButton;
 
     .prologue
-    .line 939
     iput-object p1, p0, Lmiui/view/VolumeDialog$VolumeRow;->icon:Landroid/widget/ImageButton;
 
     return-object p1
@@ -101,7 +96,6 @@
     .param p0, "x0"    # Lmiui/view/VolumeDialog$VolumeRow;
 
     .prologue
-    .line 939
     iget v0, p0, Lmiui/view/VolumeDialog$VolumeRow;->cachedIconRes:I
 
     return v0
@@ -113,7 +107,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 939
     iput p1, p0, Lmiui/view/VolumeDialog$VolumeRow;->cachedIconRes:I
 
     return p1
@@ -124,7 +117,6 @@
     .param p0, "x0"    # Lmiui/view/VolumeDialog$VolumeRow;
 
     .prologue
-    .line 939
     iget-object v0, p0, Lmiui/view/VolumeDialog$VolumeRow;->ss:Lmiui/view/VolumeDialog$StreamState;
 
     return-object v0
@@ -136,7 +128,6 @@
     .param p1, "x1"    # Lmiui/view/VolumeDialog$StreamState;
 
     .prologue
-    .line 939
     iput-object p1, p0, Lmiui/view/VolumeDialog$VolumeRow;->ss:Lmiui/view/VolumeDialog$StreamState;
 
     return-object p1
@@ -148,7 +139,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 939
     iput p1, p0, Lmiui/view/VolumeDialog$VolumeRow;->lastLevel:I
 
     return p1
@@ -159,7 +149,6 @@
     .param p0, "x0"    # Lmiui/view/VolumeDialog$VolumeRow;
 
     .prologue
-    .line 939
     iget-object v0, p0, Lmiui/view/VolumeDialog$VolumeRow;->space:Landroid/view/View;
 
     return-object v0
@@ -171,7 +160,6 @@
     .param p1, "x1"    # Landroid/view/View;
 
     .prologue
-    .line 939
     iput-object p1, p0, Lmiui/view/VolumeDialog$VolumeRow;->space:Landroid/view/View;
 
     return-object p1
@@ -182,7 +170,6 @@
     .param p0, "x0"    # Lmiui/view/VolumeDialog$VolumeRow;
 
     .prologue
-    .line 939
     iget-boolean v0, p0, Lmiui/view/VolumeDialog$VolumeRow;->tracking:Z
 
     return v0
@@ -194,7 +181,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 939
     iput-boolean p1, p0, Lmiui/view/VolumeDialog$VolumeRow;->tracking:Z
 
     return p1
@@ -205,7 +191,6 @@
     .param p0, "x0"    # Lmiui/view/VolumeDialog$VolumeRow;
 
     .prologue
-    .line 939
     iget-wide v0, p0, Lmiui/view/VolumeDialog$VolumeRow;->userAttempt:J
 
     return-wide v0
@@ -217,7 +202,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 939
     iput-wide p1, p0, Lmiui/view/VolumeDialog$VolumeRow;->userAttempt:J
 
     return-wide p1
@@ -228,7 +212,6 @@
     .param p0, "x0"    # Lmiui/view/VolumeDialog$VolumeRow;
 
     .prologue
-    .line 939
     iget-object v0, p0, Lmiui/view/VolumeDialog$VolumeRow;->anim:Landroid/animation/ObjectAnimator;
 
     return-object v0
@@ -240,7 +223,6 @@
     .param p1, "x1"    # Landroid/animation/ObjectAnimator;
 
     .prologue
-    .line 939
     iput-object p1, p0, Lmiui/view/VolumeDialog$VolumeRow;->anim:Landroid/animation/ObjectAnimator;
 
     return-object p1
@@ -251,7 +233,6 @@
     .param p0, "x0"    # Lmiui/view/VolumeDialog$VolumeRow;
 
     .prologue
-    .line 939
     iget v0, p0, Lmiui/view/VolumeDialog$VolumeRow;->animTargetProgress:I
 
     return v0
@@ -263,7 +244,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 939
     iput p1, p0, Lmiui/view/VolumeDialog$VolumeRow;->animTargetProgress:I
 
     return p1
@@ -274,7 +254,6 @@
     .param p0, "x0"    # Lmiui/view/VolumeDialog$VolumeRow;
 
     .prologue
-    .line 939
     iget-object v0, p0, Lmiui/view/VolumeDialog$VolumeRow;->view:Landroid/view/View;
 
     return-object v0
@@ -286,7 +265,6 @@
     .param p1, "x1"    # Landroid/view/View;
 
     .prologue
-    .line 939
     iput-object p1, p0, Lmiui/view/VolumeDialog$VolumeRow;->view:Landroid/view/View;
 
     return-object p1
@@ -297,7 +275,6 @@
     .param p0, "x0"    # Lmiui/view/VolumeDialog$VolumeRow;
 
     .prologue
-    .line 939
     iget v0, p0, Lmiui/view/VolumeDialog$VolumeRow;->stream:I
 
     return v0
@@ -309,7 +286,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 939
     iput p1, p0, Lmiui/view/VolumeDialog$VolumeRow;->stream:I
 
     return p1
@@ -320,7 +296,6 @@
     .param p0, "x0"    # Lmiui/view/VolumeDialog$VolumeRow;
 
     .prologue
-    .line 939
     iget v0, p0, Lmiui/view/VolumeDialog$VolumeRow;->iconsMapKey:I
 
     return v0
@@ -332,7 +307,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 939
     iput p1, p0, Lmiui/view/VolumeDialog$VolumeRow;->iconsMapKey:I
 
     return p1
@@ -343,7 +317,6 @@
     .param p0, "x0"    # Lmiui/view/VolumeDialog$VolumeRow;
 
     .prologue
-    .line 939
     iget v0, p0, Lmiui/view/VolumeDialog$VolumeRow;->initIconsMapKey:I
 
     return v0
@@ -355,7 +328,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 939
     iput p1, p0, Lmiui/view/VolumeDialog$VolumeRow;->initIconsMapKey:I
 
     return p1
@@ -366,7 +338,6 @@
     .param p0, "x0"    # Lmiui/view/VolumeDialog$VolumeRow;
 
     .prologue
-    .line 939
     iget-boolean v0, p0, Lmiui/view/VolumeDialog$VolumeRow;->important:Z
 
     return v0
@@ -378,7 +349,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 939
     iput-boolean p1, p0, Lmiui/view/VolumeDialog$VolumeRow;->important:Z
 
     return p1
@@ -389,7 +359,6 @@
     .param p0, "x0"    # Lmiui/view/VolumeDialog$VolumeRow;
 
     .prologue
-    .line 939
     iget-object v0, p0, Lmiui/view/VolumeDialog$VolumeRow;->slider:Lmiui/widget/SeekBar;
 
     return-object v0
@@ -401,7 +370,6 @@
     .param p1, "x1"    # Lmiui/widget/SeekBar;
 
     .prologue
-    .line 939
     iput-object p1, p0, Lmiui/view/VolumeDialog$VolumeRow;->slider:Lmiui/widget/SeekBar;
 
     return-object p1

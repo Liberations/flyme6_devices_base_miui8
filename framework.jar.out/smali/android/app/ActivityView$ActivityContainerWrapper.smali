@@ -28,32 +28,26 @@
     .param p1, "container"    # Landroid/app/IActivityContainer;
 
     .prologue
-    .line 391
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 388
     invoke-static {}, Ldalvik/system/CloseGuard;->get()Ldalvik/system/CloseGuard;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/app/ActivityView$ActivityContainerWrapper;->mGuard:Ldalvik/system/CloseGuard;
 
-    .line 392
     iput-object p1, p0, Landroid/app/ActivityView$ActivityContainerWrapper;->mIActivityContainer:Landroid/app/IActivityContainer;
 
-    .line 393
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/app/ActivityView$ActivityContainerWrapper;->mOpened:Z
 
-    .line 394
     iget-object v0, p0, Landroid/app/ActivityView$ActivityContainerWrapper;->mGuard:Ldalvik/system/CloseGuard;
 
-    const-string/jumbo v1, "release"
+    const-string v1, "release"
 
     invoke-virtual {v0, v1}, Ldalvik/system/CloseGuard;->open(Ljava/lang/String;)V
 
-    .line 395
     return-void
 .end method
 
@@ -64,7 +58,6 @@
     .param p1, "displayId"    # I
 
     .prologue
-    .line 399
     :try_start_0
     iget-object v0, p0, Landroid/app/ActivityView$ActivityContainerWrapper;->mIActivityContainer:Landroid/app/IActivityContainer;
 
@@ -72,11 +65,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 402
     :goto_0
     return-void
 
-    .line 400
     :catch_0
     move-exception v0
 
@@ -92,30 +83,24 @@
     .end annotation
 
     .prologue
-    .line 460
     :try_start_0
     iget-object v0, p0, Landroid/app/ActivityView$ActivityContainerWrapper;->mGuard:Ldalvik/system/CloseGuard;
 
     if-eqz v0, :cond_0
 
-    .line 461
     iget-object v0, p0, Landroid/app/ActivityView$ActivityContainerWrapper;->mGuard:Ldalvik/system/CloseGuard;
 
     invoke-virtual {v0}, Ldalvik/system/CloseGuard;->warnIfOpen()V
 
-    .line 462
     invoke-virtual {p0}, Landroid/app/ActivityView$ActivityContainerWrapper;->release()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 465
     :cond_0
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    .line 467
     return-void
 
-    .line 465
     :catchall_0
     move-exception v0
 
@@ -128,7 +113,6 @@
     .locals 2
 
     .prologue
-    .line 428
     :try_start_0
     iget-object v1, p0, Landroid/app/ActivityView$ActivityContainerWrapper;->mIActivityContainer:Landroid/app/IActivityContainer;
 
@@ -138,15 +122,12 @@
 
     move-result v1
 
-    .line 430
     :goto_0
     return v1
 
-    .line 429
     :catch_0
     move-exception v0
 
-    .line 430
     .local v0, "e":Landroid/os/RemoteException;
     const/4 v1, -0x1
 
@@ -158,7 +139,6 @@
     .param p1, "event"    # Landroid/view/InputEvent;
 
     .prologue
-    .line 436
     :try_start_0
     iget-object v1, p0, Landroid/app/ActivityView$ActivityContainerWrapper;->mIActivityContainer:Landroid/app/IActivityContainer;
 
@@ -168,15 +148,12 @@
 
     move-result v1
 
-    .line 438
     :goto_0
     return v1
 
-    .line 437
     :catch_0
     move-exception v0
 
-    .line 438
     .local v0, "e":Landroid/os/RemoteException;
     const/4 v1, 0x0
 
@@ -187,12 +164,10 @@
     .locals 2
 
     .prologue
-    .line 443
     iget-object v1, p0, Landroid/app/ActivityView$ActivityContainerWrapper;->mGuard:Ldalvik/system/CloseGuard;
 
     monitor-enter v1
 
-    .line 444
     :try_start_0
     iget-boolean v0, p0, Landroid/app/ActivityView$ActivityContainerWrapper;->mOpened:Z
     :try_end_0
@@ -200,13 +175,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 447
     :try_start_1
     iget-object v0, p0, Landroid/app/ActivityView$ActivityContainerWrapper;->mIActivityContainer:Landroid/app/IActivityContainer;
 
     invoke-interface {v0}, Landroid/app/IActivityContainer;->release()V
 
-    .line 448
     iget-object v0, p0, Landroid/app/ActivityView$ActivityContainerWrapper;->mGuard:Ldalvik/system/CloseGuard;
 
     invoke-virtual {v0}, Ldalvik/system/CloseGuard;->close()V
@@ -214,21 +187,17 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 451
     :goto_0
     const/4 v0, 0x0
 
     :try_start_2
     iput-boolean v0, p0, Landroid/app/ActivityView$ActivityContainerWrapper;->mOpened:Z
 
-    .line 453
     :cond_0
     monitor-exit v1
 
-    .line 454
     return-void
 
-    .line 453
     :catchall_0
     move-exception v0
 
@@ -238,7 +207,6 @@
 
     throw v0
 
-    .line 449
     :catch_0
     move-exception v0
 
@@ -258,12 +226,10 @@
     .end annotation
 
     .prologue
-    .line 406
     iget-object v0, p0, Landroid/app/ActivityView$ActivityContainerWrapper;->mIActivityContainer:Landroid/app/IActivityContainer;
 
     invoke-interface {v0, p1, p2, p3, p4}, Landroid/app/IActivityContainer;->setSurface(Landroid/view/Surface;III)V
 
-    .line 407
     return-void
 .end method
 
@@ -272,7 +238,6 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 411
     :try_start_0
     iget-object v1, p0, Landroid/app/ActivityView$ActivityContainerWrapper;->mIActivityContainer:Landroid/app/IActivityContainer;
 
@@ -284,11 +249,9 @@
 
     return v1
 
-    .line 412
     :catch_0
     move-exception v0
 
-    .line 413
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -320,7 +283,6 @@
     .param p1, "intentSender"    # Landroid/content/IIntentSender;
 
     .prologue
-    .line 419
     :try_start_0
     iget-object v1, p0, Landroid/app/ActivityView$ActivityContainerWrapper;->mIActivityContainer:Landroid/app/IActivityContainer;
 
@@ -332,11 +294,9 @@
 
     return v1
 
-    .line 420
     :catch_0
     move-exception v0
 
-    .line 421
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 

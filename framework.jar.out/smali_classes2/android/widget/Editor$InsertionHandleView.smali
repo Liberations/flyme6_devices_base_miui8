@@ -39,21 +39,16 @@
     .param p2, "drawable"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 4664
     iput-object p1, p0, Landroid/widget/Editor$InsertionHandleView;->this$0:Landroid/widget/Editor;
 
-    .line 4665
     invoke-direct {p0, p1, p2, p2}, Landroid/widget/Editor$HandleView;-><init>(Landroid/widget/Editor;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    .line 4667
     invoke-direct {p0}, Landroid/widget/Editor$InsertionHandleView;->createAnimations()V
 
-    .line 4668
     iget-object v0, p0, Landroid/widget/Editor$InsertionHandleView;->mContainer:Landroid/widget/Editor$AnimatePopupWindow;
 
     invoke-virtual {v0, p0}, Landroid/widget/Editor$AnimatePopupWindow;->setFader(Landroid/widget/Editor$Fader;)V
 
-    .line 4669
     return-void
 .end method
 
@@ -62,7 +57,6 @@
     .param p0, "x0"    # Landroid/widget/Editor$InsertionHandleView;
 
     .prologue
-    .line 4653
     invoke-direct {p0}, Landroid/widget/Editor$InsertionHandleView;->hideAfterDelay()V
 
     return-void
@@ -73,7 +67,6 @@
     .param p0, "x0"    # Landroid/widget/Editor$InsertionHandleView;
 
     .prologue
-    .line 4653
     invoke-direct {p0}, Landroid/widget/Editor$InsertionHandleView;->removeHiderCallback()V
 
     return-void
@@ -85,7 +78,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 4653
     iput-boolean p1, p0, Landroid/widget/Editor$InsertionHandleView;->mReShowPopup:Z
 
     return p1
@@ -101,14 +93,12 @@
 
     const/4 v6, 0x2
 
-    .line 4878
     new-instance v2, Landroid/animation/AnimatorSet;
 
     invoke-direct {v2}, Landroid/animation/AnimatorSet;-><init>()V
 
     iput-object v2, p0, Landroid/widget/Editor$InsertionHandleView;->mAnimationFadeIn:Landroid/animation/AnimatorSet;
 
-    .line 4879
     sget-object v2, Landroid/view/View;->SCALE_X:Landroid/util/Property;
 
     new-array v3, v6, [F
@@ -119,7 +109,6 @@
 
     move-result-object v0
 
-    .line 4880
     .local v0, "scaleAnimatorX":Landroid/animation/ObjectAnimator;
     sget-object v2, Landroid/view/View;->SCALE_Y:Landroid/util/Property;
 
@@ -131,7 +120,6 @@
 
     move-result-object v1
 
-    .line 4881
     .local v1, "scaleAnimatorY":Landroid/animation/ObjectAnimator;
     iget-object v2, p0, Landroid/widget/Editor$InsertionHandleView;->mAnimationFadeIn:Landroid/animation/AnimatorSet;
 
@@ -141,14 +129,12 @@
 
     invoke-virtual {v2, v3}, Landroid/animation/AnimatorSet;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 4882
     iget-object v2, p0, Landroid/widget/Editor$InsertionHandleView;->mAnimationFadeIn:Landroid/animation/AnimatorSet;
 
     const-wide/16 v4, 0x12c
 
     invoke-virtual {v2, v4, v5}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
-    .line 4883
     iget-object v2, p0, Landroid/widget/Editor$InsertionHandleView;->mAnimationFadeIn:Landroid/animation/AnimatorSet;
 
     new-array v3, v6, [Landroid/animation/Animator;
@@ -159,14 +145,12 @@
 
     invoke-virtual {v2, v3}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 4885
     new-instance v2, Landroid/animation/AnimatorSet;
 
     invoke-direct {v2}, Landroid/animation/AnimatorSet;-><init>()V
 
     iput-object v2, p0, Landroid/widget/Editor$InsertionHandleView;->mAnimationFadeOut:Landroid/animation/AnimatorSet;
 
-    .line 4886
     sget-object v2, Landroid/view/View;->SCALE_X:Landroid/util/Property;
 
     new-array v3, v6, [F
@@ -177,7 +161,6 @@
 
     move-result-object v0
 
-    .line 4887
     sget-object v2, Landroid/view/View;->SCALE_Y:Landroid/util/Property;
 
     new-array v3, v6, [F
@@ -188,7 +171,6 @@
 
     move-result-object v1
 
-    .line 4888
     iget-object v2, p0, Landroid/widget/Editor$InsertionHandleView;->mAnimationFadeOut:Landroid/animation/AnimatorSet;
 
     new-instance v3, Lmiui/view/animation/CubicEaseOutInterpolator;
@@ -197,14 +179,12 @@
 
     invoke-virtual {v2, v3}, Landroid/animation/AnimatorSet;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 4889
     iget-object v2, p0, Landroid/widget/Editor$InsertionHandleView;->mAnimationFadeOut:Landroid/animation/AnimatorSet;
 
     const-wide/16 v4, 0x96
 
     invoke-virtual {v2, v4, v5}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
-    .line 4890
     iget-object v2, p0, Landroid/widget/Editor$InsertionHandleView;->mAnimationFadeOut:Landroid/animation/AnimatorSet;
 
     new-array v3, v6, [Landroid/animation/Animator;
@@ -215,17 +195,14 @@
 
     invoke-virtual {v2, v3}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 4892
     new-instance v2, Landroid/widget/Editor$InsertionHandleView$2;
 
     invoke-direct {v2, p0}, Landroid/widget/Editor$InsertionHandleView$2;-><init>(Landroid/widget/Editor$InsertionHandleView;)V
 
     iput-object v2, p0, Landroid/widget/Editor$InsertionHandleView;->mAnimationFadeOutListener:Landroid/animation/AnimatorListenerAdapter;
 
-    .line 4898
     return-void
 
-    .line 4879
     nop
 
     :array_0
@@ -234,21 +211,18 @@
         0x3f800000    # 1.0f
     .end array-data
 
-    .line 4880
     :array_1
     .array-data 4
         0x0
         0x3f800000    # 1.0f
     .end array-data
 
-    .line 4886
     :array_2
     .array-data 4
         0x3f800000    # 1.0f
         0x0
     .end array-data
 
-    .line 4887
     :array_3
     .array-data 4
         0x3f800000    # 1.0f
@@ -260,19 +234,16 @@
     .locals 4
 
     .prologue
-    .line 4698
     iget-object v0, p0, Landroid/widget/Editor$InsertionHandleView;->mHider:Ljava/lang/Runnable;
 
     if-nez v0, :cond_0
 
-    .line 4699
     new-instance v0, Landroid/widget/Editor$InsertionHandleView$1;
 
     invoke-direct {v0, p0}, Landroid/widget/Editor$InsertionHandleView$1;-><init>(Landroid/widget/Editor$InsertionHandleView;)V
 
     iput-object v0, p0, Landroid/widget/Editor$InsertionHandleView;->mHider:Ljava/lang/Runnable;
 
-    .line 4707
     :goto_0
     iget-object v0, p0, Landroid/widget/Editor$InsertionHandleView;->this$0:Landroid/widget/Editor;
 
@@ -287,10 +258,8 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/widget/TextView;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 4708
     return-void
 
-    .line 4705
     :cond_0
     invoke-direct {p0}, Landroid/widget/Editor$InsertionHandleView;->removeHiderCallback()V
 
@@ -301,12 +270,10 @@
     .locals 2
 
     .prologue
-    .line 4711
     iget-object v0, p0, Landroid/widget/Editor$InsertionHandleView;->mHider:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_0
 
-    .line 4712
     iget-object v0, p0, Landroid/widget/Editor$InsertionHandleView;->this$0:Landroid/widget/Editor;
 
     # getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
@@ -318,7 +285,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 4714
     :cond_0
     return-void
 .end method
@@ -331,28 +297,22 @@
     .prologue
     const/high16 v1, 0x3f800000    # 1.0f
 
-    .line 4865
     iget-object v0, p0, Landroid/widget/Editor$InsertionHandleView;->mAnimationFadeIn:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->cancel()V
 
-    .line 4866
     iget-object v0, p0, Landroid/widget/Editor$InsertionHandleView;->mAnimationFadeOut:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->removeAllListeners()V
 
-    .line 4867
     iget-object v0, p0, Landroid/widget/Editor$InsertionHandleView;->mAnimationFadeOut:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->cancel()V
 
-    .line 4869
     invoke-virtual {p0, v1}, Landroid/widget/Editor$InsertionHandleView;->setScaleX(F)V
 
-    .line 4870
     invoke-virtual {p0, v1}, Landroid/widget/Editor$InsertionHandleView;->setScaleY(F)V
 
-    .line 4871
     return-void
 .end method
 
@@ -362,7 +322,6 @@
     .param p2, "y"    # I
 
     .prologue
-    .line 4847
     iget-object v2, p0, Landroid/widget/Editor$InsertionHandleView;->this$0:Landroid/widget/Editor;
 
     # getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
@@ -374,11 +333,9 @@
 
     move-result-object v0
 
-    .line 4848
     .local v0, "layout":Landroid/text/Layout;
     if-eqz v0, :cond_0
 
-    .line 4849
     invoke-virtual {p0}, Landroid/widget/Editor$InsertionHandleView;->getCurrentCursorOffset()I
 
     move-result v2
@@ -387,7 +344,6 @@
 
     move-result v1
 
-    .line 4850
     .local v1, "line":I
     invoke-virtual {v0, v1}, Landroid/text/Layout;->getLineBottom(I)I
 
@@ -403,14 +359,12 @@
 
     invoke-virtual {p0, v2}, Landroid/widget/Editor$InsertionHandleView;->setPivotY(F)V
 
-    .line 4853
     .end local v1    # "line":I
     :cond_0
     iget-object v2, p0, Landroid/widget/Editor$InsertionHandleView;->mAnimationFadeIn:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v2}, Landroid/animation/AnimatorSet;->start()V
 
-    .line 4854
     return-void
 .end method
 
@@ -418,24 +372,20 @@
     .locals 2
 
     .prologue
-    .line 4858
     iget-object v0, p0, Landroid/widget/Editor$InsertionHandleView;->mAnimationFadeOut:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->removeAllListeners()V
 
-    .line 4859
     iget-object v0, p0, Landroid/widget/Editor$InsertionHandleView;->mAnimationFadeOut:Landroid/animation/AnimatorSet;
 
     iget-object v1, p0, Landroid/widget/Editor$InsertionHandleView;->mAnimationFadeOutListener:Landroid/animation/AnimatorListenerAdapter;
 
     invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 4860
     iget-object v0, p0, Landroid/widget/Editor$InsertionHandleView;->mAnimationFadeOut:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
 
-    .line 4861
     return-void
 .end method
 
@@ -443,7 +393,6 @@
     .locals 1
 
     .prologue
-    .line 4791
     iget-object v0, p0, Landroid/widget/Editor$InsertionHandleView;->this$0:Landroid/widget/Editor;
 
     # getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
@@ -462,12 +411,10 @@
     .locals 4
 
     .prologue
-    .line 4728
     invoke-super {p0}, Landroid/widget/Editor$HandleView;->getCursorOffset()I
 
     move-result v1
 
-    .line 4729
     .local v1, "offset":I
     iget-object v2, p0, Landroid/widget/Editor$InsertionHandleView;->this$0:Landroid/widget/Editor;
 
@@ -483,12 +430,10 @@
 
     aget-object v0, v2, v3
 
-    .line 4730
     .local v0, "cursor":Landroid/graphics/drawable/Drawable;
     :goto_0
     if-eqz v0, :cond_0
 
-    .line 4731
     iget-object v2, p0, Landroid/widget/Editor$InsertionHandleView;->this$0:Landroid/widget/Editor;
 
     # getter for: Landroid/widget/Editor;->mTempRect:Landroid/graphics/Rect;
@@ -498,7 +443,6 @@
 
     invoke-virtual {v0, v2}, Landroid/graphics/drawable/Drawable;->getPadding(Landroid/graphics/Rect;)Z
 
-    .line 4732
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v2
@@ -529,11 +473,9 @@
 
     add-int/2addr v1, v2
 
-    .line 4734
     :cond_0
     return v1
 
-    .line 4729
     .end local v0    # "cursor":Landroid/graphics/drawable/Drawable;
     :cond_1
     const/4 v0, 0x0
@@ -546,7 +488,6 @@
     .param p1, "isRtlRun"    # Z
 
     .prologue
-    .line 4723
     const/4 v0, 0x1
 
     return v0
@@ -558,7 +499,6 @@
     .param p2, "isRtlRun"    # Z
 
     .prologue
-    .line 4718
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v0
@@ -572,15 +512,12 @@
     .locals 1
 
     .prologue
-    .line 4688
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/widget/Editor$InsertionHandleView;->mReShowPopup:Z
 
-    .line 4689
     invoke-super {p0}, Landroid/widget/Editor$HandleView;->hide()V
 
-    .line 4690
     return-void
 .end method
 
@@ -590,25 +527,19 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 4831
     iget-boolean v0, p0, Landroid/widget/Editor$InsertionHandleView;->mReShowPopup:Z
 
     if-eqz v0, :cond_0
 
-    .line 4832
     invoke-virtual {p0, v1}, Landroid/widget/Editor$InsertionHandleView;->showActionPopupWindow(I)V
 
-    .line 4833
     iput-boolean v1, p0, Landroid/widget/Editor$InsertionHandleView;->mReShowPopup:Z
 
-    .line 4835
     :cond_0
     invoke-super {p0}, Landroid/widget/Editor$HandleView;->onAttached()V
 
-    .line 4836
     invoke-direct {p0}, Landroid/widget/Editor$InsertionHandleView;->hideAfterDelay()V
 
-    .line 4837
     return-void
 .end method
 
@@ -616,13 +547,10 @@
     .locals 0
 
     .prologue
-    .line 4841
     invoke-super {p0}, Landroid/widget/Editor$HandleView;->onDetached()V
 
-    .line 4842
     invoke-direct {p0}, Landroid/widget/Editor$InsertionHandleView;->removeHiderCallback()V
 
-    .line 4843
     return-void
 .end method
 
@@ -630,26 +558,21 @@
     .locals 1
 
     .prologue
-    .line 4822
     invoke-virtual {p0}, Landroid/widget/Editor$InsertionHandleView;->isPopshowing()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 4823
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/widget/Editor$InsertionHandleView;->mReShowPopup:Z
 
-    .line 4825
     :cond_0
     invoke-super {p0}, Landroid/widget/Editor$HandleView;->onHandleMoved()V
 
-    .line 4826
     invoke-direct {p0}, Landroid/widget/Editor$InsertionHandleView;->removeHiderCallback()V
 
-    .line 4827
     return-void
 .end method
 
@@ -659,10 +582,8 @@
     .param p2, "heightMeasureSpec"    # I
 
     .prologue
-    .line 4673
     invoke-super {p0, p1, p2}, Landroid/widget/Editor$HandleView;->onMeasure(II)V
 
-    .line 4675
     invoke-virtual {p0}, Landroid/widget/Editor$InsertionHandleView;->getMeasuredWidth()I
 
     move-result v0
@@ -673,7 +594,6 @@
 
     invoke-virtual {p0, v0}, Landroid/widget/Editor$InsertionHandleView;->setPivotX(F)V
 
-    .line 4676
     invoke-virtual {p0}, Landroid/widget/Editor$InsertionHandleView;->getMeasuredHeight()I
 
     move-result v0
@@ -688,7 +608,6 @@
 
     invoke-virtual {p0, v0}, Landroid/widget/Editor$InsertionHandleView;->setPivotY(F)V
 
-    .line 4677
     return-void
 .end method
 
@@ -699,12 +618,10 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 4739
     invoke-super {p0, p1}, Landroid/widget/Editor$HandleView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v3
 
-    .line 4741
     .local v3, "result":Z
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
@@ -712,12 +629,10 @@
 
     packed-switch v6, :pswitch_data_0
 
-    .line 4786
     :goto_0
     :pswitch_0
     return v3
 
-    .line 4743
     :pswitch_1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
 
@@ -725,7 +640,6 @@
 
     iput v6, p0, Landroid/widget/Editor$InsertionHandleView;->mDownPositionX:F
 
-    .line 4744
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawY()F
 
     move-result v6
@@ -734,7 +648,6 @@
 
     goto :goto_0
 
-    .line 4748
     :pswitch_2
     invoke-virtual {p0}, Landroid/widget/Editor$InsertionHandleView;->offsetHasBeenChanged()Z
 
@@ -742,7 +655,6 @@
 
     if-nez v6, :cond_2
 
-    .line 4749
     iget v6, p0, Landroid/widget/Editor$InsertionHandleView;->mDownPositionX:F
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
@@ -751,7 +663,6 @@
 
     sub-float v0, v6, v7
 
-    .line 4750
     .local v0, "deltaX":F
     iget v6, p0, Landroid/widget/Editor$InsertionHandleView;->mDownPositionY:F
 
@@ -761,7 +672,6 @@
 
     sub-float v1, v6, v7
 
-    .line 4751
     .local v1, "deltaY":F
     mul-float v6, v0, v0
 
@@ -769,7 +679,6 @@
 
     add-float v2, v6, v7
 
-    .line 4753
     .local v2, "distanceSquared":F
     iget-object v6, p0, Landroid/widget/Editor$InsertionHandleView;->this$0:Landroid/widget/Editor;
 
@@ -786,13 +695,11 @@
 
     move-result-object v5
 
-    .line 4755
     .local v5, "viewConfiguration":Landroid/view/ViewConfiguration;
     invoke-virtual {v5}, Landroid/view/ViewConfiguration;->getScaledTouchSlop()I
 
     move-result v4
 
-    .line 4757
     .local v4, "touchSlop":I
     mul-int v6, v4, v4
 
@@ -802,7 +709,6 @@
 
     if-gez v6, :cond_0
 
-    .line 4758
     iget-object v6, p0, Landroid/widget/Editor$InsertionHandleView;->mActionPopupWindow:Landroid/widget/Editor$ActionPopupWindow;
 
     if-eqz v6, :cond_1
@@ -815,13 +721,10 @@
 
     if-eqz v6, :cond_1
 
-    .line 4760
     iput-boolean v8, p0, Landroid/widget/Editor$InsertionHandleView;->mReShowPopup:Z
 
-    .line 4761
     invoke-virtual {p0}, Landroid/widget/Editor$InsertionHandleView;->hideActionPopupWindow()V
 
-    .line 4777
     .end local v0    # "deltaX":F
     .end local v1    # "deltaY":F
     .end local v2    # "distanceSquared":F
@@ -833,7 +736,6 @@
 
     goto :goto_0
 
-    .line 4763
     .restart local v0    # "deltaX":F
     .restart local v1    # "deltaY":F
     .restart local v2    # "distanceSquared":F
@@ -844,7 +746,6 @@
 
     goto :goto_1
 
-    .line 4767
     .end local v0    # "deltaX":F
     .end local v1    # "deltaY":F
     .end local v2    # "distanceSquared":F
@@ -855,13 +756,10 @@
 
     if-eqz v6, :cond_3
 
-    .line 4768
     invoke-virtual {p0, v8}, Landroid/widget/Editor$InsertionHandleView;->showActionPopupWindow(I)V
 
-    .line 4769
     iput-boolean v8, p0, Landroid/widget/Editor$InsertionHandleView;->mReShowPopup:Z
 
-    .line 4772
     :cond_3
     iget-object v6, p0, Landroid/widget/Editor$InsertionHandleView;->this$0:Landroid/widget/Editor;
 
@@ -871,7 +769,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 4773
     iget-object v6, p0, Landroid/widget/Editor$InsertionHandleView;->this$0:Landroid/widget/Editor;
 
     invoke-virtual {v6}, Landroid/widget/Editor;->getSelectionController()Landroid/widget/Editor$SelectionModifierCursorController;
@@ -884,7 +781,6 @@
 
     invoke-virtual {v6, v7}, Landroid/widget/Editor$SelectionModifierCursorController;->setMinTouchOffset(I)V
 
-    .line 4774
     iget-object v6, p0, Landroid/widget/Editor$InsertionHandleView;->this$0:Landroid/widget/Editor;
 
     invoke-virtual {v6}, Landroid/widget/Editor;->getSelectionController()Landroid/widget/Editor$SelectionModifierCursorController;
@@ -899,13 +795,11 @@
 
     goto :goto_1
 
-    .line 4780
     :pswitch_3
     invoke-direct {p0}, Landroid/widget/Editor$InsertionHandleView;->hideAfterDelay()V
 
     goto/16 :goto_0
 
-    .line 4741
     nop
 
     :pswitch_data_0
@@ -922,7 +816,6 @@
     .param p1, "y"    # I
 
     .prologue
-    .line 4875
     return-void
 .end method
 
@@ -930,13 +823,10 @@
     .locals 0
 
     .prologue
-    .line 4681
     invoke-super {p0}, Landroid/widget/Editor$HandleView;->show()V
 
-    .line 4683
     invoke-direct {p0}, Landroid/widget/Editor$InsertionHandleView;->hideAfterDelay()V
 
-    .line 4684
     return-void
 .end method
 
@@ -944,15 +834,12 @@
     .locals 1
 
     .prologue
-    .line 4693
     invoke-virtual {p0}, Landroid/widget/Editor$InsertionHandleView;->show()V
 
-    .line 4694
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Landroid/widget/Editor$InsertionHandleView;->showActionPopupWindow(I)V
 
-    .line 4695
     return-void
 .end method
 
@@ -962,7 +849,6 @@
     .param p2, "y"    # F
 
     .prologue
-    .line 4801
     iget v3, p0, Landroid/widget/Editor$InsertionHandleView;->mHorizontalScale:F
 
     const/high16 v4, 0x3f800000    # 1.0f
@@ -971,12 +857,10 @@
 
     if-eqz v3, :cond_0
 
-    .line 4802
     iget v3, p0, Landroid/widget/Editor$InsertionHandleView;->mHorizontalScale:F
 
     div-float/2addr p1, v3
 
-    .line 4805
     :cond_0
     iget-object v3, p0, Landroid/widget/Editor$InsertionHandleView;->this$0:Landroid/widget/Editor;
 
@@ -989,18 +873,15 @@
 
     move-result-object v1
 
-    .line 4807
     .local v1, "layout":Landroid/text/Layout;
     if-eqz v1, :cond_2
 
-    .line 4808
     iget v3, p0, Landroid/widget/Editor$InsertionHandleView;->mPreviousLineTouched:I
 
     const/4 v4, -0x1
 
     if-ne v3, v4, :cond_1
 
-    .line 4809
     iget-object v3, p0, Landroid/widget/Editor$InsertionHandleView;->this$0:Landroid/widget/Editor;
 
     # getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
@@ -1014,7 +895,6 @@
 
     iput v3, p0, Landroid/widget/Editor$InsertionHandleView;->mPreviousLineTouched:I
 
-    .line 4811
     :cond_1
     iget-object v3, p0, Landroid/widget/Editor$InsertionHandleView;->this$0:Landroid/widget/Editor;
 
@@ -1025,7 +905,6 @@
 
     move-result v0
 
-    .line 4812
     .local v0, "currLine":I
     iget-object v3, p0, Landroid/widget/Editor$InsertionHandleView;->this$0:Landroid/widget/Editor;
 
@@ -1038,21 +917,17 @@
 
     move-result v2
 
-    .line 4813
     .local v2, "offset":I
     iput v0, p0, Landroid/widget/Editor$InsertionHandleView;->mPreviousLineTouched:I
 
-    .line 4817
     .end local v0    # "currLine":I
     :goto_0
     const/4 v3, 0x0
 
     invoke-virtual {p0, v2, v3}, Landroid/widget/Editor$InsertionHandleView;->positionAtCursorOffset(IZ)V
 
-    .line 4818
     return-void
 
-    .line 4815
     .end local v2    # "offset":I
     :cond_2
     iget-object v3, p0, Landroid/widget/Editor$InsertionHandleView;->this$0:Landroid/widget/Editor;
@@ -1075,7 +950,6 @@
     .param p1, "offset"    # I
 
     .prologue
-    .line 4796
     iget-object v0, p0, Landroid/widget/Editor$InsertionHandleView;->this$0:Landroid/widget/Editor;
 
     # getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
@@ -1091,6 +965,5 @@
 
     invoke-static {v0, p1}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;I)V
 
-    .line 4797
     return-void
 .end method

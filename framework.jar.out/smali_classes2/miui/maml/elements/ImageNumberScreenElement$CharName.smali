@@ -29,17 +29,13 @@
     .param p3, "n"    # Ljava/lang/String;
 
     .prologue
-    .line 50
     iput-object p1, p0, Lmiui/maml/elements/ImageNumberScreenElement$CharName;->this$0:Lmiui/maml/elements/ImageNumberScreenElement;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 51
     iput-char p2, p0, Lmiui/maml/elements/ImageNumberScreenElement$CharName;->ch:C
 
-    .line 52
     iput-object p3, p0, Lmiui/maml/elements/ImageNumberScreenElement$CharName;->name:Ljava/lang/String;
 
-    .line 53
     return-void
 .end method

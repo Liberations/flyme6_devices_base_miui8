@@ -17,7 +17,6 @@
     .locals 0
 
     .prologue
-    .line 34
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
     return-void
@@ -29,10 +28,8 @@
     .locals 0
 
     .prologue
-    .line 57
     invoke-virtual {p0}, Lcom/android/internal/app/AlertActivity;->finish()V
 
-    .line 58
     return-void
 .end method
 
@@ -40,17 +37,14 @@
     .locals 1
 
     .prologue
-    .line 63
     invoke-virtual {p0}, Lcom/android/internal/app/AlertActivity;->isFinishing()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 64
     invoke-virtual {p0}, Lcom/android/internal/app/AlertActivity;->finish()V
 
-    .line 66
     :cond_0
     return-void
 .end method
@@ -64,7 +58,6 @@
 
     const/4 v4, -0x1
 
-    .line 70
     const-class v3, Landroid/app/Dialog;
 
     invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -73,14 +66,12 @@
 
     invoke-virtual {p1, v3}, Landroid/view/accessibility/AccessibilityEvent;->setClassName(Ljava/lang/CharSequence;)V
 
-    .line 71
     invoke-virtual {p0}, Lcom/android/internal/app/AlertActivity;->getPackageName()Ljava/lang/String;
 
     move-result-object v3
 
     invoke-virtual {p1, v3}, Landroid/view/accessibility/AccessibilityEvent;->setPackageName(Ljava/lang/CharSequence;)V
 
-    .line 73
     invoke-virtual {p0}, Lcom/android/internal/app/AlertActivity;->getWindow()Landroid/view/Window;
 
     move-result-object v3
@@ -89,7 +80,6 @@
 
     move-result-object v1
 
-    .line 74
     .local v1, "params":Landroid/view/ViewGroup$LayoutParams;
     iget v3, v1, Landroid/view/ViewGroup$LayoutParams;->width:I
 
@@ -101,19 +91,16 @@
 
     const/4 v0, 0x1
 
-    .line 76
     .local v0, "isFullScreen":Z
     :goto_0
     invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityEvent;->setFullScreen(Z)V
 
-    .line 78
     return v2
 
     .end local v0    # "isFullScreen":Z
     :cond_0
     move v0, v2
 
-    .line 74
     goto :goto_0
 .end method
 
@@ -122,10 +109,8 @@
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 50
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 52
     new-instance v0, Lcom/android/internal/app/AlertController;
 
     invoke-virtual {p0}, Lcom/android/internal/app/AlertActivity;->getWindow()Landroid/view/Window;
@@ -136,14 +121,12 @@
 
     iput-object v0, p0, Lcom/android/internal/app/AlertActivity;->mAlert:Lcom/android/internal/app/AlertController;
 
-    .line 53
     new-instance v0, Lcom/android/internal/app/AlertController$AlertParams;
 
     invoke-direct {v0, p0}, Lcom/android/internal/app/AlertController$AlertParams;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/android/internal/app/AlertActivity;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
 
-    .line 54
     return-void
 .end method
 
@@ -153,7 +136,6 @@
     .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 95
     iget-object v0, p0, Lcom/android/internal/app/AlertActivity;->mAlert:Lcom/android/internal/app/AlertController;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/internal/app/AlertController;->onKeyDown(ILandroid/view/KeyEvent;)Z
@@ -164,7 +146,6 @@
 
     const/4 v0, 0x1
 
-    .line 96
     :goto_0
     return v0
 
@@ -182,7 +163,6 @@
     .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 101
     iget-object v0, p0, Lcom/android/internal/app/AlertActivity;->mAlert:Lcom/android/internal/app/AlertController;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/internal/app/AlertController;->onKeyUp(ILandroid/view/KeyEvent;)Z
@@ -193,7 +173,6 @@
 
     const/4 v0, 0x1
 
-    .line 102
     :goto_0
     return v0
 

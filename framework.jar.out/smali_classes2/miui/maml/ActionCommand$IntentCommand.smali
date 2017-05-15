@@ -49,15 +49,12 @@
     .param p2, "ele"    # Lorg/w3c/dom/Element;
 
     .prologue
-    .line 897
     invoke-direct {p0, p1}, Lmiui/maml/ActionCommand;-><init>(Lmiui/maml/elements/ScreenElement;)V
 
-    .line 884
     sget-object v5, Lmiui/maml/ActionCommand$IntentCommand$IntentType;->Activity:Lmiui/maml/ActionCommand$IntentCommand$IntentType;
 
     iput-object v5, p0, Lmiui/maml/ActionCommand$IntentCommand;->mIntentType:Lmiui/maml/ActionCommand$IntentCommand$IntentType;
 
-    .line 898
     new-instance v5, Lmiui/maml/util/IntentInfo;
 
     invoke-virtual {p0}, Lmiui/maml/ActionCommand$IntentCommand;->getVariables()Lmiui/maml/data/Variables;
@@ -68,7 +65,6 @@
 
     iput-object v5, p0, Lmiui/maml/ActionCommand$IntentCommand;->mIntentInfo:Lmiui/maml/util/IntentInfo;
 
-    .line 899
     const-string v5, "broadcast"
 
     invoke-interface {p2, v5}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -79,7 +75,6 @@
 
     move-result v2
 
-    .line 900
     .local v2, "isBroadcast":Z
     const-string v5, "type"
 
@@ -87,7 +82,6 @@
 
     move-result-object v1
 
-    .line 901
     .local v1, "intentType":Ljava/lang/String;
     if-nez v2, :cond_0
 
@@ -99,13 +93,11 @@
 
     if-eqz v5, :cond_3
 
-    .line 902
     :cond_0
     sget-object v5, Lmiui/maml/ActionCommand$IntentCommand$IntentType;->Broadcast:Lmiui/maml/ActionCommand$IntentCommand$IntentType;
 
     iput-object v5, p0, Lmiui/maml/ActionCommand$IntentCommand;->mIntentType:Lmiui/maml/ActionCommand$IntentCommand$IntentType;
 
-    .line 914
     :cond_1
     :goto_0
     const-string v5, "flags"
@@ -118,14 +110,12 @@
 
     iput v5, p0, Lmiui/maml/ActionCommand$IntentCommand;->mFlags:I
 
-    .line 916
     const-string v5, "activityOption"
 
     invoke-interface {p2, v5}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 917
     .local v0, "ao":Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -138,29 +128,24 @@
     :goto_1
     iput-object v5, p0, Lmiui/maml/ActionCommand$IntentCommand;->mActivityOptionsBundle:Lmiui/maml/ActionCommand$ObjVar;
 
-    .line 920
     const-string v5, "Fallback"
 
     invoke-static {p2, v5}, Lmiui/maml/util/Utils;->getChild(Lorg/w3c/dom/Element;Ljava/lang/String;)Lorg/w3c/dom/Element;
 
     move-result-object v4
 
-    .line 921
     .local v4, "node":Lorg/w3c/dom/Element;
     if-eqz v4, :cond_2
 
-    .line 922
     new-instance v5, Lmiui/maml/CommandTrigger;
 
     invoke-direct {v5, v4, p1}, Lmiui/maml/CommandTrigger;-><init>(Lorg/w3c/dom/Element;Lmiui/maml/elements/ScreenElement;)V
 
     iput-object v5, p0, Lmiui/maml/ActionCommand$IntentCommand;->mFallbackTrigger:Lmiui/maml/CommandTrigger;
 
-    .line 924
     :cond_2
     return-void
 
-    .line 903
     .end local v0    # "ao":Ljava/lang/String;
     .end local v4    # "node":Lorg/w3c/dom/Element;
     :cond_3
@@ -172,14 +157,12 @@
 
     if-eqz v5, :cond_4
 
-    .line 904
     sget-object v5, Lmiui/maml/ActionCommand$IntentCommand$IntentType;->Service:Lmiui/maml/ActionCommand$IntentCommand$IntentType;
 
     iput-object v5, p0, Lmiui/maml/ActionCommand$IntentCommand;->mIntentType:Lmiui/maml/ActionCommand$IntentCommand$IntentType;
 
     goto :goto_0
 
-    .line 905
     :cond_4
     const-string v5, "activity"
 
@@ -189,16 +172,14 @@
 
     if-eqz v5, :cond_5
 
-    .line 906
     sget-object v5, Lmiui/maml/ActionCommand$IntentCommand$IntentType;->Activity:Lmiui/maml/ActionCommand$IntentCommand$IntentType;
 
     iput-object v5, p0, Lmiui/maml/ActionCommand$IntentCommand;->mIntentType:Lmiui/maml/ActionCommand$IntentCommand$IntentType;
 
     goto :goto_0
 
-    .line 907
     :cond_5
-    const-string/jumbo v5, "var"
+    const-string v5, "var"
 
     invoke-virtual {v5, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -206,19 +187,16 @@
 
     if-eqz v5, :cond_1
 
-    .line 908
     sget-object v5, Lmiui/maml/ActionCommand$IntentCommand$IntentType;->Var:Lmiui/maml/ActionCommand$IntentCommand$IntentType;
 
     iput-object v5, p0, Lmiui/maml/ActionCommand$IntentCommand;->mIntentType:Lmiui/maml/ActionCommand$IntentCommand$IntentType;
 
-    .line 909
     const-string v5, "intentVar"
 
     invoke-interface {p2, v5}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 910
     .local v3, "name":Ljava/lang/String;
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -226,7 +204,6 @@
 
     if-nez v5, :cond_1
 
-    .line 911
     new-instance v5, Lmiui/maml/data/IndexedVariable;
 
     invoke-virtual {p0}, Lmiui/maml/ActionCommand$IntentCommand;->getVariables()Lmiui/maml/data/Variables;
@@ -241,7 +218,6 @@
 
     goto :goto_0
 
-    .line 917
     .end local v3    # "name":Ljava/lang/String;
     .restart local v0    # "ao":Ljava/lang/String;
     :cond_6
@@ -262,19 +238,16 @@
     .locals 4
 
     .prologue
-    .line 975
     iget-object v2, p0, Lmiui/maml/ActionCommand$IntentCommand;->mIntent:Landroid/content/Intent;
 
     if-eqz v2, :cond_0
 
-    .line 976
     iget-object v2, p0, Lmiui/maml/ActionCommand$IntentCommand;->mIntentInfo:Lmiui/maml/util/IntentInfo;
 
     iget-object v3, p0, Lmiui/maml/ActionCommand$IntentCommand;->mIntent:Landroid/content/Intent;
 
     invoke-virtual {v2, v3}, Lmiui/maml/util/IntentInfo;->update(Landroid/content/Intent;)V
 
-    .line 978
     :try_start_0
     sget-object v2, Lmiui/maml/ActionCommand$1;->$SwitchMap$miui$maml$ActionCommand$IntentCommand$IntentType:[I
 
@@ -288,12 +261,10 @@
 
     packed-switch v2, :pswitch_data_0
 
-    .line 1005
     :cond_0
     :goto_0
     return-void
 
-    .line 980
     :pswitch_0
     iget-object v2, p0, Lmiui/maml/ActionCommand$IntentCommand;->mActivityOptionsBundle:Lmiui/maml/ActionCommand$ObjVar;
 
@@ -309,7 +280,6 @@
 
     move-object v0, v2
 
-    .line 981
     .local v0, "bd":Landroid/os/Bundle;
     :goto_1
     invoke-virtual {p0}, Lmiui/maml/ActionCommand$IntentCommand;->getContext()Landroid/content/Context;
@@ -324,39 +294,33 @@
 
     goto :goto_0
 
-    .line 996
     .end local v0    # "bd":Landroid/os/Bundle;
     :catch_0
     move-exception v1
 
-    .line 997
     .local v1, "e":Ljava/lang/Exception;
     iget-object v2, p0, Lmiui/maml/ActionCommand$IntentCommand;->mFallbackTrigger:Lmiui/maml/CommandTrigger;
 
     if-eqz v2, :cond_2
 
-    .line 998
     const-string v2, "ActionCommand"
 
     const-string v3, "fail to send Intent, fallback..."
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 999
     iget-object v2, p0, Lmiui/maml/ActionCommand$IntentCommand;->mFallbackTrigger:Lmiui/maml/CommandTrigger;
 
     invoke-virtual {v2}, Lmiui/maml/CommandTrigger;->perform()V
 
     goto :goto_0
 
-    .line 980
     .end local v1    # "e":Ljava/lang/Exception;
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_1
 
-    .line 985
     :pswitch_1
     :try_start_1
     invoke-virtual {p0}, Lmiui/maml/ActionCommand$IntentCommand;->getContext()Landroid/content/Context;
@@ -369,7 +333,6 @@
 
     goto :goto_0
 
-    .line 988
     :pswitch_2
     invoke-virtual {p0}, Lmiui/maml/ActionCommand$IntentCommand;->getContext()Landroid/content/Context;
 
@@ -381,13 +344,11 @@
 
     goto :goto_0
 
-    .line 991
     :pswitch_3
     iget-object v2, p0, Lmiui/maml/ActionCommand$IntentCommand;->mIntentVar:Lmiui/maml/data/IndexedVariable;
 
     if-eqz v2, :cond_0
 
-    .line 992
     iget-object v2, p0, Lmiui/maml/ActionCommand$IntentCommand;->mIntentVar:Lmiui/maml/data/IndexedVariable;
 
     iget-object v3, p0, Lmiui/maml/ActionCommand$IntentCommand;->mIntent:Landroid/content/Intent;
@@ -398,7 +359,6 @@
 
     goto :goto_0
 
-    .line 1001
     .restart local v1    # "e":Ljava/lang/Exception;
     :cond_2
     const-string v2, "ActionCommand"
@@ -411,7 +371,6 @@
 
     goto :goto_0
 
-    .line 978
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -425,17 +384,14 @@
     .locals 1
 
     .prologue
-    .line 954
     iget-object v0, p0, Lmiui/maml/ActionCommand$IntentCommand;->mFallbackTrigger:Lmiui/maml/CommandTrigger;
 
     if-eqz v0, :cond_0
 
-    .line 955
     iget-object v0, p0, Lmiui/maml/ActionCommand$IntentCommand;->mFallbackTrigger:Lmiui/maml/CommandTrigger;
 
     invoke-virtual {v0}, Lmiui/maml/CommandTrigger;->finish()V
 
-    .line 957
     :cond_0
     return-void
 .end method
@@ -444,7 +400,6 @@
     .locals 3
 
     .prologue
-    .line 928
     invoke-virtual {p0}, Lmiui/maml/ActionCommand$IntentCommand;->getRoot()Lmiui/maml/ScreenElementRoot;
 
     move-result-object v1
@@ -459,7 +414,6 @@
 
     move-result-object v0
 
-    .line 930
     .local v0, "configTask":Lmiui/maml/util/Task;
     if-eqz v0, :cond_0
 
@@ -471,12 +425,10 @@
 
     if-nez v1, :cond_0
 
-    .line 931
     iget-object v1, p0, Lmiui/maml/ActionCommand$IntentCommand;->mIntentInfo:Lmiui/maml/util/IntentInfo;
 
     invoke-virtual {v1, v0}, Lmiui/maml/util/IntentInfo;->set(Lmiui/maml/util/Task;)V
 
-    .line 934
     :cond_0
     iget-object v1, p0, Lmiui/maml/ActionCommand$IntentCommand;->mIntentInfo:Lmiui/maml/util/IntentInfo;
 
@@ -490,12 +442,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 950
     :cond_1
     :goto_0
     return-void
 
-    .line 938
     :cond_2
     new-instance v1, Landroid/content/Intent;
 
@@ -503,42 +453,36 @@
 
     iput-object v1, p0, Lmiui/maml/ActionCommand$IntentCommand;->mIntent:Landroid/content/Intent;
 
-    .line 939
     iget-object v1, p0, Lmiui/maml/ActionCommand$IntentCommand;->mIntentInfo:Lmiui/maml/util/IntentInfo;
 
     iget-object v2, p0, Lmiui/maml/ActionCommand$IntentCommand;->mIntent:Landroid/content/Intent;
 
     invoke-virtual {v1, v2}, Lmiui/maml/util/IntentInfo;->update(Landroid/content/Intent;)V
 
-    .line 941
     iget v1, p0, Lmiui/maml/ActionCommand$IntentCommand;->mFlags:I
 
     const/4 v2, -0x1
 
     if-eq v1, v2, :cond_4
 
-    .line 942
     iget-object v1, p0, Lmiui/maml/ActionCommand$IntentCommand;->mIntent:Landroid/content/Intent;
 
     iget v2, p0, Lmiui/maml/ActionCommand$IntentCommand;->mFlags:I
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 947
     :cond_3
     :goto_1
     iget-object v1, p0, Lmiui/maml/ActionCommand$IntentCommand;->mFallbackTrigger:Lmiui/maml/CommandTrigger;
 
     if-eqz v1, :cond_1
 
-    .line 948
     iget-object v1, p0, Lmiui/maml/ActionCommand$IntentCommand;->mFallbackTrigger:Lmiui/maml/CommandTrigger;
 
     invoke-virtual {v1}, Lmiui/maml/CommandTrigger;->init()V
 
     goto :goto_0
 
-    .line 943
     :cond_4
     iget-object v1, p0, Lmiui/maml/ActionCommand$IntentCommand;->mIntentType:Lmiui/maml/ActionCommand$IntentCommand$IntentType;
 
@@ -546,7 +490,6 @@
 
     if-ne v1, v2, :cond_3
 
-    .line 944
     iget-object v1, p0, Lmiui/maml/ActionCommand$IntentCommand;->mIntent:Landroid/content/Intent;
 
     const/high16 v2, 0x34000000
@@ -560,17 +503,14 @@
     .locals 1
 
     .prologue
-    .line 961
     iget-object v0, p0, Lmiui/maml/ActionCommand$IntentCommand;->mFallbackTrigger:Lmiui/maml/CommandTrigger;
 
     if-eqz v0, :cond_0
 
-    .line 962
     iget-object v0, p0, Lmiui/maml/ActionCommand$IntentCommand;->mFallbackTrigger:Lmiui/maml/CommandTrigger;
 
     invoke-virtual {v0}, Lmiui/maml/CommandTrigger;->pause()V
 
-    .line 964
     :cond_0
     return-void
 .end method
@@ -579,17 +519,14 @@
     .locals 1
 
     .prologue
-    .line 968
     iget-object v0, p0, Lmiui/maml/ActionCommand$IntentCommand;->mFallbackTrigger:Lmiui/maml/CommandTrigger;
 
     if-eqz v0, :cond_0
 
-    .line 969
     iget-object v0, p0, Lmiui/maml/ActionCommand$IntentCommand;->mFallbackTrigger:Lmiui/maml/CommandTrigger;
 
     invoke-virtual {v0}, Lmiui/maml/CommandTrigger;->resume()V
 
-    .line 971
     :cond_0
     return-void
 .end method

@@ -40,10 +40,8 @@
     .locals 0
 
     .prologue
-    .line 94
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1314
     return-void
 .end method
 
@@ -68,7 +66,6 @@
     .locals 1
 
     .prologue
-    .line 1066
     const/4 v0, 0x0
 
     return v0
@@ -79,7 +76,6 @@
     .param p1, "visible"    # Z
 
     .prologue
-    .line 1037
     return-void
 .end method
 
@@ -93,7 +89,6 @@
     .locals 1
 
     .prologue
-    .line 1020
     const/4 v0, 0x0
 
     return v0
@@ -106,7 +101,6 @@
     .locals 1
 
     .prologue
-    .line 977
     const/4 v0, 0x0
 
     return v0
@@ -137,7 +131,6 @@
     .locals 1
 
     .prologue
-    .line 845
     const/4 v0, 0x0
 
     return-object v0
@@ -153,7 +146,6 @@
     .locals 1
 
     .prologue
-    .line 1051
     const/4 v0, 0x0
 
     return v0
@@ -163,7 +155,6 @@
     .locals 1
 
     .prologue
-    .line 964
     const/4 v0, 0x0
 
     return v0
@@ -176,7 +167,6 @@
     .locals 1
 
     .prologue
-    .line 854
     const/4 v0, 0x0
 
     return v0
@@ -190,7 +180,6 @@
     .param p1, "config"    # Landroid/content/res/Configuration;
 
     .prologue
-    .line 1033
     return-void
 .end method
 
@@ -200,7 +189,6 @@
     .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 1061
     const/4 v0, 0x0
 
     return v0
@@ -211,7 +199,6 @@
     .param p1, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 1056
     const/4 v0, 0x0
 
     return v0
@@ -221,7 +208,6 @@
     .locals 1
 
     .prologue
-    .line 1046
     const/4 v0, 0x0
 
     return v0
@@ -259,7 +245,6 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 1025
     return-void
 .end method
 
@@ -289,14 +274,12 @@
     .param p1, "elevation"    # F
 
     .prologue
-    .line 1005
     const/4 v0, 0x0
 
     cmpl-float v0, p1, v0
 
     if-eqz v0, :cond_0
 
-    .line 1006
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "Setting a non-zero elevation is not supported in this action bar configuration."
@@ -305,7 +288,6 @@
 
     throw v0
 
-    .line 1009
     :cond_0
     return-void
 .end method
@@ -315,10 +297,8 @@
     .param p1, "offset"    # I
 
     .prologue
-    .line 990
     if-eqz p1, :cond_0
 
-    .line 991
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "Setting an explicit action bar hide offset is not supported in this action bar configuration."
@@ -327,7 +307,6 @@
 
     throw v0
 
-    .line 994
     :cond_0
     return-void
 .end method
@@ -337,10 +316,8 @@
     .param p1, "hideOnContentScroll"    # Z
 
     .prologue
-    .line 950
     if-eqz p1, :cond_0
 
-    .line 951
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "Hide on content scroll is not supported in this action bar configuration."
@@ -349,7 +326,6 @@
 
     throw v0
 
-    .line 954
     :cond_0
     return-void
 .end method
@@ -359,7 +335,6 @@
     .param p1, "resId"    # I
 
     .prologue
-    .line 934
     return-void
 .end method
 
@@ -368,7 +343,6 @@
     .param p1, "description"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 914
     return-void
 .end method
 
@@ -377,7 +351,6 @@
     .param p1, "resId"    # I
 
     .prologue
-    .line 895
     return-void
 .end method
 
@@ -386,7 +359,6 @@
     .param p1, "indicator"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 874
     return-void
 .end method
 
@@ -395,7 +367,6 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 834
     return-void
 .end method
 
@@ -425,7 +396,6 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 1029
     return-void
 .end method
 
@@ -434,7 +404,6 @@
     .param p1, "d"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 540
     return-void
 .end method
 
@@ -443,7 +412,6 @@
     .param p1, "d"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 530
     return-void
 .end method
 
@@ -464,7 +432,6 @@
     .param p1, "title"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 1071
     return-void
 .end method
 
@@ -476,7 +443,6 @@
     .param p1, "callback"    # Landroid/view/ActionMode$Callback;
 
     .prologue
-    .line 1041
     const/4 v0, 0x0
 
     return-object v0

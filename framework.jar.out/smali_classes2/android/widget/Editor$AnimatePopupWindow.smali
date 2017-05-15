@@ -30,28 +30,22 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 2975
     iput-object p1, p0, Landroid/widget/Editor$AnimatePopupWindow;->this$0:Landroid/widget/Editor;
 
-    .line 2976
     const/4 v0, 0x0
 
     invoke-direct {p0, p2, v0, v1}, Landroid/widget/PopupWindow;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 2973
     iput-boolean v1, p0, Landroid/widget/Editor$AnimatePopupWindow;->mDismissing:Z
 
-    .line 2977
     iget-object v0, p0, Landroid/widget/Editor$AnimatePopupWindow;->mFader:Landroid/widget/Editor$Fader;
 
     if-nez v0, :cond_0
 
-    .line 2978
     const v0, 0x110c0004
 
     invoke-virtual {p0, v0}, Landroid/widget/Editor$AnimatePopupWindow;->setAnimationStyle(I)V
 
-    .line 2980
     :cond_0
     return-void
 .end method
@@ -63,18 +57,14 @@
     .param p4, "defStyle"    # I
 
     .prologue
-    .line 2982
     iput-object p1, p0, Landroid/widget/Editor$AnimatePopupWindow;->this$0:Landroid/widget/Editor;
 
-    .line 2983
     invoke-direct {p0, p2, p3, p4}, Landroid/widget/PopupWindow;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 2973
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/widget/Editor$AnimatePopupWindow;->mDismissing:Z
 
-    .line 2984
     return-void
 .end method
 
@@ -85,7 +75,6 @@
     .param p3, "x2"    # Landroid/widget/Editor$1;
 
     .prologue
-    .line 2969
     invoke-direct {p0, p1, p2}, Landroid/widget/Editor$AnimatePopupWindow;-><init>(Landroid/widget/Editor;Landroid/content/Context;)V
 
     return-void
@@ -98,29 +87,24 @@
     .param p1, "animation"    # Z
 
     .prologue
-    .line 3012
     if-eqz p1, :cond_0
 
     iget-boolean v0, p0, Landroid/widget/Editor$AnimatePopupWindow;->mDismissing:Z
 
     if-eqz v0, :cond_0
 
-    .line 3027
     :goto_0
     return-void
 
-    .line 3016
     :cond_0
     iget-object v0, p0, Landroid/widget/Editor$AnimatePopupWindow;->mFader:Landroid/widget/Editor$Fader;
 
     if-eqz v0, :cond_1
 
-    .line 3017
     iget-object v0, p0, Landroid/widget/Editor$AnimatePopupWindow;->mFader:Landroid/widget/Editor$Fader;
 
     invoke-interface {v0}, Landroid/widget/Editor$Fader;->cancelAnimations()V
 
-    .line 3020
     :cond_1
     if-eqz p1, :cond_2
 
@@ -128,25 +112,21 @@
 
     if-eqz v0, :cond_2
 
-    .line 3021
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/widget/Editor$AnimatePopupWindow;->mDismissing:Z
 
-    .line 3022
     iget-object v0, p0, Landroid/widget/Editor$AnimatePopupWindow;->mFader:Landroid/widget/Editor$Fader;
 
     invoke-interface {v0}, Landroid/widget/Editor$Fader;->fadeOut()V
 
     goto :goto_0
 
-    .line 3024
     :cond_2
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/widget/Editor$AnimatePopupWindow;->mDismissing:Z
 
-    .line 3025
     invoke-virtual {p0}, Landroid/widget/Editor$AnimatePopupWindow;->dismiss()V
 
     goto :goto_0
@@ -156,7 +136,6 @@
     .locals 1
 
     .prologue
-    .line 3030
     iget-boolean v0, p0, Landroid/widget/Editor$AnimatePopupWindow;->mDismissing:Z
 
     return v0
@@ -167,10 +146,8 @@
     .param p1, "fader"    # Landroid/widget/Editor$Fader;
 
     .prologue
-    .line 3034
     iput-object p1, p0, Landroid/widget/Editor$AnimatePopupWindow;->mFader:Landroid/widget/Editor$Fader;
 
-    .line 3035
     return-void
 .end method
 
@@ -182,36 +159,29 @@
     .param p4, "y"    # I
 
     .prologue
-    .line 2988
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/widget/Editor$AnimatePopupWindow;->mDismissing:Z
 
-    .line 2990
     iget-object v0, p0, Landroid/widget/Editor$AnimatePopupWindow;->mFader:Landroid/widget/Editor$Fader;
 
     if-eqz v0, :cond_0
 
-    .line 2991
     iget-object v0, p0, Landroid/widget/Editor$AnimatePopupWindow;->mFader:Landroid/widget/Editor$Fader;
 
     invoke-interface {v0}, Landroid/widget/Editor$Fader;->cancelAnimations()V
 
-    .line 2994
     :cond_0
     invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/PopupWindow;->showAtLocation(Landroid/view/View;III)V
 
-    .line 2996
     iget-object v0, p0, Landroid/widget/Editor$AnimatePopupWindow;->mFader:Landroid/widget/Editor$Fader;
 
     if-eqz v0, :cond_1
 
-    .line 2997
     iget-object v0, p0, Landroid/widget/Editor$AnimatePopupWindow;->mFader:Landroid/widget/Editor$Fader;
 
     invoke-interface {v0, p3, p4}, Landroid/widget/Editor$Fader;->fadeIn(II)V
 
-    .line 2999
     :cond_1
     return-void
 .end method
@@ -224,25 +194,20 @@
     .param p4, "height"    # I
 
     .prologue
-    .line 3003
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/widget/Editor$AnimatePopupWindow;->mDismissing:Z
 
-    .line 3005
     invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/PopupWindow;->update(IIII)V
 
-    .line 3006
     iget-object v0, p0, Landroid/widget/Editor$AnimatePopupWindow;->mFader:Landroid/widget/Editor$Fader;
 
     if-eqz v0, :cond_0
 
-    .line 3007
     iget-object v0, p0, Landroid/widget/Editor$AnimatePopupWindow;->mFader:Landroid/widget/Editor$Fader;
 
     invoke-interface {v0, p2}, Landroid/widget/Editor$Fader;->setY(I)V
 
-    .line 3009
     :cond_0
     return-void
 .end method

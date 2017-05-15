@@ -36,20 +36,16 @@
     .param p2, "node"    # Lorg/w3c/dom/Element;
 
     .prologue
-    .line 53
     iput-object p1, p0, Lmiui/maml/util/IntentInfo$Extra;->this$0:Lmiui/maml/util/IntentInfo;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 48
     sget-object v0, Lmiui/maml/util/IntentInfo$Type;->DOUBLE:Lmiui/maml/util/IntentInfo$Type;
 
     iput-object v0, p0, Lmiui/maml/util/IntentInfo$Extra;->mType:Lmiui/maml/util/IntentInfo$Type;
 
-    .line 54
     invoke-direct {p0, p2}, Lmiui/maml/util/IntentInfo$Extra;->load(Lorg/w3c/dom/Element;)V
 
-    .line 55
     return-void
 .end method
 
@@ -58,21 +54,17 @@
     .param p1, "node"    # Lorg/w3c/dom/Element;
 
     .prologue
-    .line 58
     if-nez p1, :cond_0
 
-    .line 59
     const-string v1, "TaskVariable"
 
     const-string v2, "node is null"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 86
     :goto_0
     return-void
 
-    .line 63
     :cond_0
     const-string v1, "name"
 
@@ -82,14 +74,12 @@
 
     iput-object v1, p0, Lmiui/maml/util/IntentInfo$Extra;->mName:Ljava/lang/String;
 
-    .line 65
     const-string v1, "type"
 
     invoke-interface {p1, v1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 66
     .local v0, "type":Ljava/lang/String;
     const-string v1, "string"
 
@@ -99,12 +89,10 @@
 
     if-eqz v1, :cond_3
 
-    .line 67
     sget-object v1, Lmiui/maml/util/IntentInfo$Type;->STRING:Lmiui/maml/util/IntentInfo$Type;
 
     iput-object v1, p0, Lmiui/maml/util/IntentInfo$Extra;->mType:Lmiui/maml/util/IntentInfo$Type;
 
-    .line 80
     :cond_1
     :goto_1
     iget-object v1, p0, Lmiui/maml/util/IntentInfo$Extra;->this$0:Lmiui/maml/util/IntentInfo;
@@ -126,19 +114,16 @@
 
     iput-object v1, p0, Lmiui/maml/util/IntentInfo$Extra;->mExpression:Lmiui/maml/data/Expression;
 
-    .line 81
     iget-object v1, p0, Lmiui/maml/util/IntentInfo$Extra;->mExpression:Lmiui/maml/data/Expression;
 
     if-nez v1, :cond_2
 
-    .line 82
     const-string v1, "TaskVariable"
 
     const-string v2, "invalid expression in IntentCommand"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 85
     :cond_2
     iget-object v1, p0, Lmiui/maml/util/IntentInfo$Extra;->this$0:Lmiui/maml/util/IntentInfo;
 
@@ -161,7 +146,6 @@
 
     goto :goto_0
 
-    .line 68
     :cond_3
     const-string v1, "int"
 
@@ -179,7 +163,6 @@
 
     if-eqz v1, :cond_5
 
-    .line 69
     :cond_4
     sget-object v1, Lmiui/maml/util/IntentInfo$Type;->INT:Lmiui/maml/util/IntentInfo$Type;
 
@@ -187,7 +170,6 @@
 
     goto :goto_1
 
-    .line 70
     :cond_5
     const-string v1, "long"
 
@@ -197,14 +179,12 @@
 
     if-eqz v1, :cond_6
 
-    .line 71
     sget-object v1, Lmiui/maml/util/IntentInfo$Type;->LONG:Lmiui/maml/util/IntentInfo$Type;
 
     iput-object v1, p0, Lmiui/maml/util/IntentInfo$Extra;->mType:Lmiui/maml/util/IntentInfo$Type;
 
     goto :goto_1
 
-    .line 72
     :cond_6
     const-string v1, "float"
 
@@ -214,14 +194,12 @@
 
     if-eqz v1, :cond_7
 
-    .line 73
     sget-object v1, Lmiui/maml/util/IntentInfo$Type;->FLOAT:Lmiui/maml/util/IntentInfo$Type;
 
     iput-object v1, p0, Lmiui/maml/util/IntentInfo$Extra;->mType:Lmiui/maml/util/IntentInfo$Type;
 
     goto :goto_1
 
-    .line 74
     :cond_7
     const-string v1, "double"
 
@@ -231,14 +209,12 @@
 
     if-eqz v1, :cond_8
 
-    .line 75
     sget-object v1, Lmiui/maml/util/IntentInfo$Type;->DOUBLE:Lmiui/maml/util/IntentInfo$Type;
 
     iput-object v1, p0, Lmiui/maml/util/IntentInfo$Extra;->mType:Lmiui/maml/util/IntentInfo$Type;
 
     goto :goto_1
 
-    .line 76
     :cond_8
     const-string v1, "boolean"
 
@@ -248,7 +224,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 77
     sget-object v1, Lmiui/maml/util/IntentInfo$Type;->BOOLEAN:Lmiui/maml/util/IntentInfo$Type;
 
     iput-object v1, p0, Lmiui/maml/util/IntentInfo$Extra;->mType:Lmiui/maml/util/IntentInfo$Type;
@@ -262,15 +237,12 @@
     .locals 2
 
     .prologue
-    .line 95
     iget-object v0, p0, Lmiui/maml/util/IntentInfo$Extra;->mExpression:Lmiui/maml/data/Expression;
 
     if-nez v0, :cond_0
 
-    .line 96
     const-wide/16 v0, 0x0
 
-    .line 97
     :goto_0
     return-wide v0
 
@@ -288,7 +260,6 @@
     .locals 1
 
     .prologue
-    .line 101
     iget-object v0, p0, Lmiui/maml/util/IntentInfo$Extra;->mName:Ljava/lang/String;
 
     return-object v0
@@ -298,15 +269,12 @@
     .locals 1
 
     .prologue
-    .line 89
     iget-object v0, p0, Lmiui/maml/util/IntentInfo$Extra;->mExpression:Lmiui/maml/data/Expression;
 
     if-nez v0, :cond_0
 
-    .line 90
     const/4 v0, 0x0
 
-    .line 91
     :goto_0
     return-object v0
 
@@ -326,12 +294,10 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 105
     iget-object v1, p0, Lmiui/maml/util/IntentInfo$Extra;->mCondition:Lmiui/maml/data/Expression;
 
     if-nez v1, :cond_1
 
-    .line 107
     :cond_0
     :goto_0
     return v0

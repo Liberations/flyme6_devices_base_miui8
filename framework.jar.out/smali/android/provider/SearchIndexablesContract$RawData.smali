@@ -39,11 +39,9 @@
     .locals 1
 
     .prologue
-    .line 171
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/provider/SearchIndexablesContract$BaseColumns;-><init>(Landroid/provider/SearchIndexablesContract$1;)V
 
-    .line 172
     return-void
 .end method

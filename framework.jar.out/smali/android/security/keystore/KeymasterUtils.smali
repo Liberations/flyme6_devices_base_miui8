@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,15 +23,12 @@
     .prologue
     const v4, 0x30000008
 
-    .line 148
     sparse-switch p1, :sswitch_data_0
 
-    .line 178
     :cond_0
     :goto_0
     return-void
 
-    .line 150
     :sswitch_0
     const/16 v2, 0x20
 
@@ -42,14 +38,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 153
     const-wide/16 v2, 0x60
 
     invoke-virtual {p0, v4, v2, v3}, Landroid/security/keymaster/KeymasterArguments;->addUnsignedInt(IJ)V
 
     goto :goto_0
 
-    .line 162
     :sswitch_1
     array-length v2, p3
 
@@ -57,7 +51,6 @@
 
     if-eq v2, v3, :cond_1
 
-    .line 163
     new-instance v2, Ljava/security/ProviderException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -90,25 +83,21 @@
 
     throw v2
 
-    .line 168
     :cond_1
     const/4 v2, 0x0
 
     aget v1, p3, v2
 
-    .line 169
     .local v1, "keymasterDigest":I
     invoke-static {v1}, Landroid/security/keystore/KeymasterUtils;->getDigestOutputSizeBits(I)I
 
     move-result v0
 
-    .line 170
     .local v0, "digestOutputSizeBits":I
     const/4 v2, -0x1
 
     if-ne v0, v2, :cond_2
 
-    .line 171
     new-instance v2, Ljava/security/ProviderException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -137,7 +126,6 @@
 
     throw v2
 
-    .line 175
     :cond_2
     int-to-long v2, v0
 
@@ -145,7 +133,6 @@
 
     goto :goto_0
 
-    .line 148
     nop
 
     :sswitch_data_0
@@ -168,25 +155,20 @@
 
     const-wide/16 v6, 0x0
 
-    .line 100
     if-nez p1, :cond_0
 
-    .line 101
     const v1, 0x700001f7
 
     invoke-virtual {p0, v1}, Landroid/security/keymaster/KeymasterArguments;->addBoolean(I)V
 
-    .line 137
     :goto_0
     return-void
 
-    .line 105
     :cond_0
     const/4 v1, -0x1
 
     if-ne p2, v1, :cond_3
 
-    .line 108
     invoke-static {}, Landroid/security/KeyStore;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
@@ -199,7 +181,6 @@
 
     check-cast v0, Landroid/hardware/fingerprint/FingerprintManager;
 
-    .line 112
     .local v0, "fingerprintManager":Landroid/hardware/fingerprint/FingerprintManager;
     if-eqz v0, :cond_1
 
@@ -207,14 +188,12 @@
 
     move-result-wide v2
 
-    .line 114
     .local v2, "fingerprintOnlySid":J
     :goto_1
     cmp-long v1, v2, v6
 
     if-nez v1, :cond_2
 
-    .line 115
     new-instance v1, Ljava/lang/IllegalStateException;
 
     const-string v6, "At least one fingerprint must be enrolled to create keys requiring user authentication for every use"
@@ -227,10 +206,8 @@
     :cond_1
     move-wide v2, v6
 
-    .line 112
     goto :goto_1
 
-    .line 119
     .restart local v2    # "fingerprintOnlySid":J
     :cond_2
     invoke-static {v2, v3}, Landroid/security/keymaster/KeymasterArguments;->toUint64(J)Ljava/math/BigInteger;
@@ -239,14 +216,12 @@
 
     invoke-virtual {p0, v9, v1}, Landroid/security/keymaster/KeymasterArguments;->addUnsignedLong(ILjava/math/BigInteger;)V
 
-    .line 121
     const/4 v1, 0x2
 
     invoke-virtual {p0, v10, v1}, Landroid/security/keymaster/KeymasterArguments;->addEnum(II)V
 
     goto :goto_0
 
-    .line 125
     .end local v0    # "fingerprintManager":Landroid/hardware/fingerprint/FingerprintManager;
     .end local v2    # "fingerprintOnlySid":J
     :cond_3
@@ -254,13 +229,11 @@
 
     move-result-wide v4
 
-    .line 126
     .local v4, "rootSid":J
     cmp-long v1, v4, v6
 
     if-nez v1, :cond_4
 
-    .line 127
     new-instance v1, Ljava/lang/IllegalStateException;
 
     const-string v6, "Secure lock screen must be enabled to create keys requiring user authentication"
@@ -269,7 +242,6 @@
 
     throw v1
 
-    .line 130
     :cond_4
     invoke-static {v4, v5}, Landroid/security/keymaster/KeymasterArguments;->toUint64(J)Ljava/math/BigInteger;
 
@@ -277,12 +249,10 @@
 
     invoke-virtual {p0, v9, v1}, Landroid/security/keymaster/KeymasterArguments;->addUnsignedLong(ILjava/math/BigInteger;)V
 
-    .line 132
     const/4 v1, 0x3
 
     invoke-virtual {p0, v10, v1}, Landroid/security/keymaster/KeymasterArguments;->addEnum(II)V
 
-    .line 134
     const v1, 0x300001f9
 
     int-to-long v6, p2
@@ -297,10 +267,8 @@
     .param p0, "keymasterDigest"    # I
 
     .prologue
-    .line 35
     packed-switch p0, :pswitch_data_0
 
-    .line 51
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -325,51 +293,42 @@
 
     throw v0
 
-    .line 37
     :pswitch_0
     const/4 v0, -0x1
 
-    .line 49
     :goto_0
     return v0
 
-    .line 39
     :pswitch_1
     const/16 v0, 0x80
 
     goto :goto_0
 
-    .line 41
     :pswitch_2
     const/16 v0, 0xa0
 
     goto :goto_0
 
-    .line 43
     :pswitch_3
     const/16 v0, 0xe0
 
     goto :goto_0
 
-    .line 45
     :pswitch_4
     const/16 v0, 0x100
 
     goto :goto_0
 
-    .line 47
     :pswitch_5
     const/16 v0, 0x180
 
     goto :goto_0
 
-    .line 49
     :pswitch_6
     const/16 v0, 0x200
 
     goto :goto_0
 
-    .line 35
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -387,10 +346,8 @@
     .param p0, "keymasterBlockMode"    # I
 
     .prologue
-    .line 57
     sparse-switch p0, :sswitch_data_0
 
-    .line 65
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -415,11 +372,9 @@
 
     throw v0
 
-    .line 59
     :sswitch_0
     const/4 v0, 0x0
 
-    .line 63
     :goto_0
     return v0
 
@@ -428,7 +383,6 @@
 
     goto :goto_0
 
-    .line 57
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_0
@@ -443,10 +397,8 @@
     .param p0, "keymasterPadding"    # I
 
     .prologue
-    .line 71
     packed-switch p0, :pswitch_data_0
 
-    .line 78
     :pswitch_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -472,11 +424,9 @@
 
     throw v0
 
-    .line 73
     :pswitch_1
     const/4 v0, 0x0
 
-    .line 76
     :goto_0
     return v0
 
@@ -485,7 +435,6 @@
 
     goto :goto_0
 
-    .line 71
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1

@@ -37,7 +37,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 932
     .local p3, "x1":Landroid/accounts/AccountManagerCallback;, "Landroid/accounts/AccountManagerCallback<Ljava/lang/Boolean;>;"
     iput-object p1, p0, Landroid/accounts/AccountManager$7;->this$0:Landroid/accounts/AccountManager;
 
@@ -62,7 +61,6 @@
     .end annotation
 
     .prologue
-    .line 940
     const-string v0, "booleanResult"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
@@ -71,16 +69,14 @@
 
     if-nez v0, :cond_0
 
-    .line 941
     new-instance v0, Landroid/accounts/AuthenticatorException;
 
-    const-string/jumbo v1, "no result in response"
+    const-string v1, "no result in response"
 
     invoke-direct {v0, v1}, Landroid/accounts/AuthenticatorException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 943
     :cond_0
     const-string v0, "booleanResult"
 
@@ -105,7 +101,6 @@
     .end annotation
 
     .prologue
-    .line 932
     invoke-virtual {p0, p1}, Landroid/accounts/AccountManager$7;->bundleToResult(Landroid/os/Bundle;)Ljava/lang/Boolean;
 
     move-result-object v0
@@ -122,12 +117,10 @@
     .end annotation
 
     .prologue
-    .line 935
     const/16 v0, 0x1f
 
     invoke-static {v0}, Landroid/util/SeempLog;->record(I)I
 
-    .line 936
     iget-object v0, p0, Landroid/accounts/AccountManager$7;->this$0:Landroid/accounts/AccountManager;
 
     # getter for: Landroid/accounts/AccountManager;->mService:Landroid/accounts/IAccountManager;
@@ -149,6 +142,5 @@
 
     invoke-interface {v0, v1, v2, v3, v4}, Landroid/accounts/IAccountManager;->removeAccountAsUser(Landroid/accounts/IAccountManagerResponse;Landroid/accounts/Account;ZI)V
 
-    .line 937
     return-void
 .end method

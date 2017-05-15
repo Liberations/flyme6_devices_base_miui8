@@ -38,7 +38,6 @@
     .locals 1
 
     .prologue
-    .line 1798
     new-instance v0, Landroid/widget/ProgressBar$SavedState$1;
 
     invoke-direct {v0}, Landroid/widget/ProgressBar$SavedState$1;-><init>()V
@@ -53,24 +52,20 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 1786
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcel;)V
 
-    .line 1787
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/widget/ProgressBar$SavedState;->progress:I
 
-    .line 1788
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/widget/ProgressBar$SavedState;->secondaryProgress:I
 
-    .line 1789
     return-void
 .end method
 
@@ -80,7 +75,6 @@
     .param p2, "x1"    # Landroid/widget/ProgressBar$1;
 
     .prologue
-    .line 1771
     invoke-direct {p0, p1}, Landroid/widget/ProgressBar$SavedState;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -91,10 +85,8 @@
     .param p1, "superState"    # Landroid/os/Parcelable;
 
     .prologue
-    .line 1779
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcelable;)V
 
-    .line 1780
     return-void
 .end method
 
@@ -106,19 +98,15 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 1793
     invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 1794
     iget v0, p0, Landroid/widget/ProgressBar$SavedState;->progress:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1795
     iget v0, p0, Landroid/widget/ProgressBar$SavedState;->secondaryProgress:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1796
     return-void
 .end method

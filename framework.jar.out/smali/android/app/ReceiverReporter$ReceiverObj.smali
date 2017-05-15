@@ -30,19 +30,14 @@
     .param p3, "receiver"    # Ljava/lang/String;
 
     .prologue
-    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     iput-object p1, p0, Landroid/app/ReceiverReporter$ReceiverObj;->action:Ljava/lang/String;
 
-    .line 46
     iput-object p2, p0, Landroid/app/ReceiverReporter$ReceiverObj;->packageName:Ljava/lang/String;
 
-    .line 47
     iput-object p3, p0, Landroid/app/ReceiverReporter$ReceiverObj;->receiver:Ljava/lang/String;
 
-    .line 48
     return-void
 .end method
 
@@ -53,17 +48,14 @@
     .param p1, "obj"    # Ljava/lang/Object;
 
     .prologue
-    .line 51
     instance-of v1, p1, Landroid/app/ReceiverReporter$ReceiverObj;
 
     if-eqz v1, :cond_1
 
     move-object v0, p1
 
-    .line 52
     check-cast v0, Landroid/app/ReceiverReporter$ReceiverObj;
 
-    .line 54
     .local v0, "receiverObj":Landroid/app/ReceiverReporter$ReceiverObj;
     iget-object v1, p0, Landroid/app/ReceiverReporter$ReceiverObj;->action:Ljava/lang/String;
 
@@ -97,19 +89,16 @@
 
     const/4 v1, 0x1
 
-    .line 58
     .end local v0    # "receiverObj":Landroid/app/ReceiverReporter$ReceiverObj;
     :goto_0
     return v1
 
-    .line 54
     .restart local v0    # "receiverObj":Landroid/app/ReceiverReporter$ReceiverObj;
     :cond_0
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 58
     .end local v0    # "receiverObj":Landroid/app/ReceiverReporter$ReceiverObj;
     :cond_1
     invoke-super {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -123,7 +112,6 @@
     .locals 3
 
     .prologue
-    .line 62
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -168,7 +156,6 @@
 
     move-result-object v0
 
-    .line 64
     .local v0, "result":Ljava/lang/String;
     return-object v0
 .end method

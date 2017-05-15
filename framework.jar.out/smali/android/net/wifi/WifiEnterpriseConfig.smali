@@ -107,7 +107,6 @@
     .locals 1
 
     .prologue
-    .line 178
     new-instance v0, Landroid/net/wifi/WifiEnterpriseConfig$1;
 
     invoke-direct {v0}, Landroid/net/wifi/WifiEnterpriseConfig$1;-><init>()V
@@ -121,22 +120,18 @@
     .locals 1
 
     .prologue
-    .line 120
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 112
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroid/net/wifi/WifiEnterpriseConfig;->mFields:Ljava/util/HashMap;
 
-    .line 115
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/net/wifi/WifiEnterpriseConfig;->mTls12Enable:Z
 
-    .line 126
     return-void
 .end method
 
@@ -145,22 +140,18 @@
     .param p1, "source"    # Landroid/net/wifi/WifiEnterpriseConfig;
 
     .prologue
-    .line 129
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 112
     new-instance v2, Ljava/util/HashMap;
 
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
     iput-object v2, p0, Landroid/net/wifi/WifiEnterpriseConfig;->mFields:Ljava/util/HashMap;
 
-    .line 115
     const/4 v2, 0x1
 
     iput-boolean v2, p0, Landroid/net/wifi/WifiEnterpriseConfig;->mTls12Enable:Z
 
-    .line 130
     iget-object v2, p1, Landroid/net/wifi/WifiEnterpriseConfig;->mFields:Ljava/util/HashMap;
 
     invoke-virtual {v2}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
@@ -185,7 +176,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 131
     .local v1, "key":Ljava/lang/String;
     iget-object v2, p0, Landroid/net/wifi/WifiEnterpriseConfig;->mFields:Ljava/util/HashMap;
 
@@ -199,7 +189,6 @@
 
     goto :goto_0
 
-    .line 133
     .end local v1    # "key":Ljava/lang/String;
     :cond_0
     return-void
@@ -210,7 +199,6 @@
     .param p0, "x0"    # Landroid/net/wifi/WifiEnterpriseConfig;
 
     .prologue
-    .line 40
     iget-object v0, p0, Landroid/net/wifi/WifiEnterpriseConfig;->mFields:Ljava/util/HashMap;
 
     return-object v0
@@ -222,7 +210,6 @@
     .param p1, "x1"    # Ljava/security/cert/X509Certificate;
 
     .prologue
-    .line 40
     iput-object p1, p0, Landroid/net/wifi/WifiEnterpriseConfig;->mCaCert:Ljava/security/cert/X509Certificate;
 
     return-object p1
@@ -234,7 +221,6 @@
     .param p1, "x1"    # Ljava/security/PrivateKey;
 
     .prologue
-    .line 40
     iput-object p1, p0, Landroid/net/wifi/WifiEnterpriseConfig;->mClientPrivateKey:Ljava/security/PrivateKey;
 
     return-object p1
@@ -246,7 +232,6 @@
     .param p1, "x1"    # Ljava/security/cert/X509Certificate;
 
     .prologue
-    .line 40
     iput-object p1, p0, Landroid/net/wifi/WifiEnterpriseConfig;->mClientCertificate:Ljava/security/cert/X509Certificate;
 
     return-object p1
@@ -258,7 +243,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 40
     iput-boolean p1, p0, Landroid/net/wifi/WifiEnterpriseConfig;->mTls12Enable:Z
 
     return p1
@@ -269,7 +253,6 @@
     .param p1, "string"    # Ljava/lang/String;
 
     .prologue
-    .line 702
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -304,20 +287,17 @@
     .param p3, "defaultIndex"    # I
 
     .prologue
-    .line 712
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 716
     .end local p3    # "defaultIndex":I
     :cond_0
     :goto_0
     return p3
 
-    .line 713
     .restart local p3    # "defaultIndex":I
     :cond_1
     const/4 v0, 0x0
@@ -328,7 +308,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 714
     aget-object v1, p1, v0
 
     invoke-virtual {p2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -341,7 +320,6 @@
 
     goto :goto_0
 
-    .line 713
     :cond_2
     add-int/lit8 v0, v0, 0x1
 
@@ -357,7 +335,6 @@
 
     const/4 v2, 0x1
 
-    .line 692
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -366,20 +343,17 @@
 
     const-string p1, ""
 
-    .line 698
     .end local p1    # "string":Ljava/lang/String;
     :cond_0
     :goto_0
     return-object p1
 
-    .line 693
     .restart local p1    # "string":Ljava/lang/String;
     :cond_1
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
 
-    .line 694
     .local v0, "length":I
     if-le v0, v2, :cond_0
 
@@ -399,7 +373,6 @@
 
     if-ne v1, v3, :cond_0
 
-    .line 696
     add-int/lit8 v1, v0, -0x1
 
     invoke-virtual {p1, v2, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
@@ -417,42 +390,34 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 165
     if-eqz p2, :cond_0
 
-    .line 167
     :try_start_0
     invoke-virtual {p2}, Ljava/security/cert/X509Certificate;->getEncoded()[B
 
     move-result-object v0
 
-    .line 168
     .local v0, "certBytes":[B
     array-length v2, v0
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 169
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByteArray([B)V
     :try_end_0
     .catch Ljava/security/cert/CertificateEncodingException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 176
     .end local v0    # "certBytes":[B
     :goto_0
     return-void
 
-    .line 170
     :catch_0
     move-exception v1
 
-    .line 171
     .local v1, "e":Ljava/security/cert/CertificateEncodingException;
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_0
 
-    .line 174
     .end local v1    # "e":Ljava/security/cert/CertificateEncodingException;
     :cond_0
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
@@ -466,7 +431,6 @@
     .locals 1
 
     .prologue
-    .line 137
     const/4 v0, 0x0
 
     return v0
@@ -476,7 +440,6 @@
     .locals 2
 
     .prologue
-    .line 609
     const-string v0, "altsubject_match"
 
     const-string v1, ""
@@ -492,7 +455,6 @@
     .locals 2
 
     .prologue
-    .line 411
     const-string v0, "anonymous_identity"
 
     const-string v1, ""
@@ -508,7 +470,6 @@
     .locals 1
 
     .prologue
-    .line 482
     iget-object v0, p0, Landroid/net/wifi/WifiEnterpriseConfig;->mCaCert:Ljava/security/cert/X509Certificate;
 
     return-object v0
@@ -518,10 +479,9 @@
     .locals 2
 
     .prologue
-    .line 451
     const-string v0, "ca_cert"
 
-    const-string/jumbo v1, "keystore://CACERT_"
+    const-string v1, "keystore://CACERT_"
 
     invoke-virtual {p0, v0, v1}, Landroid/net/wifi/WifiEnterpriseConfig;->getFieldValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -534,7 +494,6 @@
     .locals 1
 
     .prologue
-    .line 557
     iget-object v0, p0, Landroid/net/wifi/WifiEnterpriseConfig;->mClientCertificate:Ljava/security/cert/X509Certificate;
 
     return-object v0
@@ -544,10 +503,9 @@
     .locals 2
 
     .prologue
-    .line 519
     const-string v0, "client_cert"
 
-    const-string/jumbo v1, "keystore://USRCERT_"
+    const-string v1, "keystore://USRCERT_"
 
     invoke-virtual {p0, v0, v1}, Landroid/net/wifi/WifiEnterpriseConfig;->getFieldValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -560,7 +518,6 @@
     .locals 1
 
     .prologue
-    .line 572
     iget-object v0, p0, Landroid/net/wifi/WifiEnterpriseConfig;->mClientPrivateKey:Ljava/security/PrivateKey;
 
     return-object v0
@@ -570,7 +527,6 @@
     .locals 2
 
     .prologue
-    .line 639
     const-string v0, "domain_suffix_match"
 
     const-string v1, ""
@@ -586,7 +542,6 @@
     .locals 3
 
     .prologue
-    .line 338
     iget-object v1, p0, Landroid/net/wifi/WifiEnterpriseConfig;->mFields:Ljava/util/HashMap;
 
     const-string v2, "eap"
@@ -597,7 +552,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 339
     .local v0, "eapMethod":Ljava/lang/String;
     sget-object v1, Landroid/net/wifi/WifiEnterpriseConfig$Eap;->strings:[Ljava/lang/String;
 
@@ -616,7 +570,6 @@
     .param p2, "prefix"    # Ljava/lang/String;
 
     .prologue
-    .line 726
     iget-object v1, p0, Landroid/net/wifi/WifiEnterpriseConfig;->mFields:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -625,7 +578,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 728
     .local v0, "value":Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -644,24 +596,20 @@
     :cond_0
     const-string v1, ""
 
-    .line 734
     :goto_0
     return-object v1
 
-    .line 730
     :cond_1
     invoke-direct {p0, v0}, Landroid/net/wifi/WifiEnterpriseConfig;->removeDoubleQuotes(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 731
     invoke-virtual {v0, p2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    .line 732
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 
     move-result v1
@@ -675,7 +623,6 @@
     :cond_2
     move-object v1, v0
 
-    .line 734
     goto :goto_0
 .end method
 
@@ -693,7 +640,6 @@
     .end annotation
 
     .prologue
-    .line 284
     iget-object v0, p0, Landroid/net/wifi/WifiEnterpriseConfig;->mFields:Ljava/util/HashMap;
 
     return-object v0
@@ -703,8 +649,7 @@
     .locals 2
 
     .prologue
-    .line 395
-    const-string/jumbo v0, "identity"
+    const-string v0, "identity"
 
     const-string v1, ""
 
@@ -720,7 +665,6 @@
     .param p1, "current"    # Landroid/net/wifi/WifiEnterpriseConfig;
 
     .prologue
-    .line 678
     iget-object v2, p0, Landroid/net/wifi/WifiEnterpriseConfig;->mFields:Ljava/util/HashMap;
 
     const-string v3, "eap"
@@ -731,11 +675,10 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 679
     .local v0, "eap":Ljava/lang/String;
     iget-object v2, p0, Landroid/net/wifi/WifiEnterpriseConfig;->mFields:Ljava/util/HashMap;
 
-    const-string/jumbo v3, "phase2"
+    const-string v3, "phase2"
 
     invoke-virtual {v2, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -743,7 +686,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 682
     .local v1, "phase2":Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -751,7 +693,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 683
     iget-object v2, p1, Landroid/net/wifi/WifiEnterpriseConfig;->mFields:Ljava/util/HashMap;
 
     const-string v3, "eap"
@@ -763,7 +704,6 @@
     .end local v0    # "eap":Ljava/lang/String;
     check-cast v0, Ljava/lang/String;
 
-    .line 685
     .restart local v0    # "eap":Ljava/lang/String;
     :cond_0
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -772,10 +712,9 @@
 
     if-eqz v2, :cond_1
 
-    .line 686
     iget-object v2, p1, Landroid/net/wifi/WifiEnterpriseConfig;->mFields:Ljava/util/HashMap;
 
-    const-string/jumbo v3, "phase2"
+    const-string v3, "phase2"
 
     invoke-virtual {v2, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -784,7 +723,6 @@
     .end local v1    # "phase2":Ljava/lang/String;
     check-cast v1, Ljava/lang/String;
 
-    .line 688
     .restart local v1    # "phase2":Ljava/lang/String;
     :cond_1
     new-instance v2, Ljava/lang/StringBuilder;
@@ -816,8 +754,7 @@
     .locals 2
 
     .prologue
-    .line 429
-    const-string/jumbo v0, "password"
+    const-string v0, "password"
 
     const-string v1, ""
 
@@ -832,10 +769,9 @@
     .locals 3
 
     .prologue
-    .line 374
     iget-object v1, p0, Landroid/net/wifi/WifiEnterpriseConfig;->mFields:Ljava/util/HashMap;
 
-    const-string/jumbo v2, "phase2"
+    const-string v2, "phase2"
 
     invoke-virtual {v1, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -847,7 +783,6 @@
 
     move-result-object v0
 
-    .line 376
     .local v0, "phase2Method":Ljava/lang/String;
     const-string v1, "auth="
 
@@ -857,7 +792,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 377
     const-string v1, "auth="
 
     invoke-virtual {v1}, Ljava/lang/String;->length()I
@@ -868,7 +802,6 @@
 
     move-result-object v0
 
-    .line 379
     :cond_0
     sget-object v1, Landroid/net/wifi/WifiEnterpriseConfig$Phase2;->strings:[Ljava/lang/String;
 
@@ -885,8 +818,7 @@
     .locals 2
 
     .prologue
-    .line 673
-    const-string/jumbo v0, "plmn"
+    const-string v0, "plmn"
 
     const-string v1, ""
 
@@ -901,8 +833,7 @@
     .locals 2
 
     .prologue
-    .line 656
-    const-string/jumbo v0, "realm"
+    const-string v0, "realm"
 
     const-string v1, ""
 
@@ -917,8 +848,7 @@
     .locals 2
 
     .prologue
-    .line 591
-    const-string/jumbo v0, "subject_match"
+    const-string v0, "subject_match"
 
     const-string v1, ""
 
@@ -933,7 +863,6 @@
     .locals 1
 
     .prologue
-    .line 330
     iget-boolean v0, p0, Landroid/net/wifi/WifiEnterpriseConfig;->mTls12Enable:Z
 
     return v0
@@ -943,12 +872,10 @@
     .locals 1
 
     .prologue
-    .line 489
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/net/wifi/WifiEnterpriseConfig;->mCaCert:Ljava/security/cert/X509Certificate;
 
-    .line 490
     return-void
 .end method
 
@@ -958,13 +885,10 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 564
     iput-object v0, p0, Landroid/net/wifi/WifiEnterpriseConfig;->mClientPrivateKey:Ljava/security/PrivateKey;
 
-    .line 565
     iput-object v0, p0, Landroid/net/wifi/WifiEnterpriseConfig;->mClientCertificate:Ljava/security/cert/X509Certificate;
 
-    .line 566
     return-void
 .end method
 
@@ -973,14 +897,12 @@
     .param p1, "altSubjectMatch"    # Ljava/lang/String;
 
     .prologue
-    .line 601
     const-string v0, "altsubject_match"
 
     const-string v1, ""
 
     invoke-virtual {p0, v0, p1, v1}, Landroid/net/wifi/WifiEnterpriseConfig;->setFieldValue(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 602
     return-void
 .end method
 
@@ -989,14 +911,12 @@
     .param p1, "anonymousIdentity"    # Ljava/lang/String;
 
     .prologue
-    .line 404
     const-string v0, "anonymous_identity"
 
     const-string v1, ""
 
     invoke-virtual {p0, v0, p1, v1}, Landroid/net/wifi/WifiEnterpriseConfig;->setFieldValue(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 405
     return-void
 .end method
 
@@ -1005,24 +925,19 @@
     .param p1, "cert"    # Ljava/security/cert/X509Certificate;
 
     .prologue
-    .line 466
     if-eqz p1, :cond_1
 
-    .line 467
     invoke-virtual {p1}, Ljava/security/cert/X509Certificate;->getBasicConstraints()I
 
     move-result v0
 
     if-ltz v0, :cond_0
 
-    .line 468
     iput-object p1, p0, Landroid/net/wifi/WifiEnterpriseConfig;->mCaCert:Ljava/security/cert/X509Certificate;
 
-    .line 475
     :goto_0
     return-void
 
-    .line 470
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -1032,7 +947,6 @@
 
     throw v0
 
-    .line 473
     :cond_1
     const/4 v0, 0x0
 
@@ -1046,14 +960,12 @@
     .param p1, "alias"    # Ljava/lang/String;
 
     .prologue
-    .line 442
     const-string v0, "ca_cert"
 
-    const-string/jumbo v1, "keystore://CACERT_"
+    const-string v1, "keystore://CACERT_"
 
     invoke-virtual {p0, v0, p1, v1}, Landroid/net/wifi/WifiEnterpriseConfig;->setFieldValue(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 443
     return-void
 .end method
 
@@ -1062,28 +974,24 @@
     .param p1, "alias"    # Ljava/lang/String;
 
     .prologue
-    .line 501
     const-string v0, "client_cert"
 
-    const-string/jumbo v1, "keystore://USRCERT_"
+    const-string v1, "keystore://USRCERT_"
 
     invoke-virtual {p0, v0, p1, v1}, Landroid/net/wifi/WifiEnterpriseConfig;->setFieldValue(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 502
-    const-string/jumbo v0, "key_id"
+    const-string v0, "key_id"
 
     const-string v1, "USRPKEY_"
 
     invoke-virtual {p0, v0, p1, v1}, Landroid/net/wifi/WifiEnterpriseConfig;->setFieldValue(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 504
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 505
     iget-object v0, p0, Landroid/net/wifi/WifiEnterpriseConfig;->mFields:Ljava/util/HashMap;
 
     const-string v1, "engine"
@@ -1092,7 +1000,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 506
     iget-object v0, p0, Landroid/net/wifi/WifiEnterpriseConfig;->mFields:Ljava/util/HashMap;
 
     const-string v1, "engine_id"
@@ -1101,11 +1008,9 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 511
     :goto_0
     return-void
 
-    .line 508
     :cond_0
     iget-object v0, p0, Landroid/net/wifi/WifiEnterpriseConfig;->mFields:Ljava/util/HashMap;
 
@@ -1115,12 +1020,11 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 509
     iget-object v0, p0, Landroid/net/wifi/WifiEnterpriseConfig;->mFields:Ljava/util/HashMap;
 
     const-string v1, "engine_id"
 
-    const-string/jumbo v2, "keystore"
+    const-string v2, "keystore"
 
     invoke-direct {p0, v2}, Landroid/net/wifi/WifiEnterpriseConfig;->convertToQuotedString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1137,10 +1041,8 @@
     .param p2, "clientCertificate"    # Ljava/security/cert/X509Certificate;
 
     .prologue
-    .line 535
     if-eqz p2, :cond_2
 
-    .line 536
     invoke-virtual {p2}, Ljava/security/cert/X509Certificate;->getBasicConstraints()I
 
     move-result v0
@@ -1149,7 +1051,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 537
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Cannot be a CA certificate"
@@ -1158,11 +1059,9 @@
 
     throw v0
 
-    .line 539
     :cond_0
     if-nez p1, :cond_1
 
-    .line 540
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Client cert without a private key"
@@ -1171,7 +1070,6 @@
 
     throw v0
 
-    .line 542
     :cond_1
     invoke-interface {p1}, Ljava/security/PrivateKey;->getEncoded()[B
 
@@ -1179,7 +1077,6 @@
 
     if-nez v0, :cond_2
 
-    .line 543
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Private key cannot be encoded"
@@ -1188,14 +1085,11 @@
 
     throw v0
 
-    .line 547
     :cond_2
     iput-object p1, p0, Landroid/net/wifi/WifiEnterpriseConfig;->mClientPrivateKey:Ljava/security/PrivateKey;
 
-    .line 548
     iput-object p2, p0, Landroid/net/wifi/WifiEnterpriseConfig;->mClientCertificate:Ljava/security/cert/X509Certificate;
 
-    .line 549
     return-void
 .end method
 
@@ -1204,12 +1098,10 @@
     .param p1, "domain"    # Ljava/lang/String;
 
     .prologue
-    .line 631
     const-string v0, "domain_suffix_match"
 
     invoke-virtual {p0, v0, p1}, Landroid/net/wifi/WifiEnterpriseConfig;->setFieldValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 632
     return-void
 .end method
 
@@ -1218,10 +1110,8 @@
     .param p1, "eapMethod"    # I
 
     .prologue
-    .line 294
     packed-switch p1, :pswitch_data_0
 
-    .line 309
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Unknown EAP method"
@@ -1230,13 +1120,11 @@
 
     throw v0
 
-    .line 297
     :pswitch_0
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Landroid/net/wifi/WifiEnterpriseConfig;->setPhase2Method(I)V
 
-    .line 305
     :pswitch_1
     iget-object v0, p0, Landroid/net/wifi/WifiEnterpriseConfig;->mFields:Ljava/util/HashMap;
 
@@ -1248,19 +1136,16 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 306
     iget-object v0, p0, Landroid/net/wifi/WifiEnterpriseConfig;->mFields:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "proactive_key_caching"
+    const-string v1, "proactive_key_caching"
 
     const-string v2, "1"
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 311
     return-void
 
-    .line 294
     nop
 
     :pswitch_data_0
@@ -1281,25 +1166,21 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 760
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 761
     iget-object v0, p0, Landroid/net/wifi/WifiEnterpriseConfig;->mFields:Ljava/util/HashMap;
 
     const-string v1, "NULL"
 
     invoke-virtual {v0, p1, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 765
     :goto_0
     return-void
 
-    .line 763
     :cond_0
     iget-object v0, p0, Landroid/net/wifi/WifiEnterpriseConfig;->mFields:Ljava/util/HashMap;
 
@@ -1319,25 +1200,21 @@
     .param p3, "prefix"    # Ljava/lang/String;
 
     .prologue
-    .line 745
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 746
     iget-object v0, p0, Landroid/net/wifi/WifiEnterpriseConfig;->mFields:Ljava/util/HashMap;
 
     const-string v1, "NULL"
 
     invoke-virtual {v0, p1, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 750
     :goto_0
     return-void
 
-    .line 748
     :cond_0
     iget-object v0, p0, Landroid/net/wifi/WifiEnterpriseConfig;->mFields:Ljava/util/HashMap;
 
@@ -1371,14 +1248,12 @@
     .param p1, "identity"    # Ljava/lang/String;
 
     .prologue
-    .line 387
-    const-string/jumbo v0, "identity"
+    const-string v0, "identity"
 
     const-string v1, ""
 
     invoke-virtual {p0, v0, p1, v1}, Landroid/net/wifi/WifiEnterpriseConfig;->setFieldValue(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 388
     return-void
 .end method
 
@@ -1387,14 +1262,12 @@
     .param p1, "password"    # Ljava/lang/String;
 
     .prologue
-    .line 419
-    const-string/jumbo v0, "password"
+    const-string v0, "password"
 
     const-string v1, ""
 
     invoke-virtual {p0, v0, p1, v1}, Landroid/net/wifi/WifiEnterpriseConfig;->setFieldValue(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 420
     return-void
 .end method
 
@@ -1403,10 +1276,8 @@
     .param p1, "phase2Method"    # I
 
     .prologue
-    .line 352
     packed-switch p1, :pswitch_data_0
 
-    .line 365
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Unknown Phase 2 method"
@@ -1415,25 +1286,22 @@
 
     throw v0
 
-    .line 354
     :pswitch_0
     iget-object v0, p0, Landroid/net/wifi/WifiEnterpriseConfig;->mFields:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "phase2"
+    const-string v1, "phase2"
 
     const-string v2, "NULL"
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 367
     :goto_0
     return-void
 
-    .line 361
     :pswitch_1
     iget-object v0, p0, Landroid/net/wifi/WifiEnterpriseConfig;->mFields:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "phase2"
+    const-string v1, "phase2"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1465,7 +1333,6 @@
 
     goto :goto_0
 
-    .line 352
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -1481,14 +1348,12 @@
     .param p1, "plmn"    # Ljava/lang/String;
 
     .prologue
-    .line 664
-    const-string/jumbo v0, "plmn"
+    const-string v0, "plmn"
 
     const-string v1, ""
 
     invoke-virtual {p0, v0, p1, v1}, Landroid/net/wifi/WifiEnterpriseConfig;->setFieldValue(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 665
     return-void
 .end method
 
@@ -1497,14 +1362,12 @@
     .param p1, "realm"    # Ljava/lang/String;
 
     .prologue
-    .line 648
-    const-string/jumbo v0, "realm"
+    const-string v0, "realm"
 
     const-string v1, ""
 
     invoke-virtual {p0, v0, p1, v1}, Landroid/net/wifi/WifiEnterpriseConfig;->setFieldValue(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 649
     return-void
 .end method
 
@@ -1513,14 +1376,12 @@
     .param p1, "subjectMatch"    # Ljava/lang/String;
 
     .prologue
-    .line 582
-    const-string/jumbo v0, "subject_match"
+    const-string v0, "subject_match"
 
     const-string v1, ""
 
     invoke-virtual {p0, v0, p1, v1}, Landroid/net/wifi/WifiEnterpriseConfig;->setFieldValue(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 583
     return-void
 .end method
 
@@ -1529,13 +1390,11 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 319
     iput-boolean p1, p0, Landroid/net/wifi/WifiEnterpriseConfig;->mTls12Enable:Z
 
-    .line 320
     iget-object v1, p0, Landroid/net/wifi/WifiEnterpriseConfig;->mFields:Ljava/util/HashMap;
 
-    const-string/jumbo v2, "phase1"
+    const-string v2, "phase1"
 
     if-eqz p1, :cond_0
 
@@ -1544,10 +1403,8 @@
     :goto_0
     invoke-virtual {v1, v2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 322
     return-void
 
-    .line 320
     :cond_0
     const-string v0, "\"tls_disable_tlsv1_2=1\""
 
@@ -1558,12 +1415,10 @@
     .locals 5
 
     .prologue
-    .line 769
     new-instance v2, Ljava/lang/StringBuffer;
 
     invoke-direct {v2}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 770
     .local v2, "sb":Ljava/lang/StringBuffer;
     iget-object v3, p0, Landroid/net/wifi/WifiEnterpriseConfig;->mFields:Ljava/util/HashMap;
 
@@ -1589,7 +1444,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 773
     .local v1, "key":Ljava/lang/String;
     invoke-virtual {v2, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
@@ -1599,8 +1453,7 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 774
-    const-string/jumbo v3, "password"
+    const-string v3, "password"
 
     invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1608,7 +1461,7 @@
 
     if-nez v3, :cond_0
 
-    const-string/jumbo v3, "identity"
+    const-string v3, "identity"
 
     invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1616,7 +1469,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 775
     :cond_0
     const-string v3, " *\n"
 
@@ -1624,7 +1476,6 @@
 
     goto :goto_0
 
-    .line 777
     :cond_1
     iget-object v3, p0, Landroid/net/wifi/WifiEnterpriseConfig;->mFields:Ljava/util/HashMap;
 
@@ -1644,7 +1495,6 @@
 
     goto :goto_0
 
-    .line 780
     .end local v1    # "key":Ljava/lang/String;
     :cond_2
     invoke-virtual {v2}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
@@ -1662,7 +1512,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 142
     iget-object v4, p0, Landroid/net/wifi/WifiEnterpriseConfig;->mFields:Ljava/util/HashMap;
 
     invoke-virtual {v4}, Ljava/util/HashMap;->size()I
@@ -1671,7 +1520,6 @@
 
     invoke-virtual {p1, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 143
     iget-object v4, p0, Landroid/net/wifi/WifiEnterpriseConfig;->mFields:Ljava/util/HashMap;
 
     invoke-virtual {v4}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
@@ -1696,7 +1544,6 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 144
     .local v1, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -1706,7 +1553,6 @@
 
     invoke-virtual {p1, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 145
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v4
@@ -1717,26 +1563,22 @@
 
     goto :goto_0
 
-    .line 148
     .end local v1    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_0
     iget-object v4, p0, Landroid/net/wifi/WifiEnterpriseConfig;->mCaCert:Ljava/security/cert/X509Certificate;
 
     invoke-direct {p0, p1, v4}, Landroid/net/wifi/WifiEnterpriseConfig;->writeCertificate(Landroid/os/Parcel;Ljava/security/cert/X509Certificate;)V
 
-    .line 150
     iget-object v4, p0, Landroid/net/wifi/WifiEnterpriseConfig;->mClientPrivateKey:Ljava/security/PrivateKey;
 
     if-eqz v4, :cond_1
 
-    .line 151
     iget-object v4, p0, Landroid/net/wifi/WifiEnterpriseConfig;->mClientPrivateKey:Ljava/security/PrivateKey;
 
     invoke-interface {v4}, Ljava/security/PrivateKey;->getAlgorithm()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 152
     .local v0, "algorithm":Ljava/lang/String;
     iget-object v4, p0, Landroid/net/wifi/WifiEnterpriseConfig;->mClientPrivateKey:Ljava/security/PrivateKey;
 
@@ -1744,19 +1586,15 @@
 
     move-result-object v3
 
-    .line 153
     .local v3, "userKeyBytes":[B
     array-length v4, v3
 
     invoke-virtual {p1, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 154
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeByteArray([B)V
 
-    .line 155
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 160
     .end local v0    # "algorithm":Ljava/lang/String;
     .end local v3    # "userKeyBytes":[B
     :goto_1
@@ -1764,7 +1602,6 @@
 
     invoke-direct {p0, p1, v4}, Landroid/net/wifi/WifiEnterpriseConfig;->writeCertificate(Landroid/os/Parcel;Ljava/security/cert/X509Certificate;)V
 
-    .line 161
     iget-boolean v4, p0, Landroid/net/wifi/WifiEnterpriseConfig;->mTls12Enable:Z
 
     if-eqz v4, :cond_2
@@ -1774,10 +1611,8 @@
     :goto_2
     invoke-virtual {p1, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 162
     return-void
 
-    .line 157
     :cond_1
     invoke-virtual {p1, v5}, Landroid/os/Parcel;->writeInt(I)V
 
@@ -1786,6 +1621,5 @@
     :cond_2
     move v4, v5
 
-    .line 161
     goto :goto_2
 .end method

@@ -22,12 +22,10 @@
     .locals 1
 
     .prologue
-    .line 41
     sget v0, Lmiui/securityspace/CrossUserUtilsCompat;->OWNER_SHARED_USER_GID:I
 
     sput v0, Lmiui/securityspace/XSpaceUserHandle;->OWNER_SHARED_USER_GID:I
 
-    .line 46
     sget v0, Lmiui/securityspace/CrossUserUtilsCompat;->XSPACE_SHARED_USER_GID:I
 
     sput v0, Lmiui/securityspace/XSpaceUserHandle;->XSPACE_SHARED_USER_GID:I
@@ -39,7 +37,6 @@
     .locals 0
 
     .prologue
-    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -51,21 +48,17 @@
     .param p1, "defUserId"    # I
 
     .prologue
-    .line 49
     invoke-static {p0}, Lmiui/securityspace/XSpaceUserHandle;->isXSpaceUserFlag(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 50
     const/16 v0, 0x3e7
 
-    .line 54
     :goto_0
     return v0
 
-    .line 51
     :cond_0
     invoke-static {p1}, Lmiui/securityspace/XSpaceUserHandle;->isXSpaceUserId(I)Z
 
@@ -73,7 +66,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 52
     add-int/lit8 p1, p1, 0x1
 
     move v0, p1
@@ -83,7 +75,6 @@
     :cond_1
     move v0, p1
 
-    .line 54
     goto :goto_0
 .end method
 
@@ -93,14 +84,12 @@
     .param p1, "icon"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 99
     new-instance v0, Landroid/os/UserHandle;
 
     const/16 v1, 0x3e7
 
     invoke-direct {v0, v1}, Landroid/os/UserHandle;-><init>(I)V
 
-    .line 100
     .local v0, "userHandle":Landroid/os/UserHandle;
     invoke-static {p0, p1, v0}, Lmiui/securityspace/XSpaceUserHandle;->getXSpaceIcon(Landroid/content/Context;Landroid/graphics/drawable/Drawable;Landroid/os/UserHandle;)Landroid/graphics/drawable/Drawable;
 
@@ -116,7 +105,6 @@
     .param p2, "uid"    # I
 
     .prologue
-    .line 90
     new-instance v0, Landroid/os/UserHandle;
 
     invoke-static {p2}, Landroid/os/UserHandle;->getUserId(I)I
@@ -125,7 +113,6 @@
 
     invoke-direct {v0, v1}, Landroid/os/UserHandle;-><init>(I)V
 
-    .line 91
     .local v0, "userHandle":Landroid/os/UserHandle;
     invoke-static {v0}, Lmiui/securityspace/XSpaceUserHandle;->isXSpaceUser(Landroid/os/UserHandle;)Z
 
@@ -133,12 +120,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 92
     invoke-static {p0, p1, v0}, Lmiui/securityspace/XSpaceUserHandle;->getXSpaceIcon(Landroid/content/Context;Landroid/graphics/drawable/Drawable;Landroid/os/UserHandle;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
-    .line 94
     .end local p1    # "icon":Landroid/graphics/drawable/Drawable;
     :cond_0
     return-object p1
@@ -151,7 +136,6 @@
     .param p2, "userHandle"    # Landroid/os/UserHandle;
 
     .prologue
-    .line 86
     invoke-static {p0, p1, p2}, Lmiui/securityspace/CrossUserUtilsCompat;->getProfileIcon(Landroid/content/Context;Landroid/graphics/drawable/Drawable;Landroid/os/UserHandle;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
@@ -167,7 +151,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 104
     if-eqz p0, :cond_0
 
     if-eqz p1, :cond_0
@@ -188,12 +171,10 @@
 
     if-nez v2, :cond_1
 
-    .line 119
     :cond_0
     :goto_0
     return v1
 
-    .line 108
     :cond_1
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
@@ -203,7 +184,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "xspace_enabled"
+    const-string v3, "xspace_enabled"
 
     invoke-static {v2, v3, v1}, Landroid/provider/MiuiSettings$Secure;->getBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
@@ -211,7 +192,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 113
     :try_start_0
     const-string v2, "package"
 
@@ -233,7 +213,6 @@
 
     move-result-object v0
 
-    .line 115
     .local v0, "pkgInfo":Landroid/content/pm/PackageInfo;
     if-eqz v0, :cond_0
 
@@ -241,7 +220,6 @@
 
     goto :goto_0
 
-    .line 116
     .end local v0    # "pkgInfo":Landroid/content/pm/PackageInfo;
     :catch_0
     move-exception v2
@@ -253,7 +231,6 @@
     .locals 1
 
     .prologue
-    .line 66
     invoke-static {}, Landroid/os/Process;->myUid()I
 
     move-result v0
@@ -274,7 +251,6 @@
     .param p0, "uid"    # I
 
     .prologue
-    .line 78
     invoke-static {p0}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v0
@@ -291,7 +267,6 @@
     .param p0, "userinfo"    # Landroid/content/pm/UserInfo;
 
     .prologue
-    .line 70
     if-eqz p0, :cond_0
 
     iget v0, p0, Landroid/content/pm/UserInfo;->flags:I
@@ -314,7 +289,6 @@
     .param p0, "userHandle"    # Landroid/os/UserHandle;
 
     .prologue
-    .line 74
     if-eqz p0, :cond_0
 
     invoke-virtual {p0}, Landroid/os/UserHandle;->getIdentifier()I
@@ -338,7 +312,6 @@
     .locals 1
 
     .prologue
-    .line 62
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v0
@@ -357,7 +330,6 @@
     .prologue
     const/high16 v1, 0x800000
 
-    .line 82
     and-int v0, p0, v1
 
     if-ne v0, v1, :cond_0
@@ -378,7 +350,6 @@
     .param p0, "userId"    # I
 
     .prologue
-    .line 58
     const/16 v0, 0x3e7
 
     if-ne p0, v0, :cond_0

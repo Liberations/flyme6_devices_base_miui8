@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 264
     iput-object p1, p0, Landroid/graphics/drawable/AnimatedRotateDrawable$1;->this$0:Landroid/graphics/drawable/AnimatedRotateDrawable;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 3
 
     .prologue
-    .line 269
     iget-object v0, p0, Landroid/graphics/drawable/AnimatedRotateDrawable$1;->this$0:Landroid/graphics/drawable/AnimatedRotateDrawable;
 
     iget-object v1, p0, Landroid/graphics/drawable/AnimatedRotateDrawable$1;->this$0:Landroid/graphics/drawable/AnimatedRotateDrawable;
@@ -53,7 +51,6 @@
     # += operator for: Landroid/graphics/drawable/AnimatedRotateDrawable;->mCurrentDegrees:F
     invoke-static {v0, v1}, Landroid/graphics/drawable/AnimatedRotateDrawable;->access$116(Landroid/graphics/drawable/AnimatedRotateDrawable;F)F
 
-    .line 270
     iget-object v0, p0, Landroid/graphics/drawable/AnimatedRotateDrawable$1;->this$0:Landroid/graphics/drawable/AnimatedRotateDrawable;
 
     # getter for: Landroid/graphics/drawable/AnimatedRotateDrawable;->mCurrentDegrees:F
@@ -76,7 +73,6 @@
 
     if-lez v0, :cond_0
 
-    .line 271
     iget-object v0, p0, Landroid/graphics/drawable/AnimatedRotateDrawable$1;->this$0:Landroid/graphics/drawable/AnimatedRotateDrawable;
 
     const/4 v1, 0x0
@@ -84,18 +80,15 @@
     # setter for: Landroid/graphics/drawable/AnimatedRotateDrawable;->mCurrentDegrees:F
     invoke-static {v0, v1}, Landroid/graphics/drawable/AnimatedRotateDrawable;->access$102(Landroid/graphics/drawable/AnimatedRotateDrawable;F)F
 
-    .line 273
     :cond_0
     iget-object v0, p0, Landroid/graphics/drawable/AnimatedRotateDrawable$1;->this$0:Landroid/graphics/drawable/AnimatedRotateDrawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/AnimatedRotateDrawable;->invalidateSelf()V
 
-    .line 274
     iget-object v0, p0, Landroid/graphics/drawable/AnimatedRotateDrawable$1;->this$0:Landroid/graphics/drawable/AnimatedRotateDrawable;
 
     # invokes: Landroid/graphics/drawable/AnimatedRotateDrawable;->nextFrame()V
     invoke-static {v0}, Landroid/graphics/drawable/AnimatedRotateDrawable;->access$300(Landroid/graphics/drawable/AnimatedRotateDrawable;)V
 
-    .line 275
     return-void
 .end method

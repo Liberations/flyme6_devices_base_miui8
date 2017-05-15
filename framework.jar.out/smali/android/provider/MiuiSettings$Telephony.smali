@@ -91,7 +91,6 @@
     .locals 0
 
     .prologue
-    .line 3379
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -103,7 +102,6 @@
     .param p1, "defaultPrefix"    # Ljava/lang/String;
 
     .prologue
-    .line 3703
     const-wide/16 v0, -0x1
 
     invoke-static {p0, p1, v0, v1}, Landroid/provider/MiuiSettings$Telephony;->getAutoIpPrefix(Landroid/content/ContentResolver;Ljava/lang/String;J)Ljava/lang/String;
@@ -120,10 +118,8 @@
     .param p2, "simId"    # J
 
     .prologue
-    .line 3727
     const-string v0, "autoip_prefix"
 
-    .line 3728
     .local v0, "prefix":Ljava/lang/String;
     const-wide/16 v2, -0x1
 
@@ -131,7 +127,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 3729
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -148,7 +143,6 @@
 
     move-result-object v0
 
-    .line 3731
     :cond_0
     invoke-static {p0, v0, p1}, Landroid/provider/MiuiSettings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -162,8 +156,7 @@
     .param p0, "cr"    # Landroid/content/ContentResolver;
 
     .prologue
-    .line 3638
-    const-string/jumbo v0, "incall_background_key"
+    const-string v0, "incall_background_key"
 
     const/4 v1, 0x0
 
@@ -179,7 +172,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 3605
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
@@ -192,9 +184,8 @@
 
     move-result v0
 
-    .line 3607
     .local v0, "index":I
-    const-string/jumbo v1, "lithium"
+    const-string v1, "lithium"
 
     sget-object v2, Lmiui/os/Build;->DEVICE:Ljava/lang/String;
 
@@ -208,10 +199,8 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 3608
     const/4 v0, 0x0
 
-    .line 3610
     :cond_0
     return v0
 .end method
@@ -221,8 +210,7 @@
     .param p0, "cr"    # Landroid/content/ContentResolver;
 
     .prologue
-    .line 3683
-    const-string/jumbo v0, "persist.radio.countrycode"
+    const-string v0, "persist.radio.countrycode"
 
     invoke-static {p0, v0}, Landroid/provider/MiuiSettings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
@@ -236,7 +224,6 @@
     .param p0, "cr"    # Landroid/content/ContentResolver;
 
     .prologue
-    .line 3661
     const-string v0, "current_areacode"
 
     invoke-static {p0, v0}, Landroid/provider/MiuiSettings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
@@ -251,7 +238,6 @@
     .param p0, "cr"    # Landroid/content/ContentResolver;
 
     .prologue
-    .line 3870
     const-string v0, "button_auto_redial"
 
     const/4 v1, 0x0
@@ -269,7 +255,6 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 4035
     const-string v0, ""
 
     invoke-static {p0, p1, v0}, Landroid/provider/MiuiSettings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -284,7 +269,6 @@
     .param p0, "cr"    # Landroid/content/ContentResolver;
 
     .prologue
-    .line 3851
     const-string v0, "button_missed_call_notify_times"
 
     const/4 v1, 0x0
@@ -301,8 +285,7 @@
     .param p0, "cr"    # Landroid/content/ContentResolver;
 
     .prologue
-    .line 3948
-    const-string/jumbo v0, "radio_record_scenario"
+    const-string v0, "radio_record_scenario"
 
     const-string v1, "0"
 
@@ -326,8 +309,7 @@
     .param p0, "cr"    # Landroid/content/ContentResolver;
 
     .prologue
-    .line 3968
-    const-string/jumbo v0, "record_white_list"
+    const-string v0, "record_white_list"
 
     invoke-static {p0, v0}, Landroid/provider/MiuiSettings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
@@ -341,7 +323,6 @@
     .param p0, "cr"    # Landroid/content/ContentResolver;
 
     .prologue
-    .line 3832
     const-string v0, "button_connect_disconnect_vibrate"
 
     const-string v1, "100"
@@ -358,7 +339,6 @@
     .param p0, "cr"    # Landroid/content/ContentResolver;
 
     .prologue
-    .line 3813
     const-string v1, "button_antispam_strange"
 
     sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
@@ -385,7 +365,6 @@
     .param p0, "cr"    # Landroid/content/ContentResolver;
 
     .prologue
-    .line 4097
     const-string v0, "button_add_zero_prefix"
 
     const/4 v1, 0x0
@@ -402,7 +381,6 @@
     .param p0, "cr"    # Landroid/content/ContentResolver;
 
     .prologue
-    .line 4062
     const-string v0, "auto_country_code"
 
     const/4 v1, 0x0
@@ -419,7 +397,6 @@
     .param p0, "cr"    # Landroid/content/ContentResolver;
 
     .prologue
-    .line 4079
     const-string v0, "button_autoip"
 
     const/4 v1, 0x0
@@ -436,7 +413,6 @@
     .param p0, "cr"    # Landroid/content/ContentResolver;
 
     .prologue
-    .line 4116
     const-string v0, "button_auto_ip_support_local_numbers"
 
     const/4 v1, 0x0
@@ -453,7 +429,6 @@
     .param p0, "cr"    # Landroid/content/ContentResolver;
 
     .prologue
-    .line 3928
     const-string v0, "button_auto_record_call"
 
     const/4 v1, 0x0
@@ -470,7 +445,6 @@
     .param p0, "cr"    # Landroid/content/ContentResolver;
 
     .prologue
-    .line 3794
     const-string v0, "button_crescendo_ringer"
 
     const/4 v1, 0x1
@@ -487,7 +461,6 @@
     .param p0, "cr"    # Landroid/content/ContentResolver;
 
     .prologue
-    .line 3775
     const-string v0, "button_handon_ringer"
 
     const/4 v1, 0x0
@@ -504,7 +477,6 @@
     .param p0, "cr"    # Landroid/content/ContentResolver;
 
     .prologue
-    .line 3889
     const-string v0, "button_incoming_video_show"
 
     const/4 v1, 0x1
@@ -521,7 +493,6 @@
     .param p0, "cr"    # Landroid/content/ContentResolver;
 
     .prologue
-    .line 4134
     const-string v0, "button_enable_proximity"
 
     const/4 v1, 0x1
@@ -538,7 +509,6 @@
     .param p0, "cr"    # Landroid/content/ContentResolver;
 
     .prologue
-    .line 3908
     const-string v0, "button_call_recording_notification"
 
     const/4 v1, 0x1
@@ -555,7 +525,6 @@
     .param p0, "cr"    # Landroid/content/ContentResolver;
 
     .prologue
-    .line 4043
     const-string v0, "enable_telocation"
 
     const/4 v1, 0x1
@@ -572,7 +541,6 @@
     .param p0, "cr"    # Landroid/content/ContentResolver;
 
     .prologue
-    .line 3756
     const-string v0, "button_turn_over_mute"
 
     const/4 v1, 0x0
@@ -589,7 +557,6 @@
     .param p0, "cr"    # Landroid/content/ContentResolver;
 
     .prologue
-    .line 3988
     const-string v0, "button_record_unknown_number"
 
     const/4 v1, 0x0
@@ -606,7 +573,6 @@
     .param p0, "cr"    # Landroid/content/ContentResolver;
 
     .prologue
-    .line 4007
     const-string v0, "button_record_yellowpage_number"
 
     const/4 v1, 0x0
@@ -624,12 +590,10 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 3823
     const-string v0, "button_antispam_strange"
 
     invoke-static {p0, v0, p1}, Landroid/provider/MiuiSettings$System;->putBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
-    .line 3824
     return-void
 .end method
 
@@ -639,12 +603,10 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 4107
     const-string v0, "button_add_zero_prefix"
 
     invoke-static {p0, v0, p1}, Landroid/provider/MiuiSettings$System;->putBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
-    .line 4108
     return-void
 .end method
 
@@ -654,12 +616,10 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 4071
     const-string v0, "auto_country_code"
 
     invoke-static {p0, v0, p1}, Landroid/provider/MiuiSettings$System;->putBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
-    .line 4072
     return-void
 .end method
 
@@ -669,12 +629,10 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 4088
     const-string v0, "button_autoip"
 
     invoke-static {p0, v0, p1}, Landroid/provider/MiuiSettings$System;->putBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
-    .line 4089
     return-void
 .end method
 
@@ -684,12 +642,10 @@
     .param p1, "IpPrefix"    # Ljava/lang/String;
 
     .prologue
-    .line 3714
     const-wide/16 v0, -0x1
 
     invoke-static {p0, p1, v0, v1}, Landroid/provider/MiuiSettings$Telephony;->setAutoIpPrefix(Landroid/content/ContentResolver;Ljava/lang/String;J)V
 
-    .line 3715
     return-void
 .end method
 
@@ -700,10 +656,8 @@
     .param p2, "simId"    # J
 
     .prologue
-    .line 3743
     const-string v0, "autoip_prefix"
 
-    .line 3744
     .local v0, "prefix":Ljava/lang/String;
     const-wide/16 v2, -0x1
 
@@ -711,7 +665,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 3745
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -728,11 +681,9 @@
 
     move-result-object v0
 
-    .line 3747
     :cond_0
     invoke-static {p0, v0, p1}, Landroid/provider/MiuiSettings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 3748
     return-void
 .end method
 
@@ -742,12 +693,10 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 4126
     const-string v0, "button_auto_ip_support_local_numbers"
 
     invoke-static {p0, v0, p1}, Landroid/provider/MiuiSettings$System;->putBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
-    .line 4127
     return-void
 .end method
 
@@ -757,12 +706,10 @@
     .param p1, "isEnabledAutoRecord"    # Z
 
     .prologue
-    .line 3939
     const-string v0, "button_auto_record_call"
 
     invoke-static {p0, v0, p1}, Landroid/provider/MiuiSettings$System;->putBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
-    .line 3940
     return-void
 .end method
 
@@ -772,12 +719,10 @@
     .param p1, "isEnabledRedial"    # Z
 
     .prologue
-    .line 3880
     const-string v0, "button_auto_redial"
 
     invoke-static {p0, v0, p1}, Landroid/provider/MiuiSettings$System;->putBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
-    .line 3881
     return-void
 .end method
 
@@ -787,8 +732,7 @@
     .param p1, "callBackgroundType"    # I
 
     .prologue
-    .line 3651
-    const-string/jumbo v0, "incall_background_key"
+    const-string v0, "incall_background_key"
 
     invoke-static {p0, v0, p1}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
@@ -803,7 +747,6 @@
     .param p1, "callWaitingToneType"    # I
 
     .prologue
-    .line 3623
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -812,7 +755,6 @@
 
     invoke-static {v0, v1, p1}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 3625
     return-void
 .end method
 
@@ -822,12 +764,10 @@
     .param p1, "countryCode"    # Ljava/lang/String;
 
     .prologue
-    .line 3694
-    const-string/jumbo v0, "persist.radio.countrycode"
+    const-string v0, "persist.radio.countrycode"
 
     invoke-static {p0, v0, p1}, Landroid/provider/MiuiSettings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 3695
     return-void
 .end method
 
@@ -837,12 +777,10 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 3804
     const-string v0, "button_crescendo_ringer"
 
     invoke-static {p0, v0, p1}, Landroid/provider/MiuiSettings$System;->putBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
-    .line 3805
     return-void
 .end method
 
@@ -852,12 +790,10 @@
     .param p1, "aeraCode"    # Ljava/lang/String;
 
     .prologue
-    .line 3672
     const-string v0, "current_areacode"
 
     invoke-static {p0, v0, p1}, Landroid/provider/MiuiSettings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 3673
     return-void
 .end method
 
@@ -867,12 +803,10 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 3785
     const-string v0, "button_handon_ringer"
 
     invoke-static {p0, v0, p1}, Landroid/provider/MiuiSettings$System;->putBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
-    .line 3786
     return-void
 .end method
 
@@ -883,10 +817,8 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 4026
     invoke-static {p0, p1, p2}, Landroid/provider/MiuiSettings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 4027
     return-void
 .end method
 
@@ -896,12 +828,10 @@
     .param p1, "isVideoShowEnabled"    # Z
 
     .prologue
-    .line 3899
     const-string v0, "button_incoming_video_show"
 
     invoke-static {p0, v0, p1}, Landroid/provider/MiuiSettings$System;->putBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
-    .line 3900
     return-void
 .end method
 
@@ -911,12 +841,10 @@
     .param p1, "notifyTimes"    # I
 
     .prologue
-    .line 3861
     const-string v0, "button_missed_call_notify_times"
 
     invoke-static {p0, v0, p1}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 3862
     return-void
 .end method
 
@@ -926,12 +854,10 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 4143
     const-string v0, "button_enable_proximity"
 
     invoke-static {p0, v0, p1}, Landroid/provider/MiuiSettings$System;->putBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
-    .line 4144
     return-void
 .end method
 
@@ -941,12 +867,10 @@
     .param p1, "isEnabledRecordNotify"    # Z
 
     .prologue
-    .line 3919
     const-string v0, "button_call_recording_notification"
 
     invoke-static {p0, v0, p1}, Landroid/provider/MiuiSettings$System;->putBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
-    .line 3920
     return-void
 .end method
 
@@ -956,8 +880,7 @@
     .param p1, "recordScenario"    # I
 
     .prologue
-    .line 3958
-    const-string/jumbo v0, "radio_record_scenario"
+    const-string v0, "radio_record_scenario"
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -965,7 +888,6 @@
 
     invoke-static {p0, v0, v1}, Landroid/provider/MiuiSettings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 3959
     return-void
 .end method
 
@@ -975,12 +897,10 @@
     .param p1, "recordWhiteList"    # Ljava/lang/String;
 
     .prologue
-    .line 3979
-    const-string/jumbo v0, "record_white_list"
+    const-string v0, "record_white_list"
 
     invoke-static {p0, v0, p1}, Landroid/provider/MiuiSettings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 3980
     return-void
 .end method
 
@@ -990,12 +910,10 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 4052
     const-string v0, "enable_telocation"
 
     invoke-static {p0, v0, p1}, Landroid/provider/MiuiSettings$System;->putBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
-    .line 4053
     return-void
 .end method
 
@@ -1005,12 +923,10 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 3766
     const-string v0, "button_turn_over_mute"
 
     invoke-static {p0, v0, p1}, Landroid/provider/MiuiSettings$System;->putBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
-    .line 3767
     return-void
 .end method
 
@@ -1020,12 +936,10 @@
     .param p1, "enabledUnknownNumberRecord"    # Z
 
     .prologue
-    .line 3998
     const-string v0, "button_record_unknown_number"
 
     invoke-static {p0, v0, p1}, Landroid/provider/MiuiSettings$System;->putBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
-    .line 3999
     return-void
 .end method
 
@@ -1035,12 +949,10 @@
     .param p1, "vibrateKey"    # Ljava/lang/String;
 
     .prologue
-    .line 3842
     const-string v0, "button_connect_disconnect_vibrate"
 
     invoke-static {p0, v0, p1}, Landroid/provider/MiuiSettings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 3843
     return-void
 .end method
 
@@ -1050,11 +962,9 @@
     .param p1, "enabledYellowpageRecord"    # Z
 
     .prologue
-    .line 4017
     const-string v0, "button_record_yellowpage_number"
 
     invoke-static {p0, v0, p1}, Landroid/provider/MiuiSettings$System;->putBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
-    .line 4018
     return-void
 .end method

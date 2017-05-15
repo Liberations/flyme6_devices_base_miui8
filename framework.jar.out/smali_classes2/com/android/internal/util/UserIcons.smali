@@ -12,7 +12,6 @@
     .locals 1
 
     .prologue
-    .line 33
     const/16 v0, 0x8
 
     new-array v0, v0, [I
@@ -40,7 +39,6 @@
     .locals 0
 
     .prologue
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -53,29 +51,23 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 48
     if-nez p0, :cond_0
 
-    .line 49
     const/4 v0, 0x0
 
-    .line 57
     :goto_0
     return-object v0
 
-    .line 51
     :cond_0
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v3
 
-    .line 52
     .local v3, "width":I
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v2
 
-    .line 53
     .local v2, "height":I
     sget-object v4, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
@@ -83,17 +75,14 @@
 
     move-result-object v0
 
-    .line 54
     .local v0, "bitmap":Landroid/graphics/Bitmap;
     new-instance v1, Landroid/graphics/Canvas;
 
     invoke-direct {v1, v0}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 55
     .local v1, "canvas":Landroid/graphics/Canvas;
     invoke-virtual {p0, v5, v5, v3, v2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 56
     invoke-virtual {p0, v1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
     goto :goto_0
@@ -109,19 +98,16 @@
 
     const/4 v4, 0x0
 
-    .line 68
     if-eqz p1, :cond_1
 
     const v0, 0x1060064
 
-    .line 69
     .local v0, "colorResId":I
     :goto_0
     const/16 v2, -0x2710
 
     if-eq p0, v2, :cond_0
 
-    .line 71
     sget-object v2, Lcom/android/internal/util/UserIcons;->USER_ICON_COLORS:[I
 
     sget-object v3, Lcom/android/internal/util/UserIcons;->USER_ICON_COLORS:[I
@@ -132,7 +118,6 @@
 
     aget v0, v2, v3
 
-    .line 73
     :cond_0
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
@@ -148,7 +133,6 @@
 
     move-result-object v1
 
-    .line 74
     .local v1, "icon":Landroid/graphics/drawable/Drawable;
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
@@ -162,7 +146,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/graphics/drawable/Drawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 75
     invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v2
@@ -173,10 +156,8 @@
 
     invoke-virtual {v1, v4, v4, v2, v3}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 76
     return-object v1
 
-    .line 68
     .end local v0    # "colorResId":I
     .end local v1    # "icon":Landroid/graphics/drawable/Drawable;
     :cond_1

@@ -33,7 +33,6 @@
     .locals 1
 
     .prologue
-    .line 59
     const-string v0, "^[\\s]+session[\\s]+pid[\\s]+(cnt|count)"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -42,7 +41,6 @@
 
     sput-object v0, Lmiui/util/AudioOutputHelper$DUMP_TAG;->SESSIONS_HEAD_FINDER:Ljava/util/regex/Pattern;
 
-    .line 62
     const-string v0, "^\\s+(\\d+)\\s+(\\d+)\\s+\\d+$"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -51,7 +49,6 @@
 
     sput-object v0, Lmiui/util/AudioOutputHelper$DUMP_TAG;->SESSIONS_CONTENT_FINDER:Ljava/util/regex/Pattern;
 
-    .line 68
     const-string v0, "^[\\s]*[s|S]tandby: (\\w+)"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -67,7 +64,6 @@
     .locals 0
 
     .prologue
-    .line 57
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

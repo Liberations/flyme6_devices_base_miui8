@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 199
     iput-object p1, p0, Lmiui/maml/elements/WebViewScreenElement$4;->this$0:Lmiui/maml/elements/WebViewScreenElement;
 
     iput-object p2, p0, Lmiui/maml/elements/WebViewScreenElement$4;->val$jsfun:Ljava/lang/String;
@@ -44,7 +43,6 @@
     .locals 3
 
     .prologue
-    .line 201
     iget-object v0, p0, Lmiui/maml/elements/WebViewScreenElement$4;->this$0:Lmiui/maml/elements/WebViewScreenElement;
 
     # getter for: Lmiui/maml/elements/WebViewScreenElement;->mWebView:Landroid/webkit/WebView;
@@ -74,6 +72,5 @@
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
 
-    .line 202
     return-void
 .end method

@@ -40,19 +40,14 @@
     .param p3, "requestStream"    # Z
 
     .prologue
-    .line 50
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 51
     iput p1, p0, Landroid/content/res/MiuiResources$ThemeFileInfoOption;->inCookie:I
 
-    .line 52
     iput-object p2, p0, Landroid/content/res/MiuiResources$ThemeFileInfoOption;->inResourcePath:Ljava/lang/String;
 
-    .line 53
     iput-boolean p3, p0, Landroid/content/res/MiuiResources$ThemeFileInfoOption;->inRequestStream:Z
 
-    .line 54
     return-void
 .end method
 
@@ -62,20 +57,16 @@
     .param p2, "requestStream"    # Z
 
     .prologue
-    .line 59
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 60
     iget v0, p1, Landroid/util/TypedValue;->assetCookie:I
 
     iput v0, p0, Landroid/content/res/MiuiResources$ThemeFileInfoOption;->inCookie:I
 
-    .line 61
     iget v0, p1, Landroid/util/TypedValue;->density:I
 
     iput v0, p0, Landroid/content/res/MiuiResources$ThemeFileInfoOption;->inDensity:I
 
-    .line 62
     iget-object v0, p1, Landroid/util/TypedValue;->string:Ljava/lang/CharSequence;
 
     invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
@@ -84,10 +75,8 @@
 
     iput-object v0, p0, Landroid/content/res/MiuiResources$ThemeFileInfoOption;->inResourcePath:Ljava/lang/String;
 
-    .line 63
     iput-boolean p2, p0, Landroid/content/res/MiuiResources$ThemeFileInfoOption;->inRequestStream:Z
 
-    .line 64
     return-void
 .end method
 
@@ -96,12 +85,9 @@
     .param p1, "requestStream"    # Z
 
     .prologue
-    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 47
     iput-boolean p1, p0, Landroid/content/res/MiuiResources$ThemeFileInfoOption;->inRequestStream:Z
 
-    .line 48
     return-void
 .end method

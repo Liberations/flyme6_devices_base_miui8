@@ -16,14 +16,12 @@
     .locals 3
 
     .prologue
-    .line 33
     const/16 v1, 0x80
 
     new-array v1, v1, [Ljava/lang/String;
 
     sput-object v1, Lorg/apache/miui/commons/lang3/CharUtils;->CHAR_STRING_ARRAY:[Ljava/lang/String;
 
-    .line 55
     const/4 v0, 0x0
 
     .local v0, "c":C
@@ -34,7 +32,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 56
     sget-object v1, Lorg/apache/miui/commons/lang3/CharUtils;->CHAR_STRING_ARRAY:[Ljava/lang/String;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(C)Ljava/lang/String;
@@ -43,14 +40,12 @@
 
     aput-object v2, v1, v0
 
-    .line 55
     add-int/lit8 v1, v0, 0x1
 
     int-to-char v0, v1
 
     goto :goto_0
 
-    .line 58
     :cond_0
     return-void
 .end method
@@ -59,10 +54,8 @@
     .locals 0
 
     .prologue
-    .line 68
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 69
     return-void
 .end method
 
@@ -71,7 +64,6 @@
     .param p0, "ch"    # C
 
     .prologue
-    .line 404
     const/16 v0, 0x80
 
     if-ge p0, v0, :cond_0
@@ -92,7 +84,6 @@
     .param p0, "ch"    # C
 
     .prologue
-    .line 461
     const/16 v0, 0x41
 
     if-lt p0, v0, :cond_0
@@ -127,7 +118,6 @@
     .param p0, "ch"    # C
 
     .prologue
-    .line 499
     const/16 v0, 0x61
 
     if-lt p0, v0, :cond_0
@@ -152,7 +142,6 @@
     .param p0, "ch"    # C
 
     .prologue
-    .line 480
     const/16 v0, 0x41
 
     if-lt p0, v0, :cond_0
@@ -177,7 +166,6 @@
     .param p0, "ch"    # C
 
     .prologue
-    .line 537
     const/16 v0, 0x41
 
     if-lt p0, v0, :cond_0
@@ -221,7 +209,6 @@
     .param p0, "ch"    # C
 
     .prologue
-    .line 442
     const/16 v0, 0x20
 
     if-lt p0, v0, :cond_0
@@ -247,7 +234,6 @@
     .param p0, "ch"    # C
 
     .prologue
-    .line 518
     const/16 v0, 0x30
 
     if-lt p0, v0, :cond_0
@@ -272,7 +258,6 @@
     .param p0, "ch"    # C
 
     .prologue
-    .line 423
     const/16 v0, 0x20
 
     if-lt p0, v0, :cond_0
@@ -297,10 +282,8 @@
     .param p0, "ch"    # Ljava/lang/Character;
 
     .prologue
-    .line 131
     if-nez p0, :cond_0
 
-    .line 132
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "The Character must not be null"
@@ -309,7 +292,6 @@
 
     throw v0
 
-    .line 134
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Character;->charValue()C
 
@@ -324,10 +306,8 @@
     .param p1, "defaultValue"    # C
 
     .prologue
-    .line 151
     if-nez p0, :cond_0
 
-    .line 154
     .end local p1    # "defaultValue":C
     :goto_0
     return p1
@@ -346,14 +326,12 @@
     .param p0, "str"    # Ljava/lang/String;
 
     .prologue
-    .line 174
     invoke-static {p0}, Lorg/apache/miui/commons/lang3/StringUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 175
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "The String must not be empty"
@@ -362,7 +340,6 @@
 
     throw v0
 
-    .line 177
     :cond_0
     const/4 v0, 0x0
 
@@ -379,14 +356,12 @@
     .param p1, "defaultValue"    # C
 
     .prologue
-    .line 196
     invoke-static {p0}, Lorg/apache/miui/commons/lang3/StringUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 199
     .end local p1    # "defaultValue":C
     :goto_0
     return p1
@@ -409,7 +384,6 @@
     .end annotation
 
     .prologue
-    .line 89
     invoke-static {p0}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
 
     move-result-object v0
@@ -422,17 +396,14 @@
     .param p0, "str"    # Ljava/lang/String;
 
     .prologue
-    .line 110
     invoke-static {p0}, Lorg/apache/miui/commons/lang3/StringUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 111
     const/4 v0, 0x0
 
-    .line 113
     :goto_0
     return-object v0
 
@@ -455,14 +426,12 @@
     .param p0, "ch"    # C
 
     .prologue
-    .line 219
     invoke-static {p0}, Lorg/apache/miui/commons/lang3/CharUtils;->isAsciiNumeric(C)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 220
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -493,7 +462,6 @@
 
     throw v0
 
-    .line 222
     :cond_0
     add-int/lit8 v0, p0, -0x30
 
@@ -506,14 +474,12 @@
     .param p1, "defaultValue"    # I
 
     .prologue
-    .line 241
     invoke-static {p0}, Lorg/apache/miui/commons/lang3/CharUtils;->isAsciiNumeric(C)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 244
     .end local p1    # "defaultValue":I
     :goto_0
     return p1
@@ -530,10 +496,8 @@
     .param p0, "ch"    # Ljava/lang/Character;
 
     .prologue
-    .line 264
     if-nez p0, :cond_0
 
-    .line 265
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "The character must not be null"
@@ -542,7 +506,6 @@
 
     throw v0
 
-    .line 267
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Character;->charValue()C
 
@@ -561,10 +524,8 @@
     .param p1, "defaultValue"    # I
 
     .prologue
-    .line 287
     if-nez p0, :cond_0
 
-    .line 290
     .end local p1    # "defaultValue":I
     :goto_0
     return p1
@@ -587,17 +548,14 @@
     .param p0, "ch"    # C
 
     .prologue
-    .line 309
     const/16 v0, 0x80
 
     if-ge p0, v0, :cond_0
 
-    .line 310
     sget-object v0, Lorg/apache/miui/commons/lang3/CharUtils;->CHAR_STRING_ARRAY:[Ljava/lang/String;
 
     aget-object v0, v0, p0
 
-    .line 312
     :goto_0
     return-object v0
 
@@ -622,13 +580,10 @@
     .param p0, "ch"    # Ljava/lang/Character;
 
     .prologue
-    .line 333
     if-nez p0, :cond_0
 
-    .line 334
     const/4 v0, 0x0
 
-    .line 336
     :goto_0
     return-object v0
 
@@ -649,12 +604,10 @@
     .param p0, "ch"    # C
 
     .prologue
-    .line 354
     const/16 v0, 0x10
 
     if-ge p0, v0, :cond_0
 
-    .line 355
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -677,17 +630,14 @@
 
     move-result-object v0
 
-    .line 361
     :goto_0
     return-object v0
 
-    .line 356
     :cond_0
     const/16 v0, 0x100
 
     if-ge p0, v0, :cond_1
 
-    .line 357
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -712,13 +662,11 @@
 
     goto :goto_0
 
-    .line 358
     :cond_1
     const/16 v0, 0x1000
 
     if-ge p0, v0, :cond_2
 
-    .line 359
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -743,7 +691,6 @@
 
     goto :goto_0
 
-    .line 361
     :cond_2
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -775,13 +722,10 @@
     .param p0, "ch"    # Ljava/lang/Character;
 
     .prologue
-    .line 381
     if-nez p0, :cond_0
 
-    .line 382
     const/4 v0, 0x0
 
-    .line 384
     :goto_0
     return-object v0
 

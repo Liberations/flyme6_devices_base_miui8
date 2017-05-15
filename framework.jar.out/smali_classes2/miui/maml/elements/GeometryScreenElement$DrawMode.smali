@@ -48,7 +48,6 @@
 
     const/4 v2, 0x0
 
-    .line 155
     new-instance v0, Lmiui/maml/elements/GeometryScreenElement$DrawMode;
 
     const-string v1, "STROKE_CENTER"
@@ -57,7 +56,6 @@
 
     sput-object v0, Lmiui/maml/elements/GeometryScreenElement$DrawMode;->STROKE_CENTER:Lmiui/maml/elements/GeometryScreenElement$DrawMode;
 
-    .line 157
     new-instance v0, Lmiui/maml/elements/GeometryScreenElement$DrawMode;
 
     const-string v1, "STROKE_OUTER"
@@ -66,7 +64,6 @@
 
     sput-object v0, Lmiui/maml/elements/GeometryScreenElement$DrawMode;->STROKE_OUTER:Lmiui/maml/elements/GeometryScreenElement$DrawMode;
 
-    .line 159
     new-instance v0, Lmiui/maml/elements/GeometryScreenElement$DrawMode;
 
     const-string v1, "STROKE_INNER"
@@ -75,7 +72,6 @@
 
     sput-object v0, Lmiui/maml/elements/GeometryScreenElement$DrawMode;->STROKE_INNER:Lmiui/maml/elements/GeometryScreenElement$DrawMode;
 
-    .line 161
     new-instance v0, Lmiui/maml/elements/GeometryScreenElement$DrawMode;
 
     const-string v1, "FILL"
@@ -84,7 +80,6 @@
 
     sput-object v0, Lmiui/maml/elements/GeometryScreenElement$DrawMode;->FILL:Lmiui/maml/elements/GeometryScreenElement$DrawMode;
 
-    .line 154
     const/4 v0, 0x4
 
     new-array v0, v0, [Lmiui/maml/elements/GeometryScreenElement$DrawMode;
@@ -119,7 +114,6 @@
     .end annotation
 
     .prologue
-    .line 154
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -130,7 +124,6 @@
     .param p0, "strMode"    # Ljava/lang/String;
 
     .prologue
-    .line 164
     const-string v0, "inner"
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -139,14 +132,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 165
     sget-object v0, Lmiui/maml/elements/GeometryScreenElement$DrawMode;->STROKE_INNER:Lmiui/maml/elements/GeometryScreenElement$DrawMode;
 
-    .line 169
     :goto_0
     return-object v0
 
-    .line 166
     :cond_0
     const-string v0, "center"
 
@@ -156,12 +146,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 167
     sget-object v0, Lmiui/maml/elements/GeometryScreenElement$DrawMode;->STROKE_CENTER:Lmiui/maml/elements/GeometryScreenElement$DrawMode;
 
     goto :goto_0
 
-    .line 169
     :cond_1
     sget-object v0, Lmiui/maml/elements/GeometryScreenElement$DrawMode;->STROKE_OUTER:Lmiui/maml/elements/GeometryScreenElement$DrawMode;
 
@@ -173,7 +161,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 154
     const-class v0, Lmiui/maml/elements/GeometryScreenElement$DrawMode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -189,7 +176,6 @@
     .locals 1
 
     .prologue
-    .line 154
     sget-object v0, Lmiui/maml/elements/GeometryScreenElement$DrawMode;->$VALUES:[Lmiui/maml/elements/GeometryScreenElement$DrawMode;
 
     invoke-virtual {v0}, [Lmiui/maml/elements/GeometryScreenElement$DrawMode;->clone()Ljava/lang/Object;

@@ -52,7 +52,6 @@
 
     const/4 v2, 0x0
 
-    .line 351
     new-instance v0, Lmiui/push/Presence$Mode;
 
     const-string v1, "chat"
@@ -61,7 +60,6 @@
 
     sput-object v0, Lmiui/push/Presence$Mode;->chat:Lmiui/push/Presence$Mode;
 
-    .line 356
     new-instance v0, Lmiui/push/Presence$Mode;
 
     const-string v1, "available"
@@ -70,7 +68,6 @@
 
     sput-object v0, Lmiui/push/Presence$Mode;->available:Lmiui/push/Presence$Mode;
 
-    .line 361
     new-instance v0, Lmiui/push/Presence$Mode;
 
     const-string v1, "away"
@@ -79,16 +76,14 @@
 
     sput-object v0, Lmiui/push/Presence$Mode;->away:Lmiui/push/Presence$Mode;
 
-    .line 366
     new-instance v0, Lmiui/push/Presence$Mode;
 
-    const-string/jumbo v1, "xa"
+    const-string v1, "xa"
 
     invoke-direct {v0, v1, v5}, Lmiui/push/Presence$Mode;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lmiui/push/Presence$Mode;->xa:Lmiui/push/Presence$Mode;
 
-    .line 371
     new-instance v0, Lmiui/push/Presence$Mode;
 
     const-string v1, "dnd"
@@ -97,7 +92,6 @@
 
     sput-object v0, Lmiui/push/Presence$Mode;->dnd:Lmiui/push/Presence$Mode;
 
-    .line 346
     const/4 v0, 0x5
 
     new-array v0, v0, [Lmiui/push/Presence$Mode;
@@ -136,7 +130,6 @@
     .end annotation
 
     .prologue
-    .line 346
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -147,7 +140,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 346
     const-class v0, Lmiui/push/Presence$Mode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -163,7 +155,6 @@
     .locals 1
 
     .prologue
-    .line 346
     sget-object v0, Lmiui/push/Presence$Mode;->$VALUES:[Lmiui/push/Presence$Mode;
 
     invoke-virtual {v0}, [Lmiui/push/Presence$Mode;->clone()Ljava/lang/Object;

@@ -48,7 +48,6 @@
     .locals 1
 
     .prologue
-    .line 217
     new-instance v0, Landroid/app/admin/SystemUpdatePolicy$1;
 
     invoke-direct {v0}, Landroid/app/admin/SystemUpdatePolicy$1;-><init>()V
@@ -62,15 +61,12 @@
     .locals 1
 
     .prologue
-    .line 89
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 90
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/app/admin/SystemUpdatePolicy;->mPolicyType:I
 
-    .line 91
     return-void
 .end method
 
@@ -79,7 +75,6 @@
     .param p1, "x0"    # Landroid/app/admin/SystemUpdatePolicy$1;
 
     .prologue
-    .line 38
     invoke-direct {p0}, Landroid/app/admin/SystemUpdatePolicy;-><init>()V
 
     return-void
@@ -91,7 +86,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 38
     iput p1, p0, Landroid/app/admin/SystemUpdatePolicy;->mPolicyType:I
 
     return p1
@@ -103,7 +97,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 38
     iput p1, p0, Landroid/app/admin/SystemUpdatePolicy;->mMaintenanceWindowStart:I
 
     return p1
@@ -115,7 +108,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 38
     iput p1, p0, Landroid/app/admin/SystemUpdatePolicy;->mMaintenanceWindowEnd:I
 
     return p1
@@ -125,18 +117,15 @@
     .locals 2
 
     .prologue
-    .line 100
     new-instance v0, Landroid/app/admin/SystemUpdatePolicy;
 
     invoke-direct {v0}, Landroid/app/admin/SystemUpdatePolicy;-><init>()V
 
-    .line 101
     .local v0, "policy":Landroid/app/admin/SystemUpdatePolicy;
     const/4 v1, 0x1
 
     iput v1, v0, Landroid/app/admin/SystemUpdatePolicy;->mPolicyType:I
 
-    .line 102
     return-object v0
 .end method
 
@@ -144,18 +133,15 @@
     .locals 2
 
     .prologue
-    .line 140
     new-instance v0, Landroid/app/admin/SystemUpdatePolicy;
 
     invoke-direct {v0}, Landroid/app/admin/SystemUpdatePolicy;-><init>()V
 
-    .line 141
     .local v0, "policy":Landroid/app/admin/SystemUpdatePolicy;
     const/4 v1, 0x3
 
     iput v1, v0, Landroid/app/admin/SystemUpdatePolicy;->mPolicyType:I
 
-    .line 142
     return-object v0
 .end method
 
@@ -167,7 +153,6 @@
     .prologue
     const/16 v1, 0x5a0
 
-    .line 121
     if-ltz p0, :cond_0
 
     if-ge p0, v1, :cond_0
@@ -176,35 +161,29 @@
 
     if-lt p1, v1, :cond_1
 
-    .line 123
     :cond_0
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v2, "startTime and endTime must be inside [0, 1440)"
+    const-string v2, "startTime and endTime must be inside [0, 1440)"
 
     invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 125
     :cond_1
     new-instance v0, Landroid/app/admin/SystemUpdatePolicy;
 
     invoke-direct {v0}, Landroid/app/admin/SystemUpdatePolicy;-><init>()V
 
-    .line 126
     .local v0, "policy":Landroid/app/admin/SystemUpdatePolicy;
     const/4 v1, 0x2
 
     iput v1, v0, Landroid/app/admin/SystemUpdatePolicy;->mPolicyType:I
 
-    .line 127
     iput p0, v0, Landroid/app/admin/SystemUpdatePolicy;->mMaintenanceWindowStart:I
 
-    .line 128
     iput p1, v0, Landroid/app/admin/SystemUpdatePolicy;->mMaintenanceWindowEnd:I
 
-    .line 129
     return-object v0
 .end method
 
@@ -215,66 +194,56 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 241
     :try_start_0
     new-instance v0, Landroid/app/admin/SystemUpdatePolicy;
 
     invoke-direct {v0}, Landroid/app/admin/SystemUpdatePolicy;-><init>()V
 
-    .line 242
     .local v0, "policy":Landroid/app/admin/SystemUpdatePolicy;
     const/4 v3, 0x0
 
-    const-string/jumbo v4, "policy_type"
+    const-string v4, "policy_type"
 
     invoke-interface {p0, v3, v4}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 243
     .local v1, "value":Ljava/lang/String;
     if-eqz v1, :cond_2
 
-    .line 244
     invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v3
 
     iput v3, v0, Landroid/app/admin/SystemUpdatePolicy;->mPolicyType:I
 
-    .line 246
     const/4 v3, 0x0
 
-    const-string/jumbo v4, "install_window_start"
+    const-string v4, "install_window_start"
 
     invoke-interface {p0, v3, v4}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 247
     if-eqz v1, :cond_0
 
-    .line 248
     invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v3
 
     iput v3, v0, Landroid/app/admin/SystemUpdatePolicy;->mMaintenanceWindowStart:I
 
-    .line 250
     :cond_0
     const/4 v3, 0x0
 
-    const-string/jumbo v4, "install_window_end"
+    const-string v4, "install_window_end"
 
     invoke-interface {p0, v3, v4}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 251
     if-eqz v1, :cond_1
 
-    .line 252
     invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v3
@@ -283,21 +252,18 @@
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 259
     .end local v0    # "policy":Landroid/app/admin/SystemUpdatePolicy;
     .end local v1    # "value":Ljava/lang/String;
     :cond_1
     :goto_0
     return-object v0
 
-    .line 256
     :catch_0
     move-exception v3
 
     :cond_2
     move-object v0, v2
 
-    .line 259
     goto :goto_0
 .end method
 
@@ -307,7 +273,6 @@
     .locals 1
 
     .prologue
-    .line 207
     const/4 v0, 0x0
 
     return v0
@@ -317,17 +282,14 @@
     .locals 2
 
     .prologue
-    .line 177
     iget v0, p0, Landroid/app/admin/SystemUpdatePolicy;->mPolicyType:I
 
     const/4 v1, 0x2
 
     if-ne v0, v1, :cond_0
 
-    .line 178
     iget v0, p0, Landroid/app/admin/SystemUpdatePolicy;->mMaintenanceWindowEnd:I
 
-    .line 180
     :goto_0
     return v0
 
@@ -341,17 +303,14 @@
     .locals 2
 
     .prologue
-    .line 163
     iget v0, p0, Landroid/app/admin/SystemUpdatePolicy;->mPolicyType:I
 
     const/4 v1, 0x2
 
     if-ne v0, v1, :cond_0
 
-    .line 164
     iget v0, p0, Landroid/app/admin/SystemUpdatePolicy;->mMaintenanceWindowStart:I
 
-    .line 166
     :goto_0
     return v0
 
@@ -365,7 +324,6 @@
     .locals 1
 
     .prologue
-    .line 153
     iget v0, p0, Landroid/app/admin/SystemUpdatePolicy;->mPolicyType:I
 
     return v0
@@ -381,7 +339,6 @@
 
     const/4 v0, 0x1
 
-    .line 189
     iget v2, p0, Landroid/app/admin/SystemUpdatePolicy;->mPolicyType:I
 
     if-eq v2, v0, :cond_0
@@ -392,12 +349,10 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 195
     :cond_0
     :goto_0
     return v0
 
-    .line 191
     :cond_1
     iget v2, p0, Landroid/app/admin/SystemUpdatePolicy;->mPolicyType:I
 
@@ -405,7 +360,6 @@
 
     if-ne v2, v3, :cond_3
 
-    .line 192
     iget v2, p0, Landroid/app/admin/SystemUpdatePolicy;->mMaintenanceWindowStart:I
 
     if-ltz v2, :cond_2
@@ -430,7 +384,6 @@
     :cond_3
     move v0, v1
 
-    .line 195
     goto :goto_0
 .end method
 
@@ -446,8 +399,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 266
-    const-string/jumbo v0, "policy_type"
+    const-string v0, "policy_type"
 
     iget v1, p0, Landroid/app/admin/SystemUpdatePolicy;->mPolicyType:I
 
@@ -457,8 +409,7 @@
 
     invoke-interface {p1, v2, v0, v1}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 267
-    const-string/jumbo v0, "install_window_start"
+    const-string v0, "install_window_start"
 
     iget v1, p0, Landroid/app/admin/SystemUpdatePolicy;->mMaintenanceWindowStart:I
 
@@ -468,8 +419,7 @@
 
     invoke-interface {p1, v2, v0, v1}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 268
-    const-string/jumbo v0, "install_window_end"
+    const-string v0, "install_window_end"
 
     iget v1, p0, Landroid/app/admin/SystemUpdatePolicy;->mMaintenanceWindowEnd:I
 
@@ -479,7 +429,6 @@
 
     invoke-interface {p1, v2, v0, v1}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 269
     return-void
 .end method
 
@@ -487,7 +436,6 @@
     .locals 4
 
     .prologue
-    .line 201
     const-string v0, "SystemUpdatePolicy (type: %d, windowStart: %d, windowEnd: %d)"
 
     const/4 v1, 0x3
@@ -537,21 +485,17 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 212
     iget v0, p0, Landroid/app/admin/SystemUpdatePolicy;->mPolicyType:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 213
     iget v0, p0, Landroid/app/admin/SystemUpdatePolicy;->mMaintenanceWindowStart:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 214
     iget v0, p0, Landroid/app/admin/SystemUpdatePolicy;->mMaintenanceWindowEnd:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 215
     return-void
 .end method

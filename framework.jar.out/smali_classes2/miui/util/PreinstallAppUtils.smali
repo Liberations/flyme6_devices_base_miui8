@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,7 +18,6 @@
     .param p0, "pkg"    # Ljava/lang/String;
 
     .prologue
-    .line 13
     invoke-static {p0}, Lmiui/os/MiuiInit;->isPreinstalledPackage(Ljava/lang/String;)Z
 
     move-result v0
@@ -31,7 +29,6 @@
     .locals 2
 
     .prologue
-    .line 20
     const-string v0, "support_sign_verify_in_cust"
 
     const/4 v1, 0x0

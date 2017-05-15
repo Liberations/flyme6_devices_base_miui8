@@ -34,7 +34,6 @@
     .locals 1
 
     .prologue
-    .line 93
     const-class v0, Landroid/widget/DatePicker;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -51,12 +50,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 118
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Landroid/widget/DatePicker;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 119
     return-void
 .end method
 
@@ -66,12 +63,10 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 122
     const v0, 0x101035c
 
     invoke-direct {p0, p1, p2, v0}, Landroid/widget/DatePicker;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 123
     return-void
 .end method
 
@@ -82,12 +77,10 @@
     .param p3, "defStyleAttr"    # I
 
     .prologue
-    .line 126
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, p3, v0}, Landroid/widget/DatePicker;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    .line 127
     return-void
 .end method
 
@@ -99,17 +92,14 @@
     .param p4, "defStyleRes"    # I
 
     .prologue
-    .line 130
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    .line 132
     sget-object v3, Lcom/android/internal/R$styleable;->DatePicker:[I
 
     invoke-virtual {p1, p2, v3, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    .line 134
     .local v0, "a":Landroid/content/res/TypedArray;
     const/16 v3, 0x10
 
@@ -119,7 +109,6 @@
 
     move-result v2
 
-    .line 135
     .local v2, "mode":I
     const/4 v3, 0x3
 
@@ -129,32 +118,25 @@
 
     move-result v1
 
-    .line 136
     .local v1, "firstDayOfWeek":I
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 138
     packed-switch v2, :pswitch_data_0
 
-    .line 144
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/DatePicker;->createSpinnerUIDelegate(Landroid/content/Context;Landroid/util/AttributeSet;II)Landroid/widget/DatePicker$DatePickerDelegate;
 
     move-result-object v3
 
     iput-object v3, p0, Landroid/widget/DatePicker;->mDelegate:Landroid/widget/DatePicker$DatePickerDelegate;
 
-    .line 148
     :goto_0
     if-eqz v1, :cond_0
 
-    .line 149
     invoke-virtual {p0, v1}, Landroid/widget/DatePicker;->setFirstDayOfWeek(I)V
 
-    .line 151
     :cond_0
     return-void
 
-    .line 140
     :pswitch_0
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/DatePicker;->createCalendarUIDelegate(Landroid/content/Context;Landroid/util/AttributeSet;II)Landroid/widget/DatePicker$DatePickerDelegate;
 
@@ -164,7 +146,6 @@
 
     goto :goto_0
 
-    .line 138
     nop
 
     :pswitch_data_0
@@ -177,7 +158,6 @@
     .locals 1
 
     .prologue
-    .line 92
     sget-object v0, Landroid/widget/DatePicker;->LOG_TAG:Ljava/lang/String;
 
     return-object v0
@@ -191,7 +171,6 @@
     .param p4, "defStyleRes"    # I
 
     .prologue
-    .line 160
     new-instance v0, Landroid/widget/DatePickerCalendarDelegate;
 
     move-object v1, p0
@@ -217,7 +196,6 @@
     .param p4, "defStyleRes"    # I
 
     .prologue
-    .line 155
     new-instance v0, Landroid/widget/DatePicker$DatePickerSpinnerDelegate;
 
     move-object v1, p0
@@ -242,7 +220,6 @@
     .param p1, "event"    # Landroid/view/accessibility/AccessibilityEvent;
 
     .prologue
-    .line 288
     iget-object v0, p0, Landroid/widget/DatePicker;->mDelegate:Landroid/widget/DatePicker$DatePickerDelegate;
 
     invoke-interface {v0, p1}, Landroid/widget/DatePicker$DatePickerDelegate;->dispatchPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)Z
@@ -265,11 +242,9 @@
     .end annotation
 
     .prologue
-    .line 421
     .local p1, "container":Landroid/util/SparseArray;, "Landroid/util/SparseArray<Landroid/os/Parcelable;>;"
     invoke-virtual {p0, p1}, Landroid/widget/DatePicker;->dispatchThawSelfOnly(Landroid/util/SparseArray;)V
 
-    .line 422
     return-void
 .end method
 
@@ -277,7 +252,6 @@
     .locals 1
 
     .prologue
-    .line 300
     const-class v0, Landroid/widget/DatePicker;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -291,7 +265,6 @@
     .locals 1
 
     .prologue
-    .line 375
     iget-object v0, p0, Landroid/widget/DatePicker;->mDelegate:Landroid/widget/DatePicker$DatePickerDelegate;
 
     invoke-interface {v0}, Landroid/widget/DatePicker$DatePickerDelegate;->getCalendarView()Landroid/widget/CalendarView;
@@ -305,7 +278,6 @@
     .locals 1
 
     .prologue
-    .line 361
     iget-object v0, p0, Landroid/widget/DatePicker;->mDelegate:Landroid/widget/DatePicker$DatePickerDelegate;
 
     invoke-interface {v0}, Landroid/widget/DatePicker$DatePickerDelegate;->getCalendarViewShown()Z
@@ -319,7 +291,6 @@
     .locals 1
 
     .prologue
-    .line 208
     iget-object v0, p0, Landroid/widget/DatePicker;->mDelegate:Landroid/widget/DatePicker$DatePickerDelegate;
 
     invoke-interface {v0}, Landroid/widget/DatePicker$DatePickerDelegate;->getDayOfMonth()I
@@ -333,7 +304,6 @@
     .locals 1
 
     .prologue
-    .line 347
     iget-object v0, p0, Landroid/widget/DatePicker;->mDelegate:Landroid/widget/DatePicker$DatePickerDelegate;
 
     invoke-interface {v0}, Landroid/widget/DatePicker$DatePickerDelegate;->getFirstDayOfWeek()I
@@ -347,7 +317,6 @@
     .locals 2
 
     .prologue
-    .line 247
     iget-object v0, p0, Landroid/widget/DatePicker;->mDelegate:Landroid/widget/DatePicker$DatePickerDelegate;
 
     invoke-interface {v0}, Landroid/widget/DatePicker$DatePickerDelegate;->getMaxDate()Ljava/util/Calendar;
@@ -365,7 +334,6 @@
     .locals 2
 
     .prologue
-    .line 222
     iget-object v0, p0, Landroid/widget/DatePicker;->mDelegate:Landroid/widget/DatePicker$DatePickerDelegate;
 
     invoke-interface {v0}, Landroid/widget/DatePicker$DatePickerDelegate;->getMinDate()Ljava/util/Calendar;
@@ -383,7 +351,6 @@
     .locals 1
 
     .prologue
-    .line 201
     iget-object v0, p0, Landroid/widget/DatePicker;->mDelegate:Landroid/widget/DatePicker$DatePickerDelegate;
 
     invoke-interface {v0}, Landroid/widget/DatePicker$DatePickerDelegate;->getMonth()I
@@ -397,7 +364,6 @@
     .locals 1
 
     .prologue
-    .line 402
     iget-object v0, p0, Landroid/widget/DatePicker;->mDelegate:Landroid/widget/DatePicker$DatePickerDelegate;
 
     invoke-interface {v0}, Landroid/widget/DatePicker$DatePickerDelegate;->getSpinnersShown()Z
@@ -411,7 +377,6 @@
     .locals 1
 
     .prologue
-    .line 194
     iget-object v0, p0, Landroid/widget/DatePicker;->mDelegate:Landroid/widget/DatePicker$DatePickerDelegate;
 
     invoke-interface {v0}, Landroid/widget/DatePicker$DatePickerDelegate;->getYear()I
@@ -429,12 +394,10 @@
     .param p4, "onDateChangedListener"    # Landroid/widget/DatePicker$OnDateChangedListener;
 
     .prologue
-    .line 176
     iget-object v0, p0, Landroid/widget/DatePicker;->mDelegate:Landroid/widget/DatePicker$DatePickerDelegate;
 
     invoke-interface {v0, p1, p2, p3, p4}, Landroid/widget/DatePicker$DatePickerDelegate;->init(IIILandroid/widget/DatePicker$OnDateChangedListener;)V
 
-    .line 177
     return-void
 .end method
 
@@ -442,7 +405,6 @@
     .locals 1
 
     .prologue
-    .line 282
     iget-object v0, p0, Landroid/widget/DatePicker;->mDelegate:Landroid/widget/DatePicker$DatePickerDelegate;
 
     invoke-interface {v0}, Landroid/widget/DatePicker$DatePickerDelegate;->isEnabled()Z
@@ -457,15 +419,12 @@
     .param p1, "newConfig"    # Landroid/content/res/Configuration;
 
     .prologue
-    .line 305
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 306
     iget-object v0, p0, Landroid/widget/DatePicker;->mDelegate:Landroid/widget/DatePicker$DatePickerDelegate;
 
     invoke-interface {v0, p1}, Landroid/widget/DatePicker$DatePickerDelegate;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 307
     return-void
 .end method
 
@@ -474,15 +433,12 @@
     .param p1, "event"    # Landroid/view/accessibility/AccessibilityEvent;
 
     .prologue
-    .line 294
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onPopulateAccessibilityEventInternal(Landroid/view/accessibility/AccessibilityEvent;)V
 
-    .line 295
     iget-object v0, p0, Landroid/widget/DatePicker;->mDelegate:Landroid/widget/DatePicker$DatePickerDelegate;
 
     invoke-interface {v0, p1}, Landroid/widget/DatePicker$DatePickerDelegate;->onPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
 
-    .line 296
     return-void
 .end method
 
@@ -491,12 +447,10 @@
     .param p1, "state"    # Landroid/os/Parcelable;
 
     .prologue
-    .line 432
     move-object v0, p1
 
     check-cast v0, Landroid/view/View$BaseSavedState;
 
-    .line 433
     .local v0, "ss":Landroid/view/View$BaseSavedState;
     invoke-virtual {v0}, Landroid/view/View$BaseSavedState;->getSuperState()Landroid/os/Parcelable;
 
@@ -504,12 +458,10 @@
 
     invoke-super {p0, v1}, Landroid/widget/FrameLayout;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
-    .line 434
     iget-object v1, p0, Landroid/widget/DatePicker;->mDelegate:Landroid/widget/DatePicker$DatePickerDelegate;
 
     invoke-interface {v1, v0}, Landroid/widget/DatePicker$DatePickerDelegate;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
-    .line 435
     return-void
 .end method
 
@@ -517,12 +469,10 @@
     .locals 2
 
     .prologue
-    .line 426
     invoke-super {p0}, Landroid/widget/FrameLayout;->onSaveInstanceState()Landroid/os/Parcelable;
 
     move-result-object v0
 
-    .line 427
     .local v0, "superState":Landroid/os/Parcelable;
     iget-object v1, p0, Landroid/widget/DatePicker;->mDelegate:Landroid/widget/DatePicker$DatePickerDelegate;
 
@@ -538,12 +488,10 @@
     .param p1, "shown"    # Z
 
     .prologue
-    .line 389
     iget-object v0, p0, Landroid/widget/DatePicker;->mDelegate:Landroid/widget/DatePicker$DatePickerDelegate;
 
     invoke-interface {v0, p1}, Landroid/widget/DatePicker$DatePickerDelegate;->setCalendarViewShown(Z)V
 
-    .line 390
     return-void
 .end method
 
@@ -552,7 +500,6 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 273
     iget-object v0, p0, Landroid/widget/DatePicker;->mDelegate:Landroid/widget/DatePicker$DatePickerDelegate;
 
     invoke-interface {v0}, Landroid/widget/DatePicker$DatePickerDelegate;->isEnabled()Z
@@ -561,15 +508,12 @@
 
     if-ne v0, p1, :cond_0
 
-    .line 278
     :goto_0
     return-void
 
-    .line 276
     :cond_0
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->setEnabled(Z)V
 
-    .line 277
     iget-object v0, p0, Landroid/widget/DatePicker;->mDelegate:Landroid/widget/DatePicker$DatePickerDelegate;
 
     invoke-interface {v0, p1}, Landroid/widget/DatePicker$DatePickerDelegate;->setEnabled(Z)V
@@ -582,7 +526,6 @@
     .param p1, "firstDayOfWeek"    # I
 
     .prologue
-    .line 325
     const/4 v0, 0x1
 
     if-lt p1, v0, :cond_0
@@ -591,7 +534,6 @@
 
     if-le p1, v0, :cond_1
 
-    .line 326
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -601,13 +543,11 @@
 
     throw v0
 
-    .line 328
     :cond_1
     iget-object v0, p0, Landroid/widget/DatePicker;->mDelegate:Landroid/widget/DatePicker$DatePickerDelegate;
 
     invoke-interface {v0, p1}, Landroid/widget/DatePicker$DatePickerDelegate;->setFirstDayOfWeek(I)V
 
-    .line 329
     return-void
 .end method
 
@@ -616,12 +556,10 @@
     .param p1, "maxDate"    # J
 
     .prologue
-    .line 258
     iget-object v0, p0, Landroid/widget/DatePicker;->mDelegate:Landroid/widget/DatePicker$DatePickerDelegate;
 
     invoke-interface {v0, p1, p2}, Landroid/widget/DatePicker$DatePickerDelegate;->setMaxDate(J)V
 
-    .line 259
     return-void
 .end method
 
@@ -630,12 +568,10 @@
     .param p1, "minDate"    # J
 
     .prologue
-    .line 233
     iget-object v0, p0, Landroid/widget/DatePicker;->mDelegate:Landroid/widget/DatePicker$DatePickerDelegate;
 
     invoke-interface {v0, p1, p2}, Landroid/widget/DatePicker$DatePickerDelegate;->setMinDate(J)V
 
-    .line 234
     return-void
 .end method
 
@@ -644,12 +580,10 @@
     .param p1, "shown"    # Z
 
     .prologue
-    .line 416
     iget-object v0, p0, Landroid/widget/DatePicker;->mDelegate:Landroid/widget/DatePicker$DatePickerDelegate;
 
     invoke-interface {v0, p1}, Landroid/widget/DatePicker$DatePickerDelegate;->setSpinnersShown(Z)V
 
-    .line 417
     return-void
 .end method
 
@@ -658,12 +592,10 @@
     .param p1, "callback"    # Landroid/widget/DatePicker$ValidationCallback;
 
     .prologue
-    .line 268
     iget-object v0, p0, Landroid/widget/DatePicker;->mDelegate:Landroid/widget/DatePicker$DatePickerDelegate;
 
     invoke-interface {v0, p1}, Landroid/widget/DatePicker$DatePickerDelegate;->setValidationCallback(Landroid/widget/DatePicker$ValidationCallback;)V
 
-    .line 269
     return-void
 .end method
 
@@ -674,11 +606,9 @@
     .param p3, "dayOfMonth"    # I
 
     .prologue
-    .line 187
     iget-object v0, p0, Landroid/widget/DatePicker;->mDelegate:Landroid/widget/DatePicker$DatePickerDelegate;
 
     invoke-interface {v0, p1, p2, p3}, Landroid/widget/DatePicker$DatePickerDelegate;->updateDate(III)V
 
-    .line 188
     return-void
 .end method

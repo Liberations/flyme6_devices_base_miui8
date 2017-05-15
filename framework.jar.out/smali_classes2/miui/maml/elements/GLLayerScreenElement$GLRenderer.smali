@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 68
     iput-object p1, p0, Lmiui/maml/elements/GLLayerScreenElement$GLRenderer;->this$0:Lmiui/maml/elements/GLLayerScreenElement;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lmiui/maml/elements/GLLayerScreenElement$1;
 
     .prologue
-    .line 68
     invoke-direct {p0, p1}, Lmiui/maml/elements/GLLayerScreenElement$GLRenderer;-><init>(Lmiui/maml/elements/GLLayerScreenElement;)V
 
     return-void
@@ -53,7 +51,6 @@
     .param p1, "gl"    # Ljavax/microedition/khronos/opengles/GL10;
 
     .prologue
-    .line 92
     iget-object v0, p0, Lmiui/maml/elements/GLLayerScreenElement$GLRenderer;->this$0:Lmiui/maml/elements/GLLayerScreenElement;
 
     # getter for: Lmiui/maml/elements/GLLayerScreenElement;->mOnSurfaceDrawCommands:Lmiui/maml/CommandTrigger;
@@ -63,7 +60,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 93
     iget-object v0, p0, Lmiui/maml/elements/GLLayerScreenElement$GLRenderer;->this$0:Lmiui/maml/elements/GLLayerScreenElement;
 
     # getter for: Lmiui/maml/elements/GLLayerScreenElement;->mCanvasVar:Lmiui/maml/data/IndexedVariable;
@@ -73,7 +69,6 @@
 
     invoke-virtual {v0, p1}, Lmiui/maml/data/IndexedVariable;->set(Ljava/lang/Object;)Z
 
-    .line 94
     iget-object v0, p0, Lmiui/maml/elements/GLLayerScreenElement$GLRenderer;->this$0:Lmiui/maml/elements/GLLayerScreenElement;
 
     # getter for: Lmiui/maml/elements/GLLayerScreenElement;->mOnSurfaceDrawCommands:Lmiui/maml/CommandTrigger;
@@ -83,7 +78,6 @@
 
     invoke-virtual {v0}, Lmiui/maml/CommandTrigger;->perform()V
 
-    .line 95
     iget-object v0, p0, Lmiui/maml/elements/GLLayerScreenElement$GLRenderer;->this$0:Lmiui/maml/elements/GLLayerScreenElement;
 
     # getter for: Lmiui/maml/elements/GLLayerScreenElement;->mCanvasVar:Lmiui/maml/data/IndexedVariable;
@@ -95,7 +89,6 @@
 
     invoke-virtual {v0, v1}, Lmiui/maml/data/IndexedVariable;->set(Ljava/lang/Object;)Z
 
-    .line 97
     :cond_0
     iget-object v0, p0, Lmiui/maml/elements/GLLayerScreenElement$GLRenderer;->this$0:Lmiui/maml/elements/GLLayerScreenElement;
 
@@ -103,14 +96,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 98
     iget-object v0, p0, Lmiui/maml/elements/GLLayerScreenElement$GLRenderer;->this$0:Lmiui/maml/elements/GLLayerScreenElement;
 
     iget-object v0, v0, Lmiui/maml/elements/GLLayerScreenElement;->mController:Lmiui/maml/RendererController;
 
     invoke-virtual {v0}, Lmiui/maml/RendererController;->doneRender()V
 
-    .line 99
     :cond_1
     return-void
 .end method
@@ -122,7 +113,6 @@
     .param p3, "height"    # I
 
     .prologue
-    .line 81
     iget-object v0, p0, Lmiui/maml/elements/GLLayerScreenElement$GLRenderer;->this$0:Lmiui/maml/elements/GLLayerScreenElement;
 
     # getter for: Lmiui/maml/elements/GLLayerScreenElement;->mOnSurfaceChangeCommands:Lmiui/maml/CommandTrigger;
@@ -132,7 +122,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 82
     iget-object v0, p0, Lmiui/maml/elements/GLLayerScreenElement$GLRenderer;->this$0:Lmiui/maml/elements/GLLayerScreenElement;
 
     # getter for: Lmiui/maml/elements/GLLayerScreenElement;->mCanvasVar:Lmiui/maml/data/IndexedVariable;
@@ -142,7 +131,6 @@
 
     invoke-virtual {v0, p1}, Lmiui/maml/data/IndexedVariable;->set(Ljava/lang/Object;)Z
 
-    .line 83
     iget-object v0, p0, Lmiui/maml/elements/GLLayerScreenElement$GLRenderer;->this$0:Lmiui/maml/elements/GLLayerScreenElement;
 
     # getter for: Lmiui/maml/elements/GLLayerScreenElement;->mWVar:Lmiui/maml/data/IndexedVariable;
@@ -154,7 +142,6 @@
 
     invoke-virtual {v0, v2, v3}, Lmiui/maml/data/IndexedVariable;->set(D)V
 
-    .line 84
     iget-object v0, p0, Lmiui/maml/elements/GLLayerScreenElement$GLRenderer;->this$0:Lmiui/maml/elements/GLLayerScreenElement;
 
     # getter for: Lmiui/maml/elements/GLLayerScreenElement;->mHVar:Lmiui/maml/data/IndexedVariable;
@@ -166,7 +153,6 @@
 
     invoke-virtual {v0, v2, v3}, Lmiui/maml/data/IndexedVariable;->set(D)V
 
-    .line 85
     iget-object v0, p0, Lmiui/maml/elements/GLLayerScreenElement$GLRenderer;->this$0:Lmiui/maml/elements/GLLayerScreenElement;
 
     # getter for: Lmiui/maml/elements/GLLayerScreenElement;->mOnSurfaceChangeCommands:Lmiui/maml/CommandTrigger;
@@ -176,7 +162,6 @@
 
     invoke-virtual {v0}, Lmiui/maml/CommandTrigger;->perform()V
 
-    .line 86
     iget-object v0, p0, Lmiui/maml/elements/GLLayerScreenElement$GLRenderer;->this$0:Lmiui/maml/elements/GLLayerScreenElement;
 
     # getter for: Lmiui/maml/elements/GLLayerScreenElement;->mCanvasVar:Lmiui/maml/data/IndexedVariable;
@@ -188,7 +173,6 @@
 
     invoke-virtual {v0, v1}, Lmiui/maml/data/IndexedVariable;->set(Ljava/lang/Object;)Z
 
-    .line 88
     :cond_0
     return-void
 .end method
@@ -199,7 +183,6 @@
     .param p2, "config"    # Ljavax/microedition/khronos/egl/EGLConfig;
 
     .prologue
-    .line 72
     iget-object v0, p0, Lmiui/maml/elements/GLLayerScreenElement$GLRenderer;->this$0:Lmiui/maml/elements/GLLayerScreenElement;
 
     # getter for: Lmiui/maml/elements/GLLayerScreenElement;->mOnSurfaceCreateCommands:Lmiui/maml/CommandTrigger;
@@ -209,7 +192,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 73
     iget-object v0, p0, Lmiui/maml/elements/GLLayerScreenElement$GLRenderer;->this$0:Lmiui/maml/elements/GLLayerScreenElement;
 
     # getter for: Lmiui/maml/elements/GLLayerScreenElement;->mCanvasVar:Lmiui/maml/data/IndexedVariable;
@@ -219,7 +201,6 @@
 
     invoke-virtual {v0, p1}, Lmiui/maml/data/IndexedVariable;->set(Ljava/lang/Object;)Z
 
-    .line 74
     iget-object v0, p0, Lmiui/maml/elements/GLLayerScreenElement$GLRenderer;->this$0:Lmiui/maml/elements/GLLayerScreenElement;
 
     # getter for: Lmiui/maml/elements/GLLayerScreenElement;->mOnSurfaceCreateCommands:Lmiui/maml/CommandTrigger;
@@ -229,7 +210,6 @@
 
     invoke-virtual {v0}, Lmiui/maml/CommandTrigger;->perform()V
 
-    .line 75
     iget-object v0, p0, Lmiui/maml/elements/GLLayerScreenElement$GLRenderer;->this$0:Lmiui/maml/elements/GLLayerScreenElement;
 
     # getter for: Lmiui/maml/elements/GLLayerScreenElement;->mCanvasVar:Lmiui/maml/data/IndexedVariable;
@@ -241,7 +221,6 @@
 
     invoke-virtual {v0, v1}, Lmiui/maml/data/IndexedVariable;->set(Ljava/lang/Object;)Z
 
-    .line 77
     :cond_0
     return-void
 .end method

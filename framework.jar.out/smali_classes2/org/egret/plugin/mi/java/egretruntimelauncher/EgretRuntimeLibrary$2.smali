@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 105
     iput-object p1, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary$2;->this$0:Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary;
 
     iput-object p2, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary$2;->val$cache:Ljava/io/File;
@@ -49,7 +48,6 @@
     .param p1, "arg0"    # Ljava/lang/String;
 
     .prologue
-    .line 130
     iget-object v0, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary$2;->this$0:Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary;
 
     # getter for: Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary;->downloadListener:Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary$OnDownloadListener;
@@ -83,7 +81,6 @@
 
     invoke-interface {v0, v1}, Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary$OnDownloadListener;->onError(Ljava/lang/String;)V
 
-    .line 132
     return-void
 .end method
 
@@ -93,7 +90,6 @@
     .param p2, "arg1"    # I
 
     .prologue
-    .line 126
     return-void
 .end method
 
@@ -103,7 +99,6 @@
     .param p2, "arg1"    # I
 
     .prologue
-    .line 122
     return-void
 .end method
 
@@ -111,7 +106,6 @@
     .locals 3
 
     .prologue
-    .line 108
     const-string v0, "EgretRuntimeLibrary"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -140,7 +134,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 109
     iget-object v0, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary$2;->val$cache:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
@@ -149,7 +142,6 @@
 
     if-nez v0, :cond_0
 
-    .line 110
     const-string v0, "EgretRuntimeLibrary"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -178,7 +170,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 113
     :cond_0
     iget-object v0, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary$2;->val$target:Ljava/io/File;
 
@@ -199,7 +190,6 @@
 
     if-nez v0, :cond_1
 
-    .line 114
     iget-object v0, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary$2;->this$0:Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary;
 
     # getter for: Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary;->downloadListener:Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary$OnDownloadListener;
@@ -211,11 +201,9 @@
 
     invoke-interface {v0, v1}, Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary$OnDownloadListener;->onError(Ljava/lang/String;)V
 
-    .line 118
     :goto_0
     return-void
 
-    .line 117
     :cond_1
     iget-object v0, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary$2;->this$0:Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLibrary;
 

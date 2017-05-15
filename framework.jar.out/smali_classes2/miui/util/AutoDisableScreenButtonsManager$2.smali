@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 161
     iput-object p1, p0, Lmiui/util/AutoDisableScreenButtonsManager$2;->this$0:Lmiui/util/AutoDisableScreenButtonsManager;
 
     iput-object p2, p0, Lmiui/util/AutoDisableScreenButtonsManager$2;->val$text:Ljava/lang/CharSequence;
@@ -44,7 +43,6 @@
     .locals 2
 
     .prologue
-    .line 163
     iget-object v0, p0, Lmiui/util/AutoDisableScreenButtonsManager$2;->this$0:Lmiui/util/AutoDisableScreenButtonsManager;
 
     iget-object v1, p0, Lmiui/util/AutoDisableScreenButtonsManager$2;->val$text:Ljava/lang/CharSequence;
@@ -52,6 +50,5 @@
     # invokes: Lmiui/util/AutoDisableScreenButtonsManager;->showToastInner(Ljava/lang/CharSequence;)V
     invoke-static {v0, v1}, Lmiui/util/AutoDisableScreenButtonsManager;->access$700(Lmiui/util/AutoDisableScreenButtonsManager;Ljava/lang/CharSequence;)V
 
-    .line 164
     return-void
 .end method

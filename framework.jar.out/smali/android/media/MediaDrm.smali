@@ -84,15 +84,12 @@
     .locals 1
 
     .prologue
-    .line 1328
-    const-string/jumbo v0, "media_jni"
+    const-string v0, "media_jni"
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    .line 1329
     invoke-static {}, Landroid/media/MediaDrm;->native_init()V
 
-    .line 1330
     return-void
 .end method
 
@@ -106,10 +103,8 @@
     .end annotation
 
     .prologue
-    .line 202
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 204
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -117,14 +112,12 @@
     .local v0, "looper":Landroid/os/Looper;
     if-eqz v0, :cond_0
 
-    .line 205
     new-instance v1, Landroid/media/MediaDrm$EventHandler;
 
     invoke-direct {v1, p0, p0, v0}, Landroid/media/MediaDrm$EventHandler;-><init>(Landroid/media/MediaDrm;Landroid/media/MediaDrm;Landroid/os/Looper;)V
 
     iput-object v1, p0, Landroid/media/MediaDrm;->mEventHandler:Landroid/media/MediaDrm$EventHandler;
 
-    .line 215
     :goto_0
     new-instance v1, Ljava/lang/ref/WeakReference;
 
@@ -136,10 +129,8 @@
 
     invoke-direct {p0, v1, v2}, Landroid/media/MediaDrm;->native_setup(Ljava/lang/Object;[B)V
 
-    .line 217
     return-void
 
-    .line 206
     :cond_0
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
@@ -147,7 +138,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 207
     new-instance v1, Landroid/media/MediaDrm$EventHandler;
 
     invoke-direct {v1, p0, p0, v0}, Landroid/media/MediaDrm$EventHandler;-><init>(Landroid/media/MediaDrm;Landroid/media/MediaDrm;Landroid/os/Looper;)V
@@ -156,7 +146,6 @@
 
     goto :goto_0
 
-    .line 209
     :cond_1
     const/4 v1, 0x0
 
@@ -170,7 +159,6 @@
     .param p0, "x0"    # Landroid/media/MediaDrm;
 
     .prologue
-    .line 119
     iget-wide v0, p0, Landroid/media/MediaDrm;->mNativeContext:J
 
     return-wide v0
@@ -181,7 +169,6 @@
     .param p0, "x0"    # Landroid/media/MediaDrm;
 
     .prologue
-    .line 119
     iget-object v0, p0, Landroid/media/MediaDrm;->mOnEventListener:Landroid/media/MediaDrm$OnEventListener;
 
     return-object v0
@@ -196,7 +183,6 @@
     .param p4, "x4"    # [B
 
     .prologue
-    .line 119
     invoke-static {p0, p1, p2, p3, p4}, Landroid/media/MediaDrm;->verifyNative(Landroid/media/MediaDrm;[B[B[B[B)Z
 
     move-result v0
@@ -209,7 +195,6 @@
     .param p0, "x0"    # Landroid/media/MediaDrm;
 
     .prologue
-    .line 119
     iget-object v0, p0, Landroid/media/MediaDrm;->mOnKeyStatusChangeListener:Landroid/media/MediaDrm$OnKeyStatusChangeListener;
 
     return-object v0
@@ -221,7 +206,6 @@
     .param p1, "x1"    # Landroid/os/Parcel;
 
     .prologue
-    .line 119
     invoke-direct {p0, p1}, Landroid/media/MediaDrm;->keyStatusListFromParcel(Landroid/os/Parcel;)Ljava/util/List;
 
     move-result-object v0
@@ -234,7 +218,6 @@
     .param p0, "x0"    # Landroid/media/MediaDrm;
 
     .prologue
-    .line 119
     iget-object v0, p0, Landroid/media/MediaDrm;->mOnExpirationUpdateListener:Landroid/media/MediaDrm$OnExpirationUpdateListener;
 
     return-object v0
@@ -247,7 +230,6 @@
     .param p2, "x2"    # Ljava/lang/String;
 
     .prologue
-    .line 119
     invoke-static {p0, p1, p2}, Landroid/media/MediaDrm;->setCipherAlgorithmNative(Landroid/media/MediaDrm;[BLjava/lang/String;)V
 
     return-void
@@ -260,7 +242,6 @@
     .param p2, "x2"    # Ljava/lang/String;
 
     .prologue
-    .line 119
     invoke-static {p0, p1, p2}, Landroid/media/MediaDrm;->setMacAlgorithmNative(Landroid/media/MediaDrm;[BLjava/lang/String;)V
 
     return-void
@@ -275,7 +256,6 @@
     .param p4, "x4"    # [B
 
     .prologue
-    .line 119
     invoke-static {p0, p1, p2, p3, p4}, Landroid/media/MediaDrm;->encryptNative(Landroid/media/MediaDrm;[B[B[B[B)[B
 
     move-result-object v0
@@ -292,7 +272,6 @@
     .param p4, "x4"    # [B
 
     .prologue
-    .line 119
     invoke-static {p0, p1, p2, p3, p4}, Landroid/media/MediaDrm;->decryptNative(Landroid/media/MediaDrm;[B[B[B[B)[B
 
     move-result-object v0
@@ -308,7 +287,6 @@
     .param p3, "x3"    # [B
 
     .prologue
-    .line 119
     invoke-static {p0, p1, p2, p3}, Landroid/media/MediaDrm;->signNative(Landroid/media/MediaDrm;[B[B[B)[B
 
     move-result-object v0
@@ -327,24 +305,20 @@
     .param p0, "uuid"    # Ljava/util/UUID;
 
     .prologue
-    .line 179
     invoke-virtual {p0}, Ljava/util/UUID;->getMostSignificantBits()J
 
     move-result-wide v4
 
-    .line 180
     .local v4, "msb":J
     invoke-virtual {p0}, Ljava/util/UUID;->getLeastSignificantBits()J
 
     move-result-wide v2
 
-    .line 182
     .local v2, "lsb":J
     const/16 v6, 0x10
 
     new-array v1, v6, [B
 
-    .line 183
     .local v1, "uuidBytes":[B
     const/4 v0, 0x0
 
@@ -354,7 +328,6 @@
 
     if-ge v0, v6, :cond_0
 
-    .line 184
     rsub-int/lit8 v6, v0, 0x7
 
     mul-int/lit8 v6, v6, 0x8
@@ -367,7 +340,6 @@
 
     aput-byte v6, v1, v0
 
-    .line 185
     add-int/lit8 v6, v0, 0x8
 
     rsub-int/lit8 v7, v0, 0x7
@@ -382,12 +354,10 @@
 
     aput-byte v7, v1, v6
 
-    .line 183
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 188
     :cond_0
     return-object v1
 .end method
@@ -400,7 +370,6 @@
     .param p0, "uuid"    # Ljava/util/UUID;
 
     .prologue
-    .line 162
     invoke-static {p0}, Landroid/media/MediaDrm;->getByteArrayFromUUID(Ljava/util/UUID;)[B
 
     move-result-object v0
@@ -420,7 +389,6 @@
     .param p1, "mimeType"    # Ljava/lang/String;
 
     .prologue
-    .line 175
     invoke-static {p0}, Landroid/media/MediaDrm;->getByteArrayFromUUID(Ljava/util/UUID;)[B
 
     move-result-object v0
@@ -451,12 +419,10 @@
     .end annotation
 
     .prologue
-    .line 587
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 588
     .local v3, "nelems":I
     new-instance v2, Ljava/util/ArrayList;
 
@@ -465,7 +431,6 @@
     .local v2, "keyStatusList":Ljava/util/List;, "Ljava/util/List<Landroid/media/MediaDrm$KeyStatus;>;"
     move v4, v3
 
-    .line 589
     .end local v3    # "nelems":I
     .local v4, "nelems":I
     :goto_0
@@ -475,18 +440,15 @@
     .restart local v3    # "nelems":I
     if-lez v4, :cond_0
 
-    .line 590
     invoke-virtual {p1}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object v0
 
-    .line 591
     .local v0, "keyId":[B
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 592
     .local v1, "keyStatusCode":I
     new-instance v5, Landroid/media/MediaDrm$KeyStatus;
 
@@ -496,12 +458,10 @@
 
     move v4, v3
 
-    .line 593
     .end local v3    # "nelems":I
     .restart local v4    # "nelems":I
     goto :goto_0
 
-    .line 594
     .end local v0    # "keyId":[B
     .end local v1    # "keyStatusCode":I
     .end local v4    # "nelems":I
@@ -528,7 +488,6 @@
     .param p4, "obj"    # Ljava/lang/Object;
 
     .prologue
-    .line 607
     check-cast p0, Ljava/lang/ref/WeakReference;
 
     .end local p0    # "mediadrm_ref":Ljava/lang/Object;
@@ -538,29 +497,24 @@
 
     check-cast v1, Landroid/media/MediaDrm;
 
-    .line 608
     .local v1, "md":Landroid/media/MediaDrm;
     if-nez v1, :cond_1
 
-    .line 615
     :cond_0
     :goto_0
     return-void
 
-    .line 611
     :cond_1
     iget-object v2, v1, Landroid/media/MediaDrm;->mEventHandler:Landroid/media/MediaDrm$EventHandler;
 
     if-eqz v2, :cond_0
 
-    .line 612
     iget-object v2, v1, Landroid/media/MediaDrm;->mEventHandler:Landroid/media/MediaDrm$EventHandler;
 
     invoke-virtual {v2, p1, p2, p3, p4}, Landroid/media/MediaDrm$EventHandler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v0
 
-    .line 613
     .local v0, "m":Landroid/os/Message;
     iget-object v2, v1, Landroid/media/MediaDrm;->mEventHandler:Landroid/media/MediaDrm$EventHandler;
 
@@ -601,10 +555,8 @@
     .locals 0
 
     .prologue
-    .line 1317
     invoke-direct {p0}, Landroid/media/MediaDrm;->native_finalize()V
 
-    .line 1318
     return-void
 .end method
 
@@ -614,12 +566,10 @@
     .param p2, "certAuthority"    # Ljava/lang/String;
 
     .prologue
-    .line 1222
     invoke-direct {p0, p1, p2}, Landroid/media/MediaDrm;->getProvisionRequestNative(ILjava/lang/String;)Landroid/media/MediaDrm$ProvisionRequest;
 
     move-result-object v0
 
-    .line 1223
     .local v0, "provisionRequest":Landroid/media/MediaDrm$ProvisionRequest;
     new-instance v1, Landroid/media/MediaDrm$CertificateRequest;
 
@@ -643,7 +593,6 @@
     .param p3, "macAlgorithm"    # Ljava/lang/String;
 
     .prologue
-    .line 1173
     new-instance v0, Landroid/media/MediaDrm$CryptoSession;
 
     move-object v1, p0
@@ -693,7 +642,6 @@
     .locals 2
 
     .prologue
-    .line 881
     const/4 v0, 0x0
 
     const-string v1, ""
@@ -737,7 +685,6 @@
     .end annotation
 
     .prologue
-    .line 1289
     invoke-direct {p0, p1}, Landroid/media/MediaDrm;->provideProvisionResponseNative([B)Landroid/media/MediaDrm$Certificate;
 
     move-result-object v0
@@ -764,10 +711,8 @@
     .end annotation
 
     .prologue
-    .line 900
     invoke-direct {p0, p1}, Landroid/media/MediaDrm;->provideProvisionResponseNative([B)Landroid/media/MediaDrm$Certificate;
 
-    .line 901
     return-void
 .end method
 
@@ -804,10 +749,8 @@
     .param p1, "listener"    # Landroid/media/MediaDrm$OnEventListener;
 
     .prologue
-    .line 432
     iput-object p1, p0, Landroid/media/MediaDrm;->mOnEventListener:Landroid/media/MediaDrm$OnEventListener;
 
-    .line 433
     return-void
 .end method
 
@@ -817,22 +760,18 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 274
     if-eqz p1, :cond_1
 
-    .line 275
     if-eqz p2, :cond_2
 
     invoke-virtual {p2}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
 
     move-result-object v0
 
-    .line 276
     .local v0, "looper":Landroid/os/Looper;
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 277
     iget-object v1, p0, Landroid/media/MediaDrm;->mEventHandler:Landroid/media/MediaDrm$EventHandler;
 
     if-eqz v1, :cond_0
@@ -845,7 +784,6 @@
 
     if-eq v1, v0, :cond_1
 
-    .line 278
     :cond_0
     new-instance v1, Landroid/media/MediaDrm$EventHandler;
 
@@ -853,15 +791,12 @@
 
     iput-object v1, p0, Landroid/media/MediaDrm;->mEventHandler:Landroid/media/MediaDrm$EventHandler;
 
-    .line 282
     .end local v0    # "looper":Landroid/os/Looper;
     :cond_1
     iput-object p1, p0, Landroid/media/MediaDrm;->mOnExpirationUpdateListener:Landroid/media/MediaDrm$OnExpirationUpdateListener;
 
-    .line 283
     return-void
 
-    .line 275
     :cond_2
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
@@ -876,22 +811,18 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 316
     if-eqz p1, :cond_1
 
-    .line 317
     if-eqz p2, :cond_2
 
     invoke-virtual {p2}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
 
     move-result-object v0
 
-    .line 318
     .local v0, "looper":Landroid/os/Looper;
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 319
     iget-object v1, p0, Landroid/media/MediaDrm;->mEventHandler:Landroid/media/MediaDrm$EventHandler;
 
     if-eqz v1, :cond_0
@@ -904,7 +835,6 @@
 
     if-eq v1, v0, :cond_1
 
-    .line 320
     :cond_0
     new-instance v1, Landroid/media/MediaDrm$EventHandler;
 
@@ -912,15 +842,12 @@
 
     iput-object v1, p0, Landroid/media/MediaDrm;->mEventHandler:Landroid/media/MediaDrm$EventHandler;
 
-    .line 324
     .end local v0    # "looper":Landroid/os/Looper;
     :cond_1
     iput-object p1, p0, Landroid/media/MediaDrm;->mOnKeyStatusChangeListener:Landroid/media/MediaDrm$OnKeyStatusChangeListener;
 
-    .line 325
     return-void
 
-    .line 317
     :cond_2
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
@@ -943,7 +870,6 @@
     .param p4, "message"    # [B
 
     .prologue
-    .line 1312
     invoke-static {p0, p1, p2, p3, p4}, Landroid/media/MediaDrm;->signRSANative(Landroid/media/MediaDrm;[BLjava/lang/String;[B[B)[B
 
     move-result-object v0

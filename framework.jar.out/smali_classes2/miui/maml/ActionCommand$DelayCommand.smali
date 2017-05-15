@@ -29,27 +29,22 @@
     .param p2, "delay"    # J
 
     .prologue
-    .line 1113
     invoke-virtual {p1}, Lmiui/maml/ActionCommand;->getRoot()Lmiui/maml/ScreenElementRoot;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Lmiui/maml/ActionCommand;-><init>(Lmiui/maml/elements/ScreenElement;)V
 
-    .line 1114
     iput-object p1, p0, Lmiui/maml/ActionCommand$DelayCommand;->mCommand:Lmiui/maml/ActionCommand;
 
-    .line 1115
     iput-wide p2, p0, Lmiui/maml/ActionCommand$DelayCommand;->mDelay:J
 
-    .line 1116
     new-instance v0, Lmiui/maml/ActionCommand$DelayCommand$1;
 
     invoke-direct {v0, p0}, Lmiui/maml/ActionCommand$DelayCommand$1;-><init>(Lmiui/maml/ActionCommand$DelayCommand;)V
 
     iput-object v0, p0, Lmiui/maml/ActionCommand$DelayCommand;->mCmd:Ljava/lang/Runnable;
 
-    .line 1121
     return-void
 .end method
 
@@ -58,7 +53,6 @@
     .param p0, "x0"    # Lmiui/maml/ActionCommand$DelayCommand;
 
     .prologue
-    .line 1107
     iget-object v0, p0, Lmiui/maml/ActionCommand$DelayCommand;->mCommand:Lmiui/maml/ActionCommand;
 
     return-object v0
@@ -70,7 +64,6 @@
     .locals 4
 
     .prologue
-    .line 1135
     invoke-virtual {p0}, Lmiui/maml/ActionCommand$DelayCommand;->getRoot()Lmiui/maml/ScreenElementRoot;
 
     move-result-object v0
@@ -81,7 +74,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lmiui/maml/ScreenElementRoot;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 1136
     return-void
 .end method
 
@@ -89,7 +81,6 @@
     .locals 2
 
     .prologue
-    .line 1130
     invoke-virtual {p0}, Lmiui/maml/ActionCommand$DelayCommand;->getRoot()Lmiui/maml/ScreenElementRoot;
 
     move-result-object v0
@@ -98,7 +89,6 @@
 
     invoke-virtual {v0, v1}, Lmiui/maml/ScreenElementRoot;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 1131
     return-void
 .end method
 
@@ -106,11 +96,9 @@
     .locals 1
 
     .prologue
-    .line 1125
     iget-object v0, p0, Lmiui/maml/ActionCommand$DelayCommand;->mCommand:Lmiui/maml/ActionCommand;
 
     invoke-virtual {v0}, Lmiui/maml/ActionCommand;->init()V
 
-    .line 1126
     return-void
 .end method

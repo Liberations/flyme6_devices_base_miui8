@@ -34,7 +34,6 @@
     .locals 1
 
     .prologue
-    .line 419
     const-string v0, "^Output thread 0x[\\w]+ tracks"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -43,7 +42,6 @@
 
     sput-object v0, Lmiui/util/AudioOutputHelper$CompatCollector;->TRACKS_FINDER_COMPAT:Ljava/util/regex/Pattern;
 
-    .line 423
     const-string v0, "^Output thread 0x[\\w]+ active tracks"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -52,7 +50,6 @@
 
     sput-object v0, Lmiui/util/AudioOutputHelper$CompatCollector;->ACTIVE_TRACKS_FINDER_COMPAT:Ljava/util/regex/Pattern;
 
-    .line 430
     const-string v0, "^(\\s|F)+\\d+\\s+\\d+\\s+(\\d+)\\s+\\d+\\s+\\w+\\s+(\\d+)\\s.+"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -68,7 +65,6 @@
     .locals 0
 
     .prologue
-    .line 416
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -103,12 +99,10 @@
     .end annotation
 
     .prologue
-    .line 460
     .local p2, "clients":Ljava/util/List;, "Ljava/util/List<Lmiui/util/AudioOutputHelper$AudioOutputClient;>;"
     .local p3, "sessions":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/Integer;Ljava/lang/Integer;>;"
     const/4 v1, 0x0
 
-    .line 461
     .local v1, "content":Ljava/lang/String;
     :cond_0
     :goto_0
@@ -118,14 +112,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 462
     sget-object v9, Lmiui/util/AudioOutputHelper$CompatCollector;->TRACK_CONTENT_FINDER_COMPAT:Ljava/util/regex/Pattern;
 
     invoke-virtual {v9, v1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v4
 
-    .line 463
     .local v4, "matcher":Ljava/util/regex/Matcher;
     invoke-virtual {v4}, Ljava/util/regex/Matcher;->find()Z
 
@@ -133,12 +125,10 @@
 
     if-nez v9, :cond_2
 
-    .line 490
     .end local v4    # "matcher":Ljava/util/regex/Matcher;
     :cond_1
     return-object v1
 
-    .line 467
     .restart local v4    # "matcher":Ljava/util/regex/Matcher;
     :cond_2
     const/4 v9, 0x3
@@ -155,7 +145,6 @@
 
     move-result v7
 
-    .line 468
     .local v7, "sessionId":I
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -167,16 +156,13 @@
 
     check-cast v6, Ljava/lang/Integer;
 
-    .line 469
     .local v6, "proc":Ljava/lang/Integer;
     if-eqz v6, :cond_0
 
-    .line 470
     invoke-virtual {v6}, Ljava/lang/Integer;->intValue()I
 
     move-result v5
 
-    .line 471
     .local v5, "pid":I
     const/4 v9, 0x2
 
@@ -192,15 +178,12 @@
 
     move-result v8
 
-    .line 472
     .local v8, "streamType":I
     const/4 v2, 0x0
 
-    .line 475
     .local v2, "found":Z
     if-eqz p4, :cond_4
 
-    .line 476
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -220,27 +203,22 @@
 
     check-cast v0, Lmiui/util/AudioOutputHelper$AudioOutputClient;
 
-    .line 477
     .local v0, "c":Lmiui/util/AudioOutputHelper$AudioOutputClient;
     iget v9, v0, Lmiui/util/AudioOutputHelper$AudioOutputClient;->mSessionId:I
 
     if-ne v9, v7, :cond_3
 
-    .line 478
     iput-boolean p4, v0, Lmiui/util/AudioOutputHelper$AudioOutputClient;->mActive:Z
 
-    .line 479
     const/4 v2, 0x1
 
     goto :goto_1
 
-    .line 484
     .end local v0    # "c":Lmiui/util/AudioOutputHelper$AudioOutputClient;
     .end local v3    # "i$":Ljava/util/Iterator;
     :cond_4
     if-nez v2, :cond_0
 
-    .line 485
     new-instance v9, Lmiui/util/AudioOutputHelper$AudioOutputClient;
 
     invoke-direct {v9, v7, v5, v8, p4}, Lmiui/util/AudioOutputHelper$AudioOutputClient;-><init>(IIIZ)V
@@ -285,14 +263,12 @@
     .local p4, "sessions":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/Integer;Ljava/lang/Integer;>;"
     const/4 v4, 0x1
 
-    .line 438
     sget-object v2, Lmiui/util/AudioOutputHelper$CompatCollector;->TRACKS_FINDER_COMPAT:Ljava/util/regex/Pattern;
 
     invoke-virtual {v2, p2}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v1
 
-    .line 439
     .local v1, "trackMatcher":Ljava/util/regex/Matcher;
     invoke-virtual {v1}, Ljava/util/regex/Matcher;->find()Z
 
@@ -300,10 +276,8 @@
 
     if-eqz v2, :cond_0
 
-    .line 441
     invoke-virtual {p1}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
-    .line 443
     new-instance v2, Lmiui/util/AudioOutputHelper$Result;
 
     const/4 v3, 0x0
@@ -314,11 +288,9 @@
 
     invoke-direct {v2, v4, v3}, Lmiui/util/AudioOutputHelper$Result;-><init>(ZLjava/lang/String;)V
 
-    .line 454
     :goto_0
     return-object v2
 
-    .line 446
     :cond_0
     sget-object v2, Lmiui/util/AudioOutputHelper$CompatCollector;->ACTIVE_TRACKS_FINDER_COMPAT:Ljava/util/regex/Pattern;
 
@@ -326,7 +298,6 @@
 
     move-result-object v0
 
-    .line 447
     .local v0, "activeTrackMatcher":Ljava/util/regex/Matcher;
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->find()Z
 
@@ -334,10 +305,8 @@
 
     if-eqz v2, :cond_1
 
-    .line 449
     invoke-virtual {p1}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
-    .line 451
     new-instance v2, Lmiui/util/AudioOutputHelper$Result;
 
     invoke-direct {p0, p1, p3, p4, v4}, Lmiui/util/AudioOutputHelper$CompatCollector;->collectTracks(Ljava/io/BufferedReader;Ljava/util/List;Ljava/util/Map;Z)Ljava/lang/String;
@@ -348,7 +317,6 @@
 
     goto :goto_0
 
-    .line 454
     :cond_1
     sget-object v2, Lmiui/util/AudioOutputHelper;->UNHANDLED:Lmiui/util/AudioOutputHelper$Result;
 

@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -21,7 +20,6 @@
     .param p2, "wait"    # Z
 
     .prologue
-    .line 15
     :try_start_0
     const-string v1, "power"
 
@@ -33,22 +31,18 @@
 
     move-result-object v0
 
-    .line 17
     .local v0, "powermanager":Landroid/os/IPowerManager;
     if-eqz v0, :cond_0
 
-    .line 18
     invoke-interface {v0, p0, p1, p2}, Landroid/os/IPowerManager;->reboot(ZLjava/lang/String;Z)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 22
     .end local v0    # "powermanager":Landroid/os/IPowerManager;
     :cond_0
     :goto_0
     return-void
 
-    .line 20
     :catch_0
     move-exception v1
 

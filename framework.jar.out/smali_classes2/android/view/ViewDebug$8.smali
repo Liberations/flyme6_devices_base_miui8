@@ -38,7 +38,6 @@
     .locals 0
 
     .prologue
-    .line 1124
     iput-object p1, p0, Landroid/view/ViewDebug$8;->val$method:Ljava/lang/reflect/Method;
 
     iput-object p2, p0, Landroid/view/ViewDebug$8;->val$view:Landroid/view/View;
@@ -60,7 +59,6 @@
     .end annotation
 
     .prologue
-    .line 1127
     iget-object v1, p0, Landroid/view/ViewDebug$8;->val$method:Ljava/lang/reflect/Method;
 
     iget-object v2, p0, Landroid/view/ViewDebug$8;->val$view:Landroid/view/View;

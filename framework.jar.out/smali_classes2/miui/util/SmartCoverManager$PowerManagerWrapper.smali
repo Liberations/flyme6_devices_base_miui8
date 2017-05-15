@@ -34,35 +34,28 @@
     .param p2, "pm"    # Landroid/os/PowerManager;
 
     .prologue
-    .line 246
     iput-object p1, p0, Lmiui/util/SmartCoverManager$PowerManagerWrapper;->this$0:Lmiui/util/SmartCoverManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 239
     const/4 v0, 0x3
 
     iput v0, p0, Lmiui/util/SmartCoverManager$PowerManagerWrapper;->GO_TO_SLEEP_REASON_LID_SWITCH:I
 
-    .line 240
     const/4 v0, 0x1
 
     iput v0, p0, Lmiui/util/SmartCoverManager$PowerManagerWrapper;->GO_TO_SLEEP_FLAG_NO_DOZE:I
 
-    .line 241
-    const-string/jumbo v0, "wakeUp"
+    const-string v0, "wakeUp"
 
     iput-object v0, p0, Lmiui/util/SmartCoverManager$PowerManagerWrapper;->WAKE_UP:Ljava/lang/String;
 
-    .line 242
     const-string v0, "goToSleep"
 
     iput-object v0, p0, Lmiui/util/SmartCoverManager$PowerManagerWrapper;->GO_TO_SLEEP:Ljava/lang/String;
 
-    .line 247
     iput-object p2, p0, Lmiui/util/SmartCoverManager$PowerManagerWrapper;->mPowerManager:Landroid/os/PowerManager;
 
-    .line 248
     return-void
 .end method
 
@@ -88,10 +81,8 @@
 
     const/4 v2, 0x0
 
-    .line 266
     const/4 v1, 0x0
 
-    .line 268
     .local v1, "method":Ljava/lang/reflect/Method;
     :try_start_0
     iget-object v4, p0, Lmiui/util/SmartCoverManager$PowerManagerWrapper;->mPowerManager:Landroid/os/PowerManager;
@@ -106,30 +97,24 @@
 
     move-result-object v1
 
-    .line 273
     :goto_0
     if-nez v1, :cond_0
 
-    .line 287
     :goto_1
     return v2
 
-    .line 269
     :catch_0
     move-exception v0
 
-    .line 270
     .local v0, "e":Ljava/lang/NoSuchMethodException;
     invoke-virtual {v0}, Ljava/lang/NoSuchMethodException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 277
     .end local v0    # "e":Ljava/lang/NoSuchMethodException;
     :cond_0
     invoke-virtual {v1, v3}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
-    .line 279
     :try_start_1
     iget-object v4, p0, Lmiui/util/SmartCoverManager$PowerManagerWrapper;->mPowerManager:Landroid/os/PowerManager;
 
@@ -140,25 +125,20 @@
 
     move v2, v3
 
-    .line 287
     goto :goto_1
 
-    .line 280
     :catch_1
     move-exception v0
 
-    .line 281
     .local v0, "e":Ljava/lang/IllegalAccessException;
     invoke-virtual {v0}, Ljava/lang/IllegalAccessException;->printStackTrace()V
 
     goto :goto_1
 
-    .line 283
     .end local v0    # "e":Ljava/lang/IllegalAccessException;
     :catch_2
     move-exception v0
 
-    .line 284
     .local v0, "e":Ljava/lang/reflect/InvocationTargetException;
     invoke-virtual {v0}, Ljava/lang/reflect/InvocationTargetException;->printStackTrace()V
 
@@ -173,7 +153,6 @@
 
     const/4 v1, 0x0
 
-    .line 310
     iget-object v2, p0, Lmiui/util/SmartCoverManager$PowerManagerWrapper;->this$0:Lmiui/util/SmartCoverManager;
 
     # getter for: Lmiui/util/SmartCoverManager;->mContentResolver:Landroid/content/ContentResolver;
@@ -209,7 +188,6 @@
     .locals 8
 
     .prologue
-    .line 291
     const-string v4, "power"
 
     invoke-static {v4}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -220,7 +198,6 @@
 
     move-result-object v1
 
-    .line 293
     .local v1, "power":Landroid/os/IPowerManager;
     :try_start_0
     invoke-direct {p0}, Lmiui/util/SmartCoverManager$PowerManagerWrapper;->isAutoBrightnessMode()Z
@@ -229,7 +206,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 294
     iget-object v4, p0, Lmiui/util/SmartCoverManager$PowerManagerWrapper;->this$0:Lmiui/util/SmartCoverManager;
 
     # getter for: Lmiui/util/SmartCoverManager;->mContentResolver:Landroid/content/ContentResolver;
@@ -252,16 +228,13 @@
 
     move-result v2
 
-    .line 297
     .local v2, "screenAutoBrightnessAdjustmentSetting":F
     invoke-interface {v1, v2}, Landroid/os/IPowerManager;->setTemporaryScreenAutoBrightnessAdjustmentSettingOverride(F)V
 
-    .line 307
     .end local v2    # "screenAutoBrightnessAdjustmentSetting":F
     :goto_0
     return-void
 
-    .line 299
     :cond_0
     iget-object v4, p0, Lmiui/util/SmartCoverManager$PowerManagerWrapper;->this$0:Lmiui/util/SmartCoverManager;
 
@@ -289,7 +262,6 @@
 
     move-result v3
 
-    .line 302
     .local v3, "screenBrightnessSetting":I
     invoke-interface {v1, v3}, Landroid/os/IPowerManager;->setTemporaryScreenBrightnessSettingOverride(I)V
     :try_end_0
@@ -297,12 +269,10 @@
 
     goto :goto_0
 
-    .line 304
     .end local v3    # "screenBrightnessSetting":I
     :catch_0
     move-exception v0
 
-    .line 305
     .local v0, "e":Ljava/lang/Exception;
     const-string v4, "SmartCoverManager"
 
@@ -327,7 +297,6 @@
 
     const/4 v4, 0x1
 
-    .line 251
     const-string v0, "goToSleep"
 
     new-array v1, v5, [Ljava/lang/Object;
@@ -374,7 +343,6 @@
 
     if-nez v0, :cond_0
 
-    .line 253
     iget-object v0, p0, Lmiui/util/SmartCoverManager$PowerManagerWrapper;->mPowerManager:Landroid/os/PowerManager;
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
@@ -383,7 +351,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/os/PowerManager;->goToSleep(J)V
 
-    .line 255
     :cond_0
     return-void
 .end method
@@ -398,11 +365,9 @@
 
     const/4 v4, 0x0
 
-    .line 258
     invoke-direct {p0}, Lmiui/util/SmartCoverManager$PowerManagerWrapper;->restoreScreenBrightnessByLid()V
 
-    .line 260
-    const-string/jumbo v0, "wakeUp"
+    const-string v0, "wakeUp"
 
     new-array v1, v6, [Ljava/lang/Object;
 
@@ -436,7 +401,6 @@
 
     if-nez v0, :cond_0
 
-    .line 261
     iget-object v0, p0, Lmiui/util/SmartCoverManager$PowerManagerWrapper;->mPowerManager:Landroid/os/PowerManager;
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
@@ -445,7 +409,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/os/PowerManager;->wakeUp(J)V
 
-    .line 263
     :cond_0
     return-void
 .end method

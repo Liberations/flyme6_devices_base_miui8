@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 55
     iput-object p1, p0, Landroid/service/voice/VoiceInteractionSessionService$2;->this$0:Landroid/service/voice/VoiceInteractionSessionService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,22 +40,18 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 58
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/internal/os/SomeArgs;
 
-    .line 59
     .local v0, "args":Lcom/android/internal/os/SomeArgs;
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 64
     :goto_0
     return-void
 
-    .line 61
     :pswitch_0
     iget-object v3, p0, Landroid/service/voice/VoiceInteractionSessionService$2;->this$0:Landroid/service/voice/VoiceInteractionSessionService;
 
@@ -74,7 +69,6 @@
 
     goto :goto_0
 
-    .line 59
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

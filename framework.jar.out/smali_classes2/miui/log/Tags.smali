@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,7 +18,6 @@
     .param p0, "fieldFullPath"    # Ljava/lang/String;
 
     .prologue
-    .line 14
     invoke-static {p0}, Lmiui/log/AndroidTags;->get(Ljava/lang/String;)Lmiui/log/AndroidTag;
 
     move-result-object v0
@@ -32,7 +30,6 @@
     .param p0, "tagID"    # I
 
     .prologue
-    .line 30
     invoke-static {p0}, Lmiui/log/MiuiTags;->get(I)Lmiui/log/MiuiTag;
 
     move-result-object v0
@@ -45,7 +42,6 @@
     .param p0, "tagName"    # Ljava/lang/String;
 
     .prologue
-    .line 34
     invoke-static {p0}, Lmiui/log/MiuiTags;->get(Ljava/lang/String;)Lmiui/log/MiuiTag;
 
     move-result-object v0
@@ -58,7 +54,6 @@
     .param p0, "groupName"    # Ljava/lang/String;
 
     .prologue
-    .line 62
     invoke-static {p0}, Lmiui/log/TagGroups;->get(Ljava/lang/String;)Lmiui/log/TagGroup;
 
     move-result-object v0
@@ -71,7 +66,6 @@
     .param p0, "fieldFullPath"    # Ljava/lang/String;
 
     .prologue
-    .line 18
     invoke-static {p0}, Lmiui/log/AndroidTags;->isOn(Ljava/lang/String;)Z
 
     move-result v0
@@ -84,7 +78,6 @@
     .param p0, "tagID"    # I
 
     .prologue
-    .line 38
     invoke-static {p0}, Lmiui/log/MiuiTags;->isOn(I)Z
 
     move-result v0
@@ -97,7 +90,6 @@
     .param p0, "tagName"    # Ljava/lang/String;
 
     .prologue
-    .line 42
     invoke-static {p0}, Lmiui/log/MiuiTags;->isOn(Ljava/lang/String;)Z
 
     move-result v0
@@ -110,7 +102,6 @@
     .param p0, "groupName"    # Ljava/lang/String;
 
     .prologue
-    .line 66
     invoke-static {p0}, Lmiui/log/TagGroups;->isOn(Ljava/lang/String;)Z
 
     move-result v0
@@ -123,10 +114,8 @@
     .param p0, "fieldFullPath"    # Ljava/lang/String;
 
     .prologue
-    .line 26
     invoke-static {p0}, Lmiui/log/AndroidTags;->switchOff(Ljava/lang/String;)V
 
-    .line 27
     return-void
 .end method
 
@@ -135,10 +124,8 @@
     .param p0, "tagID"    # I
 
     .prologue
-    .line 54
     invoke-static {p0}, Lmiui/log/MiuiTags;->switchOff(I)V
 
-    .line 55
     return-void
 .end method
 
@@ -147,10 +134,8 @@
     .param p0, "tagName"    # Ljava/lang/String;
 
     .prologue
-    .line 58
     invoke-static {p0}, Lmiui/log/MiuiTags;->switchOff(Ljava/lang/String;)V
 
-    .line 59
     return-void
 .end method
 
@@ -159,7 +144,6 @@
     .param p0, "groupName"    # Ljava/lang/String;
 
     .prologue
-    .line 74
     const-class v0, Lmiui/log/Tags;
 
     monitor-enter v0
@@ -169,12 +153,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 75
     monitor-exit v0
 
     return-void
 
-    .line 74
     :catchall_0
     move-exception v1
 
@@ -188,10 +170,8 @@
     .param p0, "fieldFullPath"    # Ljava/lang/String;
 
     .prologue
-    .line 22
     invoke-static {p0}, Lmiui/log/AndroidTags;->switchOn(Ljava/lang/String;)V
 
-    .line 23
     return-void
 .end method
 
@@ -200,10 +180,8 @@
     .param p0, "tagID"    # I
 
     .prologue
-    .line 46
     invoke-static {p0}, Lmiui/log/MiuiTags;->switchOn(I)V
 
-    .line 47
     return-void
 .end method
 
@@ -212,10 +190,8 @@
     .param p0, "tagName"    # Ljava/lang/String;
 
     .prologue
-    .line 50
     invoke-static {p0}, Lmiui/log/MiuiTags;->switchOn(Ljava/lang/String;)V
 
-    .line 51
     return-void
 .end method
 
@@ -224,7 +200,6 @@
     .param p0, "groupName"    # Ljava/lang/String;
 
     .prologue
-    .line 70
     const-class v0, Lmiui/log/Tags;
 
     monitor-enter v0
@@ -234,12 +209,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 71
     monitor-exit v0
 
     return-void
 
-    .line 70
     :catchall_0
     move-exception v1
 

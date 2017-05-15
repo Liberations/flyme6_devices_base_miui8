@@ -40,16 +40,12 @@
     .param p2, "modifiedTime"    # J
 
     .prologue
-    .line 938
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 939
     iput-object p1, p0, Landroid/os/AnrMonitor$FileInfo;->mFile:Ljava/io/File;
 
-    .line 940
     iput-wide p2, p0, Landroid/os/AnrMonitor$FileInfo;->mModifiedTime:J
 
-    .line 941
     return-void
 .end method
 
@@ -61,7 +57,6 @@
     .param p3, "y"    # J
 
     .prologue
-    .line 957
     cmp-long v0, p1, p3
 
     if-gez v0, :cond_0
@@ -91,7 +86,6 @@
     .param p1, "another"    # Landroid/os/AnrMonitor$FileInfo;
 
     .prologue
-    .line 953
     invoke-virtual {p1}, Landroid/os/AnrMonitor$FileInfo;->getModifiedTime()J
 
     move-result-wide v0
@@ -110,7 +104,6 @@
     .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
-    .line 934
     check-cast p1, Landroid/os/AnrMonitor$FileInfo;
 
     .end local p1    # "x0":Ljava/lang/Object;
@@ -125,7 +118,6 @@
     .locals 1
 
     .prologue
-    .line 944
     iget-object v0, p0, Landroid/os/AnrMonitor$FileInfo;->mFile:Ljava/io/File;
 
     return-object v0
@@ -135,7 +127,6 @@
     .locals 2
 
     .prologue
-    .line 948
     iget-wide v0, p0, Landroid/os/AnrMonitor$FileInfo;->mModifiedTime:J
 
     return-wide v0

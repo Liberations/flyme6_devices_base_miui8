@@ -33,7 +33,6 @@
     .locals 1
 
     .prologue
-    .line 538
     const-string v0, "content://records/cached_account"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -49,9 +48,7 @@
     .locals 0
 
     .prologue
-    .line 535
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 540
     return-void
 .end method

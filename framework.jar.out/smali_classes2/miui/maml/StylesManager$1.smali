@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 18
     iput-object p1, p0, Lmiui/maml/StylesManager$1;->this$0:Lmiui/maml/StylesManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,14 +40,12 @@
     .param p1, "child"    # Lorg/w3c/dom/Element;
 
     .prologue
-    .line 21
     new-instance v0, Lmiui/maml/StylesManager$Style;
 
     iget-object v1, p0, Lmiui/maml/StylesManager$1;->this$0:Lmiui/maml/StylesManager;
 
     invoke-direct {v0, v1, p1}, Lmiui/maml/StylesManager$Style;-><init>(Lmiui/maml/StylesManager;Lorg/w3c/dom/Element;)V
 
-    .line 22
     .local v0, "s":Lmiui/maml/StylesManager$Style;
     iget-object v1, p0, Lmiui/maml/StylesManager$1;->this$0:Lmiui/maml/StylesManager;
 
@@ -61,6 +58,5 @@
 
     invoke-virtual {v1, v2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 23
     return-void
 .end method

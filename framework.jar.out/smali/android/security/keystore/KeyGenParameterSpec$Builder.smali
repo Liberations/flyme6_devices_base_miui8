@@ -61,33 +61,26 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 567
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 534
     iput v1, p0, Landroid/security/keystore/KeyGenParameterSpec$Builder;->mKeySize:I
 
-    .line 547
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/security/keystore/KeyGenParameterSpec$Builder;->mRandomizedEncryptionRequired:Z
 
-    .line 549
     iput v1, p0, Landroid/security/keystore/KeyGenParameterSpec$Builder;->mUserAuthenticationValidityDurationSeconds:I
 
-    .line 568
     if-nez p1, :cond_0
 
-    .line 569
     new-instance v0, Ljava/lang/NullPointerException;
 
-    const-string/jumbo v1, "keystoreAlias == null"
+    const-string v1, "keystoreAlias == null"
 
     invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 570
     :cond_0
     invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
 
@@ -95,23 +88,19 @@
 
     if-eqz v0, :cond_1
 
-    .line 571
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "keystoreAlias must not be empty"
+    const-string v1, "keystoreAlias must not be empty"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 573
     :cond_1
     iput-object p1, p0, Landroid/security/keystore/KeyGenParameterSpec$Builder;->mKeystoreAlias:Ljava/lang/String;
 
-    .line 574
     iput p2, p0, Landroid/security/keystore/KeyGenParameterSpec$Builder;->mPurposes:I
 
-    .line 575
     return-void
 .end method
 
@@ -121,7 +110,6 @@
     .locals 20
 
     .prologue
-    .line 937
     new-instance v1, Landroid/security/keystore/KeyGenParameterSpec;
 
     move-object/from16 v0, p0
@@ -214,23 +202,19 @@
     .param p1, "spec"    # Ljava/security/spec/AlgorithmParameterSpec;
 
     .prologue
-    .line 605
     if-nez p1, :cond_0
 
-    .line 606
     new-instance v0, Ljava/lang/NullPointerException;
 
-    const-string/jumbo v1, "spec == null"
+    const-string v1, "spec == null"
 
     invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 608
     :cond_0
     iput-object p1, p0, Landroid/security/keystore/KeyGenParameterSpec$Builder;->mSpec:Ljava/security/spec/AlgorithmParameterSpec;
 
-    .line 609
     return-object p0
 .end method
 
@@ -239,14 +223,12 @@
     .param p1, "blockModes"    # [Ljava/lang/String;
 
     .prologue
-    .line 801
     invoke-static {p1}, Landroid/security/keystore/ArrayUtils;->cloneIfNotEmpty([Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/security/keystore/KeyGenParameterSpec$Builder;->mBlockModes:[Ljava/lang/String;
 
-    .line 802
     return-object p0
 .end method
 
@@ -255,10 +237,8 @@
     .param p1, "date"    # Ljava/util/Date;
 
     .prologue
-    .line 663
     if-nez p1, :cond_0
 
-    .line 664
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "date == null"
@@ -267,7 +247,6 @@
 
     throw v0
 
-    .line 666
     :cond_0
     invoke-static {p1}, Landroid/security/keystore/Utils;->cloneIfNotNull(Ljava/util/Date;)Ljava/util/Date;
 
@@ -275,7 +254,6 @@
 
     iput-object v0, p0, Landroid/security/keystore/KeyGenParameterSpec$Builder;->mCertificateNotAfter:Ljava/util/Date;
 
-    .line 667
     return-object p0
 .end method
 
@@ -284,10 +262,8 @@
     .param p1, "date"    # Ljava/util/Date;
 
     .prologue
-    .line 648
     if-nez p1, :cond_0
 
-    .line 649
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "date == null"
@@ -296,7 +272,6 @@
 
     throw v0
 
-    .line 651
     :cond_0
     invoke-static {p1}, Landroid/security/keystore/Utils;->cloneIfNotNull(Ljava/util/Date;)Ljava/util/Date;
 
@@ -304,7 +279,6 @@
 
     iput-object v0, p0, Landroid/security/keystore/KeyGenParameterSpec$Builder;->mCertificateNotBefore:Ljava/util/Date;
 
-    .line 652
     return-object p0
 .end method
 
@@ -313,23 +287,19 @@
     .param p1, "serialNumber"    # Ljava/math/BigInteger;
 
     .prologue
-    .line 633
     if-nez p1, :cond_0
 
-    .line 634
     new-instance v0, Ljava/lang/NullPointerException;
 
-    const-string/jumbo v1, "serialNumber == null"
+    const-string v1, "serialNumber == null"
 
     invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 636
     :cond_0
     iput-object p1, p0, Landroid/security/keystore/KeyGenParameterSpec$Builder;->mCertificateSerialNumber:Ljava/math/BigInteger;
 
-    .line 637
     return-object p0
 .end method
 
@@ -338,23 +308,19 @@
     .param p1, "subject"    # Ljavax/security/auth/x500/X500Principal;
 
     .prologue
-    .line 619
     if-nez p1, :cond_0
 
-    .line 620
     new-instance v0, Ljava/lang/NullPointerException;
 
-    const-string/jumbo v1, "subject == null"
+    const-string v1, "subject == null"
 
     invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 622
     :cond_0
     iput-object p1, p0, Landroid/security/keystore/KeyGenParameterSpec$Builder;->mCertificateSubject:Ljavax/security/auth/x500/X500Principal;
 
-    .line 623
     return-object p0
 .end method
 
@@ -363,14 +329,12 @@
     .param p1, "digests"    # [Ljava/lang/String;
 
     .prologue
-    .line 746
     invoke-static {p1}, Landroid/security/keystore/ArrayUtils;->cloneIfNotEmpty([Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/security/keystore/KeyGenParameterSpec$Builder;->mDigests:[Ljava/lang/String;
 
-    .line 747
     return-object p0
 .end method
 
@@ -379,14 +343,12 @@
     .param p1, "paddings"    # [Ljava/lang/String;
 
     .prologue
-    .line 770
     invoke-static {p1}, Landroid/security/keystore/ArrayUtils;->cloneIfNotEmpty([Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/security/keystore/KeyGenParameterSpec$Builder;->mEncryptionPaddings:[Ljava/lang/String;
 
-    .line 771
     return-object p0
 .end method
 
@@ -395,23 +357,19 @@
     .param p1, "keySize"    # I
 
     .prologue
-    .line 589
     if-gez p1, :cond_0
 
-    .line 590
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "keySize < 0"
+    const-string v1, "keySize < 0"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 592
     :cond_0
     iput p1, p0, Landroid/security/keystore/KeyGenParameterSpec$Builder;->mKeySize:I
 
-    .line 593
     return-object p0
 .end method
 
@@ -420,13 +378,10 @@
     .param p1, "endDate"    # Ljava/util/Date;
 
     .prologue
-    .line 694
     invoke-virtual {p0, p1}, Landroid/security/keystore/KeyGenParameterSpec$Builder;->setKeyValidityForOriginationEnd(Ljava/util/Date;)Landroid/security/keystore/KeyGenParameterSpec$Builder;
 
-    .line 695
     invoke-virtual {p0, p1}, Landroid/security/keystore/KeyGenParameterSpec$Builder;->setKeyValidityForConsumptionEnd(Ljava/util/Date;)Landroid/security/keystore/KeyGenParameterSpec$Builder;
 
-    .line 696
     return-object p0
 .end method
 
@@ -435,14 +390,12 @@
     .param p1, "endDate"    # Ljava/util/Date;
 
     .prologue
-    .line 722
     invoke-static {p1}, Landroid/security/keystore/Utils;->cloneIfNotNull(Ljava/util/Date;)Ljava/util/Date;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/security/keystore/KeyGenParameterSpec$Builder;->mKeyValidityForConsumptionEnd:Ljava/util/Date;
 
-    .line 723
     return-object p0
 .end method
 
@@ -451,14 +404,12 @@
     .param p1, "endDate"    # Ljava/util/Date;
 
     .prologue
-    .line 708
     invoke-static {p1}, Landroid/security/keystore/Utils;->cloneIfNotNull(Ljava/util/Date;)Ljava/util/Date;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/security/keystore/KeyGenParameterSpec$Builder;->mKeyValidityForOriginationEnd:Ljava/util/Date;
 
-    .line 709
     return-object p0
 .end method
 
@@ -467,14 +418,12 @@
     .param p1, "startDate"    # Ljava/util/Date;
 
     .prologue
-    .line 679
     invoke-static {p1}, Landroid/security/keystore/Utils;->cloneIfNotNull(Ljava/util/Date;)Ljava/util/Date;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/security/keystore/KeyGenParameterSpec$Builder;->mKeyValidityStart:Ljava/util/Date;
 
-    .line 680
     return-object p0
 .end method
 
@@ -483,10 +432,8 @@
     .param p1, "required"    # Z
 
     .prologue
-    .line 843
     iput-boolean p1, p0, Landroid/security/keystore/KeyGenParameterSpec$Builder;->mRandomizedEncryptionRequired:Z
 
-    .line 844
     return-object p0
 .end method
 
@@ -495,14 +442,12 @@
     .param p1, "paddings"    # [Ljava/lang/String;
 
     .prologue
-    .line 786
     invoke-static {p1}, Landroid/security/keystore/ArrayUtils;->cloneIfNotEmpty([Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/security/keystore/KeyGenParameterSpec$Builder;->mSignaturePaddings:[Ljava/lang/String;
 
-    .line 787
     return-object p0
 .end method
 
@@ -511,10 +456,8 @@
     .param p1, "required"    # Z
 
     .prologue
-    .line 883
     iput-boolean p1, p0, Landroid/security/keystore/KeyGenParameterSpec$Builder;->mUserAuthenticationRequired:Z
 
-    .line 884
     return-object p0
 .end method
 
@@ -523,24 +466,20 @@
     .param p1, "seconds"    # I
 
     .prologue
-    .line 925
     const/4 v0, -0x1
 
     if-ge p1, v0, :cond_0
 
-    .line 926
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "seconds must be -1 or larger"
+    const-string v1, "seconds must be -1 or larger"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 928
     :cond_0
     iput p1, p0, Landroid/security/keystore/KeyGenParameterSpec$Builder;->mUserAuthenticationValidityDurationSeconds:I
 
-    .line 929
     return-object p0
 .end method

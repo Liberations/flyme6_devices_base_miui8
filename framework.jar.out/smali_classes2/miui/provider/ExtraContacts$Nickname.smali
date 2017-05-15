@@ -25,7 +25,6 @@
     .locals 2
 
     .prologue
-    .line 1190
     sget-object v0, Landroid/provider/ContactsContract$Data;->CONTENT_URI:Landroid/net/Uri;
 
     const-string v1, "nickname"

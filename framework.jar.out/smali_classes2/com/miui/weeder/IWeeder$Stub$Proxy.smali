@@ -27,13 +27,10 @@
     .param p1, "remote"    # Landroid/os/IBinder;
 
     .prologue
-    .line 56
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 57
     iput-object p1, p0, Lcom/miui/weeder/IWeeder$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
-    .line 58
     return-void
 .end method
 
@@ -43,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 61
     iget-object v0, p0, Lcom/miui/weeder/IWeeder$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-object v0
@@ -53,7 +49,6 @@
     .locals 1
 
     .prologue
-    .line 65
     const-string v0, "com.miui.weeder.IWeeder"
 
     return-object v0

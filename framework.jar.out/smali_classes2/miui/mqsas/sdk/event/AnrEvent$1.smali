@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 63
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 63
     invoke-virtual {p0, p1}, Lmiui/mqsas/sdk/event/AnrEvent$1;->createFromParcel(Landroid/os/Parcel;)Lmiui/mqsas/sdk/event/AnrEvent;
 
     move-result-object v0
@@ -58,7 +56,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 65
     new-instance v0, Lmiui/mqsas/sdk/event/AnrEvent;
 
     const/4 v1, 0x0
@@ -73,7 +70,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 63
     invoke-virtual {p0, p1}, Lmiui/mqsas/sdk/event/AnrEvent$1;->newArray(I)[Lmiui/mqsas/sdk/event/AnrEvent;
 
     move-result-object v0
@@ -86,7 +82,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 69
     new-array v0, p1, [Lmiui/mqsas/sdk/event/AnrEvent;
 
     return-object v0

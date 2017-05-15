@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 51
     iput-object p1, p0, Lmiui/app/WifiApEnabler$1;->this$0:Lmiui/app/WifiApEnabler;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 54
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 55
     .local v0, "action":Ljava/lang/String;
     const-string v1, "android.net.wifi.WIFI_AP_STATE_CHANGED"
 
@@ -54,10 +51,9 @@
 
     if-eqz v1, :cond_1
 
-    .line 56
     iget-object v1, p0, Lmiui/app/WifiApEnabler$1;->this$0:Lmiui/app/WifiApEnabler;
 
-    const-string/jumbo v2, "wifi_state"
+    const-string v2, "wifi_state"
 
     const/16 v3, 0xe
 
@@ -68,12 +64,10 @@
     # invokes: Lmiui/app/WifiApEnabler;->handleWifiApStateChanged(I)V
     invoke-static {v1, v2}, Lmiui/app/WifiApEnabler;->access$000(Lmiui/app/WifiApEnabler;I)V
 
-    .line 66
     :cond_0
     :goto_0
     return-void
 
-    .line 58
     :cond_1
     const-string v1, "android.intent.action.AIRPLANE_MODE"
 
@@ -83,7 +77,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 59
     iget-object v1, p0, Lmiui/app/WifiApEnabler$1;->this$0:Lmiui/app/WifiApEnabler;
 
     # invokes: Lmiui/app/WifiApEnabler;->updateAirplaneMode()V
@@ -91,7 +84,6 @@
 
     goto :goto_0
 
-    .line 60
     :cond_2
     const-string v1, "android.net.wifi.WIFI_STATE_CHANGED"
 
@@ -101,7 +93,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 61
     iget-object v1, p0, Lmiui/app/WifiApEnabler$1;->this$0:Lmiui/app/WifiApEnabler;
 
     # getter for: Lmiui/app/WifiApEnabler;->mWaitForWifiStateChange:Z
@@ -111,10 +102,9 @@
 
     if-eqz v1, :cond_0
 
-    .line 62
     iget-object v1, p0, Lmiui/app/WifiApEnabler$1;->this$0:Lmiui/app/WifiApEnabler;
 
-    const-string/jumbo v2, "wifi_state"
+    const-string v2, "wifi_state"
 
     const/4 v3, 0x4
 

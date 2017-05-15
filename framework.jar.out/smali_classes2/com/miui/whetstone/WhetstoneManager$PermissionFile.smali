@@ -29,7 +29,6 @@
     .locals 0
 
     .prologue
-    .line 869
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,7 +38,6 @@
     .locals 3
 
     .prologue
-    .line 883
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/data/miui/whetstone"
@@ -55,14 +53,12 @@
     .locals 3
 
     .prologue
-    .line 875
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x15
 
     if-lt v0, v1, :cond_0
 
-    .line 876
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/system/etc/WhetstonePermission"
@@ -71,7 +67,6 @@
 
     invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 878
     :goto_0
     return-object v0
 

@@ -19,12 +19,10 @@
     .locals 1
 
     .prologue
-    .line 108
     const/4 v0, 0x4
 
     invoke-direct {p0, v0}, Landroid/security/keystore/AndroidKeyStoreRSACipherSpi;-><init>(I)V
 
-    .line 109
     return-void
 .end method
 
@@ -34,17 +32,14 @@
     .locals 1
 
     .prologue
-    .line 115
     const/4 v0, 0x2
 
     invoke-virtual {p0, v0}, Landroid/security/keystore/AndroidKeyStoreRSACipherSpi$PKCS1Padding;->setKeymasterPurposeOverride(I)V
 
-    .line 116
     const/4 v0, 0x5
 
     invoke-virtual {p0, v0}, Landroid/security/keystore/AndroidKeyStoreRSACipherSpi$PKCS1Padding;->setKeymasterPaddingOverride(I)V
 
-    .line 117
     const/4 v0, 0x1
 
     return v0
@@ -54,7 +49,6 @@
     .locals 1
 
     .prologue
-    .line 144
     const/4 v0, 0x0
 
     return-object v0
@@ -69,7 +63,6 @@
     .end annotation
 
     .prologue
-    .line 106
     invoke-super {p0}, Landroid/security/keystore/AndroidKeyStoreRSACipherSpi;->finalize()V
 
     return-void
@@ -79,7 +72,6 @@
     .locals 1
 
     .prologue
-    .line 149
     const/4 v0, 0x0
 
     return v0
@@ -89,7 +81,6 @@
     .locals 1
 
     .prologue
-    .line 154
     invoke-virtual {p0}, Landroid/security/keystore/AndroidKeyStoreRSACipherSpi$PKCS1Padding;->isEncrypting()Z
 
     move-result v0
@@ -118,7 +109,6 @@
     .end annotation
 
     .prologue
-    .line 121
     return-void
 .end method
 
@@ -132,10 +122,8 @@
     .end annotation
 
     .prologue
-    .line 136
     if-eqz p1, :cond_0
 
-    .line 137
     new-instance v0, Ljava/security/InvalidAlgorithmParameterException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -166,7 +154,6 @@
 
     throw v0
 
-    .line 140
     :cond_0
     return-void
 .end method
@@ -181,10 +168,8 @@
     .end annotation
 
     .prologue
-    .line 126
     if-eqz p1, :cond_0
 
-    .line 127
     new-instance v0, Ljava/security/InvalidAlgorithmParameterException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -215,7 +200,6 @@
 
     throw v0
 
-    .line 130
     :cond_0
     return-void
 .end method

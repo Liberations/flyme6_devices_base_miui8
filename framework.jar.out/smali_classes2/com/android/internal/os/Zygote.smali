@@ -34,7 +34,6 @@
     .locals 1
 
     .prologue
-    .line 56
     new-instance v0, Ldalvik/system/ZygoteHooks;
 
     invoke-direct {v0}, Ldalvik/system/ZygoteHooks;-><init>()V
@@ -48,7 +47,6 @@
     .locals 0
 
     .prologue
-    .line 58
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -60,7 +58,6 @@
     .param p1, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 187
     move-object v1, p1
 
     .local v1, "arr$":[Ljava/lang/String;
@@ -75,7 +72,6 @@
 
     aget-object v0, v1, v2
 
-    .line 188
     .local v0, "arg":Ljava/lang/String;
     const-string v4, " \'"
 
@@ -99,12 +95,10 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 187
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 190
     .end local v0    # "arg":Ljava/lang/String;
     :cond_0
     return-void
@@ -116,12 +110,10 @@
     .param p1, "instructionSet"    # Ljava/lang/String;
 
     .prologue
-    .line 157
     sget-object v0, Lcom/android/internal/os/Zygote;->VM_HOOKS:Ldalvik/system/ZygoteHooks;
 
     invoke-virtual {v0, p0, p1}, Ldalvik/system/ZygoteHooks;->postForkChild(ILjava/lang/String;)V
 
-    .line 158
     return-void
 .end method
 
@@ -132,7 +124,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 169
     const/4 v2, 0x3
 
     new-array v0, v2, [Ljava/lang/String;
@@ -151,7 +142,6 @@
 
     aput-object p0, v0, v2
 
-    .line 171
     .local v0, "args":[Ljava/lang/String;
     const/4 v2, 0x0
 
@@ -162,14 +152,11 @@
     :try_end_0
     .catch Landroid/system/ErrnoException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 175
     return-void
 
-    .line 172
     :catch_0
     move-exception v1
 
-    .line 173
     .local v1, "e":Landroid/system/ErrnoException;
     new-instance v2, Ljava/lang/RuntimeException;
 
@@ -193,39 +180,32 @@
     .param p10, "appDataDir"    # Ljava/lang/String;
 
     .prologue
-    .line 92
     sget-object v1, Lcom/android/internal/os/Zygote;->VM_HOOKS:Ldalvik/system/ZygoteHooks;
 
     invoke-virtual {v1}, Ldalvik/system/ZygoteHooks;->preFork()V
 
-    .line 93
     invoke-static/range {p0 .. p10}, Lcom/android/internal/os/Zygote;->nativeForkAndSpecialize(II[II[[IILjava/lang/String;Ljava/lang/String;[ILjava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
-    .line 97
     .local v0, "pid":I
     if-nez v0, :cond_0
 
-    .line 98
     const/4 v1, 0x1
 
     invoke-static {v1}, Landroid/os/Trace;->setTracingEnabled(Z)V
 
-    .line 101
     const-wide/16 v2, 0x40
 
     const-string v1, "PostFork"
 
     invoke-static {v2, v3, v1}, Landroid/os/Trace;->traceBegin(JLjava/lang/String;)V
 
-    .line 103
     :cond_0
     sget-object v1, Lcom/android/internal/os/Zygote;->VM_HOOKS:Ldalvik/system/ZygoteHooks;
 
     invoke-virtual {v1}, Ldalvik/system/ZygoteHooks;->postForkCommon()V
 
-    .line 104
     return v0
 .end method
 
@@ -240,32 +220,26 @@
     .param p7, "effectiveCapabilities"    # J
 
     .prologue
-    .line 136
     sget-object v1, Lcom/android/internal/os/Zygote;->VM_HOOKS:Ldalvik/system/ZygoteHooks;
 
     invoke-virtual {v1}, Ldalvik/system/ZygoteHooks;->preFork()V
 
-    .line 137
     invoke-static/range {p0 .. p8}, Lcom/android/internal/os/Zygote;->nativeForkSystemServer(II[II[[IJJ)I
 
     move-result v0
 
-    .line 140
     .local v0, "pid":I
     if-nez v0, :cond_0
 
-    .line 141
     const/4 v1, 0x1
 
     invoke-static {v1}, Landroid/os/Trace;->setTracingEnabled(Z)V
 
-    .line 143
     :cond_0
     sget-object v1, Lcom/android/internal/os/Zygote;->VM_HOOKS:Ldalvik/system/ZygoteHooks;
 
     invoke-virtual {v1}, Ldalvik/system/ZygoteHooks;->postForkCommon()V
 
-    .line 144
     return v0
 .end method
 

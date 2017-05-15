@@ -33,17 +33,14 @@
     .param p1, "mediaBrowser"    # Landroid/media/browse/MediaBrowser;
 
     .prologue
-    .line 865
     invoke-direct {p0}, Landroid/service/media/IMediaBrowserServiceCallbacks$Stub;-><init>()V
 
-    .line 866
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Landroid/media/browse/MediaBrowser$ServiceCallbacks;->mMediaBrowser:Ljava/lang/ref/WeakReference;
 
-    .line 867
     return-void
 .end method
 
@@ -56,7 +53,6 @@
     .param p3, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 876
     iget-object v1, p0, Landroid/media/browse/MediaBrowser$ServiceCallbacks;->mMediaBrowser:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -65,15 +61,12 @@
 
     check-cast v0, Landroid/media/browse/MediaBrowser;
 
-    .line 877
     .local v0, "mediaBrowser":Landroid/media/browse/MediaBrowser;
     if-eqz v0, :cond_0
 
-    .line 878
     # invokes: Landroid/media/browse/MediaBrowser;->onServiceConnected(Landroid/service/media/IMediaBrowserServiceCallbacks;Ljava/lang/String;Landroid/media/session/MediaSession$Token;Landroid/os/Bundle;)V
     invoke-static {v0, p0, p1, p2, p3}, Landroid/media/browse/MediaBrowser;->access$1800(Landroid/media/browse/MediaBrowser;Landroid/service/media/IMediaBrowserServiceCallbacks;Ljava/lang/String;Landroid/media/session/MediaSession$Token;Landroid/os/Bundle;)V
 
-    .line 880
     :cond_0
     return-void
 .end method
@@ -82,7 +75,6 @@
     .locals 2
 
     .prologue
-    .line 887
     iget-object v1, p0, Landroid/media/browse/MediaBrowser$ServiceCallbacks;->mMediaBrowser:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -91,15 +83,12 @@
 
     check-cast v0, Landroid/media/browse/MediaBrowser;
 
-    .line 888
     .local v0, "mediaBrowser":Landroid/media/browse/MediaBrowser;
     if-eqz v0, :cond_0
 
-    .line 889
     # invokes: Landroid/media/browse/MediaBrowser;->onConnectionFailed(Landroid/service/media/IMediaBrowserServiceCallbacks;)V
     invoke-static {v0, p0}, Landroid/media/browse/MediaBrowser;->access$1900(Landroid/media/browse/MediaBrowser;Landroid/service/media/IMediaBrowserServiceCallbacks;)V
 
-    .line 891
     :cond_0
     return-void
 .end method
@@ -110,7 +99,6 @@
     .param p2, "list"    # Landroid/content/pm/ParceledListSlice;
 
     .prologue
-    .line 895
     iget-object v1, p0, Landroid/media/browse/MediaBrowser$ServiceCallbacks;->mMediaBrowser:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -119,15 +107,12 @@
 
     check-cast v0, Landroid/media/browse/MediaBrowser;
 
-    .line 896
     .local v0, "mediaBrowser":Landroid/media/browse/MediaBrowser;
     if-eqz v0, :cond_0
 
-    .line 897
     # invokes: Landroid/media/browse/MediaBrowser;->onLoadChildren(Landroid/service/media/IMediaBrowserServiceCallbacks;Ljava/lang/String;Landroid/content/pm/ParceledListSlice;)V
     invoke-static {v0, p0, p1, p2}, Landroid/media/browse/MediaBrowser;->access$2000(Landroid/media/browse/MediaBrowser;Landroid/service/media/IMediaBrowserServiceCallbacks;Ljava/lang/String;Landroid/content/pm/ParceledListSlice;)V
 
-    .line 899
     :cond_0
     return-void
 .end method

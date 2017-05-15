@@ -13,13 +13,10 @@
     .param p1, "relativePathBaseIcons"    # Ljava/lang/String;
 
     .prologue
-    .line 12
     invoke-direct {p0}, Lmiui/maml/ResourceLoader;-><init>()V
 
-    .line 13
     iput-object p1, p0, Lmiui/maml/util/FancyIconResourceLoader;->mRelatviePathBaseIcons:Ljava/lang/String;
 
-    .line 14
     return-void
 .end method
 
@@ -31,7 +28,6 @@
     .param p2, "size"    # [J
 
     .prologue
-    .line 23
     invoke-static {}, Lmiui/content/res/ThemeResources;->getSystem()Lmiui/content/res/ThemeResourcesSystem;
 
     move-result-object v0
@@ -66,7 +62,6 @@
     .param p1, "path"    # Ljava/lang/String;
 
     .prologue
-    .line 18
     invoke-static {}, Lmiui/content/res/ThemeResources;->getSystem()Lmiui/content/res/ThemeResourcesSystem;
 
     move-result-object v0

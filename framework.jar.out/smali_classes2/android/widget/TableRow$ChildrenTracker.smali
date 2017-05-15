@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 524
     iput-object p1, p0, Landroid/widget/TableRow$ChildrenTracker;->this$0:Landroid/widget/TableRow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "x1"    # Landroid/widget/TableRow$1;
 
     .prologue
-    .line 524
     invoke-direct {p0, p1}, Landroid/widget/TableRow$ChildrenTracker;-><init>(Landroid/widget/TableRow;)V
 
     return-void
@@ -54,7 +52,6 @@
     .param p1, "x1"    # Landroid/view/ViewGroup$OnHierarchyChangeListener;
 
     .prologue
-    .line 524
     invoke-direct {p0, p1}, Landroid/widget/TableRow$ChildrenTracker;->setOnHierarchyChangeListener(Landroid/view/ViewGroup$OnHierarchyChangeListener;)V
 
     return-void
@@ -65,10 +62,8 @@
     .param p1, "listener"    # Landroid/view/ViewGroup$OnHierarchyChangeListener;
 
     .prologue
-    .line 528
     iput-object p1, p0, Landroid/widget/TableRow$ChildrenTracker;->listener:Landroid/view/ViewGroup$OnHierarchyChangeListener;
 
-    .line 529
     return-void
 .end method
 
@@ -80,7 +75,6 @@
     .param p2, "child"    # Landroid/view/View;
 
     .prologue
-    .line 533
     iget-object v0, p0, Landroid/widget/TableRow$ChildrenTracker;->this$0:Landroid/widget/TableRow;
 
     const/4 v1, 0x0
@@ -88,17 +82,14 @@
     # setter for: Landroid/widget/TableRow;->mColumnToChildIndex:Landroid/util/SparseIntArray;
     invoke-static {v0, v1}, Landroid/widget/TableRow;->access$302(Landroid/widget/TableRow;Landroid/util/SparseIntArray;)Landroid/util/SparseIntArray;
 
-    .line 535
     iget-object v0, p0, Landroid/widget/TableRow$ChildrenTracker;->listener:Landroid/view/ViewGroup$OnHierarchyChangeListener;
 
     if-eqz v0, :cond_0
 
-    .line 536
     iget-object v0, p0, Landroid/widget/TableRow$ChildrenTracker;->listener:Landroid/view/ViewGroup$OnHierarchyChangeListener;
 
     invoke-interface {v0, p1, p2}, Landroid/view/ViewGroup$OnHierarchyChangeListener;->onChildViewAdded(Landroid/view/View;Landroid/view/View;)V
 
-    .line 538
     :cond_0
     return-void
 .end method
@@ -109,7 +100,6 @@
     .param p2, "child"    # Landroid/view/View;
 
     .prologue
-    .line 542
     iget-object v0, p0, Landroid/widget/TableRow$ChildrenTracker;->this$0:Landroid/widget/TableRow;
 
     const/4 v1, 0x0
@@ -117,17 +107,14 @@
     # setter for: Landroid/widget/TableRow;->mColumnToChildIndex:Landroid/util/SparseIntArray;
     invoke-static {v0, v1}, Landroid/widget/TableRow;->access$302(Landroid/widget/TableRow;Landroid/util/SparseIntArray;)Landroid/util/SparseIntArray;
 
-    .line 544
     iget-object v0, p0, Landroid/widget/TableRow$ChildrenTracker;->listener:Landroid/view/ViewGroup$OnHierarchyChangeListener;
 
     if-eqz v0, :cond_0
 
-    .line 545
     iget-object v0, p0, Landroid/widget/TableRow$ChildrenTracker;->listener:Landroid/view/ViewGroup$OnHierarchyChangeListener;
 
     invoke-interface {v0, p1, p2}, Landroid/view/ViewGroup$OnHierarchyChangeListener;->onChildViewRemoved(Landroid/view/View;Landroid/view/View;)V
 
-    .line 547
     :cond_0
     return-void
 .end method

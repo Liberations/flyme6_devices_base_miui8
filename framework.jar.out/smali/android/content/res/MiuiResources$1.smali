@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 332
     iput-object p1, p0, Landroid/content/res/MiuiResources$1;->val$preload:Landroid/util/LongSparseArray;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -37,7 +36,6 @@
     .locals 2
 
     .prologue
-    .line 335
     const-wide/16 v0, 0x7530
 
     :try_start_0
@@ -45,16 +43,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 338
     :goto_0
     iget-object v0, p0, Landroid/content/res/MiuiResources$1;->val$preload:Landroid/util/LongSparseArray;
 
     invoke-virtual {v0}, Landroid/util/LongSparseArray;->clear()V
 
-    .line 339
     return-void
 
-    .line 336
     :catch_0
     move-exception v0
 

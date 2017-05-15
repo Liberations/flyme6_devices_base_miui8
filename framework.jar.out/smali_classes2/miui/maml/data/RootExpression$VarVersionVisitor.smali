@@ -24,13 +24,10 @@
     .param p1, "root"    # Lmiui/maml/data/RootExpression;
 
     .prologue
-    .line 41
     invoke-direct {p0}, Lmiui/maml/data/ExpressionVisitor;-><init>()V
 
-    .line 42
     iput-object p1, p0, Lmiui/maml/data/RootExpression$VarVersionVisitor;->mRoot:Lmiui/maml/data/RootExpression;
 
-    .line 43
     return-void
 .end method
 
@@ -41,21 +38,17 @@
     .param p1, "exp"    # Lmiui/maml/data/Expression;
 
     .prologue
-    .line 47
     instance-of v2, p1, Lmiui/maml/data/Expression$VariableExpression;
 
     if-eqz v2, :cond_1
 
     move-object v0, p1
 
-    .line 48
     check-cast v0, Lmiui/maml/data/Expression$VariableExpression;
 
-    .line 50
     .local v0, "ep":Lmiui/maml/data/Expression$VariableExpression;
     invoke-virtual {v0}, Lmiui/maml/data/Expression$VariableExpression;->evaluate()D
 
-    .line 51
     iget-object v2, p0, Lmiui/maml/data/RootExpression$VarVersionVisitor;->mRoot:Lmiui/maml/data/RootExpression;
 
     new-instance v3, Lmiui/maml/data/RootExpression$VarVersion;
@@ -74,13 +67,11 @@
 
     invoke-virtual {v2, v3}, Lmiui/maml/data/RootExpression;->addVarVersion(Lmiui/maml/data/RootExpression$VarVersion;)V
 
-    .line 60
     .end local v0    # "ep":Lmiui/maml/data/Expression$VariableExpression;
     :cond_0
     :goto_0
     return-void
 
-    .line 53
     :cond_1
     instance-of v2, p1, Lmiui/maml/data/Expression$FunctionExpression;
 
@@ -88,16 +79,13 @@
 
     move-object v0, p1
 
-    .line 54
     check-cast v0, Lmiui/maml/data/Expression$FunctionExpression;
 
-    .line 55
     .local v0, "ep":Lmiui/maml/data/Expression$FunctionExpression;
     invoke-virtual {v0}, Lmiui/maml/data/Expression$FunctionExpression;->getFunName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 56
     .local v1, "func":Ljava/lang/String;
     const-string v2, "rand"
 
@@ -123,7 +111,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 57
     :cond_2
     iget-object v2, p0, Lmiui/maml/data/RootExpression$VarVersionVisitor;->mRoot:Lmiui/maml/data/RootExpression;
 

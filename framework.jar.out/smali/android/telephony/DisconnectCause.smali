@@ -214,10 +214,8 @@
     .locals 0
 
     .prologue
-    .line 265
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 267
     return-void
 .end method
 
@@ -226,10 +224,8 @@
     .param p0, "cause"    # I
 
     .prologue
-    .line 271
     packed-switch p0, :pswitch_data_0
 
-    .line 469
     :pswitch_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -252,595 +248,496 @@
     :goto_0
     return-object v0
 
-    .line 273
     :pswitch_1
     const-string v0, "NOT_DISCONNECTED"
 
     goto :goto_0
 
-    .line 275
     :pswitch_2
     const-string v0, "INCOMING_MISSED"
 
     goto :goto_0
 
-    .line 277
     :pswitch_3
     const-string v0, "NORMAL"
 
     goto :goto_0
 
-    .line 279
     :pswitch_4
     const-string v0, "LOCAL"
 
     goto :goto_0
 
-    .line 281
     :pswitch_5
     const-string v0, "BUSY"
 
     goto :goto_0
 
-    .line 283
     :pswitch_6
     const-string v0, "CONGESTION"
 
     goto :goto_0
 
-    .line 285
     :pswitch_7
     const-string v0, "INVALID_NUMBER"
 
     goto :goto_0
 
-    .line 287
     :pswitch_8
     const-string v0, "NUMBER_UNREACHABLE"
 
     goto :goto_0
 
-    .line 289
     :pswitch_9
     const-string v0, "SERVER_UNREACHABLE"
 
     goto :goto_0
 
-    .line 291
     :pswitch_a
     const-string v0, "INVALID_CREDENTIALS"
 
     goto :goto_0
 
-    .line 293
     :pswitch_b
     const-string v0, "OUT_OF_NETWORK"
 
     goto :goto_0
 
-    .line 295
     :pswitch_c
     const-string v0, "SERVER_ERROR"
 
     goto :goto_0
 
-    .line 297
     :pswitch_d
     const-string v0, "TIMED_OUT"
 
     goto :goto_0
 
-    .line 299
     :pswitch_e
     const-string v0, "LOST_SIGNAL"
 
     goto :goto_0
 
-    .line 301
     :pswitch_f
     const-string v0, "LIMIT_EXCEEDED"
 
     goto :goto_0
 
-    .line 303
     :pswitch_10
     const-string v0, "INCOMING_REJECTED"
 
     goto :goto_0
 
-    .line 305
     :pswitch_11
     const-string v0, "POWER_OFF"
 
     goto :goto_0
 
-    .line 307
     :pswitch_12
     const-string v0, "OUT_OF_SERVICE"
 
     goto :goto_0
 
-    .line 309
     :pswitch_13
     const-string v0, "ICC_ERROR"
 
     goto :goto_0
 
-    .line 311
     :pswitch_14
     const-string v0, "CALL_BARRED"
 
     goto :goto_0
 
-    .line 313
     :pswitch_15
     const-string v0, "FDN_BLOCKED"
 
     goto :goto_0
 
-    .line 315
     :pswitch_16
     const-string v0, "CS_RESTRICTED"
 
     goto :goto_0
 
-    .line 317
     :pswitch_17
     const-string v0, "CS_RESTRICTED_NORMAL"
 
     goto :goto_0
 
-    .line 319
     :pswitch_18
     const-string v0, "CS_RESTRICTED_EMERGENCY"
 
     goto :goto_0
 
-    .line 321
     :pswitch_19
     const-string v0, "UNOBTAINABLE_NUMBER"
 
     goto :goto_0
 
-    .line 323
     :pswitch_1a
     const-string v0, "CDMA_LOCKED_UNTIL_POWER_CYCLE"
 
     goto :goto_0
 
-    .line 325
     :pswitch_1b
     const-string v0, "CDMA_DROP"
 
     goto :goto_0
 
-    .line 327
     :pswitch_1c
     const-string v0, "CDMA_INTERCEPT"
 
     goto :goto_0
 
-    .line 329
     :pswitch_1d
     const-string v0, "CDMA_REORDER"
 
     goto :goto_0
 
-    .line 331
     :pswitch_1e
     const-string v0, "CDMA_SO_REJECT"
 
     goto :goto_0
 
-    .line 333
     :pswitch_1f
     const-string v0, "CDMA_RETRY_ORDER"
 
     goto :goto_0
 
-    .line 335
     :pswitch_20
     const-string v0, "CDMA_ACCESS_FAILURE"
 
     goto :goto_0
 
-    .line 337
     :pswitch_21
     const-string v0, "CDMA_PREEMPTED"
 
     goto :goto_0
 
-    .line 339
     :pswitch_22
     const-string v0, "CDMA_NOT_EMERGENCY"
 
     goto :goto_0
 
-    .line 341
     :pswitch_23
     const-string v0, "CDMA_ACCESS_BLOCKED"
 
     goto :goto_0
 
-    .line 343
     :pswitch_24
     const-string v0, "EMERGENCY_ONLY"
 
     goto :goto_0
 
-    .line 345
     :pswitch_25
     const-string v0, "NO_PHONE_NUMBER_SUPPLIED"
 
     goto :goto_0
 
-    .line 347
     :pswitch_26
     const-string v0, "DIALED_MMI"
 
     goto :goto_0
 
-    .line 349
     :pswitch_27
     const-string v0, "VOICEMAIL_NUMBER_MISSING"
 
     goto :goto_0
 
-    .line 351
     :pswitch_28
     const-string v0, "CDMA_CALL_LOST"
 
     goto :goto_0
 
-    .line 353
     :pswitch_29
     const-string v0, "EXITED_ECM"
 
     goto :goto_0
 
-    .line 355
     :pswitch_2a
     const-string v0, "DIAL_MODIFIED_TO_USSD"
 
     goto :goto_0
 
-    .line 357
     :pswitch_2b
     const-string v0, "DIAL_MODIFIED_TO_SS"
 
     goto/16 :goto_0
 
-    .line 359
     :pswitch_2c
     const-string v0, "DIAL_MODIFIED_TO_DIAL"
 
     goto/16 :goto_0
 
-    .line 361
     :pswitch_2d
     const-string v0, "ERROR_UNSPECIFIED"
 
     goto/16 :goto_0
 
-    .line 363
     :pswitch_2e
     const-string v0, "OUTGOING_FAILURE"
 
     goto/16 :goto_0
 
-    .line 365
     :pswitch_2f
     const-string v0, "OUTGOING_CANCELED"
 
     goto/16 :goto_0
 
-    .line 367
     :pswitch_30
     const-string v0, "IMS_MERGED_SUCCESSFULLY"
 
     goto/16 :goto_0
 
-    .line 369
     :pswitch_31
     const-string v0, "CDMA_ALREADY_ACTIVATED"
 
     goto/16 :goto_0
 
-    .line 371
     :pswitch_32
     const-string v0, "NON_SELECTED_USER_CLEARING"
 
     goto/16 :goto_0
 
-    .line 373
     :pswitch_33
     const-string v0, "HO_NOT_FEASIBLE"
 
     goto/16 :goto_0
 
-    .line 375
     :pswitch_34
     const-string v0, "NO_CIRCUIT_AVAIL"
 
     goto/16 :goto_0
 
-    .line 377
     :pswitch_35
     const-string v0, "NO_ROUTE_TO_DESTINAON"
 
     goto/16 :goto_0
 
-    .line 379
     :pswitch_36
     const-string v0, "OPERATOR_DETERMINED_BARRING"
 
     goto/16 :goto_0
 
-    .line 381
     :pswitch_37
     const-string v0, "CALL_FAIL_NO_USER_RESPONDING"
 
     goto/16 :goto_0
 
-    .line 383
     :pswitch_38
     const-string v0, "CALL_FAIL_NO_ANSWER_FROM_USER"
 
     goto/16 :goto_0
 
-    .line 385
     :pswitch_39
     const-string v0, "CALL_FAIL_DESTINATION_OUT_OF_ORDER"
 
     goto/16 :goto_0
 
-    .line 387
     :pswitch_3a
     const-string v0, "BEARER_CAPABILITY_NOT_AUTHORIZED"
 
     goto/16 :goto_0
 
-    .line 389
     :pswitch_3b
     const-string v0, "CHANNEL_UNACCEPTABLE"
 
     goto/16 :goto_0
 
-    .line 391
     :pswitch_3c
     const-string v0, "CALL_REJECTED"
 
     goto/16 :goto_0
 
-    .line 393
     :pswitch_3d
     const-string v0, "NUMBER_CHANGED"
 
     goto/16 :goto_0
 
-    .line 395
     :pswitch_3e
     const-string v0, "PREEMPTION"
 
     goto/16 :goto_0
 
-    .line 397
     :pswitch_3f
     const-string v0, "FACILITY_REJECTED"
 
     goto/16 :goto_0
 
-    .line 399
     :pswitch_40
     const-string v0, "RESP_TO_STATUS_ENQUIRY"
 
     goto/16 :goto_0
 
-    .line 401
     :pswitch_41
     const-string v0, "NORMAL_UNSPECIFIED"
 
     goto/16 :goto_0
 
-    .line 403
     :pswitch_42
     const-string v0, "NETWORK_OUT_OF_ORDER"
 
     goto/16 :goto_0
 
-    .line 405
     :pswitch_43
     const-string v0, "TEMPORARY_FAILURE"
 
     goto/16 :goto_0
 
-    .line 407
     :pswitch_44
     const-string v0, "SWITCHING_EQUIPMENT_CONGESTION"
 
     goto/16 :goto_0
 
-    .line 409
     :pswitch_45
     const-string v0, "ACCESS_INFORMATION_DISCARDED"
 
     goto/16 :goto_0
 
-    .line 411
     :pswitch_46
     const-string v0, "REQUESTED_CIRCUIT_OR_CHANNEL_NOT_AVAILABLE"
 
     goto/16 :goto_0
 
-    .line 413
     :pswitch_47
     const-string v0, "RESOURCES_UNAVAILABLE_OR_UNSPECIFIED"
 
     goto/16 :goto_0
 
-    .line 415
     :pswitch_48
     const-string v0, "QOS_UNAVAILABLE"
 
     goto/16 :goto_0
 
-    .line 417
     :pswitch_49
     const-string v0, "REQUESTED_FACILITY_NOT_SUBSCRIBED"
 
     goto/16 :goto_0
 
-    .line 419
     :pswitch_4a
     const-string v0, "INCOMING_CALLS_BARRED_WITHIN_CUG"
 
     goto/16 :goto_0
 
-    .line 421
     :pswitch_4b
     const-string v0, "BEARER_CAPABILITY_UNAVAILABLE"
 
     goto/16 :goto_0
 
-    .line 423
     :pswitch_4c
     const-string v0, "SERVICE_OPTION_NOT_AVAILABLE"
 
     goto/16 :goto_0
 
-    .line 425
     :pswitch_4d
     const-string v0, "BEARER_SERVICE_NOT_IMPLEMENTED"
 
     goto/16 :goto_0
 
-    .line 427
     :pswitch_4e
     const-string v0, "REQUESTED_FACILITY_NOT_IMPLEMENTED"
 
     goto/16 :goto_0
 
-    .line 429
     :pswitch_4f
     const-string v0, "ONLY_DIGITAL_INFORMATION_BEARER_AVAILABLE"
 
     goto/16 :goto_0
 
-    .line 431
     :pswitch_50
     const-string v0, "SERVICE_OR_OPTION_NOT_IMPLEMENTED"
 
     goto/16 :goto_0
 
-    .line 433
     :pswitch_51
     const-string v0, "INVALID_TRANSACTION_IDENTIFIER"
 
     goto/16 :goto_0
 
-    .line 435
     :pswitch_52
     const-string v0, "USER_NOT_MEMBER_OF_CUG"
 
     goto/16 :goto_0
 
-    .line 437
     :pswitch_53
     const-string v0, "INCOMPATIBLE_DESTINATION"
 
     goto/16 :goto_0
 
-    .line 439
     :pswitch_54
     const-string v0, "INVALID_TRANSIT_NW_SELECTION"
 
     goto/16 :goto_0
 
-    .line 441
     :pswitch_55
     const-string v0, "SEMANTICALLY_INCORRECT_MESSAGE"
 
     goto/16 :goto_0
 
-    .line 443
     :pswitch_56
     const-string v0, "INVALID_MANDATORY_INFORMATION"
 
     goto/16 :goto_0
 
-    .line 445
     :pswitch_57
     const-string v0, "MESSAGE_TYPE_NON_IMPLEMENTED"
 
     goto/16 :goto_0
 
-    .line 447
     :pswitch_58
     const-string v0, "MESSAGE_TYPE_NOT_COMPATIBLE_WITH_PROTOCOL_STATE"
 
     goto/16 :goto_0
 
-    .line 449
     :pswitch_59
     const-string v0, "INFORMATION_ELEMENT_NON_EXISTENT"
 
     goto/16 :goto_0
 
-    .line 451
     :pswitch_5a
     const-string v0, "CONDITIONAL_IE_ERROR"
 
     goto/16 :goto_0
 
-    .line 453
     :pswitch_5b
     const-string v0, "MESSAGE_NOT_COMPATIBLE_WITH_PROTOCOL_STATE"
 
     goto/16 :goto_0
 
-    .line 455
     :pswitch_5c
     const-string v0, "RECOVERY_ON_TIMER_EXPIRED"
 
     goto/16 :goto_0
 
-    .line 457
     :pswitch_5d
     const-string v0, "PROTOCOL_ERROR_UNSPECIFIED"
 
     goto/16 :goto_0
 
-    .line 459
     :pswitch_5e
     const-string v0, "INTERWORKING_UNSPECIFIED"
 
     goto/16 :goto_0
 
-    .line 461
     :pswitch_5f
     const-string v0, "LOCAL_LOW_BATTERY"
 
     goto/16 :goto_0
 
-    .line 463
     :pswitch_60
     const-string v0, "LOW_BATTERY"
 
     goto/16 :goto_0
 
-    .line 465
     :pswitch_61
     const-string v0, "EMERGENCY_TEMP_FAILURE"
 
     goto/16 :goto_0
 
-    .line 467
     :pswitch_62
     const-string v0, "EMERGENCY_PERM_FAILURE"
 
     goto/16 :goto_0
 
-    .line 271
     nop
 
     :pswitch_data_0

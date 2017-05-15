@@ -52,7 +52,6 @@
 
     const/4 v2, 0x0
 
-    .line 1385
     new-instance v0, Lmiui/maml/ActionCommand$AnimationCommand$CommandType;
 
     const-string v1, "INVALID"
@@ -61,7 +60,6 @@
 
     sput-object v0, Lmiui/maml/ActionCommand$AnimationCommand$CommandType;->INVALID:Lmiui/maml/ActionCommand$AnimationCommand$CommandType;
 
-    .line 1386
     new-instance v0, Lmiui/maml/ActionCommand$AnimationCommand$CommandType;
 
     const-string v1, "PLAY"
@@ -70,7 +68,6 @@
 
     sput-object v0, Lmiui/maml/ActionCommand$AnimationCommand$CommandType;->PLAY:Lmiui/maml/ActionCommand$AnimationCommand$CommandType;
 
-    .line 1387
     new-instance v0, Lmiui/maml/ActionCommand$AnimationCommand$CommandType;
 
     const-string v1, "PAUSE"
@@ -79,7 +76,6 @@
 
     sput-object v0, Lmiui/maml/ActionCommand$AnimationCommand$CommandType;->PAUSE:Lmiui/maml/ActionCommand$AnimationCommand$CommandType;
 
-    .line 1388
     new-instance v0, Lmiui/maml/ActionCommand$AnimationCommand$CommandType;
 
     const-string v1, "RESUME"
@@ -88,7 +84,6 @@
 
     sput-object v0, Lmiui/maml/ActionCommand$AnimationCommand$CommandType;->RESUME:Lmiui/maml/ActionCommand$AnimationCommand$CommandType;
 
-    .line 1389
     new-instance v0, Lmiui/maml/ActionCommand$AnimationCommand$CommandType;
 
     const-string v1, "PLAY_WITH_PARAMS"
@@ -97,7 +92,6 @@
 
     sput-object v0, Lmiui/maml/ActionCommand$AnimationCommand$CommandType;->PLAY_WITH_PARAMS:Lmiui/maml/ActionCommand$AnimationCommand$CommandType;
 
-    .line 1384
     const/4 v0, 0x5
 
     new-array v0, v0, [Lmiui/maml/ActionCommand$AnimationCommand$CommandType;
@@ -136,7 +130,6 @@
     .end annotation
 
     .prologue
-    .line 1384
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -147,7 +140,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 1384
     const-class v0, Lmiui/maml/ActionCommand$AnimationCommand$CommandType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -163,7 +155,6 @@
     .locals 1
 
     .prologue
-    .line 1384
     sget-object v0, Lmiui/maml/ActionCommand$AnimationCommand$CommandType;->$VALUES:[Lmiui/maml/ActionCommand$AnimationCommand$CommandType;
 
     invoke-virtual {v0}, [Lmiui/maml/ActionCommand$AnimationCommand$CommandType;->clone()Ljava/lang/Object;

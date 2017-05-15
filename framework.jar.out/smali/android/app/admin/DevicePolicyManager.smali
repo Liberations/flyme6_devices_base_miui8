@@ -175,7 +175,6 @@
     .locals 1
 
     .prologue
-    .line 85
     const-string v0, "DevicePolicyManager"
 
     sput-object v0, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
@@ -189,13 +188,10 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 90
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 91
     iput-object p1, p0, Landroid/app/admin/DevicePolicyManager;->mContext:Landroid/content/Context;
 
-    .line 92
     const-string v0, "device_policy"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -208,7 +204,6 @@
 
     iput-object v0, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
-    .line 94
     return-void
 .end method
 
@@ -218,12 +213,10 @@
     .param p1, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 98
     new-instance v0, Landroid/app/admin/DevicePolicyManager;
 
     invoke-direct {v0, p0, p1}, Landroid/app/admin/DevicePolicyManager;-><init>(Landroid/content/Context;Landroid/os/Handler;)V
 
-    .line 99
     .local v0, "me":Landroid/app/admin/DevicePolicyManager;
     iget-object v1, v0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -250,14 +243,12 @@
     .end annotation
 
     .prologue
-    .line 2333
     const-string v2, "X.509"
 
     invoke-static {v2}, Ljava/security/cert/CertificateFactory;->getInstance(Ljava/lang/String;)Ljava/security/cert/CertificateFactory;
 
     move-result-object v1
 
-    .line 2334
     .local v1, "certFactory":Ljava/security/cert/CertificateFactory;
     new-instance v2, Ljava/io/ByteArrayInputStream;
 
@@ -269,7 +260,6 @@
 
     check-cast v0, Ljava/security/cert/X509Certificate;
 
-    .line 2336
     .local v0, "cert":Ljava/security/cert/X509Certificate;
     new-instance v2, Lcom/android/org/conscrypt/TrustedCertificateStore;
 
@@ -291,12 +281,10 @@
     .param p3, "flags"    # I
 
     .prologue
-    .line 3457
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 3459
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -304,16 +292,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3464
     :cond_0
     :goto_0
     return-void
 
-    .line 3460
     :catch_0
     move-exception v0
 
-    .line 3461
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -330,12 +315,10 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 4186
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 4188
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -345,15 +328,12 @@
 
     move-result v1
 
-    .line 4193
     :goto_0
     return v1
 
-    .line 4189
     :catch_0
     move-exception v0
 
-    .line 4190
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -361,7 +341,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 4193
     .end local v0    # "re":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -376,12 +355,10 @@
     .param p3, "activity"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 3173
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 3175
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -389,16 +366,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3180
     :cond_0
     :goto_0
     return-void
 
-    .line 3176
     :catch_0
     move-exception v0
 
-    .line 3177
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -415,12 +389,10 @@
     .param p2, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 3771
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 3773
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -430,16 +402,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3778
     :cond_0
     :goto_0
     return-void
 
-    .line 3774
     :catch_0
     move-exception v0
 
-    .line 3775
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -455,12 +424,10 @@
     .param p1, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 3473
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 3475
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -468,16 +435,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3480
     :cond_0
     :goto_0
     return-void
 
-    .line 3476
     :catch_0
     move-exception v0
 
-    .line 3477
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -493,12 +457,10 @@
     .param p1, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 2850
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 2852
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -506,16 +468,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2857
     :cond_0
     :goto_0
     return-void
 
-    .line 2853
     :catch_0
     move-exception v0
 
-    .line 2854
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -531,12 +490,10 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 2759
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 2761
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -544,16 +501,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2766
     :cond_0
     :goto_0
     return-void
 
-    .line 2762
     :catch_0
     move-exception v0
 
-    .line 2763
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -570,12 +524,10 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 3194
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 3196
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -583,16 +535,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3201
     :cond_0
     :goto_0
     return-void
 
-    .line 3197
     :catch_0
     move-exception v0
 
-    .line 3198
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -608,12 +557,10 @@
     .param p1, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 2966
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 2968
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -621,16 +568,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2973
     :cond_0
     :goto_0
     return-void
 
-    .line 2969
     :catch_0
     move-exception v0
 
-    .line 2970
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -667,12 +611,10 @@
     .param p2, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 3792
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 3794
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -682,16 +624,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3799
     :cond_0
     :goto_0
     return-void
 
-    .line 3795
     :catch_0
     move-exception v0
 
-    .line 3796
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -713,7 +652,6 @@
     .end annotation
 
     .prologue
-    .line 3692
     :try_start_0
     iget-object v0, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -733,15 +671,12 @@
 
     move-result-object v0
 
-    .line 3697
     :goto_0
     return-object v0
 
-    .line 3694
     :catch_0
     move-exception v6
 
-    .line 3695
     .local v6, "re":Landroid/os/RemoteException;
     sget-object v0, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -749,7 +684,6 @@
 
     invoke-static {v0, v1, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 3697
     const/4 v0, 0x0
 
     goto :goto_0
@@ -763,7 +697,6 @@
     .end annotation
 
     .prologue
-    .line 3654
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -773,15 +706,12 @@
 
     move-result-object v1
 
-    .line 3658
     :goto_0
     return-object v1
 
-    .line 3655
     :catch_0
     move-exception v0
 
-    .line 3656
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -789,7 +719,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 3658
     const/4 v1, 0x0
 
     goto :goto_0
@@ -801,12 +730,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 3868
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 3870
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -816,15 +743,12 @@
 
     move-result v1
 
-    .line 3875
     :goto_0
     return v1
 
-    .line 3871
     :catch_0
     move-exception v0
 
-    .line 3872
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -848,7 +772,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3875
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -862,12 +785,10 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 3849
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 3851
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -875,16 +796,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3856
     :cond_0
     :goto_0
     return-void
 
-    .line 3852
     :catch_0
     move-exception v0
 
-    .line 3853
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -915,7 +833,6 @@
     .locals 1
 
     .prologue
-    .line 3915
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v0
@@ -932,12 +849,10 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 3923
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 3925
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -947,15 +862,12 @@
 
     move-result-object v1
 
-    .line 3931
     :goto_0
     return-object v1
 
-    .line 3926
     :catch_0
     move-exception v0
 
-    .line 3927
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -963,7 +875,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 3931
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -984,7 +895,6 @@
     .end annotation
 
     .prologue
-    .line 865
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v0
@@ -1010,12 +920,10 @@
     .end annotation
 
     .prologue
-    .line 873
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 875
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -1025,15 +933,12 @@
 
     move-result-object v1
 
-    .line 880
     :goto_0
     return-object v1
 
-    .line 876
     :catch_0
     move-exception v0
 
-    .line 877
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -1041,7 +946,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 880
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -1056,7 +960,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 2602
     :try_start_0
     iget-object v3, p0, Landroid/app/admin/DevicePolicyManager;->mContext:Landroid/content/Context;
 
@@ -1072,17 +975,14 @@
 
     move-result-object v0
 
-    .line 2609
     .local v0, "ai":Landroid/content/pm/ActivityInfo;
     new-instance v2, Landroid/content/pm/ResolveInfo;
 
     invoke-direct {v2}, Landroid/content/pm/ResolveInfo;-><init>()V
 
-    .line 2610
     .local v2, "ri":Landroid/content/pm/ResolveInfo;
     iput-object v0, v2, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
-    .line 2613
     :try_start_1
     new-instance v3, Landroid/app/admin/DeviceAdminInfo;
 
@@ -1093,17 +993,14 @@
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 2619
     .end local v0    # "ai":Landroid/content/pm/ActivityInfo;
     .end local v2    # "ri":Landroid/content/pm/ResolveInfo;
     :goto_0
     return-object v3
 
-    .line 2604
     :catch_0
     move-exception v1
 
-    .line 2605
     .local v1, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     sget-object v3, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -1129,17 +1026,14 @@
 
     move-object v3, v4
 
-    .line 2606
     goto :goto_0
 
-    .line 2614
     .end local v1    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     .restart local v0    # "ai":Landroid/content/pm/ActivityInfo;
     .restart local v2    # "ri":Landroid/content/pm/ResolveInfo;
     :catch_1
     move-exception v1
 
-    .line 2615
     .local v1, "e":Lorg/xmlpull/v1/XmlPullParserException;
     sget-object v3, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -1165,15 +1059,12 @@
 
     move-object v3, v4
 
-    .line 2616
     goto :goto_0
 
-    .line 2617
     .end local v1    # "e":Lorg/xmlpull/v1/XmlPullParserException;
     :catch_2
     move-exception v1
 
-    .line 2618
     .local v1, "e":Ljava/io/IOException;
     sget-object v3, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -1199,7 +1090,6 @@
 
     move-object v3, v4
 
-    .line 2619
     goto :goto_0
 .end method
 
@@ -1209,12 +1099,10 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 3749
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 3751
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -1224,15 +1112,12 @@
 
     move-result-object v1
 
-    .line 3756
     :goto_0
     return-object v1
 
-    .line 3752
     :catch_0
     move-exception v0
 
-    .line 3753
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -1240,7 +1125,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 3756
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -1252,12 +1136,10 @@
     .locals 3
 
     .prologue
-    .line 2500
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 2502
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -1267,15 +1149,12 @@
 
     move-result v1
 
-    .line 2507
     :goto_0
     return v1
 
-    .line 2503
     :catch_0
     move-exception v0
 
-    .line 2504
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -1283,7 +1162,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 2507
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -1296,12 +1174,10 @@
     .param p1, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 3415
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 3417
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -1311,15 +1187,12 @@
 
     move-result v1
 
-    .line 3422
     :goto_0
     return v1
 
-    .line 3418
     :catch_0
     move-exception v0
 
-    .line 3419
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -1327,7 +1200,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 3422
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x1
@@ -1340,12 +1212,10 @@
     .param p1, "userHandle"    # Landroid/os/UserHandle;
 
     .prologue
-    .line 3434
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 3436
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -1359,15 +1229,12 @@
 
     move-result v1
 
-    .line 3442
     :goto_0
     return v1
 
-    .line 3438
     :catch_0
     move-exception v0
 
-    .line 3439
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -1375,7 +1242,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 3442
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x1
@@ -1388,7 +1254,6 @@
     .param p1, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 2412
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v0
@@ -1406,12 +1271,10 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 2417
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 2419
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -1421,15 +1284,12 @@
 
     move-result v1
 
-    .line 2424
     :goto_0
     return v1
 
-    .line 2420
     :catch_0
     move-exception v0
 
-    .line 2421
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -1437,7 +1297,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 2424
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -1455,12 +1314,10 @@
     .end annotation
 
     .prologue
-    .line 2373
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 2375
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -1470,15 +1327,12 @@
 
     move-result-object v1
 
-    .line 2380
     :goto_0
     return-object v1
 
-    .line 2376
     :catch_0
     move-exception v0
 
-    .line 2377
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -1486,7 +1340,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 2380
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -1499,12 +1352,10 @@
     .param p1, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 3335
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 3337
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -1514,15 +1365,12 @@
 
     move-result v1
 
-    .line 3342
     :goto_0
     return v1
 
-    .line 3338
     :catch_0
     move-exception v0
 
-    .line 3339
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -1530,7 +1378,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 3342
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -1543,12 +1390,10 @@
     .param p1, "userHandle"    # Landroid/os/UserHandle;
 
     .prologue
-    .line 3352
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 3354
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -1562,15 +1407,12 @@
 
     move-result v1
 
-    .line 3359
     :goto_0
     return v1
 
-    .line 3355
     :catch_0
     move-exception v0
 
-    .line 3356
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -1578,7 +1420,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 3359
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -1602,12 +1443,10 @@
     .end annotation
 
     .prologue
-    .line 4234
     iget-object v2, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v2, :cond_0
 
-    .line 4236
     :try_start_0
     iget-object v2, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -1617,20 +1456,16 @@
 
     move-result-object v0
 
-    .line 4237
     .local v0, "providers":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     if-eqz v0, :cond_0
 
-    .line 4244
     .end local v0    # "providers":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :goto_0
     return-object v0
 
-    .line 4240
     :catch_0
     move-exception v1
 
-    .line 4241
     .local v1, "re":Landroid/os/RemoteException;
     sget-object v2, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -1638,7 +1473,6 @@
 
     invoke-static {v2, v3, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 4244
     .end local v1    # "re":Landroid/os/RemoteException;
     :cond_0
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
@@ -1652,12 +1486,10 @@
     .locals 3
 
     .prologue
-    .line 1636
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 1638
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -1671,15 +1503,12 @@
 
     move-result v1
 
-    .line 1643
     :goto_0
     return v1
 
-    .line 1639
     :catch_0
     move-exception v0
 
-    .line 1640
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -1687,7 +1516,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1643
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, -0x1
@@ -1699,12 +1527,10 @@
     .locals 3
 
     .prologue
-    .line 2867
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 2869
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -1714,15 +1540,12 @@
 
     move-result-object v1
 
-    .line 2874
     :goto_0
     return-object v1
 
-    .line 2870
     :catch_0
     move-exception v0
 
-    .line 2871
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -1730,7 +1553,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2874
     .end local v0    # "re":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -1742,12 +1564,10 @@
     .locals 3
 
     .prologue
-    .line 2885
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 2887
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -1757,15 +1577,12 @@
 
     move-result-object v1
 
-    .line 2892
     :goto_0
     return-object v1
 
-    .line 2888
     :catch_0
     move-exception v0
 
-    .line 2889
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -1773,7 +1590,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2892
     .end local v0    # "re":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -1785,12 +1601,10 @@
     .locals 3
 
     .prologue
-    .line 2771
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 2773
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -1800,15 +1614,12 @@
 
     move-result-object v1
 
-    .line 2778
     :goto_0
     return-object v1
 
-    .line 2774
     :catch_0
     move-exception v0
 
-    .line 2775
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -1816,7 +1627,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2778
     .end local v0    # "re":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -1828,12 +1638,10 @@
     .locals 3
 
     .prologue
-    .line 2783
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 2785
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -1843,15 +1651,12 @@
 
     move-result-object v1
 
-    .line 2790
     :goto_0
     return-object v1
 
-    .line 2786
     :catch_0
     move-exception v0
 
-    .line 2787
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -1859,7 +1664,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2790
     .end local v0    # "re":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -1871,12 +1675,10 @@
     .locals 3
 
     .prologue
-    .line 1653
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 1655
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -1886,15 +1688,12 @@
 
     move-result v1
 
-    .line 1660
     :goto_0
     return v1
 
-    .line 1656
     :catch_0
     move-exception v0
 
-    .line 1657
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -1902,7 +1701,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1660
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -1914,12 +1712,10 @@
     .locals 3
 
     .prologue
-    .line 1995
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 1997
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -1933,15 +1729,12 @@
 
     move-result-object v1
 
-    .line 2002
     :goto_0
     return-object v1
 
-    .line 1998
     :catch_0
     move-exception v0
 
-    .line 1999
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -1949,7 +1742,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 2002
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -1971,29 +1763,24 @@
     .end annotation
 
     .prologue
-    .line 2241
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2242
     .local v3, "certs":Ljava/util/List;, "Ljava/util/List<[B>;"
     iget-object v6, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v6, :cond_0
 
-    .line 2244
     :try_start_0
     iget-object v6, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     invoke-interface {v6, p1}, Landroid/app/admin/IDevicePolicyManager;->enforceCanManageCaCerts(Landroid/content/ComponentName;)V
 
-    .line 2245
     new-instance v2, Lcom/android/org/conscrypt/TrustedCertificateStore;
 
     invoke-direct {v2}, Lcom/android/org/conscrypt/TrustedCertificateStore;-><init>()V
 
-    .line 2246
     .local v2, "certStore":Lcom/android/org/conscrypt/TrustedCertificateStore;
     invoke-virtual {v2}, Lcom/android/org/conscrypt/TrustedCertificateStore;->userAliases()Ljava/util/Set;
 
@@ -2019,7 +1806,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 2248
     .local v0, "alias":Ljava/lang/String;
     :try_start_1
     invoke-virtual {v2, v0}, Lcom/android/org/conscrypt/TrustedCertificateStore;->getCertificate(Ljava/lang/String;)Ljava/security/cert/Certificate;
@@ -2037,11 +1823,9 @@
 
     goto :goto_0
 
-    .line 2249
     :catch_0
     move-exception v1
 
-    .line 2250
     .local v1, "ce":Ljava/security/cert/CertificateException;
     :try_start_2
     sget-object v6, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
@@ -2070,7 +1854,6 @@
 
     goto :goto_0
 
-    .line 2253
     .end local v0    # "alias":Ljava/lang/String;
     .end local v1    # "ce":Ljava/security/cert/CertificateException;
     .end local v2    # "certStore":Lcom/android/org/conscrypt/TrustedCertificateStore;
@@ -2078,7 +1861,6 @@
     :catch_1
     move-exception v5
 
-    .line 2254
     .local v5, "re":Landroid/os/RemoteException;
     sget-object v6, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -2086,7 +1868,6 @@
 
     invoke-static {v6, v7, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 2257
     .end local v5    # "re":Landroid/os/RemoteException;
     :cond_0
     return-object v3
@@ -2097,7 +1878,6 @@
     .param p1, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 2559
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v0
@@ -2115,12 +1895,10 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 2564
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 2566
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -2130,15 +1908,12 @@
 
     move-result v1
 
-    .line 2571
     :goto_0
     return v1
 
-    .line 2567
     :catch_0
     move-exception v0
 
-    .line 2568
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -2146,7 +1921,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 2571
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -2159,12 +1933,10 @@
     .param p1, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 3970
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 3972
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -2174,15 +1946,12 @@
 
     move-result-object v1
 
-    .line 3977
     :goto_0
     return-object v1
 
-    .line 3973
     :catch_0
     move-exception v0
 
-    .line 3974
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -2190,7 +1959,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 3977
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -2203,7 +1971,6 @@
     .param p1, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 1700
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v0
@@ -2221,12 +1988,10 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 1705
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 1707
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -2236,15 +2001,12 @@
 
     move-result v1
 
-    .line 1712
     :goto_0
     return v1
 
-    .line 1708
     :catch_0
     move-exception v0
 
-    .line 1709
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -2252,7 +2014,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1712
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -2265,7 +2026,6 @@
     .param p1, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 1820
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v0
@@ -2283,12 +2043,10 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 1825
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 1827
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -2298,15 +2056,12 @@
 
     move-result-wide v2
 
-    .line 1832
     :goto_0
     return-wide v2
 
-    .line 1828
     :catch_0
     move-exception v0
 
-    .line 1829
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -2314,7 +2069,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1832
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const-wide/16 v2, 0x0
@@ -2327,12 +2081,10 @@
     .param p1, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 1561
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 1563
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -2346,15 +2098,12 @@
 
     move-result-wide v2
 
-    .line 1568
     :goto_0
     return-wide v2
 
-    .line 1564
     :catch_0
     move-exception v0
 
-    .line 1565
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -2362,7 +2111,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1568
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const-wide/16 v2, 0x0
@@ -2375,12 +2123,10 @@
     .param p1, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 1540
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 1542
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -2394,15 +2140,12 @@
 
     move-result-wide v2
 
-    .line 1547
     :goto_0
     return-wide v2
 
-    .line 1543
     :catch_0
     move-exception v0
 
-    .line 1544
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -2410,7 +2153,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1547
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const-wide/16 v2, 0x0
@@ -2423,7 +2165,6 @@
     .param p1, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 1579
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v0
@@ -2441,12 +2182,10 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 1584
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 1586
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -2456,15 +2195,12 @@
 
     move-result v1
 
-    .line 1591
     :goto_0
     return v1
 
-    .line 1587
     :catch_0
     move-exception v0
 
-    .line 1588
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -2472,7 +2208,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1591
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -2485,7 +2220,6 @@
     .param p1, "quality"    # I
 
     .prologue
-    .line 1602
     const/16 v0, 0x10
 
     return v0
@@ -2496,7 +2230,6 @@
     .param p1, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 1095
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v0
@@ -2514,12 +2247,10 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 1100
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 1102
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -2529,15 +2260,12 @@
 
     move-result v1
 
-    .line 1107
     :goto_0
     return v1
 
-    .line 1103
     :catch_0
     move-exception v0
 
-    .line 1104
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -2545,7 +2273,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1107
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -2558,7 +2285,6 @@
     .param p1, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 1275
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v0
@@ -2576,12 +2302,10 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 1280
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 1282
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -2591,15 +2315,12 @@
 
     move-result v1
 
-    .line 1287
     :goto_0
     return v1
 
-    .line 1283
     :catch_0
     move-exception v0
 
-    .line 1284
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -2607,7 +2328,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1287
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -2620,7 +2340,6 @@
     .param p1, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 1217
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v0
@@ -2638,12 +2357,10 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 1222
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 1224
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -2653,15 +2370,12 @@
 
     move-result v1
 
-    .line 1229
     :goto_0
     return v1
 
-    .line 1225
     :catch_0
     move-exception v0
 
-    .line 1226
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -2669,7 +2383,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1229
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -2682,7 +2395,6 @@
     .param p1, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 1451
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v0
@@ -2700,12 +2412,10 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 1456
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 1458
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -2715,15 +2425,12 @@
 
     move-result v1
 
-    .line 1463
     :goto_0
     return v1
 
-    .line 1459
     :catch_0
     move-exception v0
 
-    .line 1460
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -2731,7 +2438,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1463
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -2744,7 +2450,6 @@
     .param p1, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 1334
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v0
@@ -2762,12 +2467,10 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 1339
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 1341
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -2777,15 +2480,12 @@
 
     move-result v1
 
-    .line 1346
     :goto_0
     return v1
 
-    .line 1342
     :catch_0
     move-exception v0
 
-    .line 1343
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -2793,7 +2493,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1346
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -2806,7 +2505,6 @@
     .param p1, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 1392
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v0
@@ -2824,12 +2522,10 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 1397
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 1399
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -2839,15 +2535,12 @@
 
     move-result v1
 
-    .line 1404
     :goto_0
     return v1
 
-    .line 1400
     :catch_0
     move-exception v0
 
-    .line 1401
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -2855,7 +2548,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1404
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -2868,7 +2560,6 @@
     .param p1, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 1156
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v0
@@ -2886,12 +2577,10 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 1161
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 1163
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -2901,15 +2590,12 @@
 
     move-result v1
 
-    .line 1168
     :goto_0
     return v1
 
-    .line 1164
     :catch_0
     move-exception v0
 
-    .line 1165
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -2917,7 +2603,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1168
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -2930,7 +2615,6 @@
     .param p1, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 1042
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v0
@@ -2948,12 +2632,10 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 1047
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 1049
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -2963,15 +2645,12 @@
 
     move-result v1
 
-    .line 1054
     :goto_0
     return v1
 
-    .line 1050
     :catch_0
     move-exception v0
 
-    .line 1051
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -2979,7 +2658,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1054
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -2994,7 +2672,6 @@
     .param p3, "permission"    # Ljava/lang/String;
 
     .prologue
-    .line 4458
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -3004,15 +2681,12 @@
 
     move-result v1
 
-    .line 4461
     :goto_0
     return v1
 
-    .line 4459
     :catch_0
     move-exception v0
 
-    .line 4460
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -3020,7 +2694,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 4461
     const/4 v1, 0x0
 
     goto :goto_0
@@ -3031,7 +2704,6 @@
     .param p1, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 4394
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -3041,15 +2713,12 @@
 
     move-result v1
 
-    .line 4396
     :goto_0
     return v1
 
-    .line 4395
     :catch_0
     move-exception v0
 
-    .line 4396
     .local v0, "re":Landroid/os/RemoteException;
     const/4 v1, 0x0
 
@@ -3070,12 +2739,10 @@
     .end annotation
 
     .prologue
-    .line 3549
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 3551
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -3085,15 +2752,12 @@
 
     move-result-object v1
 
-    .line 3556
     :goto_0
     return-object v1
 
-    .line 3552
     :catch_0
     move-exception v0
 
-    .line 3553
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -3101,7 +2765,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 3556
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -3125,12 +2788,10 @@
     .end annotation
 
     .prologue
-    .line 3525
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 3527
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -3140,15 +2801,12 @@
 
     move-result-object v1
 
-    .line 3532
     :goto_0
     return-object v1
 
-    .line 3528
     :catch_0
     move-exception v0
 
-    .line 3529
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -3156,7 +2814,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 3532
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -3180,12 +2837,10 @@
     .end annotation
 
     .prologue
-    .line 3604
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 3606
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -3195,15 +2850,12 @@
 
     move-result-object v1
 
-    .line 3611
     :goto_0
     return-object v1
 
-    .line 3607
     :catch_0
     move-exception v0
 
-    .line 3608
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -3211,7 +2863,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 3611
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -3232,12 +2883,10 @@
     .end annotation
 
     .prologue
-    .line 3627
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 3629
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -3247,15 +2896,12 @@
 
     move-result-object v1
 
-    .line 3634
     :goto_0
     return-object v1
 
-    .line 3630
     :catch_0
     move-exception v0
 
-    .line 3631
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -3263,7 +2909,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 3634
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -3280,7 +2925,6 @@
     .end annotation
 
     .prologue
-    .line 3094
     invoke-static {}, Landroid/os/Process;->myUserHandle()Landroid/os/UserHandle;
 
     move-result-object v0
@@ -3306,12 +2950,10 @@
     .end annotation
 
     .prologue
-    .line 3102
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 3104
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -3321,15 +2963,12 @@
 
     move-result-object v1
 
-    .line 3111
     :goto_0
     return-object v1
 
-    .line 3105
     :catch_0
     move-exception v0
 
-    .line 3106
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -3337,7 +2976,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3107
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "Requested profile owner for invalid userId"
@@ -3346,7 +2984,6 @@
 
     throw v1
 
-    .line 3111
     .end local v0    # "re":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -3363,12 +3000,10 @@
     .end annotation
 
     .prologue
-    .line 3121
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 3123
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -3386,15 +3021,12 @@
 
     move-result-object v1
 
-    .line 3130
     :goto_0
     return-object v1
 
-    .line 3124
     :catch_0
     move-exception v0
 
-    .line 3125
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -3402,7 +3034,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3126
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "Requested profile owner for invalid userId"
@@ -3411,7 +3042,6 @@
 
     throw v1
 
-    .line 3130
     .end local v0    # "re":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -3429,12 +3059,10 @@
     .end annotation
 
     .prologue
-    .line 3142
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 3144
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -3444,15 +3072,12 @@
 
     move-result-object v1
 
-    .line 3151
     :goto_0
     return-object v1
 
-    .line 3145
     :catch_0
     move-exception v0
 
-    .line 3146
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -3460,7 +3085,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3147
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "Requested profile owner for invalid userId"
@@ -3469,7 +3093,6 @@
 
     throw v1
 
-    .line 3151
     .end local v0    # "re":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -3482,12 +3105,10 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 1723
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 1725
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -3497,15 +3118,12 @@
 
     move-result v1
 
-    .line 1730
     :goto_0
     return v1
 
-    .line 1726
     :catch_0
     move-exception v0
 
-    .line 1727
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -3513,7 +3131,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1730
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/16 v1, -0x2710
@@ -3527,12 +3144,10 @@
     .param p2, "result"    # Landroid/os/RemoteCallback;
 
     .prologue
-    .line 2627
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 2629
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -3544,16 +3159,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2634
     :cond_0
     :goto_0
     return-void
 
-    .line 2630
     :catch_0
     move-exception v0
 
-    .line 2631
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -3569,7 +3181,6 @@
     .param p1, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 2459
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v0
@@ -3587,12 +3198,10 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 2464
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 2466
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -3602,15 +3211,12 @@
 
     move-result v1
 
-    .line 2471
     :goto_0
     return v1
 
-    .line 2467
     :catch_0
     move-exception v0
 
-    .line 2468
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -3618,7 +3224,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 2471
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -3631,12 +3236,10 @@
     .param p1, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 2145
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 2147
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -3650,15 +3253,12 @@
 
     move-result v1
 
-    .line 2152
     :goto_0
     return v1
 
-    .line 2148
     :catch_0
     move-exception v0
 
-    .line 2149
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -3666,7 +3266,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 2152
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -3678,7 +3277,6 @@
     .locals 1
 
     .prologue
-    .line 2175
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v0
@@ -3695,12 +3293,10 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 2180
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 2182
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -3710,15 +3306,12 @@
 
     move-result v1
 
-    .line 2187
     :goto_0
     return v1
 
-    .line 2183
     :catch_0
     move-exception v0
 
-    .line 2184
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -3726,7 +3319,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 2187
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -3738,12 +3330,10 @@
     .locals 3
 
     .prologue
-    .line 4288
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 4290
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -3753,15 +3343,12 @@
 
     move-result-object v1
 
-    .line 4295
     :goto_0
     return-object v1
 
-    .line 4291
     :catch_0
     move-exception v0
 
-    .line 4292
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -3769,7 +3356,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 4295
     .end local v0    # "re":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -3795,7 +3381,6 @@
     .end annotation
 
     .prologue
-    .line 3289
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v0
@@ -3826,12 +3411,10 @@
     .end annotation
 
     .prologue
-    .line 3295
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 3297
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -3841,15 +3424,12 @@
 
     move-result-object v1
 
-    .line 3302
     :goto_0
     return-object v1
 
-    .line 3298
     :catch_0
     move-exception v0
 
-    .line 3299
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -3857,7 +3437,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 3302
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     new-instance v1, Ljava/util/ArrayList;
@@ -3875,18 +3454,15 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 2286
     iget-object v3, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v3, :cond_0
 
-    .line 2288
     :try_start_0
     iget-object v3, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     invoke-interface {v3, p1}, Landroid/app/admin/IDevicePolicyManager;->enforceCanManageCaCerts(Landroid/content/ComponentName;)V
 
-    .line 2289
     invoke-static {p2}, Landroid/app/admin/DevicePolicyManager;->getCaCertAlias([B)Ljava/lang/String;
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -3898,16 +3474,13 @@
 
     const/4 v2, 0x1
 
-    .line 2296
     :cond_0
     :goto_0
     return v2
 
-    .line 2290
     :catch_0
     move-exception v1
 
-    .line 2291
     .local v1, "re":Landroid/os/RemoteException;
     sget-object v3, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -3917,12 +3490,10 @@
 
     goto :goto_0
 
-    .line 2292
     .end local v1    # "re":Landroid/os/RemoteException;
     :catch_1
     move-exception v0
 
-    .line 2293
     .local v0, "ce":Ljava/security/cert/CertificateException;
     sget-object v3, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -3939,12 +3510,10 @@
     .param p2, "usesPolicy"    # I
 
     .prologue
-    .line 925
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 927
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -3958,15 +3527,12 @@
 
     move-result v1
 
-    .line 932
     :goto_0
     return v1
 
-    .line 928
     :catch_0
     move-exception v0
 
-    .line 929
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -3974,7 +3540,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 932
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -3986,12 +3551,10 @@
     .locals 3
 
     .prologue
-    .line 2980
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 2982
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -4001,15 +3564,12 @@
 
     move-result v1
 
-    .line 2987
     :goto_0
     return v1
 
-    .line 2983
     :catch_0
     move-exception v0
 
-    .line 2984
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -4017,7 +3577,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2987
     .end local v0    # "re":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x1
@@ -4031,12 +3590,10 @@
     .param p2, "certBuffer"    # [B
 
     .prologue
-    .line 2201
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 2203
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -4046,15 +3603,12 @@
 
     move-result v1
 
-    .line 2208
     :goto_0
     return v1
 
-    .line 2204
     :catch_0
     move-exception v0
 
-    .line 2205
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -4062,7 +3616,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 2208
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -4080,7 +3633,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 2314
     const/4 v3, 0x1
 
     :try_start_0
@@ -4094,7 +3646,6 @@
 
     move-result-object v1
 
-    .line 2315
     .local v1, "pemCert":[B
     invoke-interface {p2}, Ljava/security/PrivateKey;->getAlgorithm()Ljava/lang/String;
 
@@ -4116,7 +3667,6 @@
 
     move-result-object v2
 
-    .line 2317
     .local v2, "pkcs8Key":[B
     iget-object v3, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -4130,17 +3680,14 @@
 
     move-result v3
 
-    .line 2325
     .end local v1    # "pemCert":[B
     .end local v2    # "pkcs8Key":[B
     :goto_0
     return v3
 
-    .line 2318
     :catch_0
     move-exception v0
 
-    .line 2319
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v3, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -4152,14 +3699,11 @@
     :goto_1
     move v3, v4
 
-    .line 2325
     goto :goto_0
 
-    .line 2320
     :catch_1
     move-exception v0
 
-    .line 2321
     .local v0, "e":Ljava/security/GeneralSecurityException;
     :goto_2
     sget-object v3, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
@@ -4170,12 +3714,10 @@
 
     goto :goto_1
 
-    .line 2322
     .end local v0    # "e":Ljava/security/GeneralSecurityException;
     :catch_2
     move-exception v0
 
-    .line 2323
     .local v0, "e":Ljava/lang/Exception;
     :goto_3
     sget-object v3, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
@@ -4186,14 +3728,12 @@
 
     goto :goto_1
 
-    .line 2322
     .end local v0    # "e":Ljava/lang/Exception;
     :catch_3
     move-exception v0
 
     goto :goto_3
 
-    .line 2320
     :catch_4
     move-exception v0
 
@@ -4204,12 +3744,10 @@
     .locals 3
 
     .prologue
-    .line 1617
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 1619
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -4223,15 +3761,12 @@
 
     move-result v1
 
-    .line 1624
     :goto_0
     return v1
 
-    .line 1620
     :catch_0
     move-exception v0
 
-    .line 1621
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -4239,7 +3774,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1624
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -4252,7 +3786,6 @@
     .param p1, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 825
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v0
@@ -4270,12 +3803,10 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 833
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 835
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -4285,15 +3816,12 @@
 
     move-result v1
 
-    .line 840
     :goto_0
     return v1
 
-    .line 836
     :catch_0
     move-exception v0
 
-    .line 837
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -4301,7 +3829,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 840
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -4315,12 +3842,10 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 3831
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 3833
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -4330,15 +3855,12 @@
 
     move-result v1
 
-    .line 3838
     :goto_0
     return v1
 
-    .line 3834
     :catch_0
     move-exception v0
 
-    .line 3835
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -4346,7 +3868,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 3838
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -4359,12 +3880,10 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 2831
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 2833
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -4374,15 +3893,12 @@
 
     move-result v1
 
-    .line 2838
     :goto_0
     return v1
 
-    .line 2834
     :catch_0
     move-exception v0
 
-    .line 2835
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -4390,7 +3906,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2838
     .end local v0    # "re":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -4403,7 +3918,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 2746
     invoke-virtual {p0, p1}, Landroid/app/admin/DevicePolicyManager;->isDeviceOwnerApp(Ljava/lang/String;)Z
 
     move-result v0
@@ -4416,12 +3930,10 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 2731
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 2733
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -4431,15 +3943,12 @@
 
     move-result v1
 
-    .line 2738
     :goto_0
     return v1
 
-    .line 2734
     :catch_0
     move-exception v0
 
-    .line 2735
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -4447,7 +3956,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2738
     .end local v0    # "re":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -4460,12 +3968,10 @@
     .param p1, "pkg"    # Ljava/lang/String;
 
     .prologue
-    .line 3986
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 3988
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -4475,15 +3981,12 @@
 
     move-result v1
 
-    .line 3993
     :goto_0
     return v1
 
-    .line 3989
     :catch_0
     move-exception v0
 
-    .line 3990
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -4491,7 +3994,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 3993
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -4504,12 +4006,10 @@
     .param p1, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 4114
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 4116
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -4519,15 +4019,12 @@
 
     move-result v1
 
-    .line 4121
     :goto_0
     return v1
 
-    .line 4117
     :catch_0
     move-exception v0
 
-    .line 4118
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -4535,7 +4032,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4121
     .end local v0    # "re":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -4550,12 +4046,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 3073
     iget-object v3, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v3, :cond_0
 
-    .line 3075
     :try_start_0
     iget-object v3, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -4571,7 +4065,6 @@
 
     move-result-object v0
 
-    .line 3077
     .local v0, "profileOwner":Landroid/content/ComponentName;
     if-eqz v0, :cond_0
 
@@ -4589,17 +4082,14 @@
 
     const/4 v2, 0x1
 
-    .line 3083
     .end local v0    # "profileOwner":Landroid/content/ComponentName;
     :cond_0
     :goto_0
     return v2
 
-    .line 3079
     :catch_0
     move-exception v1
 
-    .line 3080
     .local v1, "re":Landroid/os/RemoteException;
     sget-object v3, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -4616,12 +4106,10 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 848
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 850
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -4631,15 +4119,12 @@
 
     move-result v1
 
-    .line 855
     :goto_0
     return v1
 
-    .line 851
     :catch_0
     move-exception v0
 
-    .line 852
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -4647,7 +4132,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 855
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -4661,12 +4145,10 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 4158
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 4160
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -4676,15 +4158,12 @@
 
     move-result v1
 
-    .line 4165
     :goto_0
     return v1
 
-    .line 4161
     :catch_0
     move-exception v0
 
-    .line 4162
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -4692,7 +4171,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4165
     .end local v0    # "re":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -4704,12 +4182,10 @@
     .locals 3
 
     .prologue
-    .line 1844
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 1846
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -4717,16 +4193,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1851
     :cond_0
     :goto_0
     return-void
 
-    .line 1847
     :catch_0
     move-exception v0
 
-    .line 1848
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -4742,12 +4215,10 @@
     .param p1, "updateReceivedTime"    # J
 
     .prologue
-    .line 4352
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 4354
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -4755,16 +4226,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4359
     :cond_0
     :goto_0
     return-void
 
-    .line 4355
     :catch_0
     move-exception v0
 
-    .line 4356
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -4780,12 +4248,10 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 889
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 891
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -4799,15 +4265,12 @@
 
     move-result v1
 
-    .line 896
     :goto_0
     return v1
 
-    .line 892
     :catch_0
     move-exception v0
 
-    .line 893
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -4815,7 +4278,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 896
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -4828,12 +4290,10 @@
     .param p1, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 906
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 908
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -4845,16 +4305,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 913
     :cond_0
     :goto_0
     return-void
 
-    .line 909
     :catch_0
     move-exception v0
 
-    .line 910
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -4871,12 +4328,10 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 4213
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 4215
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -4886,15 +4341,12 @@
 
     move-result v1
 
-    .line 4220
     :goto_0
     return v1
 
-    .line 4216
     :catch_0
     move-exception v0
 
-    .line 4217
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -4902,7 +4354,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 4220
     .end local v0    # "re":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -4916,7 +4367,6 @@
     .param p2, "userHandle"    # Landroid/os/UserHandle;
 
     .prologue
-    .line 3710
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -4926,15 +4376,12 @@
 
     move-result v1
 
-    .line 3713
     :goto_0
     return v1
 
-    .line 3711
     :catch_0
     move-exception v0
 
-    .line 3712
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -4942,7 +4389,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 3713
     const/4 v1, 0x0
 
     goto :goto_0
@@ -4953,12 +4399,10 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 2655
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 2657
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -4966,16 +4410,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2662
     :cond_0
     :goto_0
     return-void
 
-    .line 2658
     :catch_0
     move-exception v0
 
-    .line 2659
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -4991,12 +4432,10 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 2668
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 2670
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -5004,16 +4443,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2675
     :cond_0
     :goto_0
     return-void
 
-    .line 2671
     :catch_0
     move-exception v0
 
-    .line 2672
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -5030,12 +4466,10 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 1778
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 1780
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -5045,15 +4479,12 @@
 
     move-result v1
 
-    .line 1785
     :goto_0
     return v1
 
-    .line 1781
     :catch_0
     move-exception v0
 
-    .line 1782
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -5061,7 +4492,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1785
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -5076,12 +4506,10 @@
     .param p3, "disabled"    # Z
 
     .prologue
-    .line 3895
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 3897
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -5089,16 +4517,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3902
     :cond_0
     :goto_0
     return-void
 
-    .line 3898
     :catch_0
     move-exception v0
 
-    .line 3899
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -5115,14 +4540,12 @@
     .param p2, "refreshing"    # Z
 
     .prologue
-    .line 2592
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v0
 
     invoke-virtual {p0, p1, p2, v0}, Landroid/app/admin/DevicePolicyManager;->setActiveAdmin(Landroid/content/ComponentName;ZI)V
 
-    .line 2593
     return-void
 .end method
 
@@ -5133,12 +4556,10 @@
     .param p3, "userHandle"    # I
 
     .prologue
-    .line 2579
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 2581
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -5146,16 +4567,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2586
     :cond_0
     :goto_0
     return-void
 
-    .line 2582
     :catch_0
     move-exception v0
 
-    .line 2583
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -5179,12 +4597,10 @@
     .param p9, "userHandle"    # I
 
     .prologue
-    .line 2641
     iget-object v0, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v0, :cond_0
 
-    .line 2643
     :try_start_0
     iget-object v0, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -5210,16 +4626,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2649
     :cond_0
     :goto_0
     return-void
 
-    .line 2645
     :catch_0
     move-exception v10
 
-    .line 2646
     .local v10, "e":Landroid/os/RemoteException;
     sget-object v0, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -5246,18 +4659,15 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 2942
     iget-object v3, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v3, :cond_0
 
-    .line 2944
     :try_start_0
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v0
 
-    .line 2945
     .local v0, "myUserId":I
     iget-object v2, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -5265,7 +4675,6 @@
 
     invoke-interface {v2, p1, v3, v0}, Landroid/app/admin/IDevicePolicyManager;->setActiveAdmin(Landroid/content/ComponentName;ZI)V
 
-    .line 2946
     iget-object v2, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     invoke-interface {v2, p1, p2, v0}, Landroid/app/admin/IDevicePolicyManager;->setProfileOwner(Landroid/content/ComponentName;Ljava/lang/String;I)Z
@@ -5274,16 +4683,13 @@
 
     move-result v2
 
-    .line 2952
     .end local v0    # "myUserId":I
     :cond_0
     return v2
 
-    .line 2947
     :catch_0
     move-exception v1
 
-    .line 2948
     .local v1, "re":Landroid/os/RemoteException;
     sget-object v2, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -5307,7 +4713,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2949
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string v3, "Couldn\'t set profile owner."
@@ -5324,12 +4729,10 @@
     .param p3, "hidden"    # Z
 
     .prologue
-    .line 3813
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 3815
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -5339,15 +4742,12 @@
 
     move-result v1
 
-    .line 3820
     :goto_0
     return v1
 
-    .line 3816
     :catch_0
     move-exception v0
 
-    .line 3817
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -5355,7 +4755,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 3820
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -5370,12 +4769,10 @@
     .param p3, "settings"    # Landroid/os/Bundle;
 
     .prologue
-    .line 3234
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 3236
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -5383,16 +4780,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3241
     :cond_0
     :goto_0
     return-void
 
-    .line 3237
     :catch_0
     move-exception v0
 
-    .line 3238
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -5409,12 +4803,10 @@
     .param p2, "required"    # Z
 
     .prologue
-    .line 2487
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 2489
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -5422,16 +4814,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2494
     :cond_0
     :goto_0
     return-void
 
-    .line 2490
     :catch_0
     move-exception v0
 
-    .line 2491
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -5448,12 +4837,10 @@
     .param p2, "disabled"    # Z
 
     .prologue
-    .line 3393
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 3395
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -5461,16 +4848,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3400
     :cond_0
     :goto_0
     return-void
 
-    .line 3396
     :catch_0
     move-exception v0
 
-    .line 3397
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -5487,12 +4871,10 @@
     .param p2, "disabled"    # Z
 
     .prologue
-    .line 2396
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 2398
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -5500,16 +4882,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2403
     :cond_0
     :goto_0
     return-void
 
-    .line 2399
     :catch_0
     move-exception v0
 
-    .line 2400
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -5531,12 +4910,10 @@
     .end annotation
 
     .prologue
-    .line 2355
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 2357
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -5544,16 +4921,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2362
     :cond_0
     :goto_0
     return-void
 
-    .line 2358
     :catch_0
     move-exception v0
 
-    .line 2359
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -5570,12 +4944,10 @@
     .param p2, "disabled"    # Z
 
     .prologue
-    .line 3316
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 3318
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -5583,16 +4955,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3323
     :cond_0
     :goto_0
     return-void
 
-    .line 3319
     :catch_0
     move-exception v0
 
-    .line 3320
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -5615,12 +4984,10 @@
     .end annotation
 
     .prologue
-    .line 2812
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 2814
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -5630,15 +4997,12 @@
 
     move-result v1
 
-    .line 2819
     :goto_0
     return v1
 
-    .line 2815
     :catch_0
     move-exception v0
 
-    .line 2816
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -5646,7 +5010,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2819
     .end local v0    # "re":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -5665,7 +5028,6 @@
     .end annotation
 
     .prologue
-    .line 2688
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Landroid/app/admin/DevicePolicyManager;->setDeviceOwner(Ljava/lang/String;Ljava/lang/String;)Z
@@ -5687,12 +5049,10 @@
     .end annotation
 
     .prologue
-    .line 2707
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 2709
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -5702,15 +5062,12 @@
 
     move-result v1
 
-    .line 2714
     :goto_0
     return v1
 
-    .line 2710
     :catch_0
     move-exception v0
 
-    .line 2711
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -5718,7 +5075,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2714
     .end local v0    # "re":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -5744,24 +5100,20 @@
     .end annotation
 
     .prologue
-    .line 1914
     .local p3, "exclusionList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     if-nez p2, :cond_0
 
-    .line 1915
     new-instance v11, Ljava/lang/NullPointerException;
 
     invoke-direct {v11}, Ljava/lang/NullPointerException;-><init>()V
 
     throw v11
 
-    .line 1917
     :cond_0
     iget-object v11, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v11, :cond_3
 
-    .line 1921
     :try_start_0
     sget-object v11, Ljava/net/Proxy;->NO_PROXY:Ljava/net/Proxy;
 
@@ -5771,14 +5123,11 @@
 
     if-eqz v11, :cond_2
 
-    .line 1922
     const/4 v6, 0x0
 
-    .line 1923
     .local v6, "hostSpec":Ljava/lang/String;
     const/4 v2, 0x0
 
-    .line 1953
     .local v2, "exclSpec":Ljava/lang/String;
     :cond_1
     iget-object v11, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
@@ -5787,13 +5136,11 @@
 
     move-result-object v11
 
-    .line 1958
     .end local v2    # "exclSpec":Ljava/lang/String;
     .end local v6    # "hostSpec":Ljava/lang/String;
     :goto_0
     return-object v11
 
-    .line 1925
     :cond_2
     invoke-virtual {p2}, Ljava/net/Proxy;->type()Ljava/net/Proxy$Type;
 
@@ -5807,7 +5154,6 @@
 
     if-nez v11, :cond_4
 
-    .line 1926
     new-instance v11, Ljava/lang/IllegalArgumentException;
 
     invoke-direct {v11}, Ljava/lang/IllegalArgumentException;-><init>()V
@@ -5816,11 +5162,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1954
     :catch_0
     move-exception v0
 
-    .line 1955
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v11, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -5828,14 +5172,12 @@
 
     invoke-static {v11, v12, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1958
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_3
     const/4 v11, 0x0
 
     goto :goto_0
 
-    .line 1928
     :cond_4
     :try_start_1
     invoke-virtual {p2}, Ljava/net/Proxy;->address()Ljava/net/SocketAddress;
@@ -5844,25 +5186,21 @@
 
     check-cast v10, Ljava/net/InetSocketAddress;
 
-    .line 1929
     .local v10, "sa":Ljava/net/InetSocketAddress;
     invoke-virtual {v10}, Ljava/net/InetSocketAddress;->getHostName()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 1930
     .local v5, "hostName":Ljava/lang/String;
     invoke-virtual {v10}, Ljava/net/InetSocketAddress;->getPort()I
 
     move-result v9
 
-    .line 1931
     .local v9, "port":I
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1932
     .local v4, "hostBuilder":Ljava/lang/StringBuilder;
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5886,14 +5224,11 @@
 
     move-result-object v6
 
-    .line 1934
     .restart local v6    # "hostSpec":Ljava/lang/String;
     if-nez p3, :cond_5
 
-    .line 1935
     const-string v2, ""
 
-    .line 1949
     .restart local v2    # "exclSpec":Ljava/lang/String;
     :goto_1
     invoke-static {v9}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
@@ -5906,25 +5241,21 @@
 
     if-eqz v11, :cond_1
 
-    .line 1951
     new-instance v11, Ljava/lang/IllegalArgumentException;
 
     invoke-direct {v11}, Ljava/lang/IllegalArgumentException;-><init>()V
 
     throw v11
 
-    .line 1937
     .end local v2    # "exclSpec":Ljava/lang/String;
     :cond_5
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1938
     .local v8, "listBuilder":Ljava/lang/StringBuilder;
     const/4 v3, 0x1
 
-    .line 1939
     .local v3, "firstDomain":Z
     invoke-interface/range {p3 .. p3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -5944,18 +5275,15 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 1940
     .local v1, "exclDomain":Ljava/lang/String;
     if-nez v3, :cond_6
 
-    .line 1941
     const-string v11, ","
 
     invoke-virtual {v8, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v8
 
-    .line 1945
     :goto_3
     invoke-virtual {v1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
@@ -5965,16 +5293,13 @@
 
     move-result-object v8
 
-    .line 1946
     goto :goto_2
 
-    .line 1943
     :cond_6
     const/4 v3, 0x0
 
     goto :goto_3
 
-    .line 1947
     .end local v1    # "exclDomain":Ljava/lang/String;
     :cond_7
     invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -5994,12 +5319,10 @@
     .param p3, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 4033
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 4035
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -6007,16 +5330,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4040
     :cond_0
     :goto_0
     return-void
 
-    .line 4036
     :catch_0
     move-exception v0
 
-    .line 4037
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -6033,7 +5353,6 @@
     .param p2, "disabled"    # Z
 
     .prologue
-    .line 4314
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -6043,15 +5362,12 @@
 
     move-result v1
 
-    .line 4317
     :goto_0
     return v1
 
-    .line 4315
     :catch_0
     move-exception v0
 
-    .line 4316
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -6059,7 +5375,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 4317
     const/4 v1, 0x0
 
     goto :goto_0
@@ -6071,12 +5386,10 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 2541
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 2543
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -6084,16 +5397,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2548
     :cond_0
     :goto_0
     return-void
 
-    .line 2544
     :catch_0
     move-exception v0
 
-    .line 2545
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -6115,12 +5425,10 @@
     .end annotation
 
     .prologue
-    .line 3954
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 3956
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -6128,16 +5436,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3961
     :cond_0
     :goto_0
     return-void
 
-    .line 3957
     :catch_0
     move-exception v0
 
-    .line 3958
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -6154,12 +5459,10 @@
     .param p2, "on"    # Z
 
     .prologue
-    .line 4098
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 4100
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -6167,16 +5470,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4105
     :cond_0
     :goto_0
     return-void
 
-    .line 4101
     :catch_0
     move-exception v0
 
-    .line 4102
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -6193,12 +5493,10 @@
     .param p2, "num"    # I
 
     .prologue
-    .line 1683
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 1685
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -6206,16 +5504,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1690
     :cond_0
     :goto_0
     return-void
 
-    .line 1686
     :catch_0
     move-exception v0
 
-    .line 1687
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -6232,12 +5527,10 @@
     .param p2, "timeMs"    # J
 
     .prologue
-    .line 1802
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 1804
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -6245,16 +5538,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1809
     :cond_0
     :goto_0
     return-void
 
-    .line 1805
     :catch_0
     move-exception v0
 
-    .line 1806
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -6271,12 +5561,10 @@
     .param p2, "timeout"    # J
 
     .prologue
-    .line 1521
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 1523
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -6284,16 +5572,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1528
     :cond_0
     :goto_0
     return-void
 
-    .line 1524
     :catch_0
     move-exception v0
 
-    .line 1525
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -6310,12 +5595,10 @@
     .param p2, "length"    # I
 
     .prologue
-    .line 1489
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 1491
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -6323,16 +5606,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1496
     :cond_0
     :goto_0
     return-void
 
-    .line 1492
     :catch_0
     move-exception v0
 
-    .line 1493
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -6349,12 +5629,10 @@
     .param p2, "length"    # I
 
     .prologue
-    .line 1079
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 1081
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -6362,16 +5640,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1086
     :cond_0
     :goto_0
     return-void
 
-    .line 1082
     :catch_0
     move-exception v0
 
-    .line 1083
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -6388,12 +5663,10 @@
     .param p2, "length"    # I
 
     .prologue
-    .line 1254
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 1256
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -6401,16 +5674,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1261
     :cond_0
     :goto_0
     return-void
 
-    .line 1257
     :catch_0
     move-exception v0
 
-    .line 1258
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -6427,12 +5697,10 @@
     .param p2, "length"    # I
 
     .prologue
-    .line 1194
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 1196
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -6440,16 +5708,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1201
     :cond_0
     :goto_0
     return-void
 
-    .line 1197
     :catch_0
     move-exception v0
 
-    .line 1198
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -6466,12 +5731,10 @@
     .param p2, "length"    # I
 
     .prologue
-    .line 1429
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 1431
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -6479,16 +5742,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1436
     :cond_0
     :goto_0
     return-void
 
-    .line 1432
     :catch_0
     move-exception v0
 
-    .line 1433
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -6505,12 +5765,10 @@
     .param p2, "length"    # I
 
     .prologue
-    .line 1312
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 1314
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -6518,16 +5776,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1319
     :cond_0
     :goto_0
     return-void
 
-    .line 1315
     :catch_0
     move-exception v0
 
-    .line 1316
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -6544,12 +5799,10 @@
     .param p2, "length"    # I
 
     .prologue
-    .line 1371
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 1373
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -6557,16 +5810,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1378
     :cond_0
     :goto_0
     return-void
 
-    .line 1374
     :catch_0
     move-exception v0
 
-    .line 1375
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -6583,12 +5833,10 @@
     .param p2, "length"    # I
 
     .prologue
-    .line 1133
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 1135
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -6596,16 +5844,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1140
     :cond_0
     :goto_0
     return-void
 
-    .line 1136
     :catch_0
     move-exception v0
 
-    .line 1137
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -6622,12 +5867,10 @@
     .param p2, "quality"    # I
 
     .prologue
-    .line 1026
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 1028
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -6635,16 +5878,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1033
     :cond_0
     :goto_0
     return-void
 
-    .line 1029
     :catch_0
     move-exception v0
 
-    .line 1030
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -6663,7 +5903,6 @@
     .param p4, "grantState"    # I
 
     .prologue
-    .line 4431
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -6673,15 +5912,12 @@
 
     move-result v1
 
-    .line 4434
     :goto_0
     return v1
 
-    .line 4432
     :catch_0
     move-exception v0
 
-    .line 4433
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -6689,7 +5925,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 4434
     const/4 v1, 0x0
 
     goto :goto_0
@@ -6701,7 +5936,6 @@
     .param p2, "policy"    # I
 
     .prologue
-    .line 4380
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -6709,15 +5943,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4384
     :goto_0
     return-void
 
-    .line 4381
     :catch_0
     move-exception v0
 
-    .line 4382
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -6743,13 +5974,11 @@
     .end annotation
 
     .prologue
-    .line 3505
     .local p2, "packageNames":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 3507
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -6759,15 +5988,12 @@
 
     move-result v1
 
-    .line 3512
     :goto_0
     return v1
 
-    .line 3508
     :catch_0
     move-exception v0
 
-    .line 3509
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -6775,7 +6001,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 3512
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -6798,13 +6023,11 @@
     .end annotation
 
     .prologue
-    .line 3583
     .local p2, "packageNames":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 3585
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -6814,15 +6037,12 @@
 
     move-result v1
 
-    .line 3590
     :goto_0
     return v1
 
-    .line 3586
     :catch_0
     move-exception v0
 
-    .line 3587
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -6830,7 +6050,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 3590
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -6843,12 +6062,10 @@
     .param p1, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 3034
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 3036
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -6856,16 +6073,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3041
     :cond_0
     :goto_0
     return-void
 
-    .line 3037
     :catch_0
     move-exception v0
 
-    .line 3038
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -6882,12 +6096,10 @@
     .param p2, "profileName"    # Ljava/lang/String;
 
     .prologue
-    .line 3055
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 3057
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -6895,16 +6107,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3062
     :cond_0
     :goto_0
     return-void
 
-    .line 3058
     :catch_0
     move-exception v0
 
-    .line 3059
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -6930,10 +6139,8 @@
     .end annotation
 
     .prologue
-    .line 3008
     if-nez p1, :cond_0
 
-    .line 3009
     new-instance v1, Ljava/lang/NullPointerException;
 
     const-string v2, "admin cannot be null"
@@ -6942,20 +6149,16 @@
 
     throw v1
 
-    .line 3011
     :cond_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_2
 
-    .line 3013
     if-nez p2, :cond_1
 
-    .line 3014
     :try_start_0
     const-string p2, ""
 
-    .line 3016
     :cond_1
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -6965,15 +6168,12 @@
 
     move-result v1
 
-    .line 3022
     :goto_0
     return v1
 
-    .line 3017
     :catch_0
     move-exception v0
 
-    .line 3018
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -6981,7 +6181,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 3019
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "Couldn\'t set profile owner."
@@ -6990,7 +6189,6 @@
 
     throw v1
 
-    .line 3022
     .end local v0    # "re":Landroid/os/RemoteException;
     :cond_2
     const/4 v1, 0x0
@@ -7004,12 +6202,10 @@
     .param p2, "proxyInfo"    # Landroid/net/ProxyInfo;
 
     .prologue
-    .line 1979
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 1981
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -7017,16 +6213,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1986
     :cond_0
     :goto_0
     return-void
 
-    .line 1982
     :catch_0
     move-exception v0
 
-    .line 1983
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -7043,12 +6236,10 @@
     .param p2, "provider"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 4082
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 4084
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -7056,16 +6247,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4089
     :cond_0
     :goto_0
     return-void
 
-    .line 4085
     :catch_0
     move-exception v0
 
-    .line 4086
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -7082,12 +6270,10 @@
     .param p2, "disabled"    # Z
 
     .prologue
-    .line 2443
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 2445
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -7095,16 +6281,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2450
     :cond_0
     :goto_0
     return-void
 
-    .line 2446
     :catch_0
     move-exception v0
 
-    .line 2447
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -7122,12 +6305,10 @@
     .param p3, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 4061
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 4063
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -7135,16 +6316,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4068
     :cond_0
     :goto_0
     return-void
 
-    .line 4064
     :catch_0
     move-exception v0
 
-    .line 4065
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -7161,7 +6339,6 @@
     .param p2, "disabled"    # Z
 
     .prologue
-    .line 4334
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -7171,15 +6348,12 @@
 
     move-result v1
 
-    .line 4337
     :goto_0
     return v1
 
-    .line 4335
     :catch_0
     move-exception v0
 
-    .line 4336
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -7187,7 +6361,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 4337
     const/4 v1, 0x0
 
     goto :goto_0
@@ -7199,12 +6372,10 @@
     .param p2, "encrypt"    # Z
 
     .prologue
-    .line 2125
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 2127
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -7214,15 +6385,12 @@
 
     move-result v1
 
-    .line 2132
     :goto_0
     return v1
 
-    .line 2128
     :catch_0
     move-exception v0
 
-    .line 2129
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -7230,7 +6398,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 2132
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -7244,12 +6411,10 @@
     .param p2, "policy"    # Landroid/app/admin/SystemUpdatePolicy;
 
     .prologue
-    .line 4273
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 4275
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -7257,16 +6422,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4280
     :cond_0
     :goto_0
     return-void
 
-    .line 4276
     :catch_0
     move-exception v0
 
-    .line 4277
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -7284,12 +6446,10 @@
     .param p3, "configuration"    # Landroid/os/PersistableBundle;
 
     .prologue
-    .line 3264
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 3266
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -7297,16 +6457,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3271
     :cond_0
     :goto_0
     return-void
 
-    .line 3267
     :catch_0
     move-exception v0
 
-    .line 3268
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -7324,12 +6481,10 @@
     .param p3, "uninstallBlocked"    # Z
 
     .prologue
-    .line 4134
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 4136
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -7337,16 +6492,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4141
     :cond_0
     :goto_0
     return-void
 
-    .line 4137
     :catch_0
     move-exception v0
 
-    .line 4138
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -7362,12 +6514,10 @@
     .param p1, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 2913
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 2915
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -7377,15 +6527,12 @@
 
     move-result v1
 
-    .line 2920
     :goto_0
     return v1
 
-    .line 2916
     :catch_0
     move-exception v0
 
-    .line 2917
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -7393,7 +6540,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 2920
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -7407,7 +6553,6 @@
     .param p2, "icon"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 4255
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -7415,15 +6560,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4259
     :goto_0
     return-void
 
-    .line 4256
     :catch_0
     move-exception v0
 
-    .line 4257
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -7441,12 +6583,10 @@
     .param p4, "originalIntent"    # Landroid/content/Intent;
 
     .prologue
-    .line 3368
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 3370
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -7454,16 +6594,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3376
     :cond_0
     :goto_0
     return-void
 
-    .line 3372
     :catch_0
     move-exception v0
 
-    .line 3373
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -7480,7 +6617,6 @@
     .param p2, "userHandle"    # Landroid/os/UserHandle;
 
     .prologue
-    .line 3728
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -7490,15 +6626,12 @@
 
     move-result v1
 
-    .line 3731
     :goto_0
     return v1
 
-    .line 3729
     :catch_0
     move-exception v0
 
-    .line 3730
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -7506,7 +6639,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 3731
     const/4 v1, 0x0
 
     goto :goto_0
@@ -7517,12 +6649,10 @@
     .param p1, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 2268
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 2270
     :try_start_0
     iget-object v2, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -7548,16 +6678,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2276
     :cond_0
     :goto_0
     return-void
 
-    .line 2272
     :catch_0
     move-exception v0
 
-    .line 2273
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -7574,18 +6701,15 @@
     .param p2, "certBuffer"    # [B
 
     .prologue
-    .line 2219
     iget-object v2, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v2, :cond_0
 
-    .line 2221
     :try_start_0
     invoke-static {p2}, Landroid/app/admin/DevicePolicyManager;->getCaCertAlias([B)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2222
     .local v0, "alias":Ljava/lang/String;
     iget-object v2, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -7602,17 +6726,14 @@
     .catch Ljava/security/cert/CertificateException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 2229
     .end local v0    # "alias":Ljava/lang/String;
     :cond_0
     :goto_0
     return-void
 
-    .line 2223
     :catch_0
     move-exception v1
 
-    .line 2224
     .local v1, "e":Ljava/security/cert/CertificateException;
     sget-object v2, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -7622,12 +6743,10 @@
 
     goto :goto_0
 
-    .line 2225
     .end local v1    # "e":Ljava/security/cert/CertificateException;
     :catch_1
     move-exception v1
 
-    .line 2226
     .local v1, "e":Landroid/os/RemoteException;
     sget-object v2, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 
@@ -7643,12 +6762,10 @@
     .param p1, "flags"    # I
 
     .prologue
-    .line 1881
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 1883
     :try_start_0
     iget-object v1, p0, Landroid/app/admin/DevicePolicyManager;->mService:Landroid/app/admin/IDevicePolicyManager;
 
@@ -7660,16 +6777,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1888
     :cond_0
     :goto_0
     return-void
 
-    .line 1884
     :catch_0
     move-exception v0
 
-    .line 1885
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/app/admin/DevicePolicyManager;->TAG:Ljava/lang/String;
 

@@ -33,12 +33,10 @@
     .param p3, "root"    # Lmiui/maml/ScreenElementRoot;
 
     .prologue
-    .line 47
     iput-object p1, p0, Lmiui/maml/shader/ShaderElement$GradientStop;->this$0:Lmiui/maml/shader/ShaderElement;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 48
     iget-object v0, p1, Lmiui/maml/shader/ShaderElement;->mRoot:Lmiui/maml/ScreenElementRoot;
 
     invoke-virtual {v0}, Lmiui/maml/ScreenElementRoot;->getVariables()Lmiui/maml/data/Variables;
@@ -51,7 +49,6 @@
 
     iput-object v0, p0, Lmiui/maml/shader/ShaderElement$GradientStop;->mColorParser:Lmiui/maml/util/ColorParser;
 
-    .line 49
     iget-object v0, p1, Lmiui/maml/shader/ShaderElement;->mRoot:Lmiui/maml/ScreenElementRoot;
 
     invoke-virtual {v0}, Lmiui/maml/ScreenElementRoot;->getVariables()Lmiui/maml/data/Variables;
@@ -70,19 +67,16 @@
 
     iput-object v0, p0, Lmiui/maml/shader/ShaderElement$GradientStop;->mPositionExp:Lmiui/maml/data/Expression;
 
-    .line 50
     iget-object v0, p0, Lmiui/maml/shader/ShaderElement$GradientStop;->mPositionExp:Lmiui/maml/data/Expression;
 
     if-nez v0, :cond_0
 
-    .line 51
     const-string v0, "GradientStop"
 
     const-string v1, "lost position attribute."
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 52
     :cond_0
     return-void
 .end method
@@ -93,7 +87,6 @@
     .locals 1
 
     .prologue
-    .line 55
     iget-object v0, p0, Lmiui/maml/shader/ShaderElement$GradientStop;->mColorParser:Lmiui/maml/util/ColorParser;
 
     invoke-virtual {v0}, Lmiui/maml/util/ColorParser;->getColor()I
@@ -107,7 +100,6 @@
     .locals 2
 
     .prologue
-    .line 59
     iget-object v0, p0, Lmiui/maml/shader/ShaderElement$GradientStop;->mPositionExp:Lmiui/maml/data/Expression;
 
     invoke-virtual {v0}, Lmiui/maml/data/Expression;->evaluate()D

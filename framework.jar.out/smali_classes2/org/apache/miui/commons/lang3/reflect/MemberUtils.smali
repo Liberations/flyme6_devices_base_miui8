@@ -22,7 +22,6 @@
     .locals 3
 
     .prologue
-    .line 40
     const/4 v0, 0x7
 
     new-array v0, v0, [Ljava/lang/Class;
@@ -78,7 +77,6 @@
     .locals 0
 
     .prologue
-    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -99,7 +97,6 @@
     .end annotation
 
     .prologue
-    .line 101
     .local p0, "left":[Ljava/lang/Class;, "[Ljava/lang/Class<*>;"
     .local p1, "right":[Ljava/lang/Class;, "[Ljava/lang/Class<*>;"
     .local p2, "actual":[Ljava/lang/Class;, "[Ljava/lang/Class<*>;"
@@ -107,13 +104,11 @@
 
     move-result v0
 
-    .line 102
     .local v0, "leftCost":F
     invoke-static {p2, p1}, Lorg/apache/miui/commons/lang3/reflect/MemberUtils;->getTotalTransformationCost([Ljava/lang/Class;[Ljava/lang/Class;)F
 
     move-result v1
 
-    .line 103
     .local v1, "rightCost":F
     cmpg-float v2, v0, v1
 
@@ -152,7 +147,6 @@
     .end annotation
 
     .prologue
-    .line 133
     .local p0, "srcClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     .local p1, "destClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {p1}, Ljava/lang/Class;->isPrimitive()Z
@@ -161,21 +155,17 @@
 
     if-eqz v1, :cond_1
 
-    .line 134
     invoke-static {p0, p1}, Lorg/apache/miui/commons/lang3/reflect/MemberUtils;->getPrimitivePromotionCost(Ljava/lang/Class;Ljava/lang/Class;)F
 
     move-result v0
 
-    .line 157
     :cond_0
     :goto_0
     return v0
 
-    .line 136
     :cond_1
     const/4 v0, 0x0
 
-    .line 137
     .local v0, "cost":F
     :goto_1
     if-eqz p0, :cond_2
@@ -186,7 +176,6 @@
 
     if-nez v1, :cond_2
 
-    .line 138
     invoke-virtual {p1}, Ljava/lang/Class;->isInterface()Z
 
     move-result v1
@@ -199,29 +188,24 @@
 
     if-eqz v1, :cond_3
 
-    .line 144
     const/high16 v1, 0x3e800000    # 0.25f
 
     add-float/2addr v0, v1
 
-    .line 154
     :cond_2
     if-nez p0, :cond_0
 
-    .line 155
     const/high16 v1, 0x3fc00000    # 1.5f
 
     add-float/2addr v0, v1
 
     goto :goto_0
 
-    .line 147
     :cond_3
     const/high16 v1, 0x3f800000    # 1.0f
 
     add-float/2addr v0, v1
 
-    .line 148
     invoke-virtual {p0}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
 
     move-result-object p0
@@ -246,14 +230,11 @@
     .local p1, "destClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const v5, 0x3dcccccd    # 0.1f
 
-    .line 168
     const/4 v1, 0x0
 
-    .line 169
     .local v1, "cost":F
     move-object v0, p0
 
-    .line 170
     .local v0, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {v0}, Ljava/lang/Class;->isPrimitive()Z
 
@@ -261,15 +242,12 @@
 
     if-nez v3, :cond_0
 
-    .line 172
     add-float/2addr v1, v5
 
-    .line 173
     invoke-static {v0}, Lorg/apache/miui/commons/lang3/ClassUtils;->wrapperToPrimitive(Ljava/lang/Class;)Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 175
     :cond_0
     const/4 v2, 0x0
 
@@ -283,17 +261,14 @@
 
     if-ge v2, v3, :cond_2
 
-    .line 176
     sget-object v3, Lorg/apache/miui/commons/lang3/reflect/MemberUtils;->ORDERED_PRIMITIVE_TYPES:[Ljava/lang/Class;
 
     aget-object v3, v3, v2
 
     if-ne v0, v3, :cond_1
 
-    .line 177
     add-float/2addr v1, v5
 
-    .line 178
     sget-object v3, Lorg/apache/miui/commons/lang3/reflect/MemberUtils;->ORDERED_PRIMITIVE_TYPES:[Ljava/lang/Class;
 
     array-length v3, v3
@@ -302,20 +277,17 @@
 
     if-ge v2, v3, :cond_1
 
-    .line 179
     sget-object v3, Lorg/apache/miui/commons/lang3/reflect/MemberUtils;->ORDERED_PRIMITIVE_TYPES:[Ljava/lang/Class;
 
     add-int/lit8 v4, v2, 0x1
 
     aget-object v0, v3, v4
 
-    .line 175
     :cond_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 183
     :cond_2
     return v1
 .end method
@@ -333,12 +305,10 @@
     .end annotation
 
     .prologue
-    .line 114
     .local p0, "srcArgs":[Ljava/lang/Class;, "[Ljava/lang/Class<*>;"
     .local p1, "destArgs":[Ljava/lang/Class;, "[Ljava/lang/Class<*>;"
     const/4 v3, 0x0
 
-    .line 115
     .local v3, "totalCost":F
     const/4 v1, 0x0
 
@@ -348,14 +318,11 @@
 
     if-ge v1, v4, :cond_0
 
-    .line 117
     aget-object v2, p0, v1
 
-    .line 118
     .local v2, "srcClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     aget-object v0, p1, v1
 
-    .line 119
     .local v0, "destClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-static {v2, v0}, Lorg/apache/miui/commons/lang3/reflect/MemberUtils;->getObjectTransformationCost(Ljava/lang/Class;Ljava/lang/Class;)F
 
@@ -363,12 +330,10 @@
 
     add-float/2addr v3, v4
 
-    .line 115
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 121
     .end local v0    # "destClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     .end local v2    # "srcClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :cond_0
@@ -380,7 +345,6 @@
     .param p0, "m"    # Ljava/lang/reflect/Member;
 
     .prologue
-    .line 85
     if-eqz p0, :cond_0
 
     invoke-interface {p0}, Ljava/lang/reflect/Member;->getModifiers()I
@@ -415,7 +379,6 @@
     .param p0, "modifiers"    # I
 
     .prologue
-    .line 76
     and-int/lit8 v0, p0, 0x7
 
     if-nez v0, :cond_0
@@ -436,7 +399,6 @@
     .param p0, "o"    # Ljava/lang/reflect/AccessibleObject;
 
     .prologue
-    .line 56
     if-eqz p0, :cond_0
 
     invoke-virtual {p0}, Ljava/lang/reflect/AccessibleObject;->isAccessible()Z
@@ -445,7 +407,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 68
     :cond_0
     :goto_0
     return-void
@@ -453,10 +414,8 @@
     :cond_1
     move-object v0, p0
 
-    .line 59
     check-cast v0, Ljava/lang/reflect/Member;
 
-    .line 60
     .local v0, "m":Ljava/lang/reflect/Member;
     invoke-interface {v0}, Ljava/lang/reflect/Member;->getModifiers()I
 
@@ -482,7 +441,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 63
     const/4 v1, 0x1
 
     :try_start_0
@@ -492,7 +450,6 @@
 
     goto :goto_0
 
-    .line 64
     :catch_0
     move-exception v1
 

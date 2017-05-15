@@ -44,7 +44,6 @@
     .param p4, "timeoutMs"    # J
 
     .prologue
-    .line 149
     const/4 v4, 0x0
 
     move-object v1, p0
@@ -59,7 +58,6 @@
 
     invoke-direct/range {v1 .. v7}, Lmiui/securitycenter/net/NetworkDiagnostics$SimpleSocketCheck;-><init>(Landroid/net/Network;Landroid/net/LinkProperties;Ljava/net/InetAddress;Ljava/net/InetAddress;J)V
 
-    .line 150
     return-void
 .end method
 
@@ -74,13 +72,10 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 118
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 120
     iput-object p1, p0, Lmiui/securitycenter/net/NetworkDiagnostics$SimpleSocketCheck;->mNetwork:Landroid/net/Network;
 
-    .line 121
     # invokes: Lmiui/securitycenter/net/NetworkDiagnostics;->now()J
     invoke-static {}, Lmiui/securitycenter/net/NetworkDiagnostics;->access$000()J
 
@@ -90,10 +85,8 @@
 
     iput-wide v2, p0, Lmiui/securitycenter/net/NetworkDiagnostics$SimpleSocketCheck;->mDeadlineTime:J
 
-    .line 122
     if-eqz p2, :cond_1
 
-    .line 123
     invoke-virtual {p2}, Landroid/net/LinkProperties;->getInterfaceName()Ljava/lang/String;
 
     move-result-object v2
@@ -105,16 +98,13 @@
 
     iput-object v2, p0, Lmiui/securitycenter/net/NetworkDiagnostics$SimpleSocketCheck;->mInterfaceIndex:Ljava/lang/Integer;
 
-    .line 127
     :goto_0
     instance-of v2, p4, Ljava/net/Inet6Address;
 
     if-eqz v2, :cond_3
 
-    .line 128
     const/4 v1, 0x0
 
-    .line 129
     .local v1, "targetWithScopeId":Ljava/net/Inet6Address;
     invoke-virtual {p4}, Ljava/net/InetAddress;->isLinkLocalAddress()Z
 
@@ -126,7 +116,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 131
     const/4 v2, 0x0
 
     :try_start_0
@@ -146,7 +135,6 @@
 
     move-result-object v1
 
-    .line 137
     :cond_0
     :goto_1
     if-eqz v1, :cond_2
@@ -155,30 +143,24 @@
     :goto_2
     iput-object v1, p0, Lmiui/securitycenter/net/NetworkDiagnostics$SimpleSocketCheck;->mTarget:Ljava/net/InetAddress;
 
-    .line 138
     sget v2, Landroid/system/OsConstants;->AF_INET6:I
 
     iput v2, p0, Lmiui/securitycenter/net/NetworkDiagnostics$SimpleSocketCheck;->mAddressFamily:I
 
-    .line 145
     :goto_3
     iput-object p3, p0, Lmiui/securitycenter/net/NetworkDiagnostics$SimpleSocketCheck;->mSource:Ljava/net/InetAddress;
 
-    .line 146
     return-void
 
-    .line 125
     :cond_1
     iput-object v4, p0, Lmiui/securitycenter/net/NetworkDiagnostics$SimpleSocketCheck;->mInterfaceIndex:Ljava/lang/Integer;
 
     goto :goto_0
 
-    .line 133
     .restart local v1    # "targetWithScopeId":Ljava/net/Inet6Address;
     :catch_0
     move-exception v0
 
-    .line 134
     .local v0, "e":Ljava/net/UnknownHostException;
     const-string v2, "NetworkDiagnostics"
 
@@ -192,15 +174,12 @@
     :cond_2
     move-object v1, p4
 
-    .line 137
     goto :goto_2
 
-    .line 140
     .end local v1    # "targetWithScopeId":Ljava/net/Inet6Address;
     :cond_3
     iput-object p4, p0, Lmiui/securitycenter/net/NetworkDiagnostics$SimpleSocketCheck;->mTarget:Ljava/net/InetAddress;
 
-    .line 141
     sget v2, Landroid/system/OsConstants;->AF_INET:I
 
     iput v2, p0, Lmiui/securitycenter/net/NetworkDiagnostics$SimpleSocketCheck;->mAddressFamily:I
@@ -214,12 +193,10 @@
     .locals 1
 
     .prologue
-    .line 181
     iget-object v0, p0, Lmiui/securitycenter/net/NetworkDiagnostics$SimpleSocketCheck;->mFileDescriptor:Ljava/io/FileDescriptor;
 
     invoke-static {v0}, Llibcore/io/IoUtils;->closeQuietly(Ljava/io/FileDescriptor;)V
 
-    .line 182
     return-void
 .end method
 
@@ -227,18 +204,15 @@
     .locals 6
 
     .prologue
-    .line 172
     iget-object v0, p0, Lmiui/securitycenter/net/NetworkDiagnostics$SimpleSocketCheck;->mSocketAddress:Ljava/net/SocketAddress;
 
     check-cast v0, Ljava/net/InetSocketAddress;
 
-    .line 173
     .local v0, "inetSockAddr":Ljava/net/InetSocketAddress;
     invoke-virtual {v0}, Ljava/net/InetSocketAddress;->getAddress()Ljava/net/InetAddress;
 
     move-result-object v1
 
-    .line 174
     .local v1, "localAddr":Ljava/net/InetAddress;
     instance-of v2, v1, Ljava/net/Inet6Address;
 
@@ -298,7 +272,6 @@
     .end annotation
 
     .prologue
-    .line 155
     iget v0, p0, Lmiui/securitycenter/net/NetworkDiagnostics$SimpleSocketCheck;->mAddressFamily:I
 
     invoke-static {v0, p1, p2}, Landroid/system/Os;->socket(III)Ljava/io/FileDescriptor;
@@ -307,7 +280,6 @@
 
     iput-object v0, p0, Lmiui/securitycenter/net/NetworkDiagnostics$SimpleSocketCheck;->mFileDescriptor:Ljava/io/FileDescriptor;
 
-    .line 157
     iget-object v0, p0, Lmiui/securitycenter/net/NetworkDiagnostics$SimpleSocketCheck;->mFileDescriptor:Ljava/io/FileDescriptor;
 
     sget v1, Landroid/system/OsConstants;->SOL_SOCKET:I
@@ -320,7 +292,6 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/system/Os;->setsockoptTimeval(Ljava/io/FileDescriptor;IILandroid/system/StructTimeval;)V
 
-    .line 159
     iget-object v0, p0, Lmiui/securitycenter/net/NetworkDiagnostics$SimpleSocketCheck;->mFileDescriptor:Ljava/io/FileDescriptor;
 
     sget v1, Landroid/system/OsConstants;->SOL_SOCKET:I
@@ -333,19 +304,16 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/system/Os;->setsockoptTimeval(Ljava/io/FileDescriptor;IILandroid/system/StructTimeval;)V
 
-    .line 162
     iget-object v0, p0, Lmiui/securitycenter/net/NetworkDiagnostics$SimpleSocketCheck;->mNetwork:Landroid/net/Network;
 
     iget-object v1, p0, Lmiui/securitycenter/net/NetworkDiagnostics$SimpleSocketCheck;->mFileDescriptor:Ljava/io/FileDescriptor;
 
     invoke-virtual {v0, v1}, Landroid/net/Network;->bindSocket(Ljava/io/FileDescriptor;)V
 
-    .line 163
     iget-object v0, p0, Lmiui/securitycenter/net/NetworkDiagnostics$SimpleSocketCheck;->mSource:Ljava/net/InetAddress;
 
     if-eqz v0, :cond_0
 
-    .line 164
     iget-object v0, p0, Lmiui/securitycenter/net/NetworkDiagnostics$SimpleSocketCheck;->mFileDescriptor:Ljava/io/FileDescriptor;
 
     iget-object v1, p0, Lmiui/securitycenter/net/NetworkDiagnostics$SimpleSocketCheck;->mSource:Ljava/net/InetAddress;
@@ -354,7 +322,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/system/Os;->bind(Ljava/io/FileDescriptor;Ljava/net/InetAddress;I)V
 
-    .line 166
     :cond_0
     iget-object v0, p0, Lmiui/securitycenter/net/NetworkDiagnostics$SimpleSocketCheck;->mFileDescriptor:Ljava/io/FileDescriptor;
 
@@ -362,7 +329,6 @@
 
     invoke-static {v0, v1, p7}, Landroid/system/Os;->connect(Ljava/io/FileDescriptor;Ljava/net/InetAddress;I)V
 
-    .line 167
     iget-object v0, p0, Lmiui/securitycenter/net/NetworkDiagnostics$SimpleSocketCheck;->mFileDescriptor:Ljava/io/FileDescriptor;
 
     invoke-static {v0}, Landroid/system/Os;->getsockname(Ljava/io/FileDescriptor;)Ljava/net/SocketAddress;
@@ -371,6 +337,5 @@
 
     iput-object v0, p0, Lmiui/securitycenter/net/NetworkDiagnostics$SimpleSocketCheck;->mSocketAddress:Ljava/net/SocketAddress;
 
-    .line 168
     return-void
 .end method

@@ -50,7 +50,6 @@
     .locals 1
 
     .prologue
-    .line 231
     new-instance v0, Lcom/miui/translationservice/provider/TranslationResult$Part$1;
 
     invoke-direct {v0}, Lcom/miui/translationservice/provider/TranslationResult$Part$1;-><init>()V
@@ -64,10 +63,8 @@
     .locals 0
 
     .prologue
-    .line 190
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 191
     return-void
 .end method
 
@@ -76,22 +73,18 @@
     .param p1, "src"    # Landroid/os/Parcel;
 
     .prologue
-    .line 193
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 194
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {p0, v1}, Lcom/miui/translationservice/provider/TranslationResult$Part;->setPart(Ljava/lang/String;)V
 
-    .line 195
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 196
     .local v0, "means":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const-class v1, Lcom/miui/translationservice/provider/TranslationResult$Part;
 
@@ -101,10 +94,8 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->readList(Ljava/util/List;Ljava/lang/ClassLoader;)V
 
-    .line 197
     invoke-virtual {p0, v0}, Lcom/miui/translationservice/provider/TranslationResult$Part;->setMeans(Ljava/util/List;)V
 
-    .line 198
     return-void
 .end method
 
@@ -114,7 +105,6 @@
     .param p2, "x1"    # Lcom/miui/translationservice/provider/TranslationResult$1;
 
     .prologue
-    .line 189
     invoke-direct {p0, p1}, Lcom/miui/translationservice/provider/TranslationResult$Part;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -126,7 +116,6 @@
     .locals 1
 
     .prologue
-    .line 222
     const/4 v0, 0x0
 
     return v0
@@ -145,7 +134,6 @@
     .end annotation
 
     .prologue
-    .line 217
     iget-object v0, p0, Lcom/miui/translationservice/provider/TranslationResult$Part;->mMeans:Ljava/util/List;
 
     return-object v0
@@ -155,7 +143,6 @@
     .locals 1
 
     .prologue
-    .line 207
     iget-object v0, p0, Lcom/miui/translationservice/provider/TranslationResult$Part;->mPart:Ljava/lang/String;
 
     return-object v0
@@ -174,11 +161,9 @@
     .end annotation
 
     .prologue
-    .line 213
     .local p1, "means":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     iput-object p1, p0, Lcom/miui/translationservice/provider/TranslationResult$Part;->mMeans:Ljava/util/List;
 
-    .line 214
     return-void
 .end method
 
@@ -187,10 +172,8 @@
     .param p1, "part"    # Ljava/lang/String;
 
     .prologue
-    .line 203
     iput-object p1, p0, Lcom/miui/translationservice/provider/TranslationResult$Part;->mPart:Ljava/lang/String;
 
-    .line 204
     return-void
 .end method
 
@@ -200,16 +183,13 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 227
     iget-object v0, p0, Lcom/miui/translationservice/provider/TranslationResult$Part;->mPart:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 228
     iget-object v0, p0, Lcom/miui/translationservice/provider/TranslationResult$Part;->mMeans:Ljava/util/List;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeList(Ljava/util/List;)V
 
-    .line 229
     return-void
 .end method

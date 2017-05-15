@@ -44,7 +44,6 @@
     .locals 1
 
     .prologue
-    .line 158
     new-instance v0, Lcom/android/internal/telephony/OperatorInfo$1;
 
     invoke-direct {v0}, Lcom/android/internal/telephony/OperatorInfo$1;-><init>()V
@@ -61,12 +60,10 @@
     .param p3, "operatorNumeric"    # Ljava/lang/String;
 
     .prologue
-    .line 98
     sget-object v0, Lcom/android/internal/telephony/OperatorInfo$State;->UNKNOWN:Lcom/android/internal/telephony/OperatorInfo$State;
 
     invoke-direct {p0, p1, p2, p3, v0}, Lcom/android/internal/telephony/OperatorInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/android/internal/telephony/OperatorInfo$State;)V
 
-    .line 99
     return-void
 .end method
 
@@ -80,39 +77,30 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 69
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 38
     sget-object v1, Lcom/android/internal/telephony/OperatorInfo$State;->UNKNOWN:Lcom/android/internal/telephony/OperatorInfo$State;
 
     iput-object v1, p0, Lcom/android/internal/telephony/OperatorInfo;->mState:Lcom/android/internal/telephony/OperatorInfo$State;
 
-    .line 71
     iput-object p1, p0, Lcom/android/internal/telephony/OperatorInfo;->mOperatorAlphaLong:Ljava/lang/String;
 
-    .line 72
     iput-object p2, p0, Lcom/android/internal/telephony/OperatorInfo;->mOperatorAlphaShort:Ljava/lang/String;
 
-    .line 73
     iput-object p3, p0, Lcom/android/internal/telephony/OperatorInfo;->mOperatorNumeric:Ljava/lang/String;
 
-    .line 74
     const-string v1, ""
 
     iput-object v1, p0, Lcom/android/internal/telephony/OperatorInfo;->mRadioTech:Ljava/lang/String;
 
-    .line 76
     if-eqz p3, :cond_0
 
-    .line 77
     const-string v1, "\\+"
 
     invoke-virtual {p3, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 78
     .local v0, "values":[Ljava/lang/String;
     const/4 v1, 0x0
 
@@ -120,22 +108,18 @@
 
     iput-object v1, p0, Lcom/android/internal/telephony/OperatorInfo;->mOperatorNumeric:Ljava/lang/String;
 
-    .line 79
     array-length v1, v0
 
     if-le v1, v2, :cond_0
 
-    .line 80
     aget-object v1, v0, v2
 
     iput-object v1, p0, Lcom/android/internal/telephony/OperatorInfo;->mRadioTech:Ljava/lang/String;
 
-    .line 83
     .end local v0    # "values":[Ljava/lang/String;
     :cond_0
     iput-object p4, p0, Lcom/android/internal/telephony/OperatorInfo;->mState:Lcom/android/internal/telephony/OperatorInfo$State;
 
-    .line 84
     return-void
 .end method
 
@@ -147,14 +131,12 @@
     .param p4, "stateString"    # Ljava/lang/String;
 
     .prologue
-    .line 91
     invoke-static {p4}, Lcom/android/internal/telephony/OperatorInfo;->rilStateToState(Ljava/lang/String;)Lcom/android/internal/telephony/OperatorInfo$State;
 
     move-result-object v0
 
     invoke-direct {p0, p1, p2, p3, v0}, Lcom/android/internal/telephony/OperatorInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/android/internal/telephony/OperatorInfo$State;)V
 
-    .line 93
     return-void
 .end method
 
@@ -163,7 +145,6 @@
     .param p0, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 105
     const-string v0, "unknown"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -172,14 +153,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 106
     sget-object v0, Lcom/android/internal/telephony/OperatorInfo$State;->UNKNOWN:Lcom/android/internal/telephony/OperatorInfo$State;
 
-    .line 112
     :goto_0
     return-object v0
 
-    .line 107
     :cond_0
     const-string v0, "available"
 
@@ -189,12 +167,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 108
     sget-object v0, Lcom/android/internal/telephony/OperatorInfo$State;->AVAILABLE:Lcom/android/internal/telephony/OperatorInfo$State;
 
     goto :goto_0
 
-    .line 109
     :cond_1
     const-string v0, "current"
 
@@ -204,12 +180,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 110
     sget-object v0, Lcom/android/internal/telephony/OperatorInfo$State;->CURRENT:Lcom/android/internal/telephony/OperatorInfo$State;
 
     goto :goto_0
 
-    .line 111
     :cond_2
     const-string v0, "forbidden"
 
@@ -219,12 +193,10 @@
 
     if-eqz v0, :cond_3
 
-    .line 112
     sget-object v0, Lcom/android/internal/telephony/OperatorInfo$State;->FORBIDDEN:Lcom/android/internal/telephony/OperatorInfo$State;
 
     goto :goto_0
 
-    .line 114
     :cond_3
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -263,7 +235,6 @@
     .locals 1
 
     .prologue
-    .line 139
     const/4 v0, 0x0
 
     return v0
@@ -273,7 +244,6 @@
     .locals 1
 
     .prologue
-    .line 43
     iget-object v0, p0, Lcom/android/internal/telephony/OperatorInfo;->mOperatorAlphaLong:Ljava/lang/String;
 
     return-object v0
@@ -283,7 +253,6 @@
     .locals 1
 
     .prologue
-    .line 48
     iget-object v0, p0, Lcom/android/internal/telephony/OperatorInfo;->mOperatorAlphaShort:Ljava/lang/String;
 
     return-object v0
@@ -293,7 +262,6 @@
     .locals 1
 
     .prologue
-    .line 53
     iget-object v0, p0, Lcom/android/internal/telephony/OperatorInfo;->mOperatorNumeric:Ljava/lang/String;
 
     return-object v0
@@ -303,7 +271,6 @@
     .locals 1
 
     .prologue
-    .line 63
     iget-object v0, p0, Lcom/android/internal/telephony/OperatorInfo;->mRadioTech:Ljava/lang/String;
 
     return-object v0
@@ -313,7 +280,6 @@
     .locals 1
 
     .prologue
-    .line 58
     iget-object v0, p0, Lcom/android/internal/telephony/OperatorInfo;->mState:Lcom/android/internal/telephony/OperatorInfo$State;
 
     return-object v0
@@ -323,7 +289,6 @@
     .locals 2
 
     .prologue
-    .line 122
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -401,17 +366,14 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 148
     iget-object v0, p0, Lcom/android/internal/telephony/OperatorInfo;->mOperatorAlphaLong:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 149
     iget-object v0, p0, Lcom/android/internal/telephony/OperatorInfo;->mOperatorAlphaShort:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 150
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -440,11 +402,9 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 151
     iget-object v0, p0, Lcom/android/internal/telephony/OperatorInfo;->mState:Lcom/android/internal/telephony/OperatorInfo$State;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeSerializable(Ljava/io/Serializable;)V
 
-    .line 152
     return-void
 .end method

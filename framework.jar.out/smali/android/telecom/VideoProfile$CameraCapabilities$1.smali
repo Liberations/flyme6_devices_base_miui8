@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 367
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,18 +44,15 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 376
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 377
     .local v3, "width":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 378
     .local v0, "height":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
@@ -66,14 +62,12 @@
 
     const/4 v2, 0x1
 
-    .line 379
     .local v2, "supportsZoom":Z
     :goto_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
     move-result v1
 
-    .line 381
     .local v1, "maxZoom":F
     new-instance v4, Landroid/telecom/VideoProfile$CameraCapabilities;
 
@@ -81,7 +75,6 @@
 
     return-object v4
 
-    .line 378
     .end local v1    # "maxZoom":F
     .end local v2    # "supportsZoom":Z
     :cond_0
@@ -95,7 +88,6 @@
     .param p1, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 367
     invoke-virtual {p0, p1}, Landroid/telecom/VideoProfile$CameraCapabilities$1;->createFromParcel(Landroid/os/Parcel;)Landroid/telecom/VideoProfile$CameraCapabilities;
 
     move-result-object v0
@@ -108,7 +100,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 386
     new-array v0, p1, [Landroid/telecom/VideoProfile$CameraCapabilities;
 
     return-object v0
@@ -119,7 +110,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 367
     invoke-virtual {p0, p1}, Landroid/telecom/VideoProfile$CameraCapabilities$1;->newArray(I)[Landroid/telecom/VideoProfile$CameraCapabilities;
 
     move-result-object v0

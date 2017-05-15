@@ -29,28 +29,22 @@
     .param p2, "caller"    # Ljava/lang/String;
 
     .prologue
-    .line 415
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 411
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/miui/whetstone/WhetstonePackageState$DebugInfo$Record;->mTime:J
 
-    .line 412
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/miui/whetstone/WhetstonePackageState$DebugInfo$Record;->mType:I
 
-    .line 416
     iput p1, p0, Lcom/miui/whetstone/WhetstonePackageState$DebugInfo$Record;->mType:I
 
-    .line 417
     iput-object p2, p0, Lcom/miui/whetstone/WhetstonePackageState$DebugInfo$Record;->mCaller:Ljava/lang/String;
 
-    .line 418
     return-void
 .end method
 
@@ -60,16 +54,13 @@
     .locals 6
 
     .prologue
-    .line 422
     const-string v0, ""
 
-    .line 423
     .local v0, "prefix":Ljava/lang/String;
     iget v1, p0, Lcom/miui/whetstone/WhetstonePackageState$DebugInfo$Record;->mType:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 438
     :goto_0
     :pswitch_0
     new-instance v1, Ljava/lang/StringBuilder;
@@ -130,35 +121,26 @@
 
     return-object v1
 
-    .line 425
     :pswitch_1
     const-string v0, "Activity"
 
-    .line 426
     goto :goto_0
 
-    .line 428
     :pswitch_2
     const-string v0, "Service"
 
-    .line 429
     goto :goto_0
 
-    .line 431
     :pswitch_3
     const-string v0, "ContentProvider"
 
-    .line 432
     goto :goto_0
 
-    .line 434
     :pswitch_4
     const-string v0, "BroadcastReceiver"
 
-    .line 435
     goto :goto_0
 
-    .line 423
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1

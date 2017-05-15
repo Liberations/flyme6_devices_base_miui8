@@ -46,15 +46,12 @@
     .locals 1
 
     .prologue
-    .line 18
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 19
     const-string v0, "miui.mqsas.IMQSService"
 
     invoke-virtual {p0, p0, v0}, Lmiui/mqsas/IMQSService$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 20
     return-void
 .end method
 
@@ -63,17 +60,13 @@
     .param p0, "obj"    # Landroid/os/IBinder;
 
     .prologue
-    .line 27
     if-nez p0, :cond_0
 
-    .line 28
     const/4 v0, 0x0
 
-    .line 34
     :goto_0
     return-object v0
 
-    .line 30
     :cond_0
     const-string v1, "miui.mqsas.IMQSService"
 
@@ -81,7 +74,6 @@
 
     move-result-object v0
 
-    .line 31
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -89,12 +81,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 32
     check-cast v0, Lmiui/mqsas/IMQSService;
 
     goto :goto_0
 
-    .line 34
     :cond_1
     new-instance v0, Lmiui/mqsas/IMQSService$Stub$Proxy;
 
@@ -110,7 +100,6 @@
     .locals 0
 
     .prologue
-    .line 38
     return-object p0
 .end method
 
@@ -129,10 +118,8 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 42
     sparse-switch p1, :sswitch_data_0
 
-    .line 136
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v2
@@ -140,7 +127,6 @@
     :goto_0
     return v2
 
-    .line 46
     :sswitch_0
     const-string v3, "miui.mqsas.IMQSService"
 
@@ -148,20 +134,17 @@
 
     goto :goto_0
 
-    .line 51
     :sswitch_1
     const-string v3, "miui.mqsas.IMQSService"
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 53
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 54
     sget-object v3, Lmiui/mqsas/sdk/event/AnrEvent;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v3, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -170,17 +153,14 @@
 
     check-cast v0, Lmiui/mqsas/sdk/event/AnrEvent;
 
-    .line 59
     .local v0, "_arg0":Lmiui/mqsas/sdk/event/AnrEvent;
     :goto_1
     invoke-virtual {p0, v0}, Lmiui/mqsas/IMQSService$Stub;->reportAnrEvent(Lmiui/mqsas/sdk/event/AnrEvent;)V
 
-    .line 60
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
-    .line 57
     .end local v0    # "_arg0":Lmiui/mqsas/sdk/event/AnrEvent;
     :cond_0
     const/4 v0, 0x0
@@ -188,21 +168,18 @@
     .restart local v0    # "_arg0":Lmiui/mqsas/sdk/event/AnrEvent;
     goto :goto_1
 
-    .line 65
     .end local v0    # "_arg0":Lmiui/mqsas/sdk/event/AnrEvent;
     :sswitch_2
     const-string v3, "miui.mqsas.IMQSService"
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 67
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 68
     sget-object v3, Lmiui/mqsas/sdk/event/JavaExceptionEvent;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v3, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -211,17 +188,14 @@
 
     check-cast v0, Lmiui/mqsas/sdk/event/JavaExceptionEvent;
 
-    .line 73
     .local v0, "_arg0":Lmiui/mqsas/sdk/event/JavaExceptionEvent;
     :goto_2
     invoke-virtual {p0, v0}, Lmiui/mqsas/IMQSService$Stub;->reportJavaExceptionEvent(Lmiui/mqsas/sdk/event/JavaExceptionEvent;)V
 
-    .line 74
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
-    .line 71
     .end local v0    # "_arg0":Lmiui/mqsas/sdk/event/JavaExceptionEvent;
     :cond_1
     const/4 v0, 0x0
@@ -229,21 +203,18 @@
     .restart local v0    # "_arg0":Lmiui/mqsas/sdk/event/JavaExceptionEvent;
     goto :goto_2
 
-    .line 79
     .end local v0    # "_arg0":Lmiui/mqsas/sdk/event/JavaExceptionEvent;
     :sswitch_3
     const-string v3, "miui.mqsas.IMQSService"
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 81
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
     if-eqz v3, :cond_2
 
-    .line 82
     sget-object v3, Lmiui/mqsas/sdk/event/WatchdogEvent;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v3, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -252,17 +223,14 @@
 
     check-cast v0, Lmiui/mqsas/sdk/event/WatchdogEvent;
 
-    .line 87
     .local v0, "_arg0":Lmiui/mqsas/sdk/event/WatchdogEvent;
     :goto_3
     invoke-virtual {p0, v0}, Lmiui/mqsas/IMQSService$Stub;->reportWatchdogEvent(Lmiui/mqsas/sdk/event/WatchdogEvent;)V
 
-    .line 88
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
-    .line 85
     .end local v0    # "_arg0":Lmiui/mqsas/sdk/event/WatchdogEvent;
     :cond_2
     const/4 v0, 0x0
@@ -270,34 +238,28 @@
     .restart local v0    # "_arg0":Lmiui/mqsas/sdk/event/WatchdogEvent;
     goto :goto_3
 
-    .line 93
     .end local v0    # "_arg0":Lmiui/mqsas/sdk/event/WatchdogEvent;
     :sswitch_4
     const-string v3, "miui.mqsas.IMQSService"
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 95
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 97
     .local v0, "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 98
     .local v1, "_arg1":Ljava/lang/String;
     invoke-virtual {p0, v0, v1}, Lmiui/mqsas/IMQSService$Stub;->reportSimpleEvent(ILjava/lang/String;)V
 
-    .line 99
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
-    .line 104
     .end local v0    # "_arg0":I
     .end local v1    # "_arg1":Ljava/lang/String;
     :sswitch_5
@@ -305,14 +267,12 @@
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 106
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
     if-eqz v3, :cond_3
 
-    .line 107
     sget-object v3, Lmiui/mqsas/sdk/event/PackageEvent;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v3, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -321,14 +281,12 @@
 
     check-cast v0, Lmiui/mqsas/sdk/event/PackageEvent;
 
-    .line 112
     .local v0, "_arg0":Lmiui/mqsas/sdk/event/PackageEvent;
     :goto_4
     invoke-virtual {p0, v0}, Lmiui/mqsas/IMQSService$Stub;->reportPackageEvent(Lmiui/mqsas/sdk/event/PackageEvent;)V
 
     goto/16 :goto_0
 
-    .line 110
     .end local v0    # "_arg0":Lmiui/mqsas/sdk/event/PackageEvent;
     :cond_3
     const/4 v0, 0x0
@@ -336,35 +294,29 @@
     .restart local v0    # "_arg0":Lmiui/mqsas/sdk/event/PackageEvent;
     goto :goto_4
 
-    .line 117
     .end local v0    # "_arg0":Lmiui/mqsas/sdk/event/PackageEvent;
     :sswitch_6
     const-string v3, "miui.mqsas.IMQSService"
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 118
     invoke-virtual {p0}, Lmiui/mqsas/IMQSService$Stub;->onBootCompleted()V
 
-    .line 119
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 124
     :sswitch_7
     const-string v3, "miui.mqsas.IMQSService"
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 126
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
     if-eqz v3, :cond_4
 
-    .line 127
     sget-object v3, Landroid/content/pm/ParceledListSlice;->CREATOR:Landroid/os/Parcelable$ClassLoaderCreator;
 
     invoke-interface {v3, p2}, Landroid/os/Parcelable$ClassLoaderCreator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -373,14 +325,12 @@
 
     check-cast v0, Landroid/content/pm/ParceledListSlice;
 
-    .line 132
     .local v0, "_arg0":Landroid/content/pm/ParceledListSlice;
     :goto_5
     invoke-virtual {p0, v0}, Lmiui/mqsas/IMQSService$Stub;->reportBroadcastEvent(Landroid/content/pm/ParceledListSlice;)V
 
     goto/16 :goto_0
 
-    .line 130
     .end local v0    # "_arg0":Landroid/content/pm/ParceledListSlice;
     :cond_4
     const/4 v0, 0x0
@@ -388,7 +338,6 @@
     .restart local v0    # "_arg0":Landroid/content/pm/ParceledListSlice;
     goto :goto_5
 
-    .line 42
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1

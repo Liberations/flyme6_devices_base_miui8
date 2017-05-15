@@ -50,22 +50,18 @@
     .locals 2
 
     .prologue
-    .line 769
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 754
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/media/session/PlaybackState$Builder;->mCustomActions:Ljava/util/List;
 
-    .line 763
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Landroid/media/session/PlaybackState$Builder;->mActiveItemId:J
 
-    .line 770
     return-void
 .end method
 
@@ -74,29 +70,23 @@
     .param p1, "from"    # Landroid/media/session/PlaybackState;
 
     .prologue
-    .line 778
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 754
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/media/session/PlaybackState$Builder;->mCustomActions:Ljava/util/List;
 
-    .line 763
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Landroid/media/session/PlaybackState$Builder;->mActiveItemId:J
 
-    .line 779
     if-nez p1, :cond_0
 
-    .line 794
     :goto_0
     return-void
 
-    .line 782
     :cond_0
     # getter for: Landroid/media/session/PlaybackState;->mState:I
     invoke-static {p1}, Landroid/media/session/PlaybackState;->access$300(Landroid/media/session/PlaybackState;)I
@@ -105,7 +95,6 @@
 
     iput v0, p0, Landroid/media/session/PlaybackState$Builder;->mState:I
 
-    .line 783
     # getter for: Landroid/media/session/PlaybackState;->mPosition:J
     invoke-static {p1}, Landroid/media/session/PlaybackState;->access$400(Landroid/media/session/PlaybackState;)J
 
@@ -113,7 +102,6 @@
 
     iput-wide v0, p0, Landroid/media/session/PlaybackState$Builder;->mPosition:J
 
-    .line 784
     # getter for: Landroid/media/session/PlaybackState;->mBufferedPosition:J
     invoke-static {p1}, Landroid/media/session/PlaybackState;->access$500(Landroid/media/session/PlaybackState;)J
 
@@ -121,7 +109,6 @@
 
     iput-wide v0, p0, Landroid/media/session/PlaybackState$Builder;->mBufferedPosition:J
 
-    .line 785
     # getter for: Landroid/media/session/PlaybackState;->mSpeed:F
     invoke-static {p1}, Landroid/media/session/PlaybackState;->access$600(Landroid/media/session/PlaybackState;)F
 
@@ -129,7 +116,6 @@
 
     iput v0, p0, Landroid/media/session/PlaybackState$Builder;->mSpeed:F
 
-    .line 786
     # getter for: Landroid/media/session/PlaybackState;->mActions:J
     invoke-static {p1}, Landroid/media/session/PlaybackState;->access$700(Landroid/media/session/PlaybackState;)J
 
@@ -137,7 +123,6 @@
 
     iput-wide v0, p0, Landroid/media/session/PlaybackState$Builder;->mActions:J
 
-    .line 787
     # getter for: Landroid/media/session/PlaybackState;->mCustomActions:Ljava/util/List;
     invoke-static {p1}, Landroid/media/session/PlaybackState;->access$800(Landroid/media/session/PlaybackState;)Ljava/util/List;
 
@@ -145,7 +130,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 788
     iget-object v0, p0, Landroid/media/session/PlaybackState$Builder;->mCustomActions:Ljava/util/List;
 
     # getter for: Landroid/media/session/PlaybackState;->mCustomActions:Ljava/util/List;
@@ -155,7 +139,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 790
     :cond_1
     # getter for: Landroid/media/session/PlaybackState;->mErrorMessage:Ljava/lang/CharSequence;
     invoke-static {p1}, Landroid/media/session/PlaybackState;->access$900(Landroid/media/session/PlaybackState;)Ljava/lang/CharSequence;
@@ -164,7 +147,6 @@
 
     iput-object v0, p0, Landroid/media/session/PlaybackState$Builder;->mErrorMessage:Ljava/lang/CharSequence;
 
-    .line 791
     # getter for: Landroid/media/session/PlaybackState;->mUpdateTime:J
     invoke-static {p1}, Landroid/media/session/PlaybackState;->access$1000(Landroid/media/session/PlaybackState;)J
 
@@ -172,7 +154,6 @@
 
     iput-wide v0, p0, Landroid/media/session/PlaybackState$Builder;->mUpdateTime:J
 
-    .line 792
     # getter for: Landroid/media/session/PlaybackState;->mActiveItemId:J
     invoke-static {p1}, Landroid/media/session/PlaybackState;->access$1100(Landroid/media/session/PlaybackState;)J
 
@@ -180,7 +161,6 @@
 
     iput-wide v0, p0, Landroid/media/session/PlaybackState$Builder;->mActiveItemId:J
 
-    .line 793
     # getter for: Landroid/media/session/PlaybackState;->mExtras:Landroid/os/Bundle;
     invoke-static {p1}, Landroid/media/session/PlaybackState;->access$1200(Landroid/media/session/PlaybackState;)Landroid/os/Bundle;
 
@@ -198,10 +178,8 @@
     .param p1, "customAction"    # Landroid/media/session/PlaybackState$CustomAction;
 
     .prologue
-    .line 934
     if-nez p1, :cond_0
 
-    .line 935
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "You may not add a null CustomAction to PlaybackState."
@@ -210,13 +188,11 @@
 
     throw v0
 
-    .line 938
     :cond_0
     iget-object v0, p0, Landroid/media/session/PlaybackState$Builder;->mCustomActions:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 939
     return-object p0
 .end method
 
@@ -229,7 +205,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 919
     new-instance v0, Landroid/media/session/PlaybackState$CustomAction;
 
     move-object v1, p1
@@ -253,7 +228,6 @@
     .locals 19
 
     .prologue
-    .line 998
     new-instance v2, Landroid/media/session/PlaybackState;
 
     move-object/from16 v0, p0
@@ -312,10 +286,8 @@
     .param p1, "actions"    # J
 
     .prologue
-    .line 894
     iput-wide p1, p0, Landroid/media/session/PlaybackState$Builder;->mActions:J
 
-    .line 895
     return-object p0
 .end method
 
@@ -324,10 +296,8 @@
     .param p1, "id"    # J
 
     .prologue
-    .line 964
     iput-wide p1, p0, Landroid/media/session/PlaybackState$Builder;->mActiveItemId:J
 
-    .line 965
     return-object p0
 .end method
 
@@ -336,10 +306,8 @@
     .param p1, "bufferedPosition"    # J
 
     .prologue
-    .line 952
     iput-wide p1, p0, Landroid/media/session/PlaybackState$Builder;->mBufferedPosition:J
 
-    .line 953
     return-object p0
 .end method
 
@@ -348,10 +316,8 @@
     .param p1, "error"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 976
     iput-object p1, p0, Landroid/media/session/PlaybackState$Builder;->mErrorMessage:Ljava/lang/CharSequence;
 
-    .line 977
     return-object p0
 .end method
 
@@ -360,10 +326,8 @@
     .param p1, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 987
     iput-object p1, p0, Landroid/media/session/PlaybackState$Builder;->mExtras:Landroid/os/Bundle;
 
-    .line 988
     return-object p0
 .end method
 
@@ -374,7 +338,6 @@
     .param p4, "playbackSpeed"    # F
 
     .prologue
-    .line 867
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v5
@@ -402,18 +365,13 @@
     .param p5, "updateTime"    # J
 
     .prologue
-    .line 830
     iput p1, p0, Landroid/media/session/PlaybackState$Builder;->mState:I
 
-    .line 831
     iput-wide p2, p0, Landroid/media/session/PlaybackState$Builder;->mPosition:J
 
-    .line 832
     iput-wide p5, p0, Landroid/media/session/PlaybackState$Builder;->mUpdateTime:J
 
-    .line 833
     iput p4, p0, Landroid/media/session/PlaybackState$Builder;->mSpeed:F
 
-    .line 834
     return-object p0
 .end method

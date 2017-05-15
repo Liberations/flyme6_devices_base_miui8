@@ -25,15 +25,12 @@
     .locals 1
 
     .prologue
-    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 46
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/os/MiuiProcess$PriorityState;->regionCounter:I
 
-    .line 49
     const/high16 v0, -0x80000000
 
     iput v0, p0, Landroid/os/MiuiProcess$PriorityState;->prevPriority:I
@@ -46,7 +43,6 @@
     .param p1, "x0"    # Landroid/os/MiuiProcess$1;
 
     .prologue
-    .line 42
     invoke-direct {p0}, Landroid/os/MiuiProcess$PriorityState;-><init>()V
 
     return-void
@@ -57,7 +53,6 @@
     .param p0, "x0"    # Landroid/os/MiuiProcess$PriorityState;
 
     .prologue
-    .line 42
     iget v0, p0, Landroid/os/MiuiProcess$PriorityState;->regionCounter:I
 
     return v0
@@ -68,7 +63,6 @@
     .param p0, "x0"    # Landroid/os/MiuiProcess$PriorityState;
 
     .prologue
-    .line 42
     iget v0, p0, Landroid/os/MiuiProcess$PriorityState;->regionCounter:I
 
     add-int/lit8 v1, v0, 0x1
@@ -83,7 +77,6 @@
     .param p0, "x0"    # Landroid/os/MiuiProcess$PriorityState;
 
     .prologue
-    .line 42
     iget v0, p0, Landroid/os/MiuiProcess$PriorityState;->regionCounter:I
 
     add-int/lit8 v1, v0, -0x1
@@ -98,7 +91,6 @@
     .param p0, "x0"    # Landroid/os/MiuiProcess$PriorityState;
 
     .prologue
-    .line 42
     iget v0, p0, Landroid/os/MiuiProcess$PriorityState;->prevPriority:I
 
     return v0
@@ -110,7 +102,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 42
     iput p1, p0, Landroid/os/MiuiProcess$PriorityState;->prevPriority:I
 
     return p1

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 46
     iput-object p1, p0, Lmiui/maml/elements/WebViewScreenElement$MamlInterface;->this$0:Lmiui/maml/elements/WebViewScreenElement;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lmiui/maml/elements/WebViewScreenElement$1;
 
     .prologue
-    .line 46
     invoke-direct {p0, p1}, Lmiui/maml/elements/WebViewScreenElement$MamlInterface;-><init>(Lmiui/maml/elements/WebViewScreenElement;)V
 
     return-void
@@ -52,12 +50,10 @@
     .end annotation
 
     .prologue
-    .line 109
     iget-object v0, p0, Lmiui/maml/elements/WebViewScreenElement$MamlInterface;->this$0:Lmiui/maml/elements/WebViewScreenElement;
 
     invoke-virtual {v0, p1}, Lmiui/maml/elements/WebViewScreenElement;->performAction(Ljava/lang/String;)V
 
-    .line 110
     return-void
 .end method
 
@@ -68,7 +64,6 @@
     .end annotation
 
     .prologue
-    .line 79
     iget-object v0, p0, Lmiui/maml/elements/WebViewScreenElement$MamlInterface;->this$0:Lmiui/maml/elements/WebViewScreenElement;
 
     invoke-virtual {v0}, Lmiui/maml/elements/WebViewScreenElement;->getVariables()Lmiui/maml/data/Variables;
@@ -89,7 +84,6 @@
     .end annotation
 
     .prologue
-    .line 84
     iget-object v0, p0, Lmiui/maml/elements/WebViewScreenElement$MamlInterface;->this$0:Lmiui/maml/elements/WebViewScreenElement;
 
     invoke-virtual {v0}, Lmiui/maml/elements/WebViewScreenElement;->getVariables()Lmiui/maml/data/Variables;
@@ -110,7 +104,6 @@
     .end annotation
 
     .prologue
-    .line 104
     iget-object v0, p0, Lmiui/maml/elements/WebViewScreenElement$MamlInterface;->this$0:Lmiui/maml/elements/WebViewScreenElement;
 
     invoke-virtual {v0}, Lmiui/maml/elements/WebViewScreenElement;->getVariables()Lmiui/maml/data/Variables;
@@ -131,7 +124,6 @@
     .end annotation
 
     .prologue
-    .line 99
     iget-object v0, p0, Lmiui/maml/elements/WebViewScreenElement$MamlInterface;->this$0:Lmiui/maml/elements/WebViewScreenElement;
 
     invoke-virtual {v0}, Lmiui/maml/elements/WebViewScreenElement;->getVariables()Lmiui/maml/data/Variables;
@@ -152,7 +144,6 @@
     .end annotation
 
     .prologue
-    .line 89
     iget-object v0, p0, Lmiui/maml/elements/WebViewScreenElement$MamlInterface;->this$0:Lmiui/maml/elements/WebViewScreenElement;
 
     invoke-virtual {v0}, Lmiui/maml/elements/WebViewScreenElement;->getVariables()Lmiui/maml/data/Variables;
@@ -173,7 +164,6 @@
     .end annotation
 
     .prologue
-    .line 94
     iget-object v0, p0, Lmiui/maml/elements/WebViewScreenElement$MamlInterface;->this$0:Lmiui/maml/elements/WebViewScreenElement;
 
     invoke-virtual {v0}, Lmiui/maml/elements/WebViewScreenElement;->getVariables()Lmiui/maml/data/Variables;
@@ -195,7 +185,6 @@
     .end annotation
 
     .prologue
-    .line 59
     iget-object v0, p0, Lmiui/maml/elements/WebViewScreenElement$MamlInterface;->this$0:Lmiui/maml/elements/WebViewScreenElement;
 
     invoke-virtual {v0}, Lmiui/maml/elements/WebViewScreenElement;->getVariables()Lmiui/maml/data/Variables;
@@ -204,7 +193,6 @@
 
     invoke-virtual {v0, p1, p2, p3}, Lmiui/maml/data/Variables;->put(Ljava/lang/String;D)V
 
-    .line 60
     return-void
 .end method
 
@@ -216,7 +204,6 @@
     .end annotation
 
     .prologue
-    .line 64
     iget-object v0, p0, Lmiui/maml/elements/WebViewScreenElement$MamlInterface;->this$0:Lmiui/maml/elements/WebViewScreenElement;
 
     invoke-virtual {v0}, Lmiui/maml/elements/WebViewScreenElement;->getVariables()Lmiui/maml/data/Variables;
@@ -227,7 +214,6 @@
 
     invoke-virtual {v0, p1, v2, v3}, Lmiui/maml/data/Variables;->put(Ljava/lang/String;D)V
 
-    .line 65
     return-void
 .end method
 
@@ -239,7 +225,6 @@
     .end annotation
 
     .prologue
-    .line 49
     iget-object v0, p0, Lmiui/maml/elements/WebViewScreenElement$MamlInterface;->this$0:Lmiui/maml/elements/WebViewScreenElement;
 
     invoke-virtual {v0}, Lmiui/maml/elements/WebViewScreenElement;->getVariables()Lmiui/maml/data/Variables;
@@ -248,7 +233,6 @@
 
     invoke-virtual {v0, p1, p2}, Lmiui/maml/data/Variables;->put(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 50
     return-void
 .end method
 
@@ -260,7 +244,6 @@
     .end annotation
 
     .prologue
-    .line 54
     iget-object v0, p0, Lmiui/maml/elements/WebViewScreenElement$MamlInterface;->this$0:Lmiui/maml/elements/WebViewScreenElement;
 
     invoke-virtual {v0}, Lmiui/maml/elements/WebViewScreenElement;->getVariables()Lmiui/maml/data/Variables;
@@ -269,7 +252,6 @@
 
     invoke-virtual {v0, p1, p2}, Lmiui/maml/data/Variables;->put(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 55
     return-void
 .end method
 
@@ -280,7 +262,6 @@
     .end annotation
 
     .prologue
-    .line 69
     iget-object v0, p0, Lmiui/maml/elements/WebViewScreenElement$MamlInterface;->this$0:Lmiui/maml/elements/WebViewScreenElement;
 
     invoke-virtual {v0}, Lmiui/maml/elements/WebViewScreenElement;->getVariables()Lmiui/maml/data/Variables;
@@ -301,7 +282,6 @@
     .end annotation
 
     .prologue
-    .line 74
     iget-object v0, p0, Lmiui/maml/elements/WebViewScreenElement$MamlInterface;->this$0:Lmiui/maml/elements/WebViewScreenElement;
 
     invoke-virtual {v0}, Lmiui/maml/elements/WebViewScreenElement;->getVariables()Lmiui/maml/data/Variables;

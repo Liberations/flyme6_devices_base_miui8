@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 89
     iput-object p1, p0, Lmiui/maml/elements/AttrDataBinders$AttrDataBinder$BitmapBinder;->this$0:Lmiui/maml/elements/AttrDataBinders$AttrDataBinder;
 
     const/4 v0, 0x0
@@ -39,7 +38,6 @@
     .param p2, "x1"    # Lmiui/maml/elements/AttrDataBinders$1;
 
     .prologue
-    .line 89
     invoke-direct {p0, p1}, Lmiui/maml/elements/AttrDataBinders$AttrDataBinder$BitmapBinder;-><init>(Lmiui/maml/elements/AttrDataBinders$AttrDataBinder;)V
 
     return-void
@@ -52,7 +50,6 @@
     .param p1, "e"    # Lmiui/maml/elements/ScreenElement;
 
     .prologue
-    .line 92
     check-cast p1, Lmiui/maml/elements/ImageScreenElement;
 
     .end local p1    # "e":Lmiui/maml/elements/ScreenElement;
@@ -70,6 +67,5 @@
 
     invoke-virtual {p1, v0}, Lmiui/maml/elements/ImageScreenElement;->setBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 93
     return-void
 .end method

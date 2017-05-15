@@ -19,14 +19,12 @@
     .locals 2
 
     .prologue
-    .line 47
     const/16 v0, 0x20
 
     const/16 v1, 0x80
 
     invoke-direct {p0, v0, v1}, Landroid/security/keystore/AndroidKeyStoreKeyGeneratorSpi;-><init>(II)V
 
-    .line 48
     return-void
 .end method
 
@@ -43,10 +41,8 @@
     .end annotation
 
     .prologue
-    .line 53
     invoke-super {p0, p1, p2}, Landroid/security/keystore/AndroidKeyStoreKeyGeneratorSpi;->engineInit(Ljava/security/spec/AlgorithmParameterSpec;Ljava/security/SecureRandom;)V
 
-    .line 54
     iget v0, p0, Landroid/security/keystore/AndroidKeyStoreKeyGeneratorSpi$AES;->mKeySizeBits:I
 
     const/16 v1, 0x80
@@ -65,7 +61,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 55
     new-instance v0, Ljava/security/InvalidAlgorithmParameterException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -98,7 +93,6 @@
 
     throw v0
 
-    .line 59
     :cond_0
     return-void
 .end method

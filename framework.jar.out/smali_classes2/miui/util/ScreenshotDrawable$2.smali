@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 161
     iput-object p1, p0, Lmiui/util/ScreenshotDrawable$2;->this$0:Lmiui/util/ScreenshotDrawable;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 163
     iget-object v0, p0, Lmiui/util/ScreenshotDrawable$2;->this$0:Lmiui/util/ScreenshotDrawable;
 
     # getter for: Lmiui/util/ScreenshotDrawable;->mBluredBitmap:Landroid/graphics/Bitmap;
@@ -48,7 +46,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 164
     iget-object v0, p0, Lmiui/util/ScreenshotDrawable$2;->this$0:Lmiui/util/ScreenshotDrawable;
 
     # getter for: Lmiui/util/ScreenshotDrawable;->mBluredBitmap:Landroid/graphics/Bitmap;
@@ -58,7 +55,6 @@
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 165
     iget-object v0, p0, Lmiui/util/ScreenshotDrawable$2;->this$0:Lmiui/util/ScreenshotDrawable;
 
     const/4 v1, 0x0
@@ -66,7 +62,6 @@
     # setter for: Lmiui/util/ScreenshotDrawable;->mBluredBitmap:Landroid/graphics/Bitmap;
     invoke-static {v0, v1}, Lmiui/util/ScreenshotDrawable;->access$102(Lmiui/util/ScreenshotDrawable;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
-    .line 167
     :cond_0
     iget-object v0, p0, Lmiui/util/ScreenshotDrawable$2;->this$0:Lmiui/util/ScreenshotDrawable;
 
@@ -78,7 +73,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 168
     iget-object v0, p0, Lmiui/util/ScreenshotDrawable$2;->this$0:Lmiui/util/ScreenshotDrawable;
 
     invoke-virtual {v0}, Lmiui/util/ScreenshotDrawable;->getCallback()Landroid/graphics/drawable/Drawable$Callback;
@@ -95,7 +89,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 170
     :cond_1
     return-void
 .end method

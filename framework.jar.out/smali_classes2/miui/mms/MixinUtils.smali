@@ -12,7 +12,6 @@
     .locals 0
 
     .prologue
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -26,7 +25,6 @@
 
     const/4 v3, 0x0
 
-    .line 20
     sget-boolean v4, Lmiui/os/Build;->IS_CM_CUSTOMIZATION:Z
 
     if-nez v4, :cond_0
@@ -38,14 +36,12 @@
     :cond_0
     move v2, v3
 
-    .line 37
     .local v0, "i":I
     .local v1, "simCount":I
     :cond_1
     :goto_0
     return v2
 
-    .line 24
     .end local v0    # "i":I
     .end local v1    # "simCount":I
     :cond_2
@@ -53,7 +49,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 28
     invoke-static {}, Lmiui/telephony/TelephonyManager;->getDefault()Lmiui/telephony/TelephonyManager;
 
     move-result-object v4
@@ -62,7 +57,6 @@
 
     move-result v1
 
-    .line 29
     .restart local v1    # "simCount":I
     const/4 v0, 0x0
 
@@ -70,7 +64,6 @@
     :goto_1
     if-ge v0, v1, :cond_1
 
-    .line 30
     invoke-static {}, Lmiui/telephony/TelephonyManager;->getDefault()Lmiui/telephony/TelephonyManager;
 
     move-result-object v4
@@ -81,7 +74,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 31
     const-string v4, "410"
 
     invoke-static {v0, v4}, Lmiui/mms/MixinUtils;->matchImsi(ILjava/lang/String;)Z
@@ -92,10 +84,8 @@
 
     move v2, v3
 
-    .line 32
     goto :goto_0
 
-    .line 29
     :cond_3
     add-int/lit8 v0, v0, 0x1
 
@@ -107,7 +97,6 @@
     .param p0, "slotId"    # I
 
     .prologue
-    .line 15
     sget-boolean v0, Lmiui/os/Build;->IS_CM_CUSTOMIZATION:Z
 
     if-nez v0, :cond_1
@@ -146,7 +135,6 @@
     .param p1, "mcc"    # Ljava/lang/String;
 
     .prologue
-    .line 10
     invoke-static {}, Lmiui/telephony/TelephonyManager;->getDefault()Lmiui/telephony/TelephonyManager;
 
     move-result-object v1
@@ -155,7 +143,6 @@
 
     move-result-object v0
 
-    .line 11
     .local v0, "imsi":Ljava/lang/String;
     if-eqz v0, :cond_0
 

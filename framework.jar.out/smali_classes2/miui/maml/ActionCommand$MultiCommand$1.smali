@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 1888
     iput-object p1, p0, Lmiui/maml/ActionCommand$MultiCommand$1;->this$0:Lmiui/maml/ActionCommand$MultiCommand;
 
     iput-object p2, p0, Lmiui/maml/ActionCommand$MultiCommand$1;->val$screenElement:Lmiui/maml/elements/ScreenElement;
@@ -45,25 +44,21 @@
     .param p1, "child"    # Lorg/w3c/dom/Element;
 
     .prologue
-    .line 1890
     iget-object v1, p0, Lmiui/maml/ActionCommand$MultiCommand$1;->val$screenElement:Lmiui/maml/elements/ScreenElement;
 
     invoke-static {p1, v1}, Lmiui/maml/ActionCommand;->create(Lorg/w3c/dom/Element;Lmiui/maml/elements/ScreenElement;)Lmiui/maml/ActionCommand;
 
     move-result-object v0
 
-    .line 1891
     .local v0, "command":Lmiui/maml/ActionCommand;
     if-eqz v0, :cond_0
 
-    .line 1892
     iget-object v1, p0, Lmiui/maml/ActionCommand$MultiCommand$1;->this$0:Lmiui/maml/ActionCommand$MultiCommand;
 
     iget-object v1, v1, Lmiui/maml/ActionCommand$MultiCommand;->mCommands:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1893
     :cond_0
     return-void
 .end method

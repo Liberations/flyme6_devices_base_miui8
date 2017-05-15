@@ -32,12 +32,10 @@
     .locals 1
 
     .prologue
-    .line 48
     const-string v0, "BitmapProvider"
 
     invoke-direct {p0, v0}, Lmiui/maml/ObjectFactory$ObjectFactoryBase;-><init>(Ljava/lang/String;)V
 
-    .line 49
     return-void
 .end method
 
@@ -49,16 +47,13 @@
     .param p2, "type"    # Ljava/lang/String;
 
     .prologue
-    .line 52
     invoke-virtual {p0, p1, p2}, Lmiui/maml/ObjectFactory$BitmapProviderFactory;->doCreate(Lmiui/maml/ScreenElementRoot;Ljava/lang/String;)Lmiui/maml/elements/BitmapProvider;
 
     move-result-object v0
 
-    .line 53
     .local v0, "ret":Lmiui/maml/elements/BitmapProvider;
     if-eqz v0, :cond_0
 
-    .line 55
     .end local v0    # "ret":Lmiui/maml/elements/BitmapProvider;
     :goto_0
     return-object v0

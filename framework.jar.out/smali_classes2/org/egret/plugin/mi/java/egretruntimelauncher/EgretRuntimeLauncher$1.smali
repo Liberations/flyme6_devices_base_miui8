@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 162
     iput-object p1, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLauncher$1;->this$0:Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLauncher;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,12 +39,10 @@
     .locals 3
 
     .prologue
-    .line 166
     new-instance v0, Lorg/egret/plugin/mi/android/util/launcher/NetClass;
 
     invoke-direct {v0}, Lorg/egret/plugin/mi/android/util/launcher/NetClass;-><init>()V
 
-    .line 167
     .local v0, "net":Lorg/egret/plugin/mi/android/util/launcher/NetClass;
     iget-object v1, p0, Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLauncher$1;->this$0:Lorg/egret/plugin/mi/java/egretruntimelauncher/EgretRuntimeLauncher;
 
@@ -60,6 +57,5 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/egret/plugin/mi/android/util/launcher/NetClass;->getRequest(Ljava/lang/String;Lorg/egret/plugin/mi/android/util/launcher/NetClass$OnNetListener;)V
 
-    .line 187
     return-void
 .end method

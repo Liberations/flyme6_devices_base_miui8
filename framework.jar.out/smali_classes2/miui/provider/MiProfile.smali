@@ -182,7 +182,6 @@
     .locals 2
 
     .prologue
-    .line 111
     sget-object v0, Landroid/provider/ContactsContract;->AUTHORITY_URI:Landroid/net/Uri;
 
     const-string v1, "miprofile"
@@ -193,7 +192,6 @@
 
     sput-object v0, Lmiui/provider/MiProfile;->MIPROFILE_URI:Landroid/net/Uri;
 
-    .line 113
     sget-object v0, Landroid/provider/ContactsContract;->AUTHORITY_URI:Landroid/net/Uri;
 
     const-string v1, "miprofile_numbers"
@@ -211,10 +209,8 @@
     .locals 0
 
     .prologue
-    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 138
     return-void
 .end method
 
@@ -224,7 +220,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 148
     sget-boolean v1, Lmiui/os/Build;->IS_CTA_BUILD:Z
 
     if-nez v1, :cond_0
@@ -239,12 +234,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 154
     :cond_0
     :goto_0
     return v0
 
-    .line 151
     :cond_1
     sget-boolean v1, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
@@ -258,7 +251,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 154
     :cond_2
     const/4 v0, 0x1
 
@@ -269,7 +261,6 @@
     .locals 2
 
     .prologue
-    .line 158
     const-string v0, "is_pad"
 
     const/4 v1, 0x0

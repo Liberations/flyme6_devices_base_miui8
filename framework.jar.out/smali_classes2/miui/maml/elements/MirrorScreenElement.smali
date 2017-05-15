@@ -24,10 +24,8 @@
     .param p2, "root"    # Lmiui/maml/ScreenElementRoot;
 
     .prologue
-    .line 20
     invoke-direct {p0, p1, p2}, Lmiui/maml/elements/AnimatedScreenElement;-><init>(Lorg/w3c/dom/Element;Lmiui/maml/ScreenElementRoot;)V
 
-    .line 21
     const-string v0, "target"
 
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -36,7 +34,6 @@
 
     iput-object v0, p0, Lmiui/maml/elements/MirrorScreenElement;->mTargetName:Ljava/lang/String;
 
-    .line 22
     const-string v0, "mirrorTranslation"
 
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -49,7 +46,6 @@
 
     iput-boolean v0, p0, Lmiui/maml/elements/MirrorScreenElement;->mMirrorTranslation:Z
 
-    .line 23
     return-void
 .end method
 
@@ -60,12 +56,10 @@
     .param p1, "c"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 36
     iget-object v0, p0, Lmiui/maml/elements/MirrorScreenElement;->mTarget:Lmiui/maml/elements/ScreenElement;
 
     if-eqz v0, :cond_0
 
-    .line 37
     iget-boolean v0, p0, Lmiui/maml/elements/MirrorScreenElement;->mMirrorTranslation:Z
 
     if-eqz v0, :cond_1
@@ -76,19 +70,16 @@
 
     if-eqz v0, :cond_1
 
-    .line 38
     iget-object v0, p0, Lmiui/maml/elements/MirrorScreenElement;->mTarget:Lmiui/maml/elements/ScreenElement;
 
     check-cast v0, Lmiui/maml/elements/AnimatedScreenElement;
 
     invoke-virtual {v0, p1}, Lmiui/maml/elements/AnimatedScreenElement;->doRenderWithTranslation(Landroid/graphics/Canvas;)V
 
-    .line 43
     :cond_0
     :goto_0
     return-void
 
-    .line 40
     :cond_1
     iget-object v0, p0, Lmiui/maml/elements/MirrorScreenElement;->mTarget:Lmiui/maml/elements/ScreenElement;
 
@@ -101,10 +92,8 @@
     .locals 3
 
     .prologue
-    .line 27
     invoke-super {p0}, Lmiui/maml/elements/AnimatedScreenElement;->init()V
 
-    .line 28
     iget-object v0, p0, Lmiui/maml/elements/MirrorScreenElement;->mRoot:Lmiui/maml/ScreenElementRoot;
 
     iget-object v1, p0, Lmiui/maml/elements/MirrorScreenElement;->mTargetName:Ljava/lang/String;
@@ -115,12 +104,10 @@
 
     iput-object v0, p0, Lmiui/maml/elements/MirrorScreenElement;->mTarget:Lmiui/maml/elements/ScreenElement;
 
-    .line 29
     iget-object v0, p0, Lmiui/maml/elements/MirrorScreenElement;->mTarget:Lmiui/maml/elements/ScreenElement;
 
     if-nez v0, :cond_0
 
-    .line 30
     const-string v0, "MirrorScreenElement"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -145,7 +132,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 32
     :cond_0
     return-void
 .end method

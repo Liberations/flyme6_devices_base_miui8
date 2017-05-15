@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 214
     iput-object p1, p0, Landroid/hardware/camera2/legacy/LegacyCameraDevice$1$4;->this$1:Landroid/hardware/camera2/legacy/LegacyCameraDevice$1;
 
     iput-object p2, p0, Landroid/hardware/camera2/legacy/LegacyCameraDevice$1$4;->val$holder:Landroid/hardware/camera2/legacy/RequestHolder;
@@ -52,7 +51,6 @@
     .locals 4
 
     .prologue
-    .line 222
     :try_start_0
     iget-object v1, p0, Landroid/hardware/camera2/legacy/LegacyCameraDevice$1$4;->this$1:Landroid/hardware/camera2/legacy/LegacyCameraDevice$1;
 
@@ -71,14 +69,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 227
     return-void
 
-    .line 223
     :catch_0
     move-exception v0
 
-    .line 224
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/IllegalStateException;
 

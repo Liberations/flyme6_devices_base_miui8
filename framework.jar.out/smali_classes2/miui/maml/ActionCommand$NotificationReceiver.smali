@@ -31,13 +31,10 @@
     .param p3, "type"    # Ljava/lang/String;
 
     .prologue
-    .line 89
     invoke-direct {p0, p1, p2}, Lmiui/maml/ActionCommand$StatefulActionCommand;-><init>(Lmiui/maml/elements/ScreenElement;Ljava/lang/String;)V
 
-    .line 90
     iput-object p3, p0, Lmiui/maml/ActionCommand$NotificationReceiver;->mType:Ljava/lang/String;
 
-    .line 91
     invoke-virtual {p0}, Lmiui/maml/ActionCommand$NotificationReceiver;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -48,7 +45,6 @@
 
     iput-object v0, p0, Lmiui/maml/ActionCommand$NotificationReceiver;->mNotifierManager:Lmiui/maml/NotifierManager;
 
-    .line 92
     return-void
 .end method
 
@@ -58,7 +54,6 @@
     .locals 2
 
     .prologue
-    .line 100
     # getter for: Lmiui/maml/ActionCommand;->mHandler:Landroid/os/Handler;
     invoke-static {}, Lmiui/maml/ActionCommand;->access$000()Landroid/os/Handler;
 
@@ -70,7 +65,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 106
     return-void
 .end method
 
@@ -78,14 +72,12 @@
     .locals 2
 
     .prologue
-    .line 127
     iget-object v0, p0, Lmiui/maml/ActionCommand$NotificationReceiver;->mNotifierManager:Lmiui/maml/NotifierManager;
 
     iget-object v1, p0, Lmiui/maml/ActionCommand$NotificationReceiver;->mType:Ljava/lang/String;
 
     invoke-virtual {v0, v1, p0}, Lmiui/maml/NotifierManager;->releaseNotifier(Ljava/lang/String;Lmiui/maml/NotifierManager$OnNotifyListener;)V
 
-    .line 128
     return-void
 .end method
 
@@ -93,17 +85,14 @@
     .locals 2
 
     .prologue
-    .line 110
     invoke-virtual {p0}, Lmiui/maml/ActionCommand$NotificationReceiver;->update()V
 
-    .line 111
     iget-object v0, p0, Lmiui/maml/ActionCommand$NotificationReceiver;->mNotifierManager:Lmiui/maml/NotifierManager;
 
     iget-object v1, p0, Lmiui/maml/ActionCommand$NotificationReceiver;->mType:Ljava/lang/String;
 
     invoke-virtual {v0, v1, p0}, Lmiui/maml/NotifierManager;->acquireNotifier(Ljava/lang/String;Lmiui/maml/NotifierManager$OnNotifyListener;)V
 
-    .line 112
     return-void
 .end method
 
@@ -114,10 +103,8 @@
     .param p3, "o"    # Ljava/lang/Object;
 
     .prologue
-    .line 96
     invoke-virtual {p0}, Lmiui/maml/ActionCommand$NotificationReceiver;->asyncUpdate()V
 
-    .line 97
     return-void
 .end method
 
@@ -125,14 +112,12 @@
     .locals 2
 
     .prologue
-    .line 116
     iget-object v0, p0, Lmiui/maml/ActionCommand$NotificationReceiver;->mNotifierManager:Lmiui/maml/NotifierManager;
 
     iget-object v1, p0, Lmiui/maml/ActionCommand$NotificationReceiver;->mType:Ljava/lang/String;
 
     invoke-virtual {v0, v1, p0}, Lmiui/maml/NotifierManager;->pause(Ljava/lang/String;Lmiui/maml/NotifierManager$OnNotifyListener;)V
 
-    .line 117
     return-void
 .end method
 
@@ -140,17 +125,14 @@
     .locals 2
 
     .prologue
-    .line 121
     invoke-virtual {p0}, Lmiui/maml/ActionCommand$NotificationReceiver;->update()V
 
-    .line 122
     iget-object v0, p0, Lmiui/maml/ActionCommand$NotificationReceiver;->mNotifierManager:Lmiui/maml/NotifierManager;
 
     iget-object v1, p0, Lmiui/maml/ActionCommand$NotificationReceiver;->mType:Ljava/lang/String;
 
     invoke-virtual {v0, v1, p0}, Lmiui/maml/NotifierManager;->resume(Ljava/lang/String;Lmiui/maml/NotifierManager$OnNotifyListener;)V
 
-    .line 123
     return-void
 .end method
 

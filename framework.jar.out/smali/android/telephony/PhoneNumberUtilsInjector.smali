@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -21,19 +20,16 @@
     .param p2, "pos"    # I
 
     .prologue
-    .line 14
     if-nez p2, :cond_1
 
     const/16 v1, 0x2b
 
     if-ne p1, v1, :cond_1
 
-    .line 19
     :cond_0
     :goto_0
     return-void
 
-    .line 15
     :cond_1
     const/16 v1, 0xa
 
@@ -41,7 +37,6 @@
 
     move-result v0
 
-    .line 16
     .local v0, "digit":I
     const/4 v1, -0x1
 
@@ -53,7 +48,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 17
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_0
@@ -67,19 +61,16 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 46
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v6
 
     if-eqz v6, :cond_1
 
-    .line 55
     :cond_0
     :goto_0
     return v5
 
-    .line 49
     :cond_1
     const-string v6, ","
 
@@ -87,7 +78,6 @@
 
     move-result-object v2
 
-    .line 50
     .local v2, "codes":[Ljava/lang/String;
     move-object v0, v2
 
@@ -103,7 +93,6 @@
 
     aget-object v1, v0, v3
 
-    .line 51
     .local v1, "code":Ljava/lang/String;
     invoke-static {v1, p1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
@@ -111,12 +100,10 @@
 
     if-eqz v6, :cond_2
 
-    .line 52
     const/4 v5, 0x1
 
     goto :goto_0
 
-    .line 50
     :cond_2
     add-int/lit8 v3, v3, 0x1
 
@@ -129,12 +116,10 @@
     .param p1, "defaultValue"    # Ljava/lang/String;
 
     .prologue
-    .line 92
     invoke-static {p0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 93
     .local v4, "ps":Ljava/lang/String;
     if-eqz v4, :cond_0
 
@@ -144,13 +129,11 @@
 
     if-nez v6, :cond_1
 
-    .line 110
     .end local p1    # "defaultValue":Ljava/lang/String;
     :cond_0
     :goto_0
     return-object p1
 
-    .line 97
     .restart local p1    # "defaultValue":Ljava/lang/String;
     :cond_1
     const-string v6, ","
@@ -159,7 +142,6 @@
 
     move-result-object v5
 
-    .line 98
     .local v5, "values":[Ljava/lang/String;
     array-length v6, v5
 
@@ -169,10 +151,8 @@
 
     move-object p1, v4
 
-    .line 99
     goto :goto_0
 
-    .line 101
     :cond_2
     const/4 v6, 0x0
 
@@ -180,7 +160,6 @@
 
     move-result-object v1
 
-    .line 102
     .local v1, "defaultType":Ljava/lang/String;
     const/4 v6, 0x2
 
@@ -188,7 +167,6 @@
 
     move-result-object v0
 
-    .line 103
     .local v0, "cdmaType":Ljava/lang/String;
     const/4 v2, 0x0
 
@@ -198,7 +176,6 @@
 
     if-ge v2, v6, :cond_0
 
-    .line 104
     invoke-static {}, Lmiui/telephony/TelephonyManagerEx;->getDefault()Lmiui/telephony/TelephonyManagerEx;
 
     move-result-object v6
@@ -209,7 +186,6 @@
 
     move-result-object v3
 
-    .line 106
     .local v3, "phoneType":Ljava/lang/String;
     invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -217,7 +193,6 @@
 
     if-eqz v6, :cond_3
 
-    .line 107
     aget-object v6, v5, v2
 
     if-eqz v6, :cond_0
@@ -226,7 +201,6 @@
 
     goto :goto_0
 
-    .line 103
     :cond_3
     add-int/lit8 v2, v2, 0x1
 
@@ -249,10 +223,8 @@
 
     const/4 v0, 0x1
 
-    .line 59
     if-ne p1, v0, :cond_1
 
-    .line 60
     const/4 v1, 0x0
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->charAt(I)C
@@ -263,18 +235,15 @@
 
     if-ne v1, v2, :cond_b
 
-    .line 88
     :cond_0
     :goto_0
     return v0
 
-    .line 63
     :cond_1
     const/4 v1, 0x3
 
     if-ne p1, v1, :cond_b
 
-    .line 64
     const/4 v1, 0x0
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->charAt(I)C
@@ -285,7 +254,6 @@
 
     if-ne v1, v2, :cond_b
 
-    .line 65
     invoke-virtual {p0, v0}, Ljava/lang/String;->charAt(I)C
 
     move-result v1
@@ -298,7 +266,6 @@
 
     if-eq v1, v5, :cond_0
 
-    .line 67
     :cond_2
     invoke-virtual {p0, v0}, Ljava/lang/String;->charAt(I)C
 
@@ -314,7 +281,6 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 69
     :cond_3
     invoke-virtual {p0, v0}, Ljava/lang/String;->charAt(I)C
 
@@ -330,7 +296,6 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 71
     :cond_4
     invoke-virtual {p0, v0}, Ljava/lang/String;->charAt(I)C
 
@@ -344,7 +309,6 @@
 
     if-eq v1, v4, :cond_0
 
-    .line 73
     :cond_5
     invoke-virtual {p0, v0}, Ljava/lang/String;->charAt(I)C
 
@@ -358,7 +322,6 @@
 
     if-eq v1, v6, :cond_0
 
-    .line 75
     :cond_6
     invoke-virtual {p0, v0}, Ljava/lang/String;->charAt(I)C
 
@@ -374,7 +337,6 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 77
     :cond_7
     invoke-virtual {p0, v0}, Ljava/lang/String;->charAt(I)C
 
@@ -388,7 +350,6 @@
 
     if-eq v1, v4, :cond_0
 
-    .line 79
     :cond_8
     invoke-virtual {p0, v0}, Ljava/lang/String;->charAt(I)C
 
@@ -402,7 +363,6 @@
 
     if-eq v1, v5, :cond_0
 
-    .line 81
     :cond_9
     invoke-virtual {p0, v0}, Ljava/lang/String;->charAt(I)C
 
@@ -418,7 +378,6 @@
 
     if-eq v1, v4, :cond_0
 
-    .line 83
     :cond_a
     invoke-virtual {p0, v0}, Ljava/lang/String;->charAt(I)C
 
@@ -434,7 +393,6 @@
 
     if-eq v1, v6, :cond_0
 
-    .line 88
     :cond_b
     const/4 v0, 0x0
 
@@ -449,7 +407,6 @@
     .param p3, "blen"    # I
 
     .prologue
-    .line 25
     const-string v0, "gsm.sim.operator.iso-country"
 
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -464,7 +421,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 26
     invoke-static {p0, p1}, Landroid/telephony/PhoneNumberUtilsInjector;->matchBrazilCarrierCodeAndPrefix(Ljava/lang/String;I)Z
 
     move-result v0
@@ -477,10 +433,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 28
     const/4 v0, 0x1
 
-    .line 31
     :goto_0
     return v0
 
@@ -499,7 +453,6 @@
 
     const/4 v2, 0x1
 
-    .line 35
     const-string v0, "gsm.sim.operator.iso-country"
 
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -514,7 +467,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 36
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -527,18 +479,15 @@
 
     if-eqz v0, :cond_1
 
-    .line 37
     invoke-virtual {p0, v3}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 42
     .end local p0    # "a":Ljava/lang/String;
     :cond_0
     :goto_0
     return-object p0
 
-    .line 38
     .restart local p0    # "a":Ljava/lang/String;
     :cond_1
     invoke-virtual {p0}, Ljava/lang/String;->length()I
@@ -553,7 +502,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 39
     invoke-virtual {p0, v2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object p0

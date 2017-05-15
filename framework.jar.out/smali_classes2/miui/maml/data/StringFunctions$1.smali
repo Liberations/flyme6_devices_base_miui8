@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 76
     invoke-static {}, Lmiui/maml/data/StringFunctions$Fun;->values()[Lmiui/maml/data/StringFunctions$Fun;
 
     move-result-object v0

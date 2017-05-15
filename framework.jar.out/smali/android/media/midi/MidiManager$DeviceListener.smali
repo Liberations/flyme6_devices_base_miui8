@@ -29,18 +29,14 @@
     .param p3, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 72
     iput-object p1, p0, Landroid/media/midi/MidiManager$DeviceListener;->this$0:Landroid/media/midi/MidiManager;
 
     invoke-direct {p0}, Landroid/media/midi/IMidiDeviceListener$Stub;-><init>()V
 
-    .line 73
     iput-object p2, p0, Landroid/media/midi/MidiManager$DeviceListener;->mCallback:Landroid/media/midi/MidiManager$DeviceCallback;
 
-    .line 74
     iput-object p3, p0, Landroid/media/midi/MidiManager$DeviceListener;->mHandler:Landroid/os/Handler;
 
-    .line 75
     return-void
 .end method
 
@@ -49,7 +45,6 @@
     .param p0, "x0"    # Landroid/media/midi/MidiManager$DeviceListener;
 
     .prologue
-    .line 68
     iget-object v0, p0, Landroid/media/midi/MidiManager$DeviceListener;->mCallback:Landroid/media/midi/MidiManager$DeviceCallback;
 
     return-object v0
@@ -62,15 +57,12 @@
     .param p1, "device"    # Landroid/media/midi/MidiDeviceInfo;
 
     .prologue
-    .line 79
     iget-object v1, p0, Landroid/media/midi/MidiManager$DeviceListener;->mHandler:Landroid/os/Handler;
 
     if-eqz v1, :cond_0
 
-    .line 80
     move-object v0, p1
 
-    .line 81
     .local v0, "deviceF":Landroid/media/midi/MidiDeviceInfo;
     iget-object v1, p0, Landroid/media/midi/MidiManager$DeviceListener;->mHandler:Landroid/os/Handler;
 
@@ -80,12 +72,10 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 89
     .end local v0    # "deviceF":Landroid/media/midi/MidiDeviceInfo;
     :goto_0
     return-void
 
-    .line 87
     :cond_0
     iget-object v1, p0, Landroid/media/midi/MidiManager$DeviceListener;->mCallback:Landroid/media/midi/MidiManager$DeviceCallback;
 
@@ -99,15 +89,12 @@
     .param p1, "device"    # Landroid/media/midi/MidiDeviceInfo;
 
     .prologue
-    .line 93
     iget-object v1, p0, Landroid/media/midi/MidiManager$DeviceListener;->mHandler:Landroid/os/Handler;
 
     if-eqz v1, :cond_0
 
-    .line 94
     move-object v0, p1
 
-    .line 95
     .local v0, "deviceF":Landroid/media/midi/MidiDeviceInfo;
     iget-object v1, p0, Landroid/media/midi/MidiManager$DeviceListener;->mHandler:Landroid/os/Handler;
 
@@ -117,12 +104,10 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 103
     .end local v0    # "deviceF":Landroid/media/midi/MidiDeviceInfo;
     :goto_0
     return-void
 
-    .line 101
     :cond_0
     iget-object v1, p0, Landroid/media/midi/MidiManager$DeviceListener;->mCallback:Landroid/media/midi/MidiManager$DeviceCallback;
 
@@ -136,15 +121,12 @@
     .param p1, "status"    # Landroid/media/midi/MidiDeviceStatus;
 
     .prologue
-    .line 107
     iget-object v1, p0, Landroid/media/midi/MidiManager$DeviceListener;->mHandler:Landroid/os/Handler;
 
     if-eqz v1, :cond_0
 
-    .line 108
     move-object v0, p1
 
-    .line 109
     .local v0, "statusF":Landroid/media/midi/MidiDeviceStatus;
     iget-object v1, p0, Landroid/media/midi/MidiManager$DeviceListener;->mHandler:Landroid/os/Handler;
 
@@ -154,12 +136,10 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 117
     .end local v0    # "statusF":Landroid/media/midi/MidiDeviceStatus;
     :goto_0
     return-void
 
-    .line 115
     :cond_0
     iget-object v1, p0, Landroid/media/midi/MidiManager$DeviceListener;->mCallback:Landroid/media/midi/MidiManager$DeviceCallback;
 

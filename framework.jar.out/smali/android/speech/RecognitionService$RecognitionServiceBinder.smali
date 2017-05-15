@@ -33,17 +33,14 @@
     .param p1, "service"    # Landroid/speech/RecognitionService;
 
     .prologue
-    .line 337
     invoke-direct {p0}, Landroid/speech/IRecognitionService$Stub;-><init>()V
 
-    .line 338
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Landroid/speech/RecognitionService$RecognitionServiceBinder;->mServiceRef:Ljava/lang/ref/WeakReference;
 
-    .line 339
     return-void
 .end method
 
@@ -54,7 +51,6 @@
     .param p1, "listener"    # Landroid/speech/IRecognitionListener;
 
     .prologue
-    .line 365
     iget-object v1, p0, Landroid/speech/RecognitionService$RecognitionServiceBinder;->mServiceRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -63,7 +59,6 @@
 
     check-cast v0, Landroid/speech/RecognitionService;
 
-    .line 366
     .local v0, "service":Landroid/speech/RecognitionService;
     if-eqz v0, :cond_0
 
@@ -74,7 +69,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 367
     # getter for: Landroid/speech/RecognitionService;->mHandler:Landroid/os/Handler;
     invoke-static {v0}, Landroid/speech/RecognitionService;->access$400(Landroid/speech/RecognitionService;)Landroid/os/Handler;
 
@@ -93,7 +87,6 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 370
     :cond_0
     return-void
 .end method
@@ -102,12 +95,10 @@
     .locals 1
 
     .prologue
-    .line 373
     iget-object v0, p0, Landroid/speech/RecognitionService$RecognitionServiceBinder;->mServiceRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->clear()V
 
-    .line 374
     return-void
 .end method
 
@@ -117,7 +108,6 @@
     .param p2, "listener"    # Landroid/speech/IRecognitionListener;
 
     .prologue
-    .line 344
     iget-object v1, p0, Landroid/speech/RecognitionService$RecognitionServiceBinder;->mServiceRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -126,7 +116,6 @@
 
     check-cast v0, Landroid/speech/RecognitionService;
 
-    .line 345
     .local v0, "service":Landroid/speech/RecognitionService;
     if-eqz v0, :cond_0
 
@@ -137,7 +126,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 346
     # getter for: Landroid/speech/RecognitionService;->mHandler:Landroid/os/Handler;
     invoke-static {v0}, Landroid/speech/RecognitionService;->access$400(Landroid/speech/RecognitionService;)Landroid/os/Handler;
 
@@ -166,7 +154,6 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 350
     :cond_0
     return-void
 .end method
@@ -176,7 +163,6 @@
     .param p1, "listener"    # Landroid/speech/IRecognitionListener;
 
     .prologue
-    .line 355
     iget-object v1, p0, Landroid/speech/RecognitionService$RecognitionServiceBinder;->mServiceRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -185,7 +171,6 @@
 
     check-cast v0, Landroid/speech/RecognitionService;
 
-    .line 356
     .local v0, "service":Landroid/speech/RecognitionService;
     if-eqz v0, :cond_0
 
@@ -196,7 +181,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 357
     # getter for: Landroid/speech/RecognitionService;->mHandler:Landroid/os/Handler;
     invoke-static {v0}, Landroid/speech/RecognitionService;->access$400(Landroid/speech/RecognitionService;)Landroid/os/Handler;
 
@@ -215,7 +199,6 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 360
     :cond_0
     return-void
 .end method

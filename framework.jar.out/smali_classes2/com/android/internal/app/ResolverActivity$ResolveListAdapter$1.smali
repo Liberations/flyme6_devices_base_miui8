@@ -38,7 +38,6 @@
     .locals 0
 
     .prologue
-    .line 1429
     iput-object p1, p0, Lcom/android/internal/app/ResolverActivity$ResolveListAdapter$1;->this$1:Lcom/android/internal/app/ResolverActivity$ResolveListAdapter;
 
     iput-object p2, p0, Lcom/android/internal/app/ResolverActivity$ResolveListAdapter$1;->val$orderMap:Ljava/util/HashMap;
@@ -53,14 +52,12 @@
     .param p1, "info"    # Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;
 
     .prologue
-    .line 1436
     invoke-virtual {p1}, Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;->getResolveInfo()Landroid/content/pm/ResolveInfo;
 
     move-result-object v3
 
     iget-object v0, v3, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
-    .line 1437
     .local v0, "activityInfo":Landroid/content/pm/ActivityInfo;
     new-instance v1, Landroid/content/ComponentName;
 
@@ -70,7 +67,6 @@
 
     invoke-direct {v1, v3, v4}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1438
     .local v1, "componentName":Landroid/content/ComponentName;
     iget-object v3, p0, Lcom/android/internal/app/ResolverActivity$ResolveListAdapter$1;->val$orderMap:Ljava/util/HashMap;
 
@@ -80,7 +76,6 @@
 
     check-cast v2, Ljava/lang/Integer;
 
-    .line 1439
     .local v2, "integer":Ljava/lang/Integer;
     if-eqz v2, :cond_0
 
@@ -105,7 +100,6 @@
     .param p2, "o2"    # Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;
 
     .prologue
-    .line 1432
     invoke-direct {p0, p1}, Lcom/android/internal/app/ResolverActivity$ResolveListAdapter$1;->getOrder(Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;)I
 
     move-result v0
@@ -125,7 +119,6 @@
     .param p2, "x1"    # Ljava/lang/Object;
 
     .prologue
-    .line 1429
     check-cast p1, Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;
 
     .end local p1    # "x0":Ljava/lang/Object;

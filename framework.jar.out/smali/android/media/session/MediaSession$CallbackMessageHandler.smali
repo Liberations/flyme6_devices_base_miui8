@@ -71,20 +71,16 @@
     .param p3, "callback"    # Landroid/media/session/MediaSession$Callback;
 
     .prologue
-    .line 1308
     iput-object p1, p0, Landroid/media/session/MediaSession$CallbackMessageHandler;->this$0:Landroid/media/session/MediaSession;
 
-    .line 1309
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
     invoke-direct {p0, p2, v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
 
-    .line 1310
     iput-object p3, p0, Landroid/media/session/MediaSession$CallbackMessageHandler;->mCallback:Landroid/media/session/MediaSession$Callback;
 
-    .line 1311
     return-void
 .end method
 
@@ -93,7 +89,6 @@
     .param p0, "x0"    # Landroid/media/session/MediaSession$CallbackMessageHandler;
 
     .prologue
-    .line 1282
     iget-object v0, p0, Landroid/media/session/MediaSession$CallbackMessageHandler;->mCallback:Landroid/media/session/MediaSession$Callback;
 
     return-object v0
@@ -106,17 +101,14 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 1334
     iget v3, p1, Landroid/os/Message;->what:I
 
     packed-switch v3, :pswitch_data_0
 
-    .line 1413
     :cond_0
     :goto_0
     return-void
 
-    .line 1336
     :pswitch_0
     iget-object v3, p0, Landroid/media/session/MediaSession$CallbackMessageHandler;->mCallback:Landroid/media/session/MediaSession$Callback;
 
@@ -124,7 +116,6 @@
 
     goto :goto_0
 
-    .line 1339
     :pswitch_1
     iget-object v4, p0, Landroid/media/session/MediaSession$CallbackMessageHandler;->mCallback:Landroid/media/session/MediaSession$Callback;
 
@@ -140,7 +131,6 @@
 
     goto :goto_0
 
-    .line 1342
     :pswitch_2
     iget-object v4, p0, Landroid/media/session/MediaSession$CallbackMessageHandler;->mCallback:Landroid/media/session/MediaSession$Callback;
 
@@ -156,7 +146,6 @@
 
     goto :goto_0
 
-    .line 1345
     :pswitch_3
     iget-object v4, p0, Landroid/media/session/MediaSession$CallbackMessageHandler;->mCallback:Landroid/media/session/MediaSession$Callback;
 
@@ -172,7 +161,6 @@
 
     goto :goto_0
 
-    .line 1348
     :pswitch_4
     iget-object v4, p0, Landroid/media/session/MediaSession$CallbackMessageHandler;->mCallback:Landroid/media/session/MediaSession$Callback;
 
@@ -188,7 +176,6 @@
 
     goto :goto_0
 
-    .line 1351
     :pswitch_5
     iget-object v3, p0, Landroid/media/session/MediaSession$CallbackMessageHandler;->mCallback:Landroid/media/session/MediaSession$Callback;
 
@@ -196,7 +183,6 @@
 
     goto :goto_0
 
-    .line 1354
     :pswitch_6
     iget-object v3, p0, Landroid/media/session/MediaSession$CallbackMessageHandler;->mCallback:Landroid/media/session/MediaSession$Callback;
 
@@ -204,7 +190,6 @@
 
     goto :goto_0
 
-    .line 1357
     :pswitch_7
     iget-object v3, p0, Landroid/media/session/MediaSession$CallbackMessageHandler;->mCallback:Landroid/media/session/MediaSession$Callback;
 
@@ -212,7 +197,6 @@
 
     goto :goto_0
 
-    .line 1360
     :pswitch_8
     iget-object v3, p0, Landroid/media/session/MediaSession$CallbackMessageHandler;->mCallback:Landroid/media/session/MediaSession$Callback;
 
@@ -220,7 +204,6 @@
 
     goto :goto_0
 
-    .line 1363
     :pswitch_9
     iget-object v3, p0, Landroid/media/session/MediaSession$CallbackMessageHandler;->mCallback:Landroid/media/session/MediaSession$Callback;
 
@@ -228,7 +211,6 @@
 
     goto :goto_0
 
-    .line 1366
     :pswitch_a
     iget-object v3, p0, Landroid/media/session/MediaSession$CallbackMessageHandler;->mCallback:Landroid/media/session/MediaSession$Callback;
 
@@ -236,7 +218,6 @@
 
     goto :goto_0
 
-    .line 1369
     :pswitch_b
     iget-object v4, p0, Landroid/media/session/MediaSession$CallbackMessageHandler;->mCallback:Landroid/media/session/MediaSession$Callback;
 
@@ -252,7 +233,6 @@
 
     goto :goto_0
 
-    .line 1372
     :pswitch_c
     iget-object v4, p0, Landroid/media/session/MediaSession$CallbackMessageHandler;->mCallback:Landroid/media/session/MediaSession$Callback;
 
@@ -264,7 +244,6 @@
 
     goto :goto_0
 
-    .line 1375
     :pswitch_d
     iget-object v4, p0, Landroid/media/session/MediaSession$CallbackMessageHandler;->mCallback:Landroid/media/session/MediaSession$Callback;
 
@@ -280,7 +259,6 @@
 
     goto/16 :goto_0
 
-    .line 1378
     :pswitch_e
     iget-object v4, p0, Landroid/media/session/MediaSession$CallbackMessageHandler;->mCallback:Landroid/media/session/MediaSession$Callback;
 
@@ -292,13 +270,11 @@
 
     goto/16 :goto_0
 
-    .line 1381
     :pswitch_f
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/media/session/MediaSession$Command;
 
-    .line 1382
     .local v0, "cmd":Landroid/media/session/MediaSession$Command;
     iget-object v3, p0, Landroid/media/session/MediaSession$CallbackMessageHandler;->mCallback:Landroid/media/session/MediaSession$Callback;
 
@@ -312,7 +288,6 @@
 
     goto/16 :goto_0
 
-    .line 1385
     .end local v0    # "cmd":Landroid/media/session/MediaSession$Command;
     :pswitch_10
     iget-object v3, p0, Landroid/media/session/MediaSession$CallbackMessageHandler;->this$0:Landroid/media/session/MediaSession;
@@ -324,7 +299,6 @@
 
     monitor-enter v4
 
-    .line 1386
     :try_start_0
     iget-object v3, p0, Landroid/media/session/MediaSession$CallbackMessageHandler;->this$0:Landroid/media/session/MediaSession;
 
@@ -333,16 +307,13 @@
 
     move-result-object v2
 
-    .line 1387
     .local v2, "vp":Landroid/media/VolumeProvider;
     monitor-exit v4
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1388
     if-eqz v2, :cond_0
 
-    .line 1389
     iget-object v3, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v3, Ljava/lang/Integer;
@@ -355,7 +326,6 @@
 
     goto/16 :goto_0
 
-    .line 1387
     .end local v2    # "vp":Landroid/media/VolumeProvider;
     :catchall_0
     move-exception v3
@@ -367,7 +337,6 @@
 
     throw v3
 
-    .line 1393
     :pswitch_11
     iget-object v3, p0, Landroid/media/session/MediaSession$CallbackMessageHandler;->this$0:Landroid/media/session/MediaSession;
 
@@ -378,7 +347,6 @@
 
     monitor-enter v4
 
-    .line 1394
     :try_start_2
     iget-object v3, p0, Landroid/media/session/MediaSession$CallbackMessageHandler;->this$0:Landroid/media/session/MediaSession;
 
@@ -387,16 +355,13 @@
 
     move-result-object v2
 
-    .line 1395
     .restart local v2    # "vp":Landroid/media/VolumeProvider;
     monitor-exit v4
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 1396
     if-eqz v2, :cond_1
 
-    .line 1397
     iget-object v3, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v3, Ljava/lang/Integer;
@@ -407,7 +372,6 @@
 
     invoke-virtual {v2, v3}, Landroid/media/VolumeProvider;->onSetVolumeTo(I)V
 
-    .line 1400
     .end local v2    # "vp":Landroid/media/VolumeProvider;
     :cond_1
     :pswitch_12
@@ -417,14 +381,12 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1401
     iget-object v3, p0, Landroid/media/session/MediaSession$CallbackMessageHandler;->mCallback:Landroid/media/session/MediaSession$Callback;
 
     invoke-virtual {v3}, Landroid/media/session/MediaSession$Callback;->setBrowsedPlayer()V
 
     goto/16 :goto_0
 
-    .line 1395
     :catchall_1
     move-exception v3
 
@@ -435,7 +397,6 @@
 
     throw v3
 
-    .line 1404
     :pswitch_13
     const-string v3, "MediaSession"
 
@@ -443,12 +404,10 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1405
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Landroid/media/session/MediaSession$PlayItemToken;
 
-    .line 1406
     .local v1, "playItemToken":Landroid/media/session/MediaSession$PlayItemToken;
     iget-object v3, p0, Landroid/media/session/MediaSession$CallbackMessageHandler;->mCallback:Landroid/media/session/MediaSession$Callback;
 
@@ -464,7 +423,6 @@
 
     goto/16 :goto_0
 
-    .line 1409
     .end local v1    # "playItemToken":Landroid/media/session/MediaSession$PlayItemToken;
     :pswitch_14
     const-string v3, "MediaSession"
@@ -473,14 +431,12 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1410
     iget-object v3, p0, Landroid/media/session/MediaSession$CallbackMessageHandler;->mCallback:Landroid/media/session/MediaSession$Callback;
 
     invoke-virtual {v3}, Landroid/media/session/MediaSession$Callback;->getNowPlayingEntries()V
 
     goto/16 :goto_0
 
-    .line 1334
     nop
 
     :pswitch_data_0
@@ -514,12 +470,10 @@
     .param p1, "what"    # I
 
     .prologue
-    .line 1324
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Landroid/media/session/MediaSession$CallbackMessageHandler;->post(ILjava/lang/Object;)V
 
-    .line 1325
     return-void
 .end method
 
@@ -529,14 +483,12 @@
     .param p2, "obj"    # Ljava/lang/Object;
 
     .prologue
-    .line 1320
     invoke-virtual {p0, p1, p2}, Landroid/media/session/MediaSession$CallbackMessageHandler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 1321
     return-void
 .end method
 
@@ -547,7 +499,6 @@
     .param p3, "arg1"    # I
 
     .prologue
-    .line 1328
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, p3, v0, p2}, Landroid/media/session/MediaSession$CallbackMessageHandler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
@@ -556,7 +507,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 1329
     return-void
 .end method
 
@@ -567,18 +517,14 @@
     .param p3, "bundle"    # Landroid/os/Bundle;
 
     .prologue
-    .line 1314
     invoke-virtual {p0, p1, p2}, Landroid/media/session/MediaSession$CallbackMessageHandler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v0
 
-    .line 1315
     .local v0, "msg":Landroid/os/Message;
     invoke-virtual {v0, p3}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
 
-    .line 1316
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 1317
     return-void
 .end method

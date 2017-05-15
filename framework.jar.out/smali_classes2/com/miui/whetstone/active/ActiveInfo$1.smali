@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 97
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 99
     new-instance v0, Lcom/miui/whetstone/active/ActiveInfo;
 
     const/4 v1, 0x0
@@ -60,7 +58,6 @@
     .param p1, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 97
     invoke-virtual {p0, p1}, Lcom/miui/whetstone/active/ActiveInfo$1;->createFromParcel(Landroid/os/Parcel;)Lcom/miui/whetstone/active/ActiveInfo;
 
     move-result-object v0
@@ -73,7 +70,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 102
     new-array v0, p1, [Lcom/miui/whetstone/active/ActiveInfo;
 
     return-object v0
@@ -84,7 +80,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 97
     invoke-virtual {p0, p1}, Lcom/miui/whetstone/active/ActiveInfo$1;->newArray(I)[Lcom/miui/whetstone/active/ActiveInfo;
 
     move-result-object v0

@@ -58,7 +58,6 @@
     .locals 1
 
     .prologue
-    .line 47
     new-instance v0, Landroid/content/SyncAdaptersCache$MySerializer;
 
     invoke-direct {v0}, Landroid/content/SyncAdaptersCache$MySerializer;-><init>()V
@@ -73,12 +72,11 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 54
     const-string v2, "android.content.SyncAdapter"
 
     const-string v3, "android.content.SyncAdapter"
 
-    const-string/jumbo v4, "sync-adapter"
+    const-string v4, "sync-adapter"
 
     sget-object v5, Landroid/content/SyncAdaptersCache;->sSerializer:Landroid/content/SyncAdaptersCache$MySerializer;
 
@@ -88,14 +86,12 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/content/pm/RegisteredServicesCache;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/content/pm/XmlSerializerAndParser;)V
 
-    .line 49
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Landroid/content/SyncAdaptersCache;->mAuthorityToSyncAdapters:Landroid/util/SparseArray;
 
-    .line 55
     return-void
 .end method
 
@@ -107,12 +103,10 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 103
     iget-object v7, p0, Landroid/content/SyncAdaptersCache;->mServicesLock:Ljava/lang/Object;
 
     monitor-enter v7
 
-    .line 104
     :try_start_0
     iget-object v6, p0, Landroid/content/SyncAdaptersCache;->mAuthorityToSyncAdapters:Landroid/util/SparseArray;
 
@@ -122,23 +116,19 @@
 
     check-cast v0, Landroid/util/ArrayMap;
 
-    .line 105
     .local v0, "adapterMap":Landroid/util/ArrayMap;, "Landroid/util/ArrayMap<Ljava/lang/String;[Ljava/lang/String;>;"
     if-nez v0, :cond_0
 
-    .line 106
     new-instance v0, Landroid/util/ArrayMap;
 
     .end local v0    # "adapterMap":Landroid/util/ArrayMap;, "Landroid/util/ArrayMap<Ljava/lang/String;[Ljava/lang/String;>;"
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
-    .line 107
     .restart local v0    # "adapterMap":Landroid/util/ArrayMap;, "Landroid/util/ArrayMap<Ljava/lang/String;[Ljava/lang/String;>;"
     iget-object v6, p0, Landroid/content/SyncAdaptersCache;->mAuthorityToSyncAdapters:Landroid/util/SparseArray;
 
     invoke-virtual {v6, p2, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 110
     :cond_0
     invoke-virtual {v0, p1}, Landroid/util/ArrayMap;->containsKey(Ljava/lang/Object;)Z
 
@@ -146,7 +136,6 @@
 
     if-eqz v6, :cond_1
 
-    .line 111
     invoke-virtual {v0, p1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v6
@@ -155,23 +144,19 @@
 
     monitor-exit v7
 
-    .line 128
     :goto_0
     return-object v6
 
-    .line 116
     :cond_1
     invoke-virtual {p0, p2}, Landroid/content/SyncAdaptersCache;->getAllServices(I)Ljava/util/Collection;
 
     move-result-object v4
 
-    .line 117
     .local v4, "serviceInfos":Ljava/util/Collection;, "Ljava/util/Collection<Landroid/content/pm/RegisteredServicesCache$ServiceInfo<Landroid/content/SyncAdapterType;>;>;"
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 118
     .local v2, "packages":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-interface {v4}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
@@ -192,7 +177,6 @@
 
     check-cast v3, Landroid/content/pm/RegisteredServicesCache$ServiceInfo;
 
-    .line 119
     .local v3, "serviceInfo":Landroid/content/pm/RegisteredServicesCache$ServiceInfo;, "Landroid/content/pm/RegisteredServicesCache$ServiceInfo<Landroid/content/SyncAdapterType;>;"
     iget-object v6, v3, Landroid/content/pm/RegisteredServicesCache$ServiceInfo;->type:Ljava/lang/Object;
 
@@ -210,7 +194,6 @@
 
     if-eqz v6, :cond_2
 
-    .line 121
     iget-object v6, v3, Landroid/content/pm/RegisteredServicesCache$ServiceInfo;->componentName:Landroid/content/ComponentName;
 
     invoke-virtual {v6}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
@@ -221,7 +204,6 @@
 
     goto :goto_1
 
-    .line 129
     .end local v0    # "adapterMap":Landroid/util/ArrayMap;, "Landroid/util/ArrayMap<Ljava/lang/String;[Ljava/lang/String;>;"
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v2    # "packages":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
@@ -236,7 +218,6 @@
 
     throw v6
 
-    .line 124
     .restart local v0    # "adapterMap":Landroid/util/ArrayMap;, "Landroid/util/ArrayMap<Ljava/lang/String;[Ljava/lang/String;>;"
     .restart local v1    # "i$":Ljava/util/Iterator;
     .restart local v2    # "packages":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
@@ -249,14 +230,11 @@
 
     new-array v5, v6, [Ljava/lang/String;
 
-    .line 125
     .local v5, "syncAdapterPackages":[Ljava/lang/String;
     invoke-virtual {v2, v5}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
-    .line 126
     invoke-virtual {v0, p1, v5}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 128
     monitor-exit v7
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -271,12 +249,10 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 92
     iget-object v2, p0, Landroid/content/SyncAdaptersCache;->mServicesLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 93
     :try_start_0
     iget-object v1, p0, Landroid/content/SyncAdaptersCache;->mAuthorityToSyncAdapters:Landroid/util/SparseArray;
 
@@ -286,26 +262,20 @@
 
     check-cast v0, Landroid/util/ArrayMap;
 
-    .line 94
     .local v0, "adapterMap":Landroid/util/ArrayMap;, "Landroid/util/ArrayMap<Ljava/lang/String;[Ljava/lang/String;>;"
     if-eqz v0, :cond_0
 
-    .line 95
     invoke-virtual {v0}, Landroid/util/ArrayMap;->clear()V
 
-    .line 97
     :cond_0
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 99
     invoke-super {p0, p1}, Landroid/content/pm/RegisteredServicesCache;->onServicesChangedLocked(I)V
 
-    .line 100
     return-void
 
-    .line 97
     .end local v0    # "adapterMap":Landroid/util/ArrayMap;, "Landroid/util/ArrayMap<Ljava/lang/String;[Ljava/lang/String;>;"
     :catchall_0
     move-exception v1
@@ -323,29 +293,23 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 134
     iget-object v1, p0, Landroid/content/SyncAdaptersCache;->mServicesLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 135
     :try_start_0
     iget-object v0, p0, Landroid/content/SyncAdaptersCache;->mAuthorityToSyncAdapters:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 136
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 138
     invoke-super {p0, p1}, Landroid/content/pm/RegisteredServicesCache;->onUserRemoved(I)V
 
-    .line 139
     return-void
 
-    .line 136
     :catchall_0
     move-exception v0
 
@@ -364,14 +328,12 @@
     .param p3, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 59
     sget-object v0, Lcom/android/internal/R$styleable;->SyncAdapter:[I
 
     invoke-virtual {p1, p3, v0}, Landroid/content/res/Resources;->obtainAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v8
 
-    .line 62
     .local v8, "sa":Landroid/content/res/TypedArray;
     const/4 v0, 0x2
 
@@ -380,7 +342,6 @@
 
     move-result-object v1
 
-    .line 64
     .local v1, "authority":Ljava/lang/String;
     const/4 v0, 0x1
 
@@ -390,23 +351,19 @@
 
     move-result-object v2
 
-    .line 66
     .local v2, "accountType":Ljava/lang/String;
     if-eqz v1, :cond_0
 
     if-nez v2, :cond_1
 
-    .line 67
     :cond_0
     const/4 v0, 0x0
 
-    .line 86
     invoke-virtual {v8}, Landroid/content/res/TypedArray;->recycle()V
 
     :goto_0
     return-object v0
 
-    .line 69
     :cond_1
     const/4 v0, 0x3
 
@@ -417,7 +374,6 @@
 
     move-result v3
 
-    .line 71
     .local v3, "userVisible":Z
     const/4 v0, 0x4
 
@@ -427,7 +383,6 @@
 
     move-result v4
 
-    .line 74
     .local v4, "supportsUploading":Z
     const/4 v0, 0x6
 
@@ -437,7 +392,6 @@
 
     move-result v5
 
-    .line 77
     .local v5, "isAlwaysSyncable":Z
     const/4 v0, 0x5
 
@@ -447,7 +401,6 @@
 
     move-result v6
 
-    .line 80
     .local v6, "allowParallelSyncs":Z
     const/4 v0, 0x0
 
@@ -455,7 +408,6 @@
 
     move-result-object v7
 
-    .line 83
     .local v7, "settingsActivity":Ljava/lang/String;
     new-instance v0, Landroid/content/SyncAdapterType;
 
@@ -463,7 +415,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 86
     invoke-virtual {v8}, Landroid/content/res/TypedArray;->recycle()V
 
     goto :goto_0
@@ -490,7 +441,6 @@
     .param p3, "x2"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 41
     invoke-virtual {p0, p1, p2, p3}, Landroid/content/SyncAdaptersCache;->parseServiceAttributes(Landroid/content/res/Resources;Ljava/lang/String;Landroid/util/AttributeSet;)Landroid/content/SyncAdapterType;
 
     move-result-object v0

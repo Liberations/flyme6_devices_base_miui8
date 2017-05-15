@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 174
     iput-object p1, p0, Landroid/widget/TranslationPresenter$1;->this$0:Landroid/widget/TranslationPresenter;
 
     iput-object p2, p0, Landroid/widget/TranslationPresenter$1;->val$detailLink:Ljava/lang/String;
@@ -49,7 +48,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 177
     iget-object v2, p0, Landroid/widget/TranslationPresenter$1;->val$detailLink:Ljava/lang/String;
 
     const/4 v3, 0x1
@@ -70,7 +68,6 @@
 
     move-result-object v1
 
-    .line 178
     .local v1, "link":Ljava/lang/String;
     new-instance v0, Landroid/content/Intent;
 
@@ -82,7 +79,6 @@
 
     invoke-direct {v0, v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 179
     .local v0, "intent":Landroid/content/Intent;
     iget-object v2, p0, Landroid/widget/TranslationPresenter$1;->this$0:Landroid/widget/TranslationPresenter;
 
@@ -93,6 +89,5 @@
 
     invoke-virtual {v2, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-    .line 180
     return-void
 .end method

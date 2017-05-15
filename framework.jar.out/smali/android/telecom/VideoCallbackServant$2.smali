@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 112
     iput-object p1, p0, Landroid/telecom/VideoCallbackServant$2;->this$0:Landroid/telecom/VideoCallbackServant;
 
     invoke-direct {p0}, Lcom/android/internal/telecom/IVideoCallback$Stub;-><init>()V
@@ -43,12 +42,10 @@
     .end annotation
 
     .prologue
-    .line 145
     invoke-static {}, Lcom/android/internal/os/SomeArgs;->obtain()Lcom/android/internal/os/SomeArgs;
 
     move-result-object v0
 
-    .line 146
     .local v0, "args":Lcom/android/internal/os/SomeArgs;
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -56,7 +53,6 @@
 
     iput-object v1, v0, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
 
-    .line 147
     iget-object v1, p0, Landroid/telecom/VideoCallbackServant$2;->this$0:Landroid/telecom/VideoCallbackServant;
 
     # getter for: Landroid/telecom/VideoCallbackServant;->mHandler:Landroid/os/Handler;
@@ -72,7 +68,6 @@
 
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 148
     return-void
 .end method
 
@@ -86,7 +81,6 @@
     .end annotation
 
     .prologue
-    .line 154
     iget-object v0, p0, Landroid/telecom/VideoCallbackServant$2;->this$0:Landroid/telecom/VideoCallbackServant;
 
     # getter for: Landroid/telecom/VideoCallbackServant;->mHandler:Landroid/os/Handler;
@@ -102,7 +96,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 156
     return-void
 .end method
 
@@ -117,19 +110,15 @@
     .end annotation
 
     .prologue
-    .line 137
     invoke-static {}, Lcom/android/internal/os/SomeArgs;->obtain()Lcom/android/internal/os/SomeArgs;
 
     move-result-object v0
 
-    .line 138
     .local v0, "args":Lcom/android/internal/os/SomeArgs;
     iput p1, v0, Lcom/android/internal/os/SomeArgs;->argi1:I
 
-    .line 139
     iput p2, v0, Lcom/android/internal/os/SomeArgs;->argi2:I
 
-    .line 140
     iget-object v1, p0, Landroid/telecom/VideoCallbackServant$2;->this$0:Landroid/telecom/VideoCallbackServant;
 
     # getter for: Landroid/telecom/VideoCallbackServant;->mHandler:Landroid/os/Handler;
@@ -145,7 +134,6 @@
 
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 141
     return-void
 .end method
 
@@ -159,7 +147,6 @@
     .end annotation
 
     .prologue
-    .line 160
     iget-object v0, p0, Landroid/telecom/VideoCallbackServant$2;->this$0:Landroid/telecom/VideoCallbackServant;
 
     # getter for: Landroid/telecom/VideoCallbackServant;->mHandler:Landroid/os/Handler;
@@ -177,7 +164,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 161
     return-void
 .end method
 
@@ -191,16 +177,13 @@
     .end annotation
 
     .prologue
-    .line 130
     invoke-static {}, Lcom/android/internal/os/SomeArgs;->obtain()Lcom/android/internal/os/SomeArgs;
 
     move-result-object v0
 
-    .line 131
     .local v0, "args":Lcom/android/internal/os/SomeArgs;
     iput p1, v0, Lcom/android/internal/os/SomeArgs;->argi1:I
 
-    .line 132
     iget-object v1, p0, Landroid/telecom/VideoCallbackServant$2;->this$0:Landroid/telecom/VideoCallbackServant;
 
     # getter for: Landroid/telecom/VideoCallbackServant;->mHandler:Landroid/os/Handler;
@@ -216,7 +199,6 @@
 
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 133
     return-void
 .end method
 
@@ -230,7 +212,6 @@
     .end annotation
 
     .prologue
-    .line 115
     iget-object v0, p0, Landroid/telecom/VideoCallbackServant$2;->this$0:Landroid/telecom/VideoCallbackServant;
 
     # getter for: Landroid/telecom/VideoCallbackServant;->mHandler:Landroid/os/Handler;
@@ -246,7 +227,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 116
     return-void
 .end method
 
@@ -262,22 +242,17 @@
     .end annotation
 
     .prologue
-    .line 121
     invoke-static {}, Lcom/android/internal/os/SomeArgs;->obtain()Lcom/android/internal/os/SomeArgs;
 
     move-result-object v0
 
-    .line 122
     .local v0, "args":Lcom/android/internal/os/SomeArgs;
     iput p1, v0, Lcom/android/internal/os/SomeArgs;->argi1:I
 
-    .line 123
     iput-object p2, v0, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
 
-    .line 124
     iput-object p3, v0, Lcom/android/internal/os/SomeArgs;->arg2:Ljava/lang/Object;
 
-    .line 125
     iget-object v1, p0, Landroid/telecom/VideoCallbackServant$2;->this$0:Landroid/telecom/VideoCallbackServant;
 
     # getter for: Landroid/telecom/VideoCallbackServant;->mHandler:Landroid/os/Handler;
@@ -293,6 +268,5 @@
 
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 126
     return-void
 .end method

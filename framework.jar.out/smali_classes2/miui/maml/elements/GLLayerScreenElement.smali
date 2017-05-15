@@ -46,13 +46,10 @@
     .param p2, "root"    # Lmiui/maml/ScreenElementRoot;
 
     .prologue
-    .line 38
     invoke-direct {p0, p1, p2}, Lmiui/maml/elements/ViewHolderScreenElement;-><init>(Lorg/w3c/dom/Element;Lmiui/maml/ScreenElementRoot;)V
 
-    .line 40
     invoke-direct {p0, p1}, Lmiui/maml/elements/GLLayerScreenElement;->load(Lorg/w3c/dom/Element;)V
 
-    .line 41
     return-void
 .end method
 
@@ -61,7 +58,6 @@
     .param p0, "x0"    # Lmiui/maml/elements/GLLayerScreenElement;
 
     .prologue
-    .line 23
     iget-object v0, p0, Lmiui/maml/elements/GLLayerScreenElement;->mOnSurfaceCreateCommands:Lmiui/maml/CommandTrigger;
 
     return-object v0
@@ -72,7 +68,6 @@
     .param p0, "x0"    # Lmiui/maml/elements/GLLayerScreenElement;
 
     .prologue
-    .line 23
     iget-object v0, p0, Lmiui/maml/elements/GLLayerScreenElement;->mCanvasVar:Lmiui/maml/data/IndexedVariable;
 
     return-object v0
@@ -83,7 +78,6 @@
     .param p0, "x0"    # Lmiui/maml/elements/GLLayerScreenElement;
 
     .prologue
-    .line 23
     iget-object v0, p0, Lmiui/maml/elements/GLLayerScreenElement;->mOnSurfaceChangeCommands:Lmiui/maml/CommandTrigger;
 
     return-object v0
@@ -94,7 +88,6 @@
     .param p0, "x0"    # Lmiui/maml/elements/GLLayerScreenElement;
 
     .prologue
-    .line 23
     iget-object v0, p0, Lmiui/maml/elements/GLLayerScreenElement;->mWVar:Lmiui/maml/data/IndexedVariable;
 
     return-object v0
@@ -105,7 +98,6 @@
     .param p0, "x0"    # Lmiui/maml/elements/GLLayerScreenElement;
 
     .prologue
-    .line 23
     iget-object v0, p0, Lmiui/maml/elements/GLLayerScreenElement;->mHVar:Lmiui/maml/data/IndexedVariable;
 
     return-object v0
@@ -116,7 +108,6 @@
     .param p0, "x0"    # Lmiui/maml/elements/GLLayerScreenElement;
 
     .prologue
-    .line 23
     iget-object v0, p0, Lmiui/maml/elements/GLLayerScreenElement;->mOnSurfaceDrawCommands:Lmiui/maml/CommandTrigger;
 
     return-object v0
@@ -127,7 +118,6 @@
     .param p0, "x0"    # Lmiui/maml/elements/GLLayerScreenElement;
 
     .prologue
-    .line 23
     iget-object v0, p0, Lmiui/maml/elements/GLLayerScreenElement;->mView:Landroid/opengl/GLSurfaceView;
 
     return-object v0
@@ -142,7 +132,6 @@
 
     const/4 v3, 0x1
 
-    .line 44
     new-instance v4, Landroid/opengl/GLSurfaceView;
 
     iget-object v5, p0, Lmiui/maml/elements/GLLayerScreenElement;->mRoot:Lmiui/maml/ScreenElementRoot;
@@ -157,7 +146,6 @@
 
     iput-object v4, p0, Lmiui/maml/elements/GLLayerScreenElement;->mView:Landroid/opengl/GLSurfaceView;
 
-    .line 45
     new-instance v4, Landroid/view/WindowManager$LayoutParams;
 
     iget-object v5, p0, Lmiui/maml/elements/GLLayerScreenElement;->mRoot:Lmiui/maml/ScreenElementRoot;
@@ -180,19 +168,16 @@
 
     iput-object v4, p0, Lmiui/maml/elements/GLLayerScreenElement;->mLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
-    .line 46
     iget-object v4, p0, Lmiui/maml/elements/GLLayerScreenElement;->mLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
     iput v3, v4, Landroid/view/WindowManager$LayoutParams;->format:I
 
-    .line 47
     iget-object v4, p0, Lmiui/maml/elements/GLLayerScreenElement;->mLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
     const/16 v5, 0x100
 
     iput v5, v4, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    .line 48
     iget-object v4, p0, Lmiui/maml/elements/GLLayerScreenElement;->mView:Landroid/opengl/GLSurfaceView;
 
     new-instance v5, Lmiui/maml/elements/GLLayerScreenElement$GLRenderer;
@@ -203,26 +188,22 @@
 
     invoke-virtual {v4, v5}, Landroid/opengl/GLSurfaceView;->setRenderer(Landroid/opengl/GLSurfaceView$Renderer;)V
 
-    .line 49
     iget-object v4, p0, Lmiui/maml/elements/GLLayerScreenElement;->mController:Lmiui/maml/RendererController;
 
     if-eqz v4, :cond_2
 
     move v0, v2
 
-    .line 51
     .local v0, "renderMode":I
     :goto_0
     iget-object v4, p0, Lmiui/maml/elements/GLLayerScreenElement;->mView:Landroid/opengl/GLSurfaceView;
 
     invoke-virtual {v4, v0}, Landroid/opengl/GLSurfaceView;->setRenderMode(I)V
 
-    .line 53
     iget-object v4, p0, Lmiui/maml/elements/GLLayerScreenElement;->mTriggers:Lmiui/maml/CommandTriggers;
 
     if-eqz v4, :cond_0
 
-    .line 54
     iget-object v4, p0, Lmiui/maml/elements/GLLayerScreenElement;->mTriggers:Lmiui/maml/CommandTriggers;
 
     const-string v5, "create"
@@ -233,7 +214,6 @@
 
     iput-object v4, p0, Lmiui/maml/elements/GLLayerScreenElement;->mOnSurfaceCreateCommands:Lmiui/maml/CommandTrigger;
 
-    .line 55
     iget-object v4, p0, Lmiui/maml/elements/GLLayerScreenElement;->mTriggers:Lmiui/maml/CommandTriggers;
 
     const-string v5, "change"
@@ -244,7 +224,6 @@
 
     iput-object v4, p0, Lmiui/maml/elements/GLLayerScreenElement;->mOnSurfaceChangeCommands:Lmiui/maml/CommandTrigger;
 
-    .line 56
     iget-object v4, p0, Lmiui/maml/elements/GLLayerScreenElement;->mTriggers:Lmiui/maml/CommandTriggers;
 
     const-string v5, "draw"
@@ -255,26 +234,22 @@
 
     iput-object v4, p0, Lmiui/maml/elements/GLLayerScreenElement;->mOnSurfaceDrawCommands:Lmiui/maml/CommandTrigger;
 
-    .line 58
     :cond_0
     iget-object v4, p0, Lmiui/maml/elements/GLLayerScreenElement;->mOnSurfaceDrawCommands:Lmiui/maml/CommandTrigger;
 
     if-nez v4, :cond_1
 
-    .line 59
     const-string v4, "GLLayerScreenElement"
 
     const-string v5, "no draw commands."
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 61
     :cond_1
     invoke-virtual {p0}, Lmiui/maml/elements/GLLayerScreenElement;->getVariables()Lmiui/maml/data/Variables;
 
     move-result-object v1
 
-    .line 62
     .local v1, "vars":Lmiui/maml/data/Variables;
     new-instance v4, Lmiui/maml/data/IndexedVariable;
 
@@ -284,7 +259,6 @@
 
     iput-object v4, p0, Lmiui/maml/elements/GLLayerScreenElement;->mCanvasVar:Lmiui/maml/data/IndexedVariable;
 
-    .line 63
     new-instance v4, Lmiui/maml/data/IndexedVariable;
 
     const-string v5, "__objGLView"
@@ -293,7 +267,6 @@
 
     iput-object v4, p0, Lmiui/maml/elements/GLLayerScreenElement;->mViewVar:Lmiui/maml/data/IndexedVariable;
 
-    .line 64
     new-instance v2, Lmiui/maml/data/IndexedVariable;
 
     const-string v4, "__w"
@@ -302,7 +275,6 @@
 
     iput-object v2, p0, Lmiui/maml/elements/GLLayerScreenElement;->mWVar:Lmiui/maml/data/IndexedVariable;
 
-    .line 65
     new-instance v2, Lmiui/maml/data/IndexedVariable;
 
     const-string v4, "__h"
@@ -311,7 +283,6 @@
 
     iput-object v2, p0, Lmiui/maml/elements/GLLayerScreenElement;->mHVar:Lmiui/maml/data/IndexedVariable;
 
-    .line 66
     return-void
 
     .end local v0    # "renderMode":I
@@ -319,7 +290,6 @@
     :cond_2
     move v0, v3
 
-    .line 49
     goto :goto_0
 .end method
 
@@ -330,13 +300,10 @@
     .param p1, "currentTime"    # J
 
     .prologue
-    .line 127
     invoke-virtual {p0, p1, p2}, Lmiui/maml/elements/GLLayerScreenElement;->doTickSelf(J)V
 
-    .line 128
     invoke-virtual {p0}, Lmiui/maml/elements/GLLayerScreenElement;->udpateView()V
 
-    .line 129
     return-void
 .end method
 
@@ -344,7 +311,6 @@
     .locals 1
 
     .prologue
-    .line 139
     iget-object v0, p0, Lmiui/maml/elements/GLLayerScreenElement;->mView:Landroid/opengl/GLSurfaceView;
 
     return-object v0
@@ -354,17 +320,14 @@
     .locals 2
 
     .prologue
-    .line 133
     iget-object v0, p0, Lmiui/maml/elements/GLLayerScreenElement;->mViewVar:Lmiui/maml/data/IndexedVariable;
 
     iget-object v1, p0, Lmiui/maml/elements/GLLayerScreenElement;->mView:Landroid/opengl/GLSurfaceView;
 
     invoke-virtual {v0, v1}, Lmiui/maml/data/IndexedVariable;->set(Ljava/lang/Object;)Z
 
-    .line 134
     invoke-super {p0}, Lmiui/maml/elements/ViewHolderScreenElement;->init()V
 
-    .line 135
     return-void
 .end method
 
@@ -373,7 +336,6 @@
     .param p1, "c"    # Lmiui/maml/RendererController;
 
     .prologue
-    .line 122
     new-instance v0, Lmiui/maml/elements/GLLayerScreenElement$ProxyListener;
 
     const/4 v1, 0x0
@@ -382,6 +344,5 @@
 
     invoke-virtual {p1, v0}, Lmiui/maml/RendererController;->setListener(Lmiui/maml/RendererController$Listener;)V
 
-    .line 123
     return-void
 .end method

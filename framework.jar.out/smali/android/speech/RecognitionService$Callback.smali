@@ -29,18 +29,14 @@
     .param p3, "callingUid"    # I
 
     .prologue
-    .line 236
     iput-object p1, p0, Landroid/speech/RecognitionService$Callback;->this$0:Landroid/speech/RecognitionService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 237
     iput-object p2, p0, Landroid/speech/RecognitionService$Callback;->mListener:Landroid/speech/IRecognitionListener;
 
-    .line 238
     iput p3, p0, Landroid/speech/RecognitionService$Callback;->mCallingUid:I
 
-    .line 239
     return-void
 .end method
 
@@ -52,7 +48,6 @@
     .param p4, "x3"    # Landroid/speech/RecognitionService$1;
 
     .prologue
-    .line 232
     invoke-direct {p0, p1, p2, p3}, Landroid/speech/RecognitionService$Callback;-><init>(Landroid/speech/RecognitionService;Landroid/speech/IRecognitionListener;I)V
 
     return-void
@@ -63,7 +58,6 @@
     .param p0, "x0"    # Landroid/speech/RecognitionService$Callback;
 
     .prologue
-    .line 232
     iget-object v0, p0, Landroid/speech/RecognitionService$Callback;->mListener:Landroid/speech/IRecognitionListener;
 
     return-object v0
@@ -80,12 +74,10 @@
     .end annotation
 
     .prologue
-    .line 246
     iget-object v0, p0, Landroid/speech/RecognitionService$Callback;->mListener:Landroid/speech/IRecognitionListener;
 
     invoke-interface {v0}, Landroid/speech/IRecognitionListener;->onBeginningOfSpeech()V
 
-    .line 247
     return-void
 .end method
 
@@ -99,12 +91,10 @@
     .end annotation
 
     .prologue
-    .line 257
     iget-object v0, p0, Landroid/speech/RecognitionService$Callback;->mListener:Landroid/speech/IRecognitionListener;
 
     invoke-interface {v0, p1}, Landroid/speech/IRecognitionListener;->onBufferReceived([B)V
 
-    .line 258
     return-void
 .end method
 
@@ -117,12 +107,10 @@
     .end annotation
 
     .prologue
-    .line 264
     iget-object v0, p0, Landroid/speech/RecognitionService$Callback;->mListener:Landroid/speech/IRecognitionListener;
 
     invoke-interface {v0}, Landroid/speech/IRecognitionListener;->onEndOfSpeech()V
 
-    .line 265
     return-void
 .end method
 
@@ -136,7 +124,6 @@
     .end annotation
 
     .prologue
-    .line 273
     iget-object v0, p0, Landroid/speech/RecognitionService$Callback;->this$0:Landroid/speech/RecognitionService;
 
     # getter for: Landroid/speech/RecognitionService;->mHandler:Landroid/os/Handler;
@@ -152,12 +139,10 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 274
     iget-object v0, p0, Landroid/speech/RecognitionService$Callback;->mListener:Landroid/speech/IRecognitionListener;
 
     invoke-interface {v0, p1}, Landroid/speech/IRecognitionListener;->onError(I)V
 
-    .line 275
     return-void
 .end method
 
@@ -165,7 +150,6 @@
     .locals 1
 
     .prologue
-    .line 329
     iget v0, p0, Landroid/speech/RecognitionService$Callback;->mCallingUid:I
 
     return v0
@@ -181,12 +165,10 @@
     .end annotation
 
     .prologue
-    .line 289
     iget-object v0, p0, Landroid/speech/RecognitionService$Callback;->mListener:Landroid/speech/IRecognitionListener;
 
     invoke-interface {v0, p1}, Landroid/speech/IRecognitionListener;->onPartialResults(Landroid/os/Bundle;)V
 
-    .line 290
     return-void
 .end method
 
@@ -200,12 +182,10 @@
     .end annotation
 
     .prologue
-    .line 299
     iget-object v0, p0, Landroid/speech/RecognitionService$Callback;->mListener:Landroid/speech/IRecognitionListener;
 
     invoke-interface {v0, p1}, Landroid/speech/IRecognitionListener;->onReadyForSpeech(Landroid/os/Bundle;)V
 
-    .line 300
     return-void
 .end method
 
@@ -219,7 +199,6 @@
     .end annotation
 
     .prologue
-    .line 310
     iget-object v0, p0, Landroid/speech/RecognitionService$Callback;->this$0:Landroid/speech/RecognitionService;
 
     # getter for: Landroid/speech/RecognitionService;->mHandler:Landroid/os/Handler;
@@ -235,12 +214,10 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 311
     iget-object v0, p0, Landroid/speech/RecognitionService$Callback;->mListener:Landroid/speech/IRecognitionListener;
 
     invoke-interface {v0, p1}, Landroid/speech/IRecognitionListener;->onResults(Landroid/os/Bundle;)V
 
-    .line 312
     return-void
 .end method
 
@@ -254,11 +231,9 @@
     .end annotation
 
     .prologue
-    .line 321
     iget-object v0, p0, Landroid/speech/RecognitionService$Callback;->mListener:Landroid/speech/IRecognitionListener;
 
     invoke-interface {v0, p1}, Landroid/speech/IRecognitionListener;->onRmsChanged(F)V
 
-    .line 322
     return-void
 .end method

@@ -41,7 +41,6 @@
     .param p4, "timeoutMs"    # J
 
     .prologue
-    .line 208
     const/4 v4, 0x0
 
     move-object v1, p0
@@ -56,7 +55,6 @@
 
     invoke-direct/range {v1 .. v7}, Lmiui/securitycenter/net/NetworkDiagnostics$IcmpCheck;-><init>(Landroid/net/Network;Landroid/net/LinkProperties;Ljava/net/InetAddress;Ljava/net/InetAddress;J)V
 
-    .line 209
     return-void
 .end method
 
@@ -69,37 +67,30 @@
     .param p5, "timeoutMs"    # J
 
     .prologue
-    .line 196
     invoke-direct/range {p0 .. p6}, Lmiui/securitycenter/net/NetworkDiagnostics$SimpleSocketCheck;-><init>(Landroid/net/Network;Landroid/net/LinkProperties;Ljava/net/InetAddress;Ljava/net/InetAddress;J)V
 
-    .line 198
     iget v0, p0, Lmiui/securitycenter/net/NetworkDiagnostics$IcmpCheck;->mAddressFamily:I
 
     sget v1, Landroid/system/OsConstants;->AF_INET6:I
 
     if-ne v0, v1, :cond_0
 
-    .line 199
     sget v0, Landroid/system/OsConstants;->IPPROTO_ICMPV6:I
 
     iput v0, p0, Lmiui/securitycenter/net/NetworkDiagnostics$IcmpCheck;->mProtocol:I
 
-    .line 200
     const/16 v0, 0x80
 
     iput v0, p0, Lmiui/securitycenter/net/NetworkDiagnostics$IcmpCheck;->mIcmpType:I
 
-    .line 205
     :goto_0
     return-void
 
-    .line 202
     :cond_0
     sget v0, Landroid/system/OsConstants;->IPPROTO_ICMP:I
 
     iput v0, p0, Lmiui/securitycenter/net/NetworkDiagnostics$IcmpCheck;->mProtocol:I
 
-    .line 203
     const/16 v0, 0x8
 
     iput v0, p0, Lmiui/securitycenter/net/NetworkDiagnostics$IcmpCheck;->mIcmpType:I
@@ -120,10 +111,8 @@
     .prologue
     const/4 v14, 0x0
 
-    .line 212
     const/4 v12, 0x0
 
-    .line 214
     .local v12, "ret":Z
     :try_start_0
     sget v2, Landroid/system/OsConstants;->SOCK_DGRAM:I
@@ -143,7 +132,6 @@
     .catch Landroid/system/ErrnoException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_5
 
-    .line 221
     const/16 v1, 0x8
 
     new-array v10, v1, [B
@@ -182,11 +170,9 @@
 
     aput-byte v14, v10, v1
 
-    .line 225
     .local v10, "icmpPacket":[B
     const/4 v0, 0x0
 
-    .line 226
     .local v0, "count":I
     :goto_0
     # invokes: Lmiui/securitycenter/net/NetworkDiagnostics;->now()J
@@ -204,10 +190,8 @@
 
     if-gez v1, :cond_0
 
-    .line 227
     add-int/lit8 v0, v0, 0x1
 
-    .line 228
     array-length v1, v10
 
     add-int/lit8 v1, v1, -0x1
@@ -216,7 +200,6 @@
 
     aput-byte v2, v10, v1
 
-    .line 230
     :try_start_1
     iget-object v1, p0, Lmiui/securitycenter/net/NetworkDiagnostics$IcmpCheck;->mFileDescriptor:Ljava/io/FileDescriptor;
 
@@ -229,7 +212,6 @@
     .catch Landroid/system/ErrnoException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/io/InterruptedIOException; {:try_start_1 .. :try_end_1} :catch_4
 
-    .line 237
     const/16 v1, 0x200
 
     :try_start_2
@@ -237,7 +219,6 @@
 
     move-result-object v11
 
-    .line 238
     .local v11, "reply":Ljava/nio/ByteBuffer;
     iget-object v1, p0, Lmiui/securitycenter/net/NetworkDiagnostics$IcmpCheck;->mFileDescriptor:Ljava/io/FileDescriptor;
 
@@ -246,10 +227,8 @@
     .catch Landroid/system/ErrnoException; {:try_start_2 .. :try_end_2} :catch_2
     .catch Ljava/io/InterruptedIOException; {:try_start_2 .. :try_end_2} :catch_3
 
-    .line 240
     const/4 v12, 0x1
 
-    .line 247
     .end local v11    # "reply":Ljava/nio/ByteBuffer;
     :cond_0
     :goto_1
@@ -257,7 +236,6 @@
 
     move v13, v12
 
-    .line 248
     .end local v0    # "count":I
     .end local v10    # "icmpPacket":[B
     .end local v12    # "ret":Z
@@ -265,13 +243,11 @@
     :goto_2
     return v13
 
-    .line 215
     .end local v13    # "ret":I
     .restart local v12    # "ret":Z
     :catch_0
     move-exception v9
 
-    .line 216
     .local v9, "e":Ljava/lang/Exception;
     :goto_3
     const-string v1, "NetworkDiagnostics"
@@ -282,11 +258,9 @@
 
     move v13, v12
 
-    .line 217
     .restart local v13    # "ret":I
     goto :goto_2
 
-    .line 231
     .end local v9    # "e":Ljava/lang/Exception;
     .end local v13    # "ret":I
     .restart local v0    # "count":I
@@ -294,7 +268,6 @@
     :catch_1
     move-exception v9
 
-    .line 232
     .restart local v9    # "e":Ljava/lang/Exception;
     :goto_4
     const-string v1, "NetworkDiagnostics"
@@ -305,30 +278,25 @@
 
     goto :goto_1
 
-    .line 242
     .end local v9    # "e":Ljava/lang/Exception;
     :catch_2
     move-exception v9
 
-    .line 243
     .restart local v9    # "e":Ljava/lang/Exception;
     :goto_5
     goto :goto_0
 
-    .line 242
     .end local v9    # "e":Ljava/lang/Exception;
     :catch_3
     move-exception v9
 
     goto :goto_5
 
-    .line 231
     :catch_4
     move-exception v9
 
     goto :goto_4
 
-    .line 215
     .end local v0    # "count":I
     .end local v10    # "icmpPacket":[B
     :catch_5

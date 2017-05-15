@@ -30,7 +30,6 @@
     .locals 1
 
     .prologue
-    .line 50
     new-instance v0, Landroid/hardware/fingerprint/FingerprintFidoOut$1;
 
     invoke-direct {v0}, Landroid/hardware/fingerprint/FingerprintFidoOut$1;-><init>()V
@@ -44,7 +43,6 @@
     .locals 0
 
     .prologue
-    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -55,15 +53,12 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 17
     invoke-virtual {p1}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object v0
 
-    .line 18
     .local v0, "ba":[B
     const/4 v1, 0x0
 
@@ -71,17 +66,14 @@
 
     invoke-virtual {p1, v0, v1, v2}, Landroid/os/Parcel;->unmarshall([BII)V
 
-    .line 19
     iput-object v0, p0, Landroid/hardware/fingerprint/FingerprintFidoOut;->uvt:[B
 
-    .line 20
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Landroid/hardware/fingerprint/FingerprintFidoOut;->fingerId:I
 
-    .line 21
     return-void
 .end method
 
@@ -91,7 +83,6 @@
     .locals 1
 
     .prologue
-    .line 41
     const/4 v0, 0x0
 
     return v0
@@ -101,7 +92,6 @@
     .locals 1
 
     .prologue
-    .line 32
     iget v0, p0, Landroid/hardware/fingerprint/FingerprintFidoOut;->fingerId:I
 
     return v0
@@ -111,7 +101,6 @@
     .locals 1
 
     .prologue
-    .line 24
     iget-object v0, p0, Landroid/hardware/fingerprint/FingerprintFidoOut;->uvt:[B
 
     return-object v0
@@ -122,10 +111,8 @@
     .param p1, "fingerId"    # I
 
     .prologue
-    .line 36
     iput p1, p0, Landroid/hardware/fingerprint/FingerprintFidoOut;->fingerId:I
 
-    .line 37
     return-void
 .end method
 
@@ -134,10 +121,8 @@
     .param p1, "uvt"    # [B
 
     .prologue
-    .line 28
     iput-object p1, p0, Landroid/hardware/fingerprint/FingerprintFidoOut;->uvt:[B
 
-    .line 29
     return-void
 .end method
 
@@ -145,7 +130,6 @@
     .locals 2
 
     .prologue
-    .line 64
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -197,16 +181,13 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 46
     iget-object v0, p0, Landroid/hardware/fingerprint/FingerprintFidoOut;->uvt:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByteArray([B)V
 
-    .line 47
     iget v0, p0, Landroid/hardware/fingerprint/FingerprintFidoOut;->fingerId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 48
     return-void
 .end method

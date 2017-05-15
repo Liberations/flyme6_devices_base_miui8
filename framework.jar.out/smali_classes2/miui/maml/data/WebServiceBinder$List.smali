@@ -31,10 +31,8 @@
     .param p2, "root"    # Lmiui/maml/ScreenElementRoot;
 
     .prologue
-    .line 278
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 279
     const-string v0, "path"
 
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -43,7 +41,6 @@
 
     iput-object v0, p0, Lmiui/maml/data/WebServiceBinder$List;->mDataPath:Ljava/lang/String;
 
-    .line 280
     iget-object v0, p0, Lmiui/maml/data/WebServiceBinder$List;->mDataPath:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -52,8 +49,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 281
-    const-string/jumbo v0, "xpath"
+    const-string v0, "xpath"
 
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -61,7 +57,6 @@
 
     iput-object v0, p0, Lmiui/maml/data/WebServiceBinder$List;->mDataPath:Ljava/lang/String;
 
-    .line 283
     :cond_0
     const-string v0, "name"
 
@@ -71,10 +66,8 @@
 
     iput-object v0, p0, Lmiui/maml/data/WebServiceBinder$List;->mName:Ljava/lang/String;
 
-    .line 284
     iput-object p2, p0, Lmiui/maml/data/WebServiceBinder$List;->mRoot:Lmiui/maml/ScreenElementRoot;
 
-    .line 285
     return-void
 .end method
 
@@ -83,7 +76,6 @@
     .param p0, "x0"    # Lmiui/maml/data/WebServiceBinder$List;
 
     .prologue
-    .line 272
     iget-object v0, p0, Lmiui/maml/data/WebServiceBinder$List;->mName:Ljava/lang/String;
 
     return-object v0
@@ -96,12 +88,10 @@
     .param p1, "arr"    # Lorg/json/JSONArray;
 
     .prologue
-    .line 342
     iget-object v11, p0, Lmiui/maml/data/WebServiceBinder$List;->mList:Lmiui/maml/elements/ListScreenElement;
 
     if-nez v11, :cond_1
 
-    .line 343
     iget-object v11, p0, Lmiui/maml/data/WebServiceBinder$List;->mRoot:Lmiui/maml/ScreenElementRoot;
 
     iget-object v12, p0, Lmiui/maml/data/WebServiceBinder$List;->mName:Ljava/lang/String;
@@ -114,12 +104,10 @@
 
     iput-object v11, p0, Lmiui/maml/data/WebServiceBinder$List;->mList:Lmiui/maml/elements/ListScreenElement;
 
-    .line 344
     iget-object v11, p0, Lmiui/maml/data/WebServiceBinder$List;->mList:Lmiui/maml/elements/ListScreenElement;
 
     if-nez v11, :cond_1
 
-    .line 345
     const-string v11, "WebServiceBinder"
 
     new-instance v12, Ljava/lang/StringBuilder;
@@ -144,41 +132,34 @@
 
     invoke-static {v11, v12}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 389
     :cond_0
     return-void
 
-    .line 349
     :cond_1
     iget-object v11, p0, Lmiui/maml/data/WebServiceBinder$List;->mList:Lmiui/maml/elements/ListScreenElement;
 
     invoke-virtual {v11}, Lmiui/maml/elements/ListScreenElement;->removeAllItems()V
 
-    .line 350
     invoke-virtual {p1}, Lorg/json/JSONArray;->length()I
 
     move-result v11
 
     if-eqz v11, :cond_0
 
-    .line 352
     iget-object v11, p0, Lmiui/maml/data/WebServiceBinder$List;->mList:Lmiui/maml/elements/ListScreenElement;
 
     invoke-virtual {v11}, Lmiui/maml/elements/ListScreenElement;->getColumnsInfo()Ljava/util/ArrayList;
 
     move-result-object v4
 
-    .line 353
     .local v4, "columnsInfo":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lmiui/maml/elements/ListScreenElement$ColumnInfo;>;"
     invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
 
     move-result v3
 
-    .line 354
     .local v3, "columnSize":I
     new-array v10, v3, [Ljava/lang/Object;
 
-    .line 356
     .local v10, "objects":[Ljava/lang/Object;
     const/4 v7, 0x0
 
@@ -190,26 +171,22 @@
 
     if-ge v7, v11, :cond_0
 
-    .line 358
     :try_start_0
     invoke-virtual {p1, v7}, Lorg/json/JSONArray;->get(I)Ljava/lang/Object;
 
     move-result-object v9
 
-    .line 359
     .local v9, "object":Ljava/lang/Object;
     instance-of v11, v9, Lorg/json/JSONObject;
 
     if-nez v11, :cond_2
 
-    .line 356
     .end local v9    # "object":Ljava/lang/Object;
     :goto_1
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_0
 
-    .line 362
     .restart local v9    # "object":Ljava/lang/Object;
     :cond_2
     move-object v0, v9
@@ -218,7 +195,6 @@
 
     move-object v6, v0
 
-    .line 363
     .local v6, "ele":Lorg/json/JSONObject;
     const/4 v8, 0x0
 
@@ -226,19 +202,16 @@
     :goto_2
     if-ge v8, v3, :cond_3
 
-    .line 364
     const/4 v11, 0x0
 
     aput-object v11, v10, v8
 
-    .line 365
     invoke-virtual {v4, v8}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lmiui/maml/elements/ListScreenElement$ColumnInfo;
 
-    .line 366
     .local v2, "columnInfo":Lmiui/maml/elements/ListScreenElement$ColumnInfo;
     sget-object v11, Lmiui/maml/data/WebServiceBinder$1;->$SwitchMap$miui$maml$elements$ListScreenElement$ColumnInfo$Type:[I
 
@@ -252,13 +225,11 @@
 
     packed-switch v11, :pswitch_data_0
 
-    .line 363
     :goto_3
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_2
 
-    .line 368
     :pswitch_0
     iget-object v11, v2, Lmiui/maml/elements/ListScreenElement$ColumnInfo;->mVarName:Ljava/lang/String;
 
@@ -272,7 +243,6 @@
 
     goto :goto_3
 
-    .line 384
     .end local v2    # "columnInfo":Lmiui/maml/elements/ListScreenElement$ColumnInfo;
     .end local v6    # "ele":Lorg/json/JSONObject;
     .end local v8    # "j":I
@@ -280,7 +250,6 @@
     :catch_0
     move-exception v5
 
-    .line 385
     .local v5, "e1":Lorg/json/JSONException;
     const-string v11, "WebServiceBinder"
 
@@ -308,7 +277,6 @@
 
     invoke-static {v11, v12}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 387
     .end local v5    # "e1":Lorg/json/JSONException;
     :cond_3
     iget-object v11, p0, Lmiui/maml/data/WebServiceBinder$List;->mList:Lmiui/maml/elements/ListScreenElement;
@@ -317,7 +285,6 @@
 
     goto :goto_1
 
-    .line 372
     .restart local v2    # "columnInfo":Lmiui/maml/elements/ListScreenElement$ColumnInfo;
     .restart local v6    # "ele":Lorg/json/JSONObject;
     .restart local v8    # "j":I
@@ -338,7 +305,6 @@
 
     goto :goto_3
 
-    .line 375
     :pswitch_2
     iget-object v11, v2, Lmiui/maml/elements/ListScreenElement$ColumnInfo;->mVarName:Ljava/lang/String;
 
@@ -354,7 +320,6 @@
 
     goto :goto_3
 
-    .line 378
     :pswitch_3
     iget-object v11, v2, Lmiui/maml/elements/ListScreenElement$ColumnInfo;->mVarName:Ljava/lang/String;
 
@@ -372,7 +337,6 @@
 
     goto :goto_3
 
-    .line 366
     nop
 
     :pswitch_data_0
@@ -390,21 +354,17 @@
     .param p1, "nodeList"    # Lorg/w3c/dom/NodeList;
 
     .prologue
-    .line 288
     if-nez p1, :cond_1
 
-    .line 339
     :cond_0
     :goto_0
     return-void
 
-    .line 291
     :cond_1
     iget-object v9, p0, Lmiui/maml/data/WebServiceBinder$List;->mList:Lmiui/maml/elements/ListScreenElement;
 
     if-nez v9, :cond_2
 
-    .line 292
     iget-object v9, p0, Lmiui/maml/data/WebServiceBinder$List;->mRoot:Lmiui/maml/ScreenElementRoot;
 
     iget-object v10, p0, Lmiui/maml/data/WebServiceBinder$List;->mName:Ljava/lang/String;
@@ -417,12 +377,10 @@
 
     iput-object v9, p0, Lmiui/maml/data/WebServiceBinder$List;->mList:Lmiui/maml/elements/ListScreenElement;
 
-    .line 293
     iget-object v9, p0, Lmiui/maml/data/WebServiceBinder$List;->mList:Lmiui/maml/elements/ListScreenElement;
 
     if-nez v9, :cond_2
 
-    .line 294
     const-string v9, "WebServiceBinder"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -449,30 +407,25 @@
 
     goto :goto_0
 
-    .line 298
     :cond_2
     iget-object v9, p0, Lmiui/maml/data/WebServiceBinder$List;->mList:Lmiui/maml/elements/ListScreenElement;
 
     invoke-virtual {v9}, Lmiui/maml/elements/ListScreenElement;->removeAllItems()V
 
-    .line 299
     iget-object v9, p0, Lmiui/maml/data/WebServiceBinder$List;->mList:Lmiui/maml/elements/ListScreenElement;
 
     invoke-virtual {v9}, Lmiui/maml/elements/ListScreenElement;->getColumnsInfo()Ljava/util/ArrayList;
 
     move-result-object v2
 
-    .line 300
     .local v2, "columnsInfo":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lmiui/maml/elements/ListScreenElement$ColumnInfo;>;"
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v7
 
-    .line 301
     .local v7, "size":I
     new-array v6, v7, [Ljava/lang/Object;
 
-    .line 303
     .local v6, "objects":[Ljava/lang/Object;
     const/4 v4, 0x0
 
@@ -484,14 +437,12 @@
 
     if-ge v4, v9, :cond_0
 
-    .line 304
     invoke-interface {p1, v4}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
 
     move-result-object v3
 
     check-cast v3, Lorg/w3c/dom/Element;
 
-    .line 305
     .local v3, "ele":Lorg/w3c/dom/Element;
     const/4 v5, 0x0
 
@@ -499,19 +450,16 @@
     :goto_2
     if-ge v5, v7, :cond_4
 
-    .line 306
     const/4 v9, 0x0
 
     aput-object v9, v6, v5
 
-    .line 307
     invoke-virtual {v2, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lmiui/maml/elements/ListScreenElement$ColumnInfo;
 
-    .line 308
     .local v1, "columnInfo":Lmiui/maml/elements/ListScreenElement$ColumnInfo;
     iget-object v9, v1, Lmiui/maml/elements/ListScreenElement$ColumnInfo;->mVarName:Ljava/lang/String;
 
@@ -519,20 +467,16 @@
 
     move-result-object v0
 
-    .line 309
     .local v0, "child":Lorg/w3c/dom/Element;
     if-eqz v0, :cond_3
 
-    .line 310
     invoke-interface {v0}, Lorg/w3c/dom/Element;->getTextContent()Ljava/lang/String;
 
     move-result-object v8
 
-    .line 311
     .local v8, "textValue":Ljava/lang/String;
     if-eqz v8, :cond_3
 
-    .line 313
     :try_start_0
     sget-object v9, Lmiui/maml/data/WebServiceBinder$1;->$SwitchMap$miui$maml$elements$ListScreenElement$ColumnInfo$Type:[I
 
@@ -546,7 +490,6 @@
 
     packed-switch v9, :pswitch_data_0
 
-    .line 305
     .end local v8    # "textValue":Ljava/lang/String;
     :cond_3
     :goto_3
@@ -554,20 +497,17 @@
 
     goto :goto_2
 
-    .line 315
     .restart local v8    # "textValue":Ljava/lang/String;
     :pswitch_0
     aput-object v8, v6, v5
 
     goto :goto_3
 
-    .line 332
     :catch_0
     move-exception v9
 
     goto :goto_3
 
-    .line 318
     :pswitch_1
     invoke-static {v8}, Ljava/lang/Double;->valueOf(Ljava/lang/String;)Ljava/lang/Double;
 
@@ -577,7 +517,6 @@
 
     goto :goto_3
 
-    .line 321
     :pswitch_2
     invoke-static {v8}, Ljava/lang/Float;->valueOf(Ljava/lang/String;)Ljava/lang/Float;
 
@@ -587,7 +526,6 @@
 
     goto :goto_3
 
-    .line 324
     :pswitch_3
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
 
@@ -597,7 +535,6 @@
 
     goto :goto_3
 
-    .line 327
     :pswitch_4
     invoke-static {v8}, Ljava/lang/Long;->valueOf(Ljava/lang/String;)Ljava/lang/Long;
 
@@ -609,7 +546,6 @@
 
     goto :goto_3
 
-    .line 337
     .end local v0    # "child":Lorg/w3c/dom/Element;
     .end local v1    # "columnInfo":Lmiui/maml/elements/ListScreenElement$ColumnInfo;
     .end local v8    # "textValue":Ljava/lang/String;
@@ -618,12 +554,10 @@
 
     invoke-virtual {v9, v6}, Lmiui/maml/elements/ListScreenElement;->addItem([Ljava/lang/Object;)V
 
-    .line 303
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_1
 
-    .line 313
     nop
 
     :pswitch_data_0

@@ -31,21 +31,16 @@
     .param p2, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 163
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 157
     sget-object v0, Lmiui/maml/data/Expression$Tokenizer$TokenType;->INVALID:Lmiui/maml/data/Expression$Tokenizer$TokenType;
 
     iput-object v0, p0, Lmiui/maml/data/Expression$Tokenizer$Token;->type:Lmiui/maml/data/Expression$Tokenizer$TokenType;
 
-    .line 164
     iput-object p1, p0, Lmiui/maml/data/Expression$Tokenizer$Token;->type:Lmiui/maml/data/Expression$Tokenizer$TokenType;
 
-    .line 165
     iput-object p2, p0, Lmiui/maml/data/Expression$Tokenizer$Token;->token:Ljava/lang/String;
 
-    .line 166
     return-void
 .end method
 
@@ -56,24 +51,18 @@
     .param p3, "o"    # Lmiui/maml/data/Expression$Ope;
 
     .prologue
-    .line 168
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 157
     sget-object v0, Lmiui/maml/data/Expression$Tokenizer$TokenType;->INVALID:Lmiui/maml/data/Expression$Tokenizer$TokenType;
 
     iput-object v0, p0, Lmiui/maml/data/Expression$Tokenizer$Token;->type:Lmiui/maml/data/Expression$Tokenizer$TokenType;
 
-    .line 169
     iput-object p1, p0, Lmiui/maml/data/Expression$Tokenizer$Token;->type:Lmiui/maml/data/Expression$Tokenizer$TokenType;
 
-    .line 170
     iput-object p2, p0, Lmiui/maml/data/Expression$Tokenizer$Token;->token:Ljava/lang/String;
 
-    .line 171
     iput-object p3, p0, Lmiui/maml/data/Expression$Tokenizer$Token;->op:Lmiui/maml/data/Expression$Ope;
 
-    .line 172
     iget-object v0, p0, Lmiui/maml/data/Expression$Tokenizer$Token;->op:Lmiui/maml/data/Expression$Ope;
 
     invoke-virtual {v0}, Lmiui/maml/data/Expression$Ope;->ordinal()I
@@ -86,6 +75,5 @@
 
     iput-object v0, p0, Lmiui/maml/data/Expression$Tokenizer$Token;->info:Lmiui/maml/data/Expression$OpeInfo;
 
-    .line 173
     return-void
 .end method

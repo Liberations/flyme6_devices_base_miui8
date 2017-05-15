@@ -155,7 +155,6 @@
     .locals 1
 
     .prologue
-    .line 61
     const-class v0, Lcom/android/internal/os/BatteryStatsHelper;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -164,7 +163,6 @@
 
     sput-object v0, Lcom/android/internal/os/BatteryStatsHelper;->TAG:Ljava/lang/String;
 
-    .line 65
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
@@ -179,12 +177,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 154
     const/4 v0, 0x1
 
     invoke-direct {p0, p1, v0}, Lcom/android/internal/os/BatteryStatsHelper;-><init>(Landroid/content/Context;Z)V
 
-    .line 155
     return-void
 .end method
 
@@ -194,14 +190,12 @@
     .param p2, "collectBatteryBroadcast"    # Z
 
     .prologue
-    .line 158
     invoke-static {p1}, Lcom/android/internal/os/BatteryStatsHelper;->checkWifiOnly(Landroid/content/Context;)Z
 
     move-result v0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/android/internal/os/BatteryStatsHelper;-><init>(Landroid/content/Context;ZZ)V
 
-    .line 159
     return-void
 .end method
 
@@ -216,74 +210,58 @@
 
     const/4 v2, 0x0
 
-    .line 161
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 79
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsHelper;->mUsageList:Ljava/util/List;
 
-    .line 84
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsHelper;->mWifiSippers:Ljava/util/List;
 
-    .line 89
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsHelper;->mBluetoothSippers:Ljava/util/List;
 
-    .line 91
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsHelper;->mUserSippers:Landroid/util/SparseArray;
 
-    .line 93
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsHelper;->mMobilemsppList:Ljava/util/List;
 
-    .line 95
     iput v2, p0, Lcom/android/internal/os/BatteryStatsHelper;->mStatsType:I
 
-    .line 106
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/android/internal/os/BatteryStatsHelper;->mStatsPeriod:J
 
-    .line 109
     iput-wide v4, p0, Lcom/android/internal/os/BatteryStatsHelper;->mMaxPower:D
 
-    .line 112
     iput-wide v4, p0, Lcom/android/internal/os/BatteryStatsHelper;->mMaxRealPower:D
 
-    .line 129
     iput-boolean v2, p0, Lcom/android/internal/os/BatteryStatsHelper;->mHasWifiPowerReporting:Z
 
-    .line 130
     iput-boolean v2, p0, Lcom/android/internal/os/BatteryStatsHelper;->mHasBluetoothPowerReporting:Z
 
-    .line 162
     iput-object p1, p0, Lcom/android/internal/os/BatteryStatsHelper;->mContext:Landroid/content/Context;
 
-    .line 163
     iput-boolean p2, p0, Lcom/android/internal/os/BatteryStatsHelper;->mCollectBatteryBroadcast:Z
 
-    .line 164
     iput-boolean p3, p0, Lcom/android/internal/os/BatteryStatsHelper;->mWifiOnly:Z
 
-    .line 165
     return-void
 .end method
 
@@ -293,7 +271,6 @@
     .prologue
     const-wide/16 v10, 0x0
 
-    .line 643
     new-instance v2, Lcom/android/internal/os/BatterySipper;
 
     sget-object v0, Lcom/android/internal/os/BatterySipper$DrainType;->BLUETOOTH:Lcom/android/internal/os/BatterySipper$DrainType;
@@ -302,7 +279,6 @@
 
     invoke-direct {v2, v0, v1, v10, v11}, Lcom/android/internal/os/BatterySipper;-><init>(Lcom/android/internal/os/BatterySipper$DrainType;Landroid/os/BatteryStats$Uid;D)V
 
-    .line 644
     .local v2, "bs":Lcom/android/internal/os/BatterySipper;
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsHelper;->mBluetoothPowerCalculator:Lcom/android/internal/os/PowerCalculator;
 
@@ -316,26 +292,22 @@
 
     invoke-virtual/range {v1 .. v8}, Lcom/android/internal/os/PowerCalculator;->calculateRemaining(Lcom/android/internal/os/BatterySipper;Landroid/os/BatteryStats;JJI)V
 
-    .line 646
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsHelper;->mBluetoothSippers:Ljava/util/List;
 
     const-string v1, "Bluetooth"
 
     invoke-direct {p0, v2, v0, v1}, Lcom/android/internal/os/BatteryStatsHelper;->aggregateSippers(Lcom/android/internal/os/BatterySipper;Ljava/util/List;Ljava/lang/String;)V
 
-    .line 647
     iget-wide v0, v2, Lcom/android/internal/os/BatterySipper;->totalPowerMah:D
 
     cmpl-double v0, v0, v10
 
     if-lez v0, :cond_0
 
-    .line 648
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsHelper;->mUsageList:Ljava/util/List;
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 650
     :cond_0
     return-void
 .end method
@@ -347,7 +319,6 @@
     .param p4, "power"    # D
 
     .prologue
-    .line 676
     new-instance v0, Lcom/android/internal/os/BatterySipper;
 
     const/4 v1, 0x0
@@ -356,22 +327,17 @@
 
     invoke-direct {v0, p1, v1, v2, v3}, Lcom/android/internal/os/BatterySipper;-><init>(Lcom/android/internal/os/BatterySipper$DrainType;Landroid/os/BatteryStats$Uid;D)V
 
-    .line 677
     .local v0, "bs":Lcom/android/internal/os/BatterySipper;
     iput-wide p4, v0, Lcom/android/internal/os/BatterySipper;->usagePowerMah:D
 
-    .line 678
     iput-wide p2, v0, Lcom/android/internal/os/BatterySipper;->usageTimeMs:J
 
-    .line 679
     invoke-virtual {v0}, Lcom/android/internal/os/BatterySipper;->sumPower()D
 
-    .line 680
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsHelper;->mUsageList:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 681
     return-object v0
 .end method
 
@@ -379,7 +345,6 @@
     .locals 10
 
     .prologue
-    .line 610
     iget-wide v0, p0, Lcom/android/internal/os/BatteryStatsHelper;->mTypeBatteryRealtime:J
 
     iget-object v6, p0, Lcom/android/internal/os/BatteryStatsHelper;->mStats:Landroid/os/BatteryStats;
@@ -398,7 +363,6 @@
 
     div-long v2, v0, v6
 
-    .line 612
     .local v2, "idleTimeMs":J
     long-to-double v0, v2
 
@@ -416,7 +380,6 @@
 
     div-double v4, v0, v6
 
-    .line 617
     .local v4, "idlePower":D
     const-wide/16 v0, 0x0
 
@@ -424,14 +387,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 618
     sget-object v1, Lcom/android/internal/os/BatterySipper$DrainType;->IDLE:Lcom/android/internal/os/BatterySipper$DrainType;
 
     move-object v0, p0
 
     invoke-direct/range {v0 .. v5}, Lcom/android/internal/os/BatteryStatsHelper;->addEntry(Lcom/android/internal/os/BatterySipper$DrainType;JD)Lcom/android/internal/os/BatterySipper;
 
-    .line 620
     :cond_0
     return-void
 .end method
@@ -440,7 +401,6 @@
     .locals 8
 
     .prologue
-    .line 557
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsHelper;->mStats:Landroid/os/BatteryStats;
 
     iget-wide v6, p0, Lcom/android/internal/os/BatteryStatsHelper;->mRawRealtime:J
@@ -455,7 +415,6 @@
 
     div-long v2, v0, v6
 
-    .line 558
     .local v2, "phoneOnTimeMs":J
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsHelper;->mPowerProfile:Lcom/android/internal/os/PowerProfile;
 
@@ -473,7 +432,6 @@
 
     div-double v4, v0, v6
 
-    .line 560
     .local v4, "phoneOnPower":D
     const-wide/16 v0, 0x0
 
@@ -481,14 +439,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 561
     sget-object v1, Lcom/android/internal/os/BatterySipper$DrainType;->PHONE:Lcom/android/internal/os/BatterySipper$DrainType;
 
     move-object v0, p0
 
     invoke-direct/range {v0 .. v5}, Lcom/android/internal/os/BatteryStatsHelper;->addEntry(Lcom/android/internal/os/BatterySipper$DrainType;JD)Lcom/android/internal/os/BatterySipper;
 
-    .line 563
     :cond_0
     return-void
 .end method
@@ -499,7 +455,6 @@
     .prologue
     const-wide/16 v10, 0x0
 
-    .line 590
     new-instance v2, Lcom/android/internal/os/BatterySipper;
 
     sget-object v0, Lcom/android/internal/os/BatterySipper$DrainType;->CELL:Lcom/android/internal/os/BatterySipper$DrainType;
@@ -508,7 +463,6 @@
 
     invoke-direct {v2, v0, v1, v10, v11}, Lcom/android/internal/os/BatterySipper;-><init>(Lcom/android/internal/os/BatterySipper$DrainType;Landroid/os/BatteryStats$Uid;D)V
 
-    .line 591
     .local v2, "radio":Lcom/android/internal/os/BatterySipper;
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsHelper;->mMobileRadioPowerCalculator:Lcom/android/internal/os/MobileRadioPowerCalculator;
 
@@ -522,22 +476,18 @@
 
     invoke-virtual/range {v1 .. v8}, Lcom/android/internal/os/MobileRadioPowerCalculator;->calculateRemaining(Lcom/android/internal/os/BatterySipper;Landroid/os/BatteryStats;JJI)V
 
-    .line 593
     invoke-virtual {v2}, Lcom/android/internal/os/BatterySipper;->sumPower()D
 
-    .line 594
     iget-wide v0, v2, Lcom/android/internal/os/BatterySipper;->totalPowerMah:D
 
     cmpl-double v0, v0, v10
 
     if-lez v0, :cond_0
 
-    .line 595
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsHelper;->mUsageList:Ljava/util/List;
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 597
     :cond_0
     return-void
 .end method
@@ -546,10 +496,8 @@
     .locals 20
 
     .prologue
-    .line 566
     const-wide/16 v6, 0x0
 
-    .line 567
     .local v6, "power":D
     move-object/from16 v0, p0
 
@@ -575,7 +523,6 @@
 
     div-long v4, v2, v18
 
-    .line 568
     .local v4, "screenOnTimeMs":J
     long-to-double v2, v4
 
@@ -595,7 +542,6 @@
 
     add-double/2addr v6, v2
 
-    .line 569
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/os/BatteryStatsHelper;->mPowerProfile:Lcom/android/internal/os/PowerProfile;
@@ -606,7 +552,6 @@
 
     move-result-wide v16
 
-    .line 571
     .local v16, "screenFullPower":D
     const/4 v10, 0x0
 
@@ -616,7 +561,6 @@
 
     if-ge v10, v2, :cond_0
 
-    .line 572
     int-to-float v2, v10
 
     const/high16 v3, 0x3f000000    # 0.5f
@@ -631,7 +575,6 @@
 
     div-double v14, v2, v18
 
-    .line 574
     .local v14, "screenBinPower":D
     move-object/from16 v0, p0
 
@@ -657,22 +600,18 @@
 
     div-long v8, v2, v18
 
-    .line 576
     .local v8, "brightnessTime":J
     long-to-double v2, v8
 
     mul-double v12, v14, v2
 
-    .line 581
     .local v12, "p":D
     add-double/2addr v6, v12
 
-    .line 571
     add-int/lit8 v10, v10, 0x1
 
     goto :goto_0
 
-    .line 583
     .end local v8    # "brightnessTime":J
     .end local v12    # "p":D
     .end local v14    # "screenBinPower":D
@@ -681,21 +620,18 @@
 
     div-double/2addr v6, v2
 
-    .line 584
     const-wide/16 v2, 0x0
 
     cmpl-double v2, v6, v2
 
     if-eqz v2, :cond_1
 
-    .line 585
     sget-object v3, Lcom/android/internal/os/BatterySipper$DrainType;->SCREEN:Lcom/android/internal/os/BatterySipper$DrainType;
 
     move-object/from16 v2, p0
 
     invoke-direct/range {v2 .. v7}, Lcom/android/internal/os/BatteryStatsHelper;->addEntry(Lcom/android/internal/os/BatterySipper$DrainType;JD)Lcom/android/internal/os/BatterySipper;
 
-    .line 587
     :cond_1
     return-void
 .end method
@@ -704,7 +640,6 @@
     .locals 8
 
     .prologue
-    .line 653
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -717,14 +652,12 @@
 
     if-ge v1, v3, :cond_0
 
-    .line 654
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsHelper;->mUserSippers:Landroid/util/SparseArray;
 
     invoke-virtual {v3, v1}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v2
 
-    .line 655
     .local v2, "userId":I
     new-instance v0, Lcom/android/internal/os/BatterySipper;
 
@@ -736,11 +669,9 @@
 
     invoke-direct {v0, v3, v4, v6, v7}, Lcom/android/internal/os/BatterySipper;-><init>(Lcom/android/internal/os/BatterySipper$DrainType;Landroid/os/BatteryStats$Uid;D)V
 
-    .line 656
     .local v0, "bs":Lcom/android/internal/os/BatterySipper;
     iput v2, v0, Lcom/android/internal/os/BatterySipper;->userId:I
 
-    .line 657
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsHelper;->mUserSippers:Landroid/util/SparseArray;
 
     invoke-virtual {v3, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -753,17 +684,14 @@
 
     invoke-direct {p0, v0, v3, v4}, Lcom/android/internal/os/BatteryStatsHelper;->aggregateSippers(Lcom/android/internal/os/BatterySipper;Ljava/util/List;Ljava/lang/String;)V
 
-    .line 658
     iget-object v3, p0, Lcom/android/internal/os/BatteryStatsHelper;->mUsageList:Ljava/util/List;
 
     invoke-interface {v3, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 653
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 660
     .end local v0    # "bs":Lcom/android/internal/os/BatterySipper;
     .end local v2    # "userId":I
     :cond_0
@@ -776,7 +704,6 @@
     .prologue
     const-wide/16 v10, 0x0
 
-    .line 630
     new-instance v2, Lcom/android/internal/os/BatterySipper;
 
     sget-object v0, Lcom/android/internal/os/BatterySipper$DrainType;->WIFI:Lcom/android/internal/os/BatterySipper$DrainType;
@@ -785,7 +712,6 @@
 
     invoke-direct {v2, v0, v1, v10, v11}, Lcom/android/internal/os/BatterySipper;-><init>(Lcom/android/internal/os/BatterySipper$DrainType;Landroid/os/BatteryStats$Uid;D)V
 
-    .line 631
     .local v2, "bs":Lcom/android/internal/os/BatterySipper;
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsHelper;->mWifiPowerCalculator:Lcom/android/internal/os/PowerCalculator;
 
@@ -799,26 +725,22 @@
 
     invoke-virtual/range {v1 .. v8}, Lcom/android/internal/os/PowerCalculator;->calculateRemaining(Lcom/android/internal/os/BatterySipper;Landroid/os/BatteryStats;JJI)V
 
-    .line 632
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsHelper;->mWifiSippers:Ljava/util/List;
 
     const-string v1, "WIFI"
 
     invoke-direct {p0, v2, v0, v1}, Lcom/android/internal/os/BatteryStatsHelper;->aggregateSippers(Lcom/android/internal/os/BatterySipper;Ljava/util/List;Ljava/lang/String;)V
 
-    .line 633
     iget-wide v0, v2, Lcom/android/internal/os/BatterySipper;->totalPowerMah:D
 
     cmpl-double v0, v0, v10
 
     if-lez v0, :cond_0
 
-    .line 634
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsHelper;->mUsageList:Ljava/util/List;
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 636
     :cond_0
     return-void
 .end method
@@ -841,7 +763,6 @@
     .end annotation
 
     .prologue
-    .line 600
     .local p2, "from":Ljava/util/List;, "Ljava/util/List<Lcom/android/internal/os/BatterySipper;>;"
     const/4 v0, 0x0
 
@@ -853,31 +774,25 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 601
     invoke-interface {p2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/android/internal/os/BatterySipper;
 
-    .line 603
     .local v1, "wbs":Lcom/android/internal/os/BatterySipper;
     invoke-virtual {p1, v1}, Lcom/android/internal/os/BatterySipper;->add(Lcom/android/internal/os/BatterySipper;)V
 
-    .line 600
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 605
     .end local v1    # "wbs":Lcom/android/internal/os/BatterySipper;
     :cond_0
     invoke-virtual {p1}, Lcom/android/internal/os/BatterySipper;->computeMobilemspp()V
 
-    .line 606
     invoke-virtual {p1}, Lcom/android/internal/os/BatterySipper;->sumPower()D
 
-    .line 607
     return-void
 .end method
 
@@ -889,7 +804,6 @@
     .prologue
     const-wide/16 v2, 0x0
 
-    .line 147
     invoke-virtual {p0}, Landroid/os/BatteryStats;->hasBluetoothActivityReporting()Z
 
     move-result v0
@@ -945,14 +859,13 @@
     .prologue
     const-wide/16 v2, 0x0
 
-    .line 139
     invoke-virtual {p0}, Landroid/os/BatteryStats;->hasWifiActivityReporting()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    const-string/jumbo v0, "wifi.controller.idle"
+    const-string v0, "wifi.controller.idle"
 
     invoke-virtual {p1, v0}, Lcom/android/internal/os/PowerProfile;->getAveragePower(Ljava/lang/String;)D
 
@@ -962,7 +875,7 @@
 
     if-eqz v0, :cond_0
 
-    const-string/jumbo v0, "wifi.controller.rx"
+    const-string v0, "wifi.controller.rx"
 
     invoke-virtual {p1, v0}, Lcom/android/internal/os/PowerProfile;->getAveragePower(Ljava/lang/String;)D
 
@@ -972,7 +885,7 @@
 
     if-eqz v0, :cond_0
 
-    const-string/jumbo v0, "wifi.controller.tx"
+    const-string v0, "wifi.controller.tx"
 
     invoke-virtual {p1, v0}, Lcom/android/internal/os/PowerProfile;->getAveragePower(Ljava/lang/String;)D
 
@@ -1000,7 +913,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 133
     const-string v2, "connectivity"
 
     invoke-virtual {p0, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -1009,7 +921,6 @@
 
     check-cast v0, Landroid/net/ConnectivityManager;
 
-    .line 135
     .local v0, "cm":Landroid/net/ConnectivityManager;
     invoke-virtual {v0, v1}, Landroid/net/ConnectivityManager;->isNetworkSupported(I)Z
 
@@ -1029,14 +940,12 @@
     .param p1, "fname"    # Ljava/lang/String;
 
     .prologue
-    .line 222
     invoke-static {p0, p1}, Lcom/android/internal/os/BatteryStatsHelper;->makeFilePath(Landroid/content/Context;Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v0
 
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
-    .line 223
     return-void
 .end method
 
@@ -1045,7 +954,6 @@
     .param p0, "service"    # Lcom/android/internal/app/IBatteryStats;
 
     .prologue
-    .line 755
     :try_start_0
     invoke-interface {p0}, Lcom/android/internal/app/IBatteryStats;->getStatisticsStream()Landroid/os/ParcelFileDescriptor;
     :try_end_0
@@ -1053,11 +961,9 @@
 
     move-result-object v4
 
-    .line 756
     .local v4, "pfd":Landroid/os/ParcelFileDescriptor;
     if-eqz v4, :cond_1
 
-    .line 757
     :try_start_1
     new-instance v2, Landroid/os/ParcelFileDescriptor$AutoCloseInputStream;
 
@@ -1069,7 +975,6 @@
     .local v2, "fis":Ljava/io/FileInputStream;
     const/4 v8, 0x0
 
-    .line 758
     :try_start_2
     invoke-virtual {v4}, Landroid/os/ParcelFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
 
@@ -1083,13 +988,11 @@
 
     move-result-object v0
 
-    .line 759
     .local v0, "data":[B
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v3
 
-    .line 760
     .local v3, "parcel":Landroid/os/Parcel;
     const/4 v7, 0x0
 
@@ -1097,12 +1000,10 @@
 
     invoke-virtual {v3, v0, v7, v9}, Landroid/os/Parcel;->unmarshall([BII)V
 
-    .line 761
     const/4 v7, 0x0
 
     invoke-virtual {v3, v7}, Landroid/os/Parcel;->setDataPosition(I)V
 
-    .line 762
     sget-object v7, Lcom/android/internal/os/BatteryStatsImpl;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v7, v3}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -1114,7 +1015,6 @@
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_3
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 765
     .local v5, "stats":Lcom/android/internal/os/BatteryStatsImpl;
     if-eqz v2, :cond_0
 
@@ -1127,7 +1027,6 @@
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_1
     .catch Landroid/os/RemoteException; {:try_start_3 .. :try_end_3} :catch_2
 
-    .line 772
     .end local v0    # "data":[B
     .end local v2    # "fis":Ljava/io/FileInputStream;
     .end local v3    # "parcel":Landroid/os/Parcel;
@@ -1137,7 +1036,6 @@
     :goto_0
     return-object v5
 
-    .line 765
     .restart local v0    # "data":[B
     .restart local v2    # "fis":Ljava/io/FileInputStream;
     .restart local v3    # "parcel":Landroid/os/Parcel;
@@ -1163,7 +1061,6 @@
     :catch_1
     move-exception v1
 
-    .line 766
     .local v1, "e":Ljava/io/IOException;
     :try_start_5
     sget-object v7, Lcom/android/internal/os/BatteryStatsHelper;->TAG:Ljava/lang/String;
@@ -1174,7 +1071,6 @@
     :try_end_5
     .catch Landroid/os/RemoteException; {:try_start_5 .. :try_end_5} :catch_2
 
-    .line 772
     .end local v1    # "e":Ljava/io/IOException;
     .end local v4    # "pfd":Landroid/os/ParcelFileDescriptor;
     :cond_1
@@ -1185,7 +1081,6 @@
 
     goto :goto_0
 
-    .line 765
     .restart local v0    # "data":[B
     .restart local v2    # "fis":Ljava/io/FileInputStream;
     .restart local v3    # "parcel":Landroid/os/Parcel;
@@ -1200,7 +1095,6 @@
 
     goto :goto_0
 
-    .line 769
     .end local v0    # "data":[B
     .end local v2    # "fis":Ljava/io/FileInputStream;
     .end local v3    # "parcel":Landroid/os/Parcel;
@@ -1209,7 +1103,6 @@
     :catch_2
     move-exception v1
 
-    .line 770
     .local v1, "e":Landroid/os/RemoteException;
     sget-object v7, Lcom/android/internal/os/BatteryStatsHelper;->TAG:Ljava/lang/String;
 
@@ -1219,7 +1112,6 @@
 
     goto :goto_1
 
-    .line 757
     .end local v1    # "e":Landroid/os/RemoteException;
     .restart local v2    # "fis":Ljava/io/FileInputStream;
     .restart local v4    # "pfd":Landroid/os/ParcelFileDescriptor;
@@ -1231,7 +1123,6 @@
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
 
-    .line 765
     :catchall_0
     move-exception v8
 
@@ -1285,17 +1176,14 @@
     .locals 4
 
     .prologue
-    .line 743
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsHelper;->mBatteryInfo:Lcom/android/internal/app/IBatteryStats;
 
     if-nez v0, :cond_1
 
-    .line 751
     :cond_0
     :goto_0
     return-void
 
-    .line 746
     :cond_1
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsHelper;->mBatteryInfo:Lcom/android/internal/app/IBatteryStats;
 
@@ -1305,12 +1193,10 @@
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsHelper;->mStats:Landroid/os/BatteryStats;
 
-    .line 747
     iget-boolean v0, p0, Lcom/android/internal/os/BatteryStatsHelper;->mCollectBatteryBroadcast:Z
 
     if-eqz v0, :cond_0
 
-    .line 748
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsHelper;->mContext:Landroid/content/Context;
 
     const/4 v1, 0x0
@@ -1336,7 +1222,6 @@
     .param p1, "fname"    # Ljava/lang/String;
 
     .prologue
-    .line 226
     new-instance v0, Ljava/io/File;
 
     invoke-virtual {p0}, Landroid/content/Context;->getFilesDir()Ljava/io/File;
@@ -1353,7 +1238,6 @@
     .param p0, "power"    # D
 
     .prologue
-    .line 273
     const-wide/16 v2, 0x0
 
     cmpl-double v1, p0, v2
@@ -1362,11 +1246,9 @@
 
     const-string v1, "0"
 
-    .line 287
     :goto_0
     return-object v1
 
-    .line 276
     :cond_0
     const-wide v2, 0x3ee4f8b588e368f1L    # 1.0E-5
 
@@ -1376,7 +1258,6 @@
 
     const-string v0, "%.8f"
 
-    .line 287
     .local v0, "format":Ljava/lang/String;
     :goto_1
     sget-object v1, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
@@ -1399,7 +1280,6 @@
 
     goto :goto_0
 
-    .line 277
     .end local v0    # "format":Ljava/lang/String;
     :cond_1
     const-wide v2, 0x3f1a36e2eb1c432dL    # 1.0E-4
@@ -1413,7 +1293,6 @@
     .restart local v0    # "format":Ljava/lang/String;
     goto :goto_1
 
-    .line 278
     .end local v0    # "format":Ljava/lang/String;
     :cond_2
     const-wide v2, 0x3f50624dd2f1a9fcL    # 0.001
@@ -1427,7 +1306,6 @@
     .restart local v0    # "format":Ljava/lang/String;
     goto :goto_1
 
-    .line 279
     .end local v0    # "format":Ljava/lang/String;
     :cond_3
     const-wide v2, 0x3f847ae147ae147bL    # 0.01
@@ -1441,7 +1319,6 @@
     .restart local v0    # "format":Ljava/lang/String;
     goto :goto_1
 
-    .line 280
     .end local v0    # "format":Ljava/lang/String;
     :cond_4
     const-wide v2, 0x3fb999999999999aL    # 0.1
@@ -1455,7 +1332,6 @@
     .restart local v0    # "format":Ljava/lang/String;
     goto :goto_1
 
-    .line 281
     .end local v0    # "format":Ljava/lang/String;
     :cond_5
     const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
@@ -1469,7 +1345,6 @@
     .restart local v0    # "format":Ljava/lang/String;
     goto :goto_1
 
-    .line 282
     .end local v0    # "format":Ljava/lang/String;
     :cond_6
     const-wide/high16 v2, 0x4024000000000000L    # 10.0
@@ -1483,7 +1358,6 @@
     .restart local v0    # "format":Ljava/lang/String;
     goto :goto_1
 
-    .line 283
     .end local v0    # "format":Ljava/lang/String;
     :cond_7
     const-wide/high16 v2, 0x4059000000000000L    # 100.0
@@ -1497,7 +1371,6 @@
     .restart local v0    # "format":Ljava/lang/String;
     goto :goto_1
 
-    .line 284
     .end local v0    # "format":Ljava/lang/String;
     :cond_8
     const-string v0, "%.0f"
@@ -1519,7 +1392,6 @@
     .end annotation
 
     .prologue
-    .line 491
     .local p1, "asUsers":Landroid/util/SparseArray;, "Landroid/util/SparseArray<Landroid/os/UserHandle;>;"
     const/4 v3, -0x1
 
@@ -1533,7 +1405,6 @@
 
     const/4 v15, 0x1
 
-    .line 492
     .local v15, "forAllUsers":Z
     :goto_0
     move-object/from16 v0, p0
@@ -1544,10 +1415,8 @@
 
     iput-wide v6, v0, Lcom/android/internal/os/BatteryStatsHelper;->mStatsPeriod:J
 
-    .line 494
     const/16 v18, 0x0
 
-    .line 495
     .local v18, "osSipper":Lcom/android/internal/os/BatterySipper;
     move-object/from16 v0, p0
 
@@ -1557,13 +1426,11 @@
 
     move-result-object v22
 
-    .line 496
     .local v22, "uidStats":Landroid/util/SparseArray;, "Landroid/util/SparseArray<+Landroid/os/BatteryStats$Uid;>;"
     invoke-virtual/range {v22 .. v22}, Landroid/util/SparseArray;->size()I
 
     move-result v2
 
-    .line 497
     .local v2, "NU":I
     const/16 v16, 0x0
 
@@ -1573,7 +1440,6 @@
 
     if-ge v0, v2, :cond_7
 
-    .line 498
     move-object/from16 v0, v22
 
     move/from16 v1, v16
@@ -1584,7 +1450,6 @@
 
     check-cast v5, Landroid/os/BatteryStats$Uid;
 
-    .line 499
     .local v5, "u":Landroid/os/BatteryStats$Uid;
     new-instance v4, Lcom/android/internal/os/BatterySipper;
 
@@ -1594,7 +1459,6 @@
 
     invoke-direct {v4, v3, v5, v6, v7}, Lcom/android/internal/os/BatterySipper;-><init>(Lcom/android/internal/os/BatterySipper$DrainType;Landroid/os/BatteryStats$Uid;D)V
 
-    .line 501
     .local v4, "app":Lcom/android/internal/os/BatterySipper;
     move-object/from16 v0, p0
 
@@ -1614,7 +1478,6 @@
 
     invoke-virtual/range {v3 .. v10}, Lcom/android/internal/os/PowerCalculator;->calculateApp(Lcom/android/internal/os/BatterySipper;Landroid/os/BatteryStats$Uid;JJI)V
 
-    .line 502
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/os/BatteryStatsHelper;->mWakelockPowerCalculator:Lcom/android/internal/os/PowerCalculator;
@@ -1633,7 +1496,6 @@
 
     invoke-virtual/range {v3 .. v10}, Lcom/android/internal/os/PowerCalculator;->calculateApp(Lcom/android/internal/os/BatterySipper;Landroid/os/BatteryStats$Uid;JJI)V
 
-    .line 503
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/os/BatteryStatsHelper;->mMobileRadioPowerCalculator:Lcom/android/internal/os/MobileRadioPowerCalculator;
@@ -1652,7 +1514,6 @@
 
     invoke-virtual/range {v3 .. v10}, Lcom/android/internal/os/MobileRadioPowerCalculator;->calculateApp(Lcom/android/internal/os/BatterySipper;Landroid/os/BatteryStats$Uid;JJI)V
 
-    .line 504
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/os/BatteryStatsHelper;->mWifiPowerCalculator:Lcom/android/internal/os/PowerCalculator;
@@ -1671,7 +1532,6 @@
 
     invoke-virtual/range {v3 .. v10}, Lcom/android/internal/os/PowerCalculator;->calculateApp(Lcom/android/internal/os/BatterySipper;Landroid/os/BatteryStats$Uid;JJI)V
 
-    .line 505
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/os/BatteryStatsHelper;->mBluetoothPowerCalculator:Lcom/android/internal/os/PowerCalculator;
@@ -1690,7 +1550,6 @@
 
     invoke-virtual/range {v3 .. v10}, Lcom/android/internal/os/PowerCalculator;->calculateApp(Lcom/android/internal/os/BatterySipper;Landroid/os/BatteryStats$Uid;JJI)V
 
-    .line 506
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/os/BatteryStatsHelper;->mSensorPowerCalculator:Lcom/android/internal/os/PowerCalculator;
@@ -1709,7 +1568,6 @@
 
     invoke-virtual/range {v3 .. v10}, Lcom/android/internal/os/PowerCalculator;->calculateApp(Lcom/android/internal/os/BatterySipper;Landroid/os/BatteryStats$Uid;JJI)V
 
-    .line 507
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/os/BatteryStatsHelper;->mCameraPowerCalculator:Lcom/android/internal/os/PowerCalculator;
@@ -1728,7 +1586,6 @@
 
     invoke-virtual/range {v3 .. v10}, Lcom/android/internal/os/PowerCalculator;->calculateApp(Lcom/android/internal/os/BatterySipper;Landroid/os/BatteryStats$Uid;JJI)V
 
-    .line 508
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/os/BatteryStatsHelper;->mFlashlightPowerCalculator:Lcom/android/internal/os/PowerCalculator;
@@ -1747,12 +1604,10 @@
 
     invoke-virtual/range {v3 .. v10}, Lcom/android/internal/os/PowerCalculator;->calculateApp(Lcom/android/internal/os/BatterySipper;Landroid/os/BatteryStats$Uid;JJI)V
 
-    .line 510
     invoke-virtual {v4}, Lcom/android/internal/os/BatterySipper;->sumPower()D
 
     move-result-wide v20
 
-    .line 517
     .local v20, "totalPower":D
     const-wide/16 v6, 0x0
 
@@ -1766,19 +1621,16 @@
 
     if-nez v3, :cond_1
 
-    .line 521
     :cond_0
     invoke-virtual {v4}, Lcom/android/internal/os/BatterySipper;->getUid()I
 
     move-result v19
 
-    .line 522
     .local v19, "uid":I
     invoke-static/range {v19 .. v19}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v23
 
-    .line 523
     .local v23, "userId":I
     const/16 v3, 0x3f2
 
@@ -1786,21 +1638,17 @@
 
     if-ne v0, v3, :cond_3
 
-    .line 524
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/os/BatteryStatsHelper;->mWifiSippers:Ljava/util/List;
 
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 540
     :goto_2
     if-nez v19, :cond_1
 
-    .line 541
     move-object/from16 v18, v4
 
-    .line 497
     .end local v19    # "uid":I
     .end local v23    # "userId":I
     :cond_1
@@ -1808,7 +1656,6 @@
 
     goto/16 :goto_1
 
-    .line 491
     .end local v2    # "NU":I
     .end local v4    # "app":Lcom/android/internal/os/BatterySipper;
     .end local v5    # "u":Landroid/os/BatteryStats$Uid;
@@ -1822,7 +1669,6 @@
 
     goto/16 :goto_0
 
-    .line 525
     .restart local v2    # "NU":I
     .restart local v4    # "app":Lcom/android/internal/os/BatterySipper;
     .restart local v5    # "u":Landroid/os/BatteryStats$Uid;
@@ -1840,7 +1686,6 @@
 
     if-ne v0, v3, :cond_4
 
-    .line 526
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/os/BatteryStatsHelper;->mBluetoothSippers:Ljava/util/List;
@@ -1849,7 +1694,6 @@
 
     goto :goto_2
 
-    .line 527
     :cond_4
     if-nez v15, :cond_6
 
@@ -1871,7 +1715,6 @@
 
     if-lt v3, v6, :cond_6
 
-    .line 530
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/os/BatteryStatsHelper;->mUserSippers:Landroid/util/SparseArray;
@@ -1884,17 +1727,14 @@
 
     check-cast v17, Ljava/util/List;
 
-    .line 531
     .local v17, "list":Ljava/util/List;, "Ljava/util/List<Lcom/android/internal/os/BatterySipper;>;"
     if-nez v17, :cond_5
 
-    .line 532
     new-instance v17, Ljava/util/ArrayList;
 
     .end local v17    # "list":Ljava/util/List;, "Ljava/util/List<Lcom/android/internal/os/BatterySipper;>;"
     invoke-direct/range {v17 .. v17}, Ljava/util/ArrayList;-><init>()V
 
-    .line 533
     .restart local v17    # "list":Ljava/util/List;, "Ljava/util/List<Lcom/android/internal/os/BatterySipper;>;"
     move-object/from16 v0, p0
 
@@ -1906,7 +1746,6 @@
 
     invoke-virtual {v3, v0, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 535
     :cond_5
     move-object/from16 v0, v17
 
@@ -1914,7 +1753,6 @@
 
     goto :goto_2
 
-    .line 537
     .end local v17    # "list":Ljava/util/List;, "Ljava/util/List<Lcom/android/internal/os/BatterySipper;>;"
     :cond_6
     move-object/from16 v0, p0
@@ -1925,7 +1763,6 @@
 
     goto :goto_2
 
-    .line 546
     .end local v4    # "app":Lcom/android/internal/os/BatterySipper;
     .end local v5    # "u":Landroid/os/BatteryStats$Uid;
     .end local v19    # "uid":I
@@ -1934,7 +1771,6 @@
     :cond_7
     if-eqz v18, :cond_8
 
-    .line 550
     move-object/from16 v0, p0
 
     iget-object v7, v0, Lcom/android/internal/os/BatteryStatsHelper;->mWakelockPowerCalculator:Lcom/android/internal/os/PowerCalculator;
@@ -1959,10 +1795,8 @@
 
     invoke-virtual/range {v7 .. v14}, Lcom/android/internal/os/PowerCalculator;->calculateRemaining(Lcom/android/internal/os/BatterySipper;Landroid/os/BatteryStats;JJI)V
 
-    .line 552
     invoke-virtual/range {v18 .. v18}, Lcom/android/internal/os/BatterySipper;->sumPower()D
 
-    .line 554
     :cond_8
     return-void
 .end method
@@ -1971,33 +1805,24 @@
     .locals 1
 
     .prologue
-    .line 663
     invoke-direct {p0}, Lcom/android/internal/os/BatteryStatsHelper;->addUserUsage()V
 
-    .line 664
     invoke-direct {p0}, Lcom/android/internal/os/BatteryStatsHelper;->addPhoneUsage()V
 
-    .line 665
     invoke-direct {p0}, Lcom/android/internal/os/BatteryStatsHelper;->addScreenUsage()V
 
-    .line 666
     invoke-direct {p0}, Lcom/android/internal/os/BatteryStatsHelper;->addWiFiUsage()V
 
-    .line 667
     invoke-direct {p0}, Lcom/android/internal/os/BatteryStatsHelper;->addBluetoothUsage()V
 
-    .line 668
     invoke-direct {p0}, Lcom/android/internal/os/BatteryStatsHelper;->addIdleUsage()V
 
-    .line 670
     iget-boolean v0, p0, Lcom/android/internal/os/BatteryStatsHelper;->mWifiOnly:Z
 
     if-nez v0, :cond_0
 
-    .line 671
     invoke-direct {p0}, Lcom/android/internal/os/BatteryStatsHelper;->addRadioUsage()V
 
-    .line 673
     :cond_0
     return-void
 .end method
@@ -2012,7 +1837,6 @@
     .end annotation
 
     .prologue
-    .line 717
     invoke-virtual {p0}, Ljava/io/FileInputStream;->available()I
 
     move-result v0
@@ -2037,14 +1861,11 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 721
     const/4 v3, 0x0
 
-    .line 722
     .local v3, "pos":I
     new-array v1, p1, [B
 
-    .line 724
     .local v1, "data":[B
     :cond_0
     :goto_0
@@ -2056,39 +1877,31 @@
 
     move-result v0
 
-    .line 727
     .local v0, "amt":I
     if-gtz v0, :cond_1
 
-    .line 730
     return-object v1
 
-    .line 732
     :cond_1
     add-int/2addr v3, v0
 
-    .line 733
     invoke-virtual {p0}, Ljava/io/FileInputStream;->available()I
 
     move-result p1
 
-    .line 734
     array-length v4, v1
 
     sub-int/2addr v4, v3
 
     if-le p1, v4, :cond_0
 
-    .line 735
     add-int v4, v3, p1
 
     new-array v2, v4, [B
 
-    .line 736
     .local v2, "newData":[B
     invoke-static {v1, v5, v2, v5, v3}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 737
     move-object v1, v2
 
     goto :goto_0
@@ -2100,18 +1913,15 @@
     .param p1, "fname"    # Ljava/lang/String;
 
     .prologue
-    .line 192
     sget-object v8, Lcom/android/internal/os/BatteryStatsHelper;->sFileXfer:Landroid/util/ArrayMap;
 
     monitor-enter v8
 
-    .line 193
     :try_start_0
     invoke-static {p0, p1}, Lcom/android/internal/os/BatteryStatsHelper;->makeFilePath(Landroid/content/Context;Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v5
 
-    .line 194
     .local v5, "path":Ljava/io/File;
     sget-object v7, Lcom/android/internal/os/BatteryStatsHelper;->sFileXfer:Landroid/util/ArrayMap;
 
@@ -2121,26 +1931,21 @@
 
     check-cast v6, Landroid/os/BatteryStats;
 
-    .line 195
     .local v6, "stats":Landroid/os/BatteryStats;
     if-eqz v6, :cond_0
 
-    .line 196
     monitor-exit v8
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 217
     .end local v6    # "stats":Landroid/os/BatteryStats;
     :goto_0
     return-object v6
 
-    .line 198
     .restart local v6    # "stats":Landroid/os/BatteryStats;
     :cond_0
     const/4 v2, 0x0
 
-    .line 200
     .local v2, "fin":Ljava/io/FileInputStream;
     :try_start_1
     new-instance v3, Ljava/io/FileInputStream;
@@ -2150,7 +1955,6 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 201
     .end local v2    # "fin":Ljava/io/FileInputStream;
     .local v3, "fin":Ljava/io/FileInputStream;
     :try_start_2
@@ -2158,13 +1962,11 @@
 
     move-result-object v0
 
-    .line 202
     .local v0, "data":[B
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v4
 
-    .line 203
     .local v4, "parcel":Landroid/os/Parcel;
     const/4 v7, 0x0
 
@@ -2172,12 +1974,10 @@
 
     invoke-virtual {v4, v0, v7, v9}, Landroid/os/Parcel;->unmarshall([BII)V
 
-    .line 204
     const/4 v7, 0x0
 
     invoke-virtual {v4, v7}, Landroid/os/Parcel;->setDataPosition(I)V
 
-    .line 205
     sget-object v7, Lcom/android/internal/os/BatteryStatsImpl;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v7, v4}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -2189,17 +1989,14 @@
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_4
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 209
     if-eqz v3, :cond_1
 
-    .line 211
     :try_start_3
     invoke-virtual {v3}, Ljava/io/FileInputStream;->close()V
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_1
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 213
     :cond_1
     :goto_1
     :try_start_4
@@ -2211,7 +2008,6 @@
 
     goto :goto_0
 
-    .line 206
     .end local v0    # "data":[B
     .end local v3    # "fin":Ljava/io/FileInputStream;
     .end local v4    # "parcel":Landroid/os/Parcel;
@@ -2219,7 +2015,6 @@
     :catch_0
     move-exception v1
 
-    .line 207
     .local v1, "e":Ljava/io/IOException;
     :goto_2
     :try_start_5
@@ -2231,17 +2026,14 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 209
     if-eqz v2, :cond_2
 
-    .line 211
     :try_start_6
     invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
     :try_end_6
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_2
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-    .line 216
     :cond_2
     :goto_3
     :try_start_7
@@ -2249,7 +2041,6 @@
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_1
 
-    .line 217
     const-string v7, "batterystats"
 
     invoke-static {v7}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -2266,7 +2057,6 @@
 
     goto :goto_0
 
-    .line 209
     .end local v1    # "e":Ljava/io/IOException;
     :catchall_0
     move-exception v7
@@ -2274,20 +2064,17 @@
     :goto_4
     if-eqz v2, :cond_3
 
-    .line 211
     :try_start_8
     invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
     :try_end_8
     .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_3
     .catchall {:try_start_8 .. :try_end_8} :catchall_1
 
-    .line 213
     :cond_3
     :goto_5
     :try_start_9
     throw v7
 
-    .line 216
     .end local v2    # "fin":Ljava/io/FileInputStream;
     .end local v5    # "path":Ljava/io/File;
     .end local v6    # "stats":Landroid/os/BatteryStats;
@@ -2300,7 +2087,6 @@
 
     throw v7
 
-    .line 212
     .restart local v0    # "data":[B
     .restart local v3    # "fin":Ljava/io/FileInputStream;
     .restart local v4    # "parcel":Landroid/os/Parcel;
@@ -2327,7 +2113,6 @@
 
     goto :goto_5
 
-    .line 209
     .end local v2    # "fin":Ljava/io/FileInputStream;
     .restart local v3    # "fin":Ljava/io/FileInputStream;
     :catchall_2
@@ -2339,7 +2124,6 @@
     .restart local v2    # "fin":Ljava/io/FileInputStream;
     goto :goto_4
 
-    .line 206
     .end local v2    # "fin":Ljava/io/FileInputStream;
     .restart local v3    # "fin":Ljava/io/FileInputStream;
     :catch_4
@@ -2358,12 +2142,10 @@
     .locals 1
 
     .prologue
-    .line 231
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsHelper;->mStats:Landroid/os/BatteryStats;
 
-    .line 232
     return-void
 .end method
 
@@ -2372,7 +2154,6 @@
     .param p1, "stats"    # Landroid/os/BatteryStats;
 
     .prologue
-    .line 253
     new-instance v0, Lcom/android/internal/os/PowerProfile;
 
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsHelper;->mContext:Landroid/content/Context;
@@ -2381,10 +2162,8 @@
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsHelper;->mPowerProfile:Lcom/android/internal/os/PowerProfile;
 
-    .line 254
     iput-object p1, p0, Lcom/android/internal/os/BatteryStatsHelper;->mStats:Landroid/os/BatteryStats;
 
-    .line 255
     return-void
 .end method
 
@@ -2393,20 +2172,16 @@
     .param p1, "icicle"    # Landroid/os/Bundle;
 
     .prologue
-    .line 258
     if-eqz p1, :cond_0
 
-    .line 259
     sget-object v0, Lcom/android/internal/os/BatteryStatsHelper;->sStatsXfer:Landroid/os/BatteryStats;
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsHelper;->mStats:Landroid/os/BatteryStats;
 
-    .line 260
     sget-object v0, Lcom/android/internal/os/BatteryStatsHelper;->sBatteryBroadcastXfer:Landroid/content/Intent;
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsHelper;->mBatteryBroadcast:Landroid/content/Intent;
 
-    .line 262
     :cond_0
     const-string v0, "batterystats"
 
@@ -2420,7 +2195,6 @@
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsHelper;->mBatteryInfo:Lcom/android/internal/app/IBatteryStats;
 
-    .line 264
     new-instance v0, Lcom/android/internal/os/PowerProfile;
 
     iget-object v1, p0, Lcom/android/internal/os/BatteryStatsHelper;->mContext:Landroid/content/Context;
@@ -2429,7 +2203,6 @@
 
     iput-object v0, p0, Lcom/android/internal/os/BatteryStatsHelper;->mPowerProfile:Lcom/android/internal/os/PowerProfile;
 
-    .line 265
     return-void
 .end method
 
@@ -2437,7 +2210,6 @@
     .locals 1
 
     .prologue
-    .line 242
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsHelper;->mBatteryBroadcast:Landroid/content/Intent;
 
     if-nez v0, :cond_0
@@ -2446,10 +2218,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 243
     invoke-direct {p0}, Lcom/android/internal/os/BatteryStatsHelper;->load()V
 
-    .line 245
     :cond_0
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsHelper;->mBatteryBroadcast:Landroid/content/Intent;
 
@@ -2460,7 +2230,6 @@
     .locals 2
 
     .prologue
-    .line 712
     iget-wide v0, p0, Lcom/android/internal/os/BatteryStatsHelper;->mBatteryTimeRemaining:J
 
     return-wide v0
@@ -2470,7 +2239,6 @@
     .locals 2
 
     .prologue
-    .line 714
     iget-wide v0, p0, Lcom/android/internal/os/BatteryStatsHelper;->mChargeTimeRemaining:J
 
     return-wide v0
@@ -2480,7 +2248,6 @@
     .locals 2
 
     .prologue
-    .line 702
     iget-wide v0, p0, Lcom/android/internal/os/BatteryStatsHelper;->mComputedPower:D
 
     return-wide v0
@@ -2490,7 +2257,6 @@
     .locals 2
 
     .prologue
-    .line 709
     iget-wide v0, p0, Lcom/android/internal/os/BatteryStatsHelper;->mMaxDrainedPower:D
 
     return-wide v0
@@ -2500,7 +2266,6 @@
     .locals 2
 
     .prologue
-    .line 696
     iget-wide v0, p0, Lcom/android/internal/os/BatteryStatsHelper;->mMaxPower:D
 
     return-wide v0
@@ -2510,7 +2275,6 @@
     .locals 2
 
     .prologue
-    .line 698
     iget-wide v0, p0, Lcom/android/internal/os/BatteryStatsHelper;->mMaxRealPower:D
 
     return-wide v0
@@ -2520,7 +2284,6 @@
     .locals 2
 
     .prologue
-    .line 705
     iget-wide v0, p0, Lcom/android/internal/os/BatteryStatsHelper;->mMinDrainedPower:D
 
     return-wide v0
@@ -2539,7 +2302,6 @@
     .end annotation
 
     .prologue
-    .line 689
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsHelper;->mMobilemsppList:Ljava/util/List;
 
     return-object v0
@@ -2549,7 +2311,6 @@
     .locals 1
 
     .prologue
-    .line 249
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsHelper;->mPowerProfile:Lcom/android/internal/os/PowerProfile;
 
     return-object v0
@@ -2559,15 +2320,12 @@
     .locals 1
 
     .prologue
-    .line 235
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsHelper;->mStats:Landroid/os/BatteryStats;
 
     if-nez v0, :cond_0
 
-    .line 236
     invoke-direct {p0}, Lcom/android/internal/os/BatteryStatsHelper;->load()V
 
-    .line 238
     :cond_0
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsHelper;->mStats:Landroid/os/BatteryStats;
 
@@ -2578,7 +2336,6 @@
     .locals 2
 
     .prologue
-    .line 692
     iget-wide v0, p0, Lcom/android/internal/os/BatteryStatsHelper;->mStatsPeriod:J
 
     return-wide v0
@@ -2588,7 +2345,6 @@
     .locals 1
 
     .prologue
-    .line 694
     iget v0, p0, Lcom/android/internal/os/BatteryStatsHelper;->mStatsType:I
 
     return v0
@@ -2598,7 +2354,6 @@
     .locals 2
 
     .prologue
-    .line 700
     iget-wide v0, p0, Lcom/android/internal/os/BatteryStatsHelper;->mTotalPower:D
 
     return-wide v0
@@ -2617,7 +2372,6 @@
     .end annotation
 
     .prologue
-    .line 685
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsHelper;->mUsageList:Ljava/util/List;
 
     return-object v0
@@ -2629,14 +2383,12 @@
     .param p2, "asUser"    # I
 
     .prologue
-    .line 294
     new-instance v0, Landroid/util/SparseArray;
 
     const/4 v1, 0x1
 
     invoke-direct {v0, v1}, Landroid/util/SparseArray;-><init>(I)V
 
-    .line 295
     .local v0, "users":Landroid/util/SparseArray;, "Landroid/util/SparseArray<Landroid/os/UserHandle;>;"
     new-instance v1, Landroid/os/UserHandle;
 
@@ -2644,10 +2396,8 @@
 
     invoke-virtual {v0, p2, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 296
     invoke-virtual {p0, p1, v0}, Lcom/android/internal/os/BatteryStatsHelper;->refreshStats(ILandroid/util/SparseArray;)V
 
-    .line 297
     return-void
 .end method
 
@@ -2668,7 +2418,6 @@
     .local p2, "asUsers":Landroid/util/SparseArray;, "Landroid/util/SparseArray<Landroid/os/UserHandle;>;"
     const-wide/16 v2, 0x3e8
 
-    .line 316
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
@@ -2689,7 +2438,6 @@
 
     invoke-virtual/range {v1 .. v7}, Lcom/android/internal/os/BatteryStatsHelper;->refreshStats(ILandroid/util/SparseArray;JJ)V
 
-    .line 318
     return-void
 .end method
 
@@ -2709,86 +2457,73 @@
     .end annotation
 
     .prologue
-    .line 323
     .local p2, "asUsers":Landroid/util/SparseArray;, "Landroid/util/SparseArray<Landroid/os/UserHandle;>;"
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/os/BatteryStatsHelper;->getStats()Landroid/os/BatteryStats;
 
-    .line 325
     const-wide/16 v14, 0x0
 
     move-object/from16 v0, p0
 
     iput-wide v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mMaxPower:D
 
-    .line 326
     const-wide/16 v14, 0x0
 
     move-object/from16 v0, p0
 
     iput-wide v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mMaxRealPower:D
 
-    .line 327
     const-wide/16 v14, 0x0
 
     move-object/from16 v0, p0
 
     iput-wide v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mComputedPower:D
 
-    .line 328
     const-wide/16 v14, 0x0
 
     move-object/from16 v0, p0
 
     iput-wide v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mTotalPower:D
 
-    .line 330
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mUsageList:Ljava/util/List;
 
     invoke-interface {v14}, Ljava/util/List;->clear()V
 
-    .line 331
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mWifiSippers:Ljava/util/List;
 
     invoke-interface {v14}, Ljava/util/List;->clear()V
 
-    .line 332
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mBluetoothSippers:Ljava/util/List;
 
     invoke-interface {v14}, Ljava/util/List;->clear()V
 
-    .line 333
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mUserSippers:Landroid/util/SparseArray;
 
     invoke-virtual {v14}, Landroid/util/SparseArray;->clear()V
 
-    .line 334
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mMobilemsppList:Ljava/util/List;
 
     invoke-interface {v14}, Ljava/util/List;->clear()V
 
-    .line 336
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mStats:Landroid/os/BatteryStats;
 
     if-nez v14, :cond_1
 
-    .line 488
     :cond_0
     :goto_0
     return-void
 
-    .line 340
     :cond_1
     move-object/from16 v0, p0
 
@@ -2796,7 +2531,6 @@
 
     if-nez v14, :cond_2
 
-    .line 341
     new-instance v14, Lcom/android/internal/os/CpuPowerCalculator;
 
     move-object/from16 v0, p0
@@ -2809,7 +2543,6 @@
 
     iput-object v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mCpuPowerCalculator:Lcom/android/internal/os/PowerCalculator;
 
-    .line 343
     :cond_2
     move-object/from16 v0, p0
 
@@ -2817,14 +2550,12 @@
 
     invoke-virtual {v14}, Lcom/android/internal/os/PowerCalculator;->reset()V
 
-    .line 345
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mWakelockPowerCalculator:Lcom/android/internal/os/PowerCalculator;
 
     if-nez v14, :cond_3
 
-    .line 346
     new-instance v14, Lcom/android/internal/os/WakelockPowerCalculator;
 
     move-object/from16 v0, p0
@@ -2837,7 +2568,6 @@
 
     iput-object v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mWakelockPowerCalculator:Lcom/android/internal/os/PowerCalculator;
 
-    .line 348
     :cond_3
     move-object/from16 v0, p0
 
@@ -2845,14 +2575,12 @@
 
     invoke-virtual {v14}, Lcom/android/internal/os/PowerCalculator;->reset()V
 
-    .line 350
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mMobileRadioPowerCalculator:Lcom/android/internal/os/MobileRadioPowerCalculator;
 
     if-nez v14, :cond_4
 
-    .line 351
     new-instance v14, Lcom/android/internal/os/MobileRadioPowerCalculator;
 
     move-object/from16 v0, p0
@@ -2871,7 +2599,6 @@
 
     iput-object v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mMobileRadioPowerCalculator:Lcom/android/internal/os/MobileRadioPowerCalculator;
 
-    .line 353
     :cond_4
     move-object/from16 v0, p0
 
@@ -2883,7 +2610,6 @@
 
     invoke-virtual {v14, v15}, Lcom/android/internal/os/MobileRadioPowerCalculator;->reset(Landroid/os/BatteryStats;)V
 
-    .line 357
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mStats:Landroid/os/BatteryStats;
@@ -2896,7 +2622,6 @@
 
     move-result v8
 
-    .line 358
     .local v8, "hasWifiPowerReporting":Z
     move-object/from16 v0, p0
 
@@ -2910,7 +2635,6 @@
 
     if-eq v8, v14, :cond_6
 
-    .line 359
     :cond_5
     if-eqz v8, :cond_d
 
@@ -2927,12 +2651,10 @@
 
     iput-object v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mWifiPowerCalculator:Lcom/android/internal/os/PowerCalculator;
 
-    .line 362
     move-object/from16 v0, p0
 
     iput-boolean v8, v0, Lcom/android/internal/os/BatteryStatsHelper;->mHasWifiPowerReporting:Z
 
-    .line 364
     :cond_6
     move-object/from16 v0, p0
 
@@ -2940,7 +2662,6 @@
 
     invoke-virtual {v14}, Lcom/android/internal/os/PowerCalculator;->reset()V
 
-    .line 366
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mStats:Landroid/os/BatteryStats;
@@ -2953,7 +2674,6 @@
 
     move-result v7
 
-    .line 368
     .local v7, "hasBluetoothPowerReporting":Z
     move-object/from16 v0, p0
 
@@ -2967,7 +2687,6 @@
 
     if-eq v7, v14, :cond_8
 
-    .line 370
     :cond_7
     new-instance v14, Lcom/android/internal/os/BluetoothPowerCalculator;
 
@@ -2981,12 +2700,10 @@
 
     iput-object v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mBluetoothPowerCalculator:Lcom/android/internal/os/PowerCalculator;
 
-    .line 371
     move-object/from16 v0, p0
 
     iput-boolean v7, v0, Lcom/android/internal/os/BatteryStatsHelper;->mHasBluetoothPowerReporting:Z
 
-    .line 373
     :cond_8
     move-object/from16 v0, p0
 
@@ -2994,14 +2711,12 @@
 
     invoke-virtual {v14}, Lcom/android/internal/os/PowerCalculator;->reset()V
 
-    .line 375
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mSensorPowerCalculator:Lcom/android/internal/os/PowerCalculator;
 
     if-nez v14, :cond_9
 
-    .line 376
     new-instance v15, Lcom/android/internal/os/SensorPowerCalculator;
 
     move-object/from16 v0, p0
@@ -3032,7 +2747,6 @@
 
     iput-object v15, v0, Lcom/android/internal/os/BatteryStatsHelper;->mSensorPowerCalculator:Lcom/android/internal/os/PowerCalculator;
 
-    .line 379
     :cond_9
     move-object/from16 v0, p0
 
@@ -3040,14 +2754,12 @@
 
     invoke-virtual {v14}, Lcom/android/internal/os/PowerCalculator;->reset()V
 
-    .line 381
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mCameraPowerCalculator:Lcom/android/internal/os/PowerCalculator;
 
     if-nez v14, :cond_a
 
-    .line 382
     new-instance v14, Lcom/android/internal/os/CameraPowerCalculator;
 
     move-object/from16 v0, p0
@@ -3060,7 +2772,6 @@
 
     iput-object v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mCameraPowerCalculator:Lcom/android/internal/os/PowerCalculator;
 
-    .line 384
     :cond_a
     move-object/from16 v0, p0
 
@@ -3068,14 +2779,12 @@
 
     invoke-virtual {v14}, Lcom/android/internal/os/PowerCalculator;->reset()V
 
-    .line 386
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mFlashlightPowerCalculator:Lcom/android/internal/os/PowerCalculator;
 
     if-nez v14, :cond_b
 
-    .line 387
     new-instance v14, Lcom/android/internal/os/FlashlightPowerCalculator;
 
     move-object/from16 v0, p0
@@ -3088,7 +2797,6 @@
 
     iput-object v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mFlashlightPowerCalculator:Lcom/android/internal/os/PowerCalculator;
 
-    .line 389
     :cond_b
     move-object/from16 v0, p0
 
@@ -3096,28 +2804,24 @@
 
     invoke-virtual {v14}, Lcom/android/internal/os/PowerCalculator;->reset()V
 
-    .line 391
     move/from16 v0, p1
 
     move-object/from16 v1, p0
 
     iput v0, v1, Lcom/android/internal/os/BatteryStatsHelper;->mStatsType:I
 
-    .line 392
     move-wide/from16 v0, p5
 
     move-object/from16 v2, p0
 
     iput-wide v0, v2, Lcom/android/internal/os/BatteryStatsHelper;->mRawUptime:J
 
-    .line 393
     move-wide/from16 v0, p3
 
     move-object/from16 v2, p0
 
     iput-wide v0, v2, Lcom/android/internal/os/BatteryStatsHelper;->mRawRealtime:J
 
-    .line 394
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mStats:Landroid/os/BatteryStats;
@@ -3132,7 +2836,6 @@
 
     iput-wide v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mBatteryUptime:J
 
-    .line 395
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mStats:Landroid/os/BatteryStats;
@@ -3147,7 +2850,6 @@
 
     iput-wide v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mBatteryRealtime:J
 
-    .line 396
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mStats:Landroid/os/BatteryStats;
@@ -3166,7 +2868,6 @@
 
     iput-wide v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mTypeBatteryUptime:J
 
-    .line 397
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mStats:Landroid/os/BatteryStats;
@@ -3185,7 +2886,6 @@
 
     iput-wide v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mTypeBatteryRealtime:J
 
-    .line 398
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mStats:Landroid/os/BatteryStats;
@@ -3200,7 +2900,6 @@
 
     iput-wide v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mBatteryTimeRemaining:J
 
-    .line 399
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mStats:Landroid/os/BatteryStats;
@@ -3215,7 +2914,6 @@
 
     iput-wide v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mChargeTimeRemaining:J
 
-    .line 409
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mStats:Landroid/os/BatteryStats;
@@ -3246,7 +2944,6 @@
 
     iput-wide v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mMinDrainedPower:D
 
-    .line 411
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mStats:Landroid/os/BatteryStats;
@@ -3277,14 +2974,12 @@
 
     iput-wide v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mMaxDrainedPower:D
 
-    .line 414
     move-object/from16 v0, p0
 
     move-object/from16 v1, p2
 
     invoke-direct {v0, v1}, Lcom/android/internal/os/BatteryStatsHelper;->processAppUsage(Landroid/util/SparseArray;)V
 
-    .line 417
     const/4 v9, 0x0
 
     .local v9, "i":I
@@ -3299,7 +2994,6 @@
 
     if-ge v9, v14, :cond_e
 
-    .line 418
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mUsageList:Ljava/util/List;
@@ -3310,11 +3004,9 @@
 
     check-cast v6, Lcom/android/internal/os/BatterySipper;
 
-    .line 419
     .local v6, "bs":Lcom/android/internal/os/BatterySipper;
     invoke-virtual {v6}, Lcom/android/internal/os/BatterySipper;->computeMobilemspp()V
 
-    .line 420
     iget-wide v14, v6, Lcom/android/internal/os/BatterySipper;->mobilemspp:D
 
     const-wide/16 v16, 0x0
@@ -3323,20 +3015,17 @@
 
     if-eqz v14, :cond_c
 
-    .line 421
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mMobilemsppList:Ljava/util/List;
 
     invoke-interface {v14, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 417
     :cond_c
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_2
 
-    .line 359
     .end local v6    # "bs":Lcom/android/internal/os/BatterySipper;
     .end local v7    # "hasBluetoothPowerReporting":Z
     .end local v9    # "i":I
@@ -3351,7 +3040,6 @@
 
     goto/16 :goto_1
 
-    .line 425
     .restart local v7    # "hasBluetoothPowerReporting":Z
     .restart local v9    # "i":I
     :cond_e
@@ -3368,7 +3056,6 @@
 
     if-ge v9, v14, :cond_11
 
-    .line 426
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mUserSippers:Landroid/util/SparseArray;
@@ -3379,7 +3066,6 @@
 
     check-cast v13, Ljava/util/List;
 
-    .line 427
     .local v13, "user":Ljava/util/List;, "Ljava/util/List<Lcom/android/internal/os/BatterySipper;>;"
     const/4 v11, 0x0
 
@@ -3391,18 +3077,15 @@
 
     if-ge v11, v14, :cond_10
 
-    .line 428
     invoke-interface {v13, v11}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v6
 
     check-cast v6, Lcom/android/internal/os/BatterySipper;
 
-    .line 429
     .restart local v6    # "bs":Lcom/android/internal/os/BatterySipper;
     invoke-virtual {v6}, Lcom/android/internal/os/BatterySipper;->computeMobilemspp()V
 
-    .line 430
     iget-wide v14, v6, Lcom/android/internal/os/BatterySipper;->mobilemspp:D
 
     const-wide/16 v16, 0x0
@@ -3411,27 +3094,23 @@
 
     if-eqz v14, :cond_f
 
-    .line 431
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mMobilemsppList:Ljava/util/List;
 
     invoke-interface {v14, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 427
     :cond_f
     add-int/lit8 v11, v11, 0x1
 
     goto :goto_4
 
-    .line 425
     .end local v6    # "bs":Lcom/android/internal/os/BatterySipper;
     :cond_10
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_3
 
-    .line 435
     .end local v11    # "j":I
     .end local v13    # "user":Ljava/util/List;, "Ljava/util/List<Lcom/android/internal/os/BatterySipper;>;"
     :cond_11
@@ -3447,17 +3126,14 @@
 
     invoke-static {v14, v15}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    .line 442
     invoke-direct/range {p0 .. p0}, Lcom/android/internal/os/BatteryStatsHelper;->processMiscUsage()V
 
-    .line 444
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mUsageList:Ljava/util/List;
 
     invoke-static {v14}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
-    .line 448
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mUsageList:Ljava/util/List;
@@ -3468,7 +3144,6 @@
 
     if-nez v14, :cond_12
 
-    .line 449
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mUsageList:Ljava/util/List;
@@ -3491,7 +3166,6 @@
 
     iput-wide v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mMaxRealPower:D
 
-    .line 450
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mUsageList:Ljava/util/List;
@@ -3500,14 +3174,12 @@
 
     move-result v12
 
-    .line 451
     .local v12, "usageListCount":I
     const/4 v9, 0x0
 
     :goto_5
     if-ge v9, v12, :cond_12
 
-    .line 452
     move-object/from16 v0, p0
 
     iget-wide v0, v0, Lcom/android/internal/os/BatteryStatsHelper;->mComputedPower:D
@@ -3532,12 +3204,10 @@
 
     iput-wide v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mComputedPower:D
 
-    .line 451
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_5
 
-    .line 461
     .end local v12    # "usageListCount":I
     :cond_12
     move-object/from16 v0, p0
@@ -3548,7 +3218,6 @@
 
     iput-wide v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mTotalPower:D
 
-    .line 462
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mStats:Landroid/os/BatteryStats;
@@ -3561,7 +3230,6 @@
 
     if-le v14, v15, :cond_0
 
-    .line 463
     move-object/from16 v0, p0
 
     iget-wide v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mMinDrainedPower:D
@@ -3576,7 +3244,6 @@
 
     if-lez v14, :cond_14
 
-    .line 464
     move-object/from16 v0, p0
 
     iget-wide v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mMinDrainedPower:D
@@ -3589,7 +3256,6 @@
 
     sub-double v4, v14, v16
 
-    .line 465
     .local v4, "amount":D
     move-object/from16 v0, p0
 
@@ -3599,7 +3265,6 @@
 
     iput-wide v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mTotalPower:D
 
-    .line 466
     new-instance v6, Lcom/android/internal/os/BatterySipper;
 
     sget-object v14, Lcom/android/internal/os/BatterySipper$DrainType;->UNACCOUNTED:Lcom/android/internal/os/BatterySipper$DrainType;
@@ -3608,7 +3273,6 @@
 
     invoke-direct {v6, v14, v15, v4, v5}, Lcom/android/internal/os/BatterySipper;-><init>(Lcom/android/internal/os/BatterySipper$DrainType;Landroid/os/BatteryStats$Uid;D)V
 
-    .line 469
     .restart local v6    # "bs":Lcom/android/internal/os/BatterySipper;
     move-object/from16 v0, p0
 
@@ -3618,16 +3282,13 @@
 
     move-result v10
 
-    .line 470
     .local v10, "index":I
     if-gez v10, :cond_13
 
-    .line 471
     add-int/lit8 v14, v10, 0x1
 
     neg-int v10, v14
 
-    .line 473
     :cond_13
     move-object/from16 v0, p0
 
@@ -3635,7 +3296,6 @@
 
     invoke-interface {v14, v10, v6}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
-    .line 474
     move-object/from16 v0, p0
 
     iget-wide v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mMaxPower:D
@@ -3650,7 +3310,6 @@
 
     goto/16 :goto_0
 
-    .line 475
     .end local v4    # "amount":D
     .end local v6    # "bs":Lcom/android/internal/os/BatterySipper;
     .end local v10    # "index":I
@@ -3669,7 +3328,6 @@
 
     if-gez v14, :cond_0
 
-    .line 476
     move-object/from16 v0, p0
 
     iget-wide v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mComputedPower:D
@@ -3682,7 +3340,6 @@
 
     sub-double v4, v14, v16
 
-    .line 479
     .restart local v4    # "amount":D
     new-instance v6, Lcom/android/internal/os/BatterySipper;
 
@@ -3692,7 +3349,6 @@
 
     invoke-direct {v6, v14, v15, v4, v5}, Lcom/android/internal/os/BatterySipper;-><init>(Lcom/android/internal/os/BatterySipper$DrainType;Landroid/os/BatteryStats$Uid;D)V
 
-    .line 480
     .restart local v6    # "bs":Lcom/android/internal/os/BatterySipper;
     move-object/from16 v0, p0
 
@@ -3702,16 +3358,13 @@
 
     move-result v10
 
-    .line 481
     .restart local v10    # "index":I
     if-gez v10, :cond_15
 
-    .line 482
     add-int/lit8 v14, v10, 0x1
 
     neg-int v10, v14
 
-    .line 484
     :cond_15
     move-object/from16 v0, p0
 
@@ -3719,7 +3372,6 @@
 
     invoke-interface {v14, v10, v6}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
-    .line 485
     move-object/from16 v0, p0
 
     iget-wide v14, v0, Lcom/android/internal/os/BatteryStatsHelper;->mMaxPower:D
@@ -3749,19 +3401,16 @@
     .end annotation
 
     .prologue
-    .line 303
     .local p2, "asUsers":Ljava/util/List;, "Ljava/util/List<Landroid/os/UserHandle;>;"
     invoke-interface {p2}, Ljava/util/List;->size()I
 
     move-result v1
 
-    .line 304
     .local v1, "n":I
     new-instance v3, Landroid/util/SparseArray;
 
     invoke-direct {v3, v1}, Landroid/util/SparseArray;-><init>(I)V
 
-    .line 305
     .local v3, "users":Landroid/util/SparseArray;, "Landroid/util/SparseArray<Landroid/os/UserHandle;>;"
     const/4 v0, 0x0
 
@@ -3769,14 +3418,12 @@
     :goto_0
     if-ge v0, v1, :cond_0
 
-    .line 306
     invoke-interface {p2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Landroid/os/UserHandle;
 
-    .line 307
     .local v2, "userHandle":Landroid/os/UserHandle;
     invoke-virtual {v2}, Landroid/os/UserHandle;->getIdentifier()I
 
@@ -3784,17 +3431,14 @@
 
     invoke-virtual {v3, v4, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 305
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 309
     .end local v2    # "userHandle":Landroid/os/UserHandle;
     :cond_0
     invoke-virtual {p0, p1, v3}, Lcom/android/internal/os/BatteryStatsHelper;->refreshStats(ILandroid/util/SparseArray;)V
 
-    .line 310
     return-void
 .end method
 
@@ -3802,17 +3446,14 @@
     .locals 1
 
     .prologue
-    .line 268
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsHelper;->mStats:Landroid/os/BatteryStats;
 
     sput-object v0, Lcom/android/internal/os/BatteryStatsHelper;->sStatsXfer:Landroid/os/BatteryStats;
 
-    .line 269
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsHelper;->mBatteryBroadcast:Landroid/content/Intent;
 
     sput-object v0, Lcom/android/internal/os/BatteryStatsHelper;->sBatteryBroadcastXfer:Landroid/content/Intent;
 
-    .line 270
     return-void
 .end method
 
@@ -3821,12 +3462,10 @@
     .param p1, "fname"    # Ljava/lang/String;
 
     .prologue
-    .line 168
     sget-object v7, Lcom/android/internal/os/BatteryStatsHelper;->sFileXfer:Landroid/util/ArrayMap;
 
     monitor-enter v7
 
-    .line 169
     :try_start_0
     iget-object v6, p0, Lcom/android/internal/os/BatteryStatsHelper;->mContext:Landroid/content/Context;
 
@@ -3834,7 +3473,6 @@
 
     move-result-object v5
 
-    .line 170
     .local v5, "path":Ljava/io/File;
     sget-object v6, Lcom/android/internal/os/BatteryStatsHelper;->sFileXfer:Landroid/util/ArrayMap;
 
@@ -3846,10 +3484,8 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 171
     const/4 v1, 0x0
 
-    .line 173
     .local v1, "fout":Ljava/io/FileOutputStream;
     :try_start_1
     new-instance v2, Ljava/io/FileOutputStream;
@@ -3859,7 +3495,6 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 174
     .end local v1    # "fout":Ljava/io/FileOutputStream;
     .local v2, "fout":Ljava/io/FileOutputStream;
     :try_start_2
@@ -3867,7 +3502,6 @@
 
     move-result-object v3
 
-    .line 175
     .local v3, "hist":Landroid/os/Parcel;
     invoke-virtual {p0}, Lcom/android/internal/os/BatteryStatsHelper;->getStats()Landroid/os/BatteryStats;
 
@@ -3877,22 +3511,18 @@
 
     invoke-virtual {v6, v3, v8}, Landroid/os/BatteryStats;->writeToParcelWithoutUids(Landroid/os/Parcel;I)V
 
-    .line 176
     invoke-virtual {v3}, Landroid/os/Parcel;->marshall()[B
 
     move-result-object v4
 
-    .line 177
     .local v4, "histData":[B
     invoke-virtual {v2, v4}, Ljava/io/FileOutputStream;->write([B)V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_4
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 181
     if-eqz v2, :cond_2
 
-    .line 183
     :try_start_3
     invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
     :try_end_3
@@ -3901,7 +3531,6 @@
 
     move-object v1, v2
 
-    .line 188
     .end local v2    # "fout":Ljava/io/FileOutputStream;
     .end local v3    # "hist":Landroid/os/Parcel;
     .end local v4    # "histData":[B
@@ -3913,10 +3542,8 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 189
     return-void
 
-    .line 184
     .end local v1    # "fout":Ljava/io/FileOutputStream;
     .restart local v2    # "fout":Ljava/io/FileOutputStream;
     .restart local v3    # "hist":Landroid/os/Parcel;
@@ -3926,18 +3553,15 @@
 
     move-object v1, v2
 
-    .line 185
     .end local v2    # "fout":Ljava/io/FileOutputStream;
     .restart local v1    # "fout":Ljava/io/FileOutputStream;
     goto :goto_0
 
-    .line 178
     .end local v3    # "hist":Landroid/os/Parcel;
     .end local v4    # "histData":[B
     :catch_1
     move-exception v0
 
-    .line 179
     .local v0, "e":Ljava/io/IOException;
     :goto_1
     :try_start_5
@@ -3949,10 +3573,8 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 181
     if-eqz v1, :cond_0
 
-    .line 183
     :try_start_6
     invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
     :try_end_6
@@ -3961,13 +3583,11 @@
 
     goto :goto_0
 
-    .line 184
     :catch_2
     move-exception v6
 
     goto :goto_0
 
-    .line 181
     .end local v0    # "e":Ljava/io/IOException;
     :catchall_0
     move-exception v6
@@ -3975,20 +3595,17 @@
     :goto_2
     if-eqz v1, :cond_1
 
-    .line 183
     :try_start_7
     invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
     :try_end_7
     .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_3
     .catchall {:try_start_7 .. :try_end_7} :catchall_1
 
-    .line 185
     :cond_1
     :goto_3
     :try_start_8
     throw v6
 
-    .line 188
     .end local v1    # "fout":Ljava/io/FileOutputStream;
     .end local v5    # "path":Ljava/io/File;
     :catchall_1
@@ -4000,7 +3617,6 @@
 
     throw v6
 
-    .line 184
     .restart local v1    # "fout":Ljava/io/FileOutputStream;
     .restart local v5    # "path":Ljava/io/File;
     :catch_3
@@ -4008,7 +3624,6 @@
 
     goto :goto_3
 
-    .line 181
     .end local v1    # "fout":Ljava/io/FileOutputStream;
     .restart local v2    # "fout":Ljava/io/FileOutputStream;
     :catchall_2
@@ -4020,7 +3635,6 @@
     .restart local v1    # "fout":Ljava/io/FileOutputStream;
     goto :goto_2
 
-    .line 178
     .end local v1    # "fout":Ljava/io/FileOutputStream;
     .restart local v2    # "fout":Ljava/io/FileOutputStream;
     :catch_4

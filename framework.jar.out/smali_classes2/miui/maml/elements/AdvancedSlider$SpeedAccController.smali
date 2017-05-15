@@ -37,14 +37,12 @@
     .param p2, "node"    # Lorg/w3c/dom/Element;
 
     .prologue
-    .line 257
     iput-object p1, p0, Lmiui/maml/elements/AdvancedSlider$SpeedAccController;->this$0:Lmiui/maml/elements/AdvancedSlider;
 
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lmiui/maml/elements/AdvancedSlider$ReboundAnimationController;-><init>(Lmiui/maml/elements/AdvancedSlider;Lmiui/maml/elements/AdvancedSlider$1;)V
 
-    .line 258
     invoke-virtual {p1}, Lmiui/maml/elements/AdvancedSlider;->getVariables()Lmiui/maml/data/Variables;
 
     move-result-object v0
@@ -61,7 +59,6 @@
 
     iput-object v0, p0, Lmiui/maml/elements/AdvancedSlider$SpeedAccController;->mBounceInitSpeedExp:Lmiui/maml/data/Expression;
 
-    .line 259
     invoke-virtual {p1}, Lmiui/maml/elements/AdvancedSlider;->getVariables()Lmiui/maml/data/Variables;
 
     move-result-object v0
@@ -78,12 +75,10 @@
 
     iput-object v0, p0, Lmiui/maml/elements/AdvancedSlider$SpeedAccController;->mBounceAccelationExp:Lmiui/maml/data/Expression;
 
-    .line 260
     iget-boolean v0, p1, Lmiui/maml/elements/AdvancedSlider;->mHasName:Z
 
     if-eqz v0, :cond_0
 
-    .line 261
     new-instance v0, Lmiui/maml/data/IndexedVariable;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -122,7 +117,6 @@
 
     iput-object v0, p0, Lmiui/maml/elements/AdvancedSlider$SpeedAccController;->mBounceProgress:Lmiui/maml/data/IndexedVariable;
 
-    .line 263
     :cond_0
     return-void
 .end method
@@ -134,7 +128,6 @@
     .param p1, "time"    # J
 
     .prologue
-    .line 293
     iget v6, p0, Lmiui/maml/elements/AdvancedSlider$SpeedAccController;->mBounceInitSpeed:I
 
     int-to-long v6, v6
@@ -159,7 +152,6 @@
 
     add-long v0, v6, v8
 
-    .line 294
     .local v0, "dist":J
     iget v6, p0, Lmiui/maml/elements/AdvancedSlider$SpeedAccController;->mBounceInitSpeed:I
 
@@ -177,7 +169,6 @@
 
     add-long v4, v6, v8
 
-    .line 295
     .local v4, "speed":J
     const-wide/16 v6, 0x0
 
@@ -185,22 +176,18 @@
 
     if-gtz v6, :cond_0
 
-    .line 296
     invoke-virtual {p0}, Lmiui/maml/elements/AdvancedSlider$SpeedAccController;->onStop()V
 
-    .line 297
     iget-object v6, p0, Lmiui/maml/elements/AdvancedSlider$SpeedAccController;->mBounceProgress:Lmiui/maml/data/IndexedVariable;
 
     if-eqz v6, :cond_0
 
-    .line 298
     iget-object v6, p0, Lmiui/maml/elements/AdvancedSlider$SpeedAccController;->mBounceProgress:Lmiui/maml/data/IndexedVariable;
 
     const-wide/high16 v8, 0x3ff0000000000000L    # 1.0
 
     invoke-virtual {v6, v8, v9}, Lmiui/maml/data/IndexedVariable;->set(D)V
 
-    .line 301
     :cond_0
     iget-wide v6, p0, Lmiui/maml/elements/AdvancedSlider$SpeedAccController;->mTotalDistance:D
 
@@ -210,20 +197,17 @@
 
     if-lez v6, :cond_2
 
-    .line 302
     long-to-double v6, v0
 
     iget-wide v8, p0, Lmiui/maml/elements/AdvancedSlider$SpeedAccController;->mTotalDistance:D
 
     div-double v2, v6, v8
 
-    .line 305
     .local v2, "progress":D
     iget-object v6, p0, Lmiui/maml/elements/AdvancedSlider$SpeedAccController;->mBounceProgress:Lmiui/maml/data/IndexedVariable;
 
     if-eqz v6, :cond_2
 
-    .line 306
     iget-object v6, p0, Lmiui/maml/elements/AdvancedSlider$SpeedAccController;->mBounceProgress:Lmiui/maml/data/IndexedVariable;
 
     const-wide/high16 v8, 0x3ff0000000000000L    # 1.0
@@ -238,7 +222,6 @@
     :cond_1
     invoke-virtual {v6, v2, v3}, Lmiui/maml/data/IndexedVariable;->set(D)V
 
-    .line 309
     :cond_2
     return-wide v0
 .end method
@@ -247,22 +230,18 @@
     .locals 4
 
     .prologue
-    .line 267
     invoke-super {p0}, Lmiui/maml/elements/AdvancedSlider$ReboundAnimationController;->init()V
 
-    .line 268
     iget-object v0, p0, Lmiui/maml/elements/AdvancedSlider$SpeedAccController;->mBounceProgress:Lmiui/maml/data/IndexedVariable;
 
     if-eqz v0, :cond_0
 
-    .line 269
     iget-object v0, p0, Lmiui/maml/elements/AdvancedSlider$SpeedAccController;->mBounceProgress:Lmiui/maml/data/IndexedVariable;
 
     const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
 
     invoke-virtual {v0, v2, v3}, Lmiui/maml/data/IndexedVariable;->set(D)V
 
-    .line 270
     :cond_0
     return-void
 .end method
@@ -271,12 +250,10 @@
     .locals 4
 
     .prologue
-    .line 283
     iget-object v0, p0, Lmiui/maml/elements/AdvancedSlider$SpeedAccController;->mBounceInitSpeedExp:Lmiui/maml/data/Expression;
 
     if-eqz v0, :cond_0
 
-    .line 284
     iget-object v0, p0, Lmiui/maml/elements/AdvancedSlider$SpeedAccController;->this$0:Lmiui/maml/elements/AdvancedSlider;
 
     iget-object v1, p0, Lmiui/maml/elements/AdvancedSlider$SpeedAccController;->mBounceInitSpeedExp:Lmiui/maml/data/Expression;
@@ -289,13 +266,11 @@
 
     iput v0, p0, Lmiui/maml/elements/AdvancedSlider$SpeedAccController;->mBounceInitSpeed:I
 
-    .line 285
     :cond_0
     iget-object v0, p0, Lmiui/maml/elements/AdvancedSlider$SpeedAccController;->mBounceAccelationExp:Lmiui/maml/data/Expression;
 
     if-eqz v0, :cond_1
 
-    .line 286
     iget-object v0, p0, Lmiui/maml/elements/AdvancedSlider$SpeedAccController;->this$0:Lmiui/maml/elements/AdvancedSlider;
 
     iget-object v1, p0, Lmiui/maml/elements/AdvancedSlider$SpeedAccController;->mBounceAccelationExp:Lmiui/maml/data/Expression;
@@ -308,20 +283,17 @@
 
     iput v0, p0, Lmiui/maml/elements/AdvancedSlider$SpeedAccController;->mBounceAccelation:I
 
-    .line 287
     :cond_1
     iget-object v0, p0, Lmiui/maml/elements/AdvancedSlider$SpeedAccController;->mBounceProgress:Lmiui/maml/data/IndexedVariable;
 
     if-eqz v0, :cond_2
 
-    .line 288
     iget-object v0, p0, Lmiui/maml/elements/AdvancedSlider$SpeedAccController;->mBounceProgress:Lmiui/maml/data/IndexedVariable;
 
     const-wide/16 v2, 0x0
 
     invoke-virtual {v0, v2, v3}, Lmiui/maml/data/IndexedVariable;->set(D)V
 
-    .line 289
     :cond_2
     return-void
 .end method
@@ -331,19 +303,15 @@
     .param p1, "ep"    # Lmiui/maml/elements/AdvancedSlider$EndPoint;
 
     .prologue
-    .line 274
     iget-object v0, p0, Lmiui/maml/elements/AdvancedSlider$SpeedAccController;->mBounceInitSpeedExp:Lmiui/maml/data/Expression;
 
     if-nez v0, :cond_0
 
-    .line 275
     invoke-virtual {p0}, Lmiui/maml/elements/AdvancedSlider$SpeedAccController;->onStop()V
 
-    .line 279
     :goto_0
     return-void
 
-    .line 277
     :cond_0
     invoke-super {p0, p1}, Lmiui/maml/elements/AdvancedSlider$ReboundAnimationController;->start(Lmiui/maml/elements/AdvancedSlider$EndPoint;)V
 

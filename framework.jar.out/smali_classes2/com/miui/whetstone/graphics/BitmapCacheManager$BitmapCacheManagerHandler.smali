@@ -24,13 +24,10 @@
     .param p2, "loop"    # Landroid/os/Looper;
 
     .prologue
-    .line 198
     iput-object p1, p0, Lcom/miui/whetstone/graphics/BitmapCacheManager$BitmapCacheManagerHandler;->this$0:Lcom/miui/whetstone/graphics/BitmapCacheManager;
 
-    .line 199
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 200
     return-void
 .end method
 
@@ -41,29 +38,24 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 205
     iget v3, p1, Landroid/os/Message;->what:I
 
     packed-switch v3, :pswitch_data_0
 
-    .line 219
     const-string v3, "WhetstoneBitmapCache"
 
     const-string v4, "invalid msg"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 222
     :goto_0
     return-void
 
-    .line 207
     :pswitch_0
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Ljava/util/ArrayList;
 
-    .line 208
     .local v1, "arg1":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/miui/whetstone/graphics/BitmapCacheManager$BitmapValue;>;"
     iget-object v3, p0, Lcom/miui/whetstone/graphics/BitmapCacheManager$BitmapCacheManagerHandler;->this$0:Lcom/miui/whetstone/graphics/BitmapCacheManager;
 
@@ -71,14 +63,12 @@
 
     goto :goto_0
 
-    .line 211
     .end local v1    # "arg1":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/miui/whetstone/graphics/BitmapCacheManager$BitmapValue;>;"
     :pswitch_1
     iget-object v2, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v2, Ljava/util/concurrent/ConcurrentHashMap;
 
-    .line 212
     .local v2, "array":Ljava/util/concurrent/ConcurrentHashMap;, "Ljava/util/concurrent/ConcurrentHashMap<Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;>;"
     iget-object v3, p0, Lcom/miui/whetstone/graphics/BitmapCacheManager$BitmapCacheManagerHandler;->this$0:Lcom/miui/whetstone/graphics/BitmapCacheManager;
 
@@ -86,14 +76,12 @@
 
     goto :goto_0
 
-    .line 215
     .end local v2    # "array":Ljava/util/concurrent/ConcurrentHashMap;, "Ljava/util/concurrent/ConcurrentHashMap<Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;>;"
     :pswitch_2
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/app/Activity;
 
-    .line 216
     .local v0, "activity":Landroid/app/Activity;
     iget-object v3, p0, Lcom/miui/whetstone/graphics/BitmapCacheManager$BitmapCacheManagerHandler;->this$0:Lcom/miui/whetstone/graphics/BitmapCacheManager;
 
@@ -101,7 +89,6 @@
 
     goto :goto_0
 
-    .line 205
     nop
 
     :pswitch_data_0

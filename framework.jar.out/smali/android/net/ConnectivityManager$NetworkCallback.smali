@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 2223
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,7 +33,6 @@
     .param p0, "x0"    # Landroid/net/ConnectivityManager$NetworkCallback;
 
     .prologue
-    .line 2223
     iget-object v0, p0, Landroid/net/ConnectivityManager$NetworkCallback;->networkRequest:Landroid/net/NetworkRequest;
 
     return-object v0
@@ -46,7 +44,6 @@
     .param p1, "x1"    # Landroid/net/NetworkRequest;
 
     .prologue
-    .line 2223
     iput-object p1, p0, Landroid/net/ConnectivityManager$NetworkCallback;->networkRequest:Landroid/net/NetworkRequest;
 
     return-object p1
@@ -59,7 +56,6 @@
     .param p1, "network"    # Landroid/net/Network;
 
     .prologue
-    .line 2248
     return-void
 .end method
 
@@ -69,7 +65,6 @@
     .param p2, "networkCapabilities"    # Landroid/net/NetworkCapabilities;
 
     .prologue
-    .line 2289
     return-void
 .end method
 
@@ -79,7 +74,6 @@
     .param p2, "linkProperties"    # Landroid/net/LinkProperties;
 
     .prologue
-    .line 2298
     return-void
 .end method
 
@@ -89,7 +83,6 @@
     .param p2, "maxMsToLive"    # I
 
     .prologue
-    .line 2264
     return-void
 .end method
 
@@ -98,7 +91,6 @@
     .param p1, "network"    # Landroid/net/Network;
 
     .prologue
-    .line 2272
     return-void
 .end method
 
@@ -107,7 +99,6 @@
     .param p1, "network"    # Landroid/net/Network;
 
     .prologue
-    .line 2318
     return-void
 .end method
 
@@ -116,7 +107,6 @@
     .param p1, "network"    # Landroid/net/Network;
 
     .prologue
-    .line 2309
     return-void
 .end method
 
@@ -125,7 +115,6 @@
     .param p1, "network"    # Landroid/net/Network;
 
     .prologue
-    .line 2239
     return-void
 .end method
 
@@ -133,6 +122,5 @@
     .locals 0
 
     .prologue
-    .line 2279
     return-void
 .end method

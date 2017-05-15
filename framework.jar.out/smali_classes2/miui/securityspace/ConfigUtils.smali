@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -18,10 +17,8 @@
     .locals 2
 
     .prologue
-    .line 35
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    .line 36
     .local v0, "version":I
     const/16 v1, 0x13
 
@@ -42,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 28
     const-string v0, "is_pad"
 
     const/4 v1, 0x0
@@ -58,7 +54,6 @@
     .locals 1
 
     .prologue
-    .line 21
     invoke-static {}, Lmiui/securityspace/ConfigUtils;->isPad()Z
 
     move-result v0
@@ -86,7 +81,6 @@
     .locals 1
 
     .prologue
-    .line 14
     invoke-static {}, Lmiui/securityspace/ConfigUtils;->isPad()Z
 
     move-result v0

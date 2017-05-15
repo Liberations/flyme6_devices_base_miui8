@@ -48,7 +48,6 @@
 
     const/4 v2, 0x0
 
-    .line 890
     new-instance v0, Lmiui/maml/ActionCommand$IntentCommand$IntentType;
 
     const-string v1, "Activity"
@@ -57,7 +56,6 @@
 
     sput-object v0, Lmiui/maml/ActionCommand$IntentCommand$IntentType;->Activity:Lmiui/maml/ActionCommand$IntentCommand$IntentType;
 
-    .line 891
     new-instance v0, Lmiui/maml/ActionCommand$IntentCommand$IntentType;
 
     const-string v1, "Broadcast"
@@ -66,7 +64,6 @@
 
     sput-object v0, Lmiui/maml/ActionCommand$IntentCommand$IntentType;->Broadcast:Lmiui/maml/ActionCommand$IntentCommand$IntentType;
 
-    .line 892
     new-instance v0, Lmiui/maml/ActionCommand$IntentCommand$IntentType;
 
     const-string v1, "Service"
@@ -75,7 +72,6 @@
 
     sput-object v0, Lmiui/maml/ActionCommand$IntentCommand$IntentType;->Service:Lmiui/maml/ActionCommand$IntentCommand$IntentType;
 
-    .line 893
     new-instance v0, Lmiui/maml/ActionCommand$IntentCommand$IntentType;
 
     const-string v1, "Var"
@@ -84,7 +80,6 @@
 
     sput-object v0, Lmiui/maml/ActionCommand$IntentCommand$IntentType;->Var:Lmiui/maml/ActionCommand$IntentCommand$IntentType;
 
-    .line 889
     const/4 v0, 0x4
 
     new-array v0, v0, [Lmiui/maml/ActionCommand$IntentCommand$IntentType;
@@ -119,7 +114,6 @@
     .end annotation
 
     .prologue
-    .line 889
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -130,7 +124,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 889
     const-class v0, Lmiui/maml/ActionCommand$IntentCommand$IntentType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -146,7 +139,6 @@
     .locals 1
 
     .prologue
-    .line 889
     sget-object v0, Lmiui/maml/ActionCommand$IntentCommand$IntentType;->$VALUES:[Lmiui/maml/ActionCommand$IntentCommand$IntentType;
 
     invoke-virtual {v0}, [Lmiui/maml/ActionCommand$IntentCommand$IntentType;->clone()Ljava/lang/Object;

@@ -43,14 +43,11 @@
     .end annotation
 
     .prologue
-    .line 535
     .local p1, "bodies":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     invoke-direct {p0}, Lmiui/maml/util/net/SimpleRequest$HeaderContent;-><init>()V
 
-    .line 536
     iput-object p1, p0, Lmiui/maml/util/net/SimpleRequest$MapContent;->bodies:Ljava/util/Map;
 
-    .line 537
     return-void
 .end method
 
@@ -61,7 +58,6 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 540
     iget-object v0, p0, Lmiui/maml/util/net/SimpleRequest$MapContent;->bodies:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -75,7 +71,6 @@
     .locals 2
 
     .prologue
-    .line 545
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

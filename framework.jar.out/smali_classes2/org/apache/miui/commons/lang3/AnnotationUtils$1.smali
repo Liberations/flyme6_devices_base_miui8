@@ -25,52 +25,40 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 52
     invoke-direct {p0}, Lorg/apache/miui/commons/lang3/builder/ToStringStyle;-><init>()V
 
-    .line 57
     invoke-virtual {p0, v0}, Lorg/apache/miui/commons/lang3/AnnotationUtils$1;->setDefaultFullDetail(Z)V
 
-    .line 58
     invoke-virtual {p0, v0}, Lorg/apache/miui/commons/lang3/AnnotationUtils$1;->setArrayContentDetail(Z)V
 
-    .line 59
     invoke-virtual {p0, v0}, Lorg/apache/miui/commons/lang3/AnnotationUtils$1;->setUseClassName(Z)V
 
-    .line 60
     invoke-virtual {p0, v0}, Lorg/apache/miui/commons/lang3/AnnotationUtils$1;->setUseShortClassName(Z)V
 
-    .line 61
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lorg/apache/miui/commons/lang3/AnnotationUtils$1;->setUseIdentityHashCode(Z)V
 
-    .line 62
     const-string v0, "("
 
     invoke-virtual {p0, v0}, Lorg/apache/miui/commons/lang3/AnnotationUtils$1;->setContentStart(Ljava/lang/String;)V
 
-    .line 63
     const-string v0, ")"
 
     invoke-virtual {p0, v0}, Lorg/apache/miui/commons/lang3/AnnotationUtils$1;->setContentEnd(Ljava/lang/String;)V
 
-    .line 64
     const-string v0, ", "
 
     invoke-virtual {p0, v0}, Lorg/apache/miui/commons/lang3/AnnotationUtils$1;->setFieldSeparator(Ljava/lang/String;)V
 
-    .line 65
     const-string v0, "["
 
     invoke-virtual {p0, v0}, Lorg/apache/miui/commons/lang3/AnnotationUtils$1;->setArrayStart(Ljava/lang/String;)V
 
-    .line 66
     const-string v0, "]"
 
     invoke-virtual {p0, v0}, Lorg/apache/miui/commons/lang3/AnnotationUtils$1;->setArrayEnd(Ljava/lang/String;)V
 
-    .line 67
     return-void
 .end method
 
@@ -83,12 +71,10 @@
     .param p3, "value"    # Ljava/lang/Object;
 
     .prologue
-    .line 93
     instance-of v0, p3, Ljava/lang/annotation/Annotation;
 
     if-eqz v0, :cond_0
 
-    .line 94
     check-cast p3, Ljava/lang/annotation/Annotation;
 
     .end local p3    # "value":Ljava/lang/Object;
@@ -96,11 +82,9 @@
 
     move-result-object p3
 
-    .line 96
     :cond_0
     invoke-super {p0, p1, p2, p3}, Lorg/apache/miui/commons/lang3/builder/ToStringStyle;->appendDetail(Ljava/lang/StringBuffer;Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 97
     return-void
 .end method
 
@@ -116,11 +100,9 @@
     .end annotation
 
     .prologue
-    .line 74
     .local p1, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v0, 0x0
 
-    .line 75
     .local v0, "annotationType":Ljava/lang/Class;, "Ljava/lang/Class<+Ljava/lang/annotation/Annotation;>;"
     invoke-static {p1}, Lorg/apache/miui/commons/lang3/ClassUtils;->getAllInterfaces(Ljava/lang/Class;)Ljava/util/List;
 
@@ -144,7 +126,6 @@
 
     check-cast v3, Ljava/lang/Class;
 
-    .line 76
     .local v3, "iface":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const-class v4, Ljava/lang/annotation/Annotation;
 
@@ -154,14 +135,11 @@
 
     if-eqz v4, :cond_0
 
-    .line 79
     move-object v1, v3
 
-    .line 80
     .local v1, "found":Ljava/lang/Class;, "Ljava/lang/Class<+Ljava/lang/annotation/Annotation;>;"
     move-object v0, v1
 
-    .line 84
     .end local v1    # "found":Ljava/lang/Class;, "Ljava/lang/Class<+Ljava/lang/annotation/Annotation;>;"
     .end local v3    # "iface":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :cond_1

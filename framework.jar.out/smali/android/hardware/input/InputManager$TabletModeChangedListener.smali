@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1036
     iput-object p1, p0, Landroid/hardware/input/InputManager$TabletModeChangedListener;->this$0:Landroid/hardware/input/InputManager;
 
     invoke-direct {p0}, Landroid/hardware/input/ITabletModeChangedListener$Stub;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Landroid/hardware/input/InputManager$1;
 
     .prologue
-    .line 1036
     invoke-direct {p0, p1}, Landroid/hardware/input/InputManager$TabletModeChangedListener;-><init>(Landroid/hardware/input/InputManager;)V
 
     return-void
@@ -51,12 +49,10 @@
     .param p3, "inTabletMode"    # Z
 
     .prologue
-    .line 1039
     iget-object v0, p0, Landroid/hardware/input/InputManager$TabletModeChangedListener;->this$0:Landroid/hardware/input/InputManager;
 
     # invokes: Landroid/hardware/input/InputManager;->onTabletModeChanged(JZ)V
     invoke-static {v0, p1, p2, p3}, Landroid/hardware/input/InputManager;->access$300(Landroid/hardware/input/InputManager;JZ)V
 
-    .line 1040
     return-void
 .end method

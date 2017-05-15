@@ -41,15 +41,12 @@
     .locals 1
 
     .prologue
-    .line 717
     iput-object p1, p0, Lmiui/maml/data/WebServiceBinder$QueryThread;->this$0:Lmiui/maml/data/WebServiceBinder;
 
-    .line 718
     const-string v0, "WebServiceBinder QueryThread"
 
     invoke-direct {p0, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
 
-    .line 719
     return-void
 .end method
 
@@ -61,7 +58,6 @@
     .param p4, "secure"    # Z
 
     .prologue
-    .line 886
     const/4 v5, 0x1
 
     move-object v0, p0
@@ -90,17 +86,14 @@
     .param p5, "retry"    # Z
 
     .prologue
-    .line 763
     const-string v4, "WebServiceBinder"
 
     const-string v5, "doRequest"
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 765
     const/4 v14, 0x0
 
-    .line 766
     .local v14, "cookies":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     move-object/from16 v0, p0
 
@@ -112,17 +105,14 @@
 
     iget-object v13, v4, Lmiui/maml/ScreenContext;->mContext:Landroid/content/Context;
 
-    .line 767
     .local v13, "context":Landroid/content/Context;
     invoke-static {v13}, Landroid/accounts/AccountManager;->get(Landroid/content/Context;)Landroid/accounts/AccountManager;
 
     move-result-object v2
 
-    .line 768
     .local v2, "accountManager":Landroid/accounts/AccountManager;
     if-eqz p3, :cond_7
 
-    .line 769
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lmiui/maml/data/WebServiceBinder$QueryThread;->this$0:Lmiui/maml/data/WebServiceBinder;
@@ -139,11 +129,9 @@
 
     if-nez v4, :cond_6
 
-    .line 770
     :cond_0
     const/4 v3, 0x0
 
-    .line 771
     .local v3, "account":Landroid/accounts/Account;
     const-string v4, "com.xiaomi"
 
@@ -151,22 +139,18 @@
 
     move-result-object v10
 
-    .line 772
     .local v10, "accounts":[Landroid/accounts/Account;
     array-length v4, v10
 
     if-lez v4, :cond_1
 
-    .line 773
     const/4 v4, 0x0
 
     aget-object v3, v10, v4
 
-    .line 775
     :cond_1
     if-nez v3, :cond_2
 
-    .line 776
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lmiui/maml/data/WebServiceBinder$QueryThread;->this$0:Lmiui/maml/data/WebServiceBinder;
@@ -176,23 +160,19 @@
     # invokes: Lmiui/maml/data/WebServiceBinder;->setErrorCode(I)V
     invoke-static {v4, v5}, Lmiui/maml/data/WebServiceBinder;->access$200(Lmiui/maml/data/WebServiceBinder;I)V
 
-    .line 777
     const-string v4, "WebServiceBinder"
 
-    const-string/jumbo v5, "xiaomi account not login"
+    const-string v5, "xiaomi account not login"
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 778
     const/16 v24, 0x0
 
-    .line 882
     .end local v3    # "account":Landroid/accounts/Account;
     .end local v10    # "accounts":[Landroid/accounts/Account;
     :goto_0
     return-object v24
 
-    .line 780
     .restart local v3    # "account":Landroid/accounts/Account;
     .restart local v10    # "accounts":[Landroid/accounts/Account;
     :cond_2
@@ -208,7 +188,6 @@
 
     iput-object v5, v4, Lmiui/maml/data/WebServiceBinder;->mEncryptedUser:Ljava/lang/String;
 
-    .line 782
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lmiui/maml/data/WebServiceBinder$QueryThread;->this$0:Lmiui/maml/data/WebServiceBinder;
@@ -230,15 +209,12 @@
 
     move-result-object v17
 
-    .line 784
     .local v17, "future":Landroid/accounts/AccountManagerFuture;, "Landroid/accounts/AccountManagerFuture<Landroid/os/Bundle;>;"
     const/4 v12, 0x0
 
-    .line 786
     .local v12, "authToken":Lmiui/maml/data/WebServiceBinder$AuthToken;
     if-eqz v17, :cond_4
 
-    .line 787
     :try_start_0
     invoke-interface/range {v17 .. v17}, Landroid/accounts/AccountManagerFuture;->getResult()Ljava/lang/Object;
 
@@ -246,11 +222,9 @@
 
     check-cast v25, Landroid/os/Bundle;
 
-    .line 788
     .local v25, "result":Landroid/os/Bundle;
     if-eqz v25, :cond_3
 
-    .line 789
     const-string v4, "authtoken"
 
     move-object/from16 v0, v25
@@ -259,7 +233,6 @@
 
     move-result-object v16
 
-    .line 790
     .local v16, "extTokenStr":Ljava/lang/String;
     invoke-static/range {v16 .. v16}, Lmiui/maml/data/WebServiceBinder$AuthToken;->parse(Ljava/lang/String;)Lmiui/maml/data/WebServiceBinder$AuthToken;
     :try_end_0
@@ -269,13 +242,11 @@
 
     move-result-object v12
 
-    .line 805
     .end local v16    # "extTokenStr":Ljava/lang/String;
     .end local v25    # "result":Landroid/os/Bundle;
     :goto_1
     if-nez v12, :cond_5
 
-    .line 806
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lmiui/maml/data/WebServiceBinder$QueryThread;->this$0:Lmiui/maml/data/WebServiceBinder;
@@ -285,12 +256,10 @@
     # invokes: Lmiui/maml/data/WebServiceBinder;->setErrorCode(I)V
     invoke-static {v4, v5}, Lmiui/maml/data/WebServiceBinder;->access$200(Lmiui/maml/data/WebServiceBinder;I)V
 
-    .line 807
     const/16 v24, 0x0
 
     goto :goto_0
 
-    .line 792
     .restart local v25    # "result":Landroid/os/Bundle;
     :cond_3
     :try_start_1
@@ -306,12 +275,10 @@
 
     goto :goto_1
 
-    .line 797
     .end local v25    # "result":Landroid/os/Bundle;
     :catch_0
     move-exception v15
 
-    .line 798
     .local v15, "e":Landroid/accounts/OperationCanceledException;
     move-object/from16 v0, p0
 
@@ -322,7 +289,6 @@
 
     goto :goto_1
 
-    .line 795
     .end local v15    # "e":Landroid/accounts/OperationCanceledException;
     :cond_4
     :try_start_2
@@ -338,11 +304,9 @@
 
     goto :goto_1
 
-    .line 799
     :catch_1
     move-exception v15
 
-    .line 800
     .local v15, "e":Landroid/accounts/AuthenticatorException;
     move-object/from16 v0, p0
 
@@ -353,12 +317,10 @@
 
     goto :goto_1
 
-    .line 801
     .end local v15    # "e":Landroid/accounts/AuthenticatorException;
     :catch_2
     move-exception v15
 
-    .line 802
     .local v15, "e":Ljava/io/IOException;
     move-object/from16 v0, p0
 
@@ -369,7 +331,6 @@
 
     goto :goto_1
 
-    .line 809
     .end local v15    # "e":Ljava/io/IOException;
     :cond_5
     move-object/from16 v0, p0
@@ -380,7 +341,6 @@
 
     iput-object v5, v4, Lmiui/maml/data/WebServiceBinder;->mServiceToken:Ljava/lang/String;
 
-    .line 810
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lmiui/maml/data/WebServiceBinder$QueryThread;->this$0:Lmiui/maml/data/WebServiceBinder;
@@ -389,7 +349,6 @@
 
     iput-object v5, v4, Lmiui/maml/data/WebServiceBinder;->mSecurity:Ljava/lang/String;
 
-    .line 812
     .end local v3    # "account":Landroid/accounts/Account;
     .end local v10    # "accounts":[Landroid/accounts/Account;
     .end local v12    # "authToken":Lmiui/maml/data/WebServiceBinder$AuthToken;
@@ -400,7 +359,6 @@
     .end local v14    # "cookies":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-direct {v14}, Ljava/util/HashMap;-><init>()V
 
-    .line 813
     .restart local v14    # "cookies":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v4, "cUserId"
 
@@ -412,7 +370,6 @@
 
     invoke-virtual {v14, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 814
     const-string v4, "serviceToken"
 
     move-object/from16 v0, p0
@@ -423,13 +380,11 @@
 
     invoke-virtual {v14, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 817
     :cond_7
     new-instance v22, Ljava/util/HashMap;
 
     invoke-direct/range {v22 .. v22}, Ljava/util/HashMap;-><init>()V
 
-    .line 818
     .local v22, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     move-object/from16 v0, p0
 
@@ -444,7 +399,6 @@
 
     move-result-object v23
 
-    .line 819
     .local v23, "paramsStr":Ljava/lang/String;
     invoke-static/range {v23 .. v23}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -452,7 +406,6 @@
 
     if-nez v4, :cond_9
 
-    .line 820
     const-string v4, ","
 
     move-object/from16 v0, v23
@@ -461,7 +414,6 @@
 
     move-result-object v26
 
-    .line 821
     .local v26, "strParams":[Ljava/lang/String;
     move-object/from16 v11, v26
 
@@ -483,7 +435,6 @@
 
     aget-object v20, v11, v18
 
-    .line 822
     .local v20, "pa":Ljava/lang/String;
     const-string v4, ":"
 
@@ -493,7 +444,6 @@
 
     move-result-object v21
 
-    .line 823
     .local v21, "param":[Ljava/lang/String;
     move-object/from16 v0, v21
 
@@ -503,13 +453,11 @@
 
     if-eq v4, v5, :cond_8
 
-    .line 821
     :goto_3
     add-int/lit8 v18, v18, 0x1
 
     goto :goto_2
 
-    .line 825
     :cond_8
     const/4 v4, 0x0
 
@@ -525,7 +473,6 @@
 
     goto :goto_3
 
-    .line 829
     .end local v11    # "arr$":[Ljava/lang/String;
     .end local v18    # "i$":I
     .end local v19    # "len$":I
@@ -547,7 +494,6 @@
 
     if-ne v4, v5, :cond_b
 
-    .line 830
     const/4 v4, 0x0
 
     move-object/from16 v0, p1
@@ -558,11 +504,9 @@
 
     move-result-object v24
 
-    .line 831
     .local v24, "resp":Lmiui/maml/util/net/SimpleRequest$StreamContent;
     if-eqz v24, :cond_a
 
-    .line 832
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lmiui/maml/data/WebServiceBinder$QueryThread;->this$0:Lmiui/maml/data/WebServiceBinder;
@@ -580,12 +524,10 @@
 
     goto/16 :goto_0
 
-    .line 861
     .end local v24    # "resp":Lmiui/maml/util/net/SimpleRequest$StreamContent;
     :catch_3
     move-exception v15
 
-    .line 862
     .restart local v15    # "e":Ljava/io/IOException;
     move-object/from16 v0, p0
 
@@ -594,7 +536,6 @@
     # invokes: Lmiui/maml/data/WebServiceBinder;->handleException(Ljava/lang/Exception;)V
     invoke-static {v4, v15}, Lmiui/maml/data/WebServiceBinder;->access$1100(Lmiui/maml/data/WebServiceBinder;Ljava/lang/Exception;)V
 
-    .line 863
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lmiui/maml/data/WebServiceBinder$QueryThread;->this$0:Lmiui/maml/data/WebServiceBinder;
@@ -604,7 +545,6 @@
     # invokes: Lmiui/maml/data/WebServiceBinder;->setErrorCode(I)V
     invoke-static {v4, v5}, Lmiui/maml/data/WebServiceBinder;->access$200(Lmiui/maml/data/WebServiceBinder;I)V
 
-    .line 882
     .end local v15    # "e":Ljava/io/IOException;
     :cond_a
     :goto_4
@@ -612,11 +552,9 @@
 
     goto/16 :goto_0
 
-    .line 836
     :cond_b
     const/16 v24, 0x0
 
-    .line 837
     .local v24, "resp":Lmiui/maml/util/net/SimpleRequest$StringContent;
     :try_start_4
     sget-object v4, Lmiui/maml/data/WebServiceBinder$1;->$SwitchMap$miui$maml$data$WebServiceBinder$RequestMethod:[I
@@ -629,11 +567,9 @@
 
     packed-switch v4, :pswitch_data_0
 
-    .line 855
     :goto_5
     if-eqz v24, :cond_a
 
-    .line 856
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lmiui/maml/data/WebServiceBinder$QueryThread;->this$0:Lmiui/maml/data/WebServiceBinder;
@@ -643,7 +579,6 @@
     # invokes: Lmiui/maml/data/WebServiceBinder;->setStatusCode(I)V
     invoke-static {v4, v5}, Lmiui/maml/data/WebServiceBinder;->access$300(Lmiui/maml/data/WebServiceBinder;I)V
 
-    .line 857
     invoke-virtual/range {v24 .. v24}, Lmiui/maml/util/net/SimpleRequest$StringContent;->getBody()Ljava/lang/String;
 
     move-result-object v25
@@ -651,15 +586,12 @@
     .local v25, "result":Ljava/lang/String;
     move-object/from16 v24, v25
 
-    .line 858
     goto/16 :goto_0
 
-    .line 839
     .end local v25    # "result":Ljava/lang/String;
     :pswitch_0
     if-eqz p4, :cond_c
 
-    .line 840
     const/4 v4, 0x1
 
     move-object/from16 v0, p0
@@ -678,7 +610,6 @@
 
     goto :goto_5
 
-    .line 842
     :cond_c
     const/4 v4, 0x1
 
@@ -690,14 +621,11 @@
 
     move-result-object v24
 
-    .line 844
     goto :goto_5
 
-    .line 846
     :pswitch_1
     if-eqz p4, :cond_d
 
-    .line 847
     const/4 v4, 0x1
 
     move-object/from16 v0, p0
@@ -716,7 +644,6 @@
 
     goto :goto_5
 
-    .line 849
     :cond_d
     const/4 v4, 0x1
 
@@ -734,15 +661,12 @@
 
     move-result-object v24
 
-    .line 851
     goto :goto_5
 
-    .line 864
     .end local v24    # "resp":Lmiui/maml/util/net/SimpleRequest$StringContent;
     :catch_4
     move-exception v15
 
-    .line 865
     .local v15, "e":Lmiui/maml/util/net/CipherException;
     move-object/from16 v0, p0
 
@@ -751,7 +675,6 @@
     # invokes: Lmiui/maml/data/WebServiceBinder;->handleException(Ljava/lang/Exception;)V
     invoke-static {v4, v15}, Lmiui/maml/data/WebServiceBinder;->access$1100(Lmiui/maml/data/WebServiceBinder;Ljava/lang/Exception;)V
 
-    .line 866
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lmiui/maml/data/WebServiceBinder$QueryThread;->this$0:Lmiui/maml/data/WebServiceBinder;
@@ -763,12 +686,10 @@
 
     goto :goto_4
 
-    .line 867
     .end local v15    # "e":Lmiui/maml/util/net/CipherException;
     :catch_5
     move-exception v15
 
-    .line 868
     .local v15, "e":Lmiui/maml/util/net/AccessDeniedException;
     move-object/from16 v0, p0
 
@@ -777,7 +698,6 @@
     # invokes: Lmiui/maml/data/WebServiceBinder;->handleException(Ljava/lang/Exception;)V
     invoke-static {v4, v15}, Lmiui/maml/data/WebServiceBinder;->access$1100(Lmiui/maml/data/WebServiceBinder;Ljava/lang/Exception;)V
 
-    .line 869
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lmiui/maml/data/WebServiceBinder$QueryThread;->this$0:Lmiui/maml/data/WebServiceBinder;
@@ -789,12 +709,10 @@
 
     goto :goto_4
 
-    .line 870
     .end local v15    # "e":Lmiui/maml/util/net/AccessDeniedException;
     :catch_6
     move-exception v15
 
-    .line 871
     .local v15, "e":Lmiui/maml/util/net/InvalidResponseException;
     move-object/from16 v0, p0
 
@@ -803,7 +721,6 @@
     # invokes: Lmiui/maml/data/WebServiceBinder;->handleException(Ljava/lang/Exception;)V
     invoke-static {v4, v15}, Lmiui/maml/data/WebServiceBinder;->access$1100(Lmiui/maml/data/WebServiceBinder;Ljava/lang/Exception;)V
 
-    .line 872
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lmiui/maml/data/WebServiceBinder$QueryThread;->this$0:Lmiui/maml/data/WebServiceBinder;
@@ -815,12 +732,10 @@
 
     goto/16 :goto_4
 
-    .line 873
     .end local v15    # "e":Lmiui/maml/util/net/InvalidResponseException;
     :catch_7
     move-exception v15
 
-    .line 874
     .local v15, "e":Lmiui/maml/util/net/AuthenticationFailureException;
     move-object/from16 v0, p0
 
@@ -829,7 +744,6 @@
     # invokes: Lmiui/maml/data/WebServiceBinder;->handleException(Ljava/lang/Exception;)V
     invoke-static {v4, v15}, Lmiui/maml/data/WebServiceBinder;->access$1100(Lmiui/maml/data/WebServiceBinder;Ljava/lang/Exception;)V
 
-    .line 875
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lmiui/maml/data/WebServiceBinder$QueryThread;->this$0:Lmiui/maml/data/WebServiceBinder;
@@ -839,7 +753,6 @@
     # invokes: Lmiui/maml/data/WebServiceBinder;->setStatusCode(I)V
     invoke-static {v4, v5}, Lmiui/maml/data/WebServiceBinder;->access$300(Lmiui/maml/data/WebServiceBinder;I)V
 
-    .line 876
     const-string v4, "com.xiaomi"
 
     move-object/from16 v0, p0
@@ -850,7 +763,6 @@
 
     invoke-virtual {v2, v4, v5}, Landroid/accounts/AccountManager;->invalidateAuthToken(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 877
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lmiui/maml/data/WebServiceBinder$QueryThread;->this$0:Lmiui/maml/data/WebServiceBinder;
@@ -859,10 +771,8 @@
 
     iput-object v5, v4, Lmiui/maml/data/WebServiceBinder;->mServiceToken:Ljava/lang/String;
 
-    .line 878
     if-eqz p5, :cond_a
 
-    .line 879
     const/4 v9, 0x0
 
     move-object/from16 v4, p0
@@ -881,7 +791,6 @@
 
     goto/16 :goto_0
 
-    .line 837
     nop
 
     :pswitch_data_0
@@ -901,26 +810,22 @@
 
     const/4 v6, 0x0
 
-    .line 723
     const-string v3, "WebServiceBinder"
 
     const-string v4, "QueryThread start"
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 724
     iget-object v3, p0, Lmiui/maml/data/WebServiceBinder$QueryThread;->this$0:Lmiui/maml/data/WebServiceBinder;
 
     # invokes: Lmiui/maml/data/WebServiceBinder;->setErrorCode(I)V
     invoke-static {v3, v6}, Lmiui/maml/data/WebServiceBinder;->access$200(Lmiui/maml/data/WebServiceBinder;I)V
 
-    .line 725
     iget-object v3, p0, Lmiui/maml/data/WebServiceBinder$QueryThread;->this$0:Lmiui/maml/data/WebServiceBinder;
 
     # invokes: Lmiui/maml/data/WebServiceBinder;->setStatusCode(I)V
     invoke-static {v3, v6}, Lmiui/maml/data/WebServiceBinder;->access$300(Lmiui/maml/data/WebServiceBinder;I)V
 
-    .line 727
     iget-object v3, p0, Lmiui/maml/data/WebServiceBinder$QueryThread;->this$0:Lmiui/maml/data/WebServiceBinder;
 
     iget-object v3, v3, Lmiui/maml/data/WebServiceBinder;->mUriFormatter:Lmiui/maml/util/TextFormatter;
@@ -929,7 +834,6 @@
 
     move-result-object v1
 
-    .line 728
     .local v1, "uriStr":Ljava/lang/String;
     if-eqz v1, :cond_2
 
@@ -941,7 +845,6 @@
 
     move-result-object v1
 
-    .line 729
     :goto_0
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -949,7 +852,6 @@
 
     if-nez v3, :cond_4
 
-    .line 730
     iget-object v3, p0, Lmiui/maml/data/WebServiceBinder$QueryThread;->this$0:Lmiui/maml/data/WebServiceBinder;
 
     iget-object v3, v3, Lmiui/maml/data/WebServiceBinder;->mRequestMethod:Lmiui/maml/data/WebServiceBinder$RequestMethod;
@@ -972,7 +874,6 @@
 
     move-result-object v0
 
-    .line 732
     .local v0, "response":Ljava/lang/Object;
     iget-object v3, p0, Lmiui/maml/data/WebServiceBinder$QueryThread;->this$0:Lmiui/maml/data/WebServiceBinder;
 
@@ -980,14 +881,12 @@
 
     if-eqz v3, :cond_0
 
-    .line 733
     if-eqz v0, :cond_3
 
     instance-of v3, v0, Ljava/lang/String;
 
     if-eqz v3, :cond_3
 
-    .line 734
     iget-object v2, p0, Lmiui/maml/data/WebServiceBinder$QueryThread;->this$0:Lmiui/maml/data/WebServiceBinder;
 
     iget-object v3, v2, Lmiui/maml/data/WebServiceBinder;->mContentStringVar:Lmiui/maml/data/IndexedVariable;
@@ -998,12 +897,10 @@
 
     invoke-virtual {v3, v2}, Lmiui/maml/data/IndexedVariable;->set(Ljava/lang/Object;)Z
 
-    .line 740
     :cond_0
     :goto_1
     if-eqz v0, :cond_1
 
-    .line 741
     sget-object v2, Lmiui/maml/data/WebServiceBinder$1;->$SwitchMap$miui$maml$data$WebServiceBinder$ResponseProtocol:[I
 
     iget-object v3, p0, Lmiui/maml/data/WebServiceBinder$QueryThread;->this$0:Lmiui/maml/data/WebServiceBinder;
@@ -1021,7 +918,6 @@
 
     packed-switch v2, :pswitch_data_0
 
-    .line 757
     .end local v0    # "response":Ljava/lang/Object;
     :cond_1
     :goto_2
@@ -1029,29 +925,24 @@
 
     invoke-virtual {v2}, Lmiui/maml/data/WebServiceBinder;->onUpdateComplete()V
 
-    .line 758
     iget-object v2, p0, Lmiui/maml/data/WebServiceBinder$QueryThread;->this$0:Lmiui/maml/data/WebServiceBinder;
 
     # setter for: Lmiui/maml/data/WebServiceBinder;->mQueryInProgress:Z
     invoke-static {v2, v6}, Lmiui/maml/data/WebServiceBinder;->access$902(Lmiui/maml/data/WebServiceBinder;Z)Z
 
-    .line 759
     const-string v2, "WebServiceBinder"
 
     const-string v3, "QueryThread end"
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 760
     return-void
 
     :cond_2
     move-object v1, v2
 
-    .line 728
     goto :goto_0
 
-    .line 736
     .restart local v0    # "response":Ljava/lang/Object;
     :cond_3
     iget-object v3, p0, Lmiui/maml/data/WebServiceBinder$QueryThread;->this$0:Lmiui/maml/data/WebServiceBinder;
@@ -1062,7 +953,6 @@
 
     goto :goto_1
 
-    .line 743
     :pswitch_0
     iget-object v2, p0, Lmiui/maml/data/WebServiceBinder$QueryThread;->this$0:Lmiui/maml/data/WebServiceBinder;
 
@@ -1074,7 +964,6 @@
 
     goto :goto_2
 
-    .line 747
     .restart local v0    # "response":Ljava/lang/Object;
     :pswitch_1
     iget-object v2, p0, Lmiui/maml/data/WebServiceBinder$QueryThread;->this$0:Lmiui/maml/data/WebServiceBinder;
@@ -1087,7 +976,6 @@
 
     goto :goto_2
 
-    .line 750
     .restart local v0    # "response":Ljava/lang/Object;
     :pswitch_2
     iget-object v2, p0, Lmiui/maml/data/WebServiceBinder$QueryThread;->this$0:Lmiui/maml/data/WebServiceBinder;
@@ -1099,7 +987,6 @@
 
     goto :goto_2
 
-    .line 755
     :cond_4
     const-string v2, "WebServiceBinder"
 
@@ -1109,7 +996,6 @@
 
     goto :goto_2
 
-    .line 741
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

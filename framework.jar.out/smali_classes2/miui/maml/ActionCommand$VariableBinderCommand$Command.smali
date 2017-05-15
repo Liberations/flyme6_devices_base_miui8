@@ -40,7 +40,6 @@
 
     const/4 v2, 0x0
 
-    .line 848
     new-instance v0, Lmiui/maml/ActionCommand$VariableBinderCommand$Command;
 
     const-string v1, "Refresh"
@@ -57,7 +56,6 @@
 
     sput-object v0, Lmiui/maml/ActionCommand$VariableBinderCommand$Command;->Invalid:Lmiui/maml/ActionCommand$VariableBinderCommand$Command;
 
-    .line 847
     const/4 v0, 0x2
 
     new-array v0, v0, [Lmiui/maml/ActionCommand$VariableBinderCommand$Command;
@@ -84,7 +82,6 @@
     .end annotation
 
     .prologue
-    .line 847
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -95,7 +92,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 847
     const-class v0, Lmiui/maml/ActionCommand$VariableBinderCommand$Command;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -111,7 +107,6 @@
     .locals 1
 
     .prologue
-    .line 847
     sget-object v0, Lmiui/maml/ActionCommand$VariableBinderCommand$Command;->$VALUES:[Lmiui/maml/ActionCommand$VariableBinderCommand$Command;
 
     invoke-virtual {v0}, [Lmiui/maml/ActionCommand$VariableBinderCommand$Command;->clone()Ljava/lang/Object;

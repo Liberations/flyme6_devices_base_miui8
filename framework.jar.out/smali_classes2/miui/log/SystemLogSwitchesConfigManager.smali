@@ -16,7 +16,6 @@
     .locals 3
 
     .prologue
-    .line 16
     new-instance v0, Lmiui/log/LogSwitchesConfigManager;
 
     const-string v1, "/data/system/miuilog/switches"
@@ -34,7 +33,6 @@
     .locals 0
 
     .prologue
-    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +43,6 @@
     .param p0, "createLogSwitchesFileIfNotExisted"    # Z
 
     .prologue
-    .line 19
     sget-object v0, Lmiui/log/SystemLogSwitchesConfigManager;->logSwitchesManager:Lmiui/log/LogSwitchesConfigManager;
 
     invoke-static {}, Lmiui/log/SystemLogSwitchesConfigManager;->synchronizedReadInitialLogSwitches()Z
@@ -54,7 +51,6 @@
 
     invoke-virtual {v0, p0, v1}, Lmiui/log/LogSwitchesConfigManager;->startMonitoring(ZZ)V
 
-    .line 21
     return-void
 .end method
 
@@ -62,7 +58,6 @@
     .locals 2
 
     .prologue
-    .line 40
     const-string v0, "sys.miui.sync_read_log_switch"
 
     const/4 v1, 0x0
@@ -79,12 +74,10 @@
     .param p0, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 36
     sget-object v0, Lmiui/log/SystemLogSwitchesConfigManager;->logSwitchesManager:Lmiui/log/LogSwitchesConfigManager;
 
     invoke-virtual {v0, p0}, Lmiui/log/LogSwitchesConfigManager;->updateLogSwitches(Landroid/content/Intent;)V
 
-    .line 37
     return-void
 .end method
 
@@ -93,12 +86,10 @@
     .param p0, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 24
     sget-object v0, Lmiui/log/SystemLogSwitchesConfigManager;->logSwitchesManager:Lmiui/log/LogSwitchesConfigManager;
 
     invoke-virtual {v0, p0}, Lmiui/log/LogSwitchesConfigManager;->updatePackageName(Ljava/lang/String;)V
 
-    .line 25
     return-void
 .end method
 
@@ -106,12 +97,10 @@
     .locals 1
 
     .prologue
-    .line 32
     sget-object v0, Lmiui/log/SystemLogSwitchesConfigManager;->logSwitchesManager:Lmiui/log/LogSwitchesConfigManager;
 
     invoke-virtual {v0}, Lmiui/log/LogSwitchesConfigManager;->updateProgramName()V
 
-    .line 33
     return-void
 .end method
 
@@ -120,11 +109,9 @@
     .param p0, "programName"    # Ljava/lang/String;
 
     .prologue
-    .line 28
     sget-object v0, Lmiui/log/SystemLogSwitchesConfigManager;->logSwitchesManager:Lmiui/log/LogSwitchesConfigManager;
 
     invoke-virtual {v0, p0}, Lmiui/log/LogSwitchesConfigManager;->updateProgramName(Ljava/lang/String;)V
 
-    .line 29
     return-void
 .end method

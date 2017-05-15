@@ -48,22 +48,17 @@
     .end annotation
 
     .prologue
-    .line 721
     .local p1, "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lmiui/app/RemoveDuplicateContacts$ContactsInfo;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 722
     iput-object p1, p0, Lmiui/app/RemoveDuplicateContacts$MergeContacts;->mContacts:Ljava/util/ArrayList;
 
-    .line 723
     iput-object p2, p0, Lmiui/app/RemoveDuplicateContacts$MergeContacts;->mName:Ljava/lang/String;
 
-    .line 724
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lmiui/app/RemoveDuplicateContacts$MergeContacts;->mChecked:Z
 
-    .line 725
     return-void
 .end method
 
@@ -82,7 +77,6 @@
     .end annotation
 
     .prologue
-    .line 714
     iget-object v0, p0, Lmiui/app/RemoveDuplicateContacts$MergeContacts;->mContacts:Ljava/util/ArrayList;
 
     return-object v0
@@ -92,7 +86,6 @@
     .locals 1
 
     .prologue
-    .line 718
     iget-object v0, p0, Lmiui/app/RemoveDuplicateContacts$MergeContacts;->mName:Ljava/lang/String;
 
     return-object v0
@@ -102,7 +95,6 @@
     .locals 1
 
     .prologue
-    .line 728
     iget-boolean v0, p0, Lmiui/app/RemoveDuplicateContacts$MergeContacts;->mChecked:Z
 
     return v0
@@ -113,9 +105,7 @@
     .param p1, "checked"    # Z
 
     .prologue
-    .line 732
     iput-boolean p1, p0, Lmiui/app/RemoveDuplicateContacts$MergeContacts;->mChecked:Z
 
-    .line 733
     return-void
 .end method

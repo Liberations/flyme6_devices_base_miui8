@@ -26,15 +26,12 @@
     .param p2, "wrapped"    # Landroid/view/ActionMode$Callback;
 
     .prologue
-    .line 3526
     iput-object p1, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$ActionModeCallback2Wrapper;->this$1:Lcom/android/internal/policy/PhoneWindow$DecorView;
 
     invoke-direct {p0}, Landroid/view/ActionMode$Callback2;-><init>()V
 
-    .line 3527
     iput-object p2, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$ActionModeCallback2Wrapper;->mWrapped:Landroid/view/ActionMode$Callback;
 
-    .line 3528
     return-void
 .end method
 
@@ -46,7 +43,6 @@
     .param p2, "item"    # Landroid/view/MenuItem;
 
     .prologue
-    .line 3540
     iget-object v0, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$ActionModeCallback2Wrapper;->mWrapped:Landroid/view/ActionMode$Callback;
 
     invoke-interface {v0, p1, p2}, Landroid/view/ActionMode$Callback;->onActionItemClicked(Landroid/view/ActionMode;Landroid/view/MenuItem;)Z
@@ -62,7 +58,6 @@
     .param p2, "menu"    # Landroid/view/Menu;
 
     .prologue
-    .line 3531
     iget-object v0, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$ActionModeCallback2Wrapper;->mWrapped:Landroid/view/ActionMode$Callback;
 
     invoke-interface {v0, p1, p2}, Landroid/view/ActionMode$Callback;->onCreateActionMode(Landroid/view/ActionMode;Landroid/view/Menu;)Z
@@ -83,12 +78,10 @@
 
     const/4 v3, 0x1
 
-    .line 3544
     iget-object v5, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$ActionModeCallback2Wrapper;->mWrapped:Landroid/view/ActionMode$Callback;
 
     invoke-interface {v5, p1}, Landroid/view/ActionMode$Callback;->onDestroyActionMode(Landroid/view/ActionMode;)V
 
-    .line 3545
     iget-object v5, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$ActionModeCallback2Wrapper;->this$1:Lcom/android/internal/policy/PhoneWindow$DecorView;
 
     # getter for: Lcom/android/internal/policy/PhoneWindow$DecorView;->mContext:Landroid/content/Context;
@@ -108,12 +101,10 @@
 
     move v1, v3
 
-    .line 3549
     .local v1, "isMncApp":Z
     :goto_0
     if-eqz v1, :cond_9
 
-    .line 3550
     iget-object v5, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$ActionModeCallback2Wrapper;->this$1:Lcom/android/internal/policy/PhoneWindow$DecorView;
 
     # getter for: Lcom/android/internal/policy/PhoneWindow$DecorView;->mPrimaryActionMode:Landroid/view/ActionMode;
@@ -125,7 +116,6 @@
 
     move v2, v3
 
-    .line 3551
     .local v2, "isPrimary":Z
     :goto_1
     iget-object v5, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$ActionModeCallback2Wrapper;->this$1:Lcom/android/internal/policy/PhoneWindow$DecorView;
@@ -139,7 +129,6 @@
 
     move v0, v3
 
-    .line 3552
     .local v0, "isFloating":Z
     :goto_2
     if-nez v2, :cond_0
@@ -150,7 +139,6 @@
 
     if-nez v4, :cond_0
 
-    .line 3553
     const-string v4, "PhoneWindow"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -190,7 +178,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3557
     :cond_0
     if-nez v0, :cond_1
 
@@ -200,7 +187,6 @@
 
     if-ne v4, v3, :cond_1
 
-    .line 3558
     const-string v3, "PhoneWindow"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -240,12 +226,10 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3566
     :cond_1
     :goto_3
     if-eqz v2, :cond_c
 
-    .line 3567
     iget-object v3, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$ActionModeCallback2Wrapper;->this$1:Lcom/android/internal/policy/PhoneWindow$DecorView;
 
     # getter for: Lcom/android/internal/policy/PhoneWindow$DecorView;->mPrimaryActionModePopup:Landroid/widget/PopupWindow;
@@ -255,7 +239,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 3568
     iget-object v3, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$ActionModeCallback2Wrapper;->this$1:Lcom/android/internal/policy/PhoneWindow$DecorView;
 
     iget-object v4, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$ActionModeCallback2Wrapper;->this$1:Lcom/android/internal/policy/PhoneWindow$DecorView;
@@ -267,7 +250,6 @@
 
     invoke-virtual {v3, v4}, Lcom/android/internal/policy/PhoneWindow$DecorView;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 3570
     :cond_2
     iget-object v3, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$ActionModeCallback2Wrapper;->this$1:Lcom/android/internal/policy/PhoneWindow$DecorView;
 
@@ -278,13 +260,11 @@
 
     if-eqz v3, :cond_3
 
-    .line 3571
     iget-object v3, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$ActionModeCallback2Wrapper;->this$1:Lcom/android/internal/policy/PhoneWindow$DecorView;
 
     # invokes: Lcom/android/internal/policy/PhoneWindow$DecorView;->endOnGoingFadeAnimation()V
     invoke-static {v3}, Lcom/android/internal/policy/PhoneWindow$DecorView;->access$2500(Lcom/android/internal/policy/PhoneWindow$DecorView;)V
 
-    .line 3572
     iget-object v3, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$ActionModeCallback2Wrapper;->this$1:Lcom/android/internal/policy/PhoneWindow$DecorView;
 
     iget-object v4, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$ActionModeCallback2Wrapper;->this$1:Lcom/android/internal/policy/PhoneWindow$DecorView;
@@ -309,7 +289,6 @@
     # setter for: Lcom/android/internal/policy/PhoneWindow$DecorView;->mFadeAnim:Landroid/animation/ObjectAnimator;
     invoke-static {v3, v4}, Lcom/android/internal/policy/PhoneWindow$DecorView;->access$2602(Lcom/android/internal/policy/PhoneWindow$DecorView;Landroid/animation/ObjectAnimator;)Landroid/animation/ObjectAnimator;
 
-    .line 3574
     iget-object v3, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$ActionModeCallback2Wrapper;->this$1:Lcom/android/internal/policy/PhoneWindow$DecorView;
 
     # getter for: Lcom/android/internal/policy/PhoneWindow$DecorView;->mFadeAnim:Landroid/animation/ObjectAnimator;
@@ -323,7 +302,6 @@
 
     invoke-virtual {v3, v4}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 3600
     iget-object v3, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$ActionModeCallback2Wrapper;->this$1:Lcom/android/internal/policy/PhoneWindow$DecorView;
 
     # getter for: Lcom/android/internal/policy/PhoneWindow$DecorView;->mFadeAnim:Landroid/animation/ObjectAnimator;
@@ -333,14 +311,12 @@
 
     invoke-virtual {v3}, Landroid/animation/ObjectAnimator;->start()V
 
-    .line 3603
     :cond_3
     iget-object v3, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$ActionModeCallback2Wrapper;->this$1:Lcom/android/internal/policy/PhoneWindow$DecorView;
 
     # setter for: Lcom/android/internal/policy/PhoneWindow$DecorView;->mPrimaryActionMode:Landroid/view/ActionMode;
     invoke-static {v3, v7}, Lcom/android/internal/policy/PhoneWindow$DecorView;->access$302(Lcom/android/internal/policy/PhoneWindow$DecorView;Landroid/view/ActionMode;)Landroid/view/ActionMode;
 
-    .line 3608
     :cond_4
     :goto_4
     iget-object v3, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$ActionModeCallback2Wrapper;->this$1:Lcom/android/internal/policy/PhoneWindow$DecorView;
@@ -363,7 +339,6 @@
 
     if-nez v3, :cond_5
 
-    .line 3610
     :try_start_0
     iget-object v3, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$ActionModeCallback2Wrapper;->this$1:Lcom/android/internal/policy/PhoneWindow$DecorView;
 
@@ -377,14 +352,12 @@
     :try_end_0
     .catch Ljava/lang/AbstractMethodError; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3615
     :cond_5
     :goto_5
     iget-object v3, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$ActionModeCallback2Wrapper;->this$1:Lcom/android/internal/policy/PhoneWindow$DecorView;
 
     invoke-virtual {v3}, Lcom/android/internal/policy/PhoneWindow$DecorView;->requestFitSystemWindows()V
 
-    .line 3616
     return-void
 
     .end local v0    # "isFloating":Z
@@ -393,24 +366,20 @@
     :cond_6
     move v1, v4
 
-    .line 3545
     goto/16 :goto_0
 
     .restart local v1    # "isMncApp":Z
     :cond_7
     move v2, v4
 
-    .line 3550
     goto/16 :goto_1
 
     .restart local v2    # "isPrimary":Z
     :cond_8
     move v0, v4
 
-    .line 3551
     goto/16 :goto_2
 
-    .line 3563
     .end local v2    # "isPrimary":Z
     :cond_9
     invoke-virtual {p1}, Landroid/view/ActionMode;->getType()I
@@ -421,7 +390,6 @@
 
     move v2, v3
 
-    .line 3564
     .restart local v2    # "isPrimary":Z
     :goto_6
     invoke-virtual {p1}, Landroid/view/ActionMode;->getType()I
@@ -441,28 +409,23 @@
     :cond_a
     move v2, v4
 
-    .line 3563
     goto :goto_6
 
     .restart local v2    # "isPrimary":Z
     :cond_b
     move v0, v4
 
-    .line 3564
     goto :goto_7
 
-    .line 3604
     .restart local v0    # "isFloating":Z
     :cond_c
     if-eqz v0, :cond_4
 
-    .line 3605
     iget-object v3, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$ActionModeCallback2Wrapper;->this$1:Lcom/android/internal/policy/PhoneWindow$DecorView;
 
     # invokes: Lcom/android/internal/policy/PhoneWindow$DecorView;->cleanupFloatingActionModeViews()V
     invoke-static {v3}, Lcom/android/internal/policy/PhoneWindow$DecorView;->access$3000(Lcom/android/internal/policy/PhoneWindow$DecorView;)V
 
-    .line 3606
     iget-object v3, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$ActionModeCallback2Wrapper;->this$1:Lcom/android/internal/policy/PhoneWindow$DecorView;
 
     # setter for: Lcom/android/internal/policy/PhoneWindow$DecorView;->mFloatingActionMode:Landroid/view/ActionMode;
@@ -470,13 +433,11 @@
 
     goto :goto_4
 
-    .line 3611
     :catch_0
     move-exception v3
 
     goto :goto_5
 
-    .line 3572
     nop
 
     :array_0
@@ -493,25 +454,21 @@
     .param p3, "outRect"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 3620
     iget-object v0, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$ActionModeCallback2Wrapper;->mWrapped:Landroid/view/ActionMode$Callback;
 
     instance-of v0, v0, Landroid/view/ActionMode$Callback2;
 
     if-eqz v0, :cond_0
 
-    .line 3621
     iget-object v0, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$ActionModeCallback2Wrapper;->mWrapped:Landroid/view/ActionMode$Callback;
 
     check-cast v0, Landroid/view/ActionMode$Callback2;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/view/ActionMode$Callback2;->onGetContentRect(Landroid/view/ActionMode;Landroid/view/View;Landroid/graphics/Rect;)V
 
-    .line 3625
     :goto_0
     return-void
 
-    .line 3623
     :cond_0
     invoke-super {p0, p1, p2, p3}, Landroid/view/ActionMode$Callback2;->onGetContentRect(Landroid/view/ActionMode;Landroid/view/View;Landroid/graphics/Rect;)V
 
@@ -524,12 +481,10 @@
     .param p2, "menu"    # Landroid/view/Menu;
 
     .prologue
-    .line 3535
     iget-object v0, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$ActionModeCallback2Wrapper;->this$1:Lcom/android/internal/policy/PhoneWindow$DecorView;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/PhoneWindow$DecorView;->requestFitSystemWindows()V
 
-    .line 3536
     iget-object v0, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$ActionModeCallback2Wrapper;->mWrapped:Landroid/view/ActionMode$Callback;
 
     invoke-interface {v0, p1, p2}, Landroid/view/ActionMode$Callback;->onPrepareActionMode(Landroid/view/ActionMode;Landroid/view/Menu;)Z

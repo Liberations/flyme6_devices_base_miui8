@@ -97,12 +97,10 @@
     .locals 1
 
     .prologue
-    .line 15
     sget-boolean v0, Lcom/miui/whetstone/WhetstoneManager;->DEBUG:Z
 
     sput-boolean v0, Lcom/miui/whetstone/WhetstonePackageState;->DEBUG:Z
 
-    .line 59
     new-instance v0, Lcom/miui/whetstone/WhetstonePackageState$1;
 
     invoke-direct {v0}, Lcom/miui/whetstone/WhetstonePackageState$1;-><init>()V
@@ -117,13 +115,10 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 110
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 111
     invoke-virtual {p0, p1}, Lcom/miui/whetstone/WhetstonePackageState;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 112
     return-void
 .end method
 
@@ -133,7 +128,6 @@
     .param p2, "x1"    # Lcom/miui/whetstone/WhetstonePackageState$1;
 
     .prologue
-    .line 13
     invoke-direct {p0, p1}, Lcom/miui/whetstone/WhetstonePackageState;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -144,22 +138,18 @@
     .param p1, "state"    # Lcom/miui/whetstone/WhetstonePackageState;
 
     .prologue
-    .line 99
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 100
     iget-object v2, p1, Lcom/miui/whetstone/WhetstonePackageState;->mPackageName:Ljava/lang/String;
 
     iput-object v2, p0, Lcom/miui/whetstone/WhetstonePackageState;->mPackageName:Ljava/lang/String;
 
-    .line 101
     new-instance v2, Ljava/util/HashMap;
 
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
     iput-object v2, p0, Lcom/miui/whetstone/WhetstonePackageState;->mUserState:Ljava/util/Map;
 
-    .line 103
     iget-object v2, p1, Lcom/miui/whetstone/WhetstonePackageState;->mUserState:Ljava/util/Map;
 
     invoke-interface {v2}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -184,7 +174,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 104
     .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Integer;Lcom/miui/whetstone/WhetstonePackageState$UserState;>;"
     iget-object v3, p0, Lcom/miui/whetstone/WhetstonePackageState;->mUserState:Ljava/util/Map;
 
@@ -206,14 +195,12 @@
 
     goto :goto_0
 
-    .line 107
     .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Integer;Lcom/miui/whetstone/WhetstonePackageState$UserState;>;"
     :cond_0
     iget-boolean v2, p1, Lcom/miui/whetstone/WhetstonePackageState;->mCloudState:Z
 
     iput-boolean v2, p0, Lcom/miui/whetstone/WhetstonePackageState;->mCloudState:Z
 
-    .line 108
     return-void
 .end method
 
@@ -222,12 +209,10 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 79
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/miui/whetstone/WhetstonePackageState;-><init>(Ljava/lang/String;Z)V
 
-    .line 80
     return-void
 .end method
 
@@ -237,23 +222,18 @@
     .param p2, "cloudState"    # Z
 
     .prologue
-    .line 88
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 89
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/miui/whetstone/WhetstonePackageState;->mUserState:Ljava/util/Map;
 
-    .line 90
     iput-object p1, p0, Lcom/miui/whetstone/WhetstonePackageState;->mPackageName:Ljava/lang/String;
 
-    .line 91
     iput-boolean p2, p0, Lcom/miui/whetstone/WhetstonePackageState;->mCloudState:Z
 
-    .line 92
     return-void
 .end method
 
@@ -266,7 +246,6 @@
     .param p3, "userId"    # I
 
     .prologue
-    .line 304
     monitor-enter p0
 
     :try_start_0
@@ -276,7 +255,6 @@
 
     const/4 p3, 0x0
 
-    .line 305
     :cond_0
     iget-object v1, p0, Lcom/miui/whetstone/WhetstonePackageState;->mUserState:Ljava/util/Map;
 
@@ -290,24 +268,20 @@
 
     check-cast v0, Lcom/miui/whetstone/WhetstonePackageState$UserState;
 
-    .line 306
     .local v0, "state":Lcom/miui/whetstone/WhetstonePackageState$UserState;
     if-eqz v0, :cond_1
 
-    .line 307
     iget-object v1, v0, Lcom/miui/whetstone/WhetstonePackageState$UserState;->mDebugInfo:Lcom/miui/whetstone/WhetstonePackageState$DebugInfo;
 
     invoke-virtual {v1, p1, p2}, Lcom/miui/whetstone/WhetstonePackageState$DebugInfo;->addDeniedRecord(ILjava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 309
     :cond_1
     monitor-exit p0
 
     return-void
 
-    .line 304
     .end local v0    # "state":Lcom/miui/whetstone/WhetstonePackageState$UserState;
     :catchall_0
     move-exception v1
@@ -321,7 +295,6 @@
     .locals 1
 
     .prologue
-    .line 116
     const/4 v0, 0x0
 
     return v0
@@ -337,14 +310,12 @@
     .end annotation
 
     .prologue
-    .line 167
     iget-boolean v1, p0, Lcom/miui/whetstone/WhetstonePackageState;->mCloudState:Z
 
     if-eqz v1, :cond_0
 
     const/4 p1, 0x0
 
-    .line 168
     :cond_0
     iget-object v1, p0, Lcom/miui/whetstone/WhetstonePackageState;->mUserState:Ljava/util/Map;
 
@@ -358,16 +329,13 @@
 
     check-cast v0, Lcom/miui/whetstone/WhetstonePackageState$UserState;
 
-    .line 169
     .local v0, "state":Lcom/miui/whetstone/WhetstonePackageState$UserState;
     if-eqz v0, :cond_1
 
-    .line 170
     iget-object v1, v0, Lcom/miui/whetstone/WhetstonePackageState$UserState;->mAdditionalInfo:Ljava/lang/String;
 
     return-object v1
 
-    .line 172
     :cond_1
     new-instance v1, Lcom/miui/whetstone/WhetstonePackageState$UserIdNotFoundException;
 
@@ -381,12 +349,10 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 312
     monitor-enter p0
 
     const/4 v1, 0x0
 
-    .line 313
     .local v1, "out":I
     :try_start_0
     iget-object v3, p0, Lcom/miui/whetstone/WhetstonePackageState;->mUserState:Ljava/util/Map;
@@ -413,7 +379,6 @@
 
     check-cast v2, Lcom/miui/whetstone/WhetstonePackageState$UserState;
 
-    .line 314
     .local v2, "state":Lcom/miui/whetstone/WhetstonePackageState$UserState;
     iget-object v3, v2, Lcom/miui/whetstone/WhetstonePackageState$UserState;->mDebugInfo:Lcom/miui/whetstone/WhetstonePackageState$DebugInfo;
 
@@ -425,17 +390,14 @@
 
     add-int/2addr v1, v3
 
-    .line 315
     goto :goto_0
 
-    .line 316
     .end local v2    # "state":Lcom/miui/whetstone/WhetstonePackageState$UserState;
     :cond_0
     monitor-exit p0
 
     return v1
 
-    .line 312
     .end local v0    # "i$":Ljava/util/Iterator;
     :catchall_0
     move-exception v3
@@ -455,14 +417,12 @@
     .end annotation
 
     .prologue
-    .line 187
     iget-boolean v1, p0, Lcom/miui/whetstone/WhetstonePackageState;->mCloudState:Z
 
     if-eqz v1, :cond_0
 
     const/4 p1, 0x0
 
-    .line 188
     :cond_0
     iget-object v1, p0, Lcom/miui/whetstone/WhetstonePackageState;->mUserState:Ljava/util/Map;
 
@@ -476,16 +436,13 @@
 
     check-cast v0, Lcom/miui/whetstone/WhetstonePackageState$UserState;
 
-    .line 189
     .local v0, "state":Lcom/miui/whetstone/WhetstonePackageState$UserState;
     if-eqz v0, :cond_1
 
-    .line 190
     iget v1, v0, Lcom/miui/whetstone/WhetstonePackageState$UserState;->mStartMask:I
 
     return v1
 
-    .line 192
     :cond_1
     new-instance v1, Lcom/miui/whetstone/WhetstonePackageState$UserIdNotFoundException;
 
@@ -498,7 +455,6 @@
     .locals 1
 
     .prologue
-    .line 159
     iget-object v0, p0, Lcom/miui/whetstone/WhetstonePackageState;->mPackageName:Ljava/lang/String;
 
     return-object v0
@@ -508,7 +464,6 @@
     .locals 1
 
     .prologue
-    .line 211
     iget-boolean v0, p0, Lcom/miui/whetstone/WhetstonePackageState;->mCloudState:Z
 
     return v0
@@ -521,19 +476,16 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 135
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v6
 
     iput-object v6, p0, Lcom/miui/whetstone/WhetstonePackageState;->mPackageName:Ljava/lang/String;
 
-    .line 136
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 137
     .local v3, "sz":I
     new-instance v6, Ljava/util/HashMap;
 
@@ -541,31 +493,26 @@
 
     iput-object v6, p0, Lcom/miui/whetstone/WhetstonePackageState;->mUserState:Ljava/util/Map;
 
-    .line 138
     const/4 v1, 0x0
 
     .local v1, "i":I
     :goto_0
     if-ge v1, v3, :cond_0
 
-    .line 139
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 140
     .local v4, "userId":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 141
     .local v0, "additionalInfo":Ljava/lang/String;
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 142
     .local v2, "mask":I
     iget-object v6, p0, Lcom/miui/whetstone/WhetstonePackageState;->mUserState:Ljava/util/Map;
 
@@ -579,12 +526,10 @@
 
     invoke-interface {v6, v7, v8}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 138
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 144
     .end local v0    # "additionalInfo":Ljava/lang/String;
     .end local v2    # "mask":I
     .end local v4    # "userId":I
@@ -598,10 +543,8 @@
     :goto_1
     iput-boolean v5, p0, Lcom/miui/whetstone/WhetstonePackageState;->mCloudState:Z
 
-    .line 145
     return-void
 
-    .line 144
     :cond_1
     const/4 v5, 0x0
 
@@ -619,7 +562,6 @@
     .end annotation
 
     .prologue
-    .line 177
     monitor-enter p0
 
     :try_start_0
@@ -629,7 +571,6 @@
 
     const/4 p2, 0x0
 
-    .line 178
     :cond_0
     iget-object v1, p0, Lcom/miui/whetstone/WhetstonePackageState;->mUserState:Ljava/util/Map;
 
@@ -643,21 +584,17 @@
 
     check-cast v0, Lcom/miui/whetstone/WhetstonePackageState$UserState;
 
-    .line 179
     .local v0, "state":Lcom/miui/whetstone/WhetstonePackageState$UserState;
     if-eqz v0, :cond_1
 
-    .line 180
     iput-object p1, v0, Lcom/miui/whetstone/WhetstonePackageState$UserState;->mAdditionalInfo:Ljava/lang/String;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 184
     monitor-exit p0
 
     return-void
 
-    .line 182
     :cond_1
     :try_start_1
     new-instance v1, Lcom/miui/whetstone/WhetstonePackageState$UserIdNotFoundException;
@@ -668,7 +605,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 177
     .end local v0    # "state":Lcom/miui/whetstone/WhetstonePackageState$UserState;
     :catchall_0
     move-exception v1
@@ -683,7 +619,6 @@
     .param p1, "cloudable"    # Z
 
     .prologue
-    .line 207
     monitor-enter p0
 
     :try_start_0
@@ -691,12 +626,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 208
     monitor-exit p0
 
     return-void
 
-    .line 207
     :catchall_0
     move-exception v0
 
@@ -716,7 +649,6 @@
     .end annotation
 
     .prologue
-    .line 197
     monitor-enter p0
 
     :try_start_0
@@ -726,7 +658,6 @@
 
     const/4 p2, 0x0
 
-    .line 198
     :cond_0
     iget-object v1, p0, Lcom/miui/whetstone/WhetstonePackageState;->mUserState:Ljava/util/Map;
 
@@ -740,21 +671,17 @@
 
     check-cast v0, Lcom/miui/whetstone/WhetstonePackageState$UserState;
 
-    .line 199
     .local v0, "state":Lcom/miui/whetstone/WhetstonePackageState$UserState;
     if-eqz v0, :cond_1
 
-    .line 200
     iput p1, v0, Lcom/miui/whetstone/WhetstonePackageState$UserState;->mStartMask:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 204
     monitor-exit p0
 
     return-void
 
-    .line 202
     :cond_1
     :try_start_1
     new-instance v1, Lcom/miui/whetstone/WhetstonePackageState$UserIdNotFoundException;
@@ -765,7 +692,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 197
     .end local v0    # "state":Lcom/miui/whetstone/WhetstonePackageState$UserState;
     :catchall_0
     move-exception v1
@@ -780,7 +706,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 163
     monitor-enter p0
 
     :try_start_0
@@ -788,12 +713,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 164
     monitor-exit p0
 
     return-void
 
-    .line 163
     :catchall_0
     move-exception v0
 
@@ -809,14 +732,12 @@
     .param p3, "userId"    # I
 
     .prologue
-    .line 148
     iget-boolean v1, p0, Lcom/miui/whetstone/WhetstonePackageState;->mCloudState:Z
 
     if-eqz v1, :cond_0
 
     const/4 p3, 0x0
 
-    .line 149
     :cond_0
     iget-object v1, p0, Lcom/miui/whetstone/WhetstonePackageState;->mUserState:Ljava/util/Map;
 
@@ -830,21 +751,16 @@
 
     check-cast v0, Lcom/miui/whetstone/WhetstonePackageState$UserState;
 
-    .line 150
     .local v0, "state":Lcom/miui/whetstone/WhetstonePackageState$UserState;
     if-eqz v0, :cond_1
 
-    .line 151
     iput-object p2, v0, Lcom/miui/whetstone/WhetstonePackageState$UserState;->mAdditionalInfo:Ljava/lang/String;
 
-    .line 152
     iput p1, v0, Lcom/miui/whetstone/WhetstonePackageState$UserState;->mStartMask:I
 
-    .line 156
     :goto_0
     return-void
 
-    .line 154
     :cond_1
     iget-object v1, p0, Lcom/miui/whetstone/WhetstonePackageState;->mUserState:Ljava/util/Map;
 
@@ -865,12 +781,10 @@
     .locals 5
 
     .prologue
-    .line 216
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 217
     .local v2, "stringBuilder":Ljava/lang/StringBuilder;
     const-string v3, "PackageName: "
 
@@ -888,17 +802,14 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 218
     iget-boolean v3, p0, Lcom/miui/whetstone/WhetstonePackageState;->mCloudState:Z
 
     if-eqz v3, :cond_0
 
-    .line 219
     const-string v3, "This package is controlled by Cloud \n"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 224
     :goto_0
     iget-object v3, p0, Lcom/miui/whetstone/WhetstonePackageState;->mUserState:Ljava/util/Map;
 
@@ -924,7 +835,6 @@
 
     check-cast v1, Lcom/miui/whetstone/WhetstonePackageState$UserState;
 
-    .line 225
     .local v1, "state":Lcom/miui/whetstone/WhetstonePackageState$UserState;
     invoke-virtual {v1}, Lcom/miui/whetstone/WhetstonePackageState$UserState;->toString()Ljava/lang/String;
 
@@ -940,7 +850,6 @@
 
     goto :goto_1
 
-    .line 221
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v1    # "state":Lcom/miui/whetstone/WhetstonePackageState$UserState;
     :cond_0
@@ -950,14 +859,12 @@
 
     goto :goto_0
 
-    .line 227
     .restart local v0    # "i$":Ljava/util/Iterator;
     :cond_1
     const-string v3, "------------------"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 228
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
@@ -971,23 +878,19 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 121
     iget-object v3, p0, Lcom/miui/whetstone/WhetstonePackageState;->mPackageName:Ljava/lang/String;
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 123
     iget-object v3, p0, Lcom/miui/whetstone/WhetstonePackageState;->mUserState:Ljava/util/Map;
 
     invoke-interface {v3}, Ljava/util/Map;->size()I
 
     move-result v2
 
-    .line 124
     .local v2, "sz":I
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 126
     iget-object v3, p0, Lcom/miui/whetstone/WhetstonePackageState;->mUserState:Ljava/util/Map;
 
     invoke-interface {v3}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -1012,7 +915,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 127
     .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Integer;Lcom/miui/whetstone/WhetstonePackageState$UserState;>;"
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -1026,7 +928,6 @@
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 128
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v3
@@ -1037,7 +938,6 @@
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 129
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v3
@@ -1050,7 +950,6 @@
 
     goto :goto_0
 
-    .line 131
     .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Integer;Lcom/miui/whetstone/WhetstonePackageState$UserState;>;"
     :cond_0
     iget-boolean v3, p0, Lcom/miui/whetstone/WhetstonePackageState;->mCloudState:Z
@@ -1062,10 +961,8 @@
     :goto_1
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 132
     return-void
 
-    .line 131
     :cond_1
     const/4 v3, 0x0
 

@@ -25,7 +25,6 @@
     .param p3, "x1"    # I
 
     .prologue
-    .line 60
     iput-object p1, p0, Lmiui/log/LogSwitchesConfigMonitor$1;->this$0:Lmiui/log/LogSwitchesConfigMonitor;
 
     invoke-direct {p0, p2, p3}, Landroid/os/FileObserver;-><init>(Ljava/lang/String;I)V
@@ -41,7 +40,6 @@
     .param p2, "path"    # Ljava/lang/String;
 
     .prologue
-    .line 63
     iget-object v0, p0, Lmiui/log/LogSwitchesConfigMonitor$1;->this$0:Lmiui/log/LogSwitchesConfigMonitor;
 
     # getter for: Lmiui/log/LogSwitchesConfigMonitor;->logSwitchesFileName:Ljava/lang/String;
@@ -55,12 +53,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 64
     iget-object v1, p0, Lmiui/log/LogSwitchesConfigMonitor$1;->this$0:Lmiui/log/LogSwitchesConfigMonitor;
 
     monitor-enter v1
 
-    .line 65
     :try_start_0
     iget-object v0, p0, Lmiui/log/LogSwitchesConfigMonitor$1;->this$0:Lmiui/log/LogSwitchesConfigMonitor;
 
@@ -85,14 +81,11 @@
     # setter for: Lmiui/log/LogSwitchesConfigMonitor;->currentLogSwitchesConfig:Ljava/util/HashMap;
     invoke-static {v0, v2}, Lmiui/log/LogSwitchesConfigMonitor;->access$102(Lmiui/log/LogSwitchesConfigMonitor;Ljava/util/HashMap;)Ljava/util/HashMap;
 
-    .line 66
     monitor-exit v1
 
-    .line 68
     :cond_0
     return-void
 
-    .line 66
     :catchall_0
     move-exception v0
 

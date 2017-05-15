@@ -29,15 +29,12 @@
     .param p2, "token"    # Landroid/os/IBinder;
 
     .prologue
-    .line 93
     iput-object p1, p0, Landroid/media/midi/MidiDeviceServer$PortClient;->this$0:Landroid/media/midi/MidiDeviceServer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 94
     iput-object p2, p0, Landroid/media/midi/MidiDeviceServer$PortClient;->mToken:Landroid/os/IBinder;
 
-    .line 97
     const/4 v1, 0x0
 
     :try_start_0
@@ -45,15 +42,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 101
     :goto_0
     return-void
 
-    .line 98
     :catch_0
     move-exception v0
 
-    .line 99
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {p0}, Landroid/media/midi/MidiDeviceServer$PortClient;->close()V
 
@@ -66,10 +60,8 @@
     .locals 0
 
     .prologue
-    .line 107
     invoke-virtual {p0}, Landroid/media/midi/MidiDeviceServer$PortClient;->close()V
 
-    .line 108
     return-void
 .end method
 

@@ -68,7 +68,6 @@
 
     const/4 v3, 0x0
 
-    .line 42
     new-instance v0, Ljava/util/ArrayList;
 
     new-array v1, v6, [Ljava/lang/String;
@@ -93,7 +92,6 @@
 
     sput-object v0, Lmiui/util/QuietUtils;->AUTHORIZE_PACKAGE:Ljava/util/ArrayList;
 
-    .line 47
     new-instance v0, Ljava/util/ArrayList;
 
     const/4 v1, 0x5
@@ -137,7 +135,6 @@
     .locals 0
 
     .prologue
-    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -152,7 +149,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 184
     sget-object v1, Lmiui/util/QuietUtils;->AUTHORIZE_PACKAGE:Ljava/util/ArrayList;
 
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
@@ -161,12 +157,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 192
     :cond_0
     :goto_0
     return v0
 
-    .line 188
     :cond_1
     if-eqz p2, :cond_2
 
@@ -176,7 +170,6 @@
 
     if-nez v1, :cond_0
 
-    .line 192
     :cond_2
     const/4 v0, 0x0
 
@@ -195,12 +188,10 @@
 
     const/4 v4, 0x1
 
-    .line 62
     invoke-static {}, Landroid/app/ActivityThread;->currentApplication()Landroid/app/Application;
 
     move-result-object v1
 
-    .line 63
     .local v1, "context":Landroid/content/Context;
     const-string v3, "power"
 
@@ -210,17 +201,14 @@
 
     check-cast v2, Landroid/os/PowerManager;
 
-    .line 65
     .local v2, "pm":Landroid/os/PowerManager;
     invoke-virtual {v1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 66
     .local v0, "cPkg":Ljava/lang/String;
     packed-switch p0, :pswitch_data_0
 
-    .line 172
     :cond_0
     :pswitch_0
     const/4 v3, 0x0
@@ -228,7 +216,6 @@
     :goto_0
     return v3
 
-    .line 68
     :pswitch_1
     const/high16 v3, 0x10000000
 
@@ -281,7 +268,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 77
     const-string v3, "QuietUtils"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -306,10 +292,8 @@
 
     move v3, v4
 
-    .line 78
     goto :goto_0
 
-    .line 83
     :pswitch_2
     invoke-static {v1, v0}, Lmiui/util/QuietUtils;->checkZenmod(Landroid/content/Context;Ljava/lang/String;)Z
 
@@ -333,7 +317,6 @@
 
     if-nez v3, :cond_0
 
-    .line 86
     const-string v3, "QuietUtils"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -358,10 +341,8 @@
 
     move v3, v4
 
-    .line 87
     goto :goto_0
 
-    .line 92
     :pswitch_3
     invoke-static {v1, v0}, Lmiui/util/QuietUtils;->checkZenmod(Landroid/content/Context;Ljava/lang/String;)Z
 
@@ -401,7 +382,6 @@
 
     if-nez v3, :cond_0
 
-    .line 96
     :cond_2
     invoke-virtual {v2}, Landroid/os/PowerManager;->isScreenOn()Z
 
@@ -409,7 +389,6 @@
 
     if-nez v3, :cond_3
 
-    .line 97
     const-string v3, "QuietUtils"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -434,10 +413,8 @@
 
     move v3, v4
 
-    .line 98
     goto/16 :goto_0
 
-    .line 100
     :cond_3
     invoke-static {v1, v0}, Lmiui/util/QuietUtils;->isTopActivity(Landroid/content/Context;Ljava/lang/String;)Z
 
@@ -445,7 +422,6 @@
 
     if-nez v3, :cond_0
 
-    .line 101
     const-string v3, "QuietUtils"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -470,10 +446,8 @@
 
     move v3, v4
 
-    .line 102
     goto/16 :goto_0
 
-    .line 108
     :pswitch_4
     if-eqz p3, :cond_4
 
@@ -488,14 +462,12 @@
 
     if-eqz v3, :cond_0
 
-    .line 110
     invoke-virtual {v2}, Landroid/os/PowerManager;->isScreenOn()Z
 
     move-result v3
 
     if-nez v3, :cond_6
 
-    .line 111
     const-string v3, "QuietUtils"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -530,10 +502,8 @@
 
     move v3, v4
 
-    .line 112
     goto/16 :goto_0
 
-    .line 108
     :cond_4
     if-eqz p2, :cond_5
 
@@ -546,11 +516,9 @@
 
     goto :goto_1
 
-    .line 114
     :cond_6
     if-eqz p3, :cond_7
 
-    .line 115
     invoke-interface {p3}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object v3
@@ -561,7 +529,6 @@
 
     if-nez v3, :cond_0
 
-    .line 116
     const-string v3, "QuietUtils"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -596,14 +563,11 @@
 
     move v3, v4
 
-    .line 117
     goto/16 :goto_0
 
-    .line 119
     :cond_7
     if-eqz p2, :cond_0
 
-    .line 120
     invoke-virtual {p2}, Ljava/lang/String;->toString()Ljava/lang/String;
 
     move-result-object v3
@@ -614,7 +578,6 @@
 
     if-nez v3, :cond_0
 
-    .line 121
     const-string v3, "QuietUtils"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -649,10 +612,8 @@
 
     move v3, v4
 
-    .line 122
     goto/16 :goto_0
 
-    .line 129
     :pswitch_5
     invoke-static {v1, v0}, Lmiui/util/QuietUtils;->checkZenmod(Landroid/content/Context;Ljava/lang/String;)Z
 
@@ -660,14 +621,12 @@
 
     if-eqz v3, :cond_0
 
-    .line 130
     invoke-virtual {v2}, Landroid/os/PowerManager;->isScreenOn()Z
 
     move-result v3
 
     if-nez v3, :cond_8
 
-    .line 131
     const-string v3, "QuietUtils"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -692,10 +651,8 @@
 
     move v3, v4
 
-    .line 132
     goto/16 :goto_0
 
-    .line 134
     :cond_8
     invoke-static {v1, v0, v4}, Lmiui/util/QuietUtils;->checkAuthorizePackage(Landroid/content/Context;Ljava/lang/String;Z)Z
 
@@ -703,7 +660,6 @@
 
     if-nez v3, :cond_0
 
-    .line 135
     const-string v3, "QuietUtils"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -728,10 +684,8 @@
 
     move v3, v4
 
-    .line 136
     goto/16 :goto_0
 
-    .line 142
     :pswitch_6
     if-ne p1, v5, :cond_0
 
@@ -741,14 +695,12 @@
 
     if-eqz v3, :cond_0
 
-    .line 144
     invoke-virtual {v2}, Landroid/os/PowerManager;->isScreenOn()Z
 
     move-result v3
 
     if-nez v3, :cond_9
 
-    .line 145
     const-string v3, "QuietUtils"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -773,10 +725,8 @@
 
     move v3, v4
 
-    .line 146
     goto/16 :goto_0
 
-    .line 148
     :cond_9
     invoke-static {v1, v0, v4}, Lmiui/util/QuietUtils;->checkAuthorizePackage(Landroid/content/Context;Ljava/lang/String;Z)Z
 
@@ -784,7 +734,6 @@
 
     if-nez v3, :cond_0
 
-    .line 149
     const-string v3, "QuietUtils"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -809,10 +758,8 @@
 
     move v3, v4
 
-    .line 150
     goto/16 :goto_0
 
-    .line 156
     :pswitch_7
     const/4 v3, 0x5
 
@@ -843,14 +790,12 @@
 
     if-eqz v3, :cond_0
 
-    .line 160
     invoke-virtual {v2}, Landroid/os/PowerManager;->isScreenOn()Z
 
     move-result v3
 
     if-nez v3, :cond_b
 
-    .line 161
     const-string v3, "QuietUtils"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -875,10 +820,8 @@
 
     move v3, v4
 
-    .line 162
     goto/16 :goto_0
 
-    .line 164
     :cond_b
     invoke-static {v1, v0, v4}, Lmiui/util/QuietUtils;->checkAuthorizePackage(Landroid/content/Context;Ljava/lang/String;Z)Z
 
@@ -886,7 +829,6 @@
 
     if-nez v3, :cond_0
 
-    .line 165
     const-string v3, "QuietUtils"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -911,10 +853,8 @@
 
     move v3, v4
 
-    .line 166
     goto/16 :goto_0
 
-    .line 66
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1
@@ -938,14 +878,12 @@
 
     const/4 v1, 0x0
 
-    .line 201
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v3, 0x15
 
     if-ge v2, v3, :cond_2
 
-    .line 202
     invoke-static {p0}, Landroid/provider/MiuiSettings$AntiSpam;->isQuietModeEnable(Landroid/content/Context;)Z
 
     move-result v2
@@ -968,7 +906,6 @@
 
     if-nez v2, :cond_1
 
-    .line 206
     :cond_0
     :goto_0
     return v0
@@ -976,10 +913,8 @@
     :cond_1
     move v0, v1
 
-    .line 202
     goto :goto_0
 
-    .line 206
     :cond_2
     invoke-static {p0}, Landroid/provider/MiuiSettings$AntiSpam;->isQuietModeEnable(Landroid/content/Context;)Z
 
@@ -1015,7 +950,6 @@
     .param p1, "pkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 250
     :try_start_0
     const-string v9, "activity"
 
@@ -1025,13 +959,11 @@
 
     check-cast v0, Landroid/app/ActivityManager;
 
-    .line 252
     .local v0, "activityManager":Landroid/app/ActivityManager;
     invoke-virtual {v0}, Landroid/app/ActivityManager;->getRunningAppProcesses()Ljava/util/List;
 
     move-result-object v2
 
-    .line 253
     .local v2, "appProcesses":Ljava/util/List;, "Ljava/util/List<Landroid/app/ActivityManager$RunningAppProcessInfo;>;"
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1050,7 +982,6 @@
 
     check-cast v1, Landroid/app/ActivityManager$RunningAppProcessInfo;
 
-    .line 254
     .local v1, "appProcess":Landroid/app/ActivityManager$RunningAppProcessInfo;
     iget v9, v1, Landroid/app/ActivityManager$RunningAppProcessInfo;->importance:I
 
@@ -1058,7 +989,6 @@
 
     if-ne v9, v10, :cond_0
 
-    .line 255
     iget-object v3, v1, Landroid/app/ActivityManager$RunningAppProcessInfo;->pkgList:[Ljava/lang/String;
 
     .local v3, "arr$":[Ljava/lang/String;
@@ -1073,7 +1003,6 @@
 
     aget-object v8, v3, v6
 
-    .line 256
     .local v8, "pkg":Ljava/lang/String;
     invoke-virtual {v8, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
     :try_end_0
@@ -1083,10 +1012,8 @@
 
     if-eqz v9, :cond_1
 
-    .line 257
     const/4 v9, 0x1
 
-    .line 265
     .end local v0    # "activityManager":Landroid/app/ActivityManager;
     .end local v1    # "appProcess":Landroid/app/ActivityManager$RunningAppProcessInfo;
     .end local v2    # "appProcesses":Ljava/util/List;, "Ljava/util/List<Landroid/app/ActivityManager$RunningAppProcessInfo;>;"
@@ -1097,7 +1024,6 @@
     :goto_1
     return v9
 
-    .line 255
     .restart local v0    # "activityManager":Landroid/app/ActivityManager;
     .restart local v1    # "appProcess":Landroid/app/ActivityManager$RunningAppProcessInfo;
     .restart local v2    # "appProcesses":Ljava/util/List;, "Ljava/util/List<Landroid/app/ActivityManager$RunningAppProcessInfo;>;"
@@ -1110,7 +1036,6 @@
 
     goto :goto_0
 
-    .line 262
     .end local v0    # "activityManager":Landroid/app/ActivityManager;
     .end local v1    # "appProcess":Landroid/app/ActivityManager$RunningAppProcessInfo;
     .end local v2    # "appProcesses":Ljava/util/List;, "Ljava/util/List<Landroid/app/ActivityManager$RunningAppProcessInfo;>;"
@@ -1121,7 +1046,6 @@
     :catch_0
     move-exception v4
 
-    .line 263
     .local v4, "e":Ljava/lang/SecurityException;
     const-string v9, "QuietUtils"
 
@@ -1149,7 +1073,6 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 265
     .end local v4    # "e":Ljava/lang/SecurityException;
     :cond_2
     const/4 v9, 0x0
@@ -1163,10 +1086,8 @@
     .param p1, "type"    # Ljava/lang/String;
 
     .prologue
-    .line 220
     const/4 v6, 0x0
 
-    .line 222
     .local v6, "cursor":Landroid/database/Cursor;
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1198,48 +1119,38 @@
 
     move-result-object v6
 
-    .line 225
     if-eqz v6, :cond_1
 
-    .line 226
     const/4 v0, 0x1
 
-    .line 231
     if-eqz v6, :cond_0
 
-    .line 233
     :try_start_1
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 239
     :cond_0
     :goto_0
     return v0
 
-    .line 231
     :cond_1
     if-eqz v6, :cond_2
 
-    .line 233
     :try_start_2
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_3
 
-    .line 239
     :cond_2
     :goto_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 228
     :catch_0
     move-exception v7
 
-    .line 229
     .local v7, "e":Ljava/lang/Exception;
     :try_start_3
     const-string v0, "QuietUtils"
@@ -1270,10 +1181,8 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 231
     if-eqz v6, :cond_2
 
-    .line 233
     :try_start_4
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
     :try_end_4
@@ -1281,31 +1190,26 @@
 
     goto :goto_1
 
-    .line 234
     :catch_1
     move-exception v0
 
     goto :goto_1
 
-    .line 231
     .end local v7    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v0
 
     if-eqz v6, :cond_3
 
-    .line 233
     :try_start_5
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_4
 
-    .line 236
     :cond_3
     :goto_2
     throw v0
 
-    .line 234
     :catch_2
     move-exception v1
 

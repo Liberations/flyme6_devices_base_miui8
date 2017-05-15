@@ -62,55 +62,42 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 63
     iput-object p1, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->this$0:Landroid/hardware/camera2/legacy/CaptureCollector;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 55
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->mTimestamp:J
 
-    .line 56
     iput v2, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->mReceivedFlags:I
 
-    .line 57
     iput-boolean v2, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->mHasStarted:Z
 
-    .line 58
     iput-boolean v2, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->mFailedJpeg:Z
 
-    .line 59
     iput-boolean v2, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->mFailedPreview:Z
 
-    .line 60
     iput-boolean v2, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->mCompleted:Z
 
-    .line 61
     iput-boolean v2, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->mPreviewCompleted:Z
 
-    .line 64
     iput-object p2, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->mRequest:Landroid/hardware/camera2/legacy/RequestHolder;
 
-    .line 65
     iput-object p3, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->mLegacy:Landroid/hardware/camera2/legacy/LegacyRequest;
 
-    .line 66
     invoke-virtual {p2}, Landroid/hardware/camera2/legacy/RequestHolder;->hasJpegTargets()Z
 
     move-result v0
 
     iput-boolean v0, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->needsJpeg:Z
 
-    .line 67
     invoke-virtual {p2}, Landroid/hardware/camera2/legacy/RequestHolder;->hasPreviewTargets()Z
 
     move-result v0
 
     iput-boolean v0, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->needsPreview:Z
 
-    .line 68
     return-void
 .end method
 
@@ -119,7 +106,6 @@
     .param p0, "x0"    # Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;
 
     .prologue
-    .line 49
     iget-object v0, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->mRequest:Landroid/hardware/camera2/legacy/RequestHolder;
 
     return-object v0
@@ -130,7 +116,6 @@
     .param p0, "x0"    # Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;
 
     .prologue
-    .line 49
     iget-wide v0, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->mTimestamp:J
 
     return-wide v0
@@ -143,7 +128,6 @@
     .param p1, "captureHolder"    # Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;
 
     .prologue
-    .line 246
     iget-object v0, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->mRequest:Landroid/hardware/camera2/legacy/RequestHolder;
 
     invoke-virtual {v0}, Landroid/hardware/camera2/legacy/RequestHolder;->getFrameNumber()J
@@ -197,7 +181,6 @@
     .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
-    .line 49
     check-cast p1, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;
 
     .end local p1    # "x0":Ljava/lang/Object;
@@ -213,7 +196,6 @@
     .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
-    .line 254
     instance-of v0, p1, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;
 
     if-eqz v0, :cond_0
@@ -242,7 +224,6 @@
     .locals 2
 
     .prologue
-    .line 79
     iget-boolean v0, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->needsJpeg:Z
 
     invoke-virtual {p0}, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->isJpegCompleted()Z
@@ -274,7 +255,6 @@
     .locals 2
 
     .prologue
-    .line 75
     iget v0, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->mReceivedFlags:I
 
     and-int/lit8 v0, v0, 0x3
@@ -298,7 +278,6 @@
     .locals 2
 
     .prologue
-    .line 71
     iget v0, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->mReceivedFlags:I
 
     and-int/lit8 v0, v0, 0xc
@@ -322,7 +301,6 @@
     .locals 1
 
     .prologue
-    .line 172
     iget-boolean v0, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->needsJpeg:Z
 
     if-eqz v0, :cond_0
@@ -333,32 +311,27 @@
 
     if-eqz v0, :cond_1
 
-    .line 180
     :cond_0
     :goto_0
     return-void
 
-    .line 175
     :cond_1
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->mFailedJpeg:Z
 
-    .line 177
     iget v0, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->mReceivedFlags:I
 
     or-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->mReceivedFlags:I
 
-    .line 178
     iget v0, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->mReceivedFlags:I
 
     or-int/lit8 v0, v0, 0x2
 
     iput v0, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->mReceivedFlags:I
 
-    .line 179
     invoke-virtual {p0}, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->tryComplete()V
 
     goto :goto_0
@@ -368,21 +341,18 @@
     .locals 2
 
     .prologue
-    .line 155
     iget-boolean v0, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->needsJpeg:Z
 
     if-nez v0, :cond_0
 
-    .line 156
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string/jumbo v1, "setJpegProduced called for capture with no jpeg targets."
+    const-string v1, "setJpegProduced called for capture with no jpeg targets."
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 159
     :cond_0
     invoke-virtual {p0}, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->isCompleted()Z
 
@@ -390,16 +360,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 160
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string/jumbo v1, "setJpegProduced called on already completed request."
+    const-string v1, "setJpegProduced called on already completed request."
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 164
     :cond_1
     iget v0, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->mReceivedFlags:I
 
@@ -407,10 +375,8 @@
 
     iput v0, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->mReceivedFlags:I
 
-    .line 165
     invoke-virtual {p0}, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->tryComplete()V
 
-    .line 166
     return-void
 .end method
 
@@ -419,21 +385,18 @@
     .param p1, "timestamp"    # J
 
     .prologue
-    .line 127
     iget-boolean v0, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->needsJpeg:Z
 
     if-nez v0, :cond_0
 
-    .line 128
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string/jumbo v1, "setJpegTimestamp called for capture with no jpeg targets."
+    const-string v1, "setJpegTimestamp called for capture with no jpeg targets."
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 131
     :cond_0
     invoke-virtual {p0}, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->isCompleted()Z
 
@@ -441,16 +404,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 132
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string/jumbo v1, "setJpegTimestamp called on already completed request."
+    const-string v1, "setJpegTimestamp called on already completed request."
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 136
     :cond_1
     iget v0, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->mReceivedFlags:I
 
@@ -458,7 +419,6 @@
 
     iput v0, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->mReceivedFlags:I
 
-    .line 138
     iget-wide v0, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->mTimestamp:J
 
     const-wide/16 v2, 0x0
@@ -467,21 +427,17 @@
 
     if-nez v0, :cond_2
 
-    .line 139
     iput-wide p1, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->mTimestamp:J
 
-    .line 142
     :cond_2
     iget-boolean v0, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->mHasStarted:Z
 
     if-nez v0, :cond_3
 
-    .line 143
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->mHasStarted:Z
 
-    .line 144
     iget-object v0, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->this$0:Landroid/hardware/camera2/legacy/CaptureCollector;
 
     # getter for: Landroid/hardware/camera2/legacy/CaptureCollector;->mDeviceState:Landroid/hardware/camera2/legacy/CameraDeviceState;
@@ -497,11 +453,9 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/hardware/camera2/legacy/CameraDeviceState;->setCaptureStart(Landroid/hardware/camera2/legacy/RequestHolder;JI)Z
 
-    .line 148
     :cond_3
     invoke-virtual {p0}, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->tryComplete()V
 
-    .line 149
     return-void
 .end method
 
@@ -509,7 +463,6 @@
     .locals 1
 
     .prologue
-    .line 233
     iget-boolean v0, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->needsPreview:Z
 
     if-eqz v0, :cond_0
@@ -520,32 +473,27 @@
 
     if-eqz v0, :cond_1
 
-    .line 241
     :cond_0
     :goto_0
     return-void
 
-    .line 236
     :cond_1
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->mFailedPreview:Z
 
-    .line 238
     iget v0, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->mReceivedFlags:I
 
     or-int/lit8 v0, v0, 0x4
 
     iput v0, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->mReceivedFlags:I
 
-    .line 239
     iget v0, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->mReceivedFlags:I
 
     or-int/lit8 v0, v0, 0x8
 
     iput v0, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->mReceivedFlags:I
 
-    .line 240
     invoke-virtual {p0}, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->tryComplete()V
 
     goto :goto_0
@@ -555,21 +503,18 @@
     .locals 2
 
     .prologue
-    .line 216
     iget-boolean v0, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->needsPreview:Z
 
     if-nez v0, :cond_0
 
-    .line 217
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string/jumbo v1, "setPreviewProduced called for capture with no preview targets."
+    const-string v1, "setPreviewProduced called for capture with no preview targets."
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 220
     :cond_0
     invoke-virtual {p0}, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->isCompleted()Z
 
@@ -577,16 +522,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 221
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string/jumbo v1, "setPreviewProduced called on already completed request."
+    const-string v1, "setPreviewProduced called on already completed request."
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 225
     :cond_1
     iget v0, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->mReceivedFlags:I
 
@@ -594,10 +537,8 @@
 
     iput v0, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->mReceivedFlags:I
 
-    .line 226
     invoke-virtual {p0}, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->tryComplete()V
 
-    .line 227
     return-void
 .end method
 
@@ -606,21 +547,18 @@
     .param p1, "timestamp"    # J
 
     .prologue
-    .line 186
     iget-boolean v0, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->needsPreview:Z
 
     if-nez v0, :cond_0
 
-    .line 187
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string/jumbo v1, "setPreviewTimestamp called for capture with no preview targets."
+    const-string v1, "setPreviewTimestamp called for capture with no preview targets."
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 190
     :cond_0
     invoke-virtual {p0}, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->isCompleted()Z
 
@@ -628,16 +566,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 191
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string/jumbo v1, "setPreviewTimestamp called on already completed request."
+    const-string v1, "setPreviewTimestamp called on already completed request."
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 195
     :cond_1
     iget v0, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->mReceivedFlags:I
 
@@ -645,7 +581,6 @@
 
     iput v0, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->mReceivedFlags:I
 
-    .line 197
     iget-wide v0, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->mTimestamp:J
 
     const-wide/16 v2, 0x0
@@ -654,26 +589,21 @@
 
     if-nez v0, :cond_2
 
-    .line 198
     iput-wide p1, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->mTimestamp:J
 
-    .line 201
     :cond_2
     iget-boolean v0, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->needsJpeg:Z
 
     if-nez v0, :cond_3
 
-    .line 202
     iget-boolean v0, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->mHasStarted:Z
 
     if-nez v0, :cond_3
 
-    .line 203
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->mHasStarted:Z
 
-    .line 204
     iget-object v0, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->this$0:Landroid/hardware/camera2/legacy/CaptureCollector;
 
     # getter for: Landroid/hardware/camera2/legacy/CaptureCollector;->mDeviceState:Landroid/hardware/camera2/legacy/CameraDeviceState;
@@ -689,11 +619,9 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/hardware/camera2/legacy/CameraDeviceState;->setCaptureStart(Landroid/hardware/camera2/legacy/RequestHolder;JI)Z
 
-    .line 209
     :cond_3
     invoke-virtual {p0}, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->tryComplete()V
 
-    .line 210
     return-void
 .end method
 
@@ -707,7 +635,6 @@
 
     const/4 v6, 0x1
 
-    .line 83
     iget-boolean v1, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->mPreviewCompleted:Z
 
     if-nez v1, :cond_0
@@ -722,16 +649,13 @@
 
     if-eqz v1, :cond_0
 
-    .line 84
     iget-object v1, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->this$0:Landroid/hardware/camera2/legacy/CaptureCollector;
 
     # invokes: Landroid/hardware/camera2/legacy/CaptureCollector;->onPreviewCompleted()V
     invoke-static {v1}, Landroid/hardware/camera2/legacy/CaptureCollector;->access$000(Landroid/hardware/camera2/legacy/CaptureCollector;)V
 
-    .line 85
     iput-boolean v6, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->mPreviewCompleted:Z
 
-    .line 88
     :cond_0
     invoke-virtual {p0}, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->isCompleted()Z
 
@@ -743,7 +667,6 @@
 
     if-nez v1, :cond_3
 
-    .line 89
     iget-boolean v1, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->mFailedPreview:Z
 
     if-nez v1, :cond_1
@@ -752,18 +675,15 @@
 
     if-eqz v1, :cond_2
 
-    .line 90
     :cond_1
     iget-boolean v1, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->mHasStarted:Z
 
     if-nez v1, :cond_4
 
-    .line 92
     iget-object v1, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->mRequest:Landroid/hardware/camera2/legacy/RequestHolder;
 
     invoke-virtual {v1}, Landroid/hardware/camera2/legacy/RequestHolder;->failRequest()V
 
-    .line 93
     iget-object v1, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->this$0:Landroid/hardware/camera2/legacy/CaptureCollector;
 
     # getter for: Landroid/hardware/camera2/legacy/CaptureCollector;->mDeviceState:Landroid/hardware/camera2/legacy/CameraDeviceState;
@@ -779,27 +699,22 @@
 
     invoke-virtual {v1, v2, v4, v5, v3}, Landroid/hardware/camera2/legacy/CameraDeviceState;->setCaptureStart(Landroid/hardware/camera2/legacy/RequestHolder;JI)Z
 
-    .line 118
     :cond_2
     iget-object v1, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->this$0:Landroid/hardware/camera2/legacy/CaptureCollector;
 
     # invokes: Landroid/hardware/camera2/legacy/CaptureCollector;->onRequestCompleted(Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;)V
     invoke-static {v1, p0}, Landroid/hardware/camera2/legacy/CaptureCollector;->access$200(Landroid/hardware/camera2/legacy/CaptureCollector;Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;)V
 
-    .line 119
     iput-boolean v6, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->mCompleted:Z
 
-    .line 121
     :cond_3
     return-void
 
-    .line 98
     :cond_4
     iget-boolean v1, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->mFailedPreview:Z
 
     if-eqz v1, :cond_5
 
-    .line 99
     const-string v1, "CaptureCollector"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -828,7 +743,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 101
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -841,7 +755,6 @@
 
     if-ge v0, v1, :cond_5
 
-    .line 102
     iget-object v1, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->this$0:Landroid/hardware/camera2/legacy/CaptureCollector;
 
     # getter for: Landroid/hardware/camera2/legacy/CaptureCollector;->mDeviceState:Landroid/hardware/camera2/legacy/CameraDeviceState;
@@ -853,19 +766,16 @@
 
     invoke-virtual {v1, v2, v5, v4}, Landroid/hardware/camera2/legacy/CameraDeviceState;->setCaptureResult(Landroid/hardware/camera2/legacy/RequestHolder;Landroid/hardware/camera2/impl/CameraMetadataNative;I)Z
 
-    .line 101
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 107
     .end local v0    # "i":I
     :cond_5
     iget-boolean v1, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->mFailedJpeg:Z
 
     if-eqz v1, :cond_2
 
-    .line 108
     const-string v1, "CaptureCollector"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -894,7 +804,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 110
     const/4 v0, 0x0
 
     .restart local v0    # "i":I
@@ -907,7 +816,6 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 111
     iget-object v1, p0, Landroid/hardware/camera2/legacy/CaptureCollector$CaptureHolder;->this$0:Landroid/hardware/camera2/legacy/CaptureCollector;
 
     # getter for: Landroid/hardware/camera2/legacy/CaptureCollector;->mDeviceState:Landroid/hardware/camera2/legacy/CameraDeviceState;
@@ -919,7 +827,6 @@
 
     invoke-virtual {v1, v2, v5, v4}, Landroid/hardware/camera2/legacy/CameraDeviceState;->setCaptureResult(Landroid/hardware/camera2/legacy/RequestHolder;Landroid/hardware/camera2/impl/CameraMetadataNative;I)Z
 
-    .line 110
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1

@@ -34,7 +34,6 @@
     .locals 1
 
     .prologue
-    .line 270
     const-string v0, "content://wifi/wifi_sync"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;

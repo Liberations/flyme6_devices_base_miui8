@@ -27,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 328
     iput-object p1, p0, Landroid/preference/SeekBarVolumizer$H;->this$0:Landroid/preference/SeekBarVolumizer;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -41,7 +40,6 @@
     .param p2, "x1"    # Landroid/preference/SeekBarVolumizer$1;
 
     .prologue
-    .line 328
     invoke-direct {p0, p1}, Landroid/preference/SeekBarVolumizer$H;-><init>(Landroid/preference/SeekBarVolumizer;)V
 
     return-void
@@ -56,12 +54,10 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 333
     iget v1, p1, Landroid/os/Message;->what:I
 
     if-ne v1, v0, :cond_1
 
-    .line 334
     iget-object v1, p0, Landroid/preference/SeekBarVolumizer$H;->this$0:Landroid/preference/SeekBarVolumizer;
 
     # getter for: Landroid/preference/SeekBarVolumizer;->mSeekBar:Landroid/widget/SeekBar;
@@ -71,7 +67,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 335
     iget-object v1, p0, Landroid/preference/SeekBarVolumizer$H;->this$0:Landroid/preference/SeekBarVolumizer;
 
     iget v2, p1, Landroid/os/Message;->arg1:I
@@ -79,7 +74,6 @@
     # setter for: Landroid/preference/SeekBarVolumizer;->mLastProgress:I
     invoke-static {v1, v2}, Landroid/preference/SeekBarVolumizer;->access$302(Landroid/preference/SeekBarVolumizer;I)I
 
-    .line 336
     iget-object v1, p0, Landroid/preference/SeekBarVolumizer$H;->this$0:Landroid/preference/SeekBarVolumizer;
 
     iget v2, p1, Landroid/os/Message;->arg2:I
@@ -91,12 +85,10 @@
     # setter for: Landroid/preference/SeekBarVolumizer;->mLastAudibleStreamVolume:I
     invoke-static {v1, v2}, Landroid/preference/SeekBarVolumizer;->access$402(Landroid/preference/SeekBarVolumizer;I)I
 
-    .line 337
     iget v1, p1, Landroid/os/Message;->arg2:I
 
     if-gez v1, :cond_2
 
-    .line 338
     .local v0, "muted":Z
     :goto_0
     iget-object v1, p0, Landroid/preference/SeekBarVolumizer$H;->this$0:Landroid/preference/SeekBarVolumizer;
@@ -108,13 +100,11 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 339
     iget-object v1, p0, Landroid/preference/SeekBarVolumizer$H;->this$0:Landroid/preference/SeekBarVolumizer;
 
     # setter for: Landroid/preference/SeekBarVolumizer;->mMuted:Z
     invoke-static {v1, v0}, Landroid/preference/SeekBarVolumizer;->access$502(Landroid/preference/SeekBarVolumizer;Z)Z
 
-    .line 340
     iget-object v1, p0, Landroid/preference/SeekBarVolumizer$H;->this$0:Landroid/preference/SeekBarVolumizer;
 
     # getter for: Landroid/preference/SeekBarVolumizer;->mCallback:Landroid/preference/SeekBarVolumizer$Callback;
@@ -124,7 +114,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 341
     iget-object v1, p0, Landroid/preference/SeekBarVolumizer$H;->this$0:Landroid/preference/SeekBarVolumizer;
 
     # getter for: Landroid/preference/SeekBarVolumizer;->mCallback:Landroid/preference/SeekBarVolumizer$Callback;
@@ -148,18 +137,15 @@
 
     invoke-interface {v1, v2, v3}, Landroid/preference/SeekBarVolumizer$Callback;->onMuted(ZZ)V
 
-    .line 344
     :cond_0
     iget-object v1, p0, Landroid/preference/SeekBarVolumizer$H;->this$0:Landroid/preference/SeekBarVolumizer;
 
     invoke-virtual {v1}, Landroid/preference/SeekBarVolumizer;->updateSeekBar()V
 
-    .line 347
     .end local v0    # "muted":Z
     :cond_1
     return-void
 
-    .line 337
     :cond_2
     const/4 v0, 0x0
 
@@ -175,7 +161,6 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 350
     if-eqz p3, :cond_0
 
     const/4 v1, -0x1
@@ -183,7 +168,6 @@
     :goto_0
     mul-int v0, p2, v1
 
-    .line 351
     .local v0, "arg2":I
     invoke-virtual {p0, v2, p1, v0}, Landroid/preference/SeekBarVolumizer$H;->obtainMessage(III)Landroid/os/Message;
 
@@ -191,13 +175,11 @@
 
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 352
     return-void
 
     .end local v0    # "arg2":I
     :cond_0
     move v1, v2
 
-    .line 350
     goto :goto_0
 .end method

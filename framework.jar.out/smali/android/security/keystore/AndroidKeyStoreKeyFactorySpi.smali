@@ -12,10 +12,8 @@
     .locals 1
 
     .prologue
-    .line 39
     invoke-direct {p0}, Ljava/security/KeyFactorySpi;-><init>()V
 
-    .line 41
     invoke-static {}, Landroid/security/KeyStore;->getInstance()Landroid/security/KeyStore;
 
     move-result-object v0
@@ -37,7 +35,6 @@
     .end annotation
 
     .prologue
-    .line 127
     new-instance v0, Ljava/security/spec/InvalidKeySpecException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -79,7 +76,6 @@
     .end annotation
 
     .prologue
-    .line 134
     new-instance v0, Ljava/security/spec/InvalidKeySpecException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -132,20 +128,17 @@
     .end annotation
 
     .prologue
-    .line 46
     .local p2, "keySpecClass":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     if-nez p1, :cond_0
 
-    .line 47
     new-instance v5, Ljava/security/spec/InvalidKeySpecException;
 
-    const-string/jumbo v6, "key == null"
+    const-string v6, "key == null"
 
     invoke-direct {v5, v6}, Ljava/security/spec/InvalidKeySpecException;-><init>(Ljava/lang/String;)V
 
     throw v5
 
-    .line 48
     :cond_0
     instance-of v5, p1, Landroid/security/keystore/AndroidKeyStorePrivateKey;
 
@@ -155,7 +148,6 @@
 
     if-nez v5, :cond_1
 
-    .line 50
     new-instance v5, Ljava/security/spec/InvalidKeySpecException;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -194,20 +186,17 @@
 
     throw v5
 
-    .line 57
     :cond_1
     if-nez p2, :cond_2
 
-    .line 58
     new-instance v5, Ljava/security/spec/InvalidKeySpecException;
 
-    const-string/jumbo v6, "keySpecClass == null"
+    const-string v6, "keySpecClass == null"
 
     invoke-direct {v5, v6}, Ljava/security/spec/InvalidKeySpecException;-><init>(Ljava/lang/String;)V
 
     throw v5
 
-    .line 59
     :cond_2
     const-class v5, Landroid/security/keystore/KeyInfo;
 
@@ -217,12 +206,10 @@
 
     if-eqz v5, :cond_5
 
-    .line 60
     instance-of v5, p1, Landroid/security/keystore/AndroidKeyStorePrivateKey;
 
     if-nez v5, :cond_3
 
-    .line 61
     new-instance v5, Ljava/security/spec/InvalidKeySpecException;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -261,7 +248,6 @@
 
     throw v5
 
-    .line 65
     :cond_3
     check-cast p1, Landroid/security/keystore/AndroidKeyStorePrivateKey;
 
@@ -270,7 +256,6 @@
 
     move-result-object v2
 
-    .line 67
     .local v2, "keyAliasInKeystore":Ljava/lang/String;
     const-string v5, "USRPKEY_"
 
@@ -280,7 +265,6 @@
 
     if-eqz v5, :cond_4
 
-    .line 68
     const-string v5, "USRPKEY_"
 
     invoke-virtual {v5}, Ljava/lang/String;->length()I
@@ -291,7 +275,6 @@
 
     move-result-object v1
 
-    .line 73
     .local v1, "entryAlias":Ljava/lang/String;
     iget-object v5, p0, Landroid/security/keystore/AndroidKeyStoreKeyFactorySpi;->mKeyStore:Landroid/security/KeyStore;
 
@@ -299,14 +282,12 @@
 
     move-result-object v3
 
-    .line 113
     .end local v1    # "entryAlias":Ljava/lang/String;
     .end local v2    # "keyAliasInKeystore":Ljava/lang/String;
     .local v3, "result":Ljava/security/spec/KeySpec;, "TT;"
     :goto_0
     return-object v3
 
-    .line 70
     .end local v3    # "result":Ljava/security/spec/KeySpec;, "TT;"
     .restart local v2    # "keyAliasInKeystore":Ljava/lang/String;
     :cond_4
@@ -334,7 +315,6 @@
 
     throw v5
 
-    .line 76
     .end local v2    # "keyAliasInKeystore":Ljava/lang/String;
     .restart local p1    # "key":Ljava/security/Key;
     :cond_5
@@ -346,12 +326,10 @@
 
     if-eqz v5, :cond_7
 
-    .line 77
     instance-of v5, p1, Landroid/security/keystore/AndroidKeyStorePublicKey;
 
     if-nez v5, :cond_6
 
-    .line 78
     new-instance v5, Ljava/security/spec/InvalidKeySpecException;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -396,7 +374,6 @@
 
     throw v5
 
-    .line 84
     :cond_6
     new-instance v3, Ljava/security/spec/X509EncodedKeySpec;
 
@@ -409,11 +386,9 @@
 
     invoke-direct {v3, v5}, Ljava/security/spec/X509EncodedKeySpec;-><init>([B)V
 
-    .line 85
     .restart local v3    # "result":Ljava/security/spec/KeySpec;, "TT;"
     goto :goto_0
 
-    .line 86
     .end local v3    # "result":Ljava/security/spec/KeySpec;, "TT;"
     .restart local p1    # "key":Ljava/security/Key;
     :cond_7
@@ -425,12 +400,10 @@
 
     if-eqz v5, :cond_9
 
-    .line 87
     instance-of v5, p1, Landroid/security/keystore/AndroidKeyStorePrivateKey;
 
     if-eqz v5, :cond_8
 
-    .line 88
     new-instance v5, Ljava/security/spec/InvalidKeySpecException;
 
     const-string v6, "Key material export of Android Keystore private keys is not supported"
@@ -439,7 +412,6 @@
 
     throw v5
 
-    .line 91
     :cond_8
     new-instance v5, Ljava/security/spec/InvalidKeySpecException;
 
@@ -449,7 +421,6 @@
 
     throw v5
 
-    .line 95
     :cond_9
     const-class v5, Ljava/security/spec/RSAPublicKeySpec;
 
@@ -459,17 +430,14 @@
 
     if-eqz v5, :cond_c
 
-    .line 96
     instance-of v5, p1, Landroid/security/keystore/AndroidKeyStoreRSAPublicKey;
 
     if-eqz v5, :cond_a
 
     move-object v4, p1
 
-    .line 97
     check-cast v4, Landroid/security/keystore/AndroidKeyStoreRSAPublicKey;
 
-    .line 99
     .local v4, "rsaKey":Landroid/security/keystore/AndroidKeyStoreRSAPublicKey;
     new-instance v3, Ljava/security/spec/RSAPublicKeySpec;
 
@@ -483,11 +451,9 @@
 
     invoke-direct {v3, v5, v6}, Ljava/security/spec/RSAPublicKeySpec;-><init>(Ljava/math/BigInteger;Ljava/math/BigInteger;)V
 
-    .line 101
     .restart local v3    # "result":Ljava/security/spec/KeySpec;, "TT;"
     goto/16 :goto_0
 
-    .line 103
     .end local v3    # "result":Ljava/security/spec/KeySpec;, "TT;"
     .end local v4    # "rsaKey":Landroid/security/keystore/AndroidKeyStoreRSAPublicKey;
     :cond_a
@@ -521,7 +487,7 @@
 
     if-eqz v5, :cond_b
 
-    const-string/jumbo v5, "private"
+    const-string v5, "private"
 
     :goto_1
     invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -543,11 +509,10 @@
     throw v6
 
     :cond_b
-    const-string/jumbo v5, "public"
+    const-string v5, "public"
 
     goto :goto_1
 
-    .line 108
     :cond_c
     const-class v5, Ljava/security/spec/ECPublicKeySpec;
 
@@ -557,17 +522,14 @@
 
     if-eqz v5, :cond_f
 
-    .line 109
     instance-of v5, p1, Landroid/security/keystore/AndroidKeyStoreECPublicKey;
 
     if-eqz v5, :cond_d
 
     move-object v0, p1
 
-    .line 110
     check-cast v0, Landroid/security/keystore/AndroidKeyStoreECPublicKey;
 
-    .line 112
     .local v0, "ecKey":Landroid/security/keystore/AndroidKeyStoreECPublicKey;
     new-instance v3, Ljava/security/spec/ECPublicKeySpec;
 
@@ -581,11 +543,9 @@
 
     invoke-direct {v3, v5, v6}, Ljava/security/spec/ECPublicKeySpec;-><init>(Ljava/security/spec/ECPoint;Ljava/security/spec/ECParameterSpec;)V
 
-    .line 113
     .restart local v3    # "result":Ljava/security/spec/KeySpec;, "TT;"
     goto/16 :goto_0
 
-    .line 115
     .end local v0    # "ecKey":Landroid/security/keystore/AndroidKeyStoreECPublicKey;
     .end local v3    # "result":Ljava/security/spec/KeySpec;, "TT;"
     :cond_d
@@ -619,7 +579,7 @@
 
     if-eqz v5, :cond_e
 
-    const-string/jumbo v5, "private"
+    const-string v5, "private"
 
     :goto_2
     invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -641,11 +601,10 @@
     throw v6
 
     :cond_e
-    const-string/jumbo v5, "public"
+    const-string v5, "public"
 
     goto :goto_2
 
-    .line 121
     :cond_f
     new-instance v5, Ljava/security/spec/InvalidKeySpecException;
 
@@ -686,19 +645,16 @@
     .end annotation
 
     .prologue
-    .line 141
     if-nez p1, :cond_0
 
-    .line 142
     new-instance v0, Ljava/security/InvalidKeyException;
 
-    const-string/jumbo v1, "key == null"
+    const-string v1, "key == null"
 
     invoke-direct {v0, v1}, Ljava/security/InvalidKeyException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 143
     :cond_0
     instance-of v0, p1, Landroid/security/keystore/AndroidKeyStorePrivateKey;
 
@@ -708,7 +664,6 @@
 
     if-nez v0, :cond_1
 
-    .line 145
     new-instance v0, Ljava/security/InvalidKeyException;
 
     const-string v1, "To import a key into Android Keystore, use KeyStore.setEntry"
@@ -717,7 +672,6 @@
 
     throw v0
 
-    .line 148
     :cond_1
     return-object p1
 .end method

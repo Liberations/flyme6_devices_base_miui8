@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 996
     iput-object p1, p0, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter$3;->this$1:Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;
 
     iput p2, p0, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter$3;->val$itemIndex:I
@@ -47,7 +46,6 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 999
     iget-object v0, p0, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter$3;->this$1:Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;
 
     iget-object v0, v0, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;->this$0:Lcom/android/internal/app/ChooserActivity;
@@ -67,6 +65,5 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/app/ChooserActivity;->showAppDetails(Landroid/content/pm/ResolveInfo;)V
 
-    .line 1001
     return v3
 .end method

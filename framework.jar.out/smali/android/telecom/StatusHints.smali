@@ -32,7 +32,6 @@
     .locals 1
 
     .prologue
-    .line 122
     new-instance v0, Landroid/telecom/StatusHints$1;
 
     invoke-direct {v0}, Landroid/telecom/StatusHints$1;-><init>()V
@@ -52,7 +51,6 @@
     .end annotation
 
     .prologue
-    .line 45
     if-nez p3, :cond_0
 
     const/4 v0, 0x0
@@ -60,10 +58,8 @@
     :goto_0
     invoke-direct {p0, p2, v0, p4}, Landroid/telecom/StatusHints;-><init>(Ljava/lang/CharSequence;Landroid/graphics/drawable/Icon;Landroid/os/Bundle;)V
 
-    .line 47
     return-void
 
-    .line 45
     :cond_0
     invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
@@ -81,17 +77,14 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 133
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 134
     invoke-virtual {p1}, Landroid/os/Parcel;->readCharSequence()Ljava/lang/CharSequence;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/telecom/StatusHints;->mLabel:Ljava/lang/CharSequence;
 
-    .line 135
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -108,7 +101,6 @@
 
     iput-object v0, p0, Landroid/telecom/StatusHints;->mIcon:Landroid/graphics/drawable/Icon;
 
-    .line 136
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -125,7 +117,6 @@
 
     iput-object v0, p0, Landroid/telecom/StatusHints;->mExtras:Landroid/os/Bundle;
 
-    .line 137
     return-void
 .end method
 
@@ -135,7 +126,6 @@
     .param p2, "x1"    # Landroid/telecom/StatusHints$1;
 
     .prologue
-    .line 33
     invoke-direct {p0, p1}, Landroid/telecom/StatusHints;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -148,19 +138,14 @@
     .param p3, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 50
     iput-object p1, p0, Landroid/telecom/StatusHints;->mLabel:Ljava/lang/CharSequence;
 
-    .line 51
     iput-object p2, p0, Landroid/telecom/StatusHints;->mIcon:Landroid/graphics/drawable/Icon;
 
-    .line 52
     iput-object p3, p0, Landroid/telecom/StatusHints;->mExtras:Landroid/os/Bundle;
 
-    .line 53
     return-void
 .end method
 
@@ -170,7 +155,6 @@
     .locals 1
 
     .prologue
-    .line 112
     const/4 v0, 0x0
 
     return v0
@@ -183,7 +167,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 141
     if-eqz p1, :cond_0
 
     instance-of v2, p1, Landroid/telecom/StatusHints;
@@ -192,10 +175,8 @@
 
     move-object v0, p1
 
-    .line 142
     check-cast v0, Landroid/telecom/StatusHints;
 
-    .line 143
     .local v0, "otherHints":Landroid/telecom/StatusHints;
     invoke-virtual {v0}, Landroid/telecom/StatusHints;->getLabel()Ljava/lang/CharSequence;
 
@@ -241,7 +222,6 @@
 
     const/4 v1, 0x1
 
-    .line 147
     .end local v0    # "otherHints":Landroid/telecom/StatusHints;
     :cond_0
     return v1
@@ -251,7 +231,6 @@
     .locals 1
 
     .prologue
-    .line 107
     iget-object v0, p0, Landroid/telecom/StatusHints;->mExtras:Landroid/os/Bundle;
 
     return-object v0
@@ -264,7 +243,6 @@
     .end annotation
 
     .prologue
-    .line 93
     iget-object v0, p0, Landroid/telecom/StatusHints;->mIcon:Landroid/graphics/drawable/Icon;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Icon;->loadDrawable(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
@@ -278,7 +256,6 @@
     .locals 1
 
     .prologue
-    .line 100
     iget-object v0, p0, Landroid/telecom/StatusHints;->mIcon:Landroid/graphics/drawable/Icon;
 
     return-object v0
@@ -290,7 +267,6 @@
     .end annotation
 
     .prologue
-    .line 83
     const/4 v0, 0x0
 
     return v0
@@ -300,7 +276,6 @@
     .locals 1
 
     .prologue
-    .line 70
     iget-object v0, p0, Landroid/telecom/StatusHints;->mLabel:Ljava/lang/CharSequence;
 
     return-object v0
@@ -312,7 +287,6 @@
     .end annotation
 
     .prologue
-    .line 63
     new-instance v0, Landroid/content/ComponentName;
 
     const-string v1, ""
@@ -328,7 +302,6 @@
     .locals 2
 
     .prologue
-    .line 152
     iget-object v0, p0, Landroid/telecom/StatusHints;->mLabel:Ljava/lang/CharSequence;
 
     invoke-static {v0}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
@@ -362,21 +335,17 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 117
     iget-object v0, p0, Landroid/telecom/StatusHints;->mLabel:Ljava/lang/CharSequence;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeCharSequence(Ljava/lang/CharSequence;)V
 
-    .line 118
     iget-object v0, p0, Landroid/telecom/StatusHints;->mIcon:Landroid/graphics/drawable/Icon;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 119
     iget-object v0, p0, Landroid/telecom/StatusHints;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 120
     return-void
 .end method

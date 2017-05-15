@@ -26,13 +26,10 @@
     .param p1, "num"    # D
 
     .prologue
-    .line 453
     invoke-direct {p0}, Lmiui/maml/data/Expression;-><init>()V
 
-    .line 454
     iput-wide p1, p0, Lmiui/maml/data/Expression$NumberExpression;->mValue:D
 
-    .line 455
     return-void
 .end method
 
@@ -43,24 +40,19 @@
     .prologue
     const/4 v2, 0x2
 
-    .line 457
     invoke-direct {p0}, Lmiui/maml/data/Expression;-><init>()V
 
-    .line 458
     if-nez p1, :cond_0
 
-    .line 459
     const-string v1, "Expression"
 
     const-string v2, "invalid NumberExpression: null"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 471
     :goto_0
     return-void
 
-    .line 463
     :cond_0
     :try_start_0
     invoke-virtual {p1}, Ljava/lang/String;->length()I
@@ -77,7 +69,6 @@
 
     if-nez v1, :cond_1
 
-    .line 464
     const/4 v1, 0x2
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
@@ -98,11 +89,9 @@
 
     goto :goto_0
 
-    .line 468
     :catch_0
     move-exception v0
 
-    .line 469
     .local v0, "e":Ljava/lang/NumberFormatException;
     const-string v1, "Expression"
 
@@ -128,7 +117,6 @@
 
     goto :goto_0
 
-    .line 466
     .end local v0    # "e":Ljava/lang/NumberFormatException;
     :cond_1
     :try_start_1
@@ -149,7 +137,6 @@
     .locals 2
 
     .prologue
-    .line 479
     iget-wide v0, p0, Lmiui/maml/data/Expression$NumberExpression;->mValue:D
 
     return-wide v0
@@ -159,12 +146,10 @@
     .locals 2
 
     .prologue
-    .line 484
     iget-object v0, p0, Lmiui/maml/data/Expression$NumberExpression;->mString:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
-    .line 485
     iget-wide v0, p0, Lmiui/maml/data/Expression$NumberExpression;->mValue:D
 
     invoke-static {v0, v1}, Lmiui/maml/util/Utils;->doubleToString(D)Ljava/lang/String;
@@ -173,7 +158,6 @@
 
     iput-object v0, p0, Lmiui/maml/data/Expression$NumberExpression;->mString:Ljava/lang/String;
 
-    .line 486
     :cond_0
     iget-object v0, p0, Lmiui/maml/data/Expression$NumberExpression;->mString:Ljava/lang/String;
 
@@ -185,9 +169,7 @@
     .param p1, "value"    # D
 
     .prologue
-    .line 474
     iput-wide p1, p0, Lmiui/maml/data/Expression$NumberExpression;->mValue:D
 
-    .line 475
     return-void
 .end method

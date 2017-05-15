@@ -18,13 +18,10 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 32
     invoke-direct {p0}, Landroid/text/style/MetricAffectingSpan;-><init>()V
 
-    .line 33
     iput p1, p0, Landroid/text/style/AbsoluteSizeSpan;->mSize:I
 
-    .line 34
     return-void
 .end method
 
@@ -34,16 +31,12 @@
     .param p2, "dip"    # Z
 
     .prologue
-    .line 41
     invoke-direct {p0}, Landroid/text/style/MetricAffectingSpan;-><init>()V
 
-    .line 42
     iput p1, p0, Landroid/text/style/AbsoluteSizeSpan;->mSize:I
 
-    .line 43
     iput-boolean p2, p0, Landroid/text/style/AbsoluteSizeSpan;->mDip:Z
 
-    .line 44
     return-void
 .end method
 
@@ -52,17 +45,14 @@
     .param p1, "src"    # Landroid/os/Parcel;
 
     .prologue
-    .line 46
     invoke-direct {p0}, Landroid/text/style/MetricAffectingSpan;-><init>()V
 
-    .line 47
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/text/style/AbsoluteSizeSpan;->mSize:I
 
-    .line 48
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -74,10 +64,8 @@
     :goto_0
     iput-boolean v0, p0, Landroid/text/style/AbsoluteSizeSpan;->mDip:Z
 
-    .line 49
     return-void
 
-    .line 48
     :cond_0
     const/4 v0, 0x0
 
@@ -90,7 +78,6 @@
     .locals 1
 
     .prologue
-    .line 61
     const/4 v0, 0x0
 
     return v0
@@ -100,7 +87,6 @@
     .locals 1
 
     .prologue
-    .line 79
     iget-boolean v0, p0, Landroid/text/style/AbsoluteSizeSpan;->mDip:Z
 
     return v0
@@ -110,7 +96,6 @@
     .locals 1
 
     .prologue
-    .line 75
     iget v0, p0, Landroid/text/style/AbsoluteSizeSpan;->mSize:I
 
     return v0
@@ -120,7 +105,6 @@
     .locals 1
 
     .prologue
-    .line 52
     invoke-virtual {p0}, Landroid/text/style/AbsoluteSizeSpan;->getSpanTypeIdInternal()I
 
     move-result v0
@@ -132,7 +116,6 @@
     .locals 1
 
     .prologue
-    .line 57
     const/16 v0, 0x10
 
     return v0
@@ -143,12 +126,10 @@
     .param p1, "ds"    # Landroid/text/TextPaint;
 
     .prologue
-    .line 84
     iget-boolean v0, p0, Landroid/text/style/AbsoluteSizeSpan;->mDip:Z
 
     if-eqz v0, :cond_0
 
-    .line 85
     iget v0, p0, Landroid/text/style/AbsoluteSizeSpan;->mSize:I
 
     int-to-float v0, v0
@@ -159,11 +140,9 @@
 
     invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setTextSize(F)V
 
-    .line 89
     :goto_0
     return-void
 
-    .line 87
     :cond_0
     iget v0, p0, Landroid/text/style/AbsoluteSizeSpan;->mSize:I
 
@@ -179,12 +158,10 @@
     .param p1, "ds"    # Landroid/text/TextPaint;
 
     .prologue
-    .line 93
     iget-boolean v0, p0, Landroid/text/style/AbsoluteSizeSpan;->mDip:Z
 
     if-eqz v0, :cond_0
 
-    .line 94
     iget v0, p0, Landroid/text/style/AbsoluteSizeSpan;->mSize:I
 
     int-to-float v0, v0
@@ -195,11 +172,9 @@
 
     invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setTextSize(F)V
 
-    .line 98
     :goto_0
     return-void
 
-    .line 96
     :cond_0
     iget v0, p0, Landroid/text/style/AbsoluteSizeSpan;->mSize:I
 
@@ -216,10 +191,8 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 65
     invoke-virtual {p0, p1, p2}, Landroid/text/style/AbsoluteSizeSpan;->writeToParcelInternal(Landroid/os/Parcel;I)V
 
-    .line 66
     return-void
 .end method
 
@@ -229,12 +202,10 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 70
     iget v0, p0, Landroid/text/style/AbsoluteSizeSpan;->mSize:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 71
     iget-boolean v0, p0, Landroid/text/style/AbsoluteSizeSpan;->mDip:Z
 
     if-eqz v0, :cond_0
@@ -244,10 +215,8 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 72
     return-void
 
-    .line 71
     :cond_0
     const/4 v0, 0x0
 

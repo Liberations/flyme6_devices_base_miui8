@@ -16,10 +16,8 @@
     .locals 0
 
     .prologue
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 27
     return-void
 .end method
 
@@ -28,12 +26,10 @@
     .param p0, "am"    # Landroid/content/res/AssetManager;
 
     .prologue
-    .line 108
     const-string v0, "/system/framework/framework-miui-res.apk"
 
     invoke-virtual {p0, v0}, Landroid/content/res/AssetManager;->addAssetPath(Ljava/lang/String;)I
 
-    .line 109
     return-void
 .end method
 
@@ -49,19 +45,15 @@
 
     const/4 v3, 0x0
 
-    .line 150
     const/high16 v4, -0x80000000
 
     if-ne p1, v4, :cond_1
 
-    .line 151
     iget-object v1, p2, Landroid/content/res/Configuration;->extraConfig:Landroid/content/res/MiuiConfiguration;
 
-    .line 152
     .local v1, "oldThemeConfig":Landroid/content/res/MiuiConfiguration;
     iget-object v0, p3, Landroid/content/res/Configuration;->extraConfig:Landroid/content/res/MiuiConfiguration;
 
-    .line 153
     .local v0, "newThemeConfig":Landroid/content/res/MiuiConfiguration;
     iget v4, v0, Landroid/content/res/MiuiConfiguration;->themeChanged:I
 
@@ -71,7 +63,6 @@
 
     if-ne v4, v2, :cond_1
 
-    .line 154
     iget-wide v4, v0, Landroid/content/res/MiuiConfiguration;->themeChangedFlags:J
 
     invoke-static {p0, v4, v5}, Landroid/content/res/MiuiConfiguration;->needRestartActivity(Ljava/lang/String;J)Z
@@ -80,7 +71,6 @@
 
     if-nez v4, :cond_0
 
-    .line 157
     .end local v0    # "newThemeConfig":Landroid/content/res/MiuiConfiguration;
     .end local v1    # "oldThemeConfig":Landroid/content/res/MiuiConfiguration;
     :goto_0
@@ -91,7 +81,6 @@
     :cond_0
     move v2, v3
 
-    .line 154
     goto :goto_0
 
     .end local v0    # "newThemeConfig":Landroid/content/res/MiuiConfiguration;
@@ -99,7 +88,6 @@
     :cond_1
     move v2, v3
 
-    .line 157
     goto :goto_0
 .end method
 
@@ -109,7 +97,6 @@
     .param p1, "desConfig"    # Landroid/content/res/Configuration;
 
     .prologue
-    .line 115
     iget-object v0, p1, Landroid/content/res/Configuration;->extraConfig:Landroid/content/res/MiuiConfiguration;
 
     iget-object v1, p0, Landroid/content/res/Configuration;->extraConfig:Landroid/content/res/MiuiConfiguration;
@@ -118,7 +105,6 @@
 
     iput v1, v0, Landroid/content/res/MiuiConfiguration;->themeChanged:I
 
-    .line 116
     return-void
 .end method
 
@@ -137,25 +123,21 @@
 
     const/4 v7, 0x0
 
-    .line 48
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v8
 
     if-eqz v8, :cond_1
 
-    .line 101
     .end local p0    # "pm":Landroid/content/pm/PackageManager;
     :cond_0
     :goto_0
     return-object v6
 
-    .line 50
     .restart local p0    # "pm":Landroid/content/pm/PackageManager;
     :cond_1
     const/4 v1, 0x0
 
-    .line 52
     .local v1, "apm":Landroid/app/ApplicationPackageManager;
     :try_start_0
     move-object v0, p0
@@ -166,38 +148,31 @@
     :try_end_0
     .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 63
     sget v8, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v9, 0x18
 
     if-gt v8, v9, :cond_8
 
-    .line 64
     if-nez p2, :cond_7
 
-    .line 72
     .local v5, "isPackageIcon":Z
     :goto_1
     if-nez v5, :cond_b
 
     move-object v2, p2
 
-    .line 73
     .local v2, "className":Ljava/lang/String;
     :goto_2
     invoke-static {p1, v2}, Lmiui/content/res/IconCustomizer;->getCustomizedIconFromCache(Ljava/lang/String;Ljava/lang/String;)Landroid/graphics/drawable/BitmapDrawable;
 
     move-result-object v3
 
-    .line 74
     .local v3, "dr":Landroid/graphics/drawable/Drawable;
     if-nez v3, :cond_6
 
-    .line 82
     if-nez p4, :cond_2
 
-    .line 84
     const/4 v6, 0x0
 
     :try_start_1
@@ -207,7 +182,6 @@
 
     move-result-object p4
 
-    .line 89
     :cond_2
     :goto_3
     if-eqz p3, :cond_5
@@ -221,19 +195,16 @@
     :cond_3
     if-eqz v5, :cond_5
 
-    .line 90
     :cond_4
     invoke-virtual {p0, p1, p3, p4}, Landroid/content/pm/PackageManager;->getDrawable(Ljava/lang/String;ILandroid/content/pm/ApplicationInfo;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v3
 
-    .line 92
     :cond_5
     instance-of v6, p0, Landroid/app/ApplicationPackageManager;
 
     if-eqz v6, :cond_6
 
-    .line 93
     check-cast p0, Landroid/app/ApplicationPackageManager;
 
     .end local p0    # "pm":Landroid/content/pm/PackageManager;
@@ -248,10 +219,8 @@
     :cond_6
     move-object v6, v3
 
-    .line 101
     goto :goto_0
 
-    .line 53
     .end local v2    # "className":Ljava/lang/String;
     .end local v3    # "dr":Landroid/graphics/drawable/Drawable;
     .end local v5    # "isPackageIcon":Z
@@ -259,7 +228,6 @@
     :catch_0
     move-exception v4
 
-    .line 54
     .local v4, "e":Ljava/lang/ClassCastException;
     if-eqz p3, :cond_0
 
@@ -273,10 +241,8 @@
     :cond_7
     move v5, v7
 
-    .line 64
     goto :goto_1
 
-    .line 66
     :cond_8
     if-eqz p2, :cond_9
 
@@ -305,10 +271,8 @@
     :cond_b
     move-object v2, v6
 
-    .line 72
     goto :goto_2
 
-    .line 85
     .restart local v2    # "className":Ljava/lang/String;
     .restart local v3    # "dr":Landroid/graphics/drawable/Drawable;
     :catch_1
@@ -325,23 +289,19 @@
     .prologue
     const-wide/16 v4, 0x0
 
-    .line 122
     const/high16 v2, -0x80000000
 
     and-int/2addr v2, p0
 
     if-eqz v2, :cond_1
 
-    .line 123
     iget-object v2, p1, Landroid/content/res/Configuration;->extraConfig:Landroid/content/res/MiuiConfiguration;
 
     iget-wide v0, v2, Landroid/content/res/MiuiConfiguration;->themeChangedFlags:J
 
-    .line 125
     .local v0, "flag":J
     invoke-static {}, Landroid/graphics/Canvas;->freeCaches()V
 
-    .line 126
     const-wide/16 v2, 0x10
 
     and-long/2addr v2, v0
@@ -350,16 +310,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 127
     invoke-static {p1}, Lmiui/content/res/ThemeFontChangeHelper;->quitProcessIfNeed(Landroid/content/res/Configuration;)V
 
-    .line 128
     invoke-static {}, Landroid/graphics/Canvas;->freeTextLayoutCaches()V
 
-    .line 129
     invoke-static {}, Landroid/view/ExtraGLES20Canvas;->freeCaches()V
 
-    .line 131
     :cond_0
     const-wide/16 v2, 0x8
 
@@ -369,10 +325,8 @@
 
     if-eqz v2, :cond_1
 
-    .line 132
     invoke-static {}, Lmiui/content/res/IconCustomizer;->clearCache()V
 
-    .line 135
     .end local v0    # "flag":J
     :cond_1
     return-void
@@ -384,17 +338,14 @@
     .param p1, "newConfig"    # Landroid/content/res/Configuration;
 
     .prologue
-    .line 141
     const/high16 v0, -0x80000000
 
     and-int/2addr v0, p0
 
     if-eqz v0, :cond_0
 
-    .line 142
     invoke-static {p0, p1}, Landroid/app/MiuiThemeHelper;->handleExtraConfigurationChanges(ILandroid/content/res/Configuration;)V
 
-    .line 144
     :cond_0
     return-void
 .end method
@@ -403,7 +354,6 @@
     .locals 2
 
     .prologue
-    .line 40
     sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     if-eqz v0, :cond_0
@@ -435,14 +385,12 @@
     .locals 2
 
     .prologue
-    .line 251
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/data/system/themeScreenshotMode"
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 252
     .local v0, "file":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -456,22 +404,17 @@
     .param p0, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 161
     const/4 v15, -0x4
 
-    .line 162
     .local v15, "intPos":I
     const/4 v6, -0x3
 
-    .line 163
     .local v6, "dotPos":I
     const/4 v13, -0x2
 
-    .line 164
     .local v13, "fractionPos":I
     const/16 v19, -0x1
 
-    .line 165
     .local v19, "unitPos":I
     const/4 v14, 0x0
 
@@ -485,14 +428,12 @@
 
     if-ge v14, v0, :cond_3
 
-    .line 166
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v14}, Ljava/lang/String;->charAt(I)C
 
     move-result v4
 
-    .line 167
     .local v4, "c":C
     const/16 v21, -0x4
 
@@ -512,10 +453,8 @@
 
     if-gt v4, v0, :cond_0
 
-    .line 168
     move v15, v14
 
-    .line 170
     :cond_0
     const/16 v21, -0x3
 
@@ -529,10 +468,8 @@
 
     if-ne v4, v0, :cond_1
 
-    .line 171
     move v6, v14
 
-    .line 173
     :cond_1
     const/16 v21, -0x3
 
@@ -552,10 +489,8 @@
 
     if-gt v4, v0, :cond_2
 
-    .line 174
     move v13, v14
 
-    .line 176
     :cond_2
     const/16 v21, -0x1
 
@@ -577,27 +512,21 @@
 
     if-gt v4, v0, :cond_4
 
-    .line 177
     move/from16 v19, v14
 
-    .line 181
     .end local v4    # "c":C
     :cond_3
     const/4 v8, 0x0
 
-    .line 182
     .local v8, "f":F
     const/4 v12, 0x0
 
-    .line 183
     .local v12, "fraction":I
     const/16 v20, 0x0
 
-    .line 184
     .local v20, "unitType":I
     const/16 v16, 0x0
 
-    .line 186
     .local v16, "mantissaShift":I
     const/16 v21, -0x1
 
@@ -613,7 +542,6 @@
 
     if-ge v13, v0, :cond_12
 
-    .line 188
     const/16 v21, 0x0
 
     :try_start_0
@@ -633,7 +561,6 @@
 
     move-result v8
 
-    .line 192
     const/16 v21, -0x3
 
     move/from16 v0, v21
@@ -646,14 +573,11 @@
 
     if-eq v13, v0, :cond_6
 
-    .line 194
     const/4 v10, 0x4
 
-    .line 195
     .local v10, "fracMaxDigits":I
     add-int/lit8 v11, v6, 0x1
 
-    .line 196
     .local v11, "fracStart":I
     const/16 v21, 0x4
 
@@ -666,7 +590,6 @@
 
     add-int v9, v11, v21
 
-    .line 197
     .local v9, "fracEnd":I
     new-instance v17, Ljava/lang/StringBuilder;
 
@@ -682,7 +605,6 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 198
     .local v17, "tmp":Ljava/lang/StringBuilder;
     :goto_1
     invoke-virtual/range {v17 .. v17}, Ljava/lang/StringBuilder;->length()I
@@ -697,7 +619,6 @@
 
     if-ge v0, v1, :cond_5
 
-    .line 199
     const/16 v21, 0x30
 
     move-object/from16 v0, v17
@@ -708,24 +629,20 @@
 
     goto :goto_1
 
-    .line 202
     .end local v9    # "fracEnd":I
     .end local v17    # "tmp":Ljava/lang/StringBuilder;
     :catch_0
     move-exception v7
 
-    .line 203
     .local v7, "e":Ljava/lang/NumberFormatException;
     const/4 v5, 0x0
 
-    .line 243
     .end local v7    # "e":Ljava/lang/NumberFormatException;
     .end local v10    # "fracMaxDigits":I
     .end local v11    # "fracStart":I
     :goto_2
     return-object v5
 
-    .line 165
     .end local v8    # "f":F
     .end local v12    # "fraction":I
     .end local v16    # "mantissaShift":I
@@ -736,7 +653,6 @@
 
     goto/16 :goto_0
 
-    .line 189
     .end local v4    # "c":C
     .restart local v8    # "f":F
     .restart local v12    # "fraction":I
@@ -745,13 +661,11 @@
     :catch_1
     move-exception v7
 
-    .line 190
     .restart local v7    # "e":Ljava/lang/NumberFormatException;
     const/4 v5, 0x0
 
     goto :goto_2
 
-    .line 201
     .end local v7    # "e":Ljava/lang/NumberFormatException;
     .restart local v9    # "fracEnd":I
     .restart local v10    # "fracMaxDigits":I
@@ -768,7 +682,6 @@
 
     move-result v12
 
-    .line 207
     .end local v9    # "fracEnd":I
     .end local v10    # "fracMaxDigits":I
     .end local v11    # "fracStart":I
@@ -780,12 +693,10 @@
 
     if-ge v12, v0, :cond_8
 
-    .line 208
     const/high16 v21, 0x43800000    # 256.0f
 
     mul-float v8, v8, v21
 
-    .line 219
     :cond_7
     :goto_3
     move-object/from16 v0, p0
@@ -796,9 +707,8 @@
 
     move-result-object v18
 
-    .line 220
     .local v18, "unit":Ljava/lang/String;
-    const-string/jumbo v21, "px"
+    const-string v21, "px"
 
     move-object/from16 v0, v18
 
@@ -810,10 +720,8 @@
 
     if-eqz v21, :cond_b
 
-    .line 221
     const/16 v20, 0x0
 
-    .line 236
     :goto_4
     float-to-int v0, v8
 
@@ -823,7 +731,6 @@
 
     move-result-object v5
 
-    .line 237
     .local v5, "complex":Ljava/lang/Integer;
     invoke-virtual {v5}, Ljava/lang/Integer;->intValue()I
 
@@ -839,7 +746,6 @@
 
     move-result-object v5
 
-    .line 238
     invoke-virtual {v5}, Ljava/lang/Integer;->intValue()I
 
     move-result v21
@@ -852,7 +758,6 @@
 
     move-result-object v5
 
-    .line 239
     invoke-virtual {v5}, Ljava/lang/Integer;->intValue()I
 
     move-result v21
@@ -863,10 +768,8 @@
 
     move-result-object v5
 
-    .line 240
     goto :goto_2
 
-    .line 209
     .end local v5    # "complex":Ljava/lang/Integer;
     .end local v18    # "unit":Ljava/lang/String;
     :cond_8
@@ -876,17 +779,14 @@
 
     if-ge v12, v0, :cond_9
 
-    .line 210
     const/high16 v21, 0x47000000    # 32768.0f
 
     mul-float v8, v8, v21
 
-    .line 211
     const/16 v16, 0x1
 
     goto :goto_3
 
-    .line 212
     :cond_9
     const/high16 v21, 0x800000
 
@@ -894,17 +794,14 @@
 
     if-ge v12, v0, :cond_a
 
-    .line 213
     const/high16 v21, 0x4b000000    # 8388608.0f
 
     mul-float v8, v8, v21
 
-    .line 214
     const/16 v16, 0x2
 
     goto :goto_3
 
-    .line 215
     :cond_a
     int-to-long v0, v12
 
@@ -916,17 +813,14 @@
 
     if-gez v21, :cond_7
 
-    .line 216
     const/high16 v21, 0x4f000000
 
     mul-float v8, v8, v21
 
-    .line 217
     const/16 v16, 0x3
 
     goto :goto_3
 
-    .line 222
     .restart local v18    # "unit":Ljava/lang/String;
     :cond_b
     const-string v21, "dp"
@@ -953,15 +847,13 @@
 
     if-eqz v21, :cond_d
 
-    .line 223
     :cond_c
     const/16 v20, 0x1
 
     goto :goto_4
 
-    .line 224
     :cond_d
-    const-string/jumbo v21, "sp"
+    const-string v21, "sp"
 
     move-object/from16 v0, v18
 
@@ -973,14 +865,12 @@
 
     if-eqz v21, :cond_e
 
-    .line 225
     const/16 v20, 0x2
 
     goto/16 :goto_4
 
-    .line 226
     :cond_e
-    const-string/jumbo v21, "pt"
+    const-string v21, "pt"
 
     move-object/from16 v0, v18
 
@@ -992,14 +882,12 @@
 
     if-eqz v21, :cond_f
 
-    .line 227
     const/16 v20, 0x3
 
     goto/16 :goto_4
 
-    .line 228
     :cond_f
-    const-string/jumbo v21, "in"
+    const-string v21, "in"
 
     move-object/from16 v0, v18
 
@@ -1011,14 +899,12 @@
 
     if-eqz v21, :cond_10
 
-    .line 229
     const/16 v20, 0x4
 
     goto/16 :goto_4
 
-    .line 230
     :cond_10
-    const-string/jumbo v21, "mm"
+    const-string v21, "mm"
 
     move-object/from16 v0, v18
 
@@ -1030,18 +916,15 @@
 
     if-eqz v21, :cond_11
 
-    .line 231
     const/16 v20, 0x5
 
     goto/16 :goto_4
 
-    .line 233
     :cond_11
     const/4 v5, 0x0
 
     goto/16 :goto_2
 
-    .line 241
     .end local v18    # "unit":Ljava/lang/String;
     :cond_12
     const/4 v5, 0x0

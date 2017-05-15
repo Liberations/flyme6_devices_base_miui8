@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,7 +18,6 @@
     .param p0, "mode"    # I
 
     .prologue
-    .line 9
     invoke-static {p0}, Landroid/system/OsConstants;->S_ISREG(I)Z
 
     move-result v0

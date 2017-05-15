@@ -40,7 +40,6 @@
     .locals 0
 
     .prologue
-    .line 691
     iput-object p1, p0, Lcom/android/internal/widget/LockPatternUtils$1;->this$0:Lcom/android/internal/widget/LockPatternUtils;
 
     iput-object p2, p0, Lcom/android/internal/widget/LockPatternUtils$1;->val$service:Landroid/os/IBinder;
@@ -61,10 +60,8 @@
     .param p1, "dummy"    # [Ljava/lang/Void;
 
     .prologue
-    .line 694
     const/4 v1, -0x1
 
-    .line 695
     .local v1, "i":I
     iget-object v3, p0, Lcom/android/internal/widget/LockPatternUtils$1;->val$service:Landroid/os/IBinder;
 
@@ -72,7 +69,6 @@
 
     move-result-object v2
 
-    .line 697
     .local v2, "mountService":Landroid/os/storage/IMountService;
     :try_start_0
     iget v3, p0, Lcom/android/internal/widget/LockPatternUtils$1;->val$type:I
@@ -85,7 +81,6 @@
 
     move-result v1
 
-    .line 702
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -93,11 +88,9 @@
     :goto_0
     return-object v3
 
-    .line 698
     :catch_0
     move-exception v0
 
-    .line 699
     .local v0, "e":Landroid/os/RemoteException;
     const-string v3, "LockPatternUtils"
 
@@ -105,7 +98,6 @@
 
     invoke-static {v3, v4, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 700
     const/4 v3, -0x1
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -120,7 +112,6 @@
     .param p1, "x0"    # [Ljava/lang/Object;
 
     .prologue
-    .line 691
     check-cast p1, [Ljava/lang/Void;
 
     .end local p1    # "x0":[Ljava/lang/Object;
@@ -136,20 +127,17 @@
     .param p1, "result"    # Ljava/lang/Integer;
 
     .prologue
-    .line 706
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.miui.EncryptionPassword"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 707
     .local v0, "intent":Landroid/content/Intent;
-    const-string/jumbo v1, "vold_status"
+    const-string v1, "vold_status"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;
 
-    .line 708
     iget-object v1, p0, Lcom/android/internal/widget/LockPatternUtils$1;->this$0:Lcom/android/internal/widget/LockPatternUtils;
 
     # getter for: Lcom/android/internal/widget/LockPatternUtils;->mContext:Landroid/content/Context;
@@ -159,7 +147,6 @@
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 709
     return-void
 .end method
 
@@ -168,7 +155,6 @@
     .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
-    .line 691
     check-cast p1, Ljava/lang/Integer;
 
     .end local p1    # "x0":Ljava/lang/Object;

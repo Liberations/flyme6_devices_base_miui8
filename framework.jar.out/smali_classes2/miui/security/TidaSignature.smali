@@ -45,7 +45,6 @@
     .locals 1
 
     .prologue
-    .line 21
     const-class v0, Lmiui/security/TidaSignature;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -61,17 +60,14 @@
     .locals 1
 
     .prologue
-    .line 33
     invoke-direct {p0}, Ljava/security/SignatureSpi;-><init>()V
 
-    .line 34
     invoke-static {}, Lmiui/security/Tida;->getInstance()Lmiui/security/Tida;
 
     move-result-object v0
 
     iput-object v0, p0, Lmiui/security/TidaSignature;->mTida:Lmiui/security/Tida;
 
-    .line 35
     return-void
 .end method
 
@@ -79,7 +75,6 @@
     .locals 1
 
     .prologue
-    .line 19
     sget-object v0, Lmiui/security/TidaSignature;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -89,17 +84,14 @@
     .locals 1
 
     .prologue
-    .line 38
     const/4 v0, 0x0
 
     iput v0, p0, Lmiui/security/TidaSignature;->mMode:I
 
-    .line 39
     const/4 v0, 0x0
 
     iput-object v0, p0, Lmiui/security/TidaSignature;->mHelperSignature:Ljava/security/Signature;
 
-    .line 40
     return-void
 .end method
 
@@ -115,7 +107,6 @@
     .end annotation
 
     .prologue
-    .line 166
     iget-object v0, p0, Lmiui/security/TidaSignature;->mParameter:Ljava/lang/Object;
 
     return-object v0
@@ -131,7 +122,6 @@
     .end annotation
 
     .prologue
-    .line 92
     sget-object v2, Lmiui/security/TidaSignature;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -156,20 +146,16 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 93
     invoke-direct {p0}, Lmiui/security/TidaSignature;->resetAll()V
 
-    .line 95
     instance-of v2, p1, Lmiui/security/TidaPrivateKey;
 
     if-eqz v2, :cond_0
 
-    .line 96
     const/4 v2, 0x3
 
     iput v2, p0, Lmiui/security/TidaSignature;->mMode:I
 
-    .line 97
     check-cast p1, Lmiui/security/TidaPrivateKey;
 
     .end local p1    # "privateKey":Ljava/security/PrivateKey;
@@ -177,7 +163,6 @@
 
     move-result-object v0
 
-    .line 98
     .local v0, "alias":Ljava/lang/String;
     iget-object v2, p0, Lmiui/security/TidaSignature;->mTida:Lmiui/security/Tida;
 
@@ -185,19 +170,16 @@
 
     invoke-virtual {v2, v0, v3}, Lmiui/security/Tida;->signInit(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 109
     .end local v0    # "alias":Ljava/lang/String;
     :goto_0
     return-void
 
-    .line 101
     .restart local p1    # "privateKey":Ljava/security/PrivateKey;
     :cond_0
     const/4 v2, 0x1
 
     iput v2, p0, Lmiui/security/TidaSignature;->mMode:I
 
-    .line 103
     :try_start_0
     iget-object v2, p0, Lmiui/security/TidaSignature;->mAlgorithm:Ljava/lang/String;
 
@@ -207,7 +189,6 @@
 
     iput-object v2, p0, Lmiui/security/TidaSignature;->mHelperSignature:Ljava/security/Signature;
 
-    .line 104
     iget-object v2, p0, Lmiui/security/TidaSignature;->mHelperSignature:Ljava/security/Signature;
 
     invoke-virtual {v2, p1}, Ljava/security/Signature;->initSign(Ljava/security/PrivateKey;)V
@@ -216,11 +197,9 @@
 
     goto :goto_0
 
-    .line 105
     :catch_0
     move-exception v1
 
-    .line 106
     .local v1, "e":Ljava/lang/Exception;
     new-instance v2, Ljava/security/InvalidKeyException;
 
@@ -239,10 +218,8 @@
     .end annotation
 
     .prologue
-    .line 80
     invoke-direct {p0}, Lmiui/security/TidaSignature;->resetAll()V
 
-    .line 82
     :try_start_0
     iget-object v1, p0, Lmiui/security/TidaSignature;->mAlgorithm:Ljava/lang/String;
 
@@ -252,26 +229,21 @@
 
     iput-object v1, p0, Lmiui/security/TidaSignature;->mHelperSignature:Ljava/security/Signature;
 
-    .line 83
     iget-object v1, p0, Lmiui/security/TidaSignature;->mHelperSignature:Ljava/security/Signature;
 
     invoke-virtual {v1, p1}, Ljava/security/Signature;->initVerify(Ljava/security/PublicKey;)V
 
-    .line 84
     const/4 v1, 0x2
 
     iput v1, p0, Lmiui/security/TidaSignature;->mMode:I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 88
     return-void
 
-    .line 85
     :catch_0
     move-exception v0
 
-    .line 86
     .local v0, "e":Ljava/lang/Exception;
     new-instance v1, Ljava/security/InvalidKeyException;
 
@@ -293,10 +265,8 @@
     .end annotation
 
     .prologue
-    .line 161
     iput-object p2, p0, Lmiui/security/TidaSignature;->mParameter:Ljava/lang/Object;
 
-    .line 162
     return-void
 .end method
 
@@ -309,7 +279,6 @@
     .end annotation
 
     .prologue
-    .line 135
     sget-object v0, Lmiui/security/TidaSignature;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -334,21 +303,18 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 137
     iget v0, p0, Lmiui/security/TidaSignature;->mMode:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 138
     iget-object v0, p0, Lmiui/security/TidaSignature;->mHelperSignature:Ljava/security/Signature;
 
     invoke-virtual {v0}, Ljava/security/Signature;->sign()[B
 
     move-result-object v0
 
-    .line 140
     :goto_0
     return-object v0
 
@@ -376,14 +342,12 @@
 
     const/4 v1, 0x0
 
-    .line 113
     new-array v0, v2, [B
 
     aput-byte p1, v0, v1
 
     invoke-virtual {p0, v0, v1, v2}, Lmiui/security/TidaSignature;->engineUpdate([BII)V
 
-    .line 114
     return-void
 .end method
 
@@ -399,7 +363,6 @@
     .end annotation
 
     .prologue
-    .line 118
     sget-object v0, Lmiui/security/TidaSignature;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -424,14 +387,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 120
     if-nez p3, :cond_0
 
-    .line 131
     :goto_0
     return-void
 
-    .line 124
     :cond_0
     iget v0, p0, Lmiui/security/TidaSignature;->mMode:I
 
@@ -439,14 +399,12 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 125
     iget-object v0, p0, Lmiui/security/TidaSignature;->mTida:Lmiui/security/Tida;
 
     invoke-virtual {v0, p1, p2, p3}, Lmiui/security/Tida;->signUpdate([BII)V
 
     goto :goto_0
 
-    .line 126
     :cond_1
     iget v0, p0, Lmiui/security/TidaSignature;->mMode:I
 
@@ -460,7 +418,6 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 127
     :cond_2
     iget-object v0, p0, Lmiui/security/TidaSignature;->mHelperSignature:Ljava/security/Signature;
 
@@ -468,7 +425,6 @@
 
     goto :goto_0
 
-    .line 129
     :cond_3
     new-instance v0, Ljava/security/SignatureException;
 
@@ -489,10 +445,8 @@
     .end annotation
 
     .prologue
-    .line 146
     if-nez p1, :cond_0
 
-    .line 147
     new-instance v0, Ljava/security/SignatureException;
 
     const-string v1, "null input"
@@ -501,7 +455,6 @@
 
     throw v0
 
-    .line 149
     :cond_0
     const/4 v0, 0x0
 
@@ -526,7 +479,6 @@
     .end annotation
 
     .prologue
-    .line 155
     iget-object v0, p0, Lmiui/security/TidaSignature;->mHelperSignature:Ljava/security/Signature;
 
     invoke-virtual {v0, p1, p2, p3}, Ljava/security/Signature;->verify([BII)Z

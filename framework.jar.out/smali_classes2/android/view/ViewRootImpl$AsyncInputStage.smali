@@ -37,16 +37,12 @@
     .param p3, "traceCounter"    # Ljava/lang/String;
 
     .prologue
-    .line 3796
     iput-object p1, p0, Landroid/view/ViewRootImpl$AsyncInputStage;->this$0:Landroid/view/ViewRootImpl;
 
-    .line 3797
     invoke-direct {p0, p1, p2}, Landroid/view/ViewRootImpl$InputStage;-><init>(Landroid/view/ViewRootImpl;Landroid/view/ViewRootImpl$InputStage;)V
 
-    .line 3798
     iput-object p3, p0, Landroid/view/ViewRootImpl$AsyncInputStage;->mTraceCounter:Ljava/lang/String;
 
-    .line 3799
     return-void
 .end method
 
@@ -56,37 +52,30 @@
     .param p2, "prev"    # Landroid/view/ViewRootImpl$QueuedInputEvent;
 
     .prologue
-    .line 3894
     if-nez p2, :cond_1
 
-    .line 3895
     iget-object v0, p1, Landroid/view/ViewRootImpl$QueuedInputEvent;->mNext:Landroid/view/ViewRootImpl$QueuedInputEvent;
 
     iput-object v0, p0, Landroid/view/ViewRootImpl$AsyncInputStage;->mQueueHead:Landroid/view/ViewRootImpl$QueuedInputEvent;
 
-    .line 3899
     :goto_0
     iget-object v0, p0, Landroid/view/ViewRootImpl$AsyncInputStage;->mQueueTail:Landroid/view/ViewRootImpl$QueuedInputEvent;
 
     if-ne v0, p1, :cond_0
 
-    .line 3900
     iput-object p2, p0, Landroid/view/ViewRootImpl$AsyncInputStage;->mQueueTail:Landroid/view/ViewRootImpl$QueuedInputEvent;
 
-    .line 3902
     :cond_0
     const/4 v0, 0x0
 
     iput-object v0, p1, Landroid/view/ViewRootImpl$QueuedInputEvent;->mNext:Landroid/view/ViewRootImpl$QueuedInputEvent;
 
-    .line 3904
     iget v0, p0, Landroid/view/ViewRootImpl$AsyncInputStage;->mQueueLength:I
 
     add-int/lit8 v0, v0, -0x1
 
     iput v0, p0, Landroid/view/ViewRootImpl$AsyncInputStage;->mQueueLength:I
 
-    .line 3905
     const-wide/16 v0, 0x4
 
     iget-object v2, p0, Landroid/view/ViewRootImpl$AsyncInputStage;->mTraceCounter:Ljava/lang/String;
@@ -95,10 +84,8 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/os/Trace;->traceCounter(JLjava/lang/String;I)V
 
-    .line 3906
     return-void
 
-    .line 3897
     :cond_1
     iget-object v0, p1, Landroid/view/ViewRootImpl$QueuedInputEvent;->mNext:Landroid/view/ViewRootImpl$QueuedInputEvent;
 
@@ -112,18 +99,14 @@
     .param p1, "q"    # Landroid/view/ViewRootImpl$QueuedInputEvent;
 
     .prologue
-    .line 3881
     iget-object v0, p0, Landroid/view/ViewRootImpl$AsyncInputStage;->mQueueTail:Landroid/view/ViewRootImpl$QueuedInputEvent;
 
     if-nez v0, :cond_0
 
-    .line 3882
     iput-object p1, p0, Landroid/view/ViewRootImpl$AsyncInputStage;->mQueueHead:Landroid/view/ViewRootImpl$QueuedInputEvent;
 
-    .line 3883
     iput-object p1, p0, Landroid/view/ViewRootImpl$AsyncInputStage;->mQueueTail:Landroid/view/ViewRootImpl$QueuedInputEvent;
 
-    .line 3889
     :goto_0
     iget v0, p0, Landroid/view/ViewRootImpl$AsyncInputStage;->mQueueLength:I
 
@@ -131,7 +114,6 @@
 
     iput v0, p0, Landroid/view/ViewRootImpl$AsyncInputStage;->mQueueLength:I
 
-    .line 3890
     const-wide/16 v0, 0x4
 
     iget-object v2, p0, Landroid/view/ViewRootImpl$AsyncInputStage;->mTraceCounter:Ljava/lang/String;
@@ -140,16 +122,13 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/os/Trace;->traceCounter(JLjava/lang/String;I)V
 
-    .line 3891
     return-void
 
-    .line 3885
     :cond_0
     iget-object v0, p0, Landroid/view/ViewRootImpl$AsyncInputStage;->mQueueTail:Landroid/view/ViewRootImpl$QueuedInputEvent;
 
     iput-object p1, v0, Landroid/view/ViewRootImpl$QueuedInputEvent;->mNext:Landroid/view/ViewRootImpl$QueuedInputEvent;
 
-    .line 3886
     iput-object p1, p0, Landroid/view/ViewRootImpl$AsyncInputStage;->mQueueTail:Landroid/view/ViewRootImpl$QueuedInputEvent;
 
     goto :goto_0
@@ -163,19 +142,15 @@
     .param p2, "result"    # I
 
     .prologue
-    .line 3873
     const/4 v0, 0x3
 
     if-ne p2, v0, :cond_0
 
-    .line 3874
     invoke-virtual {p0, p1}, Landroid/view/ViewRootImpl$AsyncInputStage;->defer(Landroid/view/ViewRootImpl$QueuedInputEvent;)V
 
-    .line 3878
     :goto_0
     return-void
 
-    .line 3876
     :cond_0
     invoke-super {p0, p1, p2}, Landroid/view/ViewRootImpl$InputStage;->apply(Landroid/view/ViewRootImpl$QueuedInputEvent;I)V
 
@@ -187,17 +162,14 @@
     .param p1, "q"    # Landroid/view/ViewRootImpl$QueuedInputEvent;
 
     .prologue
-    .line 3807
     iget v0, p1, Landroid/view/ViewRootImpl$QueuedInputEvent;->mFlags:I
 
     or-int/lit8 v0, v0, 0x2
 
     iput v0, p1, Landroid/view/ViewRootImpl$QueuedInputEvent;->mFlags:I
 
-    .line 3808
     invoke-direct {p0, p1}, Landroid/view/ViewRootImpl$AsyncInputStage;->enqueue(Landroid/view/ViewRootImpl$QueuedInputEvent;)V
 
-    .line 3809
     return-void
 .end method
 
@@ -207,10 +179,8 @@
     .param p2, "writer"    # Ljava/io/PrintWriter;
 
     .prologue
-    .line 3910
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 3911
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -221,20 +191,16 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 3912
     const-string v0, ": mQueueLength="
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 3913
     iget v0, p0, Landroid/view/ViewRootImpl$AsyncInputStage;->mQueueLength:I
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(I)V
 
-    .line 3915
     invoke-super {p0, p1, p2}, Landroid/view/ViewRootImpl$InputStage;->dump(Ljava/lang/String;Ljava/io/PrintWriter;)V
 
-    .line 3916
     return-void
 .end method
 
@@ -243,29 +209,23 @@
     .param p1, "q"    # Landroid/view/ViewRootImpl$QueuedInputEvent;
 
     .prologue
-    .line 3814
     iget v5, p1, Landroid/view/ViewRootImpl$QueuedInputEvent;->mFlags:I
 
     and-int/lit8 v5, v5, -0x3
 
     iput v5, p1, Landroid/view/ViewRootImpl$QueuedInputEvent;->mFlags:I
 
-    .line 3817
     iget-object v1, p0, Landroid/view/ViewRootImpl$AsyncInputStage;->mQueueHead:Landroid/view/ViewRootImpl$QueuedInputEvent;
 
-    .line 3818
     .local v1, "curr":Landroid/view/ViewRootImpl$QueuedInputEvent;
     if-nez v1, :cond_1
 
-    .line 3819
     invoke-super {p0, p1}, Landroid/view/ViewRootImpl$InputStage;->forward(Landroid/view/ViewRootImpl$QueuedInputEvent;)V
 
-    .line 3869
     :cond_0
     :goto_0
     return-void
 
-    .line 3826
     :cond_1
     iget-object v5, p1, Landroid/view/ViewRootImpl$QueuedInputEvent;->mEvent:Landroid/view/InputEvent;
 
@@ -273,22 +233,18 @@
 
     move-result v2
 
-    .line 3827
     .local v2, "deviceId":I
     const/4 v4, 0x0
 
-    .line 3828
     .local v4, "prev":Landroid/view/ViewRootImpl$QueuedInputEvent;
     const/4 v0, 0x0
 
-    .line 3829
     .local v0, "blocked":Z
     :goto_1
     if-eqz v1, :cond_3
 
     if-eq v1, p1, :cond_3
 
-    .line 3830
     if-nez v0, :cond_2
 
     iget-object v5, v1, Landroid/view/ViewRootImpl$QueuedInputEvent;->mEvent:Landroid/view/InputEvent;
@@ -299,49 +255,37 @@
 
     if-ne v2, v5, :cond_2
 
-    .line 3831
     const/4 v0, 0x1
 
-    .line 3833
     :cond_2
     move-object v4, v1
 
-    .line 3834
     iget-object v1, v1, Landroid/view/ViewRootImpl$QueuedInputEvent;->mNext:Landroid/view/ViewRootImpl$QueuedInputEvent;
 
     goto :goto_1
 
-    .line 3840
     :cond_3
     if-eqz v0, :cond_4
 
-    .line 3841
     if-nez v1, :cond_0
 
-    .line 3842
     invoke-direct {p0, p1}, Landroid/view/ViewRootImpl$AsyncInputStage;->enqueue(Landroid/view/ViewRootImpl$QueuedInputEvent;)V
 
     goto :goto_0
 
-    .line 3848
     :cond_4
     if-eqz v1, :cond_5
 
-    .line 3849
     iget-object v1, v1, Landroid/view/ViewRootImpl$QueuedInputEvent;->mNext:Landroid/view/ViewRootImpl$QueuedInputEvent;
 
-    .line 3850
     invoke-direct {p0, p1, v4}, Landroid/view/ViewRootImpl$AsyncInputStage;->dequeue(Landroid/view/ViewRootImpl$QueuedInputEvent;Landroid/view/ViewRootImpl$QueuedInputEvent;)V
 
-    .line 3852
     :cond_5
     invoke-super {p0, p1}, Landroid/view/ViewRootImpl$InputStage;->forward(Landroid/view/ViewRootImpl$QueuedInputEvent;)V
 
-    .line 3855
     :goto_2
     if-eqz v1, :cond_0
 
-    .line 3856
     iget-object v5, v1, Landroid/view/ViewRootImpl$QueuedInputEvent;->mEvent:Landroid/view/InputEvent;
 
     invoke-virtual {v5}, Landroid/view/InputEvent;->getDeviceId()I
@@ -350,35 +294,27 @@
 
     if-ne v2, v5, :cond_6
 
-    .line 3857
     iget v5, v1, Landroid/view/ViewRootImpl$QueuedInputEvent;->mFlags:I
 
     and-int/lit8 v5, v5, 0x2
 
     if-nez v5, :cond_0
 
-    .line 3860
     iget-object v3, v1, Landroid/view/ViewRootImpl$QueuedInputEvent;->mNext:Landroid/view/ViewRootImpl$QueuedInputEvent;
 
-    .line 3861
     .local v3, "next":Landroid/view/ViewRootImpl$QueuedInputEvent;
     invoke-direct {p0, v1, v4}, Landroid/view/ViewRootImpl$AsyncInputStage;->dequeue(Landroid/view/ViewRootImpl$QueuedInputEvent;Landroid/view/ViewRootImpl$QueuedInputEvent;)V
 
-    .line 3862
     invoke-super {p0, v1}, Landroid/view/ViewRootImpl$InputStage;->forward(Landroid/view/ViewRootImpl$QueuedInputEvent;)V
 
-    .line 3863
     move-object v1, v3
 
-    .line 3864
     goto :goto_2
 
-    .line 3865
     .end local v3    # "next":Landroid/view/ViewRootImpl$QueuedInputEvent;
     :cond_6
     move-object v4, v1
 
-    .line 3866
     iget-object v1, v1, Landroid/view/ViewRootImpl$QueuedInputEvent;->mNext:Landroid/view/ViewRootImpl$QueuedInputEvent;
 
     goto :goto_2

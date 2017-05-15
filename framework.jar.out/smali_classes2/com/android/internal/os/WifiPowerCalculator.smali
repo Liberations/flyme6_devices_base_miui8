@@ -25,16 +25,13 @@
     .param p1, "profile"    # Lcom/android/internal/os/PowerProfile;
 
     .prologue
-    .line 33
     invoke-direct {p0}, Lcom/android/internal/os/PowerCalculator;-><init>()V
 
-    .line 31
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/android/internal/os/WifiPowerCalculator;->mTotalAppPowerDrain:D
 
-    .line 34
-    const-string/jumbo v0, "wifi.controller.idle"
+    const-string v0, "wifi.controller.idle"
 
     invoke-virtual {p1, v0}, Lcom/android/internal/os/PowerProfile;->getAveragePower(Ljava/lang/String;)D
 
@@ -42,8 +39,7 @@
 
     iput-wide v0, p0, Lcom/android/internal/os/WifiPowerCalculator;->mIdleCurrentMa:D
 
-    .line 35
-    const-string/jumbo v0, "wifi.controller.tx"
+    const-string v0, "wifi.controller.tx"
 
     invoke-virtual {p1, v0}, Lcom/android/internal/os/PowerProfile;->getAveragePower(Ljava/lang/String;)D
 
@@ -51,8 +47,7 @@
 
     iput-wide v0, p0, Lcom/android/internal/os/WifiPowerCalculator;->mTxCurrentMa:D
 
-    .line 36
-    const-string/jumbo v0, "wifi.controller.rx"
+    const-string v0, "wifi.controller.rx"
 
     invoke-virtual {p1, v0}, Lcom/android/internal/os/PowerProfile;->getAveragePower(Ljava/lang/String;)D
 
@@ -60,7 +55,6 @@
 
     iput-wide v0, p0, Lcom/android/internal/os/WifiPowerCalculator;->mRxCurrentMa:D
 
-    .line 37
     return-void
 .end method
 
@@ -75,7 +69,6 @@
     .param p7, "statsType"    # I
 
     .prologue
-    .line 42
     const/4 v8, 0x0
 
     move-object/from16 v0, p2
@@ -86,7 +79,6 @@
 
     move-result-wide v2
 
-    .line 44
     .local v2, "idleTime":J
     const/4 v8, 0x2
 
@@ -98,7 +90,6 @@
 
     move-result-wide v6
 
-    .line 45
     .local v6, "txTime":J
     const/4 v8, 0x1
 
@@ -110,7 +101,6 @@
 
     move-result-wide v4
 
-    .line 46
     .local v4, "rxTime":J
     add-long v8, v2, v4
 
@@ -118,7 +108,6 @@
 
     iput-wide v8, p1, Lcom/android/internal/os/BatterySipper;->wifiRunningTimeMs:J
 
-    .line 47
     long-to-double v8, v2
 
     iget-wide v10, p0, Lcom/android/internal/os/WifiPowerCalculator;->mIdleCurrentMa:D
@@ -147,7 +136,6 @@
 
     iput-wide v8, p1, Lcom/android/internal/os/BatterySipper;->wifiPowerMah:D
 
-    .line 50
     iget-wide v8, p0, Lcom/android/internal/os/WifiPowerCalculator;->mTotalAppPowerDrain:D
 
     iget-wide v10, p1, Lcom/android/internal/os/BatterySipper;->wifiPowerMah:D
@@ -156,7 +144,6 @@
 
     iput-wide v8, p0, Lcom/android/internal/os/WifiPowerCalculator;->mTotalAppPowerDrain:D
 
-    .line 52
     const/4 v8, 0x2
 
     move-object/from16 v0, p2
@@ -169,7 +156,6 @@
 
     iput-wide v8, p1, Lcom/android/internal/os/BatterySipper;->wifiRxPackets:J
 
-    .line 54
     const/4 v8, 0x3
 
     move-object/from16 v0, p2
@@ -182,7 +168,6 @@
 
     iput-wide v8, p1, Lcom/android/internal/os/BatterySipper;->wifiTxPackets:J
 
-    .line 56
     const/4 v8, 0x2
 
     move-object/from16 v0, p2
@@ -195,7 +180,6 @@
 
     iput-wide v8, p1, Lcom/android/internal/os/BatterySipper;->wifiRxBytes:J
 
-    .line 58
     const/4 v8, 0x3
 
     move-object/from16 v0, p2
@@ -208,7 +192,6 @@
 
     iput-wide v8, p1, Lcom/android/internal/os/BatterySipper;->wifiTxBytes:J
 
-    .line 65
     return-void
 .end method
 
@@ -221,7 +204,6 @@
     .param p7, "statsType"    # I
 
     .prologue
-    .line 70
     const/4 v10, 0x0
 
     move-object/from16 v0, p2
@@ -232,7 +214,6 @@
 
     move-result-wide v2
 
-    .line 72
     .local v2, "idleTimeMs":J
     const/4 v10, 0x1
 
@@ -244,7 +225,6 @@
 
     move-result-wide v6
 
-    .line 74
     .local v6, "rxTimeMs":J
     const/4 v10, 0x2
 
@@ -256,7 +236,6 @@
 
     move-result-wide v8
 
-    .line 76
     .local v8, "txTimeMs":J
     add-long v10, v2, v6
 
@@ -266,7 +245,6 @@
 
     iput-wide v10, v0, Lcom/android/internal/os/BatterySipper;->wifiRunningTimeMs:J
 
-    .line 78
     const/4 v10, 0x3
 
     move-object/from16 v0, p2
@@ -283,7 +261,6 @@
 
     div-double v4, v10, v12
 
-    .line 80
     .local v4, "powerDrainMah":D
     const-wide/16 v10, 0x0
 
@@ -291,7 +268,6 @@
 
     if-nez v10, :cond_0
 
-    .line 82
     long-to-double v10, v2
 
     move-object/from16 v0, p0
@@ -324,7 +300,6 @@
 
     div-double v4, v10, v12
 
-    .line 85
     :cond_0
     const-wide/16 v10, 0x0
 
@@ -342,7 +317,6 @@
 
     iput-wide v10, v0, Lcom/android/internal/os/BatterySipper;->wifiPowerMah:D
 
-    .line 90
     return-void
 .end method
 
@@ -350,11 +324,9 @@
     .locals 2
 
     .prologue
-    .line 94
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/android/internal/os/WifiPowerCalculator;->mTotalAppPowerDrain:D
 
-    .line 95
     return-void
 .end method

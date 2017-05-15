@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 4905
     iput-object p1, p0, Lcom/android/internal/policy/PhoneWindow$RotationWatcher$1;->this$0:Lcom/android/internal/policy/PhoneWindow$RotationWatcher;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,11 +39,9 @@
     .locals 1
 
     .prologue
-    .line 4907
     iget-object v0, p0, Lcom/android/internal/policy/PhoneWindow$RotationWatcher$1;->this$0:Lcom/android/internal/policy/PhoneWindow$RotationWatcher;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/PhoneWindow$RotationWatcher;->dispatchRotationChanged()V
 
-    .line 4908
     return-void
 .end method

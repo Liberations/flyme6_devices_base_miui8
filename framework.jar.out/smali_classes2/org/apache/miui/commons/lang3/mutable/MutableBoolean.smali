@@ -38,10 +38,8 @@
     .locals 0
 
     .prologue
-    .line 48
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 49
     return-void
 .end method
 
@@ -50,17 +48,14 @@
     .param p1, "value"    # Ljava/lang/Boolean;
 
     .prologue
-    .line 68
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 69
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
 
     iput-boolean v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableBoolean;->value:Z
 
-    .line 70
     return-void
 .end method
 
@@ -69,13 +64,10 @@
     .param p1, "value"    # Z
 
     .prologue
-    .line 57
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 58
     iput-boolean p1, p0, Lorg/apache/miui/commons/lang3/mutable/MutableBoolean;->value:Z
 
-    .line 59
     return-void
 .end method
 
@@ -85,7 +77,6 @@
     .locals 1
 
     .prologue
-    .line 129
     iget-boolean v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableBoolean;->value:Z
 
     return v0
@@ -96,7 +87,6 @@
     .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
-    .line 32
     check-cast p1, Lorg/apache/miui/commons/lang3/mutable/MutableBoolean;
 
     .end local p1    # "x0":Ljava/lang/Object;
@@ -112,10 +102,8 @@
     .param p1, "other"    # Lorg/apache/miui/commons/lang3/mutable/MutableBoolean;
 
     .prologue
-    .line 179
     iget-boolean v0, p1, Lorg/apache/miui/commons/lang3/mutable/MutableBoolean;->value:Z
 
-    .line 180
     .local v0, "anotherVal":Z
     iget-boolean v1, p0, Lorg/apache/miui/commons/lang3/mutable/MutableBoolean;->value:Z
 
@@ -148,12 +136,10 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 154
     instance-of v1, p1, Lorg/apache/miui/commons/lang3/mutable/MutableBoolean;
 
     if-eqz v1, :cond_0
 
-    .line 155
     iget-boolean v1, p0, Lorg/apache/miui/commons/lang3/mutable/MutableBoolean;->value:Z
 
     check-cast p1, Lorg/apache/miui/commons/lang3/mutable/MutableBoolean;
@@ -167,7 +153,6 @@
 
     const/4 v0, 0x1
 
-    .line 157
     :cond_0
     return v0
 .end method
@@ -176,7 +161,6 @@
     .locals 1
 
     .prologue
-    .line 79
     iget-boolean v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableBoolean;->value:Z
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -190,7 +174,6 @@
     .locals 1
 
     .prologue
-    .line 32
     invoke-virtual {p0}, Lorg/apache/miui/commons/lang3/mutable/MutableBoolean;->getValue()Ljava/lang/Boolean;
 
     move-result-object v0
@@ -202,7 +185,6 @@
     .locals 1
 
     .prologue
-    .line 167
     iget-boolean v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableBoolean;->value:Z
 
     if-eqz v0, :cond_0
@@ -230,7 +212,6 @@
     .locals 1
 
     .prologue
-    .line 119
     iget-boolean v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableBoolean;->value:Z
 
     if-nez v0, :cond_0
@@ -252,7 +233,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 109
     iget-boolean v1, p0, Lorg/apache/miui/commons/lang3/mutable/MutableBoolean;->value:Z
 
     if-ne v1, v0, :cond_0
@@ -271,14 +251,12 @@
     .param p1, "value"    # Ljava/lang/Boolean;
 
     .prologue
-    .line 98
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
 
     iput-boolean v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableBoolean;->value:Z
 
-    .line 99
     return-void
 .end method
 
@@ -287,7 +265,6 @@
     .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
-    .line 32
     check-cast p1, Ljava/lang/Boolean;
 
     .end local p1    # "x0":Ljava/lang/Object;
@@ -301,10 +278,8 @@
     .param p1, "value"    # Z
 
     .prologue
-    .line 88
     iput-boolean p1, p0, Lorg/apache/miui/commons/lang3/mutable/MutableBoolean;->value:Z
 
-    .line 89
     return-void
 .end method
 
@@ -312,7 +287,6 @@
     .locals 1
 
     .prologue
-    .line 140
     invoke-virtual {p0}, Lorg/apache/miui/commons/lang3/mutable/MutableBoolean;->booleanValue()Z
 
     move-result v0
@@ -328,7 +302,6 @@
     .locals 1
 
     .prologue
-    .line 191
     iget-boolean v0, p0, Lorg/apache/miui/commons/lang3/mutable/MutableBoolean;->value:Z
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;

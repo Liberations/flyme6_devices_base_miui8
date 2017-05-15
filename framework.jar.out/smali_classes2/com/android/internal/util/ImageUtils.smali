@@ -28,10 +28,8 @@
     .locals 1
 
     .prologue
-    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 48
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
@@ -52,29 +50,24 @@
 
     const/4 v10, 0x0
 
-    .line 129
     if-nez p0, :cond_1
 
-    .line 157
     .end local p0    # "drawable":Landroid/graphics/drawable/Drawable;
     :cond_0
     :goto_0
     return-object v4
 
-    .line 132
     .restart local p0    # "drawable":Landroid/graphics/drawable/Drawable;
     :cond_1
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v2
 
-    .line 133
     .local v2, "originalWidth":I
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v1
 
-    .line 135
     .local v1, "originalHeight":I
     if-gt v2, p1, :cond_2
 
@@ -84,7 +77,6 @@
 
     if-eqz v7, :cond_2
 
-    .line 137
     check-cast p0, Landroid/graphics/drawable/BitmapDrawable;
 
     .end local p0    # "drawable":Landroid/graphics/drawable/Drawable;
@@ -94,14 +86,12 @@
 
     goto :goto_0
 
-    .line 139
     .restart local p0    # "drawable":Landroid/graphics/drawable/Drawable;
     :cond_2
     if-lez v1, :cond_0
 
     if-lez v2, :cond_0
 
-    .line 145
     int-to-float v7, p1
 
     int-to-float v8, v2
@@ -118,7 +108,6 @@
 
     move-result v3
 
-    .line 147
     .local v3, "ratio":F
     const/high16 v7, 0x3f800000    # 1.0f
 
@@ -126,14 +115,12 @@
 
     move-result v3
 
-    .line 148
     int-to-float v7, v2
 
     mul-float/2addr v7, v3
 
     float-to-int v6, v7
 
-    .line 149
     .local v6, "scaledWidth":I
     int-to-float v7, v1
 
@@ -141,7 +128,6 @@
 
     float-to-int v5, v7
 
-    .line 150
     .local v5, "scaledHeight":I
     sget-object v7, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
@@ -149,17 +135,14 @@
 
     move-result-object v4
 
-    .line 153
     .local v4, "result":Landroid/graphics/Bitmap;
     new-instance v0, Landroid/graphics/Canvas;
 
     invoke-direct {v0, v4}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 154
     .local v0, "canvas":Landroid/graphics/Canvas;
     invoke-virtual {p0, v10, v10, v6, v5}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 155
     invoke-virtual {p0, v0}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
     goto :goto_0
@@ -170,7 +153,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 98
     iget-object v0, p0, Lcom/android/internal/util/ImageUtils;->mTempBuffer:[I
 
     if-eqz v0, :cond_0
@@ -181,13 +163,11 @@
 
     if-ge v0, p1, :cond_1
 
-    .line 99
     :cond_0
     new-array v0, p1, [I
 
     iput-object v0, p0, Lcom/android/internal/util/ImageUtils;->mTempBuffer:[I
 
-    .line 101
     :cond_1
     return-void
 .end method
@@ -201,39 +181,32 @@
 
     const/16 v6, 0x14
 
-    .line 110
     shr-int/lit8 v5, p0, 0x18
 
     and-int/lit16 v0, v5, 0xff
 
-    .line 111
     .local v0, "alpha":I
     const/16 v5, 0x32
 
     if-ge v0, v5, :cond_1
 
-    .line 119
     :cond_0
     :goto_0
     return v4
 
-    .line 115
     :cond_1
     shr-int/lit8 v5, p0, 0x10
 
     and-int/lit16 v3, v5, 0xff
 
-    .line 116
     .local v3, "r":I
     shr-int/lit8 v5, p0, 0x8
 
     and-int/lit16 v2, v5, 0xff
 
-    .line 117
     .local v2, "g":I
     and-int/lit16 v1, p0, 0xff
 
-    .line 119
     .local v1, "b":I
     sub-int v5, v3, v2
 
@@ -282,30 +255,25 @@
 
     const/4 v2, 0x0
 
-    .line 59
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v7
 
-    .line 60
     .local v7, "height":I
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v3
 
-    .line 63
     .local v3, "width":I
     if-gt v7, v1, :cond_0
 
     if-le v3, v1, :cond_2
 
-    .line 64
     :cond_0
     iget-object v0, p0, Lcom/android/internal/util/ImageUtils;->mTempCompactBitmap:Landroid/graphics/Bitmap;
 
     if-nez v0, :cond_1
 
-    .line 65
     sget-object v0, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     invoke-static {v1, v1, v0}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
@@ -314,7 +282,6 @@
 
     iput-object v0, p0, Lcom/android/internal/util/ImageUtils;->mTempCompactBitmap:Landroid/graphics/Bitmap;
 
-    .line 68
     new-instance v0, Landroid/graphics/Canvas;
 
     iget-object v1, p0, Lcom/android/internal/util/ImageUtils;->mTempCompactBitmap:Landroid/graphics/Bitmap;
@@ -323,25 +290,21 @@
 
     iput-object v0, p0, Lcom/android/internal/util/ImageUtils;->mTempCompactBitmapCanvas:Landroid/graphics/Canvas;
 
-    .line 69
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0, v10}, Landroid/graphics/Paint;-><init>(I)V
 
     iput-object v0, p0, Lcom/android/internal/util/ImageUtils;->mTempCompactBitmapPaint:Landroid/graphics/Paint;
 
-    .line 70
     iget-object v0, p0, Lcom/android/internal/util/ImageUtils;->mTempCompactBitmapPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v10}, Landroid/graphics/Paint;->setFilterBitmap(Z)V
 
-    .line 72
     :cond_1
     iget-object v0, p0, Lcom/android/internal/util/ImageUtils;->mTempMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v0}, Landroid/graphics/Matrix;->reset()V
 
-    .line 73
     iget-object v0, p0, Lcom/android/internal/util/ImageUtils;->mTempMatrix:Landroid/graphics/Matrix;
 
     int-to-float v1, v3
@@ -354,14 +317,12 @@
 
     invoke-virtual {v0, v1, v4, v5, v5}, Landroid/graphics/Matrix;->setScale(FFFF)V
 
-    .line 77
     iget-object v0, p0, Lcom/android/internal/util/ImageUtils;->mTempCompactBitmapCanvas:Landroid/graphics/Canvas;
 
     sget-object v1, Landroid/graphics/PorterDuff$Mode;->SRC:Landroid/graphics/PorterDuff$Mode;
 
     invoke-virtual {v0, v2, v1}, Landroid/graphics/Canvas;->drawColor(ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 78
     iget-object v0, p0, Lcom/android/internal/util/ImageUtils;->mTempCompactBitmapCanvas:Landroid/graphics/Canvas;
 
     iget-object v1, p0, Lcom/android/internal/util/ImageUtils;->mTempMatrix:Landroid/graphics/Matrix;
@@ -370,23 +331,18 @@
 
     invoke-virtual {v0, p1, v1, v4}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Matrix;Landroid/graphics/Paint;)V
 
-    .line 79
     iget-object p1, p0, Lcom/android/internal/util/ImageUtils;->mTempCompactBitmap:Landroid/graphics/Bitmap;
 
-    .line 80
     const/16 v7, 0x40
 
     move v3, v7
 
-    .line 83
     :cond_2
     mul-int v9, v7, v3
 
-    .line 84
     .local v9, "size":I
     invoke-direct {p0, v9}, Lcom/android/internal/util/ImageUtils;->ensureBufferSize(I)V
 
-    .line 85
     iget-object v1, p0, Lcom/android/internal/util/ImageUtils;->mTempBuffer:[I
 
     move-object v0, p1
@@ -399,14 +355,12 @@
 
     invoke-virtual/range {v0 .. v7}, Landroid/graphics/Bitmap;->getPixels([IIIIIII)V
 
-    .line 86
     const/4 v8, 0x0
 
     .local v8, "i":I
     :goto_0
     if-ge v8, v9, :cond_4
 
-    .line 87
     iget-object v0, p0, Lcom/android/internal/util/ImageUtils;->mTempBuffer:[I
 
     aget v0, v0, v8
@@ -417,11 +371,9 @@
 
     if-nez v0, :cond_3
 
-    .line 91
     :goto_1
     return v2
 
-    .line 86
     :cond_3
     add-int/lit8 v8, v8, 0x1
 
@@ -430,6 +382,5 @@
     :cond_4
     move v2, v10
 
-    .line 91
     goto :goto_1
 .end method

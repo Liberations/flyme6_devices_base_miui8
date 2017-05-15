@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 126
     iput-object p1, p0, Landroid/util/ResolutionOverride$1;->this$0:Landroid/util/ResolutionOverride;
 
     iput-object p2, p0, Landroid/util/ResolutionOverride$1;->val$surfaceView:Landroid/view/SurfaceView;
@@ -44,13 +43,11 @@
     .locals 2
 
     .prologue
-    .line 129
     iget-object v0, p0, Landroid/util/ResolutionOverride$1;->val$surfaceView:Landroid/view/SurfaceView;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/view/SurfaceView;->setVisibility(I)V
 
-    .line 130
     return-void
 .end method

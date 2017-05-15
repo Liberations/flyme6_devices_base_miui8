@@ -21,12 +21,10 @@
     .param p2, "exp"    # Ljava/lang/String;
 
     .prologue
-    .line 331
     const/4 v0, 0x1
 
     invoke-direct {p0, p1, p2, v0}, Lmiui/maml/data/Expression$VariableExpression;-><init>(Lmiui/maml/data/Variables;Ljava/lang/String;Z)V
 
-    .line 332
     return-void
 .end method
 
@@ -36,7 +34,6 @@
     .locals 2
 
     .prologue
-    .line 336
     iget-object v0, p0, Lmiui/maml/data/Expression$NumberVariableExpression;->mIndexedVar:Lmiui/maml/data/IndexedVariable;
 
     invoke-virtual {v0}, Lmiui/maml/data/IndexedVariable;->getDouble()D
@@ -50,7 +47,6 @@
     .locals 2
 
     .prologue
-    .line 341
     invoke-virtual {p0}, Lmiui/maml/data/Expression$NumberVariableExpression;->evaluate()D
 
     move-result-wide v0
@@ -66,7 +62,6 @@
     .locals 1
 
     .prologue
-    .line 346
     iget-object v0, p0, Lmiui/maml/data/Expression$NumberVariableExpression;->mIndexedVar:Lmiui/maml/data/IndexedVariable;
 
     invoke-virtual {v0}, Lmiui/maml/data/IndexedVariable;->isNull()Z

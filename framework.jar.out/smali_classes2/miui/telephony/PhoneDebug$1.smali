@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 68
     iput p1, p0, Lmiui/telephony/PhoneDebug$1;->val$time:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 4
 
     .prologue
-    .line 73
     :try_start_0
     iget v1, p0, Lmiui/telephony/PhoneDebug$1;->val$time:I
 
@@ -48,21 +46,17 @@
 
     invoke-static {v2, v3}, Ljava/lang/Thread;->sleep(J)V
 
-    .line 74
     # invokes: Lmiui/telephony/PhoneDebug;->register()V
     invoke-static {}, Lmiui/telephony/PhoneDebug;->access$000()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 78
     :goto_0
     return-void
 
-    .line 75
     :catch_0
     move-exception v0
 
-    .line 76
     .local v0, "te":Ljava/lang/Exception;
     const-string v1, "PhoneDebug"
 

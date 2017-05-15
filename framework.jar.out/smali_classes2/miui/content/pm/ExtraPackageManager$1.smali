@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 262
     invoke-direct {p0}, Landroid/util/Singleton;-><init>()V
 
     return-void
@@ -40,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 262
     invoke-virtual {p0}, Lmiui/content/pm/ExtraPackageManager$1;->create()Lmiui/content/pm/ExtraPackageManager$SignatureHolder;
 
     move-result-object v0
@@ -52,7 +50,6 @@
     .locals 1
 
     .prologue
-    .line 265
     new-instance v0, Lmiui/content/pm/ExtraPackageManager$SignatureHolder;
 
     invoke-direct {v0}, Lmiui/content/pm/ExtraPackageManager$SignatureHolder;-><init>()V
