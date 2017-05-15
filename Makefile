@@ -54,7 +54,7 @@ vendor_remove_dirs := data-app vendor/ChinaTelecom
 # The default value is Bluetooth.
 # You can configure the apk name in the vendor/system/app or vendor/system/priv-app directory.
 #-----------------------------------------------------------------------------
-vendor_saved_apps := Bluetooth BluetoothExt BluetoothMidiService HTMLViewer KeyChain MiuiBluetooth PicoTts PrintSpooler Stk UserDictionaryProvider BackupRestoreConfirmation DefaultContainerService ExternalStorageProvider FusedLocation InputDevices PicoTts ProxyHandler SharedStorageBackup Shell qcrilmsgtunnel shutdownlistener TimeService miui miuisystem AMAPNetworkLocation com.qualcomm.location
+vendor_saved_apps := Bluetooth BluetoothExt BluetoothMidiService HTMLViewer KeyChain MiuiBluetooth PicoTts PrintSpooler Stk UserDictionaryProvider BackupRestoreConfirmation DefaultContainerService ExternalStorageProvider FusedLocation InputDevices PicoTts ProxyHandler SharedStorageBackup Shell qcrilmsgtunnel shutdownlistener TimeService miui miuisystem  com.qualcomm.location  SpacesCore SpacesPolicyApp SpacesManagerService telresources
 
 ##############################################################################
 # The value decides which vendor apk you want to modify.
