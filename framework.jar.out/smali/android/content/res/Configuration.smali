@@ -936,7 +936,7 @@
 .end method
 
 .method public static needNewResources(II)Z
-    .locals 1
+    .locals 2
     .param p0, "configChanges"    # I
     .param p1, "interestingChanges"    # I
 
@@ -945,21 +945,21 @@
     const/high16 v0, 0x40000000    # 2.0f
 
     or-int/2addr v0, p1
-    or-int/lit16 v1, v1, 0x4000
+    or-int/lit16 v0, v0, 0x4000
 
-    const v0, 0x8000
+    const v1, 0x8000
 
-    or-int/2addr v1, v0
+    or-int/2addr v0, v1
 
-    const/4 v0, 0x0
+ 
 
     and-int/2addr v0, p0
 
     if-nez v0, :cond_0
 
-    invoke-static {p0}, Landroid/content/res/MiuiConfiguration;->needNewResources(I)Z
+    #invoke-static {p0}, Landroid/content/res/MiuiConfiguration;->needNewResources(I)Z
 
-    move-result v0
+    #move-result v0
 
     if-eqz v0, :cond_1
 
