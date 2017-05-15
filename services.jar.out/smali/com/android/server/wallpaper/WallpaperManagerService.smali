@@ -5102,61 +5102,74 @@
     .param p2, "callingPackage"    # Ljava/lang/String;
 
     .prologue
+
     invoke-direct/range {p0 .. p0}, Lcom/android/server/wallpaper/WallpaperManagerService;->isFlymeChildrenMode()Z
 
     move-result v0
 
     if-eqz v0, :cond_flyme_0
 
-    return-void
+    const/4 v0, 0x0
+
+    return-object v0
 
     :cond_flyme_0
-    const-string v5, "android.permission.SET_WALLPAPER"
+
+    const/4 v6, 0x0
+
+    .line 852
+    const-string/jumbo v5, "android.permission.SET_WALLPAPER"
 
     invoke-direct {p0, v5}, Lcom/android/server/wallpaper/WallpaperManagerService;->checkPermission(Ljava/lang/String;)V
 
+    .line 853
     invoke-virtual {p0, p2}, Lcom/android/server/wallpaper/WallpaperManagerService;->isWallpaperSupported(Ljava/lang/String;)Z
 
     move-result v5
 
     if-nez v5, :cond_0
 
-    const/4 v2, 0x0
+    .line 854
+    return-object v6
 
-    :goto_0
-    return-object v2
-
+    .line 856
     :cond_0
     iget-object v6, p0, Lcom/android/server/wallpaper/WallpaperManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v6
 
+    .line 858
     :try_start_0
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v3
 
+    .line 859
     .local v3, "userId":I
     invoke-direct {p0, v3}, Lcom/android/server/wallpaper/WallpaperManagerService;->getWallpaperSafeLocked(I)Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperData;
 
     move-result-object v4
 
+    .line 860
     .local v4, "wallpaper":Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperData;
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
     move-result-wide v0
 
+    .line 862
     .local v0, "ident":J
     :try_start_1
     invoke-virtual {p0, p1, v4}, Lcom/android/server/wallpaper/WallpaperManagerService;->updateWallpaperBitmapLocked(Ljava/lang/String;Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperData;)Landroid/os/ParcelFileDescriptor;
 
     move-result-object v2
 
+    .line 863
     .local v2, "pfd":Landroid/os/ParcelFileDescriptor;
     if-eqz v2, :cond_1
 
+    .line 864
     const/4 v5, 0x1
 
     iput-boolean v5, v4, Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperData;->imageWallpaperPending:Z
@@ -5164,44 +5177,46 @@
     invoke-direct/range {p0 .. p0}, Lcom/android/server/wallpaper/WallpaperManagerService;->setFlymeWallpaperSimultaneously()V
 
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 868
     :cond_1
     :try_start_2
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
     monitor-exit v6
 
-    goto :goto_0
+    .line 866
+    return-object v2
 
-    .line 870
-    .end local v0    # "ident":J
+    .line 867
     .end local v2    # "pfd":Landroid/os/ParcelFileDescriptor;
-    .end local v3    # "userId":I
-    .end local v4    # "wallpaper":Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperData;
     :catchall_0
     move-exception v5
 
-    monitor-exit v6
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    throw v5
-
     .line 868
-    .restart local v0    # "ident":J
-    .restart local v3    # "userId":I
-    .restart local v4    # "wallpaper":Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperData;
-    :catchall_1
-    move-exception v5
-
     :try_start_3
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
+    .line 867
     throw v5
     :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    .line 856
+    .end local v0    # "ident":J
+    .end local v3    # "userId":I
+    .end local v4    # "wallpaper":Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperData;
+    :catchall_1
+    move-exception v5
+
+    monitor-exit v6
+
+    throw v5
 .end method
+
 
 .method public setWallpaperComponent(Landroid/content/ComponentName;)V
     .locals 10

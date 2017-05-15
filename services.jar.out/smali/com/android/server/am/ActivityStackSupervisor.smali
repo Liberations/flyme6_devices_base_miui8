@@ -6,7 +6,7 @@
 .implements Landroid/hardware/display/DisplayManager$DisplayListener;
 
 
-# annotations
+# annotations ver
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Lcom/android/server/am/ActivityStackSupervisor$FlymeInjector;,
