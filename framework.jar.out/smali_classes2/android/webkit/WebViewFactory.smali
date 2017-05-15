@@ -792,8 +792,9 @@
 
     .line 156
     :cond_2
-    const-wide/16 v6, 0x10
     :goto_flyme_0
+    const-wide/16 v6, 0x10
+
     :try_start_1
     const-string v4, "WebViewFactory.getProvider()"
 
