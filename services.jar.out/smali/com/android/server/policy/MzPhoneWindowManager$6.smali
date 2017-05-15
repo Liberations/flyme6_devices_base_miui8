@@ -25,6 +25,7 @@
     .param p2, "$anonymous0"    # Landroid/os/Handler;
 
     .prologue
+    .line 419
     iput-object p1, p0, Lcom/android/server/policy/MzPhoneWindowManager$6;->this$0:Lcom/android/server/policy/MzPhoneWindowManager;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -39,6 +40,7 @@
     .param p1, "selfChange"    # Z
 
     .prologue
+    .line 422
     iget-object v0, p0, Lcom/android/server/policy/MzPhoneWindowManager$6;->this$0:Lcom/android/server/policy/MzPhoneWindowManager;
 
     iget-object v1, p0, Lcom/android/server/policy/MzPhoneWindowManager$6;->this$0:Lcom/android/server/policy/MzPhoneWindowManager;
@@ -49,5 +51,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/policy/MzPhoneWindowManager;->-set4(Lcom/android/server/policy/MzPhoneWindowManager;Z)Z
 
+    .line 421
     return-void
 .end method

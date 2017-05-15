@@ -19,6 +19,7 @@
     .locals 0
 
     .prologue
+    .line 5510
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,11 +30,12 @@
     .param p0, "at"    # Landroid/app/ActivityThread;
 
     .prologue
+    .line 5539
     invoke-static {}, Lcom/meizu/common/alphame/AlphaMe;->getInstance()Lcom/meizu/common/alphame/AlphaMe;
 
     move-result-object v0
 
-    const-string v1, "AppEvent"
+    const-string/jumbo v1, "AppEvent"
 
     const/4 v2, 0x2
 
@@ -51,7 +53,7 @@
 
     aput-object v3, v2, v4
 
-    const-string v3, "pause"
+    const-string/jumbo v3, "pause"
 
     const/4 v4, 0x1
 
@@ -59,6 +61,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/meizu/common/alphame/AlphaMe;->collect(Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 5538
     return-void
 .end method
 
@@ -67,11 +70,12 @@
     .param p0, "at"    # Landroid/app/ActivityThread;
 
     .prologue
+    .line 5535
     invoke-static {}, Lcom/meizu/common/alphame/AlphaMe;->getInstance()Lcom/meizu/common/alphame/AlphaMe;
 
     move-result-object v0
 
-    const-string v1, "AppEvent"
+    const-string/jumbo v1, "AppEvent"
 
     const/4 v2, 0x2
 
@@ -89,7 +93,7 @@
 
     aput-object v3, v2, v4
 
-    const-string v3, "resume"
+    const-string/jumbo v3, "resume"
 
     const/4 v4, 0x1
 
@@ -97,6 +101,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/meizu/common/alphame/AlphaMe;->collect(Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 5534
     return-void
 .end method
 
@@ -106,8 +111,10 @@
     .param p1, "packageInfo"    # Landroid/app/LoadedApk;
 
     .prologue
+    .line 5519
     const/4 v2, 0x0
 
+    .line 5521
     .local v2, "rejectReceive":Z
     :try_start_0
     iget-object v3, p0, Landroid/app/ActivityThread$ReceiverData;->intent:Landroid/content/Intent;
@@ -122,13 +129,14 @@
 
     if-eqz v3, :cond_0
 
+    .line 5522
     iget-object v3, p0, Landroid/app/ActivityThread$ReceiverData;->intent:Landroid/content/Intent;
 
     invoke-virtual {v3}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v3
 
-    const-string v4, "pdus"
+    const-string/jumbo v4, "pdus"
 
     invoke-virtual {v3, v4}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -136,6 +144,7 @@
 
     check-cast v1, [Ljava/lang/Object;
 
+    .line 5523
     .local v1, "pduses":[Ljava/lang/Object;
     if-eqz v1, :cond_0
 
@@ -143,6 +152,7 @@
 
     if-lez v3, :cond_0
 
+    .line 5524
     invoke-virtual {p1}, Landroid/app/LoadedApk;->getPackageName()Ljava/lang/String;
 
     move-result-object v3
@@ -157,13 +167,16 @@
 
     if-nez v3, :cond_0
 
+    .line 5525
     const/4 v2, 0x1
 
+    .line 5531
     .end local v1    # "pduses":[Ljava/lang/Object;
     :cond_0
     :goto_0
     return v2
 
+    .line 5529
     :catch_0
     move-exception v0
 
@@ -177,14 +190,17 @@
     .param p1, "res"    # Landroid/content/res/Resources;
 
     .prologue
+    .line 5513
     if-eqz p1, :cond_0
 
+    .line 5514
     invoke-virtual {p0}, Landroid/app/LoadedApk;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->setFlymeThemeResource(Ljava/lang/String;)V
 
+    .line 5512
     :cond_0
     return-void
 .end method

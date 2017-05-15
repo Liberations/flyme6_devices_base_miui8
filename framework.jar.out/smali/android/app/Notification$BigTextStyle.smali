@@ -220,6 +220,8 @@
 
     invoke-virtual {p0, v0}, Landroid/app/Notification$BigTextStyle;->makeBigContentViewFlyme(Landroid/widget/RemoteViews;)V
 
+    invoke-virtual {p0, v0}, Landroid/app/Notification$BigTextStyle;->makeBigContentViewFlyme(Landroid/widget/RemoteViews;)V
+
     return-object v0
 .end method
 

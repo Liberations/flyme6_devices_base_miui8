@@ -19,10 +19,12 @@
     .locals 1
 
     .prologue
-    const-string v0, "APP_LIST_CHANGED"
+    .line 426
+    const-string/jumbo v0, "APP_LIST_CHANGED"
 
     invoke-direct {p0, v0}, Lcom/meizu/common/alphame/AlphaMe$ActionReceiver;-><init>(Ljava/lang/String;)V
 
+    .line 425
     return-void
 .end method
 
@@ -45,11 +47,14 @@
     .prologue
     move-object v0, p2
 
+    .line 431
     check-cast v0, Lcom/meizu/common/alphame/Args;
 
+    .line 432
     .local v0, "args":Lcom/meizu/common/alphame/Args;
     if-eqz v0, :cond_0
 
+    .line 433
     invoke-virtual {v0}, Lcom/meizu/common/alphame/Args;->getObjects()[Ljava/lang/Object;
 
     move-result-object v3
@@ -64,6 +69,7 @@
 
     move-result v2
 
+    .line 435
     .local v2, "type":I
     invoke-virtual {v0}, Lcom/meizu/common/alphame/Args;->getObjects()[Ljava/lang/Object;
 
@@ -75,9 +81,11 @@
 
     check-cast v1, Ljava/util/ArrayList;
 
+    .line 436
     .local v1, "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     packed-switch v2, :pswitch_data_0
 
+    .line 430
     .end local v1    # "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     .end local v2    # "type":I
     :cond_0
@@ -85,6 +93,7 @@
     :pswitch_0
     return-void
 
+    .line 438
     .restart local v1    # "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     .restart local v2    # "type":I
     :pswitch_1
@@ -92,16 +101,19 @@
 
     goto :goto_0
 
+    .line 441
     :pswitch_2
     invoke-static {v1}, Lcom/android/server/shrinker/PackageStateInfo;->-wrap1(Ljava/util/List;)V
 
     goto :goto_0
 
+    .line 444
     :pswitch_3
     invoke-static {v1}, Lcom/android/server/shrinker/PackageStateInfo;->-wrap0(Ljava/util/List;)V
 
     goto :goto_0
 
+    .line 436
     nop
 
     :pswitch_data_0

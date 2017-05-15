@@ -37,6 +37,7 @@
     .param p1, "this$0"    # Lcom/android/server/notification/RankingControllerImpl;
 
     .prologue
+    .line 189
     iput-object p1, p0, Lcom/android/server/notification/RankingControllerImpl$1;->this$0:Lcom/android/server/notification/RankingControllerImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,6 +53,7 @@
     .param p2, "rhs"    # Ljava/lang/Object;
 
     .prologue
+    .line 191
     check-cast p1, Lmeizu/notification/RankingDaily;
 
     .end local p1    # "lhs":Ljava/lang/Object;
@@ -71,6 +73,7 @@
     .param p2, "rhs"    # Lmeizu/notification/RankingDaily;
 
     .prologue
+    .line 193
     iget v0, p1, Lmeizu/notification/RankingDaily;->allNum:I
 
     iget v1, p2, Lmeizu/notification/RankingDaily;->allNum:I
@@ -82,6 +85,7 @@
     :goto_0
     return v0
 
+    .line 194
     :cond_0
     iget v0, p1, Lmeizu/notification/RankingDaily;->allNum:I
 

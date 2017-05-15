@@ -4407,6 +4407,10 @@
 
     invoke-virtual {v1}, Landroid/app/Activity$TintBarInject;->onCreate()V
 
+    iget-object v1, p0, Landroid/app/Activity;->mInject:Landroid/app/Activity$TintBarInject;
+
+    invoke-virtual {v1}, Landroid/app/Activity$TintBarInject;->onCreate()V
+
     return-void
 
     :cond_4

@@ -30,6 +30,7 @@
     .param p2, "val$contentHeight"    # I
 
     .prologue
+    .line 1020
     iput-object p1, p0, Lcom/android/internal/app/AlertControllerExt$7;->this$0:Lcom/android/internal/app/AlertControllerExt;
 
     iput p2, p0, Lcom/android/internal/app/AlertControllerExt$7;->val$contentHeight:I
@@ -49,6 +50,7 @@
     .param p4, "totalItemCount"    # I
 
     .prologue
+    .line 1036
     return-void
 .end method
 
@@ -60,12 +62,14 @@
     .prologue
     const/4 v2, 0x1
 
+    .line 1026
     const/4 v0, 0x2
 
     if-eq p2, v0, :cond_0
 
     if-ne p2, v2, :cond_1
 
+    .line 1027
     :cond_0
     iget v0, p0, Lcom/android/internal/app/AlertControllerExt$7;->val$contentHeight:I
 
@@ -81,6 +85,7 @@
 
     if-le v0, v1, :cond_1
 
+    .line 1028
     iget-object v0, p0, Lcom/android/internal/app/AlertControllerExt$7;->this$0:Lcom/android/internal/app/AlertControllerExt;
 
     invoke-static {v0}, Lcom/android/internal/app/AlertControllerExt;->-get5(Lcom/android/internal/app/AlertControllerExt;)Landroid/widget/ListView;
@@ -89,9 +94,11 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/ListView;->setVerticalFadingEdgeEnabled(Z)V
 
+    .line 1023
     :goto_0
     return-void
 
+    .line 1030
     :cond_1
     iget-object v0, p0, Lcom/android/internal/app/AlertControllerExt$7;->this$0:Lcom/android/internal/app/AlertControllerExt;
 

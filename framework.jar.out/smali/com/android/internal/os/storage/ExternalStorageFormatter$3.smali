@@ -30,6 +30,7 @@
     .param p3, "val$volumeId"    # Ljava/lang/String;
 
     .prologue
+    .line 188
     iput-object p1, p0, Lcom/android/internal/os/storage/ExternalStorageFormatter$3;->this$0:Lcom/android/internal/os/storage/ExternalStorageFormatter;
 
     iput-object p2, p0, Lcom/android/internal/os/storage/ExternalStorageFormatter$3;->val$mountService:Landroid/os/storage/IMountService;
@@ -49,8 +50,10 @@
     .prologue
     const/high16 v7, 0x10000000
 
+    .line 191
     const/4 v3, 0x0
 
+    .line 193
     .local v3, "success":Z
     :try_start_0
     iget-object v4, p0, Lcom/android/internal/os/storage/ExternalStorageFormatter$3;->val$mountService:Landroid/os/storage/IMountService;
@@ -61,11 +64,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 194
     const/4 v3, 0x1
 
+    .line 201
     :goto_0
     if-eqz v3, :cond_0
 
+    .line 202
     iget-object v4, p0, Lcom/android/internal/os/storage/ExternalStorageFormatter$3;->this$0:Lcom/android/internal/os/storage/ExternalStorageFormatter;
 
     invoke-static {v4}, Lcom/android/internal/os/storage/ExternalStorageFormatter;->-get1(Lcom/android/internal/os/storage/ExternalStorageFormatter;)Z
@@ -74,16 +80,19 @@
 
     if-eqz v4, :cond_0
 
+    .line 203
     new-instance v2, Landroid/content/Intent;
 
-    const-string v4, "android.intent.action.MASTER_CLEAR"
+    const-string/jumbo v4, "android.intent.action.MASTER_CLEAR"
 
     invoke-direct {v2, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
+    .line 204
     .local v2, "intent":Landroid/content/Intent;
     invoke-virtual {v2, v7}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    const-string v4, "android.intent.extra.REASON"
+    .line 205
+    const-string/jumbo v4, "android.intent.extra.REASON"
 
     iget-object v5, p0, Lcom/android/internal/os/storage/ExternalStorageFormatter$3;->this$0:Lcom/android/internal/os/storage/ExternalStorageFormatter;
 
@@ -93,39 +102,49 @@
 
     invoke-virtual {v2, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 206
     iget-object v4, p0, Lcom/android/internal/os/storage/ExternalStorageFormatter$3;->this$0:Lcom/android/internal/os/storage/ExternalStorageFormatter;
 
     invoke-virtual {v4, v2}, Lcom/android/internal/os/storage/ExternalStorageFormatter;->sendBroadcast(Landroid/content/Intent;)V
 
+    .line 208
     iget-object v4, p0, Lcom/android/internal/os/storage/ExternalStorageFormatter$3;->this$0:Lcom/android/internal/os/storage/ExternalStorageFormatter;
 
     invoke-virtual {v4}, Lcom/android/internal/os/storage/ExternalStorageFormatter;->stopSelf()V
 
+    .line 209
     return-void
 
+    .line 195
     .end local v2    # "intent":Landroid/content/Intent;
     :catch_0
     move-exception v1
 
+    .line 196
     .local v1, "e":Ljava/lang/Exception;
     invoke-static {}, Landroid/os/Looper;->prepare()V
 
+    .line 197
     iget-object v4, p0, Lcom/android/internal/os/storage/ExternalStorageFormatter$3;->this$0:Lcom/android/internal/os/storage/ExternalStorageFormatter;
 
+    .line 198
     sget v5, Lcom/flyme/internal/R$string;->format_error:I
 
     const/4 v6, 0x1
 
+    .line 197
     invoke-static {v4, v5, v6}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
     move-result-object v4
 
     invoke-virtual {v4}, Landroid/widget/Toast;->show()V
 
+    .line 199
     invoke-static {}, Landroid/os/Looper;->loop()V
 
     goto :goto_0
 
+    .line 214
     .end local v1    # "e":Ljava/lang/Exception;
     :cond_0
     if-nez v3, :cond_1
@@ -138,16 +157,19 @@
 
     if-eqz v4, :cond_1
 
+    .line 215
     new-instance v2, Landroid/content/Intent;
 
-    const-string v4, "android.intent.action.MASTER_CLEAR"
+    const-string/jumbo v4, "android.intent.action.MASTER_CLEAR"
 
     invoke-direct {v2, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
+    .line 216
     .restart local v2    # "intent":Landroid/content/Intent;
     invoke-virtual {v2, v7}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    const-string v4, "android.intent.extra.REASON"
+    .line 217
+    const-string/jumbo v4, "android.intent.extra.REASON"
 
     iget-object v5, p0, Lcom/android/internal/os/storage/ExternalStorageFormatter$3;->this$0:Lcom/android/internal/os/storage/ExternalStorageFormatter;
 
@@ -157,18 +179,22 @@
 
     invoke-virtual {v2, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 218
     iget-object v4, p0, Lcom/android/internal/os/storage/ExternalStorageFormatter$3;->this$0:Lcom/android/internal/os/storage/ExternalStorageFormatter;
 
     invoke-virtual {v4, v2}, Lcom/android/internal/os/storage/ExternalStorageFormatter;->sendBroadcast(Landroid/content/Intent;)V
 
+    .line 226
     .end local v2    # "intent":Landroid/content/Intent;
     :goto_1
     iget-object v4, p0, Lcom/android/internal/os/storage/ExternalStorageFormatter$3;->this$0:Lcom/android/internal/os/storage/ExternalStorageFormatter;
 
     invoke-virtual {v4}, Lcom/android/internal/os/storage/ExternalStorageFormatter;->stopSelf()V
 
+    .line 227
     return-void
 
+    .line 221
     :cond_1
     :try_start_1
     iget-object v4, p0, Lcom/android/internal/os/storage/ExternalStorageFormatter$3;->val$mountService:Landroid/os/storage/IMountService;
@@ -181,13 +207,15 @@
 
     goto :goto_1
 
+    .line 222
     :catch_1
     move-exception v0
 
+    .line 223
     .local v0, "e":Landroid/os/RemoteException;
-    const-string v4, "ExtStorageFormatter"
+    const-string/jumbo v4, "ExtStorageFormatter"
 
-    const-string v5, "Failed talking with mount service"
+    const-string/jumbo v5, "Failed talking with mount service"
 
     invoke-static {v4, v5, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 

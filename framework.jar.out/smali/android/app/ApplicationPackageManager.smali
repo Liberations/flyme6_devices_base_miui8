@@ -2575,6 +2575,10 @@
 
     move-result-object v1
 
+    invoke-static/range {p0 .. p3}, Landroid/app/ApplicationPackageManager$FlymeInjector;->getFlymeThemeDrawable(Landroid/app/ApplicationPackageManager;Ljava/lang/String;ILandroid/content/pm/ApplicationInfo;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
     .local v1, "dr":Landroid/graphics/drawable/Drawable;
     if-eqz v1, :cond_2
 

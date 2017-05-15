@@ -84,16 +84,20 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
+    .line 127
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 128
     iput-object p1, p0, Landroid/content/res/flymetheme/iconfilter/bean/FilterConfigInfo$Filter;->name:Ljava/lang/String;
 
+    .line 129
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
     iput-object v0, p0, Landroid/content/res/flymetheme/iconfilter/bean/FilterConfigInfo$Filter;->params:Ljava/util/Map;
 
+    .line 127
     return-void
 .end method
 
@@ -105,14 +109,17 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
+    .line 137
     iget-object v0, p0, Landroid/content/res/flymetheme/iconfilter/bean/FilterConfigInfo$Filter;->params:Ljava/util/Map;
 
     if-eqz v0, :cond_0
 
+    .line 138
     iget-object v0, p0, Landroid/content/res/flymetheme/iconfilter/bean/FilterConfigInfo$Filter;->params:Ljava/util/Map;
 
     invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 136
     :cond_0
     return-void
 .end method
@@ -121,6 +128,7 @@
     .locals 1
 
     .prologue
+    .line 133
     iget-object v0, p0, Landroid/content/res/flymetheme/iconfilter/bean/FilterConfigInfo$Filter;->name:Ljava/lang/String;
 
     return-object v0
@@ -140,6 +148,7 @@
     .end annotation
 
     .prologue
+    .line 143
     iget-object v0, p0, Landroid/content/res/flymetheme/iconfilter/bean/FilterConfigInfo$Filter;->params:Ljava/util/Map;
 
     return-object v0
@@ -149,29 +158,35 @@
     .locals 5
 
     .prologue
+    .line 148
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 149
     .local v3, "sb":Ljava/lang/StringBuilder;
-    const-string v4, "the filter name is "
+    const-string/jumbo v4, "the filter name is "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 150
     iget-object v4, p0, Landroid/content/res/flymetheme/iconfilter/bean/FilterConfigInfo$Filter;->name:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v4, ":"
+    .line 151
+    const-string/jumbo v4, ":"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 152
     iget-object v4, p0, Landroid/content/res/flymetheme/iconfilter/bean/FilterConfigInfo$Filter;->params:Ljava/util/Map;
 
     invoke-interface {v4}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v2
 
+    .line 153
     .local v2, "keys":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -191,13 +206,16 @@
 
     check-cast v0, Ljava/lang/String;
 
+    .line 154
     .local v0, "key":Ljava/lang/String;
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v4, "="
+    .line 155
+    const-string/jumbo v4, "="
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 156
     iget-object v4, p0, Landroid/content/res/flymetheme/iconfilter/bean/FilterConfigInfo$Filter;->params:Ljava/util/Map;
 
     invoke-interface {v4, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -208,12 +226,14 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v4, ","
+    .line 157
+    const-string/jumbo v4, ","
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
+    .line 159
     .end local v0    # "key":Ljava/lang/String;
     :cond_0
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;

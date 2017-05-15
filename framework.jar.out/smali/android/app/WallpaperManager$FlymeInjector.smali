@@ -35,14 +35,17 @@
     .locals 1
 
     .prologue
-    const-string v0, ""
+    .line 1296
+    const-string/jumbo v0, ""
 
     sput-object v0, Landroid/app/WallpaperManager$FlymeInjector;->mFlymeWallpaperPath:Ljava/lang/String;
 
-    const-string v0, ""
+    .line 1297
+    const-string/jumbo v0, ""
 
     sput-object v0, Landroid/app/WallpaperManager$FlymeInjector;->mFlymeLockWallpaperPath:Ljava/lang/String;
 
+    .line 1293
     return-void
 .end method
 
@@ -50,6 +53,7 @@
     .locals 0
 
     .prologue
+    .line 1293
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -62,15 +66,19 @@
     .prologue
     const/4 v2, 0x0
 
+    .line 1336
     if-nez p0, :cond_0
 
+    .line 1337
     return v2
 
+    .line 1340
     :cond_0
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
+    .line 1341
     .local v0, "mFile":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -78,10 +86,12 @@
 
     if-eqz v1, :cond_1
 
+    .line 1342
     const/4 v1, 0x1
 
     return v1
 
+    .line 1344
     :cond_1
     return v2
 .end method
@@ -93,6 +103,7 @@
     .prologue
     const/4 v6, 0x0
 
+    .line 1349
     sget-object v4, Landroid/app/WallpaperManager$FlymeInjector;->mFlymeWallpaperPath:Ljava/lang/String;
 
     invoke-virtual {v4}, Ljava/lang/String;->isEmpty()Z
@@ -109,6 +120,7 @@
 
     if-eqz v4, :cond_1
 
+    .line 1352
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -120,6 +132,7 @@
 
     move-result-object v1
 
+    .line 1353
     .local v1, "colorVlaue":[Ljava/lang/String;
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -131,6 +144,7 @@
 
     move-result-object v2
 
+    .line 1354
     .local v2, "launcherWallpaperName":[Ljava/lang/String;
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -142,15 +156,17 @@
 
     move-result-object v3
 
+    .line 1355
     .local v3, "lockWallpaperName":[Ljava/lang/String;
-    const-string v0, "/system/customizecenter/wallpapers/"
+    const-string/jumbo v0, "/system/customizecenter/wallpapers/"
 
+    .line 1356
     .local v0, "FLYME_WALLPAPER_ROOT_PATH":Ljava/lang/String;
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v5, "/system/customizecenter/wallpapers/"
+    const-string/jumbo v5, "/system/customizecenter/wallpapers/"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -168,11 +184,12 @@
 
     sput-object v4, Landroid/app/WallpaperManager$FlymeInjector;->mFlymeWallpaperPath:Ljava/lang/String;
 
+    .line 1357
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v5, "/system/customizecenter/wallpapers/"
+    const-string/jumbo v5, "/system/customizecenter/wallpapers/"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -190,8 +207,10 @@
 
     sput-object v4, Landroid/app/WallpaperManager$FlymeInjector;->mFlymeLockWallpaperPath:Ljava/lang/String;
 
+    .line 1348
     return-void
 
+    .line 1350
     .end local v0    # "FLYME_WALLPAPER_ROOT_PATH":Ljava/lang/String;
     .end local v1    # "colorVlaue":[Ljava/lang/String;
     .end local v2    # "launcherWallpaperName":[Ljava/lang/String;
@@ -209,10 +228,12 @@
 
     const/4 v3, 0x0
 
+    .line 1362
     invoke-virtual {p0}, Landroid/app/WallpaperManager;->flymeGetFieldContext()Landroid/content/Context;
 
     move-result-object v0
 
+    .line 1363
     .local v0, "context":Landroid/content/Context;
     if-eqz v0, :cond_0
 
@@ -220,7 +241,7 @@
 
     move-result-object v1
 
-    const-string v2, "children_mode"
+    const-string/jumbo v2, "children_mode"
 
     invoke-static {v1, v2, v3}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -228,7 +249,8 @@
 
     if-ne v1, v4, :cond_0
 
-    const-string v1, "com.android.settings"
+    .line 1364
+    const-string/jumbo v1, "com.android.settings"
 
     invoke-virtual {v0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
@@ -240,14 +262,17 @@
 
     if-eqz v1, :cond_1
 
+    .line 1368
     :cond_0
     return v3
 
+    .line 1365
     :cond_1
     sget v1, Lcom/flyme/internal/R$string;->children_mode_can_not_set_wallpaper:I
 
     invoke-static {v0, v1}, Landroid/app/WallpaperManager$FlymeInjector;->showUnSupportSetWallpaperToast(Landroid/content/Context;I)V
 
+    .line 1366
     return v4
 .end method
 
@@ -256,7 +281,8 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    const-string v6, "/custom/meizu/wallpaper/default_wallpaper.png"
+    .line 1305
+    const-string/jumbo v6, "/custom/meizu/wallpaper/default_wallpaper.png"
 
     invoke-static {v6}, Landroid/app/WallpaperManager$FlymeInjector;->checkWallpaperPath(Ljava/lang/String;)Z
 
@@ -270,8 +296,10 @@
 
     if-eqz v6, :cond_0
 
+    .line 1306
     const/4 v4, 0x0
 
+    .line 1308
     .local v4, "is":Ljava/io/InputStream;
     :try_start_0
     new-instance v4, Ljava/io/FileInputStream;
@@ -279,7 +307,7 @@
     .end local v4    # "is":Ljava/io/InputStream;
     new-instance v6, Ljava/io/File;
 
-    const-string v7, "/custom/meizu/wallpaper/default_wallpaper.png"
+    const-string/jumbo v7, "/custom/meizu/wallpaper/default_wallpaper.png"
 
     invoke-direct {v6, v7}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
@@ -287,13 +315,16 @@
     :try_end_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 1309
     .local v4, "is":Ljava/io/InputStream;
     return-object v4
 
+    .line 1310
     .end local v4    # "is":Ljava/io/InputStream;
     :catch_0
     move-exception v1
 
+    .line 1311
     .local v1, "e":Ljava/io/FileNotFoundException;
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -305,14 +336,17 @@
 
     move-result-object v4
 
+    .line 1312
     .restart local v4    # "is":Ljava/io/InputStream;
     return-object v4
 
+    .line 1317
     .end local v1    # "e":Ljava/io/FileNotFoundException;
     .end local v4    # "is":Ljava/io/InputStream;
     :cond_0
-    const-string v0, "ro.config.wallpaper"
+    const-string/jumbo v0, "ro.config.wallpaper"
 
+    .line 1318
     .local v0, "PROP_WALLPAPER":Ljava/lang/String;
     sget-object v6, Landroid/app/WallpaperManager$FLYME_WALLPAPER_TYPE;->LAUNCHER:Landroid/app/WallpaperManager$FLYME_WALLPAPER_TYPE;
 
@@ -320,18 +354,21 @@
 
     move-result-object v4
 
+    .line 1319
     .restart local v4    # "is":Ljava/io/InputStream;
     if-eqz v4, :cond_1
 
     return-object v4
 
+    .line 1321
     :cond_1
-    const-string v6, "ro.config.wallpaper"
+    const-string/jumbo v6, "ro.config.wallpaper"
 
     invoke-static {v6}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
+    .line 1322
     .local v5, "path":Ljava/lang/String;
     invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -339,10 +376,12 @@
 
     if-nez v6, :cond_2
 
+    .line 1323
     new-instance v3, Ljava/io/File;
 
     invoke-direct {v3, v5}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
+    .line 1324
     .local v3, "file":Ljava/io/File;
     invoke-virtual {v3}, Ljava/io/File;->exists()Z
 
@@ -350,6 +389,7 @@
 
     if-eqz v6, :cond_2
 
+    .line 1326
     :try_start_1
     new-instance v6, Ljava/io/FileInputStream;
 
@@ -359,9 +399,11 @@
 
     return-object v6
 
+    .line 1327
     :catch_1
     move-exception v2
 
+    .line 1332
     .end local v3    # "file":Ljava/io/File;
     :cond_2
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -383,6 +425,7 @@
     .param p1, "msgStringResId"    # I
 
     .prologue
+    .line 1372
     new-instance v1, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -391,13 +434,16 @@
 
     invoke-direct {v1, v2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
+    .line 1373
     .local v1, "handlerToast":Landroid/os/Handler;
     new-instance v0, Landroid/app/WallpaperManager$FlymeInjector$FlymeChildrenModeToast;
 
     invoke-direct {v0, p0, p1}, Landroid/app/WallpaperManager$FlymeInjector$FlymeChildrenModeToast;-><init>(Landroid/content/Context;I)V
 
+    .line 1374
     .local v0, "childrenModeToast":Landroid/app/WallpaperManager$FlymeInjector$FlymeChildrenModeToast;
     invoke-virtual {v1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
+    .line 1371
     return-void
 .end method

@@ -60,6 +60,7 @@
     .locals 0
 
     .prologue
+    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -72,21 +73,25 @@
     .param p1, "filter"    # Landroid/content/res/flymetheme/iconfilter/bean/FilterConfigInfo$Filter;
 
     .prologue
+    .line 60
     iget-object v0, p0, Landroid/content/res/flymetheme/iconfilter/bean/FilterConfigInfo;->mFilters:Ljava/util/List;
 
     if-nez v0, :cond_0
 
+    .line 61
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/content/res/flymetheme/iconfilter/bean/FilterConfigInfo;->mFilters:Ljava/util/List;
 
+    .line 63
     :cond_0
     iget-object v0, p0, Landroid/content/res/flymetheme/iconfilter/bean/FilterConfigInfo;->mFilters:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 59
     return-void
 .end method
 
@@ -95,10 +100,12 @@
     .param p1, "point"    # Landroid/graphics/Point;
 
     .prologue
+    .line 49
     iget-object v0, p0, Landroid/content/res/flymetheme/iconfilter/bean/FilterConfigInfo;->mPoints:Ljava/util/List;
 
     if-nez v0, :cond_0
 
+    .line 50
     new-instance v0, Ljava/util/ArrayList;
 
     const/4 v1, 0x4
@@ -107,11 +114,13 @@
 
     iput-object v0, p0, Landroid/content/res/flymetheme/iconfilter/bean/FilterConfigInfo;->mPoints:Ljava/util/List;
 
+    .line 52
     :cond_0
     iget-object v0, p0, Landroid/content/res/flymetheme/iconfilter/bean/FilterConfigInfo;->mPoints:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 48
     return-void
 .end method
 
@@ -128,6 +137,7 @@
     .end annotation
 
     .prologue
+    .line 67
     iget-object v0, p0, Landroid/content/res/flymetheme/iconfilter/bean/FilterConfigInfo;->mFilters:Ljava/util/List;
 
     return-object v0
@@ -146,6 +156,7 @@
     .end annotation
 
     .prologue
+    .line 56
     iget-object v0, p0, Landroid/content/res/flymetheme/iconfilter/bean/FilterConfigInfo;->mPoints:Ljava/util/List;
 
     return-object v0
@@ -155,6 +166,7 @@
     .locals 1
 
     .prologue
+    .line 39
     iget-object v0, p0, Landroid/content/res/flymetheme/iconfilter/bean/FilterConfigInfo;->mVersion:Ljava/lang/String;
 
     return-object v0
@@ -165,6 +177,7 @@
     .param p1, "version"    # Ljava/lang/String;
 
     .prologue
+    .line 43
     iget-object v0, p0, Landroid/content/res/flymetheme/iconfilter/bean/FilterConfigInfo;->mVersion:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -173,8 +186,10 @@
 
     if-eqz v0, :cond_0
 
+    .line 44
     iput-object p1, p0, Landroid/content/res/flymetheme/iconfilter/bean/FilterConfigInfo;->mVersion:Ljava/lang/String;
 
+    .line 42
     :cond_0
     return-void
 .end method
@@ -183,15 +198,18 @@
     .locals 6
 
     .prologue
+    .line 73
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 74
     .local v4, "sb":Ljava/lang/StringBuilder;
-    const-string v5, "FilterConfig\n"
+    const-string/jumbo v5, "FilterConfig\n"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 75
     iget-object v5, p0, Landroid/content/res/flymetheme/iconfilter/bean/FilterConfigInfo;->mPoints:Ljava/util/List;
 
     invoke-interface {v5}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -212,29 +230,35 @@
 
     check-cast v2, Landroid/graphics/Point;
 
+    .line 76
     .local v2, "point":Landroid/graphics/Point;
-    const-string v5, "x:"
+    const-string/jumbo v5, "x:"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 77
     iget v5, v2, Landroid/graphics/Point;->x:I
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v5, ", y:"
+    .line 78
+    const-string/jumbo v5, ", y:"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 79
     iget v5, v2, Landroid/graphics/Point;->y:I
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v5, "\n"
+    .line 80
+    const-string/jumbo v5, "\n"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
+    .line 82
     .end local v2    # "point":Landroid/graphics/Point;
     :cond_0
     iget-object v5, p0, Landroid/content/res/flymetheme/iconfilter/bean/FilterConfigInfo;->mFilters:Ljava/util/List;
@@ -257,6 +281,7 @@
 
     check-cast v0, Landroid/content/res/flymetheme/iconfilter/bean/FilterConfigInfo$Filter;
 
+    .line 83
     .local v0, "filter":Landroid/content/res/flymetheme/iconfilter/bean/FilterConfigInfo$Filter;
     invoke-virtual {v0}, Landroid/content/res/flymetheme/iconfilter/bean/FilterConfigInfo$Filter;->toString()Ljava/lang/String;
 
@@ -264,12 +289,14 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v5, "\n"
+    .line 84
+    const-string/jumbo v5, "\n"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
 
+    .line 86
     .end local v0    # "filter":Landroid/content/res/flymetheme/iconfilter/bean/FilterConfigInfo$Filter;
     :cond_1
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;

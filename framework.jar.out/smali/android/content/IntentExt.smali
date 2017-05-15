@@ -168,6 +168,7 @@
     .locals 0
 
     .prologue
+    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -180,12 +181,14 @@
     .param p1, "flags"    # I
 
     .prologue
+    .line 417
     iget v0, p0, Landroid/content/IntentExt;->mAccessSrcFlags:I
 
     or-int/2addr v0, p1
 
     iput v0, p0, Landroid/content/IntentExt;->mAccessSrcFlags:I
 
+    .line 416
     return-void
 .end method
 
@@ -194,12 +197,14 @@
     .param p1, "flags"    # I
 
     .prologue
+    .line 401
     iget v0, p0, Landroid/content/IntentExt;->mMeizuFlags:I
 
     or-int/2addr v0, p1
 
     iput v0, p0, Landroid/content/IntentExt;->mMeizuFlags:I
 
+    .line 400
     return-void
 .end method
 
@@ -207,6 +212,7 @@
     .locals 1
 
     .prologue
+    .line 501
     iget-object v0, p0, Landroid/content/IntentExt;->mAccessPackageLabel:Ljava/lang/String;
 
     return-object v0
@@ -216,6 +222,7 @@
     .locals 1
 
     .prologue
+    .line 493
     iget-object v0, p0, Landroid/content/IntentExt;->mAccessPackageName:Ljava/lang/String;
 
     return-object v0
@@ -225,6 +232,7 @@
     .locals 1
 
     .prologue
+    .line 485
     iget-object v0, p0, Landroid/content/IntentExt;->mAccessSrcClassName:Ljava/lang/String;
 
     return-object v0
@@ -234,6 +242,7 @@
     .locals 1
 
     .prologue
+    .line 471
     iget v0, p0, Landroid/content/IntentExt;->mAccessSrcFlags:I
 
     return v0
@@ -243,6 +252,7 @@
     .locals 1
 
     .prologue
+    .line 478
     iget-object v0, p0, Landroid/content/IntentExt;->mAccessSrcPackageName:Ljava/lang/String;
 
     return-object v0
@@ -252,6 +262,7 @@
     .locals 1
 
     .prologue
+    .line 464
     iget v0, p0, Landroid/content/IntentExt;->mMeizuFlags:I
 
     return v0
@@ -262,8 +273,10 @@
     .param p1, "label"    # Ljava/lang/String;
 
     .prologue
+    .line 457
     iput-object p1, p0, Landroid/content/IntentExt;->mAccessPackageLabel:Ljava/lang/String;
 
+    .line 456
     return-void
 .end method
 
@@ -272,8 +285,10 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
+    .line 449
     iput-object p1, p0, Landroid/content/IntentExt;->mAccessPackageName:Ljava/lang/String;
 
+    .line 448
     return-void
 .end method
 
@@ -282,8 +297,10 @@
     .param p1, "className"    # Ljava/lang/String;
 
     .prologue
+    .line 441
     iput-object p1, p0, Landroid/content/IntentExt;->mAccessSrcClassName:Ljava/lang/String;
 
+    .line 440
     return-void
 .end method
 
@@ -292,8 +309,10 @@
     .param p1, "flags"    # I
 
     .prologue
+    .line 425
     iput p1, p0, Landroid/content/IntentExt;->mAccessSrcFlags:I
 
+    .line 424
     return-void
 .end method
 
@@ -302,8 +321,10 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
+    .line 433
     iput-object p1, p0, Landroid/content/IntentExt;->mAccessSrcPackageName:Ljava/lang/String;
 
+    .line 432
     return-void
 .end method
 
@@ -312,7 +333,9 @@
     .param p1, "flags"    # I
 
     .prologue
+    .line 409
     iput p1, p0, Landroid/content/IntentExt;->mMeizuFlags:I
 
+    .line 408
     return-void
 .end method

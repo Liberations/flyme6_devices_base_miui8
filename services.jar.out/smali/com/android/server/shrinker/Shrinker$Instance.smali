@@ -31,6 +31,7 @@
     .locals 2
 
     .prologue
+    .line 23
     new-instance v0, Lcom/android/server/shrinker/Shrinker;
 
     const/4 v1, 0x0
@@ -39,6 +40,7 @@
 
     sput-object v0, Lcom/android/server/shrinker/Shrinker$Instance;->INSTANCE:Lcom/android/server/shrinker/Shrinker;
 
+    .line 22
     return-void
 .end method
 
@@ -46,6 +48,7 @@
     .locals 0
 
     .prologue
+    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

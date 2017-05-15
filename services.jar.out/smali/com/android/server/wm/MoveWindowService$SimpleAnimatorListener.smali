@@ -27,6 +27,7 @@
     .param p1, "this$0"    # Lcom/android/server/wm/MoveWindowService;
 
     .prologue
+    .line 506
     iput-object p1, p0, Lcom/android/server/wm/MoveWindowService$SimpleAnimatorListener;->this$0:Lcom/android/server/wm/MoveWindowService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,6 +42,7 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
+    .line 519
     return-void
 .end method
 
@@ -49,6 +51,7 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
+    .line 514
     return-void
 .end method
 
@@ -57,6 +60,7 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
+    .line 524
     return-void
 .end method
 
@@ -65,5 +69,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
+    .line 509
     return-void
 .end method

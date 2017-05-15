@@ -20,6 +20,7 @@
     .locals 0
 
     .prologue
+    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,35 +40,42 @@
     .end annotation
 
     .prologue
+    .line 62
     new-instance v1, Landroid/bluetooth/BluetoothServerSocket;
 
+    .line 63
     new-instance v2, Landroid/os/ParcelUuid;
 
     invoke-direct {v2, p1}, Landroid/os/ParcelUuid;-><init>(Ljava/util/UUID;)V
 
+    .line 62
     const/4 v3, 0x1
 
     invoke-direct {v1, v3, p2, p3, v2}, Landroid/bluetooth/BluetoothServerSocket;-><init>(IZZLandroid/os/ParcelUuid;)V
 
+    .line 64
     .local v1, "socket":Landroid/bluetooth/BluetoothServerSocket;
     invoke-virtual {v1, p0}, Landroid/bluetooth/BluetoothServerSocket;->setServiceName(Ljava/lang/String;)V
 
+    .line 65
     iget-object v2, v1, Landroid/bluetooth/BluetoothServerSocket;->mSocket:Landroid/bluetooth/BluetoothSocket;
 
     invoke-virtual {v2}, Landroid/bluetooth/BluetoothSocket;->bindListen()I
 
     move-result v0
 
+    .line 66
     .local v0, "errno":I
     if-eqz v0, :cond_0
 
+    .line 70
     new-instance v2, Ljava/io/IOException;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v4, "Error: "
+    const-string/jumbo v4, "Error: "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -85,6 +93,7 @@
 
     throw v2
 
+    .line 72
     :cond_0
     return-object v1
 .end method
@@ -95,6 +104,7 @@
     .param p1, "persist"    # Z
 
     .prologue
+    .line 83
     invoke-virtual {p0, p1}, Landroid/bluetooth/BluetoothAdapter;->disable(Z)Z
 
     move-result v0
@@ -107,6 +117,7 @@
     .param p0, "adapter"    # Landroid/bluetooth/BluetoothAdapter;
 
     .prologue
+    .line 93
     invoke-virtual {p0}, Landroid/bluetooth/BluetoothAdapter;->enableNoAutoConnect()Z
 
     move-result v0
@@ -119,14 +130,17 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
+    .line 49
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    const-string v1, "mz_bt_session_status"
+    .line 50
+    const-string/jumbo v1, "mz_bt_session_status"
 
     const/4 v2, 0x1
 
+    .line 49
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$Secure;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result v0
@@ -148,6 +162,7 @@
     .prologue
     const/4 v0, 0x0
 
+    .line 56
     invoke-static {p0, p1, v0, v0, p2}, Landroid/bluetooth/BluetoothAdapterExt;->createNewRfcommSocketAndRecord(Ljava/lang/String;Ljava/util/UUID;ZZI)Landroid/bluetooth/BluetoothServerSocket;
 
     move-result-object v0
@@ -161,13 +176,17 @@
     .param p1, "status"    # I
 
     .prologue
+    .line 39
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    const-string v1, "mz_bt_session_status"
+    .line 40
+    const-string/jumbo v1, "mz_bt_session_status"
 
+    .line 39
     invoke-static {v0, v1, p1}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
+    .line 38
     return-void
 .end method

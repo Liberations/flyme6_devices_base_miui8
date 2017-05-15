@@ -24,18 +24,22 @@
     .locals 1
 
     .prologue
+    .line 12
     invoke-direct {p0}, Landroid/content/res/flymetheme/iconfilter/filters/BaseFilter;-><init>()V
 
+    .line 19
     const/4 v0, 0x7
 
     iput v0, p0, Landroid/content/res/flymetheme/iconfilter/filters/ColorLevelFilter;->mFlag:I
 
+    .line 21
     const/16 v0, 0x100
 
     new-array v0, v0, [I
 
     iput-object v0, p0, Landroid/content/res/flymetheme/iconfilter/filters/ColorLevelFilter;->mLevelTable:[I
 
+    .line 12
     return-void
 .end method
 
@@ -54,15 +58,18 @@
     .prologue
     const/4 v2, 0x0
 
+    .line 43
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v3
 
+    .line 44
     .local v3, "width":I
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v7
 
+    .line 45
     .local v7, "height":I
     mul-int v0, v3, v7
 
@@ -77,8 +84,10 @@
 
     move v6, v3
 
+    .line 46
     invoke-virtual/range {v0 .. v7}, Landroid/graphics/Bitmap;->getPixels([IIIIIII)V
 
+    .line 47
     iget-object v10, p0, Landroid/content/res/flymetheme/iconfilter/filters/ColorLevelFilter;->mLevelTable:[I
 
     iget v11, p0, Landroid/content/res/flymetheme/iconfilter/filters/ColorLevelFilter;->mFlag:I
@@ -93,6 +102,7 @@
 
     invoke-direct/range {v8 .. v13}, Landroid/content/res/flymetheme/iconfilter/filters/ColorLevelFilter;->nativeColorLevelFilter([I[IIII)V
 
+    .line 48
     sget-object v0, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     invoke-static {v1, v3, v7, v0}, Landroid/graphics/Bitmap;->createBitmap([IIILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
@@ -107,8 +117,10 @@
     .param p1, "flag"    # I
 
     .prologue
+    .line 24
     iput p1, p0, Landroid/content/res/flymetheme/iconfilter/filters/ColorLevelFilter;->mFlag:I
 
+    .line 23
     return-void
 .end method
 
@@ -123,22 +135,26 @@
     .prologue
     const/16 v1, 0xff
 
+    .line 28
     const/16 v0, 0xfd
 
     if-le p1, v0, :cond_0
 
     const/16 p1, 0xfd
 
+    .line 29
     :cond_0
     if-gez p1, :cond_1
 
     const/4 p1, 0x0
 
+    .line 30
     :cond_1
     if-le p3, v1, :cond_2
 
     const/16 p3, 0xff
 
+    .line 31
     :cond_2
     const/4 v0, 0x2
 
@@ -146,6 +162,7 @@
 
     const/4 p3, 0x2
 
+    .line 32
     :cond_3
     const v0, 0x411fd70a    # 9.99f
 
@@ -155,6 +172,7 @@
 
     const p2, 0x411fd70a    # 9.99f
 
+    .line 33
     :cond_4
     const/4 v0, 0x0
 
@@ -164,26 +182,31 @@
 
     const p2, 0x3c23d70a    # 0.01f
 
+    .line 34
     :cond_5
     if-gez p4, :cond_6
 
     const/4 p4, 0x0
 
+    .line 35
     :cond_6
     if-le p4, v1, :cond_7
 
     const/16 p4, 0xff
 
+    .line 36
     :cond_7
     if-gez p5, :cond_8
 
     const/4 p5, 0x0
 
+    .line 37
     :cond_8
     if-le p5, v1, :cond_9
 
     const/16 p5, 0xff
 
+    .line 38
     :cond_9
     iget-object v1, p0, Landroid/content/res/flymetheme/iconfilter/filters/ColorLevelFilter;->mLevelTable:[I
 
@@ -201,5 +224,6 @@
 
     invoke-direct/range {v0 .. v6}, Landroid/content/res/flymetheme/iconfilter/filters/ColorLevelFilter;->nativeSetParams([IIFIII)V
 
+    .line 27
     return-void
 .end method

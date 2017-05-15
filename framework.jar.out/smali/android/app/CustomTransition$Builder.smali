@@ -82,14 +82,18 @@
     .param p1, "options"    # Landroid/os/Bundle;
 
     .prologue
+    .line 162
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 145
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/app/CustomTransition$Builder;->mOverrideOriginal:Z
 
+    .line 163
     invoke-direct {p0, p1}, Landroid/app/CustomTransition$Builder;->unpack(Landroid/os/Bundle;)V
 
+    .line 162
     return-void
 .end method
 
@@ -108,29 +112,35 @@
     .param p1, "transitionClass"    # Ljava/lang/String;
 
     .prologue
+    .line 156
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 145
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/app/CustomTransition$Builder;->mOverrideOriginal:Z
 
+    .line 157
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 158
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string v1, "Empty class name is not allow!"
+    const-string/jumbo v1, "Empty class name is not allow!"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
+    .line 159
     :cond_0
     iput-object p1, p0, Landroid/app/CustomTransition$Builder;->mTransitionClass:Ljava/lang/String;
 
+    .line 156
     return-void
 .end method
 
@@ -139,7 +149,8 @@
     .param p1, "options"    # Landroid/os/Bundle;
 
     .prologue
-    const-string v0, "android.app:CustomTransition.class"
+    .line 233
+    const-string/jumbo v0, "android.app:CustomTransition.class"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -147,7 +158,8 @@
 
     iput-object v0, p0, Landroid/app/CustomTransition$Builder;->mTransitionClass:Ljava/lang/String;
 
-    const-string v0, "android.app:CustomTransition.animThumbnail"
+    .line 234
+    const-string/jumbo v0, "android.app:CustomTransition.animThumbnail"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
@@ -157,11 +169,13 @@
 
     iput-object v0, p0, Landroid/app/CustomTransition$Builder;->mThumbnail:Landroid/graphics/Bitmap;
 
+    .line 235
     iget-object v0, p0, Landroid/app/CustomTransition$Builder;->mThumbnail:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_0
 
-    const-string v0, "android.app:CustomTransition.animStartX"
+    .line 236
+    const-string/jumbo v0, "android.app:CustomTransition.animStartX"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
@@ -169,7 +183,8 @@
 
     iput v0, p0, Landroid/app/CustomTransition$Builder;->mStartingX:I
 
-    const-string v0, "android.app:CustomTransition.animStartY"
+    .line 237
+    const-string/jumbo v0, "android.app:CustomTransition.animStartY"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
@@ -177,8 +192,9 @@
 
     iput v0, p0, Landroid/app/CustomTransition$Builder;->mStartingY:I
 
+    .line 239
     :cond_0
-    const-string v0, "android.app:CustomTransition.animPriority"
+    const-string/jumbo v0, "android.app:CustomTransition.animPriority"
 
     iget-boolean v1, p0, Landroid/app/CustomTransition$Builder;->mOverrideOriginal:Z
 
@@ -188,7 +204,8 @@
 
     iput-boolean v0, p0, Landroid/app/CustomTransition$Builder;->mOverrideOriginal:Z
 
-    const-string v0, "android.app:CustomTransition.animStartListener"
+    .line 240
+    const-string/jumbo v0, "android.app:CustomTransition.animStartListener"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getBinder(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -200,6 +217,7 @@
 
     iput-object v0, p0, Landroid/app/CustomTransition$Builder;->mAnimationStartedListener:Landroid/os/IRemoteCallback;
 
+    .line 232
     return-void
 .end method
 
@@ -210,16 +228,19 @@
     .param p1, "target"    # Landroid/app/Activity;
 
     .prologue
+    .line 249
     if-nez p1, :cond_0
 
+    .line 250
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string v1, "Target must not be null!"
+    const-string/jumbo v1, "Target must not be null!"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
+    .line 248
     :cond_0
     return-void
 .end method
@@ -228,51 +249,60 @@
     .locals 3
 
     .prologue
+    .line 218
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
+    .line 219
     .local v0, "options":Landroid/os/Bundle;
-    const-string v1, "android.app:CustomTransition.class"
+    const-string/jumbo v1, "android.app:CustomTransition.class"
 
     iget-object v2, p0, Landroid/app/CustomTransition$Builder;->mTransitionClass:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 220
     iget-object v1, p0, Landroid/app/CustomTransition$Builder;->mThumbnail:Landroid/graphics/Bitmap;
 
     if-eqz v1, :cond_0
 
-    const-string v1, "android.app:CustomTransition.animThumbnail"
+    .line 221
+    const-string/jumbo v1, "android.app:CustomTransition.animThumbnail"
 
     iget-object v2, p0, Landroid/app/CustomTransition$Builder;->mThumbnail:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    const-string v1, "android.app:CustomTransition.animStartX"
+    .line 222
+    const-string/jumbo v1, "android.app:CustomTransition.animStartX"
 
     iget v2, p0, Landroid/app/CustomTransition$Builder;->mStartingX:I
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    const-string v1, "android.app:CustomTransition.animStartY"
+    .line 223
+    const-string/jumbo v1, "android.app:CustomTransition.animStartY"
 
     iget v2, p0, Landroid/app/CustomTransition$Builder;->mStartingY:I
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
+    .line 225
     :cond_0
-    const-string v1, "android.app:CustomTransition.animPriority"
+    const-string/jumbo v1, "android.app:CustomTransition.animPriority"
 
     iget-boolean v2, p0, Landroid/app/CustomTransition$Builder;->mOverrideOriginal:Z
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
+    .line 226
     iget-object v1, p0, Landroid/app/CustomTransition$Builder;->mAnimationStartedListener:Landroid/os/IRemoteCallback;
 
     if-eqz v1, :cond_1
 
-    const-string v1, "android.app:CustomTransition.animStartListener"
+    .line 227
+    const-string/jumbo v1, "android.app:CustomTransition.animStartListener"
 
     iget-object v2, p0, Landroid/app/CustomTransition$Builder;->mAnimationStartedListener:Landroid/os/IRemoteCallback;
 
@@ -282,6 +312,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putBinder(Ljava/lang/String;Landroid/os/IBinder;)V
 
+    .line 229
     :cond_1
     return-object v0
 .end method
@@ -292,15 +323,19 @@
     .param p2, "listener"    # Landroid/app/ActivityOptions$OnAnimationStartedListener;
 
     .prologue
+    .line 199
     if-eqz p2, :cond_0
 
     if-eqz p1, :cond_0
 
+    .line 200
     move-object v1, p1
 
+    .line 201
     .local v1, "h":Landroid/os/Handler;
     move-object v0, p2
 
+    .line 202
     .local v0, "finalListener":Landroid/app/ActivityOptions$OnAnimationStartedListener;
     new-instance v2, Landroid/app/CustomTransition$Builder$1;
 
@@ -308,6 +343,7 @@
 
     iput-object v2, p0, Landroid/app/CustomTransition$Builder;->mAnimationStartedListener:Landroid/os/IRemoteCallback;
 
+    .line 214
     .end local v0    # "finalListener":Landroid/app/ActivityOptions$OnAnimationStartedListener;
     .end local v1    # "h":Landroid/os/Handler;
     :cond_0
@@ -319,8 +355,10 @@
     .param p1, "overrideOriginal"    # Z
 
     .prologue
+    .line 187
     iput-boolean p1, p0, Landroid/app/CustomTransition$Builder;->mOverrideOriginal:Z
 
+    .line 188
     return-object p0
 .end method
 
@@ -331,11 +369,15 @@
     .param p3, "startingY"    # I
 
     .prologue
+    .line 175
     iput-object p1, p0, Landroid/app/CustomTransition$Builder;->mThumbnail:Landroid/graphics/Bitmap;
 
+    .line 176
     iput p2, p0, Landroid/app/CustomTransition$Builder;->mStartingX:I
 
+    .line 177
     iput p3, p0, Landroid/app/CustomTransition$Builder;->mStartingY:I
 
+    .line 178
     return-object p0
 .end method

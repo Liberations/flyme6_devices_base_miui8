@@ -33,14 +33,17 @@
     .locals 1
 
     .prologue
+    .line 17
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 15
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/shrinker/PackageRecord;->procs:Ljava/util/ArrayList;
 
+    .line 17
     return-void
 .end method
 
@@ -49,28 +52,34 @@
     .param p1, "info"    # Landroid/content/pm/ApplicationInfo;
 
     .prologue
+    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 15
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/shrinker/PackageRecord;->procs:Ljava/util/ArrayList;
 
+    .line 32
     iput-object p1, p0, Lcom/android/server/shrinker/PackageRecord;->info:Landroid/content/pm/ApplicationInfo;
 
+    .line 33
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/server/shrinker/PackageRecord;->lastActiveTime:J
 
+    .line 34
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/shrinker/PackageRecord;->procs:Ljava/util/ArrayList;
 
+    .line 31
     return-void
 .end method
 
@@ -81,6 +90,7 @@
     .param p1, "pid"    # I
 
     .prologue
+    .line 82
     iget-object v2, p0, Lcom/android/server/shrinker/PackageRecord;->procs:Ljava/util/ArrayList;
 
     invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -101,13 +111,16 @@
 
     check-cast v0, Lcom/android/server/shrinker/ProcessRecord;
 
+    .line 83
     .local v0, "r":Lcom/android/server/shrinker/ProcessRecord;
     iget v2, v0, Lcom/android/server/shrinker/ProcessRecord;->pid:I
 
     if-ne v2, p1, :cond_0
 
+    .line 84
     return-object v0
 
+    .line 87
     .end local v0    # "r":Lcom/android/server/shrinker/ProcessRecord;
     :cond_1
     const/4 v2, 0x0
@@ -120,6 +133,7 @@
     .param p1, "pid"    # I
 
     .prologue
+    .line 91
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -130,6 +144,7 @@
 
     if-ge v0, v1, :cond_1
 
+    .line 92
     iget-object v1, p0, Lcom/android/server/shrinker/PackageRecord;->procs:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -142,13 +157,16 @@
 
     if-ne v1, p1, :cond_0
 
+    .line 93
     return v0
 
+    .line 91
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
+    .line 96
     :cond_1
     const/4 v1, -0x1
 
@@ -161,23 +179,28 @@
     .param p2, "pid"    # I
 
     .prologue
+    .line 57
     invoke-virtual {p0, p2}, Lcom/android/server/shrinker/PackageRecord;->find(I)Lcom/android/server/shrinker/ProcessRecord;
 
     move-result-object v0
 
+    .line 58
     .local v0, "r":Lcom/android/server/shrinker/ProcessRecord;
     if-nez v0, :cond_0
 
+    .line 59
     new-instance v0, Lcom/android/server/shrinker/ProcessRecord;
 
     .end local v0    # "r":Lcom/android/server/shrinker/ProcessRecord;
     invoke-direct {v0, p0, p1, p2}, Lcom/android/server/shrinker/ProcessRecord;-><init>(Lcom/android/server/shrinker/PackageRecord;Ljava/lang/String;I)V
 
+    .line 60
     .restart local v0    # "r":Lcom/android/server/shrinker/ProcessRecord;
     iget-object v1, p0, Lcom/android/server/shrinker/PackageRecord;->procs:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 61
     iget-object v1, p0, Lcom/android/server/shrinker/PackageRecord;->info:Landroid/content/pm/ApplicationInfo;
 
     iget-object v1, v1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
@@ -188,8 +211,10 @@
 
     if-eqz v1, :cond_0
 
+    .line 62
     iput-object v0, p0, Lcom/android/server/shrinker/PackageRecord;->mainProc:Lcom/android/server/shrinker/ProcessRecord;
 
+    .line 65
     :cond_0
     return-object v0
 .end method
@@ -199,18 +224,22 @@
     .param p1, "pid"    # I
 
     .prologue
+    .line 69
     invoke-virtual {p0, p1}, Lcom/android/server/shrinker/PackageRecord;->indexOf(I)I
 
     move-result v0
 
+    .line 70
     .local v0, "index":I
     const/4 v1, 0x0
 
+    .line 71
     .local v1, "r":Lcom/android/server/shrinker/ProcessRecord;
     const/4 v2, -0x1
 
     if-eq v0, v2, :cond_0
 
+    .line 72
     iget-object v2, p0, Lcom/android/server/shrinker/PackageRecord;->procs:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
@@ -220,21 +249,25 @@
     .end local v1    # "r":Lcom/android/server/shrinker/ProcessRecord;
     check-cast v1, Lcom/android/server/shrinker/ProcessRecord;
 
+    .line 73
     .local v1, "r":Lcom/android/server/shrinker/ProcessRecord;
     iget-object v2, p0, Lcom/android/server/shrinker/PackageRecord;->mainProc:Lcom/android/server/shrinker/ProcessRecord;
 
     if-ne v1, v2, :cond_0
 
+    .line 74
     iget-object v2, v1, Lcom/android/server/shrinker/ProcessRecord;->parent:Lcom/android/server/shrinker/PackageRecord;
 
     const/4 v3, 0x0
 
     iput-boolean v3, v2, Lcom/android/server/shrinker/PackageRecord;->showUI:Z
 
+    .line 75
     const/4 v2, 0x0
 
     iput-object v2, p0, Lcom/android/server/shrinker/PackageRecord;->mainProc:Lcom/android/server/shrinker/ProcessRecord;
 
+    .line 78
     .end local v1    # "r":Lcom/android/server/shrinker/ProcessRecord;
     :cond_0
     return-object v1
@@ -245,40 +278,49 @@
     .param p1, "r"    # Lcom/android/server/shrinker/PackageRecord;
 
     .prologue
+    .line 21
     iget-object v0, p1, Lcom/android/server/shrinker/PackageRecord;->info:Landroid/content/pm/ApplicationInfo;
 
     iput-object v0, p0, Lcom/android/server/shrinker/PackageRecord;->info:Landroid/content/pm/ApplicationInfo;
 
+    .line 22
     iget-boolean v0, p1, Lcom/android/server/shrinker/PackageRecord;->isForeground:Z
 
     iput-boolean v0, p0, Lcom/android/server/shrinker/PackageRecord;->isForeground:Z
 
+    .line 23
     iget-boolean v0, p1, Lcom/android/server/shrinker/PackageRecord;->showUI:Z
 
     iput-boolean v0, p0, Lcom/android/server/shrinker/PackageRecord;->showUI:Z
 
+    .line 24
     iget-wide v0, p1, Lcom/android/server/shrinker/PackageRecord;->lastActiveTime:J
 
     iput-wide v0, p0, Lcom/android/server/shrinker/PackageRecord;->lastActiveTime:J
 
+    .line 25
     iget-object v0, p0, Lcom/android/server/shrinker/PackageRecord;->procs:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
+    .line 26
     iget-object v0, p0, Lcom/android/server/shrinker/PackageRecord;->procs:Ljava/util/ArrayList;
 
     iget-object v1, p1, Lcom/android/server/shrinker/PackageRecord;->procs:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
+    .line 27
     iget-boolean v0, p1, Lcom/android/server/shrinker/PackageRecord;->recent:Z
 
     iput-boolean v0, p0, Lcom/android/server/shrinker/PackageRecord;->recent:Z
 
+    .line 28
     iget-object v0, p1, Lcom/android/server/shrinker/PackageRecord;->mainProc:Lcom/android/server/shrinker/ProcessRecord;
 
     iput-object v0, p0, Lcom/android/server/shrinker/PackageRecord;->mainProc:Lcom/android/server/shrinker/ProcessRecord;
 
+    .line 20
     return-void
 .end method
 
@@ -286,6 +328,7 @@
     .locals 1
 
     .prologue
+    .line 53
     iget-object v0, p0, Lcom/android/server/shrinker/PackageRecord;->procs:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -299,8 +342,10 @@
     .locals 3
 
     .prologue
+    .line 39
     const/4 v0, 0x0
 
+    .line 40
     .local v0, "r":Lcom/android/server/shrinker/PackageRecordExt;
     iget-object v1, p0, Lcom/android/server/shrinker/PackageRecord;->procs:Ljava/util/ArrayList;
 
@@ -310,6 +355,7 @@
 
     if-nez v1, :cond_0
 
+    .line 41
     iget-object v1, p0, Lcom/android/server/shrinker/PackageRecord;->procs:Ljava/util/ArrayList;
 
     const/4 v2, 0x0
@@ -322,19 +368,24 @@
 
     iget-object v0, v1, Lcom/android/server/shrinker/ProcessRecord;->syncParent:Lcom/android/server/shrinker/PackageRecordExt;
 
+    .line 42
     .local v0, "r":Lcom/android/server/shrinker/PackageRecordExt;
     if-eqz v0, :cond_0
 
+    .line 43
     invoke-virtual {v0, p0}, Lcom/android/server/shrinker/PackageRecordExt;->set(Lcom/android/server/shrinker/PackageRecord;)V
 
+    .line 46
     .end local v0    # "r":Lcom/android/server/shrinker/PackageRecordExt;
     :cond_0
     if-nez v0, :cond_1
 
+    .line 47
     new-instance v0, Lcom/android/server/shrinker/PackageRecordExt;
 
     invoke-direct {v0, p0}, Lcom/android/server/shrinker/PackageRecordExt;-><init>(Lcom/android/server/shrinker/PackageRecord;)V
 
+    .line 49
     :cond_1
     return-object v0
 .end method

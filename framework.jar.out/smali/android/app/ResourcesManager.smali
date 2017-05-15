@@ -314,6 +314,8 @@
 
     invoke-static {v2}, Landroid/app/ResourcesManager$FlymeInjector;->freeCaches(I)V
 
+    invoke-static {v0}, Landroid/app/ResourcesManager$FlymeInjector;->freeCaches(I)V
+
     invoke-static {}, Landroid/app/ApplicationPackageManager;->configurationChanged()V
 
     const/4 v11, 0x0

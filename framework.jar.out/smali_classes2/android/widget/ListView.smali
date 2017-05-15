@@ -5504,6 +5504,8 @@
 
     invoke-direct/range {p0 .. p1}, Landroid/widget/ListView;->flymeSetupChild(Landroid/view/View;)V
 
+    invoke-direct/range {p0 .. p1}, Landroid/widget/ListView;->flymeSetupChild(Landroid/view/View;)V
+
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/widget/ListView;->mCheckStates:Landroid/util/SparseBooleanArray;

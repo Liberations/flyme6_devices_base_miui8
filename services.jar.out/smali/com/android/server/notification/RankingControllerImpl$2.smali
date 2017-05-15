@@ -37,6 +37,7 @@
     .param p1, "this$0"    # Lcom/android/server/notification/RankingControllerImpl;
 
     .prologue
+    .line 200
     iput-object p1, p0, Lcom/android/server/notification/RankingControllerImpl$2;->this$0:Lcom/android/server/notification/RankingControllerImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,6 +53,7 @@
     .param p2, "rhs"    # Ljava/lang/Object;
 
     .prologue
+    .line 202
     check-cast p1, Lmeizu/notification/RankingDaily;
 
     .end local p1    # "lhs":Ljava/lang/Object;
@@ -73,6 +75,7 @@
     .prologue
     const/high16 v4, 0x3f800000    # 1.0f
 
+    .line 204
     iget v2, p1, Lmeizu/notification/RankingDaily;->clickNum:I
 
     int-to-float v2, v2
@@ -85,6 +88,7 @@
 
     div-float v0, v2, v3
 
+    .line 205
     .local v0, "a":F
     iget v2, p2, Lmeizu/notification/RankingDaily;->clickNum:I
 
@@ -98,6 +102,7 @@
 
     div-float v1, v2, v3
 
+    .line 206
     .local v1, "b":F
     cmpl-float v2, v0, v1
 

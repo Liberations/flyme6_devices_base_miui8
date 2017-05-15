@@ -33,6 +33,7 @@
     .param p3, "val$data"    # I
 
     .prologue
+    .line 377
     iput-object p1, p0, Lcom/android/server/wm/MoveWindowService$6;->this$0:Lcom/android/server/wm/MoveWindowService;
 
     iput p2, p0, Lcom/android/server/wm/MoveWindowService$6;->val$msg:I
@@ -50,6 +51,7 @@
     .locals 4
 
     .prologue
+    .line 381
     :try_start_0
     iget-object v1, p0, Lcom/android/server/wm/MoveWindowService$6;->this$0:Lcom/android/server/wm/MoveWindowService;
 
@@ -63,9 +65,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 379
     :goto_0
     return-void
 
+    .line 382
     :catch_0
     move-exception v0
 

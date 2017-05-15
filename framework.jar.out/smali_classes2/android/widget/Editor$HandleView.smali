@@ -1641,6 +1641,8 @@
 
     invoke-direct/range {p0 .. p0}, Landroid/widget/Editor$HandleView;->flymeSendShowMessage()V
 
+    invoke-direct/range {p0 .. p0}, Landroid/widget/Editor$HandleView;->flymeSendShowMessage()V
+
     .end local v0    # "positionX":I
     .end local v1    # "positionY":I
     :cond_4

@@ -497,6 +497,16 @@
 
     :cond_flyme_0
 
+    invoke-static/range {p0 .. p0}, Landroid/widget/Toast$FlymeInjector;->checkSameMsg(Landroid/widget/Toast;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_flyme_0
+
+    return-void
+
+    :cond_flyme_0
+
     :try_start_0
     iget v3, p0, Landroid/widget/Toast;->mDuration:I
 
