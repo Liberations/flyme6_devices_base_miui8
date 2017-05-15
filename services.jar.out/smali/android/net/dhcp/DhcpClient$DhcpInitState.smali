@@ -23,13 +23,10 @@
     .locals 0
 
     .prologue
-    .line 761
     iput-object p1, p0, Landroid/net/dhcp/DhcpClient$DhcpInitState;->this$0:Landroid/net/dhcp/DhcpClient;
 
-    .line 762
     invoke-direct {p0, p1}, Landroid/net/dhcp/DhcpClient$PacketRetransmittingState;-><init>(Landroid/net/dhcp/DhcpClient;)V
 
-    .line 763
     return-void
 .end method
 
@@ -39,16 +36,13 @@
     .locals 1
 
     .prologue
-    .line 767
     invoke-super {p0}, Landroid/net/dhcp/DhcpClient$PacketRetransmittingState;->enter()V
 
-    .line 768
     iget-object v0, p0, Landroid/net/dhcp/DhcpClient$DhcpInitState;->this$0:Landroid/net/dhcp/DhcpClient;
 
     # invokes: Landroid/net/dhcp/DhcpClient;->startNewTransaction()V
     invoke-static {v0}, Landroid/net/dhcp/DhcpClient;->access$2400(Landroid/net/dhcp/DhcpClient;)V
 
-    .line 769
     return-void
 .end method
 
@@ -57,7 +51,6 @@
     .param p1, "packet"    # Landroid/net/dhcp/DhcpPacket;
 
     .prologue
-    .line 776
     iget-object v0, p0, Landroid/net/dhcp/DhcpClient$DhcpInitState;->this$0:Landroid/net/dhcp/DhcpClient;
 
     invoke-virtual {v0, p1}, Landroid/net/dhcp/DhcpClient;->isValidPacket(Landroid/net/dhcp/DhcpPacket;)Z
@@ -66,18 +59,15 @@
 
     if-nez v0, :cond_1
 
-    .line 783
     :cond_0
     :goto_0
     return-void
 
-    .line 777
     :cond_1
     instance-of v0, p1, Landroid/net/dhcp/DhcpOfferPacket;
 
     if-eqz v0, :cond_0
 
-    .line 778
     iget-object v0, p0, Landroid/net/dhcp/DhcpClient$DhcpInitState;->this$0:Landroid/net/dhcp/DhcpClient;
 
     invoke-virtual {p1}, Landroid/net/dhcp/DhcpPacket;->toDhcpResults()Landroid/net/DhcpResults;
@@ -87,7 +77,6 @@
     # setter for: Landroid/net/dhcp/DhcpClient;->mOffer:Landroid/net/DhcpResults;
     invoke-static {v0, v1}, Landroid/net/dhcp/DhcpClient;->access$2602(Landroid/net/dhcp/DhcpClient;Landroid/net/DhcpResults;)Landroid/net/DhcpResults;
 
-    .line 779
     iget-object v0, p0, Landroid/net/dhcp/DhcpClient$DhcpInitState;->this$0:Landroid/net/dhcp/DhcpClient;
 
     # getter for: Landroid/net/dhcp/DhcpClient;->mOffer:Landroid/net/DhcpResults;
@@ -97,7 +86,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 780
     const-string v0, "DhcpClient"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -127,7 +115,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 781
     iget-object v0, p0, Landroid/net/dhcp/DhcpClient$DhcpInitState;->this$0:Landroid/net/dhcp/DhcpClient;
 
     iget-object v1, p0, Landroid/net/dhcp/DhcpClient$DhcpInitState;->this$0:Landroid/net/dhcp/DhcpClient;
@@ -147,7 +134,6 @@
     .locals 1
 
     .prologue
-    .line 772
     iget-object v0, p0, Landroid/net/dhcp/DhcpClient$DhcpInitState;->this$0:Landroid/net/dhcp/DhcpClient;
 
     # invokes: Landroid/net/dhcp/DhcpClient;->sendDiscoverPacket()Z

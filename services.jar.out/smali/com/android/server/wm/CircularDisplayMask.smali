@@ -47,35 +47,28 @@
 
     const/4 v8, 0x1
 
-    .line 56
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     iput v2, p0, Lcom/android/server/wm/CircularDisplayMask;->mScreenOffset:I
 
-    .line 45
     new-instance v1, Landroid/view/Surface;
 
     invoke-direct {v1}, Landroid/view/Surface;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/wm/CircularDisplayMask;->mSurface:Landroid/view/Surface;
 
-    .line 52
     iput-boolean v2, p0, Lcom/android/server/wm/CircularDisplayMask;->mDimensionsUnequal:Z
 
-    .line 57
     new-instance v1, Landroid/graphics/Point;
 
     invoke-direct {v1}, Landroid/graphics/Point;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/wm/CircularDisplayMask;->mScreenSize:Landroid/graphics/Point;
 
-    .line 58
     iget-object v1, p0, Lcom/android/server/wm/CircularDisplayMask;->mScreenSize:Landroid/graphics/Point;
 
     invoke-virtual {p1, v1}, Landroid/view/Display;->getSize(Landroid/graphics/Point;)V
 
-    .line 59
     iget-object v1, p0, Lcom/android/server/wm/CircularDisplayMask;->mScreenSize:Landroid/graphics/Point;
 
     iget v1, v1, Landroid/graphics/Point;->x:I
@@ -86,7 +79,6 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 60
     const-string v1, "CircularDisplayMask"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -119,14 +111,11 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 62
     iput-boolean v8, p0, Lcom/android/server/wm/CircularDisplayMask;->mDimensionsUnequal:Z
 
-    .line 65
     :cond_0
     const/4 v7, 0x0
 
-    .line 72
     .local v7, "ctrl":Landroid/view/SurfaceControl;
     :try_start_0
     new-instance v0, Landroid/view/SurfaceControl;
@@ -151,7 +140,6 @@
     :try_end_0
     .catch Landroid/view/Surface$OutOfResourcesException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 75
     .end local v7    # "ctrl":Landroid/view/SurfaceControl;
     .local v0, "ctrl":Landroid/view/SurfaceControl;
     :try_start_1
@@ -161,46 +149,37 @@
 
     invoke-virtual {v0, v1}, Landroid/view/SurfaceControl;->setLayerStack(I)V
 
-    .line 76
     invoke-virtual {v0, p3}, Landroid/view/SurfaceControl;->setLayer(I)V
 
-    .line 77
     const/4 v1, 0x0
 
     const/4 v2, 0x0
 
     invoke-virtual {v0, v1, v2}, Landroid/view/SurfaceControl;->setPosition(FF)V
 
-    .line 78
     invoke-virtual {v0}, Landroid/view/SurfaceControl;->show()V
 
-    .line 79
     iget-object v1, p0, Lcom/android/server/wm/CircularDisplayMask;->mSurface:Landroid/view/Surface;
 
     invoke-virtual {v1, v0}, Landroid/view/Surface;->copyFrom(Landroid/view/SurfaceControl;)V
     :try_end_1
     .catch Landroid/view/Surface$OutOfResourcesException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 82
     :goto_0
     iput-object v0, p0, Lcom/android/server/wm/CircularDisplayMask;->mSurfaceControl:Landroid/view/SurfaceControl;
 
-    .line 83
     iput-boolean v8, p0, Lcom/android/server/wm/CircularDisplayMask;->mDrawNeeded:Z
 
-    .line 84
     new-instance v1, Landroid/graphics/Paint;
 
     invoke-direct {v1}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/wm/CircularDisplayMask;->mPaint:Landroid/graphics/Paint;
 
-    .line 85
     iget-object v1, p0, Lcom/android/server/wm/CircularDisplayMask;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v1, v8}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 86
     iget-object v1, p0, Lcom/android/server/wm/CircularDisplayMask;->mPaint:Landroid/graphics/Paint;
 
     new-instance v2, Landroid/graphics/PorterDuffXfermode;
@@ -211,16 +190,12 @@
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
-    .line 87
     iput p4, p0, Lcom/android/server/wm/CircularDisplayMask;->mScreenOffset:I
 
-    .line 88
     iput p5, p0, Lcom/android/server/wm/CircularDisplayMask;->mMaskThickness:I
 
-    .line 89
     return-void
 
-    .line 80
     .end local v0    # "ctrl":Landroid/view/SurfaceControl;
     .restart local v7    # "ctrl":Landroid/view/SurfaceControl;
     :catch_0
@@ -246,7 +221,6 @@
 
     const/4 v5, 0x0
 
-    .line 92
     iget-boolean v3, p0, Lcom/android/server/wm/CircularDisplayMask;->mDrawNeeded:Z
 
     if-eqz v3, :cond_0
@@ -259,16 +233,13 @@
 
     if-eqz v3, :cond_1
 
-    .line 129
     :cond_0
     :goto_0
     return-void
 
-    .line 95
     :cond_1
     iput-boolean v6, p0, Lcom/android/server/wm/CircularDisplayMask;->mDrawNeeded:Z
 
-    .line 97
     new-instance v2, Landroid/graphics/Rect;
 
     iget-object v3, p0, Lcom/android/server/wm/CircularDisplayMask;->mScreenSize:Landroid/graphics/Point;
@@ -281,11 +252,9 @@
 
     invoke-direct {v2, v6, v6, v3, v4}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 98
     .local v2, "dirty":Landroid/graphics/Rect;
     const/4 v0, 0x0
 
-    .line 100
     .local v0, "c":Landroid/graphics/Canvas;
     :try_start_0
     iget-object v3, p0, Lcom/android/server/wm/CircularDisplayMask;->mSurface:Landroid/view/Surface;
@@ -297,16 +266,13 @@
 
     move-result-object v0
 
-    .line 104
     :goto_1
     if-eqz v0, :cond_0
 
-    .line 107
     iget v3, p0, Lcom/android/server/wm/CircularDisplayMask;->mRotation:I
 
     packed-switch v3, :pswitch_data_0
 
-    .line 123
     :goto_2
     iget-object v3, p0, Lcom/android/server/wm/CircularDisplayMask;->mScreenSize:Landroid/graphics/Point;
 
@@ -314,13 +280,11 @@
 
     div-int/lit8 v1, v3, 0x2
 
-    .line 124
     .local v1, "circleRadius":I
     const/high16 v3, -0x1000000
 
     invoke-virtual {v0, v3}, Landroid/graphics/Canvas;->drawColor(I)V
 
-    .line 127
     int-to-float v3, v1
 
     int-to-float v4, v1
@@ -335,14 +299,12 @@
 
     invoke-virtual {v0, v3, v4, v5, v6}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 128
     iget-object v3, p0, Lcom/android/server/wm/CircularDisplayMask;->mSurface:Landroid/view/Surface;
 
     invoke-virtual {v3, v0}, Landroid/view/Surface;->unlockCanvasAndPost(Landroid/graphics/Canvas;)V
 
     goto :goto_0
 
-    .line 111
     .end local v1    # "circleRadius":I
     :pswitch_0
     iget-object v3, p0, Lcom/android/server/wm/CircularDisplayMask;->mSurfaceControl:Landroid/view/SurfaceControl;
@@ -351,7 +313,6 @@
 
     goto :goto_2
 
-    .line 115
     :pswitch_1
     iget-object v3, p0, Lcom/android/server/wm/CircularDisplayMask;->mSurfaceControl:Landroid/view/SurfaceControl;
 
@@ -365,7 +326,6 @@
 
     goto :goto_2
 
-    .line 119
     :pswitch_2
     iget-object v3, p0, Lcom/android/server/wm/CircularDisplayMask;->mSurfaceControl:Landroid/view/SurfaceControl;
 
@@ -379,19 +339,16 @@
 
     goto :goto_2
 
-    .line 102
     :catch_0
     move-exception v3
 
     goto :goto_1
 
-    .line 101
     :catch_1
     move-exception v3
 
     goto :goto_1
 
-    .line 107
     nop
 
     :pswitch_data_0
@@ -412,7 +369,6 @@
     .param p3, "rotation"    # I
 
     .prologue
-    .line 147
     iget v0, p0, Lcom/android/server/wm/CircularDisplayMask;->mLastDW:I
 
     if-ne v0, p1, :cond_0
@@ -425,26 +381,20 @@
 
     if-ne v0, p3, :cond_0
 
-    .line 155
     :goto_0
     return-void
 
-    .line 150
     :cond_0
     iput p1, p0, Lcom/android/server/wm/CircularDisplayMask;->mLastDW:I
 
-    .line 151
     iput p2, p0, Lcom/android/server/wm/CircularDisplayMask;->mLastDH:I
 
-    .line 152
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/wm/CircularDisplayMask;->mDrawNeeded:Z
 
-    .line 153
     iput p3, p0, Lcom/android/server/wm/CircularDisplayMask;->mRotation:I
 
-    .line 154
     invoke-direct {p0}, Lcom/android/server/wm/CircularDisplayMask;->drawIfNeeded()V
 
     goto :goto_0
@@ -455,33 +405,26 @@
     .param p1, "on"    # Z
 
     .prologue
-    .line 134
     iget-object v0, p0, Lcom/android/server/wm/CircularDisplayMask;->mSurfaceControl:Landroid/view/SurfaceControl;
 
     if-nez v0, :cond_0
 
-    .line 144
     :goto_0
     return-void
 
-    .line 137
     :cond_0
     iput-boolean p1, p0, Lcom/android/server/wm/CircularDisplayMask;->mVisible:Z
 
-    .line 138
     invoke-direct {p0}, Lcom/android/server/wm/CircularDisplayMask;->drawIfNeeded()V
 
-    .line 139
     if-eqz p1, :cond_1
 
-    .line 140
     iget-object v0, p0, Lcom/android/server/wm/CircularDisplayMask;->mSurfaceControl:Landroid/view/SurfaceControl;
 
     invoke-virtual {v0}, Landroid/view/SurfaceControl;->show()V
 
     goto :goto_0
 
-    .line 142
     :cond_1
     iget-object v0, p0, Lcom/android/server/wm/CircularDisplayMask;->mSurfaceControl:Landroid/view/SurfaceControl;
 

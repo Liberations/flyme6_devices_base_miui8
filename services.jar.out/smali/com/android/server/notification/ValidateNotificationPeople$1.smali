@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 99
     iput-object p1, p0, Lcom/android/server/notification/ValidateNotificationPeople$1;->this$0:Lcom/android/server/notification/ValidateNotificationPeople;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -41,10 +40,8 @@
     .param p3, "userId"    # I
 
     .prologue
-    .line 102
     invoke-super {p0, p1, p2, p3}, Landroid/database/ContentObserver;->onChange(ZLandroid/net/Uri;I)V
 
-    .line 103
     # getter for: Lcom/android/server/notification/ValidateNotificationPeople;->DEBUG:Z
     invoke-static {}, Lcom/android/server/notification/ValidateNotificationPeople;->access$000()Z
 
@@ -63,7 +60,6 @@
 
     if-nez v0, :cond_1
 
-    .line 104
     :cond_0
     # getter for: Lcom/android/server/notification/ValidateNotificationPeople;->VERBOSE:Z
     invoke-static {}, Lcom/android/server/notification/ValidateNotificationPeople;->access$200()Z
@@ -101,7 +97,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 106
     :cond_1
     iget-object v0, p0, Lcom/android/server/notification/ValidateNotificationPeople$1;->this$0:Lcom/android/server/notification/ValidateNotificationPeople;
 
@@ -112,12 +107,10 @@
 
     invoke-virtual {v0}, Landroid/util/LruCache;->evictAll()V
 
-    .line 107
     iget-object v0, p0, Lcom/android/server/notification/ValidateNotificationPeople$1;->this$0:Lcom/android/server/notification/ValidateNotificationPeople;
 
     # operator++ for: Lcom/android/server/notification/ValidateNotificationPeople;->mEvictionCount:I
     invoke-static {v0}, Lcom/android/server/notification/ValidateNotificationPeople;->access$108(Lcom/android/server/notification/ValidateNotificationPeople;)I
 
-    .line 108
     return-void
 .end method

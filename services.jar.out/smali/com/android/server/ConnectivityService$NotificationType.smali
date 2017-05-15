@@ -40,7 +40,6 @@
 
     const/4 v2, 0x0
 
-    .line 3327
     new-instance v0, Lcom/android/server/ConnectivityService$NotificationType;
 
     const-string v1, "SIGN_IN"
@@ -83,7 +82,6 @@
     .end annotation
 
     .prologue
-    .line 3327
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -94,7 +92,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 3327
     const-class v0, Lcom/android/server/ConnectivityService$NotificationType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -110,7 +107,6 @@
     .locals 1
 
     .prologue
-    .line 3327
     sget-object v0, Lcom/android/server/ConnectivityService$NotificationType;->$VALUES:[Lcom/android/server/ConnectivityService$NotificationType;
 
     invoke-virtual {v0}, [Lcom/android/server/ConnectivityService$NotificationType;->clone()Ljava/lang/Object;

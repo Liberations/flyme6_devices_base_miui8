@@ -39,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 455
     const/16 v0, -0x2710
 
     sput v0, Lcom/android/server/notification/RankingHelper$Record;->UNKNOWN_UID:I
@@ -51,25 +50,20 @@
     .locals 1
 
     .prologue
-    .line 454
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 458
     sget v0, Lcom/android/server/notification/RankingHelper$Record;->UNKNOWN_UID:I
 
     iput v0, p0, Lcom/android/server/notification/RankingHelper$Record;->uid:I
 
-    .line 459
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/notification/RankingHelper$Record;->priority:I
 
-    .line 460
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/notification/RankingHelper$Record;->peekable:Z
 
-    .line 461
     const/16 v0, -0x3e8
 
     iput v0, p0, Lcom/android/server/notification/RankingHelper$Record;->visibility:I
@@ -90,7 +84,6 @@
     .param p1, "x0"    # Lcom/android/server/notification/RankingHelper$1;
 
     .prologue
-    .line 454
     invoke-direct {p0}, Lcom/android/server/notification/RankingHelper$Record;-><init>()V
 
     return-void

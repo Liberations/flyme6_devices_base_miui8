@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 281
     iput-object p1, p0, Lcom/android/server/policy/MiuiGlobalActions$3;->this$0:Lcom/android/server/policy/MiuiGlobalActions;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -49,7 +48,6 @@
     .param p9, "oldBottom"    # I
 
     .prologue
-    .line 285
     iget-object v0, p0, Lcom/android/server/policy/MiuiGlobalActions$3;->this$0:Lcom/android/server/policy/MiuiGlobalActions;
 
     # getter for: Lcom/android/server/policy/MiuiGlobalActions;->mRotation:I
@@ -74,7 +72,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 286
     iget-object v0, p0, Lcom/android/server/policy/MiuiGlobalActions$3;->this$0:Lcom/android/server/policy/MiuiGlobalActions;
 
     # getter for: Lcom/android/server/policy/MiuiGlobalActions;->mHandler:Landroid/os/Handler;
@@ -86,7 +83,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 288
     :cond_0
     return-void
 .end method

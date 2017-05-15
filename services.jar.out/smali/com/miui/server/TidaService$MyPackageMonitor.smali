@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 40
     iput-object p1, p0, Lcom/miui/server/TidaService$MyPackageMonitor;->this$0:Lcom/miui/server/TidaService;
 
     invoke-direct {p0}, Lcom/android/internal/content/PackageMonitor;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/miui/server/TidaService$1;
 
     .prologue
-    .line 40
     invoke-direct {p0, p1}, Lcom/miui/server/TidaService$MyPackageMonitor;-><init>(Lcom/miui/server/TidaService;)V
 
     return-void
@@ -50,12 +48,10 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 43
     iget-object v0, p0, Lcom/miui/server/TidaService$MyPackageMonitor;->this$0:Lcom/miui/server/TidaService;
 
     # invokes: Lcom/miui/server/TidaService;->onUidRemoved(I)V
     invoke-static {v0, p1}, Lcom/miui/server/TidaService;->access$000(Lcom/miui/server/TidaService;I)V
 
-    .line 44
     return-void
 .end method

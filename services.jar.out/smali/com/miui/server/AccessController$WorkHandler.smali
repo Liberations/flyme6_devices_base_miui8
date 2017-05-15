@@ -24,13 +24,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 99
     iput-object p1, p0, Lcom/miui/server/AccessController$WorkHandler;->this$0:Lcom/miui/server/AccessController;
 
-    .line 100
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 101
     return-void
 .end method
 
@@ -41,16 +38,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 105
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 110
     :goto_0
     return-void
 
-    .line 107
     :pswitch_0
     iget-object v0, p0, Lcom/miui/server/AccessController$WorkHandler;->this$0:Lcom/miui/server/AccessController;
 
@@ -58,7 +52,6 @@
 
     goto :goto_0
 
-    .line 105
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

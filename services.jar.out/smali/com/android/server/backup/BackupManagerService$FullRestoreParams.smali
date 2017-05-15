@@ -24,14 +24,11 @@
     .param p2, "input"    # Landroid/os/ParcelFileDescriptor;
 
     .prologue
-    .line 536
     iput-object p1, p0, Lcom/android/server/backup/BackupManagerService$FullRestoreParams;->this$0:Lcom/android/server/backup/BackupManagerService;
 
     invoke-direct {p0, p1}, Lcom/android/server/backup/BackupManagerService$FullParams;-><init>(Lcom/android/server/backup/BackupManagerService;)V
 
-    .line 537
     iput-object p2, p0, Lcom/android/server/backup/BackupManagerService$FullRestoreParams;->fd:Landroid/os/ParcelFileDescriptor;
 
-    .line 538
     return-void
 .end method

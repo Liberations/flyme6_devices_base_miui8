@@ -24,13 +24,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 241
     iput-object p1, p0, Lcom/android/server/pm/PackageDexOptimizerManager$DexOptHandler;->this$0:Lcom/android/server/pm/PackageDexOptimizerManager;
 
-    .line 242
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 243
     return-void
 .end method
 
@@ -39,14 +36,12 @@
     .param p1, "info"    # Lcom/android/server/pm/PackageDexOptimizerManager$AppDexoptInfo;
 
     .prologue
-    .line 276
     iget-object v6, p0, Lcom/android/server/pm/PackageDexOptimizerManager$DexOptHandler;->this$0:Lcom/android/server/pm/PackageDexOptimizerManager;
 
     iget-object v7, v6, Lcom/android/server/pm/PackageDexOptimizerManager;->mPendingDexOpt:Landroid/util/ArraySet;
 
     monitor-enter v7
 
-    .line 277
     :try_start_0
     iget-object v6, p0, Lcom/android/server/pm/PackageDexOptimizerManager$DexOptHandler;->this$0:Lcom/android/server/pm/PackageDexOptimizerManager;
 
@@ -60,20 +55,16 @@
 
     if-nez v6, :cond_0
 
-    .line 278
     monitor-exit v7
 
-    .line 317
     :goto_0
     return-void
 
-    .line 280
     :cond_0
     monitor-exit v7
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 282
     const-string v6, "package"
 
     invoke-static {v6}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -82,7 +73,6 @@
 
     check-cast v4, Lcom/android/server/pm/PackageManagerService;
 
-    .line 284
     .local v4, "pms":Lcom/android/server/pm/PackageManagerService;
     const-string v6, "PackageDexOptimizerManager"
 
@@ -108,16 +98,13 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 285
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 287
     .local v0, "callingId":J
     const/high16 v3, -0x80000000
 
-    .line 289
     .local v3, "installFlags":I
     :try_start_1
     # getter for: Lcom/android/server/pm/PackageDexOptimizerManager;->sPerformDexOptMethod:Ljava/lang/reflect/Method;
@@ -130,7 +117,6 @@
 
     if-eqz v6, :cond_1
 
-    .line 292
     :try_start_2
     # getter for: Lcom/android/server/pm/PackageDexOptimizerManager;->sPerformDexOptMethod:Ljava/lang/reflect/Method;
     invoke-static {}, Lcom/android/server/pm/PackageDexOptimizerManager;->access$100()Ljava/lang/reflect/Method;
@@ -183,7 +169,6 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 301
     .local v5, "ret":Ljava/lang/Boolean;
     :goto_1
     if-eqz v5, :cond_2
@@ -195,7 +180,6 @@
 
     if-eqz v6, :cond_2
 
-    .line 302
     const/4 v6, 0x1
 
     iput v6, p1, Lcom/android/server/pm/PackageDexOptimizerManager$AppDexoptInfo;->returnCode:I
@@ -203,13 +187,11 @@
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
-    .line 311
     .end local v5    # "ret":Ljava/lang/Boolean;
     :cond_1
     :goto_2
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 314
     :goto_3
     iget-object v6, p0, Lcom/android/server/pm/PackageDexOptimizerManager$DexOptHandler;->this$0:Lcom/android/server/pm/PackageDexOptimizerManager;
 
@@ -217,7 +199,6 @@
 
     monitor-enter v7
 
-    .line 315
     :try_start_4
     iget-object v6, p0, Lcom/android/server/pm/PackageDexOptimizerManager$DexOptHandler;->this$0:Lcom/android/server/pm/PackageDexOptimizerManager;
 
@@ -227,7 +208,6 @@
 
     invoke-virtual {v6, v8}, Landroid/util/ArraySet;->remove(Ljava/lang/Object;)Z
 
-    .line 316
     monitor-exit v7
 
     goto :goto_0
@@ -241,7 +221,6 @@
 
     throw v6
 
-    .line 280
     .end local v0    # "callingId":J
     .end local v3    # "installFlags":I
     .end local v4    # "pms":Lcom/android/server/pm/PackageManagerService;
@@ -255,14 +234,12 @@
 
     throw v6
 
-    .line 295
     .restart local v0    # "callingId":J
     .restart local v3    # "installFlags":I
     .restart local v4    # "pms":Lcom/android/server/pm/PackageManagerService;
     :catch_0
     move-exception v2
 
-    .line 296
     .local v2, "e":Ljava/lang/IllegalArgumentException;
     :try_start_6
     const-string v6, "PackageDexOptimizerManager"
@@ -287,7 +264,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 297
     # getter for: Lcom/android/server/pm/PackageDexOptimizerManager;->sPerformDexOptMethod:Ljava/lang/reflect/Method;
     invoke-static {}, Lcom/android/server/pm/PackageDexOptimizerManager;->access$100()Ljava/lang/reflect/Method;
 
@@ -328,7 +304,6 @@
     .restart local v5    # "ret":Ljava/lang/Boolean;
     goto :goto_1
 
-    .line 304
     .end local v2    # "e":Ljava/lang/IllegalArgumentException;
     :cond_2
     const/4 v6, -0x1
@@ -340,19 +315,16 @@
 
     goto :goto_2
 
-    .line 307
     .end local v5    # "ret":Ljava/lang/Boolean;
     :catch_1
     move-exception v2
 
-    .line 308
     .local v2, "e":Ljava/lang/Exception;
     const/4 v6, -0x1
 
     :try_start_7
     iput v6, p1, Lcom/android/server/pm/PackageDexOptimizerManager$AppDexoptInfo;->returnCode:I
 
-    .line 309
     const-string v6, "PackageDexOptimizerManager"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -377,7 +349,6 @@
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_2
 
-    .line 311
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_3
@@ -398,29 +369,24 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 246
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 273
     :cond_0
     :goto_0
     return-void
 
-    .line 248
     :pswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/server/pm/PackageDexOptimizerManager$AppDexoptInfo;
 
-    .line 250
     .local v0, "info":Lcom/android/server/pm/PackageDexOptimizerManager$AppDexoptInfo;
     iget-object v1, v0, Lcom/android/server/pm/PackageDexOptimizerManager$AppDexoptInfo;->observer:Lmiui/os/IMiuiDexoptObserver;
 
     if-eqz v1, :cond_1
 
-    .line 252
     :try_start_0
     iget-object v1, v0, Lcom/android/server/pm/PackageDexOptimizerManager$AppDexoptInfo;->observer:Lmiui/os/IMiuiDexoptObserver;
 
@@ -430,17 +396,14 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 258
     :cond_1
     :goto_1
     invoke-direct {p0, v0}, Lcom/android/server/pm/PackageDexOptimizerManager$DexOptHandler;->performDexOptInBackground(Lcom/android/server/pm/PackageDexOptimizerManager$AppDexoptInfo;)V
 
-    .line 260
     iget-object v1, v0, Lcom/android/server/pm/PackageDexOptimizerManager$AppDexoptInfo;->observer:Lmiui/os/IMiuiDexoptObserver;
 
     if-eqz v1, :cond_0
 
-    .line 262
     :try_start_1
     iget-object v1, v0, Lcom/android/server/pm/PackageDexOptimizerManager$AppDexoptInfo;->observer:Lmiui/os/IMiuiDexoptObserver;
 
@@ -454,19 +417,16 @@
 
     goto :goto_0
 
-    .line 263
     :catch_0
     move-exception v1
 
     goto :goto_0
 
-    .line 253
     :catch_1
     move-exception v1
 
     goto :goto_1
 
-    .line 246
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

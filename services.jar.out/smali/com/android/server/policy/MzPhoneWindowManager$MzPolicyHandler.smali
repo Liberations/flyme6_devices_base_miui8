@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/server/policy/MzPhoneWindowManager;
 
     .prologue
-    .line 152
     iput-object p1, p0, Lcom/android/server/policy/MzPhoneWindowManager$MzPolicyHandler;->this$0:Lcom/android/server/policy/MzPhoneWindowManager;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -49,17 +48,14 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 155
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 154
     :goto_0
     :pswitch_0
     return-void
 
-    .line 157
     :pswitch_1
     iget-object v1, p0, Lcom/android/server/policy/MzPhoneWindowManager$MzPolicyHandler;->this$0:Lcom/android/server/policy/MzPhoneWindowManager;
 
@@ -71,7 +67,6 @@
 
     goto :goto_0
 
-    .line 160
     :pswitch_2
     iget-object v0, p0, Lcom/android/server/policy/MzPhoneWindowManager$MzPolicyHandler;->this$0:Lcom/android/server/policy/MzPhoneWindowManager;
 
@@ -79,7 +74,6 @@
 
     goto :goto_0
 
-    .line 163
     :pswitch_3
     iget-object v0, p0, Lcom/android/server/policy/MzPhoneWindowManager$MzPolicyHandler;->this$0:Lcom/android/server/policy/MzPhoneWindowManager;
 
@@ -87,7 +81,6 @@
 
     goto :goto_0
 
-    .line 166
     :pswitch_4
     iget-object v0, p0, Lcom/android/server/policy/MzPhoneWindowManager$MzPolicyHandler;->this$0:Lcom/android/server/policy/MzPhoneWindowManager;
 
@@ -95,7 +88,6 @@
 
     goto :goto_0
 
-    .line 155
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_3

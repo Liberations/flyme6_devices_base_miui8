@@ -23,15 +23,12 @@
     .locals 1
 
     .prologue
-    .line 2543
     iput-object p1, p0, Lcom/android/server/audio/AudioService$SoundPoolListenerThread;->this$0:Lcom/android/server/audio/AudioService;
 
-    .line 2544
     const-string v0, "SoundPoolListenerThread"
 
     invoke-direct {p0, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
 
-    .line 2545
     return-void
 .end method
 
@@ -41,10 +38,8 @@
     .locals 5
 
     .prologue
-    .line 2550
     invoke-static {}, Landroid/os/Looper;->prepare()V
 
-    .line 2551
     iget-object v0, p0, Lcom/android/server/audio/AudioService$SoundPoolListenerThread;->this$0:Lcom/android/server/audio/AudioService;
 
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
@@ -54,7 +49,6 @@
     # setter for: Lcom/android/server/audio/AudioService;->mSoundPoolLooper:Landroid/os/Looper;
     invoke-static {v0, v1}, Lcom/android/server/audio/AudioService;->access$1702(Lcom/android/server/audio/AudioService;Landroid/os/Looper;)Landroid/os/Looper;
 
-    .line 2553
     iget-object v0, p0, Lcom/android/server/audio/AudioService$SoundPoolListenerThread;->this$0:Lcom/android/server/audio/AudioService;
 
     # getter for: Lcom/android/server/audio/AudioService;->mSoundEffectsLock:Ljava/lang/Object;
@@ -64,7 +58,6 @@
 
     monitor-enter v1
 
-    .line 2554
     :try_start_0
     iget-object v0, p0, Lcom/android/server/audio/AudioService$SoundPoolListenerThread;->this$0:Lcom/android/server/audio/AudioService;
 
@@ -75,7 +68,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2555
     iget-object v0, p0, Lcom/android/server/audio/AudioService$SoundPoolListenerThread;->this$0:Lcom/android/server/audio/AudioService;
 
     new-instance v2, Lcom/android/server/audio/AudioService$SoundPoolCallback;
@@ -89,7 +81,6 @@
     # setter for: Lcom/android/server/audio/AudioService;->mSoundPoolCallBack:Lcom/android/server/audio/AudioService$SoundPoolCallback;
     invoke-static {v0, v2}, Lcom/android/server/audio/AudioService;->access$2002(Lcom/android/server/audio/AudioService;Lcom/android/server/audio/AudioService$SoundPoolCallback;)Lcom/android/server/audio/AudioService$SoundPoolCallback;
 
-    .line 2556
     iget-object v0, p0, Lcom/android/server/audio/AudioService$SoundPoolListenerThread;->this$0:Lcom/android/server/audio/AudioService;
 
     # getter for: Lcom/android/server/audio/AudioService;->mSoundPool:Landroid/media/SoundPool;
@@ -106,7 +97,6 @@
 
     invoke-virtual {v0, v2}, Landroid/media/SoundPool;->setOnLoadCompleteListener(Landroid/media/SoundPool$OnLoadCompleteListener;)V
 
-    .line 2558
     :cond_0
     iget-object v0, p0, Lcom/android/server/audio/AudioService$SoundPoolListenerThread;->this$0:Lcom/android/server/audio/AudioService;
 
@@ -117,18 +107,14 @@
 
     invoke-virtual {v0}, Ljava/lang/Object;->notify()V
 
-    .line 2559
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2560
     invoke-static {}, Landroid/os/Looper;->loop()V
 
-    .line 2561
     return-void
 
-    .line 2559
     :catchall_0
     move-exception v0
 

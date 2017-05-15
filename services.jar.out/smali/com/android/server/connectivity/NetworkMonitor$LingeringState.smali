@@ -31,7 +31,6 @@
     .locals 0
 
     .prologue
-    .line 605
     iput-object p1, p0, Lcom/android/server/connectivity/NetworkMonitor$LingeringState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -45,7 +44,6 @@
     .param p2, "x1"    # Lcom/android/server/connectivity/NetworkMonitor$1;
 
     .prologue
-    .line 605
     invoke-direct {p0, p1}, Lcom/android/server/connectivity/NetworkMonitor$LingeringState;-><init>(Lcom/android/server/connectivity/NetworkMonitor;)V
 
     return-void
@@ -57,7 +55,6 @@
     .locals 7
 
     .prologue
-    .line 613
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor$LingeringState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     new-instance v1, Ljava/util/Random;
@@ -71,7 +68,6 @@
     # setter for: Lcom/android/server/connectivity/NetworkMonitor;->mLingerToken:I
     invoke-static {v0, v1}, Lcom/android/server/connectivity/NetworkMonitor;->access$3402(Lcom/android/server/connectivity/NetworkMonitor;I)I
 
-    .line 614
     new-instance v0, Lcom/android/server/connectivity/NetworkMonitor$CustomIntentReceiver;
 
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkMonitor$LingeringState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
@@ -91,7 +87,6 @@
 
     iput-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor$LingeringState;->mBroadcastReceiver:Lcom/android/server/connectivity/NetworkMonitor$CustomIntentReceiver;
 
-    .line 616
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor$LingeringState;->mBroadcastReceiver:Lcom/android/server/connectivity/NetworkMonitor$CustomIntentReceiver;
 
     invoke-virtual {v0}, Lcom/android/server/connectivity/NetworkMonitor$CustomIntentReceiver;->getPendingIntent()Landroid/app/PendingIntent;
@@ -100,7 +95,6 @@
 
     iput-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor$LingeringState;->mIntent:Landroid/app/PendingIntent;
 
-    .line 617
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
@@ -116,7 +110,6 @@
 
     add-long v2, v0, v4
 
-    .line 618
     .local v2, "wakeupTime":J
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor$LingeringState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
@@ -142,7 +135,6 @@
 
     invoke-virtual/range {v0 .. v6}, Landroid/app/AlarmManager;->setWindow(IJJLandroid/app/PendingIntent;)V
 
-    .line 621
     return-void
 .end method
 
@@ -150,7 +142,6 @@
     .locals 2
 
     .prologue
-    .line 667
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor$LingeringState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # getter for: Lcom/android/server/connectivity/NetworkMonitor;->mAlarmManager:Landroid/app/AlarmManager;
@@ -162,7 +153,6 @@
 
     invoke-virtual {v0, v1}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 668
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor$LingeringState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # getter for: Lcom/android/server/connectivity/NetworkMonitor;->mContext:Landroid/content/Context;
@@ -174,7 +164,6 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 669
     return-void
 .end method
 
@@ -187,7 +176,6 @@
 
     const/4 v0, 0x1
 
-    .line 625
     iget v2, p1, Landroid/os/Message;->what:I
 
     packed-switch v2, :pswitch_data_0
@@ -195,13 +183,11 @@
     :pswitch_0
     move v0, v1
 
-    .line 661
     :cond_0
     :goto_0
     :pswitch_1
     return v0
 
-    .line 627
     :pswitch_2
     iget-object v2, p0, Lcom/android/server/connectivity/NetworkMonitor$LingeringState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
@@ -209,7 +195,6 @@
 
     invoke-virtual {v2, v3}, Lcom/android/server/connectivity/NetworkMonitor;->log(Ljava/lang/String;)V
 
-    .line 629
     iget-object v2, p0, Lcom/android/server/connectivity/NetworkMonitor$LingeringState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # getter for: Lcom/android/server/connectivity/NetworkMonitor;->mNetworkAgentInfo:Lcom/android/server/connectivity/NetworkAgentInfo;
@@ -221,7 +206,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 630
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkMonitor$LingeringState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     iget-object v2, p0, Lcom/android/server/connectivity/NetworkMonitor$LingeringState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
@@ -239,10 +223,8 @@
     :cond_1
     move v0, v1
 
-    .line 633
     goto :goto_0
 
-    .line 635
     :pswitch_3
     iget v1, p1, Landroid/os/Message;->arg1:I
 
@@ -255,7 +237,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 637
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkMonitor$LingeringState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # getter for: Lcom/android/server/connectivity/NetworkMonitor;->mConnectivityServiceHandler:Landroid/os/Handler;
@@ -282,7 +263,6 @@
 
     goto :goto_0
 
-    .line 625
     nop
 
     :pswitch_data_0

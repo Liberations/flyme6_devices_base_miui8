@@ -32,10 +32,8 @@
     .locals 1
 
     .prologue
-    .line 699
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 701
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
@@ -51,12 +49,10 @@
     .locals 5
 
     .prologue
-    .line 718
     iget-object v4, p0, Lcom/android/server/notification/ManagedServices$UserProfiles;->mCurrentProfiles:Landroid/util/SparseArray;
 
     monitor-enter v4
 
-    .line 719
     :try_start_0
     iget-object v3, p0, Lcom/android/server/notification/ManagedServices$UserProfiles;->mCurrentProfiles:Landroid/util/SparseArray;
 
@@ -66,7 +62,6 @@
 
     new-array v2, v3, [I
 
-    .line 720
     .local v2, "users":[I
     iget-object v3, p0, Lcom/android/server/notification/ManagedServices$UserProfiles;->mCurrentProfiles:Landroid/util/SparseArray;
 
@@ -74,7 +69,6 @@
 
     move-result v0
 
-    .line 721
     .local v0, "N":I
     const/4 v1, 0x0
 
@@ -82,7 +76,6 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 722
     iget-object v3, p0, Lcom/android/server/notification/ManagedServices$UserProfiles;->mCurrentProfiles:Landroid/util/SparseArray;
 
     invoke-virtual {v3, v1}, Landroid/util/SparseArray;->keyAt(I)I
@@ -91,18 +84,15 @@
 
     aput v3, v2, v1
 
-    .line 721
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 724
     :cond_0
     monitor-exit v4
 
     return-object v2
 
-    .line 725
     .end local v0    # "N":I
     .end local v1    # "i":I
     .end local v2    # "users":[I
@@ -121,12 +111,10 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 729
     iget-object v1, p0, Lcom/android/server/notification/ManagedServices$UserProfiles;->mCurrentProfiles:Landroid/util/SparseArray;
 
     monitor-enter v1
 
-    .line 730
     :try_start_0
     iget-object v0, p0, Lcom/android/server/notification/ManagedServices$UserProfiles;->mCurrentProfiles:Landroid/util/SparseArray;
 
@@ -148,7 +136,6 @@
 
     goto :goto_0
 
-    .line 731
     :catchall_0
     move-exception v0
 
@@ -164,7 +151,6 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 704
     const-string v5, "user"
 
     invoke-virtual {p1, v5}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -173,34 +159,28 @@
 
     check-cast v4, Landroid/os/UserManager;
 
-    .line 705
     .local v4, "userManager":Landroid/os/UserManager;
     if-eqz v4, :cond_1
 
-    .line 706
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
     move-result v0
 
-    .line 707
     .local v0, "currentUserId":I
     invoke-virtual {v4, v0}, Landroid/os/UserManager;->getProfiles(I)Ljava/util/List;
 
     move-result-object v2
 
-    .line 708
     .local v2, "profiles":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     iget-object v6, p0, Lcom/android/server/notification/ManagedServices$UserProfiles;->mCurrentProfiles:Landroid/util/SparseArray;
 
     monitor-enter v6
 
-    .line 709
     :try_start_0
     iget-object v5, p0, Lcom/android/server/notification/ManagedServices$UserProfiles;->mCurrentProfiles:Landroid/util/SparseArray;
 
     invoke-virtual {v5}, Landroid/util/SparseArray;->clear()V
 
-    .line 710
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -219,7 +199,6 @@
 
     check-cast v3, Landroid/content/pm/UserInfo;
 
-    .line 711
     .local v3, "user":Landroid/content/pm/UserInfo;
     iget-object v5, p0, Lcom/android/server/notification/ManagedServices$UserProfiles;->mCurrentProfiles:Landroid/util/SparseArray;
 
@@ -229,7 +208,6 @@
 
     goto :goto_0
 
-    .line 713
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v3    # "user":Landroid/content/pm/UserInfo;
     :catchall_0
@@ -248,7 +226,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 715
     .end local v0    # "currentUserId":I
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v2    # "profiles":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"

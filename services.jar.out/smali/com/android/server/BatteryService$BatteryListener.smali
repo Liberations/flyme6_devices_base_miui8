@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1069
     iput-object p1, p0, Lcom/android/server/BatteryService$BatteryListener;->this$0:Lcom/android/server/BatteryService;
 
     invoke-direct {p0}, Landroid/os/IBatteryPropertiesListener$Stub;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/BatteryService$1;
 
     .prologue
-    .line 1069
     invoke-direct {p0, p1}, Lcom/android/server/BatteryService$BatteryListener;-><init>(Lcom/android/server/BatteryService;)V
 
     return-void
@@ -50,12 +48,10 @@
     .param p1, "props"    # Landroid/os/BatteryProperties;
 
     .prologue
-    .line 1072
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 1075
     .local v0, "identity":J
     iget-object v3, p0, Lcom/android/server/BatteryService$BatteryListener;->this$0:Lcom/android/server/BatteryService;
 
@@ -72,7 +68,6 @@
 
     check-cast v2, Landroid/telephony/TelephonyManager;
 
-    .line 1076
     .local v2, "tm":Landroid/telephony/TelephonyManager;
     iget-object v3, p0, Lcom/android/server/BatteryService$BatteryListener;->this$0:Lcom/android/server/BatteryService;
 
@@ -85,7 +80,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/telephony/TelephonyManager;->listen(Landroid/telephony/PhoneStateListener;I)V
 
-    .line 1080
     :try_start_0
     iget-object v3, p0, Lcom/android/server/BatteryService$BatteryListener;->this$0:Lcom/android/server/BatteryService;
 
@@ -94,13 +88,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1082
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1084
     return-void
 
-    .line 1082
     :catchall_0
     move-exception v3
 

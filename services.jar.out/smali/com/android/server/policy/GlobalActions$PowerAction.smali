@@ -26,17 +26,14 @@
     .locals 2
 
     .prologue
-    .line 342
     iput-object p1, p0, Lcom/android/server/policy/GlobalActions$PowerAction;->this$0:Lcom/android/server/policy/GlobalActions;
 
-    .line 343
     const v0, 0x1080030
 
     const v1, 0x104011c
 
     invoke-direct {p0, v0, v1}, Lcom/android/server/policy/GlobalActions$SinglePressAction;-><init>(II)V
 
-    .line 345
     return-void
 .end method
 
@@ -46,7 +43,6 @@
     .param p2, "x1"    # Lcom/android/server/policy/GlobalActions$1;
 
     .prologue
-    .line 341
     invoke-direct {p0, p1}, Lcom/android/server/policy/GlobalActions$PowerAction;-><init>(Lcom/android/server/policy/GlobalActions;)V
 
     return-void
@@ -60,7 +56,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 349
     iget-object v2, p0, Lcom/android/server/policy/GlobalActions$PowerAction;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mContext:Landroid/content/Context;
@@ -76,7 +71,6 @@
 
     check-cast v0, Landroid/os/UserManager;
 
-    .line 350
     .local v0, "um":Landroid/os/UserManager;
     const-string v2, "no_safe_boot"
 
@@ -86,7 +80,6 @@
 
     if-nez v2, :cond_0
 
-    .line 351
     iget-object v2, p0, Lcom/android/server/policy/GlobalActions$PowerAction;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mWindowManagerFuncs:Landroid/view/WindowManagerPolicy$WindowManagerFuncs;
@@ -96,7 +89,6 @@
 
     invoke-interface {v2, v1}, Landroid/view/WindowManagerPolicy$WindowManagerFuncs;->rebootSafeMode(Z)V
 
-    .line 354
     :goto_0
     return v1
 
@@ -110,7 +102,6 @@
     .locals 2
 
     .prologue
-    .line 370
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$PowerAction;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mWindowManagerFuncs:Landroid/view/WindowManagerPolicy$WindowManagerFuncs;
@@ -122,7 +113,6 @@
 
     invoke-interface {v0, v1}, Landroid/view/WindowManagerPolicy$WindowManagerFuncs;->shutdown(Z)V
 
-    .line 371
     return-void
 .end method
 
@@ -130,7 +120,6 @@
     .locals 1
 
     .prologue
-    .line 364
     const/4 v0, 0x1
 
     return v0
@@ -140,7 +129,6 @@
     .locals 1
 
     .prologue
-    .line 359
     const/4 v0, 0x1
 
     return v0

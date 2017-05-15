@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,7 +19,6 @@
     .param p1, "port"    # I
 
     .prologue
-    .line 143
     instance-of v0, p0, Ljava/net/Inet6Address;
 
     if-eqz v0, :cond_0
@@ -70,34 +68,27 @@
     .prologue
     const v9, 0xffff
 
-    .line 47
     move v6, p1
 
-    .line 48
     .local v6, "sum":I
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v1
 
-    .line 52
     .local v1, "bufPosition":I
     invoke-virtual {p0, p2}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 53
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->asShortBuffer()Ljava/nio/ShortBuffer;
 
     move-result-object v5
 
-    .line 56
     .local v5, "shortBuf":Ljava/nio/ShortBuffer;
     invoke-virtual {p0, v1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 58
     sub-int v7, p3, p2
 
     div-int/lit8 v4, v7, 0x2
 
-    .line 59
     .local v4, "numShorts":I
     const/4 v2, 0x0
 
@@ -105,7 +96,6 @@
     :goto_0
     if-ge v2, v4, :cond_0
 
-    .line 60
     invoke-virtual {v5, v2}, Ljava/nio/ShortBuffer;->get(I)S
 
     move-result v7
@@ -116,43 +106,35 @@
 
     add-int/2addr v6, v7
 
-    .line 59
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 62
     :cond_0
     mul-int/lit8 v7, v4, 0x2
 
     add-int/2addr p2, v7
 
-    .line 65
     if-eq p3, p2, :cond_2
 
-    .line 66
     invoke-virtual {p0, p2}, Ljava/nio/ByteBuffer;->get(I)B
 
     move-result v7
 
     int-to-short v0, v7
 
-    .line 69
     .local v0, "b":S
     if-gez v0, :cond_1
 
-    .line 70
     add-int/lit16 v7, v0, 0x100
 
     int-to-short v0, v7
 
-    .line 73
     :cond_1
     mul-int/lit16 v7, v0, 0x100
 
     add-int/2addr v6, v7
 
-    .line 76
     .end local v0    # "b":S
     :cond_2
     shr-int/lit8 v7, v6, 0x10
@@ -163,7 +145,6 @@
 
     add-int v6, v7, v8
 
-    .line 77
     shr-int/lit8 v7, v6, 0x10
 
     and-int/2addr v7, v9
@@ -172,10 +153,8 @@
 
     and-int v6, v7, v9
 
-    .line 78
     xor-int/lit8 v3, v6, -0x1
 
-    .line 79
     .local v3, "negated":I
     int-to-short v7, v3
 
@@ -191,7 +170,6 @@
     .param p0, "v"    # S
 
     .prologue
-    .line 38
     const v0, 0xffff
 
     and-int/2addr v0, p0
@@ -205,7 +183,6 @@
     .param p1, "headerOffset"    # I
 
     .prologue
-    .line 106
     invoke-virtual {p0, p1}, Ljava/nio/ByteBuffer;->get(I)B
 
     move-result v1
@@ -214,7 +191,6 @@
 
     int-to-byte v0, v1
 
-    .line 107
     .local v0, "ihl":B
     const/4 v1, 0x0
 
@@ -237,7 +213,6 @@
     .param p1, "headerOffset"    # I
 
     .prologue
-    .line 102
     invoke-virtual {p0, p1}, Ljava/nio/ByteBuffer;->get(I)B
 
     move-result v0
@@ -256,7 +231,6 @@
     .param p0, "port"    # I
 
     .prologue
-    .line 149
     if-lez p0, :cond_0
 
     const/high16 v0, 0x10000
@@ -282,10 +256,8 @@
     .param p3, "transportLen"    # I
 
     .prologue
-    .line 84
     add-int v0, p2, p3
 
-    .line 85
     .local v0, "partial":I
     add-int/lit8 v1, p1, 0xc
 
@@ -299,7 +271,6 @@
 
     add-int/2addr v0, v1
 
-    .line 86
     add-int/lit8 v1, p1, 0xe
 
     invoke-virtual {p0, v1}, Ljava/nio/ByteBuffer;->getShort(I)S
@@ -312,7 +283,6 @@
 
     add-int/2addr v0, v1
 
-    .line 87
     add-int/lit8 v1, p1, 0x10
 
     invoke-virtual {p0, v1}, Ljava/nio/ByteBuffer;->getShort(I)S
@@ -325,7 +295,6 @@
 
     add-int/2addr v0, v1
 
-    .line 88
     add-int/lit8 v1, p1, 0x12
 
     invoke-virtual {p0, v1}, Ljava/nio/ByteBuffer;->getShort(I)S
@@ -338,7 +307,6 @@
 
     add-int/2addr v0, v1
 
-    .line 89
     return v0
 .end method
 
@@ -350,10 +318,8 @@
     .param p3, "transportLen"    # I
 
     .prologue
-    .line 94
     add-int v1, p2, p3
 
-    .line 95
     .local v1, "partial":I
     const/16 v0, 0x8
 
@@ -363,7 +329,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 96
     add-int v2, p1, v0
 
     invoke-virtual {p0, v2}, Ljava/nio/ByteBuffer;->getShort(I)S
@@ -376,12 +341,10 @@
 
     add-int/2addr v1, v2
 
-    .line 95
     add-int/lit8 v0, v0, 0x2
 
     goto :goto_0
 
-    .line 98
     :cond_0
     return v1
 .end method
@@ -394,7 +357,6 @@
     .param p3, "transportLen"    # I
 
     .prologue
-    .line 139
     sget v0, Landroid/system/OsConstants;->IPPROTO_TCP:I
 
     invoke-static {p0, v0, p1, p2, p3}, Landroid/net/util/IpUtils;->transportChecksum(Ljava/nio/ByteBuffer;IIII)S
@@ -413,10 +375,8 @@
     .param p4, "transportLen"    # I
 
     .prologue
-    .line 112
     if-gez p4, :cond_0
 
-    .line 113
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -441,24 +401,20 @@
 
     throw v2
 
-    .line 116
     :cond_0
     invoke-static {p0, p2}, Landroid/net/util/IpUtils;->ipversion(Ljava/nio/ByteBuffer;I)B
 
     move-result v1
 
-    .line 117
     .local v1, "ver":B
     const/4 v2, 0x4
 
     if-ne v1, v2, :cond_2
 
-    .line 118
     invoke-static {p0, p2, p1, p4}, Landroid/net/util/IpUtils;->pseudoChecksumIPv4(Ljava/nio/ByteBuffer;III)I
 
     move-result v0
 
-    .line 125
     .local v0, "sum":I
     :goto_0
     add-int v2, p3, p4
@@ -467,30 +423,25 @@
 
     move-result v0
 
-    .line 126
     sget v2, Landroid/system/OsConstants;->IPPROTO_UDP:I
 
     if-ne p1, v2, :cond_1
 
     if-nez v0, :cond_1
 
-    .line 127
     const/4 v0, -0x1
 
-    .line 129
     :cond_1
     int-to-short v2, v0
 
     return v2
 
-    .line 119
     .end local v0    # "sum":I
     :cond_2
     const/4 v2, 0x6
 
     if-ne v1, v2, :cond_3
 
-    .line 120
     invoke-static {p0, p2, p1, p4}, Landroid/net/util/IpUtils;->pseudoChecksumIPv6(Ljava/nio/ByteBuffer;III)I
 
     move-result v0
@@ -498,7 +449,6 @@
     .restart local v0    # "sum":I
     goto :goto_0
 
-    .line 122
     .end local v0    # "sum":I
     :cond_3
     new-instance v2, Ljava/lang/UnsupportedOperationException;
@@ -517,7 +467,6 @@
     .param p2, "transportOffset"    # I
 
     .prologue
-    .line 133
     add-int/lit8 v1, p2, 0x4
 
     invoke-virtual {p0, v1}, Ljava/nio/ByteBuffer;->getShort(I)S
@@ -528,7 +477,6 @@
 
     move-result v0
 
-    .line 134
     .local v0, "transportLen":I
     sget v1, Landroid/system/OsConstants;->IPPROTO_UDP:I
 

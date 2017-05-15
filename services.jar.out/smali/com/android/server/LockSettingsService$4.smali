@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 655
     iput-object p1, p0, Lcom/android/server/LockSettingsService$4;->this$0:Lcom/android/server/LockSettingsService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "password"    # Ljava/lang/String;
 
     .prologue
-    .line 669
     return-object p1
 .end method
 
@@ -57,12 +55,10 @@
     .end annotation
 
     .prologue
-    .line 659
     iget-object v0, p0, Lcom/android/server/LockSettingsService$4;->this$0:Lcom/android/server/LockSettingsService;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/server/LockSettingsService;->setLockPassword(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 660
     return-void
 .end method
 
@@ -72,7 +68,6 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 664
     iget-object v0, p0, Lcom/android/server/LockSettingsService$4;->this$0:Lcom/android/server/LockSettingsService;
 
     # getter for: Lcom/android/server/LockSettingsService;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;

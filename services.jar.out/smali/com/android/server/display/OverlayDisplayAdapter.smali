@@ -55,7 +55,6 @@
     .locals 1
 
     .prologue
-    .line 78
     const-string v0, "([^,]+)(,[a-z]+)*"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -64,7 +63,6 @@
 
     sput-object v0, Lcom/android/server/display/OverlayDisplayAdapter;->DISPLAY_PATTERN:Ljava/util/regex/Pattern;
 
-    .line 80
     const-string v0, "(\\d+)x(\\d+)/(\\d+)"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -85,7 +83,6 @@
     .param p5, "uiHandler"    # Landroid/os/Handler;
 
     .prologue
-    .line 94
     const-string v5, "OverlayDisplayAdapter"
 
     move-object v0, p0
@@ -100,22 +97,18 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/display/DisplayAdapter;-><init>(Lcom/android/server/display/DisplayManagerService$SyncRoot;Landroid/content/Context;Landroid/os/Handler;Lcom/android/server/display/DisplayAdapter$Listener;Ljava/lang/String;)V
 
-    .line 87
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/display/OverlayDisplayAdapter;->mOverlays:Ljava/util/ArrayList;
 
-    .line 89
     const-string v0, ""
 
     iput-object v0, p0, Lcom/android/server/display/OverlayDisplayAdapter;->mCurrentOverlaySetting:Ljava/lang/String;
 
-    .line 95
     iput-object p5, p0, Lcom/android/server/display/OverlayDisplayAdapter;->mUiHandler:Landroid/os/Handler;
 
-    .line 96
     return-void
 .end method
 
@@ -124,7 +117,6 @@
     .param p0, "x0"    # Lcom/android/server/display/OverlayDisplayAdapter;
 
     .prologue
-    .line 69
     invoke-direct {p0}, Lcom/android/server/display/OverlayDisplayAdapter;->updateOverlayDisplayDevices()V
 
     return-void
@@ -135,7 +127,6 @@
     .param p0, "x0"    # Lcom/android/server/display/OverlayDisplayAdapter;
 
     .prologue
-    .line 69
     iget-object v0, p0, Lcom/android/server/display/OverlayDisplayAdapter;->mUiHandler:Landroid/os/Handler;
 
     return-object v0
@@ -146,34 +137,28 @@
     .param p0, "overlayNumber"    # I
 
     .prologue
-    .line 209
     packed-switch p0, :pswitch_data_0
 
-    .line 218
     const/16 v0, 0x53
 
     :goto_0
     return v0
 
-    .line 211
     :pswitch_0
     const/16 v0, 0x33
 
     goto :goto_0
 
-    .line 213
     :pswitch_1
     const/16 v0, 0x55
 
     goto :goto_0
 
-    .line 215
     :pswitch_2
     const/16 v0, 0x35
 
     goto :goto_0
 
-    .line 209
     nop
 
     :pswitch_data_0
@@ -188,24 +173,19 @@
     .locals 2
 
     .prologue
-    .line 131
     invoke-virtual {p0}, Lcom/android/server/display/OverlayDisplayAdapter;->getSyncRoot()Lcom/android/server/display/DisplayManagerService$SyncRoot;
 
     move-result-object v1
 
     monitor-enter v1
 
-    .line 132
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/display/OverlayDisplayAdapter;->updateOverlayDisplayDevicesLocked()V
 
-    .line 133
     monitor-exit v1
 
-    .line 134
     return-void
 
-    .line 133
     :catchall_0
     move-exception v0
 
@@ -220,7 +200,6 @@
     .locals 30
 
     .prologue
-    .line 137
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/display/OverlayDisplayAdapter;->getContext()Landroid/content/Context;
 
     move-result-object v2
@@ -235,14 +214,11 @@
 
     move-result-object v25
 
-    .line 139
     .local v25, "value":Ljava/lang/String;
     if-nez v25, :cond_0
 
-    .line 140
     const-string v25, ""
 
-    .line 143
     :cond_0
     move-object/from16 v0, p0
 
@@ -256,12 +232,10 @@
 
     if-eqz v2, :cond_2
 
-    .line 206
     :cond_1
     :goto_0
     return-void
 
-    .line 146
     :cond_2
     move-object/from16 v0, v25
 
@@ -269,7 +243,6 @@
 
     iput-object v0, v1, Lcom/android/server/display/OverlayDisplayAdapter;->mCurrentOverlaySetting:Ljava/lang/String;
 
-    .line 148
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/display/OverlayDisplayAdapter;->mOverlays:Ljava/util/ArrayList;
@@ -280,14 +253,12 @@
 
     if-nez v2, :cond_4
 
-    .line 149
     const-string v2, "OverlayDisplayAdapter"
 
     const-string v3, "Dismissing all overlay display devices."
 
     invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 150
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/display/OverlayDisplayAdapter;->mOverlays:Ljava/util/ArrayList;
@@ -310,13 +281,11 @@
 
     check-cast v23, Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle;
 
-    .line 151
     .local v23, "overlay":Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle;
     invoke-virtual/range {v23 .. v23}, Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle;->dismissLocked()V
 
     goto :goto_1
 
-    .line 153
     .end local v23    # "overlay":Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle;
     :cond_3
     move-object/from16 v0, p0
@@ -325,12 +294,10 @@
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
 
-    .line 156
     .end local v16    # "i$":Ljava/util/Iterator;
     :cond_4
     const/4 v11, 0x0
 
-    .line 157
     .local v11, "count":I
     const-string v2, ";"
 
@@ -364,7 +331,6 @@
 
     aget-object v24, v9, v17
 
-    .line 158
     .local v24, "part":Ljava/lang/String;
     sget-object v2, Lcom/android/server/display/OverlayDisplayAdapter;->DISPLAY_PATTERN:Ljava/util/regex/Pattern;
 
@@ -374,7 +340,6 @@
 
     move-result-object v13
 
-    .line 159
     .local v13, "displayMatcher":Ljava/util/regex/Matcher;
     invoke-virtual {v13}, Ljava/util/regex/Matcher;->matches()Z
 
@@ -382,12 +347,10 @@
 
     if-eqz v2, :cond_b
 
-    .line 160
     const/4 v2, 0x4
 
     if-lt v11, v2, :cond_5
 
-    .line 161
     const-string v2, "OverlayDisplayAdapter"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -416,7 +379,6 @@
 
     goto :goto_0
 
-    .line 164
     :cond_5
     const/4 v2, 0x1
 
@@ -424,7 +386,6 @@
 
     move-result-object v22
 
-    .line 165
     .local v22, "modeString":Ljava/lang/String;
     const/4 v2, 0x2
 
@@ -432,13 +393,11 @@
 
     move-result-object v14
 
-    .line 166
     .local v14, "flagString":Ljava/lang/String;
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 167
     .local v5, "modes":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/display/OverlayDisplayAdapter$OverlayMode;>;"
     const-string v2, "\\|"
 
@@ -467,7 +426,6 @@
 
     aget-object v20, v10, v16
 
-    .line 168
     .local v20, "mode":Ljava/lang/String;
     sget-object v2, Lcom/android/server/display/OverlayDisplayAdapter;->MODE_PATTERN:Ljava/util/regex/Pattern;
 
@@ -477,7 +435,6 @@
 
     move-result-object v21
 
-    .line 169
     .local v21, "modeMatcher":Ljava/util/regex/Matcher;
     invoke-virtual/range {v21 .. v21}, Ljava/util/regex/Matcher;->matches()Z
 
@@ -485,7 +442,6 @@
 
     if-eqz v2, :cond_8
 
-    .line 171
     const/4 v2, 0x1
 
     :try_start_0
@@ -501,7 +457,6 @@
 
     move-result v26
 
-    .line 172
     .local v26, "width":I
     const/4 v2, 0x2
 
@@ -517,7 +472,6 @@
 
     move-result v15
 
-    .line 173
     .local v15, "height":I
     const/4 v2, 0x3
 
@@ -533,7 +487,6 @@
 
     move-result v12
 
-    .line 174
     .local v12, "densityDpi":I
     const/16 v2, 0x64
 
@@ -563,7 +516,6 @@
 
     if-gt v12, v2, :cond_7
 
-    .line 178
     new-instance v2, Lcom/android/server/display/OverlayDisplayAdapter$OverlayMode;
 
     move/from16 v0, v26
@@ -572,7 +524,6 @@
 
     invoke-virtual {v5, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 167
     .end local v12    # "densityDpi":I
     .end local v15    # "height":I
     .end local v26    # "width":I
@@ -582,7 +533,6 @@
 
     goto :goto_3
 
-    .line 181
     .restart local v12    # "densityDpi":I
     .restart local v15    # "height":I
     .restart local v26    # "width":I
@@ -617,7 +567,6 @@
 
     goto :goto_4
 
-    .line 183
     .end local v12    # "densityDpi":I
     .end local v15    # "height":I
     .end local v26    # "width":I
@@ -626,7 +575,6 @@
 
     goto :goto_4
 
-    .line 185
     :cond_8
     invoke-virtual/range {v20 .. v20}, Ljava/lang/String;->isEmpty()Z
 
@@ -636,7 +584,6 @@
 
     goto :goto_4
 
-    .line 189
     .end local v20    # "mode":Ljava/lang/String;
     .end local v21    # "modeMatcher":Ljava/util/regex/Matcher;
     :cond_9
@@ -646,12 +593,10 @@
 
     if-nez v2, :cond_b
 
-    .line 190
     add-int/lit8 v11, v11, 0x1
 
     move v8, v11
 
-    .line 191
     .local v8, "number":I
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/display/OverlayDisplayAdapter;->getContext()Landroid/content/Context;
 
@@ -685,13 +630,11 @@
 
     move-result-object v4
 
-    .line 194
     .local v4, "name":Ljava/lang/String;
     invoke-static {v8}, Lcom/android/server/display/OverlayDisplayAdapter;->chooseOverlayGravity(I)I
 
     move-result v6
 
-    .line 195
     .local v6, "gravity":I
     if-eqz v14, :cond_a
 
@@ -705,7 +648,6 @@
 
     const/4 v7, 0x1
 
-    .line 197
     .local v7, "secure":Z
     :goto_5
     const-string v2, "OverlayDisplayAdapter"
@@ -766,7 +708,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 200
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/display/OverlayDisplayAdapter;->mOverlays:Ljava/util/ArrayList;
@@ -783,7 +724,6 @@
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 157
     .end local v4    # "name":Ljava/lang/String;
     .end local v5    # "modes":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/display/OverlayDisplayAdapter$OverlayMode;>;"
     .end local v6    # "gravity":I
@@ -804,7 +744,6 @@
     .restart local v17    # "i$":I
     goto/16 :goto_2
 
-    .line 195
     .end local v17    # "i$":I
     .restart local v4    # "name":Ljava/lang/String;
     .restart local v5    # "modes":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/display/OverlayDisplayAdapter$OverlayMode;>;"
@@ -820,7 +759,6 @@
 
     goto :goto_5
 
-    .line 204
     .end local v4    # "name":Ljava/lang/String;
     .end local v5    # "modes":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/display/OverlayDisplayAdapter$OverlayMode;>;"
     .end local v6    # "gravity":I
@@ -867,10 +805,8 @@
     .param p1, "pw"    # Ljava/io/PrintWriter;
 
     .prologue
-    .line 100
     invoke-super {p0, p1}, Lcom/android/server/display/DisplayAdapter;->dumpLocked(Ljava/io/PrintWriter;)V
 
-    .line 102
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -893,7 +829,6 @@
 
     invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 103
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -920,7 +855,6 @@
 
     invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 104
     iget-object v2, p0, Lcom/android/server/display/OverlayDisplayAdapter;->mOverlays:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -941,13 +875,11 @@
 
     check-cast v1, Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle;
 
-    .line 105
     .local v1, "overlay":Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle;
     invoke-virtual {v1, p1}, Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle;->dumpLocked(Ljava/io/PrintWriter;)V
 
     goto :goto_0
 
-    .line 107
     .end local v1    # "overlay":Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle;
     :cond_0
     return-void
@@ -957,10 +889,8 @@
     .locals 2
 
     .prologue
-    .line 111
     invoke-super {p0}, Lcom/android/server/display/DisplayAdapter;->registerLocked()V
 
-    .line 113
     invoke-virtual {p0}, Lcom/android/server/display/OverlayDisplayAdapter;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -971,6 +901,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 128
     return-void
 .end method

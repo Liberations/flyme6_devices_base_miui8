@@ -32,7 +32,6 @@
     .locals 1
 
     .prologue
-    .line 3082
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$3;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iput-object p2, p0, Lcom/android/server/pm/PackageManagerService$3;->val$volumeUuid:Ljava/lang/String;
@@ -52,17 +51,14 @@
     .locals 8
 
     .prologue
-    .line 3084
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$3;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v0, v0, Lcom/android/server/pm/PackageManagerService;->mHandler:Lcom/android/server/pm/PackageManagerService$PackageHandler;
 
     invoke-virtual {v0, p0}, Lcom/android/server/pm/PackageManagerService$PackageHandler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 3085
     const/4 v7, -0x1
 
-    .line 3086
     .local v7, "retCode":I
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$3;->this$0:Lcom/android/server/pm/PackageManagerService;
 
@@ -70,7 +66,6 @@
 
     monitor-enter v1
 
-    .line 3087
     :try_start_0
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$3;->this$0:Lcom/android/server/pm/PackageManagerService;
 
@@ -84,33 +79,27 @@
 
     move-result v7
 
-    .line 3088
     if-gez v7, :cond_0
 
-    .line 3089
     const-string v0, "PackageManager"
 
     const-string v3, "Couldn\'t clear application caches"
 
     invoke-static {v0, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3091
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3092
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$3;->val$pi:Landroid/content/IntentSender;
 
     if-eqz v0, :cond_1
 
-    .line 3095
     if-ltz v7, :cond_2
 
     const/4 v2, 0x1
 
-    .line 3096
     .local v2, "code":I
     :goto_0
     :try_start_1
@@ -128,13 +117,11 @@
     :try_end_1
     .catch Landroid/content/IntentSender$SendIntentException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 3102
     .end local v2    # "code":I
     :cond_1
     :goto_1
     return-void
 
-    .line 3091
     :catchall_0
     move-exception v0
 
@@ -145,18 +132,15 @@
 
     throw v0
 
-    .line 3095
     :cond_2
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 3098
     .restart local v2    # "code":I
     :catch_0
     move-exception v6
 
-    .line 3099
     .local v6, "e1":Landroid/content/IntentSender$SendIntentException;
     const-string v0, "PackageManager"
 

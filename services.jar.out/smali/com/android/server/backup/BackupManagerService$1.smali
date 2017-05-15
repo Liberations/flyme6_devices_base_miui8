@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1416
     iput-object p1, p0, Lcom/android/server/backup/BackupManagerService$1;->this$0:Lcom/android/server/backup/BackupManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,14 +39,12 @@
     .locals 12
 
     .prologue
-    .line 1418
     iget-object v8, p0, Lcom/android/server/backup/BackupManagerService$1;->this$0:Lcom/android/server/backup/BackupManagerService;
 
     iget-object v9, v8, Lcom/android/server/backup/BackupManagerService;->mQueueLock:Ljava/lang/Object;
 
     monitor-enter v9
 
-    .line 1420
     :try_start_0
     new-instance v3, Ljava/io/ByteArrayOutputStream;
 
@@ -55,19 +52,16 @@
 
     invoke-direct {v3, v8}, Ljava/io/ByteArrayOutputStream;-><init>(I)V
 
-    .line 1421
     .local v3, "bufStream":Ljava/io/ByteArrayOutputStream;
     new-instance v2, Ljava/io/DataOutputStream;
 
     invoke-direct {v2, v3}, Ljava/io/DataOutputStream;-><init>(Ljava/io/OutputStream;)V
 
-    .line 1422
     .local v2, "bufOut":Ljava/io/DataOutputStream;
     const/4 v8, 0x1
 
     invoke-virtual {v2, v8}, Ljava/io/DataOutputStream;->writeInt(I)V
 
-    .line 1431
     iget-object v8, p0, Lcom/android/server/backup/BackupManagerService$1;->this$0:Lcom/android/server/backup/BackupManagerService;
 
     iget-object v8, v8, Lcom/android/server/backup/BackupManagerService;->mFullBackupQueue:Ljava/util/ArrayList;
@@ -76,18 +70,15 @@
 
     move-result v0
 
-    .line 1432
     .local v0, "N":I
     invoke-virtual {v2, v0}, Ljava/io/DataOutputStream;->writeInt(I)V
 
-    .line 1434
     const/4 v6, 0x0
 
     .local v6, "i":I
     :goto_0
     if-ge v6, v0, :cond_0
 
-    .line 1435
     iget-object v8, p0, Lcom/android/server/backup/BackupManagerService$1;->this$0:Lcom/android/server/backup/BackupManagerService;
 
     iget-object v8, v8, Lcom/android/server/backup/BackupManagerService;->mFullBackupQueue:Ljava/util/ArrayList;
@@ -98,28 +89,23 @@
 
     check-cast v5, Lcom/android/server/backup/BackupManagerService$FullBackupEntry;
 
-    .line 1436
     .local v5, "entry":Lcom/android/server/backup/BackupManagerService$FullBackupEntry;
     iget-object v8, v5, Lcom/android/server/backup/BackupManagerService$FullBackupEntry;->packageName:Ljava/lang/String;
 
     invoke-virtual {v2, v8}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 1437
     iget-wide v10, v5, Lcom/android/server/backup/BackupManagerService$FullBackupEntry;->lastBackup:J
 
     invoke-virtual {v2, v10, v11}, Ljava/io/DataOutputStream;->writeLong(J)V
 
-    .line 1434
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_0
 
-    .line 1439
     .end local v5    # "entry":Lcom/android/server/backup/BackupManagerService$FullBackupEntry;
     :cond_0
     invoke-virtual {v2}, Ljava/io/DataOutputStream;->flush()V
 
-    .line 1441
     new-instance v1, Landroid/util/AtomicFile;
 
     iget-object v8, p0, Lcom/android/server/backup/BackupManagerService$1;->this$0:Lcom/android/server/backup/BackupManagerService;
@@ -128,13 +114,11 @@
 
     invoke-direct {v1, v8}, Landroid/util/AtomicFile;-><init>(Ljava/io/File;)V
 
-    .line 1442
     .local v1, "af":Landroid/util/AtomicFile;
     invoke-virtual {v1}, Landroid/util/AtomicFile;->startWrite()Ljava/io/FileOutputStream;
 
     move-result-object v7
 
-    .line 1443
     .local v7, "out":Ljava/io/FileOutputStream;
     invoke-virtual {v3}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
@@ -142,13 +126,11 @@
 
     invoke-virtual {v7, v8}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 1444
     invoke-virtual {v1, v7}, Landroid/util/AtomicFile;->finishWrite(Ljava/io/FileOutputStream;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1448
     .end local v0    # "N":I
     .end local v1    # "af":Landroid/util/AtomicFile;
     .end local v2    # "bufOut":Ljava/io/DataOutputStream;
@@ -159,14 +141,11 @@
     :try_start_1
     monitor-exit v9
 
-    .line 1449
     return-void
 
-    .line 1445
     :catch_0
     move-exception v4
 
-    .line 1446
     .local v4, "e":Ljava/lang/Exception;
     const-string v8, "BackupManagerService"
 
@@ -176,7 +155,6 @@
 
     goto :goto_1
 
-    .line 1448
     .end local v4    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v8

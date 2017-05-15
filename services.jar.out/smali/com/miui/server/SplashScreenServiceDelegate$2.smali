@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 114
     iput-object p1, p0, Lcom/miui/server/SplashScreenServiceDelegate$2;->this$0:Lcom/miui/server/SplashScreenServiceDelegate;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,14 +43,12 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 117
     const-string v1, "SplashScreenServiceDelegate"
 
     const-string v2, "SplashScreen service connected!"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 118
     iget-object v1, p0, Lcom/miui/server/SplashScreenServiceDelegate$2;->this$0:Lcom/miui/server/SplashScreenServiceDelegate;
 
     invoke-static {p2}, Lcom/miui/server/ISplashScreenService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/miui/server/ISplashScreenService;
@@ -60,7 +57,6 @@
 
     iput-object v2, v1, Lcom/miui/server/SplashScreenServiceDelegate;->mSplashScreenService:Lcom/miui/server/ISplashScreenService;
 
-    .line 119
     iget-object v1, p0, Lcom/miui/server/SplashScreenServiceDelegate$2;->this$0:Lcom/miui/server/SplashScreenServiceDelegate;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -70,13 +66,11 @@
     # setter for: Lcom/miui/server/SplashScreenServiceDelegate;->mStartTime:J
     invoke-static {v1, v2, v3}, Lcom/miui/server/SplashScreenServiceDelegate;->access$302(Lcom/miui/server/SplashScreenServiceDelegate;J)J
 
-    .line 120
     iget-object v1, p0, Lcom/miui/server/SplashScreenServiceDelegate$2;->this$0:Lcom/miui/server/SplashScreenServiceDelegate;
 
     # setter for: Lcom/miui/server/SplashScreenServiceDelegate;->mRebindCount:I
     invoke-static {v1, v4}, Lcom/miui/server/SplashScreenServiceDelegate;->access$402(Lcom/miui/server/SplashScreenServiceDelegate;I)I
 
-    .line 121
     iget-object v1, p0, Lcom/miui/server/SplashScreenServiceDelegate$2;->this$0:Lcom/miui/server/SplashScreenServiceDelegate;
 
     iget-object v1, v1, Lcom/miui/server/SplashScreenServiceDelegate;->mHandler:Landroid/os/Handler;
@@ -85,7 +79,6 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 123
     :try_start_0
     iget-object v1, p0, Lcom/miui/server/SplashScreenServiceDelegate$2;->this$0:Lcom/miui/server/SplashScreenServiceDelegate;
 
@@ -105,15 +98,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 127
     :goto_0
     return-void
 
-    .line 124
     :catch_0
     move-exception v0
 
-    .line 125
     .local v0, "e":Ljava/lang/Exception;
     const-string v1, "SplashScreenServiceDelegate"
 
@@ -129,20 +119,17 @@
     .param p1, "name"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 131
     const-string v0, "SplashScreenServiceDelegate"
 
     const-string v1, "SplashScreen service disconnected!"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 132
     iget-object v0, p0, Lcom/miui/server/SplashScreenServiceDelegate$2;->this$0:Lcom/miui/server/SplashScreenServiceDelegate;
 
     const/4 v1, 0x0
 
     iput-object v1, v0, Lcom/miui/server/SplashScreenServiceDelegate;->mSplashScreenService:Lcom/miui/server/ISplashScreenService;
 
-    .line 133
     return-void
 .end method

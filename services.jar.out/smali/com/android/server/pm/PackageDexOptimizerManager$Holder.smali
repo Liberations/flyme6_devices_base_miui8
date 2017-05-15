@@ -23,7 +23,6 @@
     .locals 2
 
     .prologue
-    .line 80
     new-instance v0, Lcom/android/server/pm/PackageDexOptimizerManager;
 
     const/4 v1, 0x0
@@ -39,7 +38,6 @@
     .locals 0
 
     .prologue
-    .line 79
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

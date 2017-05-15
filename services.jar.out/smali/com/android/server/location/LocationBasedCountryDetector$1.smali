@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 176
     iput-object p1, p0, Lcom/android/server/location/LocationBasedCountryDetector$1;->this$0:Lcom/android/server/location/LocationBasedCountryDetector;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,21 +40,17 @@
     .param p1, "location"    # Landroid/location/Location;
 
     .prologue
-    .line 179
     if-eqz p1, :cond_0
 
-    .line 180
     iget-object v0, p0, Lcom/android/server/location/LocationBasedCountryDetector$1;->this$0:Lcom/android/server/location/LocationBasedCountryDetector;
 
     invoke-virtual {v0}, Lcom/android/server/location/LocationBasedCountryDetector;->stop()V
 
-    .line 181
     iget-object v0, p0, Lcom/android/server/location/LocationBasedCountryDetector$1;->this$0:Lcom/android/server/location/LocationBasedCountryDetector;
 
     # invokes: Lcom/android/server/location/LocationBasedCountryDetector;->queryCountryCode(Landroid/location/Location;)V
     invoke-static {v0, p1}, Lcom/android/server/location/LocationBasedCountryDetector;->access$000(Lcom/android/server/location/LocationBasedCountryDetector;Landroid/location/Location;)V
 
-    .line 183
     :cond_0
     return-void
 .end method
@@ -65,7 +60,6 @@
     .param p1, "provider"    # Ljava/lang/String;
 
     .prologue
-    .line 186
     return-void
 .end method
 
@@ -74,7 +68,6 @@
     .param p1, "provider"    # Ljava/lang/String;
 
     .prologue
-    .line 189
     return-void
 .end method
 
@@ -85,6 +78,5 @@
     .param p3, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 192
     return-void
 .end method

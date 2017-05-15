@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 31
     iput-object p1, p0, Lcom/android/server/display/DisplayProjectionReceiver$1;->this$0:Lcom/android/server/display/DisplayProjectionReceiver;
 
     iput-object p2, p0, Lcom/android/server/display/DisplayProjectionReceiver$1;->val$iface:Ljava/lang/String;
@@ -41,7 +40,6 @@
     .locals 2
 
     .prologue
-    .line 34
     iget-object v0, p0, Lcom/android/server/display/DisplayProjectionReceiver$1;->this$0:Lcom/android/server/display/DisplayProjectionReceiver;
 
     # getter for: Lcom/android/server/display/DisplayProjectionReceiver;->mProjectionManager:Lcom/android/server/display/MiuiProjectionManager;
@@ -53,6 +51,5 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/display/MiuiProjectionManager;->startProjection(Ljava/lang/String;)V
 
-    .line 35
     return-void
 .end method

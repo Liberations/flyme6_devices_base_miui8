@@ -27,20 +27,16 @@
     .param p2, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 842
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 843
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lcom/android/server/pm/PackageManagerServiceInjector$InstallAppParam;->refH:Ljava/lang/ref/WeakReference;
 
-    .line 844
     iput-object p2, p0, Lcom/android/server/pm/PackageManagerServiceInjector$InstallAppParam;->msg:Landroid/os/Message;
 
-    .line 845
     return-void
 .end method
 
@@ -49,7 +45,6 @@
     .param p0, "x0"    # Lcom/android/server/pm/PackageManagerServiceInjector$InstallAppParam;
 
     .prologue
-    .line 838
     invoke-direct {p0}, Lcom/android/server/pm/PackageManagerServiceInjector$InstallAppParam;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -62,7 +57,6 @@
     .param p0, "x0"    # Lcom/android/server/pm/PackageManagerServiceInjector$InstallAppParam;
 
     .prologue
-    .line 838
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerServiceInjector$InstallAppParam;->msg:Landroid/os/Message;
 
     return-object v0
@@ -72,15 +66,12 @@
     .locals 1
 
     .prologue
-    .line 849
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerServiceInjector$InstallAppParam;->refH:Ljava/lang/ref/WeakReference;
 
     if-nez v0, :cond_0
 
-    .line 850
     const/4 v0, 0x0
 
-    .line 852
     :goto_0
     return-object v0
 

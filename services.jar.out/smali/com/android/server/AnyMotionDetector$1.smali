@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 248
     iput-object p1, p0, Lcom/android/server/AnyMotionDetector$1;->this$0:Lcom/android/server/AnyMotionDetector;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "accuracy"    # I
 
     .prologue
-    .line 269
     return-void
 .end method
 
@@ -51,10 +49,8 @@
     .param p1, "event"    # Landroid/hardware/SensorEvent;
 
     .prologue
-    .line 251
     const/4 v0, -0x1
 
-    .line 252
     .local v0, "status":I
     iget-object v2, p0, Lcom/android/server/AnyMotionDetector$1;->this$0:Lcom/android/server/AnyMotionDetector;
 
@@ -65,7 +61,6 @@
 
     monitor-enter v7
 
-    .line 253
     :try_start_0
     new-instance v1, Lcom/android/server/AnyMotionDetector$Vector3;
 
@@ -93,7 +88,6 @@
 
     invoke-direct/range {v1 .. v6}, Lcom/android/server/AnyMotionDetector$Vector3;-><init>(JFFF)V
 
-    .line 255
     .local v1, "accelDatum":Lcom/android/server/AnyMotionDetector$Vector3;
     iget-object v2, p0, Lcom/android/server/AnyMotionDetector$1;->this$0:Lcom/android/server/AnyMotionDetector;
 
@@ -104,7 +98,6 @@
 
     invoke-virtual {v2, v1}, Lcom/android/server/AnyMotionDetector$RunningSignalStats;->accumulate(Lcom/android/server/AnyMotionDetector$Vector3;)V
 
-    .line 258
     iget-object v2, p0, Lcom/android/server/AnyMotionDetector$1;->this$0:Lcom/android/server/AnyMotionDetector;
 
     # getter for: Lcom/android/server/AnyMotionDetector;->mRunningStats:Lcom/android/server/AnyMotionDetector$RunningSignalStats;
@@ -125,7 +118,6 @@
 
     if-lt v2, v3, :cond_0
 
-    .line 259
     iget-object v2, p0, Lcom/android/server/AnyMotionDetector$1;->this$0:Lcom/android/server/AnyMotionDetector;
 
     # invokes: Lcom/android/server/AnyMotionDetector;->stopOrientationMeasurementLocked()I
@@ -133,18 +125,15 @@
 
     move-result v0
 
-    .line 261
     :cond_0
     monitor-exit v7
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 262
     const/4 v2, -0x1
 
     if-eq v0, v2, :cond_1
 
-    .line 263
     iget-object v2, p0, Lcom/android/server/AnyMotionDetector$1;->this$0:Lcom/android/server/AnyMotionDetector;
 
     # getter for: Lcom/android/server/AnyMotionDetector;->mCallback:Lcom/android/server/AnyMotionDetector$DeviceIdleCallback;
@@ -154,11 +143,9 @@
 
     invoke-interface {v2, v0}, Lcom/android/server/AnyMotionDetector$DeviceIdleCallback;->onAnyMotionResult(I)V
 
-    .line 265
     :cond_1
     return-void
 
-    .line 261
     .end local v1    # "accelDatum":Lcom/android/server/AnyMotionDetector$Vector3;
     :catchall_0
     move-exception v2

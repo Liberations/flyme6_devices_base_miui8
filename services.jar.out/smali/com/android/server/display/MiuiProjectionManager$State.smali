@@ -44,7 +44,6 @@
 
     const/4 v2, 0x0
 
-    .line 26
     new-instance v0, Lcom/android/server/display/MiuiProjectionManager$State;
 
     const-string v1, "STATE_LISTENING"
@@ -53,7 +52,6 @@
 
     sput-object v0, Lcom/android/server/display/MiuiProjectionManager$State;->STATE_LISTENING:Lcom/android/server/display/MiuiProjectionManager$State;
 
-    .line 27
     new-instance v0, Lcom/android/server/display/MiuiProjectionManager$State;
 
     const-string v1, "STATE_CONNECTED"
@@ -62,7 +60,6 @@
 
     sput-object v0, Lcom/android/server/display/MiuiProjectionManager$State;->STATE_CONNECTED:Lcom/android/server/display/MiuiProjectionManager$State;
 
-    .line 28
     new-instance v0, Lcom/android/server/display/MiuiProjectionManager$State;
 
     const-string v1, "STATE_DISCONNECTED"
@@ -71,7 +68,6 @@
 
     sput-object v0, Lcom/android/server/display/MiuiProjectionManager$State;->STATE_DISCONNECTED:Lcom/android/server/display/MiuiProjectionManager$State;
 
-    .line 25
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/android/server/display/MiuiProjectionManager$State;
@@ -102,7 +98,6 @@
     .end annotation
 
     .prologue
-    .line 25
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -113,7 +108,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 25
     const-class v0, Lcom/android/server/display/MiuiProjectionManager$State;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -129,7 +123,6 @@
     .locals 1
 
     .prologue
-    .line 25
     sget-object v0, Lcom/android/server/display/MiuiProjectionManager$State;->$VALUES:[Lcom/android/server/display/MiuiProjectionManager$State;
 
     invoke-virtual {v0}, [Lcom/android/server/display/MiuiProjectionManager$State;->clone()Ljava/lang/Object;

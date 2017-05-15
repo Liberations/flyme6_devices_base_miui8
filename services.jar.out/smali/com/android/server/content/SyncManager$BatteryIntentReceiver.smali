@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 3678
     iput-object p1, p0, Lcom/android/server/content/SyncManager$BatteryIntentReceiver;->this$0:Lcom/android/server/content/SyncManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/content/SyncManager$1;
 
     .prologue
-    .line 3678
     invoke-direct {p0, p1}, Lcom/android/server/content/SyncManager$BatteryIntentReceiver;-><init>(Lcom/android/server/content/SyncManager;)V
 
     return-void
@@ -51,12 +49,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 3681
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3682
     .local v0, "action":Ljava/lang/String;
     const-string v1, "android.intent.action.BATTERY_CHANGED"
 
@@ -66,13 +62,11 @@
 
     if-eqz v1, :cond_0
 
-    .line 3683
     iget-object v1, p0, Lcom/android/server/content/SyncManager$BatteryIntentReceiver;->this$0:Lcom/android/server/content/SyncManager;
 
     # invokes: Lcom/android/server/content/SyncManager;->manageBatteryChanged(Landroid/content/Intent;)V
     invoke-static {v1, p2}, Lcom/android/server/content/SyncManager;->access$5500(Lcom/android/server/content/SyncManager;Landroid/content/Intent;)V
 
-    .line 3685
     :cond_0
     return-void
 .end method

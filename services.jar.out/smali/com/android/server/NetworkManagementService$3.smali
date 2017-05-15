@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 1680
     iput-object p1, p0, Lcom/android/server/NetworkManagementService$3;->this$0:Lcom/android/server/NetworkManagementService;
 
     iput-object p2, p0, Lcom/android/server/NetworkManagementService$3;->val$params:Lcom/android/server/NetworkManagementService$IdleTimerParams;
@@ -44,7 +43,6 @@
     .locals 7
 
     .prologue
-    .line 1682
     iget-object v1, p0, Lcom/android/server/NetworkManagementService$3;->this$0:Lcom/android/server/NetworkManagementService;
 
     iget-object v0, p0, Lcom/android/server/NetworkManagementService$3;->val$params:Lcom/android/server/NetworkManagementService$IdleTimerParams;
@@ -62,6 +60,5 @@
     # invokes: Lcom/android/server/NetworkManagementService;->notifyInterfaceClassActivity(IIJZ)V
     invoke-static/range {v1 .. v6}, Lcom/android/server/NetworkManagementService;->access$200(Lcom/android/server/NetworkManagementService;IIJZ)V
 
-    .line 1685
     return-void
 .end method

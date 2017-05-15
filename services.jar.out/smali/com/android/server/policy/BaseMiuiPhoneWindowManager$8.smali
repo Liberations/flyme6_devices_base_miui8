@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1288
     iput-object p1, p0, Lcom/android/server/policy/BaseMiuiPhoneWindowManager$8;->this$0:Lcom/android/server/policy/BaseMiuiPhoneWindowManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1290
     iget-object v0, p0, Lcom/android/server/policy/BaseMiuiPhoneWindowManager$8;->this$0:Lcom/android/server/policy/BaseMiuiPhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/server/policy/BaseMiuiPhoneWindowManager;->mHandler:Landroid/os/Handler;
@@ -52,7 +50,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 1291
     iget-object v0, p0, Lcom/android/server/policy/BaseMiuiPhoneWindowManager$8;->this$0:Lcom/android/server/policy/BaseMiuiPhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/server/policy/BaseMiuiPhoneWindowManager;->mHandler:Landroid/os/Handler;
@@ -73,6 +70,5 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 1294
     return-void
 .end method

@@ -30,16 +30,12 @@
     .param p2, "callback"    # Landroid/media/projection/IMediaProjectionWatcherCallback;
 
     .prologue
-    .line 587
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 588
     iput-object p1, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$WatcherStopCallback;->mInfo:Landroid/media/projection/MediaProjectionInfo;
 
-    .line 589
     iput-object p2, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$WatcherStopCallback;->mCallback:Landroid/media/projection/IMediaProjectionWatcherCallback;
 
-    .line 590
     return-void
 .end method
 
@@ -49,7 +45,6 @@
     .locals 3
 
     .prologue
-    .line 595
     :try_start_0
     iget-object v1, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$WatcherStopCallback;->mCallback:Landroid/media/projection/IMediaProjectionWatcherCallback;
 
@@ -59,15 +54,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 599
     :goto_0
     return-void
 
-    .line 596
     :catch_0
     move-exception v0
 
-    .line 597
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "MediaProjectionManagerService"
 

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 21322
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$LocalService;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-direct {p0}, Landroid/app/ActivityManagerInternal;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/am/ActivityManagerService$1;
 
     .prologue
-    .line 21322
     invoke-direct {p0, p1}, Lcom/android/server/am/ActivityManagerService$LocalService;-><init>(Lcom/android/server/am/ActivityManagerService;)V
 
     return-void
@@ -50,15 +48,12 @@
     .param p1, "tag"    # Ljava/lang/String;
 
     .prologue
-    .line 21342
     invoke-static {p1}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 21344
     iget-object v2, p0, Lcom/android/server/am/ActivityManagerService$LocalService;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     monitor-enter v2
 
-    .line 21345
     :try_start_0
     new-instance v0, Lcom/android/server/am/ActivityManagerService$SleepTokenImpl;
 
@@ -66,7 +61,6 @@
 
     invoke-direct {v0, v1, p1}, Lcom/android/server/am/ActivityManagerService$SleepTokenImpl;-><init>(Lcom/android/server/am/ActivityManagerService;Ljava/lang/String;)V
 
-    .line 21346
     .local v0, "token":Lcom/android/server/am/ActivityManagerService$SleepTokenImpl;
     iget-object v1, p0, Lcom/android/server/am/ActivityManagerService$LocalService;->this$0:Lcom/android/server/am/ActivityManagerService;
 
@@ -74,17 +68,14 @@
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 21347
     iget-object v1, p0, Lcom/android/server/am/ActivityManagerService$LocalService;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-virtual {v1}, Lcom/android/server/am/ActivityManagerService;->updateSleepIfNeededLocked()V
 
-    .line 21348
     monitor-exit v2
 
     return-object v0
 
-    .line 21349
     .end local v0    # "token":Lcom/android/server/am/ActivityManagerService$SleepTokenImpl;
     :catchall_0
     move-exception v1
@@ -102,7 +93,6 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 21325
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$LocalService;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/am/ActivityManagerService;->checkContentProviderAccess(Ljava/lang/String;I)Ljava/lang/String;
@@ -117,12 +107,10 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 21354
     iget-object v2, p0, Lcom/android/server/am/ActivityManagerService$LocalService;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     monitor-enter v2
 
-    .line 21355
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/ActivityManagerService$LocalService;->this$0:Lcom/android/server/am/ActivityManagerService;
 
@@ -132,7 +120,6 @@
 
     move-result-object v0
 
-    .line 21356
     .local v0, "homeActivity":Lcom/android/server/am/ActivityRecord;
     if-nez v0, :cond_0
 
@@ -148,7 +135,6 @@
 
     goto :goto_0
 
-    .line 21357
     .end local v0    # "homeActivity":Lcom/android/server/am/ActivityRecord;
     :catchall_0
     move-exception v1
@@ -165,12 +151,10 @@
     .param p1, "wakefulness"    # I
 
     .prologue
-    .line 21330
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$LocalService;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/am/ActivityManagerService;->onWakefulnessChanged(I)V
 
-    .line 21331
     return-void
 .end method
 
@@ -184,7 +168,6 @@
     .param p6, "crashHandler"    # Ljava/lang/Runnable;
 
     .prologue
-    .line 21336
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$LocalService;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     move-object v1, p1

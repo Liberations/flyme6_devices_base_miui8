@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Looper;
 
     .prologue
-    .line 69
     iput-object p1, p0, Lcom/android/server/policy/MiuiScreenOnProximityLock$2;->this$0:Lcom/android/server/policy/MiuiScreenOnProximityLock;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -39,25 +38,20 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 72
     iget-object v1, p0, Lcom/android/server/policy/MiuiScreenOnProximityLock$2;->this$0:Lcom/android/server/policy/MiuiScreenOnProximityLock;
 
     monitor-enter v1
 
-    .line 73
     :try_start_0
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 91
     :goto_0
     monitor-exit v1
 
-    .line 92
     return-void
 
-    .line 75
     :pswitch_0
     const-string v0, "MiuiScreenOnProximityLock"
 
@@ -65,14 +59,12 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 76
     iget-object v0, p0, Lcom/android/server/policy/MiuiScreenOnProximityLock$2;->this$0:Lcom/android/server/policy/MiuiScreenOnProximityLock;
 
     invoke-virtual {v0}, Lcom/android/server/policy/MiuiScreenOnProximityLock;->release()Z
 
     goto :goto_0
 
-    .line 91
     :catchall_0
     move-exception v0
 
@@ -82,7 +74,6 @@
 
     throw v0
 
-    .line 80
     :pswitch_1
     :try_start_1
     iget-object v0, p0, Lcom/android/server/policy/MiuiScreenOnProximityLock$2;->this$0:Lcom/android/server/policy/MiuiScreenOnProximityLock;
@@ -92,7 +83,6 @@
 
     goto :goto_0
 
-    .line 84
     :pswitch_2
     iget-object v0, p0, Lcom/android/server/policy/MiuiScreenOnProximityLock$2;->this$0:Lcom/android/server/policy/MiuiScreenOnProximityLock;
 
@@ -101,7 +91,6 @@
 
     goto :goto_0
 
-    .line 88
     :pswitch_3
     iget-object v0, p0, Lcom/android/server/policy/MiuiScreenOnProximityLock$2;->this$0:Lcom/android/server/policy/MiuiScreenOnProximityLock;
 
@@ -112,7 +101,6 @@
 
     goto :goto_0
 
-    .line 73
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

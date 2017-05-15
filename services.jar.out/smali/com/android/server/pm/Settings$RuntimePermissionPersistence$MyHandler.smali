@@ -23,10 +23,8 @@
     .locals 1
 
     .prologue
-    .line 4847
     iput-object p1, p0, Lcom/android/server/pm/Settings$RuntimePermissionPersistence$MyHandler;->this$1:Lcom/android/server/pm/Settings$RuntimePermissionPersistence;
 
-    .line 4848
     invoke-static {}, Lcom/android/internal/os/BackgroundThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -37,7 +35,6 @@
 
     invoke-direct {p0, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 4849
     return-void
 .end method
 
@@ -48,29 +45,23 @@
     .param p1, "message"    # Landroid/os/Message;
 
     .prologue
-    .line 4853
     iget v1, p1, Landroid/os/Message;->what:I
 
-    .line 4854
     .local v1, "userId":I
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/Runnable;
 
-    .line 4855
     .local v0, "callback":Ljava/lang/Runnable;
     iget-object v2, p0, Lcom/android/server/pm/Settings$RuntimePermissionPersistence$MyHandler;->this$1:Lcom/android/server/pm/Settings$RuntimePermissionPersistence;
 
     # invokes: Lcom/android/server/pm/Settings$RuntimePermissionPersistence;->writePermissionsSync(I)V
     invoke-static {v2, v1}, Lcom/android/server/pm/Settings$RuntimePermissionPersistence;->access$200(Lcom/android/server/pm/Settings$RuntimePermissionPersistence;I)V
 
-    .line 4856
     if-eqz v0, :cond_0
 
-    .line 4857
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    .line 4859
     :cond_0
     return-void
 .end method

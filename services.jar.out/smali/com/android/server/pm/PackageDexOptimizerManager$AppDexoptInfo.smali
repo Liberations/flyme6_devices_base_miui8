@@ -31,22 +31,17 @@
     .param p3, "obs"    # Lmiui/os/IMiuiDexoptObserver;
 
     .prologue
-    .line 232
     iput-object p1, p0, Lcom/android/server/pm/PackageDexOptimizerManager$AppDexoptInfo;->this$0:Lcom/android/server/pm/PackageDexOptimizerManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 233
     iput-object p2, p0, Lcom/android/server/pm/PackageDexOptimizerManager$AppDexoptInfo;->packageName:Ljava/lang/String;
 
-    .line 234
     iput-object p3, p0, Lcom/android/server/pm/PackageDexOptimizerManager$AppDexoptInfo;->observer:Lmiui/os/IMiuiDexoptObserver;
 
-    .line 235
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/pm/PackageDexOptimizerManager$AppDexoptInfo;->returnCode:I
 
-    .line 236
     return-void
 .end method

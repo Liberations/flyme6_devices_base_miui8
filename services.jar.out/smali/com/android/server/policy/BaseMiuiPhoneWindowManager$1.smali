@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 223
     iput-object p1, p0, Lcom/android/server/policy/BaseMiuiPhoneWindowManager$1;->this$0:Lcom/android/server/policy/BaseMiuiPhoneWindowManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,13 +39,11 @@
     .locals 1
 
     .prologue
-    .line 226
     iget-object v0, p0, Lcom/android/server/policy/BaseMiuiPhoneWindowManager$1;->this$0:Lcom/android/server/policy/BaseMiuiPhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/server/policy/BaseMiuiPhoneWindowManager;->mPowerLongPressOriginal:Ljava/lang/Runnable;
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    .line 227
     return-void
 .end method

@@ -32,20 +32,16 @@
     .param p3, "engineSocket"    # Landroid/os/ParcelFileDescriptor;
 
     .prologue
-    .line 8184
     iput-object p1, p0, Lcom/android/server/backup/BackupManagerService$PerformUnifiedRestoreTask$EngineThread;->this$1:Lcom/android/server/backup/BackupManagerService$PerformUnifiedRestoreTask;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 8185
     iput-object p2, p0, Lcom/android/server/backup/BackupManagerService$PerformUnifiedRestoreTask$EngineThread;->mEngine:Lcom/android/server/backup/BackupManagerService$FullRestoreEngine;
 
-    .line 8186
     const/4 v0, 0x1
 
     invoke-virtual {p2, v0}, Lcom/android/server/backup/BackupManagerService$FullRestoreEngine;->setRunning(Z)V
 
-    .line 8187
     new-instance v0, Ljava/io/FileInputStream;
 
     invoke-virtual {p3}, Landroid/os/ParcelFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
@@ -56,7 +52,6 @@
 
     iput-object v0, p0, Lcom/android/server/backup/BackupManagerService$PerformUnifiedRestoreTask$EngineThread;->mEngineStream:Ljava/io/FileInputStream;
 
-    .line 8188
     return-void
 .end method
 
@@ -66,7 +61,6 @@
     .locals 1
 
     .prologue
-    .line 8191
     iget-object v0, p0, Lcom/android/server/backup/BackupManagerService$PerformUnifiedRestoreTask$EngineThread;->mEngine:Lcom/android/server/backup/BackupManagerService$FullRestoreEngine;
 
     invoke-virtual {v0}, Lcom/android/server/backup/BackupManagerService$FullRestoreEngine;->isRunning()Z
@@ -80,7 +74,6 @@
     .locals 3
 
     .prologue
-    .line 8200
     :goto_0
     iget-object v0, p0, Lcom/android/server/backup/BackupManagerService$PerformUnifiedRestoreTask$EngineThread;->mEngine:Lcom/android/server/backup/BackupManagerService$FullRestoreEngine;
 
@@ -90,7 +83,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 8202
     iget-object v0, p0, Lcom/android/server/backup/BackupManagerService$PerformUnifiedRestoreTask$EngineThread;->mEngine:Lcom/android/server/backup/BackupManagerService$FullRestoreEngine;
 
     iget-object v1, p0, Lcom/android/server/backup/BackupManagerService$PerformUnifiedRestoreTask$EngineThread;->mEngineStream:Ljava/io/FileInputStream;
@@ -101,7 +93,6 @@
 
     goto :goto_0
 
-    .line 8204
     :cond_0
     return-void
 .end method
@@ -110,7 +101,6 @@
     .locals 1
 
     .prologue
-    .line 8195
     iget-object v0, p0, Lcom/android/server/backup/BackupManagerService$PerformUnifiedRestoreTask$EngineThread;->mEngine:Lcom/android/server/backup/BackupManagerService$FullRestoreEngine;
 
     invoke-virtual {v0}, Lcom/android/server/backup/BackupManagerService$FullRestoreEngine;->waitForResult()I

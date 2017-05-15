@@ -133,245 +133,210 @@
     .locals 2
 
     .prologue
-    .line 61
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
     sput-object v0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->PHONE_PERMISSIONS:Ljava/util/Set;
 
-    .line 63
     sget-object v0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->PHONE_PERMISSIONS:Ljava/util/Set;
 
     const-string v1, "android.permission.READ_PHONE_STATE"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 64
     sget-object v0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->PHONE_PERMISSIONS:Ljava/util/Set;
 
     const-string v1, "android.permission.CALL_PHONE"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 65
     sget-object v0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->PHONE_PERMISSIONS:Ljava/util/Set;
 
     const-string v1, "android.permission.READ_CALL_LOG"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 66
     sget-object v0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->PHONE_PERMISSIONS:Ljava/util/Set;
 
     const-string v1, "android.permission.WRITE_CALL_LOG"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 67
     sget-object v0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->PHONE_PERMISSIONS:Ljava/util/Set;
 
     const-string v1, "com.android.voicemail.permission.ADD_VOICEMAIL"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 68
     sget-object v0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->PHONE_PERMISSIONS:Ljava/util/Set;
 
     const-string v1, "android.permission.USE_SIP"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 69
     sget-object v0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->PHONE_PERMISSIONS:Ljava/util/Set;
 
     const-string v1, "android.permission.PROCESS_OUTGOING_CALLS"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 72
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
     sput-object v0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->CONTACTS_PERMISSIONS:Ljava/util/Set;
 
-    .line 74
     sget-object v0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->CONTACTS_PERMISSIONS:Ljava/util/Set;
 
     const-string v1, "android.permission.READ_CONTACTS"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 75
     sget-object v0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->CONTACTS_PERMISSIONS:Ljava/util/Set;
 
     const-string v1, "android.permission.WRITE_CONTACTS"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 76
     sget-object v0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->CONTACTS_PERMISSIONS:Ljava/util/Set;
 
     const-string v1, "android.permission.GET_ACCOUNTS"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 79
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
     sput-object v0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->LOCATION_PERMISSIONS:Ljava/util/Set;
 
-    .line 81
     sget-object v0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->LOCATION_PERMISSIONS:Ljava/util/Set;
 
     const-string v1, "android.permission.ACCESS_FINE_LOCATION"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 82
     sget-object v0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->LOCATION_PERMISSIONS:Ljava/util/Set;
 
     const-string v1, "android.permission.ACCESS_COARSE_LOCATION"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 85
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
     sput-object v0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->CALENDAR_PERMISSIONS:Ljava/util/Set;
 
-    .line 87
     sget-object v0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->CALENDAR_PERMISSIONS:Ljava/util/Set;
 
     const-string v1, "android.permission.READ_CALENDAR"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 88
     sget-object v0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->CALENDAR_PERMISSIONS:Ljava/util/Set;
 
     const-string v1, "android.permission.WRITE_CALENDAR"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 91
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
     sput-object v0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->SMS_PERMISSIONS:Ljava/util/Set;
 
-    .line 93
     sget-object v0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->SMS_PERMISSIONS:Ljava/util/Set;
 
     const-string v1, "android.permission.SEND_SMS"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 94
     sget-object v0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->SMS_PERMISSIONS:Ljava/util/Set;
 
     const-string v1, "android.permission.RECEIVE_SMS"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 95
     sget-object v0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->SMS_PERMISSIONS:Ljava/util/Set;
 
     const-string v1, "android.permission.READ_SMS"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 96
     sget-object v0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->SMS_PERMISSIONS:Ljava/util/Set;
 
     const-string v1, "android.permission.RECEIVE_WAP_PUSH"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 97
     sget-object v0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->SMS_PERMISSIONS:Ljava/util/Set;
 
     const-string v1, "android.permission.RECEIVE_MMS"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 98
     sget-object v0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->SMS_PERMISSIONS:Ljava/util/Set;
 
     const-string v1, "android.permission.READ_CELL_BROADCASTS"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 101
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
     sput-object v0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->MICROPHONE_PERMISSIONS:Ljava/util/Set;
 
-    .line 103
     sget-object v0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->MICROPHONE_PERMISSIONS:Ljava/util/Set;
 
     const-string v1, "android.permission.RECORD_AUDIO"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 106
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
     sput-object v0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->CAMERA_PERMISSIONS:Ljava/util/Set;
 
-    .line 108
     sget-object v0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->CAMERA_PERMISSIONS:Ljava/util/Set;
 
     const-string v1, "android.permission.CAMERA"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 111
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
     sput-object v0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->SENSORS_PERMISSIONS:Ljava/util/Set;
 
-    .line 113
     sget-object v0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->SENSORS_PERMISSIONS:Ljava/util/Set;
 
     const-string v1, "android.permission.BODY_SENSORS"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 116
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
     sput-object v0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->STORAGE_PERMISSIONS:Ljava/util/Set;
 
-    .line 118
     sget-object v0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->STORAGE_PERMISSIONS:Ljava/util/Set;
 
     const-string v1, "android.permission.READ_EXTERNAL_STORAGE"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 119
     sget-object v0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->STORAGE_PERMISSIONS:Ljava/util/Set;
 
     const-string v1, "android.permission.WRITE_EXTERNAL_STORAGE"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 120
     return-void
 .end method
 
@@ -380,13 +345,10 @@
     .param p1, "service"    # Lcom/android/server/pm/PackageManagerService;
 
     .prologue
-    .line 132
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 133
     iput-object p1, p0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->mService:Lcom/android/server/pm/PackageManagerService;
 
-    .line 134
     return-void
 .end method
 
@@ -395,7 +357,6 @@
     .param p0, "pkg"    # Landroid/content/pm/PackageParser$Package;
 
     .prologue
-    .line 862
     iget-object v0, p0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget v0, v0, Landroid/content/pm/ApplicationInfo;->targetSdkVersion:I
@@ -421,7 +382,6 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 744
     iget-object v1, p0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->mService:Lcom/android/server/pm/PackageManagerService;
 
     const/4 v2, 0x0
@@ -430,18 +390,15 @@
 
     move-result-object v0
 
-    .line 745
     .local v0, "provider":Landroid/content/pm/ProviderInfo;
     if-eqz v0, :cond_0
 
-    .line 746
     iget-object v1, v0, Landroid/content/pm/ProviderInfo;->packageName:Ljava/lang/String;
 
     invoke-direct {p0, v1}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->getSystemPackageLPr(Ljava/lang/String;)Landroid/content/pm/PackageParser$Package;
 
     move-result-object v1
 
-    .line 748
     :goto_0
     return-object v1
 
@@ -459,7 +416,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 678
     iget-object v6, p0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->mService:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v6, v6, Lcom/android/server/pm/PackageManagerService;->mActivities:Lcom/android/server/pm/PackageManagerService$ActivityIntentResolver;
@@ -482,24 +438,20 @@
 
     move-result-object v3
 
-    .line 681
     .local v3, "handlers":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     if-nez v3, :cond_1
 
     move-object v2, v5
 
-    .line 693
     :cond_0
     :goto_0
     return-object v2
 
-    .line 684
     :cond_1
     invoke-interface {v3}, Ljava/util/List;->size()I
 
     move-result v1
 
-    .line 685
     .local v1, "handlerCount":I
     const/4 v4, 0x0
 
@@ -507,14 +459,12 @@
     :goto_1
     if-ge v4, v1, :cond_2
 
-    .line 686
     invoke-interface {v3, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/content/pm/ResolveInfo;
 
-    .line 687
     .local v0, "handler":Landroid/content/pm/ResolveInfo;
     iget-object v6, v0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
@@ -524,11 +474,9 @@
 
     move-result-object v2
 
-    .line 689
     .local v2, "handlerPackage":Landroid/content/pm/PackageParser$Package;
     if-nez v2, :cond_0
 
-    .line 685
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_1
@@ -538,7 +486,6 @@
     :cond_2
     move-object v2, v5
 
-    .line 693
     goto :goto_0
 .end method
 
@@ -550,7 +497,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 698
     iget-object v6, p0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->mService:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v7, p0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->mService:Lcom/android/server/pm/PackageManagerService;
@@ -571,24 +517,20 @@
 
     move-result-object v3
 
-    .line 701
     .local v3, "handlers":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     if-nez v3, :cond_1
 
     move-object v2, v5
 
-    .line 713
     :cond_0
     :goto_0
     return-object v2
 
-    .line 704
     :cond_1
     invoke-interface {v3}, Ljava/util/List;->size()I
 
     move-result v1
 
-    .line 705
     .local v1, "handlerCount":I
     const/4 v4, 0x0
 
@@ -596,14 +538,12 @@
     :goto_1
     if-ge v4, v1, :cond_2
 
-    .line 706
     invoke-interface {v3, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/content/pm/ResolveInfo;
 
-    .line 707
     .local v0, "handler":Landroid/content/pm/ResolveInfo;
     iget-object v6, v0, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
 
@@ -613,11 +553,9 @@
 
     move-result-object v2
 
-    .line 709
     .local v2, "handlerPackage":Landroid/content/pm/PackageParser$Package;
     if-nez v2, :cond_0
 
-    .line 705
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_1
@@ -627,7 +565,6 @@
     :cond_2
     move-object v2, v5
 
-    .line 713
     goto :goto_0
 .end method
 
@@ -648,12 +585,10 @@
     .end annotation
 
     .prologue
-    .line 718
     new-instance v7, Ljava/util/ArrayList;
 
     invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
-    .line 720
     .local v7, "syncAdapterPackages":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PackageParser$Package;>;"
     new-instance v2, Landroid/content/Intent;
 
@@ -661,13 +596,11 @@
 
     invoke-direct {v2, v8}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 721
     .local v2, "homeIntent":Landroid/content/Intent;
     const-string v8, "android.intent.category.LAUNCHER"
 
     invoke-virtual {v2, v8}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 723
     move-object v0, p1
 
     .local v0, "arr$":[Ljava/lang/String;
@@ -682,11 +615,9 @@
 
     aget-object v6, v0, v3
 
-    .line 724
     .local v6, "syncAdapterPackageName":Ljava/lang/String;
     invoke-virtual {v2, v6}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 726
     iget-object v8, p0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->mService:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v8, v8, Lcom/android/server/pm/PackageManagerService;->mActivities:Lcom/android/server/pm/PackageManagerService$ActivityIntentResolver;
@@ -709,7 +640,6 @@
 
     move-result-object v1
 
-    .line 729
     .local v1, "homeActivities":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
 
@@ -717,29 +647,24 @@
 
     if-nez v8, :cond_1
 
-    .line 723
     :cond_0
     :goto_1
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 733
     :cond_1
     invoke-direct {p0, v6}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->getSystemPackageLPr(Ljava/lang/String;)Landroid/content/pm/PackageParser$Package;
 
     move-result-object v5
 
-    .line 734
     .local v5, "syncAdapterPackage":Landroid/content/pm/PackageParser$Package;
     if-eqz v5, :cond_0
 
-    .line 735
     invoke-interface {v7, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 739
     .end local v1    # "homeActivities":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     .end local v5    # "syncAdapterPackage":Landroid/content/pm/PackageParser$Package;
     .end local v6    # "syncAdapterPackageName":Ljava/lang/String;
@@ -752,7 +677,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 752
     iget-object v0, p0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->mService:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v0, v0, Lcom/android/server/pm/PackageManagerService;->mPackages:Landroid/util/ArrayMap;
@@ -773,12 +697,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 756
     invoke-direct {p0, p1}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->getPackageLPr(Ljava/lang/String;)Landroid/content/pm/PackageParser$Package;
 
     move-result-object v0
 
-    .line 757
     .local v0, "pkg":Landroid/content/pm/PackageParser$Package;
     if-eqz v0, :cond_1
 
@@ -788,14 +710,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 758
     invoke-direct {p0, v0}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->isSysComponentOrPersistentPlatformSignedPrivAppLPr(Landroid/content/pm/PackageParser$Package;)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 760
     .end local v0    # "pkg":Landroid/content/pm/PackageParser$Package;
     :goto_0
     return-object v0
@@ -804,13 +724,11 @@
     :cond_0
     move-object v0, v1
 
-    .line 758
     goto :goto_0
 
     :cond_1
     move-object v0, v1
 
-    .line 760
     goto :goto_0
 .end method
 
@@ -820,7 +738,6 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 631
     const-string v0, "DefaultPermGrantPolicy"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -843,24 +760,20 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 632
     invoke-static {p1}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->doesPackageSupportRuntimePermissions(Landroid/content/pm/PackageParser$Package;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 633
     sget-object v0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->PHONE_PERMISSIONS:Ljava/util/Set;
 
     invoke-direct {p0, p1, v0, p2}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;I)V
 
-    .line 634
     sget-object v0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->MICROPHONE_PERMISSIONS:Ljava/util/Set;
 
     invoke-direct {p0, p1, v0, p2}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;I)V
 
-    .line 636
     :cond_0
     return-void
 .end method
@@ -871,34 +784,28 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 582
     invoke-static {p1}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->doesPackageSupportRuntimePermissions(Landroid/content/pm/PackageParser$Package;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 583
     sget-object v0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->PHONE_PERMISSIONS:Ljava/util/Set;
 
     invoke-direct {p0, p1, v0, p2}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;I)V
 
-    .line 584
     sget-object v0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->CONTACTS_PERMISSIONS:Ljava/util/Set;
 
     invoke-direct {p0, p1, v0, p2}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;I)V
 
-    .line 585
     sget-object v0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->SMS_PERMISSIONS:Ljava/util/Set;
 
     invoke-direct {p0, p1, v0, p2}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;I)V
 
-    .line 586
     sget-object v0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->MICROPHONE_PERMISSIONS:Ljava/util/Set;
 
     invoke-direct {p0, p1, v0, p2}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;I)V
 
-    .line 588
     :cond_0
     return-void
 .end method
@@ -909,29 +816,24 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 593
     invoke-static {p1}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->doesPackageSupportRuntimePermissions(Landroid/content/pm/PackageParser$Package;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 594
     sget-object v0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->PHONE_PERMISSIONS:Ljava/util/Set;
 
     invoke-direct {p0, p1, v0, p2}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;I)V
 
-    .line 595
     sget-object v0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->CONTACTS_PERMISSIONS:Ljava/util/Set;
 
     invoke-direct {p0, p1, v0, p2}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;I)V
 
-    .line 596
     sget-object v0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->SMS_PERMISSIONS:Ljava/util/Set;
 
     invoke-direct {p0, p1, v0, p2}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;I)V
 
-    .line 598
     :cond_0
     return-void
 .end method
@@ -941,7 +843,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 196
     const-string v80, "DefaultPermGrantPolicy"
 
     new-instance v81, Ljava/lang/StringBuilder;
@@ -968,7 +869,6 @@
 
     invoke-static/range {v80 .. v81}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 206
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->mService:Lcom/android/server/pm/PackageManagerService;
@@ -983,7 +883,6 @@
 
     monitor-enter v81
 
-    .line 207
     :try_start_0
     move-object/from16 v0, p0
 
@@ -991,7 +890,6 @@
 
     move-object/from16 v48, v0
 
-    .line 208
     .local v48, "imePackagesProvider":Landroid/content/pm/PackageManagerInternal$PackagesProvider;
     move-object/from16 v0, p0
 
@@ -999,7 +897,6 @@
 
     move-object/from16 v53, v0
 
-    .line 209
     .local v53, "locationPackagesProvider":Landroid/content/pm/PackageManagerInternal$PackagesProvider;
     move-object/from16 v0, p0
 
@@ -1007,7 +904,6 @@
 
     move-object/from16 v77, v0
 
-    .line 210
     .local v77, "voiceInteractionPackagesProvider":Landroid/content/pm/PackageManagerInternal$PackagesProvider;
     move-object/from16 v0, p0
 
@@ -1015,7 +911,6 @@
 
     move-object/from16 v67, v0
 
-    .line 211
     .local v67, "smsAppPackagesProvider":Landroid/content/pm/PackageManagerInternal$PackagesProvider;
     move-object/from16 v0, p0
 
@@ -1023,7 +918,6 @@
 
     move-object/from16 v35, v0
 
-    .line 212
     .local v35, "dialerAppPackagesProvider":Landroid/content/pm/PackageManagerInternal$PackagesProvider;
     move-object/from16 v0, p0
 
@@ -1031,7 +925,6 @@
 
     move-object/from16 v65, v0
 
-    .line 213
     .local v65, "simCallManagerPackagesProvider":Landroid/content/pm/PackageManagerInternal$PackagesProvider;
     move-object/from16 v0, p0
 
@@ -1039,13 +932,11 @@
 
     move-object/from16 v72, v0
 
-    .line 214
     .local v72, "syncAdapterPackagesProvider":Landroid/content/pm/PackageManagerInternal$SyncAdapterPackagesProvider;
     monitor-exit v81
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 216
     if-eqz v48, :cond_b
 
     move-object/from16 v0, v48
@@ -1056,7 +947,6 @@
 
     move-result-object v47
 
-    .line 218
     .local v47, "imePackageNames":[Ljava/lang/String;
     :goto_0
     if-eqz v77, :cond_c
@@ -1069,7 +959,6 @@
 
     move-result-object v76
 
-    .line 220
     .local v76, "voiceInteractPackageNames":[Ljava/lang/String;
     :goto_1
     if-eqz v53, :cond_d
@@ -1082,7 +971,6 @@
 
     move-result-object v52
 
-    .line 222
     .local v52, "locationPackageNames":[Ljava/lang/String;
     :goto_2
     if-eqz v67, :cond_e
@@ -1095,7 +983,6 @@
 
     move-result-object v66
 
-    .line 224
     .local v66, "smsAppPackageNames":[Ljava/lang/String;
     :goto_3
     if-eqz v35, :cond_f
@@ -1108,7 +995,6 @@
 
     move-result-object v34
 
-    .line 226
     .local v34, "dialerAppPackageNames":[Ljava/lang/String;
     :goto_4
     if-eqz v65, :cond_10
@@ -1121,7 +1007,6 @@
 
     move-result-object v64
 
-    .line 228
     .local v64, "simCallManagerPackageNames":[Ljava/lang/String;
     :goto_5
     if-eqz v72, :cond_11
@@ -1138,7 +1023,6 @@
 
     move-result-object v28
 
-    .line 230
     .local v28, "contactsSyncAdapterPackages":[Ljava/lang/String;
     :goto_6
     if-eqz v72, :cond_12
@@ -1155,7 +1039,6 @@
 
     move-result-object v13
 
-    .line 233
     .local v13, "calendarSyncAdapterPackages":[Ljava/lang/String;
     :goto_7
     move-object/from16 v0, p0
@@ -1172,7 +1055,6 @@
 
     monitor-enter v81
 
-    .line 235
     :try_start_1
     move-object/from16 v0, p0
 
@@ -1194,7 +1076,6 @@
 
     move-result-object v49
 
-    .line 237
     .local v49, "installerPackage":Landroid/content/pm/PackageParser$Package;
     if-eqz v49, :cond_0
 
@@ -1204,7 +1085,6 @@
 
     if-eqz v80, :cond_0
 
-    .line 239
     sget-object v80, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->STORAGE_PERMISSIONS:Ljava/util/Set;
 
     const/16 v82, 0x1
@@ -1221,7 +1101,6 @@
 
     invoke-direct {v0, v1, v2, v3, v4}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;ZI)V
 
-    .line 243
     :cond_0
     move-object/from16 v0, p0
 
@@ -1243,7 +1122,6 @@
 
     move-result-object v73
 
-    .line 245
     .local v73, "verifierPackage":Landroid/content/pm/PackageParser$Package;
     if-eqz v73, :cond_1
 
@@ -1253,7 +1131,6 @@
 
     if-eqz v80, :cond_1
 
-    .line 247
     sget-object v80, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->STORAGE_PERMISSIONS:Ljava/util/Set;
 
     const/16 v82, 0x1
@@ -1270,7 +1147,6 @@
 
     invoke-direct {v0, v1, v2, v3, v4}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;ZI)V
 
-    .line 248
     sget-object v80, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->PHONE_PERMISSIONS:Ljava/util/Set;
 
     const/16 v82, 0x0
@@ -1287,7 +1163,6 @@
 
     invoke-direct {v0, v1, v2, v3, v4}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;ZI)V
 
-    .line 249
     sget-object v80, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->SMS_PERMISSIONS:Ljava/util/Set;
 
     const/16 v82, 0x0
@@ -1304,7 +1179,6 @@
 
     invoke-direct {v0, v1, v2, v3, v4}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;ZI)V
 
-    .line 253
     :cond_1
     new-instance v60, Landroid/content/Intent;
 
@@ -1316,7 +1190,6 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 254
     .local v60, "setupIntent":Landroid/content/Intent;
     const-string v80, "android.intent.category.SETUP_WIZARD"
 
@@ -1326,7 +1199,6 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 255
     move-object/from16 v0, p0
 
     move-object/from16 v1, v60
@@ -1337,7 +1209,6 @@
 
     move-result-object v61
 
-    .line 257
     .local v61, "setupPackage":Landroid/content/pm/PackageParser$Package;
     if-eqz v61, :cond_2
 
@@ -1347,7 +1218,6 @@
 
     if-eqz v80, :cond_2
 
-    .line 259
     sget-object v80, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->PHONE_PERMISSIONS:Ljava/util/Set;
 
     move-object/from16 v0, p0
@@ -1360,7 +1230,6 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;I)V
 
-    .line 260
     sget-object v80, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->CONTACTS_PERMISSIONS:Ljava/util/Set;
 
     move-object/from16 v0, p0
@@ -1373,7 +1242,6 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;I)V
 
-    .line 264
     :cond_2
     new-instance v15, Landroid/content/Intent;
 
@@ -1383,7 +1251,6 @@
 
     invoke-direct {v15, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 265
     .local v15, "cameraIntent":Landroid/content/Intent;
     move-object/from16 v0, p0
 
@@ -1393,7 +1260,6 @@
 
     move-result-object v16
 
-    .line 267
     .local v16, "cameraPackage":Landroid/content/pm/PackageParser$Package;
     if-eqz v16, :cond_3
 
@@ -1403,7 +1269,6 @@
 
     if-eqz v80, :cond_3
 
-    .line 269
     sget-object v80, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->CAMERA_PERMISSIONS:Ljava/util/Set;
 
     move-object/from16 v0, p0
@@ -1416,7 +1281,6 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;I)V
 
-    .line 270
     sget-object v80, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->MICROPHONE_PERMISSIONS:Ljava/util/Set;
 
     move-object/from16 v0, p0
@@ -1429,7 +1293,6 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;I)V
 
-    .line 271
     sget-object v80, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->STORAGE_PERMISSIONS:Ljava/util/Set;
 
     move-object/from16 v0, p0
@@ -1442,7 +1305,6 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;I)V
 
-    .line 275
     :cond_3
     const-string v80, "media"
 
@@ -1456,11 +1318,9 @@
 
     move-result-object v56
 
-    .line 277
     .local v56, "mediaStorePackage":Landroid/content/pm/PackageParser$Package;
     if-eqz v56, :cond_4
 
-    .line 278
     sget-object v80, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->STORAGE_PERMISSIONS:Ljava/util/Set;
 
     const/16 v82, 0x1
@@ -1477,7 +1337,6 @@
 
     invoke-direct {v0, v1, v2, v3, v4}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;ZI)V
 
-    .line 282
     :cond_4
     const-string v80, "downloads"
 
@@ -1491,11 +1350,9 @@
 
     move-result-object v38
 
-    .line 284
     .local v38, "downloadsPackage":Landroid/content/pm/PackageParser$Package;
     if-eqz v38, :cond_5
 
-    .line 285
     sget-object v80, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->STORAGE_PERMISSIONS:Ljava/util/Set;
 
     const/16 v82, 0x1
@@ -1512,7 +1369,6 @@
 
     invoke-direct {v0, v1, v2, v3, v4}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;ZI)V
 
-    .line 289
     :cond_5
     new-instance v39, Landroid/content/Intent;
 
@@ -1524,7 +1380,6 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 290
     .local v39, "downloadsUiIntent":Landroid/content/Intent;
     move-object/from16 v0, p0
 
@@ -1536,7 +1391,6 @@
 
     move-result-object v40
 
-    .line 292
     .local v40, "downloadsUiPackage":Landroid/content/pm/PackageParser$Package;
     if-eqz v40, :cond_6
 
@@ -1546,7 +1400,6 @@
 
     if-eqz v80, :cond_6
 
-    .line 294
     sget-object v80, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->STORAGE_PERMISSIONS:Ljava/util/Set;
 
     const/16 v82, 0x1
@@ -1563,7 +1416,6 @@
 
     invoke-direct {v0, v1, v2, v3, v4}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;ZI)V
 
-    .line 298
     :cond_6
     const-string v80, "com.android.externalstorage.documents"
 
@@ -1577,11 +1429,9 @@
 
     move-result-object v71
 
-    .line 300
     .local v71, "storagePackage":Landroid/content/pm/PackageParser$Package;
     if-eqz v71, :cond_7
 
-    .line 301
     sget-object v80, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->STORAGE_PERMISSIONS:Ljava/util/Set;
 
     const/16 v82, 0x1
@@ -1598,7 +1448,6 @@
 
     invoke-direct {v0, v1, v2, v3, v4}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;ZI)V
 
-    .line 305
     :cond_7
     new-instance v21, Landroid/content/Intent;
 
@@ -1610,7 +1459,6 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 306
     .local v21, "certInstallerIntent":Landroid/content/Intent;
     move-object/from16 v0, p0
 
@@ -1622,7 +1470,6 @@
 
     move-result-object v22
 
-    .line 308
     .local v22, "certInstallerPackage":Landroid/content/pm/PackageParser$Package;
     if-eqz v22, :cond_8
 
@@ -1632,7 +1479,6 @@
 
     if-eqz v80, :cond_8
 
-    .line 310
     sget-object v80, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->STORAGE_PERMISSIONS:Ljava/util/Set;
 
     const/16 v82, 0x1
@@ -1649,11 +1495,9 @@
 
     invoke-direct {v0, v1, v2, v3, v4}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;ZI)V
 
-    .line 314
     :cond_8
     if-nez v34, :cond_13
 
-    .line 315
     new-instance v36, Landroid/content/Intent;
 
     const-string v80, "android.intent.action.DIAL"
@@ -1664,7 +1508,6 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 316
     .local v36, "dialerIntent":Landroid/content/Intent;
     move-object/from16 v0, p0
 
@@ -1676,11 +1519,9 @@
 
     move-result-object v37
 
-    .line 318
     .local v37, "dialerPackage":Landroid/content/pm/PackageParser$Package;
     if-eqz v37, :cond_9
 
-    .line 319
     move-object/from16 v0, p0
 
     move-object/from16 v1, v37
@@ -1689,13 +1530,11 @@
 
     invoke-direct {v0, v1, v2}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantDefaultPermissionsToDefaultSystemDialerAppLPr(Landroid/content/pm/PackageParser$Package;I)V
 
-    .line 331
     .end local v36    # "dialerIntent":Landroid/content/Intent;
     .end local v37    # "dialerPackage":Landroid/content/pm/PackageParser$Package;
     :cond_9
     if-eqz v64, :cond_15
 
-    .line 332
     move-object/from16 v5, v64
 
     .local v5, "arr$":[Ljava/lang/String;
@@ -1716,7 +1555,6 @@
 
     aget-object v63, v5, v46
 
-    .line 333
     .local v63, "simCallManagerPackageName":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1726,11 +1564,9 @@
 
     move-result-object v62
 
-    .line 335
     .local v62, "simCallManagerPackage":Landroid/content/pm/PackageParser$Package;
     if-eqz v62, :cond_a
 
-    .line 336
     move-object/from16 v0, p0
 
     move-object/from16 v1, v62
@@ -1741,13 +1577,11 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 332
     :cond_a
     add-int/lit8 v46, v46, 0x1
 
     goto :goto_8
 
-    .line 214
     .end local v5    # "arr$":[Ljava/lang/String;
     .end local v13    # "calendarSyncAdapterPackages":[Ljava/lang/String;
     .end local v15    # "cameraIntent":Landroid/content/Intent;
@@ -1791,7 +1625,6 @@
 
     throw v80
 
-    .line 216
     .restart local v35    # "dialerAppPackagesProvider":Landroid/content/pm/PackageManagerInternal$PackagesProvider;
     .restart local v48    # "imePackagesProvider":Landroid/content/pm/PackageManagerInternal$PackagesProvider;
     .restart local v53    # "locationPackagesProvider":Landroid/content/pm/PackageManagerInternal$PackagesProvider;
@@ -1804,56 +1637,48 @@
 
     goto/16 :goto_0
 
-    .line 218
     .restart local v47    # "imePackageNames":[Ljava/lang/String;
     :cond_c
     const/16 v76, 0x0
 
     goto/16 :goto_1
 
-    .line 220
     .restart local v76    # "voiceInteractPackageNames":[Ljava/lang/String;
     :cond_d
     const/16 v52, 0x0
 
     goto/16 :goto_2
 
-    .line 222
     .restart local v52    # "locationPackageNames":[Ljava/lang/String;
     :cond_e
     const/16 v66, 0x0
 
     goto/16 :goto_3
 
-    .line 224
     .restart local v66    # "smsAppPackageNames":[Ljava/lang/String;
     :cond_f
     const/16 v34, 0x0
 
     goto/16 :goto_4
 
-    .line 226
     .restart local v34    # "dialerAppPackageNames":[Ljava/lang/String;
     :cond_10
     const/16 v64, 0x0
 
     goto/16 :goto_5
 
-    .line 228
     .restart local v64    # "simCallManagerPackageNames":[Ljava/lang/String;
     :cond_11
     const/16 v28, 0x0
 
     goto/16 :goto_6
 
-    .line 230
     .restart local v28    # "contactsSyncAdapterPackages":[Ljava/lang/String;
     :cond_12
     const/4 v13, 0x0
 
     goto/16 :goto_7
 
-    .line 322
     .restart local v13    # "calendarSyncAdapterPackages":[Ljava/lang/String;
     .restart local v15    # "cameraIntent":Landroid/content/Intent;
     .restart local v16    # "cameraPackage":Landroid/content/pm/PackageParser$Package;
@@ -1890,7 +1715,6 @@
 
     aget-object v33, v5, v46
 
-    .line 323
     .local v33, "dialerAppPackageName":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1900,11 +1724,9 @@
 
     move-result-object v37
 
-    .line 324
     .restart local v37    # "dialerPackage":Landroid/content/pm/PackageParser$Package;
     if-eqz v37, :cond_14
 
-    .line 325
     move-object/from16 v0, p0
 
     move-object/from16 v1, v37
@@ -1913,13 +1735,11 @@
 
     invoke-direct {v0, v1, v2}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantDefaultPermissionsToDefaultSystemDialerAppLPr(Landroid/content/pm/PackageParser$Package;I)V
 
-    .line 322
     :cond_14
     add-int/lit8 v46, v46, 0x1
 
     goto :goto_9
 
-    .line 343
     .end local v5    # "arr$":[Ljava/lang/String;
     .end local v33    # "dialerAppPackageName":Ljava/lang/String;
     .end local v37    # "dialerPackage":Landroid/content/pm/PackageParser$Package;
@@ -1928,7 +1748,6 @@
     :cond_15
     if-nez v66, :cond_1c
 
-    .line 344
     new-instance v68, Landroid/content/Intent;
 
     const-string v80, "android.intent.action.MAIN"
@@ -1939,7 +1758,6 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 345
     .local v68, "smsIntent":Landroid/content/Intent;
     const-string v80, "android.intent.category.APP_MESSAGING"
 
@@ -1949,7 +1767,6 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 346
     move-object/from16 v0, p0
 
     move-object/from16 v1, v68
@@ -1960,11 +1777,9 @@
 
     move-result-object v69
 
-    .line 348
     .local v69, "smsPackage":Landroid/content/pm/PackageParser$Package;
     if-eqz v69, :cond_16
 
-    .line 349
     move-object/from16 v0, p0
 
     move-object/from16 v1, v69
@@ -1973,7 +1788,6 @@
 
     invoke-direct {v0, v1, v2}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantDefaultPermissionsToDefaultSystemSmsAppLPr(Landroid/content/pm/PackageParser$Package;I)V
 
-    .line 361
     .end local v68    # "smsIntent":Landroid/content/Intent;
     .end local v69    # "smsPackage":Landroid/content/pm/PackageParser$Package;
     :cond_16
@@ -1987,7 +1801,6 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 362
     .local v19, "cbrIntent":Landroid/content/Intent;
     move-object/from16 v0, p0
 
@@ -1999,7 +1812,6 @@
 
     move-result-object v20
 
-    .line 364
     .local v20, "cbrPackage":Landroid/content/pm/PackageParser$Package;
     if-eqz v20, :cond_17
 
@@ -2009,7 +1821,6 @@
 
     if-eqz v80, :cond_17
 
-    .line 365
     sget-object v80, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->SMS_PERMISSIONS:Ljava/util/Set;
 
     move-object/from16 v0, p0
@@ -2022,7 +1833,6 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;I)V
 
-    .line 369
     :cond_17
     new-instance v17, Landroid/content/Intent;
 
@@ -2034,7 +1844,6 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 370
     .local v17, "carrierProvIntent":Landroid/content/Intent;
     move-object/from16 v0, p0
 
@@ -2046,7 +1855,6 @@
 
     move-result-object v18
 
-    .line 372
     .local v18, "carrierProvPackage":Landroid/content/pm/PackageParser$Package;
     if-eqz v18, :cond_18
 
@@ -2056,7 +1864,6 @@
 
     if-eqz v80, :cond_18
 
-    .line 373
     sget-object v80, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->SMS_PERMISSIONS:Ljava/util/Set;
 
     const/16 v82, 0x0
@@ -2073,7 +1880,6 @@
 
     invoke-direct {v0, v1, v2, v3, v4}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;ZI)V
 
-    .line 377
     :cond_18
     new-instance v8, Landroid/content/Intent;
 
@@ -2083,7 +1889,6 @@
 
     invoke-direct {v8, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 378
     .local v8, "calendarIntent":Landroid/content/Intent;
     const-string v80, "android.intent.category.APP_CALENDAR"
 
@@ -2091,7 +1896,6 @@
 
     invoke-virtual {v8, v0}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 379
     move-object/from16 v0, p0
 
     move/from16 v1, p1
@@ -2100,7 +1904,6 @@
 
     move-result-object v9
 
-    .line 381
     .local v9, "calendarPackage":Landroid/content/pm/PackageParser$Package;
     if-eqz v9, :cond_19
 
@@ -2110,7 +1913,6 @@
 
     if-eqz v80, :cond_19
 
-    .line 383
     sget-object v80, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->CALENDAR_PERMISSIONS:Ljava/util/Set;
 
     move-object/from16 v0, p0
@@ -2121,7 +1923,6 @@
 
     invoke-direct {v0, v9, v1, v2}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;I)V
 
-    .line 384
     sget-object v80, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->CONTACTS_PERMISSIONS:Ljava/util/Set;
 
     move-object/from16 v0, p0
@@ -2132,7 +1933,6 @@
 
     invoke-direct {v0, v9, v1, v2}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;I)V
 
-    .line 388
     :cond_19
     const-string v80, "com.android.calendar"
 
@@ -2146,11 +1946,9 @@
 
     move-result-object v10
 
-    .line 390
     .local v10, "calendarProviderPackage":Landroid/content/pm/PackageParser$Package;
     if-eqz v10, :cond_1a
 
-    .line 391
     sget-object v80, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->CONTACTS_PERMISSIONS:Ljava/util/Set;
 
     move-object/from16 v0, p0
@@ -2161,7 +1959,6 @@
 
     invoke-direct {v0, v10, v1, v2}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;I)V
 
-    .line 392
     sget-object v80, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->CALENDAR_PERMISSIONS:Ljava/util/Set;
 
     const/16 v82, 0x1
@@ -2176,7 +1973,6 @@
 
     invoke-direct {v0, v10, v1, v2, v3}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;ZI)V
 
-    .line 394
     sget-object v80, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->STORAGE_PERMISSIONS:Ljava/util/Set;
 
     move-object/from16 v0, p0
@@ -2187,7 +1983,6 @@
 
     invoke-direct {v0, v10, v1, v2}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;I)V
 
-    .line 398
     :cond_1a
     move-object/from16 v0, p0
 
@@ -2197,13 +1992,11 @@
 
     move-result-object v14
 
-    .line 400
     .local v14, "calendarSyncAdapters":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PackageParser$Package;>;"
     invoke-interface {v14}, Ljava/util/List;->size()I
 
     move-result v12
 
-    .line 401
     .local v12, "calendarSyncAdapterCount":I
     const/16 v45, 0x0
 
@@ -2213,7 +2006,6 @@
 
     if-ge v0, v12, :cond_1e
 
-    .line 402
     move/from16 v0, v45
 
     invoke-interface {v14, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -2222,7 +2014,6 @@
 
     check-cast v11, Landroid/content/pm/PackageParser$Package;
 
-    .line 403
     .local v11, "calendarSyncAdapter":Landroid/content/pm/PackageParser$Package;
     invoke-static {v11}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->doesPackageSupportRuntimePermissions(Landroid/content/pm/PackageParser$Package;)Z
 
@@ -2230,7 +2021,6 @@
 
     if-eqz v80, :cond_1b
 
-    .line 404
     sget-object v80, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->CALENDAR_PERMISSIONS:Ljava/util/Set;
 
     move-object/from16 v0, p0
@@ -2241,13 +2031,11 @@
 
     invoke-direct {v0, v11, v1, v2}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;I)V
 
-    .line 401
     :cond_1b
     add-int/lit8 v45, v45, 0x1
 
     goto :goto_a
 
-    .line 352
     .end local v8    # "calendarIntent":Landroid/content/Intent;
     .end local v9    # "calendarPackage":Landroid/content/pm/PackageParser$Package;
     .end local v10    # "calendarProviderPackage":Landroid/content/pm/PackageParser$Package;
@@ -2280,7 +2068,6 @@
 
     aget-object v70, v5, v46
 
-    .line 353
     .local v70, "smsPackageName":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -2290,11 +2077,9 @@
 
     move-result-object v69
 
-    .line 354
     .restart local v69    # "smsPackage":Landroid/content/pm/PackageParser$Package;
     if-eqz v69, :cond_1d
 
-    .line 355
     move-object/from16 v0, p0
 
     move-object/from16 v1, v69
@@ -2303,13 +2088,11 @@
 
     invoke-direct {v0, v1, v2}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantDefaultPermissionsToDefaultSystemSmsAppLPr(Landroid/content/pm/PackageParser$Package;I)V
 
-    .line 352
     :cond_1d
     add-int/lit8 v46, v46, 0x1
 
     goto :goto_b
 
-    .line 409
     .end local v5    # "arr$":[Ljava/lang/String;
     .end local v46    # "i$":I
     .end local v50    # "len$":I
@@ -2336,7 +2119,6 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 410
     .local v23, "contactsIntent":Landroid/content/Intent;
     const-string v80, "android.intent.category.APP_CONTACTS"
 
@@ -2346,7 +2128,6 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 411
     move-object/from16 v0, p0
 
     move-object/from16 v1, v23
@@ -2357,7 +2138,6 @@
 
     move-result-object v24
 
-    .line 413
     .local v24, "contactsPackage":Landroid/content/pm/PackageParser$Package;
     if-eqz v24, :cond_1f
 
@@ -2367,7 +2147,6 @@
 
     if-eqz v80, :cond_1f
 
-    .line 415
     sget-object v80, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->CONTACTS_PERMISSIONS:Ljava/util/Set;
 
     move-object/from16 v0, p0
@@ -2380,7 +2159,6 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;I)V
 
-    .line 416
     sget-object v80, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->PHONE_PERMISSIONS:Ljava/util/Set;
 
     move-object/from16 v0, p0
@@ -2393,7 +2171,6 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;I)V
 
-    .line 420
     :cond_1f
     move-object/from16 v0, p0
 
@@ -2405,13 +2182,11 @@
 
     move-result-object v29
 
-    .line 422
     .local v29, "contactsSyncAdapters":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PackageParser$Package;>;"
     invoke-interface/range {v29 .. v29}, Ljava/util/List;->size()I
 
     move-result v27
 
-    .line 423
     .local v27, "contactsSyncAdapterCount":I
     const/16 v45, 0x0
 
@@ -2422,7 +2197,6 @@
 
     if-ge v0, v1, :cond_21
 
-    .line 424
     move-object/from16 v0, v29
 
     move/from16 v1, v45
@@ -2433,7 +2207,6 @@
 
     check-cast v26, Landroid/content/pm/PackageParser$Package;
 
-    .line 425
     .local v26, "contactsSyncAdapter":Landroid/content/pm/PackageParser$Package;
     invoke-static/range {v26 .. v26}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->doesPackageSupportRuntimePermissions(Landroid/content/pm/PackageParser$Package;)Z
 
@@ -2441,7 +2214,6 @@
 
     if-eqz v80, :cond_20
 
-    .line 426
     sget-object v80, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->CONTACTS_PERMISSIONS:Ljava/util/Set;
 
     move-object/from16 v0, p0
@@ -2454,13 +2226,11 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;I)V
 
-    .line 423
     :cond_20
     add-int/lit8 v45, v45, 0x1
 
     goto :goto_c
 
-    .line 431
     .end local v26    # "contactsSyncAdapter":Landroid/content/pm/PackageParser$Package;
     :cond_21
     const-string v80, "com.android.contacts"
@@ -2475,11 +2245,9 @@
 
     move-result-object v25
 
-    .line 433
     .local v25, "contactsProviderPackage":Landroid/content/pm/PackageParser$Package;
     if-eqz v25, :cond_22
 
-    .line 434
     sget-object v80, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->CONTACTS_PERMISSIONS:Ljava/util/Set;
 
     const/16 v82, 0x1
@@ -2496,7 +2264,6 @@
 
     invoke-direct {v0, v1, v2, v3, v4}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;ZI)V
 
-    .line 436
     sget-object v80, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->PHONE_PERMISSIONS:Ljava/util/Set;
 
     const/16 v82, 0x1
@@ -2513,7 +2280,6 @@
 
     invoke-direct {v0, v1, v2, v3, v4}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;ZI)V
 
-    .line 438
     sget-object v80, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->STORAGE_PERMISSIONS:Ljava/util/Set;
 
     move-object/from16 v0, p0
@@ -2526,7 +2292,6 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;I)V
 
-    .line 442
     :cond_22
     new-instance v31, Landroid/content/Intent;
 
@@ -2538,7 +2303,6 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 444
     .local v31, "deviceProvisionIntent":Landroid/content/Intent;
     move-object/from16 v0, p0
 
@@ -2550,7 +2314,6 @@
 
     move-result-object v32
 
-    .line 446
     .local v32, "deviceProvisionPackage":Landroid/content/pm/PackageParser$Package;
     if-eqz v32, :cond_23
 
@@ -2560,7 +2323,6 @@
 
     if-eqz v80, :cond_23
 
-    .line 448
     sget-object v80, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->CONTACTS_PERMISSIONS:Ljava/util/Set;
 
     move-object/from16 v0, p0
@@ -2573,7 +2335,6 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;I)V
 
-    .line 452
     :cond_23
     new-instance v54, Landroid/content/Intent;
 
@@ -2585,7 +2346,6 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 453
     .local v54, "mapsIntent":Landroid/content/Intent;
     const-string v80, "android.intent.category.APP_MAPS"
 
@@ -2595,7 +2355,6 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 454
     move-object/from16 v0, p0
 
     move-object/from16 v1, v54
@@ -2606,7 +2365,6 @@
 
     move-result-object v55
 
-    .line 456
     .local v55, "mapsPackage":Landroid/content/pm/PackageParser$Package;
     if-eqz v55, :cond_24
 
@@ -2616,7 +2374,6 @@
 
     if-eqz v80, :cond_24
 
-    .line 458
     sget-object v80, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->LOCATION_PERMISSIONS:Ljava/util/Set;
 
     move-object/from16 v0, p0
@@ -2629,7 +2386,6 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;I)V
 
-    .line 462
     :cond_24
     new-instance v43, Landroid/content/Intent;
 
@@ -2641,7 +2397,6 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 463
     .local v43, "galleryIntent":Landroid/content/Intent;
     const-string v80, "android.intent.category.APP_GALLERY"
 
@@ -2651,7 +2406,6 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 464
     move-object/from16 v0, p0
 
     move-object/from16 v1, v43
@@ -2662,7 +2416,6 @@
 
     move-result-object v44
 
-    .line 466
     .local v44, "galleryPackage":Landroid/content/pm/PackageParser$Package;
     if-eqz v44, :cond_25
 
@@ -2672,7 +2425,6 @@
 
     if-eqz v80, :cond_25
 
-    .line 468
     sget-object v80, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->STORAGE_PERMISSIONS:Ljava/util/Set;
 
     move-object/from16 v0, p0
@@ -2685,7 +2437,6 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;I)V
 
-    .line 472
     :cond_25
     new-instance v41, Landroid/content/Intent;
 
@@ -2697,7 +2448,6 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 473
     .local v41, "emailIntent":Landroid/content/Intent;
     const-string v80, "android.intent.category.APP_EMAIL"
 
@@ -2707,7 +2457,6 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 474
     move-object/from16 v0, p0
 
     move-object/from16 v1, v41
@@ -2718,7 +2467,6 @@
 
     move-result-object v42
 
-    .line 476
     .local v42, "emailPackage":Landroid/content/pm/PackageParser$Package;
     if-eqz v42, :cond_26
 
@@ -2728,7 +2476,6 @@
 
     if-eqz v80, :cond_26
 
-    .line 478
     sget-object v80, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->CONTACTS_PERMISSIONS:Ljava/util/Set;
 
     move-object/from16 v0, p0
@@ -2741,11 +2488,9 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;I)V
 
-    .line 482
     :cond_26
     const/4 v7, 0x0
 
-    .line 483
     .local v7, "browserPackage":Landroid/content/pm/PackageParser$Package;
     move-object/from16 v0, p0
 
@@ -2761,11 +2506,9 @@
 
     move-result-object v30
 
-    .line 484
     .local v30, "defaultBrowserPackage":Ljava/lang/String;
     if-eqz v30, :cond_27
 
-    .line 485
     move-object/from16 v0, p0
 
     move-object/from16 v1, v30
@@ -2774,11 +2517,9 @@
 
     move-result-object v7
 
-    .line 487
     :cond_27
     if-nez v7, :cond_28
 
-    .line 488
     new-instance v6, Landroid/content/Intent;
 
     const-string v80, "android.intent.action.MAIN"
@@ -2787,7 +2528,6 @@
 
     invoke-direct {v6, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 489
     .local v6, "browserIntent":Landroid/content/Intent;
     const-string v80, "android.intent.category.APP_BROWSER"
 
@@ -2795,7 +2535,6 @@
 
     invoke-virtual {v6, v0}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 490
     move-object/from16 v0, p0
 
     move/from16 v1, p1
@@ -2804,7 +2543,6 @@
 
     move-result-object v7
 
-    .line 493
     .end local v6    # "browserIntent":Landroid/content/Intent;
     :cond_28
     if-eqz v7, :cond_29
@@ -2815,7 +2553,6 @@
 
     if-eqz v80, :cond_29
 
-    .line 495
     sget-object v80, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->LOCATION_PERMISSIONS:Ljava/util/Set;
 
     move-object/from16 v0, p0
@@ -2826,11 +2563,9 @@
 
     invoke-direct {v0, v7, v1, v2}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;I)V
 
-    .line 512
     :cond_29
     if-eqz v76, :cond_2b
 
-    .line 513
     move-object/from16 v5, v76
 
     .restart local v5    # "arr$":[Ljava/lang/String;
@@ -2851,7 +2586,6 @@
 
     aget-object v75, v5, v46
 
-    .line 514
     .local v75, "voiceInteractPackageName":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -2861,7 +2595,6 @@
 
     move-result-object v74
 
-    .line 516
     .local v74, "voiceInteractPackage":Landroid/content/pm/PackageParser$Package;
     if-eqz v74, :cond_2a
 
@@ -2871,7 +2604,6 @@
 
     if-eqz v80, :cond_2a
 
-    .line 518
     sget-object v80, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->CONTACTS_PERMISSIONS:Ljava/util/Set;
 
     move-object/from16 v0, p0
@@ -2884,7 +2616,6 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;I)V
 
-    .line 520
     sget-object v80, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->CALENDAR_PERMISSIONS:Ljava/util/Set;
 
     move-object/from16 v0, p0
@@ -2897,7 +2628,6 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;I)V
 
-    .line 522
     sget-object v80, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->MICROPHONE_PERMISSIONS:Ljava/util/Set;
 
     move-object/from16 v0, p0
@@ -2910,7 +2640,6 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;I)V
 
-    .line 524
     sget-object v80, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->PHONE_PERMISSIONS:Ljava/util/Set;
 
     move-object/from16 v0, p0
@@ -2923,7 +2652,6 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;I)V
 
-    .line 526
     sget-object v80, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->SMS_PERMISSIONS:Ljava/util/Set;
 
     move-object/from16 v0, p0
@@ -2936,7 +2664,6 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;I)V
 
-    .line 528
     sget-object v80, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->LOCATION_PERMISSIONS:Ljava/util/Set;
 
     move-object/from16 v0, p0
@@ -2949,13 +2676,11 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;I)V
 
-    .line 513
     :cond_2a
     add-int/lit8 v46, v46, 0x1
 
     goto :goto_d
 
-    .line 535
     .end local v5    # "arr$":[Ljava/lang/String;
     .end local v46    # "i$":I
     .end local v50    # "len$":I
@@ -2972,7 +2697,6 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 536
     .local v78, "voiceRecoIntent":Landroid/content/Intent;
     const-string v80, "android.intent.category.DEFAULT"
 
@@ -2982,7 +2706,6 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 537
     move-object/from16 v0, p0
 
     move-object/from16 v1, v78
@@ -2993,7 +2716,6 @@
 
     move-result-object v79
 
-    .line 539
     .local v79, "voiceRecoPackage":Landroid/content/pm/PackageParser$Package;
     if-eqz v79, :cond_2c
 
@@ -3003,7 +2725,6 @@
 
     if-eqz v80, :cond_2c
 
-    .line 541
     sget-object v80, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->MICROPHONE_PERMISSIONS:Ljava/util/Set;
 
     move-object/from16 v0, p0
@@ -3016,11 +2737,9 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;I)V
 
-    .line 545
     :cond_2c
     if-eqz v52, :cond_2e
 
-    .line 546
     move-object/from16 v5, v52
 
     .restart local v5    # "arr$":[Ljava/lang/String;
@@ -3041,7 +2760,6 @@
 
     aget-object v59, v5, v46
 
-    .line 547
     .local v59, "packageName":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -3051,7 +2769,6 @@
 
     move-result-object v51
 
-    .line 548
     .local v51, "locationPackage":Landroid/content/pm/PackageParser$Package;
     if-eqz v51, :cond_2d
 
@@ -3061,7 +2778,6 @@
 
     if-eqz v80, :cond_2d
 
-    .line 550
     sget-object v80, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->CONTACTS_PERMISSIONS:Ljava/util/Set;
 
     move-object/from16 v0, p0
@@ -3074,7 +2790,6 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;I)V
 
-    .line 551
     sget-object v80, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->CALENDAR_PERMISSIONS:Ljava/util/Set;
 
     move-object/from16 v0, p0
@@ -3087,7 +2802,6 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;I)V
 
-    .line 552
     sget-object v80, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->MICROPHONE_PERMISSIONS:Ljava/util/Set;
 
     move-object/from16 v0, p0
@@ -3100,7 +2814,6 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;I)V
 
-    .line 553
     sget-object v80, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->PHONE_PERMISSIONS:Ljava/util/Set;
 
     move-object/from16 v0, p0
@@ -3113,7 +2826,6 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;I)V
 
-    .line 554
     sget-object v80, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->SMS_PERMISSIONS:Ljava/util/Set;
 
     move-object/from16 v0, p0
@@ -3126,7 +2838,6 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;I)V
 
-    .line 555
     sget-object v80, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->LOCATION_PERMISSIONS:Ljava/util/Set;
 
     const/16 v82, 0x1
@@ -3143,7 +2854,6 @@
 
     invoke-direct {v0, v1, v2, v3, v4}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;ZI)V
 
-    .line 557
     sget-object v80, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->CAMERA_PERMISSIONS:Ljava/util/Set;
 
     move-object/from16 v0, p0
@@ -3156,7 +2866,6 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;I)V
 
-    .line 558
     sget-object v80, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->SENSORS_PERMISSIONS:Ljava/util/Set;
 
     move-object/from16 v0, p0
@@ -3169,7 +2878,6 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;I)V
 
-    .line 559
     sget-object v80, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->STORAGE_PERMISSIONS:Ljava/util/Set;
 
     move-object/from16 v0, p0
@@ -3182,13 +2890,11 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;I)V
 
-    .line 546
     :cond_2d
     add-int/lit8 v46, v46, 0x1
 
     goto/16 :goto_e
 
-    .line 565
     .end local v5    # "arr$":[Ljava/lang/String;
     .end local v46    # "i$":I
     .end local v50    # "len$":I
@@ -3205,7 +2911,6 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 566
     .local v57, "musicIntent":Landroid/content/Intent;
     const-string v80, "android.intent.category.DEFAULT"
 
@@ -3215,7 +2920,6 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 567
     new-instance v80, Ljava/io/File;
 
     const-string v82, "foo.mp3"
@@ -3240,7 +2944,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setDataAndType(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 569
     move-object/from16 v0, p0
 
     move-object/from16 v1, v57
@@ -3251,7 +2954,6 @@
 
     move-result-object v58
 
-    .line 571
     .local v58, "musicPackage":Landroid/content/pm/PackageParser$Package;
     if-eqz v58, :cond_2f
 
@@ -3261,7 +2963,6 @@
 
     if-eqz v80, :cond_2f
 
-    .line 573
     sget-object v80, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->STORAGE_PERMISSIONS:Ljava/util/Set;
 
     move-object/from16 v0, p0
@@ -3274,7 +2975,6 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;I)V
 
-    .line 576
     :cond_2f
     move-object/from16 v0, p0
 
@@ -3294,13 +2994,10 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/pm/Settings;->onDefaultRuntimePermissionsGrantedLPr(I)V
 
-    .line 577
     monitor-exit v81
 
-    .line 578
     return-void
 
-    .line 577
     .end local v7    # "browserPackage":Landroid/content/pm/PackageParser$Package;
     .end local v8    # "calendarIntent":Landroid/content/Intent;
     .end local v9    # "calendarPackage":Landroid/content/pm/PackageParser$Package;
@@ -3358,7 +3055,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 170
     const-string v7, "DefaultPermGrantPolicy"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -3381,14 +3077,12 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 172
     iget-object v7, p0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->mService:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v8, v7, Lcom/android/server/pm/PackageManagerService;->mPackages:Landroid/util/ArrayMap;
 
     monitor-enter v8
 
-    .line 173
     :try_start_0
     iget-object v7, p0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->mService:Lcom/android/server/pm/PackageManagerService;
 
@@ -3417,7 +3111,6 @@
 
     check-cast v6, Landroid/content/pm/PackageParser$Package;
 
-    .line 174
     .local v6, "pkg":Landroid/content/pm/PackageParser$Package;
     invoke-direct {p0, v6}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->isSysComponentOrPersistentPlatformSignedPrivAppLPr(Landroid/content/pm/PackageParser$Package;)Z
 
@@ -3439,12 +3132,10 @@
 
     if-nez v7, :cond_0
 
-    .line 179
     new-instance v5, Landroid/util/ArraySet;
 
     invoke-direct {v5}, Landroid/util/ArraySet;-><init>()V
 
-    .line 180
     .local v5, "permissions":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     iget-object v7, v6, Landroid/content/pm/PackageParser$Package;->requestedPermissions:Ljava/util/ArrayList;
 
@@ -3452,7 +3143,6 @@
 
     move-result v4
 
-    .line 181
     .local v4, "permissionCount":I
     const/4 v1, 0x0
 
@@ -3460,7 +3150,6 @@
     :goto_1
     if-ge v1, v4, :cond_2
 
-    .line 182
     iget-object v7, v6, Landroid/content/pm/PackageParser$Package;->requestedPermissions:Ljava/util/ArrayList;
 
     invoke-virtual {v7, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -3469,7 +3158,6 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 183
     .local v3, "permission":Ljava/lang/String;
     iget-object v7, p0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->mService:Lcom/android/server/pm/PackageManagerService;
 
@@ -3483,7 +3171,6 @@
 
     check-cast v0, Lcom/android/server/pm/BasePermission;
 
-    .line 184
     .local v0, "bp":Lcom/android/server/pm/BasePermission;
     if-eqz v0, :cond_1
 
@@ -3493,16 +3180,13 @@
 
     if-eqz v7, :cond_1
 
-    .line 185
     invoke-interface {v5, v3}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 181
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 188
     .end local v0    # "bp":Lcom/android/server/pm/BasePermission;
     .end local v3    # "permission":Ljava/lang/String;
     :cond_2
@@ -3512,14 +3196,12 @@
 
     if-nez v7, :cond_0
 
-    .line 189
     const/4 v7, 0x1
 
     invoke-direct {p0, v6, v5, v7, p1}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;ZI)V
 
     goto :goto_0
 
-    .line 192
     .end local v1    # "i":I
     .end local v2    # "i$":Ljava/util/Iterator;
     .end local v4    # "permissionCount":I
@@ -3541,7 +3223,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 193
     return-void
 .end method
 
@@ -3564,7 +3245,6 @@
     .local p2, "permissions":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     const/4 v3, 0x0
 
-    .line 765
     move-object v0, p0
 
     move-object v1, p1
@@ -3577,7 +3257,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;ZZI)V
 
-    .line 766
     return-void
 .end method
 
@@ -3598,7 +3277,6 @@
     .end annotation
 
     .prologue
-    .line 770
     .local p2, "permissions":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     const/4 v4, 0x0
 
@@ -3614,7 +3292,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;ZZI)V
 
-    .line 771
     return-void
 .end method
 
@@ -3636,7 +3313,6 @@
     .end annotation
 
     .prologue
-    .line 775
     .local p2, "permissions":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     iget-object v1, p1, Landroid/content/pm/PackageParser$Package;->requestedPermissions:Ljava/util/ArrayList;
 
@@ -3646,19 +3322,15 @@
 
     if-eqz v1, :cond_1
 
-    .line 840
     :cond_0
     return-void
 
-    .line 779
     :cond_1
     iget-object v12, p1, Landroid/content/pm/PackageParser$Package;->requestedPermissions:Ljava/util/ArrayList;
 
-    .line 780
     .local v12, "requestedPermissions":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/4 v10, 0x0
 
-    .line 782
     .local v10, "grantablePermissions":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     invoke-virtual {p1}, Landroid/content/pm/PackageParser$Package;->isUpdatedSystemApp()Z
 
@@ -3666,7 +3338,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 783
     iget-object v1, p0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->mService:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v1, v1, Lcom/android/server/pm/PackageManagerService;->mSettings:Lcom/android/server/pm/Settings;
@@ -3677,7 +3348,6 @@
 
     move-result-object v13
 
-    .line 786
     .local v13, "sysPs":Lcom/android/server/pm/PackageSetting;
     if-eqz v13, :cond_2
 
@@ -3685,7 +3355,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 787
     iget-object v1, v13, Lcom/android/server/pm/PackageSetting;->pkg:Landroid/content/pm/PackageParser$Package;
 
     iget-object v1, v1, Landroid/content/pm/PackageParser$Package;->requestedPermissions:Ljava/util/ArrayList;
@@ -3696,7 +3365,6 @@
 
     if-nez v1, :cond_0
 
-    .line 790
     iget-object v1, v13, Lcom/android/server/pm/PackageSetting;->pkg:Landroid/content/pm/PackageParser$Package;
 
     iget-object v1, v1, Landroid/content/pm/PackageParser$Package;->requestedPermissions:Ljava/util/ArrayList;
@@ -3707,26 +3375,22 @@
 
     if-nez v1, :cond_2
 
-    .line 791
     new-instance v10, Landroid/util/ArraySet;
 
     .end local v10    # "grantablePermissions":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     invoke-direct {v10, v12}, Landroid/util/ArraySet;-><init>(Ljava/util/Collection;)V
 
-    .line 792
     .restart local v10    # "grantablePermissions":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     iget-object v1, v13, Lcom/android/server/pm/PackageSetting;->pkg:Landroid/content/pm/PackageParser$Package;
 
     iget-object v12, v1, Landroid/content/pm/PackageParser$Package;->requestedPermissions:Ljava/util/ArrayList;
 
-    .line 797
     .end local v13    # "sysPs":Lcom/android/server/pm/PackageSetting;
     :cond_2
     invoke-interface {v12}, Ljava/util/List;->size()I
 
     move-result v9
 
-    .line 798
     .local v9, "grantablePermissionCount":I
     const/4 v11, 0x0
 
@@ -3734,14 +3398,12 @@
     :goto_0
     if-ge v11, v9, :cond_0
 
-    .line 799
     invoke-interface {v12, v11}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/lang/String;
 
-    .line 803
     .local v2, "permission":Ljava/lang/String;
     if-eqz v10, :cond_4
 
@@ -3751,14 +3413,12 @@
 
     if-nez v1, :cond_4
 
-    .line 798
     :cond_3
     :goto_1
     add-int/lit8 v11, v11, 0x1
 
     goto :goto_0
 
-    .line 807
     :cond_4
     move-object/from16 v0, p2
 
@@ -3768,7 +3428,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 808
     iget-object v1, p0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->mService:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v3, p1, Landroid/content/pm/PackageParser$Package;->packageName:Ljava/lang/String;
@@ -3779,23 +3438,19 @@
 
     move-result v8
 
-    .line 816
     .local v8, "flags":I
     if-eqz v8, :cond_5
 
     if-eqz p4, :cond_3
 
-    .line 818
     :cond_5
     const/16 v7, 0x14
 
-    .line 820
     .local v7, "fixedFlags":I
     and-int/lit8 v1, v8, 0x14
 
     if-nez v1, :cond_3
 
-    .line 824
     iget-object v1, p0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->mService:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v3, p1, Landroid/content/pm/PackageParser$Package;->packageName:Ljava/lang/String;
@@ -3804,17 +3459,13 @@
 
     invoke-virtual {v1, v3, v2, v0}, Lcom/android/server/pm/PackageManagerService;->grantRuntimePermission(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 830
     const/16 v4, 0x20
 
-    .line 831
     .local v4, "newFlags":I
     if-eqz p3, :cond_6
 
-    .line 832
     or-int/lit8 v4, v4, 0x10
 
-    .line 835
     :cond_6
     iget-object v1, p0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->mService:Lcom/android/server/pm/PackageManagerService;
 
@@ -3838,7 +3489,6 @@
 
     const/4 v2, 0x0
 
-    .line 843
     iget-object v3, p1, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget v3, v3, Landroid/content/pm/ApplicationInfo;->uid:I
@@ -3853,12 +3503,10 @@
 
     move v2, v1
 
-    .line 857
     :cond_0
     :goto_0
     return v2
 
-    .line 846
     :cond_1
     invoke-virtual {p1}, Landroid/content/pm/PackageParser$Package;->isPrivilegedApp()Z
 
@@ -3866,7 +3514,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 849
     iget-object v3, p0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->mService:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v3, v3, Lcom/android/server/pm/PackageManagerService;->mSettings:Lcom/android/server/pm/Settings;
@@ -3877,11 +3524,9 @@
 
     move-result-object v0
 
-    .line 850
     .local v0, "sysPkg":Lcom/android/server/pm/PackageSetting;
     if-eqz v0, :cond_3
 
-    .line 851
     iget-object v3, v0, Lcom/android/server/pm/PackageSetting;->pkg:Landroid/content/pm/PackageParser$Package;
 
     iget-object v3, v3, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -3892,7 +3537,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 857
     :cond_2
     iget-object v3, p0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->mService:Lcom/android/server/pm/PackageManagerService;
 
@@ -3913,7 +3557,6 @@
 
     goto :goto_0
 
-    .line 854
     :cond_3
     iget-object v3, p1, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
@@ -3928,7 +3571,6 @@
     :cond_4
     move v1, v2
 
-    .line 857
     goto :goto_1
 .end method
 
@@ -3939,13 +3581,10 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 165
     invoke-direct {p0, p1}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantPermissionsToSysComponentsAndPrivApps(I)V
 
-    .line 166
     invoke-direct {p0, p1}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantDefaultSystemHandlerPermissions(I)V
 
-    .line 167
     return-void
 .end method
 
@@ -3957,7 +3596,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 665
     const-string v0, "DefaultPermGrantPolicy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -3980,21 +3618,17 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 666
     if-nez p1, :cond_1
 
-    .line 674
     :cond_0
     :goto_0
     return-void
 
-    .line 669
     :cond_1
     invoke-direct {p0, p1}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->getSystemPackageLPr(Ljava/lang/String;)Landroid/content/pm/PackageParser$Package;
 
     move-result-object v1
 
-    .line 670
     .local v1, "browserPackage":Landroid/content/pm/PackageParser$Package;
     if-eqz v1, :cond_0
 
@@ -4004,7 +3638,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 672
     sget-object v2, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->LOCATION_PERMISSIONS:Ljava/util/Set;
 
     move-object v0, p0
@@ -4028,7 +3661,6 @@
 
     const/4 v3, 0x0
 
-    .line 615
     const-string v0, "DefaultPermGrantPolicy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -4051,21 +3683,17 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 616
     if-nez p1, :cond_1
 
-    .line 627
     :cond_0
     :goto_0
     return-void
 
-    .line 619
     :cond_1
     invoke-direct {p0, p1}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->getPackageLPr(Ljava/lang/String;)Landroid/content/pm/PackageParser$Package;
 
     move-result-object v1
 
-    .line 620
     .local v1, "dialerPackage":Landroid/content/pm/PackageParser$Package;
     if-eqz v1, :cond_0
 
@@ -4075,7 +3703,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 622
     sget-object v2, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->PHONE_PERMISSIONS:Ljava/util/Set;
 
     move-object v0, p0
@@ -4084,7 +3711,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;ZZI)V
 
-    .line 623
     sget-object v2, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->CONTACTS_PERMISSIONS:Ljava/util/Set;
 
     move-object v0, p0
@@ -4093,7 +3719,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;ZZI)V
 
-    .line 624
     sget-object v2, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->SMS_PERMISSIONS:Ljava/util/Set;
 
     move-object v0, p0
@@ -4102,7 +3727,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;ZZI)V
 
-    .line 625
     sget-object v2, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->MICROPHONE_PERMISSIONS:Ljava/util/Set;
 
     move-object v0, p0
@@ -4120,25 +3744,20 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 639
     if-nez p1, :cond_1
 
-    .line 646
     :cond_0
     :goto_0
     return-void
 
-    .line 642
     :cond_1
     invoke-direct {p0, p1}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->getPackageLPr(Ljava/lang/String;)Landroid/content/pm/PackageParser$Package;
 
     move-result-object v0
 
-    .line 643
     .local v0, "simCallManagerPackage":Landroid/content/pm/PackageParser$Package;
     if-eqz v0, :cond_0
 
-    .line 644
     invoke-direct {p0, v0, p2}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantDefaultPermissionsToDefaultSimCallManagerLPr(Landroid/content/pm/PackageParser$Package;I)V
 
     goto :goto_0
@@ -4154,7 +3773,6 @@
 
     const/4 v3, 0x0
 
-    .line 602
     const-string v0, "DefaultPermGrantPolicy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -4177,21 +3795,17 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 603
     if-nez p1, :cond_1
 
-    .line 612
     :cond_0
     :goto_0
     return-void
 
-    .line 606
     :cond_1
     invoke-direct {p0, p1}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->getPackageLPr(Ljava/lang/String;)Landroid/content/pm/PackageParser$Package;
 
     move-result-object v1
 
-    .line 607
     .local v1, "smsPackage":Landroid/content/pm/PackageParser$Package;
     if-eqz v1, :cond_0
 
@@ -4201,7 +3815,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 608
     sget-object v2, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->PHONE_PERMISSIONS:Ljava/util/Set;
 
     move-object v0, p0
@@ -4210,7 +3823,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;ZZI)V
 
-    .line 609
     sget-object v2, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->CONTACTS_PERMISSIONS:Ljava/util/Set;
 
     move-object v0, p0
@@ -4219,7 +3831,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;ZZI)V
 
-    .line 610
     sget-object v2, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->SMS_PERMISSIONS:Ljava/util/Set;
 
     move-object v0, p0
@@ -4237,7 +3848,6 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 649
     const-string v5, "DefaultPermGrantPolicy"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -4260,14 +3870,11 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 650
     if-nez p1, :cond_1
 
-    .line 662
     :cond_0
     return-void
 
-    .line 653
     :cond_1
     move-object v0, p1
 
@@ -4283,13 +3890,11 @@
 
     aget-object v4, v0, v2
 
-    .line 654
     .local v4, "packageName":Ljava/lang/String;
     invoke-direct {p0, v4}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->getSystemPackageLPr(Ljava/lang/String;)Landroid/content/pm/PackageParser$Package;
 
     move-result-object v1
 
-    .line 655
     .local v1, "carrierPackage":Landroid/content/pm/PackageParser$Package;
     if-eqz v1, :cond_2
 
@@ -4299,22 +3904,18 @@
 
     if-eqz v5, :cond_2
 
-    .line 657
     sget-object v5, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->PHONE_PERMISSIONS:Ljava/util/Set;
 
     invoke-direct {p0, v1, v5, p2}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;I)V
 
-    .line 658
     sget-object v5, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->LOCATION_PERMISSIONS:Ljava/util/Set;
 
     invoke-direct {p0, v1, v5, p2}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;I)V
 
-    .line 659
     sget-object v5, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->SMS_PERMISSIONS:Ljava/util/Set;
 
     invoke-direct {p0, v1, v5, p2}, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->grantRuntimePermissionsLPw(Landroid/content/pm/PackageParser$Package;Ljava/util/Set;I)V
 
-    .line 653
     :cond_2
     add-int/lit8 v2, v2, 0x1
 
@@ -4326,10 +3927,8 @@
     .param p1, "provider"    # Landroid/content/pm/PackageManagerInternal$PackagesProvider;
 
     .prologue
-    .line 153
     iput-object p1, p0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->mDialerAppPackagesProvider:Landroid/content/pm/PackageManagerInternal$PackagesProvider;
 
-    .line 154
     return-void
 .end method
 
@@ -4338,10 +3937,8 @@
     .param p1, "provider"    # Landroid/content/pm/PackageManagerInternal$PackagesProvider;
 
     .prologue
-    .line 137
     iput-object p1, p0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->mImePackagesProvider:Landroid/content/pm/PackageManagerInternal$PackagesProvider;
 
-    .line 138
     return-void
 .end method
 
@@ -4350,10 +3947,8 @@
     .param p1, "provider"    # Landroid/content/pm/PackageManagerInternal$PackagesProvider;
 
     .prologue
-    .line 141
     iput-object p1, p0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->mLocationPackagesProvider:Landroid/content/pm/PackageManagerInternal$PackagesProvider;
 
-    .line 142
     return-void
 .end method
 
@@ -4362,10 +3957,8 @@
     .param p1, "provider"    # Landroid/content/pm/PackageManagerInternal$PackagesProvider;
 
     .prologue
-    .line 157
     iput-object p1, p0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->mSimCallManagerPackagesProvider:Landroid/content/pm/PackageManagerInternal$PackagesProvider;
 
-    .line 158
     return-void
 .end method
 
@@ -4374,10 +3967,8 @@
     .param p1, "provider"    # Landroid/content/pm/PackageManagerInternal$PackagesProvider;
 
     .prologue
-    .line 149
     iput-object p1, p0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->mSmsAppPackagesProvider:Landroid/content/pm/PackageManagerInternal$PackagesProvider;
 
-    .line 150
     return-void
 .end method
 
@@ -4386,10 +3977,8 @@
     .param p1, "provider"    # Landroid/content/pm/PackageManagerInternal$SyncAdapterPackagesProvider;
 
     .prologue
-    .line 161
     iput-object p1, p0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->mSyncAdapterPackagesProvider:Landroid/content/pm/PackageManagerInternal$SyncAdapterPackagesProvider;
 
-    .line 162
     return-void
 .end method
 
@@ -4398,10 +3987,8 @@
     .param p1, "provider"    # Landroid/content/pm/PackageManagerInternal$PackagesProvider;
 
     .prologue
-    .line 145
     iput-object p1, p0, Lcom/android/server/pm/DefaultPermissionGrantPolicy;->mVoiceInteractionPackagesProvider:Landroid/content/pm/PackageManagerInternal$PackagesProvider;
 
-    .line 146
     return-void
 .end method
 

@@ -20,7 +20,6 @@
     .param p1, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 157
     invoke-direct {p0, p1}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
     return-void
@@ -33,10 +32,8 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 160
     # invokes: Lcom/android/server/HandyMode;->refreshStatus()V
     invoke-static {}, Lcom/android/server/HandyMode;->access$100()V
 
-    .line 161
     return-void
 .end method

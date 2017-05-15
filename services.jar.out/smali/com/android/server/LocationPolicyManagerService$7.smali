@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 349
     iput-object p1, p0, Lcom/android/server/LocationPolicyManagerService$7;->this$0:Lcom/android/server/LocationPolicyManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 353
     :try_start_0
     iget-object v1, p0, Lcom/android/server/LocationPolicyManagerService$7;->this$0:Lcom/android/server/LocationPolicyManagerService;
 
@@ -52,7 +50,6 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 354
     :try_start_1
     iget-object v3, p0, Lcom/android/server/LocationPolicyManagerService$7;->this$0:Lcom/android/server/LocationPolicyManagerService;
 
@@ -92,7 +89,6 @@
     # setter for: Lcom/android/server/LocationPolicyManagerService;->mDeviceIdle:Z
     invoke-static {v3, v1}, Lcom/android/server/LocationPolicyManagerService;->access$1302(Lcom/android/server/LocationPolicyManagerService;Z)Z
 
-    .line 355
     const-string v1, "LocationPolicy"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -122,20 +118,16 @@
 
     invoke-static {v1, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 356
     iget-object v1, p0, Lcom/android/server/LocationPolicyManagerService$7;->this$0:Lcom/android/server/LocationPolicyManagerService;
 
     # invokes: Lcom/android/server/LocationPolicyManagerService;->updateRulesForDeviceIdleLocked()V
     invoke-static {v1}, Lcom/android/server/LocationPolicyManagerService;->access$1500(Lcom/android/server/LocationPolicyManagerService;)V
 
-    .line 357
     monitor-exit v2
 
-    .line 361
     :goto_0
     return-void
 
-    .line 357
     :catchall_0
     move-exception v1
 
@@ -148,11 +140,9 @@
     :try_end_2
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 358
     :catch_0
     move-exception v0
 
-    .line 359
     .local v0, "e":Ljava/lang/Throwable;
     invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 

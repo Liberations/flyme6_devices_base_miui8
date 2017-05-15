@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 197
     iput-object p1, p0, Lcom/android/server/policy/MiuiScreenOnProximityLock$4;->this$0:Lcom/android/server/policy/MiuiScreenOnProximityLock;
 
     iput-object p2, p0, Lcom/android/server/policy/MiuiScreenOnProximityLock$4;->val$container:Landroid/view/View;
@@ -45,7 +44,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 214
     return-void
 .end method
 
@@ -54,7 +52,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 208
     iget-object v1, p0, Lcom/android/server/policy/MiuiScreenOnProximityLock$4;->this$0:Lcom/android/server/policy/MiuiScreenOnProximityLock;
 
     # getter for: Lcom/android/server/policy/MiuiScreenOnProximityLock;->mContext:Landroid/content/Context;
@@ -70,13 +67,11 @@
 
     check-cast v0, Landroid/view/WindowManager;
 
-    .line 209
     .local v0, "wm":Landroid/view/WindowManager;
     iget-object v1, p0, Lcom/android/server/policy/MiuiScreenOnProximityLock$4;->val$container:Landroid/view/View;
 
     invoke-interface {v0, v1}, Landroid/view/WindowManager;->removeView(Landroid/view/View;)V
 
-    .line 210
     return-void
 .end method
 
@@ -85,7 +80,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 204
     return-void
 .end method
 
@@ -94,6 +88,5 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 200
     return-void
 .end method

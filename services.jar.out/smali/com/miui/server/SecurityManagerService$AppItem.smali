@@ -30,18 +30,13 @@
     .param p3, "ce"    # Z
 
     .prologue
-    .line 202
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 203
     iput-object p1, p0, Lcom/miui/server/SecurityManagerService$AppItem;->mPkg:Ljava/lang/String;
 
-    .line 204
     iput-object p2, p0, Lcom/miui/server/SecurityManagerService$AppItem;->mSignature:Ljava/lang/String;
 
-    .line 205
     iput-boolean p3, p0, Lcom/miui/server/SecurityManagerService$AppItem;->mCheckEnable:Z
 
-    .line 206
     return-void
 .end method

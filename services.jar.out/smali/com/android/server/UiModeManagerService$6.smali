@@ -28,7 +28,6 @@
     .param p1, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 657
     iput-object p2, p0, Lcom/android/server/UiModeManagerService$6;->val$service:Lcom/android/server/UiModeManagerService;
 
     iput-object p3, p0, Lcom/android/server/UiModeManagerService$6;->val$context:Landroid/content/Context;
@@ -47,7 +46,6 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 660
     iget-object v0, p0, Lcom/android/server/UiModeManagerService$6;->val$service:Lcom/android/server/UiModeManagerService;
 
     iget-object v1, p0, Lcom/android/server/UiModeManagerService$6;->val$context:Landroid/content/Context;
@@ -67,12 +65,10 @@
     # setter for: Lcom/android/server/UiModeManagerService;->mDefaultUiModeType:I
     invoke-static {v0, v1}, Lcom/android/server/UiModeManagerService;->access$402(Lcom/android/server/UiModeManagerService;I)I
 
-    .line 663
     iget-object v1, p0, Lcom/android/server/UiModeManagerService$6;->val$lock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 664
     :try_start_0
     iget-object v0, p0, Lcom/android/server/UiModeManagerService$6;->val$service:Lcom/android/server/UiModeManagerService;
 
@@ -80,20 +76,16 @@
 
     if-eqz v0, :cond_0
 
-    .line 665
     iget-object v0, p0, Lcom/android/server/UiModeManagerService$6;->val$service:Lcom/android/server/UiModeManagerService;
 
     # invokes: Lcom/android/server/UiModeManagerService;->updateConfigurationLocked()V
     invoke-static {v0}, Lcom/android/server/UiModeManagerService;->access$500(Lcom/android/server/UiModeManagerService;)V
 
-    .line 667
     :cond_0
     monitor-exit v1
 
-    .line 668
     return-void
 
-    .line 667
     :catchall_0
     move-exception v0
 

@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 538
     iput-object p1, p0, Landroid/net/dhcp/DhcpClient$WaitBeforeOtherState;->this$0:Landroid/net/dhcp/DhcpClient;
 
     invoke-direct {p0, p1}, Landroid/net/dhcp/DhcpClient$LoggingState;-><init>(Landroid/net/dhcp/DhcpClient;)V
@@ -39,10 +38,8 @@
     .locals 2
 
     .prologue
-    .line 543
     invoke-super {p0}, Landroid/net/dhcp/DhcpClient$LoggingState;->enter()V
 
-    .line 544
     iget-object v0, p0, Landroid/net/dhcp/DhcpClient$WaitBeforeOtherState;->this$0:Landroid/net/dhcp/DhcpClient;
 
     # getter for: Landroid/net/dhcp/DhcpClient;->mController:Lcom/android/internal/util/StateMachine;
@@ -54,7 +51,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/util/StateMachine;->sendMessage(I)V
 
-    .line 545
     return-void
 .end method
 
@@ -63,21 +59,17 @@
     .param p1, "message"    # Landroid/os/Message;
 
     .prologue
-    .line 549
     invoke-super {p0, p1}, Landroid/net/dhcp/DhcpClient$LoggingState;->processMessage(Landroid/os/Message;)Z
 
-    .line 550
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 555
     const/4 v0, 0x0
 
     :goto_0
     return v0
 
-    .line 552
     :pswitch_0
     iget-object v0, p0, Landroid/net/dhcp/DhcpClient$WaitBeforeOtherState;->this$0:Landroid/net/dhcp/DhcpClient;
 
@@ -86,12 +78,10 @@
     # invokes: Landroid/net/dhcp/DhcpClient;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v0, v1}, Landroid/net/dhcp/DhcpClient;->access$400(Landroid/net/dhcp/DhcpClient;Lcom/android/internal/util/IState;)V
 
-    .line 553
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 550
     nop
 
     :pswitch_data_0

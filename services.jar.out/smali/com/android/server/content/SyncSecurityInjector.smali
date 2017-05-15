@@ -16,7 +16,6 @@
     .locals 0
 
     .prologue
-    .line 17
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,30 +27,24 @@
     .param p1, "reason"    # I
 
     .prologue
-    .line 37
     if-nez p0, :cond_0
 
-    .line 38
     const-string v6, "SyncSecurityInjector"
 
     const-string v7, "filterOutXiaomiAccount: null accountAndUsers, abort. "
 
     invoke-static {v6, v7}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 39
     const/4 p0, 0x0
 
-    .line 74
     .end local p0    # "accountAndUsers":[Landroid/accounts/AccountAndUser;
     :goto_0
     return-object p0
 
-    .line 42
     .restart local p0    # "accountAndUsers":[Landroid/accounts/AccountAndUser;
     :cond_0
     if-gez p1, :cond_1
 
-    .line 43
     const-string v6, "SyncSecurityInjector"
 
     const-string v7, "filterOutXiaomiAccount: internal request, abort. "
@@ -60,19 +53,16 @@
 
     goto :goto_0
 
-    .line 48
     :cond_1
     invoke-static {p1}, Landroid/os/UserHandle;->getAppId(I)I
 
     move-result v0
 
-    .line 50
     .local v0, "appId":I
     const/16 v6, 0x2710
 
     if-ge v0, v6, :cond_2
 
-    .line 51
     const-string v6, "SyncSecurityInjector"
 
     const-string v7, "filterOutXiaomiAccount: system request, abort. "
@@ -81,7 +71,6 @@
 
     goto :goto_0
 
-    .line 56
     :cond_2
     :try_start_0
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
@@ -96,7 +85,6 @@
 
     if-nez v6, :cond_3
 
-    .line 58
     const-string v6, "SyncSecurityInjector"
 
     const-string v7, "filterOutXiaomiAccount: CLOUD MANAGER, abort. "
@@ -107,11 +95,9 @@
 
     goto :goto_0
 
-    .line 61
     :catch_0
     move-exception v6
 
-    .line 65
     :cond_3
     const-string v6, "SyncSecurityInjector"
 
@@ -119,12 +105,10 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 67
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 68
     .local v3, "filtered":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/accounts/AccountAndUser;>;"
     move-object v1, p0
 
@@ -140,7 +124,6 @@
 
     aget-object v2, v1, v4
 
-    .line 69
     .local v2, "au":Landroid/accounts/AccountAndUser;
     if-eqz v2, :cond_4
 
@@ -160,19 +143,16 @@
 
     if-eqz v6, :cond_4
 
-    .line 68
     :goto_2
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_1
 
-    .line 72
     :cond_4
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_2
 
-    .line 74
     .end local v2    # "au":Landroid/accounts/AccountAndUser;
     :cond_5
     const/4 v6, 0x0
@@ -195,13 +175,10 @@
     .param p0, "account"    # Landroid/accounts/Account;
 
     .prologue
-    .line 102
     if-nez p0, :cond_0
 
-    .line 103
     const-string v0, "[NULL]"
 
-    .line 106
     :goto_0
     return-object v0
 
@@ -243,14 +220,12 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 79
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v3
 
     int-to-long v0, v3
 
-    .line 81
     .local v0, "pid":J
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
@@ -260,7 +235,6 @@
 
     if-ge v3, v4, :cond_0
 
-    .line 82
     const-string v3, "SyncSecurityInjector"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -303,11 +277,9 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 96
     :goto_0
     return v2
 
-    .line 85
     :cond_0
     if-eqz p1, :cond_1
 
@@ -321,7 +293,6 @@
 
     if-nez v3, :cond_2
 
-    .line 86
     :cond_1
     const-string v3, "SyncSecurityInjector"
 
@@ -367,7 +338,6 @@
 
     goto :goto_0
 
-    .line 89
     :cond_2
     const-string v3, "com.xiaomi.permission.CLOUD_MANAGER"
 
@@ -377,7 +347,6 @@
 
     if-nez v3, :cond_3
 
-    .line 91
     const-string v3, "SyncSecurityInjector"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -422,7 +391,6 @@
 
     goto :goto_0
 
-    .line 95
     :cond_3
     const-string v2, "SyncSecurityInjector"
 
@@ -466,7 +434,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 96
     const/4 v2, 0x0
 
     goto/16 :goto_0

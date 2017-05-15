@@ -34,18 +34,14 @@
     .param p3, "callback"    # Landroid/hardware/display/IDisplayManagerCallback;
 
     .prologue
-    .line 1155
     iput-object p1, p0, Lcom/android/server/display/DisplayManagerService$CallbackRecord;->this$0:Lcom/android/server/display/DisplayManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1156
     iput p2, p0, Lcom/android/server/display/DisplayManagerService$CallbackRecord;->mPid:I
 
-    .line 1157
     iput-object p3, p0, Lcom/android/server/display/DisplayManagerService$CallbackRecord;->mCallback:Landroid/hardware/display/IDisplayManagerCallback;
 
-    .line 1158
     return-void
 .end method
 
@@ -55,13 +51,11 @@
     .locals 1
 
     .prologue
-    .line 1165
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService$CallbackRecord;->this$0:Lcom/android/server/display/DisplayManagerService;
 
     # invokes: Lcom/android/server/display/DisplayManagerService;->onCallbackDied(Lcom/android/server/display/DisplayManagerService$CallbackRecord;)V
     invoke-static {v0, p0}, Lcom/android/server/display/DisplayManagerService;->access$1700(Lcom/android/server/display/DisplayManagerService;Lcom/android/server/display/DisplayManagerService$CallbackRecord;)V
 
-    .line 1166
     return-void
 .end method
 
@@ -71,7 +65,6 @@
     .param p2, "event"    # I
 
     .prologue
-    .line 1170
     :try_start_0
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService$CallbackRecord;->mCallback:Landroid/hardware/display/IDisplayManagerCallback;
 
@@ -79,15 +72,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1176
     :goto_0
     return-void
 
-    .line 1171
     :catch_0
     move-exception v0
 
-    .line 1172
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "DisplayManagerService"
 
@@ -119,7 +109,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1174
     invoke-virtual {p0}, Lcom/android/server/display/DisplayManagerService$CallbackRecord;->binderDied()V
 
     goto :goto_0

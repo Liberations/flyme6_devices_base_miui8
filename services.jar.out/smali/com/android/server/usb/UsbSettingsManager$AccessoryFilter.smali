@@ -28,31 +28,26 @@
     .param p1, "accessory"    # Landroid/hardware/usb/UsbAccessory;
 
     .prologue
-    .line 387
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 388
     invoke-virtual {p1}, Landroid/hardware/usb/UsbAccessory;->getManufacturer()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/usb/UsbSettingsManager$AccessoryFilter;->mManufacturer:Ljava/lang/String;
 
-    .line 389
     invoke-virtual {p1}, Landroid/hardware/usb/UsbAccessory;->getModel()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/usb/UsbSettingsManager$AccessoryFilter;->mModel:Ljava/lang/String;
 
-    .line 390
     invoke-virtual {p1}, Landroid/hardware/usb/UsbAccessory;->getVersion()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/usb/UsbSettingsManager$AccessoryFilter;->mVersion:Ljava/lang/String;
 
-    .line 391
     return-void
 .end method
 
@@ -63,19 +58,14 @@
     .param p3, "version"    # Ljava/lang/String;
 
     .prologue
-    .line 381
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 382
     iput-object p1, p0, Lcom/android/server/usb/UsbSettingsManager$AccessoryFilter;->mManufacturer:Ljava/lang/String;
 
-    .line 383
     iput-object p2, p0, Lcom/android/server/usb/UsbSettingsManager$AccessoryFilter;->mModel:Ljava/lang/String;
 
-    .line 384
     iput-object p3, p0, Lcom/android/server/usb/UsbSettingsManager$AccessoryFilter;->mVersion:Ljava/lang/String;
 
-    .line 385
     return-void
 .end method
 
@@ -90,24 +80,19 @@
     .end annotation
 
     .prologue
-    .line 395
     const/4 v2, 0x0
 
-    .line 396
     .local v2, "manufacturer":Ljava/lang/String;
     const/4 v3, 0x0
 
-    .line 397
     .local v3, "model":Ljava/lang/String;
     const/4 v6, 0x0
 
-    .line 399
     .local v6, "version":Ljava/lang/String;
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeCount()I
 
     move-result v0
 
-    .line 400
     .local v0, "count":I
     const/4 v1, 0x0
 
@@ -115,18 +100,15 @@
     :goto_0
     if-ge v1, v0, :cond_3
 
-    .line 401
     invoke-interface {p0, v1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeName(I)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 402
     .local v4, "name":Ljava/lang/String;
     invoke-interface {p0, v1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 404
     .local v5, "value":Ljava/lang/String;
     const-string v7, "manufacturer"
 
@@ -136,17 +118,14 @@
 
     if-eqz v7, :cond_1
 
-    .line 405
     move-object v2, v5
 
-    .line 400
     :cond_0
     :goto_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 406
     :cond_1
     const-string v7, "model"
 
@@ -156,12 +135,10 @@
 
     if-eqz v7, :cond_2
 
-    .line 407
     move-object v3, v5
 
     goto :goto_1
 
-    .line 408
     :cond_2
     const-string v7, "version"
 
@@ -171,12 +148,10 @@
 
     if-eqz v7, :cond_0
 
-    .line 409
     move-object v6, v5
 
     goto :goto_1
 
-    .line 412
     .end local v4    # "name":Ljava/lang/String;
     .end local v5    # "value":Ljava/lang/String;
     :cond_3
@@ -198,7 +173,6 @@
 
     const/4 v3, 0x0
 
-    .line 446
     iget-object v4, p0, Lcom/android/server/usb/UsbSettingsManager$AccessoryFilter;->mManufacturer:Ljava/lang/String;
 
     if-eqz v4, :cond_0
@@ -214,12 +188,10 @@
     :cond_0
     move v2, v3
 
-    .line 461
     :cond_1
     :goto_0
     return v2
 
-    .line 449
     :cond_2
     instance-of v4, p1, Lcom/android/server/usb/UsbSettingsManager$AccessoryFilter;
 
@@ -227,10 +199,8 @@
 
     move-object v1, p1
 
-    .line 450
     check-cast v1, Lcom/android/server/usb/UsbSettingsManager$AccessoryFilter;
 
-    .line 451
     .local v1, "filter":Lcom/android/server/usb/UsbSettingsManager$AccessoryFilter;
     iget-object v4, p0, Lcom/android/server/usb/UsbSettingsManager$AccessoryFilter;->mManufacturer:Ljava/lang/String;
 
@@ -267,7 +237,6 @@
 
     goto :goto_0
 
-    .line 455
     .end local v1    # "filter":Lcom/android/server/usb/UsbSettingsManager$AccessoryFilter;
     :cond_4
     instance-of v4, p1, Landroid/hardware/usb/UsbAccessory;
@@ -276,10 +245,8 @@
 
     move-object v0, p1
 
-    .line 456
     check-cast v0, Landroid/hardware/usb/UsbAccessory;
 
-    .line 457
     .local v0, "accessory":Landroid/hardware/usb/UsbAccessory;
     iget-object v4, p0, Lcom/android/server/usb/UsbSettingsManager$AccessoryFilter;->mManufacturer:Ljava/lang/String;
 
@@ -326,7 +293,6 @@
     :cond_6
     move v2, v3
 
-    .line 461
     goto :goto_0
 .end method
 
@@ -336,7 +302,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 466
     iget-object v0, p0, Lcom/android/server/usb/UsbSettingsManager$AccessoryFilter;->mManufacturer:Ljava/lang/String;
 
     if-nez v0, :cond_0
@@ -397,7 +362,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 430
     iget-object v1, p0, Lcom/android/server/usb/UsbSettingsManager$AccessoryFilter;->mManufacturer:Ljava/lang/String;
 
     if-eqz v1, :cond_1
@@ -414,12 +378,10 @@
 
     if-nez v1, :cond_1
 
-    .line 433
     :cond_0
     :goto_0
     return v0
 
-    .line 431
     :cond_1
     iget-object v1, p0, Lcom/android/server/usb/UsbSettingsManager$AccessoryFilter;->mModel:Ljava/lang/String;
 
@@ -437,7 +399,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 432
     :cond_2
     iget-object v1, p0, Lcom/android/server/usb/UsbSettingsManager$AccessoryFilter;->mVersion:Ljava/lang/String;
 
@@ -455,7 +416,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 433
     :cond_3
     const/4 v0, 0x1
 
@@ -469,7 +429,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 437
     iget-object v1, p0, Lcom/android/server/usb/UsbSettingsManager$AccessoryFilter;->mManufacturer:Ljava/lang/String;
 
     if-eqz v1, :cond_1
@@ -484,12 +443,10 @@
 
     if-nez v1, :cond_1
 
-    .line 440
     :cond_0
     :goto_0
     return v0
 
-    .line 438
     :cond_1
     iget-object v1, p0, Lcom/android/server/usb/UsbSettingsManager$AccessoryFilter;->mModel:Ljava/lang/String;
 
@@ -505,7 +462,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 439
     :cond_2
     iget-object v1, p0, Lcom/android/server/usb/UsbSettingsManager$AccessoryFilter;->mVersion:Ljava/lang/String;
 
@@ -521,7 +477,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 440
     :cond_3
     const/4 v0, 0x1
 
@@ -532,7 +487,6 @@
     .locals 2
 
     .prologue
-    .line 473
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -598,55 +552,46 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 416
     const-string v0, "usb-accessory"
 
     invoke-interface {p1, v2, v0}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 417
     iget-object v0, p0, Lcom/android/server/usb/UsbSettingsManager$AccessoryFilter;->mManufacturer:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    .line 418
     const-string v0, "manufacturer"
 
     iget-object v1, p0, Lcom/android/server/usb/UsbSettingsManager$AccessoryFilter;->mManufacturer:Ljava/lang/String;
 
     invoke-interface {p1, v2, v0, v1}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 420
     :cond_0
     iget-object v0, p0, Lcom/android/server/usb/UsbSettingsManager$AccessoryFilter;->mModel:Ljava/lang/String;
 
     if-eqz v0, :cond_1
 
-    .line 421
     const-string v0, "model"
 
     iget-object v1, p0, Lcom/android/server/usb/UsbSettingsManager$AccessoryFilter;->mModel:Ljava/lang/String;
 
     invoke-interface {p1, v2, v0, v1}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 423
     :cond_1
     iget-object v0, p0, Lcom/android/server/usb/UsbSettingsManager$AccessoryFilter;->mVersion:Ljava/lang/String;
 
     if-eqz v0, :cond_2
 
-    .line 424
     const-string v0, "version"
 
     iget-object v1, p0, Lcom/android/server/usb/UsbSettingsManager$AccessoryFilter;->mVersion:Ljava/lang/String;
 
     invoke-interface {p1, v2, v0, v1}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 426
     :cond_2
     const-string v0, "usb-accessory"
 
     invoke-interface {p1, v2, v0}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 427
     return-void
 .end method

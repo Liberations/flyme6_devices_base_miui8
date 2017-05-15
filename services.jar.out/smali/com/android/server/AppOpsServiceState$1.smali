@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 103
     iput-object p1, p0, Lcom/android/server/AppOpsServiceState$1;->this$0:Lcom/android/server/AppOpsServiceState;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -40,12 +39,10 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 106
     iget-object v0, p0, Lcom/android/server/AppOpsServiceState$1;->this$0:Lcom/android/server/AppOpsServiceState;
 
     # invokes: Lcom/android/server/AppOpsServiceState;->updatePowerState()V
     invoke-static {v0}, Lcom/android/server/AppOpsServiceState;->access$100(Lcom/android/server/AppOpsServiceState;)V
 
-    .line 107
     return-void
 .end method

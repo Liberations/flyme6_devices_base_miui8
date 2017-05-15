@@ -123,7 +123,6 @@
 
     const/4 v3, 0x0
 
-    .line 44
     const-string v0, "middle_keycode_is_dpad_center"
 
     invoke-static {v0, v3}, Lmiui/util/FeatureParser;->getBoolean(Ljava/lang/String;Z)Z
@@ -132,7 +131,6 @@
 
     sput-boolean v0, Lcom/android/server/MiuiInputFilter;->isDpadDevice:Z
 
-    .line 45
     sget-boolean v0, Lcom/android/server/MiuiInputFilter;->isDpadDevice:Z
 
     if-eqz v0, :cond_0
@@ -142,7 +140,6 @@
     :goto_0
     sput v0, Lcom/android/server/MiuiInputFilter;->MIDDLE_KEYCODE:I
 
-    .line 60
     new-array v0, v5, [[I
 
     new-array v1, v5, [I
@@ -167,7 +164,6 @@
 
     sput-object v0, Lcom/android/server/MiuiInputFilter;->NOT_ENTERED_LISTEN_COMBINATION_KEYS:[[I
 
-    .line 66
     new-array v0, v6, [[I
 
     new-array v1, v5, [I
@@ -216,7 +212,6 @@
 
     return-void
 
-    .line 45
     :cond_0
     const/4 v0, 0x3
 
@@ -230,7 +225,6 @@
     .prologue
     const/4 v2, 0x3
 
-    .line 137
     invoke-static {}, Lcom/android/server/DisplayThread;->get()Lcom/android/server/DisplayThread;
 
     move-result-object v0
@@ -241,7 +235,6 @@
 
     invoke-direct {p0, v0}, Landroid/view/InputFilter;-><init>(Landroid/os/Looper;)V
 
-    .line 57
     const-wide v0, 0x3fd657184ae74487L    # 0.3490658503988659
 
     invoke-static {v0, v1}, Ljava/lang/Math;->cos(D)D
@@ -250,46 +243,38 @@
 
     iput-wide v0, p0, Lcom/android/server/MiuiInputFilter;->MAX_COS:D
 
-    .line 80
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/MiuiInputFilter;->mPendingKeys:Ljava/util/List;
 
-    .line 81
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/MiuiInputFilter;->mOutsideClickableRects:Ljava/util/List;
 
-    .line 89
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/MiuiInputFilter;->mThreeGestureState:I
 
-    .line 90
     new-array v0, v2, [I
 
     iput-object v0, p0, Lcom/android/server/MiuiInputFilter;->mPointerIds:[I
 
-    .line 91
     new-array v0, v2, [F
 
     iput-object v0, p0, Lcom/android/server/MiuiInputFilter;->mInitMotionY:[F
 
-    .line 95
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/MiuiInputFilter;->mPoints:Ljava/util/ArrayList;
 
-    .line 138
     iput-object p1, p0, Lcom/android/server/MiuiInputFilter;->mContext:Landroid/content/Context;
 
-    .line 139
     new-instance v0, Lcom/android/server/MiuiInputFilter$H;
 
     invoke-static {}, Lcom/android/server/DisplayThread;->get()Lcom/android/server/DisplayThread;
@@ -304,7 +289,6 @@
 
     iput-object v0, p0, Lcom/android/server/MiuiInputFilter;->mHandler:Lcom/android/server/MiuiInputFilter$H;
 
-    .line 141
     const/high16 v0, 0x41a00000    # 20.0f
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -321,7 +305,6 @@
 
     sput v0, Lcom/android/server/MiuiInputFilter;->sEdgeDistance:F
 
-    .line 142
     const/high16 v0, 0x43160000    # 150.0f
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -340,7 +323,6 @@
 
     sput v0, Lcom/android/server/MiuiInputFilter;->sThreeGestureThreshold:I
 
-    .line 143
     return-void
 .end method
 
@@ -349,7 +331,6 @@
     .param p0, "x0"    # Lcom/android/server/MiuiInputFilter;
 
     .prologue
-    .line 42
     iget-object v0, p0, Lcom/android/server/MiuiInputFilter;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -360,7 +341,6 @@
     .param p0, "x0"    # Lcom/android/server/MiuiInputFilter;
 
     .prologue
-    .line 42
     invoke-direct {p0}, Lcom/android/server/MiuiInputFilter;->gotoScreenshotSetting()V
 
     return-void
@@ -372,7 +352,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 42
     invoke-direct {p0, p1}, Lcom/android/server/MiuiInputFilter;->setIsShowThreeGestureAlert(Z)V
 
     return-void
@@ -383,10 +362,8 @@
     .param p1, "newState"    # I
 
     .prologue
-    .line 447
     iput p1, p0, Lcom/android/server/MiuiInputFilter;->mThreeGestureState:I
 
-    .line 448
     return-void
 .end method
 
@@ -395,7 +372,6 @@
     .param p1, "policyFlags"    # I
 
     .prologue
-    .line 182
     move-object/from16 v0, p0
 
     iget-object v6, v0, Lcom/android/server/MiuiInputFilter;->mPoints:Ljava/util/ArrayList;
@@ -408,7 +384,6 @@
 
     check-cast v2, Landroid/graphics/PointF;
 
-    .line 183
     .local v2, "firstP":Landroid/graphics/PointF;
     move-object/from16 v0, p0
 
@@ -422,7 +397,6 @@
 
     check-cast v11, Landroid/graphics/PointF;
 
-    .line 184
     .local v11, "secondP":Landroid/graphics/PointF;
     move-object/from16 v0, p0
 
@@ -436,11 +410,9 @@
 
     check-cast v14, Landroid/graphics/PointF;
 
-    .line 185
     .local v14, "thirdP":Landroid/graphics/PointF;
     const/4 v15, 0x0
 
-    .line 186
     .local v15, "volumeChange":F
     iget v6, v11, Landroid/graphics/PointF;->x:F
 
@@ -532,7 +504,6 @@
 
     div-double v12, v6, v8
 
-    .line 188
     .local v12, "cosTheta":D
     invoke-static {v12, v13}, Ljava/lang/Math;->abs(D)D
 
@@ -546,7 +517,6 @@
 
     if-gez v6, :cond_0
 
-    .line 189
     iget v6, v11, Landroid/graphics/PointF;->x:F
 
     iget v7, v2, Landroid/graphics/PointF;->x:F
@@ -577,7 +547,6 @@
 
     sub-float v15, v6, v7
 
-    .line 191
     :cond_0
     const/4 v6, 0x0
 
@@ -585,12 +554,10 @@
 
     if-eqz v6, :cond_1
 
-    .line 192
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v4
 
-    .line 193
     .local v4, "time":J
     new-instance v3, Landroid/view/KeyEvent;
 
@@ -611,7 +578,6 @@
 
     invoke-direct/range {v3 .. v10}, Landroid/view/KeyEvent;-><init>(JJIII)V
 
-    .line 194
     .local v3, "evt":Landroid/view/KeyEvent;
     move-object/from16 v0, p0
 
@@ -619,12 +585,10 @@
 
     invoke-virtual {v0, v3, v1}, Lcom/android/server/MiuiInputFilter;->sendInputEvent(Landroid/view/InputEvent;I)V
 
-    .line 195
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v4
 
-    .line 196
     new-instance v3, Landroid/view/KeyEvent;
 
     .end local v3    # "evt":Landroid/view/KeyEvent;
@@ -645,7 +609,6 @@
 
     invoke-direct/range {v3 .. v10}, Landroid/view/KeyEvent;-><init>(JJIII)V
 
-    .line 197
     .restart local v3    # "evt":Landroid/view/KeyEvent;
     move-object/from16 v0, p0
 
@@ -653,20 +616,17 @@
 
     invoke-virtual {v0, v3, v1}, Lcom/android/server/MiuiInputFilter;->sendInputEvent(Landroid/view/InputEvent;I)V
 
-    .line 199
     .end local v3    # "evt":Landroid/view/KeyEvent;
     .end local v4    # "time":J
     :cond_1
     return-void
 
-    .line 193
     .restart local v4    # "time":J
     :cond_2
     const/16 v9, 0x19
 
     goto :goto_0
 
-    .line 196
     :cond_3
     const/16 v9, 0x19
 
@@ -678,14 +638,11 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 432
     const/4 v1, 0x1
 
-    .line 433
     .local v1, "maxY":F
     const v2, 0x7f7fffff    # Float.MAX_VALUE
 
-    .line 434
     .local v2, "minY":F
     const/4 v0, 0x0
 
@@ -697,28 +654,23 @@
 
     if-ge v0, v4, :cond_0
 
-    .line 435
     invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->getY(I)F
 
     move-result v3
 
-    .line 436
     .local v3, "y":F
     invoke-static {v1, v3}, Ljava/lang/Math;->max(FF)F
 
     move-result v1
 
-    .line 437
     invoke-static {v2, v3}, Ljava/lang/Math;->min(FF)F
 
     move-result v2
 
-    .line 434
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 439
     .end local v3    # "y":F
     :cond_0
     sub-float v4, v1, v2
@@ -743,10 +695,8 @@
 
     if-lez v4, :cond_1
 
-    .line 440
     const/4 v4, 0x0
 
-    .line 443
     :goto_1
     return v4
 
@@ -762,7 +712,6 @@
     .param p2, "y"    # F
 
     .prologue
-    .line 512
     iget-object v2, p0, Lcom/android/server/MiuiInputFilter;->mOutsideClickableRects:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -783,7 +732,6 @@
 
     check-cast v0, Lcom/android/server/MiuiInputFilter$ClickableRect;
 
-    .line 513
     .local v0, "c":Lcom/android/server/MiuiInputFilter$ClickableRect;
     iget-object v2, v0, Lcom/android/server/MiuiInputFilter$ClickableRect;->mRect:Landroid/graphics/Rect;
 
@@ -797,7 +745,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 517
     .end local v0    # "c":Lcom/android/server/MiuiInputFilter$ClickableRect;
     :goto_0
     return-object v0
@@ -815,7 +762,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 530
     iget-object v4, p0, Lcom/android/server/MiuiInputFilter;->mTempPointerCoords:[Landroid/view/MotionEvent$PointerCoords;
 
     if-eqz v4, :cond_1
@@ -824,29 +770,23 @@
 
     array-length v1, v4
 
-    .line 531
     .local v1, "oldSize":I
     :goto_0
     if-ge v1, p1, :cond_0
 
-    .line 532
     iget-object v2, p0, Lcom/android/server/MiuiInputFilter;->mTempPointerCoords:[Landroid/view/MotionEvent$PointerCoords;
 
-    .line 533
     .local v2, "oldTempPointerCoords":[Landroid/view/MotionEvent$PointerCoords;
     new-array v4, p1, [Landroid/view/MotionEvent$PointerCoords;
 
     iput-object v4, p0, Lcom/android/server/MiuiInputFilter;->mTempPointerCoords:[Landroid/view/MotionEvent$PointerCoords;
 
-    .line 534
     if-eqz v2, :cond_0
 
-    .line 535
     iget-object v4, p0, Lcom/android/server/MiuiInputFilter;->mTempPointerCoords:[Landroid/view/MotionEvent$PointerCoords;
 
     invoke-static {v2, v3, v4, v3, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 538
     .end local v2    # "oldTempPointerCoords":[Landroid/view/MotionEvent$PointerCoords;
     :cond_0
     move v0, v1
@@ -855,7 +795,6 @@
     :goto_1
     if-ge v0, p1, :cond_2
 
-    .line 539
     iget-object v3, p0, Lcom/android/server/MiuiInputFilter;->mTempPointerCoords:[Landroid/view/MotionEvent$PointerCoords;
 
     new-instance v4, Landroid/view/MotionEvent$PointerCoords;
@@ -864,7 +803,6 @@
 
     aput-object v4, v3, v0
 
-    .line 538
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
@@ -874,10 +812,8 @@
     :cond_1
     move v1, v3
 
-    .line 530
     goto :goto_0
 
-    .line 541
     .restart local v0    # "i":I
     .restart local v1    # "oldSize":I
     :cond_2
@@ -893,7 +829,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 545
     iget-object v4, p0, Lcom/android/server/MiuiInputFilter;->mTempPointerProperties:[Landroid/view/MotionEvent$PointerProperties;
 
     if-eqz v4, :cond_1
@@ -902,29 +837,23 @@
 
     array-length v1, v4
 
-    .line 546
     .local v1, "oldSize":I
     :goto_0
     if-ge v1, p1, :cond_0
 
-    .line 547
     iget-object v2, p0, Lcom/android/server/MiuiInputFilter;->mTempPointerProperties:[Landroid/view/MotionEvent$PointerProperties;
 
-    .line 548
     .local v2, "oldTempPointerProperties":[Landroid/view/MotionEvent$PointerProperties;
     new-array v4, p1, [Landroid/view/MotionEvent$PointerProperties;
 
     iput-object v4, p0, Lcom/android/server/MiuiInputFilter;->mTempPointerProperties:[Landroid/view/MotionEvent$PointerProperties;
 
-    .line 549
     if-eqz v2, :cond_0
 
-    .line 550
     iget-object v4, p0, Lcom/android/server/MiuiInputFilter;->mTempPointerProperties:[Landroid/view/MotionEvent$PointerProperties;
 
     invoke-static {v2, v3, v4, v3, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 553
     .end local v2    # "oldTempPointerProperties":[Landroid/view/MotionEvent$PointerProperties;
     :cond_0
     move v0, v1
@@ -933,7 +862,6 @@
     :goto_1
     if-ge v0, p1, :cond_2
 
-    .line 554
     iget-object v3, p0, Lcom/android/server/MiuiInputFilter;->mTempPointerProperties:[Landroid/view/MotionEvent$PointerProperties;
 
     new-instance v4, Landroid/view/MotionEvent$PointerProperties;
@@ -942,7 +870,6 @@
 
     aput-object v4, v3, v0
 
-    .line 553
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
@@ -952,10 +879,8 @@
     :cond_1
     move v1, v3
 
-    .line 545
     goto :goto_0
 
-    .line 556
     .restart local v0    # "i":I
     .restart local v1    # "oldSize":I
     :cond_2
@@ -970,14 +895,12 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 480
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.MAIN"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 481
     .local v0, "settingIntent":Landroid/content/Intent;
     const-string v1, "com.android.settings"
 
@@ -985,43 +908,36 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 482
     const-string v1, ":android:show_fragment"
 
     const-string v2, "com.android.settings.display.ScreenshotFragment"
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 483
     const-string v1, ":android:show_fragment_title"
 
     invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 484
     const-string v1, ":android:show_fragment_short_title"
 
     invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 485
     const-string v1, ":android:no_headers"
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 486
     const/high16 v1, 0x10000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 487
     iget-object v1, p0, Lcom/android/server/MiuiInputFilter;->mContext:Landroid/content/Context;
 
     sget-object v2, Landroid/os/UserHandle;->OWNER:Landroid/os/UserHandle;
 
     invoke-virtual {v1, v0, v2}, Landroid/content/Context;->startActivityAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 488
     return-void
 .end method
 
@@ -1029,7 +945,6 @@
     .locals 4
 
     .prologue
-    .line 254
     iget-object v0, p0, Lcom/android/server/MiuiInputFilter;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1055,7 +970,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 249
     iget-object v0, p0, Lcom/android/server/MiuiInputFilter;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1079,7 +993,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 521
     cmpl-float v0, p1, v1
 
     if-lez v0, :cond_0
@@ -1121,7 +1034,6 @@
     .param p2, "y"    # F
 
     .prologue
-    .line 525
     sget v0, Lcom/android/server/MiuiInputFilter;->sEdgeDistance:F
 
     neg-float v0, v0
@@ -1174,7 +1086,6 @@
     .param p1, "isSecondKey"    # Z
 
     .prologue
-    .line 565
     invoke-direct {p0}, Lcom/android/server/MiuiInputFilter;->needShowDialog()Z
 
     move-result v0
@@ -1199,7 +1110,6 @@
     .locals 1
 
     .prologue
-    .line 560
     invoke-static {}, Lcom/android/server/HandyMode;->getMode()I
 
     move-result v0
@@ -1237,7 +1147,6 @@
 
     const/4 v5, 0x1
 
-    .line 573
     monitor-enter p0
 
     :try_start_0
@@ -1251,32 +1160,26 @@
 
     if-nez v0, :cond_2
 
-    .line 574
     :cond_0
     invoke-super {p0, p1, p2}, Landroid/view/InputFilter;->onInputEvent(Landroid/view/InputEvent;I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 643
     :cond_1
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 577
     :cond_2
     const/4 v9, 0x0
 
-    .line 578
     .local v9, "needDelay":Z
     const/4 v10, 0x0
 
-    .line 579
     .local v10, "needTrigger":Z
     const/4 v7, 0x0
 
-    .line 580
     .local v7, "isSecondKey":Z
     :try_start_1
     iget-object v0, p0, Lcom/android/server/MiuiInputFilter;->mPendingKeys:Ljava/util/List;
@@ -1287,29 +1190,23 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 635
     :cond_3
     :goto_1
     if-nez v9, :cond_4
 
-    .line 636
     invoke-super {p0, p1, p2}, Landroid/view/InputFilter;->onInputEvent(Landroid/view/InputEvent;I)V
 
-    .line 639
     :cond_4
     if-eqz v10, :cond_1
 
-    .line 640
     invoke-virtual {p0}, Lcom/android/server/MiuiInputFilter;->triggerCombinationClick()V
 
-    .line 641
     invoke-virtual {p0}, Lcom/android/server/MiuiInputFilter;->clearPendingList()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
-    .line 573
     .end local v7    # "isSecondKey":Z
     .end local v9    # "needDelay":Z
     .end local v10    # "needTrigger":Z
@@ -1320,7 +1217,6 @@
 
     throw v0
 
-    .line 582
     .restart local v7    # "isSecondKey":Z
     .restart local v9    # "needDelay":Z
     .restart local v10    # "needTrigger":Z
@@ -1342,14 +1238,12 @@
 
     if-eqz v0, :cond_3
 
-    .line 584
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/android/server/MiuiInputFilter;->needDelayKey(Z)Z
 
     move-result v9
 
-    .line 585
     invoke-virtual {p1}, Landroid/view/KeyEvent;->copy()Landroid/view/KeyEvent;
 
     move-result-object v1
@@ -1374,7 +1268,6 @@
 
     goto :goto_2
 
-    .line 590
     :pswitch_1
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getAction()I
 
@@ -1421,13 +1314,11 @@
 
     if-eqz v7, :cond_9
 
-    .line 594
     :cond_7
     invoke-direct {p0, v7}, Lcom/android/server/MiuiInputFilter;->needDelayKey(Z)Z
 
     move-result v9
 
-    .line 595
     invoke-virtual {p1}, Landroid/view/KeyEvent;->copy()Landroid/view/KeyEvent;
 
     move-result-object v1
@@ -1452,13 +1343,11 @@
 
     goto :goto_3
 
-    .line 597
     :cond_9
     invoke-virtual {p0}, Lcom/android/server/MiuiInputFilter;->flushPending()V
 
     goto :goto_1
 
-    .line 603
     :pswitch_2
     iget-object v0, p0, Lcom/android/server/MiuiInputFilter;->mPendingKeys:Ljava/util/List;
 
@@ -1472,7 +1361,6 @@
 
     iget-object v6, v0, Lcom/android/server/MiuiInputFilter$KeyData;->keyEvent:Landroid/view/KeyEvent;
 
-    .line 604
     .local v6, "firstKeyEvent":Landroid/view/KeyEvent;
     iget-object v0, p0, Lcom/android/server/MiuiInputFilter;->mPendingKeys:Ljava/util/List;
 
@@ -1486,7 +1374,6 @@
 
     iget-object v8, v0, Lcom/android/server/MiuiInputFilter$KeyData;->keyEvent:Landroid/view/KeyEvent;
 
-    .line 605
     .local v8, "lastKeyEvent":Landroid/view/KeyEvent;
     invoke-virtual {v8}, Landroid/view/KeyEvent;->getAction()I
 
@@ -1533,13 +1420,11 @@
 
     if-ne v0, v1, :cond_e
 
-    .line 612
     :cond_b
     invoke-direct {p0, v7}, Lcom/android/server/MiuiInputFilter;->needDelayKey(Z)Z
 
     move-result v9
 
-    .line 613
     invoke-virtual {p1}, Landroid/view/KeyEvent;->copy()Landroid/view/KeyEvent;
 
     move-result-object v1
@@ -1574,13 +1459,11 @@
 
     goto :goto_5
 
-    .line 616
     :cond_e
     invoke-virtual {p0}, Lcom/android/server/MiuiInputFilter;->flushPending()V
 
     goto/16 :goto_1
 
-    .line 622
     .end local v6    # "firstKeyEvent":Landroid/view/KeyEvent;
     .end local v8    # "lastKeyEvent":Landroid/view/KeyEvent;
     :pswitch_3
@@ -1596,7 +1479,6 @@
 
     iget-object v11, v0, Lcom/android/server/MiuiInputFilter$KeyData;->keyEvent:Landroid/view/KeyEvent;
 
-    .line 623
     .local v11, "pendingKeyEvent":Landroid/view/KeyEvent;
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getAction()I
 
@@ -1614,13 +1496,10 @@
 
     if-ne v0, v1, :cond_10
 
-    .line 625
     const/4 v10, 0x1
 
-    .line 626
     const/4 v9, 0x1
 
-    .line 627
     invoke-virtual {p1}, Landroid/view/KeyEvent;->copy()Landroid/view/KeyEvent;
 
     move-result-object v1
@@ -1645,7 +1524,6 @@
 
     goto :goto_6
 
-    .line 629
     :cond_10
     invoke-virtual {p0}, Lcom/android/server/MiuiInputFilter;->flushPending()V
     :try_end_2
@@ -1653,7 +1531,6 @@
 
     goto/16 :goto_1
 
-    .line 580
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -1669,12 +1546,10 @@
     .param p2, "policyFlags"    # I
 
     .prologue
-    .line 240
     invoke-direct {p0, p1, p2}, Lcom/android/server/MiuiInputFilter;->processMotionEventForThreeGestureDetect(Landroid/view/MotionEvent;I)Z
 
     move-result v0
 
-    .line 241
     .local v0, "consumed":Z
     if-nez v0, :cond_0
 
@@ -1682,14 +1557,11 @@
 
     if-eqz v1, :cond_0
 
-    .line 242
     invoke-direct {p0, p1, p2}, Lcom/android/server/MiuiInputFilter;->processMotionEventForHandyMode(Landroid/view/MotionEvent;I)V
 
-    .line 246
     :goto_0
     return-void
 
-    .line 244
     :cond_0
     invoke-super {p0, p1, p2}, Landroid/view/InputFilter;->onInputEvent(Landroid/view/InputEvent;I)V
 
@@ -1704,7 +1576,6 @@
     .param p3, "scalePivot"    # F
 
     .prologue
-    .line 236
     sub-float v0, p3, p0
 
     mul-float/2addr v0, p2
@@ -1724,19 +1595,16 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 162
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v1
 
     packed-switch v1, :pswitch_data_0
 
-    .line 179
     :cond_0
     :goto_0
     return-void
 
-    .line 164
     :pswitch_0
     new-instance v0, Landroid/graphics/PointF;
 
@@ -1750,7 +1618,6 @@
 
     invoke-direct {v0, v1, v2}, Landroid/graphics/PointF;-><init>(FF)V
 
-    .line 165
     .local v0, "curPointF":Landroid/graphics/PointF;
     iget v1, p0, Lcom/android/server/MiuiInputFilter;->mSampleDura:I
 
@@ -1762,15 +1629,12 @@
 
     if-lt v1, v2, :cond_1
 
-    .line 166
     iget-object v1, p0, Lcom/android/server/MiuiInputFilter;->mPoints:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 167
     iput v3, p0, Lcom/android/server/MiuiInputFilter;->mSampleDura:I
 
-    .line 169
     :cond_1
     iget-object v1, p0, Lcom/android/server/MiuiInputFilter;->mPoints:Ljava/util/ArrayList;
 
@@ -1782,29 +1646,24 @@
 
     if-lt v1, v2, :cond_0
 
-    .line 170
     invoke-direct {p0, p2}, Lcom/android/server/MiuiInputFilter;->changeVolumeForBackTouch(I)V
 
-    .line 171
     iget-object v1, p0, Lcom/android/server/MiuiInputFilter;->mPoints:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
 
     goto :goto_0
 
-    .line 175
     .end local v0    # "curPointF":Landroid/graphics/PointF;
     :pswitch_1
     iput v3, p0, Lcom/android/server/MiuiInputFilter;->mSampleDura:I
 
-    .line 176
     iget-object v1, p0, Lcom/android/server/MiuiInputFilter;->mPoints:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
 
     goto :goto_0
 
-    .line 162
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1
@@ -1818,29 +1677,24 @@
     .param p2, "policyFlags"    # I
 
     .prologue
-    .line 264
     invoke-static {}, Lcom/android/server/HandyMode;->getMode()I
 
     move-result v21
 
-    .line 265
     .local v21, "mode":I
     if-eqz v21, :cond_9
 
-    .line 266
     const/high16 v4, 0x3f800000    # 1.0f
 
     sget v5, Lcom/android/server/HandyMode;->sScale:F
 
     div-float v23, v4, v5
 
-    .line 268
     .local v23, "scaleInverse":F
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getPointerCount()I
 
     move-result v9
 
-    .line 269
     .local v9, "pointerCount":I
     move-object/from16 v0, p0
 
@@ -1848,7 +1702,6 @@
 
     move-result-object v11
 
-    .line 270
     .local v11, "coords":[Landroid/view/MotionEvent$PointerCoords;
     move-object/from16 v0, p0
 
@@ -1856,7 +1709,6 @@
 
     move-result-object v10
 
-    .line 271
     .local v10, "properties":[Landroid/view/MotionEvent$PointerProperties;
     const/16 v20, 0x0
 
@@ -1866,7 +1718,6 @@
 
     if-ge v0, v9, :cond_1
 
-    .line 272
     aget-object v4, v11, v20
 
     move-object/from16 v0, p1
@@ -1875,7 +1726,6 @@
 
     invoke-virtual {v0, v1, v4}, Landroid/view/MotionEvent;->getPointerCoords(ILandroid/view/MotionEvent$PointerCoords;)V
 
-    .line 274
     const/4 v4, 0x2
 
     move/from16 v0, v21
@@ -1888,7 +1738,6 @@
 
     move/from16 v24, v0
 
-    .line 275
     .local v24, "xPivot":F
     :goto_1
     aget-object v4, v11, v20
@@ -1909,14 +1758,12 @@
 
     iput v5, v4, Landroid/view/MotionEvent$PointerCoords;->x:F
 
-    .line 277
     sget v4, Lcom/android/server/HandyMode;->sScreenHeight:I
 
     int-to-float v0, v4
 
     move/from16 v25, v0
 
-    .line 278
     .local v25, "yPivot":F
     aget-object v4, v11, v20
 
@@ -1936,7 +1783,6 @@
 
     iput v5, v4, Landroid/view/MotionEvent$PointerCoords;->y:F
 
-    .line 280
     aget-object v4, v10, v20
 
     move-object/from16 v0, p1
@@ -1945,12 +1791,10 @@
 
     invoke-virtual {v0, v1, v4}, Landroid/view/MotionEvent;->getPointerProperties(ILandroid/view/MotionEvent$PointerProperties;)V
 
-    .line 271
     add-int/lit8 v20, v20, 0x1
 
     goto :goto_0
 
-    .line 274
     .end local v24    # "xPivot":F
     .end local v25    # "yPivot":F
     :cond_0
@@ -1958,7 +1802,6 @@
 
     goto :goto_1
 
-    .line 282
     :cond_1
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getDownTime()J
 
@@ -2008,27 +1851,23 @@
 
     move-result-object v22
 
-    .line 297
     .local v22, "newEvent":Landroid/view/MotionEvent;
     const/4 v4, 0x1
 
     if-ne v9, v4, :cond_8
 
-    .line 298
     invoke-virtual/range {v22 .. v22}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v4
 
     if-nez v4, :cond_2
 
-    .line 300
     const/4 v4, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v4, v0, Lcom/android/server/MiuiInputFilter;->mWasInside:Z
 
-    .line 301
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v4
@@ -2047,7 +1886,6 @@
 
     iput-object v4, v0, Lcom/android/server/MiuiInputFilter;->mClickingRect:Lcom/android/server/MiuiInputFilter$ClickableRect;
 
-    .line 304
     :cond_2
     move-object/from16 v0, p0
 
@@ -2071,7 +1909,6 @@
 
     if-nez v4, :cond_6
 
-    .line 305
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/MiuiInputFilter;->mClickingRect:Lcom/android/server/MiuiInputFilter$ClickableRect;
@@ -2102,14 +1939,12 @@
 
     if-nez v4, :cond_3
 
-    .line 306
     const/4 v4, 0x0
 
     move-object/from16 v0, p0
 
     iput-object v4, v0, Lcom/android/server/MiuiInputFilter;->mClickingRect:Lcom/android/server/MiuiInputFilter$ClickableRect;
 
-    .line 309
     :cond_3
     invoke-virtual/range {v22 .. v22}, Landroid/view/MotionEvent;->getAction()I
 
@@ -2119,14 +1954,12 @@
 
     if-ne v4, v5, :cond_4
 
-    .line 310
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/MiuiInputFilter;->mClickingRect:Lcom/android/server/MiuiInputFilter$ClickableRect;
 
     if-eqz v4, :cond_5
 
-    .line 311
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/MiuiInputFilter;->mClickingRect:Lcom/android/server/MiuiInputFilter$ClickableRect;
@@ -2135,12 +1968,10 @@
 
     invoke-interface {v4}, Ljava/lang/Runnable;->run()V
 
-    .line 330
     :cond_4
     :goto_2
     invoke-virtual/range {v22 .. v22}, Landroid/view/MotionEvent;->recycle()V
 
-    .line 334
     .end local v9    # "pointerCount":I
     .end local v10    # "properties":[Landroid/view/MotionEvent$PointerProperties;
     .end local v11    # "coords":[Landroid/view/MotionEvent$PointerCoords;
@@ -2150,7 +1981,6 @@
     :goto_3
     return-void
 
-    .line 312
     .restart local v9    # "pointerCount":I
     .restart local v10    # "properties":[Landroid/view/MotionEvent$PointerProperties;
     .restart local v11    # "coords":[Landroid/view/MotionEvent$PointerCoords;
@@ -2174,14 +2004,12 @@
 
     if-nez v4, :cond_4
 
-    .line 313
     const/4 v4, 0x0
 
     invoke-static {v4}, Lcom/android/server/HandyMode;->changeMode(I)V
 
     goto :goto_2
 
-    .line 317
     :cond_6
     move-object/from16 v0, p0
 
@@ -2197,14 +2025,12 @@
 
     if-ne v4, v5, :cond_7
 
-    .line 318
     const/4 v4, 0x0
 
     move-object/from16 v0, v22
 
     invoke-virtual {v0, v4}, Landroid/view/MotionEvent;->setAction(I)V
 
-    .line 320
     :cond_7
     move-object/from16 v0, p0
 
@@ -2214,14 +2040,12 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/MiuiInputFilter;->sendInputEvent(Landroid/view/InputEvent;I)V
 
-    .line 321
     const/4 v4, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v4, v0, Lcom/android/server/MiuiInputFilter;->mWasInside:Z
 
-    .line 322
     const/4 v4, 0x0
 
     move-object/from16 v0, p0
@@ -2230,7 +2054,6 @@
 
     goto :goto_2
 
-    .line 325
     :cond_8
     move-object/from16 v0, p0
 
@@ -2240,14 +2063,12 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/MiuiInputFilter;->sendInputEvent(Landroid/view/InputEvent;I)V
 
-    .line 326
     const/4 v4, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v4, v0, Lcom/android/server/MiuiInputFilter;->mWasInside:Z
 
-    .line 327
     const/4 v4, 0x0
 
     move-object/from16 v0, p0
@@ -2256,7 +2077,6 @@
 
     goto :goto_2
 
-    .line 332
     .end local v9    # "pointerCount":I
     .end local v10    # "properties":[Landroid/view/MotionEvent$PointerProperties;
     .end local v11    # "coords":[Landroid/view/MotionEvent$PointerCoords;
@@ -2275,12 +2095,10 @@
     .param p2, "policyFlags"    # I
 
     .prologue
-    .line 337
     sget-boolean v4, Lcom/android/server/MiuiInputFilter;->sBootCompleted:Z
 
     if-nez v4, :cond_1
 
-    .line 338
     const-string v4, "sys.boot_completed"
 
     const/4 v5, 0x0
@@ -2291,42 +2109,35 @@
 
     sput-boolean v4, Lcom/android/server/MiuiInputFilter;->sBootCompleted:Z
 
-    .line 339
     sget-boolean v4, Lcom/android/server/MiuiInputFilter;->sBootCompleted:Z
 
     if-nez v4, :cond_1
 
     const/16 v24, 0x0
 
-    .line 427
     :cond_0
     :goto_0
     return v24
 
-    .line 342
     :cond_1
     invoke-direct/range {p0 .. p0}, Lcom/android/server/MiuiInputFilter;->isThreeGestureScreenshotEnabled()Z
 
     move-result v24
 
-    .line 343
     .local v24, "isGestureEnabled":Z
     invoke-direct/range {p0 .. p0}, Lcom/android/server/MiuiInputFilter;->isShowThreeGestureAlert()Z
 
     move-result v25
 
-    .line 344
     .local v25, "isShowThreeGestureAlert":Z
     if-nez v25, :cond_2
 
     if-nez v24, :cond_2
 
-    .line 345
     const/16 v24, 0x0
 
     goto :goto_0
 
-    .line 348
     :cond_2
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -2334,14 +2145,12 @@
 
     if-nez v4, :cond_4
 
-    .line 349
     const/4 v4, 0x0
 
     move-object/from16 v0, p0
 
     invoke-direct {v0, v4}, Lcom/android/server/MiuiInputFilter;->changeThreeGestureState(I)V
 
-    .line 387
     :cond_3
     :goto_1
     move-object/from16 v0, p0
@@ -2352,12 +2161,10 @@
 
     if-ne v4, v5, :cond_8
 
-    .line 388
     const/16 v24, 0x0
 
     goto :goto_0
 
-    .line 350
     :cond_4
     move-object/from16 v0, p0
 
@@ -2373,14 +2180,12 @@
 
     if-ne v4, v5, :cond_3
 
-    .line 351
     invoke-direct/range {p0 .. p1}, Lcom/android/server/MiuiInputFilter;->checkIsStartThreeGesture(Landroid/view/MotionEvent;)Z
 
     move-result v4
 
     if-nez v4, :cond_5
 
-    .line 352
     const/4 v4, 0x4
 
     move-object/from16 v0, p0
@@ -2389,7 +2194,6 @@
 
     goto :goto_1
 
-    .line 354
     :cond_5
     const/4 v4, 0x1
 
@@ -2397,15 +2201,12 @@
 
     invoke-direct {v0, v4}, Lcom/android/server/MiuiInputFilter;->changeThreeGestureState(I)V
 
-    .line 355
     if-eqz v24, :cond_7
 
-    .line 356
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getPointerCount()I
 
     move-result v27
 
-    .line 357
     .local v27, "pointerCount":I
     move-object/from16 v0, p0
 
@@ -2415,7 +2216,6 @@
 
     move-result-object v11
 
-    .line 358
     .local v11, "coords":[Landroid/view/MotionEvent$PointerCoords;
     move-object/from16 v0, p0
 
@@ -2425,7 +2225,6 @@
 
     move-result-object v10
 
-    .line 359
     .local v10, "properties":[Landroid/view/MotionEvent$PointerProperties;
     const/16 v22, 0x0
 
@@ -2437,7 +2236,6 @@
 
     if-ge v0, v1, :cond_6
 
-    .line 360
     aget-object v4, v11, v22
 
     move-object/from16 v0, p1
@@ -2446,7 +2244,6 @@
 
     invoke-virtual {v0, v1, v4}, Landroid/view/MotionEvent;->getPointerCoords(ILandroid/view/MotionEvent$PointerCoords;)V
 
-    .line 361
     aget-object v4, v10, v22
 
     move-object/from16 v0, p1
@@ -2455,12 +2252,10 @@
 
     invoke-virtual {v0, v1, v4}, Landroid/view/MotionEvent;->getPointerProperties(ILandroid/view/MotionEvent$PointerProperties;)V
 
-    .line 359
     add-int/lit8 v22, v22, 0x1
 
     goto :goto_2
 
-    .line 363
     :cond_6
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getDownTime()J
 
@@ -2510,7 +2305,6 @@
 
     move-result-object v20
 
-    .line 377
     .local v20, "cancelEvent":Landroid/view/MotionEvent;
     move-object/from16 v0, p0
 
@@ -2520,7 +2314,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/MiuiInputFilter;->sendInputEvent(Landroid/view/InputEvent;I)V
 
-    .line 380
     .end local v10    # "properties":[Landroid/view/MotionEvent$PointerProperties;
     .end local v11    # "coords":[Landroid/view/MotionEvent$PointerCoords;
     .end local v20    # "cancelEvent":Landroid/view/MotionEvent;
@@ -2537,7 +2330,6 @@
 
     if-ge v0, v4, :cond_3
 
-    .line 381
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/MiuiInputFilter;->mPointerIds:[I
@@ -2552,7 +2344,6 @@
 
     aput v5, v4, v22
 
-    .line 382
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/MiuiInputFilter;->mInitMotionY:[F
@@ -2567,12 +2358,10 @@
 
     aput v5, v4, v22
 
-    .line 380
     add-int/lit8 v22, v22, 0x1
 
     goto :goto_3
 
-    .line 391
     .end local v22    # "i":I
     :cond_8
     move-object/from16 v0, p0
@@ -2581,7 +2370,6 @@
 
     if-eqz v4, :cond_e
 
-    .line 392
     move-object/from16 v0, p0
 
     iget v4, v0, Lcom/android/server/MiuiInputFilter;->mThreeGestureState:I
@@ -2590,7 +2378,6 @@
 
     if-ne v4, v5, :cond_0
 
-    .line 396
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getPointerCount()I
 
     move-result v4
@@ -2599,7 +2386,6 @@
 
     if-eq v4, v5, :cond_9
 
-    .line 397
     const/4 v4, 0x2
 
     move-object/from16 v0, p0
@@ -2608,7 +2394,6 @@
 
     goto/16 :goto_0
 
-    .line 400
     :cond_9
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
@@ -2618,11 +2403,9 @@
 
     goto/16 :goto_0
 
-    .line 402
     :pswitch_0
     const/16 v21, 0x0
 
-    .line 403
     .local v21, "distance":F
     const/16 v22, 0x0
 
@@ -2634,7 +2417,6 @@
 
     if-ge v0, v4, :cond_c
 
-    .line 404
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/MiuiInputFilter;->mPointerIds:[I
@@ -2647,7 +2429,6 @@
 
     move-result v23
 
-    .line 405
     .local v23, "index":I
     if-ltz v23, :cond_a
 
@@ -2657,7 +2438,6 @@
 
     if-lt v0, v4, :cond_b
 
-    .line 406
     :cond_a
     const/4 v4, 0x2
 
@@ -2667,7 +2447,6 @@
 
     goto/16 :goto_0
 
-    .line 409
     :cond_b
     move-object/from16 v0, p1
 
@@ -2687,12 +2466,10 @@
 
     add-float v21, v21, v4
 
-    .line 403
     add-int/lit8 v22, v22, 0x1
 
     goto :goto_4
 
-    .line 411
     .end local v23    # "index":I
     :cond_c
     sget v4, Lcom/android/server/MiuiInputFilter;->sThreeGestureThreshold:I
@@ -2703,22 +2480,18 @@
 
     if-ltz v4, :cond_0
 
-    .line 412
     const/4 v4, 0x3
 
     move-object/from16 v0, p0
 
     invoke-direct {v0, v4}, Lcom/android/server/MiuiInputFilter;->changeThreeGestureState(I)V
 
-    .line 413
     if-eqz v24, :cond_d
 
-    .line 414
     invoke-direct/range {p0 .. p0}, Lcom/android/server/MiuiInputFilter;->takeScreenshot()V
 
     goto/16 :goto_0
 
-    .line 416
     :cond_d
     move-object/from16 v0, p0
 
@@ -2732,7 +2505,6 @@
 
     check-cast v26, Landroid/app/KeyguardManager;
 
-    .line 417
     .local v26, "km":Landroid/app/KeyguardManager;
     invoke-virtual/range {v26 .. v26}, Landroid/app/KeyguardManager;->isKeyguardLocked()Z
 
@@ -2746,12 +2518,10 @@
 
     if-nez v4, :cond_0
 
-    .line 418
     invoke-direct/range {p0 .. p0}, Lcom/android/server/MiuiInputFilter;->showGestureDetectAlert()V
 
     goto/16 :goto_0
 
-    .line 427
     .end local v21    # "distance":F
     .end local v22    # "i":I
     .end local v26    # "km":Landroid/app/KeyguardManager;
@@ -2760,7 +2530,6 @@
 
     goto/16 :goto_0
 
-    .line 400
     :pswitch_data_0
     .packed-switch 0x2
         :pswitch_0
@@ -2774,30 +2543,23 @@
     .param p2, "event"    # Ljava/lang/String;
 
     .prologue
-    .line 496
     const-string v5, "count_event"
 
-    .line 497
     .local v5, "STAT_TYPE_COUNT_EVENT":Ljava/lang/String;
     const-string v4, "com.miui.gallery"
 
-    .line 498
     .local v4, "GALLERY_PKG_NAME":Ljava/lang/String;
     const-string v0, "com.miui.gallery.intent.action.SEND_STAT"
 
-    .line 499
     .local v0, "ACTION_SEND_STAT":Ljava/lang/String;
     const-string v3, "stat_type"
 
-    .line 500
     .local v3, "EXTRA_STAT_TYPE":Ljava/lang/String;
     const-string v1, "category"
 
-    .line 501
     .local v1, "EXTRA_CATEGORY":Ljava/lang/String;
     const-string v2, "event"
 
-    .line 503
     .local v2, "EXTRA_EVENT":Ljava/lang/String;
     new-instance v6, Landroid/content/Intent;
 
@@ -2805,33 +2567,27 @@
 
     invoke-direct {v6, v7}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 504
     .local v6, "intent":Landroid/content/Intent;
     const-string v7, "com.miui.gallery"
 
     invoke-virtual {v6, v7}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 505
     const-string v7, "stat_type"
 
     const-string v8, "count_event"
 
     invoke-virtual {v6, v7, v8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 506
     const-string v7, "category"
 
     invoke-virtual {v6, v7, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 507
     const-string v7, "event"
 
     invoke-virtual {v6, v7, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 508
     invoke-virtual {p0, v6}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 509
     return-void
 .end method
 
@@ -2840,7 +2596,6 @@
     .param p1, "val"    # Z
 
     .prologue
-    .line 259
     iget-object v0, p0, Lcom/android/server/MiuiInputFilter;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -2853,7 +2608,6 @@
 
     invoke-static {v0, v1, p1, v2}, Landroid/provider/MiuiSettings$System;->putBooleanForUser(Landroid/content/ContentResolver;Ljava/lang/String;ZI)Z
 
-    .line 261
     return-void
 .end method
 
@@ -2861,7 +2615,6 @@
     .locals 5
 
     .prologue
-    .line 451
     const-string v1, "trigger_restart_min_framework"
 
     const-string v2, "vold.decrypt"
@@ -2876,11 +2629,9 @@
 
     if-eqz v1, :cond_0
 
-    .line 477
     :goto_0
     return-void
 
-    .line 454
     :cond_0
     new-instance v1, Lmiui/app/AlertDialog$Builder;
 
@@ -2936,7 +2687,6 @@
 
     move-result-object v0
 
-    .line 467
     .local v0, "dlg":Lmiui/app/AlertDialog;
     new-instance v1, Lcom/android/server/MiuiInputFilter$2;
 
@@ -2944,7 +2694,6 @@
 
     invoke-virtual {v0, v1}, Lmiui/app/AlertDialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
-    .line 475
     invoke-virtual {v0}, Lmiui/app/AlertDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v1
@@ -2953,7 +2702,6 @@
 
     invoke-virtual {v1, v2}, Landroid/view/Window;->setType(I)V
 
-    .line 476
     invoke-virtual {v0}, Lmiui/app/AlertDialog;->show()V
 
     goto :goto_0
@@ -2963,7 +2711,6 @@
     .locals 3
 
     .prologue
-    .line 491
     iget-object v0, p0, Lcom/android/server/MiuiInputFilter;->mContext:Landroid/content/Context;
 
     new-instance v1, Landroid/content/Intent;
@@ -2976,7 +2723,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 492
     iget-object v0, p0, Lcom/android/server/MiuiInputFilter;->mContext:Landroid/content/Context;
 
     const-string v1, "screenshot"
@@ -2985,7 +2731,6 @@
 
     invoke-static {v0, v1, v2}, Lcom/android/server/MiuiInputFilter;->sendRecordCountEvent(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 493
     return-void
 .end method
 
@@ -2997,7 +2742,6 @@
     .param p2, "listener"    # Ljava/lang/Runnable;
 
     .prologue
-    .line 146
     iget-object v0, p0, Lcom/android/server/MiuiInputFilter;->mOutsideClickableRects:Ljava/util/List;
 
     new-instance v1, Lcom/android/server/MiuiInputFilter$ClickableRect;
@@ -3006,7 +2750,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 147
     return-void
 .end method
 
@@ -3021,7 +2764,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 709
     monitor-enter p0
 
     :try_start_0
@@ -3031,30 +2773,23 @@
 
     invoke-virtual {v2, v3}, Lcom/android/server/MiuiInputFilter$H;->removeMessages(I)V
 
-    .line 711
     new-instance v0, Lcom/android/server/MiuiInputFilter$KeyData;
 
     invoke-direct {v0}, Lcom/android/server/MiuiInputFilter$KeyData;-><init>()V
 
-    .line 712
     .local v0, "keyData":Lcom/android/server/MiuiInputFilter$KeyData;
     iput-object p1, v0, Lcom/android/server/MiuiInputFilter$KeyData;->keyEvent:Landroid/view/KeyEvent;
 
-    .line 713
     iput p2, v0, Lcom/android/server/MiuiInputFilter$KeyData;->policyFlags:I
 
-    .line 714
     iput-boolean p5, v0, Lcom/android/server/MiuiInputFilter$KeyData;->isSended:Z
 
-    .line 715
     if-gez p3, :cond_1
 
-    .line 716
     iget-object v2, p0, Lcom/android/server/MiuiInputFilter;->mPendingKeys:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 721
     :goto_0
     iget-object v2, p0, Lcom/android/server/MiuiInputFilter;->mHandler:Lcom/android/server/MiuiInputFilter$H;
 
@@ -3075,12 +2810,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 723
     monitor-exit p0
 
     return-void
 
-    .line 718
     :cond_1
     :try_start_1
     iget-object v2, p0, Lcom/android/server/MiuiInputFilter;->mPendingKeys:Ljava/util/List;
@@ -3091,7 +2824,6 @@
 
     goto :goto_0
 
-    .line 709
     .end local v0    # "keyData":Lcom/android/server/MiuiInputFilter$KeyData;
     :catchall_0
     move-exception v1
@@ -3108,16 +2840,13 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 646
     invoke-virtual {p0}, Lcom/android/server/MiuiInputFilter;->getListenCombinationKeys()[[I
 
     move-result-object v2
 
-    .line 647
     .local v2, "listenCombinationKeys":[[I
     array-length v0, v2
 
-    .line 648
     .local v0, "N":I
     const/4 v1, 0x0
 
@@ -3125,21 +2854,17 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 649
     aget-object v4, v2, v1
 
     aget v4, v4, v3
 
     if-ne v4, p1, :cond_1
 
-    .line 650
     const/4 v3, 0x1
 
-    .line 653
     :cond_0
     return v3
 
-    .line 648
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
@@ -3155,12 +2880,10 @@
 
     const/4 v7, 0x0
 
-    .line 665
     invoke-virtual {p0}, Lcom/android/server/MiuiInputFilter;->getListenCombinationKeys()[[I
 
     move-result-object v4
 
-    .line 666
     .local v4, "listenCombinationKeys":[[I
     iget-object v5, p0, Lcom/android/server/MiuiInputFilter;->mPendingKeys:Ljava/util/List;
 
@@ -3176,11 +2899,9 @@
 
     move-result v1
 
-    .line 667
     .local v1, "firstKeyCode":I
     array-length v0, v4
 
-    .line 668
     .local v0, "N":I
     const/4 v2, 0x0
 
@@ -3188,10 +2909,8 @@
     :goto_0
     if-ge v2, v0, :cond_1
 
-    .line 669
     aget-object v3, v4, v2
 
-    .line 670
     .local v3, "keySequence":[I
     aget v5, v3, v7
 
@@ -3203,12 +2922,10 @@
 
     move v5, v6
 
-    .line 674
     .end local v3    # "keySequence":[I
     :goto_1
     return v5
 
-    .line 668
     .restart local v3    # "keySequence":[I
     :cond_0
     add-int/lit8 v2, v2, 0x1
@@ -3219,7 +2936,6 @@
     :cond_1
     move v5, v7
 
-    .line 674
     goto :goto_1
 .end method
 
@@ -3227,7 +2943,6 @@
     .locals 2
 
     .prologue
-    .line 726
     monitor-enter p0
 
     :try_start_0
@@ -3237,19 +2952,16 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/MiuiInputFilter$H;->removeMessages(I)V
 
-    .line 727
     iget-object v0, p0, Lcom/android/server/MiuiInputFilter;->mPendingKeys:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 728
     monitor-exit p0
 
     return-void
 
-    .line 726
     :catchall_0
     move-exception v0
 
@@ -3262,7 +2974,6 @@
     .locals 4
 
     .prologue
-    .line 699
     monitor-enter p0
 
     const/4 v0, 0x0
@@ -3278,7 +2989,6 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 700
     iget-object v2, p0, Lcom/android/server/MiuiInputFilter;->mPendingKeys:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -3287,13 +2997,11 @@
 
     check-cast v1, Lcom/android/server/MiuiInputFilter$KeyData;
 
-    .line 701
     .local v1, "keyData":Lcom/android/server/MiuiInputFilter$KeyData;
     iget-boolean v2, v1, Lcom/android/server/MiuiInputFilter$KeyData;->isSended:Z
 
     if-nez v2, :cond_0
 
-    .line 702
     iget-object v3, v1, Lcom/android/server/MiuiInputFilter$KeyData;->keyEvent:Landroid/view/KeyEvent;
 
     iget-object v2, p0, Lcom/android/server/MiuiInputFilter;->mPendingKeys:Ljava/util/List;
@@ -3308,25 +3016,21 @@
 
     invoke-virtual {p0, v3, v2}, Lcom/android/server/MiuiInputFilter;->sendInputEvent(Landroid/view/InputEvent;I)V
 
-    .line 699
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 705
     .end local v1    # "keyData":Lcom/android/server/MiuiInputFilter$KeyData;
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/MiuiInputFilter;->clearPendingList()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 706
     monitor-exit p0
 
     return-void
 
-    .line 699
     :catchall_0
     move-exception v2
 
@@ -3339,17 +3043,14 @@
     .locals 1
 
     .prologue
-    .line 657
     invoke-static {}, Lcom/android/server/HandyMode;->getMode()I
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 658
     sget-object v0, Lcom/android/server/MiuiInputFilter;->NOT_ENTERED_LISTEN_COMBINATION_KEYS:[[I
 
-    .line 660
     :goto_0
     return-object v0
 
@@ -3363,7 +3064,6 @@
     .locals 1
 
     .prologue
-    .line 100
     iget-boolean v0, p0, Lcom/android/server/MiuiInputFilter;->mInstalled:Z
 
     return v0
@@ -3375,7 +3075,6 @@
     .param p2, "policyFlags"    # I
 
     .prologue
-    .line 203
     instance-of v0, p1, Landroid/view/MotionEvent;
 
     if-eqz v0, :cond_1
@@ -3388,7 +3087,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 204
     invoke-virtual {p1}, Landroid/view/InputEvent;->getDevice()Landroid/view/InputDevice;
 
     move-result-object v0
@@ -3415,17 +3113,14 @@
 
     if-nez v0, :cond_0
 
-    .line 205
     check-cast p1, Landroid/view/MotionEvent;
 
     .end local p1    # "event":Landroid/view/InputEvent;
     invoke-direct {p0, p1, p2}, Lcom/android/server/MiuiInputFilter;->processMotionEventForBackTouch(Landroid/view/MotionEvent;I)V
 
-    .line 217
     :goto_0
     return-void
 
-    .line 208
     .restart local p1    # "event":Landroid/view/InputEvent;
     :cond_0
     check-cast p1, Landroid/view/MotionEvent;
@@ -3435,7 +3130,6 @@
 
     goto :goto_0
 
-    .line 210
     .restart local p1    # "event":Landroid/view/InputEvent;
     :cond_1
     instance-of v0, p1, Landroid/view/KeyEvent;
@@ -3450,14 +3144,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 211
     invoke-static {}, Lmiui/util/HandyModeUtils;->isFeatureVisible()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 212
     check-cast p1, Landroid/view/KeyEvent;
 
     .end local p1    # "event":Landroid/view/InputEvent;
@@ -3465,7 +3157,6 @@
 
     goto :goto_0
 
-    .line 216
     .restart local p1    # "event":Landroid/view/InputEvent;
     :cond_2
     invoke-super {p0, p1, p2}, Landroid/view/InputFilter;->onInputEvent(Landroid/view/InputEvent;I)V
@@ -3477,15 +3168,12 @@
     .locals 1
 
     .prologue
-    .line 221
     invoke-super {p0}, Landroid/view/InputFilter;->onInstalled()V
 
-    .line 222
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/MiuiInputFilter;->mInstalled:Z
 
-    .line 223
     return-void
 .end method
 
@@ -3495,27 +3183,21 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 227
     invoke-super {p0}, Landroid/view/InputFilter;->onUninstalled()V
 
-    .line 228
     iput-boolean v1, p0, Lcom/android/server/MiuiInputFilter;->mInstalled:Z
 
-    .line 229
     invoke-static {}, Lcom/android/server/HandyMode;->getMode()I
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 230
     invoke-static {v1}, Lcom/android/server/HandyMode;->changeMode(I)V
 
-    .line 232
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/MiuiInputFilter;->clearPendingList()V
 
-    .line 233
     return-void
 .end method
 
@@ -3524,7 +3206,6 @@
     .param p1, "listener"    # Ljava/lang/Runnable;
 
     .prologue
-    .line 150
     iget-object v1, p0, Lcom/android/server/MiuiInputFilter;->mOutsideClickableRects:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->size()I
@@ -3537,7 +3218,6 @@
     :goto_0
     if-ltz v0, :cond_1
 
-    .line 151
     iget-object v1, p0, Lcom/android/server/MiuiInputFilter;->mOutsideClickableRects:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -3550,18 +3230,15 @@
 
     if-ne v1, p1, :cond_0
 
-    .line 152
     iget-object v1, p0, Lcom/android/server/MiuiInputFilter;->mOutsideClickableRects:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    .line 150
     :cond_0
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    .line 155
     :cond_1
     return-void
 .end method
@@ -3571,10 +3248,8 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 158
     iput-boolean p1, p0, Lcom/android/server/MiuiInputFilter;->mCitTestEnabled:Z
 
-    .line 159
     return-void
 .end method
 
@@ -3586,7 +3261,6 @@
 
     const/4 v5, 0x2
 
-    .line 678
     monitor-enter p0
 
     :try_start_0
@@ -3608,13 +3282,11 @@
 
     if-eqz v3, :cond_0
 
-    .line 696
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 681
     :cond_0
     :try_start_1
     const-string v3, "persist.sys.handswap"
@@ -3625,7 +3297,6 @@
 
     move-result-object v0
 
-    .line 682
     .local v0, "handswap":Ljava/lang/String;
     const-string v3, "1"
 
@@ -3633,11 +3304,9 @@
 
     move-result v1
 
-    .line 684
     .local v1, "keyDirectionExchanged":Z
     const/4 v2, 0x0
 
-    .line 685
     .local v2, "newMode":I
     iget-object v3, p0, Lcom/android/server/MiuiInputFilter;->mPendingKeys:Ljava/util/List;
 
@@ -3659,12 +3328,10 @@
 
     if-ne v3, v6, :cond_3
 
-    .line 686
     if-eqz v1, :cond_2
 
     move v2, v4
 
-    .line 691
     :cond_1
     :goto_1
     invoke-direct {p0}, Lcom/android/server/MiuiInputFilter;->needShowDialog()Z
@@ -3673,14 +3340,12 @@
 
     if-eqz v3, :cond_5
 
-    .line 692
     invoke-static {v2}, Lcom/android/server/HandyMode;->alertToEnter(I)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
-    .line 678
     .end local v0    # "handswap":Ljava/lang/String;
     .end local v1    # "keyDirectionExchanged":Z
     .end local v2    # "newMode":I
@@ -3697,10 +3362,8 @@
     :cond_2
     move v2, v5
 
-    .line 686
     goto :goto_1
 
-    .line 687
     :cond_3
     :try_start_2
     iget-object v3, p0, Lcom/android/server/MiuiInputFilter;->mPendingKeys:Ljava/util/List;
@@ -3723,7 +3386,6 @@
 
     if-ne v3, v6, :cond_1
 
-    .line 688
     if-eqz v1, :cond_4
 
     move v2, v5
@@ -3736,7 +3398,6 @@
 
     goto :goto_2
 
-    .line 694
     :cond_5
     invoke-static {v2}, Lcom/android/server/HandyMode;->changeMode(I)V
     :try_end_2

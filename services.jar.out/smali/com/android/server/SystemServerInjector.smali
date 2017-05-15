@@ -12,7 +12,6 @@
     .locals 1
 
     .prologue
-    .line 28
     new-instance v0, Lcom/android/server/SystemLogSwitchesConfigReceiver;
 
     invoke-direct {v0}, Lcom/android/server/SystemLogSwitchesConfigReceiver;-><init>()V
@@ -26,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,7 +36,6 @@
     .param p1, "onlyCore"    # Z
 
     .prologue
-    .line 31
     const-string v9, "security"
 
     new-instance v10, Lcom/miui/server/SecurityManagerService;
@@ -47,7 +44,6 @@
 
     invoke-static {v9, v10}, Landroid/os/ServiceManager;->addService(Ljava/lang/String;Landroid/os/IBinder;)V
 
-    .line 32
     const-string v9, "MiuiInit"
 
     new-instance v10, Lcom/miui/server/MiuiInitServer;
@@ -56,7 +52,6 @@
 
     invoke-static {v9, v10}, Landroid/os/ServiceManager;->addService(Ljava/lang/String;Landroid/os/IBinder;)V
 
-    .line 33
     const-string v9, "MiuiBackup"
 
     new-instance v10, Lcom/miui/server/BackupManagerService;
@@ -65,7 +60,6 @@
 
     invoke-static {v9, v10}, Landroid/os/ServiceManager;->addService(Ljava/lang/String;Landroid/os/IBinder;)V
 
-    .line 34
     const-string v9, "locationpolicy"
 
     invoke-static {}, Lcom/android/server/LocationPolicyManagerService;->getDefaultService()Lcom/android/server/LocationPolicyManagerService;
@@ -74,7 +68,6 @@
 
     invoke-static {v9, v10}, Landroid/os/ServiceManager;->addService(Ljava/lang/String;Landroid/os/IBinder;)V
 
-    .line 35
     const-string v9, "perfshielder"
 
     new-instance v10, Lcom/miui/server/PerfShielderService;
@@ -83,7 +76,6 @@
 
     invoke-static {v9, v10}, Landroid/os/ServiceManager;->addService(Ljava/lang/String;Landroid/os/IBinder;)V
 
-    .line 40
     :try_start_0
     const-string v9, "com.miui.whetstone.server.WhetstoneActivityManagerService"
 
@@ -93,7 +85,6 @@
 
     move-result-object v7
 
-    .line 41
     .local v7, "whetstoneService":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v9, 0x1
 
@@ -109,7 +100,6 @@
 
     check-cast v6, Landroid/os/IBinder;
 
-    .line 42
     .local v6, "whetstoneInstance":Landroid/os/IBinder;
     const-string v9, "SERVICE"
 
@@ -119,13 +109,11 @@
 
     move-result-object v8
 
-    .line 43
     .local v8, "whetstoneServiceName":Lmiui/util/ObjectReference;, "Lmiui/util/ObjectReference<Ljava/lang/String;>;"
     if-eqz v6, :cond_0
 
     if-eqz v8, :cond_0
 
-    .line 44
     invoke-virtual {v8}, Lmiui/util/ObjectReference;->get()Ljava/lang/Object;
 
     move-result-object v9
@@ -136,7 +124,6 @@
     :try_end_0
     .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 53
     .end local v6    # "whetstoneInstance":Landroid/os/IBinder;
     .end local v7    # "whetstoneService":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     .end local v8    # "whetstoneServiceName":Lmiui/util/ObjectReference;, "Lmiui/util/ObjectReference<Ljava/lang/String;>;"
@@ -149,7 +136,6 @@
 
     move-result-object v5
 
-    .line 54
     .local v5, "tidaService":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v9, 0x1
 
@@ -165,7 +151,6 @@
 
     move-result-object v0
 
-    .line 55
     .local v0, "ctor":Ljava/lang/reflect/Constructor;, "Ljava/lang/reflect/Constructor<*>;"
     const-string v9, "SERVICE_NAME"
 
@@ -173,13 +158,11 @@
 
     move-result-object v3
 
-    .line 56
     .local v3, "nameField":Ljava/lang/reflect/Field;
     if-eqz v0, :cond_1
 
     if-eqz v3, :cond_1
 
-    .line 57
     const/4 v9, 0x1
 
     new-array v9, v9, [Ljava/lang/Object;
@@ -194,7 +177,6 @@
 
     check-cast v4, Landroid/os/IBinder;
 
-    .line 58
     .local v4, "tidaInstance":Landroid/os/IBinder;
     const/4 v9, 0x0
 
@@ -204,13 +186,11 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 59
     .local v2, "name":Ljava/lang/String;
     invoke-static {v2, v4}, Landroid/os/ServiceManager;->addService(Ljava/lang/String;Landroid/os/IBinder;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 65
     .end local v0    # "ctor":Ljava/lang/reflect/Constructor;, "Ljava/lang/reflect/Constructor<*>;"
     .end local v2    # "name":Ljava/lang/String;
     .end local v3    # "nameField":Ljava/lang/reflect/Field;
@@ -220,25 +200,20 @@
     :goto_1
     invoke-static {}, Lcom/android/server/display/ScreenEffectService;->startScreenEffectService()V
 
-    .line 66
     return-void
 
-    .line 46
     :catch_0
     move-exception v1
 
-    .line 47
     .local v1, "e":Ljava/lang/ClassNotFoundException;
     invoke-virtual {v1}, Ljava/lang/ClassNotFoundException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 61
     .end local v1    # "e":Ljava/lang/ClassNotFoundException;
     :catch_1
     move-exception v1
 
-    .line 62
     .local v1, "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -251,10 +226,8 @@
     .param p1, "onlyCore"    # Z
 
     .prologue
-    .line 69
     invoke-static {p0}, Lcom/android/server/SystemServerInjectorOverlay;->addSecuritySpaceService(Landroid/content/Context;)V
 
-    .line 70
     return-void
 .end method
 
@@ -262,15 +235,12 @@
     .locals 1
 
     .prologue
-    .line 77
     const/4 v0, 0x1
 
     invoke-static {v0}, Lmiui/log/SystemLogSwitchesConfigManager;->enableLogSwitch(Z)V
 
-    .line 78
     invoke-static {}, Lmiui/log/SystemLogSwitchesConfigManager;->updateProgramName()V
 
-    .line 79
     return-void
 .end method
 
@@ -279,33 +249,27 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 82
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 83
     .local v0, "filter":Landroid/content/IntentFilter;
     const-string v1, "miui.intent.action.SWITCH_ON_MIUILOGS"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 84
     const-string v1, "miui.intent.action.SWITCH_OFF_MIUILOGS"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 85
     const-string v1, "miui.intent.action.REVERT_MIUILOG_SWITCHES"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 86
     sget-object v1, Lcom/android/server/SystemServerInjector;->systemLogSwitchesReceiver:Lcom/android/server/SystemLogSwitchesConfigReceiver;
 
     invoke-virtual {p0, v1, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 87
     return-void
 .end method
 
@@ -313,9 +277,7 @@
     .locals 0
 
     .prologue
-    .line 73
     invoke-static {}, Lcom/android/server/SystemServerInjectorOverlay;->systemReadyBeforePMS()V
 
-    .line 74
     return-void
 .end method

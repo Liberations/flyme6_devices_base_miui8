@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 321
     iput-object p1, p0, Lcom/android/server/policy/MiuiGlobalActions$7;->this$0:Lcom/android/server/policy/MiuiGlobalActions;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,16 +37,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 323
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 331
     :goto_0
     return-void
 
-    .line 325
     :pswitch_0
     iget-object v0, p0, Lcom/android/server/policy/MiuiGlobalActions$7;->this$0:Lcom/android/server/policy/MiuiGlobalActions;
 
@@ -55,7 +51,6 @@
 
     goto :goto_0
 
-    .line 328
     :pswitch_1
     iget-object v0, p0, Lcom/android/server/policy/MiuiGlobalActions$7;->this$0:Lcom/android/server/policy/MiuiGlobalActions;
 
@@ -64,7 +59,6 @@
 
     goto :goto_0
 
-    .line 323
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

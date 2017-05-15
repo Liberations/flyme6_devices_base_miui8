@@ -37,19 +37,16 @@
     .locals 3
 
     .prologue
-    .line 20
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v0, Lcom/android/server/NetworkTimeUpdateServiceInjector;->sNtpServers:Ljava/util/ArrayList;
 
-    .line 23
     const/4 v0, 0x0
 
     sput-object v0, Lcom/android/server/NetworkTimeUpdateServiceInjector;->sServerField:Ljava/lang/reflect/Field;
 
-    .line 24
     const/4 v0, 0x6
 
     new-array v0, v0, [Ljava/lang/String;
@@ -99,7 +96,6 @@
     .locals 0
 
     .prologue
-    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -115,7 +111,6 @@
     .end annotation
 
     .prologue
-    .line 41
     sget-object v0, Lcom/android/server/NetworkTimeUpdateServiceInjector;->sServerField:Ljava/lang/reflect/Field;
 
     invoke-virtual {v0, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -134,12 +129,10 @@
     .param p2, "event"    # I
 
     .prologue
-    .line 116
     sget-object v0, Lcom/android/server/NetworkTimeUpdateServiceInjector;->sConnManager:Landroid/net/ConnectivityManager;
 
     if-nez v0, :cond_0
 
-    .line 117
     const-string v0, "connectivity"
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -150,7 +143,6 @@
 
     sput-object v0, Lcom/android/server/NetworkTimeUpdateServiceInjector;->sConnManager:Landroid/net/ConnectivityManager;
 
-    .line 121
     :cond_0
     invoke-static {}, Lcom/android/server/NetworkTimeUpdateServiceInjector;->isNetworkConnected()Z
 
@@ -158,17 +150,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 122
     const-string v0, "NetworkTimeUpdateServiceInjector"
 
     const-string v1, "network ok,send msg to sync time"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 123
     invoke-static {p1, p2}, Lcom/android/server/NetworkTimeUpdateServiceInjector;->sendHandlerMessage(Landroid/os/Handler;I)V
 
-    .line 125
     :cond_1
     return-void
 .end method
@@ -179,10 +168,8 @@
     .param p1, "trustedTime"    # Landroid/util/TrustedTime;
 
     .prologue
-    .line 63
     sput-object p1, Lcom/android/server/NetworkTimeUpdateServiceInjector;->sTime:Landroid/util/TrustedTime;
 
-    .line 64
     const-string v5, "connectivity"
 
     invoke-virtual {p0, v5}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -193,14 +180,12 @@
 
     sput-object v5, Lcom/android/server/NetworkTimeUpdateServiceInjector;->sConnManager:Landroid/net/ConnectivityManager;
 
-    .line 66
     sget-object v5, Lcom/android/server/NetworkTimeUpdateServiceInjector;->sTime:Landroid/util/TrustedTime;
 
     instance-of v5, v5, Landroid/util/NtpTrustedTime;
 
     if-eqz v5, :cond_0
 
-    .line 68
     :try_start_0
     sget-object v5, Lcom/android/server/NetworkTimeUpdateServiceInjector;->sTime:Landroid/util/TrustedTime;
 
@@ -208,7 +193,6 @@
 
     invoke-static {v5, v6}, Lcom/android/server/NetworkTimeUpdateServiceInjector;->initReflectServerField(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 69
     sget-object v5, Lcom/android/server/NetworkTimeUpdateServiceInjector;->sTime:Landroid/util/TrustedTime;
 
     invoke-static {v5}, Lcom/android/server/NetworkTimeUpdateServiceInjector;->getReflectServerField(Ljava/lang/Object;)Ljava/lang/String;
@@ -217,14 +201,12 @@
 
     sput-object v5, Lcom/android/server/NetworkTimeUpdateServiceInjector;->sDefaultNtpServer:Ljava/lang/String;
 
-    .line 70
     sget-object v5, Lcom/android/server/NetworkTimeUpdateServiceInjector;->sNtpServers:Ljava/util/ArrayList;
 
     sget-object v6, Lcom/android/server/NetworkTimeUpdateServiceInjector;->sDefaultNtpServer:Ljava/lang/String;
 
     invoke-virtual {v5, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 71
     sget-object v0, Lcom/android/server/NetworkTimeUpdateServiceInjector;->NTP_SERVERS_LIST:[Ljava/lang/String;
 
     .local v0, "arr$":[Ljava/lang/String;
@@ -239,7 +221,6 @@
 
     aget-object v4, v0, v2
 
-    .line 72
     .local v4, "ntpServer":Ljava/lang/String;
     sget-object v5, Lcom/android/server/NetworkTimeUpdateServiceInjector;->sNtpServers:Ljava/util/ArrayList;
 
@@ -247,12 +228,10 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 71
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 74
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v2    # "i$":I
     .end local v3    # "len$":I
@@ -260,11 +239,9 @@
     :catch_0
     move-exception v1
 
-    .line 75
     .local v1, "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 78
     .end local v1    # "e":Ljava/lang/Exception;
     :cond_0
     return-void
@@ -281,7 +258,6 @@
     .end annotation
 
     .prologue
-    .line 36
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -292,14 +268,12 @@
 
     sput-object v0, Lcom/android/server/NetworkTimeUpdateServiceInjector;->sServerField:Ljava/lang/reflect/Field;
 
-    .line 37
     sget-object v0, Lcom/android/server/NetworkTimeUpdateServiceInjector;->sServerField:Ljava/lang/reflect/Field;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 38
     return-void
 .end method
 
@@ -307,7 +281,6 @@
     .locals 1
 
     .prologue
-    .line 93
     invoke-static {}, Lcom/android/server/NetworkTimeUpdateServiceInjector;->isNetworkConnected()Z
 
     move-result v0
@@ -321,7 +294,6 @@
     .param p1, "netEvent"    # I
 
     .prologue
-    .line 81
     if-ne p0, p1, :cond_0
 
     const/4 v0, 0x1
@@ -339,14 +311,12 @@
     .locals 3
 
     .prologue
-    .line 97
     sget-object v1, Lcom/android/server/NetworkTimeUpdateServiceInjector;->sConnManager:Landroid/net/ConnectivityManager;
 
     if-nez v1, :cond_0
 
     const/4 v0, 0x0
 
-    .line 98
     .local v0, "netInfo":Landroid/net/NetworkInfo;
     :goto_0
     if-eqz v0, :cond_1
@@ -357,14 +327,11 @@
 
     if-eqz v1, :cond_1
 
-    .line 100
     const/4 v1, 0x1
 
-    .line 103
     :goto_1
     return v1
 
-    .line 97
     .end local v0    # "netInfo":Landroid/net/NetworkInfo;
     :cond_0
     sget-object v1, Lcom/android/server/NetworkTimeUpdateServiceInjector;->sConnManager:Landroid/net/ConnectivityManager;
@@ -375,7 +342,6 @@
 
     goto :goto_0
 
-    .line 102
     .restart local v0    # "netInfo":Landroid/net/NetworkInfo;
     :cond_1
     const-string v1, "NetworkTimeUpdateServiceInjector"
@@ -384,7 +350,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 103
     const/4 v1, 0x0
 
     goto :goto_1
@@ -395,7 +360,6 @@
     .param p0, "tryCounter"    # I
 
     .prologue
-    .line 50
     :try_start_0
     sget-object v2, Lcom/android/server/NetworkTimeUpdateServiceInjector;->sNtpServers:Ljava/util/ArrayList;
 
@@ -405,7 +369,6 @@
 
     rem-int v1, p0, v2
 
-    .line 51
     .local v1, "index":I
     sget-object v3, Lcom/android/server/NetworkTimeUpdateServiceInjector;->sTime:Landroid/util/TrustedTime;
 
@@ -419,7 +382,6 @@
 
     invoke-static {v3, v2}, Lcom/android/server/NetworkTimeUpdateServiceInjector;->setReflectServerField(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 52
     const-string v2, "NetworkTimeUpdateServiceInjector"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -458,12 +420,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 53
     sget-object v2, Lcom/android/server/NetworkTimeUpdateServiceInjector;->sTime:Landroid/util/TrustedTime;
 
     invoke-interface {v2}, Landroid/util/TrustedTime;->forceRefresh()Z
 
-    .line 54
     sget-object v2, Lcom/android/server/NetworkTimeUpdateServiceInjector;->sTime:Landroid/util/TrustedTime;
 
     sget-object v3, Lcom/android/server/NetworkTimeUpdateServiceInjector;->sDefaultNtpServer:Ljava/lang/String;
@@ -472,23 +432,18 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 55
     const/4 v2, 0x1
 
-    .line 58
     .end local v1    # "index":I
     :goto_0
     return v2
 
-    .line 56
     :catch_0
     move-exception v0
 
-    .line 57
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 58
     const/4 v2, 0x0
 
     goto :goto_0
@@ -500,21 +455,17 @@
     .param p1, "event"    # I
 
     .prologue
-    .line 108
     if-nez p0, :cond_0
 
-    .line 109
     const-string v0, "NetworkTimeUpdateServiceInjector"
 
     const-string v1, "handler null"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 113
     :goto_0
     return-void
 
-    .line 111
     :cond_0
     invoke-virtual {p0, p1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
@@ -536,12 +487,10 @@
     .end annotation
 
     .prologue
-    .line 45
     sget-object v0, Lcom/android/server/NetworkTimeUpdateServiceInjector;->sServerField:Ljava/lang/reflect/Field;
 
     invoke-virtual {v0, p0, p1}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 46
     return-void
 .end method
 
@@ -550,14 +499,12 @@
     .param p0, "tryCounter"    # I
 
     .prologue
-    .line 85
     sget-object v0, Lcom/android/server/NetworkTimeUpdateServiceInjector;->sTime:Landroid/util/TrustedTime;
 
     instance-of v0, v0, Landroid/util/NtpTrustedTime;
 
     if-eqz v0, :cond_1
 
-    .line 86
     sget-object v0, Lcom/android/server/NetworkTimeUpdateServiceInjector;->sServerField:Ljava/lang/reflect/Field;
 
     if-eqz v0, :cond_0
@@ -568,13 +515,11 @@
 
     if-nez v0, :cond_1
 
-    .line 87
     :cond_0
     sget-object v0, Lcom/android/server/NetworkTimeUpdateServiceInjector;->sTime:Landroid/util/TrustedTime;
 
     invoke-interface {v0}, Landroid/util/TrustedTime;->forceRefresh()Z
 
-    .line 90
     :cond_1
     return-void
 .end method

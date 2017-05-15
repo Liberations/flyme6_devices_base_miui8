@@ -24,13 +24,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 226
     iput-object p1, p0, Lcom/miui/server/SecurityManagerService$SecurityWriteHandler;->this$0:Lcom/miui/server/SecurityManagerService;
 
-    .line 227
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 228
     return-void
 .end method
 
@@ -45,20 +42,16 @@
 
     const/4 v5, 0x0
 
-    .line 231
     iget v4, p1, Landroid/os/Message;->what:I
 
     packed-switch v4, :pswitch_data_0
 
-    .line 275
     :goto_0
     return-void
 
-    .line 234
     :pswitch_0
     invoke-static {v5}, Landroid/os/Process;->setThreadPriority(I)V
 
-    .line 235
     iget-object v4, p0, Lcom/miui/server/SecurityManagerService$SecurityWriteHandler;->this$0:Lcom/miui/server/SecurityManagerService;
 
     # getter for: Lcom/miui/server/SecurityManagerService;->mSettingsFile:Lcom/android/internal/os/AtomicFile;
@@ -68,29 +61,24 @@
 
     monitor-enter v5
 
-    .line 236
     const/4 v4, 0x1
 
     :try_start_0
     invoke-virtual {p0, v4}, Lcom/miui/server/SecurityManagerService$SecurityWriteHandler;->removeMessages(I)V
 
-    .line 237
     iget-object v4, p0, Lcom/miui/server/SecurityManagerService$SecurityWriteHandler;->this$0:Lcom/miui/server/SecurityManagerService;
 
     # invokes: Lcom/miui/server/SecurityManagerService;->writeSettings()V
     invoke-static {v4}, Lcom/miui/server/SecurityManagerService;->access$200(Lcom/miui/server/SecurityManagerService;)V
 
-    .line 238
     monitor-exit v5
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 239
     invoke-static {v10}, Landroid/os/Process;->setThreadPriority(I)V
 
     goto :goto_0
 
-    .line 238
     :catchall_0
     move-exception v4
 
@@ -101,11 +89,9 @@
 
     throw v4
 
-    .line 243
     :pswitch_1
     invoke-static {v5}, Landroid/os/Process;->setThreadPriority(I)V
 
-    .line 244
     iget-object v4, p0, Lcom/miui/server/SecurityManagerService$SecurityWriteHandler;->this$0:Lcom/miui/server/SecurityManagerService;
 
     # getter for: Lcom/miui/server/SecurityManagerService;->mWakeUpTime:Ljava/util/HashMap;
@@ -115,29 +101,24 @@
 
     monitor-enter v5
 
-    .line 245
     const/4 v4, 0x2
 
     :try_start_2
     invoke-virtual {p0, v4}, Lcom/miui/server/SecurityManagerService$SecurityWriteHandler;->removeMessages(I)V
 
-    .line 246
     iget-object v4, p0, Lcom/miui/server/SecurityManagerService$SecurityWriteHandler;->this$0:Lcom/miui/server/SecurityManagerService;
 
     # invokes: Lcom/miui/server/SecurityManagerService;->writeWakeUpTime()V
     invoke-static {v4}, Lcom/miui/server/SecurityManagerService;->access$400(Lcom/miui/server/SecurityManagerService;)V
 
-    .line 247
     monitor-exit v5
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 248
     invoke-static {v10}, Landroid/os/Process;->setThreadPriority(I)V
 
     goto :goto_0
 
-    .line 247
     :catchall_1
     move-exception v4
 
@@ -148,11 +129,9 @@
 
     throw v4
 
-    .line 252
     :pswitch_2
     invoke-static {v5}, Landroid/os/Process;->setThreadPriority(I)V
 
-    .line 253
     iget-object v4, p0, Lcom/miui/server/SecurityManagerService$SecurityWriteHandler;->this$0:Lcom/miui/server/SecurityManagerService;
 
     # getter for: Lcom/miui/server/SecurityManagerService;->mWakeUpTime:Ljava/util/HashMap;
@@ -162,13 +141,11 @@
 
     monitor-enter v5
 
-    .line 254
     const/4 v4, 0x3
 
     :try_start_4
     invoke-virtual {p0, v4}, Lcom/miui/server/SecurityManagerService$SecurityWriteHandler;->removeMessages(I)V
 
-    .line 255
     const-string v4, "vendor"
 
     const/4 v6, 0x3
@@ -179,14 +156,12 @@
 
     if-eqz v4, :cond_0
 
-    .line 256
     const-string v4, "vendor"
 
     invoke-static {v4}, Lmiui/util/FeatureParser;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 257
     .local v3, "vendor":Ljava/lang/String;
     iget-object v4, p0, Lcom/miui/server/SecurityManagerService$SecurityWriteHandler;->this$0:Lcom/miui/server/SecurityManagerService;
 
@@ -204,7 +179,6 @@
 
     invoke-static {v4, v3, v6, v7}, Lmiui/security/SecurityManagerCompat;->writeBootTime(Landroid/content/Context;Ljava/lang/String;J)V
 
-    .line 258
     const-string v4, "SecurityManagerService"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -234,19 +208,16 @@
 
     invoke-static {v4, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 262
     .end local v3    # "vendor":Ljava/lang/String;
     :goto_1
     monitor-exit v5
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
-    .line 263
     invoke-static {v10}, Landroid/os/Process;->setThreadPriority(I)V
 
     goto/16 :goto_0
 
-    .line 260
     :cond_0
     :try_start_5
     const-string v4, "SecurityManagerService"
@@ -257,7 +228,6 @@
 
     goto :goto_1
 
-    .line 262
     :catchall_2
     move-exception v4
 
@@ -267,23 +237,19 @@
 
     throw v4
 
-    .line 266
     :pswitch_3
     iget-object v5, p0, Lcom/miui/server/SecurityManagerService$SecurityWriteHandler;->this$0:Lcom/miui/server/SecurityManagerService;
 
     monitor-enter v5
 
-    .line 267
     :try_start_6
     iget v1, p1, Landroid/os/Message;->arg1:I
 
-    .line 268
     .local v1, "userId":I
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/String;
 
-    .line 269
     .local v0, "packageName":Ljava/lang/String;
     iget-object v4, p0, Lcom/miui/server/SecurityManagerService$SecurityWriteHandler;->this$0:Lcom/miui/server/SecurityManagerService;
 
@@ -292,13 +258,11 @@
 
     move-result-object v2
 
-    .line 270
     .local v2, "userState":Lcom/miui/server/SecurityManagerService$UserState;
     iget-object v4, v2, Lcom/miui/server/SecurityManagerService$UserState;->mAccessControlCanceled:Landroid/util/ArraySet;
 
     invoke-virtual {v4, v0}, Landroid/util/ArraySet;->remove(Ljava/lang/Object;)Z
 
-    .line 271
     monitor-exit v5
 
     goto/16 :goto_0
@@ -315,7 +279,6 @@
 
     throw v4
 
-    .line 231
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

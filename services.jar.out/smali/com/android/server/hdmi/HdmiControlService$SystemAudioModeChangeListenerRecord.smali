@@ -29,15 +29,12 @@
     .param p2, "listener"    # Landroid/hardware/hdmi/IHdmiSystemAudioModeChangeListener;
 
     .prologue
-    .line 1137
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$SystemAudioModeChangeListenerRecord;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1138
     iput-object p2, p0, Lcom/android/server/hdmi/HdmiControlService$SystemAudioModeChangeListenerRecord;->mListener:Landroid/hardware/hdmi/IHdmiSystemAudioModeChangeListener;
 
-    .line 1139
     return-void
 .end method
 
@@ -46,7 +43,6 @@
     .param p0, "x0"    # Lcom/android/server/hdmi/HdmiControlService$SystemAudioModeChangeListenerRecord;
 
     .prologue
-    .line 1134
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiControlService$SystemAudioModeChangeListenerRecord;->mListener:Landroid/hardware/hdmi/IHdmiSystemAudioModeChangeListener;
 
     return-object v0
@@ -58,7 +54,6 @@
     .locals 2
 
     .prologue
-    .line 1143
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiControlService$SystemAudioModeChangeListenerRecord;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     # getter for: Lcom/android/server/hdmi/HdmiControlService;->mLock:Ljava/lang/Object;
@@ -68,7 +63,6 @@
 
     monitor-enter v1
 
-    .line 1144
     :try_start_0
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiControlService$SystemAudioModeChangeListenerRecord;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
@@ -79,13 +73,10 @@
 
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 1145
     monitor-exit v1
 
-    .line 1146
     return-void
 
-    .line 1145
     :catchall_0
     move-exception v0
 

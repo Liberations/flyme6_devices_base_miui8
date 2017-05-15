@@ -35,7 +35,6 @@
     .locals 3
 
     .prologue
-    .line 44
     new-instance v0, Landroid/content/ComponentName;
 
     const-string v1, "android"
@@ -50,7 +49,6 @@
 
     sput-object v0, Lcom/android/server/pm/MiuiBackgroundDexOptService;->sDexoptServiceName:Landroid/content/ComponentName;
 
-    .line 51
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
@@ -64,10 +62,8 @@
     .locals 2
 
     .prologue
-    .line 37
     invoke-direct {p0}, Landroid/app/job/JobService;-><init>()V
 
-    .line 53
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
@@ -96,7 +92,6 @@
     .end annotation
 
     .prologue
-    .line 70
     .local p1, "pkgs":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     const-string v5, "package"
 
@@ -106,7 +101,6 @@
 
     check-cast v3, Lcom/android/server/pm/PackageManagerService;
 
-    .line 71
     .local v3, "pm":Lcom/android/server/pm/PackageManagerService;
     iget-object v5, v3, Lcom/android/server/pm/PackageManagerService;->mContext:Landroid/content/Context;
 
@@ -116,13 +110,11 @@
 
     move-result-object v4
 
-    .line 74
     .local v4, "startedPkgs":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     new-instance v1, Landroid/util/ArraySet;
 
     invoke-direct {v1}, Landroid/util/ArraySet;-><init>()V
 
-    .line 75
     .local v1, "mostNeededPkgs":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Ljava/lang/String;>;"
     invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -143,7 +135,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 76
     .local v2, "p":Ljava/lang/String;
     invoke-interface {v4, v2}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
@@ -151,12 +142,10 @@
 
     if-eqz v5, :cond_0
 
-    .line 77
     invoke-virtual {v1, v2}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 80
     .end local v2    # "p":Ljava/lang/String;
     :cond_1
     return-object v1
@@ -167,12 +156,10 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 56
     const-wide/16 v0, 0x0
 
     invoke-static {p0, v0, v1}, Lcom/android/server/pm/MiuiBackgroundDexOptService;->schedule(Landroid/content/Context;J)V
 
-    .line 57
     return-void
 .end method
 
@@ -182,7 +169,6 @@
     .param p1, "minLatency"    # J
 
     .prologue
-    .line 60
     const-string v2, "jobscheduler"
 
     invoke-virtual {p0, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -191,7 +177,6 @@
 
     check-cast v1, Landroid/app/job/JobScheduler;
 
-    .line 61
     .local v1, "js":Landroid/app/job/JobScheduler;
     new-instance v2, Landroid/app/job/JobInfo$Builder;
 
@@ -221,11 +206,9 @@
 
     move-result-object v0
 
-    .line 66
     .local v0, "job":Landroid/app/job/JobInfo;
     invoke-virtual {v1, v0}, Landroid/app/job/JobScheduler;->schedule(Landroid/app/job/JobInfo;)I
 
-    .line 67
     return-void
 .end method
 
@@ -240,14 +223,12 @@
 
     const/4 v0, 0x0
 
-    .line 85
     const-string v1, "MiuiBackgroundDexOptService"
 
     const-string v2, "onIdleStart"
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 86
     const-string v1, "package"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -256,7 +237,6 @@
 
     check-cast v4, Lcom/android/server/pm/PackageManagerService;
 
-    .line 89
     .local v4, "pm":Lcom/android/server/pm/PackageManagerService;
     invoke-virtual {v4}, Lcom/android/server/pm/PackageManagerService;->isStorageLow()Z
 
@@ -264,32 +244,26 @@
 
     if-eqz v1, :cond_1
 
-    .line 90
     const-wide/32 v8, 0xdbba00
 
     invoke-static {p0, v8, v9}, Lcom/android/server/pm/MiuiBackgroundDexOptService;->schedule(Landroid/content/Context;J)V
 
-    .line 125
     :cond_0
     :goto_0
     return v0
 
-    .line 94
     :cond_1
     invoke-virtual {v4}, Lcom/android/server/pm/PackageManagerService;->getPackagesThatNeedDexOpt()Landroid/util/ArraySet;
 
     move-result-object v6
 
-    .line 95
     .local v6, "pkgs":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     if-eqz v6, :cond_0
 
-    .line 99
     invoke-direct {p0, v6}, Lcom/android/server/pm/MiuiBackgroundDexOptService;->getMostNeededDexOptPackages(Ljava/util/Set;)Landroid/util/ArraySet;
 
     move-result-object v3
 
-    .line 100
     .local v3, "mostPkgs":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Ljava/lang/String;>;"
     if-eqz v3, :cond_0
 
@@ -299,16 +273,13 @@
 
     if-nez v1, :cond_0
 
-    .line 104
     move-object v5, p1
 
-    .line 105
     .local v5, "jobParams":Landroid/app/job/JobParameters;
     iget-object v0, p0, Lcom/android/server/pm/MiuiBackgroundDexOptService;->mIdleTime:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0, v7}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 106
     new-instance v0, Lcom/android/server/pm/MiuiBackgroundDexOptService$1;
 
     const-string v2, "MiuiBackgroundDexOptService_DexOpter"
@@ -321,7 +292,6 @@
 
     move v0, v7
 
-    .line 125
     goto :goto_0
 .end method
 
@@ -332,18 +302,15 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 130
     const-string v0, "MiuiBackgroundDexOptService"
 
     const-string v1, "onIdleStop"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 131
     iget-object v0, p0, Lcom/android/server/pm/MiuiBackgroundDexOptService;->mIdleTime:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 132
     return v2
 .end method

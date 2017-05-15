@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 203
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,7 +32,6 @@
     .param p1, "x0"    # Lcom/android/server/Watchdog$1;
 
     .prologue
-    .line 203
     invoke-direct {p0}, Lcom/android/server/Watchdog$BinderThreadMonitor;-><init>()V
 
     return-void
@@ -45,9 +43,7 @@
     .locals 0
 
     .prologue
-    .line 206
     invoke-static {}, Landroid/os/Binder;->blockUntilThreadAvailable()V
 
-    .line 207
     return-void
 .end method

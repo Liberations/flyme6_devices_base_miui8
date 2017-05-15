@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 173
     iput-object p1, p0, Lcom/android/server/usage/UsageStatsDatabase$1;->this$0:Lcom/android/server/usage/UsageStatsDatabase;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 176
     const-string v0, ".bak"
 
     invoke-virtual {p2, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z

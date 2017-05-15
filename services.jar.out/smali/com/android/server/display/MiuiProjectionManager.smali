@@ -36,24 +36,18 @@
     .param p3, "controller"    # Lcom/android/server/display/WifiDisplayController;
 
     .prologue
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
     iput-object p1, p0, Lcom/android/server/display/MiuiProjectionManager;->mContext:Landroid/content/Context;
 
-    .line 33
     iput-object p2, p0, Lcom/android/server/display/MiuiProjectionManager;->mHandler:Landroid/os/Handler;
 
-    .line 34
     iput-object p3, p0, Lcom/android/server/display/MiuiProjectionManager;->mDisplayController:Lcom/android/server/display/WifiDisplayController;
 
-    .line 35
     sget-object v0, Lcom/android/server/display/MiuiProjectionManager$State;->STATE_DISCONNECTED:Lcom/android/server/display/MiuiProjectionManager$State;
 
     iput-object v0, p0, Lcom/android/server/display/MiuiProjectionManager;->mState:Lcom/android/server/display/MiuiProjectionManager$State;
 
-    .line 36
     return-void
 .end method
 
@@ -62,7 +56,6 @@
     .param p0, "x0"    # Lcom/android/server/display/MiuiProjectionManager;
 
     .prologue
-    .line 15
     invoke-direct {p0}, Lcom/android/server/display/MiuiProjectionManager;->startProjectionInternal()V
 
     return-void
@@ -73,7 +66,6 @@
     .param p0, "x0"    # Lcom/android/server/display/MiuiProjectionManager;
 
     .prologue
-    .line 15
     invoke-direct {p0}, Lcom/android/server/display/MiuiProjectionManager;->stopProjectionInternal()V
 
     return-void
@@ -85,7 +77,6 @@
     .param p1, "x1"    # Lcom/android/server/display/MiuiProjectionManager$State;
 
     .prologue
-    .line 15
     iput-object p1, p0, Lcom/android/server/display/MiuiProjectionManager;->mState:Lcom/android/server/display/MiuiProjectionManager$State;
 
     return-object p1
@@ -96,7 +87,6 @@
     .param p0, "x0"    # Lcom/android/server/display/MiuiProjectionManager;
 
     .prologue
-    .line 15
     iget-object v0, p0, Lcom/android/server/display/MiuiProjectionManager;->mDisplayController:Lcom/android/server/display/WifiDisplayController;
 
     return-object v0
@@ -110,14 +100,11 @@
 
     const/4 v11, 0x0
 
-    .line 49
     const/4 v2, 0x0
 
-    .line 50
     .local v2, "extDisplayHelperClazz":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v1, 0x0
 
-    .line 52
     .local v1, "displayControllerClazz":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iget-object v6, p0, Lcom/android/server/display/MiuiProjectionManager;->mDisplayController:Lcom/android/server/display/WifiDisplayController;
 
@@ -129,7 +116,6 @@
 
     move-result-object v0
 
-    .line 53
     .local v0, "connected":Lmiui/util/ObjectReference;, "Lmiui/util/ObjectReference<Ljava/lang/Boolean;>;"
     if-eqz v0, :cond_0
 
@@ -145,11 +131,9 @@
 
     if-eqz v6, :cond_0
 
-    .line 77
     :goto_0
     return-void
 
-    .line 57
     :cond_0
     iget-object v6, p0, Lcom/android/server/display/MiuiProjectionManager;->mDisplayController:Lcom/android/server/display/WifiDisplayController;
 
@@ -157,17 +141,14 @@
 
     move-result-object v1
 
-    .line 58
     const-string v6, "com.android.server.display.ExtendedRemoteDisplayHelper"
 
     invoke-direct {p0, v6}, Lcom/android/server/display/MiuiProjectionManager;->tryFindClass(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v2
 
-    .line 60
     if-eqz v2, :cond_1
 
-    .line 61
     const-string v6, "isAvailable"
 
     const-class v7, Ljava/lang/Boolean;
@@ -178,7 +159,6 @@
 
     move-result-object v3
 
-    .line 62
     .local v3, "isAvailable":Lmiui/util/ObjectReference;, "Lmiui/util/ObjectReference<Ljava/lang/Boolean;>;"
     if-eqz v3, :cond_1
 
@@ -194,7 +174,6 @@
 
     if-eqz v6, :cond_1
 
-    .line 64
     const-string v6, "listen"
 
     const-class v7, Ljava/lang/Object;
@@ -231,11 +210,9 @@
 
     move-result-object v5
 
-    .line 66
     .local v5, "remoteDisplay":Lmiui/util/ObjectReference;, "Lmiui/util/ObjectReference<Ljava/lang/Object;>;"
     if-eqz v5, :cond_1
 
-    .line 67
     iget-object v6, p0, Lcom/android/server/display/MiuiProjectionManager;->mDisplayController:Lcom/android/server/display/WifiDisplayController;
 
     const-string v7, "mExtRemoteDisplay"
@@ -246,14 +223,12 @@
 
     invoke-static {v6, v7, v8}, Lmiui/util/ReflectionUtils;->trySetObjectField(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 68
     sget-object v6, Lcom/android/server/display/MiuiProjectionManager$State;->STATE_LISTENING:Lcom/android/server/display/MiuiProjectionManager$State;
 
     iput-object v6, p0, Lcom/android/server/display/MiuiProjectionManager;->mState:Lcom/android/server/display/MiuiProjectionManager$State;
 
     goto :goto_0
 
-    .line 74
     .end local v3    # "isAvailable":Lmiui/util/ObjectReference;, "Lmiui/util/ObjectReference<Ljava/lang/Boolean;>;"
     .end local v5    # "remoteDisplay":Lmiui/util/ObjectReference;, "Lmiui/util/ObjectReference<Ljava/lang/Object;>;"
     :cond_1
@@ -269,7 +244,6 @@
 
     move-result-object v4
 
-    .line 75
     .local v4, "remoteDisplay":Landroid/media/RemoteDisplay;
     iget-object v6, p0, Lcom/android/server/display/MiuiProjectionManager;->mDisplayController:Lcom/android/server/display/WifiDisplayController;
 
@@ -277,7 +251,6 @@
 
     invoke-static {v6, v7, v4}, Lmiui/util/ReflectionUtils;->trySetObjectField(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 76
     sget-object v6, Lcom/android/server/display/MiuiProjectionManager$State;->STATE_LISTENING:Lcom/android/server/display/MiuiProjectionManager$State;
 
     iput-object v6, p0, Lcom/android/server/display/MiuiProjectionManager;->mState:Lcom/android/server/display/MiuiProjectionManager$State;
@@ -291,10 +264,8 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 80
     const/4 v1, 0x0
 
-    .line 81
     .local v1, "extRemoteDisplay":Ljava/lang/Object;
     iget-object v4, p0, Lcom/android/server/display/MiuiProjectionManager;->mDisplayController:Lcom/android/server/display/WifiDisplayController;
 
@@ -306,19 +277,15 @@
 
     move-result-object v2
 
-    .line 83
     .local v2, "reference":Lmiui/util/ObjectReference;, "Lmiui/util/ObjectReference<Ljava/lang/Object;>;"
     if-eqz v2, :cond_1
 
-    .line 84
     invoke-virtual {v2}, Lmiui/util/ObjectReference;->get()Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 85
     const/4 v0, 0x0
 
-    .line 86
     .local v0, "extDisplayHelperClazz":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const-string v4, "com.android.server.display.ExtendedRemoteDisplayHelper"
 
@@ -326,10 +293,8 @@
 
     move-result-object v0
 
-    .line 87
     if-eqz v0, :cond_0
 
-    .line 88
     const-string v4, "dispose"
 
     const-class v5, Ljava/lang/Void;
@@ -344,14 +309,12 @@
 
     invoke-static {v0, v4, v5, v6}, Lmiui/util/ReflectionUtils;->tryCallStaticMethod(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Object;)Lmiui/util/ObjectReference;
 
-    .line 89
     iget-object v4, p0, Lcom/android/server/display/MiuiProjectionManager;->mDisplayController:Lcom/android/server/display/WifiDisplayController;
 
     const-string v5, "mExtRemoteDisplay"
 
     invoke-static {v4, v5, v8}, Lmiui/util/ReflectionUtils;->trySetObjectField(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 96
     .end local v0    # "extDisplayHelperClazz":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     .end local v1    # "extRemoteDisplay":Ljava/lang/Object;
     :cond_0
@@ -360,10 +323,8 @@
 
     iput-object v4, p0, Lcom/android/server/display/MiuiProjectionManager;->mState:Lcom/android/server/display/MiuiProjectionManager$State;
 
-    .line 97
     return-void
 
-    .line 92
     .restart local v1    # "extRemoteDisplay":Ljava/lang/Object;
     :cond_1
     iget-object v4, p0, Lcom/android/server/display/MiuiProjectionManager;->mDisplayController:Lcom/android/server/display/WifiDisplayController;
@@ -376,7 +337,6 @@
 
     move-result-object v3
 
-    .line 93
     .local v3, "remoteDisplay":Lmiui/util/ObjectReference;, "Lmiui/util/ObjectReference<Landroid/media/RemoteDisplay;>;"
     invoke-virtual {v3}, Lmiui/util/ObjectReference;->get()Ljava/lang/Object;
 
@@ -386,7 +346,6 @@
 
     invoke-virtual {v4}, Landroid/media/RemoteDisplay;->dispose()V
 
-    .line 94
     iget-object v4, p0, Lcom/android/server/display/MiuiProjectionManager;->mDisplayController:Lcom/android/server/display/WifiDisplayController;
 
     const-string v5, "mRemoteDisplay"
@@ -410,10 +369,8 @@
     .end annotation
 
     .prologue
-    .line 39
     const/4 v1, 0x0
 
-    .line 41
     .local v1, "found":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :try_start_0
     invoke-static {p1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
@@ -422,15 +379,12 @@
 
     move-result-object v1
 
-    .line 45
     :goto_0
     return-object v1
 
-    .line 42
     :catch_0
     move-exception v0
 
-    .line 43
     .local v0, "ex":Ljava/lang/Exception;
     const-string v2, "MIUI_PROJECTION"
 
@@ -464,14 +418,12 @@
     .param p1, "iface"    # Ljava/lang/String;
 
     .prologue
-    .line 100
     iget-object v0, p0, Lcom/android/server/display/MiuiProjectionManager;->mState:Lcom/android/server/display/MiuiProjectionManager$State;
 
     sget-object v1, Lcom/android/server/display/MiuiProjectionManager$State;->STATE_DISCONNECTED:Lcom/android/server/display/MiuiProjectionManager$State;
 
     if-ne v0, v1, :cond_0
 
-    .line 101
     const-string v0, "MIUI_PROJECTION"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -494,14 +446,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 103
     new-instance v0, Ljava/lang/String;
 
     invoke-direct {v0, p1}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/android/server/display/MiuiProjectionManager;->mIface:Ljava/lang/String;
 
-    .line 104
     iget-object v0, p0, Lcom/android/server/display/MiuiProjectionManager;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/display/MiuiProjectionManager$1;
@@ -510,7 +460,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 112
     :cond_0
     return-void
 .end method
@@ -519,21 +468,18 @@
     .locals 2
 
     .prologue
-    .line 115
     iget-object v0, p0, Lcom/android/server/display/MiuiProjectionManager;->mState:Lcom/android/server/display/MiuiProjectionManager$State;
 
     sget-object v1, Lcom/android/server/display/MiuiProjectionManager$State;->STATE_DISCONNECTED:Lcom/android/server/display/MiuiProjectionManager$State;
 
     if-eq v0, v1, :cond_0
 
-    .line 116
     const-string v0, "MIUI_PROJECTION"
 
     const-string v1, "stop projection"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 118
     iget-object v0, p0, Lcom/android/server/display/MiuiProjectionManager;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/display/MiuiProjectionManager$2;
@@ -542,7 +488,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 125
     :cond_0
     return-void
 .end method

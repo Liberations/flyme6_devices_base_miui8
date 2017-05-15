@@ -24,13 +24,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 374
     iput-object p1, p0, Lcom/android/server/audio/MediaFocusControl$MediaEventHandler;->this$0:Lcom/android/server/audio/MediaFocusControl;
 
-    .line 375
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 376
     return-void
 .end method
 
@@ -41,17 +38,14 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 380
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 429
     :goto_0
     :pswitch_0
     return-void
 
-    .line 382
     :pswitch_1
     iget-object v0, p0, Lcom/android/server/audio/MediaFocusControl$MediaEventHandler;->this$0:Lcom/android/server/audio/MediaFocusControl;
 
@@ -60,7 +54,6 @@
 
     goto :goto_0
 
-    .line 387
     :pswitch_2
     iget-object v1, p0, Lcom/android/server/audio/MediaFocusControl$MediaEventHandler;->this$0:Lcom/android/server/audio/MediaFocusControl;
 
@@ -75,7 +68,6 @@
 
     goto :goto_0
 
-    .line 391
     :pswitch_3
     iget-object v0, p0, Lcom/android/server/audio/MediaFocusControl$MediaEventHandler;->this$0:Lcom/android/server/audio/MediaFocusControl;
 
@@ -84,7 +76,6 @@
 
     goto :goto_0
 
-    .line 395
     :pswitch_4
     iget-object v1, p0, Lcom/android/server/audio/MediaFocusControl$MediaEventHandler;->this$0:Lcom/android/server/audio/MediaFocusControl;
 
@@ -99,7 +90,6 @@
 
     goto :goto_0
 
-    .line 400
     :pswitch_5
     const-string v1, "MediaFocusControl"
 
@@ -131,7 +121,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 401
     iget-object v1, p0, Lcom/android/server/audio/MediaFocusControl$MediaEventHandler;->this$0:Lcom/android/server/audio/MediaFocusControl;
 
     iget v2, p1, Landroid/os/Message;->arg2:I
@@ -153,7 +142,6 @@
 
     goto :goto_0
 
-    .line 406
     :pswitch_6
     const-string v0, "MediaFocusControl"
 
@@ -161,7 +149,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 407
     iget-object v0, p0, Lcom/android/server/audio/MediaFocusControl$MediaEventHandler;->this$0:Lcom/android/server/audio/MediaFocusControl;
 
     # invokes: Lcom/android/server/audio/MediaFocusControl;->onGetRemoteControlClientNowPlayingEntries()V
@@ -169,7 +156,6 @@
 
     goto :goto_0
 
-    .line 411
     :pswitch_7
     const-string v0, "MediaFocusControl"
 
@@ -177,7 +163,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 412
     iget-object v0, p0, Lcom/android/server/audio/MediaFocusControl$MediaEventHandler;->this$0:Lcom/android/server/audio/MediaFocusControl;
 
     # invokes: Lcom/android/server/audio/MediaFocusControl;->onSetRemoteControlClientBrowsedPlayer()V
@@ -185,7 +170,6 @@
 
     goto :goto_0
 
-    .line 417
     :pswitch_8
     iget-object v1, p0, Lcom/android/server/audio/MediaFocusControl$MediaEventHandler;->this$0:Lcom/android/server/audio/MediaFocusControl;
 
@@ -202,7 +186,6 @@
 
     goto :goto_0
 
-    .line 422
     :pswitch_9
     iget-object v0, p0, Lcom/android/server/audio/MediaFocusControl$MediaEventHandler;->this$0:Lcom/android/server/audio/MediaFocusControl;
 
@@ -211,7 +194,6 @@
 
     goto/16 :goto_0
 
-    .line 426
     :pswitch_a
     iget-object v1, p0, Lcom/android/server/audio/MediaFocusControl$MediaEventHandler;->this$0:Lcom/android/server/audio/MediaFocusControl;
 
@@ -223,7 +205,6 @@
 
     goto/16 :goto_0
 
-    .line 380
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1

@@ -30,7 +30,6 @@
     .param p2, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 250
     iput-object p1, p0, Lcom/android/server/usb/UsbMidiDevice$3;->this$0:Lcom/android/server/usb/UsbMidiDevice;
 
     iput-object p3, p0, Lcom/android/server/usb/UsbMidiDevice$3;->val$eventSchedulerF:Lcom/android/internal/midi/MidiEventScheduler;
@@ -50,7 +49,6 @@
     .locals 6
 
     .prologue
-    .line 256
     :goto_0
     :try_start_0
     iget-object v2, p0, Lcom/android/server/usb/UsbMidiDevice$3;->val$eventSchedulerF:Lcom/android/internal/midi/MidiEventScheduler;
@@ -63,30 +61,24 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 261
     .local v1, "event":Lcom/android/internal/midi/MidiEventScheduler$MidiEvent;
     if-nez v1, :cond_0
 
-    .line 271
     const-string v2, "UsbMidiDevice"
 
     const-string v3, "output thread exit"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 272
     return-void
 
-    .line 257
     .end local v1    # "event":Lcom/android/internal/midi/MidiEventScheduler$MidiEvent;
     :catch_0
     move-exception v0
 
-    .line 259
     .local v0, "e":Ljava/lang/InterruptedException;
     goto :goto_0
 
-    .line 265
     .end local v0    # "e":Ljava/lang/InterruptedException;
     .restart local v1    # "event":Lcom/android/internal/midi/MidiEventScheduler$MidiEvent;
     :cond_0
@@ -103,7 +95,6 @@
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 269
     :goto_1
     iget-object v2, p0, Lcom/android/server/usb/UsbMidiDevice$3;->val$eventSchedulerF:Lcom/android/internal/midi/MidiEventScheduler;
 
@@ -111,11 +102,9 @@
 
     goto :goto_0
 
-    .line 266
     :catch_1
     move-exception v0
 
-    .line 267
     .local v0, "e":Ljava/io/IOException;
     const-string v2, "UsbMidiDevice"
 

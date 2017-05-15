@@ -53,7 +53,6 @@
     .locals 1
 
     .prologue
-    .line 45
     const-string v0, "^securespaces_extension_(.*)"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -70,23 +69,18 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 81
     invoke-direct {p0}, Landroid/os/securespaces/ISecureSpacesService$Stub;-><init>()V
 
-    .line 54
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroid/service/securespaces/SecureSpacesService;->mExtensions:Ljava/util/HashMap;
 
-    .line 82
     iput-object p1, p0, Landroid/service/securespaces/SecureSpacesService;->mContext:Landroid/content/Context;
 
-    .line 83
     invoke-direct {p0}, Landroid/service/securespaces/SecureSpacesService;->findExtensions()V
 
-    .line 84
     return-void
 .end method
 
@@ -108,12 +102,10 @@
     .prologue
     const/4 v9, 0x0
 
-    .line 184
     new-instance v8, Ljava/util/ArrayList;
 
     invoke-direct {v8}, Ljava/util/ArrayList;-><init>()V
 
-    .line 187
     .local v8, "restrictions":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/service/securespaces/SecureSpacesService$UserRestriction;>;"
     move-object v0, p1
 
@@ -129,7 +121,6 @@
 
     aget-object v2, v0, v3
 
-    .line 188
     .local v2, "entry":Ljava/lang/String;
     const-string v10, ","
 
@@ -137,7 +128,6 @@
 
     move-result-object v7
 
-    .line 189
     .local v7, "parts":[Ljava/lang/String;
     array-length v10, v7
 
@@ -147,7 +137,6 @@
 
     move-object v8, v9
 
-    .line 203
     .end local v2    # "entry":Ljava/lang/String;
     .end local v7    # "parts":[Ljava/lang/String;
     .end local v8    # "restrictions":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/service/securespaces/SecureSpacesService$UserRestriction;>;"
@@ -155,7 +144,6 @@
     :goto_1
     return-object v8
 
-    .line 190
     .restart local v2    # "entry":Ljava/lang/String;
     .restart local v7    # "parts":[Ljava/lang/String;
     .restart local v8    # "restrictions":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/service/securespaces/SecureSpacesService$UserRestriction;>;"
@@ -164,11 +152,9 @@
 
     aget-object v5, v7, v10
 
-    .line 191
     .local v5, "name":Ljava/lang/String;
     const/4 v6, 0x0
 
-    .line 193
     .local v6, "ownerControlled":Z
     const/4 v10, 0x1
 
@@ -183,10 +169,8 @@
 
     if-lez v10, :cond_2
 
-    .line 194
     const/4 v6, 0x1
 
-    .line 199
     :cond_2
     new-instance v10, Landroid/service/securespaces/SecureSpacesService$UserRestriction;
 
@@ -194,7 +178,6 @@
 
     invoke-virtual {v8, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 200
     const-string v10, "SecureSpacesService"
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -227,19 +210,16 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 187
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 196
     :catch_0
     move-exception v1
 
     .local v1, "e":Ljava/lang/NumberFormatException;
     move-object v8, v9
 
-    .line 197
     goto :goto_1
 .end method
 
@@ -247,18 +227,15 @@
     .locals 4
 
     .prologue
-    .line 281
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
-    .line 282
     .local v0, "caller":I
     const/16 v1, 0x2710
 
     if-ge v0, v1, :cond_0
 
-    .line 283
     const-string v1, "SecureSpacesService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -281,10 +258,8 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 284
     return-void
 
-    .line 286
     :cond_0
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -299,16 +274,13 @@
     .locals 22
 
     .prologue
-    .line 91
     const-class v8, Lcom/android/internal/R$bool;
 
-    .line 92
     .local v8, "c":Ljava/lang/Class;, "Ljava/lang/Class<Lcom/android/internal/R$bool;>;"
     invoke-virtual {v8}, Ljava/lang/Class;->getDeclaredFields()[Ljava/lang/reflect/Field;
 
     move-result-object v12
 
-    .line 93
     .local v12, "fields":[Ljava/lang/reflect/Field;
     move-object/from16 v0, p0
 
@@ -318,7 +290,6 @@
 
     move-result-object v17
 
-    .line 94
     .local v17, "res":Landroid/content/res/Resources;
     const-string v2, "SecureSpacesService"
 
@@ -326,7 +297,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 96
     const/4 v13, 0x0
 
     .local v13, "i":I
@@ -336,7 +306,6 @@
     :goto_0
     if-ge v13, v15, :cond_0
 
-    .line 99
     :try_start_0
     aget-object v2, v12, v13
 
@@ -348,41 +317,34 @@
 
     move-result v18
 
-    .line 103
     .local v18, "resourceId":I
     invoke-virtual/range {v17 .. v18}, Landroid/content/res/Resources;->getResourceEntryName(I)Ljava/lang/String;
 
     move-result-object v19
 
-    .line 104
     .local v19, "resourceName":Ljava/lang/String;
     if-nez v19, :cond_2
 
-    .line 105
     const-string v2, "SecureSpacesService"
 
     const-string v3, "Error enumerating Secure Spaces Extensions"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 153
     .end local v18    # "resourceId":I
     .end local v19    # "resourceName":Ljava/lang/String;
     :cond_0
     return-void
 
-    .line 100
     :catch_0
     move-exception v9
 
-    .line 96
     :cond_1
     :goto_1
     add-int/lit8 v13, v13, 0x1
 
     goto :goto_0
 
-    .line 108
     .restart local v18    # "resourceId":I
     .restart local v19    # "resourceName":Ljava/lang/String;
     :cond_2
@@ -394,7 +356,6 @@
 
     move-result-object v14
 
-    .line 109
     .local v14, "matcher":Ljava/util/regex/Matcher;
     invoke-virtual {v14}, Ljava/util/regex/Matcher;->find()Z
 
@@ -402,12 +363,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 111
     invoke-virtual/range {v17 .. v18}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v10
 
-    .line 112
     .local v10, "enabled":Z
     const/4 v2, 0x1
 
@@ -415,7 +374,6 @@
 
     move-result-object v11
 
-    .line 113
     .local v11, "extensionLabel":Ljava/lang/String;
     const-string v2, "SecureSpacesService"
 
@@ -453,10 +411,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 114
     if-nez v10, :cond_3
 
-    .line 115
     const-string v2, "SecureSpacesService"
 
     const-string v3, "Extension not enabled.  Skipping..."
@@ -465,7 +421,6 @@
 
     goto :goto_1
 
-    .line 119
     :cond_3
     :try_start_1
     new-instance v2, Ljava/lang/StringBuilder;
@@ -504,7 +459,6 @@
 
     check-cast v16, Ljava/lang/String;
 
-    .line 122
     .local v16, "name":Ljava/lang/String;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -546,7 +500,6 @@
 
     move-result v4
 
-    .line 125
     .local v4, "majorVersion":I
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -588,7 +541,6 @@
 
     move-result v5
 
-    .line 128
     .local v5, "minorVersion":I
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -626,7 +578,6 @@
 
     check-cast v6, Ljava/lang/String;
 
-    .line 131
     .local v6, "serviceName":Ljava/lang/String;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -670,17 +621,14 @@
 
     move-object/from16 v20, v0
 
-    .line 135
     .local v20, "userRestrictionEntries":[Ljava/lang/String;
     new-instance v7, Ljava/util/ArrayList;
 
     invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
-    .line 136
     .local v7, "userRestrictions":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/service/securespaces/SecureSpacesService$UserRestriction;>;"
     if-eqz v20, :cond_4
 
-    .line 137
     move-object/from16 v0, p0
 
     move-object/from16 v1, v20
@@ -689,10 +637,8 @@
 
     move-result-object v7
 
-    .line 138
     if-nez v7, :cond_4
 
-    .line 139
     const-string v2, "SecureSpacesService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -729,7 +675,6 @@
 
     goto/16 :goto_1
 
-    .line 147
     .end local v4    # "majorVersion":I
     .end local v5    # "minorVersion":I
     .end local v6    # "serviceName":Ljava/lang/String;
@@ -739,7 +684,6 @@
     :catch_1
     move-exception v9
 
-    .line 148
     .local v9, "e":Landroid/content/res/Resources$NotFoundException;
     const-string v2, "SecureSpacesService"
 
@@ -775,7 +719,6 @@
 
     goto/16 :goto_1
 
-    .line 144
     .end local v9    # "e":Landroid/content/res/Resources$NotFoundException;
     .restart local v4    # "majorVersion":I
     .restart local v5    # "minorVersion":I
@@ -803,7 +746,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 146
     const-string v2, "SecureSpacesService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -839,12 +781,10 @@
     .param p2, "c"    # Ljava/lang/Class;
 
     .prologue
-    .line 156
     invoke-virtual {p2}, Ljava/lang/Class;->getDeclaredFields()[Ljava/lang/reflect/Field;
 
     move-result-object v1
 
-    .line 157
     .local v1, "fields":[Ljava/lang/reflect/Field;
     iget-object v7, p0, Landroid/service/securespaces/SecureSpacesService;->mContext:Landroid/content/Context;
 
@@ -852,7 +792,6 @@
 
     move-result-object v4
 
-    .line 159
     .local v4, "res":Landroid/content/res/Resources;
     const/4 v2, 0x0
 
@@ -863,7 +802,6 @@
     :goto_0
     if-ge v2, v3, :cond_4
 
-    .line 162
     :try_start_0
     aget-object v7, v1, v2
 
@@ -875,13 +813,11 @@
 
     move-result v5
 
-    .line 166
     .local v5, "resourceId":I
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getResourceEntryName(I)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 167
     .local v6, "resourceName":Ljava/lang/String;
     invoke-virtual {p1, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -889,12 +825,10 @@
 
     if-eqz v7, :cond_0
 
-    .line 168
     const-class v7, Lcom/android/internal/R$bool;
 
     if-ne p2, v7, :cond_1
 
-    .line 169
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v7
@@ -903,23 +837,19 @@
 
     move-result-object v7
 
-    .line 175
     :goto_1
     return-object v7
 
-    .line 163
     .end local v5    # "resourceId":I
     .end local v6    # "resourceName":Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 159
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 170
     .restart local v5    # "resourceId":I
     .restart local v6    # "resourceName":Ljava/lang/String;
     :cond_1
@@ -927,7 +857,6 @@
 
     if-ne p2, v7, :cond_2
 
-    .line 171
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v7
@@ -938,33 +867,28 @@
 
     goto :goto_1
 
-    .line 172
     :cond_2
     const-class v7, Lcom/android/internal/R$string;
 
     if-ne p2, v7, :cond_3
 
-    .line 173
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v7
 
     goto :goto_1
 
-    .line 174
     :cond_3
     const-class v7, Lcom/android/internal/R$array;
 
     if-ne p2, v7, :cond_0
 
-    .line 175
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
     move-result-object v7
 
     goto :goto_1
 
-    .line 179
     .end local v5    # "resourceId":I
     .end local v6    # "resourceName":Ljava/lang/String;
     :cond_4
@@ -990,15 +914,12 @@
     .end annotation
 
     .prologue
-    .line 269
     invoke-static {}, Landroid/service/securespaces/SecureSpacesService;->checkCallerIsSystem()V
 
-    .line 270
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 271
     .local v4, "restrictions":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     iget-object v5, p0, Landroid/service/securespaces/SecureSpacesService;->mExtensions:Ljava/util/HashMap;
 
@@ -1023,7 +944,6 @@
 
     check-cast v0, Landroid/service/securespaces/SecureSpacesService$SecureSpacesExtension;
 
-    .line 272
     .local v0, "extention":Landroid/service/securespaces/SecureSpacesService$SecureSpacesExtension;
     iget-object v5, v0, Landroid/service/securespaces/SecureSpacesService$SecureSpacesExtension;->userRestrictions:Ljava/util/ArrayList;
 
@@ -1046,20 +966,17 @@
 
     check-cast v3, Landroid/service/securespaces/SecureSpacesService$UserRestriction;
 
-    .line 273
     .local v3, "restriction":Landroid/service/securespaces/SecureSpacesService$UserRestriction;
     iget-boolean v5, v3, Landroid/service/securespaces/SecureSpacesService$UserRestriction;->deviceOwnerOnly:Z
 
     if-eqz v5, :cond_1
 
-    .line 274
     iget-object v5, v3, Landroid/service/securespaces/SecureSpacesService$UserRestriction;->name:Ljava/lang/String;
 
     invoke-virtual {v4, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 277
     .end local v0    # "extention":Landroid/service/securespaces/SecureSpacesService$SecureSpacesExtension;
     .end local v2    # "i$":Ljava/util/Iterator;
     .end local v3    # "restriction":Landroid/service/securespaces/SecureSpacesService$UserRestriction;
@@ -1072,10 +989,8 @@
     .param p1, "extensionName"    # Ljava/lang/String;
 
     .prologue
-    .line 231
     invoke-static {}, Landroid/service/securespaces/SecureSpacesService;->checkCallerIsSystem()V
 
-    .line 232
     iget-object v1, p0, Landroid/service/securespaces/SecureSpacesService;->mExtensions:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1084,11 +999,9 @@
 
     check-cast v0, Landroid/service/securespaces/SecureSpacesService$SecureSpacesExtension;
 
-    .line 233
     .local v0, "extension":Landroid/service/securespaces/SecureSpacesService$SecureSpacesExtension;
     if-nez v0, :cond_0
 
-    .line 234
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "Invalid Secure Spaces extension"
@@ -1097,7 +1010,6 @@
 
     throw v1
 
-    .line 235
     :cond_0
     iget v1, v0, Landroid/service/securespaces/SecureSpacesService$SecureSpacesExtension;->majorVersion:I
 
@@ -1109,10 +1021,8 @@
     .param p1, "extensionName"    # Ljava/lang/String;
 
     .prologue
-    .line 240
     invoke-static {}, Landroid/service/securespaces/SecureSpacesService;->checkCallerIsSystem()V
 
-    .line 241
     iget-object v1, p0, Landroid/service/securespaces/SecureSpacesService;->mExtensions:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1121,11 +1031,9 @@
 
     check-cast v0, Landroid/service/securespaces/SecureSpacesService$SecureSpacesExtension;
 
-    .line 242
     .local v0, "extension":Landroid/service/securespaces/SecureSpacesService$SecureSpacesExtension;
     if-nez v0, :cond_0
 
-    .line 243
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "Invalid Secure Spaces extension"
@@ -1134,7 +1042,6 @@
 
     throw v1
 
-    .line 244
     :cond_0
     iget v1, v0, Landroid/service/securespaces/SecureSpacesService$SecureSpacesExtension;->minorVersion:I
 
@@ -1146,10 +1053,8 @@
     .param p1, "extensionName"    # Ljava/lang/String;
 
     .prologue
-    .line 249
     invoke-static {}, Landroid/service/securespaces/SecureSpacesService;->checkCallerIsSystem()V
 
-    .line 250
     iget-object v1, p0, Landroid/service/securespaces/SecureSpacesService;->mExtensions:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1158,11 +1063,9 @@
 
     check-cast v0, Landroid/service/securespaces/SecureSpacesService$SecureSpacesExtension;
 
-    .line 251
     .local v0, "extension":Landroid/service/securespaces/SecureSpacesService$SecureSpacesExtension;
     if-nez v0, :cond_0
 
-    .line 252
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "Invalid Secure Spaces extension"
@@ -1171,7 +1074,6 @@
 
     throw v1
 
-    .line 253
     :cond_0
     iget-object v1, v0, Landroid/service/securespaces/SecureSpacesService$SecureSpacesExtension;->serviceName:Ljava/lang/String;
 
@@ -1191,7 +1093,6 @@
     .end annotation
 
     .prologue
-    .line 220
     new-instance v0, Ljava/util/ArrayList;
 
     iget-object v1, p0, Landroid/service/securespaces/SecureSpacesService;->mExtensions:Ljava/util/HashMap;
@@ -1209,10 +1110,8 @@
     .locals 1
 
     .prologue
-    .line 208
     invoke-static {}, Landroid/service/securespaces/SecureSpacesService;->checkCallerIsSystem()V
 
-    .line 209
     const/4 v0, 0x1
 
     return v0
@@ -1222,10 +1121,8 @@
     .locals 1
 
     .prologue
-    .line 214
     invoke-static {}, Landroid/service/securespaces/SecureSpacesService;->checkCallerIsSystem()V
 
-    .line 215
     const/4 v0, 0x0
 
     return v0
@@ -1244,12 +1141,10 @@
     .end annotation
 
     .prologue
-    .line 258
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 259
     .local v4, "restrictions":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     iget-object v5, p0, Landroid/service/securespaces/SecureSpacesService;->mExtensions:Ljava/util/HashMap;
 
@@ -1274,7 +1169,6 @@
 
     check-cast v0, Landroid/service/securespaces/SecureSpacesService$SecureSpacesExtension;
 
-    .line 260
     .local v0, "extention":Landroid/service/securespaces/SecureSpacesService$SecureSpacesExtension;
     iget-object v5, v0, Landroid/service/securespaces/SecureSpacesService$SecureSpacesExtension;->userRestrictions:Ljava/util/ArrayList;
 
@@ -1296,7 +1190,6 @@
 
     check-cast v3, Landroid/service/securespaces/SecureSpacesService$UserRestriction;
 
-    .line 261
     .local v3, "restriction":Landroid/service/securespaces/SecureSpacesService$UserRestriction;
     iget-object v5, v3, Landroid/service/securespaces/SecureSpacesService$UserRestriction;->name:Ljava/lang/String;
 
@@ -1304,7 +1197,6 @@
 
     goto :goto_0
 
-    .line 264
     .end local v0    # "extention":Landroid/service/securespaces/SecureSpacesService$SecureSpacesExtension;
     .end local v2    # "i$":Ljava/util/Iterator;
     .end local v3    # "restriction":Landroid/service/securespaces/SecureSpacesService$UserRestriction;
@@ -1317,10 +1209,8 @@
     .param p1, "extensionName"    # Ljava/lang/String;
 
     .prologue
-    .line 225
     invoke-static {}, Landroid/service/securespaces/SecureSpacesService;->checkCallerIsSystem()V
 
-    .line 226
     iget-object v0, p0, Landroid/service/securespaces/SecureSpacesService;->mExtensions:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
@@ -1334,6 +1224,5 @@
     .locals 0
 
     .prologue
-    .line 88
     return-void
 .end method

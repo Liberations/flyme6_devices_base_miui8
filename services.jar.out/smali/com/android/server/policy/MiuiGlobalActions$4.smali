@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 291
     iput-object p1, p0, Lcom/android/server/policy/MiuiGlobalActions$4;->this$0:Lcom/android/server/policy/MiuiGlobalActions;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 293
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 294
     .local v0, "action":Ljava/lang/String;
     const-string v2, "android.intent.action.CLOSE_SYSTEM_DIALOGS"
 
@@ -62,7 +59,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 296
     :cond_0
     const-string v2, "reason"
 
@@ -70,7 +66,6 @@
 
     move-result-object v1
 
-    .line 297
     .local v1, "reason":Ljava/lang/String;
     const-string v2, "globalactions"
 
@@ -80,7 +75,6 @@
 
     if-nez v2, :cond_1
 
-    .line 298
     iget-object v2, p0, Lcom/android/server/policy/MiuiGlobalActions$4;->this$0:Lcom/android/server/policy/MiuiGlobalActions;
 
     # getter for: Lcom/android/server/policy/MiuiGlobalActions;->mHandler:Landroid/os/Handler;
@@ -92,7 +86,6 @@
 
     invoke-virtual {v2, v3}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 301
     .end local v1    # "reason":Ljava/lang/String;
     :cond_1
     return-void

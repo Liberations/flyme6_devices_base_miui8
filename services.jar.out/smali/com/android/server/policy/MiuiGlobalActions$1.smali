@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 111
     iput-object p1, p0, Lcom/android/server/policy/MiuiGlobalActions$1;->this$0:Lcom/android/server/policy/MiuiGlobalActions;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

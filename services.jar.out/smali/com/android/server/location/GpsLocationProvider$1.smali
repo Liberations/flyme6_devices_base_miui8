@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 407
     iput-object p1, p0, Lcom/android/server/location/GpsLocationProvider$1;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     invoke-direct {p0}, Landroid/location/IGpsStatusProvider$Stub;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "listener"    # Landroid/location/IGpsStatusListener;
 
     .prologue
-    .line 410
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$1;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     # getter for: Lcom/android/server/location/GpsLocationProvider;->mListenerHelper:Lcom/android/server/location/GpsStatusListenerHelper;
@@ -48,7 +46,6 @@
 
     invoke-virtual {v0, p1}, Lcom/android/server/location/GpsStatusListenerHelper;->addListener(Landroid/os/IInterface;)Z
 
-    .line 411
     return-void
 .end method
 
@@ -57,7 +54,6 @@
     .param p1, "listener"    # Landroid/location/IGpsStatusListener;
 
     .prologue
-    .line 415
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$1;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     # getter for: Lcom/android/server/location/GpsLocationProvider;->mListenerHelper:Lcom/android/server/location/GpsStatusListenerHelper;
@@ -67,6 +63,5 @@
 
     invoke-virtual {v0, p1}, Lcom/android/server/location/GpsStatusListenerHelper;->removeListener(Landroid/os/IInterface;)V
 
-    .line 416
     return-void
 .end method

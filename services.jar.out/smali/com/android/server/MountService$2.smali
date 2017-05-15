@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 2415
     iput-object p1, p0, Lcom/android/server/MountService$2;->this$0:Lcom/android/server/MountService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 6
 
     .prologue
-    .line 2418
     :try_start_0
     iget-object v1, p0, Lcom/android/server/MountService$2;->this$0:Lcom/android/server/MountService;
 
@@ -65,15 +63,12 @@
     :try_end_0
     .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2422
     :goto_0
     return-void
 
-    .line 2419
     :catch_0
     move-exception v0
 
-    .line 2420
     .local v0, "e":Lcom/android/server/NativeDaemonConnectorException;
     const-string v1, "MountService"
 

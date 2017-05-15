@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 35
     iput-object p1, p0, Lcom/android/server/connectivity/NetworkMonitorInjector$1;->val$nm:Lcom/android/server/connectivity/NetworkMonitor;
 
     iput p2, p0, Lcom/android/server/connectivity/NetworkMonitorInjector$1;->val$finishedMessageCode:I
@@ -42,13 +41,11 @@
     .param p1, "response"    # I
 
     .prologue
-    .line 38
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitorInjector$1;->val$nm:Lcom/android/server/connectivity/NetworkMonitor;
 
     iget v1, p0, Lcom/android/server/connectivity/NetworkMonitorInjector$1;->val$finishedMessageCode:I
 
     invoke-virtual {v0, v1, p1}, Lcom/android/server/connectivity/NetworkMonitor;->sendMessage(II)V
 
-    .line 39
     return-void
 .end method

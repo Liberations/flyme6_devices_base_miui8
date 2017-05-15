@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,14 +19,12 @@
     .param p1, "cooked"    # [Ljava/lang/String;
 
     .prologue
-    .line 10
     array-length v3, p1
 
     const/4 v4, 0x7
 
     if-lt v3, v4, :cond_0
 
-    .line 11
     const/4 v3, 0x5
 
     aget-object v3, p1, v3
@@ -36,7 +33,6 @@
 
     move-result v0
 
-    .line 12
     .local v0, "txtLen":I
     const/4 v3, 0x6
 
@@ -46,7 +42,6 @@
 
     move-result-object v2
 
-    .line 13
     .local v2, "txtRecordBase64":[B
     const/4 v3, 0x0
 
@@ -54,13 +49,11 @@
 
     move-result-object v1
 
-    .line 14
     .local v1, "txtRecord":[B
     array-length v3, v1
 
     invoke-static {v3, v1, p0}, Landroid/net/nsd/NsdServiceInfoInjector;->setTxtRecord(I[BLandroid/net/nsd/NsdServiceInfo;)V
 
-    .line 16
     .end local v0    # "txtLen":I
     .end local v1    # "txtRecord":[B
     .end local v2    # "txtRecordBase64":[B

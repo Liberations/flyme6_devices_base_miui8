@@ -29,7 +29,6 @@
     .param p1, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 97
     invoke-direct {p0, p1}, Landroid/util/FloatProperty;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -42,7 +41,6 @@
     .param p1, "object"    # Lcom/android/server/display/DisplayPowerState;
 
     .prologue
-    .line 105
     invoke-virtual {p1}, Lcom/android/server/display/DisplayPowerState;->getColorFadeLevel()F
 
     move-result v0
@@ -59,7 +57,6 @@
     .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
-    .line 97
     check-cast p1, Lcom/android/server/display/DisplayPowerState;
 
     .end local p1    # "x0":Ljava/lang/Object;
@@ -76,10 +73,8 @@
     .param p2, "value"    # F
 
     .prologue
-    .line 100
     invoke-virtual {p1, p2}, Lcom/android/server/display/DisplayPowerState;->setColorFadeLevel(F)V
 
-    .line 101
     return-void
 .end method
 
@@ -89,7 +84,6 @@
     .param p2, "x1"    # F
 
     .prologue
-    .line 97
     check-cast p1, Lcom/android/server/display/DisplayPowerState;
 
     .end local p1    # "x0":Ljava/lang/Object;

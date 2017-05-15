@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 360
     iput-object p1, p0, Lcom/android/server/connectivity/NetworkMonitor$ValidatedState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/connectivity/NetworkMonitor$1;
 
     .prologue
-    .line 360
     invoke-direct {p0, p1}, Lcom/android/server/connectivity/NetworkMonitor$ValidatedState;-><init>(Lcom/android/server/connectivity/NetworkMonitor;)V
 
     return-void
@@ -51,7 +49,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 363
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor$ValidatedState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # getter for: Lcom/android/server/connectivity/NetworkMonitor;->mConnectivityServiceHandler:Landroid/os/Handler;
@@ -76,7 +73,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 365
     return-void
 .end method
 
@@ -85,18 +81,15 @@
     .param p1, "message"    # Landroid/os/Message;
 
     .prologue
-    .line 369
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 374
     const/4 v0, 0x0
 
     :goto_0
     return v0
 
-    .line 371
     :pswitch_0
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor$ValidatedState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
@@ -110,12 +103,10 @@
     # invokes: Lcom/android/server/connectivity/NetworkMonitor;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v0, v1}, Lcom/android/server/connectivity/NetworkMonitor;->access$2200(Lcom/android/server/connectivity/NetworkMonitor;Lcom/android/internal/util/IState;)V
 
-    .line 372
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 369
     :pswitch_data_0
     .packed-switch 0x82001
         :pswitch_0

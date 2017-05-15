@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 317
     iput-object p1, p0, Lcom/android/server/telecom/TelecomLoaderService$5;->this$0:Lcom/android/server/telecom/TelecomLoaderService;
 
     iput-object p2, p0, Lcom/android/server/telecom/TelecomLoaderService$5;->val$packageManagerInternal:Landroid/content/pm/PackageManagerInternal;
@@ -43,7 +42,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 320
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v4
@@ -56,7 +54,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 321
     invoke-static {}, Lcom/android/server/pm/UserManagerService;->getInstance()Lcom/android/server/pm/UserManagerService;
 
     move-result-object v4
@@ -77,7 +74,6 @@
 
     aget v3, v0, v1
 
-    .line 322
     .local v3, "userId":I
     iget-object v4, p0, Lcom/android/server/telecom/TelecomLoaderService$5;->this$0:Lcom/android/server/telecom/TelecomLoaderService;
 
@@ -86,12 +82,10 @@
     # invokes: Lcom/android/server/telecom/TelecomLoaderService;->updateSimCallManagerPermissions(Landroid/content/pm/PackageManagerInternal;I)V
     invoke-static {v4, v5, v3}, Lcom/android/server/telecom/TelecomLoaderService;->access$800(Lcom/android/server/telecom/TelecomLoaderService;Landroid/content/pm/PackageManagerInternal;I)V
 
-    .line 321
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 325
     .end local v0    # "arr$":[I
     .end local v1    # "i$":I
     .end local v2    # "len$":I

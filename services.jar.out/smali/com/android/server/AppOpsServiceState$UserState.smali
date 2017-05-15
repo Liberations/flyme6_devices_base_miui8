@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 52
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,7 +35,6 @@
     .param p1, "x0"    # Lcom/android/server/AppOpsServiceState$1;
 
     .prologue
-    .line 52
     invoke-direct {p0}, Lcom/android/server/AppOpsServiceState$UserState;-><init>()V
 
     return-void

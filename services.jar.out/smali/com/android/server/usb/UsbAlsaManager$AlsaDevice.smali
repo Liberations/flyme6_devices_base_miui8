@@ -42,21 +42,16 @@
     .param p4, "device"    # I
 
     .prologue
-    .line 92
     iput-object p1, p0, Lcom/android/server/usb/UsbAlsaManager$AlsaDevice;->this$0:Lcom/android/server/usb/UsbAlsaManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 93
     iput p2, p0, Lcom/android/server/usb/UsbAlsaManager$AlsaDevice;->mType:I
 
-    .line 94
     iput p3, p0, Lcom/android/server/usb/UsbAlsaManager$AlsaDevice;->mCard:I
 
-    .line 95
     iput p4, p0, Lcom/android/server/usb/UsbAlsaManager$AlsaDevice;->mDevice:I
 
-    .line 96
     return-void
 .end method
 
@@ -69,12 +64,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 99
     instance-of v2, p1, Lcom/android/server/usb/UsbAlsaManager$AlsaDevice;
 
     if-nez v2, :cond_1
 
-    .line 103
     :cond_0
     :goto_0
     return v1
@@ -82,10 +75,8 @@
     :cond_1
     move-object v0, p1
 
-    .line 102
     check-cast v0, Lcom/android/server/usb/UsbAlsaManager$AlsaDevice;
 
-    .line 103
     .local v0, "other":Lcom/android/server/usb/UsbAlsaManager$AlsaDevice;
     iget v2, p0, Lcom/android/server/usb/UsbAlsaManager$AlsaDevice;->mType:I
 
@@ -114,12 +105,10 @@
     .locals 3
 
     .prologue
-    .line 107
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 108
     .local v0, "sb":Ljava/lang/StringBuilder;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -143,7 +132,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 109
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -166,7 +154,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 110
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -189,12 +176,10 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 111
     const-string v1, "]"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 112
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1

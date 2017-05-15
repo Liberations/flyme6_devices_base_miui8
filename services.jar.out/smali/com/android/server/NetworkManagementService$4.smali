@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 2637
     iput-object p1, p0, Lcom/android/server/NetworkManagementService$4;->this$0:Lcom/android/server/NetworkManagementService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,10 +40,8 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 2640
     const/4 v1, 0x0
 
-    .line 2641
     .local v1, "isBlockAllData":Z
     if-eqz p2, :cond_0
 
@@ -60,14 +57,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 2643
     const-string v2, "Restrict"
 
     invoke-virtual {p2, v2, v4}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v1
 
-    .line 2644
     const-string v2, "ZeroBalance"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -90,7 +85,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2646
     :cond_0
     iget-object v2, p0, Lcom/android/server/NetworkManagementService$4;->this$0:Lcom/android/server/NetworkManagementService;
 
@@ -105,7 +99,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2650
     iget-object v2, p0, Lcom/android/server/NetworkManagementService$4;->this$0:Lcom/android/server/NetworkManagementService;
 
     # getter for: Lcom/android/server/NetworkManagementService;->mBandwidthControlEnabled:Z
@@ -115,11 +108,9 @@
 
     if-nez v2, :cond_1
 
-    .line 2659
     :goto_0
     return-void
 
-    .line 2652
     :cond_1
     :try_start_0
     const-string v2, "ZeroBalance"
@@ -144,7 +135,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2654
     iget-object v2, p0, Lcom/android/server/NetworkManagementService$4;->this$0:Lcom/android/server/NetworkManagementService;
 
     # getter for: Lcom/android/server/NetworkManagementService;->mConnector:Lcom/android/server/NativeDaemonConnector;
@@ -173,11 +163,9 @@
 
     goto :goto_0
 
-    .line 2656
     :catch_0
     move-exception v0
 
-    .line 2657
     .local v0, "e":Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v0}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
 
@@ -185,7 +173,6 @@
 
     throw v2
 
-    .line 2654
     .end local v0    # "e":Lcom/android/server/NativeDaemonConnectorException;
     :cond_2
     :try_start_1

@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,7 +35,6 @@
     .param p2, "proxy"    # Landroid/bluetooth/BluetoothProfile;
 
     .prologue
-    .line 35
     # getter for: Lcom/android/server/connectivity/TetheringInjector;->sBluetoothPan:Ljava/util/concurrent/atomic/AtomicReference;
     invoke-static {}, Lcom/android/server/connectivity/TetheringInjector;->access$000()Ljava/util/concurrent/atomic/AtomicReference;
 
@@ -47,7 +45,6 @@
     .end local p2    # "proxy":Landroid/bluetooth/BluetoothProfile;
     invoke-virtual {v0, p2}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
-    .line 36
     return-void
 .end method
 
@@ -56,7 +53,6 @@
     .param p1, "profile"    # I
 
     .prologue
-    .line 38
     # getter for: Lcom/android/server/connectivity/TetheringInjector;->sBluetoothPan:Ljava/util/concurrent/atomic/AtomicReference;
     invoke-static {}, Lcom/android/server/connectivity/TetheringInjector;->access$000()Ljava/util/concurrent/atomic/AtomicReference;
 
@@ -68,7 +64,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 40
     :try_start_0
     invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->getDefaultAdapter()Landroid/bluetooth/BluetoothAdapter;
 
@@ -91,7 +86,6 @@
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 46
     :cond_0
     :goto_0
     # getter for: Lcom/android/server/connectivity/TetheringInjector;->sBluetoothPan:Ljava/util/concurrent/atomic/AtomicReference;
@@ -103,14 +97,11 @@
 
     invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
-    .line 47
     return-void
 
-    .line 42
     :catch_0
     move-exception v0
 
-    .line 43
     .local v0, "e":Ljava/lang/RuntimeException;
     const-string v1, "Tethering"
 

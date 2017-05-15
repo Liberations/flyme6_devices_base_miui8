@@ -23,17 +23,14 @@
     .locals 2
 
     .prologue
-    .line 375
     iput-object p1, p0, Lcom/android/server/policy/GlobalActions$RebootAction;->this$0:Lcom/android/server/policy/GlobalActions;
 
-    .line 376
     const v0, 0x1080368
 
     const v1, 0x104011d
 
     invoke-direct {p0, v0, v1}, Lcom/android/server/policy/GlobalActions$SinglePressAction;-><init>(II)V
 
-    .line 378
     return-void
 .end method
 
@@ -43,7 +40,6 @@
     .param p2, "x1"    # Lcom/android/server/policy/GlobalActions$1;
 
     .prologue
-    .line 374
     invoke-direct {p0, p1}, Lcom/android/server/policy/GlobalActions$RebootAction;-><init>(Lcom/android/server/policy/GlobalActions;)V
 
     return-void
@@ -55,7 +51,6 @@
     .locals 5
 
     .prologue
-    .line 393
     :try_start_0
     const-string v2, "power"
 
@@ -67,7 +62,6 @@
 
     move-result-object v1
 
-    .line 395
     .local v1, "pm":Landroid/os/IPowerManager;
     const/4 v2, 0x1
 
@@ -79,16 +73,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 400
     .end local v1    # "pm":Landroid/os/IPowerManager;
     :goto_0
     return-void
 
-    .line 396
     :catch_0
     move-exception v0
 
-    .line 397
     .local v0, "e":Landroid/os/RemoteException;
     const-string v2, "GlobalActions"
 
@@ -103,7 +94,6 @@
     .locals 1
 
     .prologue
-    .line 387
     const/4 v0, 0x1
 
     return v0
@@ -113,7 +103,6 @@
     .locals 1
 
     .prologue
-    .line 382
     const/4 v0, 0x1
 
     return v0

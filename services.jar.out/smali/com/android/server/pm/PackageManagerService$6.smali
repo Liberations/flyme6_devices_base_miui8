@@ -34,7 +34,6 @@
     .locals 1
 
     .prologue
-    .line 5825
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$6;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iput-object p2, p0, Lcom/android/server/pm/PackageManagerService$6;->val$ref_file:Ljava/io/File;
@@ -56,7 +55,6 @@
     .locals 8
 
     .prologue
-    .line 5828
     :try_start_0
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$6;->this$0:Lcom/android/server/pm/PackageManagerService;
 
@@ -77,16 +75,13 @@
     :try_end_0
     .catch Lcom/android/server/pm/PackageManagerException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 5844
     :cond_0
     :goto_0
     return-void
 
-    .line 5830
     :catch_0
     move-exception v7
 
-    .line 5831
     .local v7, "e":Lcom/android/server/pm/PackageManagerException;
     const-string v0, "PackageManager"
 
@@ -126,7 +121,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5834
     iget v0, p0, Lcom/android/server/pm/PackageManagerService$6;->val$ref_parseFlags:I
 
     and-int/lit8 v0, v0, 0x1
@@ -139,7 +133,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 5836
     const/4 v0, 0x5
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -164,7 +157,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/pm/PackageManagerService;->logCriticalInfo(ILjava/lang/String;)V
 
-    .line 5837
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$6;->val$ref_file:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->isDirectory()Z
@@ -173,7 +165,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 5838
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$6;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v0, v0, Lcom/android/server/pm/PackageManagerService;->mInstaller:Lcom/android/server/pm/Installer;
@@ -188,7 +179,6 @@
 
     goto :goto_0
 
-    .line 5840
     :cond_1
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$6;->val$ref_file:Ljava/io/File;
 

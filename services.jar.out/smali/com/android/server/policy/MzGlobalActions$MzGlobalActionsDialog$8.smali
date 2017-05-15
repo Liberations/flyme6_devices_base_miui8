@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog;
 
     .prologue
-    .line 576
     iput-object p1, p0, Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog$8;->this$1:Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 598
     return-void
 .end method
 
@@ -51,7 +49,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 590
     return-void
 .end method
 
@@ -60,7 +57,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 584
     return-void
 .end method
 
@@ -69,6 +65,5 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 579
     return-void
 .end method

@@ -30,7 +30,6 @@
     .param p2, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 79
     iput-object p1, p0, Lcom/android/server/pm/BackgroundDexOptService$1;->this$0:Lcom/android/server/pm/BackgroundDexOptService;
 
     iput-object p3, p0, Lcom/android/server/pm/BackgroundDexOptService$1;->val$pkgs:Landroid/util/ArraySet;
@@ -50,7 +49,6 @@
     .locals 6
 
     .prologue
-    .line 82
     iget-object v2, p0, Lcom/android/server/pm/BackgroundDexOptService$1;->val$pkgs:Landroid/util/ArraySet;
 
     invoke-virtual {v2}, Landroid/util/ArraySet;->iterator()Ljava/util/Iterator;
@@ -72,7 +70,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 83
     .local v1, "pkg":Ljava/lang/String;
     iget-object v2, p0, Lcom/android/server/pm/BackgroundDexOptService$1;->this$0:Lcom/android/server/pm/BackgroundDexOptService;
 
@@ -84,19 +81,16 @@
 
     if-nez v2, :cond_1
 
-    .line 85
     iget-object v2, p0, Lcom/android/server/pm/BackgroundDexOptService$1;->this$0:Lcom/android/server/pm/BackgroundDexOptService;
 
     const-wide/16 v4, 0x0
 
     invoke-static {v2, v4, v5}, Lcom/android/server/pm/BackgroundDexOptService;->schedule(Landroid/content/Context;J)V
 
-    .line 100
     .end local v1    # "pkg":Ljava/lang/String;
     :goto_1
     return-void
 
-    .line 88
     .restart local v1    # "pkg":Ljava/lang/String;
     :cond_1
     sget-object v2, Lcom/android/server/pm/BackgroundDexOptService;->sFailedPackageNames:Landroid/util/ArraySet;
@@ -107,7 +101,6 @@
 
     if-nez v2, :cond_0
 
-    .line 92
     iget-object v2, p0, Lcom/android/server/pm/BackgroundDexOptService$1;->val$pm:Lcom/android/server/pm/PackageManagerService;
 
     const/4 v3, 0x0
@@ -120,14 +113,12 @@
 
     if-nez v2, :cond_0
 
-    .line 95
     sget-object v2, Lcom/android/server/pm/BackgroundDexOptService;->sFailedPackageNames:Landroid/util/ArraySet;
 
     invoke-virtual {v2, v1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 99
     .end local v1    # "pkg":Ljava/lang/String;
     :cond_2
     iget-object v2, p0, Lcom/android/server/pm/BackgroundDexOptService$1;->this$0:Lcom/android/server/pm/BackgroundDexOptService;

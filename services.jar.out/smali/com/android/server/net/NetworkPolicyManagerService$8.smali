@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 625
     iput-object p1, p0, Lcom/android/server/net/NetworkPolicyManagerService$8;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -43,12 +42,10 @@
 
     const/4 v2, -0x1
 
-    .line 631
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 632
     .local v0, "action":Ljava/lang/String;
     const-string v4, "android.intent.extra.user_handle"
 
@@ -56,15 +53,12 @@
 
     move-result v1
 
-    .line 633
     .local v1, "userId":I
     if-ne v1, v2, :cond_0
 
-    .line 647
     :goto_0
     return-void
 
-    .line 635
     :cond_0
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
@@ -78,7 +72,6 @@
 
     goto :goto_0
 
-    .line 638
     :pswitch_0
     iget-object v2, p0, Lcom/android/server/net/NetworkPolicyManagerService$8;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
@@ -86,20 +79,17 @@
 
     monitor-enter v3
 
-    .line 641
     :try_start_0
     iget-object v2, p0, Lcom/android/server/net/NetworkPolicyManagerService$8;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-virtual {v2, v1}, Lcom/android/server/net/NetworkPolicyManagerService;->removePoliciesForUserLocked(I)V
 
-    .line 643
     iget-object v2, p0, Lcom/android/server/net/NetworkPolicyManagerService$8;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     const/4 v4, 0x1
 
     invoke-virtual {v2, v4}, Lcom/android/server/net/NetworkPolicyManagerService;->updateRulesForGlobalChangeLocked(Z)V
 
-    .line 644
     monitor-exit v3
 
     goto :goto_0
@@ -113,7 +103,6 @@
 
     throw v2
 
-    .line 635
     :sswitch_0
     const-string v3, "android.intent.action.USER_REMOVED"
 

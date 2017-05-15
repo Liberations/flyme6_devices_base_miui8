@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 168
     iput-object p1, p0, Lcom/miui/server/SplashScreenServiceDelegate$3;->this$0:Lcom/miui/server/SplashScreenServiceDelegate;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,19 +39,16 @@
     .locals 2
 
     .prologue
-    .line 171
     const-string v0, "SplashScreenServiceDelegate"
 
     const-string v1, "SplashScreen service binderDied!"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 172
     iget-object v0, p0, Lcom/miui/server/SplashScreenServiceDelegate$3;->this$0:Lcom/miui/server/SplashScreenServiceDelegate;
 
     # invokes: Lcom/miui/server/SplashScreenServiceDelegate;->delayToRebindService()V
     invoke-static {v0}, Lcom/miui/server/SplashScreenServiceDelegate;->access$500(Lcom/miui/server/SplashScreenServiceDelegate;)V
 
-    .line 173
     return-void
 .end method

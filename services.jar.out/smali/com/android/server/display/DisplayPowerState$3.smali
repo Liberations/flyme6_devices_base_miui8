@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 310
     iput-object p1, p0, Lcom/android/server/display/DisplayPowerState$3;->this$0:Lcom/android/server/display/DisplayPowerState;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,13 +43,11 @@
 
     const/4 v0, 0x0
 
-    .line 313
     iget-object v1, p0, Lcom/android/server/display/DisplayPowerState$3;->this$0:Lcom/android/server/display/DisplayPowerState;
 
     # setter for: Lcom/android/server/display/DisplayPowerState;->mScreenUpdatePending:Z
     invoke-static {v1, v0}, Lcom/android/server/display/DisplayPowerState;->access$002(Lcom/android/server/display/DisplayPowerState;Z)Z
 
-    .line 315
     iget-object v1, p0, Lcom/android/server/display/DisplayPowerState$3;->this$0:Lcom/android/server/display/DisplayPowerState;
 
     # getter for: Lcom/android/server/display/DisplayPowerState;->mScreenState:I
@@ -80,7 +77,6 @@
 
     move-result v0
 
-    .line 317
     .local v0, "brightness":I
     :cond_0
     iget-object v1, p0, Lcom/android/server/display/DisplayPowerState$3;->this$0:Lcom/android/server/display/DisplayPowerState;
@@ -103,7 +99,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 318
     # getter for: Lcom/android/server/display/DisplayPowerState;->DEBUG:Z
     invoke-static {}, Lcom/android/server/display/DisplayPowerState;->access$500()Z
 
@@ -120,7 +115,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 319
     :cond_1
     const-string v1, "DisplayPowerState"
 
@@ -128,25 +122,21 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 321
     :cond_2
     iget-object v1, p0, Lcom/android/server/display/DisplayPowerState$3;->this$0:Lcom/android/server/display/DisplayPowerState;
 
     # setter for: Lcom/android/server/display/DisplayPowerState;->mScreenReady:Z
     invoke-static {v1, v3}, Lcom/android/server/display/DisplayPowerState;->access$702(Lcom/android/server/display/DisplayPowerState;Z)Z
 
-    .line 322
     iget-object v1, p0, Lcom/android/server/display/DisplayPowerState$3;->this$0:Lcom/android/server/display/DisplayPowerState;
 
     # invokes: Lcom/android/server/display/DisplayPowerState;->invokeCleanListenerIfNeeded()V
     invoke-static {v1}, Lcom/android/server/display/DisplayPowerState;->access$800(Lcom/android/server/display/DisplayPowerState;)V
 
-    .line 328
     :cond_3
     :goto_0
     return-void
 
-    .line 324
     :cond_4
     # getter for: Lcom/android/server/display/DisplayPowerState;->DEBUG:Z
     invoke-static {}, Lcom/android/server/display/DisplayPowerState;->access$500()Z
@@ -164,7 +154,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 325
     :cond_5
     const-string v1, "DisplayPowerState"
 

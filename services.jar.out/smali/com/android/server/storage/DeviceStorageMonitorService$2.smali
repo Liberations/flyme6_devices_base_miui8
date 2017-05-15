@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 171
     iput-object p1, p0, Lcom/android/server/storage/DeviceStorageMonitorService$2;->this$0:Lcom/android/server/storage/DeviceStorageMonitorService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 174
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 175
     .local v0, "action":Ljava/lang/String;
     const-string v2, "android.intent.action.USER_PRESENT"
 
@@ -54,7 +51,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 176
     iget-object v2, p0, Lcom/android/server/storage/DeviceStorageMonitorService$2;->this$0:Lcom/android/server/storage/DeviceStorageMonitorService;
 
     # getter for: Lcom/android/server/storage/DeviceStorageMonitorService;->mLevel:I
@@ -62,7 +58,6 @@
 
     move-result v1
 
-    .line 177
     .local v1, "level":I
     iget-object v2, p0, Lcom/android/server/storage/DeviceStorageMonitorService$2;->this$0:Lcom/android/server/storage/DeviceStorageMonitorService;
 
@@ -70,7 +65,6 @@
 
     invoke-virtual {v2, v3}, Lcom/android/server/storage/DeviceStorageMonitorService;->checkMemory(Z)V
 
-    .line 178
     iget-object v2, p0, Lcom/android/server/storage/DeviceStorageMonitorService$2;->this$0:Lcom/android/server/storage/DeviceStorageMonitorService;
 
     # getter for: Lcom/android/server/storage/DeviceStorageMonitorService;->mLevel:I
@@ -84,13 +78,11 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 179
     iget-object v2, p0, Lcom/android/server/storage/DeviceStorageMonitorService$2;->this$0:Lcom/android/server/storage/DeviceStorageMonitorService;
 
     # invokes: Lcom/android/server/storage/DeviceStorageMonitorService;->doMemLowAction()V
     invoke-static {v2}, Lcom/android/server/storage/DeviceStorageMonitorService;->access$100(Lcom/android/server/storage/DeviceStorageMonitorService;)V
 
-    .line 182
     .end local v1    # "level":I
     :cond_0
     return-void

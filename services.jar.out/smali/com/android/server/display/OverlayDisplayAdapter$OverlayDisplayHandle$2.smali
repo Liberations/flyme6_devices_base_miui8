@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 454
     iput-object p1, p0, Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle$2;->this$1:Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 10
 
     .prologue
-    .line 457
     iget-object v1, p0, Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle$2;->this$1:Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle;
 
     # getter for: Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle;->mModes:Ljava/util/List;
@@ -61,7 +59,6 @@
 
     check-cast v9, Lcom/android/server/display/OverlayDisplayAdapter$OverlayMode;
 
-    .line 458
     .local v9, "mode":Lcom/android/server/display/OverlayDisplayAdapter$OverlayMode;
     new-instance v0, Lcom/android/server/display/OverlayDisplayWindow;
 
@@ -104,11 +101,9 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/android/server/display/OverlayDisplayWindow;-><init>(Landroid/content/Context;Ljava/lang/String;IIIIZLcom/android/server/display/OverlayDisplayWindow$Listener;)V
 
-    .line 461
     .local v0, "window":Lcom/android/server/display/OverlayDisplayWindow;
     invoke-virtual {v0}, Lcom/android/server/display/OverlayDisplayWindow;->show()V
 
-    .line 463
     iget-object v1, p0, Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle$2;->this$1:Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle;
 
     iget-object v1, v1, Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle;->this$0:Lcom/android/server/display/OverlayDisplayAdapter;
@@ -119,20 +114,16 @@
 
     monitor-enter v2
 
-    .line 464
     :try_start_0
     iget-object v1, p0, Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle$2;->this$1:Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle;
 
     # setter for: Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle;->mWindow:Lcom/android/server/display/OverlayDisplayWindow;
     invoke-static {v1, v0}, Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle;->access$802(Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle;Lcom/android/server/display/OverlayDisplayWindow;)Lcom/android/server/display/OverlayDisplayWindow;
 
-    .line 465
     monitor-exit v2
 
-    .line 466
     return-void
 
-    .line 465
     :catchall_0
     move-exception v1
 

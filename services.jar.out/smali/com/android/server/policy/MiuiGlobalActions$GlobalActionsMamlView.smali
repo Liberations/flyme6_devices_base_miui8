@@ -32,13 +32,10 @@
     .param p4, "startDelay"    # J
 
     .prologue
-    .line 339
     iput-object p1, p0, Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView;->this$0:Lcom/android/server/policy/MiuiGlobalActions;
 
-    .line 340
     invoke-direct {p0, p2, p3, p4, p5}, Lmiui/maml/component/MamlView;-><init>(Landroid/content/Context;Lmiui/maml/ScreenElementRoot;J)V
 
-    .line 341
     iget-object v0, p0, Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/android/server/policy/EnableAccessibilityController;->canEnableAccessibilityViaGesture(Landroid/content/Context;)Z
@@ -47,7 +44,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 342
     new-instance v0, Lcom/android/server/policy/EnableAccessibilityController;
 
     iget-object v1, p0, Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView;->mContext:Landroid/content/Context;
@@ -60,11 +56,9 @@
 
     iput-object v0, p0, Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView;->mEnableAccessibilityController:Lcom/android/server/policy/EnableAccessibilityController;
 
-    .line 352
     :goto_0
     return-void
 
-    .line 350
     :cond_0
     const/4 v0, 0x0
 
@@ -84,24 +78,20 @@
 
     const/4 v9, 0x0
 
-    .line 356
     iget-object v2, p0, Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView;->mEnableAccessibilityController:Lcom/android/server/policy/EnableAccessibilityController;
 
     if-eqz v2, :cond_2
 
-    .line 357
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v8
 
-    .line 359
     .local v8, "action":I
     :try_start_0
     iget-boolean v2, p0, Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView;->mIntercepted:Z
 
     if-nez v2, :cond_4
 
-    .line 360
     iget-object v2, p0, Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView;->mEnableAccessibilityController:Lcom/android/server/policy/EnableAccessibilityController;
 
     invoke-virtual {v2, p1}, Lcom/android/server/policy/EnableAccessibilityController;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
@@ -110,17 +100,14 @@
 
     iput-boolean v2, p0, Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView;->mIntercepted:Z
 
-    .line 361
     iget-boolean v2, p0, Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView;->mIntercepted:Z
 
     if-eqz v2, :cond_0
 
-    .line 362
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
-    .line 363
     .local v0, "now":J
     const/4 v4, 0x3
 
@@ -136,29 +123,24 @@
 
     move-result-object p1
 
-    .line 365
     const/16 v2, 0x1002
 
     invoke-virtual {p1, v2}, Landroid/view/MotionEvent;->setSource(I)V
 
-    .line 366
     const/4 v2, 0x1
 
     iput-boolean v2, p0, Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView;->mCancelOnUp:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 372
     .end local v0    # "now":J
     :cond_0
     if-ne v8, v10, :cond_2
 
-    .line 373
     iget-boolean v2, p0, Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView;->mCancelOnUp:Z
 
     if-eqz v2, :cond_1
 
-    .line 374
     iget-object v2, p0, Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView;->this$0:Lcom/android/server/policy/MiuiGlobalActions;
 
     # getter for: Lcom/android/server/policy/MiuiGlobalActions;->mHandler:Landroid/os/Handler;
@@ -168,14 +150,11 @@
 
     invoke-virtual {v2, v9}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 376
     :cond_1
     iput-boolean v9, p0, Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView;->mCancelOnUp:Z
 
-    .line 377
     iput-boolean v9, p0, Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView;->mIntercepted:Z
 
-    .line 381
     .end local v8    # "action":I
     :cond_2
     invoke-super {p0, p1}, Lmiui/maml/component/MamlView;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
@@ -186,7 +165,6 @@
     :goto_0
     return v2
 
-    .line 369
     .restart local v8    # "action":I
     :cond_4
     :try_start_1
@@ -198,15 +176,12 @@
 
     move-result v2
 
-    .line 372
     if-ne v8, v10, :cond_3
 
-    .line 373
     iget-boolean v3, p0, Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView;->mCancelOnUp:Z
 
     if-eqz v3, :cond_5
 
-    .line 374
     iget-object v3, p0, Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView;->this$0:Lcom/android/server/policy/MiuiGlobalActions;
 
     # getter for: Lcom/android/server/policy/MiuiGlobalActions;->mHandler:Landroid/os/Handler;
@@ -216,27 +191,22 @@
 
     invoke-virtual {v3, v9}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 376
     :cond_5
     iput-boolean v9, p0, Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView;->mCancelOnUp:Z
 
-    .line 377
     iput-boolean v9, p0, Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView;->mIntercepted:Z
 
     goto :goto_0
 
-    .line 372
     :catchall_0
     move-exception v2
 
     if-ne v8, v10, :cond_7
 
-    .line 373
     iget-boolean v3, p0, Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView;->mCancelOnUp:Z
 
     if-eqz v3, :cond_6
 
-    .line 374
     iget-object v3, p0, Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView;->this$0:Lcom/android/server/policy/MiuiGlobalActions;
 
     # getter for: Lcom/android/server/policy/MiuiGlobalActions;->mHandler:Landroid/os/Handler;
@@ -246,11 +216,9 @@
 
     invoke-virtual {v3, v9}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 376
     :cond_6
     iput-boolean v9, p0, Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView;->mCancelOnUp:Z
 
-    .line 377
     iput-boolean v9, p0, Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView;->mIntercepted:Z
 
     :cond_7

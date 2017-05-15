@@ -43,7 +43,6 @@
     .locals 2
 
     .prologue
-    .line 25
     const-class v1, Lcom/miui/server/TidaService;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -52,12 +51,10 @@
 
     sput-object v1, Lcom/miui/server/TidaService;->TAG:Ljava/lang/String;
 
-    .line 27
     const/4 v1, 0x0
 
     sput-boolean v1, Lcom/miui/server/TidaService;->sTesting:Z
 
-    .line 33
     :try_start_0
     const-string v1, "tida"
 
@@ -65,21 +62,17 @@
     :try_end_0
     .catch Ljava/lang/UnsatisfiedLinkError; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 38
     .local v0, "e":Ljava/lang/UnsatisfiedLinkError;
     :goto_0
     return-void
 
-    .line 34
     .end local v0    # "e":Ljava/lang/UnsatisfiedLinkError;
     :catch_0
     move-exception v0
 
-    .line 35
     .restart local v0    # "e":Ljava/lang/UnsatisfiedLinkError;
     invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
-    .line 36
     const/4 v1, 0x1
 
     sput-boolean v1, Lcom/miui/server/TidaService;->sTesting:Z
@@ -94,20 +87,16 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 54
     invoke-direct {p0}, Lmiui/security/ITidaService$Stub;-><init>()V
 
-    .line 139
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/miui/server/TidaService;->keys:Ljava/util/Map;
 
-    .line 55
     iput-object p1, p0, Lcom/miui/server/TidaService;->mContext:Landroid/content/Context;
 
-    .line 56
     new-instance v0, Lcom/miui/server/TidaService$MyPackageMonitor;
 
     invoke-direct {v0, p0, v2}, Lcom/miui/server/TidaService$MyPackageMonitor;-><init>(Lcom/miui/server/TidaService;Lcom/miui/server/TidaService$1;)V
@@ -116,7 +105,6 @@
 
     invoke-virtual {v0, p1, v2, v1}, Lcom/miui/server/TidaService$MyPackageMonitor;->register(Landroid/content/Context;Landroid/os/Looper;Z)V
 
-    .line 57
     return-void
 .end method
 
@@ -126,7 +114,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 22
     invoke-direct {p0, p1}, Lcom/miui/server/TidaService;->onUidRemoved(I)V
 
     return-void
@@ -155,19 +142,15 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 60
     sget-boolean v0, Lcom/miui/server/TidaService;->sTesting:Z
 
     if-eqz v0, :cond_0
 
-    .line 61
     invoke-direct {p0, p1}, Lcom/miui/server/TidaService;->testRemoveAllKey(I)V
 
-    .line 65
     :goto_0
     return-void
 
-    .line 63
     :cond_0
     invoke-direct {p0, p1}, Lcom/miui/server/TidaService;->nativeRemoveAllKey(I)V
 
@@ -180,7 +163,6 @@
     .param p2, "alias"    # Ljava/lang/String;
 
     .prologue
-    .line 142
     sget-object v0, Lcom/miui/server/TidaService;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -219,7 +201,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 143
     iget-object v0, p0, Lcom/miui/server/TidaService;->keys:Ljava/util/Map;
 
     invoke-interface {v0, p2}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -236,7 +217,6 @@
     .param p3, "alg"    # Ljava/lang/String;
 
     .prologue
-    .line 147
     sget-object v2, Lcom/miui/server/TidaService;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -285,24 +265,20 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 148
     new-instance v0, Lmiui/security/TidaPrivateKey;
 
     invoke-direct {v0, p2}, Lmiui/security/TidaPrivateKey;-><init>(Ljava/lang/String;)V
 
-    .line 149
     .local v0, "priv":Lmiui/security/TidaPrivateKey;
     new-instance v1, Lmiui/security/TidaPublicKey;
 
     invoke-direct {v1}, Lmiui/security/TidaPublicKey;-><init>()V
 
-    .line 150
     .local v1, "pub":Lmiui/security/TidaPublicKey;
     iget-object v2, p0, Lcom/miui/server/TidaService;->keys:Ljava/util/Map;
 
     invoke-interface {v2, p2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 151
     new-instance v2, Ljava/security/KeyPair;
 
     invoke-direct {v2, v1, v0}, Ljava/security/KeyPair;-><init>(Ljava/security/PublicKey;Ljava/security/PrivateKey;)V
@@ -315,7 +291,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 167
     sget-object v0, Lcom/miui/server/TidaService;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -344,7 +319,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 168
     return-void
 .end method
 
@@ -352,14 +326,12 @@
     .locals 2
 
     .prologue
-    .line 155
     sget-object v0, Lcom/miui/server/TidaService;->TAG:Ljava/lang/String;
 
     const-string v1, "testSing()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 156
     const-string v0, "testSign"
 
     invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
@@ -376,7 +348,6 @@
     .param p3, "algorithm"    # Ljava/lang/String;
 
     .prologue
-    .line 164
     sget-object v0, Lcom/miui/server/TidaService;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -425,7 +396,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 165
     return-void
 .end method
 
@@ -434,7 +404,6 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 160
     sget-object v0, Lcom/miui/server/TidaService;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -463,7 +432,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 161
     return-void
 .end method
 
@@ -474,23 +442,19 @@
     .param p1, "alias"    # Ljava/lang/String;
 
     .prologue
-    .line 68
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
-    .line 70
     .local v0, "uid":I
     sget-boolean v1, Lcom/miui/server/TidaService;->sTesting:Z
 
     if-eqz v1, :cond_0
 
-    .line 71
     invoke-direct {p0, v0, p1}, Lcom/miui/server/TidaService;->testContains(ILjava/lang/String;)Z
 
     move-result v1
 
-    .line 73
     :goto_0
     return v1
 
@@ -508,10 +472,8 @@
     .param p2, "alg"    # Ljava/lang/String;
 
     .prologue
-    .line 78
     if-nez p1, :cond_0
 
-    .line 79
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string v3, "Alias is null"
@@ -520,11 +482,9 @@
 
     throw v2
 
-    .line 81
     :cond_0
     if-nez p2, :cond_1
 
-    .line 82
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string v3, "Algorithm is null"
@@ -533,41 +493,33 @@
 
     throw v2
 
-    .line 85
     :cond_1
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
 
-    .line 86
     .local v1, "uid":I
     const/4 v0, 0x0
 
-    .line 88
     .local v0, "kp":Ljava/security/KeyPair;
     sget-boolean v2, Lcom/miui/server/TidaService;->sTesting:Z
 
     if-eqz v2, :cond_2
 
-    .line 89
     invoke-direct {p0, v1, p1, p2}, Lcom/miui/server/TidaService;->testGenerateKeyPair(ILjava/lang/String;Ljava/lang/String;)Ljava/security/KeyPair;
 
     move-result-object v0
 
-    .line 94
     :goto_0
     if-eqz v0, :cond_3
 
-    .line 95
     new-instance v2, Lmiui/security/KeyPairParcel;
 
     invoke-direct {v2, v0}, Lmiui/security/KeyPairParcel;-><init>(Ljava/security/KeyPair;)V
 
-    .line 97
     :goto_1
     return-object v2
 
-    .line 91
     :cond_2
     invoke-direct {p0, v1, p1, p2}, Lcom/miui/server/TidaService;->nativeGenerateKeyPair(ILjava/lang/String;Ljava/lang/String;)Ljava/security/KeyPair;
 
@@ -575,7 +527,6 @@
 
     goto :goto_0
 
-    .line 97
     :cond_3
     const/4 v2, 0x0
 
@@ -586,17 +537,14 @@
     .locals 1
 
     .prologue
-    .line 102
     sget-boolean v0, Lcom/miui/server/TidaService;->sTesting:Z
 
     if-eqz v0, :cond_0
 
-    .line 103
     invoke-direct {p0}, Lcom/miui/server/TidaService;->testSign()[B
 
     move-result-object v0
 
-    .line 105
     :goto_0
     return-object v0
 
@@ -614,10 +562,8 @@
     .param p2, "algorithm"    # Ljava/lang/String;
 
     .prologue
-    .line 122
     if-nez p1, :cond_0
 
-    .line 123
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "Alias is null"
@@ -626,11 +572,9 @@
 
     throw v1
 
-    .line 125
     :cond_0
     if-nez p2, :cond_1
 
-    .line 126
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "Algorithm is null"
@@ -639,26 +583,21 @@
 
     throw v1
 
-    .line 129
     :cond_1
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
-    .line 131
     .local v0, "uid":I
     sget-boolean v1, Lcom/miui/server/TidaService;->sTesting:Z
 
     if-eqz v1, :cond_2
 
-    .line 132
     invoke-direct {p0, v0, p1, p2}, Lcom/miui/server/TidaService;->testSignInit(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 136
     :goto_0
     return-void
 
-    .line 134
     :cond_2
     invoke-direct {p0, v0, p1, p2}, Lcom/miui/server/TidaService;->nativeSignInit(ILjava/lang/String;Ljava/lang/String;)V
 
@@ -670,25 +609,20 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 110
     if-nez p1, :cond_0
 
-    .line 119
     :goto_0
     return-void
 
-    .line 114
     :cond_0
     sget-boolean v0, Lcom/miui/server/TidaService;->sTesting:Z
 
     if-eqz v0, :cond_1
 
-    .line 115
     invoke-direct {p0, p1}, Lcom/miui/server/TidaService;->testSignUpdate(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 117
     :cond_1
     invoke-direct {p0, p1}, Lcom/miui/server/TidaService;->nativeSignUpdate(Ljava/lang/String;)V
 

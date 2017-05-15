@@ -41,13 +41,10 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 88
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 100
     iput v0, p0, Lcom/android/server/TelephonyRegistry$Record;->subId:I
 
-    .line 102
     iput v0, p0, Lcom/android/server/TelephonyRegistry$Record;->phoneId:I
 
     return-void
@@ -58,7 +55,6 @@
     .param p1, "x0"    # Lcom/android/server/TelephonyRegistry$1;
 
     .prologue
-    .line 88
     invoke-direct {p0}, Lcom/android/server/TelephonyRegistry$Record;-><init>()V
 
     return-void
@@ -70,7 +66,6 @@
     .locals 1
 
     .prologue
-    .line 111
     iget-object v0, p0, Lcom/android/server/TelephonyRegistry$Record;->onSubscriptionsChangedListenerCallback:Lcom/android/internal/telephony/IOnSubscriptionsChangedListener;
 
     if-eqz v0, :cond_0
@@ -91,7 +86,6 @@
     .param p1, "events"    # I
 
     .prologue
-    .line 107
     iget-object v0, p0, Lcom/android/server/TelephonyRegistry$Record;->callback:Lcom/android/internal/telephony/IPhoneStateListener;
 
     if-eqz v0, :cond_0
@@ -117,7 +111,6 @@
     .locals 2
 
     .prologue
-    .line 116
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

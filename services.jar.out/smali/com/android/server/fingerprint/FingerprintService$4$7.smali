@@ -34,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 1013
     iput-object p1, p0, Lcom/android/server/fingerprint/FingerprintService$4$7;->this$1:Lcom/android/server/fingerprint/FingerprintService$4;
 
     iput p2, p0, Lcom/android/server/fingerprint/FingerprintService$4$7;->val$cmd:I
@@ -56,7 +55,6 @@
     .locals 5
 
     .prologue
-    .line 1016
     iget-object v0, p0, Lcom/android/server/fingerprint/FingerprintService$4$7;->this$1:Lcom/android/server/fingerprint/FingerprintService$4;
 
     iget-object v0, v0, Lcom/android/server/fingerprint/FingerprintService$4;->this$0:Lcom/android/server/fingerprint/FingerprintService;
@@ -71,6 +69,5 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Lcom/android/server/fingerprint/FingerprintService;->handleGxCmdResult(III[B)V
 
-    .line 1017
     return-void
 .end method

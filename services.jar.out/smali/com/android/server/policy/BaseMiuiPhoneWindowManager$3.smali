@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 715
     iput-object p1, p0, Lcom/android/server/policy/BaseMiuiPhoneWindowManager$3;->this$0:Lcom/android/server/policy/BaseMiuiPhoneWindowManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 718
     iget-object v0, p0, Lcom/android/server/policy/BaseMiuiPhoneWindowManager$3;->this$0:Lcom/android/server/policy/BaseMiuiPhoneWindowManager;
 
     # getter for: Lcom/android/server/policy/BaseMiuiPhoneWindowManager;->mTorchEnabled:Z
@@ -50,7 +48,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 719
     iget-object v0, p0, Lcom/android/server/policy/BaseMiuiPhoneWindowManager$3;->this$0:Lcom/android/server/policy/BaseMiuiPhoneWindowManager;
 
     const/4 v1, 0x0
@@ -58,7 +55,6 @@
     # invokes: Lcom/android/server/policy/BaseMiuiPhoneWindowManager;->setTorch(Z)Z
     invoke-static {v0, v1}, Lcom/android/server/policy/BaseMiuiPhoneWindowManager;->access$400(Lcom/android/server/policy/BaseMiuiPhoneWindowManager;Z)Z
 
-    .line 721
     :cond_0
     return-void
 .end method

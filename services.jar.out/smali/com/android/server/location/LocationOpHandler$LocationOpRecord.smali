@@ -32,20 +32,15 @@
     .param p4, "timestamp"    # J
 
     .prologue
-    .line 114
     iput-object p1, p0, Lcom/android/server/location/LocationOpHandler$LocationOpRecord;->this$0:Lcom/android/server/location/LocationOpHandler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 115
     iput p2, p0, Lcom/android/server/location/LocationOpHandler$LocationOpRecord;->uid:I
 
-    .line 116
     iput p3, p0, Lcom/android/server/location/LocationOpHandler$LocationOpRecord;->locationOp:I
 
-    .line 117
     iput-wide p4, p0, Lcom/android/server/location/LocationOpHandler$LocationOpRecord;->timestamp:J
 
-    .line 118
     return-void
 .end method

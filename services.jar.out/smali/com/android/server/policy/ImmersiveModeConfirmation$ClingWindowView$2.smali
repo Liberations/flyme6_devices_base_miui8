@@ -28,12 +28,10 @@
     .locals 1
 
     .prologue
-    .line 205
     iput-object p1, p0, Lcom/android/server/policy/ImmersiveModeConfirmation$ClingWindowView$2;->this$1:Lcom/android/server/policy/ImmersiveModeConfirmation$ClingWindowView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 206
     const/4 v0, 0x2
 
     new-array v0, v0, [I
@@ -54,7 +52,6 @@
 
     const/4 v4, 0x0
 
-    .line 212
     iget-object v0, p0, Lcom/android/server/policy/ImmersiveModeConfirmation$ClingWindowView$2;->this$1:Lcom/android/server/policy/ImmersiveModeConfirmation$ClingWindowView;
 
     # getter for: Lcom/android/server/policy/ImmersiveModeConfirmation$ClingWindowView;->mClingLayout:Landroid/view/ViewGroup;
@@ -66,12 +63,10 @@
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->getLocationInWindow([I)V
 
-    .line 213
     const/4 v0, 0x3
 
     invoke-virtual {p1, v0}, Landroid/view/ViewTreeObserver$InternalInsetsInfo;->setTouchableInsets(I)V
 
-    .line 215
     iget-object v0, p1, Landroid/view/ViewTreeObserver$InternalInsetsInfo;->touchableRegion:Landroid/graphics/Region;
 
     iget-object v1, p0, Lcom/android/server/policy/ImmersiveModeConfirmation$ClingWindowView$2;->mTmpInt2:[I
@@ -118,6 +113,5 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/graphics/Region;->set(IIII)Z
 
-    .line 220
     return-void
 .end method

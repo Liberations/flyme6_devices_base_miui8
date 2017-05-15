@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 60
     iput-object p1, p0, Lcom/miui/server/MiuiInitServer$BootCompletedReceiver$1;->this$1:Lcom/miui/server/MiuiInitServer$BootCompletedReceiver;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -37,7 +36,6 @@
     .locals 2
 
     .prologue
-    .line 68
     const-wide/32 v0, 0x2bf20
 
     :try_start_0
@@ -45,14 +43,11 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 75
     :goto_0
     invoke-static {}, Lcom/android/server/pm/PreinstallApp;->installNewUpdatedSystemPreinstallApps()V
 
-    .line 76
     return-void
 
-    .line 69
     :catch_0
     move-exception v0
 

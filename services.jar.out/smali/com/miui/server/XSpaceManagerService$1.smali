@@ -20,7 +20,6 @@
     .param p1, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 284
     invoke-direct {p0, p1}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
     return-void
@@ -33,10 +32,8 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 287
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
-    .line 288
     # getter for: Lcom/miui/server/XSpaceManagerService;->sResolver:Landroid/content/ContentResolver;
     invoke-static {}, Lcom/miui/server/XSpaceManagerService;->access$000()Landroid/content/ContentResolver;
 
@@ -52,7 +49,6 @@
 
     sput-boolean v0, Lcom/miui/server/XSpaceManagerService;->sIsXSpaceActived:Z
 
-    .line 290
     # getter for: Lcom/miui/server/XSpaceManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/miui/server/XSpaceManagerService;->access$100()Ljava/lang/String;
 
@@ -80,6 +76,5 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 291
     return-void
 .end method

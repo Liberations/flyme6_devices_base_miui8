@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 650
     iput-object p1, p0, Lcom/miui/server/BackupManagerService$FullBackupRestoreObserver;->this$0:Lcom/miui/server/BackupManagerService;
 
     invoke-direct {p0}, Landroid/app/backup/IFullBackupRestoreObserver$Stub;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/miui/server/BackupManagerService$1;
 
     .prologue
-    .line 650
     invoke-direct {p0, p1}, Lcom/miui/server/BackupManagerService$FullBackupRestoreObserver;-><init>(Lcom/miui/server/BackupManagerService;)V
 
     return-void
@@ -55,7 +53,6 @@
     .end annotation
 
     .prologue
-    .line 658
     iget-object v0, p0, Lcom/miui/server/BackupManagerService$FullBackupRestoreObserver;->this$0:Lcom/miui/server/BackupManagerService;
 
     # getter for: Lcom/miui/server/BackupManagerService;->mCurrentWorkingPkg:Ljava/lang/String;
@@ -82,7 +79,6 @@
 
     if-nez v0, :cond_0
 
-    .line 661
     :cond_0
     iget-object v0, p0, Lcom/miui/server/BackupManagerService$FullBackupRestoreObserver;->this$0:Lcom/miui/server/BackupManagerService;
 
@@ -93,7 +89,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 662
     iget-object v0, p0, Lcom/miui/server/BackupManagerService$FullBackupRestoreObserver;->this$0:Lcom/miui/server/BackupManagerService;
 
     # getter for: Lcom/miui/server/BackupManagerService;->mBackupRestoreObserver:Lmiui/app/backup/IPackageBackupRestoreObserver;
@@ -117,7 +112,6 @@
 
     invoke-interface {v0, v1, v2}, Lmiui/app/backup/IPackageBackupRestoreObserver;->onBackupStart(Ljava/lang/String;I)V
 
-    .line 664
     :cond_1
     return-void
 .end method
@@ -131,7 +125,6 @@
     .end annotation
 
     .prologue
-    .line 668
     iget-object v0, p0, Lcom/miui/server/BackupManagerService$FullBackupRestoreObserver;->this$0:Lcom/miui/server/BackupManagerService;
 
     # getter for: Lcom/miui/server/BackupManagerService;->mBackupRestoreObserver:Lmiui/app/backup/IPackageBackupRestoreObserver;
@@ -141,7 +134,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 669
     iget-object v0, p0, Lcom/miui/server/BackupManagerService$FullBackupRestoreObserver;->this$0:Lcom/miui/server/BackupManagerService;
 
     # getter for: Lcom/miui/server/BackupManagerService;->mBackupRestoreObserver:Lmiui/app/backup/IPackageBackupRestoreObserver;
@@ -165,7 +157,6 @@
 
     invoke-interface {v0, v1, v2}, Lmiui/app/backup/IPackageBackupRestoreObserver;->onBackupEnd(Ljava/lang/String;I)V
 
-    .line 671
     :cond_0
     return-void
 .end method
@@ -179,7 +170,6 @@
     .end annotation
 
     .prologue
-    .line 687
     iget-object v0, p0, Lcom/miui/server/BackupManagerService$FullBackupRestoreObserver;->this$0:Lcom/miui/server/BackupManagerService;
 
     # getter for: Lcom/miui/server/BackupManagerService;->mBackupRestoreObserver:Lmiui/app/backup/IPackageBackupRestoreObserver;
@@ -189,7 +179,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 689
     iget-object v0, p0, Lcom/miui/server/BackupManagerService$FullBackupRestoreObserver;->this$0:Lcom/miui/server/BackupManagerService;
 
     # getter for: Lcom/miui/server/BackupManagerService;->mBackupRestoreObserver:Lmiui/app/backup/IPackageBackupRestoreObserver;
@@ -213,7 +202,6 @@
 
     invoke-interface {v0, v1, v2}, Lmiui/app/backup/IPackageBackupRestoreObserver;->onRestoreEnd(Ljava/lang/String;I)V
 
-    .line 691
     :cond_0
     return-void
 .end method
@@ -228,7 +216,6 @@
     .end annotation
 
     .prologue
-    .line 679
     iget-object v0, p0, Lcom/miui/server/BackupManagerService$FullBackupRestoreObserver;->this$0:Lcom/miui/server/BackupManagerService;
 
     # getter for: Lcom/miui/server/BackupManagerService;->mBackupRestoreObserver:Lmiui/app/backup/IPackageBackupRestoreObserver;
@@ -238,7 +225,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 681
     iget-object v0, p0, Lcom/miui/server/BackupManagerService$FullBackupRestoreObserver;->this$0:Lcom/miui/server/BackupManagerService;
 
     # getter for: Lcom/miui/server/BackupManagerService;->mBackupRestoreObserver:Lmiui/app/backup/IPackageBackupRestoreObserver;
@@ -262,7 +248,6 @@
 
     invoke-interface {v0, v1, v2}, Lmiui/app/backup/IPackageBackupRestoreObserver;->onRestoreStart(Ljava/lang/String;I)V
 
-    .line 683
     :cond_0
     return-void
 .end method
@@ -276,7 +261,6 @@
     .end annotation
 
     .prologue
-    .line 654
     return-void
 .end method
 
@@ -289,7 +273,6 @@
     .end annotation
 
     .prologue
-    .line 675
     return-void
 .end method
 
@@ -302,6 +285,5 @@
     .end annotation
 
     .prologue
-    .line 695
     return-void
 .end method

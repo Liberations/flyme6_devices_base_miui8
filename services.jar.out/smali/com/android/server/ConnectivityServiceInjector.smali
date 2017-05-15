@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,7 +18,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 49
     invoke-static {p0}, Lcom/android/server/MiuiConfigCaptivePortal;->enableDataAndWifiRoam(Landroid/content/Context;)Z
 
     move-result v0
@@ -31,12 +29,10 @@
     .locals 2
 
     .prologue
-    .line 37
     invoke-static {}, Lcom/miui/whetstone/PowerKeeperPolicy;->getInstance()Lcom/miui/whetstone/PowerKeeperPolicy;
 
     move-result-object v0
 
-    .line 38
     .local v0, "power":Lcom/miui/whetstone/PowerKeeperPolicy;
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
@@ -44,7 +40,6 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/whetstone/PowerKeeperPolicy;->notifyVpnStart(I)V
 
-    .line 39
     return-void
 .end method
 
@@ -53,15 +48,12 @@
     .param p0, "info"    # Landroid/net/NetworkInfo;
 
     .prologue
-    .line 42
     if-eqz p0, :cond_0
 
-    .line 43
     invoke-static {}, Lcom/miui/whetstone/PowerKeeperPolicy;->getInstance()Lcom/miui/whetstone/PowerKeeperPolicy;
 
     move-result-object v0
 
-    .line 44
     .local v0, "power":Lcom/miui/whetstone/PowerKeeperPolicy;
     invoke-virtual {p0}, Landroid/net/NetworkInfo;->getDetailedState()Landroid/net/NetworkInfo$DetailedState;
 
@@ -69,7 +61,6 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/whetstone/PowerKeeperPolicy;->notifyVpnStatusChanged(Landroid/net/NetworkInfo$DetailedState;)V
 
-    .line 46
     .end local v0    # "power":Lcom/miui/whetstone/PowerKeeperPolicy;
     :cond_0
     return-void
@@ -82,7 +73,6 @@
     .param p2, "ssid"    # Ljava/lang/String;
 
     .prologue
-    .line 17
     const-string v3, "wifi"
 
     invoke-virtual {p0, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -91,37 +81,31 @@
 
     check-cast v2, Landroid/net/wifi/WifiManager;
 
-    .line 19
     .local v2, "wifiManager":Landroid/net/wifi/WifiManager;
     invoke-virtual {v2}, Landroid/net/wifi/WifiManager;->getConnectionInfo()Landroid/net/wifi/WifiInfo;
 
     move-result-object v1
 
-    .line 21
     .local v1, "wifiInfo":Landroid/net/wifi/WifiInfo;
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 22
     .local v0, "loginIntent":Landroid/content/Intent;
     const-string v3, "com.miui.action.OPEN_WIFI_LOGIN"
 
     invoke-virtual {v0, v3}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 23
     const-string v3, "com.android.settings"
 
     const-string v4, "com.android.settings.wifi.MiuiWifiService"
 
     invoke-virtual {v0, v3, v4}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 24
     const-string v3, "miui.intent.extra.OPEN_WIFI_SSID"
 
     invoke-virtual {v0, v3, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 25
     invoke-virtual {p1}, Landroid/content/Intent;->getDataString()Ljava/lang/String;
 
     move-result-object v3
@@ -140,7 +124,6 @@
 
     invoke-virtual {v0, v3}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    .line 26
     if-eqz v1, :cond_0
 
     invoke-virtual {v1}, Landroid/net/wifi/WifiInfo;->getSSID()Ljava/lang/String;
@@ -153,7 +136,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 27
     const-string v3, "miui.intent.extra.BSSID"
 
     invoke-virtual {v1}, Landroid/net/wifi/WifiInfo;->getBSSID()Ljava/lang/String;
@@ -162,7 +144,6 @@
 
     invoke-virtual {v0, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 29
     :cond_0
     const-string v3, "miui.intent.extra.CAPTIVE_PORTAL"
 
@@ -174,7 +155,6 @@
 
     invoke-virtual {v0, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/IBinder;)Landroid/content/Intent;
 
-    .line 31
     const-string v3, "miui.intent.extra.NETWORK"
 
     const-string v4, "miui.intent.extra.NETWORK"
@@ -185,9 +165,7 @@
 
     invoke-virtual {v0, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 33
     invoke-virtual {p0, v0}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
-    .line 34
     return-void
 .end method

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1358
     iput-object p1, p0, Lcom/android/server/fingerprint/FingerprintService$5;->this$0:Lcom/android/server/fingerprint/FingerprintService;
 
     invoke-direct {p0}, Landroid/app/IUserSwitchObserver$Stub;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "newProfileId"    # I
 
     .prologue
-    .line 1371
     return-void
 .end method
 
@@ -52,7 +50,6 @@
     .end annotation
 
     .prologue
-    .line 1367
     return-void
 .end method
 
@@ -62,7 +59,6 @@
     .param p2, "reply"    # Landroid/os/IRemoteCallback;
 
     .prologue
-    .line 1361
     iget-object v0, p0, Lcom/android/server/fingerprint/FingerprintService$5;->this$0:Lcom/android/server/fingerprint/FingerprintService;
 
     iget-object v0, v0, Lcom/android/server/fingerprint/FingerprintService;->mHandler:Landroid/os/Handler;
@@ -77,6 +73,5 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 1363
     return-void
 .end method

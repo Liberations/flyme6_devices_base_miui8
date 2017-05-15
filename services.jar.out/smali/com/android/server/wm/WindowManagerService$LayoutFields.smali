@@ -75,63 +75,46 @@
 
     const/4 v2, 0x0
 
-    .line 669
     iput-object p1, p0, Lcom/android/server/wm/WindowManagerService$LayoutFields;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 677
     iput-boolean v2, p0, Lcom/android/server/wm/WindowManagerService$LayoutFields;->mWallpaperForceHidingChanged:Z
 
-    .line 678
     iput-boolean v2, p0, Lcom/android/server/wm/WindowManagerService$LayoutFields;->mWallpaperMayChange:Z
 
-    .line 679
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/wm/WindowManagerService$LayoutFields;->mOrientationChangeComplete:Z
 
-    .line 680
     iput-object v3, p0, Lcom/android/server/wm/WindowManagerService$LayoutFields;->mLastWindowFreezeSource:Ljava/lang/Object;
 
-    .line 681
     iput-object v3, p0, Lcom/android/server/wm/WindowManagerService$LayoutFields;->mHoldScreen:Lcom/android/server/wm/Session;
 
-    .line 682
     iput-boolean v2, p0, Lcom/android/server/wm/WindowManagerService$LayoutFields;->mObscured:Z
 
-    .line 683
     iput-boolean v2, p0, Lcom/android/server/wm/WindowManagerService$LayoutFields;->mSyswin:Z
 
-    .line 684
     iput v1, p0, Lcom/android/server/wm/WindowManagerService$LayoutFields;->mScreenBrightness:F
 
-    .line 685
     iput v1, p0, Lcom/android/server/wm/WindowManagerService$LayoutFields;->mButtonBrightness:F
 
-    .line 686
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Lcom/android/server/wm/WindowManagerService$LayoutFields;->mUserActivityTimeout:J
 
-    .line 687
     iput-boolean v2, p0, Lcom/android/server/wm/WindowManagerService$LayoutFields;->mUpdateRotation:Z
 
-    .line 688
     iput-boolean v2, p0, Lcom/android/server/wm/WindowManagerService$LayoutFields;->mWallpaperActionPending:Z
 
-    .line 692
     iput-boolean v2, p0, Lcom/android/server/wm/WindowManagerService$LayoutFields;->mDisplayHasContent:Z
 
-    .line 696
     iput-boolean v2, p0, Lcom/android/server/wm/WindowManagerService$LayoutFields;->mObscureApplicationContentOnSecondaryDisplays:Z
 
-    .line 698
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/wm/WindowManagerService$LayoutFields;->mPreferredRefreshRate:F
 
-    .line 700
     iput v2, p0, Lcom/android/server/wm/WindowManagerService$LayoutFields;->mPreferredModeId:I
 
     return-void
@@ -142,7 +125,6 @@
     .param p0, "x0"    # Lcom/android/server/wm/WindowManagerService$LayoutFields;
 
     .prologue
-    .line 669
     iget-boolean v0, p0, Lcom/android/server/wm/WindowManagerService$LayoutFields;->mObscured:Z
 
     return v0
@@ -154,7 +136,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 669
     iput-boolean p1, p0, Lcom/android/server/wm/WindowManagerService$LayoutFields;->mObscured:Z
 
     return p1
@@ -165,7 +146,6 @@
     .param p0, "x0"    # Lcom/android/server/wm/WindowManagerService$LayoutFields;
 
     .prologue
-    .line 669
     iget-object v0, p0, Lcom/android/server/wm/WindowManagerService$LayoutFields;->mHoldScreen:Lcom/android/server/wm/Session;
 
     return-object v0
@@ -177,7 +157,6 @@
     .param p1, "x1"    # Lcom/android/server/wm/Session;
 
     .prologue
-    .line 669
     iput-object p1, p0, Lcom/android/server/wm/WindowManagerService$LayoutFields;->mHoldScreen:Lcom/android/server/wm/Session;
 
     return-object p1
@@ -188,7 +167,6 @@
     .param p0, "x0"    # Lcom/android/server/wm/WindowManagerService$LayoutFields;
 
     .prologue
-    .line 669
     iget-boolean v0, p0, Lcom/android/server/wm/WindowManagerService$LayoutFields;->mSyswin:Z
 
     return v0
@@ -200,7 +178,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 669
     iput-boolean p1, p0, Lcom/android/server/wm/WindowManagerService$LayoutFields;->mSyswin:Z
 
     return p1
@@ -211,7 +188,6 @@
     .param p0, "x0"    # Lcom/android/server/wm/WindowManagerService$LayoutFields;
 
     .prologue
-    .line 669
     iget v0, p0, Lcom/android/server/wm/WindowManagerService$LayoutFields;->mScreenBrightness:F
 
     return v0
@@ -223,7 +199,6 @@
     .param p1, "x1"    # F
 
     .prologue
-    .line 669
     iput p1, p0, Lcom/android/server/wm/WindowManagerService$LayoutFields;->mScreenBrightness:F
 
     return p1
@@ -234,7 +209,6 @@
     .param p0, "x0"    # Lcom/android/server/wm/WindowManagerService$LayoutFields;
 
     .prologue
-    .line 669
     iget v0, p0, Lcom/android/server/wm/WindowManagerService$LayoutFields;->mButtonBrightness:F
 
     return v0
@@ -246,7 +220,6 @@
     .param p1, "x1"    # F
 
     .prologue
-    .line 669
     iput p1, p0, Lcom/android/server/wm/WindowManagerService$LayoutFields;->mButtonBrightness:F
 
     return p1
@@ -257,7 +230,6 @@
     .param p0, "x0"    # Lcom/android/server/wm/WindowManagerService$LayoutFields;
 
     .prologue
-    .line 669
     iget-wide v0, p0, Lcom/android/server/wm/WindowManagerService$LayoutFields;->mUserActivityTimeout:J
 
     return-wide v0
@@ -269,7 +241,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 669
     iput-wide p1, p0, Lcom/android/server/wm/WindowManagerService$LayoutFields;->mUserActivityTimeout:J
 
     return-wide p1
@@ -280,7 +251,6 @@
     .param p0, "x0"    # Lcom/android/server/wm/WindowManagerService$LayoutFields;
 
     .prologue
-    .line 669
     iget-boolean v0, p0, Lcom/android/server/wm/WindowManagerService$LayoutFields;->mUpdateRotation:Z
 
     return v0
@@ -292,7 +262,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 669
     iput-boolean p1, p0, Lcom/android/server/wm/WindowManagerService$LayoutFields;->mUpdateRotation:Z
 
     return p1

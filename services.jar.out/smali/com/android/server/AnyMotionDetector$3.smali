@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 281
     iput-object p1, p0, Lcom/android/server/AnyMotionDetector$3;->this$0:Lcom/android/server/AnyMotionDetector;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,10 +39,8 @@
     .locals 3
 
     .prologue
-    .line 284
     const/4 v0, -0x1
 
-    .line 285
     .local v0, "status":I
     iget-object v1, p0, Lcom/android/server/AnyMotionDetector$3;->this$0:Lcom/android/server/AnyMotionDetector;
 
@@ -54,7 +51,6 @@
 
     monitor-enter v2
 
-    .line 289
     :try_start_0
     iget-object v1, p0, Lcom/android/server/AnyMotionDetector$3;->this$0:Lcom/android/server/AnyMotionDetector;
 
@@ -63,17 +59,14 @@
 
     move-result v0
 
-    .line 290
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 291
     const/4 v1, -0x1
 
     if-eq v0, v1, :cond_0
 
-    .line 292
     iget-object v1, p0, Lcom/android/server/AnyMotionDetector$3;->this$0:Lcom/android/server/AnyMotionDetector;
 
     # getter for: Lcom/android/server/AnyMotionDetector;->mCallback:Lcom/android/server/AnyMotionDetector$DeviceIdleCallback;
@@ -83,11 +76,9 @@
 
     invoke-interface {v1, v0}, Lcom/android/server/AnyMotionDetector$DeviceIdleCallback;->onAnyMotionResult(I)V
 
-    .line 294
     :cond_0
     return-void
 
-    .line 290
     :catchall_0
     move-exception v1
 

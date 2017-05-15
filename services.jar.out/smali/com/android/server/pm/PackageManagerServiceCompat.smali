@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -21,7 +20,6 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 10
     invoke-virtual {p0, p1, p2}, Lcom/android/server/pm/PackageManagerService;->getPackageUid(Ljava/lang/String;I)I
 
     move-result v0

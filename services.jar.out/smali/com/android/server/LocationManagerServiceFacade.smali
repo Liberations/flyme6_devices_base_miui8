@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -23,19 +22,15 @@
     .param p4, "allowedResolutionLevel"    # I
 
     .prologue
-    .line 7
     const/4 v0, 0x0
 
-    .line 8
     .local v0, "ret":Z
     if-eqz p0, :cond_0
 
-    .line 9
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/LocationManagerService;->checkLocationAccess(IILjava/lang/String;I)Z
 
     move-result v0
 
-    .line 11
     :cond_0
     return v0
 .end method

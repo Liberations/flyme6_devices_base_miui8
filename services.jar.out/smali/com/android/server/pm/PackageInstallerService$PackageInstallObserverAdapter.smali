@@ -36,25 +36,18 @@
     .param p5, "userId"    # I
 
     .prologue
-    .line 999
     invoke-direct {p0}, Landroid/app/PackageInstallObserver;-><init>()V
 
-    .line 1000
     iput-object p1, p0, Lcom/android/server/pm/PackageInstallerService$PackageInstallObserverAdapter;->mContext:Landroid/content/Context;
 
-    .line 1001
     iput-object p2, p0, Lcom/android/server/pm/PackageInstallerService$PackageInstallObserverAdapter;->mTarget:Landroid/content/IntentSender;
 
-    .line 1002
     iput p3, p0, Lcom/android/server/pm/PackageInstallerService$PackageInstallObserverAdapter;->mSessionId:I
 
-    .line 1003
     iput-boolean p4, p0, Lcom/android/server/pm/PackageInstallerService$PackageInstallObserverAdapter;->mShowNotification:Z
 
-    .line 1004
     iput p5, p0, Lcom/android/server/pm/PackageInstallerService$PackageInstallObserverAdapter;->mUserId:I
 
-    .line 1005
     return-void
 .end method
 
@@ -72,14 +65,12 @@
 
     const/4 v0, 0x0
 
-    .line 1023
     if-ne v9, p2, :cond_0
 
     iget-boolean v1, p0, Lcom/android/server/pm/PackageInstallerService$PackageInstallObserverAdapter;->mShowNotification:Z
 
     if-eqz v1, :cond_0
 
-    .line 1024
     if-eqz p4, :cond_2
 
     const-string v1, "android.intent.extra.REPLACING"
@@ -90,7 +81,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 1025
     .local v9, "update":Z
     :goto_0
     iget-object v2, p0, Lcom/android/server/pm/PackageInstallerService$PackageInstallObserverAdapter;->mContext:Landroid/content/Context;
@@ -117,11 +107,9 @@
 
     move-result-object v7
 
-    .line 1031
     .local v7, "notification":Landroid/app/Notification;
     if-eqz v7, :cond_0
 
-    .line 1032
     iget-object v1, p0, Lcom/android/server/pm/PackageInstallerService$PackageInstallObserverAdapter;->mContext:Landroid/content/Context;
 
     const-string v2, "notification"
@@ -132,11 +120,9 @@
 
     check-cast v8, Landroid/app/NotificationManager;
 
-    .line 1034
     .local v8, "notificationManager":Landroid/app/NotificationManager;
     invoke-virtual {v8, p1, v0, v7}, Landroid/app/NotificationManager;->notify(Ljava/lang/String;ILandroid/app/Notification;)V
 
-    .line 1037
     .end local v7    # "notification":Landroid/app/Notification;
     .end local v8    # "notificationManager":Landroid/app/NotificationManager;
     .end local v9    # "update":Z
@@ -145,20 +131,17 @@
 
     invoke-direct {v3}, Landroid/content/Intent;-><init>()V
 
-    .line 1038
     .local v3, "fillIn":Landroid/content/Intent;
     const-string v0, "android.content.pm.extra.PACKAGE_NAME"
 
     invoke-virtual {v3, v0, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1039
     const-string v0, "android.content.pm.extra.SESSION_ID"
 
     iget v1, p0, Lcom/android/server/pm/PackageInstallerService$PackageInstallObserverAdapter;->mSessionId:I
 
     invoke-virtual {v3, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1040
     const-string v0, "android.content.pm.extra.STATUS"
 
     invoke-static {p2}, Landroid/content/pm/PackageManager;->installStatusToPublicStatus(I)I
@@ -167,7 +150,6 @@
 
     invoke-virtual {v3, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1042
     const-string v0, "android.content.pm.extra.STATUS_MESSAGE"
 
     invoke-static {p2, p3}, Landroid/content/pm/PackageManager;->installStatusToString(ILjava/lang/String;)Ljava/lang/String;
@@ -176,22 +158,18 @@
 
     invoke-virtual {v3, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1044
     const-string v0, "android.content.pm.extra.LEGACY_STATUS"
 
     invoke-virtual {v3, v0, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1045
     if-eqz p4, :cond_1
 
-    .line 1046
     const-string v0, "android.content.pm.extra.FAILURE_EXISTING_PACKAGE"
 
     invoke-virtual {p4, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 1048
     .local v6, "existing":Ljava/lang/String;
     invoke-static {v6}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -199,12 +177,10 @@
 
     if-nez v0, :cond_1
 
-    .line 1049
     const-string v0, "android.content.pm.extra.OTHER_PACKAGE_NAME"
 
     invoke-virtual {v3, v0, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1053
     .end local v6    # "existing":Ljava/lang/String;
     :cond_1
     :try_start_0
@@ -222,7 +198,6 @@
     :try_end_0
     .catch Landroid/content/IntentSender$SendIntentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1056
     :goto_2
     return-void
 
@@ -230,17 +205,14 @@
     :cond_2
     move v9, v0
 
-    .line 1024
     goto :goto_0
 
-    .line 1025
     .restart local v9    # "update":Z
     :cond_3
     const v1, 0x1040584
 
     goto :goto_1
 
-    .line 1054
     .end local v9    # "update":Z
     .restart local v3    # "fillIn":Landroid/content/Intent;
     :catch_0
@@ -254,12 +226,10 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1009
     new-instance v3, Landroid/content/Intent;
 
     invoke-direct {v3}, Landroid/content/Intent;-><init>()V
 
-    .line 1010
     .local v3, "fillIn":Landroid/content/Intent;
     const-string v0, "android.content.pm.extra.SESSION_ID"
 
@@ -267,19 +237,16 @@
 
     invoke-virtual {v3, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1011
     const-string v0, "android.content.pm.extra.STATUS"
 
     const/4 v1, -0x1
 
     invoke-virtual {v3, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1013
     const-string v0, "android.intent.extra.INTENT"
 
     invoke-virtual {v3, v0, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 1015
     :try_start_0
     iget-object v0, p0, Lcom/android/server/pm/PackageInstallerService$PackageInstallObserverAdapter;->mTarget:Landroid/content/IntentSender;
 
@@ -295,11 +262,9 @@
     :try_end_0
     .catch Landroid/content/IntentSender$SendIntentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1018
     :goto_0
     return-void
 
-    .line 1016
     :catch_0
     move-exception v0
 

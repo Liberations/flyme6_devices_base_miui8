@@ -53,25 +53,20 @@
     .param p3, "verifierComponent"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 641
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$IntentVerifierProxy;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 639
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/PackageManagerService$IntentVerifierProxy;->mCurrentIntentFilterVerifications:Ljava/util/ArrayList;
 
-    .line 642
     iput-object p2, p0, Lcom/android/server/pm/PackageManagerService$IntentVerifierProxy;->mContext:Landroid/content/Context;
 
-    .line 643
     iput-object p3, p0, Lcom/android/server/pm/PackageManagerService$IntentVerifierProxy;->mIntentFilterVerifierComponent:Landroid/content/ComponentName;
 
-    .line 644
     return-void
 .end method
 
@@ -83,23 +78,19 @@
     .param p4, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 810
     new-instance v0, Lcom/android/server/pm/IntentFilterVerificationState;
 
     invoke-direct {v0, p1, p2, p4}, Lcom/android/server/pm/IntentFilterVerificationState;-><init>(IILjava/lang/String;)V
 
-    .line 812
     .local v0, "ivs":Lcom/android/server/pm/IntentFilterVerificationState;
     invoke-virtual {v0}, Lcom/android/server/pm/IntentFilterVerificationState;->setPendingState()V
 
-    .line 813
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$IntentVerifierProxy;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v2, v1, Lcom/android/server/pm/PackageManagerService;->mPackages:Landroid/util/ArrayMap;
 
     monitor-enter v2
 
-    .line 814
     :try_start_0
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$IntentVerifierProxy;->this$0:Lcom/android/server/pm/PackageManagerService;
 
@@ -107,7 +98,6 @@
 
     invoke-virtual {v1, p3, v0}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 815
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$IntentVerifierProxy;->mCurrentIntentFilterVerifications:Ljava/util/ArrayList;
 
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -116,13 +106,10 @@
 
     invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 816
     monitor-exit v2
 
-    .line 817
     return-object v0
 
-    .line 816
     :catchall_0
     move-exception v1
 
@@ -137,7 +124,6 @@
     .locals 1
 
     .prologue
-    .line 647
     const-string v0, "https"
 
     return-object v0
@@ -150,20 +136,17 @@
     .param p3, "ivs"    # Lcom/android/server/pm/IntentFilterVerificationState;
 
     .prologue
-    .line 683
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "android.intent.action.INTENT_FILTER_NEEDS_VERIFICATION"
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 684
     .local v1, "verificationIntent":Landroid/content/Intent;
     const-string v2, "android.content.pm.extra.INTENT_FILTER_VERIFICATION_ID"
 
     invoke-virtual {v1, v2, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 687
     const-string v2, "android.content.pm.extra.INTENT_FILTER_VERIFICATION_URI_SCHEME"
 
     invoke-direct {p0}, Lcom/android/server/pm/PackageManagerService$IntentVerifierProxy;->getDefaultScheme()Ljava/lang/String;
@@ -172,7 +155,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 690
     const-string v2, "android.content.pm.extra.INTENT_FILTER_VERIFICATION_HOSTS"
 
     invoke-virtual {p3}, Lcom/android/server/pm/IntentFilterVerificationState;->getHostsString()Ljava/lang/String;
@@ -181,7 +163,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 693
     const-string v2, "android.content.pm.extra.INTENT_FILTER_VERIFICATION_PACKAGE_NAME"
 
     invoke-virtual {p3}, Lcom/android/server/pm/IntentFilterVerificationState;->getPackageName()Ljava/lang/String;
@@ -190,28 +171,23 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 696
     iget-object v2, p0, Lcom/android/server/pm/PackageManagerService$IntentVerifierProxy;->mIntentFilterVerifierComponent:Landroid/content/ComponentName;
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 697
     const/high16 v2, 0x10000000
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 699
     new-instance v0, Landroid/os/UserHandle;
 
     invoke-direct {v0, p1}, Landroid/os/UserHandle;-><init>(I)V
 
-    .line 700
     .local v0, "user":Landroid/os/UserHandle;
     iget-object v2, p0, Lcom/android/server/pm/PackageManagerService$IntentVerifierProxy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2, v1, v0}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 703
     return-void
 .end method
 
@@ -226,7 +202,6 @@
     .param p5, "x4"    # Ljava/lang/String;
 
     .prologue
-    .line 636
     move-object v4, p4
 
     check-cast v4, Landroid/content/pm/PackageParser$ActivityIntentInfo;
@@ -257,7 +232,6 @@
     .param p5, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 793
     # invokes: Lcom/android/server/pm/PackageManagerService;->hasValidDomains(Landroid/content/pm/PackageParser$ActivityIntentInfo;)Z
     invoke-static {p4}, Lcom/android/server/pm/PackageManagerService;->access$200(Landroid/content/pm/PackageParser$ActivityIntentInfo;)Z
 
@@ -265,14 +239,11 @@
 
     if-nez v1, :cond_0
 
-    .line 794
     const/4 v1, 0x0
 
-    .line 805
     :goto_0
     return v1
 
-    .line 796
     :cond_0
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$IntentVerifierProxy;->this$0:Lcom/android/server/pm/PackageManagerService;
 
@@ -284,20 +255,16 @@
 
     check-cast v0, Lcom/android/server/pm/IntentFilterVerificationState;
 
-    .line 797
     .local v0, "ivs":Lcom/android/server/pm/IntentFilterVerificationState;
     if-nez v0, :cond_1
 
-    .line 798
     invoke-direct {p0, p1, p2, p3, p5}, Lcom/android/server/pm/PackageManagerService$IntentVerifierProxy;->createDomainVerificationState(IIILjava/lang/String;)Lcom/android/server/pm/IntentFilterVerificationState;
 
     move-result-object v0
 
-    .line 804
     :cond_1
     invoke-virtual {v0, p4}, Lcom/android/server/pm/IntentFilterVerificationState;->addFilter(Landroid/content/pm/PackageParser$ActivityIntentInfo;)V
 
-    .line 805
     const/4 v1, 0x1
 
     goto :goto_0
@@ -308,7 +275,6 @@
     .param p1, "verificationId"    # I
 
     .prologue
-    .line 706
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/pm/PackageManagerService$IntentVerifierProxy;->this$0:Lcom/android/server/pm/PackageManagerService;
@@ -323,25 +289,21 @@
 
     check-cast v5, Lcom/android/server/pm/IntentFilterVerificationState;
 
-    .line 708
     .local v5, "ivs":Lcom/android/server/pm/IntentFilterVerificationState;
     invoke-virtual {v5}, Lcom/android/server/pm/IntentFilterVerificationState;->isVerified()Z
 
     move-result v12
 
-    .line 710
     .local v12, "verified":Z
     invoke-virtual {v5}, Lcom/android/server/pm/IntentFilterVerificationState;->getFilters()Ljava/util/ArrayList;
 
     move-result-object v3
 
-    .line 711
     .local v3, "filters":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/content/pm/PackageParser$ActivityIntentInfo;>;"
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
-    .line 716
     .local v1, "count":I
     const/4 v6, 0x0
 
@@ -349,23 +311,19 @@
     :goto_0
     if-ge v6, v1, :cond_0
 
-    .line 717
     invoke-virtual {v3, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Landroid/content/pm/PackageParser$ActivityIntentInfo;
 
-    .line 718
     .local v2, "filter":Landroid/content/pm/PackageParser$ActivityIntentInfo;
     invoke-virtual {v2, v12}, Landroid/content/pm/PackageParser$ActivityIntentInfo;->setVerified(Z)V
 
-    .line 716
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_0
 
-    .line 725
     .end local v2    # "filter":Landroid/content/pm/PackageParser$ActivityIntentInfo;
     :cond_0
     move-object/from16 v0, p0
@@ -378,16 +336,13 @@
 
     invoke-virtual {v13, v0}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 727
     invoke-virtual {v5}, Lcom/android/server/pm/IntentFilterVerificationState;->getPackageName()Ljava/lang/String;
 
     move-result-object v8
 
-    .line 728
     .local v8, "packageName":Ljava/lang/String;
     const/4 v4, 0x0
 
-    .line 730
     .local v4, "ivi":Landroid/content/pm/IntentFilterVerificationInfo;
     move-object/from16 v0, p0
 
@@ -397,7 +352,6 @@
 
     monitor-enter v14
 
-    .line 731
     :try_start_0
     move-object/from16 v0, p0
 
@@ -409,15 +363,12 @@
 
     move-result-object v4
 
-    .line 732
     monitor-exit v14
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 733
     if-nez v4, :cond_1
 
-    .line 734
     const-string v13, "PackageManager"
 
     new-instance v14, Ljava/lang/StringBuilder;
@@ -452,11 +403,9 @@
 
     invoke-static {v13, v14}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 788
     :goto_1
     return-void
 
-    .line 732
     :catchall_0
     move-exception v13
 
@@ -467,7 +416,6 @@
 
     throw v13
 
-    .line 742
     :cond_1
     move-object/from16 v0, p0
 
@@ -477,16 +425,13 @@
 
     monitor-enter v14
 
-    .line 743
     if-eqz v12, :cond_4
 
-    .line 744
     const/4 v13, 0x2
 
     :try_start_2
     invoke-virtual {v4, v13}, Landroid/content/pm/IntentFilterVerificationInfo;->setStatus(I)V
 
-    .line 748
     :goto_2
     move-object/from16 v0, p0
 
@@ -494,18 +439,15 @@
 
     invoke-virtual {v13}, Lcom/android/server/pm/PackageManagerService;->scheduleWriteSettingsLocked()V
 
-    .line 750
     invoke-virtual {v5}, Lcom/android/server/pm/IntentFilterVerificationState;->getUserId()I
 
     move-result v10
 
-    .line 751
     .local v10, "userId":I
     const/4 v13, -0x1
 
     if-eq v10, v13, :cond_3
 
-    .line 752
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/pm/PackageManagerService$IntentVerifierProxy;->this$0:Lcom/android/server/pm/PackageManagerService;
@@ -516,24 +458,19 @@
 
     move-result v11
 
-    .line 755
     .local v11, "userStatus":I
     const/4 v9, 0x0
 
-    .line 756
     .local v9, "updatedStatus":I
     const/4 v7, 0x0
 
-    .line 760
     .local v7, "needUpdate":Z
     packed-switch v11, :pswitch_data_0
 
-    .line 781
     :cond_2
     :goto_3
     if-eqz v7, :cond_3
 
-    .line 782
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/pm/PackageManagerService$IntentVerifierProxy;->this$0:Lcom/android/server/pm/PackageManagerService;
@@ -542,14 +479,12 @@
 
     invoke-virtual {v13, v8, v9, v10}, Lcom/android/server/pm/Settings;->updateIntentFilterVerificationStatusLPw(Ljava/lang/String;II)Z
 
-    .line 784
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/pm/PackageManagerService$IntentVerifierProxy;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {v13, v10}, Lcom/android/server/pm/PackageManagerService;->scheduleWritePackageRestrictionsLocked(I)V
 
-    .line 787
     .end local v7    # "needUpdate":Z
     .end local v9    # "updatedStatus":I
     .end local v11    # "userStatus":I
@@ -568,7 +503,6 @@
 
     throw v13
 
-    .line 746
     :cond_4
     const/4 v13, 0x1
 
@@ -579,7 +513,6 @@
 
     goto :goto_2
 
-    .line 762
     .restart local v7    # "needUpdate":Z
     .restart local v9    # "updatedStatus":I
     .restart local v10    # "userId":I
@@ -587,35 +520,27 @@
     :pswitch_0
     if-eqz v12, :cond_5
 
-    .line 763
     const/4 v9, 0x2
 
-    .line 767
     :goto_4
     const/4 v7, 0x1
 
-    .line 768
     goto :goto_3
 
-    .line 765
     :cond_5
     const/4 v9, 0x1
 
     goto :goto_4
 
-    .line 771
     :pswitch_1
     if-eqz v12, :cond_2
 
-    .line 772
     const/4 v9, 0x2
 
-    .line 773
     const/4 v7, 0x1
 
     goto :goto_3
 
-    .line 760
     nop
 
     :pswitch_data_0
@@ -630,14 +555,12 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 653
     iget-object v11, p0, Lcom/android/server/pm/PackageManagerService$IntentVerifierProxy;->mCurrentIntentFilterVerifications:Ljava/util/ArrayList;
 
     invoke-virtual {v11}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 654
     .local v0, "count":I
     const/4 v8, 0x0
 
@@ -645,7 +568,6 @@
     :goto_0
     if-ge v8, v0, :cond_2
 
-    .line 655
     iget-object v11, p0, Lcom/android/server/pm/PackageManagerService$IntentVerifierProxy;->mCurrentIntentFilterVerifications:Ljava/util/ArrayList;
 
     invoke-virtual {v11, v8}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -658,7 +580,6 @@
 
     move-result v10
 
-    .line 656
     .local v10, "verificationId":I
     iget-object v11, p0, Lcom/android/server/pm/PackageManagerService$IntentVerifierProxy;->this$0:Lcom/android/server/pm/PackageManagerService;
 
@@ -670,31 +591,26 @@
 
     check-cast v6, Lcom/android/server/pm/IntentFilterVerificationState;
 
-    .line 659
     .local v6, "ivs":Lcom/android/server/pm/IntentFilterVerificationState;
     invoke-virtual {v6}, Lcom/android/server/pm/IntentFilterVerificationState;->getPackageName()Ljava/lang/String;
 
     move-result-object v9
 
-    .line 661
     .local v9, "packageName":Ljava/lang/String;
     invoke-virtual {v6}, Lcom/android/server/pm/IntentFilterVerificationState;->getFilters()Ljava/util/ArrayList;
 
     move-result-object v5
 
-    .line 662
     .local v5, "filters":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/content/pm/PackageParser$ActivityIntentInfo;>;"
     invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
 
     move-result v4
 
-    .line 663
     .local v4, "filterCount":I
     new-instance v2, Landroid/util/ArraySet;
 
     invoke-direct {v2}, Landroid/util/ArraySet;-><init>()V
 
-    .line 664
     .local v2, "domainsSet":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Ljava/lang/String;>;"
     const/4 v7, 0x0
 
@@ -702,14 +618,12 @@
     :goto_1
     if-ge v7, v4, :cond_0
 
-    .line 665
     invoke-virtual {v5, v7}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Landroid/content/pm/PackageParser$ActivityIntentInfo;
 
-    .line 666
     .local v3, "filter":Landroid/content/pm/PackageParser$ActivityIntentInfo;
     invoke-virtual {v3}, Landroid/content/pm/PackageParser$ActivityIntentInfo;->getHostsList()Ljava/util/ArrayList;
 
@@ -717,19 +631,16 @@
 
     invoke-virtual {v2, v11}, Landroid/util/ArraySet;->addAll(Ljava/util/Collection;)Z
 
-    .line 664
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_1
 
-    .line 668
     .end local v3    # "filter":Landroid/content/pm/PackageParser$ActivityIntentInfo;
     :cond_0
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 669
     .local v1, "domainsList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     iget-object v11, p0, Lcom/android/server/pm/PackageManagerService$IntentVerifierProxy;->this$0:Lcom/android/server/pm/PackageManagerService;
 
@@ -737,7 +648,6 @@
 
     monitor-enter v12
 
-    .line 670
     :try_start_0
     iget-object v11, p0, Lcom/android/server/pm/PackageManagerService$IntentVerifierProxy;->this$0:Lcom/android/server/pm/PackageManagerService;
 
@@ -749,26 +659,21 @@
 
     if-eqz v11, :cond_1
 
-    .line 672
     iget-object v11, p0, Lcom/android/server/pm/PackageManagerService$IntentVerifierProxy;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {v11}, Lcom/android/server/pm/PackageManagerService;->scheduleWriteSettingsLocked()V
 
-    .line 674
     :cond_1
     monitor-exit v12
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 675
     invoke-direct {p0, p1, v10, v6}, Lcom/android/server/pm/PackageManagerService$IntentVerifierProxy;->sendVerificationRequest(IILcom/android/server/pm/IntentFilterVerificationState;)V
 
-    .line 654
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_0
 
-    .line 674
     :catchall_0
     move-exception v11
 
@@ -779,7 +684,6 @@
 
     throw v11
 
-    .line 677
     .end local v1    # "domainsList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     .end local v2    # "domainsSet":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Ljava/lang/String;>;"
     .end local v4    # "filterCount":I
@@ -793,6 +697,5 @@
 
     invoke-virtual {v11}, Ljava/util/ArrayList;->clear()V
 
-    .line 678
     return-void
 .end method

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1088
     iput-object p1, p0, Lcom/android/server/BatteryService$14;->this$0:Lcom/android/server/BatteryService;
 
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
@@ -39,6 +38,5 @@
     .param p2, "incomingNumber"    # Ljava/lang/String;
 
     .prologue
-    .line 1101
     return-void
 .end method

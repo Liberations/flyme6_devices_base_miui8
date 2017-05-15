@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 554
     iput-object p1, p0, Lcom/android/server/pm/PackageInstallerService$2;->this$0:Lcom/android/server/pm/PackageInstallerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 557
     iget-object v0, p0, Lcom/android/server/pm/PackageInstallerService$2;->this$0:Lcom/android/server/pm/PackageInstallerService;
 
     # getter for: Lcom/android/server/pm/PackageInstallerService;->mSessions:Landroid/util/SparseArray;
@@ -50,20 +48,16 @@
 
     monitor-enter v1
 
-    .line 558
     :try_start_0
     iget-object v0, p0, Lcom/android/server/pm/PackageInstallerService$2;->this$0:Lcom/android/server/pm/PackageInstallerService;
 
     # invokes: Lcom/android/server/pm/PackageInstallerService;->writeSessionsLocked()V
     invoke-static {v0}, Lcom/android/server/pm/PackageInstallerService;->access$100(Lcom/android/server/pm/PackageInstallerService;)V
 
-    .line 559
     monitor-exit v1
 
-    .line 560
     return-void
 
-    .line 559
     :catchall_0
     move-exception v0
 

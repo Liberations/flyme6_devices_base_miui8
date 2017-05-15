@@ -33,7 +33,6 @@
     .param p13, "x10"    # I
 
     .prologue
-    .line 404
     .local p4, "x2":Ljava/util/List;, "Ljava/util/List<Lcom/android/server/display/OverlayDisplayAdapter$OverlayMode;>;"
     iput-object p1, p0, Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle$1;->this$1:Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle;
 
@@ -75,12 +74,10 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 407
     iget-object v0, p0, Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle$1;->this$1:Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle;
 
     # invokes: Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle;->onActiveModeChangedLocked(I)V
     invoke-static {v0, p1}, Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle;->access$200(Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle;I)V
 
-    .line 408
     return-void
 .end method

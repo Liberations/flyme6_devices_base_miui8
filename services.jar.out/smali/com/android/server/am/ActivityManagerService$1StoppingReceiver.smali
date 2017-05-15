@@ -38,7 +38,6 @@
     .end annotation
 
     .prologue
-    .line 21056
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$1StoppingReceiver;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     iput-object p2, p0, Lcom/android/server/am/ActivityManagerService$1StoppingReceiver;->val$uss:Lcom/android/server/am/UserState;
@@ -67,14 +66,12 @@
     .param p7, "sendingUser"    # I
 
     .prologue
-    .line 21063
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/am/ActivityManagerService$1StoppingReceiver;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     monitor-enter v3
 
-    .line 21064
     :try_start_0
     move-object/from16 v0, p0
 
@@ -86,21 +83,16 @@
 
     if-eq v2, v4, :cond_0
 
-    .line 21066
     monitor-exit v3
 
-    .line 21096
     :goto_0
     return-void
 
-    .line 21070
     :cond_0
     if-nez p2, :cond_2
 
-    .line 21071
     if-eqz p3, :cond_1
 
-    .line 21072
     const-string v2, "ActivityManager"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -125,7 +117,6 @@
 
     invoke-static {v2, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 21076
     :goto_1
     move-object/from16 v0, p0
 
@@ -141,12 +132,10 @@
 
     invoke-virtual {v2, v4, v6, v7}, Lcom/android/server/am/ActivityManagerService$MainHandler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 21078
     monitor-exit v3
 
     goto :goto_0
 
-    .line 21082
     :catchall_0
     move-exception v2
 
@@ -156,7 +145,6 @@
 
     throw v2
 
-    .line 21074
     :cond_1
     :try_start_1
     const-string v2, "ActivityManager"
@@ -167,7 +155,6 @@
 
     goto :goto_1
 
-    .line 21081
     :cond_2
     move-object/from16 v0, p0
 
@@ -177,12 +164,10 @@
 
     iput v4, v2, Lcom/android/server/am/UserState;->mState:I
 
-    .line 21082
     monitor-exit v3
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 21083
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/am/ActivityManagerService$1StoppingReceiver;->this$0:Lcom/android/server/am/ActivityManagerService;
@@ -205,7 +190,6 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/android/server/am/BatteryStatsService;->noteEvent(ILjava/lang/String;I)V
 
-    .line 21086
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/am/ActivityManagerService$1StoppingReceiver;->this$0:Lcom/android/server/am/ActivityManagerService;
@@ -218,7 +202,6 @@
 
     invoke-virtual {v2, v3}, Lcom/android/server/SystemServiceManager;->stopUser(I)V
 
-    .line 21091
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/am/ActivityManagerService$1StoppingReceiver;->this$0:Lcom/android/server/am/ActivityManagerService;

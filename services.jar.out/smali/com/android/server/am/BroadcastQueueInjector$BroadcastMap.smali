@@ -27,16 +27,12 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 80
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 81
     iput-object p1, p0, Lcom/android/server/am/BroadcastQueueInjector$BroadcastMap;->action:Ljava/lang/String;
 
-    .line 82
     iput-object p2, p0, Lcom/android/server/am/BroadcastQueueInjector$BroadcastMap;->packageName:Ljava/lang/String;
 
-    .line 83
     return-void
 .end method
 
@@ -47,17 +43,14 @@
     .param p1, "obj"    # Ljava/lang/Object;
 
     .prologue
-    .line 86
     instance-of v1, p1, Lcom/android/server/am/BroadcastQueueInjector$BroadcastMap;
 
     if-eqz v1, :cond_1
 
     move-object v0, p1
 
-    .line 87
     check-cast v0, Lcom/android/server/am/BroadcastQueueInjector$BroadcastMap;
 
-    .line 89
     .local v0, "broadcastMapObj":Lcom/android/server/am/BroadcastQueueInjector$BroadcastMap;
     iget-object v1, p0, Lcom/android/server/am/BroadcastQueueInjector$BroadcastMap;->action:Ljava/lang/String;
 
@@ -81,19 +74,16 @@
 
     const/4 v1, 0x1
 
-    .line 92
     .end local v0    # "broadcastMapObj":Lcom/android/server/am/BroadcastQueueInjector$BroadcastMap;
     :goto_0
     return v1
 
-    .line 89
     .restart local v0    # "broadcastMapObj":Lcom/android/server/am/BroadcastQueueInjector$BroadcastMap;
     :cond_0
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 92
     .end local v0    # "broadcastMapObj":Lcom/android/server/am/BroadcastQueueInjector$BroadcastMap;
     :cond_1
     invoke-super {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -107,7 +97,6 @@
     .locals 3
 
     .prologue
-    .line 96
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -140,7 +129,6 @@
 
     move-result-object v0
 
-    .line 97
     .local v0, "result":Ljava/lang/String;
     return-object v0
 .end method

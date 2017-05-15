@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 588
     iput-object p1, p0, Lcom/miui/server/PerfShielderService$5;->this$0:Lcom/miui/server/PerfShielderService;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,16 +37,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 591
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 599
     :goto_0
     return-void
 
-    .line 593
     :pswitch_0
     iget-object v0, p0, Lcom/miui/server/PerfShielderService$5;->this$0:Lcom/miui/server/PerfShielderService;
 
@@ -56,7 +52,6 @@
 
     goto :goto_0
 
-    .line 596
     :pswitch_1
     iget-object v0, p0, Lcom/miui/server/PerfShielderService$5;->this$0:Lcom/miui/server/PerfShielderService;
 
@@ -65,7 +60,6 @@
 
     goto :goto_0
 
-    .line 591
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

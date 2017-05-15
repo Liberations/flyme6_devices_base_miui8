@@ -14,7 +14,6 @@
     .locals 1
 
     .prologue
-    .line 16
     const-string v0, "ExtraPackageManagerService"
 
     sput-object v0, Lcom/android/server/pm/ExtraPackageManagerService;->TAG:Ljava/lang/String;
@@ -26,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,14 +37,12 @@
     .prologue
     const/16 v5, -0x2710
 
-    .line 64
     sget-object v2, Lcom/android/server/pm/ExtraPackageManagerService;->TAG:Ljava/lang/String;
 
     const-string v3, "Check extra restorecon flag"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 65
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
@@ -59,23 +55,19 @@
 
     move-result v1
 
-    .line 67
     .local v1, "userId":I
     if-ne v1, v5, :cond_0
 
-    .line 68
     sget-object v2, Lcom/android/server/pm/ExtraPackageManagerService;->TAG:Ljava/lang/String;
 
     const-string v3, "There\'s no second space, delete the flag file"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 69
     invoke-static {}, Lcom/android/server/pm/ExtraPackageManagerService;->getExtraRestoreconFlagFile()Ljava/io/File;
 
     move-result-object v0
 
-    .line 70
     .local v0, "flagFile":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -83,10 +75,8 @@
 
     if-eqz v2, :cond_0
 
-    .line 71
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
-    .line 74
     .end local v0    # "flagFile":Ljava/io/File;
     :cond_0
     return-void
@@ -96,10 +86,8 @@
     .locals 2
 
     .prologue
-    .line 42
     const-string v0, "/data/system/restorecon_flag"
 
-    .line 43
     .local v0, "path":Ljava/lang/String;
     new-instance v1, Ljava/io/File;
 
@@ -113,7 +101,6 @@
     .param p0, "userId"    # I
 
     .prologue
-    .line 19
     sget-object v6, Lcom/android/server/pm/ExtraPackageManagerService;->TAG:Ljava/lang/String;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -136,12 +123,10 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 20
     invoke-static {}, Lcom/android/server/pm/ExtraPackageManagerService;->getExtraRestoreconFlagFile()Ljava/io/File;
 
     move-result-object v3
 
-    .line 21
     .local v3, "flagFile":Ljava/io/File;
     invoke-virtual {v3}, Ljava/io/File;->exists()Z
 
@@ -149,18 +134,15 @@
 
     if-nez v6, :cond_0
 
-    .line 22
     sget-object v6, Lcom/android/server/pm/ExtraPackageManagerService;->TAG:Ljava/lang/String;
 
     const-string v7, "There\'s no restorecon flag file"
 
     invoke-static {v6, v7}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 37
     :goto_0
     return-void
 
-    .line 25
     :cond_0
     const-string v6, "package"
 
@@ -170,7 +152,6 @@
 
     check-cast v5, Lcom/android/server/pm/PackageManagerService;
 
-    .line 26
     .local v5, "pms":Lcom/android/server/pm/PackageManagerService;
     const/4 v6, 0x0
 
@@ -178,16 +159,13 @@
 
     move-result-object v1
 
-    .line 27
     .local v1, "applicationInfos":Landroid/content/pm/ParceledListSlice;, "Landroid/content/pm/ParceledListSlice<Landroid/content/pm/ApplicationInfo;>;"
     if-eqz v1, :cond_1
 
-    .line 28
     invoke-virtual {v1}, Landroid/content/pm/ParceledListSlice;->getList()Ljava/util/List;
 
     move-result-object v2
 
-    .line 29
     .local v2, "apps":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ApplicationInfo;>;"
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -207,7 +185,6 @@
 
     check-cast v0, Landroid/content/pm/ApplicationInfo;
 
-    .line 30
     .local v0, "app":Landroid/content/pm/ApplicationInfo;
     iget-object v6, v5, Lcom/android/server/pm/PackageManagerService;->mInstaller:Lcom/android/server/pm/Installer;
 
@@ -225,7 +202,6 @@
 
     invoke-virtual {v6, v7, v8, v9, v10}, Lcom/android/server/pm/Installer;->restoreconData(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Z
 
-    .line 31
     sget-object v6, Lcom/android/server/pm/ExtraPackageManagerService;->TAG:Ljava/lang/String;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -282,7 +258,6 @@
 
     goto :goto_1
 
-    .line 35
     .end local v0    # "app":Landroid/content/pm/ApplicationInfo;
     .end local v2    # "apps":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ApplicationInfo;>;"
     .end local v4    # "i$":Ljava/util/Iterator;
@@ -313,7 +288,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 36
     invoke-virtual {v3}, Ljava/io/File;->delete()Z
 
     goto/16 :goto_0
@@ -323,19 +297,16 @@
     .locals 5
 
     .prologue
-    .line 47
     sget-object v2, Lcom/android/server/pm/ExtraPackageManagerService;->TAG:Ljava/lang/String;
 
     const-string v3, "Set extra restorecon flag"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 48
     invoke-static {}, Lcom/android/server/pm/ExtraPackageManagerService;->getExtraRestoreconFlagFile()Ljava/io/File;
 
     move-result-object v0
 
-    .line 49
     .local v0, "flagFile":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -343,11 +314,9 @@
 
     if-nez v2, :cond_0
 
-    .line 51
     :try_start_0
     invoke-virtual {v0}, Ljava/io/File;->createNewFile()Z
 
-    .line 52
     sget-object v2, Lcom/android/server/pm/ExtraPackageManagerService;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -376,16 +345,13 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 57
     :cond_0
     :goto_0
     return-void
 
-    .line 53
     :catch_0
     move-exception v1
 
-    .line 54
     .local v1, "ioe":Ljava/io/IOException;
     sget-object v2, Lcom/android/server/pm/ExtraPackageManagerService;->TAG:Ljava/lang/String;
 

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 108
     iput-object p1, p0, Lcom/miui/server/PerfShielderService$1;->this$0:Lcom/miui/server/PerfShielderService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,12 +39,10 @@
     .locals 1
 
     .prologue
-    .line 111
     iget-object v0, p0, Lcom/miui/server/PerfShielderService$1;->this$0:Lcom/miui/server/PerfShielderService;
 
     # invokes: Lcom/miui/server/PerfShielderService;->bindService()V
     invoke-static {v0}, Lcom/miui/server/PerfShielderService;->access$100(Lcom/miui/server/PerfShielderService;)V
 
-    .line 112
     return-void
 .end method

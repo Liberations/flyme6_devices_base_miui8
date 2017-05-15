@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 222
     iput p1, p0, Lcom/android/server/HandyMode$7;->val$mode:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,11 +39,9 @@
     .locals 1
 
     .prologue
-    .line 224
     iget v0, p0, Lcom/android/server/HandyMode$7;->val$mode:I
 
     invoke-static {v0}, Lcom/android/server/HandyMode;->changeMode(I)V
 
-    .line 225
     return-void
 .end method

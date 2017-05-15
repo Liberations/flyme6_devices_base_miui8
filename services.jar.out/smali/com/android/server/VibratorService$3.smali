@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 420
     iput-object p1, p0, Lcom/android/server/VibratorService$3;->this$0:Lcom/android/server/VibratorService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 423
     iget-object v0, p0, Lcom/android/server/VibratorService$3;->this$0:Lcom/android/server/VibratorService;
 
     # getter for: Lcom/android/server/VibratorService;->mVibrations:Ljava/util/LinkedList;
@@ -50,26 +48,21 @@
 
     monitor-enter v1
 
-    .line 424
     :try_start_0
     iget-object v0, p0, Lcom/android/server/VibratorService$3;->this$0:Lcom/android/server/VibratorService;
 
     # invokes: Lcom/android/server/VibratorService;->doCancelVibrateLocked()V
     invoke-static {v0}, Lcom/android/server/VibratorService;->access$200(Lcom/android/server/VibratorService;)V
 
-    .line 425
     iget-object v0, p0, Lcom/android/server/VibratorService$3;->this$0:Lcom/android/server/VibratorService;
 
     # invokes: Lcom/android/server/VibratorService;->startNextVibrationLocked()V
     invoke-static {v0}, Lcom/android/server/VibratorService;->access$300(Lcom/android/server/VibratorService;)V
 
-    .line 426
     monitor-exit v1
 
-    .line 427
     return-void
 
-    .line 426
     :catchall_0
     move-exception v0
 

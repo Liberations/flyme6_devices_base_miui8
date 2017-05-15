@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 3387
     iput-object p1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$5;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     iput p2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$5;->val$userHandle:I
@@ -44,13 +43,11 @@
     .locals 5
 
     .prologue
-    .line 3391
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
     move-result-object v0
 
-    .line 3392
     .local v0, "am":Landroid/app/IActivityManager;
     invoke-interface {v0}, Landroid/app/IActivityManager;->getCurrentUser()Landroid/content/pm/UserInfo;
 
@@ -62,12 +59,10 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 3393
     const/4 v2, 0x0
 
     invoke-interface {v0, v2}, Landroid/app/IActivityManager;->switchUser(I)Z
 
-    .line 3396
     :cond_0
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$5;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
@@ -78,7 +73,6 @@
 
     move-result v1
 
-    .line 3397
     .local v1, "isManagedProfile":Z
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$5;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
@@ -92,7 +86,6 @@
 
     if-nez v2, :cond_2
 
-    .line 3398
     const-string v2, "DevicePolicyManagerService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -117,20 +110,17 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3405
     .end local v0    # "am":Landroid/app/IActivityManager;
     .end local v1    # "isManagedProfile":Z
     :cond_1
     :goto_0
     return-void
 
-    .line 3399
     .restart local v0    # "am":Landroid/app/IActivityManager;
     .restart local v1    # "isManagedProfile":Z
     :cond_2
     if-eqz v1, :cond_1
 
-    .line 3400
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$5;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     # invokes: Lcom/android/server/devicepolicy/DevicePolicyManagerService;->sendWipeProfileNotification()V
@@ -140,7 +130,6 @@
 
     goto :goto_0
 
-    .line 3402
     .end local v0    # "am":Landroid/app/IActivityManager;
     .end local v1    # "isManagedProfile":Z
     :catch_0

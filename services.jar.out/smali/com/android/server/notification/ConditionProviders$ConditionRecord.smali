@@ -33,16 +33,12 @@
     .param p2, "component"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 389
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 390
     iput-object p1, p0, Lcom/android/server/notification/ConditionProviders$ConditionRecord;->id:Landroid/net/Uri;
 
-    .line 391
     iput-object p2, p0, Lcom/android/server/notification/ConditionProviders$ConditionRecord;->component:Landroid/content/ComponentName;
 
-    .line 392
     return-void
 .end method
 
@@ -53,7 +49,6 @@
     .param p3, "x2"    # Lcom/android/server/notification/ConditionProviders$1;
 
     .prologue
-    .line 382
     invoke-direct {p0, p1, p2}, Lcom/android/server/notification/ConditionProviders$ConditionRecord;-><init>(Landroid/net/Uri;Landroid/content/ComponentName;)V
 
     return-void
@@ -65,7 +60,6 @@
     .locals 3
 
     .prologue
-    .line 396
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "ConditionRecord[id="
@@ -102,7 +96,6 @@
 
     move-result-object v0
 
-    .line 399
     .local v0, "sb":Ljava/lang/StringBuilder;
     const/16 v1, 0x5d
 

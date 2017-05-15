@@ -24,13 +24,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 642
     iput-object p1, p0, Lcom/android/server/display/LocalDisplayAdapter$HotplugDisplayEventReceiver;->this$0:Lcom/android/server/display/LocalDisplayAdapter;
 
-    .line 643
     invoke-direct {p0, p2}, Landroid/view/DisplayEventReceiver;-><init>(Landroid/os/Looper;)V
 
-    .line 644
     return-void
 .end method
 
@@ -43,7 +40,6 @@
     .param p4, "connected"    # Z
 
     .prologue
-    .line 648
     iget-object v0, p0, Lcom/android/server/display/LocalDisplayAdapter$HotplugDisplayEventReceiver;->this$0:Lcom/android/server/display/LocalDisplayAdapter;
 
     invoke-virtual {v0}, Lcom/android/server/display/LocalDisplayAdapter;->getSyncRoot()Lcom/android/server/display/DisplayManagerService$SyncRoot;
@@ -52,24 +48,19 @@
 
     monitor-enter v1
 
-    .line 649
     if-eqz p4, :cond_0
 
-    .line 650
     :try_start_0
     iget-object v0, p0, Lcom/android/server/display/LocalDisplayAdapter$HotplugDisplayEventReceiver;->this$0:Lcom/android/server/display/LocalDisplayAdapter;
 
     # invokes: Lcom/android/server/display/LocalDisplayAdapter;->tryConnectDisplayLocked(I)V
     invoke-static {v0, p3}, Lcom/android/server/display/LocalDisplayAdapter;->access$100(Lcom/android/server/display/LocalDisplayAdapter;I)V
 
-    .line 654
     :goto_0
     monitor-exit v1
 
-    .line 655
     return-void
 
-    .line 652
     :cond_0
     iget-object v0, p0, Lcom/android/server/display/LocalDisplayAdapter$HotplugDisplayEventReceiver;->this$0:Lcom/android/server/display/LocalDisplayAdapter;
 
@@ -78,7 +69,6 @@
 
     goto :goto_0
 
-    .line 654
     :catchall_0
     move-exception v0
 

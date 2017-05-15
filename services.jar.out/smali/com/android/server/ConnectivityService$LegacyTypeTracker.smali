@@ -43,12 +43,10 @@
     .locals 1
 
     .prologue
-    .line 483
     iput-object p1, p0, Lcom/android/server/ConnectivityService$LegacyTypeTracker;->this$0:Lcom/android/server/ConnectivityService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 484
     const/16 v0, 0x12
 
     new-array v0, v0, [Ljava/util/ArrayList;
@@ -57,7 +55,6 @@
 
     iput-object v0, p0, Lcom/android/server/ConnectivityService$LegacyTypeTracker;->mTypeLists:[Ljava/util/ArrayList;
 
-    .line 486
     return-void
 .end method
 
@@ -66,12 +63,10 @@
     .param p1, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 628
     const-string v0, "CSLegacyTypeTracker"
 
     invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 629
     return-void
 .end method
 
@@ -83,7 +78,6 @@
     .param p4, "isDefaultNetwork"    # Z
 
     .prologue
-    .line 512
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -138,7 +132,6 @@
 
     invoke-direct {p0, v0}, Lcom/android/server/ConnectivityService$LegacyTypeTracker;->log(Ljava/lang/String;)V
 
-    .line 516
     return-void
 .end method
 
@@ -147,14 +140,12 @@
     .param p1, "nai"    # Lcom/android/server/connectivity/NetworkAgentInfo;
 
     .prologue
-    .line 596
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Lcom/android/server/connectivity/NetworkAgentInfo;->name()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 597
     .local v0, "name":Ljava/lang/String;
     :goto_0
     iget-object v2, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
@@ -195,7 +186,6 @@
 
     move-result-object v1
 
-    .line 600
     .local v1, "state":Ljava/lang/String;
     :goto_1
     new-instance v2, Ljava/lang/StringBuilder;
@@ -222,7 +212,6 @@
 
     return-object v2
 
-    .line 596
     .end local v0    # "name":Ljava/lang/String;
     .end local v1    # "state":Ljava/lang/String;
     :cond_0
@@ -230,7 +219,6 @@
 
     goto :goto_0
 
-    .line 597
     .restart local v0    # "name":Ljava/lang/String;
     :cond_1
     const-string v1, "???/???"
@@ -246,25 +234,21 @@
     .param p2, "nai"    # Lcom/android/server/connectivity/NetworkAgentInfo;
 
     .prologue
-    .line 520
     invoke-virtual {p0, p1}, Lcom/android/server/ConnectivityService$LegacyTypeTracker;->isTypeSupported(I)Z
 
     move-result v2
 
     if-nez v2, :cond_1
 
-    .line 539
     :cond_0
     :goto_0
     return-void
 
-    .line 525
     :cond_1
     iget-object v2, p0, Lcom/android/server/ConnectivityService$LegacyTypeTracker;->mTypeLists:[Ljava/util/ArrayList;
 
     aget-object v1, v2, p1
 
-    .line 526
     .local v1, "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/connectivity/NetworkAgentInfo;>;"
     invoke-virtual {v1, p2}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
@@ -272,21 +256,17 @@
 
     if-nez v2, :cond_0
 
-    .line 529
     iget-object v3, p0, Lcom/android/server/ConnectivityService$LegacyTypeTracker;->mTypeLists:[Ljava/util/ArrayList;
 
     monitor-enter v3
 
-    .line 530
     :try_start_0
     invoke-virtual {v1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 531
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 534
     iget-object v2, p0, Lcom/android/server/ConnectivityService$LegacyTypeTracker;->this$0:Lcom/android/server/ConnectivityService;
 
     # invokes: Lcom/android/server/ConnectivityService;->isDefaultNetwork(Lcom/android/server/connectivity/NetworkAgentInfo;)Z
@@ -294,7 +274,6 @@
 
     move-result v0
 
-    .line 535
     .local v0, "isDefaultNetwork":Z
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -306,13 +285,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 536
     :cond_2
     sget-object v2, Landroid/net/NetworkInfo$DetailedState;->CONNECTED:Landroid/net/NetworkInfo$DetailedState;
 
     invoke-direct {p0, p2, v2, p1, v0}, Lcom/android/server/ConnectivityService$LegacyTypeTracker;->maybeLogBroadcast(Lcom/android/server/connectivity/NetworkAgentInfo;Landroid/net/NetworkInfo$DetailedState;IZ)V
 
-    .line 537
     iget-object v2, p0, Lcom/android/server/ConnectivityService$LegacyTypeTracker;->this$0:Lcom/android/server/ConnectivityService;
 
     sget-object v3, Landroid/net/NetworkInfo$DetailedState;->CONNECTED:Landroid/net/NetworkInfo$DetailedState;
@@ -322,7 +299,6 @@
 
     goto :goto_0
 
-    .line 531
     .end local v0    # "isDefaultNetwork":Z
     :catchall_0
     move-exception v2
@@ -340,14 +316,12 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 489
     iget-object v0, p0, Lcom/android/server/ConnectivityService$LegacyTypeTracker;->mTypeLists:[Ljava/util/ArrayList;
 
     aget-object v0, v0, p1
 
     if-eqz v0, :cond_0
 
-    .line 490
     new-instance v0, Ljava/lang/IllegalStateException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -378,7 +352,6 @@
 
     throw v0
 
-    .line 493
     :cond_0
     iget-object v0, p0, Lcom/android/server/ConnectivityService$LegacyTypeTracker;->mTypeLists:[Ljava/util/ArrayList;
 
@@ -388,7 +361,6 @@
 
     aput-object v1, v0, p1
 
-    .line 494
     return-void
 .end method
 
@@ -397,20 +369,16 @@
     .param p1, "pw"    # Lcom/android/internal/util/IndentingPrintWriter;
 
     .prologue
-    .line 604
     const-string v3, "mLegacyTypeTracker:"
 
     invoke-virtual {p1, v3}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 605
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->increaseIndent()V
 
-    .line 606
     const-string v3, "Supported types:"
 
     invoke-virtual {p1, v3}, Lcom/android/internal/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 607
     const/4 v2, 0x0
 
     .local v2, "type":I
@@ -421,7 +389,6 @@
 
     if-ge v2, v3, :cond_1
 
-    .line 608
     iget-object v3, p0, Lcom/android/server/ConnectivityService$LegacyTypeTracker;->mTypeLists:[Ljava/util/ArrayList;
 
     aget-object v3, v3, v2
@@ -448,30 +415,24 @@
 
     invoke-virtual {p1, v3}, Lcom/android/internal/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 607
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 610
     :cond_1
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
-    .line 611
     const-string v3, "Current state:"
 
     invoke-virtual {p1, v3}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 612
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->increaseIndent()V
 
-    .line 613
     iget-object v4, p0, Lcom/android/server/ConnectivityService$LegacyTypeTracker;->mTypeLists:[Ljava/util/ArrayList;
 
     monitor-enter v4
 
-    .line 614
     const/4 v2, 0x0
 
     :goto_1
@@ -482,7 +443,6 @@
 
     if-ge v2, v3, :cond_4
 
-    .line 615
     iget-object v3, p0, Lcom/android/server/ConnectivityService$LegacyTypeTracker;->mTypeLists:[Ljava/util/ArrayList;
 
     aget-object v3, v3, v2
@@ -499,13 +459,11 @@
 
     if-eqz v3, :cond_3
 
-    .line 614
     :cond_2
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 616
     :cond_3
     iget-object v3, p0, Lcom/android/server/ConnectivityService$LegacyTypeTracker;->mTypeLists:[Ljava/util/ArrayList;
 
@@ -529,7 +487,6 @@
 
     check-cast v1, Lcom/android/server/connectivity/NetworkAgentInfo;
 
-    .line 617
     .local v1, "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -561,7 +518,6 @@
 
     goto :goto_2
 
-    .line 620
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v1    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     :catchall_0
@@ -579,16 +535,12 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 621
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->decreaseIndent()V
 
-    .line 622
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->decreaseIndent()V
 
-    .line 623
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
-    .line 624
     return-void
 .end method
 
@@ -597,12 +549,10 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 501
     iget-object v1, p0, Lcom/android/server/ConnectivityService$LegacyTypeTracker;->mTypeLists:[Ljava/util/ArrayList;
 
     monitor-enter v1
 
-    .line 502
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/server/ConnectivityService$LegacyTypeTracker;->isTypeSupported(I)Z
 
@@ -620,7 +570,6 @@
 
     if-nez v0, :cond_0
 
-    .line 503
     iget-object v0, p0, Lcom/android/server/ConnectivityService$LegacyTypeTracker;->mTypeLists:[Ljava/util/ArrayList;
 
     aget-object v0, v0, p1
@@ -635,20 +584,16 @@
 
     monitor-exit v1
 
-    .line 506
     :goto_0
     return-object v0
 
-    .line 505
     :cond_0
     monitor-exit v1
 
-    .line 506
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 505
     :catchall_0
     move-exception v0
 
@@ -664,7 +609,6 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 497
     invoke-static {p1}, Landroid/net/ConnectivityManager;->isNetworkTypeValid(I)Z
 
     move-result v0
@@ -697,12 +641,10 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 543
     iget-object v4, p0, Lcom/android/server/ConnectivityService$LegacyTypeTracker;->mTypeLists:[Ljava/util/ArrayList;
 
     aget-object v0, v4, p1
 
-    .line 544
     .local v0, "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/connectivity/NetworkAgentInfo;>;"
     if-eqz v0, :cond_0
 
@@ -712,12 +654,10 @@
 
     if-eqz v4, :cond_1
 
-    .line 569
     :cond_0
     :goto_0
     return-void
 
-    .line 547
     :cond_1
     invoke-virtual {v0, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -729,13 +669,11 @@
 
     move-result v3
 
-    .line 549
     .local v3, "wasFirstNetwork":Z
     iget-object v5, p0, Lcom/android/server/ConnectivityService$LegacyTypeTracker;->mTypeLists:[Ljava/util/ArrayList;
 
     monitor-enter v5
 
-    .line 550
     :try_start_0
     invoke-virtual {v0, p2}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
@@ -743,12 +681,10 @@
 
     if-nez v4, :cond_2
 
-    .line 551
     monitor-exit v5
 
     goto :goto_0
 
-    .line 553
     :catchall_0
     move-exception v4
 
@@ -764,26 +700,21 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 555
     sget-object v2, Landroid/net/NetworkInfo$DetailedState;->DISCONNECTED:Landroid/net/NetworkInfo$DetailedState;
 
-    .line 557
     .local v2, "state":Landroid/net/NetworkInfo$DetailedState;
     if-nez v3, :cond_3
 
     if-eqz p3, :cond_4
 
-    .line 558
     :cond_3
     invoke-direct {p0, p2, v2, p1, p3}, Lcom/android/server/ConnectivityService$LegacyTypeTracker;->maybeLogBroadcast(Lcom/android/server/connectivity/NetworkAgentInfo;Landroid/net/NetworkInfo$DetailedState;IZ)V
 
-    .line 559
     iget-object v4, p0, Lcom/android/server/ConnectivityService$LegacyTypeTracker;->this$0:Lcom/android/server/ConnectivityService;
 
     # invokes: Lcom/android/server/ConnectivityService;->sendLegacyNetworkBroadcast(Lcom/android/server/connectivity/NetworkAgentInfo;Landroid/net/NetworkInfo$DetailedState;I)V
     invoke-static {v4, p2, v2, p1}, Lcom/android/server/ConnectivityService;->access$100(Lcom/android/server/ConnectivityService;Lcom/android/server/connectivity/NetworkAgentInfo;Landroid/net/NetworkInfo$DetailedState;I)V
 
-    .line 562
     :cond_4
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -793,7 +724,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 563
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -820,14 +750,12 @@
 
     invoke-direct {p0, v4}, Lcom/android/server/ConnectivityService$LegacyTypeTracker;->log(Ljava/lang/String;)V
 
-    .line 565
     invoke-virtual {v0, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/android/server/connectivity/NetworkAgentInfo;
 
-    .line 566
     .local v1, "replacement":Lcom/android/server/connectivity/NetworkAgentInfo;
     iget-object v4, p0, Lcom/android/server/ConnectivityService$LegacyTypeTracker;->this$0:Lcom/android/server/ConnectivityService;
 
@@ -838,7 +766,6 @@
 
     invoke-direct {p0, v1, v2, p1, v4}, Lcom/android/server/ConnectivityService$LegacyTypeTracker;->maybeLogBroadcast(Lcom/android/server/connectivity/NetworkAgentInfo;Landroid/net/NetworkInfo$DetailedState;IZ)V
 
-    .line 567
     iget-object v4, p0, Lcom/android/server/ConnectivityService$LegacyTypeTracker;->this$0:Lcom/android/server/ConnectivityService;
 
     # invokes: Lcom/android/server/ConnectivityService;->sendLegacyNetworkBroadcast(Lcom/android/server/connectivity/NetworkAgentInfo;Landroid/net/NetworkInfo$DetailedState;I)V
@@ -853,7 +780,6 @@
     .param p2, "wasDefault"    # Z
 
     .prologue
-    .line 574
     const/4 v0, 0x0
 
     .local v0, "type":I
@@ -864,15 +790,12 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 575
     invoke-virtual {p0, v0, p1, p2}, Lcom/android/server/ConnectivityService$LegacyTypeTracker;->remove(ILcom/android/server/connectivity/NetworkAgentInfo;Z)V
 
-    .line 574
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 577
     :cond_0
     return-void
 .end method
@@ -886,7 +809,6 @@
 
     const/4 v7, 0x0
 
-    .line 582
     iget-object v8, p0, Lcom/android/server/ConnectivityService$LegacyTypeTracker;->this$0:Lcom/android/server/ConnectivityService;
 
     # invokes: Lcom/android/server/ConnectivityService;->isDefaultNetwork(Lcom/android/server/connectivity/NetworkAgentInfo;)Z
@@ -894,7 +816,6 @@
 
     move-result v1
 
-    .line 583
     .local v1, "isDefault":Z
     iget-object v8, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
 
@@ -902,7 +823,6 @@
 
     move-result-object v4
 
-    .line 584
     .local v4, "state":Landroid/net/NetworkInfo$DetailedState;
     const/4 v5, 0x0
 
@@ -914,12 +834,10 @@
 
     if-ge v5, v8, :cond_4
 
-    .line 585
     iget-object v8, p0, Lcom/android/server/ConnectivityService$LegacyTypeTracker;->mTypeLists:[Ljava/util/ArrayList;
 
     aget-object v3, v8, v5
 
-    .line 586
     .local v3, "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/connectivity/NetworkAgentInfo;>;"
     if-eqz v3, :cond_2
 
@@ -931,7 +849,6 @@
 
     move v0, v6
 
-    .line 587
     .local v0, "contains":Z
     :goto_1
     if-eqz v0, :cond_3
@@ -944,7 +861,6 @@
 
     move v2, v6
 
-    .line 588
     .local v2, "isFirst":Z
     :goto_2
     if-nez v2, :cond_0
@@ -953,17 +869,14 @@
 
     if-eqz v1, :cond_1
 
-    .line 589
     :cond_0
     invoke-direct {p0, p1, v4, v5, v1}, Lcom/android/server/ConnectivityService$LegacyTypeTracker;->maybeLogBroadcast(Lcom/android/server/connectivity/NetworkAgentInfo;Landroid/net/NetworkInfo$DetailedState;IZ)V
 
-    .line 590
     iget-object v8, p0, Lcom/android/server/ConnectivityService$LegacyTypeTracker;->this$0:Lcom/android/server/ConnectivityService;
 
     # invokes: Lcom/android/server/ConnectivityService;->sendLegacyNetworkBroadcast(Lcom/android/server/connectivity/NetworkAgentInfo;Landroid/net/NetworkInfo$DetailedState;I)V
     invoke-static {v8, p1, v4, v5}, Lcom/android/server/ConnectivityService;->access$100(Lcom/android/server/ConnectivityService;Lcom/android/server/connectivity/NetworkAgentInfo;Landroid/net/NetworkInfo$DetailedState;I)V
 
-    .line 584
     :cond_1
     add-int/lit8 v5, v5, 0x1
 
@@ -974,17 +887,14 @@
     :cond_2
     move v0, v7
 
-    .line 586
     goto :goto_1
 
     .restart local v0    # "contains":Z
     :cond_3
     move v2, v7
 
-    .line 587
     goto :goto_2
 
-    .line 593
     .end local v0    # "contains":Z
     .end local v3    # "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/connectivity/NetworkAgentInfo;>;"
     :cond_4

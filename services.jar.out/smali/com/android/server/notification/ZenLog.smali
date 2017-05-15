@@ -58,12 +58,10 @@
     .locals 2
 
     .prologue
-    .line 37
     sget-boolean v0, Landroid/os/Build;->IS_DEBUGGABLE:Z
 
     sput-boolean v0, Lcom/android/server/notification/ZenLog;->DEBUG:Z
 
-    .line 39
     sget-boolean v0, Landroid/os/Build;->IS_DEBUGGABLE:Z
 
     if-eqz v0, :cond_0
@@ -73,28 +71,24 @@
     :goto_0
     sput v0, Lcom/android/server/notification/ZenLog;->SIZE:I
 
-    .line 41
     sget v0, Lcom/android/server/notification/ZenLog;->SIZE:I
 
     new-array v0, v0, [J
 
     sput-object v0, Lcom/android/server/notification/ZenLog;->TIMES:[J
 
-    .line 42
     sget v0, Lcom/android/server/notification/ZenLog;->SIZE:I
 
     new-array v0, v0, [I
 
     sput-object v0, Lcom/android/server/notification/ZenLog;->TYPES:[I
 
-    .line 43
     sget v0, Lcom/android/server/notification/ZenLog;->SIZE:I
 
     new-array v0, v0, [Ljava/lang/String;
 
     sput-object v0, Lcom/android/server/notification/ZenLog;->MSGS:[Ljava/lang/String;
 
-    .line 45
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     const-string v1, "MM-dd HH:mm:ss.SSS"
@@ -105,7 +99,6 @@
 
     return-void
 
-    .line 39
     :cond_0
     const/16 v0, 0x14
 
@@ -116,7 +109,6 @@
     .locals 0
 
     .prologue
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -128,12 +120,10 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 199
     sget-object v1, Lcom/android/server/notification/ZenLog;->MSGS:[Ljava/lang/String;
 
     monitor-enter v1
 
-    .line 200
     :try_start_0
     sget-object v0, Lcom/android/server/notification/ZenLog;->TIMES:[J
 
@@ -145,21 +135,18 @@
 
     aput-wide v4, v0, v2
 
-    .line 201
     sget-object v0, Lcom/android/server/notification/ZenLog;->TYPES:[I
 
     sget v2, Lcom/android/server/notification/ZenLog;->sNext:I
 
     aput p0, v0, v2
 
-    .line 202
     sget-object v0, Lcom/android/server/notification/ZenLog;->MSGS:[Ljava/lang/String;
 
     sget v2, Lcom/android/server/notification/ZenLog;->sNext:I
 
     aput-object p1, v0, v2
 
-    .line 203
     sget v0, Lcom/android/server/notification/ZenLog;->sNext:I
 
     add-int/lit8 v0, v0, 0x1
@@ -170,27 +157,23 @@
 
     sput v0, Lcom/android/server/notification/ZenLog;->sNext:I
 
-    .line 204
     sget v0, Lcom/android/server/notification/ZenLog;->sSize:I
 
     sget v2, Lcom/android/server/notification/ZenLog;->SIZE:I
 
     if-ge v0, v2, :cond_0
 
-    .line 205
     sget v0, Lcom/android/server/notification/ZenLog;->sSize:I
 
     add-int/lit8 v0, v0, 0x1
 
     sput v0, Lcom/android/server/notification/ZenLog;->sSize:I
 
-    .line 207
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 208
     sget-boolean v0, Lcom/android/server/notification/ZenLog;->DEBUG:Z
 
     if-eqz v0, :cond_1
@@ -225,11 +208,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 209
     :cond_1
     return-void
 
-    .line 207
     :catchall_0
     move-exception v0
 
@@ -246,7 +227,6 @@
     .param p0, "component"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 195
     if-eqz p0, :cond_0
 
     invoke-virtual {p0}, Landroid/content/ComponentName;->toShortString()Ljava/lang/String;
@@ -268,12 +248,10 @@
     .param p1, "prefix"    # Ljava/lang/String;
 
     .prologue
-    .line 212
     sget-object v4, Lcom/android/server/notification/ZenLog;->MSGS:[Ljava/lang/String;
 
     monitor-enter v4
 
-    .line 213
     :try_start_0
     sget v3, Lcom/android/server/notification/ZenLog;->sNext:I
 
@@ -289,7 +267,6 @@
 
     rem-int v2, v3, v5
 
-    .line 214
     .local v2, "start":I
     const/4 v0, 0x0
 
@@ -299,18 +276,15 @@
 
     if-ge v0, v3, :cond_0
 
-    .line 215
     add-int v3, v2, v0
 
     sget v5, Lcom/android/server/notification/ZenLog;->SIZE:I
 
     rem-int v1, v3, v5
 
-    .line 216
     .local v1, "j":I
     invoke-virtual {p0, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 217
     sget-object v3, Lcom/android/server/notification/ZenLog;->FORMAT:Ljava/text/SimpleDateFormat;
 
     new-instance v5, Ljava/util/Date;
@@ -327,12 +301,10 @@
 
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 218
     const/16 v3, 0x20
 
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->print(C)V
 
-    .line 219
     sget-object v3, Lcom/android/server/notification/ZenLog;->TYPES:[I
 
     aget v3, v3, v1
@@ -343,32 +315,26 @@
 
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 220
     const-string v3, ": "
 
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 221
     sget-object v3, Lcom/android/server/notification/ZenLog;->MSGS:[Ljava/lang/String;
 
     aget-object v3, v3, v1
 
     invoke-virtual {p0, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 214
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 223
     .end local v1    # "j":I
     :cond_0
     monitor-exit v4
 
-    .line 224
     return-void
 
-    .line 223
     .end local v0    # "i":I
     .end local v2    # "start":I
     :catchall_0
@@ -386,10 +352,8 @@
     .param p0, "hints"    # I
 
     .prologue
-    .line 187
     packed-switch p0, :pswitch_data_0
 
-    .line 190
     invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v0
@@ -397,19 +361,16 @@
     :goto_0
     return-object v0
 
-    .line 188
     :pswitch_0
     const-string v0, "none"
 
     goto :goto_0
 
-    .line 189
     :pswitch_1
     const-string v0, "disable_effects"
 
     goto :goto_0
 
-    .line 187
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -422,34 +383,28 @@
     .param p0, "ringerMode"    # I
 
     .prologue
-    .line 166
     packed-switch p0, :pswitch_data_0
 
-    .line 170
     const-string v0, "unknown"
 
     :goto_0
     return-object v0
 
-    .line 167
     :pswitch_0
     const-string v0, "silent"
 
     goto :goto_0
 
-    .line 168
     :pswitch_1
     const-string v0, "vibrate"
 
     goto :goto_0
 
-    .line 169
     :pswitch_2
     const-string v0, "normal"
 
     goto :goto_0
 
-    .line 166
     nop
 
     :pswitch_data_0
@@ -466,7 +421,6 @@
     .param p1, "e"    # Landroid/os/RemoteException;
 
     .prologue
-    .line 141
     if-nez p0, :cond_0
 
     const-string v0, "no provider"
@@ -496,7 +450,6 @@
     .param p2, "newConfig"    # Landroid/service/notification/ZenModeConfig;
 
     .prologue
-    .line 120
     const/16 v1, 0xb
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -544,10 +497,8 @@
 
     invoke-static {v1, v0}, Lcom/android/server/notification/ZenLog;->append(ILjava/lang/String;)V
 
-    .line 123
     return-void
 
-    .line 120
     :cond_0
     const/4 v0, 0x0
 
@@ -560,7 +511,6 @@
     .param p1, "reason"    # Ljava/lang/String;
 
     .prologue
-    .line 126
     const/16 v0, 0xd
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -591,7 +541,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/notification/ZenLog;->append(ILjava/lang/String;)V
 
-    .line 127
     return-void
 .end method
 
@@ -600,12 +549,10 @@
     .param p0, "result"    # Ljava/lang/String;
 
     .prologue
-    .line 95
     const/4 v0, 0x5
 
     invoke-static {v0, p0}, Lcom/android/server/notification/ZenLog;->append(ILjava/lang/String;)V
 
-    .line 96
     return-void
 .end method
 
@@ -615,7 +562,6 @@
     .param p1, "newSuppressor"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 131
     const/16 v0, 0xe
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -650,7 +596,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/notification/ZenLog;->append(ILjava/lang/String;)V
 
-    .line 133
     return-void
 .end method
 
@@ -661,7 +606,6 @@
     .param p2, "reason"    # Ljava/lang/String;
 
     .prologue
-    .line 107
     const/16 v0, 0x8
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -702,7 +646,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/notification/ZenLog;->append(ILjava/lang/String;)V
 
-    .line 108
     return-void
 .end method
 
@@ -712,7 +655,6 @@
     .param p1, "reason"    # Ljava/lang/String;
 
     .prologue
-    .line 67
     if-eqz p0, :cond_0
 
     invoke-virtual {p0}, Lcom/android/server/notification/NotificationRecord;->isIntercepted()Z
@@ -721,11 +663,9 @@
 
     if-eqz v0, :cond_0
 
-    .line 69
     :goto_0
     return-void
 
-    .line 68
     :cond_0
     const/4 v0, 0x1
 
@@ -767,7 +707,6 @@
     .param p2, "listenerCount"    # I
 
     .prologue
-    .line 136
     const/16 v0, 0xf
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -812,7 +751,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/notification/ZenLog;->append(ILjava/lang/String;)V
 
-    .line 138
     return-void
 .end method
 
@@ -822,18 +760,15 @@
     .param p1, "reason"    # Ljava/lang/String;
 
     .prologue
-    .line 72
     if-eqz p0, :cond_0
 
     iget-boolean v0, p0, Lcom/android/server/notification/NotificationRecord;->isUpdate:Z
 
     if-eqz v0, :cond_0
 
-    .line 74
     :goto_0
     return-void
 
-    .line 73
     :cond_0
     const/16 v0, 0xc
 
@@ -877,7 +812,6 @@
     .param p4, "ringerModeInternalOut"    # I
 
     .prologue
-    .line 78
     const/4 v0, 0x3
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -950,7 +884,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/notification/ZenLog;->append(ILjava/lang/String;)V
 
-    .line 83
     return-void
 .end method
 
@@ -963,7 +896,6 @@
     .param p4, "ringerModeExternalOut"    # I
 
     .prologue
-    .line 87
     const/4 v0, 0x4
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1036,7 +968,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/notification/ZenLog;->append(ILjava/lang/String;)V
 
-    .line 92
     return-void
 .end method
 
@@ -1046,7 +977,6 @@
     .param p1, "reason"    # Ljava/lang/String;
 
     .prologue
-    .line 99
     const/4 v0, 0x6
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1077,7 +1007,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/notification/ZenLog;->append(ILjava/lang/String;)V
 
-    .line 100
     return-void
 .end method
 
@@ -1088,7 +1017,6 @@
     .param p2, "e"    # Landroid/os/RemoteException;
 
     .prologue
-    .line 111
     const/16 v0, 0x9
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1119,7 +1047,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/notification/ZenLog;->append(ILjava/lang/String;)V
 
-    .line 112
     return-void
 .end method
 
@@ -1130,7 +1057,6 @@
     .param p2, "e"    # Landroid/os/RemoteException;
 
     .prologue
-    .line 115
     const/16 v0, 0xa
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1161,7 +1087,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/notification/ZenLog;->append(ILjava/lang/String;)V
 
-    .line 116
     return-void
 .end method
 
@@ -1171,7 +1096,6 @@
     .param p1, "toMode"    # I
 
     .prologue
-    .line 103
     const/4 v0, 0x7
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1206,7 +1130,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/notification/ZenLog;->append(ILjava/lang/String;)V
 
-    .line 104
     return-void
 .end method
 
@@ -1215,106 +1138,88 @@
     .param p0, "type"    # I
 
     .prologue
-    .line 145
     packed-switch p0, :pswitch_data_0
 
-    .line 161
     const-string v0, "unknown"
 
     :goto_0
     return-object v0
 
-    .line 146
     :pswitch_0
     const-string v0, "intercepted"
 
     goto :goto_0
 
-    .line 147
     :pswitch_1
     const-string v0, "allow_disable"
 
     goto :goto_0
 
-    .line 148
     :pswitch_2
     const-string v0, "set_ringer_mode_external"
 
     goto :goto_0
 
-    .line 149
     :pswitch_3
     const-string v0, "set_ringer_mode_internal"
 
     goto :goto_0
 
-    .line 150
     :pswitch_4
     const-string v0, "downtime"
 
     goto :goto_0
 
-    .line 151
     :pswitch_5
     const-string v0, "set_zen_mode"
 
     goto :goto_0
 
-    .line 152
     :pswitch_6
     const-string v0, "update_zen_mode"
 
     goto :goto_0
 
-    .line 153
     :pswitch_7
     const-string v0, "exit_condition"
 
     goto :goto_0
 
-    .line 154
     :pswitch_8
     const-string v0, "subscribe"
 
     goto :goto_0
 
-    .line 155
     :pswitch_9
     const-string v0, "unsubscribe"
 
     goto :goto_0
 
-    .line 156
     :pswitch_a
     const-string v0, "config"
 
     goto :goto_0
 
-    .line 157
     :pswitch_b
     const-string v0, "not_intercepted"
 
     goto :goto_0
 
-    .line 158
     :pswitch_c
     const-string v0, "disable_effects"
 
     goto :goto_0
 
-    .line 159
     :pswitch_d
     const-string v0, "suppressor_changed"
 
     goto :goto_0
 
-    .line 160
     :pswitch_e
     const-string v0, "listener_hints_changed"
 
     goto :goto_0
 
-    .line 145
     nop
 
     :pswitch_data_0
@@ -1342,46 +1247,38 @@
     .param p0, "zenMode"    # I
 
     .prologue
-    .line 175
     packed-switch p0, :pswitch_data_0
 
-    .line 182
     const-string v0, "unknown"
 
     :goto_0
     return-object v0
 
-    .line 176
     :pswitch_0
     const-string v0, "off"
 
     goto :goto_0
 
-    .line 177
     :pswitch_1
     const-string v0, "important_interruptions"
 
     goto :goto_0
 
-    .line 178
     :pswitch_2
     const-string v0, "alarms"
 
     goto :goto_0
 
-    .line 179
     :pswitch_3
     const-string v0, "no_interruptions"
 
     goto :goto_0
 
-    .line 181
     :pswitch_4
     const-string v0, "miui_silent"
 
     goto :goto_0
 
-    .line 175
     nop
 
     :pswitch_data_0

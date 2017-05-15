@@ -39,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 48
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -55,29 +54,24 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 76
     invoke-direct {p0, p1, p2}, Lcom/android/server/job/controllers/StateController;-><init>(Lcom/android/server/job/StateChangedListener;Landroid/content/Context;)V
 
-    .line 51
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/job/controllers/BatteryController;->mTrackedTasks:Ljava/util/List;
 
-    .line 77
     new-instance v0, Lcom/android/server/job/controllers/BatteryController$ChargingTracker;
 
     invoke-direct {v0, p0}, Lcom/android/server/job/controllers/BatteryController$ChargingTracker;-><init>(Lcom/android/server/job/controllers/BatteryController;)V
 
     iput-object v0, p0, Lcom/android/server/job/controllers/BatteryController;->mChargeTracker:Lcom/android/server/job/controllers/BatteryController$ChargingTracker;
 
-    .line 78
     iget-object v0, p0, Lcom/android/server/job/controllers/BatteryController;->mChargeTracker:Lcom/android/server/job/controllers/BatteryController$ChargingTracker;
 
     invoke-virtual {v0}, Lcom/android/server/job/controllers/BatteryController$ChargingTracker;->startTracking()V
 
-    .line 79
     return-void
 .end method
 
@@ -86,7 +80,6 @@
     .param p0, "x0"    # Lcom/android/server/job/controllers/BatteryController;
 
     .prologue
-    .line 45
     invoke-direct {p0}, Lcom/android/server/job/controllers/BatteryController;->maybeReportNewChargingState()V
 
     return-void
@@ -97,18 +90,15 @@
     .param p0, "taskManagerService"    # Lcom/android/server/job/JobSchedulerService;
 
     .prologue
-    .line 55
     sget-object v1, Lcom/android/server/job/controllers/BatteryController;->sCreationLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 56
     :try_start_0
     sget-object v0, Lcom/android/server/job/controllers/BatteryController;->sController:Lcom/android/server/job/controllers/BatteryController;
 
     if-nez v0, :cond_0
 
-    .line 57
     new-instance v0, Lcom/android/server/job/controllers/BatteryController;
 
     invoke-virtual {p0}, Lcom/android/server/job/JobSchedulerService;->getContext()Landroid/content/Context;
@@ -119,18 +109,15 @@
 
     sput-object v0, Lcom/android/server/job/controllers/BatteryController;->sController:Lcom/android/server/job/controllers/BatteryController;
 
-    .line 60
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 61
     sget-object v0, Lcom/android/server/job/controllers/BatteryController;->sController:Lcom/android/server/job/controllers/BatteryController;
 
     return-object v0
 
-    .line 60
     :catchall_0
     move-exception v0
 
@@ -148,7 +135,6 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 72
     new-instance v0, Lcom/android/server/job/controllers/BatteryController;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/job/controllers/BatteryController;-><init>(Lcom/android/server/job/StateChangedListener;Landroid/content/Context;)V
@@ -160,24 +146,20 @@
     .locals 7
 
     .prologue
-    .line 102
     iget-object v5, p0, Lcom/android/server/job/controllers/BatteryController;->mChargeTracker:Lcom/android/server/job/controllers/BatteryController$ChargingTracker;
 
     invoke-virtual {v5}, Lcom/android/server/job/controllers/BatteryController$ChargingTracker;->isOnStablePower()Z
 
     move-result v3
 
-    .line 106
     .local v3, "stablePower":Z
     const/4 v2, 0x0
 
-    .line 107
     .local v2, "reportChange":Z
     iget-object v6, p0, Lcom/android/server/job/controllers/BatteryController;->mTrackedTasks:Ljava/util/List;
 
     monitor-enter v6
 
-    .line 108
     :try_start_0
     iget-object v5, p0, Lcom/android/server/job/controllers/BatteryController;->mTrackedTasks:Ljava/util/List;
 
@@ -200,7 +182,6 @@
 
     check-cast v4, Lcom/android/server/job/controllers/JobStatus;
 
-    .line 109
     .local v4, "ts":Lcom/android/server/job/controllers/JobStatus;
     iget-object v5, v4, Lcom/android/server/job/controllers/JobStatus;->chargingConstraintSatisfied:Ljava/util/concurrent/atomic/AtomicBoolean;
 
@@ -208,16 +189,13 @@
 
     move-result v1
 
-    .line 110
     .local v1, "previous":Z
     if-eq v1, v3, :cond_0
 
-    .line 111
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 114
     .end local v1    # "previous":Z
     .end local v4    # "ts":Lcom/android/server/job/controllers/JobStatus;
     :cond_1
@@ -225,30 +203,24 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 117
     if-eqz v2, :cond_2
 
-    .line 118
     iget-object v5, p0, Lcom/android/server/job/controllers/BatteryController;->mStateChangedListener:Lcom/android/server/job/StateChangedListener;
 
     invoke-interface {v5}, Lcom/android/server/job/StateChangedListener;->onControllerStateChanged()V
 
-    .line 121
     :cond_2
     if-eqz v3, :cond_3
 
-    .line 122
     iget-object v5, p0, Lcom/android/server/job/controllers/BatteryController;->mStateChangedListener:Lcom/android/server/job/StateChangedListener;
 
     const/4 v6, 0x0
 
     invoke-interface {v5, v6}, Lcom/android/server/job/StateChangedListener;->onRunJobNow(Lcom/android/server/job/controllers/JobStatus;)V
 
-    .line 124
     :cond_3
     return-void
 
-    .line 114
     .end local v0    # "i$":Ljava/util/Iterator;
     :catchall_0
     move-exception v5
@@ -268,12 +240,10 @@
     .param p1, "pw"    # Ljava/io/PrintWriter;
 
     .prologue
-    .line 203
     const-string v1, "Batt."
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 204
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -300,12 +270,10 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 205
     iget-object v2, p0, Lcom/android/server/job/controllers/BatteryController;->mTrackedTasks:Ljava/util/List;
 
     monitor-enter v2
 
-    .line 206
     :try_start_0
     iget-object v1, p0, Lcom/android/server/job/controllers/BatteryController;->mTrackedTasks:Ljava/util/List;
 
@@ -313,7 +281,6 @@
 
     move-result-object v0
 
-    .line 207
     .local v0, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Lcom/android/server/job/controllers/JobStatus;>;"
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -321,7 +288,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 208
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
@@ -338,7 +304,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 210
     :cond_0
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -347,7 +312,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 211
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -384,7 +348,6 @@
 
     goto :goto_0
 
-    .line 214
     .end local v0    # "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Lcom/android/server/job/controllers/JobStatus;>;"
     :catchall_0
     move-exception v1
@@ -395,18 +358,15 @@
 
     throw v1
 
-    .line 213
     .restart local v0    # "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Lcom/android/server/job/controllers/JobStatus;>;"
     :cond_1
     :try_start_1
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 214
     monitor-exit v2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 215
     return-void
 .end method
 
@@ -414,7 +374,6 @@
     .locals 1
 
     .prologue
-    .line 66
     iget-object v0, p0, Lcom/android/server/job/controllers/BatteryController;->mChargeTracker:Lcom/android/server/job/controllers/BatteryController$ChargingTracker;
 
     return-object v0
@@ -425,14 +384,12 @@
     .param p1, "taskStatus"    # Lcom/android/server/job/controllers/JobStatus;
 
     .prologue
-    .line 83
     iget-object v1, p0, Lcom/android/server/job/controllers/BatteryController;->mChargeTracker:Lcom/android/server/job/controllers/BatteryController$ChargingTracker;
 
     invoke-virtual {v1}, Lcom/android/server/job/controllers/BatteryController$ChargingTracker;->isOnStablePower()Z
 
     move-result v0
 
-    .line 84
     .local v0, "isOnStablePower":Z
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->hasChargingConstraint()Z
 
@@ -440,30 +397,24 @@
 
     if-eqz v1, :cond_0
 
-    .line 85
     iget-object v2, p0, Lcom/android/server/job/controllers/BatteryController;->mTrackedTasks:Ljava/util/List;
 
     monitor-enter v2
 
-    .line 86
     :try_start_0
     iget-object v1, p0, Lcom/android/server/job/controllers/BatteryController;->mTrackedTasks:Ljava/util/List;
 
     invoke-interface {v1, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 87
     iget-object v1, p1, Lcom/android/server/job/controllers/JobStatus;->chargingConstraintSatisfied:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 88
     monitor-exit v2
 
-    .line 90
     :cond_0
     return-void
 
-    .line 88
     :catchall_0
     move-exception v1
 
@@ -479,32 +430,26 @@
     .param p1, "taskStatus"    # Lcom/android/server/job/controllers/JobStatus;
 
     .prologue
-    .line 94
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->hasChargingConstraint()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 95
     iget-object v1, p0, Lcom/android/server/job/controllers/BatteryController;->mTrackedTasks:Ljava/util/List;
 
     monitor-enter v1
 
-    .line 96
     :try_start_0
     iget-object v0, p0, Lcom/android/server/job/controllers/BatteryController;->mTrackedTasks:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 97
     monitor-exit v1
 
-    .line 99
     :cond_0
     return-void
 
-    .line 97
     :catchall_0
     move-exception v0
 

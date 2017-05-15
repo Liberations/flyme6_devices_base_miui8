@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 120
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,7 +35,6 @@
     .param p2, "authority"    # Ljava/lang/String;
 
     .prologue
-    .line 124
     invoke-static {p1}, Lcom/android/server/content/SyncManagerAccountChangePolicy;->isBatteryCharging(Landroid/content/Context;)Z
 
     move-result v0

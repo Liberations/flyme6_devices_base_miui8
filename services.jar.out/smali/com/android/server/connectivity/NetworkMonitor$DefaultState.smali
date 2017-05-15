@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 302
     iput-object p1, p0, Lcom/android/server/connectivity/NetworkMonitor$DefaultState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/connectivity/NetworkMonitor$1;
 
     .prologue
-    .line 302
     invoke-direct {p0, p1}, Lcom/android/server/connectivity/NetworkMonitor$DefaultState;-><init>(Lcom/android/server/connectivity/NetworkMonitor;)V
 
     return-void
@@ -54,17 +52,14 @@
 
     const/4 v4, 0x1
 
-    .line 305
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 351
     :goto_0
     :pswitch_0
     return v4
 
-    .line 307
     :pswitch_1
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor$DefaultState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
@@ -72,7 +67,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/connectivity/NetworkMonitor;->log(Ljava/lang/String;)V
 
-    .line 308
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor$DefaultState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkMonitor$DefaultState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
@@ -87,7 +81,6 @@
 
     goto :goto_0
 
-    .line 311
     :pswitch_2
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor$DefaultState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
@@ -103,7 +96,6 @@
 
     goto :goto_0
 
-    .line 314
     :pswitch_3
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor$DefaultState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
@@ -114,7 +106,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 315
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor$DefaultState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # getter for: Lcom/android/server/connectivity/NetworkMonitor;->mContext:Landroid/content/Context;
@@ -131,7 +122,6 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 316
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor$DefaultState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     const/4 v1, 0x0
@@ -139,7 +129,6 @@
     # setter for: Lcom/android/server/connectivity/NetworkMonitor;->mLaunchCaptivePortalAppBroadcastReceiver:Lcom/android/server/connectivity/NetworkMonitor$CustomIntentReceiver;
     invoke-static {v0, v1}, Lcom/android/server/connectivity/NetworkMonitor;->access$1002(Lcom/android/server/connectivity/NetworkMonitor;Lcom/android/server/connectivity/NetworkMonitor$CustomIntentReceiver;)Lcom/android/server/connectivity/NetworkMonitor$CustomIntentReceiver;
 
-    .line 318
     :cond_0
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor$DefaultState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
@@ -148,7 +137,6 @@
 
     goto :goto_0
 
-    .line 322
     :pswitch_4
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor$DefaultState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
@@ -174,7 +162,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/connectivity/NetworkMonitor;->log(Ljava/lang/String;)V
 
-    .line 323
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor$DefaultState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     iget v1, p1, Landroid/os/Message;->arg1:I
@@ -182,7 +169,6 @@
     # setter for: Lcom/android/server/connectivity/NetworkMonitor;->mUidResponsibleForReeval:I
     invoke-static {v0, v1}, Lcom/android/server/connectivity/NetworkMonitor;->access$1302(Lcom/android/server/connectivity/NetworkMonitor;I)I
 
-    .line 324
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor$DefaultState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkMonitor$DefaultState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
@@ -197,7 +183,6 @@
 
     goto :goto_0
 
-    .line 327
     :pswitch_5
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor$DefaultState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
@@ -223,14 +208,12 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/connectivity/NetworkMonitor;->log(Ljava/lang/String;)V
 
-    .line 328
     iget v0, p1, Landroid/os/Message;->arg1:I
 
     packed-switch v0, :pswitch_data_1
 
     goto/16 :goto_0
 
-    .line 330
     :pswitch_6
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor$DefaultState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
@@ -240,14 +223,12 @@
 
     goto/16 :goto_0
 
-    .line 333
     :pswitch_7
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor$DefaultState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # setter for: Lcom/android/server/connectivity/NetworkMonitor;->mDontDisplaySigninNotification:Z
     invoke-static {v0, v4}, Lcom/android/server/connectivity/NetworkMonitor;->access$1502(Lcom/android/server/connectivity/NetworkMonitor;Z)Z
 
-    .line 336
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor$DefaultState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkMonitor$DefaultState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
@@ -262,20 +243,17 @@
 
     goto/16 :goto_0
 
-    .line 339
     :pswitch_8
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor$DefaultState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # setter for: Lcom/android/server/connectivity/NetworkMonitor;->mDontDisplaySigninNotification:Z
     invoke-static {v0, v4}, Lcom/android/server/connectivity/NetworkMonitor;->access$1502(Lcom/android/server/connectivity/NetworkMonitor;Z)Z
 
-    .line 340
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor$DefaultState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # setter for: Lcom/android/server/connectivity/NetworkMonitor;->mUserDoesNotWant:Z
     invoke-static {v0, v4}, Lcom/android/server/connectivity/NetworkMonitor;->access$1802(Lcom/android/server/connectivity/NetworkMonitor;Z)Z
 
-    .line 341
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor$DefaultState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # getter for: Lcom/android/server/connectivity/NetworkMonitor;->mConnectivityServiceHandler:Landroid/os/Handler;
@@ -300,13 +278,11 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 345
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor$DefaultState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # setter for: Lcom/android/server/connectivity/NetworkMonitor;->mUidResponsibleForReeval:I
     invoke-static {v0, v5}, Lcom/android/server/connectivity/NetworkMonitor;->access$1302(Lcom/android/server/connectivity/NetworkMonitor;I)I
 
-    .line 346
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor$DefaultState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkMonitor$DefaultState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
@@ -321,7 +297,6 @@
 
     goto/16 :goto_0
 
-    .line 305
     :pswitch_data_0
     .packed-switch 0x82001
         :pswitch_2
@@ -338,7 +313,6 @@
         :pswitch_4
     .end packed-switch
 
-    .line 328
     :pswitch_data_1
     .packed-switch 0x0
         :pswitch_6

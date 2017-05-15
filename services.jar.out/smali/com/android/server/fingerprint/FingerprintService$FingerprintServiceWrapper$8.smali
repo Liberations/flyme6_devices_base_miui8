@@ -42,7 +42,6 @@
     .locals 0
 
     .prologue
-    .line 1280
     iput-object p1, p0, Lcom/android/server/fingerprint/FingerprintService$FingerprintServiceWrapper$8;->this$1:Lcom/android/server/fingerprint/FingerprintService$FingerprintServiceWrapper;
 
     iput-object p2, p0, Lcom/android/server/fingerprint/FingerprintService$FingerprintServiceWrapper$8;->val$token:Landroid/os/IBinder;
@@ -72,7 +71,6 @@
     .locals 10
 
     .prologue
-    .line 1283
     iget-object v0, p0, Lcom/android/server/fingerprint/FingerprintService$FingerprintServiceWrapper$8;->this$1:Lcom/android/server/fingerprint/FingerprintService$FingerprintServiceWrapper;
 
     iget-object v0, v0, Lcom/android/server/fingerprint/FingerprintService$FingerprintServiceWrapper;->this$0:Lcom/android/server/fingerprint/FingerprintService;
@@ -97,6 +95,5 @@
 
     invoke-virtual/range {v0 .. v9}, Lcom/android/server/fingerprint/FingerprintService;->startGxCmd(Landroid/os/IBinder;IIII[BLandroid/hardware/fingerprint/IFingerprintServiceReceiver;IZ)V
 
-    .line 1286
     return-void
 .end method

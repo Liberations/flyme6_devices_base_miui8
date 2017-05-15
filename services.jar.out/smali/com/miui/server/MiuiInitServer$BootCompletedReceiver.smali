@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 57
     iput-object p1, p0, Lcom/miui/server/MiuiInitServer$BootCompletedReceiver;->this$0:Lcom/miui/server/MiuiInitServer;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/miui/server/MiuiInitServer$1;
 
     .prologue
-    .line 57
     invoke-direct {p0, p1}, Lcom/miui/server/MiuiInitServer$BootCompletedReceiver;-><init>(Lcom/miui/server/MiuiInitServer;)V
 
     return-void
@@ -51,13 +49,11 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 60
     new-instance v0, Lcom/miui/server/MiuiInitServer$BootCompletedReceiver$1;
 
     invoke-direct {v0, p0}, Lcom/miui/server/MiuiInitServer$BootCompletedReceiver$1;-><init>(Lcom/miui/server/MiuiInitServer$BootCompletedReceiver;)V
 
     invoke-virtual {v0}, Lcom/miui/server/MiuiInitServer$BootCompletedReceiver$1;->start()V
 
-    .line 78
     return-void
 .end method

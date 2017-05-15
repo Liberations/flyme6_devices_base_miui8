@@ -50,7 +50,6 @@
     .param p8, "x6"    # Z
 
     .prologue
-    .line 1993
     iput-object p1, p0, Lcom/android/server/accounts/AccountManagerService$6;->this$0:Lcom/android/server/accounts/AccountManagerService;
 
     iput-object p9, p0, Lcom/android/server/accounts/AccountManagerService$6;->val$loginOptions:Landroid/os/Bundle;
@@ -93,10 +92,8 @@
     .param p1, "result"    # Landroid/os/Bundle;
 
     .prologue
-    .line 2017
     if-eqz p1, :cond_5
 
-    .line 2018
     const-string v0, "authTokenLabelKey"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
@@ -105,7 +102,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2019
     iget-object v0, p0, Lcom/android/server/accounts/AccountManagerService$6;->this$0:Lcom/android/server/accounts/AccountManagerService;
 
     iget-object v1, p0, Lcom/android/server/accounts/AccountManagerService$6;->val$account:Landroid/accounts/Account;
@@ -123,28 +119,23 @@
 
     move-result-object v4
 
-    .line 2024
     .local v4, "intent":Landroid/content/Intent;
     new-instance v10, Landroid/os/Bundle;
 
     invoke-direct {v10}, Landroid/os/Bundle;-><init>()V
 
-    .line 2025
     .local v10, "bundle":Landroid/os/Bundle;
     const-string v0, "intent"
 
     invoke-virtual {v10, v0, v4}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 2026
     invoke-virtual {p0, v10}, Lcom/android/server/accounts/AccountManagerService$6;->onResult(Landroid/os/Bundle;)V
 
-    .line 2069
     .end local v4    # "intent":Landroid/content/Intent;
     .end local v10    # "bundle":Landroid/os/Bundle;
     :goto_0
     return-void
 
-    .line 2029
     :cond_0
     const-string v0, "authtoken"
 
@@ -152,18 +143,15 @@
 
     move-result-object v7
 
-    .line 2030
     .local v7, "authToken":Ljava/lang/String;
     if-eqz v7, :cond_4
 
-    .line 2031
     const-string v0, "authAccount"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v11
 
-    .line 2032
     .local v11, "name":Ljava/lang/String;
     const-string v0, "accountType"
 
@@ -171,7 +159,6 @@
 
     move-result-object v13
 
-    .line 2033
     .local v13, "type":Ljava/lang/String;
     invoke-static {v13}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -185,7 +172,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 2034
     :cond_1
     const/4 v0, 0x5
 
@@ -195,19 +181,16 @@
 
     goto :goto_0
 
-    .line 2038
     :cond_2
     new-instance v12, Landroid/accounts/Account;
 
     invoke-direct {v12, v11, v13}, Landroid/accounts/Account;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2039
     .local v12, "resultAccount":Landroid/accounts/Account;
     iget-boolean v0, p0, Lcom/android/server/accounts/AccountManagerService$6;->val$customTokens:Z
 
     if-nez v0, :cond_3
 
-    .line 2040
     iget-object v0, p0, Lcom/android/server/accounts/AccountManagerService$6;->this$0:Lcom/android/server/accounts/AccountManagerService;
 
     iget-object v1, p0, Lcom/android/server/accounts/AccountManagerService$6;->mAccounts:Lcom/android/server/accounts/AccountManagerService$UserAccounts;
@@ -217,7 +200,6 @@
     # invokes: Lcom/android/server/accounts/AccountManagerService;->saveAuthTokenToDatabase(Lcom/android/server/accounts/AccountManagerService$UserAccounts;Landroid/accounts/Account;Ljava/lang/String;Ljava/lang/String;)Z
     invoke-static {v0, v1, v12, v2, v7}, Lcom/android/server/accounts/AccountManagerService;->access$2300(Lcom/android/server/accounts/AccountManagerService;Lcom/android/server/accounts/AccountManagerService$UserAccounts;Landroid/accounts/Account;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 2046
     :cond_3
     const-string v0, "android.accounts.expiry"
 
@@ -227,7 +209,6 @@
 
     move-result-wide v8
 
-    .line 2048
     .local v8, "expiryMillis":J
     iget-boolean v0, p0, Lcom/android/server/accounts/AccountManagerService$6;->val$customTokens:Z
 
@@ -241,7 +222,6 @@
 
     if-lez v0, :cond_4
 
-    .line 2050
     iget-object v1, p0, Lcom/android/server/accounts/AccountManagerService$6;->this$0:Lcom/android/server/accounts/AccountManagerService;
 
     iget-object v2, p0, Lcom/android/server/accounts/AccountManagerService$6;->mAccounts:Lcom/android/server/accounts/AccountManagerService$UserAccounts;
@@ -257,7 +237,6 @@
     # invokes: Lcom/android/server/accounts/AccountManagerService;->saveCachedToken(Lcom/android/server/accounts/AccountManagerService$UserAccounts;Landroid/accounts/Account;Ljava/lang/String;[BLjava/lang/String;Ljava/lang/String;J)V
     invoke-static/range {v1 .. v9}, Lcom/android/server/accounts/AccountManagerService;->access$2400(Lcom/android/server/accounts/AccountManagerService;Lcom/android/server/accounts/AccountManagerService$UserAccounts;Landroid/accounts/Account;Ljava/lang/String;[BLjava/lang/String;Ljava/lang/String;J)V
 
-    .line 2061
     .end local v8    # "expiryMillis":J
     .end local v11    # "name":Ljava/lang/String;
     .end local v12    # "resultAccount":Landroid/accounts/Account;
@@ -271,7 +250,6 @@
 
     check-cast v4, Landroid/content/Intent;
 
-    .line 2062
     .restart local v4    # "intent":Landroid/content/Intent;
     if-eqz v4, :cond_5
 
@@ -283,7 +261,6 @@
 
     if-nez v0, :cond_5
 
-    .line 2063
     iget-object v0, p0, Lcom/android/server/accounts/AccountManagerService$6;->this$0:Lcom/android/server/accounts/AccountManagerService;
 
     iget-object v1, p0, Lcom/android/server/accounts/AccountManagerService$6;->mAccounts:Lcom/android/server/accounts/AccountManagerService$UserAccounts;
@@ -306,7 +283,6 @@
     # invokes: Lcom/android/server/accounts/AccountManagerService;->doNotification(Lcom/android/server/accounts/AccountManagerService$UserAccounts;Landroid/accounts/Account;Ljava/lang/CharSequence;Landroid/content/Intent;I)V
     invoke-static/range {v0 .. v5}, Lcom/android/server/accounts/AccountManagerService;->access$2500(Lcom/android/server/accounts/AccountManagerService;Lcom/android/server/accounts/AccountManagerService$UserAccounts;Landroid/accounts/Account;Ljava/lang/CharSequence;Landroid/content/Intent;I)V
 
-    .line 2068
     .end local v4    # "intent":Landroid/content/Intent;
     .end local v7    # "authToken":Ljava/lang/String;
     :cond_5
@@ -324,23 +300,19 @@
     .end annotation
 
     .prologue
-    .line 2008
     iget-boolean v0, p0, Lcom/android/server/accounts/AccountManagerService$6;->val$permissionGranted:Z
 
     if-nez v0, :cond_0
 
-    .line 2009
     iget-object v0, p0, Lcom/android/server/accounts/AccountManagerService$6;->mAuthenticator:Landroid/accounts/IAccountAuthenticator;
 
     iget-object v1, p0, Lcom/android/server/accounts/AccountManagerService$6;->val$authTokenType:Ljava/lang/String;
 
     invoke-interface {v0, p0, v1}, Landroid/accounts/IAccountAuthenticator;->getAuthTokenLabel(Landroid/accounts/IAccountAuthenticatorResponse;Ljava/lang/String;)V
 
-    .line 2013
     :goto_0
     return-void
 
-    .line 2011
     :cond_0
     iget-object v0, p0, Lcom/android/server/accounts/AccountManagerService$6;->mAuthenticator:Landroid/accounts/IAccountAuthenticator;
 
@@ -360,7 +332,6 @@
     .param p1, "now"    # J
 
     .prologue
-    .line 1996
     iget-object v0, p0, Lcom/android/server/accounts/AccountManagerService$6;->val$loginOptions:Landroid/os/Bundle;
 
     if-eqz v0, :cond_0
@@ -369,7 +340,6 @@
 
     invoke-virtual {v0}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
-    .line 1997
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 

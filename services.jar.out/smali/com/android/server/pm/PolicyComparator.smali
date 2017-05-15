@@ -27,10 +27,8 @@
     .locals 1
 
     .prologue
-    .line 867
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 869
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/pm/PolicyComparator;->duplicateFound:Z
@@ -50,7 +48,6 @@
 
     const/4 v2, 0x1
 
-    .line 879
     invoke-virtual {p1}, Lcom/android/server/pm/Policy;->isDefaultStanza()Z
 
     move-result v4
@@ -61,24 +58,20 @@
 
     if-eq v4, v5, :cond_1
 
-    .line 880
     invoke-virtual {p1}, Lcom/android/server/pm/Policy;->isDefaultStanza()Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    .line 905
     :goto_0
     return v2
 
     :cond_0
     move v2, v3
 
-    .line 880
     goto :goto_0
 
-    .line 884
     :cond_1
     invoke-virtual {p1}, Lcom/android/server/pm/Policy;->hasInnerPackages()Z
 
@@ -90,7 +83,6 @@
 
     if-eq v4, v5, :cond_3
 
-    .line 885
     invoke-virtual {p1}, Lcom/android/server/pm/Policy;->hasInnerPackages()Z
 
     move-result v4
@@ -107,7 +99,6 @@
 
     goto :goto_1
 
-    .line 889
     :cond_3
     invoke-virtual {p1}, Lcom/android/server/pm/Policy;->getSignatures()Ljava/util/Set;
 
@@ -123,17 +114,14 @@
 
     if-eqz v3, :cond_5
 
-    .line 891
     invoke-virtual {p1}, Lcom/android/server/pm/Policy;->hasGlobalSeinfo()Z
 
     move-result v3
 
     if-eqz v3, :cond_4
 
-    .line 892
     iput-boolean v2, p0, Lcom/android/server/pm/PolicyComparator;->duplicateFound:Z
 
-    .line 893
     const-string v3, "SELinuxMMAC"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -160,19 +148,16 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 897
     :cond_4
     invoke-virtual {p1}, Lcom/android/server/pm/Policy;->getInnerPackages()Ljava/util/Map;
 
     move-result-object v0
 
-    .line 898
     .local v0, "p1Packages":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-virtual {p2}, Lcom/android/server/pm/Policy;->getInnerPackages()Ljava/util/Map;
 
     move-result-object v1
 
-    .line 899
     .local v1, "p2Packages":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
@@ -188,10 +173,8 @@
 
     if-nez v3, :cond_5
 
-    .line 900
     iput-boolean v2, p0, Lcom/android/server/pm/PolicyComparator;->duplicateFound:Z
 
-    .line 901
     const-string v2, "SELinuxMMAC"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -218,7 +201,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 905
     .end local v0    # "p1Packages":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     .end local v1    # "p2Packages":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_5
@@ -233,7 +215,6 @@
     .param p2, "x1"    # Ljava/lang/Object;
 
     .prologue
-    .line 867
     check-cast p1, Lcom/android/server/pm/Policy;
 
     .end local p1    # "x0":Ljava/lang/Object;
@@ -251,7 +232,6 @@
     .locals 1
 
     .prologue
-    .line 872
     iget-boolean v0, p0, Lcom/android/server/pm/PolicyComparator;->duplicateFound:Z
 
     return v0

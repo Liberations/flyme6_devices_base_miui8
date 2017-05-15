@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 210
     iput-object p1, p0, Lcom/miui/server/SplashScreenServiceDelegate$4;->this$0:Lcom/miui/server/SplashScreenServiceDelegate;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,16 +37,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 213
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 219
     :goto_0
     return-void
 
-    .line 215
     :pswitch_0
     iget-object v0, p0, Lcom/miui/server/SplashScreenServiceDelegate$4;->this$0:Lcom/miui/server/SplashScreenServiceDelegate;
 
@@ -56,7 +52,6 @@
 
     goto :goto_0
 
-    .line 213
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

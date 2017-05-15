@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 20
     iput-object p1, p0, Lcom/android/server/SystemLogSwitchesConfigReceiver$1;->this$0:Lcom/android/server/SystemLogSwitchesConfigReceiver;
 
     iput-object p2, p0, Lcom/android/server/SystemLogSwitchesConfigReceiver$1;->val$intent:Landroid/content/Intent;
@@ -44,11 +43,9 @@
     .locals 1
 
     .prologue
-    .line 23
     iget-object v0, p0, Lcom/android/server/SystemLogSwitchesConfigReceiver$1;->val$intent:Landroid/content/Intent;
 
     invoke-static {v0}, Lmiui/log/SystemLogSwitchesConfigManager;->updateLogSwitches(Landroid/content/Intent;)V
 
-    .line 24
     return-void
 .end method

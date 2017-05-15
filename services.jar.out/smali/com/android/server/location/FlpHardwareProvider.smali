@@ -66,12 +66,10 @@
     .locals 1
 
     .prologue
-    .line 53
     const/4 v0, 0x0
 
     sput-object v0, Lcom/android/server/location/FlpHardwareProvider;->sSingletonInstance:Lcom/android/server/location/FlpHardwareProvider;
 
-    .line 289
     invoke-static {}, Lcom/android/server/location/FlpHardwareProvider;->nativeClassInit()V
 
     return-void
@@ -86,43 +84,34 @@
 
     const/4 v11, 0x0
 
-    .line 81
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 46
     iput-object v11, p0, Lcom/android/server/location/FlpHardwareProvider;->mGeofenceHardwareSink:Landroid/hardware/location/GeofenceHardwareImpl;
 
-    .line 47
     iput-object v11, p0, Lcom/android/server/location/FlpHardwareProvider;->mLocationSink:Landroid/hardware/location/IFusedLocationHardwareSink;
 
-    .line 51
     iput v12, p0, Lcom/android/server/location/FlpHardwareProvider;->mVersion:I
 
-    .line 57
     new-instance v6, Ljava/lang/Object;
 
     invoke-direct {v6}, Ljava/lang/Object;-><init>()V
 
     iput-object v6, p0, Lcom/android/server/location/FlpHardwareProvider;->mLocationSinkLock:Ljava/lang/Object;
 
-    .line 344
     new-instance v6, Lcom/android/server/location/FlpHardwareProvider$1;
 
     invoke-direct {v6, p0}, Lcom/android/server/location/FlpHardwareProvider$1;-><init>(Lcom/android/server/location/FlpHardwareProvider;)V
 
     iput-object v6, p0, Lcom/android/server/location/FlpHardwareProvider;->mLocationHardware:Landroid/hardware/location/IFusedLocationHardware;
 
-    .line 429
     new-instance v6, Lcom/android/server/location/FlpHardwareProvider$2;
 
     invoke-direct {v6, p0}, Lcom/android/server/location/FlpHardwareProvider$2;-><init>(Lcom/android/server/location/FlpHardwareProvider;)V
 
     iput-object v6, p0, Lcom/android/server/location/FlpHardwareProvider;->mGeofenceHardwareService:Landroid/location/IFusedGeofenceHardware;
 
-    .line 82
     iput-object p1, p0, Lcom/android/server/location/FlpHardwareProvider;->mContext:Landroid/content/Context;
 
-    .line 85
     iget-object v6, p0, Lcom/android/server/location/FlpHardwareProvider;->mContext:Landroid/content/Context;
 
     const-string v7, "location"
@@ -133,19 +122,15 @@
 
     check-cast v0, Landroid/location/LocationManager;
 
-    .line 87
     .local v0, "manager":Landroid/location/LocationManager;
     const-wide/16 v2, 0x0
 
-    .line 88
     .local v2, "minTime":J
     const/4 v1, 0x0
 
-    .line 89
     .local v1, "minDistance":F
     const/4 v4, 0x0
 
-    .line 90
     .local v4, "oneShot":Z
     const-string v6, "passive"
 
@@ -159,11 +144,9 @@
 
     move-result-object v5
 
-    .line 97
     .local v5, "request":Landroid/location/LocationRequest;
     invoke-virtual {v5, v12}, Landroid/location/LocationRequest;->setHideFromAppOps(Z)V
 
-    .line 98
     new-instance v6, Lcom/android/server/location/FlpHardwareProvider$NetworkLocationListener;
 
     invoke-direct {v6, p0, v11}, Lcom/android/server/location/FlpHardwareProvider$NetworkLocationListener;-><init>(Lcom/android/server/location/FlpHardwareProvider;Lcom/android/server/location/FlpHardwareProvider$1;)V
@@ -174,7 +157,6 @@
 
     invoke-virtual {v0, v5, v6, v7}, Landroid/location/LocationManager;->requestLocationUpdates(Landroid/location/LocationRequest;Landroid/location/LocationListener;Landroid/os/Looper;)V
 
-    .line 102
     return-void
 .end method
 
@@ -183,7 +165,6 @@
     .param p0, "x0"    # Lcom/android/server/location/FlpHardwareProvider;
 
     .prologue
-    .line 44
     iget-object v0, p0, Lcom/android/server/location/FlpHardwareProvider;->mLocationSinkLock:Ljava/lang/Object;
 
     return-object v0
@@ -194,7 +175,6 @@
     .param p0, "x0"    # Lcom/android/server/location/FlpHardwareProvider;
 
     .prologue
-    .line 44
     invoke-direct {p0}, Lcom/android/server/location/FlpHardwareProvider;->nativeIsDiagnosticSupported()Z
 
     move-result v0
@@ -208,7 +188,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 44
     invoke-direct {p0, p1}, Lcom/android/server/location/FlpHardwareProvider;->nativeInjectDiagnosticData(Ljava/lang/String;)V
 
     return-void
@@ -219,7 +198,6 @@
     .param p0, "x0"    # Lcom/android/server/location/FlpHardwareProvider;
 
     .prologue
-    .line 44
     invoke-direct {p0}, Lcom/android/server/location/FlpHardwareProvider;->nativeIsDeviceContextSupported()Z
 
     move-result v0
@@ -233,7 +211,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 44
     invoke-direct {p0, p1}, Lcom/android/server/location/FlpHardwareProvider;->nativeInjectDeviceContext(I)V
 
     return-void
@@ -244,7 +221,6 @@
     .param p0, "x0"    # Lcom/android/server/location/FlpHardwareProvider;
 
     .prologue
-    .line 44
     invoke-direct {p0}, Lcom/android/server/location/FlpHardwareProvider;->getVersion()I
 
     move-result v0
@@ -257,7 +233,6 @@
     .param p0, "x0"    # Lcom/android/server/location/FlpHardwareProvider;
 
     .prologue
-    .line 44
     invoke-direct {p0}, Lcom/android/server/location/FlpHardwareProvider;->nativeIsGeofencingSupported()Z
 
     move-result v0
@@ -271,7 +246,6 @@
     .param p1, "x1"    # [Landroid/hardware/location/GeofenceHardwareRequestParcelable;
 
     .prologue
-    .line 44
     invoke-direct {p0, p1}, Lcom/android/server/location/FlpHardwareProvider;->nativeAddGeofences([Landroid/hardware/location/GeofenceHardwareRequestParcelable;)V
 
     return-void
@@ -283,7 +257,6 @@
     .param p1, "x1"    # [I
 
     .prologue
-    .line 44
     invoke-direct {p0, p1}, Lcom/android/server/location/FlpHardwareProvider;->nativeRemoveGeofences([I)V
 
     return-void
@@ -295,7 +268,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 44
     invoke-direct {p0, p1}, Lcom/android/server/location/FlpHardwareProvider;->nativePauseGeofence(I)V
 
     return-void
@@ -308,7 +280,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 44
     invoke-direct {p0, p1, p2}, Lcom/android/server/location/FlpHardwareProvider;->nativeResumeGeofence(II)V
 
     return-void
@@ -319,7 +290,6 @@
     .param p0, "x0"    # Lcom/android/server/location/FlpHardwareProvider;
 
     .prologue
-    .line 44
     iget-object v0, p0, Lcom/android/server/location/FlpHardwareProvider;->mLocationSink:Landroid/hardware/location/IFusedLocationHardwareSink;
 
     return-object v0
@@ -336,7 +306,6 @@
     .param p6, "x6"    # I
 
     .prologue
-    .line 44
     invoke-direct/range {p0 .. p6}, Lcom/android/server/location/FlpHardwareProvider;->nativeModifyGeofenceOption(IIIIII)V
 
     return-void
@@ -348,7 +317,6 @@
     .param p1, "x1"    # Landroid/hardware/location/IFusedLocationHardwareSink;
 
     .prologue
-    .line 44
     iput-object p1, p0, Lcom/android/server/location/FlpHardwareProvider;->mLocationSink:Landroid/hardware/location/IFusedLocationHardwareSink;
 
     return-object p1
@@ -360,7 +328,6 @@
     .param p1, "x1"    # Landroid/location/Location;
 
     .prologue
-    .line 44
     invoke-direct {p0, p1}, Lcom/android/server/location/FlpHardwareProvider;->nativeInjectLocation(Landroid/location/Location;)V
 
     return-void
@@ -371,7 +338,6 @@
     .param p0, "x0"    # Lcom/android/server/location/FlpHardwareProvider;
 
     .prologue
-    .line 44
     invoke-direct {p0}, Lcom/android/server/location/FlpHardwareProvider;->maybeSendCapabilities()V
 
     return-void
@@ -382,7 +348,6 @@
     .param p0, "x0"    # Lcom/android/server/location/FlpHardwareProvider;
 
     .prologue
-    .line 44
     invoke-direct {p0}, Lcom/android/server/location/FlpHardwareProvider;->nativeGetBatchSize()I
 
     move-result v0
@@ -397,7 +362,6 @@
     .param p2, "x2"    # Landroid/location/FusedBatchOptions;
 
     .prologue
-    .line 44
     invoke-direct {p0, p1, p2}, Lcom/android/server/location/FlpHardwareProvider;->nativeStartBatching(ILandroid/location/FusedBatchOptions;)V
 
     return-void
@@ -409,7 +373,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 44
     invoke-direct {p0, p1}, Lcom/android/server/location/FlpHardwareProvider;->nativeStopBatching(I)V
 
     return-void
@@ -422,7 +385,6 @@
     .param p2, "x2"    # Landroid/location/FusedBatchOptions;
 
     .prologue
-    .line 44
     invoke-direct {p0, p1, p2}, Lcom/android/server/location/FlpHardwareProvider;->nativeUpdateBatchingOptions(ILandroid/location/FusedBatchOptions;)V
 
     return-void
@@ -434,7 +396,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 44
     invoke-direct {p0, p1}, Lcom/android/server/location/FlpHardwareProvider;->nativeRequestBatchedLocation(I)V
 
     return-void
@@ -445,7 +406,6 @@
     .param p0, "x0"    # Lcom/android/server/location/FlpHardwareProvider;
 
     .prologue
-    .line 44
     invoke-direct {p0}, Lcom/android/server/location/FlpHardwareProvider;->nativeFlushBatchedLocations()V
 
     return-void
@@ -455,12 +415,10 @@
     .locals 2
 
     .prologue
-    .line 500
     iget-object v0, p0, Lcom/android/server/location/FlpHardwareProvider;->mGeofenceHardwareSink:Landroid/hardware/location/GeofenceHardwareImpl;
 
     if-nez v0, :cond_0
 
-    .line 501
     iget-object v0, p0, Lcom/android/server/location/FlpHardwareProvider;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Landroid/hardware/location/GeofenceHardwareImpl;->getInstance(Landroid/content/Context;)Landroid/hardware/location/GeofenceHardwareImpl;
@@ -469,7 +427,6 @@
 
     iput-object v0, p0, Lcom/android/server/location/FlpHardwareProvider;->mGeofenceHardwareSink:Landroid/hardware/location/GeofenceHardwareImpl;
 
-    .line 502
     iget-object v0, p0, Lcom/android/server/location/FlpHardwareProvider;->mGeofenceHardwareSink:Landroid/hardware/location/GeofenceHardwareImpl;
 
     invoke-direct {p0}, Lcom/android/server/location/FlpHardwareProvider;->getVersion()I
@@ -478,7 +435,6 @@
 
     invoke-virtual {v0, v1}, Landroid/hardware/location/GeofenceHardwareImpl;->setVersion(I)V
 
-    .line 505
     :cond_0
     iget-object v0, p0, Lcom/android/server/location/FlpHardwareProvider;->mGeofenceHardwareSink:Landroid/hardware/location/GeofenceHardwareImpl;
 
@@ -490,24 +446,20 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 73
     sget-object v0, Lcom/android/server/location/FlpHardwareProvider;->sSingletonInstance:Lcom/android/server/location/FlpHardwareProvider;
 
     if-nez v0, :cond_0
 
-    .line 74
     new-instance v0, Lcom/android/server/location/FlpHardwareProvider;
 
     invoke-direct {v0, p0}, Lcom/android/server/location/FlpHardwareProvider;-><init>(Landroid/content/Context;)V
 
     sput-object v0, Lcom/android/server/location/FlpHardwareProvider;->sSingletonInstance:Lcom/android/server/location/FlpHardwareProvider;
 
-    .line 75
     sget-object v0, Lcom/android/server/location/FlpHardwareProvider;->sSingletonInstance:Lcom/android/server/location/FlpHardwareProvider;
 
     invoke-direct {v0}, Lcom/android/server/location/FlpHardwareProvider;->nativeInit()V
 
-    .line 78
     :cond_0
     sget-object v0, Lcom/android/server/location/FlpHardwareProvider;->sSingletonInstance:Lcom/android/server/location/FlpHardwareProvider;
 
@@ -518,36 +470,29 @@
     .locals 2
 
     .prologue
-    .line 164
     iget-object v1, p0, Lcom/android/server/location/FlpHardwareProvider;->mLocationSinkLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 165
     :try_start_0
     iget-boolean v0, p0, Lcom/android/server/location/FlpHardwareProvider;->mHaveBatchingCapabilities:Z
 
     if-eqz v0, :cond_0
 
-    .line 166
     iget v0, p0, Lcom/android/server/location/FlpHardwareProvider;->mVersion:I
 
     monitor-exit v1
 
-    .line 169
     :goto_0
     return v0
 
-    .line 168
     :cond_0
     monitor-exit v1
 
-    .line 169
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 168
     :catchall_0
     move-exception v0
 
@@ -562,7 +507,6 @@
     .locals 1
 
     .prologue
-    .line 105
     invoke-static {}, Lcom/android/server/location/FlpHardwareProvider;->nativeIsSupported()Z
 
     move-result v0
@@ -574,46 +518,37 @@
     .locals 6
 
     .prologue
-    .line 183
     iget-object v5, p0, Lcom/android/server/location/FlpHardwareProvider;->mLocationSinkLock:Ljava/lang/Object;
 
     monitor-enter v5
 
-    .line 184
     :try_start_0
     iget-object v3, p0, Lcom/android/server/location/FlpHardwareProvider;->mLocationSink:Landroid/hardware/location/IFusedLocationHardwareSink;
 
-    .line 185
     .local v3, "sink":Landroid/hardware/location/IFusedLocationHardwareSink;
     iget-boolean v2, p0, Lcom/android/server/location/FlpHardwareProvider;->mHaveBatchingCapabilities:Z
 
-    .line 186
     .local v2, "haveBatchingCapabilities":Z
     iget v0, p0, Lcom/android/server/location/FlpHardwareProvider;->mBatchingCapabilities:I
 
-    .line 187
     .local v0, "batchingCapabilities":I
     monitor-exit v5
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 189
     if-eqz v3, :cond_0
 
     if-eqz v2, :cond_0
 
-    .line 190
     :try_start_1
     invoke-interface {v3, v0}, Landroid/hardware/location/IFusedLocationHardwareSink;->onCapabilities(I)V
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 195
     :cond_0
     :goto_0
     return-void
 
-    .line 187
     .end local v0    # "batchingCapabilities":I
     .end local v2    # "haveBatchingCapabilities":Z
     .end local v3    # "sink":Landroid/hardware/location/IFusedLocationHardwareSink;
@@ -627,14 +562,12 @@
 
     throw v4
 
-    .line 192
     .restart local v0    # "batchingCapabilities":I
     .restart local v2    # "haveBatchingCapabilities":Z
     .restart local v3    # "sink":Landroid/hardware/location/IFusedLocationHardwareSink;
     :catch_0
     move-exception v1
 
-    .line 193
     .local v1, "e":Landroid/os/RemoteException;
     const-string v4, "FlpHardwareProvider"
 
@@ -713,34 +646,27 @@
     .param p1, "capabilities"    # I
 
     .prologue
-    .line 133
     iget-object v1, p0, Lcom/android/server/location/FlpHardwareProvider;->mLocationSinkLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 134
     const/4 v0, 0x1
 
     :try_start_0
     iput-boolean v0, p0, Lcom/android/server/location/FlpHardwareProvider;->mHaveBatchingCapabilities:Z
 
-    .line 135
     iput p1, p0, Lcom/android/server/location/FlpHardwareProvider;->mBatchingCapabilities:I
 
-    .line 136
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 138
     invoke-direct {p0}, Lcom/android/server/location/FlpHardwareProvider;->maybeSendCapabilities()V
 
-    .line 140
     iget-object v0, p0, Lcom/android/server/location/FlpHardwareProvider;->mGeofenceHardwareSink:Landroid/hardware/location/GeofenceHardwareImpl;
 
     if-eqz v0, :cond_0
 
-    .line 141
     iget-object v0, p0, Lcom/android/server/location/FlpHardwareProvider;->mGeofenceHardwareSink:Landroid/hardware/location/GeofenceHardwareImpl;
 
     invoke-direct {p0}, Lcom/android/server/location/FlpHardwareProvider;->getVersion()I
@@ -749,11 +675,9 @@
 
     invoke-virtual {v0, v1}, Landroid/hardware/location/GeofenceHardwareImpl;->setVersion(I)V
 
-    .line 143
     :cond_0
     return-void
 
-    .line 136
     :catchall_0
     move-exception v0
 
@@ -770,36 +694,29 @@
     .param p1, "status"    # I
 
     .prologue
-    .line 147
     iget-object v3, p0, Lcom/android/server/location/FlpHardwareProvider;->mLocationSinkLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 148
     :try_start_0
     iget-object v1, p0, Lcom/android/server/location/FlpHardwareProvider;->mLocationSink:Landroid/hardware/location/IFusedLocationHardwareSink;
 
-    .line 149
     .local v1, "sink":Landroid/hardware/location/IFusedLocationHardwareSink;
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 151
     if-eqz v1, :cond_0
 
-    .line 152
     :try_start_1
     invoke-interface {v1, p1}, Landroid/hardware/location/IFusedLocationHardwareSink;->onStatusChanged(I)V
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 157
     :cond_0
     :goto_0
     return-void
 
-    .line 149
     .end local v1    # "sink":Landroid/hardware/location/IFusedLocationHardwareSink;
     :catchall_0
     move-exception v2
@@ -811,12 +728,10 @@
 
     throw v2
 
-    .line 154
     .restart local v1    # "sink":Landroid/hardware/location/IFusedLocationHardwareSink;
     :catch_0
     move-exception v0
 
-    .line 155
     .local v0, "e":Landroid/os/RemoteException;
     const-string v2, "FlpHardwareProvider"
 
@@ -832,38 +747,31 @@
     .param p1, "data"    # Ljava/lang/String;
 
     .prologue
-    .line 200
     iget-object v3, p0, Lcom/android/server/location/FlpHardwareProvider;->mLocationSinkLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 201
     :try_start_0
     iget-object v1, p0, Lcom/android/server/location/FlpHardwareProvider;->mLocationSink:Landroid/hardware/location/IFusedLocationHardwareSink;
 
-    .line 202
     .local v1, "sink":Landroid/hardware/location/IFusedLocationHardwareSink;
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 204
     :try_start_1
     iget-object v2, p0, Lcom/android/server/location/FlpHardwareProvider;->mLocationSink:Landroid/hardware/location/IFusedLocationHardwareSink;
 
     if-eqz v2, :cond_0
 
-    .line 205
     invoke-interface {v1, p1}, Landroid/hardware/location/IFusedLocationHardwareSink;->onDiagnosticDataAvailable(Ljava/lang/String;)V
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 210
     :cond_0
     :goto_0
     return-void
 
-    .line 202
     .end local v1    # "sink":Landroid/hardware/location/IFusedLocationHardwareSink;
     :catchall_0
     move-exception v2
@@ -875,12 +783,10 @@
 
     throw v2
 
-    .line 207
     .restart local v1    # "sink":Landroid/hardware/location/IFusedLocationHardwareSink;
     :catch_0
     move-exception v0
 
-    .line 208
     .local v0, "e":Landroid/os/RemoteException;
     const-string v2, "FlpHardwareProvider"
 
@@ -897,7 +803,6 @@
     .param p2, "result"    # I
 
     .prologue
-    .line 259
     invoke-direct {p0}, Lcom/android/server/location/FlpHardwareProvider;->getGeofenceHardwareSink()Landroid/hardware/location/GeofenceHardwareImpl;
 
     move-result-object v0
@@ -908,7 +813,6 @@
 
     invoke-virtual {v0, p1, v1}, Landroid/hardware/location/GeofenceHardwareImpl;->reportGeofenceAddStatus(II)V
 
-    .line 262
     return-void
 .end method
 
@@ -919,23 +823,18 @@
     .param p3, "location"    # Landroid/location/Location;
 
     .prologue
-    .line 232
     const/4 v1, 0x0
 
-    .line 233
     .local v1, "updatedLocation":Landroid/location/Location;
     if-eqz p3, :cond_0
 
-    .line 234
     invoke-direct {p0, p3}, Lcom/android/server/location/FlpHardwareProvider;->updateLocationInformation(Landroid/location/Location;)Landroid/location/Location;
 
     move-result-object v1
 
-    .line 238
     :cond_0
     packed-switch p1, :pswitch_data_0
 
-    .line 246
     const-string v2, "FlpHardwareProvider"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -958,10 +857,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 247
     const/4 v0, 0x1
 
-    .line 251
     .local v0, "monitorStatus":I
     :goto_0
     invoke-direct {p0}, Lcom/android/server/location/FlpHardwareProvider;->getGeofenceHardwareSink()Landroid/hardware/location/GeofenceHardwareImpl;
@@ -972,28 +869,22 @@
 
     invoke-virtual {v2, v3, v0, v1, p2}, Landroid/hardware/location/GeofenceHardwareImpl;->reportGeofenceMonitorStatus(IILandroid/location/Location;I)V
 
-    .line 256
     return-void
 
-    .line 240
     .end local v0    # "monitorStatus":I
     :pswitch_0
     const/4 v0, 0x1
 
-    .line 241
     .restart local v0    # "monitorStatus":I
     goto :goto_0
 
-    .line 243
     .end local v0    # "monitorStatus":I
     :pswitch_1
     const/4 v0, 0x0
 
-    .line 244
     .restart local v0    # "monitorStatus":I
     goto :goto_0
 
-    .line 238
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -1007,7 +898,6 @@
     .param p2, "result"    # I
 
     .prologue
-    .line 271
     invoke-direct {p0}, Lcom/android/server/location/FlpHardwareProvider;->getGeofenceHardwareSink()Landroid/hardware/location/GeofenceHardwareImpl;
 
     move-result-object v0
@@ -1018,7 +908,6 @@
 
     invoke-virtual {v0, p1, v1}, Landroid/hardware/location/GeofenceHardwareImpl;->reportGeofencePauseStatus(II)V
 
-    .line 274
     return-void
 .end method
 
@@ -1028,7 +917,6 @@
     .param p2, "result"    # I
 
     .prologue
-    .line 265
     invoke-direct {p0}, Lcom/android/server/location/FlpHardwareProvider;->getGeofenceHardwareSink()Landroid/hardware/location/GeofenceHardwareImpl;
 
     move-result-object v0
@@ -1039,7 +927,6 @@
 
     invoke-virtual {v0, p1, v1}, Landroid/hardware/location/GeofenceHardwareImpl;->reportGeofenceRemoveStatus(II)V
 
-    .line 268
     return-void
 .end method
 
@@ -1049,7 +936,6 @@
     .param p2, "result"    # I
 
     .prologue
-    .line 277
     invoke-direct {p0}, Lcom/android/server/location/FlpHardwareProvider;->getGeofenceHardwareSink()Landroid/hardware/location/GeofenceHardwareImpl;
 
     move-result-object v0
@@ -1060,7 +946,6 @@
 
     invoke-virtual {v0, p1, v1}, Landroid/hardware/location/GeofenceHardwareImpl;->reportGeofenceResumeStatus(II)V
 
-    .line 280
     return-void
 .end method
 
@@ -1073,7 +958,6 @@
     .param p6, "sourcesUsed"    # I
 
     .prologue
-    .line 221
     invoke-direct {p0}, Lcom/android/server/location/FlpHardwareProvider;->getGeofenceHardwareSink()Landroid/hardware/location/GeofenceHardwareImpl;
 
     move-result-object v0
@@ -1094,7 +978,6 @@
 
     invoke-virtual/range {v0 .. v7}, Landroid/hardware/location/GeofenceHardwareImpl;->reportGeofenceTransition(ILandroid/location/Location;IJII)V
 
-    .line 228
     return-void
 .end method
 
@@ -1103,14 +986,12 @@
     .param p1, "capabilities"    # I
 
     .prologue
-    .line 283
     invoke-direct {p0}, Lcom/android/server/location/FlpHardwareProvider;->getGeofenceHardwareSink()Landroid/hardware/location/GeofenceHardwareImpl;
 
     move-result-object v0
 
     invoke-virtual {v0, p1}, Landroid/hardware/location/GeofenceHardwareImpl;->onCapabilities(I)V
 
-    .line 284
     return-void
 .end method
 
@@ -1119,7 +1000,6 @@
     .param p1, "locations"    # [Landroid/location/Location;
 
     .prologue
-    .line 113
     move-object v0, p1
 
     .local v0, "arr$":[Landroid/location/Location;
@@ -1134,56 +1014,46 @@
 
     aget-object v4, v0, v2
 
-    .line 114
     .local v4, "location":Landroid/location/Location;
     const-string v6, "fused"
 
     invoke-virtual {v4, v6}, Landroid/location/Location;->setProvider(Ljava/lang/String;)V
 
-    .line 116
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
 
     move-result-wide v6
 
     invoke-virtual {v4, v6, v7}, Landroid/location/Location;->setElapsedRealtimeNanos(J)V
 
-    .line 113
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 120
     .end local v4    # "location":Landroid/location/Location;
     :cond_0
     iget-object v7, p0, Lcom/android/server/location/FlpHardwareProvider;->mLocationSinkLock:Ljava/lang/Object;
 
     monitor-enter v7
 
-    .line 121
     :try_start_0
     iget-object v5, p0, Lcom/android/server/location/FlpHardwareProvider;->mLocationSink:Landroid/hardware/location/IFusedLocationHardwareSink;
 
-    .line 122
     .local v5, "sink":Landroid/hardware/location/IFusedLocationHardwareSink;
     monitor-exit v7
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 124
     if-eqz v5, :cond_1
 
-    .line 125
     :try_start_1
     invoke-interface {v5, p1}, Landroid/hardware/location/IFusedLocationHardwareSink;->onLocationAvailable([Landroid/location/Location;)V
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 130
     :cond_1
     :goto_1
     return-void
 
-    .line 122
     .end local v5    # "sink":Landroid/hardware/location/IFusedLocationHardwareSink;
     :catchall_0
     move-exception v6
@@ -1195,12 +1065,10 @@
 
     throw v6
 
-    .line 127
     .restart local v5    # "sink":Landroid/hardware/location/IFusedLocationHardwareSink;
     :catch_0
     move-exception v1
 
-    .line 128
     .local v1, "e":Landroid/os/RemoteException;
     const-string v6, "FlpHardwareProvider"
 
@@ -1216,15 +1084,12 @@
     .param p1, "version"    # I
 
     .prologue
-    .line 173
     iput p1, p0, Lcom/android/server/location/FlpHardwareProvider;->mVersion:I
 
-    .line 174
     iget-object v0, p0, Lcom/android/server/location/FlpHardwareProvider;->mGeofenceHardwareSink:Landroid/hardware/location/GeofenceHardwareImpl;
 
     if-eqz v0, :cond_0
 
-    .line 175
     iget-object v0, p0, Lcom/android/server/location/FlpHardwareProvider;->mGeofenceHardwareSink:Landroid/hardware/location/GeofenceHardwareImpl;
 
     invoke-direct {p0}, Lcom/android/server/location/FlpHardwareProvider;->getVersion()I
@@ -1233,7 +1098,6 @@
 
     invoke-virtual {v0, v1}, Landroid/hardware/location/GeofenceHardwareImpl;->setVersion(I)V
 
-    .line 177
     :cond_0
     return-void
 .end method
@@ -1249,10 +1113,8 @@
 
     const/4 v0, 0x0
 
-    .line 509
     packed-switch p0, :pswitch_data_0
 
-    .line 525
     const-string v3, "FlpHardwareProvider"
 
     const-string v4, "Invalid FlpHal result code: %d"
@@ -1273,7 +1135,6 @@
 
     move v0, v1
 
-    .line 526
     :goto_0
     :pswitch_0
     return v0
@@ -1281,10 +1142,8 @@
     :pswitch_1
     move v0, v1
 
-    .line 513
     goto :goto_0
 
-    .line 515
     :pswitch_2
     const/4 v0, 0x6
 
@@ -1293,28 +1152,23 @@
     :pswitch_3
     move v0, v2
 
-    .line 517
     goto :goto_0
 
-    .line 519
     :pswitch_4
     const/4 v0, 0x2
 
     goto :goto_0
 
-    .line 521
     :pswitch_5
     const/4 v0, 0x3
 
     goto :goto_0
 
-    .line 523
     :pswitch_6
     const/4 v0, 0x4
 
     goto :goto_0
 
-    .line 509
     nop
 
     :pswitch_data_0
@@ -1334,19 +1188,16 @@
     .param p1, "location"    # Landroid/location/Location;
 
     .prologue
-    .line 531
     const-string v0, "fused"
 
     invoke-virtual {p1, v0}, Landroid/location/Location;->setProvider(Ljava/lang/String;)V
 
-    .line 533
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
 
     move-result-wide v0
 
     invoke-virtual {p1, v0, v1}, Landroid/location/Location;->setElapsedRealtimeNanos(J)V
 
-    .line 534
     return-object p1
 .end method
 
@@ -1356,7 +1207,6 @@
     .locals 1
 
     .prologue
-    .line 341
     iget-object v0, p0, Lcom/android/server/location/FlpHardwareProvider;->mGeofenceHardwareService:Landroid/location/IFusedGeofenceHardware;
 
     return-object v0
@@ -1366,7 +1216,6 @@
     .locals 1
 
     .prologue
-    .line 337
     iget-object v0, p0, Lcom/android/server/location/FlpHardwareProvider;->mLocationHardware:Landroid/hardware/location/IFusedLocationHardware;
 
     return-object v0

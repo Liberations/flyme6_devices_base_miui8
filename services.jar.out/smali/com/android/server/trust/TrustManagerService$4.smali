@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 834
     iput-object p1, p0, Lcom/android/server/trust/TrustManagerService$4;->this$0:Lcom/android/server/trust/TrustManagerService;
 
     invoke-direct {p0}, Lcom/android/internal/widget/LockPatternUtils$StrongAuthTracker;-><init>()V
@@ -38,11 +37,9 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 837
     iget-object v0, p0, Lcom/android/server/trust/TrustManagerService$4;->this$0:Lcom/android/server/trust/TrustManagerService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/trust/TrustManagerService;->refreshAgentList(I)V
 
-    .line 838
     return-void
 .end method

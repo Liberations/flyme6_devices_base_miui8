@@ -39,17 +39,14 @@
     .locals 1
 
     .prologue
-    .line 110
     iput-object p1, p0, Lcom/android/server/connectivity/NetworkDiagnostics$Measurement;->this$0:Lcom/android/server/connectivity/NetworkDiagnostics;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 115
     const-string v0, ""
 
     iput-object v0, p0, Lcom/android/server/connectivity/NetworkDiagnostics$Measurement;->description:Ljava/lang/String;
 
-    .line 118
     const-string v0, ""
 
     iput-object v0, p0, Lcom/android/server/connectivity/NetworkDiagnostics$Measurement;->result:Ljava/lang/String;
@@ -63,7 +60,6 @@
     .param p2, "x1"    # Lcom/android/server/connectivity/NetworkDiagnostics$1;
 
     .prologue
-    .line 110
     invoke-direct {p0, p1}, Lcom/android/server/connectivity/NetworkDiagnostics$Measurement;-><init>(Lcom/android/server/connectivity/NetworkDiagnostics;)V
 
     return-void
@@ -75,7 +71,6 @@
     .prologue
     const-wide/16 v2, 0x0
 
-    .line 140
     iget-wide v0, p0, Lcom/android/server/connectivity/NetworkDiagnostics$Measurement;->finishTime:J
 
     cmp-long v0, v0, v2
@@ -89,7 +84,6 @@
 
     iput-wide v0, p0, Lcom/android/server/connectivity/NetworkDiagnostics$Measurement;->finishTime:J
 
-    .line 144
     :cond_0
     iget-wide v0, p0, Lcom/android/server/connectivity/NetworkDiagnostics$Measurement;->startTime:J
 
@@ -101,7 +95,6 @@
 
     iput-wide v0, p0, Lcom/android/server/connectivity/NetworkDiagnostics$Measurement;->startTime:J
 
-    .line 145
     :cond_1
     return-void
 .end method
@@ -113,10 +106,8 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 130
     invoke-direct {p0}, Lcom/android/server/connectivity/NetworkDiagnostics$Measurement;->maybeFixupTimes()V
 
-    .line 131
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -137,7 +128,6 @@
 
     iput-object v0, p0, Lcom/android/server/connectivity/NetworkDiagnostics$Measurement;->result:Ljava/lang/String;
 
-    .line 132
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkDiagnostics$Measurement;->this$0:Lcom/android/server/connectivity/NetworkDiagnostics;
 
     # getter for: Lcom/android/server/connectivity/NetworkDiagnostics;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
@@ -147,7 +137,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 133
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkDiagnostics$Measurement;->this$0:Lcom/android/server/connectivity/NetworkDiagnostics;
 
     # getter for: Lcom/android/server/connectivity/NetworkDiagnostics;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
@@ -157,7 +146,6 @@
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
-    .line 135
     :cond_0
     return-void
 .end method
@@ -167,10 +155,8 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 122
     invoke-direct {p0}, Lcom/android/server/connectivity/NetworkDiagnostics$Measurement;->maybeFixupTimes()V
 
-    .line 123
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -191,7 +177,6 @@
 
     iput-object v0, p0, Lcom/android/server/connectivity/NetworkDiagnostics$Measurement;->result:Ljava/lang/String;
 
-    .line 124
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkDiagnostics$Measurement;->this$0:Lcom/android/server/connectivity/NetworkDiagnostics;
 
     # getter for: Lcom/android/server/connectivity/NetworkDiagnostics;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
@@ -201,7 +186,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 125
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkDiagnostics$Measurement;->this$0:Lcom/android/server/connectivity/NetworkDiagnostics;
 
     # getter for: Lcom/android/server/connectivity/NetworkDiagnostics;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
@@ -211,7 +195,6 @@
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
-    .line 127
     :cond_0
     return-void
 .end method
@@ -220,7 +203,6 @@
     .locals 6
 
     .prologue
-    .line 149
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

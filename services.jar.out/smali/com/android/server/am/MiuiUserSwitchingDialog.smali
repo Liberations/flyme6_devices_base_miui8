@@ -33,23 +33,18 @@
     .param p3, "userId"    # I
 
     .prologue
-    .line 33
     invoke-direct {p0, p2}, Lmiui/app/AlertDialog;-><init>(Landroid/content/Context;)V
 
-    .line 92
     new-instance v0, Lcom/android/server/am/MiuiUserSwitchingDialog$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/am/MiuiUserSwitchingDialog$1;-><init>(Lcom/android/server/am/MiuiUserSwitchingDialog;)V
 
     iput-object v0, p0, Lcom/android/server/am/MiuiUserSwitchingDialog;->mHandler:Landroid/os/Handler;
 
-    .line 34
     iput-object p1, p0, Lcom/android/server/am/MiuiUserSwitchingDialog;->mService:Lcom/android/server/am/ActivityManagerService;
 
-    .line 35
     iput p3, p0, Lcom/android/server/am/MiuiUserSwitchingDialog;->mUserId:I
 
-    .line 36
     return-void
 .end method
 
@@ -61,25 +56,20 @@
     .param p4, "withTheme"    # Z
 
     .prologue
-    .line 39
     const v0, 0x110c000a
 
     invoke-direct {p0, p2, v0}, Lmiui/app/AlertDialog;-><init>(Landroid/content/Context;I)V
 
-    .line 92
     new-instance v0, Lcom/android/server/am/MiuiUserSwitchingDialog$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/am/MiuiUserSwitchingDialog$1;-><init>(Lcom/android/server/am/MiuiUserSwitchingDialog;)V
 
     iput-object v0, p0, Lcom/android/server/am/MiuiUserSwitchingDialog;->mHandler:Landroid/os/Handler;
 
-    .line 40
     iput-object p1, p0, Lcom/android/server/am/MiuiUserSwitchingDialog;->mService:Lcom/android/server/am/ActivityManagerService;
 
-    .line 41
     iput p3, p0, Lcom/android/server/am/MiuiUserSwitchingDialog;->mUserId:I
 
-    .line 42
     return-void
 .end method
 
@@ -92,7 +82,6 @@
     .prologue
     const/4 v9, 0x0
 
-    .line 46
     invoke-virtual {p0}, Lcom/android/server/am/MiuiUserSwitchingDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v5
@@ -101,7 +90,6 @@
 
     invoke-virtual {v5, v6}, Landroid/view/Window;->setType(I)V
 
-    .line 47
     invoke-virtual {p0}, Lcom/android/server/am/MiuiUserSwitchingDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v5
@@ -110,20 +98,17 @@
 
     move-result-object v1
 
-    .line 48
     .local v1, "attrs":Landroid/view/WindowManager$LayoutParams;
     const/16 v5, 0x110
 
     iput v5, v1, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
 
-    .line 50
     invoke-virtual {p0}, Lcom/android/server/am/MiuiUserSwitchingDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v5
 
     invoke-virtual {v5, v1}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
 
-    .line 51
     invoke-virtual {p0}, Lcom/android/server/am/MiuiUserSwitchingDialog;->getContext()Landroid/content/Context;
 
     move-result-object v5
@@ -132,7 +117,6 @@
 
     move-result-object v2
 
-    .line 52
     .local v2, "inflater":Landroid/view/LayoutInflater;
     invoke-virtual {p0}, Lcom/android/server/am/MiuiUserSwitchingDialog;->getContext()Landroid/content/Context;
 
@@ -148,7 +132,6 @@
 
     move-result-object v0
 
-    .line 55
     .local v0, "a":Landroid/content/res/TypedArray;
     sget v5, Lcom/miui/internal/R$styleable;->AlertDialog_progressLayout:I
 
@@ -162,7 +145,6 @@
 
     move-result-object v4
 
-    .line 58
     .local v4, "view":Landroid/view/View;
     sget v5, Lmiui/R$id;->message:I
 
@@ -174,23 +156,19 @@
 
     iput-object v5, p0, Lcom/android/server/am/MiuiUserSwitchingDialog;->mMessageView:Landroid/widget/TextView;
 
-    .line 59
     const v5, 0x102000d
 
     invoke-virtual {v4, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
-    .line 60
     .local v3, "mProgress":Landroid/view/View;
     const/16 v5, 0x8
 
     invoke-virtual {v3, v5}, Landroid/view/View;->setVisibility(I)V
 
-    .line 61
     invoke-virtual {p0, v4}, Lcom/android/server/am/MiuiUserSwitchingDialog;->setView(Landroid/view/View;)V
 
-    .line 62
     invoke-virtual {p0}, Lcom/android/server/am/MiuiUserSwitchingDialog;->getContext()Landroid/content/Context;
 
     move-result-object v5
@@ -203,10 +181,8 @@
 
     invoke-virtual {p0, v5}, Lcom/android/server/am/MiuiUserSwitchingDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    .line 63
     invoke-super {p0, p1}, Lmiui/app/AlertDialog;->onCreate(Landroid/os/Bundle;)V
 
-    .line 64
     return-void
 .end method
 
@@ -215,12 +191,10 @@
     .param p1, "message"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 78
     iget-object v0, p0, Lcom/android/server/am/MiuiUserSwitchingDialog;->mMessageView:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 79
     return-void
 .end method
 
@@ -228,15 +202,12 @@
     .locals 4
 
     .prologue
-    .line 68
     invoke-super {p0}, Lmiui/app/AlertDialog;->show()V
 
-    .line 69
     iget-object v0, p0, Lcom/android/server/am/MiuiUserSwitchingDialog;->mHandler:Landroid/os/Handler;
 
     invoke-static {v0, p0}, Lcom/android/server/am/UserSwitchingDialogInjector;->switchUser(Landroid/os/Handler;Lcom/android/server/am/MiuiUserSwitchingDialog;)V
 
-    .line 72
     iget-object v0, p0, Lcom/android/server/am/MiuiUserSwitchingDialog;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/android/server/am/MiuiUserSwitchingDialog;->mHandler:Landroid/os/Handler;
@@ -251,7 +222,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 74
     return-void
 .end method
 
@@ -259,45 +229,36 @@
     .locals 2
 
     .prologue
-    .line 82
     monitor-enter p0
 
-    .line 83
     :try_start_0
     iget-boolean v0, p0, Lcom/android/server/am/MiuiUserSwitchingDialog;->mStartedUser:Z
 
     if-nez v0, :cond_0
 
-    .line 84
     iget-object v0, p0, Lcom/android/server/am/MiuiUserSwitchingDialog;->mService:Lcom/android/server/am/ActivityManagerService;
 
     iget v1, p0, Lcom/android/server/am/MiuiUserSwitchingDialog;->mUserId:I
 
     invoke-static {v0, v1, p0}, Lcom/android/server/am/UserSwitchingDialogInjector;->startUserInForeground(Lcom/android/server/am/ActivityManagerService;ILandroid/app/Dialog;)V
 
-    .line 85
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/am/MiuiUserSwitchingDialog;->mStartedUser:Z
 
-    .line 86
     invoke-static {p0}, Lcom/android/server/am/UserSwitchingDialogInjector;->finishSwitchUser(Landroid/app/Dialog;)V
 
-    .line 87
     iget-object v0, p0, Lcom/android/server/am/MiuiUserSwitchingDialog;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 89
     :cond_0
     monitor-exit p0
 
-    .line 90
     return-void
 
-    .line 89
     :catchall_0
     move-exception v0
 

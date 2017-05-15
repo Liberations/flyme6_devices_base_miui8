@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 132
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -35,7 +34,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 136
     const-string v2, "wifi"
 
     invoke-virtual {p1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -44,7 +42,6 @@
 
     check-cast v1, Landroid/net/wifi/WifiManager;
 
-    .line 137
     .local v1, "wm":Landroid/net/wifi/WifiManager;
     if-eqz v1, :cond_0
 
@@ -54,12 +51,10 @@
 
     if-eqz v2, :cond_0
 
-    .line 138
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2, v3}, Landroid/net/wifi/WifiManager;->setWifiApEnabled(Landroid/net/wifi/WifiConfiguration;Z)Z
 
-    .line 141
     :cond_0
     # getter for: Lcom/android/server/connectivity/TetheringInjector;->sBluetoothPan:Ljava/util/concurrent/atomic/AtomicReference;
     invoke-static {}, Lcom/android/server/connectivity/TetheringInjector;->access$000()Ljava/util/concurrent/atomic/AtomicReference;
@@ -89,7 +84,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 142
     # getter for: Lcom/android/server/connectivity/TetheringInjector;->sBluetoothPan:Ljava/util/concurrent/atomic/AtomicReference;
     invoke-static {}, Lcom/android/server/connectivity/TetheringInjector;->access$000()Ljava/util/concurrent/atomic/AtomicReference;
 
@@ -103,7 +97,6 @@
 
     invoke-virtual {v2, v3}, Landroid/bluetooth/BluetoothPan;->setBluetoothTethering(Z)V
 
-    .line 145
     :cond_1
     const-string v2, "connectivity"
 
@@ -113,14 +106,11 @@
 
     check-cast v0, Landroid/net/ConnectivityManager;
 
-    .line 147
     .local v0, "cm":Landroid/net/ConnectivityManager;
     if-eqz v0, :cond_2
 
-    .line 148
     invoke-virtual {v0, v3}, Landroid/net/ConnectivityManager;->setUsbTethering(Z)I
 
-    .line 150
     :cond_2
     return-void
 .end method

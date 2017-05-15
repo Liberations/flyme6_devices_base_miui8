@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 111
     invoke-direct {p0}, Landroid/view/IRotationWatcher$Stub;-><init>()V
 
     return-void
@@ -32,19 +31,16 @@
     .param p1, "rotation"    # I
 
     .prologue
-    .line 113
     invoke-static {}, Lmiui/util/HandyModeUtils;->isFeatureVisible()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 121
     :cond_0
     :goto_0
     return-void
 
-    .line 114
     :cond_1
     if-eqz p1, :cond_0
 
@@ -55,7 +51,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 115
     sget-object v0, Lcom/android/server/HandyMode;->sHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/HandyMode$RotationWatcher$1;

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 307
     iput-object p1, p0, Lcom/android/server/GestureLauncherService$1;->this$0:Lcom/android/server/GestureLauncherService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 310
     const-string v0, "android.intent.action.USER_SWITCHED"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -52,7 +50,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 311
     iget-object v0, p0, Lcom/android/server/GestureLauncherService$1;->this$0:Lcom/android/server/GestureLauncherService;
 
     const-string v1, "android.intent.extra.user_handle"
@@ -66,7 +63,6 @@
     # setter for: Lcom/android/server/GestureLauncherService;->mUserId:I
     invoke-static {v0, v1}, Lcom/android/server/GestureLauncherService;->access$102(Lcom/android/server/GestureLauncherService;I)I
 
-    .line 312
     iget-object v0, p0, Lcom/android/server/GestureLauncherService$1;->this$0:Lcom/android/server/GestureLauncherService;
 
     # getter for: Lcom/android/server/GestureLauncherService;->mContext:Landroid/content/Context;
@@ -87,25 +83,21 @@
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
-    .line 313
     iget-object v0, p0, Lcom/android/server/GestureLauncherService$1;->this$0:Lcom/android/server/GestureLauncherService;
 
     # invokes: Lcom/android/server/GestureLauncherService;->registerContentObservers()V
     invoke-static {v0}, Lcom/android/server/GestureLauncherService;->access$400(Lcom/android/server/GestureLauncherService;)V
 
-    .line 314
     iget-object v0, p0, Lcom/android/server/GestureLauncherService$1;->this$0:Lcom/android/server/GestureLauncherService;
 
     # invokes: Lcom/android/server/GestureLauncherService;->updateCameraRegistered()V
     invoke-static {v0}, Lcom/android/server/GestureLauncherService;->access$500(Lcom/android/server/GestureLauncherService;)V
 
-    .line 315
     iget-object v0, p0, Lcom/android/server/GestureLauncherService$1;->this$0:Lcom/android/server/GestureLauncherService;
 
     # invokes: Lcom/android/server/GestureLauncherService;->updateCameraDoubleTapPowerEnabled()V
     invoke-static {v0}, Lcom/android/server/GestureLauncherService;->access$600(Lcom/android/server/GestureLauncherService;)V
 
-    .line 317
     :cond_0
     return-void
 .end method

@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 257
     iput-object p1, p0, Landroid/net/dhcp/DhcpClient$1;->this$0:Landroid/net/dhcp/DhcpClient;
 
     iput p2, p0, Landroid/net/dhcp/DhcpClient$1;->val$cmd:I
@@ -43,13 +42,11 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 260
     iget-object v0, p0, Landroid/net/dhcp/DhcpClient$1;->this$0:Landroid/net/dhcp/DhcpClient;
 
     iget v1, p0, Landroid/net/dhcp/DhcpClient$1;->val$cmd:I
 
     invoke-virtual {v0, v1}, Landroid/net/dhcp/DhcpClient;->sendMessage(I)V
 
-    .line 261
     return-void
 .end method

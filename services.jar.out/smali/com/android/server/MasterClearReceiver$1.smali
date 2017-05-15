@@ -28,7 +28,6 @@
     .param p2, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 55
     iput-object p1, p0, Lcom/android/server/MasterClearReceiver$1;->this$0:Lcom/android/server/MasterClearReceiver;
 
     iput-object p3, p0, Lcom/android/server/MasterClearReceiver$1;->val$context:Landroid/content/Context;
@@ -46,7 +45,6 @@
     .locals 5
 
     .prologue
-    .line 61
     :try_start_0
     iget-object v1, p0, Lcom/android/server/MasterClearReceiver$1;->val$context:Landroid/content/Context;
 
@@ -62,7 +60,6 @@
 
     invoke-static {v1, v2}, Lcom/android/server/MasterClearReceiverInjector;->rebootFactoryReset(Landroid/content/Context;Z)V
 
-    .line 62
     const-string v1, "MasterClear"
 
     const-string v2, "Still running after master clear?!"
@@ -72,15 +69,12 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 68
     :goto_0
     return-void
 
-    .line 63
     :catch_0
     move-exception v0
 
-    .line 64
     .local v0, "e":Ljava/io/IOException;
     const-string v1, "MasterClear"
 
@@ -90,12 +84,10 @@
 
     goto :goto_0
 
-    .line 65
     .end local v0    # "e":Ljava/io/IOException;
     :catch_1
     move-exception v0
 
-    .line 66
     .local v0, "e":Ljava/lang/SecurityException;
     const-string v1, "MasterClear"
 

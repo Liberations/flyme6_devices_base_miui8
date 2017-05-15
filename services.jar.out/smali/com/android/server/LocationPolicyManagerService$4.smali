@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 295
     iput-object p1, p0, Lcom/android/server/LocationPolicyManagerService$4;->this$0:Lcom/android/server/LocationPolicyManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,22 +40,18 @@
     .prologue
     const/4 v2, -0x1
 
-    .line 300
     const-string v1, "android.intent.extra.UID"
 
     invoke-virtual {p2, v1, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 301
     .local v0, "uid":I
     if-ne v0, v2, :cond_0
 
-    .line 310
     :goto_0
     return-void
 
-    .line 304
     :cond_0
     const-string v1, "LocationPolicy"
 
@@ -80,7 +75,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 305
     iget-object v1, p0, Lcom/android/server/LocationPolicyManagerService$4;->this$0:Lcom/android/server/LocationPolicyManagerService;
 
     # getter for: Lcom/android/server/LocationPolicyManagerService;->mRulesLock:Ljava/lang/Object;
@@ -90,7 +84,6 @@
 
     monitor-enter v2
 
-    .line 306
     :try_start_0
     iget-object v1, p0, Lcom/android/server/LocationPolicyManagerService$4;->this$0:Lcom/android/server/LocationPolicyManagerService;
 
@@ -101,19 +94,16 @@
 
     invoke-virtual {v1, v0}, Landroid/util/SparseIntArray;->delete(I)V
 
-    .line 307
     iget-object v1, p0, Lcom/android/server/LocationPolicyManagerService$4;->this$0:Lcom/android/server/LocationPolicyManagerService;
 
     # invokes: Lcom/android/server/LocationPolicyManagerService;->updateRulesForUidLocked(I)V
     invoke-static {v1, v0}, Lcom/android/server/LocationPolicyManagerService;->access$100(Lcom/android/server/LocationPolicyManagerService;I)V
 
-    .line 308
     iget-object v1, p0, Lcom/android/server/LocationPolicyManagerService$4;->this$0:Lcom/android/server/LocationPolicyManagerService;
 
     # invokes: Lcom/android/server/LocationPolicyManagerService;->writePolicyLocked()V
     invoke-static {v1}, Lcom/android/server/LocationPolicyManagerService;->access$600(Lcom/android/server/LocationPolicyManagerService;)V
 
-    .line 309
     monitor-exit v2
 
     goto :goto_0

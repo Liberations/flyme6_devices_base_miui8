@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 580
     iput-object p1, p0, Lcom/miui/server/PerfShielderService$4;->this$0:Lcom/miui/server/PerfShielderService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,14 +39,12 @@
     .locals 4
 
     .prologue
-    .line 583
     const-string v0, "PerfShielderService"
 
     const-string v1, "Miui performance service binderDied!"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 584
     iget-object v0, p0, Lcom/miui/server/PerfShielderService$4;->this$0:Lcom/miui/server/PerfShielderService;
 
     const-wide/32 v2, 0x493e0
@@ -55,6 +52,5 @@
     # invokes: Lcom/miui/server/PerfShielderService;->sendRebindServiceMsg(J)V
     invoke-static {v0, v2, v3}, Lcom/miui/server/PerfShielderService;->access$700(Lcom/miui/server/PerfShielderService;J)V
 
-    .line 585
     return-void
 .end method

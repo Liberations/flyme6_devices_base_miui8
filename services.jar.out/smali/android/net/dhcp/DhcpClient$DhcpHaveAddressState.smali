@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 830
     iput-object p1, p0, Landroid/net/dhcp/DhcpClient$DhcpHaveAddressState;->this$0:Landroid/net/dhcp/DhcpClient;
 
     invoke-direct {p0, p1}, Landroid/net/dhcp/DhcpClient$LoggingState;-><init>(Landroid/net/dhcp/DhcpClient;)V
@@ -37,10 +36,8 @@
     .locals 2
 
     .prologue
-    .line 833
     invoke-super {p0}, Landroid/net/dhcp/DhcpClient$LoggingState;->enter()V
 
-    .line 834
     iget-object v0, p0, Landroid/net/dhcp/DhcpClient$DhcpHaveAddressState;->this$0:Landroid/net/dhcp/DhcpClient;
 
     iget-object v1, p0, Landroid/net/dhcp/DhcpClient$DhcpHaveAddressState;->this$0:Landroid/net/dhcp/DhcpClient;
@@ -88,14 +85,12 @@
 
     if-nez v0, :cond_1
 
-    .line 837
     :cond_0
     iget-object v0, p0, Landroid/net/dhcp/DhcpClient$DhcpHaveAddressState;->this$0:Landroid/net/dhcp/DhcpClient;
 
     # invokes: Landroid/net/dhcp/DhcpClient;->notifyFailure()V
     invoke-static {v0}, Landroid/net/dhcp/DhcpClient;->access$1500(Landroid/net/dhcp/DhcpClient;)V
 
-    .line 840
     iget-object v0, p0, Landroid/net/dhcp/DhcpClient$DhcpHaveAddressState;->this$0:Landroid/net/dhcp/DhcpClient;
 
     iget-object v1, p0, Landroid/net/dhcp/DhcpClient$DhcpHaveAddressState;->this$0:Landroid/net/dhcp/DhcpClient;
@@ -108,7 +103,6 @@
     # invokes: Landroid/net/dhcp/DhcpClient;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v0, v1}, Landroid/net/dhcp/DhcpClient;->access$3700(Landroid/net/dhcp/DhcpClient;Lcom/android/internal/util/IState;)V
 
-    .line 842
     :cond_1
     return-void
 .end method
@@ -117,7 +111,6 @@
     .locals 3
 
     .prologue
-    .line 846
     iget-object v0, p0, Landroid/net/dhcp/DhcpClient$DhcpHaveAddressState;->this$0:Landroid/net/dhcp/DhcpClient;
 
     const-string v1, "Clearing IP address"
@@ -125,7 +118,6 @@
     # invokes: Landroid/net/dhcp/DhcpClient;->maybeLog(Ljava/lang/String;)V
     invoke-static {v0, v1}, Landroid/net/dhcp/DhcpClient;->access$100(Landroid/net/dhcp/DhcpClient;Ljava/lang/String;)V
 
-    .line 847
     iget-object v0, p0, Landroid/net/dhcp/DhcpClient$DhcpHaveAddressState;->this$0:Landroid/net/dhcp/DhcpClient;
 
     new-instance v1, Landroid/net/LinkAddress;
@@ -137,6 +129,5 @@
     # invokes: Landroid/net/dhcp/DhcpClient;->setIpAddress(Landroid/net/LinkAddress;)Z
     invoke-static {v0, v1}, Landroid/net/dhcp/DhcpClient;->access$3500(Landroid/net/dhcp/DhcpClient;Landroid/net/LinkAddress;)Z
 
-    .line 848
     return-void
 .end method

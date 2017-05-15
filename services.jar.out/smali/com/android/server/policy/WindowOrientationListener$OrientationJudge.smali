@@ -34,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 243
     iput-object p1, p0, Lcom/android/server/policy/WindowOrientationListener$OrientationJudge;->this$0:Lcom/android/server/policy/WindowOrientationListener;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

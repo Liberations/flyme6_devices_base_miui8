@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 300
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerServiceInjector$1;->val$ams:Lcom/android/server/am/ActivityManagerService;
 
     iput p2, p0, Lcom/android/server/am/ActivityManagerServiceInjector$1;->val$userId:I
@@ -44,7 +43,6 @@
     .locals 4
 
     .prologue
-    .line 302
     new-instance v0, Lcom/android/server/am/MiuiUserSwitchingDialog;
 
     iget-object v1, p0, Lcom/android/server/am/ActivityManagerServiceInjector$1;->val$ams:Lcom/android/server/am/ActivityManagerService;
@@ -59,6 +57,5 @@
 
     invoke-virtual {v0}, Lcom/android/server/am/MiuiUserSwitchingDialog;->show()V
 
-    .line 303
     return-void
 .end method

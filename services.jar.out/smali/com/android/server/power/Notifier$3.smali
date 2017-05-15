@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 373
     iput-object p1, p0, Lcom/android/server/power/Notifier$3;->this$0:Lcom/android/server/power/Notifier;
 
     iput p2, p0, Lcom/android/server/power/Notifier$3;->val$why:I
@@ -44,7 +43,6 @@
     .locals 2
 
     .prologue
-    .line 376
     iget-object v0, p0, Lcom/android/server/power/Notifier$3;->this$0:Lcom/android/server/power/Notifier;
 
     # getter for: Lcom/android/server/power/Notifier;->mPolicy:Landroid/view/WindowManagerPolicy;
@@ -56,6 +54,5 @@
 
     invoke-interface {v0, v1}, Landroid/view/WindowManagerPolicy;->startedGoingToSleep(I)V
 
-    .line 377
     return-void
 .end method

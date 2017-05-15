@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 582
     iput-object p1, p0, Lcom/android/server/InputMethodManagerService$ImmsBroadcastReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -43,12 +42,10 @@
 
     const/4 v6, 0x1
 
-    .line 585
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 586
     .local v0, "action":Ljava/lang/String;
     const-string v4, "android.intent.action.CLOSE_SYSTEM_DIALOGS"
 
@@ -58,17 +55,14 @@
 
     if-eqz v4, :cond_1
 
-    .line 587
     iget-object v4, p0, Lcom/android/server/InputMethodManagerService$ImmsBroadcastReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     invoke-virtual {v4}, Lcom/android/server/InputMethodManagerService;->hideInputMethodMenu()V
 
-    .line 620
     :cond_0
     :goto_0
     return-void
 
-    .line 590
     :cond_1
     const-string v4, "android.intent.action.USER_ADDED"
 
@@ -86,7 +80,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 592
     :cond_2
     iget-object v4, p0, Lcom/android/server/InputMethodManagerService$ImmsBroadcastReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
@@ -94,7 +87,6 @@
 
     goto :goto_0
 
-    .line 594
     :cond_3
     const-string v4, "android.os.action.SETTING_RESTORED"
 
@@ -104,14 +96,12 @@
 
     if-eqz v4, :cond_4
 
-    .line 595
     const-string v4, "setting_name"
 
     invoke-virtual {p2, v4}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 596
     .local v1, "name":Ljava/lang/String;
     const-string v4, "enabled_input_methods"
 
@@ -121,14 +111,12 @@
 
     if-eqz v4, :cond_0
 
-    .line 597
     const-string v4, "previous_value"
 
     invoke-virtual {p2, v4}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 599
     .local v3, "prevValue":Ljava/lang/String;
     const-string v4, "new_value"
 
@@ -136,7 +124,6 @@
 
     move-result-object v2
 
-    .line 601
     .local v2, "newValue":Ljava/lang/String;
     iget-object v4, p0, Lcom/android/server/InputMethodManagerService$ImmsBroadcastReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
@@ -146,7 +133,6 @@
 
     goto :goto_0
 
-    .line 603
     .end local v1    # "name":Ljava/lang/String;
     .end local v2    # "newValue":Ljava/lang/String;
     .end local v3    # "prevValue":Ljava/lang/String;
@@ -165,7 +151,6 @@
 
     if-eqz v4, :cond_5
 
-    .line 605
     iget-object v4, p0, Lcom/android/server/InputMethodManagerService$ImmsBroadcastReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     iget-object v4, v4, Lcom/android/server/InputMethodManagerService;->kb:Lcom/android/server/InputMethodManagerService$KeyboardDetect;
@@ -182,14 +167,12 @@
 
     if-ne v4, v7, :cond_0
 
-    .line 606
     iget-object v4, p0, Lcom/android/server/InputMethodManagerService$ImmsBroadcastReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     iget-object v4, v4, Lcom/android/server/InputMethodManagerService;->kb:Lcom/android/server/InputMethodManagerService$KeyboardDetect;
 
     invoke-virtual {v4}, Lcom/android/server/InputMethodManagerService$KeyboardDetect;->keyboardPerflockAcquire()V
 
-    .line 607
     iget-object v4, p0, Lcom/android/server/InputMethodManagerService$ImmsBroadcastReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     iget-object v4, v4, Lcom/android/server/InputMethodManagerService;->kb:Lcom/android/server/InputMethodManagerService$KeyboardDetect;
@@ -204,7 +187,6 @@
 
     goto :goto_0
 
-    .line 610
     :cond_5
     const-string v4, "android.intent.action.SCREEN_OFF"
 
@@ -220,7 +202,6 @@
 
     if-nez v4, :cond_6
 
-    .line 612
     iget-object v4, p0, Lcom/android/server/InputMethodManagerService$ImmsBroadcastReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     iget-object v4, v4, Lcom/android/server/InputMethodManagerService;->kb:Lcom/android/server/InputMethodManagerService$KeyboardDetect;
@@ -237,14 +218,12 @@
 
     if-ne v4, v6, :cond_0
 
-    .line 613
     iget-object v4, p0, Lcom/android/server/InputMethodManagerService$ImmsBroadcastReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     iget-object v4, v4, Lcom/android/server/InputMethodManagerService;->kb:Lcom/android/server/InputMethodManagerService$KeyboardDetect;
 
     invoke-virtual {v4}, Lcom/android/server/InputMethodManagerService$KeyboardDetect;->keyboardPerflockRelease()V
 
-    .line 614
     iget-object v4, p0, Lcom/android/server/InputMethodManagerService$ImmsBroadcastReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     iget-object v4, v4, Lcom/android/server/InputMethodManagerService;->kb:Lcom/android/server/InputMethodManagerService$KeyboardDetect;
@@ -259,7 +238,6 @@
 
     goto/16 :goto_0
 
-    .line 618
     :cond_6
     const-string v4, "InputMethodManagerService"
 

@@ -86,25 +86,20 @@
     .locals 1
 
     .prologue
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 156
     sget-object v0, Landroid/view/Display$Mode;->EMPTY_ARRAY:[Landroid/view/Display$Mode;
 
     iput-object v0, p0, Lcom/android/server/display/DisplayDeviceInfo;->supportedModes:[Landroid/view/Display$Mode;
 
-    .line 165
     sget-object v0, Landroid/view/Display$ColorTransform;->EMPTY_ARRAY:[Landroid/view/Display$ColorTransform;
 
     iput-object v0, p0, Lcom/android/server/display/DisplayDeviceInfo;->supportedColorTransforms:[Landroid/view/Display$ColorTransform;
 
-    .line 220
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/display/DisplayDeviceInfo;->rotation:I
 
-    .line 236
     const/4 v0, 0x2
 
     iput v0, p0, Lcom/android/server/display/DisplayDeviceInfo;->state:I
@@ -117,111 +112,91 @@
     .param p0, "flags"    # I
 
     .prologue
-    .line 386
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 387
     .local v0, "msg":Ljava/lang/StringBuilder;
     and-int/lit8 v1, p0, 0x1
 
     if-eqz v1, :cond_0
 
-    .line 388
     const-string v1, ", FLAG_DEFAULT_DISPLAY"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 390
     :cond_0
     and-int/lit8 v1, p0, 0x2
 
     if-eqz v1, :cond_1
 
-    .line 391
     const-string v1, ", FLAG_ROTATES_WITH_CONTENT"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 393
     :cond_1
     and-int/lit8 v1, p0, 0x4
 
     if-eqz v1, :cond_2
 
-    .line 394
     const-string v1, ", FLAG_SECURE"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 396
     :cond_2
     and-int/lit8 v1, p0, 0x8
 
     if-eqz v1, :cond_3
 
-    .line 397
     const-string v1, ", FLAG_SUPPORTS_PROTECTED_BUFFERS"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 399
     :cond_3
     and-int/lit8 v1, p0, 0x10
 
     if-eqz v1, :cond_4
 
-    .line 400
     const-string v1, ", FLAG_PRIVATE"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 402
     :cond_4
     and-int/lit8 v1, p0, 0x20
 
     if-eqz v1, :cond_5
 
-    .line 403
     const-string v1, ", FLAG_NEVER_BLANK"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 405
     :cond_5
     and-int/lit8 v1, p0, 0x40
 
     if-eqz v1, :cond_6
 
-    .line 406
     const-string v1, ", FLAG_PRESENTATION"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 408
     :cond_6
     and-int/lit16 v1, p0, 0x80
 
     if-eqz v1, :cond_7
 
-    .line 409
     const-string v1, ", FLAG_OWN_CONTENT_ONLY"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 411
     :cond_7
     and-int/lit16 v1, p0, 0x100
 
     if-eqz v1, :cond_8
 
-    .line 412
     const-string v1, ", FLAG_ROUND"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 414
     :cond_8
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -235,10 +210,8 @@
     .param p0, "touch"    # I
 
     .prologue
-    .line 373
     packed-switch p0, :pswitch_data_0
 
-    .line 381
     invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v0
@@ -246,25 +219,21 @@
     :goto_0
     return-object v0
 
-    .line 375
     :pswitch_0
     const-string v0, "NONE"
 
     goto :goto_0
 
-    .line 377
     :pswitch_1
     const-string v0, "INTERNAL"
 
     goto :goto_0
 
-    .line 379
     :pswitch_2
     const-string v0, "EXTERNAL"
 
     goto :goto_0
 
-    .line 373
     nop
 
     :pswitch_data_0
@@ -282,122 +251,98 @@
     .param p1, "other"    # Lcom/android/server/display/DisplayDeviceInfo;
 
     .prologue
-    .line 314
     iget-object v0, p1, Lcom/android/server/display/DisplayDeviceInfo;->name:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/android/server/display/DisplayDeviceInfo;->name:Ljava/lang/String;
 
-    .line 315
     iget-object v0, p1, Lcom/android/server/display/DisplayDeviceInfo;->uniqueId:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/android/server/display/DisplayDeviceInfo;->uniqueId:Ljava/lang/String;
 
-    .line 316
     iget v0, p1, Lcom/android/server/display/DisplayDeviceInfo;->width:I
 
     iput v0, p0, Lcom/android/server/display/DisplayDeviceInfo;->width:I
 
-    .line 317
     iget v0, p1, Lcom/android/server/display/DisplayDeviceInfo;->height:I
 
     iput v0, p0, Lcom/android/server/display/DisplayDeviceInfo;->height:I
 
-    .line 318
     iget v0, p1, Lcom/android/server/display/DisplayDeviceInfo;->modeId:I
 
     iput v0, p0, Lcom/android/server/display/DisplayDeviceInfo;->modeId:I
 
-    .line 319
     iget v0, p1, Lcom/android/server/display/DisplayDeviceInfo;->defaultModeId:I
 
     iput v0, p0, Lcom/android/server/display/DisplayDeviceInfo;->defaultModeId:I
 
-    .line 320
     iget-object v0, p1, Lcom/android/server/display/DisplayDeviceInfo;->supportedModes:[Landroid/view/Display$Mode;
 
     iput-object v0, p0, Lcom/android/server/display/DisplayDeviceInfo;->supportedModes:[Landroid/view/Display$Mode;
 
-    .line 321
     iget v0, p1, Lcom/android/server/display/DisplayDeviceInfo;->colorTransformId:I
 
     iput v0, p0, Lcom/android/server/display/DisplayDeviceInfo;->colorTransformId:I
 
-    .line 322
     iget v0, p1, Lcom/android/server/display/DisplayDeviceInfo;->defaultColorTransformId:I
 
     iput v0, p0, Lcom/android/server/display/DisplayDeviceInfo;->defaultColorTransformId:I
 
-    .line 323
     iget-object v0, p1, Lcom/android/server/display/DisplayDeviceInfo;->supportedColorTransforms:[Landroid/view/Display$ColorTransform;
 
     iput-object v0, p0, Lcom/android/server/display/DisplayDeviceInfo;->supportedColorTransforms:[Landroid/view/Display$ColorTransform;
 
-    .line 324
     iget v0, p1, Lcom/android/server/display/DisplayDeviceInfo;->densityDpi:I
 
     iput v0, p0, Lcom/android/server/display/DisplayDeviceInfo;->densityDpi:I
 
-    .line 325
     iget v0, p1, Lcom/android/server/display/DisplayDeviceInfo;->xDpi:F
 
     iput v0, p0, Lcom/android/server/display/DisplayDeviceInfo;->xDpi:F
 
-    .line 326
     iget v0, p1, Lcom/android/server/display/DisplayDeviceInfo;->yDpi:F
 
     iput v0, p0, Lcom/android/server/display/DisplayDeviceInfo;->yDpi:F
 
-    .line 327
     iget-wide v0, p1, Lcom/android/server/display/DisplayDeviceInfo;->appVsyncOffsetNanos:J
 
     iput-wide v0, p0, Lcom/android/server/display/DisplayDeviceInfo;->appVsyncOffsetNanos:J
 
-    .line 328
     iget-wide v0, p1, Lcom/android/server/display/DisplayDeviceInfo;->presentationDeadlineNanos:J
 
     iput-wide v0, p0, Lcom/android/server/display/DisplayDeviceInfo;->presentationDeadlineNanos:J
 
-    .line 329
     iget v0, p1, Lcom/android/server/display/DisplayDeviceInfo;->flags:I
 
     iput v0, p0, Lcom/android/server/display/DisplayDeviceInfo;->flags:I
 
-    .line 330
     iget v0, p1, Lcom/android/server/display/DisplayDeviceInfo;->touch:I
 
     iput v0, p0, Lcom/android/server/display/DisplayDeviceInfo;->touch:I
 
-    .line 331
     iget v0, p1, Lcom/android/server/display/DisplayDeviceInfo;->rotation:I
 
     iput v0, p0, Lcom/android/server/display/DisplayDeviceInfo;->rotation:I
 
-    .line 332
     iget v0, p1, Lcom/android/server/display/DisplayDeviceInfo;->type:I
 
     iput v0, p0, Lcom/android/server/display/DisplayDeviceInfo;->type:I
 
-    .line 333
     iget-object v0, p1, Lcom/android/server/display/DisplayDeviceInfo;->address:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/android/server/display/DisplayDeviceInfo;->address:Ljava/lang/String;
 
-    .line 334
     iget v0, p1, Lcom/android/server/display/DisplayDeviceInfo;->state:I
 
     iput v0, p0, Lcom/android/server/display/DisplayDeviceInfo;->state:I
 
-    .line 335
     iget v0, p1, Lcom/android/server/display/DisplayDeviceInfo;->ownerUid:I
 
     iput v0, p0, Lcom/android/server/display/DisplayDeviceInfo;->ownerUid:I
 
-    .line 336
     iget-object v0, p1, Lcom/android/server/display/DisplayDeviceInfo;->ownerPackageName:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/android/server/display/DisplayDeviceInfo;->ownerPackageName:Ljava/lang/String;
 
-    .line 337
     return-void
 .end method
 
@@ -406,10 +351,8 @@
     .param p1, "other"    # Lcom/android/server/display/DisplayDeviceInfo;
 
     .prologue
-    .line 277
     const/4 v0, 0x0
 
-    .line 278
     .local v0, "diff":I
     iget v1, p0, Lcom/android/server/display/DisplayDeviceInfo;->state:I
 
@@ -417,10 +360,8 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 279
     or-int/lit8 v0, v0, 0x1
 
-    .line 281
     :cond_0
     iget-object v1, p0, Lcom/android/server/display/DisplayDeviceInfo;->name:Ljava/lang/String;
 
@@ -586,11 +527,9 @@
 
     if-nez v1, :cond_2
 
-    .line 303
     :cond_1
     or-int/lit8 v0, v0, 0x2
 
-    .line 305
     :cond_2
     return v0
 .end method
@@ -600,7 +539,6 @@
     .param p1, "other"    # Lcom/android/server/display/DisplayDeviceInfo;
 
     .prologue
-    .line 269
     if-eqz p1, :cond_0
 
     invoke-virtual {p0, p1}, Lcom/android/server/display/DisplayDeviceInfo;->diff(Lcom/android/server/display/DisplayDeviceInfo;)I
@@ -625,7 +563,6 @@
     .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
-    .line 265
     instance-of v0, p1, Lcom/android/server/display/DisplayDeviceInfo;
 
     if-eqz v0, :cond_0
@@ -654,7 +591,6 @@
     .locals 1
 
     .prologue
-    .line 310
     const/4 v0, 0x0
 
     return v0
@@ -666,7 +602,6 @@
     .param p2, "height"    # I
 
     .prologue
-    .line 256
     invoke-static {p1, p2}, Ljava/lang/Math;->min(II)I
 
     move-result v0
@@ -677,21 +612,18 @@
 
     iput v0, p0, Lcom/android/server/display/DisplayDeviceInfo;->densityDpi:I
 
-    .line 259
     iget v0, p0, Lcom/android/server/display/DisplayDeviceInfo;->densityDpi:I
 
     int-to-float v0, v0
 
     iput v0, p0, Lcom/android/server/display/DisplayDeviceInfo;->xDpi:F
 
-    .line 260
     iget v0, p0, Lcom/android/server/display/DisplayDeviceInfo;->densityDpi:I
 
     int-to-float v0, v0
 
     iput v0, p0, Lcom/android/server/display/DisplayDeviceInfo;->yDpi:F
 
-    .line 261
     return-void
 .end method
 
@@ -699,18 +631,15 @@
     .locals 4
 
     .prologue
-    .line 342
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 343
     .local v0, "sb":Ljava/lang/StringBuilder;
     const-string v1, "DisplayDeviceInfo{\""
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 344
     iget-object v1, p0, Lcom/android/server/display/DisplayDeviceInfo;->name:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -733,7 +662,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 345
     iget v1, p0, Lcom/android/server/display/DisplayDeviceInfo;->width:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
@@ -750,7 +678,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 346
     const-string v1, ", modeId "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -761,7 +688,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 347
     const-string v1, ", defaultModeId "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -772,7 +698,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 348
     const-string v1, ", supportedModes "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -787,7 +712,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 349
     const-string v1, ", colorTransformId "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -798,7 +722,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 350
     const-string v1, ", defaultColorTransformId "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -809,7 +732,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 351
     const-string v1, ", supportedColorTransforms "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -824,7 +746,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 352
     const-string v1, ", density "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -835,7 +756,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 353
     const-string v1, ", "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -864,7 +784,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 354
     const-string v1, ", appVsyncOff "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -875,7 +794,6 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    .line 355
     const-string v1, ", presDeadline "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -886,7 +804,6 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    .line 356
     const-string v1, ", touch "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -901,7 +818,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 357
     const-string v1, ", rotation "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -912,7 +828,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 358
     const-string v1, ", type "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -927,12 +842,10 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 359
     iget-object v1, p0, Lcom/android/server/display/DisplayDeviceInfo;->address:Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
-    .line 360
     const-string v1, ", address "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -943,7 +856,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 362
     :cond_0
     const-string v1, ", state "
 
@@ -959,7 +871,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 363
     iget v1, p0, Lcom/android/server/display/DisplayDeviceInfo;->ownerUid:I
 
     if-nez v1, :cond_1
@@ -968,7 +879,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 364
     :cond_1
     const-string v1, ", owner "
 
@@ -980,7 +890,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 365
     const-string v1, " (uid "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -997,7 +906,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 367
     :cond_2
     iget v1, p0, Lcom/android/server/display/DisplayDeviceInfo;->flags:I
 
@@ -1007,12 +915,10 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 368
     const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 369
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1121
     iput-object p1, p0, Lcom/android/server/BatteryService$LocalService;->this$0:Lcom/android/server/BatteryService;
 
     invoke-direct {p0}, Landroid/os/BatteryManagerInternal;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/BatteryService$1;
 
     .prologue
-    .line 1121
     invoke-direct {p0, p1}, Lcom/android/server/BatteryService$LocalService;-><init>(Lcom/android/server/BatteryService;)V
 
     return-void
@@ -49,7 +47,6 @@
     .locals 3
 
     .prologue
-    .line 1138
     iget-object v0, p0, Lcom/android/server/BatteryService$LocalService;->this$0:Lcom/android/server/BatteryService;
 
     # getter for: Lcom/android/server/BatteryService;->mLock:Ljava/lang/Object;
@@ -59,7 +56,6 @@
 
     monitor-enter v1
 
-    .line 1139
     :try_start_0
     iget-object v0, p0, Lcom/android/server/BatteryService$LocalService;->this$0:Lcom/android/server/BatteryService;
 
@@ -70,7 +66,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1140
     iget-object v0, p0, Lcom/android/server/BatteryService$LocalService;->this$0:Lcom/android/server/BatteryService;
 
     # getter for: Lcom/android/server/BatteryService;->mBatteryProps:Landroid/os/BatteryProperties;
@@ -82,11 +77,9 @@
 
     monitor-exit v1
 
-    .line 1143
     :goto_0
     return v0
 
-    .line 1142
     :cond_0
     # getter for: Lcom/android/server/BatteryService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/BatteryService;->access$900()Ljava/lang/String;
@@ -97,14 +90,12 @@
 
     invoke-static {v0, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1143
     const/16 v0, 0x50
 
     monitor-exit v1
 
     goto :goto_0
 
-    .line 1144
     :catchall_0
     move-exception v0
 
@@ -119,7 +110,6 @@
     .locals 2
 
     .prologue
-    .line 1149
     iget-object v0, p0, Lcom/android/server/BatteryService$LocalService;->this$0:Lcom/android/server/BatteryService;
 
     # getter for: Lcom/android/server/BatteryService;->mLock:Ljava/lang/Object;
@@ -129,7 +119,6 @@
 
     monitor-enter v1
 
-    .line 1150
     :try_start_0
     iget-object v0, p0, Lcom/android/server/BatteryService$LocalService;->this$0:Lcom/android/server/BatteryService;
 
@@ -142,7 +131,6 @@
 
     return v0
 
-    .line 1151
     :catchall_0
     move-exception v0
 
@@ -157,7 +145,6 @@
     .locals 2
 
     .prologue
-    .line 1156
     iget-object v0, p0, Lcom/android/server/BatteryService$LocalService;->this$0:Lcom/android/server/BatteryService;
 
     # getter for: Lcom/android/server/BatteryService;->mLock:Ljava/lang/Object;
@@ -167,7 +154,6 @@
 
     monitor-enter v1
 
-    .line 1157
     :try_start_0
     iget-object v0, p0, Lcom/android/server/BatteryService$LocalService;->this$0:Lcom/android/server/BatteryService;
 
@@ -180,7 +166,6 @@
 
     return v0
 
-    .line 1158
     :catchall_0
     move-exception v0
 
@@ -195,7 +180,6 @@
     .locals 2
 
     .prologue
-    .line 1131
     iget-object v0, p0, Lcom/android/server/BatteryService$LocalService;->this$0:Lcom/android/server/BatteryService;
 
     # getter for: Lcom/android/server/BatteryService;->mLock:Ljava/lang/Object;
@@ -205,7 +189,6 @@
 
     monitor-enter v1
 
-    .line 1132
     :try_start_0
     iget-object v0, p0, Lcom/android/server/BatteryService$LocalService;->this$0:Lcom/android/server/BatteryService;
 
@@ -218,7 +201,6 @@
 
     return v0
 
-    .line 1133
     :catchall_0
     move-exception v0
 
@@ -234,7 +216,6 @@
     .param p1, "plugTypeSet"    # I
 
     .prologue
-    .line 1124
     iget-object v0, p0, Lcom/android/server/BatteryService$LocalService;->this$0:Lcom/android/server/BatteryService;
 
     # getter for: Lcom/android/server/BatteryService;->mLock:Ljava/lang/Object;
@@ -244,7 +225,6 @@
 
     monitor-enter v1
 
-    .line 1125
     :try_start_0
     iget-object v0, p0, Lcom/android/server/BatteryService$LocalService;->this$0:Lcom/android/server/BatteryService;
 
@@ -257,7 +237,6 @@
 
     return v0
 
-    .line 1126
     :catchall_0
     move-exception v0
 

@@ -36,20 +36,16 @@
     .param p2, "service"    # Lcom/android/server/am/ActivityManagerService;
 
     .prologue
-    .line 334
     invoke-direct {p0}, Landroid/view/IApplicationToken$Stub;-><init>()V
 
-    .line 335
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lcom/android/server/am/ActivityRecord$Token;->weakActivity:Ljava/lang/ref/WeakReference;
 
-    .line 336
     iput-object p2, p0, Lcom/android/server/am/ActivityRecord$Token;->mService:Lcom/android/server/am/ActivityManagerService;
 
-    .line 337
     return-void
 .end method
 
@@ -58,7 +54,6 @@
     .param p0, "x0"    # Lcom/android/server/am/ActivityRecord$Token;
 
     .prologue
-    .line 330
     invoke-static {p0}, Lcom/android/server/am/ActivityRecord$Token;->tokenToActivityRecordLocked(Lcom/android/server/am/ActivityRecord$Token;)Lcom/android/server/am/ActivityRecord;
 
     move-result-object v0
@@ -73,17 +68,14 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 400
     if-nez p0, :cond_1
 
     move-object v0, v1
 
-    .line 407
     :cond_0
     :goto_0
     return-object v0
 
-    .line 403
     :cond_1
     iget-object v2, p0, Lcom/android/server/am/ActivityRecord$Token;->weakActivity:Ljava/lang/ref/WeakReference;
 
@@ -93,7 +85,6 @@
 
     check-cast v0, Lcom/android/server/am/ActivityRecord;
 
-    .line 404
     .local v0, "r":Lcom/android/server/am/ActivityRecord;
     if-eqz v0, :cond_2
 
@@ -110,7 +101,6 @@
     :cond_2
     move-object v0, v1
 
-    .line 405
     goto :goto_0
 .end method
 
@@ -120,37 +110,30 @@
     .locals 5
 
     .prologue
-    .line 389
     iget-object v4, p0, Lcom/android/server/am/ActivityRecord$Token;->mService:Lcom/android/server/am/ActivityManagerService;
 
     monitor-enter v4
 
-    .line 390
     :try_start_0
     invoke-static {p0}, Lcom/android/server/am/ActivityRecord$Token;->tokenToActivityRecordLocked(Lcom/android/server/am/ActivityRecord$Token;)Lcom/android/server/am/ActivityRecord;
 
     move-result-object v0
 
-    .line 391
     .local v0, "r":Lcom/android/server/am/ActivityRecord;
     if-nez v0, :cond_0
 
-    .line 392
     const-wide/16 v2, 0x0
 
     monitor-exit v4
 
-    .line 395
     :goto_0
     return-wide v2
 
-    .line 394
     :cond_0
     invoke-virtual {v0}, Lcom/android/server/am/ActivityRecord;->getWaitingHistoryRecordLocked()Lcom/android/server/am/ActivityRecord;
 
     move-result-object v0
 
-    .line 395
     invoke-static {v0}, Lcom/android/server/am/ActivityManagerService;->getInputDispatchingTimeoutLocked(Lcom/android/server/am/ActivityRecord;)J
 
     move-result-wide v2
@@ -159,7 +142,6 @@
 
     goto :goto_0
 
-    .line 396
     .end local v0    # "r":Lcom/android/server/am/ActivityRecord;
     :catchall_0
     move-exception v1
@@ -178,48 +160,39 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 376
     iget-object v5, p0, Lcom/android/server/am/ActivityRecord$Token;->mService:Lcom/android/server/am/ActivityManagerService;
 
     monitor-enter v5
 
-    .line 377
     :try_start_0
     invoke-static {p0}, Lcom/android/server/am/ActivityRecord$Token;->tokenToActivityRecordLocked(Lcom/android/server/am/ActivityRecord$Token;)Lcom/android/server/am/ActivityRecord;
 
     move-result-object v3
 
-    .line 378
     .local v3, "r":Lcom/android/server/am/ActivityRecord;
     if-nez v3, :cond_0
 
-    .line 379
     monitor-exit v5
 
-    .line 384
     :goto_0
     return v4
 
-    .line 381
     :cond_0
     invoke-virtual {v3}, Lcom/android/server/am/ActivityRecord;->getWaitingHistoryRecordLocked()Lcom/android/server/am/ActivityRecord;
 
     move-result-object v2
 
-    .line 382
     .local v2, "anrActivity":Lcom/android/server/am/ActivityRecord;
     if-eqz v3, :cond_1
 
     iget-object v1, v3, Lcom/android/server/am/ActivityRecord;->app:Lcom/android/server/am/ProcessRecord;
 
-    .line 383
     .local v1, "anrApp":Lcom/android/server/am/ProcessRecord;
     :goto_1
     monitor-exit v5
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 384
     iget-object v0, p0, Lcom/android/server/am/ActivityRecord$Token;->mService:Lcom/android/server/am/ActivityManagerService;
 
     move-object v5, p1
@@ -230,14 +203,12 @@
 
     goto :goto_0
 
-    .line 382
     .end local v1    # "anrApp":Lcom/android/server/am/ProcessRecord;
     :cond_1
     const/4 v1, 0x0
 
     goto :goto_1
 
-    .line 383
     .end local v2    # "anrActivity":Lcom/android/server/am/ActivityRecord;
     .end local v3    # "r":Lcom/android/server/am/ActivityRecord;
     :catchall_0
@@ -255,20 +226,17 @@
     .locals 2
 
     .prologue
-    .line 412
     new-instance v0, Ljava/lang/StringBuilder;
 
     const/16 v1, 0x80
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 413
     .local v0, "sb":Ljava/lang/StringBuilder;
     const-string v1, "Token{"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 414
     invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result v1
@@ -279,12 +247,10 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 415
     const/16 v1, 0x20
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 416
     iget-object v1, p0, Lcom/android/server/am/ActivityRecord$Token;->weakActivity:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -293,12 +259,10 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 417
     const/16 v1, 0x7d
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 418
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -310,32 +274,25 @@
     .locals 3
 
     .prologue
-    .line 341
     iget-object v2, p0, Lcom/android/server/am/ActivityRecord$Token;->mService:Lcom/android/server/am/ActivityManagerService;
 
     monitor-enter v2
 
-    .line 342
     :try_start_0
     invoke-static {p0}, Lcom/android/server/am/ActivityRecord$Token;->tokenToActivityRecordLocked(Lcom/android/server/am/ActivityRecord$Token;)Lcom/android/server/am/ActivityRecord;
 
     move-result-object v0
 
-    .line 343
     .local v0, "r":Lcom/android/server/am/ActivityRecord;
     if-eqz v0, :cond_0
 
-    .line 344
     invoke-virtual {v0}, Lcom/android/server/am/ActivityRecord;->windowsDrawnLocked()V
 
-    .line 346
     :cond_0
     monitor-exit v2
 
-    .line 347
     return-void
 
-    .line 346
     .end local v0    # "r":Lcom/android/server/am/ActivityRecord;
     :catchall_0
     move-exception v1
@@ -351,22 +308,18 @@
     .locals 5
 
     .prologue
-    .line 361
     iget-object v2, p0, Lcom/android/server/am/ActivityRecord$Token;->mService:Lcom/android/server/am/ActivityManagerService;
 
     monitor-enter v2
 
-    .line 362
     :try_start_0
     invoke-static {p0}, Lcom/android/server/am/ActivityRecord$Token;->tokenToActivityRecordLocked(Lcom/android/server/am/ActivityRecord$Token;)Lcom/android/server/am/ActivityRecord;
 
     move-result-object v0
 
-    .line 363
     .local v0, "r":Lcom/android/server/am/ActivityRecord;
     if-eqz v0, :cond_1
 
-    .line 364
     sget-boolean v1, Lcom/android/server/am/ActivityManagerDebugConfig;->DEBUG_SWITCH:Z
 
     if-eqz v1, :cond_0
@@ -393,20 +346,16 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 365
     :cond_0
     const/4 v1, 0x0
 
     iput-boolean v1, v0, Lcom/android/server/am/ActivityRecord;->nowVisible:Z
 
-    .line 366
     monitor-exit v2
 
-    .line 369
     :goto_0
     return-void
 
-    .line 368
     :cond_1
     monitor-exit v2
 
@@ -427,32 +376,25 @@
     .locals 3
 
     .prologue
-    .line 351
     iget-object v2, p0, Lcom/android/server/am/ActivityRecord$Token;->mService:Lcom/android/server/am/ActivityManagerService;
 
     monitor-enter v2
 
-    .line 352
     :try_start_0
     invoke-static {p0}, Lcom/android/server/am/ActivityRecord$Token;->tokenToActivityRecordLocked(Lcom/android/server/am/ActivityRecord$Token;)Lcom/android/server/am/ActivityRecord;
 
     move-result-object v0
 
-    .line 353
     .local v0, "r":Lcom/android/server/am/ActivityRecord;
     if-eqz v0, :cond_0
 
-    .line 354
     invoke-virtual {v0}, Lcom/android/server/am/ActivityRecord;->windowsVisibleLocked()V
 
-    .line 356
     :cond_0
     monitor-exit v2
 
-    .line 357
     return-void
 
-    .line 356
     .end local v0    # "r":Lcom/android/server/am/ActivityRecord;
     :catchall_0
     move-exception v1

@@ -53,32 +53,26 @@
     .param p2, "initial"    # Z
 
     .prologue
-    .line 50
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 37
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/UserState;->mStopCallbacks:Ljava/util/ArrayList;
 
-    .line 40
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/am/UserState;->mState:I
 
-    .line 48
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/UserState;->mProviderLastReportedFg:Landroid/util/ArrayMap;
 
-    .line 51
     iput-object p1, p0, Lcom/android/server/am/UserState;->mHandle:Landroid/os/UserHandle;
 
-    .line 52
     return-void
 .end method
 
@@ -90,24 +84,20 @@
     .param p2, "pw"    # Ljava/io/PrintWriter;
 
     .prologue
-    .line 55
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v0, "mState="
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 56
     iget v0, p0, Lcom/android/server/am/UserState;->mState:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 61
     iget v0, p0, Lcom/android/server/am/UserState;->mState:I
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(I)V
 
-    .line 63
     :goto_0
     iget-boolean v0, p0, Lcom/android/server/am/UserState;->switching:Z
 
@@ -117,7 +107,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 64
     :cond_0
     iget-boolean v0, p0, Lcom/android/server/am/UserState;->initializing:Z
 
@@ -127,14 +116,11 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 65
     :cond_1
     invoke-virtual {p2}, Ljava/io/PrintWriter;->println()V
 
-    .line 66
     return-void
 
-    .line 57
     :pswitch_0
     const-string v0, "BOOTING"
 
@@ -142,7 +128,6 @@
 
     goto :goto_0
 
-    .line 58
     :pswitch_1
     const-string v0, "RUNNING"
 
@@ -150,7 +135,6 @@
 
     goto :goto_0
 
-    .line 59
     :pswitch_2
     const-string v0, "STOPPING"
 
@@ -158,7 +142,6 @@
 
     goto :goto_0
 
-    .line 60
     :pswitch_3
     const-string v0, "SHUTDOWN"
 
@@ -166,7 +149,6 @@
 
     goto :goto_0
 
-    .line 56
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

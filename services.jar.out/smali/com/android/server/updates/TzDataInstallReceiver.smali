@@ -26,7 +26,6 @@
     .locals 2
 
     .prologue
-    .line 32
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/data/misc/zoneinfo"
@@ -35,7 +34,6 @@
 
     sput-object v0, Lcom/android/server/updates/TzDataInstallReceiver;->TZ_DATA_DIR:Ljava/io/File;
 
-    .line 33
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -69,7 +67,6 @@
     .locals 4
 
     .prologue
-    .line 41
     sget-object v0, Lcom/android/server/updates/TzDataInstallReceiver;->UPDATE_DIR_NAME:Ljava/lang/String;
 
     const-string v1, "tzdata_bundle.zip"
@@ -80,7 +77,6 @@
 
     invoke-direct {p0, v0, v1, v2, v3}, Lcom/android/server/updates/ConfigUpdateInstallReceiver;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 43
     new-instance v0, Llibcore/tzdata/update/TzDataBundleInstaller;
 
     const-string v1, "TZDataInstallReceiver"
@@ -91,7 +87,6 @@
 
     iput-object v0, p0, Lcom/android/server/updates/TzDataInstallReceiver;->installer:Llibcore/tzdata/update/TzDataBundleInstaller;
 
-    .line 44
     return-void
 .end method
 
@@ -108,14 +103,12 @@
     .end annotation
 
     .prologue
-    .line 48
     iget-object v1, p0, Lcom/android/server/updates/TzDataInstallReceiver;->installer:Llibcore/tzdata/update/TzDataBundleInstaller;
 
     invoke-virtual {v1, p1}, Llibcore/tzdata/update/TzDataBundleInstaller;->install([B)Z
 
     move-result v0
 
-    .line 49
     .local v0, "valid":Z
     const-string v1, "TZDataInstallReceiver"
 
@@ -139,9 +132,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 52
     invoke-super {p0, p1, p2}, Lcom/android/server/updates/ConfigUpdateInstallReceiver;->install([BI)V
 
-    .line 53
     return-void
 .end method

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 407
     iput-object p1, p0, Lcom/android/server/connectivity/Tethering$1;->this$0:Lcom/android/server/connectivity/Tethering;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 410
     iget-object v0, p0, Lcom/android/server/connectivity/Tethering$1;->this$0:Lcom/android/server/connectivity/Tethering;
 
     const v1, 0x1080695
@@ -48,6 +46,5 @@
     # invokes: Lcom/android/server/connectivity/Tethering;->showTetheredNotification(I)V
     invoke-static {v0, v1}, Lcom/android/server/connectivity/Tethering;->access$100(Lcom/android/server/connectivity/Tethering;I)V
 
-    .line 411
     return-void
 .end method

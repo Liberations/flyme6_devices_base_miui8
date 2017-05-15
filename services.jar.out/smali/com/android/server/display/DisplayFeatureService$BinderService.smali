@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 74
     iput-object p1, p0, Lcom/android/server/display/DisplayFeatureService$BinderService;->this$0:Lcom/android/server/display/DisplayFeatureService;
 
     invoke-direct {p0}, Landroid/hardware/display/IDisplayFeatureService$Stub;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/display/DisplayFeatureService$1;
 
     .prologue
-    .line 74
     invoke-direct {p0, p1}, Lcom/android/server/display/DisplayFeatureService$BinderService;-><init>(Lcom/android/server/display/DisplayFeatureService;)V
 
     return-void
@@ -57,7 +55,6 @@
     .end annotation
 
     .prologue
-    .line 95
     const/4 v0, 0x0
 
     return v0
@@ -74,7 +71,6 @@
     .end annotation
 
     .prologue
-    .line 107
     const/4 v0, -0x1
 
     return v0
@@ -91,12 +87,10 @@
     .end annotation
 
     .prologue
-    .line 101
     int-to-long v0, p2
 
     invoke-static {v0, v1}, Landroid/os/ColorAdjust;->setCe(J)Z
 
-    .line 102
     const/4 v0, 0x0
 
     return v0
@@ -113,12 +107,10 @@
     .end annotation
 
     .prologue
-    .line 77
     int-to-long v0, p2
 
     invoke-static {v0, v1}, Landroid/os/ColorAdjust;->setGamma(J)Z
 
-    .line 78
     const/4 v0, 0x0
 
     return v0
@@ -137,30 +129,25 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 83
     const-string v2, "com.qti.snapdragon.sdk.display.IColorService"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 84
     .local v0, "colorService":Landroid/os/IBinder;
     if-eqz v0, :cond_0
 
-    .line 85
     iget-object v2, p0, Lcom/android/server/display/DisplayFeatureService$BinderService;->this$0:Lcom/android/server/display/DisplayFeatureService;
 
     # invokes: Lcom/android/server/display/DisplayFeatureService;->setActiveMode(Landroid/os/IBinder;II)I
     invoke-static {v2, v0, v1, p2}, Lcom/android/server/display/DisplayFeatureService;->access$100(Lcom/android/server/display/DisplayFeatureService;Landroid/os/IBinder;II)I
 
-    .line 86
     iget-object v2, p0, Lcom/android/server/display/DisplayFeatureService$BinderService;->this$0:Lcom/android/server/display/DisplayFeatureService;
 
     # invokes: Lcom/android/server/display/DisplayFeatureService;->setDefaultMode(Landroid/os/IBinder;II)I
     invoke-static {v2, v0, v1, p2}, Lcom/android/server/display/DisplayFeatureService;->access$200(Lcom/android/server/display/DisplayFeatureService;Landroid/os/IBinder;II)I
 
-    .line 89
     :goto_0
     return v1
 
@@ -181,7 +168,6 @@
     .end annotation
 
     .prologue
-    .line 112
     const/4 v0, -0x1
 
     return v0

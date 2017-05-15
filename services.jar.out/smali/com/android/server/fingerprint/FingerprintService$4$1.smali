@@ -34,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 952
     iput-object p1, p0, Lcom/android/server/fingerprint/FingerprintService$4$1;->this$1:Lcom/android/server/fingerprint/FingerprintService$4;
 
     iput-wide p2, p0, Lcom/android/server/fingerprint/FingerprintService$4$1;->val$deviceId:J
@@ -56,7 +55,6 @@
     .locals 7
 
     .prologue
-    .line 955
     iget-object v0, p0, Lcom/android/server/fingerprint/FingerprintService$4$1;->this$1:Lcom/android/server/fingerprint/FingerprintService$4;
 
     iget-object v1, v0, Lcom/android/server/fingerprint/FingerprintService$4;->this$0:Lcom/android/server/fingerprint/FingerprintService;
@@ -71,6 +69,5 @@
 
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/fingerprint/FingerprintService;->handleEnrollResult(JIII)V
 
-    .line 956
     return-void
 .end method

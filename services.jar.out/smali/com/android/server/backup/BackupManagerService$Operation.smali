@@ -29,17 +29,13 @@
     .param p3, "callbackObj"    # Lcom/android/server/backup/BackupManagerService$BackupRestoreTask;
 
     .prologue
-    .line 551
     iput-object p1, p0, Lcom/android/server/backup/BackupManagerService$Operation;->this$0:Lcom/android/server/backup/BackupManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 552
     iput p2, p0, Lcom/android/server/backup/BackupManagerService$Operation;->state:I
 
-    .line 553
     iput-object p3, p0, Lcom/android/server/backup/BackupManagerService$Operation;->callback:Lcom/android/server/backup/BackupManagerService$BackupRestoreTask;
 
-    .line 554
     return-void
 .end method

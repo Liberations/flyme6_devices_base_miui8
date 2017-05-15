@@ -34,18 +34,14 @@
     .param p3, "userId"    # I
 
     .prologue
-    .line 291
     iput-object p1, p0, Lcom/android/server/AppOpsServiceState$Callback;->this$0:Lcom/android/server/AppOpsServiceState;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 292
     iput-object p2, p0, Lcom/android/server/AppOpsServiceState$Callback;->mCallback:Lcom/android/internal/app/IOpsCallback;
 
-    .line 293
     iput p3, p0, Lcom/android/server/AppOpsServiceState$Callback;->mUserId:I
 
-    .line 295
     :try_start_0
     iget-object v0, p0, Lcom/android/server/AppOpsServiceState$Callback;->mCallback:Lcom/android/internal/app/IOpsCallback;
 
@@ -57,7 +53,6 @@
 
     invoke-interface {v0, p0, v1}, Landroid/os/IBinder;->linkToDeath(Landroid/os/IBinder$DeathRecipient;I)V
 
-    .line 296
     const-string v0, "AppOpsServiceState"
 
     const-string v1, "linkToDeath"
@@ -66,11 +61,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 299
     :goto_0
     return-void
 
-    .line 297
     :catch_0
     move-exception v0
 
@@ -83,10 +76,8 @@
     .locals 3
 
     .prologue
-    .line 314
     invoke-virtual {p0}, Lcom/android/server/AppOpsServiceState$Callback;->unlinkToDeath()V
 
-    .line 315
     iget-object v0, p0, Lcom/android/server/AppOpsServiceState$Callback;->this$0:Lcom/android/server/AppOpsServiceState;
 
     iget v1, p0, Lcom/android/server/AppOpsServiceState$Callback;->mUserId:I
@@ -94,7 +85,6 @@
     # invokes: Lcom/android/server/AppOpsServiceState;->startService(I)V
     invoke-static {v0, v1}, Lcom/android/server/AppOpsServiceState;->access$300(Lcom/android/server/AppOpsServiceState;I)V
 
-    .line 316
     const-string v0, "AppOpsServiceState"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -119,7 +109,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 317
     return-void
 .end method
 
@@ -127,23 +116,19 @@
     .locals 2
 
     .prologue
-    .line 302
     iget-boolean v0, p0, Lcom/android/server/AppOpsServiceState$Callback;->mUnLink:Z
 
     if-eqz v0, :cond_0
 
-    .line 310
     :goto_0
     return-void
 
-    .line 306
     :cond_0
     const/4 v0, 0x1
 
     :try_start_0
     iput-boolean v0, p0, Lcom/android/server/AppOpsServiceState$Callback;->mUnLink:Z
 
-    .line 307
     iget-object v0, p0, Lcom/android/server/AppOpsServiceState$Callback;->mCallback:Lcom/android/internal/app/IOpsCallback;
 
     invoke-interface {v0}, Lcom/android/internal/app/IOpsCallback;->asBinder()Landroid/os/IBinder;
@@ -158,7 +143,6 @@
 
     goto :goto_0
 
-    .line 308
     :catch_0
     move-exception v0
 

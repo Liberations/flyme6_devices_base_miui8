@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 2227
     iput-object p1, p0, Lcom/android/server/policy/BaseMiuiPhoneWindowManager$16;->this$0:Lcom/android/server/policy/BaseMiuiPhoneWindowManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 2229
     const-string v1, "enable"
 
     const/4 v2, 0x0
@@ -48,7 +46,6 @@
 
     move-result v0
 
-    .line 2230
     .local v0, "enable":Z
     const-string v1, "WindowManager"
 
@@ -72,12 +69,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2231
     iget-object v1, p0, Lcom/android/server/policy/BaseMiuiPhoneWindowManager$16;->this$0:Lcom/android/server/policy/BaseMiuiPhoneWindowManager;
 
     # invokes: Lcom/android/server/policy/BaseMiuiPhoneWindowManager;->setScreenRecorderEnabled(Z)V
     invoke-static {v1, v0}, Lcom/android/server/policy/BaseMiuiPhoneWindowManager;->access$3300(Lcom/android/server/policy/BaseMiuiPhoneWindowManager;Z)V
 
-    .line 2232
     return-void
 .end method

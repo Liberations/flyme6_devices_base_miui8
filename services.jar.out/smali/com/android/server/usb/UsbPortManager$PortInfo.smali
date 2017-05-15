@@ -45,17 +45,14 @@
     .param p2, "supportedModes"    # I
 
     .prologue
-    .line 731
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 732
     new-instance v0, Landroid/hardware/usb/UsbPort;
 
     invoke-direct {v0, p1, p2}, Landroid/hardware/usb/UsbPort;-><init>(Ljava/lang/String;I)V
 
     iput-object v0, p0, Lcom/android/server/usb/UsbPortManager$PortInfo;->mUsbPort:Landroid/hardware/usb/UsbPort;
 
-    .line 733
     return-void
 .end method
 
@@ -72,16 +69,12 @@
     .param p7, "supportedRoleCombinations"    # I
 
     .prologue
-    .line 739
     iput-boolean p2, p0, Lcom/android/server/usb/UsbPortManager$PortInfo;->mCanChangeMode:Z
 
-    .line 740
     iput-boolean p4, p0, Lcom/android/server/usb/UsbPortManager$PortInfo;->mCanChangePowerRole:Z
 
-    .line 741
     iput-boolean p6, p0, Lcom/android/server/usb/UsbPortManager$PortInfo;->mCanChangeDataRole:Z
 
-    .line 742
     iget-object v0, p0, Lcom/android/server/usb/UsbPortManager$PortInfo;->mUsbPortStatus:Landroid/hardware/usb/UsbPortStatus;
 
     if-eqz v0, :cond_0
@@ -118,7 +111,6 @@
 
     if-eq v0, p7, :cond_1
 
-    .line 748
     :cond_0
     new-instance v0, Landroid/hardware/usb/UsbPortStatus;
 
@@ -126,10 +118,8 @@
 
     iput-object v0, p0, Lcom/android/server/usb/UsbPortManager$PortInfo;->mUsbPortStatus:Landroid/hardware/usb/UsbPortStatus;
 
-    .line 750
     const/4 v0, 0x1
 
-    .line 752
     :goto_0
     return v0
 
@@ -143,7 +133,6 @@
     .locals 2
 
     .prologue
-    .line 757
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

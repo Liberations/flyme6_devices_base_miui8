@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog;
 
     .prologue
-    .line 606
     iput-object p1, p0, Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog$9;->this$1:Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 632
     return-void
 .end method
 
@@ -55,28 +53,24 @@
 
     const/4 v1, 0x0
 
-    .line 624
     iget-object v0, p0, Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog$9;->this$1:Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog;
 
     iget-object v0, v0, Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog;->mContainer:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setBlurAlpha(F)V
 
-    .line 625
     iget-object v0, p0, Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog$9;->this$1:Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog;
 
     iget-object v0, v0, Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog;->mContainer:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setBlurIntensity(F)V
 
-    .line 626
     iget-object v0, p0, Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog$9;->this$1:Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog;
 
     iget-object v0, v0, Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog;->mContainer:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->enableBlurGlassFeature(Z)V
 
-    .line 628
     iget-object v0, p0, Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog$9;->this$1:Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog;
 
     invoke-static {v0}, Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog;->-get6(Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog;)Landroid/os/Handler;
@@ -85,7 +79,6 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 621
     return-void
 .end method
 
@@ -94,7 +87,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 615
     return-void
 .end method
 
@@ -103,6 +95,5 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 609
     return-void
 .end method

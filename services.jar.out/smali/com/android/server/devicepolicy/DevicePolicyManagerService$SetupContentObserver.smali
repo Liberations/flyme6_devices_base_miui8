@@ -26,13 +26,10 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 6232
     iput-object p1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$SetupContentObserver;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
-    .line 6233
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 6229
     const-string v0, "user_setup_complete"
 
     invoke-static {v0}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -41,7 +38,6 @@
 
     iput-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$SetupContentObserver;->mUserSetupComplete:Landroid/net/Uri;
 
-    .line 6234
     return-void
 .end method
 
@@ -53,7 +49,6 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 6242
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$SetupContentObserver;->mUserSetupComplete:Landroid/net/Uri;
 
     invoke-virtual {v0, p2}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
@@ -62,12 +57,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 6243
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$SetupContentObserver;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->updateUserSetupComplete()V
 
-    .line 6245
     :cond_0
     return-void
 .end method
@@ -77,7 +70,6 @@
     .param p1, "resolver"    # Landroid/content/ContentResolver;
 
     .prologue
-    .line 6237
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$SetupContentObserver;->mUserSetupComplete:Landroid/net/Uri;
 
     const/4 v1, 0x0
@@ -86,6 +78,5 @@
 
     invoke-virtual {p1, v0, v1, p0, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 6238
     return-void
 .end method

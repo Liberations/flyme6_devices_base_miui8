@@ -28,7 +28,6 @@
     .param p2, "x0"    # J
 
     .prologue
-    .line 5249
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$5;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     iput-object p4, p0, Lcom/android/server/am/ActivityManagerService$5;->val$dumpApp:Lcom/android/server/am/ProcessRecord;
@@ -46,7 +45,6 @@
     .locals 4
 
     .prologue
-    .line 5254
     :try_start_0
     iget-object v2, p0, Lcom/android/server/am/ActivityManagerService$5;->val$dumpApp:Lcom/android/server/am/ProcessRecord;
 
@@ -56,7 +54,6 @@
 
     move-result-object v1
 
-    .line 5255
     .local v1, "msgs":Ljava/lang/String;
     iget-object v2, p0, Lcom/android/server/am/ActivityManagerService$5;->val$stringBuffer:Ljava/lang/StringBuffer;
 
@@ -64,26 +61,21 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuffer;->setLength(I)V
 
-    .line 5256
     iget-object v2, p0, Lcom/android/server/am/ActivityManagerService$5;->val$stringBuffer:Ljava/lang/StringBuffer;
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 5257
     invoke-virtual {p0}, Lcom/android/server/am/ActivityManagerService$5;->finishRun()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 5261
     .end local v1    # "msgs":Ljava/lang/String;
     :goto_0
     return-void
 
-    .line 5258
     :catch_0
     move-exception v0
 
-    .line 5259
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "ActivityManager"
 

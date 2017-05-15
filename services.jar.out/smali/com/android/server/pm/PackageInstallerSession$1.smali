@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 173
     iput-object p1, p0, Lcom/android/server/pm/PackageInstallerSession$1;->this$0:Lcom/android/server/pm/PackageInstallerSession;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 176
     iget-object v2, p0, Lcom/android/server/pm/PackageInstallerSession$1;->this$0:Lcom/android/server/pm/PackageInstallerSession;
 
     # getter for: Lcom/android/server/pm/PackageInstallerSession;->mLock:Ljava/lang/Object;
@@ -51,13 +49,11 @@
 
     monitor-enter v3
 
-    .line 177
     :try_start_0
     iget-object v2, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     if-eqz v2, :cond_0
 
-    .line 178
     iget-object v4, p0, Lcom/android/server/pm/PackageInstallerSession$1;->this$0:Lcom/android/server/pm/PackageInstallerSession;
 
     iget-object v2, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -69,7 +65,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 182
     :cond_0
     :try_start_1
     iget-object v2, p0, Lcom/android/server/pm/PackageInstallerSession$1;->this$0:Lcom/android/server/pm/PackageInstallerSession;
@@ -80,7 +75,6 @@
     .catch Lcom/android/server/pm/PackageManagerException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 190
     :goto_0
     const/4 v2, 0x1
 
@@ -89,17 +83,14 @@
 
     return v2
 
-    .line 183
     :catch_0
     move-exception v1
 
-    .line 184
     .local v1, "e":Lcom/android/server/pm/PackageManagerException;
     invoke-static {v1}, Landroid/util/ExceptionUtils;->getCompleteMessage(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 185
     .local v0, "completeMsg":Ljava/lang/String;
     const-string v2, "PackageInstaller"
 
@@ -137,13 +128,11 @@
 
     invoke-static {v2, v4}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 186
     iget-object v2, p0, Lcom/android/server/pm/PackageInstallerSession$1;->this$0:Lcom/android/server/pm/PackageInstallerSession;
 
     # invokes: Lcom/android/server/pm/PackageInstallerSession;->destroyInternal()V
     invoke-static {v2}, Lcom/android/server/pm/PackageInstallerSession;->access$300(Lcom/android/server/pm/PackageInstallerSession;)V
 
-    .line 187
     iget-object v2, p0, Lcom/android/server/pm/PackageInstallerSession$1;->this$0:Lcom/android/server/pm/PackageInstallerSession;
 
     iget v4, v1, Lcom/android/server/pm/PackageManagerException;->error:I
@@ -155,7 +144,6 @@
 
     goto :goto_0
 
-    .line 191
     .end local v0    # "completeMsg":Ljava/lang/String;
     .end local v1    # "e":Lcom/android/server/pm/PackageManagerException;
     :catchall_0

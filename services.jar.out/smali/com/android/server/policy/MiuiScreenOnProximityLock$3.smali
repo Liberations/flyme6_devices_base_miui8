@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 159
     iput-object p1, p0, Lcom/android/server/policy/MiuiScreenOnProximityLock$3;->this$0:Lcom/android/server/policy/MiuiScreenOnProximityLock;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,12 +41,10 @@
     .param p2, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 162
     iget-object v0, p0, Lcom/android/server/policy/MiuiScreenOnProximityLock$3;->this$0:Lcom/android/server/policy/MiuiScreenOnProximityLock;
 
     invoke-virtual {v0}, Lcom/android/server/policy/MiuiScreenOnProximityLock;->forceShow()V
 
-    .line 163
     const/4 v0, 0x0
 
     return v0

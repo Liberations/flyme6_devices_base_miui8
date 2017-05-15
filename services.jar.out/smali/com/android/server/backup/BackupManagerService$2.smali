@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1796
     iput-object p1, p0, Lcom/android/server/backup/BackupManagerService$2;->this$0:Lcom/android/server/backup/BackupManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,34 +38,27 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1800
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 1801
     .local v4, "action":Ljava/lang/String;
     const/16 v24, 0x0
 
-    .line 1802
     .local v24, "replacing":Z
     const/4 v5, 0x0
 
-    .line 1803
     .local v5, "added":Z
     const/4 v8, 0x0
 
-    .line 1804
     .local v8, "changed":Z
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v13
 
-    .line 1805
     .local v13, "extras":Landroid/os/Bundle;
     const/16 v22, 0x0
 
-    .line 1806
     .local v22, "pkgList":[Ljava/lang/String;
     const-string v30, "android.intent.action.PACKAGE_ADDED"
 
@@ -98,34 +90,28 @@
 
     if-eqz v30, :cond_b
 
-    .line 1809
     :cond_0
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v29
 
-    .line 1810
     .local v29, "uri":Landroid/net/Uri;
     if-nez v29, :cond_2
 
-    .line 1961
     .end local v29    # "uri":Landroid/net/Uri;
     :cond_1
     :goto_0
     return-void
 
-    .line 1813
     .restart local v29    # "uri":Landroid/net/Uri;
     :cond_2
     invoke-virtual/range {v29 .. v29}, Landroid/net/Uri;->getSchemeSpecificPart()Ljava/lang/String;
 
     move-result-object v23
 
-    .line 1814
     .local v23, "pkgName":Ljava/lang/String;
     if-eqz v23, :cond_3
 
-    .line 1815
     const/16 v30, 0x1
 
     move/from16 v0, v30
@@ -139,7 +125,6 @@
 
     aput-object v23, v22, v30
 
-    .line 1817
     .restart local v22    # "pkgList":[Ljava/lang/String;
     :cond_3
     const-string v30, "android.intent.action.PACKAGE_CHANGED"
@@ -150,10 +135,8 @@
 
     move-result v8
 
-    .line 1820
     if-eqz v8, :cond_7
 
-    .line 1822
     :try_start_0
     const-string v30, "android.intent.extra.changed_component_name_list"
 
@@ -165,11 +148,9 @@
 
     move-result-object v10
 
-    .line 1841
     .local v10, "components":[Ljava/lang/String;
     const/16 v27, 0x1
 
-    .line 1842
     .local v27, "tryBind":Z
     move-object/from16 v0, p0
 
@@ -187,7 +168,6 @@
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1843
     :try_start_1
     move-object/from16 v0, p0
 
@@ -211,16 +191,13 @@
 
     check-cast v11, Lcom/android/server/backup/BackupManagerService$TransportConnection;
 
-    .line 1844
     .local v11, "conn":Lcom/android/server/backup/BackupManagerService$TransportConnection;
     if-eqz v11, :cond_5
 
-    .line 1846
     iget-object v0, v11, Lcom/android/server/backup/BackupManagerService$TransportConnection;->mTransport:Landroid/content/pm/ServiceInfo;
 
     move-object/from16 v25, v0
 
-    .line 1847
     .local v25, "svc":Landroid/content/pm/ServiceInfo;
     new-instance v26, Landroid/content/ComponentName;
 
@@ -244,7 +221,6 @@
 
     invoke-direct {v0, v1, v2}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1849
     .local v26, "svcName":Landroid/content/ComponentName;
     move-object/from16 v0, v25
 
@@ -262,16 +238,13 @@
 
     if-eqz v30, :cond_5
 
-    .line 1850
     invoke-virtual/range {v26 .. v26}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
 
     move-result-object v9
 
-    .line 1855
     .local v9, "className":Ljava/lang/String;
     const/16 v17, 0x0
 
-    .line 1856
     .local v17, "isTransport":Z
     const/4 v15, 0x0
 
@@ -285,7 +258,6 @@
 
     if-ge v15, v0, :cond_4
 
-    .line 1857
     aget-object v30, v10, v15
 
     move-object/from16 v0, v30
@@ -296,12 +268,10 @@
 
     if-eqz v30, :cond_6
 
-    .line 1859
     invoke-virtual/range {v26 .. v26}, Landroid/content/ComponentName;->flattenToShortString()Ljava/lang/String;
 
     move-result-object v14
 
-    .line 1860
     .local v14, "flatName":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -319,7 +289,6 @@
 
     invoke-virtual {v0, v11}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
-    .line 1861
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/backup/BackupManagerService$2;->this$0:Lcom/android/server/backup/BackupManagerService;
@@ -338,7 +307,6 @@
 
     invoke-virtual {v0, v1}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1862
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/backup/BackupManagerService$2;->this$0:Lcom/android/server/backup/BackupManagerService;
@@ -375,7 +343,6 @@
 
     invoke-virtual {v0, v1}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1863
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/backup/BackupManagerService$2;->this$0:Lcom/android/server/backup/BackupManagerService;
@@ -392,18 +359,14 @@
 
     invoke-virtual {v0, v14}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1864
     const/16 v17, 0x1
 
-    .line 1868
     .end local v14    # "flatName":Ljava/lang/String;
     :cond_4
     if-nez v17, :cond_5
 
-    .line 1871
     const/16 v27, 0x0
 
-    .line 1875
     .end local v9    # "className":Ljava/lang/String;
     .end local v15    # "i":I
     .end local v17    # "isTransport":Z
@@ -414,10 +377,8 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1877
     if-eqz v27, :cond_1
 
-    .line 1881
     :try_start_2
     move-object/from16 v0, p0
 
@@ -442,7 +403,6 @@
 
     move-result-object v6
 
-    .line 1882
     .local v6, "app":Landroid/content/pm/PackageInfo;
     move-object/from16 v0, p0
 
@@ -458,7 +418,6 @@
 
     goto/16 :goto_0
 
-    .line 1884
     .end local v6    # "app":Landroid/content/pm/PackageInfo;
     .end local v10    # "components":[Ljava/lang/String;
     .end local v11    # "conn":Lcom/android/server/backup/BackupManagerService$TransportConnection;
@@ -468,7 +427,6 @@
 
     goto/16 :goto_0
 
-    .line 1856
     .restart local v9    # "className":Ljava/lang/String;
     .restart local v10    # "components":[Ljava/lang/String;
     .restart local v11    # "conn":Lcom/android/server/backup/BackupManagerService$TransportConnection;
@@ -482,7 +440,6 @@
 
     goto/16 :goto_1
 
-    .line 1875
     .end local v9    # "className":Ljava/lang/String;
     .end local v11    # "conn":Lcom/android/server/backup/BackupManagerService$TransportConnection;
     .end local v15    # "i":I
@@ -502,7 +459,6 @@
     :try_end_4
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_4 .. :try_end_4} :catch_0
 
-    .line 1893
     .end local v10    # "components":[Ljava/lang/String;
     .end local v27    # "tryBind":Z
     :cond_7
@@ -514,7 +470,6 @@
 
     move-result v5
 
-    .line 1894
     const-string v30, "android.intent.extra.REPLACING"
 
     const/16 v31, 0x0
@@ -527,7 +482,6 @@
 
     move-result v24
 
-    .line 1903
     .end local v23    # "pkgName":Ljava/lang/String;
     .end local v29    # "uri":Landroid/net/Uri;
     :cond_8
@@ -542,7 +496,6 @@
 
     if-eqz v30, :cond_1
 
-    .line 1907
     const-string v30, "android.intent.extra.UID"
 
     move-object/from16 v0, v30
@@ -551,11 +504,9 @@
 
     move-result v28
 
-    .line 1908
     .local v28, "uid":I
     if-eqz v5, :cond_f
 
-    .line 1909
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/backup/BackupManagerService$2;->this$0:Lcom/android/server/backup/BackupManagerService;
@@ -570,10 +521,8 @@
 
     monitor-enter v31
 
-    .line 1910
     if-eqz v24, :cond_9
 
-    .line 1913
     :try_start_5
     move-object/from16 v0, p0
 
@@ -589,7 +538,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/backup/BackupManagerService;->removePackageParticipantsLocked([Ljava/lang/String;I)V
 
-    .line 1915
     :cond_9
     move-object/from16 v0, p0
 
@@ -603,17 +551,14 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/backup/BackupManagerService;->addPackageParticipantsLocked([Ljava/lang/String;)V
 
-    .line 1916
     monitor-exit v31
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 1918
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v20
 
-    .line 1919
     .local v20, "now":J
     move-object/from16 v7, v22
 
@@ -635,7 +580,6 @@
 
     aget-object v19, v7, v16
 
-    .line 1921
     .local v19, "packageName":Ljava/lang/String;
     :try_start_6
     move-object/from16 v0, p0
@@ -661,7 +605,6 @@
 
     move-result-object v6
 
-    .line 1922
     .restart local v6    # "app":Landroid/content/pm/PackageInfo;
     invoke-static {v6}, Lcom/android/server/backup/BackupManagerService;->appGetsFullBackup(Landroid/content/pm/PackageInfo;)Z
 
@@ -679,7 +622,6 @@
 
     if-eqz v30, :cond_a
 
-    .line 1923
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/backup/BackupManagerService$2;->this$0:Lcom/android/server/backup/BackupManagerService;
@@ -694,7 +636,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/server/backup/BackupManagerService;->enqueueFullBackup(Ljava/lang/String;J)V
 
-    .line 1924
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/backup/BackupManagerService$2;->this$0:Lcom/android/server/backup/BackupManagerService;
@@ -709,7 +650,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/backup/BackupManagerService;->scheduleNextFullBackupJob(J)V
 
-    .line 1929
     :cond_a
     move-object/from16 v0, p0
 
@@ -727,7 +667,6 @@
     :try_end_6
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_6 .. :try_end_6} :catch_1
 
-    .line 1930
     :try_start_7
     move-object/from16 v0, p0
 
@@ -751,11 +690,9 @@
 
     check-cast v11, Lcom/android/server/backup/BackupManagerService$TransportConnection;
 
-    .line 1931
     .restart local v11    # "conn":Lcom/android/server/backup/BackupManagerService$TransportConnection;
     if-eqz v11, :cond_d
 
-    .line 1935
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/backup/BackupManagerService$2;->this$0:Lcom/android/server/backup/BackupManagerService;
@@ -772,13 +709,11 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/backup/BackupManagerService;->bindTransport(Landroid/content/pm/ServiceInfo;)Z
 
-    .line 1939
     :goto_4
     monitor-exit v31
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_2
 
-    .line 1919
     .end local v6    # "app":Landroid/content/pm/PackageInfo;
     .end local v11    # "conn":Lcom/android/server/backup/BackupManagerService$TransportConnection;
     :goto_5
@@ -786,7 +721,6 @@
 
     goto/16 :goto_3
 
-    .line 1895
     .end local v7    # "arr$":[Ljava/lang/String;
     .end local v16    # "i$":I
     .end local v18    # "len$":I
@@ -804,10 +738,8 @@
 
     if-eqz v30, :cond_c
 
-    .line 1896
     const/4 v5, 0x1
 
-    .line 1897
     const-string v30, "android.intent.extra.changed_package_list"
 
     move-object/from16 v0, p2
@@ -820,7 +752,6 @@
 
     goto/16 :goto_2
 
-    .line 1898
     :cond_c
     const-string v30, "android.intent.action.EXTERNAL_APPLICATIONS_UNAVAILABLE"
 
@@ -832,10 +763,8 @@
 
     if-eqz v30, :cond_8
 
-    .line 1899
     const/4 v5, 0x0
 
-    .line 1900
     const-string v30, "android.intent.extra.changed_package_list"
 
     move-object/from16 v0, p2
@@ -848,7 +777,6 @@
 
     goto/16 :goto_2
 
-    .line 1916
     .restart local v28    # "uid":I
     :catchall_1
     move-exception v30
@@ -860,7 +788,6 @@
 
     throw v30
 
-    .line 1937
     .restart local v6    # "app":Landroid/content/pm/PackageInfo;
     .restart local v7    # "arr$":[Ljava/lang/String;
     .restart local v11    # "conn":Lcom/android/server/backup/BackupManagerService$TransportConnection;
@@ -882,7 +809,6 @@
 
     goto :goto_4
 
-    .line 1939
     .end local v11    # "conn":Lcom/android/server/backup/BackupManagerService$TransportConnection;
     :catchall_2
     move-exception v30
@@ -896,12 +822,10 @@
     :try_end_a
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_a .. :try_end_a} :catch_1
 
-    .line 1941
     .end local v6    # "app":Landroid/content/pm/PackageInfo;
     :catch_1
     move-exception v12
 
-    .line 1944
     .local v12, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v30, "BackupManagerService"
 
@@ -931,7 +855,6 @@
 
     goto :goto_5
 
-    .line 1951
     .end local v12    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     .end local v19    # "packageName":Ljava/lang/String;
     :cond_e
@@ -948,7 +871,6 @@
 
     goto/16 :goto_0
 
-    .line 1953
     .end local v7    # "arr$":[Ljava/lang/String;
     .end local v16    # "i$":I
     .end local v18    # "len$":I
@@ -956,7 +878,6 @@
     :cond_f
     if-nez v24, :cond_1
 
-    .line 1956
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/backup/BackupManagerService$2;->this$0:Lcom/android/server/backup/BackupManagerService;
@@ -971,7 +892,6 @@
 
     monitor-enter v31
 
-    .line 1957
     :try_start_b
     move-object/from16 v0, p0
 
@@ -987,7 +907,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/backup/BackupManagerService;->removePackageParticipantsLocked([Ljava/lang/String;I)V
 
-    .line 1958
     monitor-exit v31
 
     goto/16 :goto_0

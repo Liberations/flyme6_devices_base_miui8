@@ -17,25 +17,20 @@
     .param p1, "orig"    # Lcom/android/server/pm/PackageSetting;
 
     .prologue
-    .line 46
     invoke-direct {p0, p1}, Lcom/android/server/pm/PackageSettingBase;-><init>(Lcom/android/server/pm/PackageSettingBase;)V
 
-    .line 48
     iget v0, p1, Lcom/android/server/pm/PackageSetting;->appId:I
 
     iput v0, p0, Lcom/android/server/pm/PackageSetting;->appId:I
 
-    .line 49
     iget-object v0, p1, Lcom/android/server/pm/PackageSetting;->pkg:Landroid/content/pm/PackageParser$Package;
 
     iput-object v0, p0, Lcom/android/server/pm/PackageSetting;->pkg:Landroid/content/pm/PackageParser$Package;
 
-    .line 50
     iget-object v0, p1, Lcom/android/server/pm/PackageSetting;->sharedUser:Lcom/android/server/pm/SharedUserSetting;
 
     iput-object v0, p0, Lcom/android/server/pm/PackageSetting;->sharedUser:Lcom/android/server/pm/SharedUserSetting;
 
-    .line 51
     return-void
 .end method
 
@@ -54,10 +49,8 @@
     .param p11, "privateFlags"    # I
 
     .prologue
-    .line 36
     invoke-direct/range {p0 .. p11}, Lcom/android/server/pm/PackageSettingBase;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/io/File;Ljava/io/File;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;III)V
 
-    .line 39
     return-void
 .end method
 
@@ -67,7 +60,6 @@
     .locals 1
 
     .prologue
-    .line 61
     iget-object v0, p0, Lcom/android/server/pm/PackageSetting;->sharedUser:Lcom/android/server/pm/SharedUserSetting;
 
     if-eqz v0, :cond_0
@@ -93,7 +85,6 @@
     .locals 1
 
     .prologue
-    .line 71
     iget v0, p0, Lcom/android/server/pm/PackageSetting;->pkgPrivateFlags:I
 
     and-int/lit8 v0, v0, 0x4
@@ -115,7 +106,6 @@
     .locals 1
 
     .prologue
-    .line 67
     iget v0, p0, Lcom/android/server/pm/PackageSetting;->pkgPrivateFlags:I
 
     and-int/lit8 v0, v0, 0x8
@@ -137,7 +127,6 @@
     .locals 1
 
     .prologue
-    .line 79
     iget-object v0, p0, Lcom/android/server/pm/PackageSetting;->sharedUser:Lcom/android/server/pm/SharedUserSetting;
 
     if-eqz v0, :cond_0
@@ -157,7 +146,6 @@
     .locals 1
 
     .prologue
-    .line 75
     iget v0, p0, Lcom/android/server/pm/PackageSetting;->pkgFlags:I
 
     and-int/lit8 v0, v0, 0x1
@@ -179,7 +167,6 @@
     .locals 2
 
     .prologue
-    .line 55
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

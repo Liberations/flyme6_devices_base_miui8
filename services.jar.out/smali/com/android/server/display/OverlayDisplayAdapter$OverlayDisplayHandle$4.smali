@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 486
     iput-object p1, p0, Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle$4;->this$1:Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 5
 
     .prologue
-    .line 491
     iget-object v2, p0, Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle$4;->this$1:Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle;
 
     iget-object v2, v2, Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle;->this$0:Lcom/android/server/display/OverlayDisplayAdapter;
@@ -51,7 +49,6 @@
 
     monitor-enter v3
 
-    .line 492
     :try_start_0
     iget-object v2, p0, Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle$4;->this$1:Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle;
 
@@ -62,14 +59,11 @@
 
     if-nez v2, :cond_0
 
-    .line 493
     monitor-exit v3
 
-    .line 499
     :goto_0
     return-void
 
-    .line 495
     :cond_0
     iget-object v2, p0, Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle$4;->this$1:Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle;
 
@@ -91,7 +85,6 @@
 
     check-cast v0, Lcom/android/server/display/OverlayDisplayAdapter$OverlayMode;
 
-    .line 496
     .local v0, "mode":Lcom/android/server/display/OverlayDisplayAdapter$OverlayMode;
     iget-object v2, p0, Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle$4;->this$1:Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle;
 
@@ -100,13 +93,11 @@
 
     move-result-object v1
 
-    .line 497
     .local v1, "window":Lcom/android/server/display/OverlayDisplayWindow;
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 498
     iget v2, v0, Lcom/android/server/display/OverlayDisplayAdapter$OverlayMode;->mWidth:I
 
     iget v3, v0, Lcom/android/server/display/OverlayDisplayAdapter$OverlayMode;->mHeight:I
@@ -117,7 +108,6 @@
 
     goto :goto_0
 
-    .line 497
     .end local v0    # "mode":Lcom/android/server/display/OverlayDisplayAdapter$OverlayMode;
     .end local v1    # "window":Lcom/android/server/display/OverlayDisplayWindow;
     :catchall_0

@@ -36,7 +36,6 @@
     .param p8, "x6"    # Z
 
     .prologue
-    .line 794
     iput-object p1, p0, Lcom/android/server/accounts/AccountManagerService$3;->this$0:Lcom/android/server/accounts/AccountManagerService;
 
     iput-object p9, p0, Lcom/android/server/accounts/AccountManagerService$3;->val$account:Landroid/accounts/Account;
@@ -57,7 +56,6 @@
     .param p1, "result"    # Landroid/os/Bundle;
 
     .prologue
-    .line 808
     if-eqz p1, :cond_0
 
     const-string v0, "booleanResult"
@@ -70,7 +68,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 811
     iget-object v0, p0, Lcom/android/server/accounts/AccountManagerService$3;->this$0:Lcom/android/server/accounts/AccountManagerService;
 
     iget-object v1, p0, Lcom/android/server/accounts/AccountManagerService$3;->val$response:Landroid/accounts/IAccountManagerResponse;
@@ -82,11 +79,9 @@
     # invokes: Lcom/android/server/accounts/AccountManagerService;->completeCloningAccount(Landroid/accounts/IAccountManagerResponse;Landroid/os/Bundle;Landroid/accounts/Account;Lcom/android/server/accounts/AccountManagerService$UserAccounts;)V
     invoke-static {v0, v1, p1, v2, v3}, Lcom/android/server/accounts/AccountManagerService;->access$1200(Lcom/android/server/accounts/AccountManagerService;Landroid/accounts/IAccountManagerResponse;Landroid/os/Bundle;Landroid/accounts/Account;Lcom/android/server/accounts/AccountManagerService$UserAccounts;)V
 
-    .line 815
     :goto_0
     return-void
 
-    .line 813
     :cond_0
     invoke-super {p0, p1}, Lcom/android/server/accounts/AccountManagerService$Session;->onResult(Landroid/os/Bundle;)V
 
@@ -102,14 +97,12 @@
     .end annotation
 
     .prologue
-    .line 803
     iget-object v0, p0, Lcom/android/server/accounts/AccountManagerService$3;->mAuthenticator:Landroid/accounts/IAccountAuthenticator;
 
     iget-object v1, p0, Lcom/android/server/accounts/AccountManagerService$3;->val$account:Landroid/accounts/Account;
 
     invoke-interface {v0, p0, v1}, Landroid/accounts/IAccountAuthenticator;->getAccountCredentialsForCloning(Landroid/accounts/IAccountAuthenticatorResponse;Landroid/accounts/Account;)V
 
-    .line 804
     return-void
 .end method
 
@@ -118,7 +111,6 @@
     .param p1, "now"    # J
 
     .prologue
-    .line 797
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

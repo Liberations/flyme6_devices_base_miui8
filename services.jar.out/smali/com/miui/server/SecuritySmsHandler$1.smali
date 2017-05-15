@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 223
     iput-object p1, p0, Lcom/miui/server/SecuritySmsHandler$1;->this$0:Lcom/miui/server/SecuritySmsHandler;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 226
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 227
     .local v0, "action":Ljava/lang/String;
     const-string v1, "SecurityManagerService"
 
@@ -68,7 +65,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 228
     const-string v1, "android.provider.Telephony.SMS_DELIVER"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -77,22 +73,18 @@
 
     if-eqz v1, :cond_0
 
-    .line 229
     const/4 v1, 0x0
 
     invoke-virtual {p2, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 230
     const/high16 v1, 0x8000000
 
     invoke-virtual {p2, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 231
     const-string v1, "android.provider.Telephony.SMS_RECEIVED"
 
     invoke-virtual {p2, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 232
     iget-object v1, p0, Lcom/miui/server/SecuritySmsHandler$1;->this$0:Lcom/miui/server/SecuritySmsHandler;
 
     const-string v2, "android.permission.RECEIVE_SMS"
@@ -109,14 +101,12 @@
     # invokes: Lcom/miui/server/SecuritySmsHandler;->dispatchIntent(Landroid/content/Intent;Ljava/lang/String;ILandroid/content/BroadcastReceiver;)V
     invoke-static {v1, p2, v2, v3, v4}, Lcom/miui/server/SecuritySmsHandler;->access$100(Lcom/miui/server/SecuritySmsHandler;Landroid/content/Intent;Ljava/lang/String;ILandroid/content/BroadcastReceiver;)V
 
-    .line 234
     const-string v1, "SecurityManagerService"
 
     const-string v2, "mResultReceiver dispatch SMS_RECEIVED_ACTION"
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 236
     :cond_0
     return-void
 .end method

@@ -24,13 +24,10 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 106
     iput-object p1, p0, Lcom/android/server/display/PaperModeService$SettingsObserver;->this$0:Lcom/android/server/display/PaperModeService;
 
-    .line 107
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 108
     return-void
 .end method
 
@@ -42,13 +39,11 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 112
     iget-object v0, p0, Lcom/android/server/display/PaperModeService$SettingsObserver;->this$0:Lcom/android/server/display/PaperModeService;
 
     # invokes: Lcom/android/server/display/PaperModeService;->updateSettings()V
     invoke-static {v0}, Lcom/android/server/display/PaperModeService;->access$400(Lcom/android/server/display/PaperModeService;)V
 
-    .line 113
     # getter for: Lcom/android/server/display/PaperModeService;->URI_PAPER_MODE_WHITE_LIST:Landroid/net/Uri;
     invoke-static {}, Lcom/android/server/display/PaperModeService;->access$500()Landroid/net/Uri;
 
@@ -60,13 +55,11 @@
 
     if-nez v0, :cond_0
 
-    .line 114
     iget-object v0, p0, Lcom/android/server/display/PaperModeService$SettingsObserver;->this$0:Lcom/android/server/display/PaperModeService;
 
     # invokes: Lcom/android/server/display/PaperModeService;->updatePaperMode()V
     invoke-static {v0}, Lcom/android/server/display/PaperModeService;->access$300(Lcom/android/server/display/PaperModeService;)V
 
-    .line 116
     :cond_0
     return-void
 .end method

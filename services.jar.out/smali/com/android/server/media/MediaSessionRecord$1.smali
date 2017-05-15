@@ -40,7 +40,6 @@
     .locals 0
 
     .prologue
-    .line 459
     iput-object p1, p0, Lcom/android/server/media/MediaSessionRecord$1;->this$0:Lcom/android/server/media/MediaSessionRecord;
 
     iput-boolean p2, p0, Lcom/android/server/media/MediaSessionRecord$1;->val$useSuggested:Z
@@ -68,12 +67,10 @@
     .locals 6
 
     .prologue
-    .line 462
     iget-boolean v0, p0, Lcom/android/server/media/MediaSessionRecord$1;->val$useSuggested:Z
 
     if-eqz v0, :cond_1
 
-    .line 463
     iget v0, p0, Lcom/android/server/media/MediaSessionRecord$1;->val$stream:I
 
     const/4 v1, 0x0
@@ -84,7 +81,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 464
     iget-object v0, p0, Lcom/android/server/media/MediaSessionRecord$1;->this$0:Lcom/android/server/media/MediaSessionRecord;
 
     # getter for: Lcom/android/server/media/MediaSessionRecord;->mAudioManagerInternal:Landroid/media/AudioManagerInternal;
@@ -104,11 +100,9 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/media/AudioManagerInternal;->adjustSuggestedStreamVolumeForUid(IIILjava/lang/String;I)V
 
-    .line 475
     :goto_0
     return-void
 
-    .line 467
     :cond_0
     iget-object v0, p0, Lcom/android/server/media/MediaSessionRecord$1;->this$0:Lcom/android/server/media/MediaSessionRecord;
 
@@ -135,7 +129,6 @@
 
     goto :goto_0
 
-    .line 472
     :cond_1
     iget-object v0, p0, Lcom/android/server/media/MediaSessionRecord$1;->this$0:Lcom/android/server/media/MediaSessionRecord;
 

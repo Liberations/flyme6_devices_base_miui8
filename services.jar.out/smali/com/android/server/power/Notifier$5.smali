@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 413
     iput-object p1, p0, Lcom/android/server/power/Notifier$5;->this$0:Lcom/android/server/power/Notifier;
 
     iput p2, p0, Lcom/android/server/power/Notifier$5;->val$why:I
@@ -46,7 +45,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 416
     const/16 v0, 0xaa8
 
     const/4 v1, 0x4
@@ -87,7 +85,6 @@
 
     invoke-static {v0, v1}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
 
-    .line 417
     iget-object v0, p0, Lcom/android/server/power/Notifier$5;->this$0:Lcom/android/server/power/Notifier;
 
     # getter for: Lcom/android/server/power/Notifier;->mPolicy:Landroid/view/WindowManagerPolicy;
@@ -104,6 +101,5 @@
 
     invoke-static {v0, v1}, Lcom/android/server/power/Notifier$FlymeInjector;->notifyAccessControlGotoSleep(Lcom/android/server/power/Notifier;I)V
 
-    .line 418
     return-void
 .end method

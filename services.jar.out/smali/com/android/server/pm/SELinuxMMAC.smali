@@ -49,14 +49,12 @@
     .locals 2
 
     .prologue
-    .line 64
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v0, Lcom/android/server/pm/SELinuxMMAC;->sPolicies:Ljava/util/List;
 
-    .line 67
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -81,14 +79,12 @@
 
     sput-object v0, Lcom/android/server/pm/SELinuxMMAC;->DATA_VERSION_FILE:Ljava/lang/String;
 
-    .line 74
     invoke-static {}, Lcom/android/server/pm/SELinuxMMAC;->useOverridePolicy()Z
 
     move-result v0
 
     sput-boolean v0, Lcom/android/server/pm/SELinuxMMAC;->USE_OVERRIDE_POLICY:Z
 
-    .line 77
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -113,7 +109,6 @@
 
     sput-object v0, Lcom/android/server/pm/SELinuxMMAC;->DATA_MAC_PERMISSIONS:Ljava/lang/String;
 
-    .line 81
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -138,7 +133,6 @@
 
     sput-object v0, Lcom/android/server/pm/SELinuxMMAC;->BASE_MAC_PERMISSIONS:Ljava/lang/String;
 
-    .line 85
     sget-boolean v0, Lcom/android/server/pm/SELinuxMMAC;->USE_OVERRIDE_POLICY:Z
 
     if-eqz v0, :cond_0
@@ -148,7 +142,6 @@
     :goto_0
     sput-object v0, Lcom/android/server/pm/SELinuxMMAC;->MAC_PERMISSIONS:Ljava/lang/String;
 
-    .line 89
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -173,7 +166,6 @@
 
     sput-object v0, Lcom/android/server/pm/SELinuxMMAC;->DATA_SEAPP_CONTEXTS:Ljava/lang/String;
 
-    .line 96
     sget-boolean v0, Lcom/android/server/pm/SELinuxMMAC;->USE_OVERRIDE_POLICY:Z
 
     if-eqz v0, :cond_1
@@ -183,7 +175,6 @@
     :goto_1
     sput-object v0, Lcom/android/server/pm/SELinuxMMAC;->SEAPP_CONTEXTS:Ljava/lang/String;
 
-    .line 100
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -214,13 +205,11 @@
 
     return-void
 
-    .line 85
     :cond_0
     sget-object v0, Lcom/android/server/pm/SELinuxMMAC;->BASE_MAC_PERMISSIONS:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 96
     :cond_1
     const-string v0, "/seapp_contexts"
 
@@ -231,7 +220,6 @@
     .locals 0
 
     .prologue
-    .line 54
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -242,12 +230,10 @@
     .param p0, "pkg"    # Landroid/content/pm/PackageParser$Package;
 
     .prologue
-    .line 350
     sget-object v4, Lcom/android/server/pm/SELinuxMMAC;->sPolicies:Ljava/util/List;
 
     monitor-enter v4
 
-    .line 351
     :try_start_0
     sget-object v3, Lcom/android/server/pm/SELinuxMMAC;->sPolicies:Ljava/util/List;
 
@@ -269,42 +255,34 @@
 
     check-cast v1, Lcom/android/server/pm/Policy;
 
-    .line 352
     .local v1, "policy":Lcom/android/server/pm/Policy;
     invoke-virtual {v1, p0}, Lcom/android/server/pm/Policy;->getMatchedSeinfo(Landroid/content/pm/PackageParser$Package;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 353
     .local v2, "seinfo":Ljava/lang/String;
     if-eqz v2, :cond_0
 
-    .line 354
     iget-object v3, p0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iput-object v2, v3, Landroid/content/pm/ApplicationInfo;->seinfo:Ljava/lang/String;
 
-    .line 359
     const/4 v3, 0x1
 
     monitor-exit v4
 
-    .line 368
     .end local v1    # "policy":Lcom/android/server/pm/Policy;
     .end local v2    # "seinfo":Ljava/lang/String;
     :goto_0
     return v3
 
-    .line 362
     :cond_1
     monitor-exit v4
 
-    .line 368
     const/4 v3, 0x0
 
     goto :goto_0
 
-    .line 362
     .end local v0    # "i$":Ljava/util/Iterator;
     :catchall_0
     move-exception v3
@@ -327,14 +305,11 @@
     .end annotation
 
     .prologue
-    .line 421
     const/4 v0, 0x0
 
-    .line 422
     .local v0, "fos":Ljava/io/FileOutputStream;
     const/4 v2, 0x0
 
-    .line 424
     .local v2, "tmp":Ljava/io/File;
     :try_start_0
     const-string v3, "seapp_hash"
@@ -349,39 +324,33 @@
 
     move-result-object v2
 
-    .line 425
     const/4 v3, 0x1
 
     invoke-virtual {v2, v3}, Ljava/io/File;->setReadable(Z)Z
 
-    .line 426
     new-instance v1, Ljava/io/FileOutputStream;
 
     invoke-direct {v1, v2}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 427
     .end local v0    # "fos":Ljava/io/FileOutputStream;
     .local v1, "fos":Ljava/io/FileOutputStream;
     :try_start_1
     invoke-virtual {v1, p1}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 428
     invoke-virtual {v1}, Ljava/io/FileOutputStream;->getFD()Ljava/io/FileDescriptor;
 
     move-result-object v3
 
     invoke-virtual {v3}, Ljava/io/FileDescriptor;->sync()V
 
-    .line 429
     invoke-virtual {v2, p0}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
 
     move-result v3
 
     if-nez v3, :cond_1
 
-    .line 430
     new-instance v3, Ljava/io/IOException;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -412,7 +381,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 433
     :catchall_0
     move-exception v3
 
@@ -423,32 +391,25 @@
     :goto_0
     if-eqz v2, :cond_0
 
-    .line 434
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
-    .line 436
     :cond_0
     invoke-static {v0}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
     throw v3
 
-    .line 433
     .end local v0    # "fos":Ljava/io/FileOutputStream;
     .restart local v1    # "fos":Ljava/io/FileOutputStream;
     :cond_1
     if-eqz v2, :cond_2
 
-    .line 434
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
-    .line 436
     :cond_2
     invoke-static {v1}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 438
     return-void
 
-    .line 433
     .end local v1    # "fos":Ljava/io/FileOutputStream;
     .restart local v0    # "fos":Ljava/io/FileOutputStream;
     :catchall_1
@@ -468,7 +429,6 @@
     .end annotation
 
     .prologue
-    .line 311
     const/4 v0, 0x2
 
     const/4 v1, 0x0
@@ -477,10 +437,8 @@
 
     invoke-interface {p0, v0, v1, v2}, Lorg/xmlpull/v1/XmlPullParser;->require(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 312
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->nextTag()I
 
-    .line 313
     return-void
 .end method
 
@@ -499,21 +457,17 @@
 
     const/4 v5, 0x2
 
-    .line 252
     const-string v3, "default"
 
     invoke-interface {p0, v5, v6, v3}, Lorg/xmlpull/v1/XmlPullParser;->require(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 253
     new-instance v0, Lcom/android/server/pm/Policy$PolicyBuilder;
 
     invoke-direct {v0}, Lcom/android/server/pm/Policy$PolicyBuilder;-><init>()V
 
-    .line 254
     .local v0, "pb":Lcom/android/server/pm/Policy$PolicyBuilder;
     invoke-virtual {v0}, Lcom/android/server/pm/Policy$PolicyBuilder;->setAsDefaultPolicy()Lcom/android/server/pm/Policy$PolicyBuilder;
 
-    .line 256
     :cond_0
     :goto_0
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->next()I
@@ -524,19 +478,16 @@
 
     if-eq v3, v4, :cond_2
 
-    .line 257
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
     move-result v3
 
     if-ne v3, v5, :cond_0
 
-    .line 261
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 262
     .local v2, "tagName":Ljava/lang/String;
     const-string v3, "seinfo"
 
@@ -546,30 +497,25 @@
 
     if-eqz v3, :cond_1
 
-    .line 263
     const-string v3, "value"
 
     invoke-interface {p0, v6, v3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 264
     .local v1, "seinfo":Ljava/lang/String;
     invoke-virtual {v0, v1}, Lcom/android/server/pm/Policy$PolicyBuilder;->setGlobalSeinfoOrThrow(Ljava/lang/String;)Lcom/android/server/pm/Policy$PolicyBuilder;
 
-    .line 265
     invoke-static {p0}, Lcom/android/server/pm/SELinuxMMAC;->readSeinfo(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto :goto_0
 
-    .line 267
     .end local v1    # "seinfo":Ljava/lang/String;
     :cond_1
     invoke-static {p0}, Lcom/android/server/pm/SELinuxMMAC;->skip(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto :goto_0
 
-    .line 271
     .end local v2    # "tagName":Ljava/lang/String;
     :cond_2
     invoke-virtual {v0}, Lcom/android/server/pm/Policy$PolicyBuilder;->build()Lcom/android/server/pm/Policy;
@@ -589,22 +535,18 @@
 
     const/4 v8, 0x0
 
-    .line 118
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 120
     .local v3, "policies":Ljava/util/List;, "Ljava/util/List<Lcom/android/server/pm/Policy;>;"
     const/4 v4, 0x0
 
-    .line 121
     .local v4, "policyFile":Ljava/io/FileReader;
     invoke-static {}, Landroid/util/Xml;->newPullParser()Lorg/xmlpull/v1/XmlPullParser;
 
     move-result-object v2
 
-    .line 123
     .local v2, "parser":Lorg/xmlpull/v1/XmlPullParser;
     :try_start_0
     new-instance v5, Ljava/io/FileReader;
@@ -619,7 +561,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_3
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 124
     .end local v4    # "policyFile":Ljava/io/FileReader;
     .local v5, "policyFile":Ljava/io/FileReader;
     :try_start_1
@@ -647,13 +588,10 @@
 
     invoke-static {v10, v11}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 126
     invoke-interface {v2, v5}, Lorg/xmlpull/v1/XmlPullParser;->setInput(Ljava/io/Reader;)V
 
-    .line 127
     invoke-interface {v2}, Lorg/xmlpull/v1/XmlPullParser;->nextTag()I
 
-    .line 128
     const/4 v10, 0x2
 
     const/4 v11, 0x0
@@ -662,7 +600,6 @@
 
     invoke-interface {v2, v10, v11, v12}, Lorg/xmlpull/v1/XmlPullParser;->require(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 130
     :cond_0
     :goto_0
     invoke-interface {v2}, Lorg/xmlpull/v1/XmlPullParser;->next()I
@@ -673,14 +610,12 @@
 
     if-eq v10, v11, :cond_2
 
-    .line 131
     invoke-interface {v2}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
     move-result v10
 
     if-ne v10, v13, :cond_0
 
-    .line 135
     invoke-interface {v2}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v11
@@ -697,7 +632,6 @@
     :goto_1
     packed-switch v10, :pswitch_data_0
 
-    .line 143
     invoke-static {v2}, Lcom/android/server/pm/SELinuxMMAC;->skip(Lorg/xmlpull/v1/XmlPullParser;)V
     :try_end_1
     .catch Ljava/lang/IllegalStateException; {:try_start_1 .. :try_end_1} :catch_0
@@ -708,7 +642,6 @@
 
     goto :goto_0
 
-    .line 146
     :catch_0
     move-exception v9
 
@@ -719,7 +652,6 @@
     :goto_2
     move-object v0, v9
 
-    .line 148
     .local v0, "ex":Ljava/lang/Exception;
     :goto_3
     :try_start_2
@@ -729,7 +661,6 @@
 
     invoke-direct {v7, v9}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 149
     .local v7, "sb":Ljava/lang/StringBuilder;
     invoke-interface {v2}, Lorg/xmlpull/v1/XmlPullParser;->getPositionDescription()Ljava/lang/String;
 
@@ -737,25 +668,20 @@
 
     invoke-virtual {v7, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 150
     const-string v9, " while parsing "
 
     invoke-virtual {v7, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 151
     sget-object v9, Lcom/android/server/pm/SELinuxMMAC;->MAC_PERMISSIONS:Ljava/lang/String;
 
     invoke-virtual {v7, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 152
     const-string v9, ":"
 
     invoke-virtual {v7, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 153
     invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 154
     const-string v9, "SELinuxMMAC"
 
     invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -766,16 +692,13 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 160
     invoke-static {v4}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 181
     .end local v0    # "ex":Ljava/lang/Exception;
     .end local v7    # "sb":Ljava/lang/StringBuilder;
     :goto_4
     return v8
 
-    .line 135
     .end local v4    # "policyFile":Ljava/io/FileReader;
     .restart local v5    # "policyFile":Ljava/io/FileReader;
     :sswitch_0
@@ -805,7 +728,6 @@
 
     goto :goto_1
 
-    .line 137
     :pswitch_0
     invoke-static {v2}, Lcom/android/server/pm/SELinuxMMAC;->readSignerOrThrow(Lorg/xmlpull/v1/XmlPullParser;)Lcom/android/server/pm/Policy;
 
@@ -815,7 +737,6 @@
 
     goto :goto_0
 
-    .line 146
     :catch_1
     move-exception v9
 
@@ -828,7 +749,6 @@
 
     goto :goto_3
 
-    .line 140
     .end local v4    # "policyFile":Ljava/io/FileReader;
     .restart local v5    # "policyFile":Ljava/io/FileReader;
     :pswitch_1
@@ -846,7 +766,6 @@
 
     goto :goto_0
 
-    .line 146
     :catch_2
     move-exception v9
 
@@ -859,29 +778,24 @@
 
     goto :goto_3
 
-    .line 160
     .end local v4    # "policyFile":Ljava/io/FileReader;
     .restart local v5    # "policyFile":Ljava/io/FileReader;
     :cond_2
     invoke-static {v5}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 164
     new-instance v6, Lcom/android/server/pm/PolicyComparator;
 
     invoke-direct {v6}, Lcom/android/server/pm/PolicyComparator;-><init>()V
 
-    .line 165
     .local v6, "policySort":Lcom/android/server/pm/PolicyComparator;
     invoke-static {v3, v6}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    .line 166
     invoke-virtual {v6}, Lcom/android/server/pm/PolicyComparator;->foundDuplicate()Z
 
     move-result v10
 
     if-eqz v10, :cond_3
 
-    .line 167
     const-string v9, "SELinuxMMAC"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -908,17 +822,14 @@
 
     move-object v4, v5
 
-    .line 168
     .end local v5    # "policyFile":Ljava/io/FileReader;
     .restart local v4    # "policyFile":Ljava/io/FileReader;
     goto :goto_4
 
-    .line 156
     .end local v6    # "policySort":Lcom/android/server/pm/PolicyComparator;
     :catch_3
     move-exception v1
 
-    .line 157
     .local v1, "ioe":Ljava/io/IOException;
     :goto_7
     :try_start_4
@@ -948,7 +859,6 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 160
     invoke-static {v4}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
     goto :goto_4
@@ -962,7 +872,6 @@
 
     throw v8
 
-    .line 171
     .end local v4    # "policyFile":Ljava/io/FileReader;
     .restart local v5    # "policyFile":Ljava/io/FileReader;
     .restart local v6    # "policySort":Lcom/android/server/pm/PolicyComparator;
@@ -971,11 +880,9 @@
 
     monitor-enter v10
 
-    .line 172
     :try_start_5
     sput-object v3, Lcom/android/server/pm/SELinuxMMAC;->sPolicies:Ljava/util/List;
 
-    .line 179
     monitor-exit v10
 
     move-object v4, v5
@@ -984,10 +891,8 @@
     .restart local v4    # "policyFile":Ljava/io/FileReader;
     move v8, v9
 
-    .line 181
     goto/16 :goto_4
 
-    .line 179
     .end local v4    # "policyFile":Ljava/io/FileReader;
     .restart local v5    # "policyFile":Ljava/io/FileReader;
     :catchall_1
@@ -999,7 +904,6 @@
 
     throw v8
 
-    .line 160
     .end local v6    # "policySort":Lcom/android/server/pm/PolicyComparator;
     :catchall_2
     move-exception v8
@@ -1010,7 +914,6 @@
     .restart local v4    # "policyFile":Ljava/io/FileReader;
     goto :goto_8
 
-    .line 156
     .end local v4    # "policyFile":Ljava/io/FileReader;
     .restart local v5    # "policyFile":Ljava/io/FileReader;
     :catch_4
@@ -1022,7 +925,6 @@
     .restart local v4    # "policyFile":Ljava/io/FileReader;
     goto :goto_7
 
-    .line 146
     :catch_5
     move-exception v9
 
@@ -1038,7 +940,6 @@
 
     goto :goto_5
 
-    .line 135
     :sswitch_data_0
     .sparse-switch
         -0x35ca90d6 -> :sswitch_0
@@ -1068,19 +969,16 @@
 
     const/4 v5, 0x0
 
-    .line 290
     const-string v3, "package"
 
     invoke-interface {p0, v6, v5, v3}, Lorg/xmlpull/v1/XmlPullParser;->require(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 291
     const-string v3, "name"
 
     invoke-interface {p0, v5, v3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 293
     .local v0, "pkgName":Ljava/lang/String;
     :cond_0
     :goto_0
@@ -1092,19 +990,16 @@
 
     if-eq v3, v4, :cond_2
 
-    .line 294
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
     move-result v3
 
     if-ne v3, v6, :cond_0
 
-    .line 298
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 299
     .local v2, "tagName":Ljava/lang/String;
     const-string v3, "seinfo"
 
@@ -1114,30 +1009,25 @@
 
     if-eqz v3, :cond_1
 
-    .line 300
     const-string v3, "value"
 
     invoke-interface {p0, v5, v3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 301
     .local v1, "seinfo":Ljava/lang/String;
     invoke-virtual {p1, v0, v1}, Lcom/android/server/pm/Policy$PolicyBuilder;->addInnerPackageMapOrThrow(Ljava/lang/String;Ljava/lang/String;)Lcom/android/server/pm/Policy$PolicyBuilder;
 
-    .line 302
     invoke-static {p0}, Lcom/android/server/pm/SELinuxMMAC;->readSeinfo(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto :goto_0
 
-    .line 304
     .end local v1    # "seinfo":Ljava/lang/String;
     :cond_1
     invoke-static {p0}, Lcom/android/server/pm/SELinuxMMAC;->skip(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto :goto_0
 
-    .line 307
     .end local v2    # "tagName":Ljava/lang/String;
     :cond_2
     return-void
@@ -1154,7 +1044,6 @@
     .end annotation
 
     .prologue
-    .line 317
     const/4 v0, 0x2
 
     const/4 v1, 0x0
@@ -1163,10 +1052,8 @@
 
     invoke-interface {p0, v0, v1, v2}, Lorg/xmlpull/v1/XmlPullParser;->require(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 318
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->nextTag()I
 
-    .line 319
     return-void
 .end method
 
@@ -1185,17 +1072,14 @@
 
     const/4 v7, 0x0
 
-    .line 201
     const-string v5, "signer"
 
     invoke-interface {p0, v8, v7, v5}, Lorg/xmlpull/v1/XmlPullParser;->require(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 202
     new-instance v1, Lcom/android/server/pm/Policy$PolicyBuilder;
 
     invoke-direct {v1}, Lcom/android/server/pm/Policy$PolicyBuilder;-><init>()V
 
-    .line 206
     .local v1, "pb":Lcom/android/server/pm/Policy$PolicyBuilder;
     const-string v5, "signature"
 
@@ -1203,14 +1087,11 @@
 
     move-result-object v0
 
-    .line 207
     .local v0, "cert":Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 208
     invoke-virtual {v1, v0}, Lcom/android/server/pm/Policy$PolicyBuilder;->addSignature(Ljava/lang/String;)Lcom/android/server/pm/Policy$PolicyBuilder;
 
-    .line 211
     :cond_0
     :goto_0
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->next()I
@@ -1221,19 +1102,16 @@
 
     if-eq v5, v6, :cond_4
 
-    .line 212
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
     move-result v5
 
     if-ne v5, v8, :cond_0
 
-    .line 216
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 217
     .local v4, "tagName":Ljava/lang/String;
     const-string v5, "seinfo"
 
@@ -1243,23 +1121,19 @@
 
     if-eqz v5, :cond_1
 
-    .line 218
     const-string v5, "value"
 
     invoke-interface {p0, v7, v5}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 219
     .local v2, "seinfo":Ljava/lang/String;
     invoke-virtual {v1, v2}, Lcom/android/server/pm/Policy$PolicyBuilder;->setGlobalSeinfoOrThrow(Ljava/lang/String;)Lcom/android/server/pm/Policy$PolicyBuilder;
 
-    .line 220
     invoke-static {p0}, Lcom/android/server/pm/SELinuxMMAC;->readSeinfo(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto :goto_0
 
-    .line 221
     .end local v2    # "seinfo":Ljava/lang/String;
     :cond_1
     const-string v5, "package"
@@ -1270,12 +1144,10 @@
 
     if-eqz v5, :cond_2
 
-    .line 222
     invoke-static {p0, v1}, Lcom/android/server/pm/SELinuxMMAC;->readPackageOrThrow(Lorg/xmlpull/v1/XmlPullParser;Lcom/android/server/pm/Policy$PolicyBuilder;)V
 
     goto :goto_0
 
-    .line 223
     :cond_2
     const-string v5, "cert"
 
@@ -1285,30 +1157,25 @@
 
     if-eqz v5, :cond_3
 
-    .line 224
     const-string v5, "signature"
 
     invoke-interface {p0, v7, v5}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 225
     .local v3, "sig":Ljava/lang/String;
     invoke-virtual {v1, v3}, Lcom/android/server/pm/Policy$PolicyBuilder;->addSignature(Ljava/lang/String;)Lcom/android/server/pm/Policy$PolicyBuilder;
 
-    .line 226
     invoke-static {p0}, Lcom/android/server/pm/SELinuxMMAC;->readCert(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto :goto_0
 
-    .line 228
     .end local v3    # "sig":Ljava/lang/String;
     :cond_3
     invoke-static {p0}, Lcom/android/server/pm/SELinuxMMAC;->skip(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto :goto_0
 
-    .line 232
     .end local v4    # "tagName":Ljava/lang/String;
     :cond_4
     invoke-virtual {v1}, Lcom/android/server/pm/Policy$PolicyBuilder;->build()Lcom/android/server/pm/Policy;
@@ -1328,13 +1195,11 @@
     .end annotation
 
     .prologue
-    .line 449
     :try_start_0
     invoke-static {p0}, Llibcore/io/IoUtils;->readFileAsByteArray(Ljava/lang/String;)[B
 
     move-result-object v0
 
-    .line 450
     .local v0, "contents":[B
     const-string v2, "SHA-1"
 
@@ -1350,12 +1215,10 @@
 
     return-object v2
 
-    .line 451
     .end local v0    # "contents":[B
     :catch_0
     move-exception v1
 
-    .line 452
     .local v1, "nsae":Ljava/security/NoSuchAlgorithmException;
     new-instance v2, Ljava/lang/RuntimeException;
 
@@ -1368,7 +1231,6 @@
     .locals 5
 
     .prologue
-    .line 404
     :try_start_0
     sget-object v2, Lcom/android/server/pm/SELinuxMMAC;->SEAPP_CONTEXTS:Ljava/lang/String;
 
@@ -1376,7 +1238,6 @@
 
     move-result-object v0
 
-    .line 405
     .local v0, "currentHash":[B
     new-instance v2, Ljava/io/File;
 
@@ -1388,15 +1249,12 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 409
     :goto_0
     return-void
 
-    .line 406
     :catch_0
     move-exception v1
 
-    .line 407
     .local v1, "ioe":Ljava/io/IOException;
     const-string v2, "SELinuxMMAC"
 
@@ -1431,10 +1289,8 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 380
     const/4 v0, 0x0
 
-    .line 382
     .local v0, "currentHash":[B
     :try_start_0
     sget-object v4, Lcom/android/server/pm/SELinuxMMAC;->SEAPP_CONTEXTS:Ljava/lang/String;
@@ -1445,10 +1301,8 @@
 
     move-result-object v0
 
-    .line 389
     const/4 v2, 0x0
 
-    .line 391
     .local v2, "storedHash":[B
     :try_start_1
     sget-object v4, Lcom/android/server/pm/SELinuxMMAC;->SEAPP_HASH_FILE:Ljava/lang/String;
@@ -1459,7 +1313,6 @@
 
     move-result-object v2
 
-    .line 396
     :goto_0
     if-eqz v2, :cond_0
 
@@ -1477,11 +1330,9 @@
     :goto_1
     return v3
 
-    .line 383
     :catch_0
     move-exception v1
 
-    .line 384
     .local v1, "ioe":Ljava/io/IOException;
     const-string v4, "SELinuxMMAC"
 
@@ -1491,13 +1342,11 @@
 
     goto :goto_1
 
-    .line 392
     .end local v1    # "ioe":Ljava/io/IOException;
     .restart local v2    # "storedHash":[B
     :catch_1
     move-exception v1
 
-    .line 393
     .restart local v1    # "ioe":Ljava/io/IOException;
     const-string v4, "SELinuxMMAC"
 
@@ -1543,7 +1392,6 @@
     .end annotation
 
     .prologue
-    .line 322
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
     move-result v1
@@ -1552,23 +1400,19 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 323
     new-instance v1, Ljava/lang/IllegalStateException;
 
     invoke-direct {v1}, Ljava/lang/IllegalStateException;-><init>()V
 
     throw v1
 
-    .line 325
     :cond_0
     const/4 v0, 0x1
 
-    .line 326
     .local v0, "depth":I
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 327
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
     move-result v1
@@ -1577,24 +1421,19 @@
 
     goto :goto_0
 
-    .line 332
     :pswitch_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 329
     :pswitch_1
     add-int/lit8 v0, v0, -0x1
 
-    .line 330
     goto :goto_0
 
-    .line 336
     :cond_1
     return-void
 
-    .line 327
     nop
 
     :pswitch_data_0
@@ -1608,7 +1447,6 @@
     .locals 6
 
     .prologue
-    .line 458
     :try_start_0
     sget-object v3, Lcom/android/server/pm/SELinuxMMAC;->DATA_VERSION_FILE:Ljava/lang/String;
 
@@ -1616,7 +1454,6 @@
 
     move-result-object v2
 
-    .line 459
     .local v2, "overrideVersion":Ljava/lang/String;
     const-string v3, "/selinux_version"
 
@@ -1624,7 +1461,6 @@
 
     move-result-object v0
 
-    .line 460
     .local v0, "baseVersion":Ljava/lang/String;
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1632,15 +1468,12 @@
 
     if-eqz v3, :cond_0
 
-    .line 461
     const/4 v3, 0x1
 
-    .line 470
     .end local v0    # "baseVersion":Ljava/lang/String;
     :goto_0
     return v3
 
-    .line 463
     .restart local v0    # "baseVersion":Ljava/lang/String;
     :cond_0
     const-string v3, "SELinuxMMAC"
@@ -1690,18 +1523,15 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 470
     .end local v0    # "baseVersion":Ljava/lang/String;
     :goto_1
     const/4 v3, 0x0
 
     goto :goto_0
 
-    .line 467
     :catch_0
     move-exception v1
 
-    .line 468
     .local v1, "ioe":Ljava/io/IOException;
     const-string v3, "SELinuxMMAC"
 
@@ -1711,7 +1541,6 @@
 
     goto :goto_1
 
-    .line 465
     .end local v1    # "ioe":Ljava/io/IOException;
     :catch_1
     move-exception v3

@@ -82,28 +82,24 @@
     .locals 4
 
     .prologue
-    .line 37
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Lcom/android/server/am/MiuiUsageStats;->mFileLock:Ljava/lang/Object;
 
-    .line 39
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     sput-object v0, Lcom/android/server/am/MiuiUsageStats;->mUsageStatsMap:Landroid/util/ArrayMap;
 
-    .line 40
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     sput-object v0, Lcom/android/server/am/MiuiUsageStats;->mStats:Landroid/util/ArrayMap;
 
-    .line 41
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     const-string v1, "yyyy-MM-dd"
@@ -112,12 +108,10 @@
 
     sput-object v0, Lcom/android/server/am/MiuiUsageStats;->mFormat:Ljava/text/SimpleDateFormat;
 
-    .line 42
     const/4 v0, 0x0
 
     sput-object v0, Lcom/android/server/am/MiuiUsageStats;->mLastWriteDay:Ljava/lang/String;
 
-    .line 43
     new-instance v0, Ljava/util/concurrent/atomic/AtomicLong;
 
     const-wide/16 v2, 0x0
@@ -126,7 +120,6 @@
 
     sput-object v0, Lcom/android/server/am/MiuiUsageStats;->mLastWriteElapsedTime:Ljava/util/concurrent/atomic/AtomicLong;
 
-    .line 48
     new-instance v0, Lcom/android/server/am/MiuiUsageStats$1;
 
     const-string v1, "miui-usage"
@@ -135,7 +128,6 @@
 
     sput-object v0, Lcom/android/server/am/MiuiUsageStats;->mWriteThread:Ljava/lang/Thread;
 
-    .line 55
     sget-object v0, Lcom/android/server/am/MiuiUsageStats;->mLastWriteElapsedTime:Ljava/util/concurrent/atomic/AtomicLong;
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
@@ -144,7 +136,6 @@
 
     invoke-virtual {v0, v2, v3}, Ljava/util/concurrent/atomic/AtomicLong;->set(J)V
 
-    .line 56
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -155,7 +146,6 @@
 
     sput-object v0, Lcom/android/server/am/MiuiUsageStats;->mLastWriteDay:Ljava/lang/String;
 
-    .line 57
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/data/system/usagestats"
@@ -184,10 +174,8 @@
 
     sput-object v0, Lcom/android/server/am/MiuiUsageStats;->mHistory:Ljava/io/File;
 
-    .line 58
     invoke-static {}, Lcom/android/server/am/MiuiUsageStats;->deleteOldFiles()V
 
-    .line 59
     return-void
 .end method
 
@@ -195,10 +183,8 @@
     .locals 0
 
     .prologue
-    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 246
     return-void
 .end method
 
@@ -206,7 +192,6 @@
     .locals 0
 
     .prologue
-    .line 18
     invoke-static {}, Lcom/android/server/am/MiuiUsageStats;->writeStatsToFile()V
 
     return-void
@@ -216,7 +201,6 @@
     .locals 6
 
     .prologue
-    .line 190
     sget-object v4, Lcom/android/server/am/MiuiUsageStats;->mStats:Landroid/util/ArrayMap;
 
     invoke-virtual {v4}, Landroid/util/ArrayMap;->keySet()Ljava/util/Set;
@@ -241,7 +225,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 191
     .local v2, "name":Ljava/lang/String;
     sget-object v4, Lcom/android/server/am/MiuiUsageStats;->mStats:Landroid/util/ArrayMap;
 
@@ -251,18 +234,15 @@
 
     check-cast v3, Lcom/android/server/am/MiuiUsageStats$UsageStatsItem;
 
-    .line 192
     .local v3, "usage":Lcom/android/server/am/MiuiUsageStats$UsageStatsItem;
     if-eqz v3, :cond_1
 
-    .line 193
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
 
     iput-wide v4, v3, Lcom/android/server/am/MiuiUsageStats$UsageStatsItem;->endTime:J
 
-    .line 194
     sget-object v4, Lcom/android/server/am/MiuiUsageStats;->mUsageStatsMap:Landroid/util/ArrayMap;
 
     invoke-virtual {v4, v2}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -271,27 +251,22 @@
 
     check-cast v1, Ljava/util/ArrayList;
 
-    .line 195
     .local v1, "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/am/MiuiUsageStats$UsageStatsItem;>;"
     if-nez v1, :cond_0
 
-    .line 196
     new-instance v1, Ljava/util/ArrayList;
 
     .end local v1    # "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/am/MiuiUsageStats$UsageStatsItem;>;"
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 198
     .restart local v1    # "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/am/MiuiUsageStats$UsageStatsItem;>;"
     :cond_0
     invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 199
     sget-object v4, Lcom/android/server/am/MiuiUsageStats;->mUsageStatsMap:Landroid/util/ArrayMap;
 
     invoke-virtual {v4, v2, v1}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 201
     .end local v1    # "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/am/MiuiUsageStats$UsageStatsItem;>;"
     :cond_1
     sget-object v4, Lcom/android/server/am/MiuiUsageStats;->mStats:Landroid/util/ArrayMap;
@@ -300,7 +275,6 @@
 
     goto :goto_0
 
-    .line 203
     .end local v2    # "name":Ljava/lang/String;
     .end local v3    # "usage":Lcom/android/server/am/MiuiUsageStats$UsageStatsItem;
     :cond_2
@@ -312,7 +286,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 176
     sget-object v2, Lcom/android/server/am/MiuiUsageStats;->mStats:Landroid/util/ArrayMap;
 
     invoke-virtual {v2, p0}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -321,18 +294,15 @@
 
     check-cast v1, Lcom/android/server/am/MiuiUsageStats$UsageStatsItem;
 
-    .line 177
     .local v1, "usage":Lcom/android/server/am/MiuiUsageStats$UsageStatsItem;
     if-eqz v1, :cond_1
 
-    .line 178
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
     iput-wide v2, v1, Lcom/android/server/am/MiuiUsageStats$UsageStatsItem;->endTime:J
 
-    .line 179
     sget-object v2, Lcom/android/server/am/MiuiUsageStats;->mUsageStatsMap:Landroid/util/ArrayMap;
 
     invoke-virtual {v2, p0}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -341,34 +311,28 @@
 
     check-cast v0, Ljava/util/ArrayList;
 
-    .line 180
     .local v0, "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/am/MiuiUsageStats$UsageStatsItem;>;"
     if-nez v0, :cond_0
 
-    .line 181
     new-instance v0, Ljava/util/ArrayList;
 
     .end local v0    # "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/am/MiuiUsageStats$UsageStatsItem;>;"
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 183
     .restart local v0    # "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/am/MiuiUsageStats$UsageStatsItem;>;"
     :cond_0
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 184
     sget-object v2, Lcom/android/server/am/MiuiUsageStats;->mUsageStatsMap:Landroid/util/ArrayMap;
 
     invoke-virtual {v2, p0, v0}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 186
     .end local v0    # "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/am/MiuiUsageStats$UsageStatsItem;>;"
     :cond_1
     sget-object v2, Lcom/android/server/am/MiuiUsageStats;->mStats:Landroid/util/ArrayMap;
 
     invoke-virtual {v2, p0}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 187
     return-void
 .end method
 
@@ -376,7 +340,6 @@
     .locals 6
 
     .prologue
-    .line 206
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
@@ -389,7 +352,6 @@
 
     move-result-object v0
 
-    .line 207
     .local v0, "oldDay":Ljava/lang/String;
     new-instance v1, Ljava/io/File;
 
@@ -415,7 +377,6 @@
 
     invoke-direct {v1, v2, v3}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 208
     .local v1, "oldFile":Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
@@ -423,10 +384,8 @@
 
     if-eqz v2, :cond_0
 
-    .line 209
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
 
-    .line 211
     :cond_0
     return-void
 .end method
@@ -435,12 +394,10 @@
     .locals 9
 
     .prologue
-    .line 214
     invoke-static {}, Lcom/android/server/am/MiuiUsageStats;->getRecentFileNames()Ljava/util/List;
 
     move-result-object v6
 
-    .line 215
     .local v6, "recentFileNames":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     new-instance v7, Ljava/io/File;
 
@@ -448,17 +405,14 @@
 
     invoke-direct {v7, v8}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 216
     .local v7, "root":Ljava/io/File;
     invoke-virtual {v7}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object v3
 
-    .line 217
     .local v3, "files":[Ljava/io/File;
     if-eqz v3, :cond_2
 
-    .line 218
     move-object v0, v3
 
     .local v0, "arr$":[Ljava/io/File;
@@ -473,13 +427,11 @@
 
     aget-object v1, v0, v4
 
-    .line 219
     .local v1, "file":Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 221
     .local v2, "fileName":Ljava/lang/String;
     invoke-interface {v6, v2}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
@@ -487,14 +439,12 @@
 
     if-eqz v8, :cond_1
 
-    .line 218
     :cond_0
     :goto_1
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    .line 224
     :cond_1
     const-string v8, "miuiusage-"
 
@@ -510,19 +460,16 @@
 
     if-nez v8, :cond_0
 
-    .line 225
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result v8
 
     if-eqz v8, :cond_0
 
-    .line 226
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
 
     goto :goto_1
 
-    .line 231
     .end local v0    # "arr$":[Ljava/io/File;
     .end local v1    # "file":Ljava/io/File;
     .end local v2    # "fileName":Ljava/lang/String;
@@ -537,12 +484,10 @@
     .param p0, "currentTime"    # J
 
     .prologue
-    .line 242
     new-instance v0, Ljava/sql/Date;
 
     invoke-direct {v0, p0, p1}, Ljava/sql/Date;-><init>(J)V
 
-    .line 243
     .local v0, "date":Ljava/sql/Date;
     sget-object v1, Lcom/android/server/am/MiuiUsageStats;->mFormat:Ljava/text/SimpleDateFormat;
 
@@ -566,12 +511,10 @@
     .end annotation
 
     .prologue
-    .line 234
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 235
     .local v1, "recentFileNames":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/4 v0, 0x0
 
@@ -581,7 +524,6 @@
 
     if-gt v0, v2, :cond_0
 
-    .line 236
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -618,12 +560,10 @@
 
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 235
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 238
     :cond_0
     return-object v1
 .end method
@@ -634,23 +574,18 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 62
     sget-object v2, Lcom/android/server/am/MiuiUsageStats;->mStats:Landroid/util/ArrayMap;
 
     monitor-enter v2
 
-    .line 63
     if-nez p1, :cond_0
 
-    .line 64
     :try_start_0
     monitor-exit v2
 
-    .line 74
     :goto_0
     return-void
 
-    .line 66
     :cond_0
     sget-object v1, Lcom/android/server/am/MiuiUsageStats;->mStats:Landroid/util/ArrayMap;
 
@@ -660,31 +595,25 @@
 
     if-nez v1, :cond_1
 
-    .line 67
     new-instance v0, Lcom/android/server/am/MiuiUsageStats$UsageStatsItem;
 
     invoke-direct {v0}, Lcom/android/server/am/MiuiUsageStats$UsageStatsItem;-><init>()V
 
-    .line 68
     .local v0, "usage":Lcom/android/server/am/MiuiUsageStats$UsageStatsItem;
     iput-object p0, v0, Lcom/android/server/am/MiuiUsageStats$UsageStatsItem;->action:Ljava/lang/String;
 
-    .line 69
     iput-object p1, v0, Lcom/android/server/am/MiuiUsageStats$UsageStatsItem;->name:Ljava/lang/String;
 
-    .line 70
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
 
     iput-wide v4, v0, Lcom/android/server/am/MiuiUsageStats$UsageStatsItem;->startTime:J
 
-    .line 71
     sget-object v1, Lcom/android/server/am/MiuiUsageStats;->mStats:Landroid/util/ArrayMap;
 
     invoke-virtual {v1, p1, v0}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 73
     .end local v0    # "usage":Lcom/android/server/am/MiuiUsageStats$UsageStatsItem;
     :cond_1
     monitor-exit v2
@@ -706,30 +635,24 @@
     .param p0, "force"    # Z
 
     .prologue
-    .line 108
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 109
     .local v0, "elapsedTime":J
     if-eqz p0, :cond_0
 
-    .line 110
     sget-object v3, Lcom/android/server/am/MiuiUsageStats;->mStats:Landroid/util/ArrayMap;
 
     monitor-enter v3
 
-    .line 111
     :try_start_0
     invoke-static {}, Lcom/android/server/am/MiuiUsageStats;->addAllStatsToUsageMapLocked()V
 
-    .line 112
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 114
     :cond_0
     sget-object v2, Lcom/android/server/am/MiuiUsageStats;->mLastWriteElapsedTime:Ljava/util/concurrent/atomic/AtomicLong;
 
@@ -747,22 +670,18 @@
 
     if-eqz p0, :cond_2
 
-    .line 115
     :cond_1
     sget-object v2, Lcom/android/server/am/MiuiUsageStats;->mLastWriteElapsedTime:Ljava/util/concurrent/atomic/AtomicLong;
 
     invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/atomic/AtomicLong;->set(J)V
 
-    .line 116
     sget-object v2, Lcom/android/server/am/MiuiUsageStats;->mWriteThread:Ljava/lang/Thread;
 
     invoke-virtual {v2}, Ljava/lang/Thread;->run()V
 
-    .line 118
     :cond_2
     return-void
 
-    .line 112
     :catchall_0
     move-exception v2
 
@@ -779,32 +698,25 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 77
     sget-object v1, Lcom/android/server/am/MiuiUsageStats;->mStats:Landroid/util/ArrayMap;
 
     monitor-enter v1
 
-    .line 78
     if-nez p0, :cond_0
 
-    .line 79
     :try_start_0
     monitor-exit v1
 
-    .line 84
     :goto_0
     return-void
 
-    .line 81
     :cond_0
     invoke-static {p0}, Lcom/android/server/am/MiuiUsageStats;->addStatsToUsageMapLocked(Ljava/lang/String;)V
 
-    .line 82
     const/4 v0, 0x0
 
     invoke-static {v0}, Lcom/android/server/am/MiuiUsageStats;->startWriteThreadIfNeed(Z)V
 
-    .line 83
     monitor-exit v1
 
     goto :goto_0
@@ -824,64 +736,52 @@
     .param p0, "batteryProperties"    # Landroid/os/BatteryProperties;
 
     .prologue
-    .line 88
     iget-boolean v1, p0, Landroid/os/BatteryProperties;->chargerAcOnline:Z
 
     if-eqz v1, :cond_1
 
-    .line 89
     const-string v0, "AC"
 
-    .line 97
     .local v0, "plugType":Ljava/lang/String;
     :goto_0
     sget-object v1, Lcom/android/server/am/MiuiUsageStats;->mLastPlugType:Ljava/lang/String;
 
     if-eq v1, v0, :cond_0
 
-    .line 98
     if-eqz v0, :cond_4
 
-    .line 99
     const-string v1, "charging"
 
     invoke-static {v1, v0}, Lcom/android/server/am/MiuiUsageStats;->startUsageStats(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 103
     :goto_1
     sput-object v0, Lcom/android/server/am/MiuiUsageStats;->mLastPlugType:Ljava/lang/String;
 
-    .line 105
     :cond_0
     return-void
 
-    .line 90
     .end local v0    # "plugType":Ljava/lang/String;
     :cond_1
     iget-boolean v1, p0, Landroid/os/BatteryProperties;->chargerUsbOnline:Z
 
     if-eqz v1, :cond_2
 
-    .line 91
     const-string v0, "USB"
 
     .restart local v0    # "plugType":Ljava/lang/String;
     goto :goto_0
 
-    .line 92
     .end local v0    # "plugType":Ljava/lang/String;
     :cond_2
     iget-boolean v1, p0, Landroid/os/BatteryProperties;->chargerWirelessOnline:Z
 
     if-eqz v1, :cond_3
 
-    .line 93
     const-string v0, "WIRELESS"
 
     .restart local v0    # "plugType":Ljava/lang/String;
     goto :goto_0
 
-    .line 95
     .end local v0    # "plugType":Ljava/lang/String;
     :cond_3
     const/4 v0, 0x0
@@ -889,7 +789,6 @@
     .restart local v0    # "plugType":Ljava/lang/String;
     goto :goto_0
 
-    .line 101
     :cond_4
     sget-object v1, Lcom/android/server/am/MiuiUsageStats;->mLastPlugType:Ljava/lang/String;
 
@@ -903,10 +802,8 @@
     .param p0, "file"    # Ljava/io/File;
 
     .prologue
-    .line 131
     const/4 v14, 0x0
 
-    .line 133
     .local v14, "writer":Ljava/io/FileWriter;
     :try_start_0
     new-instance v15, Ljava/io/FileWriter;
@@ -922,7 +819,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_4
     .catchall {:try_start_0 .. :try_end_0} :catchall_3
 
-    .line 134
     .end local v14    # "writer":Ljava/io/FileWriter;
     .local v15, "writer":Ljava/io/FileWriter;
     :try_start_1
@@ -934,7 +830,6 @@
 
     invoke-direct {v13, v0}, Landroid/util/ArrayMap;-><init>(Landroid/util/ArrayMap;)V
 
-    .line 135
     .local v13, "usageStatsMap":Landroid/util/ArrayMap;, "Landroid/util/ArrayMap<Ljava/lang/String;Ljava/util/ArrayList<Lcom/android/server/am/MiuiUsageStats$UsageStatsItem;>;>;"
     sget-object v17, Lcom/android/server/am/MiuiUsageStats;->mStats:Landroid/util/ArrayMap;
 
@@ -943,18 +838,15 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
-    .line 136
     :try_start_2
     sget-object v16, Lcom/android/server/am/MiuiUsageStats;->mUsageStatsMap:Landroid/util/ArrayMap;
 
     invoke-virtual/range {v16 .. v16}, Landroid/util/ArrayMap;->clear()V
 
-    .line 137
     monitor-exit v17
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 138
     :try_start_3
     sget-object v17, Lcom/android/server/am/MiuiUsageStats;->mFileLock:Ljava/lang/Object;
 
@@ -963,13 +855,11 @@
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
-    .line 139
     :try_start_4
     invoke-virtual {v13}, Landroid/util/ArrayMap;->keySet()Ljava/util/Set;
 
     move-result-object v9
 
-    .line 140
     .local v9, "keys":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     invoke-interface {v9}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -989,7 +879,6 @@
 
     check-cast v10, Ljava/lang/String;
 
-    .line 141
     .local v10, "name":Ljava/lang/String;
     invoke-virtual {v13, v10}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -997,11 +886,9 @@
 
     check-cast v7, Ljava/util/ArrayList;
 
-    .line 142
     .local v7, "items":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/am/MiuiUsageStats$UsageStatsItem;>;"
     if-nez v7, :cond_2
 
-    .line 143
     const-string v16, "MiuiUsageStats"
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -1038,7 +925,6 @@
 
     goto :goto_0
 
-    .line 159
     .end local v5    # "i$":Ljava/util/Iterator;
     .end local v7    # "items":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/am/MiuiUsageStats$UsageStatsItem;>;"
     .end local v9    # "keys":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
@@ -1056,14 +942,12 @@
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_0
     .catchall {:try_start_5 .. :try_end_5} :catchall_2
 
-    .line 160
     .end local v13    # "usageStatsMap":Landroid/util/ArrayMap;, "Landroid/util/ArrayMap<Ljava/lang/String;Ljava/util/ArrayList<Lcom/android/server/am/MiuiUsageStats$UsageStatsItem;>;>;"
     :catch_0
     move-exception v4
 
     move-object v14, v15
 
-    .line 162
     .end local v15    # "writer":Ljava/io/FileWriter;
     .local v4, "e":Ljava/io/IOException;
     .restart local v14    # "writer":Ljava/io/FileWriter;
@@ -1073,22 +957,18 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_3
 
-    .line 164
     if-eqz v14, :cond_0
 
-    .line 166
     :try_start_7
     invoke-virtual {v14}, Ljava/io/FileWriter;->close()V
     :try_end_7
     .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_2
 
-    .line 173
     .end local v4    # "e":Ljava/io/IOException;
     :cond_0
     :goto_2
     return-void
 
-    .line 137
     .end local v14    # "writer":Ljava/io/FileWriter;
     .restart local v13    # "usageStatsMap":Landroid/util/ArrayMap;, "Landroid/util/ArrayMap<Ljava/lang/String;Ljava/util/ArrayList<Lcom/android/server/am/MiuiUsageStats$UsageStatsItem;>;>;"
     .restart local v15    # "writer":Ljava/io/FileWriter;
@@ -1106,7 +986,6 @@
     .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_0
     .catchall {:try_start_9 .. :try_end_9} :catchall_2
 
-    .line 164
     .end local v13    # "usageStatsMap":Landroid/util/ArrayMap;, "Landroid/util/ArrayMap<Ljava/lang/String;Ljava/util/ArrayList<Lcom/android/server/am/MiuiUsageStats$UsageStatsItem;>;>;"
     :catchall_2
     move-exception v16
@@ -1118,18 +997,15 @@
     :goto_3
     if-eqz v14, :cond_1
 
-    .line 166
     :try_start_a
     invoke-virtual {v14}, Ljava/io/FileWriter;->close()V
     :try_end_a
     .catch Ljava/io/IOException; {:try_start_a .. :try_end_a} :catch_3
 
-    .line 170
     :cond_1
     :goto_4
     throw v16
 
-    .line 146
     .end local v14    # "writer":Ljava/io/FileWriter;
     .restart local v5    # "i$":Ljava/util/Iterator;
     .restart local v7    # "items":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/am/MiuiUsageStats$UsageStatsItem;>;"
@@ -1143,7 +1019,6 @@
 
     move-result v12
 
-    .line 147
     .local v12, "size":I
     const/4 v8, 0x0
 
@@ -1151,20 +1026,17 @@
     :goto_5
     if-ge v8, v12, :cond_3
 
-    .line 148
     invoke-virtual {v7, v8}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v6
 
     check-cast v6, Lcom/android/server/am/MiuiUsageStats$UsageStatsItem;
 
-    .line 149
     .local v6, "item":Lcom/android/server/am/MiuiUsageStats$UsageStatsItem;
     new-instance v11, Ljava/lang/StringBuffer;
 
     invoke-direct {v11}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 150
     .local v11, "sb":Ljava/lang/StringBuffer;
     new-instance v16, Ljava/lang/StringBuilder;
 
@@ -1298,24 +1170,20 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 154
     invoke-virtual {v11}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v16
 
     invoke-virtual/range {v15 .. v16}, Ljava/io/FileWriter;->write(Ljava/lang/String;)V
 
-    .line 155
     const/16 v16, 0xa
 
     invoke-virtual/range {v15 .. v16}, Ljava/io/FileWriter;->write(I)V
 
-    .line 147
     add-int/lit8 v8, v8, 0x1
 
     goto/16 :goto_5
 
-    .line 157
     .end local v6    # "item":Lcom/android/server/am/MiuiUsageStats$UsageStatsItem;
     .end local v11    # "sb":Ljava/lang/StringBuffer;
     :cond_3
@@ -1323,7 +1191,6 @@
 
     goto/16 :goto_0
 
-    .line 159
     .end local v7    # "items":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/am/MiuiUsageStats$UsageStatsItem;>;"
     .end local v8    # "j":I
     .end local v10    # "name":Ljava/lang/String;
@@ -1333,10 +1200,8 @@
     :try_end_b
     .catchall {:try_start_b .. :try_end_b} :catchall_0
 
-    .line 164
     if-eqz v15, :cond_5
 
-    .line 166
     :try_start_c
     invoke-virtual {v15}, Ljava/io/FileWriter;->close()V
     :try_end_c
@@ -1344,59 +1209,49 @@
 
     move-object v14, v15
 
-    .line 170
     .end local v15    # "writer":Ljava/io/FileWriter;
     .restart local v14    # "writer":Ljava/io/FileWriter;
     goto/16 :goto_2
 
-    .line 167
     .end local v14    # "writer":Ljava/io/FileWriter;
     .restart local v15    # "writer":Ljava/io/FileWriter;
     :catch_1
     move-exception v4
 
-    .line 169
     .restart local v4    # "e":Ljava/io/IOException;
     invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
 
     move-object v14, v15
 
-    .line 170
     .end local v15    # "writer":Ljava/io/FileWriter;
     .restart local v14    # "writer":Ljava/io/FileWriter;
     goto/16 :goto_2
 
-    .line 167
     .end local v5    # "i$":Ljava/util/Iterator;
     .end local v9    # "keys":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     .end local v13    # "usageStatsMap":Landroid/util/ArrayMap;, "Landroid/util/ArrayMap<Ljava/lang/String;Ljava/util/ArrayList<Lcom/android/server/am/MiuiUsageStats$UsageStatsItem;>;>;"
     :catch_2
     move-exception v4
 
-    .line 169
     invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
 
     goto/16 :goto_2
 
-    .line 167
     .end local v4    # "e":Ljava/io/IOException;
     :catch_3
     move-exception v4
 
-    .line 169
     .restart local v4    # "e":Ljava/io/IOException;
     invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
 
     goto/16 :goto_4
 
-    .line 164
     .end local v4    # "e":Ljava/io/IOException;
     :catchall_3
     move-exception v16
 
     goto/16 :goto_3
 
-    .line 160
     :catch_4
     move-exception v4
 
@@ -1419,7 +1274,6 @@
     .locals 6
 
     .prologue
-    .line 121
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
@@ -1428,7 +1282,6 @@
 
     move-result-object v0
 
-    .line 122
     .local v0, "curDay":Ljava/lang/String;
     sget-object v2, Lcom/android/server/am/MiuiUsageStats;->mLastWriteDay:Ljava/lang/String;
 
@@ -1440,12 +1293,10 @@
 
     const/4 v1, 0x1
 
-    .line 123
     .local v1, "dayChanged":Z
     :goto_0
     if-eqz v1, :cond_0
 
-    .line 124
     new-instance v2, Ljava/io/File;
 
     const-string v3, "/data/system/usagestats"
@@ -1472,19 +1323,15 @@
 
     sput-object v2, Lcom/android/server/am/MiuiUsageStats;->mHistory:Ljava/io/File;
 
-    .line 125
     invoke-static {}, Lcom/android/server/am/MiuiUsageStats;->deleteOldFile()V
 
-    .line 127
     :cond_0
     sget-object v2, Lcom/android/server/am/MiuiUsageStats;->mHistory:Ljava/io/File;
 
     invoke-static {v2}, Lcom/android/server/am/MiuiUsageStats;->writeFile(Ljava/io/File;)V
 
-    .line 128
     return-void
 
-    .line 122
     .end local v1    # "dayChanged":Z
     :cond_1
     const/4 v1, 0x0

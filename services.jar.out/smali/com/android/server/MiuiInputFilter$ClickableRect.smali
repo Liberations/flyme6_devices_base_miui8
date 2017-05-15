@@ -27,15 +27,11 @@
     .param p2, "listener"    # Ljava/lang/Runnable;
 
     .prologue
-    .line 130
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 131
     iput-object p1, p0, Lcom/android/server/MiuiInputFilter$ClickableRect;->mRect:Landroid/graphics/Rect;
 
-    .line 132
     iput-object p2, p0, Lcom/android/server/MiuiInputFilter$ClickableRect;->mClickListener:Ljava/lang/Runnable;
 
-    .line 133
     return-void
 .end method

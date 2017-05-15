@@ -116,16 +116,12 @@
     .param p2, "windowManagerFuncs"    # Landroid/view/WindowManagerPolicy$WindowManagerFuncs;
 
     .prologue
-    .line 72
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 74
     sput-object p1, Lcom/android/server/policy/MzGlobalActions;->mContext:Landroid/content/Context;
 
-    .line 75
     iput-object p2, p0, Lcom/android/server/policy/MzGlobalActions;->mWindowManagerFuncs:Landroid/view/WindowManagerPolicy$WindowManagerFuncs;
 
-    .line 76
     invoke-static {p1}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
 
     move-result-object v0
@@ -136,7 +132,6 @@
 
     iput v0, p0, Lcom/android/server/policy/MzGlobalActions;->mWindowTouchSlop:I
 
-    .line 73
     return-void
 .end method
 
@@ -146,19 +141,16 @@
     .param p1, "windowManagerFuncs"    # Landroid/view/WindowManagerPolicy$WindowManagerFuncs;
 
     .prologue
-    .line 81
     sget-object v0, Lcom/android/server/policy/MzGlobalActions;->mInstance:Lcom/android/server/policy/MzGlobalActions;
 
     if-nez v0, :cond_0
 
-    .line 82
     new-instance v0, Lcom/android/server/policy/MzGlobalActions;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/policy/MzGlobalActions;-><init>(Landroid/content/Context;Landroid/view/WindowManagerPolicy$WindowManagerFuncs;)V
 
     sput-object v0, Lcom/android/server/policy/MzGlobalActions;->mInstance:Lcom/android/server/policy/MzGlobalActions;
 
-    .line 84
     :cond_0
     sget-object v0, Lcom/android/server/policy/MzGlobalActions;->mInstance:Lcom/android/server/policy/MzGlobalActions;
 
@@ -169,7 +161,6 @@
     .locals 1
 
     .prologue
-    .line 641
     const/4 v0, 0x0
 
     return v0
@@ -181,25 +172,20 @@
     .locals 3
 
     .prologue
-    .line 88
     sget-object v0, Lcom/android/server/policy/MzGlobalActions;->mMzDialog:Landroid/app/Dialog;
 
     if-nez v0, :cond_0
 
-    .line 89
     new-instance v0, Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog;
 
     sget-object v1, Lcom/android/server/policy/MzGlobalActions;->mContext:Landroid/content/Context;
 
-    .line 90
     sget v2, Lcom/flyme/internal/R$style;->GlobalActionsDialog:I
 
-    .line 89
     invoke-direct {v0, p0, v1, v2}, Lcom/android/server/policy/MzGlobalActions$MzGlobalActionsDialog;-><init>(Lcom/android/server/policy/MzGlobalActions;Landroid/content/Context;I)V
 
     sput-object v0, Lcom/android/server/policy/MzGlobalActions;->mMzDialog:Landroid/app/Dialog;
 
-    .line 91
     sget-object v0, Lcom/android/server/policy/MzGlobalActions;->mMzDialog:Landroid/app/Dialog;
 
     invoke-virtual {v0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
@@ -210,13 +196,10 @@
 
     move-result-object v0
 
-    .line 92
     const/high16 v1, 0x10000
 
-    .line 91
     invoke-virtual {v0, v1}, Landroid/view/View;->setSystemUiVisibility(I)V
 
-    .line 93
     sget-object v0, Lcom/android/server/policy/MzGlobalActions;->mMzDialog:Landroid/app/Dialog;
 
     invoke-virtual {v0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
@@ -231,12 +214,10 @@
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->statusBarColor:I
 
-    .line 95
     :cond_0
     sget-object v0, Lcom/android/server/policy/MzGlobalActions;->mMzDialog:Landroid/app/Dialog;
 
     invoke-virtual {v0}, Landroid/app/Dialog;->show()V
 
-    .line 87
     return-void
 .end method

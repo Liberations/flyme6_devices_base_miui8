@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,22 +28,18 @@
 
     const/4 v1, 0x0
 
-    .line 13
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
     move-result-object v0
 
-    .line 17
     .local v0, "am":Landroid/app/IActivityManager;
     const/4 v2, 0x1
 
     new-array v8, v2, [Ljava/lang/String;
 
-    .line 18
     .local v8, "requiredPermissions":[Ljava/lang/String;
     aput-object p1, v8, v5
 
-    .line 19
     const/4 v9, -0x1
 
     move-object v2, p0
@@ -67,6 +62,5 @@
 
     invoke-interface/range {v0 .. v13}, Landroid/app/IActivityManager;->broadcastIntent(Landroid/app/IApplicationThread;Landroid/content/Intent;Ljava/lang/String;Landroid/content/IIntentReceiver;ILjava/lang/String;Landroid/os/Bundle;[Ljava/lang/String;ILandroid/os/Bundle;ZZI)I
 
-    .line 21
     return-void
 .end method

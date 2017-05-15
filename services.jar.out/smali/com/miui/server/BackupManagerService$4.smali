@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 719
     iput-object p1, p0, Lcom/miui/server/BackupManagerService$4;->this$0:Lcom/miui/server/BackupManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 737
     const/4 v0, 0x0
 
     return-object v0
@@ -57,10 +55,8 @@
     .end annotation
 
     .prologue
-    .line 722
     iget-object v2, p1, Landroid/content/pm/PackageStats;->packageName:Ljava/lang/String;
 
-    .line 724
     .local v2, "pkg":Ljava/lang/String;
     :try_start_0
     iget-object v3, p0, Lcom/miui/server/BackupManagerService$4;->this$0:Lcom/miui/server/BackupManagerService;
@@ -76,7 +72,6 @@
 
     move-result-object v1
 
-    .line 725
     .local v1, "pi":Landroid/content/pm/PackageInfo;
     iget-object v3, p0, Lcom/miui/server/BackupManagerService$4;->this$0:Lcom/miui/server/BackupManagerService;
 
@@ -91,7 +86,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 726
     iget-object v3, p0, Lcom/miui/server/BackupManagerService$4;->this$0:Lcom/miui/server/BackupManagerService;
 
     iget-wide v4, p1, Landroid/content/pm/PackageStats;->dataSize:J
@@ -99,12 +93,10 @@
     # setter for: Lcom/miui/server/BackupManagerService;->mCurrentTotalSize:J
     invoke-static {v3, v4, v5}, Lcom/miui/server/BackupManagerService;->access$1602(Lcom/miui/server/BackupManagerService;J)J
 
-    .line 733
     .end local v1    # "pi":Landroid/content/pm/PackageInfo;
     :goto_0
     return-void
 
-    .line 728
     .restart local v1    # "pi":Landroid/content/pm/PackageInfo;
     :cond_0
     iget-object v3, p0, Lcom/miui/server/BackupManagerService$4;->this$0:Lcom/miui/server/BackupManagerService;
@@ -132,12 +124,10 @@
 
     goto :goto_0
 
-    .line 730
     .end local v1    # "pi":Landroid/content/pm/PackageInfo;
     :catch_0
     move-exception v0
 
-    .line 731
     .local v0, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     invoke-virtual {v0}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
 

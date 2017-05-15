@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 144
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$HdmiControlBroadcastReceiver;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/hdmi/HdmiControlService$1;
 
     .prologue
-    .line 144
     invoke-direct {p0, p1}, Lcom/android/server/hdmi/HdmiControlService$HdmiControlBroadcastReceiver;-><init>(Lcom/android/server/hdmi/HdmiControlService;)V
 
     return-void
@@ -47,12 +45,10 @@
     .locals 2
 
     .prologue
-    .line 175
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v0
 
-    .line 176
     .local v0, "locale":Ljava/util/Locale;
     sget-object v1, Ljava/util/Locale;->TAIWAN:Ljava/util/Locale;
 
@@ -88,11 +84,9 @@
 
     if-eqz v1, :cond_1
 
-    .line 180
     :cond_0
     const-string v1, "chi"
 
-    .line 182
     :goto_0
     return-object v1
 
@@ -118,13 +112,11 @@
 
     const/4 v2, 0x0
 
-    .line 148
     iget-object v1, p0, Lcom/android/server/hdmi/HdmiControlService$HdmiControlBroadcastReceiver;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     # invokes: Lcom/android/server/hdmi/HdmiControlService;->assertRunOnServiceThread()V
     invoke-static {v1}, Lcom/android/server/hdmi/HdmiControlService;->access$000(Lcom/android/server/hdmi/HdmiControlService;)V
 
-    .line 149
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v4
@@ -141,12 +133,10 @@
     :goto_0
     packed-switch v1, :pswitch_data_0
 
-    .line 172
     :cond_1
     :goto_1
     return-void
 
-    .line 149
     :sswitch_0
     const-string v5, "android.intent.action.SCREEN_OFF"
 
@@ -199,7 +189,6 @@
 
     goto :goto_0
 
-    .line 151
     :pswitch_0
     iget-object v1, p0, Lcom/android/server/hdmi/HdmiControlService$HdmiControlBroadcastReceiver;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
@@ -209,7 +198,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 152
     iget-object v1, p0, Lcom/android/server/hdmi/HdmiControlService$HdmiControlBroadcastReceiver;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     # invokes: Lcom/android/server/hdmi/HdmiControlService;->onStandby(I)V
@@ -217,7 +205,6 @@
 
     goto :goto_1
 
-    .line 156
     :pswitch_1
     iget-object v1, p0, Lcom/android/server/hdmi/HdmiControlService$HdmiControlBroadcastReceiver;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
@@ -227,7 +214,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 157
     iget-object v1, p0, Lcom/android/server/hdmi/HdmiControlService$HdmiControlBroadcastReceiver;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     # invokes: Lcom/android/server/hdmi/HdmiControlService;->onWakeUp()V
@@ -235,13 +221,11 @@
 
     goto :goto_1
 
-    .line 161
     :pswitch_2
     invoke-direct {p0}, Lcom/android/server/hdmi/HdmiControlService$HdmiControlBroadcastReceiver;->getMenuLanguage()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 162
     .local v0, "language":Ljava/lang/String;
     iget-object v1, p0, Lcom/android/server/hdmi/HdmiControlService$HdmiControlBroadcastReceiver;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
@@ -256,7 +240,6 @@
 
     if-nez v1, :cond_1
 
-    .line 163
     iget-object v1, p0, Lcom/android/server/hdmi/HdmiControlService$HdmiControlBroadcastReceiver;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     # invokes: Lcom/android/server/hdmi/HdmiControlService;->onLanguageChanged(Ljava/lang/String;)V
@@ -264,7 +247,6 @@
 
     goto :goto_1
 
-    .line 167
     .end local v0    # "language":Ljava/lang/String;
     :pswitch_3
     iget-object v1, p0, Lcom/android/server/hdmi/HdmiControlService$HdmiControlBroadcastReceiver;->this$0:Lcom/android/server/hdmi/HdmiControlService;
@@ -275,7 +257,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 168
     iget-object v1, p0, Lcom/android/server/hdmi/HdmiControlService$HdmiControlBroadcastReceiver;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     # invokes: Lcom/android/server/hdmi/HdmiControlService;->onStandby(I)V
@@ -283,7 +264,6 @@
 
     goto :goto_1
 
-    .line 149
     nop
 
     :sswitch_data_0

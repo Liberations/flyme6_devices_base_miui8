@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Looper;
 
     .prologue
-    .line 694
     iput-object p1, p0, Lcom/android/server/usb/UsbPortManager$2;->this$0:Lcom/android/server/usb/UsbPortManager;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -39,16 +38,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 697
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 705
     :goto_0
     return-void
 
-    .line 699
     :pswitch_0
     iget-object v0, p0, Lcom/android/server/usb/UsbPortManager$2;->this$0:Lcom/android/server/usb/UsbPortManager;
 
@@ -59,7 +55,6 @@
 
     monitor-enter v1
 
-    .line 700
     :try_start_0
     iget-object v0, p0, Lcom/android/server/usb/UsbPortManager$2;->this$0:Lcom/android/server/usb/UsbPortManager;
 
@@ -68,7 +63,6 @@
     # invokes: Lcom/android/server/usb/UsbPortManager;->updatePortsLocked(Lcom/android/internal/util/IndentingPrintWriter;)V
     invoke-static {v0, v2}, Lcom/android/server/usb/UsbPortManager;->access$200(Lcom/android/server/usb/UsbPortManager;Lcom/android/internal/util/IndentingPrintWriter;)V
 
-    .line 701
     monitor-exit v1
 
     goto :goto_0
@@ -82,7 +76,6 @@
 
     throw v0
 
-    .line 697
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

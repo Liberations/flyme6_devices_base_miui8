@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 313
     iput-object p1, p0, Lcom/android/server/LocationPolicyManagerService$5;->this$0:Lcom/android/server/LocationPolicyManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,12 +40,10 @@
     .prologue
     const/4 v3, -0x1
 
-    .line 319
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 320
     .local v0, "action":Ljava/lang/String;
     const-string v2, "android.intent.extra.user_handle"
 
@@ -54,15 +51,12 @@
 
     move-result v1
 
-    .line 321
     .local v1, "userId":I
     if-ne v1, v3, :cond_0
 
-    .line 331
     :goto_0
     return-void
 
-    .line 323
     :cond_0
     const-string v2, "LocationPolicy"
 
@@ -86,7 +80,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 324
     iget-object v2, p0, Lcom/android/server/LocationPolicyManagerService$5;->this$0:Lcom/android/server/LocationPolicyManagerService;
 
     # getter for: Lcom/android/server/LocationPolicyManagerService;->mRulesLock:Ljava/lang/Object;
@@ -96,20 +89,17 @@
 
     monitor-enter v3
 
-    .line 327
     :try_start_0
     iget-object v2, p0, Lcom/android/server/LocationPolicyManagerService$5;->this$0:Lcom/android/server/LocationPolicyManagerService;
 
     # invokes: Lcom/android/server/LocationPolicyManagerService;->removePoliciesForUserLocked(I)V
     invoke-static {v2, v1}, Lcom/android/server/LocationPolicyManagerService;->access$700(Lcom/android/server/LocationPolicyManagerService;I)V
 
-    .line 329
     iget-object v2, p0, Lcom/android/server/LocationPolicyManagerService$5;->this$0:Lcom/android/server/LocationPolicyManagerService;
 
     # invokes: Lcom/android/server/LocationPolicyManagerService;->updateRulesForRestrictBackgroundLocked()V
     invoke-static {v2}, Lcom/android/server/LocationPolicyManagerService;->access$800(Lcom/android/server/LocationPolicyManagerService;)V
 
-    .line 330
     monitor-exit v3
 
     goto :goto_0

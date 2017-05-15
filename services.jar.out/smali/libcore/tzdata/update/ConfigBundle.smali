@@ -25,13 +25,10 @@
     .param p1, "bytes"    # [B
 
     .prologue
-    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 50
     iput-object p1, p0, Llibcore/tzdata/update/ConfigBundle;->bytes:[B
 
-    .line 51
     return-void
 .end method
 
@@ -49,22 +46,18 @@
     .prologue
     const/4 v10, 0x0
 
-    .line 66
     invoke-static {p1, p2}, Llibcore/tzdata/update/FileUtils;->ensureDirectoriesExist(Ljava/io/File;Z)V
 
-    .line 68
     new-instance v7, Ljava/util/zip/ZipInputStream;
 
     invoke-direct {v7, p0}, Ljava/util/zip/ZipInputStream;-><init>(Ljava/io/InputStream;)V
 
-    .line 69
     .local v7, "zipInputStream":Ljava/util/zip/ZipInputStream;
     const/16 v8, 0x2000
 
     :try_start_0
     new-array v0, v8, [B
 
-    .line 71
     .local v0, "buffer":[B
     :cond_0
     :goto_0
@@ -75,18 +68,15 @@
     .local v2, "entry":Ljava/util/zip/ZipEntry;
     if-eqz v2, :cond_9
 
-    .line 74
     invoke-virtual {v2}, Ljava/util/zip/ZipEntry;->getName()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 77
     .local v5, "name":Ljava/lang/String;
     invoke-static {p1, v5}, Llibcore/tzdata/update/FileUtils;->createSubFile(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v3
 
-    .line 79
     .local v3, "entryFile":Ljava/io/File;
     invoke-virtual {v2}, Ljava/util/zip/ZipEntry;->isDirectory()Z
 
@@ -94,7 +84,6 @@
 
     if-eqz v8, :cond_2
 
-    .line 80
     invoke-static {v3, p2}, Llibcore/tzdata/update/FileUtils;->ensureDirectoriesExist(Ljava/io/File;Z)V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
@@ -102,7 +91,6 @@
 
     goto :goto_0
 
-    .line 68
     .end local v0    # "buffer":[B
     .end local v2    # "entry":Ljava/util/zip/ZipEntry;
     .end local v3    # "entryFile":Ljava/io/File;
@@ -115,7 +103,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 102
     :catchall_0
     move-exception v9
 
@@ -137,7 +124,6 @@
     :goto_2
     throw v8
 
-    .line 83
     .restart local v0    # "buffer":[B
     .restart local v2    # "entry":Ljava/util/zip/ZipEntry;
     .restart local v3    # "entryFile":Ljava/io/File;
@@ -154,14 +140,12 @@
 
     if-nez v8, :cond_3
 
-    .line 84
     invoke-virtual {v3}, Ljava/io/File;->getParentFile()Ljava/io/File;
 
     move-result-object v8
 
     invoke-static {v8, p2}, Llibcore/tzdata/update/FileUtils;->ensureDirectoriesExist(Ljava/io/File;Z)V
 
-    .line 88
     :cond_3
     new-instance v4, Ljava/io/FileOutputStream;
 
@@ -173,7 +157,6 @@
     .local v4, "fos":Ljava/io/FileOutputStream;
     const/4 v8, 0x0
 
-    .line 90
     :goto_3
     :try_start_4
     invoke-virtual {v7, v0}, Ljava/util/zip/ZipInputStream;->read([B)I
@@ -185,7 +168,6 @@
 
     if-eq v1, v9, :cond_5
 
-    .line 91
     const/4 v9, 0x0
 
     invoke-virtual {v4, v0, v9, v1}, Ljava/io/FileOutputStream;->write([BII)V
@@ -195,7 +177,6 @@
 
     goto :goto_3
 
-    .line 88
     .end local v1    # "count":I
     :catch_1
     move-exception v8
@@ -205,7 +186,6 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 95
     :catchall_1
     move-exception v9
 
@@ -234,7 +214,6 @@
     .catch Ljava/lang/Throwable; {:try_start_7 .. :try_end_7} :catch_0
     .catchall {:try_start_7 .. :try_end_7} :catchall_2
 
-    .line 102
     .end local v0    # "buffer":[B
     .end local v2    # "entry":Ljava/util/zip/ZipEntry;
     .end local v3    # "entryFile":Ljava/io/File;
@@ -245,7 +224,6 @@
 
     goto :goto_1
 
-    .line 94
     .restart local v0    # "buffer":[B
     .restart local v1    # "count":I
     .restart local v2    # "entry":Ljava/util/zip/ZipEntry;
@@ -263,7 +241,6 @@
     .catch Ljava/lang/Throwable; {:try_start_8 .. :try_end_8} :catch_1
     .catchall {:try_start_8 .. :try_end_8} :catchall_3
 
-    .line 95
     if-eqz v4, :cond_6
 
     if-eqz v10, :cond_7
@@ -274,18 +251,15 @@
     .catch Ljava/lang/Throwable; {:try_start_9 .. :try_end_9} :catch_2
     .catchall {:try_start_9 .. :try_end_9} :catchall_2
 
-    .line 97
     :cond_6
     :goto_6
     if-eqz p2, :cond_0
 
-    .line 98
     :try_start_a
     invoke-static {v3}, Llibcore/tzdata/update/FileUtils;->makeWorldReadable(Ljava/io/File;)V
 
     goto :goto_0
 
-    .line 95
     :catch_2
     move-exception v6
 
@@ -318,7 +292,6 @@
 
     goto :goto_5
 
-    .line 102
     .end local v3    # "entryFile":Ljava/io/File;
     .end local v4    # "fos":Ljava/io/FileOutputStream;
     .end local v5    # "name":Ljava/lang/String;
@@ -332,12 +305,10 @@
     :try_end_b
     .catch Ljava/lang/Throwable; {:try_start_b .. :try_end_b} :catch_4
 
-    .line 103
     :cond_a
     :goto_7
     return-void
 
-    .line 102
     :catch_4
     move-exception v6
 
@@ -368,7 +339,6 @@
 
     goto :goto_2
 
-    .line 95
     .restart local v0    # "buffer":[B
     .restart local v2    # "entry":Ljava/util/zip/ZipEntry;
     .restart local v3    # "entryFile":Ljava/io/File;
@@ -393,15 +363,12 @@
 
     const/4 v2, 0x0
 
-    .line 107
     if-ne p0, p1, :cond_1
 
-    .line 120
     :cond_0
     :goto_0
     return v1
 
-    .line 110
     :cond_1
     if-eqz p1, :cond_2
 
@@ -418,16 +385,13 @@
     :cond_2
     move v1, v2
 
-    .line 111
     goto :goto_0
 
     :cond_3
     move-object v0, p1
 
-    .line 114
     check-cast v0, Llibcore/tzdata/update/ConfigBundle;
 
-    .line 116
     .local v0, "that":Llibcore/tzdata/update/ConfigBundle;
     iget-object v3, p0, Llibcore/tzdata/update/ConfigBundle;->bytes:[B
 
@@ -441,7 +405,6 @@
 
     move v1, v2
 
-    .line 117
     goto :goto_0
 .end method
 
@@ -455,7 +418,6 @@
     .end annotation
 
     .prologue
-    .line 58
     new-instance v0, Ljava/io/ByteArrayInputStream;
 
     iget-object v1, p0, Llibcore/tzdata/update/ConfigBundle;->bytes:[B
@@ -466,7 +428,6 @@
 
     invoke-static {v0, p1, v1}, Llibcore/tzdata/update/ConfigBundle;->extractZipSafely(Ljava/io/InputStream;Ljava/io/File;Z)V
 
-    .line 59
     return-void
 .end method
 
@@ -474,7 +435,6 @@
     .locals 1
 
     .prologue
-    .line 54
     iget-object v0, p0, Llibcore/tzdata/update/ConfigBundle;->bytes:[B
 
     return-object v0

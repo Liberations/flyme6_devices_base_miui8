@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 116
     iput-object p1, p0, Lcom/android/server/usb/UsbMidiDevice$InputReceiverProxy;->this$0:Lcom/android/server/usb/UsbMidiDevice;
 
     invoke-direct {p0}, Landroid/media/midi/MidiReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "x1"    # Lcom/android/server/usb/UsbMidiDevice$1;
 
     .prologue
-    .line 116
     invoke-direct {p0, p1}, Lcom/android/server/usb/UsbMidiDevice$InputReceiverProxy;-><init>(Lcom/android/server/usb/UsbMidiDevice;)V
 
     return-void
@@ -60,10 +58,8 @@
     .end annotation
 
     .prologue
-    .line 121
     iget-object v0, p0, Lcom/android/server/usb/UsbMidiDevice$InputReceiverProxy;->mReceiver:Landroid/media/midi/MidiReceiver;
 
-    .line 122
     .local v0, "receiver":Landroid/media/midi/MidiReceiver;
     if-eqz v0, :cond_0
 
@@ -75,10 +71,8 @@
 
     move-wide v4, p4
 
-    .line 123
     invoke-virtual/range {v0 .. v5}, Landroid/media/midi/MidiReceiver;->send([BIIJ)V
 
-    .line 125
     :cond_0
     return-void
 .end method
@@ -88,9 +82,7 @@
     .param p1, "receiver"    # Landroid/media/midi/MidiReceiver;
 
     .prologue
-    .line 128
     iput-object p1, p0, Lcom/android/server/usb/UsbMidiDevice$InputReceiverProxy;->mReceiver:Landroid/media/midi/MidiReceiver;
 
-    .line 129
     return-void
 .end method

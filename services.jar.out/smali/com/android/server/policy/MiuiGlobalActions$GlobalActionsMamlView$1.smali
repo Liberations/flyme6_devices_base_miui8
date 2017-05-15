@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 343
     iput-object p1, p0, Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView$1;->this$1:Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView;
 
     iput-object p2, p0, Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView$1;->val$this$0:Lcom/android/server/policy/MiuiGlobalActions;
@@ -44,13 +43,11 @@
     .locals 1
 
     .prologue
-    .line 346
     iget-object v0, p0, Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView$1;->this$1:Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView;
 
     iget-object v0, v0, Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView;->this$0:Lcom/android/server/policy/MiuiGlobalActions;
 
     invoke-virtual {v0}, Lcom/android/server/policy/MiuiGlobalActions;->dismiss()V
 
-    .line 347
     return-void
 .end method

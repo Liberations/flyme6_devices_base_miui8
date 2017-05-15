@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 153
     iput-object p1, p0, Lcom/android/server/PinnerService$BinderService;->this$0:Lcom/android/server/PinnerService;
 
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/PinnerService$1;
 
     .prologue
-    .line 153
     invoke-direct {p0, p1}, Lcom/android/server/PinnerService$BinderService;-><init>(Lcom/android/server/PinnerService;)V
 
     return-void
@@ -52,7 +50,6 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 156
     iget-object v1, p0, Lcom/android/server/PinnerService$BinderService;->this$0:Lcom/android/server/PinnerService;
 
     # getter for: Lcom/android/server/PinnerService;->mContext:Landroid/content/Context;
@@ -66,15 +63,12 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 157
     const-string v1, "Pinned Files:"
 
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 158
     monitor-enter p0
 
-    .line 159
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -93,7 +87,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 160
     iget-object v1, p0, Lcom/android/server/PinnerService$BinderService;->this$0:Lcom/android/server/PinnerService;
 
     # getter for: Lcom/android/server/PinnerService;->mPinnedFiles:Ljava/util/ArrayList;
@@ -109,19 +102,15 @@
 
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 159
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 162
     :cond_0
     monitor-exit p0
 
-    .line 163
     return-void
 
-    .line 162
     :catchall_0
     move-exception v1
 

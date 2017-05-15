@@ -8,10 +8,8 @@
     .locals 0
 
     .prologue
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
     return-void
 .end method
 
@@ -25,16 +23,13 @@
     .end annotation
 
     .prologue
-    .line 109
     const/16 v0, 0x2004
 
-    .line 110
     .local v0, "BUFFER_SIZE":I
     new-instance v3, Ljava/util/zip/CRC32;
 
     invoke-direct {v3}, Ljava/util/zip/CRC32;-><init>()V
 
-    .line 111
     .local v3, "crc32":Ljava/util/zip/CRC32;
     new-instance v4, Ljava/io/FileInputStream;
 
@@ -43,13 +38,11 @@
     .local v4, "fis":Ljava/io/FileInputStream;
     const/4 v7, 0x0
 
-    .line 112
     const/16 v6, 0x2004
 
     :try_start_0
     new-array v1, v6, [B
 
-    .line 114
     .local v1, "buffer":[B
     :goto_0
     invoke-virtual {v4, v1}, Ljava/io/FileInputStream;->read([B)I
@@ -61,7 +54,6 @@
 
     if-eq v2, v6, :cond_1
 
-    .line 115
     const/4 v6, 0x0
 
     invoke-virtual {v3, v1, v6, v2}, Ljava/util/zip/CRC32;->update([BII)V
@@ -71,7 +63,6 @@
 
     goto :goto_0
 
-    .line 111
     .end local v1    # "buffer":[B
     .end local v2    # "count":I
     :catch_0
@@ -82,7 +73,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 117
     :catchall_0
     move-exception v7
 
@@ -118,7 +108,6 @@
     :try_end_3
     .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_1
 
-    .line 118
     :cond_2
     :goto_3
     invoke-virtual {v3}, Ljava/util/zip/CRC32;->getValue()J
@@ -127,7 +116,6 @@
 
     return-wide v6
 
-    .line 117
     :catch_1
     move-exception v5
 
@@ -175,7 +163,6 @@
     .end annotation
 
     .prologue
-    .line 48
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, p0, p1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
@@ -184,7 +171,6 @@
 
     move-result-object v0
 
-    .line 49
     .local v0, "subFile":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->getPath()Ljava/lang/String;
 
@@ -200,7 +186,6 @@
 
     if-nez v1, :cond_0
 
-    .line 50
     new-instance v1, Ljava/io/IOException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -239,7 +224,6 @@
 
     throw v1
 
-    .line 53
     :cond_0
     return-object v0
 .end method
@@ -254,14 +238,12 @@
     .end annotation
 
     .prologue
-    .line 151
     invoke-virtual {p0}, Ljava/io/File;->isDirectory()Z
 
     move-result v5
 
     if-eqz v5, :cond_2
 
-    .line 152
     invoke-virtual {p0}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object v0
@@ -278,7 +260,6 @@
 
     aget-object v1, v0, v2
 
-    .line 153
     .local v1, "file":Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->isDirectory()Z
 
@@ -292,35 +273,29 @@
 
     if-nez v5, :cond_0
 
-    .line 156
     invoke-static {v1}, Llibcore/tzdata/update/FileUtils;->deleteRecursive(Ljava/io/File;)V
 
-    .line 152
     :goto_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 159
     :cond_0
     invoke-static {v1}, Llibcore/tzdata/update/FileUtils;->doDelete(Ljava/io/File;)V
 
     goto :goto_1
 
-    .line 162
     .end local v1    # "file":Ljava/io/File;
     :cond_1
     invoke-virtual {p0}, Ljava/io/File;->list()[Ljava/lang/String;
 
     move-result-object v4
 
-    .line 163
     .local v4, "remainingFiles":[Ljava/lang/String;
     array-length v5, v4
 
     if-eqz v5, :cond_2
 
-    .line 164
     new-instance v5, Ljava/io/IOException;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -349,7 +324,6 @@
 
     throw v5
 
-    .line 168
     .end local v0    # "arr$":[Ljava/io/File;
     .end local v2    # "i$":I
     .end local v3    # "len$":I
@@ -357,7 +331,6 @@
     :cond_2
     invoke-static {p0}, Llibcore/tzdata/update/FileUtils;->doDelete(Ljava/io/File;)V
 
-    .line 169
     return-void
 .end method
 
@@ -371,14 +344,12 @@
     .end annotation
 
     .prologue
-    .line 138
     invoke-virtual {p0}, Ljava/io/File;->delete()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 139
     new-instance v0, Ljava/io/IOException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -403,7 +374,6 @@
 
     throw v0
 
-    .line 141
     :cond_0
     return-void
 .end method
@@ -419,29 +389,23 @@
     .end annotation
 
     .prologue
-    .line 68
     new-instance v2, Ljava/util/LinkedList;
 
     invoke-direct {v2}, Ljava/util/LinkedList;-><init>()V
 
-    .line 69
     .local v2, "dirs":Ljava/util/LinkedList;, "Ljava/util/LinkedList<Ljava/io/File;>;"
     move-object v0, p0
 
-    .line 71
     .local v0, "currentDir":Ljava/io/File;
     :cond_0
     invoke-virtual {v2, v0}, Ljava/util/LinkedList;->addFirst(Ljava/lang/Object;)V
 
-    .line 72
     invoke-virtual {v0}, Ljava/io/File;->getParentFile()Ljava/io/File;
 
     move-result-object v0
 
-    .line 73
     if-nez v0, :cond_0
 
-    .line 75
     invoke-virtual {v2}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -461,7 +425,6 @@
 
     check-cast v1, Ljava/io/File;
 
-    .line 76
     .local v1, "dirToCheck":Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
@@ -469,14 +432,12 @@
 
     if-nez v4, :cond_3
 
-    .line 77
     invoke-virtual {v1}, Ljava/io/File;->mkdir()Z
 
     move-result v4
 
     if-nez v4, :cond_2
 
-    .line 78
     new-instance v4, Ljava/io/IOException;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -501,16 +462,13 @@
 
     throw v4
 
-    .line 80
     :cond_2
     if-eqz p1, :cond_1
 
-    .line 81
     invoke-static {v1}, Llibcore/tzdata/update/FileUtils;->makeDirectoryWorldAccessible(Ljava/io/File;)V
 
     goto :goto_0
 
-    .line 83
     :cond_3
     invoke-virtual {v1}, Ljava/io/File;->isDirectory()Z
 
@@ -518,7 +476,6 @@
 
     if-nez v4, :cond_1
 
-    .line 84
     new-instance v4, Ljava/io/IOException;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -543,7 +500,6 @@
 
     throw v4
 
-    .line 87
     .end local v1    # "dirToCheck":Ljava/io/File;
     :cond_4
     return-void
@@ -559,21 +515,18 @@
     .end annotation
 
     .prologue
-    .line 129
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 130
     invoke-virtual {p0}, Ljava/io/File;->isFile()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 131
     new-instance v0, Ljava/io/IOException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -598,11 +551,9 @@
 
     throw v0
 
-    .line 133
     :cond_0
     invoke-static {p0}, Llibcore/tzdata/update/FileUtils;->doDelete(Ljava/io/File;)V
 
-    .line 135
     :cond_1
     return-void
 .end method
@@ -618,7 +569,6 @@
     .end annotation
 
     .prologue
-    .line 172
     move-object v0, p1
 
     .local v0, "arr$":[Ljava/lang/String;
@@ -633,13 +583,11 @@
 
     aget-object v2, v0, v3
 
-    .line 173
     .local v2, "fileName":Ljava/lang/String;
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, p0, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 174
     .local v1, "file":Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
@@ -647,16 +595,13 @@
 
     if-nez v5, :cond_0
 
-    .line 175
     const/4 v5, 0x0
 
-    .line 178
     .end local v1    # "file":Ljava/io/File;
     .end local v2    # "fileName":Ljava/lang/String;
     :goto_1
     return v5
 
-    .line 172
     .restart local v1    # "file":Ljava/io/File;
     .restart local v2    # "fileName":Ljava/lang/String;
     :cond_0
@@ -664,7 +609,6 @@
 
     goto :goto_0
 
-    .line 178
     .end local v1    # "file":Ljava/io/File;
     .end local v2    # "fileName":Ljava/lang/String;
     :cond_1
@@ -683,12 +627,10 @@
     .end annotation
 
     .prologue
-    .line 144
     invoke-virtual {p0}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 145
     .local v0, "baseName":Ljava/lang/String;
     new-instance v2, Ljava/io/File;
 
@@ -706,7 +648,6 @@
 
     move-result-object v1
 
-    .line 147
     .local v1, "canonicalPathExceptBaseName":Ljava/lang/String;
     invoke-virtual {p0}, Ljava/io/File;->getCanonicalPath()Ljava/lang/String;
 
@@ -739,14 +680,12 @@
     .end annotation
 
     .prologue
-    .line 90
     invoke-virtual {p0}, Ljava/io/File;->isDirectory()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 91
     new-instance v0, Ljava/io/IOException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -771,11 +710,9 @@
 
     throw v0
 
-    .line 93
     :cond_0
     invoke-static {p0}, Llibcore/tzdata/update/FileUtils;->makeWorldReadable(Ljava/io/File;)V
 
-    .line 94
     const/4 v0, 0x1
 
     const/4 v1, 0x0
@@ -786,7 +723,6 @@
 
     if-nez v0, :cond_1
 
-    .line 95
     new-instance v0, Ljava/io/IOException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -817,7 +753,6 @@
 
     throw v0
 
-    .line 97
     :cond_1
     return-void
 .end method
@@ -832,7 +767,6 @@
     .end annotation
 
     .prologue
-    .line 100
     const/4 v0, 0x1
 
     const/4 v1, 0x0
@@ -843,7 +777,6 @@
 
     if-nez v0, :cond_0
 
-    .line 101
     new-instance v0, Ljava/io/IOException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -874,7 +807,6 @@
 
     throw v0
 
-    .line 103
     :cond_0
     return-void
 .end method
@@ -901,12 +833,10 @@
     .end annotation
 
     .prologue
-    .line 185
     new-instance v1, Ljava/io/FileInputStream;
 
     invoke-direct {v1, p0}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    .line 186
     .local v1, "in":Ljava/io/FileInputStream;
     new-instance v0, Ljava/io/BufferedReader;
 
@@ -921,13 +851,11 @@
     .local v0, "fileReader":Ljava/io/BufferedReader;
     const/4 v6, 0x0
 
-    .line 189
     :try_start_0
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 191
     .local v3, "lines":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :goto_0
     invoke-virtual {v0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
@@ -937,7 +865,6 @@
     .local v2, "line":Ljava/lang/String;
     if-eqz v2, :cond_1
 
-    .line 192
     invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
@@ -945,7 +872,6 @@
 
     goto :goto_0
 
-    .line 186
     .end local v2    # "line":Ljava/lang/String;
     .end local v3    # "lines":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :catch_0
@@ -956,7 +882,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 195
     :catchall_0
     move-exception v6
 
@@ -1043,17 +968,14 @@
     .end annotation
 
     .prologue
-    .line 122
     invoke-static {p1}, Llibcore/tzdata/update/FileUtils;->ensureFileDoesNotExist(Ljava/io/File;)V
 
-    .line 123
     invoke-virtual {p0, p1}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 124
     new-instance v0, Ljava/io/IOException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1088,7 +1010,6 @@
 
     throw v0
 
-    .line 126
     :cond_0
     return-void
 .end method

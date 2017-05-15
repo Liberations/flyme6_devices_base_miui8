@@ -33,22 +33,16 @@
     .param p5, "z"    # F
 
     .prologue
-    .line 306
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 307
     iput-wide p1, p0, Lcom/android/server/AnyMotionDetector$Vector3;->timeMillisSinceBoot:J
 
-    .line 308
     iput p3, p0, Lcom/android/server/AnyMotionDetector$Vector3;->x:F
 
-    .line 309
     iput p4, p0, Lcom/android/server/AnyMotionDetector$Vector3;->y:F
 
-    .line 310
     iput p5, p0, Lcom/android/server/AnyMotionDetector$Vector3;->z:F
 
-    .line 311
     return-void
 .end method
 
@@ -57,7 +51,6 @@
     .param p0, "x0"    # Lcom/android/server/AnyMotionDetector$Vector3;
 
     .prologue
-    .line 300
     invoke-direct {p0}, Lcom/android/server/AnyMotionDetector$Vector3;->normalized()Lcom/android/server/AnyMotionDetector$Vector3;
 
     move-result-object v0
@@ -69,7 +62,6 @@
     .locals 2
 
     .prologue
-    .line 314
     invoke-virtual {p0, p0}, Lcom/android/server/AnyMotionDetector$Vector3;->dotProduct(Lcom/android/server/AnyMotionDetector$Vector3;)F
 
     move-result v0
@@ -89,12 +81,10 @@
     .locals 7
 
     .prologue
-    .line 318
     invoke-direct {p0}, Lcom/android/server/AnyMotionDetector$Vector3;->norm()F
 
     move-result v0
 
-    .line 319
     .local v0, "mag":F
     new-instance v1, Lcom/android/server/AnyMotionDetector$Vector3;
 
@@ -124,7 +114,6 @@
     .param p1, "other"    # Lcom/android/server/AnyMotionDetector$Vector3;
 
     .prologue
-    .line 330
     invoke-virtual {p0, p1}, Lcom/android/server/AnyMotionDetector$Vector3;->dotProduct(Lcom/android/server/AnyMotionDetector$Vector3;)F
 
     move-result v3
@@ -139,11 +128,9 @@
 
     move-result-wide v0
 
-    .line 331
     .local v0, "degrees":D
     double-to-float v2, v0
 
-    .line 332
     .local v2, "returnValue":F
     const-string v3, "AnyMotionDetector"
 
@@ -185,7 +172,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 334
     const-string v3, "AnyMotionDetector"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -218,7 +204,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 335
     return v2
 .end method
 
@@ -227,7 +212,6 @@
     .param p1, "v"    # Lcom/android/server/AnyMotionDetector$Vector3;
 
     .prologue
-    .line 349
     iget v0, p0, Lcom/android/server/AnyMotionDetector$Vector3;->x:F
 
     iget v1, p1, Lcom/android/server/AnyMotionDetector$Vector3;->x:F
@@ -258,7 +242,6 @@
     .param p1, "v"    # Lcom/android/server/AnyMotionDetector$Vector3;
 
     .prologue
-    .line 361
     new-instance v1, Lcom/android/server/AnyMotionDetector$Vector3;
 
     iget-wide v2, p1, Lcom/android/server/AnyMotionDetector$Vector3;->timeMillisSinceBoot:J
@@ -291,7 +274,6 @@
     .param p1, "v"    # Lcom/android/server/AnyMotionDetector$Vector3;
 
     .prologue
-    .line 357
     new-instance v1, Lcom/android/server/AnyMotionDetector$Vector3;
 
     iget-wide v2, p1, Lcom/android/server/AnyMotionDetector$Vector3;->timeMillisSinceBoot:J
@@ -324,7 +306,6 @@
     .param p1, "val"    # F
 
     .prologue
-    .line 353
     new-instance v1, Lcom/android/server/AnyMotionDetector$Vector3;
 
     iget-wide v2, p0, Lcom/android/server/AnyMotionDetector$Vector3;->timeMillisSinceBoot:J
@@ -350,10 +331,8 @@
     .locals 4
 
     .prologue
-    .line 340
     const-string v0, ""
 
-    .line 341
     .local v0, "msg":Ljava/lang/String;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -379,7 +358,6 @@
 
     move-result-object v0
 
-    .line 342
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -404,7 +382,6 @@
 
     move-result-object v0
 
-    .line 343
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -429,7 +406,6 @@
 
     move-result-object v0
 
-    .line 344
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -454,6 +430,5 @@
 
     move-result-object v0
 
-    .line 345
     return-object v0
 .end method

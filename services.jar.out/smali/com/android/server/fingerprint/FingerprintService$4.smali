@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 947
     iput-object p1, p0, Lcom/android/server/fingerprint/FingerprintService$4;->this$0:Lcom/android/server/fingerprint/FingerprintService;
 
     invoke-direct {p0}, Landroid/hardware/fingerprint/IFingerprintDaemonCallback$Stub;-><init>()V
@@ -39,7 +38,6 @@
     .param p3, "acquiredInfo"    # I
 
     .prologue
-    .line 962
     iget-object v0, p0, Lcom/android/server/fingerprint/FingerprintService$4;->this$0:Lcom/android/server/fingerprint/FingerprintService;
 
     iget-object v0, v0, Lcom/android/server/fingerprint/FingerprintService;->mHandler:Landroid/os/Handler;
@@ -50,7 +48,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 968
     return-void
 .end method
 
@@ -61,7 +58,6 @@
     .param p4, "groupId"    # I
 
     .prologue
-    .line 972
     iget-object v0, p0, Lcom/android/server/fingerprint/FingerprintService$4;->this$0:Lcom/android/server/fingerprint/FingerprintService;
 
     iget-object v6, v0, Lcom/android/server/fingerprint/FingerprintService;->mHandler:Landroid/os/Handler;
@@ -80,7 +76,6 @@
 
     invoke-virtual {v6, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 978
     return-void
 .end method
 
@@ -92,7 +87,6 @@
     .param p5, "remaining"    # I
 
     .prologue
-    .line 952
     iget-object v0, p0, Lcom/android/server/fingerprint/FingerprintService$4;->this$0:Lcom/android/server/fingerprint/FingerprintService;
 
     iget-object v7, v0, Lcom/android/server/fingerprint/FingerprintService;->mHandler:Landroid/os/Handler;
@@ -113,7 +107,6 @@
 
     invoke-virtual {v7, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 958
     return-void
 .end method
 
@@ -124,7 +117,6 @@
     .param p4, "groupIds"    # [I
 
     .prologue
-    .line 1002
     iget-object v0, p0, Lcom/android/server/fingerprint/FingerprintService$4;->this$0:Lcom/android/server/fingerprint/FingerprintService;
 
     iget-object v6, v0, Lcom/android/server/fingerprint/FingerprintService;->mHandler:Landroid/os/Handler;
@@ -143,7 +135,6 @@
 
     invoke-virtual {v6, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 1008
     return-void
 .end method
 
@@ -153,7 +144,6 @@
     .param p3, "error"    # I
 
     .prologue
-    .line 982
     iget-object v0, p0, Lcom/android/server/fingerprint/FingerprintService$4;->this$0:Lcom/android/server/fingerprint/FingerprintService;
 
     iget-object v0, v0, Lcom/android/server/fingerprint/FingerprintService;->mHandler:Landroid/os/Handler;
@@ -164,7 +154,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 988
     return-void
 .end method
 
@@ -177,7 +166,6 @@
     .param p6, "rspData"    # [B
 
     .prologue
-    .line 1013
     iget-object v0, p0, Lcom/android/server/fingerprint/FingerprintService$4;->this$0:Lcom/android/server/fingerprint/FingerprintService;
 
     iget-object v6, v0, Lcom/android/server/fingerprint/FingerprintService;->mHandler:Landroid/os/Handler;
@@ -198,7 +186,6 @@
 
     invoke-virtual {v6, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 1019
     return-void
 .end method
 
@@ -209,7 +196,6 @@
     .param p4, "groupId"    # I
 
     .prologue
-    .line 992
     iget-object v0, p0, Lcom/android/server/fingerprint/FingerprintService$4;->this$0:Lcom/android/server/fingerprint/FingerprintService;
 
     iget-object v6, v0, Lcom/android/server/fingerprint/FingerprintService;->mHandler:Landroid/os/Handler;
@@ -228,6 +214,5 @@
 
     invoke-virtual {v6, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 998
     return-void
 .end method

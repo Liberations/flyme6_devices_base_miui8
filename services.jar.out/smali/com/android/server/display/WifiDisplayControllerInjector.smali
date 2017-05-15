@@ -12,7 +12,6 @@
     .locals 0
 
     .prologue
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -25,34 +24,28 @@
     .param p2, "controller"    # Lcom/android/server/display/WifiDisplayController;
 
     .prologue
-    .line 14
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 15
     .local v0, "filter":Landroid/content/IntentFilter;
     const-string v1, "miui.action.START_PROJECTION"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 16
     const-string v1, "miui.action.STOP_PROJECTION"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 17
     new-instance v1, Lcom/android/server/display/DisplayProjectionReceiver;
 
     invoke-direct {v1, p0, p1, p2}, Lcom/android/server/display/DisplayProjectionReceiver;-><init>(Landroid/content/Context;Landroid/os/Handler;Lcom/android/server/display/WifiDisplayController;)V
 
     sput-object v1, Lcom/android/server/display/WifiDisplayControllerInjector;->mReceiver:Lcom/android/server/display/DisplayProjectionReceiver;
 
-    .line 18
     sget-object v1, Lcom/android/server/display/WifiDisplayControllerInjector;->mReceiver:Lcom/android/server/display/DisplayProjectionReceiver;
 
     invoke-virtual {p0, v1, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 19
     return-void
 .end method

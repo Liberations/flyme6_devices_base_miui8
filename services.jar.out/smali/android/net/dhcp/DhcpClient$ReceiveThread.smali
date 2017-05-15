@@ -27,19 +27,16 @@
     .locals 1
 
     .prologue
-    .line 346
     iput-object p1, p0, Landroid/net/dhcp/DhcpClient$ReceiveThread;->this$0:Landroid/net/dhcp/DhcpClient;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
-    .line 348
     const/16 v0, 0x5dc
 
     new-array v0, v0, [B
 
     iput-object v0, p0, Landroid/net/dhcp/DhcpClient$ReceiveThread;->mPacket:[B
 
-    .line 349
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/net/dhcp/DhcpClient$ReceiveThread;->stopped:Z
@@ -53,18 +50,15 @@
     .locals 1
 
     .prologue
-    .line 352
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/net/dhcp/DhcpClient$ReceiveThread;->stopped:Z
 
-    .line 353
     iget-object v0, p0, Landroid/net/dhcp/DhcpClient$ReceiveThread;->this$0:Landroid/net/dhcp/DhcpClient;
 
     # invokes: Landroid/net/dhcp/DhcpClient;->closeSockets()V
     invoke-static {v0}, Landroid/net/dhcp/DhcpClient;->access$000(Landroid/net/dhcp/DhcpClient;)V
 
-    .line 354
     return-void
 .end method
 
@@ -74,7 +68,6 @@
     .prologue
     const/4 v11, 0x0
 
-    .line 358
     iget-object v7, p0, Landroid/net/dhcp/DhcpClient$ReceiveThread;->this$0:Landroid/net/dhcp/DhcpClient;
 
     const-string v8, "Receive thread started"
@@ -82,17 +75,14 @@
     # invokes: Landroid/net/dhcp/DhcpClient;->maybeLog(Ljava/lang/String;)V
     invoke-static {v7, v8}, Landroid/net/dhcp/DhcpClient;->access$100(Landroid/net/dhcp/DhcpClient;Ljava/lang/String;)V
 
-    .line 359
     :cond_0
     :goto_0
     iget-boolean v7, p0, Landroid/net/dhcp/DhcpClient$ReceiveThread;->stopped:Z
 
     if-nez v7, :cond_1
 
-    .line 360
     const/4 v3, 0x0
 
-    .line 362
     .local v3, "length":I
     :try_start_0
     iget-object v7, p0, Landroid/net/dhcp/DhcpClient$ReceiveThread;->this$0:Landroid/net/dhcp/DhcpClient;
@@ -114,10 +104,8 @@
 
     move-result v3
 
-    .line 363
     const/4 v4, 0x0
 
-    .line 364
     .local v4, "packet":Landroid/net/dhcp/DhcpPacket;
     iget-object v7, p0, Landroid/net/dhcp/DhcpClient$ReceiveThread;->mPacket:[B
 
@@ -127,7 +115,6 @@
 
     move-result-object v4
 
-    .line 365
     iget-object v7, p0, Landroid/net/dhcp/DhcpClient$ReceiveThread;->this$0:Landroid/net/dhcp/DhcpClient;
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -151,7 +138,6 @@
     # invokes: Landroid/net/dhcp/DhcpClient;->maybeLog(Ljava/lang/String;)V
     invoke-static {v7, v8}, Landroid/net/dhcp/DhcpClient;->access$100(Landroid/net/dhcp/DhcpClient;Ljava/lang/String;)V
 
-    .line 366
     iget-object v7, p0, Landroid/net/dhcp/DhcpClient$ReceiveThread;->this$0:Landroid/net/dhcp/DhcpClient;
 
     const v8, 0x30066
@@ -165,19 +151,16 @@
 
     goto :goto_0
 
-    .line 367
     .end local v4    # "packet":Landroid/net/dhcp/DhcpPacket;
     :catch_0
     move-exception v2
 
-    .line 368
     .local v2, "e":Ljava/lang/Exception;
     :goto_1
     iget-boolean v7, p0, Landroid/net/dhcp/DhcpClient$ReceiveThread;->stopped:Z
 
     if-nez v7, :cond_0
 
-    .line 369
     const-string v7, "DhcpClient"
 
     const-string v8, "Read error"
@@ -186,12 +169,10 @@
 
     goto :goto_0
 
-    .line 371
     .end local v2    # "e":Ljava/lang/Exception;
     :catch_1
     move-exception v2
 
-    .line 372
     .local v2, "e":Landroid/net/dhcp/DhcpPacket$ParseException;
     const-string v7, "DhcpClient"
 
@@ -219,7 +200,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 374
     const-string v7, "DhcpClient"
 
     iget-object v8, p0, Landroid/net/dhcp/DhcpClient$ReceiveThread;->mPacket:[B
@@ -232,24 +212,19 @@
 
     goto :goto_0
 
-    .line 376
     .end local v2    # "e":Landroid/net/dhcp/DhcpPacket$ParseException;
     :catch_2
     move-exception v2
 
-    .line 378
     .local v2, "e":Ljava/lang/Exception;
     const v5, 0x534e4554
 
-    .line 379
     .local v5, "snetTagId":I
     const-string v0, "31850211"
 
-    .line 380
     .local v0, "bugId":Ljava/lang/String;
     const/4 v6, -0x1
 
-    .line 381
     .local v6, "uid":I
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -259,7 +234,6 @@
 
     move-result-object v1
 
-    .line 382
     .local v1, "data":Ljava/lang/String;
     const/4 v7, 0x3
 
@@ -281,7 +255,6 @@
 
     invoke-static {v5, v7}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
 
-    .line 383
     const-string v7, "DhcpClient"
 
     const-string v8, "Failed to parse DHCP packet"
@@ -290,7 +263,6 @@
 
     goto/16 :goto_0
 
-    .line 386
     .end local v0    # "bugId":Ljava/lang/String;
     .end local v1    # "data":Ljava/lang/String;
     .end local v2    # "e":Ljava/lang/Exception;
@@ -305,10 +277,8 @@
     # invokes: Landroid/net/dhcp/DhcpClient;->maybeLog(Ljava/lang/String;)V
     invoke-static {v7, v8}, Landroid/net/dhcp/DhcpClient;->access$100(Landroid/net/dhcp/DhcpClient;Ljava/lang/String;)V
 
-    .line 387
     return-void
 
-    .line 367
     .restart local v3    # "length":I
     :catch_3
     move-exception v2

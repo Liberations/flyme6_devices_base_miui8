@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 9
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -22,7 +21,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 20
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lcom/android/server/SystemLogSwitchesConfigReceiver$1;
@@ -33,6 +31,5 @@
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 26
     return-void
 .end method

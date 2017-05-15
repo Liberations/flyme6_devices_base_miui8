@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 124
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -33,7 +32,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 126
     # getter for: Lcom/android/server/HandyMode;->sMode:I
     invoke-static {}, Lcom/android/server/HandyMode;->access$000()I
 
@@ -41,12 +39,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 127
     const/4 v0, 0x0
 
     invoke-static {v0}, Lcom/android/server/HandyMode;->changeMode(I)V
 
-    .line 129
     :cond_0
     return-void
 .end method

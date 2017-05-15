@@ -51,20 +51,16 @@
 
     const/4 v2, 0x0
 
-    .line 33
     invoke-direct {p0, p1}, Lcom/android/server/lights/LightsService;-><init>(Landroid/content/Context;)V
 
-    .line 167
     new-instance v0, Lcom/android/server/lights/MiuiLightsService$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/lights/MiuiLightsService$1;-><init>(Lcom/android/server/lights/MiuiLightsService;)V
 
     iput-object v0, p0, Lcom/android/server/lights/MiuiLightsService;->mHandler:Landroid/os/Handler;
 
-    .line 34
     iput-object p1, p0, Lcom/android/server/lights/MiuiLightsService;->mContext:Landroid/content/Context;
 
-    .line 35
     iget-object v0, p0, Lcom/android/server/lights/MiuiLightsService;->mLights:[Lcom/android/server/lights/LightsService$LightImpl;
 
     new-instance v1, Lcom/android/server/lights/MiuiLightsService$LightImpl;
@@ -73,7 +69,6 @@
 
     aput-object v1, v0, v3
 
-    .line 36
     iget-object v0, p0, Lcom/android/server/lights/MiuiLightsService;->mLights:[Lcom/android/server/lights/LightsService$LightImpl;
 
     new-instance v1, Lcom/android/server/lights/MiuiLightsService$LightImpl;
@@ -82,7 +77,6 @@
 
     aput-object v1, v0, v5
 
-    .line 37
     iget-object v0, p0, Lcom/android/server/lights/MiuiLightsService;->mLights:[Lcom/android/server/lights/LightsService$LightImpl;
 
     new-instance v1, Lcom/android/server/lights/MiuiLightsService$LightImpl;
@@ -91,7 +85,6 @@
 
     aput-object v1, v0, v4
 
-    .line 38
     return-void
 .end method
 
@@ -100,7 +93,6 @@
     .param p0, "x0"    # Lcom/android/server/lights/MiuiLightsService;
 
     .prologue
-    .line 23
     iget-object v0, p0, Lcom/android/server/lights/MiuiLightsService;->mBatteryManagerInternal:Landroid/os/BatteryManagerInternal;
 
     return-object v0
@@ -111,7 +103,6 @@
     .param p0, "x0"    # Lcom/android/server/lights/MiuiLightsService;
 
     .prologue
-    .line 23
     iget-boolean v0, p0, Lcom/android/server/lights/MiuiLightsService;->mSupportTapFingerprint:Z
 
     return v0
@@ -122,7 +113,6 @@
     .param p0, "x0"    # Lcom/android/server/lights/MiuiLightsService;
 
     .prologue
-    .line 23
     iget-boolean v0, p0, Lcom/android/server/lights/MiuiLightsService;->mSupportButtonLight:Z
 
     return v0
@@ -133,7 +123,6 @@
     .param p0, "x0"    # Lcom/android/server/lights/MiuiLightsService;
 
     .prologue
-    .line 23
     iget-boolean v0, p0, Lcom/android/server/lights/MiuiLightsService;->mSupportLedLight:Z
 
     return v0
@@ -144,7 +133,6 @@
     .param p0, "x0"    # Lcom/android/server/lights/MiuiLightsService;
 
     .prologue
-    .line 23
     iget-object v0, p0, Lcom/android/server/lights/MiuiLightsService;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -155,7 +143,6 @@
     .param p0, "x0"    # Lcom/android/server/lights/MiuiLightsService;
 
     .prologue
-    .line 23
     iget-object v0, p0, Lcom/android/server/lights/MiuiLightsService;->mResolver:Landroid/content/ContentResolver;
 
     return-object v0
@@ -167,7 +154,6 @@
     .param p1, "x1"    # Landroid/content/ContentResolver;
 
     .prologue
-    .line 23
     iput-object p1, p0, Lcom/android/server/lights/MiuiLightsService;->mResolver:Landroid/content/ContentResolver;
 
     return-object p1
@@ -178,7 +164,6 @@
     .param p0, "x0"    # Lcom/android/server/lights/MiuiLightsService;
 
     .prologue
-    .line 23
     iget-object v0, p0, Lcom/android/server/lights/MiuiLightsService;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -189,7 +174,6 @@
     .param p0, "x0"    # Lcom/android/server/lights/MiuiLightsService;
 
     .prologue
-    .line 23
     invoke-direct {p0}, Lcom/android/server/lights/MiuiLightsService;->isDisableButtonLight()Z
 
     move-result v0
@@ -202,7 +186,6 @@
     .param p0, "x0"    # Lcom/android/server/lights/MiuiLightsService;
 
     .prologue
-    .line 23
     invoke-direct {p0}, Lcom/android/server/lights/MiuiLightsService;->isTurnOnButtonLight()Z
 
     move-result v0
@@ -215,7 +198,6 @@
     .param p0, "x0"    # Lcom/android/server/lights/MiuiLightsService;
 
     .prologue
-    .line 23
     invoke-direct {p0}, Lcom/android/server/lights/MiuiLightsService;->isTurnOnBatteryLight()Z
 
     move-result v0
@@ -233,12 +215,10 @@
 
     const/4 v0, 0x0
 
-    .line 247
     iget-boolean v2, p0, Lcom/android/server/lights/MiuiLightsService;->mSupportTapFingerprint:Z
 
     if-eqz v2, :cond_2
 
-    .line 248
     iget-object v2, p0, Lcom/android/server/lights/MiuiLightsService;->mResolver:Landroid/content/ContentResolver;
 
     const-string v3, "screen_buttons_state"
@@ -262,7 +242,6 @@
     :cond_0
     move v0, v1
 
-    .line 253
     :cond_1
     :goto_0
     return v0
@@ -295,7 +274,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 242
     iget-object v1, p0, Lcom/android/server/lights/MiuiLightsService;->mResolver:Landroid/content/ContentResolver;
 
     const-string v2, "battery_light_turn_on"
@@ -323,7 +301,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 237
     iget-object v1, p0, Lcom/android/server/lights/MiuiLightsService;->mResolver:Landroid/content/ContentResolver;
 
     const-string v2, "screen_buttons_turn_on"
@@ -356,12 +333,10 @@
 
     const/4 v3, 0x0
 
-    .line 42
     const/16 v0, 0x3e8
 
     if-ne p1, v0, :cond_2
 
-    .line 43
     const-string v0, "support_tap_fingerprint_sensor_to_home"
 
     invoke-static {v0, v3}, Lmiui/util/FeatureParser;->getBoolean(Ljava/lang/String;Z)Z
@@ -370,7 +345,6 @@
 
     iput-boolean v0, p0, Lcom/android/server/lights/MiuiLightsService;->mSupportTapFingerprint:Z
 
-    .line 44
     const-string v0, "support_button_light"
 
     invoke-static {v0, v1}, Lmiui/util/FeatureParser;->getBoolean(Ljava/lang/String;Z)Z
@@ -379,7 +353,6 @@
 
     iput-boolean v0, p0, Lcom/android/server/lights/MiuiLightsService;->mSupportButtonLight:Z
 
-    .line 45
     const-string v0, "support_led_light"
 
     invoke-static {v0, v1}, Lmiui/util/FeatureParser;->getBoolean(Ljava/lang/String;Z)Z
@@ -388,19 +361,16 @@
 
     iput-boolean v0, p0, Lcom/android/server/lights/MiuiLightsService;->mSupportLedLight:Z
 
-    .line 46
     new-instance v0, Lcom/android/server/lights/MiuiLightsService$LightContentObserver;
 
     invoke-direct {v0, p0}, Lcom/android/server/lights/MiuiLightsService$LightContentObserver;-><init>(Lcom/android/server/lights/MiuiLightsService;)V
 
     iput-object v0, p0, Lcom/android/server/lights/MiuiLightsService;->mLightContentObserver:Lcom/android/server/lights/MiuiLightsService$LightContentObserver;
 
-    .line 47
     iget-object v0, p0, Lcom/android/server/lights/MiuiLightsService;->mLightContentObserver:Lcom/android/server/lights/MiuiLightsService$LightContentObserver;
 
     invoke-virtual {v0}, Lcom/android/server/lights/MiuiLightsService$LightContentObserver;->observe()V
 
-    .line 48
     const-class v0, Landroid/os/BatteryManagerInternal;
 
     invoke-virtual {p0, v0}, Lcom/android/server/lights/MiuiLightsService;->getLocalService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -411,7 +381,6 @@
 
     iput-object v0, p0, Lcom/android/server/lights/MiuiLightsService;->mBatteryManagerInternal:Landroid/os/BatteryManagerInternal;
 
-    .line 49
     iget-object v0, p0, Lcom/android/server/lights/MiuiLightsService;->mResolver:Landroid/content/ContentResolver;
 
     const-string v1, "screen_buttons_state"
@@ -420,12 +389,10 @@
 
     invoke-static {v0, v1, v3, v2}, Landroid/provider/Settings$Secure;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 51
     iget-boolean v0, p0, Lcom/android/server/lights/MiuiLightsService;->mSupportButtonLight:Z
 
     if-eqz v0, :cond_0
 
-    .line 52
     iget-object v0, p0, Lcom/android/server/lights/MiuiLightsService;->mLights:[Lcom/android/server/lights/LightsService$LightImpl;
 
     const/4 v1, 0x2
@@ -436,13 +403,11 @@
 
     invoke-virtual {v0}, Lcom/android/server/lights/MiuiLightsService$LightImpl;->updateLight()V
 
-    .line 54
     :cond_0
     iget-boolean v0, p0, Lcom/android/server/lights/MiuiLightsService;->mSupportLedLight:Z
 
     if-eqz v0, :cond_1
 
-    .line 55
     iget-object v0, p0, Lcom/android/server/lights/MiuiLightsService;->mLights:[Lcom/android/server/lights/LightsService$LightImpl;
 
     const/4 v1, 0x3
@@ -453,7 +418,6 @@
 
     invoke-virtual {v0}, Lcom/android/server/lights/MiuiLightsService$LightImpl;->updateLight()V
 
-    .line 57
     :cond_1
     iget-object v0, p0, Lcom/android/server/lights/MiuiLightsService;->mContext:Landroid/content/Context;
 
@@ -471,7 +435,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 59
     :cond_2
     return-void
 .end method

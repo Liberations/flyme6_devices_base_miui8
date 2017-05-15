@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 398
     iput-object p1, p0, Lcom/android/server/DeviceIdleController$4;->this$0:Lcom/android/server/DeviceIdleController;
 
     invoke-direct {p0}, Landroid/hardware/TriggerEventListener;-><init>()V
@@ -38,24 +37,19 @@
     .param p1, "event"    # Landroid/hardware/TriggerEvent;
 
     .prologue
-    .line 400
     iget-object v1, p0, Lcom/android/server/DeviceIdleController$4;->this$0:Lcom/android/server/DeviceIdleController;
 
     monitor-enter v1
 
-    .line 401
     :try_start_0
     iget-object v0, p0, Lcom/android/server/DeviceIdleController$4;->this$0:Lcom/android/server/DeviceIdleController;
 
     invoke-virtual {v0}, Lcom/android/server/DeviceIdleController;->significantMotionLocked()V
 
-    .line 402
     monitor-exit v1
 
-    .line 403
     return-void
 
-    .line 402
     :catchall_0
     move-exception v0
 

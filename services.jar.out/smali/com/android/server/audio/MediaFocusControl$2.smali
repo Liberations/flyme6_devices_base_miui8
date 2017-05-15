@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 716
     iput-object p1, p0, Lcom/android/server/audio/MediaFocusControl$2;->this$0:Lcom/android/server/audio/MediaFocusControl;
 
     iput-object p2, p0, Lcom/android/server/audio/MediaFocusControl$2;->val$pcb2:Landroid/media/audiopolicy/IAudioPolicyCallback;
@@ -41,7 +40,6 @@
     .locals 5
 
     .prologue
-    .line 719
     # getter for: Lcom/android/server/audio/MediaFocusControl;->mAudioFocusLock:Ljava/lang/Object;
     invoke-static {}, Lcom/android/server/audio/MediaFocusControl;->access$2000()Ljava/lang/Object;
 
@@ -49,7 +47,6 @@
 
     monitor-enter v2
 
-    .line 720
     :try_start_0
     iget-object v1, p0, Lcom/android/server/audio/MediaFocusControl$2;->this$0:Lcom/android/server/audio/MediaFocusControl;
 
@@ -64,16 +61,13 @@
 
     if-eqz v1, :cond_0
 
-    .line 721
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 732
     :goto_0
     return-void
 
-    .line 724
     :cond_0
     :try_start_1
     iget-object v3, p0, Lcom/android/server/audio/MediaFocusControl$2;->val$pcb2:Landroid/media/audiopolicy/IAudioPolicyCallback;
@@ -102,7 +96,6 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 731
     :goto_1
     :try_start_2
     monitor-exit v2
@@ -118,11 +111,9 @@
 
     throw v1
 
-    .line 727
     :catch_0
     move-exception v0
 
-    .line 728
     .local v0, "e":Landroid/os/RemoteException;
     :try_start_3
     const-string v1, "MediaFocusControl"

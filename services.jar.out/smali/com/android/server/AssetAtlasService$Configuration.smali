@@ -35,7 +35,6 @@
     .param p4, "count"    # I
 
     .prologue
-    .line 587
     const/4 v5, 0x2
 
     move-object v0, p0
@@ -50,7 +49,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/AssetAtlasService$Configuration;-><init>(Landroid/graphics/Atlas$Type;IIII)V
 
-    .line 588
     return-void
 .end method
 
@@ -63,25 +61,18 @@
     .param p5, "flags"    # I
 
     .prologue
-    .line 590
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 591
     iput-object p1, p0, Lcom/android/server/AssetAtlasService$Configuration;->type:Landroid/graphics/Atlas$Type;
 
-    .line 592
     iput p2, p0, Lcom/android/server/AssetAtlasService$Configuration;->width:I
 
-    .line 593
     iput p3, p0, Lcom/android/server/AssetAtlasService$Configuration;->height:I
 
-    .line 594
     iput p4, p0, Lcom/android/server/AssetAtlasService$Configuration;->count:I
 
-    .line 595
     iput p5, p0, Lcom/android/server/AssetAtlasService$Configuration;->flags:I
 
-    .line 596
     return-void
 .end method
 
@@ -91,7 +82,6 @@
     .locals 2
 
     .prologue
-    .line 600
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

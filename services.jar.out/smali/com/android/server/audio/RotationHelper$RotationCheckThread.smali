@@ -27,12 +27,10 @@
     .locals 1
 
     .prologue
-    .line 176
     const-string v0, "RotationCheck"
 
     invoke-direct {p0, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
 
-    .line 171
     const/16 v0, 0x8
 
     new-array v0, v0, [I
@@ -41,17 +39,14 @@
 
     iput-object v0, p0, Lcom/android/server/audio/RotationHelper$RotationCheckThread;->WAIT_TIMES_MS:[I
 
-    .line 173
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/audio/RotationHelper$RotationCheckThread;->mCounterLock:Ljava/lang/Object;
 
-    .line 177
     return-void
 
-    .line 171
     :array_0
     .array-data 4
         0xa
@@ -71,33 +66,27 @@
     .locals 2
 
     .prologue
-    .line 180
     iget-object v1, p0, Lcom/android/server/audio/RotationHelper$RotationCheckThread;->mCounterLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 181
     const/4 v0, 0x0
 
     :try_start_0
     iput v0, p0, Lcom/android/server/audio/RotationHelper$RotationCheckThread;->mWaitCounter:I
 
-    .line 182
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 184
     :try_start_1
     invoke-virtual {p0}, Lcom/android/server/audio/RotationHelper$RotationCheckThread;->start()V
     :try_end_1
     .catch Ljava/lang/IllegalStateException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 186
     :goto_0
     return-void
 
-    .line 182
     :catchall_0
     move-exception v0
 
@@ -108,7 +97,6 @@
 
     throw v0
 
-    .line 185
     :catch_0
     move-exception v0
 
@@ -119,12 +107,10 @@
     .locals 2
 
     .prologue
-    .line 189
     iget-object v1, p0, Lcom/android/server/audio/RotationHelper$RotationCheckThread;->mCounterLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 190
     :try_start_0
     iget-object v0, p0, Lcom/android/server/audio/RotationHelper$RotationCheckThread;->WAIT_TIMES_MS:[I
 
@@ -132,13 +118,10 @@
 
     iput v0, p0, Lcom/android/server/audio/RotationHelper$RotationCheckThread;->mWaitCounter:I
 
-    .line 191
     monitor-exit v1
 
-    .line 192
     return-void
 
-    .line 191
     :catchall_0
     move-exception v0
 
@@ -153,7 +136,6 @@
     .locals 4
 
     .prologue
-    .line 195
     :cond_0
     :goto_0
     iget v1, p0, Lcom/android/server/audio/RotationHelper$RotationCheckThread;->mWaitCounter:I
@@ -164,12 +146,10 @@
 
     if-ge v1, v2, :cond_2
 
-    .line 197
     iget-object v2, p0, Lcom/android/server/audio/RotationHelper$RotationCheckThread;->mCounterLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 198
     :try_start_0
     iget v1, p0, Lcom/android/server/audio/RotationHelper$RotationCheckThread;->mWaitCounter:I
 
@@ -185,7 +165,6 @@
 
     aget v0, v1, v3
 
-    .line 200
     .local v0, "waitTimeMs":I
     :goto_1
     iget v1, p0, Lcom/android/server/audio/RotationHelper$RotationCheckThread;->mWaitCounter:I
@@ -194,41 +173,34 @@
 
     iput v1, p0, Lcom/android/server/audio/RotationHelper$RotationCheckThread;->mWaitCounter:I
 
-    .line 201
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 203
     if-lez v0, :cond_0
 
-    .line 204
     int-to-long v2, v0
 
     :try_start_1
     invoke-static {v2, v3}, Lcom/android/server/audio/RotationHelper$RotationCheckThread;->sleep(J)V
 
-    .line 205
     invoke-static {}, Lcom/android/server/audio/RotationHelper;->updateOrientation()V
     :try_end_1
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
 
     goto :goto_0
 
-    .line 207
     :catch_0
     move-exception v1
 
     goto :goto_0
 
-    .line 198
     .end local v0    # "waitTimeMs":I
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_1
 
-    .line 201
     :catchall_0
     move-exception v1
 
@@ -239,7 +211,6 @@
 
     throw v1
 
-    .line 209
     :cond_2
     return-void
 .end method

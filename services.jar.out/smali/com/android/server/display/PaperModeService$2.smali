@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 201
     iput-object p1, p0, Lcom/android/server/display/PaperModeService$2;->this$0:Lcom/android/server/display/PaperModeService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 3
 
     .prologue
-    .line 204
     iget-object v0, p0, Lcom/android/server/display/PaperModeService$2;->this$0:Lcom/android/server/display/PaperModeService;
 
     invoke-virtual {v0}, Lcom/android/server/display/PaperModeService;->getContext()Landroid/content/Context;
@@ -57,6 +55,5 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 206
     return-void
 .end method

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 206
     iput-object p1, p0, Lcom/android/server/telecom/TelecomLoaderService$1;->this$0:Lcom/android/server/telecom/TelecomLoaderService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +44,6 @@
 
     const/4 v4, 0x1
 
-    .line 209
     iget-object v2, p0, Lcom/android/server/telecom/TelecomLoaderService$1;->this$0:Lcom/android/server/telecom/TelecomLoaderService;
 
     # getter for: Lcom/android/server/telecom/TelecomLoaderService;->mLock:Ljava/lang/Object;
@@ -55,7 +53,6 @@
 
     monitor-enter v2
 
-    .line 210
     :try_start_0
     iget-object v3, p0, Lcom/android/server/telecom/TelecomLoaderService$1;->this$0:Lcom/android/server/telecom/TelecomLoaderService;
 
@@ -66,7 +63,6 @@
 
     if-nez v3, :cond_2
 
-    .line 211
     iget-object v3, p0, Lcom/android/server/telecom/TelecomLoaderService$1;->this$0:Lcom/android/server/telecom/TelecomLoaderService;
 
     # getter for: Lcom/android/server/telecom/TelecomLoaderService;->mDefaultSmsAppRequests:Landroid/util/IntArray;
@@ -76,7 +72,6 @@
 
     if-nez v3, :cond_0
 
-    .line 212
     iget-object v3, p0, Lcom/android/server/telecom/TelecomLoaderService$1;->this$0:Lcom/android/server/telecom/TelecomLoaderService;
 
     new-instance v4, Landroid/util/IntArray;
@@ -86,7 +81,6 @@
     # setter for: Lcom/android/server/telecom/TelecomLoaderService;->mDefaultSmsAppRequests:Landroid/util/IntArray;
     invoke-static {v3, v4}, Lcom/android/server/telecom/TelecomLoaderService;->access$302(Lcom/android/server/telecom/TelecomLoaderService;Landroid/util/IntArray;)Landroid/util/IntArray;
 
-    .line 214
     :cond_0
     iget-object v3, p0, Lcom/android/server/telecom/TelecomLoaderService$1;->this$0:Lcom/android/server/telecom/TelecomLoaderService;
 
@@ -97,21 +91,17 @@
 
     invoke-virtual {v3, p1}, Landroid/util/IntArray;->add(I)V
 
-    .line 215
     monitor-exit v2
 
-    .line 223
     :cond_1
     :goto_0
     return-object v1
 
-    .line 217
     :cond_2
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 218
     iget-object v2, p0, Lcom/android/server/telecom/TelecomLoaderService$1;->this$0:Lcom/android/server/telecom/TelecomLoaderService;
 
     # getter for: Lcom/android/server/telecom/TelecomLoaderService;->mContext:Landroid/content/Context;
@@ -123,11 +113,9 @@
 
     move-result-object v0
 
-    .line 220
     .local v0, "smsComponent":Landroid/content/ComponentName;
     if-eqz v0, :cond_1
 
-    .line 221
     new-array v1, v4, [Ljava/lang/String;
 
     const/4 v2, 0x0
@@ -140,7 +128,6 @@
 
     goto :goto_0
 
-    .line 217
     .end local v0    # "smsComponent":Landroid/content/ComponentName;
     :catchall_0
     move-exception v1

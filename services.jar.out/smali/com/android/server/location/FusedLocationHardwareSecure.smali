@@ -19,19 +19,14 @@
     .param p3, "permissionId"    # Ljava/lang/String;
 
     .prologue
-    .line 37
     invoke-direct {p0}, Landroid/hardware/location/IFusedLocationHardware$Stub;-><init>()V
 
-    .line 38
     iput-object p1, p0, Lcom/android/server/location/FusedLocationHardwareSecure;->mLocationHardware:Landroid/hardware/location/IFusedLocationHardware;
 
-    .line 39
     iput-object p2, p0, Lcom/android/server/location/FusedLocationHardwareSecure;->mContext:Landroid/content/Context;
 
-    .line 40
     iput-object p3, p0, Lcom/android/server/location/FusedLocationHardwareSecure;->mPermissionId:Ljava/lang/String;
 
-    .line 41
     return-void
 .end method
 
@@ -39,7 +34,6 @@
     .locals 6
 
     .prologue
-    .line 44
     iget-object v0, p0, Lcom/android/server/location/FusedLocationHardwareSecure;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/location/FusedLocationHardwareSecure;->mPermissionId:Ljava/lang/String;
@@ -62,7 +56,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 49
     return-void
 .end method
 
@@ -77,15 +70,12 @@
     .end annotation
 
     .prologue
-    .line 122
     invoke-direct {p0}, Lcom/android/server/location/FusedLocationHardwareSecure;->checkPermissions()V
 
-    .line 123
     iget-object v0, p0, Lcom/android/server/location/FusedLocationHardwareSecure;->mLocationHardware:Landroid/hardware/location/IFusedLocationHardware;
 
     invoke-interface {v0}, Landroid/hardware/location/IFusedLocationHardware;->flushBatchedLocations()V
 
-    .line 124
     return-void
 .end method
 
@@ -98,10 +88,8 @@
     .end annotation
 
     .prologue
-    .line 65
     invoke-direct {p0}, Lcom/android/server/location/FusedLocationHardwareSecure;->checkPermissions()V
 
-    .line 66
     iget-object v0, p0, Lcom/android/server/location/FusedLocationHardwareSecure;->mLocationHardware:Landroid/hardware/location/IFusedLocationHardware;
 
     invoke-interface {v0}, Landroid/hardware/location/IFusedLocationHardware;->getSupportedBatchSize()I
@@ -120,10 +108,8 @@
     .end annotation
 
     .prologue
-    .line 128
     invoke-direct {p0}, Lcom/android/server/location/FusedLocationHardwareSecure;->checkPermissions()V
 
-    .line 129
     iget-object v0, p0, Lcom/android/server/location/FusedLocationHardwareSecure;->mLocationHardware:Landroid/hardware/location/IFusedLocationHardware;
 
     invoke-interface {v0}, Landroid/hardware/location/IFusedLocationHardware;->getVersion()I
@@ -143,15 +129,12 @@
     .end annotation
 
     .prologue
-    .line 116
     invoke-direct {p0}, Lcom/android/server/location/FusedLocationHardwareSecure;->checkPermissions()V
 
-    .line 117
     iget-object v0, p0, Lcom/android/server/location/FusedLocationHardwareSecure;->mLocationHardware:Landroid/hardware/location/IFusedLocationHardware;
 
     invoke-interface {v0, p1}, Landroid/hardware/location/IFusedLocationHardware;->injectDeviceContext(I)V
 
-    .line 118
     return-void
 .end method
 
@@ -165,15 +148,12 @@
     .end annotation
 
     .prologue
-    .line 104
     invoke-direct {p0}, Lcom/android/server/location/FusedLocationHardwareSecure;->checkPermissions()V
 
-    .line 105
     iget-object v0, p0, Lcom/android/server/location/FusedLocationHardwareSecure;->mLocationHardware:Landroid/hardware/location/IFusedLocationHardware;
 
     invoke-interface {v0, p1}, Landroid/hardware/location/IFusedLocationHardware;->injectDiagnosticData(Ljava/lang/String;)V
 
-    .line 106
     return-void
 .end method
 
@@ -187,15 +167,12 @@
     .end annotation
 
     .prologue
-    .line 53
     invoke-direct {p0}, Lcom/android/server/location/FusedLocationHardwareSecure;->checkPermissions()V
 
-    .line 54
     iget-object v0, p0, Lcom/android/server/location/FusedLocationHardwareSecure;->mLocationHardware:Landroid/hardware/location/IFusedLocationHardware;
 
     invoke-interface {v0, p1}, Landroid/hardware/location/IFusedLocationHardware;->registerSink(Landroid/hardware/location/IFusedLocationHardwareSink;)V
 
-    .line 55
     return-void
 .end method
 
@@ -209,15 +186,12 @@
     .end annotation
 
     .prologue
-    .line 92
     invoke-direct {p0}, Lcom/android/server/location/FusedLocationHardwareSecure;->checkPermissions()V
 
-    .line 93
     iget-object v0, p0, Lcom/android/server/location/FusedLocationHardwareSecure;->mLocationHardware:Landroid/hardware/location/IFusedLocationHardware;
 
     invoke-interface {v0, p1}, Landroid/hardware/location/IFusedLocationHardware;->requestBatchOfLocations(I)V
 
-    .line 94
     return-void
 .end method
 
@@ -232,15 +206,12 @@
     .end annotation
 
     .prologue
-    .line 71
     invoke-direct {p0}, Lcom/android/server/location/FusedLocationHardwareSecure;->checkPermissions()V
 
-    .line 72
     iget-object v0, p0, Lcom/android/server/location/FusedLocationHardwareSecure;->mLocationHardware:Landroid/hardware/location/IFusedLocationHardware;
 
     invoke-interface {v0, p1, p2}, Landroid/hardware/location/IFusedLocationHardware;->startBatching(ILandroid/location/FusedBatchOptions;)V
 
-    .line 73
     return-void
 .end method
 
@@ -254,15 +225,12 @@
     .end annotation
 
     .prologue
-    .line 77
     invoke-direct {p0}, Lcom/android/server/location/FusedLocationHardwareSecure;->checkPermissions()V
 
-    .line 78
     iget-object v0, p0, Lcom/android/server/location/FusedLocationHardwareSecure;->mLocationHardware:Landroid/hardware/location/IFusedLocationHardware;
 
     invoke-interface {v0, p1}, Landroid/hardware/location/IFusedLocationHardware;->stopBatching(I)V
 
-    .line 79
     return-void
 .end method
 
@@ -275,10 +243,8 @@
     .end annotation
 
     .prologue
-    .line 110
     invoke-direct {p0}, Lcom/android/server/location/FusedLocationHardwareSecure;->checkPermissions()V
 
-    .line 111
     iget-object v0, p0, Lcom/android/server/location/FusedLocationHardwareSecure;->mLocationHardware:Landroid/hardware/location/IFusedLocationHardware;
 
     invoke-interface {v0}, Landroid/hardware/location/IFusedLocationHardware;->supportsDeviceContextInjection()Z
@@ -297,10 +263,8 @@
     .end annotation
 
     .prologue
-    .line 98
     invoke-direct {p0}, Lcom/android/server/location/FusedLocationHardwareSecure;->checkPermissions()V
 
-    .line 99
     iget-object v0, p0, Lcom/android/server/location/FusedLocationHardwareSecure;->mLocationHardware:Landroid/hardware/location/IFusedLocationHardware;
 
     invoke-interface {v0}, Landroid/hardware/location/IFusedLocationHardware;->supportsDiagnosticDataInjection()Z
@@ -320,15 +284,12 @@
     .end annotation
 
     .prologue
-    .line 59
     invoke-direct {p0}, Lcom/android/server/location/FusedLocationHardwareSecure;->checkPermissions()V
 
-    .line 60
     iget-object v0, p0, Lcom/android/server/location/FusedLocationHardwareSecure;->mLocationHardware:Landroid/hardware/location/IFusedLocationHardware;
 
     invoke-interface {v0, p1}, Landroid/hardware/location/IFusedLocationHardware;->unregisterSink(Landroid/hardware/location/IFusedLocationHardwareSink;)V
 
-    .line 61
     return-void
 .end method
 
@@ -343,14 +304,11 @@
     .end annotation
 
     .prologue
-    .line 86
     invoke-direct {p0}, Lcom/android/server/location/FusedLocationHardwareSecure;->checkPermissions()V
 
-    .line 87
     iget-object v0, p0, Lcom/android/server/location/FusedLocationHardwareSecure;->mLocationHardware:Landroid/hardware/location/IFusedLocationHardware;
 
     invoke-interface {v0, p1, p2}, Landroid/hardware/location/IFusedLocationHardware;->updateBatchingOptions(ILandroid/location/FusedBatchOptions;)V
 
-    .line 88
     return-void
 .end method

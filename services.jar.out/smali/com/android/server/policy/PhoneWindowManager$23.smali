@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 6243
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$23;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iput-object p2, p0, Lcom/android/server/policy/PhoneWindowManager$23;->val$msg:Ljava/lang/CharSequence;
@@ -46,14 +45,12 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 6245
     iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager$23;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v2, v2, Lcom/android/server/policy/PhoneWindowManager;->mBootMsgDialog:Landroid/app/ProgressDialog;
 
     if-nez v2, :cond_0
 
-    .line 6247
     iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager$23;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v2, v2, Lcom/android/server/policy/PhoneWindowManager;->mContext:Landroid/content/Context;
@@ -70,10 +67,8 @@
 
     if-eqz v2, :cond_1
 
-    .line 6249
     const v1, 0x10304bb
 
-    .line 6257
     .local v1, "theme":I
     :goto_0
     iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager$23;->this$0:Lcom/android/server/policy/PhoneWindowManager;
@@ -88,7 +83,6 @@
 
     iput-object v3, v2, Lcom/android/server/policy/PhoneWindowManager;->mBootMsgDialog:Landroid/app/ProgressDialog;
 
-    .line 6280
     iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager$23;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v2, v2, Lcom/android/server/policy/PhoneWindowManager;->mContext:Landroid/content/Context;
@@ -103,7 +97,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 6281
     iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager$23;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v2, v2, Lcom/android/server/policy/PhoneWindowManager;->mBootMsgDialog:Landroid/app/ProgressDialog;
@@ -112,7 +105,6 @@
 
     invoke-virtual {v2, v3}, Landroid/app/ProgressDialog;->setTitle(I)V
 
-    .line 6285
     :goto_1
     iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager$23;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -120,7 +112,6 @@
 
     invoke-virtual {v2, v5}, Landroid/app/ProgressDialog;->setProgressStyle(I)V
 
-    .line 6286
     iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager$23;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v2, v2, Lcom/android/server/policy/PhoneWindowManager;->mBootMsgDialog:Landroid/app/ProgressDialog;
@@ -129,7 +120,6 @@
 
     invoke-virtual {v2, v3}, Landroid/app/ProgressDialog;->setIndeterminate(Z)V
 
-    .line 6287
     iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager$23;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v2, v2, Lcom/android/server/policy/PhoneWindowManager;->mBootMsgDialog:Landroid/app/ProgressDialog;
@@ -142,7 +132,6 @@
 
     invoke-virtual {v2, v3}, Landroid/view/Window;->setType(I)V
 
-    .line 6289
     iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager$23;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v2, v2, Lcom/android/server/policy/PhoneWindowManager;->mBootMsgDialog:Landroid/app/ProgressDialog;
@@ -155,7 +144,6 @@
 
     invoke-virtual {v2, v3}, Landroid/view/Window;->addFlags(I)V
 
-    .line 6292
     iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager$23;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v2, v2, Lcom/android/server/policy/PhoneWindowManager;->mBootMsgDialog:Landroid/app/ProgressDialog;
@@ -168,7 +156,6 @@
 
     invoke-virtual {v2, v3}, Landroid/view/Window;->setDimAmount(F)V
 
-    .line 6293
     iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager$23;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v2, v2, Lcom/android/server/policy/PhoneWindowManager;->mBootMsgDialog:Landroid/app/ProgressDialog;
@@ -181,13 +168,11 @@
 
     move-result-object v0
 
-    .line 6294
     .local v0, "lp":Landroid/view/WindowManager$LayoutParams;
     const/4 v2, 0x5
 
     iput v2, v0, Landroid/view/WindowManager$LayoutParams;->screenOrientation:I
 
-    .line 6295
     iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager$23;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v2, v2, Lcom/android/server/policy/PhoneWindowManager;->mBootMsgDialog:Landroid/app/ProgressDialog;
@@ -198,21 +183,18 @@
 
     invoke-virtual {v2, v0}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
 
-    .line 6296
     iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager$23;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v2, v2, Lcom/android/server/policy/PhoneWindowManager;->mBootMsgDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v2, v5}, Landroid/app/ProgressDialog;->setCancelable(Z)V
 
-    .line 6297
     iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager$23;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v2, v2, Lcom/android/server/policy/PhoneWindowManager;->mBootMsgDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v2}, Landroid/app/ProgressDialog;->show()V
 
-    .line 6299
     .end local v0    # "lp":Landroid/view/WindowManager$LayoutParams;
     .end local v1    # "theme":I
     :cond_0
@@ -224,10 +206,8 @@
 
     invoke-virtual {v2, v3}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    .line 6300
     return-void
 
-    .line 6250
     :cond_1
     iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager$23;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -245,13 +225,11 @@
 
     if-eqz v2, :cond_2
 
-    .line 6252
     const v1, 0x103049a
 
     .restart local v1    # "theme":I
     goto/16 :goto_0
 
-    .line 6254
     .end local v1    # "theme":I
     :cond_2
     const/4 v1, 0x0
@@ -259,7 +237,6 @@
     .restart local v1    # "theme":I
     goto/16 :goto_0
 
-    .line 6283
     :cond_3
     iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager$23;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 

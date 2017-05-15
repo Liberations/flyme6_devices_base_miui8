@@ -14,7 +14,6 @@
     .locals 1
 
     .prologue
-    .line 15
     const-class v0, Lcom/android/server/display/DisplayPowerControllerInjector;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -23,7 +22,6 @@
 
     sput-object v0, Lcom/android/server/display/DisplayPowerControllerInjector;->TAG:Ljava/lang/String;
 
-    .line 17
     const/4 v0, 0x0
 
     sput-object v0, Lcom/android/server/display/DisplayPowerControllerInjector;->mTwilight:Lcom/android/server/twilight/TwilightManager;
@@ -35,7 +33,6 @@
     .locals 0
 
     .prologue
-    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,7 +44,6 @@
     .param p1, "oldBrightness"    # I
 
     .prologue
-    .line 20
     const/4 v1, 0x3
 
     const-string v2, "persist.sys.smartcover_mode"
@@ -62,7 +58,6 @@
 
     const/4 v0, 0x1
 
-    .line 22
     .local v0, "isLattice":Z
     :goto_0
     if-eqz p1, :cond_0
@@ -75,12 +70,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 24
     invoke-static {}, Lcom/android/server/display/DisplayPowerControllerInjector;->useTwilightAdjustment()I
 
     move-result p1
 
-    .line 25
     sget-object v1, Lcom/android/server/display/DisplayPowerControllerInjector;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -103,11 +96,9 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 27
     :cond_0
     return p1
 
-    .line 20
     .end local v0    # "isLattice":Z
     :cond_1
     const/4 v0, 0x0
@@ -119,16 +110,13 @@
     .locals 3
 
     .prologue
-    .line 31
     const/16 v0, 0xff
 
-    .line 32
     .local v0, "brightness":I
     sget-object v2, Lcom/android/server/display/DisplayPowerControllerInjector;->mTwilight:Lcom/android/server/twilight/TwilightManager;
 
     if-nez v2, :cond_0
 
-    .line 33
     const-class v2, Lcom/android/server/twilight/TwilightManager;
 
     invoke-static {v2}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -139,20 +127,17 @@
 
     sput-object v2, Lcom/android/server/display/DisplayPowerControllerInjector;->mTwilight:Lcom/android/server/twilight/TwilightManager;
 
-    .line 35
     :cond_0
     sget-object v2, Lcom/android/server/display/DisplayPowerControllerInjector;->mTwilight:Lcom/android/server/twilight/TwilightManager;
 
     if-eqz v2, :cond_1
 
-    .line 36
     sget-object v2, Lcom/android/server/display/DisplayPowerControllerInjector;->mTwilight:Lcom/android/server/twilight/TwilightManager;
 
     invoke-interface {v2}, Lcom/android/server/twilight/TwilightManager;->getCurrentState()Lcom/android/server/twilight/TwilightState;
 
     move-result-object v1
 
-    .line 37
     .local v1, "state":Lcom/android/server/twilight/TwilightState;
     if-eqz v1, :cond_1
 
@@ -162,10 +147,8 @@
 
     if-eqz v2, :cond_1
 
-    .line 38
     const/16 v0, 0x7f
 
-    .line 41
     .end local v1    # "state":Lcom/android/server/twilight/TwilightState;
     :cond_1
     return v0

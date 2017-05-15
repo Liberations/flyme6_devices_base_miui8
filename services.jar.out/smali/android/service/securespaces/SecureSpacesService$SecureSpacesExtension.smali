@@ -53,24 +53,18 @@
     .end annotation
 
     .prologue
-    .line 63
     .local p5, "restrictions":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/service/securespaces/SecureSpacesService$UserRestriction;>;"
     iput-object p1, p0, Landroid/service/securespaces/SecureSpacesService$SecureSpacesExtension;->this$0:Landroid/service/securespaces/SecureSpacesService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 64
     iput p2, p0, Landroid/service/securespaces/SecureSpacesService$SecureSpacesExtension;->majorVersion:I
 
-    .line 65
     iput p3, p0, Landroid/service/securespaces/SecureSpacesService$SecureSpacesExtension;->minorVersion:I
 
-    .line 66
     iput-object p4, p0, Landroid/service/securespaces/SecureSpacesService$SecureSpacesExtension;->serviceName:Ljava/lang/String;
 
-    .line 67
     iput-object p5, p0, Landroid/service/securespaces/SecureSpacesService$SecureSpacesExtension;->userRestrictions:Ljava/util/ArrayList;
 
-    .line 68
     return-void
 .end method

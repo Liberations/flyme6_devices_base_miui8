@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 2181
     iput-object p1, p0, Lcom/android/server/pm/UserManagerService$MainHandler;->this$0:Lcom/android/server/pm/UserManagerService;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,16 +37,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 2185
     iget v2, p1, Landroid/os/Message;->what:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 2196
     :goto_0
     return-void
 
-    .line 2187
     :pswitch_0
     const/4 v2, 0x1
 
@@ -55,7 +51,6 @@
 
     invoke-virtual {p0, v2, v3}, Lcom/android/server/pm/UserManagerService$MainHandler;->removeMessages(ILjava/lang/Object;)V
 
-    .line 2188
     iget-object v2, p0, Lcom/android/server/pm/UserManagerService$MainHandler;->this$0:Lcom/android/server/pm/UserManagerService;
 
     # getter for: Lcom/android/server/pm/UserManagerService;->mPackagesLock:Ljava/lang/Object;
@@ -65,7 +60,6 @@
 
     monitor-enter v3
 
-    .line 2189
     :try_start_0
     iget-object v2, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -73,7 +67,6 @@
 
     iget v0, v2, Landroid/content/pm/UserInfo;->id:I
 
-    .line 2190
     .local v0, "userId":I
     iget-object v2, p0, Lcom/android/server/pm/UserManagerService$MainHandler;->this$0:Lcom/android/server/pm/UserManagerService;
 
@@ -88,17 +81,14 @@
 
     check-cast v1, Landroid/content/pm/UserInfo;
 
-    .line 2191
     .local v1, "userInfo":Landroid/content/pm/UserInfo;
     if-eqz v1, :cond_0
 
-    .line 2192
     iget-object v2, p0, Lcom/android/server/pm/UserManagerService$MainHandler;->this$0:Lcom/android/server/pm/UserManagerService;
 
     # invokes: Lcom/android/server/pm/UserManagerService;->writeUserLocked(Landroid/content/pm/UserInfo;)V
     invoke-static {v2, v1}, Lcom/android/server/pm/UserManagerService;->access$500(Lcom/android/server/pm/UserManagerService;Landroid/content/pm/UserInfo;)V
 
-    .line 2194
     :cond_0
     monitor-exit v3
 
@@ -115,7 +105,6 @@
 
     throw v2
 
-    .line 2185
     nop
 
     :pswitch_data_0

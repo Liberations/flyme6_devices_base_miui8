@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1218
     iput-object p1, p0, Lcom/android/server/policy/BaseMiuiPhoneWindowManager$7;->this$0:Lcom/android/server/policy/BaseMiuiPhoneWindowManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1220
     iget-object v0, p0, Lcom/android/server/policy/BaseMiuiPhoneWindowManager$7;->this$0:Lcom/android/server/policy/BaseMiuiPhoneWindowManager;
 
     const/4 v1, 0x0
@@ -47,6 +45,5 @@
     # invokes: Lcom/android/server/policy/BaseMiuiPhoneWindowManager;->setStatusBarInFullscreen(Z)V
     invoke-static {v0, v1}, Lcom/android/server/policy/BaseMiuiPhoneWindowManager;->access$800(Lcom/android/server/policy/BaseMiuiPhoneWindowManager;Z)V
 
-    .line 1221
     return-void
 .end method

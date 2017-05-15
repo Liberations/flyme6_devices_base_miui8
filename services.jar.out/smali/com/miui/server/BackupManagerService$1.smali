@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 85
     iput-object p1, p0, Lcom/miui/server/BackupManagerService$1;->this$0:Lcom/miui/server/BackupManagerService;
 
     invoke-direct {p0}, Lcom/android/internal/content/PackageMonitor;-><init>()V
@@ -40,7 +39,6 @@
     .param p3, "components"    # [Ljava/lang/String;
 
     .prologue
-    .line 88
     if-eqz p1, :cond_1
 
     iget-object v0, p0, Lcom/miui/server/BackupManagerService$1;->this$0:Lcom/miui/server/BackupManagerService;
@@ -56,7 +54,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 89
     iget-object v0, p0, Lcom/miui/server/BackupManagerService$1;->this$0:Lcom/miui/server/BackupManagerService;
 
     # getter for: Lcom/miui/server/BackupManagerService;->mPkgChangingLock:Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -66,7 +63,6 @@
 
     monitor-enter v1
 
-    .line 90
     :try_start_0
     iget-object v0, p0, Lcom/miui/server/BackupManagerService$1;->this$0:Lcom/miui/server/BackupManagerService;
 
@@ -81,7 +77,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 91
     iget-object v0, p0, Lcom/miui/server/BackupManagerService$1;->this$0:Lcom/miui/server/BackupManagerService;
 
     # getter for: Lcom/miui/server/BackupManagerService;->mPkgChangingLock:Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -93,7 +88,6 @@
 
     invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 92
     iget-object v0, p0, Lcom/miui/server/BackupManagerService$1;->this$0:Lcom/miui/server/BackupManagerService;
 
     # getter for: Lcom/miui/server/BackupManagerService;->mPkgChangingLock:Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -103,17 +97,14 @@
 
     invoke-virtual {v0}, Ljava/lang/Object;->notify()V
 
-    .line 94
     :cond_0
     monitor-exit v1
 
-    .line 96
     :cond_1
     const/4 v0, 0x1
 
     return v0
 
-    .line 94
     :catchall_0
     move-exception v0
 

@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 1651
     iput-object p1, p0, Lcom/android/server/NetworkManagementService$2;->this$0:Lcom/android/server/NetworkManagementService;
 
     iput p2, p0, Lcom/android/server/NetworkManagementService$2;->val$type:I
@@ -44,7 +43,6 @@
     .locals 7
 
     .prologue
-    .line 1653
     iget-object v1, p0, Lcom/android/server/NetworkManagementService$2;->this$0:Lcom/android/server/NetworkManagementService;
 
     iget v2, p0, Lcom/android/server/NetworkManagementService$2;->val$type:I
@@ -60,6 +58,5 @@
     # invokes: Lcom/android/server/NetworkManagementService;->notifyInterfaceClassActivity(IIJZ)V
     invoke-static/range {v1 .. v6}, Lcom/android/server/NetworkManagementService;->access$200(Lcom/android/server/NetworkManagementService;IIJZ)V
 
-    .line 1656
     return-void
 .end method

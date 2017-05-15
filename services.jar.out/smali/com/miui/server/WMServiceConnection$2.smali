@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 114
     iput-object p1, p0, Lcom/miui/server/WMServiceConnection$2;->this$0:Lcom/miui/server/WMServiceConnection;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,12 +39,10 @@
     .locals 1
 
     .prologue
-    .line 118
     iget-object v0, p0, Lcom/miui/server/WMServiceConnection$2;->this$0:Lcom/miui/server/WMServiceConnection;
 
     # invokes: Lcom/miui/server/WMServiceConnection;->bindDelay()V
     invoke-static {v0}, Lcom/miui/server/WMServiceConnection;->access$400(Lcom/miui/server/WMServiceConnection;)V
 
-    .line 119
     return-void
 .end method

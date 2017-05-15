@@ -23,21 +23,18 @@
     .locals 2
 
     .prologue
-    .line 33
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v0, Lcom/android/server/am/ActiveServicesInjector;->sMayRestartPackageList:Ljava/util/ArrayList;
 
-    .line 35
     sget-object v0, Lcom/android/server/am/ActiveServicesInjector;->sMayRestartPackageList:Ljava/util/ArrayList;
 
     const-string v1, "com.android.incallui"
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 36
     return-void
 .end method
 
@@ -45,7 +42,6 @@
     .locals 0
 
     .prologue
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -61,7 +57,6 @@
 
     const/4 v9, 0x0
 
-    .line 39
     iget-object v0, p0, Lcom/android/server/am/ServiceRecord;->packageName:Ljava/lang/String;
 
     iget-object v1, p0, Lcom/android/server/am/ServiceRecord;->appInfo:Landroid/content/pm/ApplicationInfo;
@@ -76,11 +71,9 @@
 
     move v0, v9
 
-    .line 67
     :goto_0
     return v0
 
-    .line 44
     :cond_0
     invoke-static {}, Lcom/miui/whetstone/server/WhetstoneActivityManagerService;->getSingletonService()Lcom/miui/whetstone/server/WhetstoneActivityManagerService;
 
@@ -88,7 +81,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 45
     invoke-static {}, Lcom/miui/whetstone/server/WhetstoneActivityManagerService;->getSingletonService()Lcom/miui/whetstone/server/WhetstoneActivityManagerService;
 
     move-result-object v0
@@ -137,7 +129,6 @@
 
     if-eq v0, v10, :cond_4
 
-    .line 53
     const-string v1, "WhetstonePackageState"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -211,10 +202,8 @@
 
     move v0, v9
 
-    .line 57
     goto :goto_0
 
-    .line 45
     :cond_1
     const-string v5, ""
 
@@ -225,19 +214,16 @@
 
     goto :goto_2
 
-    .line 53
     :cond_3
     const-string v0, ""
 
     goto :goto_3
 
-    .line 61
     :cond_4
     sget-boolean v0, Lcom/miui/whetstone/WhetstonePackageState;->DEBUG:Z
 
     if-eqz v0, :cond_5
 
-    .line 62
     const-string v1, "WhetstonePackageState"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -312,10 +298,8 @@
     :cond_5
     move v0, v10
 
-    .line 67
     goto/16 :goto_0
 
-    .line 62
     :cond_6
     const-string v0, ""
 
@@ -327,12 +311,10 @@
     .param p0, "service"    # Lcom/android/server/am/ActivityManagerService;
 
     .prologue
-    .line 96
     sget-object v0, Lcom/android/server/am/LowPriorityServiceHelper;->mInstance:Lcom/android/server/am/LowPriorityServiceHelper;
 
     invoke-virtual {v0}, Lcom/android/server/am/LowPriorityServiceHelper;->closeCheckPriority()V
 
-    .line 97
     return-void
 .end method
 
@@ -345,19 +327,16 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 74
     sget-boolean v2, Lmiui/os/Build;->IS_CTS_BUILD:Z
 
     if-nez v2, :cond_0
 
     if-nez p1, :cond_1
 
-    .line 78
     :cond_0
     :goto_0
     return v1
 
-    .line 77
     :cond_1
     iget-object v2, p0, Lcom/android/server/am/ActivityManagerService;->mAppOpsService:Lcom/android/server/AppOpsService;
 
@@ -371,7 +350,6 @@
 
     move-result v0
 
-    .line 78
     .local v0, "mode":I
     if-eqz v0, :cond_0
 
@@ -387,12 +365,10 @@
     .param p2, "inBlacklist"    # Z
 
     .prologue
-    .line 92
     sget-object v0, Lcom/android/server/am/LowPriorityServiceHelper;->mInstance:Lcom/android/server/am/LowPriorityServiceHelper;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/am/LowPriorityServiceHelper;->removeServicePriority(Lcom/android/internal/app/MiuiServicePriority;Z)V
 
-    .line 93
     return-void
 .end method
 
@@ -411,13 +387,11 @@
     .end annotation
 
     .prologue
-    .line 82
     .local p1, "servicePrioritys":Ljava/util/List;, "Ljava/util/List<Lcom/android/internal/app/MiuiServicePriority;>;"
     sget-object v0, Lcom/android/server/am/LowPriorityServiceHelper;->mInstance:Lcom/android/server/am/LowPriorityServiceHelper;
 
     invoke-virtual {v0, p1}, Lcom/android/server/am/LowPriorityServiceHelper;->setServicePriority(Ljava/util/List;)V
 
-    .line 83
     return-void
 .end method
 
@@ -437,18 +411,15 @@
     .end annotation
 
     .prologue
-    .line 86
     .local p1, "servicePrioritys":Ljava/util/List;, "Ljava/util/List<Lcom/android/internal/app/MiuiServicePriority;>;"
     sget-object v0, Lcom/android/server/am/LowPriorityServiceHelper;->mInstance:Lcom/android/server/am/LowPriorityServiceHelper;
 
     invoke-virtual {v0, p1}, Lcom/android/server/am/LowPriorityServiceHelper;->setServicePriority(Ljava/util/List;)V
 
-    .line 87
     sget-object v0, Lcom/android/server/am/LowPriorityServiceHelper;->mInstance:Lcom/android/server/am/LowPriorityServiceHelper;
 
     invoke-virtual {v0, p2, p3}, Lcom/android/server/am/LowPriorityServiceHelper;->setNoProcDelayTime(J)V
 
-    .line 88
     return-void
 .end method
 
@@ -457,7 +428,6 @@
     .param p0, "record"    # Lcom/android/server/am/ServiceRecord;
 
     .prologue
-    .line 101
     iget-object v1, p0, Lcom/android/server/am/ServiceRecord;->app:Lcom/android/server/am/ProcessRecord;
 
     if-eqz v1, :cond_0
@@ -486,15 +456,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 104
     const/4 v0, 0x1
 
-    .line 108
     .local v0, "isTopServiceApp":Z
     :goto_0
     return v0
 
-    .line 106
     .end local v0    # "isTopServiceApp":Z
     :cond_0
     const/4 v0, 0x0

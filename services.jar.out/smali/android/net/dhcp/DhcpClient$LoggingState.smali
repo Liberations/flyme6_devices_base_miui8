@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 484
     iput-object p1, p0, Landroid/net/dhcp/DhcpClient$LoggingState;->this$0:Landroid/net/dhcp/DhcpClient;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -36,10 +35,8 @@
     .param p1, "what"    # I
 
     .prologue
-    .line 490
     sparse-switch p1, :sswitch_data_0
 
-    .line 512
     invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v0
@@ -47,67 +44,56 @@
     :goto_0
     return-object v0
 
-    .line 492
     :sswitch_0
     const-string v0, "CMD_START_DHCP"
 
     goto :goto_0
 
-    .line 494
     :sswitch_1
     const-string v0, "CMD_STOP_DHCP"
 
     goto :goto_0
 
-    .line 496
     :sswitch_2
     const-string v0, "CMD_RENEW_DHCP"
 
     goto :goto_0
 
-    .line 498
     :sswitch_3
     const-string v0, "CMD_PRE_DHCP_ACTION"
 
     goto :goto_0
 
-    .line 500
     :sswitch_4
     const-string v0, "CMD_PRE_DHCP_ACTION_COMPLETE"
 
     goto :goto_0
 
-    .line 502
     :sswitch_5
     const-string v0, "CMD_POST_DHCP_ACTION"
 
     goto :goto_0
 
-    .line 504
     :sswitch_6
     const-string v0, "CMD_KICK"
 
     goto :goto_0
 
-    .line 506
     :sswitch_7
     const-string v0, "CMD_RECEIVED_PACKET"
 
     goto :goto_0
 
-    .line 508
     :sswitch_8
     const-string v0, "CMD_TIMEOUT"
 
     goto :goto_0
 
-    .line 510
     :sswitch_9
     const-string v0, "CMD_ONESHOT_TIMEOUT"
 
     goto :goto_0
 
-    .line 490
     :sswitch_data_0
     .sparse-switch
         0x30001 -> :sswitch_0
@@ -128,12 +114,10 @@
     .param p1, "message"    # Landroid/os/Message;
 
     .prologue
-    .line 517
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
 
-    .line 518
     .local v2, "now":J
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -141,7 +125,6 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 519
     .local v0, "b":Ljava/lang/StringBuilder;
     invoke-virtual {p1}, Landroid/os/Message;->getWhen()J
 
@@ -151,7 +134,6 @@
 
     invoke-static {v4, v5, v0}, Landroid/util/TimeUtils;->formatDuration(JLjava/lang/StringBuilder;)V
 
-    .line 520
     const-string v1, " "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -202,7 +184,6 @@
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 524
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -216,7 +197,6 @@
     .locals 0
 
     .prologue
-    .line 487
     return-void
 .end method
 
@@ -225,7 +205,6 @@
     .param p1, "message"    # Landroid/os/Message;
 
     .prologue
-    .line 532
     const/4 v0, 0x0
 
     return v0

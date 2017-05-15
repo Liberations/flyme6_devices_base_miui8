@@ -24,7 +24,6 @@
     .param p1, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 146
     iput-object p2, p0, Lcom/android/server/power/ButtonLightAutoController$3;->val$context:Landroid/content/Context;
 
     invoke-direct {p0, p1}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -40,11 +39,9 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 149
     iget-object v0, p0, Lcom/android/server/power/ButtonLightAutoController$3;->val$context:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/android/server/power/ButtonLightAutoController;->updateButtonLightTimeout(Landroid/content/Context;)V
 
-    .line 150
     return-void
 .end method

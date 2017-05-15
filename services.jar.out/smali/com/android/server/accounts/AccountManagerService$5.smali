@@ -34,7 +34,6 @@
     .param p8, "x6"    # Z
 
     .prologue
-    .line 1838
     iput-object p1, p0, Lcom/android/server/accounts/AccountManagerService$5;->this$0:Lcom/android/server/accounts/AccountManagerService;
 
     iput-object p9, p0, Lcom/android/server/accounts/AccountManagerService$5;->val$accountType:Ljava/lang/String;
@@ -53,38 +52,31 @@
     .param p1, "result"    # Landroid/os/Bundle;
 
     .prologue
-    .line 1853
     if-eqz p1, :cond_0
 
-    .line 1854
     const-string v2, "authTokenLabelKey"
 
     invoke-virtual {p1, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1855
     .local v1, "label":Ljava/lang/String;
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 1856
     .local v0, "bundle":Landroid/os/Bundle;
     const-string v2, "authTokenLabelKey"
 
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1857
     invoke-super {p0, v0}, Lcom/android/server/accounts/AccountManagerService$Session;->onResult(Landroid/os/Bundle;)V
 
-    .line 1862
     .end local v0    # "bundle":Landroid/os/Bundle;
     .end local v1    # "label":Ljava/lang/String;
     :goto_0
     return-void
 
-    .line 1860
     :cond_0
     invoke-super {p0, p1}, Lcom/android/server/accounts/AccountManagerService$Session;->onResult(Landroid/os/Bundle;)V
 
@@ -100,14 +92,12 @@
     .end annotation
 
     .prologue
-    .line 1848
     iget-object v0, p0, Lcom/android/server/accounts/AccountManagerService$5;->mAuthenticator:Landroid/accounts/IAccountAuthenticator;
 
     iget-object v1, p0, Lcom/android/server/accounts/AccountManagerService$5;->val$authTokenType:Ljava/lang/String;
 
     invoke-interface {v0, p0, v1}, Landroid/accounts/IAccountAuthenticator;->getAuthTokenLabel(Landroid/accounts/IAccountAuthenticatorResponse;Ljava/lang/String;)V
 
-    .line 1849
     return-void
 .end method
 
@@ -116,7 +106,6 @@
     .param p1, "now"    # J
 
     .prologue
-    .line 1841
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

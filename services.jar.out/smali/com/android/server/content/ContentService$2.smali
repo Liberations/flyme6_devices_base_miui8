@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 165
     iput-object p1, p0, Lcom/android/server/content/ContentService$2;->this$0:Lcom/android/server/content/ContentService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 168
     iget-object v0, p0, Lcom/android/server/content/ContentService$2;->this$0:Lcom/android/server/content/ContentService;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/content/ContentService;->getSyncAdapterPackagesForAuthorityAsUser(Ljava/lang/String;I)[Ljava/lang/String;

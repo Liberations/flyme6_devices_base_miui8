@@ -29,23 +29,18 @@
     .param p2, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 405
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 406
     iput-object p1, p0, Lcom/android/server/devicepolicy/DeviceOwner$OwnerInfo;->name:Ljava/lang/String;
 
-    .line 407
     iput-object p2, p0, Lcom/android/server/devicepolicy/DeviceOwner$OwnerInfo;->admin:Landroid/content/ComponentName;
 
-    .line 408
     invoke-virtual {p2}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/devicepolicy/DeviceOwner$OwnerInfo;->packageName:Ljava/lang/String;
 
-    .line 409
     return-void
 .end method
 
@@ -55,16 +50,12 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 399
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 400
     iput-object p1, p0, Lcom/android/server/devicepolicy/DeviceOwner$OwnerInfo;->name:Ljava/lang/String;
 
-    .line 401
     iput-object p2, p0, Lcom/android/server/devicepolicy/DeviceOwner$OwnerInfo;->packageName:Ljava/lang/String;
 
-    .line 402
     new-instance v0, Landroid/content/ComponentName;
 
     const-string v1, ""
@@ -73,7 +64,6 @@
 
     iput-object v0, p0, Lcom/android/server/devicepolicy/DeviceOwner$OwnerInfo;->admin:Landroid/content/ComponentName;
 
-    .line 403
     return-void
 .end method
 
@@ -85,7 +75,6 @@
     .param p2, "pw"    # Ljava/io/PrintWriter;
 
     .prologue
-    .line 411
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -112,7 +101,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 412
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -139,9 +127,7 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 413
     invoke-virtual {p2}, Ljava/io/PrintWriter;->println()V
 
-    .line 414
     return-void
 .end method

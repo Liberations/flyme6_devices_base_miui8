@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 127
     iput-object p1, p0, Lcom/android/server/camera/CameraService$2;->this$0:Lcom/android/server/camera/CameraService;
 
     invoke-direct {p0}, Landroid/hardware/ICameraServiceProxy$Stub;-><init>()V
@@ -39,20 +38,17 @@
     .param p2, "newCameraState"    # I
 
     .prologue
-    .line 135
     # invokes: Lcom/android/server/camera/CameraService;->cameraStateToString(I)Ljava/lang/String;
     invoke-static {p2}, Lcom/android/server/camera/CameraService;->access$500(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 138
     .local v0, "state":Ljava/lang/String;
     iget-object v1, p0, Lcom/android/server/camera/CameraService$2;->this$0:Lcom/android/server/camera/CameraService;
 
     # invokes: Lcom/android/server/camera/CameraService;->updateActivityCount(Ljava/lang/String;I)V
     invoke-static {v1, p1, p2}, Lcom/android/server/camera/CameraService;->access$600(Lcom/android/server/camera/CameraService;Ljava/lang/String;I)V
 
-    .line 139
     return-void
 .end method
 
@@ -60,7 +56,6 @@
     .locals 2
 
     .prologue
-    .line 130
     iget-object v0, p0, Lcom/android/server/camera/CameraService$2;->this$0:Lcom/android/server/camera/CameraService;
 
     const/16 v1, 0x1e
@@ -68,6 +63,5 @@
     # invokes: Lcom/android/server/camera/CameraService;->notifySwitchWithRetries(I)V
     invoke-static {v0, v1}, Lcom/android/server/camera/CameraService;->access$400(Lcom/android/server/camera/CameraService;I)V
 
-    .line 131
     return-void
 .end method

@@ -32,18 +32,14 @@
     .param p3, "listener"    # Landroid/hardware/input/ITabletModeChangedListener;
 
     .prologue
-    .line 1911
     iput-object p1, p0, Lcom/android/server/input/InputManagerService$TabletModeChangedListenerRecord;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1912
     iput p2, p0, Lcom/android/server/input/InputManagerService$TabletModeChangedListenerRecord;->mPid:I
 
-    .line 1913
     iput-object p3, p0, Lcom/android/server/input/InputManagerService$TabletModeChangedListenerRecord;->mListener:Landroid/hardware/input/ITabletModeChangedListener;
 
-    .line 1914
     return-void
 .end method
 
@@ -53,7 +49,6 @@
     .locals 2
 
     .prologue
-    .line 1921
     iget-object v0, p0, Lcom/android/server/input/InputManagerService$TabletModeChangedListenerRecord;->this$0:Lcom/android/server/input/InputManagerService;
 
     iget v1, p0, Lcom/android/server/input/InputManagerService$TabletModeChangedListenerRecord;->mPid:I
@@ -61,7 +56,6 @@
     # invokes: Lcom/android/server/input/InputManagerService;->onTabletModeChangedListenerDied(I)V
     invoke-static {v0, v1}, Lcom/android/server/input/InputManagerService;->access$1100(Lcom/android/server/input/InputManagerService;I)V
 
-    .line 1922
     return-void
 .end method
 
@@ -71,7 +65,6 @@
     .param p3, "inTabletMode"    # Z
 
     .prologue
-    .line 1926
     :try_start_0
     iget-object v1, p0, Lcom/android/server/input/InputManagerService$TabletModeChangedListenerRecord;->mListener:Landroid/hardware/input/ITabletModeChangedListener;
 
@@ -79,15 +72,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1932
     :goto_0
     return-void
 
-    .line 1927
     :catch_0
     move-exception v0
 
-    .line 1928
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "InputManager"
 
@@ -119,7 +109,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1930
     invoke-virtual {p0}, Lcom/android/server/input/InputManagerService$TabletModeChangedListenerRecord;->binderDied()V
 
     goto :goto_0

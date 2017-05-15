@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 734
     iput-object p1, p0, Lcom/android/server/connectivity/Vpn$3;->this$0:Lcom/android/server/connectivity/Vpn;
 
     invoke-direct {p0}, Lcom/android/server/net/BaseNetworkObserver;-><init>()V
@@ -38,12 +37,10 @@
     .param p1, "interfaze"    # Ljava/lang/String;
 
     .prologue
-    .line 746
     iget-object v1, p0, Lcom/android/server/connectivity/Vpn$3;->this$0:Lcom/android/server/connectivity/Vpn;
 
     monitor-enter v1
 
-    .line 747
     :try_start_0
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$3;->this$0:Lcom/android/server/connectivity/Vpn;
 
@@ -67,7 +64,6 @@
 
     if-nez v0, :cond_0
 
-    .line 748
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$3;->this$0:Lcom/android/server/connectivity/Vpn;
 
     const/4 v2, 0x0
@@ -75,7 +71,6 @@
     # setter for: Lcom/android/server/connectivity/Vpn;->mStatusIntent:Landroid/app/PendingIntent;
     invoke-static {v0, v2}, Lcom/android/server/connectivity/Vpn;->access$702(Lcom/android/server/connectivity/Vpn;Landroid/app/PendingIntent;)Landroid/app/PendingIntent;
 
-    .line 749
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$3;->this$0:Lcom/android/server/connectivity/Vpn;
 
     const/4 v2, 0x0
@@ -83,7 +78,6 @@
     # setter for: Lcom/android/server/connectivity/Vpn;->mVpnUsers:Ljava/util/List;
     invoke-static {v0, v2}, Lcom/android/server/connectivity/Vpn;->access$802(Lcom/android/server/connectivity/Vpn;Ljava/util/List;)Ljava/util/List;
 
-    .line 750
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$3;->this$0:Lcom/android/server/connectivity/Vpn;
 
     const/4 v2, 0x0
@@ -91,7 +85,6 @@
     # setter for: Lcom/android/server/connectivity/Vpn;->mConfig:Lcom/android/internal/net/VpnConfig;
     invoke-static {v0, v2}, Lcom/android/server/connectivity/Vpn;->access$902(Lcom/android/server/connectivity/Vpn;Lcom/android/internal/net/VpnConfig;)Lcom/android/internal/net/VpnConfig;
 
-    .line 751
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$3;->this$0:Lcom/android/server/connectivity/Vpn;
 
     const/4 v2, 0x0
@@ -99,7 +92,6 @@
     # setter for: Lcom/android/server/connectivity/Vpn;->mInterface:Ljava/lang/String;
     invoke-static {v0, v2}, Lcom/android/server/connectivity/Vpn;->access$502(Lcom/android/server/connectivity/Vpn;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 752
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$3;->this$0:Lcom/android/server/connectivity/Vpn;
 
     # getter for: Lcom/android/server/connectivity/Vpn;->mConnection:Lcom/android/server/connectivity/Vpn$Connection;
@@ -109,7 +101,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 753
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$3;->this$0:Lcom/android/server/connectivity/Vpn;
 
     # getter for: Lcom/android/server/connectivity/Vpn;->mContext:Landroid/content/Context;
@@ -126,7 +117,6 @@
 
     invoke-virtual {v0, v2}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
-    .line 754
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$3;->this$0:Lcom/android/server/connectivity/Vpn;
 
     const/4 v2, 0x0
@@ -134,21 +124,17 @@
     # setter for: Lcom/android/server/connectivity/Vpn;->mConnection:Lcom/android/server/connectivity/Vpn$Connection;
     invoke-static {v0, v2}, Lcom/android/server/connectivity/Vpn;->access$1002(Lcom/android/server/connectivity/Vpn;Lcom/android/server/connectivity/Vpn$Connection;)Lcom/android/server/connectivity/Vpn$Connection;
 
-    .line 755
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$3;->this$0:Lcom/android/server/connectivity/Vpn;
 
     # invokes: Lcom/android/server/connectivity/Vpn;->agentDisconnect()V
     invoke-static {v0}, Lcom/android/server/connectivity/Vpn;->access$1200(Lcom/android/server/connectivity/Vpn;)V
 
-    .line 761
     :cond_0
     :goto_0
     monitor-exit v1
 
-    .line 762
     return-void
 
-    .line 756
     :cond_1
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$3;->this$0:Lcom/android/server/connectivity/Vpn;
 
@@ -159,7 +145,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 757
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$3;->this$0:Lcom/android/server/connectivity/Vpn;
 
     # getter for: Lcom/android/server/connectivity/Vpn;->mLegacyVpnRunner:Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;
@@ -169,7 +154,6 @@
 
     invoke-virtual {v0}, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->exit()V
 
-    .line 758
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$3;->this$0:Lcom/android/server/connectivity/Vpn;
 
     const/4 v2, 0x0
@@ -179,7 +163,6 @@
 
     goto :goto_0
 
-    .line 761
     :catchall_0
     move-exception v0
 
@@ -196,12 +179,10 @@
     .param p2, "up"    # Z
 
     .prologue
-    .line 737
     iget-object v1, p0, Lcom/android/server/connectivity/Vpn$3;->this$0:Lcom/android/server/connectivity/Vpn;
 
     monitor-enter v1
 
-    .line 738
     if-nez p2, :cond_0
 
     :try_start_0
@@ -214,7 +195,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 739
     iget-object v0, p0, Lcom/android/server/connectivity/Vpn$3;->this$0:Lcom/android/server/connectivity/Vpn;
 
     # getter for: Lcom/android/server/connectivity/Vpn;->mLegacyVpnRunner:Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;
@@ -224,14 +204,11 @@
 
     invoke-virtual {v0, p1}, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->check(Ljava/lang/String;)V
 
-    .line 741
     :cond_0
     monitor-exit v1
 
-    .line 742
     return-void
 
-    .line 741
     :catchall_0
     move-exception v0
 

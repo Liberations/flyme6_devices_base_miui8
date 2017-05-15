@@ -38,7 +38,6 @@
     .locals 0
 
     .prologue
-    .line 9718
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$9;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iput-object p2, p0, Lcom/android/server/pm/PackageManagerService$9;->val$userIds:[I
@@ -64,23 +63,19 @@
     .locals 21
 
     .prologue
-    .line 9722
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
     move-result-object v2
 
-    .line 9723
     .local v2, "am":Landroid/app/IActivityManager;
     if-nez v2, :cond_1
 
-    .line 9760
     .end local v2    # "am":Landroid/app/IActivityManager;
     :cond_0
     :goto_0
     return-void
 
-    .line 9725
     .restart local v2    # "am":Landroid/app/IActivityManager;
     :cond_1
     move-object/from16 v0, p0
@@ -89,12 +84,10 @@
 
     if-nez v3, :cond_5
 
-    .line 9726
     invoke-interface {v2}, Landroid/app/IActivityManager;->getRunningUserIds()[I
 
     move-result-object v19
 
-    .line 9730
     .local v19, "resolvedUserIds":[I
     :goto_1
     move-object/from16 v16, v19
@@ -119,7 +112,6 @@
 
     aget v15, v16, v17
 
-    .line 9731
     .local v15, "id":I
     new-instance v4, Landroid/content/Intent;
 
@@ -148,7 +140,6 @@
     :goto_3
     invoke-direct {v4, v5, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 9733
     .local v4, "intent":Landroid/content/Intent;
     move-object/from16 v0, p0
 
@@ -156,14 +147,12 @@
 
     if-eqz v3, :cond_2
 
-    .line 9734
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/pm/PackageManagerService$9;->val$extras:Landroid/os/Bundle;
 
     invoke-virtual {v4, v3}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 9736
     :cond_2
     move-object/from16 v0, p0
 
@@ -171,14 +160,12 @@
 
     if-eqz v3, :cond_3
 
-    .line 9737
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/pm/PackageManagerService$9;->val$targetPkg:Ljava/lang/String;
 
     invoke-virtual {v4, v3}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 9740
     :cond_3
     const-string v3, "android.intent.extra.UID"
 
@@ -188,7 +175,6 @@
 
     move-result v20
 
-    .line 9741
     .local v20, "uid":I
     if-lez v20, :cond_4
 
@@ -198,7 +184,6 @@
 
     if-eq v3, v15, :cond_4
 
-    .line 9742
     invoke-static/range {v20 .. v20}, Landroid/os/UserHandle;->getAppId(I)I
 
     move-result v3
@@ -207,25 +192,21 @@
 
     move-result v20
 
-    .line 9743
     const-string v3, "android.intent.extra.UID"
 
     move/from16 v0, v20
 
     invoke-virtual {v4, v3, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 9745
     :cond_4
     const-string v3, "android.intent.extra.user_handle"
 
     invoke-virtual {v4, v3, v15}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 9746
     const/high16 v3, 0x4000000
 
     invoke-virtual {v4, v3}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 9754
     const/4 v3, 0x0
 
     const/4 v5, 0x0
@@ -259,12 +240,10 @@
 
     invoke-interface/range {v2 .. v15}, Landroid/app/IActivityManager;->broadcastIntent(Landroid/app/IApplicationThread;Landroid/content/Intent;Ljava/lang/String;Landroid/content/IIntentReceiver;ILjava/lang/String;Landroid/os/Bundle;[Ljava/lang/String;ILandroid/os/Bundle;ZZI)I
 
-    .line 9730
     add-int/lit8 v17, v17, 0x1
 
     goto :goto_2
 
-    .line 9728
     .end local v4    # "intent":Landroid/content/Intent;
     .end local v15    # "id":I
     .end local v16    # "arr$":[I
@@ -284,7 +263,6 @@
     .restart local v19    # "resolvedUserIds":[I
     goto/16 :goto_1
 
-    .line 9731
     .restart local v15    # "id":I
     .restart local v16    # "arr$":[I
     .restart local v17    # "i$":I
@@ -294,7 +272,6 @@
 
     goto :goto_3
 
-    .line 9754
     .restart local v4    # "intent":Landroid/content/Intent;
     .restart local v20    # "uid":I
     :cond_7
@@ -302,7 +279,6 @@
 
     goto :goto_4
 
-    .line 9758
     .end local v2    # "am":Landroid/app/IActivityManager;
     .end local v4    # "intent":Landroid/content/Intent;
     .end local v15    # "id":I

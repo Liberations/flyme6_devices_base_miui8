@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 270
     iput-object p1, p0, Lcom/android/server/AppOpsServiceState$2;->this$0:Lcom/android/server/AppOpsServiceState;
 
     iput p2, p0, Lcom/android/server/AppOpsServiceState$2;->val$userId:I
@@ -44,7 +43,6 @@
     .locals 5
 
     .prologue
-    .line 275
     :try_start_0
     new-instance v1, Landroid/content/Intent;
 
@@ -52,13 +50,11 @@
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 276
     .local v1, "intent":Landroid/content/Intent;
     const-string v2, "com.lbe.security.miui"
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 277
     iget-object v2, p0, Lcom/android/server/AppOpsServiceState$2;->this$0:Lcom/android/server/AppOpsServiceState;
 
     # getter for: Lcom/android/server/AppOpsServiceState;->mContext:Landroid/content/Context;
@@ -76,16 +72,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 282
     .end local v1    # "intent":Landroid/content/Intent;
     :goto_0
     return-void
 
-    .line 278
     :catch_0
     move-exception v0
 
-    .line 280
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "AppOpsServiceState"
 

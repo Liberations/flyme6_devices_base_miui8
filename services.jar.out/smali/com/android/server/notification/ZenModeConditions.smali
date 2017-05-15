@@ -37,7 +37,6 @@
     .locals 1
 
     .prologue
-    .line 35
     sget-boolean v0, Lcom/android/server/notification/ZenModeHelper;->DEBUG:Z
 
     sput-boolean v0, Lcom/android/server/notification/ZenModeConditions;->DEBUG:Z
@@ -51,28 +50,22 @@
     .param p2, "conditionProviders"    # Lcom/android/server/notification/ConditionProviders;
 
     .prologue
-    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/notification/ZenModeConditions;->mSubscriptions:Landroid/util/ArrayMap;
 
-    .line 41
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/notification/ZenModeConditions;->mFirstEvaluation:Z
 
-    .line 44
     iput-object p1, p0, Lcom/android/server/notification/ZenModeConditions;->mHelper:Lcom/android/server/notification/ZenModeHelper;
 
-    .line 45
     iput-object p2, p0, Lcom/android/server/notification/ZenModeConditions;->mConditionProviders:Lcom/android/server/notification/ConditionProviders;
 
-    .line 46
     iget-object v0, p0, Lcom/android/server/notification/ZenModeConditions;->mConditionProviders:Lcom/android/server/notification/ConditionProviders;
 
     const-string v1, "countdown"
@@ -83,7 +76,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 47
     iget-object v0, p0, Lcom/android/server/notification/ZenModeConditions;->mConditionProviders:Lcom/android/server/notification/ConditionProviders;
 
     new-instance v1, Lcom/android/server/notification/CountdownConditionProvider;
@@ -92,7 +84,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/notification/ConditionProviders;->addSystemProvider(Lcom/android/server/notification/SystemConditionProviderService;)V
 
-    .line 49
     :cond_0
     iget-object v0, p0, Lcom/android/server/notification/ZenModeConditions;->mConditionProviders:Lcom/android/server/notification/ConditionProviders;
 
@@ -104,7 +95,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 50
     iget-object v0, p0, Lcom/android/server/notification/ZenModeConditions;->mConditionProviders:Lcom/android/server/notification/ConditionProviders;
 
     new-instance v1, Lcom/android/server/notification/ScheduleConditionProvider;
@@ -113,7 +103,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/notification/ConditionProviders;->addSystemProvider(Lcom/android/server/notification/SystemConditionProviderService;)V
 
-    .line 52
     :cond_1
     iget-object v0, p0, Lcom/android/server/notification/ZenModeConditions;->mConditionProviders:Lcom/android/server/notification/ConditionProviders;
 
@@ -125,7 +114,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 53
     iget-object v0, p0, Lcom/android/server/notification/ZenModeConditions;->mConditionProviders:Lcom/android/server/notification/ConditionProviders;
 
     new-instance v1, Lcom/android/server/notification/EventConditionProvider;
@@ -138,13 +126,11 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/notification/ConditionProviders;->addSystemProvider(Lcom/android/server/notification/SystemConditionProviderService;)V
 
-    .line 55
     :cond_2
     iget-object v0, p0, Lcom/android/server/notification/ZenModeConditions;->mConditionProviders:Lcom/android/server/notification/ConditionProviders;
 
     invoke-virtual {v0, p0}, Lcom/android/server/notification/ConditionProviders;->setCallback(Lcom/android/server/notification/ConditionProviders$Callback;)V
 
-    .line 56
     return-void
 .end method
 
@@ -167,27 +153,22 @@
     .local p2, "current":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Landroid/net/Uri;>;"
     const/4 v6, 0x0
 
-    .line 128
     if-eqz p1, :cond_0
 
     iget-object v5, p1, Landroid/service/notification/ZenModeConfig$ZenRule;->conditionId:Landroid/net/Uri;
 
     if-nez v5, :cond_1
 
-    .line 165
     :cond_0
     :goto_0
     return-void
 
-    .line 129
     :cond_1
     iget-object v2, p1, Landroid/service/notification/ZenModeConfig$ZenRule;->conditionId:Landroid/net/Uri;
 
-    .line 130
     .local v2, "id":Landroid/net/Uri;
     const/4 v3, 0x0
 
-    .line 131
     .local v3, "isSystemCondition":Z
     iget-object v5, p0, Lcom/android/server/notification/ZenModeConditions;->mConditionProviders:Lcom/android/server/notification/ConditionProviders;
 
@@ -214,7 +195,6 @@
 
     check-cast v4, Lcom/android/server/notification/SystemConditionProviderService;
 
-    .line 132
     .local v4, "sp":Lcom/android/server/notification/SystemConditionProviderService;
     invoke-virtual {v4, v2}, Lcom/android/server/notification/SystemConditionProviderService;->isValidConditionId(Landroid/net/Uri;)Z
 
@@ -222,7 +202,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 133
     iget-object v5, p0, Lcom/android/server/notification/ZenModeConditions;->mConditionProviders:Lcom/android/server/notification/ConditionProviders;
 
     invoke-virtual {v4}, Lcom/android/server/notification/SystemConditionProviderService;->getComponent()Landroid/content/ComponentName;
@@ -235,24 +214,20 @@
 
     invoke-virtual {v5, v7, v2, v8}, Lcom/android/server/notification/ConditionProviders;->ensureRecordExists(Landroid/content/ComponentName;Landroid/net/Uri;Landroid/service/notification/IConditionProvider;)V
 
-    .line 134
     invoke-virtual {v4}, Lcom/android/server/notification/SystemConditionProviderService;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v5
 
     iput-object v5, p1, Landroid/service/notification/ZenModeConfig$ZenRule;->component:Landroid/content/ComponentName;
 
-    .line 135
     const/4 v3, 0x1
 
     goto :goto_1
 
-    .line 138
     .end local v4    # "sp":Lcom/android/server/notification/SystemConditionProviderService;
     :cond_3
     if-nez v3, :cond_5
 
-    .line 139
     iget-object v5, p0, Lcom/android/server/notification/ZenModeConditions;->mConditionProviders:Lcom/android/server/notification/ConditionProviders;
 
     iget-object v7, p1, Landroid/service/notification/ZenModeConfig$ZenRule;->component:Landroid/content/ComponentName;
@@ -261,7 +236,6 @@
 
     move-result-object v0
 
-    .line 140
     .local v0, "cp":Landroid/service/notification/IConditionProvider;
     sget-boolean v5, Lcom/android/server/notification/ZenModeConditions;->DEBUG:Z
 
@@ -304,25 +278,21 @@
 
     invoke-static {v7, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 141
     :cond_4
     if-eqz v0, :cond_5
 
-    .line 142
     iget-object v5, p0, Lcom/android/server/notification/ZenModeConditions;->mConditionProviders:Lcom/android/server/notification/ConditionProviders;
 
     iget-object v7, p1, Landroid/service/notification/ZenModeConfig$ZenRule;->component:Landroid/content/ComponentName;
 
     invoke-virtual {v5, v7, v2, v0}, Lcom/android/server/notification/ConditionProviders;->ensureRecordExists(Landroid/content/ComponentName;Landroid/net/Uri;Landroid/service/notification/IConditionProvider;)V
 
-    .line 145
     .end local v0    # "cp":Landroid/service/notification/IConditionProvider;
     :cond_5
     iget-object v5, p1, Landroid/service/notification/ZenModeConfig$ZenRule;->component:Landroid/content/ComponentName;
 
     if-nez v5, :cond_7
 
-    .line 146
     const-string v5, "ZenModeHelper"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -347,7 +317,6 @@
 
     invoke-static {v5, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 147
     iput-boolean v6, p1, Landroid/service/notification/ZenModeConfig$ZenRule;->enabled:Z
 
     goto/16 :goto_0
@@ -356,22 +325,17 @@
     :cond_6
     move v5, v6
 
-    .line 140
     goto :goto_2
 
-    .line 150
     .end local v0    # "cp":Landroid/service/notification/IConditionProvider;
     :cond_7
     if-eqz p2, :cond_8
 
-    .line 151
     invoke-virtual {p2, v2}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 153
     :cond_8
     if-eqz p3, :cond_9
 
-    .line 154
     iget-object v5, p0, Lcom/android/server/notification/ZenModeConditions;->mConditionProviders:Lcom/android/server/notification/ConditionProviders;
 
     iget-object v6, p1, Landroid/service/notification/ZenModeConfig$ZenRule;->component:Landroid/content/ComponentName;
@@ -384,7 +348,6 @@
 
     if-eqz v5, :cond_a
 
-    .line 155
     iget-object v5, p0, Lcom/android/server/notification/ZenModeConditions;->mSubscriptions:Landroid/util/ArrayMap;
 
     iget-object v6, p1, Landroid/service/notification/ZenModeConfig$ZenRule;->conditionId:Landroid/net/Uri;
@@ -393,14 +356,12 @@
 
     invoke-virtual {v5, v6, v7}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 160
     :cond_9
     :goto_3
     iget-object v5, p1, Landroid/service/notification/ZenModeConfig$ZenRule;->condition:Landroid/service/notification/Condition;
 
     if-nez v5, :cond_0
 
-    .line 161
     iget-object v5, p0, Lcom/android/server/notification/ZenModeConditions;->mConditionProviders:Lcom/android/server/notification/ConditionProviders;
 
     iget-object v6, p1, Landroid/service/notification/ZenModeConfig$ZenRule;->component:Landroid/content/ComponentName;
@@ -413,7 +374,6 @@
 
     iput-object v5, p1, Landroid/service/notification/ZenModeConfig$ZenRule;->condition:Landroid/service/notification/Condition;
 
-    .line 162
     iget-object v5, p1, Landroid/service/notification/ZenModeConfig$ZenRule;->condition:Landroid/service/notification/Condition;
 
     if-eqz v5, :cond_0
@@ -448,7 +408,6 @@
 
     goto/16 :goto_0
 
-    .line 157
     :cond_a
     sget-boolean v5, Lcom/android/server/notification/ZenModeConditions;->DEBUG:Z
 
@@ -470,15 +429,12 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 168
     if-nez p1, :cond_1
 
-    .line 176
     :cond_0
     :goto_0
     return v3
 
-    .line 169
     :cond_1
     iget-object v4, p0, Lcom/android/server/notification/ZenModeConditions;->mHelper:Lcom/android/server/notification/ZenModeHelper;
 
@@ -486,11 +442,9 @@
 
     move-result-object v0
 
-    .line 170
     .local v0, "config":Landroid/service/notification/ZenModeConfig;
     if-eqz v0, :cond_0
 
-    .line 171
     iget-object v4, v0, Landroid/service/notification/ZenModeConfig;->automaticRules:Landroid/util/ArrayMap;
 
     invoke-virtual {v4}, Landroid/util/ArrayMap;->values()Ljava/util/Collection;
@@ -515,7 +469,6 @@
 
     check-cast v2, Landroid/service/notification/ZenModeConfig$ZenRule;
 
-    .line 172
     .local v2, "rule":Landroid/service/notification/ZenModeConfig$ZenRule;
     iget-object v4, v2, Landroid/service/notification/ZenModeConfig$ZenRule;->component:Landroid/content/ComponentName;
 
@@ -531,7 +484,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 173
     const/4 v3, 0x1
 
     goto :goto_0
@@ -546,7 +498,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 189
     if-eqz p1, :cond_0
 
     if-eqz p3, :cond_0
@@ -555,12 +506,10 @@
 
     if-nez v1, :cond_1
 
-    .line 193
     :cond_0
     :goto_0
     return v0
 
-    .line 190
     :cond_1
     iget-object v1, p3, Landroid/service/notification/ZenModeConfig$ZenRule;->conditionId:Landroid/net/Uri;
 
@@ -570,7 +519,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 191
     iget-object v1, p3, Landroid/service/notification/ZenModeConfig$ZenRule;->condition:Landroid/service/notification/Condition;
 
     invoke-static {p2, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -579,10 +527,8 @@
 
     if-nez v1, :cond_0
 
-    .line 192
     iput-object p2, p3, Landroid/service/notification/ZenModeConfig$ZenRule;->condition:Landroid/service/notification/Condition;
 
-    .line 193
     const/4 v0, 0x1
 
     goto :goto_0
@@ -595,7 +541,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 180
     if-eqz p1, :cond_2
 
     iget-boolean v1, p1, Landroid/service/notification/ZenModeConfig$ZenRule;->snoozing:Z
@@ -612,11 +557,9 @@
 
     if-nez v1, :cond_2
 
-    .line 181
     :cond_0
     iput-boolean v0, p1, Landroid/service/notification/ZenModeConfig$ZenRule;->snoozing:Z
 
-    .line 182
     sget-boolean v0, Lcom/android/server/notification/ZenModeConditions;->DEBUG:Z
 
     if-eqz v0, :cond_1
@@ -645,11 +588,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 183
     :cond_1
     const/4 v0, 0x1
 
-    .line 185
     :cond_2
     return v0
 .end method
@@ -662,7 +603,6 @@
     .param p2, "prefix"    # Ljava/lang/String;
 
     .prologue
-    .line 59
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v0, "mSubscriptions="
@@ -673,7 +613,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
-    .line 60
     return-void
 .end method
 
@@ -683,14 +622,11 @@
     .param p2, "processSubscriptions"    # Z
 
     .prologue
-    .line 67
     if-nez p1, :cond_0
 
-    .line 91
     :goto_0
     return-void
 
-    .line 68
     :cond_0
     iget-object v7, p1, Landroid/service/notification/ZenModeConfig;->manualRule:Landroid/service/notification/ZenModeConfig$ZenRule;
 
@@ -710,7 +646,6 @@
 
     if-nez v7, :cond_2
 
-    .line 70
     sget-boolean v7, Lcom/android/server/notification/ZenModeConditions;->DEBUG:Z
 
     if-eqz v7, :cond_1
@@ -721,25 +656,21 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 71
     :cond_1
     const/4 v7, 0x0
 
     iput-object v7, p1, Landroid/service/notification/ZenModeConfig;->manualRule:Landroid/service/notification/ZenModeConfig$ZenRule;
 
-    .line 73
     :cond_2
     new-instance v3, Landroid/util/ArraySet;
 
     invoke-direct {v3}, Landroid/util/ArraySet;-><init>()V
 
-    .line 74
     .local v3, "current":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Landroid/net/Uri;>;"
     iget-object v7, p1, Landroid/service/notification/ZenModeConfig;->manualRule:Landroid/service/notification/ZenModeConfig$ZenRule;
 
     invoke-direct {p0, v7, v3, p2}, Lcom/android/server/notification/ZenModeConditions;->evaluateRule(Landroid/service/notification/ZenModeConfig$ZenRule;Landroid/util/ArraySet;Z)V
 
-    .line 75
     iget-object v7, p1, Landroid/service/notification/ZenModeConfig;->automaticRules:Landroid/util/ArrayMap;
 
     invoke-virtual {v7}, Landroid/util/ArrayMap;->values()Ljava/util/Collection;
@@ -764,16 +695,13 @@
 
     check-cast v1, Landroid/service/notification/ZenModeConfig$ZenRule;
 
-    .line 76
     .local v1, "automaticRule":Landroid/service/notification/ZenModeConfig$ZenRule;
     invoke-direct {p0, v1, v3, p2}, Lcom/android/server/notification/ZenModeConditions;->evaluateRule(Landroid/service/notification/ZenModeConfig$ZenRule;Landroid/util/ArraySet;Z)V
 
-    .line 77
     invoke-direct {p0, v1}, Lcom/android/server/notification/ZenModeConditions;->updateSnoozing(Landroid/service/notification/ZenModeConfig$ZenRule;)Z
 
     goto :goto_1
 
-    .line 79
     .end local v1    # "automaticRule":Landroid/service/notification/ZenModeConfig$ZenRule;
     :cond_3
     iget-object v7, p0, Lcom/android/server/notification/ZenModeConditions;->mSubscriptions:Landroid/util/ArrayMap;
@@ -782,7 +710,6 @@
 
     move-result v0
 
-    .line 80
     .local v0, "N":I
     add-int/lit8 v4, v0, -0x1
 
@@ -790,7 +717,6 @@
     :goto_2
     if-ltz v4, :cond_5
 
-    .line 81
     iget-object v7, p0, Lcom/android/server/notification/ZenModeConditions;->mSubscriptions:Landroid/util/ArrayMap;
 
     invoke-virtual {v7, v4}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
@@ -799,7 +725,6 @@
 
     check-cast v6, Landroid/net/Uri;
 
-    .line 82
     .local v6, "id":Landroid/net/Uri;
     iget-object v7, p0, Lcom/android/server/notification/ZenModeConditions;->mSubscriptions:Landroid/util/ArrayMap;
 
@@ -809,34 +734,28 @@
 
     check-cast v2, Landroid/content/ComponentName;
 
-    .line 83
     .local v2, "component":Landroid/content/ComponentName;
     if-eqz p2, :cond_4
 
-    .line 84
     invoke-virtual {v3, v6}, Landroid/util/ArraySet;->contains(Ljava/lang/Object;)Z
 
     move-result v7
 
     if-nez v7, :cond_4
 
-    .line 85
     iget-object v7, p0, Lcom/android/server/notification/ZenModeConditions;->mConditionProviders:Lcom/android/server/notification/ConditionProviders;
 
     invoke-virtual {v7, v2, v6}, Lcom/android/server/notification/ConditionProviders;->unsubscribeIfNecessary(Landroid/content/ComponentName;Landroid/net/Uri;)V
 
-    .line 86
     iget-object v7, p0, Lcom/android/server/notification/ZenModeConditions;->mSubscriptions:Landroid/util/ArrayMap;
 
     invoke-virtual {v7, v4}, Landroid/util/ArrayMap;->removeAt(I)Ljava/lang/Object;
 
-    .line 80
     :cond_4
     add-int/lit8 v4, v4, -0x1
 
     goto :goto_2
 
-    .line 90
     .end local v2    # "component":Landroid/content/ComponentName;
     .end local v6    # "id":Landroid/net/Uri;
     :cond_5
@@ -851,7 +770,6 @@
     .locals 0
 
     .prologue
-    .line 96
     return-void
 .end method
 
@@ -861,7 +779,6 @@
     .param p2, "condition"    # Landroid/service/notification/Condition;
 
     .prologue
-    .line 113
     sget-boolean v4, Lcom/android/server/notification/ZenModeConditions;->DEBUG:Z
 
     if-eqz v4, :cond_0
@@ -898,7 +815,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 114
     :cond_0
     iget-object v4, p0, Lcom/android/server/notification/ZenModeConditions;->mHelper:Lcom/android/server/notification/ZenModeHelper;
 
@@ -906,29 +822,24 @@
 
     move-result-object v1
 
-    .line 115
     .local v1, "config":Landroid/service/notification/ZenModeConfig;
     if-nez v1, :cond_2
 
-    .line 125
     :cond_1
     :goto_0
     return-void
 
-    .line 116
     :cond_2
     invoke-virtual {v1}, Landroid/service/notification/ZenModeConfig;->copy()Landroid/service/notification/ZenModeConfig;
 
     move-result-object v1
 
-    .line 117
     iget-object v4, v1, Landroid/service/notification/ZenModeConfig;->manualRule:Landroid/service/notification/ZenModeConfig$ZenRule;
 
     invoke-direct {p0, p1, p2, v4}, Lcom/android/server/notification/ZenModeConditions;->updateCondition(Landroid/net/Uri;Landroid/service/notification/Condition;Landroid/service/notification/ZenModeConfig$ZenRule;)Z
 
     move-result v3
 
-    .line 118
     .local v3, "updated":Z
     iget-object v4, v1, Landroid/service/notification/ZenModeConfig;->automaticRules:Landroid/util/ArrayMap;
 
@@ -954,7 +865,6 @@
 
     check-cast v0, Landroid/service/notification/ZenModeConfig$ZenRule;
 
-    .line 119
     .local v0, "automaticRule":Landroid/service/notification/ZenModeConfig$ZenRule;
     invoke-direct {p0, p1, p2, v0}, Lcom/android/server/notification/ZenModeConditions;->updateCondition(Landroid/net/Uri;Landroid/service/notification/Condition;Landroid/service/notification/ZenModeConfig$ZenRule;)Z
 
@@ -962,22 +872,18 @@
 
     or-int/2addr v3, v4
 
-    .line 120
     invoke-direct {p0, v0}, Lcom/android/server/notification/ZenModeConditions;->updateSnoozing(Landroid/service/notification/ZenModeConfig$ZenRule;)Z
 
     move-result v4
 
     or-int/2addr v3, v4
 
-    .line 121
     goto :goto_1
 
-    .line 122
     .end local v0    # "automaticRule":Landroid/service/notification/ZenModeConfig$ZenRule;
     :cond_3
     if-eqz v3, :cond_1
 
-    .line 123
     iget-object v4, p0, Lcom/android/server/notification/ZenModeConditions;->mHelper:Lcom/android/server/notification/ZenModeHelper;
 
     const-string v5, "conditionChanged"
@@ -992,7 +898,6 @@
     .param p1, "component"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 105
     sget-boolean v0, Lcom/android/server/notification/ZenModeConditions;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -1019,7 +924,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 106
     :cond_0
     invoke-direct {p0, p1}, Lcom/android/server/notification/ZenModeConditions;->isAutomaticActive(Landroid/content/ComponentName;)Z
 
@@ -1027,7 +931,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 107
     iget-object v0, p0, Lcom/android/server/notification/ZenModeConditions;->mHelper:Lcom/android/server/notification/ZenModeHelper;
 
     iget-object v1, p0, Lcom/android/server/notification/ZenModeConditions;->mHelper:Lcom/android/server/notification/ZenModeHelper;
@@ -1040,7 +943,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/notification/ZenModeHelper;->setConfigAsync(Landroid/service/notification/ZenModeConfig;Ljava/lang/String;)V
 
-    .line 109
     :cond_1
     return-void
 .end method
@@ -1049,7 +951,6 @@
     .locals 0
 
     .prologue
-    .line 101
     return-void
 .end method
 
@@ -1059,11 +960,9 @@
     .param p2, "relevance"    # I
 
     .prologue
-    .line 63
     iget-object v0, p0, Lcom/android/server/notification/ZenModeConditions;->mConditionProviders:Lcom/android/server/notification/ConditionProviders;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/notification/ConditionProviders;->requestConditions(Landroid/service/notification/IConditionListener;I)V
 
-    .line 64
     return-void
 .end method

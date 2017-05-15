@@ -12,7 +12,6 @@
     .locals 0
 
     .prologue
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -26,7 +25,6 @@
     .param p3, "label"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 69
     invoke-static/range {p0 .. p0}, Lmiui/os/Environment;->isUsingMiui(Landroid/content/Context;)Z
 
     move-result v12
@@ -45,14 +43,12 @@
 
     if-eqz v12, :cond_2
 
-    .line 70
     const v12, 0x11030017
 
     move-object/from16 v0, p2
 
     invoke-virtual {v0, v12}, Lcom/android/internal/policy/PhoneWindow;->setContentView(I)V
 
-    .line 71
     const v12, 0x110b0036
 
     move-object/from16 v0, p1
@@ -61,16 +57,13 @@
 
     move-result-object v5
 
-    .line 72
     .local v5, "statusBar":Landroid/view/View;
     if-eqz v5, :cond_0
 
-    .line 73
     invoke-virtual {v5}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v4
 
-    .line 74
     .local v4, "lp":Landroid/view/ViewGroup$LayoutParams;
     invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -96,10 +89,8 @@
 
     iput v12, v4, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 75
     invoke-virtual {v5, v4}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 78
     .end local v4    # "lp":Landroid/view/ViewGroup$LayoutParams;
     :cond_0
     const/4 v12, 0x0
@@ -116,7 +107,6 @@
 
     move-result-object v1
 
-    .line 80
     .local v1, "a":Landroid/content/res/TypedArray;
     sget v12, Lmiui/R$styleable;->ActionBar_android_titleTextStyle:I
 
@@ -126,7 +116,6 @@
 
     move-result v9
 
-    .line 82
     .local v9, "titleStyleRes":I
     sget v12, Lcom/miui/internal/R$styleable;->ActionBar_titleCenter:I
 
@@ -136,7 +125,6 @@
 
     move-result v6
 
-    .line 84
     .local v6, "titleCenter":Z
     sget v12, Lmiui/R$styleable;->ActionBar_android_displayOptions:I
 
@@ -146,11 +134,9 @@
 
     move-result v3
 
-    .line 87
     .local v3, "displayOptions":I
     invoke-virtual {v1}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 89
     const v12, 0x110b0035
 
     move-object/from16 v0, p1
@@ -159,7 +145,6 @@
 
     move-result-object v2
 
-    .line 90
     .local v2, "actionBar":Landroid/view/View;
     invoke-virtual {v2}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
 
@@ -171,7 +156,6 @@
 
     if-eqz v12, :cond_1
 
-    .line 91
     new-instance v12, Landroid/graphics/drawable/ColorDrawable;
 
     sget v13, Lmiui/R$attr;->colorPrimary:I
@@ -186,7 +170,6 @@
 
     invoke-virtual {v2, v12}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 95
     :cond_1
     const v12, 0x110b0037
 
@@ -196,7 +179,6 @@
 
     move-result-object v8
 
-    .line 96
     .local v8, "titleLayout":Landroid/view/View;
     const v12, 0x110b0010
 
@@ -206,7 +188,6 @@
 
     check-cast v10, Landroid/widget/TextView;
 
-    .line 97
     .local v10, "titleView":Landroid/widget/TextView;
     const v12, 0x110b000f
 
@@ -216,18 +197,15 @@
 
     check-cast v11, Landroid/widget/ImageView;
 
-    .line 100
     .local v11, "upView":Landroid/widget/ImageView;
     and-int/lit8 v12, v3, 0x8
 
     if-nez v12, :cond_3
 
-    .line 101
     const/4 v12, 0x4
 
     invoke-virtual {v8, v12}, Landroid/view/View;->setVisibility(I)V
 
-    .line 129
     .end local v1    # "a":Landroid/content/res/TypedArray;
     .end local v2    # "actionBar":Landroid/view/View;
     .end local v3    # "displayOptions":I
@@ -241,7 +219,6 @@
     :goto_0
     return-void
 
-    .line 106
     .restart local v1    # "a":Landroid/content/res/TypedArray;
     .restart local v2    # "actionBar":Landroid/view/View;
     .restart local v3    # "displayOptions":I
@@ -262,7 +239,6 @@
 
     if-nez v12, :cond_5
 
-    .line 109
     const/4 v12, 0x0
 
     invoke-virtual {v8}, Landroid/view/View;->getPaddingTop()I
@@ -277,44 +253,36 @@
 
     invoke-virtual {v8, v12, v13, v14, v15}, Landroid/view/View;->setPadding(IIII)V
 
-    .line 111
     invoke-virtual {v8}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v7
 
     check-cast v7, Landroid/widget/LinearLayout$LayoutParams;
 
-    .line 113
     .local v7, "titleLP":Landroid/widget/LinearLayout$LayoutParams;
     const/4 v12, 0x1
 
     iput v12, v7, Landroid/widget/LinearLayout$LayoutParams;->gravity:I
 
-    .line 114
     invoke-virtual {v8, v7}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 121
     .end local v7    # "titleLP":Landroid/widget/LinearLayout$LayoutParams;
     :goto_1
     if-eqz v9, :cond_4
 
-    .line 122
     move-object/from16 v0, p0
 
     invoke-virtual {v10, v0, v9}, Landroid/widget/TextView;->setTextAppearance(Landroid/content/Context;I)V
 
-    .line 126
     :cond_4
     if-eqz p3, :cond_2
 
-    .line 127
     move-object/from16 v0, p3
 
     invoke-virtual {v10, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 
-    .line 117
     :cond_5
     const/4 v12, 0x0
 
@@ -329,14 +297,12 @@
     .param p1, "statusBarHeight"    # I
 
     .prologue
-    .line 60
     invoke-static {}, Lcom/android/server/policy/PhoneWindowManagerInjector;->oldmanNeedFixSoftInputResizeLayout()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 64
     .end local p0    # "unrestrictedScreenTop":I
     :goto_0
     return p0
@@ -353,10 +319,8 @@
     .param p0, "params"    # Landroid/view/WindowManager$LayoutParams;
 
     .prologue
-    .line 44
     sput-object p0, Lcom/android/server/policy/PhoneWindowManagerInjector;->sOldmanLastTopFullscreenOpaqueWmLp:Landroid/view/WindowManager$LayoutParams;
 
-    .line 45
     return-void
 .end method
 
@@ -365,7 +329,6 @@
     .param p0, "adjust"    # I
 
     .prologue
-    .line 56
     const/16 v0, 0x10
 
     if-ne p0, v0, :cond_0
@@ -395,17 +358,14 @@
 
     const/4 v0, 0x0
 
-    .line 48
     sget-object v2, Lcom/android/server/policy/PhoneWindowManagerInjector;->sOldmanLastTopFullscreenOpaqueWmLp:Landroid/view/WindowManager$LayoutParams;
 
     if-nez v2, :cond_1
 
-    .line 52
     :cond_0
     :goto_0
     return v0
 
-    .line 50
     :cond_1
     invoke-static {}, Lmiui/os/Build;->getUserMode()I
 
@@ -413,7 +373,6 @@
 
     if-ne v2, v1, :cond_0
 
-    .line 52
     sget-object v2, Lcom/android/server/policy/PhoneWindowManagerInjector;->sOldmanLastTopFullscreenOpaqueWmLp:Landroid/view/WindowManager$LayoutParams;
 
     iget v2, v2, Landroid/view/WindowManager$LayoutParams;->flags:I
@@ -449,7 +408,6 @@
     .param p2, "policyFlags"    # I
 
     .prologue
-    .line 34
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getAction()I
 
     move-result v1
@@ -458,12 +416,10 @@
 
     const/4 v0, 0x1
 
-    .line 39
     .local v0, "down":Z
     :goto_0
     return-void
 
-    .line 34
     .end local v0    # "down":Z
     :cond_0
     const/4 v0, 0x0

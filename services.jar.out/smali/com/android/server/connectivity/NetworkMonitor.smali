@@ -153,12 +153,10 @@
     .locals 1
 
     .prologue
-    .line 200
     const/16 v0, 0x7530
 
     sput v0, Lcom/android/server/connectivity/NetworkMonitor;->DEFAULT_LINGER_DELAY_MS:I
 
-    .line 242
     const/4 v0, 0x1
 
     sput-boolean v0, Lcom/android/server/connectivity/NetworkMonitor;->mSkipNetworkValidation:Z
@@ -180,7 +178,6 @@
 
     const/4 v2, 0x0
 
-    .line 252
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -205,75 +202,60 @@
 
     invoke-direct {p0, v0}, Lcom/android/internal/util/StateMachine;-><init>(Ljava/lang/String;)V
 
-    .line 202
     iput v2, p0, Lcom/android/server/connectivity/NetworkMonitor;->mLingerToken:I
 
-    .line 209
     iput v2, p0, Lcom/android/server/connectivity/NetworkMonitor;->mReevaluateToken:I
 
-    .line 211
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/server/connectivity/NetworkMonitor;->mUidResponsibleForReeval:I
 
-    .line 226
     iput-boolean v2, p0, Lcom/android/server/connectivity/NetworkMonitor;->mIsCaptivePortalCheckEnabled:Z
 
-    .line 229
     iput-boolean v2, p0, Lcom/android/server/connectivity/NetworkMonitor;->mUserDoesNotWant:Z
 
-    .line 231
     iput-boolean v2, p0, Lcom/android/server/connectivity/NetworkMonitor;->mDontDisplaySigninNotification:Z
 
-    .line 233
     iput-boolean v2, p0, Lcom/android/server/connectivity/NetworkMonitor;->systemReady:Z
 
-    .line 235
     new-instance v0, Lcom/android/server/connectivity/NetworkMonitor$DefaultState;
 
     invoke-direct {v0, p0, v4}, Lcom/android/server/connectivity/NetworkMonitor$DefaultState;-><init>(Lcom/android/server/connectivity/NetworkMonitor;Lcom/android/server/connectivity/NetworkMonitor$1;)V
 
     iput-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor;->mDefaultState:Lcom/android/internal/util/State;
 
-    .line 236
     new-instance v0, Lcom/android/server/connectivity/NetworkMonitor$ValidatedState;
 
     invoke-direct {v0, p0, v4}, Lcom/android/server/connectivity/NetworkMonitor$ValidatedState;-><init>(Lcom/android/server/connectivity/NetworkMonitor;Lcom/android/server/connectivity/NetworkMonitor$1;)V
 
     iput-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor;->mValidatedState:Lcom/android/internal/util/State;
 
-    .line 237
     new-instance v0, Lcom/android/server/connectivity/NetworkMonitor$MaybeNotifyState;
 
     invoke-direct {v0, p0, v4}, Lcom/android/server/connectivity/NetworkMonitor$MaybeNotifyState;-><init>(Lcom/android/server/connectivity/NetworkMonitor;Lcom/android/server/connectivity/NetworkMonitor$1;)V
 
     iput-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor;->mMaybeNotifyState:Lcom/android/internal/util/State;
 
-    .line 238
     new-instance v0, Lcom/android/server/connectivity/NetworkMonitor$EvaluatingState;
 
     invoke-direct {v0, p0, v4}, Lcom/android/server/connectivity/NetworkMonitor$EvaluatingState;-><init>(Lcom/android/server/connectivity/NetworkMonitor;Lcom/android/server/connectivity/NetworkMonitor$1;)V
 
     iput-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor;->mEvaluatingState:Lcom/android/internal/util/State;
 
-    .line 239
     new-instance v0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;
 
     invoke-direct {v0, p0, v4}, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;-><init>(Lcom/android/server/connectivity/NetworkMonitor;Lcom/android/server/connectivity/NetworkMonitor$1;)V
 
     iput-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor;->mCaptivePortalState:Lcom/android/internal/util/State;
 
-    .line 240
     new-instance v0, Lcom/android/server/connectivity/NetworkMonitor$LingeringState;
 
     invoke-direct {v0, p0, v4}, Lcom/android/server/connectivity/NetworkMonitor$LingeringState;-><init>(Lcom/android/server/connectivity/NetworkMonitor;Lcom/android/server/connectivity/NetworkMonitor$1;)V
 
     iput-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor;->mLingeringState:Lcom/android/internal/util/State;
 
-    .line 245
     iput-object v4, p0, Lcom/android/server/connectivity/NetworkMonitor;->mLaunchCaptivePortalAppBroadcastReceiver:Lcom/android/server/connectivity/NetworkMonitor$CustomIntentReceiver;
 
-    .line 247
     new-instance v0, Landroid/util/LocalLog;
 
     const/16 v3, 0x14
@@ -282,16 +264,12 @@
 
     iput-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor;->validationLogs:Landroid/util/LocalLog;
 
-    .line 254
     iput-object p1, p0, Lcom/android/server/connectivity/NetworkMonitor;->mContext:Landroid/content/Context;
 
-    .line 255
     iput-object p2, p0, Lcom/android/server/connectivity/NetworkMonitor;->mConnectivityServiceHandler:Landroid/os/Handler;
 
-    .line 256
     iput-object p3, p0, Lcom/android/server/connectivity/NetworkMonitor;->mNetworkAgentInfo:Lcom/android/server/connectivity/NetworkAgentInfo;
 
-    .line 257
     const-string v0, "phone"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -302,7 +280,6 @@
 
     iput-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
-    .line 258
     const-string v0, "wifi"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -313,7 +290,6 @@
 
     iput-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor;->mWifiManager:Landroid/net/wifi/WifiManager;
 
-    .line 259
     const-string v0, "alarm"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -324,55 +300,46 @@
 
     iput-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor;->mAlarmManager:Landroid/app/AlarmManager;
 
-    .line 260
     iput-object p4, p0, Lcom/android/server/connectivity/NetworkMonitor;->mDefaultRequest:Landroid/net/NetworkRequest;
 
-    .line 262
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor;->mDefaultState:Lcom/android/internal/util/State;
 
     invoke-virtual {p0, v0}, Lcom/android/server/connectivity/NetworkMonitor;->addState(Lcom/android/internal/util/State;)V
 
-    .line 263
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor;->mValidatedState:Lcom/android/internal/util/State;
 
     iget-object v3, p0, Lcom/android/server/connectivity/NetworkMonitor;->mDefaultState:Lcom/android/internal/util/State;
 
     invoke-virtual {p0, v0, v3}, Lcom/android/server/connectivity/NetworkMonitor;->addState(Lcom/android/internal/util/State;Lcom/android/internal/util/State;)V
 
-    .line 264
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor;->mMaybeNotifyState:Lcom/android/internal/util/State;
 
     iget-object v3, p0, Lcom/android/server/connectivity/NetworkMonitor;->mDefaultState:Lcom/android/internal/util/State;
 
     invoke-virtual {p0, v0, v3}, Lcom/android/server/connectivity/NetworkMonitor;->addState(Lcom/android/internal/util/State;Lcom/android/internal/util/State;)V
 
-    .line 265
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor;->mEvaluatingState:Lcom/android/internal/util/State;
 
     iget-object v3, p0, Lcom/android/server/connectivity/NetworkMonitor;->mMaybeNotifyState:Lcom/android/internal/util/State;
 
     invoke-virtual {p0, v0, v3}, Lcom/android/server/connectivity/NetworkMonitor;->addState(Lcom/android/internal/util/State;Lcom/android/internal/util/State;)V
 
-    .line 266
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor;->mCaptivePortalState:Lcom/android/internal/util/State;
 
     iget-object v3, p0, Lcom/android/server/connectivity/NetworkMonitor;->mMaybeNotifyState:Lcom/android/internal/util/State;
 
     invoke-virtual {p0, v0, v3}, Lcom/android/server/connectivity/NetworkMonitor;->addState(Lcom/android/internal/util/State;Lcom/android/internal/util/State;)V
 
-    .line 267
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor;->mLingeringState:Lcom/android/internal/util/State;
 
     iget-object v3, p0, Lcom/android/server/connectivity/NetworkMonitor;->mDefaultState:Lcom/android/internal/util/State;
 
     invoke-virtual {p0, v0, v3}, Lcom/android/server/connectivity/NetworkMonitor;->addState(Lcom/android/internal/util/State;Lcom/android/internal/util/State;)V
 
-    .line 268
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor;->mDefaultState:Lcom/android/internal/util/State;
 
     invoke-virtual {p0, v0}, Lcom/android/server/connectivity/NetworkMonitor;->setInitialState(Lcom/android/internal/util/State;)V
 
-    .line 270
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -387,7 +354,6 @@
 
     iput-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor;->mServer:Ljava/lang/String;
 
-    .line 272
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor;->mServer:Ljava/lang/String;
 
     if-nez v0, :cond_0
@@ -396,7 +362,6 @@
 
     iput-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor;->mServer:Ljava/lang/String;
 
-    .line 274
     :cond_0
     const-string v0, "persist.netmon.linger"
 
@@ -408,7 +373,6 @@
 
     iput v0, p0, Lcom/android/server/connectivity/NetworkMonitor;->mLingerDelayMs:I
 
-    .line 276
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -428,19 +392,15 @@
     :goto_0
     iput-boolean v0, p0, Lcom/android/server/connectivity/NetworkMonitor;->mIsCaptivePortalCheckEnabled:Z
 
-    .line 280
     sput-boolean v1, Lcom/android/server/connectivity/NetworkMonitor;->mSkipNetworkValidation:Z
 
-    .line 283
     invoke-virtual {p0}, Lcom/android/server/connectivity/NetworkMonitor;->start()V
 
-    .line 284
     return-void
 
     :cond_1
     move v0, v2
 
-    .line 276
     goto :goto_0
 .end method
 
@@ -449,7 +409,6 @@
     .param p0, "time_ms"    # I
 
     .prologue
-    .line 869
     invoke-static {}, Landroid/os/Process;->myUid()I
 
     move-result v0
@@ -458,7 +417,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 870
     new-instance v0, Ljava/lang/SecurityException;
 
     const-string v1, "SetDefaultLingerTime only for internal testing."
@@ -467,11 +425,9 @@
 
     throw v0
 
-    .line 872
     :cond_0
     sput p0, Lcom/android/server/connectivity/NetworkMonitor;->DEFAULT_LINGER_DELAY_MS:I
 
-    .line 873
     return-void
 .end method
 
@@ -480,7 +436,6 @@
     .param p0, "x0"    # Lcom/android/server/connectivity/NetworkMonitor;
 
     .prologue
-    .line 77
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor;->mLaunchCaptivePortalAppBroadcastReceiver:Lcom/android/server/connectivity/NetworkMonitor$CustomIntentReceiver;
 
     return-object v0
@@ -492,7 +447,6 @@
     .param p1, "x1"    # Lcom/android/server/connectivity/NetworkMonitor$CustomIntentReceiver;
 
     .prologue
-    .line 77
     iput-object p1, p0, Lcom/android/server/connectivity/NetworkMonitor;->mLaunchCaptivePortalAppBroadcastReceiver:Lcom/android/server/connectivity/NetworkMonitor$CustomIntentReceiver;
 
     return-object p1
@@ -503,7 +457,6 @@
     .param p0, "x0"    # Lcom/android/server/connectivity/NetworkMonitor;
 
     .prologue
-    .line 77
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -514,7 +467,6 @@
     .param p0, "x0"    # Lcom/android/server/connectivity/NetworkMonitor;
 
     .prologue
-    .line 77
     invoke-virtual {p0}, Lcom/android/server/connectivity/NetworkMonitor;->quit()V
 
     return-void
@@ -525,7 +477,6 @@
     .param p0, "x0"    # Lcom/android/server/connectivity/NetworkMonitor;
 
     .prologue
-    .line 77
     iget v0, p0, Lcom/android/server/connectivity/NetworkMonitor;->mUidResponsibleForReeval:I
 
     return v0
@@ -537,7 +488,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 77
     iput p1, p0, Lcom/android/server/connectivity/NetworkMonitor;->mUidResponsibleForReeval:I
 
     return p1
@@ -549,7 +499,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 77
     invoke-virtual {p0, p1}, Lcom/android/server/connectivity/NetworkMonitor;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -560,7 +509,6 @@
     .param p0, "x0"    # Lcom/android/server/connectivity/NetworkMonitor;
 
     .prologue
-    .line 77
     iget-boolean v0, p0, Lcom/android/server/connectivity/NetworkMonitor;->mDontDisplaySigninNotification:Z
 
     return v0
@@ -572,7 +520,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 77
     iput-boolean p1, p0, Lcom/android/server/connectivity/NetworkMonitor;->mDontDisplaySigninNotification:Z
 
     return p1
@@ -583,7 +530,6 @@
     .param p0, "x0"    # Lcom/android/server/connectivity/NetworkMonitor;
 
     .prologue
-    .line 77
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor;->mValidatedState:Lcom/android/internal/util/State;
 
     return-object v0
@@ -595,7 +541,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 77
     invoke-virtual {p0, p1}, Lcom/android/server/connectivity/NetworkMonitor;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -606,7 +551,6 @@
     .param p0, "x0"    # Lcom/android/server/connectivity/NetworkMonitor;
 
     .prologue
-    .line 77
     iget-boolean v0, p0, Lcom/android/server/connectivity/NetworkMonitor;->mUserDoesNotWant:Z
 
     return v0
@@ -618,7 +562,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 77
     iput-boolean p1, p0, Lcom/android/server/connectivity/NetworkMonitor;->mUserDoesNotWant:Z
 
     return p1
@@ -629,7 +572,6 @@
     .param p0, "x0"    # Lcom/android/server/connectivity/NetworkMonitor;
 
     .prologue
-    .line 77
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor;->mNetworkAgentInfo:Lcom/android/server/connectivity/NetworkAgentInfo;
 
     return-object v0
@@ -640,7 +582,6 @@
     .param p0, "x0"    # Lcom/android/server/connectivity/NetworkMonitor;
 
     .prologue
-    .line 77
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor;->mConnectivityServiceHandler:Landroid/os/Handler;
 
     return-object v0
@@ -652,7 +593,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 77
     invoke-virtual {p0, p1}, Lcom/android/server/connectivity/NetworkMonitor;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -664,7 +604,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 77
     invoke-virtual {p0, p1}, Lcom/android/server/connectivity/NetworkMonitor;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -675,7 +614,6 @@
     .param p0, "x0"    # Lcom/android/server/connectivity/NetworkMonitor;
 
     .prologue
-    .line 77
     iget v0, p0, Lcom/android/server/connectivity/NetworkMonitor;->mReevaluateToken:I
 
     return v0
@@ -686,7 +624,6 @@
     .param p0, "x0"    # Lcom/android/server/connectivity/NetworkMonitor;
 
     .prologue
-    .line 77
     iget v0, p0, Lcom/android/server/connectivity/NetworkMonitor;->mReevaluateToken:I
 
     add-int/lit8 v0, v0, 0x1
@@ -701,7 +638,6 @@
     .param p0, "x0"    # Lcom/android/server/connectivity/NetworkMonitor;
 
     .prologue
-    .line 77
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor;->mDefaultRequest:Landroid/net/NetworkRequest;
 
     return-object v0
@@ -713,7 +649,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 77
     invoke-virtual {p0, p1}, Lcom/android/server/connectivity/NetworkMonitor;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -723,7 +658,6 @@
     .locals 1
 
     .prologue
-    .line 77
     sget-boolean v0, Lcom/android/server/connectivity/NetworkMonitor;->mSkipNetworkValidation:Z
 
     return v0
@@ -734,7 +668,6 @@
     .param p0, "x0"    # Lcom/android/server/connectivity/NetworkMonitor;
 
     .prologue
-    .line 77
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor;->mCaptivePortalState:Lcom/android/internal/util/State;
 
     return-object v0
@@ -746,7 +679,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 77
     invoke-virtual {p0, p1}, Lcom/android/server/connectivity/NetworkMonitor;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -758,7 +690,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 77
     invoke-virtual {p0, p1}, Lcom/android/server/connectivity/NetworkMonitor;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -770,7 +701,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 77
     invoke-virtual {p0, p1}, Lcom/android/server/connectivity/NetworkMonitor;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -782,7 +712,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 77
     invoke-virtual {p0, p1}, Lcom/android/server/connectivity/NetworkMonitor;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -794,7 +723,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 77
     invoke-virtual {p0, p1}, Lcom/android/server/connectivity/NetworkMonitor;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -806,7 +734,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 77
     invoke-virtual {p0, p1}, Lcom/android/server/connectivity/NetworkMonitor;->removeMessages(I)V
 
     return-void
@@ -817,7 +744,6 @@
     .param p0, "x0"    # Lcom/android/server/connectivity/NetworkMonitor;
 
     .prologue
-    .line 77
     iget v0, p0, Lcom/android/server/connectivity/NetworkMonitor;->mLingerToken:I
 
     return v0
@@ -829,7 +755,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 77
     iput p1, p0, Lcom/android/server/connectivity/NetworkMonitor;->mLingerToken:I
 
     return p1
@@ -840,7 +765,6 @@
     .param p0, "x0"    # Lcom/android/server/connectivity/NetworkMonitor;
 
     .prologue
-    .line 77
     iget v0, p0, Lcom/android/server/connectivity/NetworkMonitor;->mLingerDelayMs:I
 
     return v0
@@ -851,7 +775,6 @@
     .param p0, "x0"    # Lcom/android/server/connectivity/NetworkMonitor;
 
     .prologue
-    .line 77
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor;->mAlarmManager:Landroid/app/AlarmManager;
 
     return-object v0
@@ -863,7 +786,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 77
     invoke-virtual {p0, p1}, Lcom/android/server/connectivity/NetworkMonitor;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -874,7 +796,6 @@
     .param p0, "x0"    # Lcom/android/server/connectivity/NetworkMonitor;
 
     .prologue
-    .line 77
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor;->mLingeringState:Lcom/android/internal/util/State;
 
     return-object v0
@@ -886,7 +807,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 77
     invoke-virtual {p0, p1}, Lcom/android/server/connectivity/NetworkMonitor;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -897,7 +817,6 @@
     .param p0, "x0"    # Lcom/android/server/connectivity/NetworkMonitor;
 
     .prologue
-    .line 77
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor;->mEvaluatingState:Lcom/android/internal/util/State;
 
     return-object v0
@@ -909,7 +828,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 77
     invoke-virtual {p0, p1}, Lcom/android/server/connectivity/NetworkMonitor;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -923,7 +841,6 @@
     .param p5, "responseTimestampMs"    # J
 
     .prologue
-    .line 793
     iget-object v9, p0, Lcom/android/server/connectivity/NetworkMonitor;->mContext:Landroid/content/Context;
 
     invoke-virtual {v9}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -940,25 +857,21 @@
 
     if-nez v9, :cond_1
 
-    .line 864
     :cond_0
     :goto_0
     return-void
 
-    .line 798
     :cond_1
     iget-boolean v9, p0, Lcom/android/server/connectivity/NetworkMonitor;->systemReady:Z
 
     if-eqz v9, :cond_0
 
-    .line 800
     new-instance v7, Landroid/content/Intent;
 
     const-string v9, "android.net.conn.NETWORK_CONDITIONS_MEASURED"
 
     invoke-direct {v7, v9}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 801
     .local v7, "latencyBroadcast":Landroid/content/Intent;
     iget-object v9, p0, Lcom/android/server/connectivity/NetworkMonitor;->mNetworkAgentInfo:Lcom/android/server/connectivity/NetworkAgentInfo;
 
@@ -972,7 +885,6 @@
 
     goto :goto_0
 
-    .line 820
     :pswitch_0
     const-string v9, "extra_network_type"
 
@@ -984,21 +896,17 @@
 
     invoke-virtual {v7, v9, v10}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 821
     iget-object v9, p0, Lcom/android/server/connectivity/NetworkMonitor;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     invoke-virtual {v9}, Landroid/telephony/TelephonyManager;->getAllCellInfo()Ljava/util/List;
 
     move-result-object v6
 
-    .line 822
     .local v6, "info":Ljava/util/List;, "Ljava/util/List<Landroid/telephony/CellInfo;>;"
     if-eqz v6, :cond_0
 
-    .line 823
     const/4 v8, 0x0
 
-    .line 824
     .local v8, "numRegisteredCellInfo":I
     invoke-interface {v6}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1019,7 +927,6 @@
 
     check-cast v3, Landroid/telephony/CellInfo;
 
-    .line 825
     .local v3, "cellInfo":Landroid/telephony/CellInfo;
     invoke-virtual {v3}, Landroid/telephony/CellInfo;->isRegistered()Z
 
@@ -1027,22 +934,18 @@
 
     if-eqz v9, :cond_2
 
-    .line 826
     add-int/lit8 v8, v8, 0x1
 
-    .line 827
     const/4 v9, 0x1
 
     if-le v8, v9, :cond_6
 
-    .line 828
     const-string v9, "more than one registered CellInfo.  Can\'t tell which is active.  Bailing."
 
     invoke-virtual {p0, v9}, Lcom/android/server/connectivity/NetworkMonitor;->log(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 803
     .end local v3    # "cellInfo":Landroid/telephony/CellInfo;
     .end local v5    # "i$":Ljava/util/Iterator;
     .end local v6    # "info":Ljava/util/List;, "Ljava/util/List<Landroid/telephony/CellInfo;>;"
@@ -1054,11 +957,9 @@
 
     move-result-object v4
 
-    .line 804
     .local v4, "currentWifiInfo":Landroid/net/wifi/WifiInfo;
     if-eqz v4, :cond_5
 
-    .line 812
     const-string v9, "extra_ssid"
 
     invoke-virtual {v4}, Landroid/net/wifi/WifiInfo;->getSSID()Ljava/lang/String;
@@ -1067,7 +968,6 @@
 
     invoke-virtual {v7, v9, v10}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 813
     const-string v9, "extra_bssid"
 
     invoke-virtual {v4}, Landroid/net/wifi/WifiInfo;->getBSSID()Ljava/lang/String;
@@ -1076,7 +976,6 @@
 
     invoke-virtual {v7, v9, v10}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 854
     .end local v4    # "currentWifiInfo":Landroid/net/wifi/WifiInfo;
     :cond_3
     const-string v9, "extra_connectivity_type"
@@ -1091,34 +990,28 @@
 
     invoke-virtual {v7, v9, v10}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 855
     const-string v9, "extra_response_received"
 
     invoke-virtual {v7, v9, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 856
     const-string v9, "extra_request_timestamp_ms"
 
     move-wide/from16 v0, p3
 
     invoke-virtual {v7, v9, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
-    .line 858
     if-eqz p1, :cond_4
 
-    .line 859
     const-string v9, "extra_is_captive_portal"
 
     invoke-virtual {v7, v9, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 860
     const-string v9, "extra_response_timestamp_ms"
 
     move-wide/from16 v0, p5
 
     invoke-virtual {v7, v9, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
-    .line 862
     :cond_4
     iget-object v9, p0, Lcom/android/server/connectivity/NetworkMonitor;->mContext:Landroid/content/Context;
 
@@ -1130,7 +1023,6 @@
 
     goto/16 :goto_0
 
-    .line 815
     .restart local v4    # "currentWifiInfo":Landroid/net/wifi/WifiInfo;
     :cond_5
     const-string v9, "network info is TYPE_WIFI but no ConnectionInfo found"
@@ -1139,7 +1031,6 @@
 
     goto/16 :goto_0
 
-    .line 832
     .end local v4    # "currentWifiInfo":Landroid/net/wifi/WifiInfo;
     .restart local v3    # "cellInfo":Landroid/telephony/CellInfo;
     .restart local v5    # "i$":Ljava/util/Iterator;
@@ -1150,7 +1041,6 @@
 
     if-eqz v9, :cond_7
 
-    .line 833
     check-cast v3, Landroid/telephony/CellInfoCdma;
 
     .end local v3    # "cellInfo":Landroid/telephony/CellInfo;
@@ -1158,7 +1048,6 @@
 
     move-result-object v2
 
-    .line 834
     .local v2, "cellId":Landroid/telephony/CellIdentityCdma;
     const-string v9, "extra_cellid"
 
@@ -1166,7 +1055,6 @@
 
     goto :goto_1
 
-    .line 835
     .end local v2    # "cellId":Landroid/telephony/CellIdentityCdma;
     .restart local v3    # "cellInfo":Landroid/telephony/CellInfo;
     :cond_7
@@ -1174,7 +1062,6 @@
 
     if-eqz v9, :cond_8
 
-    .line 836
     check-cast v3, Landroid/telephony/CellInfoGsm;
 
     .end local v3    # "cellInfo":Landroid/telephony/CellInfo;
@@ -1182,7 +1069,6 @@
 
     move-result-object v2
 
-    .line 837
     .local v2, "cellId":Landroid/telephony/CellIdentityGsm;
     const-string v9, "extra_cellid"
 
@@ -1190,7 +1076,6 @@
 
     goto/16 :goto_1
 
-    .line 838
     .end local v2    # "cellId":Landroid/telephony/CellIdentityGsm;
     .restart local v3    # "cellInfo":Landroid/telephony/CellInfo;
     :cond_8
@@ -1198,7 +1083,6 @@
 
     if-eqz v9, :cond_9
 
-    .line 839
     check-cast v3, Landroid/telephony/CellInfoLte;
 
     .end local v3    # "cellInfo":Landroid/telephony/CellInfo;
@@ -1206,7 +1090,6 @@
 
     move-result-object v2
 
-    .line 840
     .local v2, "cellId":Landroid/telephony/CellIdentityLte;
     const-string v9, "extra_cellid"
 
@@ -1214,7 +1097,6 @@
 
     goto/16 :goto_1
 
-    .line 841
     .end local v2    # "cellId":Landroid/telephony/CellIdentityLte;
     .restart local v3    # "cellInfo":Landroid/telephony/CellInfo;
     :cond_9
@@ -1222,7 +1104,6 @@
 
     if-eqz v9, :cond_a
 
-    .line 842
     check-cast v3, Landroid/telephony/CellInfoWcdma;
 
     .end local v3    # "cellInfo":Landroid/telephony/CellInfo;
@@ -1230,7 +1111,6 @@
 
     move-result-object v2
 
-    .line 843
     .local v2, "cellId":Landroid/telephony/CellIdentityWcdma;
     const-string v9, "extra_cellid"
 
@@ -1238,7 +1118,6 @@
 
     goto/16 :goto_1
 
-    .line 845
     .end local v2    # "cellId":Landroid/telephony/CellIdentityWcdma;
     .restart local v3    # "cellInfo":Landroid/telephony/CellInfo;
     :cond_a
@@ -1248,7 +1127,6 @@
 
     goto/16 :goto_0
 
-    .line 801
     nop
 
     :pswitch_data_0
@@ -1263,15 +1141,12 @@
     .param p1, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 292
     invoke-virtual {p0, p1}, Lcom/android/server/connectivity/NetworkMonitor;->log(Ljava/lang/String;)V
 
-    .line 293
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor;->validationLogs:Landroid/util/LocalLog;
 
     invoke-virtual {v0, p1}, Landroid/util/LocalLog;->log(Ljava/lang/String;)V
 
-    .line 294
     return-void
 .end method
 
@@ -1281,7 +1156,6 @@
     .locals 1
 
     .prologue
-    .line 297
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor;->validationLogs:Landroid/util/LocalLog;
 
     invoke-virtual {v0}, Landroid/util/LocalLog;->readOnlyLocalLog()Landroid/util/LocalLog$ReadOnlyLocalLog;
@@ -1295,7 +1169,6 @@
     .locals 22
 
     .prologue
-    .line 678
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Lcom/android/server/connectivity/NetworkMonitor;->mIsCaptivePortalCheckEnabled:Z
@@ -1304,20 +1177,16 @@
 
     const/16 v16, 0xcc
 
-    .line 781
     :cond_0
     :goto_0
     return v16
 
-    .line 680
     :cond_1
     const/16 v21, 0x0
 
-    .line 681
     .local v21, "urlConnection":Ljava/net/HttpURLConnection;
     const/16 v16, 0x257
 
-    .line 683
     .local v16, "httpResponseCode":I
     :try_start_0
     new-instance v20, Ljava/net/URL;
@@ -1334,11 +1203,9 @@
 
     invoke-direct {v0, v3, v4, v5}, Ljava/net/URL;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 700
     .local v20, "url":Ljava/net/URL;
     const/4 v14, 0x0
 
-    .line 701
     .local v14, "fetchPac":Z
     move-object/from16 v0, p0
 
@@ -1350,7 +1217,6 @@
 
     move-result-object v19
 
-    .line 702
     .local v19, "proxyInfo":Landroid/net/ProxyInfo;
     if-eqz v19, :cond_2
 
@@ -1366,7 +1232,6 @@
 
     if-nez v3, :cond_2
 
-    .line 703
     new-instance v20, Ljava/net/URL;
 
     .end local v20    # "url":Ljava/net/URL;
@@ -1382,11 +1247,9 @@
 
     invoke-direct {v0, v3}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
 
-    .line 704
     .restart local v20    # "url":Ljava/net/URL;
     const/4 v14, 0x1
 
-    .line 708
     :cond_2
     move-object/from16 v0, p0
 
@@ -1398,28 +1261,23 @@
 
     move-result-object v20
 
-    .line 710
     new-instance v12, Ljava/lang/StringBuffer;
 
     invoke-direct {v12}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 711
     .local v12, "connectInfo":Ljava/lang/StringBuffer;
     const/4 v15, 0x0
 
-    .line 714
     .local v15, "hostToResolve":Ljava/lang/String;
     if-eqz v19, :cond_3
 
     if-eqz v14, :cond_6
 
-    .line 715
     :cond_3
     invoke-virtual/range {v20 .. v20}, Ljava/net/URL;->getHost()Ljava/lang/String;
 
     move-result-object v15
 
-    .line 719
     :cond_4
     :goto_1
     invoke-static {v15}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -1428,7 +1286,6 @@
 
     if-nez v3, :cond_7
 
-    .line 720
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1455,7 +1312,6 @@
 
     invoke-virtual {v12, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 721
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/connectivity/NetworkMonitor;->mNetworkAgentInfo:Lcom/android/server/connectivity/NetworkAgentInfo;
@@ -1466,7 +1322,6 @@
 
     move-result-object v10
 
-    .line 723
     .local v10, "addresses":[Ljava/net/InetAddress;
     move-object v11, v10
 
@@ -1488,7 +1343,6 @@
 
     aget-object v2, v11, v17
 
-    .line 724
     .local v2, "address":Ljava/net/InetAddress;
     invoke-virtual {v2}, Ljava/net/InetAddress;->getHostAddress()Ljava/lang/String;
 
@@ -1496,7 +1350,6 @@
 
     invoke-virtual {v12, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 725
     array-length v3, v10
 
     add-int/lit8 v3, v3, -0x1
@@ -1509,13 +1362,11 @@
 
     invoke-virtual {v12, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 723
     :cond_5
     add-int/lit8 v17, v17, 0x1
 
     goto :goto_2
 
-    .line 716
     .end local v2    # "address":Ljava/net/InetAddress;
     .end local v10    # "addresses":[Ljava/net/InetAddress;
     .end local v11    # "arr$":[Ljava/net/InetAddress;
@@ -1524,14 +1375,12 @@
     :cond_6
     if-eqz v19, :cond_4
 
-    .line 717
     invoke-virtual/range {v19 .. v19}, Landroid/net/ProxyInfo;->getHost()Ljava/lang/String;
 
     move-result-object v15
 
     goto :goto_1
 
-    .line 728
     :cond_7
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1583,7 +1432,6 @@
 
     invoke-direct {v0, v3}, Lcom/android/server/connectivity/NetworkMonitor;->validationLog(Ljava/lang/String;)V
 
-    .line 730
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/connectivity/NetworkMonitor;->mNetworkAgentInfo:Lcom/android/server/connectivity/NetworkAgentInfo;
@@ -1602,53 +1450,44 @@
 
     move-object/from16 v21, v0
 
-    .line 731
     move-object/from16 v0, v21
 
     invoke-virtual {v0, v14}, Ljava/net/HttpURLConnection;->setInstanceFollowRedirects(Z)V
 
-    .line 732
     const/16 v3, 0x2710
 
     move-object/from16 v0, v21
 
     invoke-virtual {v0, v3}, Ljava/net/HttpURLConnection;->setConnectTimeout(I)V
 
-    .line 733
     const/16 v3, 0x2710
 
     move-object/from16 v0, v21
 
     invoke-virtual {v0, v3}, Ljava/net/HttpURLConnection;->setReadTimeout(I)V
 
-    .line 734
     const/4 v3, 0x0
 
     move-object/from16 v0, v21
 
     invoke-virtual {v0, v3}, Ljava/net/HttpURLConnection;->setUseCaches(Z)V
 
-    .line 737
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v6
 
-    .line 739
     .local v6, "requestTimestamp":J
     invoke-virtual/range {v21 .. v21}, Ljava/net/HttpURLConnection;->getInputStream()Ljava/io/InputStream;
 
-    .line 742
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v8
 
-    .line 744
     .local v8, "responseTimestamp":J
     invoke-virtual/range {v21 .. v21}, Ljava/net/HttpURLConnection;->getResponseCode()I
 
     move-result v16
 
-    .line 745
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1687,7 +1526,6 @@
 
     invoke-direct {v0, v3}, Lcom/android/server/connectivity/NetworkMonitor;->validationLog(Ljava/lang/String;)V
 
-    .line 758
     const/16 v3, 0xc8
 
     move/from16 v0, v16
@@ -1700,17 +1538,14 @@
 
     if-nez v3, :cond_8
 
-    .line 759
     const-string v3, "Empty 200 response interpreted as 204 response."
 
     move-object/from16 v0, p0
 
     invoke-direct {v0, v3}, Lcom/android/server/connectivity/NetworkMonitor;->validationLog(Ljava/lang/String;)V
 
-    .line 760
     const/16 v16, 0xcc
 
-    .line 763
     :cond_8
     const/16 v3, 0xc8
 
@@ -1720,17 +1555,14 @@
 
     if-eqz v14, :cond_9
 
-    .line 764
     const-string v3, "PAC fetch 200 response interpreted as 204 response."
 
     move-object/from16 v0, p0
 
     invoke-direct {v0, v3}, Lcom/android/server/connectivity/NetworkMonitor;->validationLog(Ljava/lang/String;)V
 
-    .line 765
     const/16 v16, 0xcc
 
-    .line 768
     :cond_9
     const/4 v4, 0x1
 
@@ -1750,21 +1582,17 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 777
     if-eqz v21, :cond_0
 
-    .line 778
     invoke-virtual/range {v21 .. v21}, Ljava/net/HttpURLConnection;->disconnect()V
 
     goto/16 :goto_0
 
-    .line 768
     :cond_a
     const/4 v5, 0x0
 
     goto :goto_3
 
-    .line 771
     .end local v6    # "requestTimestamp":J
     .end local v8    # "responseTimestamp":J
     .end local v12    # "connectInfo":Ljava/lang/StringBuffer;
@@ -1775,7 +1603,6 @@
     :catch_0
     move-exception v13
 
-    .line 772
     .local v13, "e":Ljava/io/IOException;
     :try_start_1
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1802,30 +1629,25 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 773
     const/16 v3, 0x257
 
     move/from16 v0, v16
 
     if-ne v0, v3, :cond_b
 
-    .line 777
     :cond_b
     if-eqz v21, :cond_0
 
-    .line 778
     invoke-virtual/range {v21 .. v21}, Ljava/net/HttpURLConnection;->disconnect()V
 
     goto/16 :goto_0
 
-    .line 777
     .end local v13    # "e":Ljava/io/IOException;
     :catchall_0
     move-exception v3
 
     if-eqz v21, :cond_c
 
-    .line 778
     invoke-virtual/range {v21 .. v21}, Ljava/net/HttpURLConnection;->disconnect()V
 
     :cond_c
@@ -1837,7 +1659,6 @@
     .param p1, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 288
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1864,6 +1685,5 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 289
     return-void
 .end method

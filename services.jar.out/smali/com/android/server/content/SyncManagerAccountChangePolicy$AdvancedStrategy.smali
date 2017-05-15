@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 138
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,18 +35,15 @@
     .param p2, "authority"    # Ljava/lang/String;
 
     .prologue
-    .line 142
     invoke-static {p1}, Lcom/android/server/content/SyncManagerAccountChangePolicy;->isBatteryCharging(Landroid/content/Context;)Z
 
     move-result v0
 
-    .line 143
     .local v0, "isBatteryCharging":Z
     invoke-static {p1}, Lcom/android/server/content/SyncManagerAccountChangePolicy;->isNetworkNotMetered(Landroid/content/Context;)Z
 
     move-result v1
 
-    .line 144
     .local v1, "isNetworkNotMetered":Z
     if-eqz v0, :cond_0
 

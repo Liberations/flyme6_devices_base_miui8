@@ -14,7 +14,6 @@
     .locals 1
 
     .prologue
-    .line 10
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -29,13 +28,10 @@
     .param p1, "service"    # Lcom/android/server/am/ActivityManagerService;
 
     .prologue
-    .line 24
     invoke-direct {p0}, Lcom/android/server/am/BaseMiuiBroadcastManager;-><init>()V
 
-    .line 25
     invoke-virtual {p0, p1}, Lcom/android/server/am/MiuiBroadcastManager;->init(Lcom/android/server/am/ActivityManagerService;)V
 
-    .line 26
     return-void
 .end method
 
@@ -43,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 29
     sget v0, Lcom/android/server/am/BaseMiuiBroadcastManager;->EXTRA_QUEUE_SIZE:I
 
     return v0
@@ -54,42 +49,35 @@
     .param p0, "service"    # Lcom/android/server/am/ActivityManagerService;
 
     .prologue
-    .line 14
     sget-object v0, Lcom/android/server/am/MiuiBroadcastManager;->sInstance:Lcom/android/server/am/MiuiBroadcastManager;
 
     if-nez v0, :cond_1
 
-    .line 15
     sget-object v1, Lcom/android/server/am/MiuiBroadcastManager;->sInstanceSync:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 16
     :try_start_0
     sget-object v0, Lcom/android/server/am/MiuiBroadcastManager;->sInstance:Lcom/android/server/am/MiuiBroadcastManager;
 
     if-nez v0, :cond_0
 
-    .line 17
     new-instance v0, Lcom/android/server/am/MiuiBroadcastManager;
 
     invoke-direct {v0, p0}, Lcom/android/server/am/MiuiBroadcastManager;-><init>(Lcom/android/server/am/ActivityManagerService;)V
 
     sput-object v0, Lcom/android/server/am/MiuiBroadcastManager;->sInstance:Lcom/android/server/am/MiuiBroadcastManager;
 
-    .line 19
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 21
     :cond_1
     sget-object v0, Lcom/android/server/am/MiuiBroadcastManager;->sInstance:Lcom/android/server/am/MiuiBroadcastManager;
 
     return-object v0
 
-    .line 19
     :catchall_0
     move-exception v0
 
@@ -105,7 +93,6 @@
     .locals 1
 
     .prologue
-    .line 33
     sget-boolean v0, Lcom/android/server/am/BaseMiuiBroadcastManager;->ENABLE_EXTRA_QUEUES:Z
 
     return v0
@@ -121,7 +108,6 @@
     .param p5, "allowDelayBehindServices"    # Z
 
     .prologue
-    .line 39
     new-instance v0, Lcom/android/server/am/BroadcastQueue;
 
     iget-object v2, p1, Lcom/android/server/am/ActivityManagerService;->mHandler:Lcom/android/server/am/ActivityManagerService$MainHandler;
@@ -147,7 +133,6 @@
     .param p4, "old"    # Lcom/android/server/am/BroadcastRecord;
 
     .prologue
-    .line 44
     new-instance v1, Lcom/android/server/am/BroadcastRecord;
 
     move-object/from16 v0, p4

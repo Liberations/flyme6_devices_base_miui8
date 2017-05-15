@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 418
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
     return-void
@@ -32,22 +31,18 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 422
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 428
     :goto_0
     return-void
 
-    .line 424
     :pswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/server/am/ExtraActivityManagerService$CompatibleMessage;
 
-    .line 425
     .local v0, "cMsg":Lcom/android/server/am/ExtraActivityManagerService$CompatibleMessage;
     iget-object v1, v0, Lcom/android/server/am/ExtraActivityManagerService$CompatibleMessage;->context:Landroid/content/Context;
 
@@ -63,7 +58,6 @@
 
     goto :goto_0
 
-    .line 422
     nop
 
     :pswitch_data_0

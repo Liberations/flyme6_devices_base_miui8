@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 365
     iput-object p1, p0, Lcom/android/server/DeviceIdleController$2;->this$0:Lcom/android/server/DeviceIdleController;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,7 +40,6 @@
     .prologue
     const/16 v4, 0x8
 
-    .line 370
     const-string v0, "android.os.action.DEVICE_IDLE_MODE_CHANGED"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -54,7 +52,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 371
     iget-object v0, p0, Lcom/android/server/DeviceIdleController$2;->this$0:Lcom/android/server/DeviceIdleController;
 
     iget-object v0, v0, Lcom/android/server/DeviceIdleController;->mHandler:Lcom/android/server/DeviceIdleController$MyHandler;
@@ -70,11 +67,9 @@
 
     invoke-virtual {v0, v4, v2, v3}, Lcom/android/server/DeviceIdleController$MyHandler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 377
     :goto_0
     return-void
 
-    .line 374
     :cond_0
     iget-object v0, p0, Lcom/android/server/DeviceIdleController$2;->this$0:Lcom/android/server/DeviceIdleController;
 

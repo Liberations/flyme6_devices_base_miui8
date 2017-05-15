@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 381
     iput-object p1, p0, Lcom/android/server/connectivity/NetworkMonitor$MaybeNotifyState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/connectivity/NetworkMonitor$1;
 
     .prologue
-    .line 381
     invoke-direct {p0, p1}, Lcom/android/server/connectivity/NetworkMonitor$MaybeNotifyState;-><init>(Lcom/android/server/connectivity/NetworkMonitor;)V
 
     return-void
@@ -49,7 +47,6 @@
     .locals 6
 
     .prologue
-    .line 412
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkMonitor$MaybeNotifyState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     const v2, 0x8200a
@@ -73,7 +70,6 @@
 
     move-result-object v0
 
-    .line 414
     .local v0, "message":Landroid/os/Message;
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkMonitor$MaybeNotifyState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
@@ -84,7 +80,6 @@
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 415
     return-void
 .end method
 
@@ -93,18 +88,15 @@
     .param p1, "message"    # Landroid/os/Message;
 
     .prologue
-    .line 384
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 406
     const/4 v1, 0x0
 
     :goto_0
     return v1
 
-    .line 386
     :pswitch_0
     new-instance v0, Landroid/content/Intent;
 
@@ -112,7 +104,6 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 388
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "android.net.extra.NETWORK"
 
@@ -127,7 +118,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 389
     const-string v1, "android.net.extra.CAPTIVE_PORTAL"
 
     new-instance v2, Landroid/net/CaptivePortal;
@@ -140,12 +130,10 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 401
     const/high16 v1, 0x10400000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 403
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkMonitor$MaybeNotifyState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # getter for: Lcom/android/server/connectivity/NetworkMonitor;->mContext:Landroid/content/Context;
@@ -157,12 +145,10 @@
 
     invoke-virtual {v1, v0, v2}, Landroid/content/Context;->startActivityAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 404
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 384
     :pswitch_data_0
     .packed-switch 0x8200b
         :pswitch_0

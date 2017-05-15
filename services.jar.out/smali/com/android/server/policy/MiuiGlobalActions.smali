@@ -64,45 +64,38 @@
     .param p2, "windowManagerFuncs"    # Landroid/view/WindowManagerPolicy$WindowManagerFuncs;
 
     .prologue
-    .line 95
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 90
     new-instance v0, Landroid/os/Binder;
 
     invoke-direct {v0}, Landroid/os/Binder;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/policy/MiuiGlobalActions;->mBinder:Landroid/os/Binder;
 
-    .line 111
     new-instance v0, Lcom/android/server/policy/MiuiGlobalActions$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/policy/MiuiGlobalActions$1;-><init>(Lcom/android/server/policy/MiuiGlobalActions;)V
 
     iput-object v0, p0, Lcom/android/server/policy/MiuiGlobalActions;->mCommandListener:Lmiui/maml/ScreenElementRoot$OnExternCommandListener;
 
-    .line 281
     new-instance v0, Lcom/android/server/policy/MiuiGlobalActions$3;
 
     invoke-direct {v0, p0}, Lcom/android/server/policy/MiuiGlobalActions$3;-><init>(Lcom/android/server/policy/MiuiGlobalActions;)V
 
     iput-object v0, p0, Lcom/android/server/policy/MiuiGlobalActions;->mDialogLayoutChangeListener:Landroid/view/View$OnLayoutChangeListener;
 
-    .line 291
     new-instance v0, Lcom/android/server/policy/MiuiGlobalActions$4;
 
     invoke-direct {v0, p0}, Lcom/android/server/policy/MiuiGlobalActions$4;-><init>(Lcom/android/server/policy/MiuiGlobalActions;)V
 
     iput-object v0, p0, Lcom/android/server/policy/MiuiGlobalActions;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 304
     new-instance v0, Lcom/android/server/policy/MiuiGlobalActions$5;
 
     invoke-direct {v0, p0}, Lcom/android/server/policy/MiuiGlobalActions$5;-><init>(Lcom/android/server/policy/MiuiGlobalActions;)V
 
     iput-object v0, p0, Lcom/android/server/policy/MiuiGlobalActions;->mRingerModeReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 311
     new-instance v0, Lcom/android/server/policy/MiuiGlobalActions$6;
 
     new-instance v1, Landroid/os/Handler;
@@ -113,17 +106,14 @@
 
     iput-object v0, p0, Lcom/android/server/policy/MiuiGlobalActions;->mAirplaneModeObserver:Landroid/database/ContentObserver;
 
-    .line 321
     new-instance v0, Lcom/android/server/policy/MiuiGlobalActions$7;
 
     invoke-direct {v0, p0}, Lcom/android/server/policy/MiuiGlobalActions$7;-><init>(Lcom/android/server/policy/MiuiGlobalActions;)V
 
     iput-object v0, p0, Lcom/android/server/policy/MiuiGlobalActions;->mHandler:Landroid/os/Handler;
 
-    .line 96
     iput-object p1, p0, Lcom/android/server/policy/MiuiGlobalActions;->mContext:Landroid/content/Context;
 
-    .line 97
     iget-object v0, p0, Lcom/android/server/policy/MiuiGlobalActions;->mContext:Landroid/content/Context;
 
     const-string v1, "audio"
@@ -136,7 +126,6 @@
 
     iput-object v0, p0, Lcom/android/server/policy/MiuiGlobalActions;->mAudioManager:Landroid/media/AudioManager;
 
-    .line 98
     iget-object v0, p0, Lcom/android/server/policy/MiuiGlobalActions;->mContext:Landroid/content/Context;
 
     const-string v1, "window"
@@ -149,7 +138,6 @@
 
     iput-object v0, p0, Lcom/android/server/policy/MiuiGlobalActions;->mWindowManager:Landroid/view/WindowManager;
 
-    .line 100
     new-instance v0, Lmiui/maml/ResourceManager;
 
     new-instance v1, Lmiui/maml/util/ZipResourceLoader;
@@ -162,7 +150,6 @@
 
     iput-object v0, p0, Lcom/android/server/policy/MiuiGlobalActions;->mResourceManager:Lmiui/maml/ResourceManager;
 
-    .line 101
     new-instance v0, Lmiui/maml/ScreenElementRoot;
 
     new-instance v1, Lmiui/maml/ScreenContext;
@@ -177,31 +164,26 @@
 
     iput-object v0, p0, Lcom/android/server/policy/MiuiGlobalActions;->mScreenElementRoot:Lmiui/maml/ScreenElementRoot;
 
-    .line 102
     iget-object v0, p0, Lcom/android/server/policy/MiuiGlobalActions;->mScreenElementRoot:Lmiui/maml/ScreenElementRoot;
 
     iget-object v1, p0, Lcom/android/server/policy/MiuiGlobalActions;->mCommandListener:Lmiui/maml/ScreenElementRoot$OnExternCommandListener;
 
     invoke-virtual {v0, v1}, Lmiui/maml/ScreenElementRoot;->setOnExternCommandListener(Lmiui/maml/ScreenElementRoot$OnExternCommandListener;)V
 
-    .line 103
     iget-object v0, p0, Lcom/android/server/policy/MiuiGlobalActions;->mScreenElementRoot:Lmiui/maml/ScreenElementRoot;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lmiui/maml/ScreenElementRoot;->setKeepResource(Z)V
 
-    .line 104
     iget-object v0, p0, Lcom/android/server/policy/MiuiGlobalActions;->mScreenElementRoot:Lmiui/maml/ScreenElementRoot;
 
     invoke-virtual {v0}, Lmiui/maml/ScreenElementRoot;->load()Z
 
-    .line 105
     iget-object v0, p0, Lcom/android/server/policy/MiuiGlobalActions;->mScreenElementRoot:Lmiui/maml/ScreenElementRoot;
 
     invoke-virtual {v0}, Lmiui/maml/ScreenElementRoot;->init()V
 
-    .line 107
     const-string v0, "statusbar"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -214,7 +196,6 @@
 
     iput-object v0, p0, Lcom/android/server/policy/MiuiGlobalActions;->mStatusBarService:Lcom/android/internal/statusbar/IStatusBarService;
 
-    .line 109
     return-void
 .end method
 
@@ -224,7 +205,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 75
     invoke-direct {p0, p1}, Lcom/android/server/policy/MiuiGlobalActions;->sendAction(I)V
 
     return-void
@@ -234,7 +214,6 @@
     .locals 1
 
     .prologue
-    .line 75
     invoke-static {}, Lcom/android/server/policy/MiuiGlobalActions;->getPowerManager()Landroid/os/IPowerManager;
 
     move-result-object v0
@@ -247,7 +226,6 @@
     .param p0, "x0"    # Lcom/android/server/policy/MiuiGlobalActions;
 
     .prologue
-    .line 75
     iget-object v0, p0, Lcom/android/server/policy/MiuiGlobalActions;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -258,7 +236,6 @@
     .param p0, "x0"    # Lcom/android/server/policy/MiuiGlobalActions;
 
     .prologue
-    .line 75
     iget-object v0, p0, Lcom/android/server/policy/MiuiGlobalActions;->mScreenElementRoot:Lmiui/maml/ScreenElementRoot;
 
     return-object v0
@@ -269,7 +246,6 @@
     .param p0, "x0"    # Lcom/android/server/policy/MiuiGlobalActions;
 
     .prologue
-    .line 75
     iget v0, p0, Lcom/android/server/policy/MiuiGlobalActions;->mRotation:I
 
     return v0
@@ -280,7 +256,6 @@
     .param p0, "x0"    # Lcom/android/server/policy/MiuiGlobalActions;
 
     .prologue
-    .line 75
     iget-object v0, p0, Lcom/android/server/policy/MiuiGlobalActions;->mWindowManager:Landroid/view/WindowManager;
 
     return-object v0
@@ -291,7 +266,6 @@
     .param p0, "x0"    # Lcom/android/server/policy/MiuiGlobalActions;
 
     .prologue
-    .line 75
     invoke-direct {p0}, Lcom/android/server/policy/MiuiGlobalActions;->updateVariables()V
 
     return-void
@@ -301,7 +275,6 @@
     .locals 1
 
     .prologue
-    .line 140
     const-string v0, "power"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -319,7 +292,6 @@
     .locals 6
 
     .prologue
-    .line 150
     iget-object v1, p0, Lcom/android/server/policy/MiuiGlobalActions;->mScreenElementRoot:Lmiui/maml/ScreenElementRoot;
 
     invoke-virtual {v1}, Lmiui/maml/ScreenElementRoot;->getContext()Lmiui/maml/ScreenContext;
@@ -330,10 +302,8 @@
 
     invoke-virtual {v1}, Lmiui/maml/data/Variables;->reset()V
 
-    .line 151
     invoke-direct {p0}, Lcom/android/server/policy/MiuiGlobalActions;->updateVariables()V
 
-    .line 152
     iget-object v1, p0, Lcom/android/server/policy/MiuiGlobalActions;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -358,7 +328,6 @@
 
     invoke-static {v1, v2, v3}, Lmiui/maml/LanguageHelper;->load(Ljava/util/Locale;Lmiui/maml/ResourceManager;Lmiui/maml/data/Variables;)Z
 
-    .line 155
     new-instance v0, Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView;
 
     iget-object v2, p0, Lcom/android/server/policy/MiuiGlobalActions;->mContext:Landroid/content/Context;
@@ -371,7 +340,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView;-><init>(Lcom/android/server/policy/MiuiGlobalActions;Landroid/content/Context;Lmiui/maml/ScreenElementRoot;J)V
 
-    .line 156
     .local v0, "retView":Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView;
     return-object v0
 .end method
@@ -381,25 +349,21 @@
     .param p1, "toggleId"    # I
 
     .prologue
-    .line 144
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.miui.app.ExtraStatusBarManager.action_TRIGGER_TOGGLE"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 145
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "com.miui.app.ExtraStatusBarManager.extra_TOGGLE_ID"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 146
     iget-object v1, p0, Lcom/android/server/policy/MiuiGlobalActions;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 147
     return-void
 .end method
 
@@ -407,7 +371,6 @@
     .locals 13
 
     .prologue
-    .line 164
     iget-object v10, p0, Lcom/android/server/policy/MiuiGlobalActions;->mContext:Landroid/content/Context;
 
     invoke-virtual {v10}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -428,7 +391,6 @@
 
     const/4 v3, 0x1
 
-    .line 165
     .local v3, "isAirplaneModeOn":Z
     :goto_0
     iget-object v10, p0, Lcom/android/server/policy/MiuiGlobalActions;->mScreenElementRoot:Lmiui/maml/ScreenElementRoot;
@@ -437,7 +399,6 @@
 
     move-result-object v9
 
-    .line 166
     .local v9, "variables":Lmiui/maml/data/Variables;
     const-string v12, "airplane_mode"
 
@@ -448,7 +409,6 @@
     :goto_1
     invoke-static {v12, v9, v10, v11}, Lmiui/maml/util/Utils;->putVariableNumber(Ljava/lang/String;Lmiui/maml/data/Variables;D)V
 
-    .line 167
     const-string v12, "silent_mode"
 
     iget-object v10, p0, Lcom/android/server/policy/MiuiGlobalActions;->mAudioManager:Landroid/media/AudioManager;
@@ -466,7 +426,6 @@
     :goto_2
     invoke-static {v12, v9, v10, v11}, Lmiui/maml/util/Utils;->putVariableNumber(Ljava/lang/String;Lmiui/maml/data/Variables;D)V
 
-    .line 168
     const-string v12, "show_emergency"
 
     const-string v10, "IN"
@@ -486,14 +445,12 @@
     :goto_3
     invoke-static {v12, v9, v10, v11}, Lmiui/maml/util/Utils;->putVariableNumber(Ljava/lang/String;Lmiui/maml/data/Variables;D)V
 
-    .line 171
     const-string v10, "shutdown_info"
 
     const/4 v11, 0x0
 
     invoke-static {v10, v9, v11}, Lmiui/maml/util/Utils;->putVariableString(Ljava/lang/String;Lmiui/maml/data/Variables;Ljava/lang/String;)V
 
-    .line 172
     iget-object v10, p0, Lcom/android/server/policy/MiuiGlobalActions;->mContext:Landroid/content/Context;
 
     const-string v11, "security"
@@ -504,14 +461,11 @@
 
     check-cast v5, Lmiui/security/SecurityManager;
 
-    .line 173
     .local v5, "securityManager":Lmiui/security/SecurityManager;
     if-eqz v5, :cond_1
 
-    .line 174
     const/4 v4, 0x1
 
-    .line 175
     .local v4, "isShutDownAlarm":Z
     const-string v10, "com.android.deskclock.util.ShutdownAlarm"
 
@@ -519,7 +473,6 @@
 
     move-result-wide v6
 
-    .line 176
     .local v6, "time":J
     const-string v10, "com.miui.powercenter.provider.BootAlarmIntentService"
 
@@ -527,7 +480,6 @@
 
     move-result-wide v0
 
-    .line 177
     .local v0, "autoBootTime":J
     const-wide/16 v10, 0x0
 
@@ -549,14 +501,11 @@
 
     if-gez v10, :cond_6
 
-    .line 178
     :cond_0
     move-wide v6, v0
 
-    .line 179
     const/4 v4, 0x0
 
-    .line 183
     :goto_4
     const-wide/16 v10, 0x0
 
@@ -564,7 +513,6 @@
 
     if-lez v10, :cond_1
 
-    .line 184
     iget-object v11, p0, Lcom/android/server/policy/MiuiGlobalActions;->mContext:Landroid/content/Context;
 
     if-eqz v4, :cond_7
@@ -576,7 +524,6 @@
 
     move-result-object v2
 
-    .line 186
     .local v2, "format":Ljava/lang/String;
     const-wide/16 v10, 0x3e8
 
@@ -588,7 +535,6 @@
 
     move-result-object v8
 
-    .line 187
     .local v8, "timeStr":Ljava/lang/String;
     const-string v10, "shutdown_info"
 
@@ -606,7 +552,6 @@
 
     invoke-static {v10, v9, v11}, Lmiui/maml/util/Utils;->putVariableString(Ljava/lang/String;Lmiui/maml/data/Variables;Ljava/lang/String;)V
 
-    .line 190
     .end local v0    # "autoBootTime":J
     .end local v2    # "format":Ljava/lang/String;
     .end local v4    # "isShutDownAlarm":Z
@@ -615,7 +560,6 @@
     :cond_1
     return-void
 
-    .line 164
     .end local v3    # "isAirplaneModeOn":Z
     .end local v5    # "securityManager":Lmiui/security/SecurityManager;
     .end local v9    # "variables":Lmiui/maml/data/Variables;
@@ -624,7 +568,6 @@
 
     goto/16 :goto_0
 
-    .line 166
     .restart local v3    # "isAirplaneModeOn":Z
     .restart local v9    # "variables":Lmiui/maml/data/Variables;
     :cond_3
@@ -632,19 +575,16 @@
 
     goto/16 :goto_1
 
-    .line 167
     :cond_4
     const-wide/16 v10, 0x0
 
     goto :goto_2
 
-    .line 168
     :cond_5
     const-wide/16 v10, 0x0
 
     goto :goto_3
 
-    .line 181
     .restart local v0    # "autoBootTime":J
     .restart local v4    # "isShutDownAlarm":Z
     .restart local v5    # "securityManager":Lmiui/security/SecurityManager;
@@ -656,7 +596,6 @@
 
     goto :goto_4
 
-    .line 184
     :cond_7
     const v10, 0x11070082
 
@@ -669,26 +608,22 @@
     .locals 5
 
     .prologue
-    .line 264
     iget-object v1, p0, Lcom/android/server/policy/MiuiGlobalActions;->mRoot:Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView;
 
     if-eqz v1, :cond_0
 
-    .line 265
     iget-object v1, p0, Lcom/android/server/policy/MiuiGlobalActions;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/android/server/policy/MiuiGlobalActions;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 266
     iget-object v1, p0, Lcom/android/server/policy/MiuiGlobalActions;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/android/server/policy/MiuiGlobalActions;->mRingerModeReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 267
     iget-object v1, p0, Lcom/android/server/policy/MiuiGlobalActions;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -699,26 +634,22 @@
 
     invoke-virtual {v1, v2}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
-    .line 269
     iget-object v1, p0, Lcom/android/server/policy/MiuiGlobalActions;->mWindowManager:Landroid/view/WindowManager;
 
     iget-object v2, p0, Lcom/android/server/policy/MiuiGlobalActions;->mRoot:Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView;
 
     invoke-interface {v1, v2}, Landroid/view/WindowManager;->removeViewImmediate(Landroid/view/View;)V
 
-    .line 270
     iget-object v1, p0, Lcom/android/server/policy/MiuiGlobalActions;->mRoot:Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView;
 
     const/4 v2, 0x1
 
     invoke-virtual {v1, v2}, Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView;->cleanUp(Z)V
 
-    .line 271
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/server/policy/MiuiGlobalActions;->mRoot:Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView;
 
-    .line 274
     :try_start_0
     iget-object v1, p0, Lcom/android/server/policy/MiuiGlobalActions;->mStatusBarService:Lcom/android/internal/statusbar/IStatusBarService;
 
@@ -732,16 +663,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 279
     :cond_0
     :goto_0
     return-void
 
-    .line 275
     :catch_0
     move-exception v0
 
-    .line 276
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -758,16 +686,13 @@
 
     const/4 v1, -0x1
 
-    .line 197
     iget-object v2, p0, Lcom/android/server/policy/MiuiGlobalActions;->mRoot:Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView;
 
     if-eqz v2, :cond_0
 
-    .line 261
     :goto_0
     return-void
 
-    .line 199
     :cond_0
     iget-object v2, p0, Lcom/android/server/policy/MiuiGlobalActions;->mWindowManager:Landroid/view/WindowManager;
 
@@ -775,7 +700,6 @@
 
     move-result-object v6
 
-    .line 200
     .local v6, "display":Landroid/view/Display;
     invoke-virtual {v6}, Landroid/view/Display;->getRotation()I
 
@@ -783,14 +707,12 @@
 
     iput v2, p0, Lcom/android/server/policy/MiuiGlobalActions;->mRotation:I
 
-    .line 202
     invoke-direct {p0}, Lcom/android/server/policy/MiuiGlobalActions;->loadMamlView()Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView;
 
     move-result-object v2
 
     iput-object v2, p0, Lcom/android/server/policy/MiuiGlobalActions;->mRoot:Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView;
 
-    .line 203
     iget-object v2, p0, Lcom/android/server/policy/MiuiGlobalActions;->mRoot:Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView;
 
     new-instance v3, Landroid/view/ViewGroup$LayoutParams;
@@ -799,14 +721,12 @@
 
     invoke-virtual {v2, v3}, Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 205
     iget-object v2, p0, Lcom/android/server/policy/MiuiGlobalActions;->mRoot:Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView;
 
     const/16 v3, 0x1202
 
     invoke-virtual {v2, v3}, Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView;->setSystemUiVisibility(I)V
 
-    .line 208
     iget-object v2, p0, Lcom/android/server/policy/MiuiGlobalActions;->mRoot:Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView;
 
     new-instance v3, Lcom/android/server/policy/MiuiGlobalActions$2;
@@ -815,24 +735,20 @@
 
     invoke-virtual {v2, v3}, Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView;->setOnKeyListener(Landroid/view/View$OnKeyListener;)V
 
-    .line 223
     iget-object v2, p0, Lcom/android/server/policy/MiuiGlobalActions;->mRoot:Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView;
 
     invoke-virtual {v2, v9}, Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView;->setFocusableInTouchMode(Z)V
 
-    .line 224
     iget-object v2, p0, Lcom/android/server/policy/MiuiGlobalActions;->mRoot:Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView;
 
     invoke-virtual {v2}, Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView;->requestFocus()Z
 
-    .line 225
     iget-object v2, p0, Lcom/android/server/policy/MiuiGlobalActions;->mRoot:Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView;
 
     iget-object v3, p0, Lcom/android/server/policy/MiuiGlobalActions;->mDialogLayoutChangeListener:Landroid/view/View$OnLayoutChangeListener;
 
     invoke-virtual {v2, v3}, Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView;->addOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
-    .line 227
     new-instance v0, Landroid/view/WindowManager$LayoutParams;
 
     const/16 v3, 0x7de
@@ -845,63 +761,52 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/view/WindowManager$LayoutParams;-><init>(IIIII)V
 
-    .line 235
     .local v0, "lp":Landroid/view/WindowManager$LayoutParams;
     const/4 v1, 0x2
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->extraFlags:I
 
-    .line 236
     iget v1, v0, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
 
     or-int/lit8 v1, v1, 0x2
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
 
-    .line 238
     const-string v1, "MiuiGlobalActions"
 
     invoke-virtual {v0, v1}, Landroid/view/WindowManager$LayoutParams;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 239
     iput v9, v0, Landroid/view/WindowManager$LayoutParams;->format:I
 
-    .line 240
     const v1, 0x110c0002
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->windowAnimations:I
 
-    .line 241
     iget-object v1, p0, Lcom/android/server/policy/MiuiGlobalActions;->mWindowManager:Landroid/view/WindowManager;
 
     iget-object v2, p0, Lcom/android/server/policy/MiuiGlobalActions;->mRoot:Lcom/android/server/policy/MiuiGlobalActions$GlobalActionsMamlView;
 
     invoke-interface {v1, v2, v0}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 244
     new-instance v8, Landroid/content/IntentFilter;
 
     invoke-direct {v8}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 245
     .local v8, "filter":Landroid/content/IntentFilter;
     const-string v1, "android.intent.action.CLOSE_SYSTEM_DIALOGS"
 
     invoke-virtual {v8, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 246
     const-string v1, "android.intent.action.SCREEN_OFF"
 
     invoke-virtual {v8, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 247
     iget-object v1, p0, Lcom/android/server/policy/MiuiGlobalActions;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/android/server/policy/MiuiGlobalActions;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2, v8}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 249
     new-instance v8, Landroid/content/IntentFilter;
 
     .end local v8    # "filter":Landroid/content/IntentFilter;
@@ -909,7 +814,6 @@
 
     invoke-direct {v8, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 250
     .restart local v8    # "filter":Landroid/content/IntentFilter;
     iget-object v1, p0, Lcom/android/server/policy/MiuiGlobalActions;->mContext:Landroid/content/Context;
 
@@ -917,7 +821,6 @@
 
     invoke-virtual {v1, v2, v8}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 252
     iget-object v1, p0, Lcom/android/server/policy/MiuiGlobalActions;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -934,7 +837,6 @@
 
     invoke-virtual {v1, v2, v9, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 257
     :try_start_0
     iget-object v1, p0, Lcom/android/server/policy/MiuiGlobalActions;->mStatusBarService:Lcom/android/internal/statusbar/IStatusBarService;
 
@@ -950,11 +852,9 @@
 
     goto/16 :goto_0
 
-    .line 258
     :catch_0
     move-exception v7
 
-    .line 259
     .local v7, "e":Landroid/os/RemoteException;
     invoke-virtual {v7}, Landroid/os/RemoteException;->printStackTrace()V
 

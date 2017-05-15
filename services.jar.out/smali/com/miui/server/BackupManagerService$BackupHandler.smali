@@ -24,13 +24,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 699
     iput-object p1, p0, Lcom/miui/server/BackupManagerService$BackupHandler;->this$0:Lcom/miui/server/BackupManagerService;
 
-    .line 700
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 701
     return-void
 .end method
 
@@ -41,7 +38,6 @@
     .param p3, "x2"    # Lcom/miui/server/BackupManagerService$1;
 
     .prologue
-    .line 698
     invoke-direct {p0, p1, p2}, Lcom/miui/server/BackupManagerService$BackupHandler;-><init>(Lcom/miui/server/BackupManagerService;Landroid/os/Looper;)V
 
     return-void

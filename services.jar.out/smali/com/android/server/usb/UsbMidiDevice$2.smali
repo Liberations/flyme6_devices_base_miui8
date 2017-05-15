@@ -26,7 +26,6 @@
     .param p2, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 200
     iput-object p1, p0, Lcom/android/server/usb/UsbMidiDevice$2;->this$0:Lcom/android/server/usb/UsbMidiDevice;
 
     iput-object p3, p0, Lcom/android/server/usb/UsbMidiDevice$2;->val$outputReceivers:[Landroid/media/midi/MidiReceiver;
@@ -42,12 +41,10 @@
     .locals 11
 
     .prologue
-    .line 203
     const/16 v0, 0x200
 
     new-array v1, v0, [B
 
-    .line 207
     .local v1, "buffer":[B
     :goto_0
     :try_start_0
@@ -55,7 +52,6 @@
 
     move-result-wide v4
 
-    .line 208
     .local v4, "timestamp":J
     iget-object v0, p0, Lcom/android/server/usb/UsbMidiDevice$2;->this$0:Lcom/android/server/usb/UsbMidiDevice;
 
@@ -69,7 +65,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Landroid/system/ErrnoException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 209
     :try_start_1
     iget-object v0, p0, Lcom/android/server/usb/UsbMidiDevice$2;->this$0:Lcom/android/server/usb/UsbMidiDevice;
 
@@ -84,7 +79,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 240
     .end local v4    # "timestamp":J
     :goto_1
     const-string v0, "UsbMidiDevice"
@@ -93,10 +87,8 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 241
     return-void
 
-    .line 212
     .restart local v4    # "timestamp":J
     :cond_0
     const/4 v7, 0x0
@@ -115,7 +107,6 @@
 
     if-ge v7, v0, :cond_1
 
-    .line 213
     iget-object v0, p0, Lcom/android/server/usb/UsbMidiDevice$2;->this$0:Lcom/android/server/usb/UsbMidiDevice;
 
     # getter for: Lcom/android/server/usb/UsbMidiDevice;->mPollFDs:[Landroid/system/StructPollfd;
@@ -125,7 +116,6 @@
 
     aget-object v8, v0, v7
 
-    .line 214
     .local v8, "pfd":Landroid/system/StructPollfd;
     iget-short v0, v8, Landroid/system/StructPollfd;->revents:S
 
@@ -139,14 +129,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 230
     .end local v8    # "pfd":Landroid/system/StructPollfd;
     :cond_1
     monitor-exit v9
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 233
     :try_start_3
     iget-object v0, p0, Lcom/android/server/usb/UsbMidiDevice$2;->this$0:Lcom/android/server/usb/UsbMidiDevice;
 
@@ -164,13 +152,11 @@
 
     goto :goto_0
 
-    .line 235
     .end local v4    # "timestamp":J
     .end local v7    # "index":I
     :catch_0
     move-exception v6
 
-    .line 236
     .local v6, "e":Ljava/io/IOException;
     const-string v0, "UsbMidiDevice"
 
@@ -180,7 +166,6 @@
 
     goto :goto_1
 
-    .line 217
     .end local v6    # "e":Ljava/io/IOException;
     .restart local v4    # "timestamp":J
     .restart local v7    # "index":I
@@ -195,12 +180,10 @@
 
     if-eqz v0, :cond_3
 
-    .line 219
     const/4 v0, 0x0
 
     iput-short v0, v8, Landroid/system/StructPollfd;->revents:S
 
-    .line 221
     iget-object v0, p0, Lcom/android/server/usb/UsbMidiDevice$2;->this$0:Lcom/android/server/usb/UsbMidiDevice;
 
     # getter for: Lcom/android/server/usb/UsbMidiDevice;->mInputStreams:[Ljava/io/FileInputStream;
@@ -214,7 +197,6 @@
 
     if-eq v7, v0, :cond_1
 
-    .line 226
     iget-object v0, p0, Lcom/android/server/usb/UsbMidiDevice$2;->this$0:Lcom/android/server/usb/UsbMidiDevice;
 
     # getter for: Lcom/android/server/usb/UsbMidiDevice;->mInputStreams:[Ljava/io/FileInputStream;
@@ -228,7 +210,6 @@
 
     move-result v3
 
-    .line 227
     .local v3, "count":I
     iget-object v0, p0, Lcom/android/server/usb/UsbMidiDevice$2;->val$outputReceivers:[Landroid/media/midi/MidiReceiver;
 
@@ -238,14 +219,12 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/media/midi/MidiReceiver;->send([BIIJ)V
 
-    .line 212
     .end local v3    # "count":I
     :cond_3
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_2
 
-    .line 230
     .end local v7    # "index":I
     .end local v8    # "pfd":Landroid/system/StructPollfd;
     :catchall_0
@@ -261,12 +240,10 @@
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_0
     .catch Landroid/system/ErrnoException; {:try_start_5 .. :try_end_5} :catch_1
 
-    .line 237
     .end local v4    # "timestamp":J
     :catch_1
     move-exception v6
 
-    .line 238
     .local v6, "e":Landroid/system/ErrnoException;
     const-string v0, "UsbMidiDevice"
 

@@ -28,7 +28,6 @@
     .param p8, "x5"    # Ljava/util/concurrent/ThreadFactory;
 
     .prologue
-    .line 92
     .local p7, "x4":Ljava/util/concurrent/BlockingQueue;, "Ljava/util/concurrent/BlockingQueue<Ljava/lang/Runnable;>;"
     iput-object p1, p0, Lcom/android/server/pm/MultiTaskDealer$2;->this$0:Lcom/android/server/pm/MultiTaskDealer;
 
@@ -59,23 +58,18 @@
     .param p2, "t"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 94
     if-eqz p2, :cond_0
 
-    .line 95
     invoke-virtual {p2}, Ljava/lang/Throwable;->printStackTrace()V
 
-    .line 97
     :cond_0
     iget-object v0, p0, Lcom/android/server/pm/MultiTaskDealer$2;->this$0:Lcom/android/server/pm/MultiTaskDealer;
 
     # invokes: Lcom/android/server/pm/MultiTaskDealer;->TaskCompleteNotify(Ljava/lang/Runnable;)V
     invoke-static {v0, p1}, Lcom/android/server/pm/MultiTaskDealer;->access$000(Lcom/android/server/pm/MultiTaskDealer;Ljava/lang/Runnable;)V
 
-    .line 99
     invoke-super {p0, p1, p2}, Ljava/util/concurrent/ThreadPoolExecutor;->afterExecute(Ljava/lang/Runnable;Ljava/lang/Throwable;)V
 
-    .line 100
     return-void
 .end method
 
@@ -85,9 +79,7 @@
     .param p2, "r"    # Ljava/lang/Runnable;
 
     .prologue
-    .line 103
     invoke-super {p0, p1, p2}, Ljava/util/concurrent/ThreadPoolExecutor;->beforeExecute(Ljava/lang/Thread;Ljava/lang/Runnable;)V
 
-    .line 104
     return-void
 .end method

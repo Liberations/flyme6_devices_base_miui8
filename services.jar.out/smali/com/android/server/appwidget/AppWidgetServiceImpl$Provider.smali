@@ -42,17 +42,14 @@
     .locals 1
 
     .prologue
-    .line 3340
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3343
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$Provider;->widgets:Ljava/util/ArrayList;
 
-    .line 3347
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$Provider;->tag:I
@@ -66,7 +63,6 @@
     .locals 1
 
     .prologue
-    .line 3350
     iget-object v0, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$Provider;->id:Lcom/android/server/appwidget/AppWidgetServiceImpl$ProviderId;
 
     iget v0, v0, Lcom/android/server/appwidget/AppWidgetServiceImpl$ProviderId;->uid:I
@@ -84,14 +80,12 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 3360
     iget-object v3, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$Provider;->widgets:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 3361
     .local v0, "N":I
     const/4 v1, 0x0
 
@@ -99,7 +93,6 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 3362
     iget-object v3, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$Provider;->widgets:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -108,7 +101,6 @@
 
     check-cast v2, Lcom/android/server/appwidget/AppWidgetServiceImpl$Widget;
 
-    .line 3363
     .local v2, "widget":Lcom/android/server/appwidget/AppWidgetServiceImpl$Widget;
     iget-object v3, v2, Lcom/android/server/appwidget/AppWidgetServiceImpl$Widget;->host:Lcom/android/server/appwidget/AppWidgetServiceImpl$Host;
 
@@ -130,22 +122,18 @@
 
     if-ne v3, p2, :cond_0
 
-    .line 3365
     const/4 v3, 0x1
 
-    .line 3368
     .end local v2    # "widget":Lcom/android/server/appwidget/AppWidgetServiceImpl$Widget;
     :goto_1
     return v3
 
-    .line 3361
     .restart local v2    # "widget":Lcom/android/server/appwidget/AppWidgetServiceImpl$Widget;
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 3368
     .end local v2    # "widget":Lcom/android/server/appwidget/AppWidgetServiceImpl$Widget;
     :cond_1
     const/4 v3, 0x0
@@ -159,7 +147,6 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 3354
     invoke-virtual {p0}, Lcom/android/server/appwidget/AppWidgetServiceImpl$Provider;->getUserId()I
 
     move-result v0
@@ -195,7 +182,6 @@
     .locals 2
 
     .prologue
-    .line 3373
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 132
     iput-object p1, p0, Lcom/android/server/connectivity/PacManager$PacRefreshIntentReceiver;->this$0:Lcom/android/server/connectivity/PacManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 134
     iget-object v0, p0, Lcom/android/server/connectivity/PacManager$PacRefreshIntentReceiver;->this$0:Lcom/android/server/connectivity/PacManager;
 
     # getter for: Lcom/android/server/connectivity/PacManager;->mNetThreadHandler:Landroid/os/Handler;
@@ -56,6 +54,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 135
     return-void
 .end method

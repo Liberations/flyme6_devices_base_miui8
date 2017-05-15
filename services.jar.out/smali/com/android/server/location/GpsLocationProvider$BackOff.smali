@@ -33,16 +33,12 @@
     .param p3, "maxIntervalMillis"    # J
 
     .prologue
-    .line 2243
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2244
     iput-wide p1, p0, Lcom/android/server/location/GpsLocationProvider$BackOff;->mInitIntervalMillis:J
 
-    .line 2245
     iput-wide p3, p0, Lcom/android/server/location/GpsLocationProvider$BackOff;->mMaxIntervalMillis:J
 
-    .line 2247
     iget-wide v0, p0, Lcom/android/server/location/GpsLocationProvider$BackOff;->mInitIntervalMillis:J
 
     const-wide/16 v2, 0x2
@@ -51,7 +47,6 @@
 
     iput-wide v0, p0, Lcom/android/server/location/GpsLocationProvider$BackOff;->mCurrentIntervalMillis:J
 
-    .line 2248
     return-void
 .end method
 
@@ -61,7 +56,6 @@
     .locals 4
 
     .prologue
-    .line 2251
     iget-wide v0, p0, Lcom/android/server/location/GpsLocationProvider$BackOff;->mCurrentIntervalMillis:J
 
     iget-wide v2, p0, Lcom/android/server/location/GpsLocationProvider$BackOff;->mMaxIntervalMillis:J
@@ -70,14 +64,11 @@
 
     if-lez v0, :cond_0
 
-    .line 2252
     iget-wide v0, p0, Lcom/android/server/location/GpsLocationProvider$BackOff;->mMaxIntervalMillis:J
 
-    .line 2256
     :goto_0
     return-wide v0
 
-    .line 2255
     :cond_0
     iget-wide v0, p0, Lcom/android/server/location/GpsLocationProvider$BackOff;->mCurrentIntervalMillis:J
 
@@ -87,7 +78,6 @@
 
     iput-wide v0, p0, Lcom/android/server/location/GpsLocationProvider$BackOff;->mCurrentIntervalMillis:J
 
-    .line 2256
     iget-wide v0, p0, Lcom/android/server/location/GpsLocationProvider$BackOff;->mCurrentIntervalMillis:J
 
     goto :goto_0
@@ -97,7 +87,6 @@
     .locals 4
 
     .prologue
-    .line 2260
     iget-wide v0, p0, Lcom/android/server/location/GpsLocationProvider$BackOff;->mInitIntervalMillis:J
 
     const-wide/16 v2, 0x2
@@ -106,6 +95,5 @@
 
     iput-wide v0, p0, Lcom/android/server/location/GpsLocationProvider$BackOff;->mCurrentIntervalMillis:J
 
-    .line 2261
     return-void
 .end method

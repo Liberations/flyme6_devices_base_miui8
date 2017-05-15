@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 389
     iput-object p1, p0, Lcom/android/server/audio/AudioService$1;->this$0:Lcom/android/server/audio/AudioService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,14 +42,11 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 391
     packed-switch p1, :pswitch_data_0
 
-    .line 399
     :goto_0
     return-void
 
-    .line 393
     :pswitch_0
     iget-object v0, p0, Lcom/android/server/audio/AudioService$1;->this$0:Lcom/android/server/audio/AudioService;
 
@@ -74,7 +70,6 @@
 
     goto :goto_0
 
-    .line 391
     :pswitch_data_0
     .packed-switch 0x64
         :pswitch_0

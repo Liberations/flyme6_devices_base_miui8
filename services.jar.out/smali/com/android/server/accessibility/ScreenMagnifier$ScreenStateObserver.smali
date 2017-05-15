@@ -35,25 +35,20 @@
     .param p3, "magnificationController"    # Lcom/android/server/accessibility/ScreenMagnifier$MagnificationController;
 
     .prologue
-    .line 1145
     iput-object p1, p0, Lcom/android/server/accessibility/ScreenMagnifier$ScreenStateObserver;->this$0:Lcom/android/server/accessibility/ScreenMagnifier;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 1132
     new-instance v0, Lcom/android/server/accessibility/ScreenMagnifier$ScreenStateObserver$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/accessibility/ScreenMagnifier$ScreenStateObserver$1;-><init>(Lcom/android/server/accessibility/ScreenMagnifier$ScreenStateObserver;)V
 
     iput-object v0, p0, Lcom/android/server/accessibility/ScreenMagnifier$ScreenStateObserver;->mHandler:Landroid/os/Handler;
 
-    .line 1146
     iput-object p2, p0, Lcom/android/server/accessibility/ScreenMagnifier$ScreenStateObserver;->mContext:Landroid/content/Context;
 
-    .line 1147
     iput-object p3, p0, Lcom/android/server/accessibility/ScreenMagnifier$ScreenStateObserver;->mMagnificationController:Lcom/android/server/accessibility/ScreenMagnifier$MagnificationController;
 
-    .line 1148
     iget-object v0, p0, Lcom/android/server/accessibility/ScreenMagnifier$ScreenStateObserver;->mContext:Landroid/content/Context;
 
     new-instance v1, Landroid/content/IntentFilter;
@@ -64,7 +59,6 @@
 
     invoke-virtual {v0, p0, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 1149
     return-void
 .end method
 
@@ -74,7 +68,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 1126
     invoke-direct {p0, p1}, Lcom/android/server/accessibility/ScreenMagnifier$ScreenStateObserver;->handleOnScreenStateChange(Ljava/lang/String;)V
 
     return-void
@@ -85,7 +78,6 @@
     .param p1, "action"    # Ljava/lang/String;
 
     .prologue
-    .line 1162
     iget-object v0, p0, Lcom/android/server/accessibility/ScreenMagnifier$ScreenStateObserver;->mMagnificationController:Lcom/android/server/accessibility/ScreenMagnifier$MagnificationController;
 
     invoke-virtual {v0}, Lcom/android/server/accessibility/ScreenMagnifier$MagnificationController;->isMagnifying()Z
@@ -103,14 +95,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 1164
     iget-object v0, p0, Lcom/android/server/accessibility/ScreenMagnifier$ScreenStateObserver;->mMagnificationController:Lcom/android/server/accessibility/ScreenMagnifier$MagnificationController;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/android/server/accessibility/ScreenMagnifier$MagnificationController;->reset(Z)V
 
-    .line 1166
     :cond_0
     return-void
 .end method
@@ -121,12 +111,10 @@
     .locals 1
 
     .prologue
-    .line 1152
     iget-object v0, p0, Lcom/android/server/accessibility/ScreenMagnifier$ScreenStateObserver;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p0}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 1153
     return-void
 .end method
 
@@ -136,7 +124,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1157
     iget-object v0, p0, Lcom/android/server/accessibility/ScreenMagnifier$ScreenStateObserver;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x1
@@ -151,6 +138,5 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 1159
     return-void
 .end method

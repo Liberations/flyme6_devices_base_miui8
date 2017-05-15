@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 189
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,9 +33,7 @@
     .locals 0
 
     .prologue
-    .line 192
     invoke-static {}, Lcom/android/server/power/ButtonLightAutoController;->turnOffHWButtonLight()V
 
-    .line 193
     return-void
 .end method

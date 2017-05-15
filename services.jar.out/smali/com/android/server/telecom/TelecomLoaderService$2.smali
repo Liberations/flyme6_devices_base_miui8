@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 229
     iput-object p1, p0, Lcom/android/server/telecom/TelecomLoaderService$2;->this$0:Lcom/android/server/telecom/TelecomLoaderService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 232
     iget-object v2, p0, Lcom/android/server/telecom/TelecomLoaderService$2;->this$0:Lcom/android/server/telecom/TelecomLoaderService;
 
     # getter for: Lcom/android/server/telecom/TelecomLoaderService;->mLock:Ljava/lang/Object;
@@ -53,7 +51,6 @@
 
     monitor-enter v2
 
-    .line 233
     :try_start_0
     iget-object v3, p0, Lcom/android/server/telecom/TelecomLoaderService$2;->this$0:Lcom/android/server/telecom/TelecomLoaderService;
 
@@ -64,7 +61,6 @@
 
     if-nez v3, :cond_2
 
-    .line 234
     iget-object v3, p0, Lcom/android/server/telecom/TelecomLoaderService$2;->this$0:Lcom/android/server/telecom/TelecomLoaderService;
 
     # getter for: Lcom/android/server/telecom/TelecomLoaderService;->mDefaultDialerAppRequests:Landroid/util/IntArray;
@@ -74,7 +70,6 @@
 
     if-nez v3, :cond_0
 
-    .line 235
     iget-object v3, p0, Lcom/android/server/telecom/TelecomLoaderService$2;->this$0:Lcom/android/server/telecom/TelecomLoaderService;
 
     new-instance v4, Landroid/util/IntArray;
@@ -84,7 +79,6 @@
     # setter for: Lcom/android/server/telecom/TelecomLoaderService;->mDefaultDialerAppRequests:Landroid/util/IntArray;
     invoke-static {v3, v4}, Lcom/android/server/telecom/TelecomLoaderService;->access$402(Lcom/android/server/telecom/TelecomLoaderService;Landroid/util/IntArray;)Landroid/util/IntArray;
 
-    .line 237
     :cond_0
     iget-object v3, p0, Lcom/android/server/telecom/TelecomLoaderService$2;->this$0:Lcom/android/server/telecom/TelecomLoaderService;
 
@@ -95,21 +89,17 @@
 
     invoke-virtual {v3, p1}, Landroid/util/IntArray;->add(I)V
 
-    .line 238
     monitor-exit v2
 
-    .line 245
     :cond_1
     :goto_0
     return-object v1
 
-    .line 240
     :cond_2
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 241
     iget-object v2, p0, Lcom/android/server/telecom/TelecomLoaderService$2;->this$0:Lcom/android/server/telecom/TelecomLoaderService;
 
     # getter for: Lcom/android/server/telecom/TelecomLoaderService;->mContext:Landroid/content/Context;
@@ -121,11 +111,9 @@
 
     move-result-object v0
 
-    .line 242
     .local v0, "packageName":Ljava/lang/String;
     if-eqz v0, :cond_1
 
-    .line 243
     const/4 v1, 0x1
 
     new-array v1, v1, [Ljava/lang/String;
@@ -136,7 +124,6 @@
 
     goto :goto_0
 
-    .line 240
     .end local v0    # "packageName":Ljava/lang/String;
     :catchall_0
     move-exception v1

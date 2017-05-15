@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 126
     iput-object p1, p0, Lcom/android/server/job/controllers/AppIdleController$AppIdleStateChangeListener;->this$0:Lcom/android/server/job/controllers/AppIdleController;
 
     invoke-direct {p0}, Landroid/app/usage/UsageStatsManagerInternal$AppIdleStateChangeListener;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/job/controllers/AppIdleController$1;
 
     .prologue
-    .line 126
     invoke-direct {p0, p1}, Lcom/android/server/job/controllers/AppIdleController$AppIdleStateChangeListener;-><init>(Lcom/android/server/job/controllers/AppIdleController;)V
 
     return-void
@@ -56,10 +54,8 @@
 
     const/4 v5, 0x0
 
-    .line 130
     const/4 v0, 0x0
 
-    .line 131
     .local v0, "changed":Z
     iget-object v3, p0, Lcom/android/server/job/controllers/AppIdleController$AppIdleStateChangeListener;->this$0:Lcom/android/server/job/controllers/AppIdleController;
 
@@ -67,7 +63,6 @@
 
     monitor-enter v6
 
-    .line 132
     :try_start_0
     iget-object v3, p0, Lcom/android/server/job/controllers/AppIdleController$AppIdleStateChangeListener;->this$0:Lcom/android/server/job/controllers/AppIdleController;
 
@@ -75,15 +70,12 @@
 
     if-eqz v3, :cond_1
 
-    .line 133
     monitor-exit v6
 
-    .line 152
     :cond_0
     :goto_0
     return-void
 
-    .line 135
     :cond_1
     iget-object v3, p0, Lcom/android/server/job/controllers/AppIdleController$AppIdleStateChangeListener;->this$0:Lcom/android/server/job/controllers/AppIdleController;
 
@@ -108,7 +100,6 @@
 
     check-cast v2, Lcom/android/server/job/controllers/JobStatus;
 
-    .line 136
     .local v2, "task":Lcom/android/server/job/controllers/JobStatus;
     iget-object v3, v2, Lcom/android/server/job/controllers/JobStatus;->job:Landroid/app/job/JobInfo;
 
@@ -132,7 +123,6 @@
 
     if-ne v3, p2, :cond_2
 
-    .line 138
     iget-object v3, v2, Lcom/android/server/job/controllers/JobStatus;->appNotIdleConstraintSatisfied:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
@@ -146,7 +136,6 @@
     :goto_2
     if-eq v7, v3, :cond_2
 
-    .line 143
     iget-object v7, v2, Lcom/android/server/job/controllers/JobStatus;->appNotIdleConstraintSatisfied:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     if-nez p3, :cond_4
@@ -156,7 +145,6 @@
     :goto_3
     invoke-virtual {v7, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 144
     const/4 v0, 0x1
 
     goto :goto_1
@@ -164,26 +152,21 @@
     :cond_3
     move v3, v5
 
-    .line 138
     goto :goto_2
 
     :cond_4
     move v3, v5
 
-    .line 143
     goto :goto_3
 
-    .line 148
     .end local v2    # "task":Lcom/android/server/job/controllers/JobStatus;
     :cond_5
     monitor-exit v6
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 149
     if-eqz v0, :cond_0
 
-    .line 150
     iget-object v3, p0, Lcom/android/server/job/controllers/AppIdleController$AppIdleStateChangeListener;->this$0:Lcom/android/server/job/controllers/AppIdleController;
 
     iget-object v3, v3, Lcom/android/server/job/controllers/AppIdleController;->mStateChangedListener:Lcom/android/server/job/StateChangedListener;
@@ -192,7 +175,6 @@
 
     goto :goto_0
 
-    .line 148
     .end local v1    # "i$":Ljava/util/Iterator;
     :catchall_0
     move-exception v3
@@ -210,11 +192,9 @@
     .param p1, "isParoleOn"    # Z
 
     .prologue
-    .line 159
     iget-object v0, p0, Lcom/android/server/job/controllers/AppIdleController$AppIdleStateChangeListener;->this$0:Lcom/android/server/job/controllers/AppIdleController;
 
     invoke-virtual {v0, p1}, Lcom/android/server/job/controllers/AppIdleController;->setAppIdleParoleOn(Z)V
 
-    .line 160
     return-void
 .end method

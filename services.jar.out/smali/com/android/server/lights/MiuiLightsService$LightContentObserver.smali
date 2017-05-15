@@ -37,10 +37,8 @@
     .locals 1
 
     .prologue
-    .line 188
     iput-object p1, p0, Lcom/android/server/lights/MiuiLightsService$LightContentObserver;->this$0:Lcom/android/server/lights/MiuiLightsService;
 
-    .line 189
     # getter for: Lcom/android/server/lights/MiuiLightsService;->mHandler:Landroid/os/Handler;
     invoke-static {p1}, Lcom/android/server/lights/MiuiLightsService;->access$600(Lcom/android/server/lights/MiuiLightsService;)Landroid/os/Handler;
 
@@ -48,7 +46,6 @@
 
     invoke-direct {p0, v0}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 180
     const-string v0, "screen_buttons_state"
 
     invoke-static {v0}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -57,7 +54,6 @@
 
     iput-object v0, p0, Lcom/android/server/lights/MiuiLightsService$LightContentObserver;->SCREEN_BUTTONS_STATE_URI:Landroid/net/Uri;
 
-    .line 181
     const-string v0, "single_key_use_enable"
 
     invoke-static {v0}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -66,7 +62,6 @@
 
     iput-object v0, p0, Lcom/android/server/lights/MiuiLightsService$LightContentObserver;->SINGLE_KEY_USE_ACTION_URI:Landroid/net/Uri;
 
-    .line 182
     const-string v0, "screen_buttons_turn_on"
 
     invoke-static {v0}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -75,7 +70,6 @@
 
     iput-object v0, p0, Lcom/android/server/lights/MiuiLightsService$LightContentObserver;->SCREEN_BUTTONS_TURN_ON_URI:Landroid/net/Uri;
 
-    .line 183
     const-string v0, "breathing_light_color"
 
     invoke-static {v0}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -84,7 +78,6 @@
 
     iput-object v0, p0, Lcom/android/server/lights/MiuiLightsService$LightContentObserver;->BREATHING_LIGHT_COLOR_URI:Landroid/net/Uri;
 
-    .line 184
     const-string v0, "call_breathing_light_color"
 
     invoke-static {v0}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -93,7 +86,6 @@
 
     iput-object v0, p0, Lcom/android/server/lights/MiuiLightsService$LightContentObserver;->CALL_BREATHING_LIGHT_COLOR_URI:Landroid/net/Uri;
 
-    .line 185
     const-string v0, "mms_breathing_light_color"
 
     invoke-static {v0}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -102,7 +94,6 @@
 
     iput-object v0, p0, Lcom/android/server/lights/MiuiLightsService$LightContentObserver;->MMS_BREATHING_LIGHT_COLOR_URI:Landroid/net/Uri;
 
-    .line 186
     const-string v0, "battery_light_turn_on"
 
     invoke-static {v0}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -111,7 +102,6 @@
 
     iput-object v0, p0, Lcom/android/server/lights/MiuiLightsService$LightContentObserver;->BATTERY_LIGHT_TURN_ON_URI:Landroid/net/Uri;
 
-    .line 190
     return-void
 .end method
 
@@ -125,7 +115,6 @@
 
     const/4 v3, -0x1
 
-    .line 193
     iget-object v0, p0, Lcom/android/server/lights/MiuiLightsService$LightContentObserver;->this$0:Lcom/android/server/lights/MiuiLightsService;
 
     iget-object v1, p0, Lcom/android/server/lights/MiuiLightsService$LightContentObserver;->this$0:Lcom/android/server/lights/MiuiLightsService;
@@ -142,7 +131,6 @@
     # setter for: Lcom/android/server/lights/MiuiLightsService;->mResolver:Landroid/content/ContentResolver;
     invoke-static {v0, v1}, Lcom/android/server/lights/MiuiLightsService;->access$502(Lcom/android/server/lights/MiuiLightsService;Landroid/content/ContentResolver;)Landroid/content/ContentResolver;
 
-    .line 195
     iget-object v0, p0, Lcom/android/server/lights/MiuiLightsService$LightContentObserver;->this$0:Lcom/android/server/lights/MiuiLightsService;
 
     # getter for: Lcom/android/server/lights/MiuiLightsService;->mSupportButtonLight:Z
@@ -152,7 +140,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 196
     iget-object v0, p0, Lcom/android/server/lights/MiuiLightsService$LightContentObserver;->this$0:Lcom/android/server/lights/MiuiLightsService;
 
     # getter for: Lcom/android/server/lights/MiuiLightsService;->mResolver:Landroid/content/ContentResolver;
@@ -164,7 +151,6 @@
 
     invoke-virtual {v0, v1, v2, p0, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 198
     iget-object v0, p0, Lcom/android/server/lights/MiuiLightsService$LightContentObserver;->this$0:Lcom/android/server/lights/MiuiLightsService;
 
     # getter for: Lcom/android/server/lights/MiuiLightsService;->mSupportTapFingerprint:Z
@@ -174,7 +160,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 199
     iget-object v0, p0, Lcom/android/server/lights/MiuiLightsService$LightContentObserver;->this$0:Lcom/android/server/lights/MiuiLightsService;
 
     # getter for: Lcom/android/server/lights/MiuiLightsService;->mResolver:Landroid/content/ContentResolver;
@@ -186,7 +171,6 @@
 
     invoke-virtual {v0, v1, v2, p0, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 202
     :cond_0
     iget-object v0, p0, Lcom/android/server/lights/MiuiLightsService$LightContentObserver;->this$0:Lcom/android/server/lights/MiuiLightsService;
 
@@ -199,7 +183,6 @@
 
     invoke-virtual {v0, v1, v2, p0, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 206
     :cond_1
     iget-object v0, p0, Lcom/android/server/lights/MiuiLightsService$LightContentObserver;->this$0:Lcom/android/server/lights/MiuiLightsService;
 
@@ -210,7 +193,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 207
     iget-object v0, p0, Lcom/android/server/lights/MiuiLightsService$LightContentObserver;->this$0:Lcom/android/server/lights/MiuiLightsService;
 
     # getter for: Lcom/android/server/lights/MiuiLightsService;->mResolver:Landroid/content/ContentResolver;
@@ -222,7 +204,6 @@
 
     invoke-virtual {v0, v1, v2, p0, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 209
     iget-object v0, p0, Lcom/android/server/lights/MiuiLightsService$LightContentObserver;->this$0:Lcom/android/server/lights/MiuiLightsService;
 
     # getter for: Lcom/android/server/lights/MiuiLightsService;->mResolver:Landroid/content/ContentResolver;
@@ -234,7 +215,6 @@
 
     invoke-virtual {v0, v1, v2, p0, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 211
     iget-object v0, p0, Lcom/android/server/lights/MiuiLightsService$LightContentObserver;->this$0:Lcom/android/server/lights/MiuiLightsService;
 
     # getter for: Lcom/android/server/lights/MiuiLightsService;->mResolver:Landroid/content/ContentResolver;
@@ -246,7 +226,6 @@
 
     invoke-virtual {v0, v1, v2, p0, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 213
     iget-object v0, p0, Lcom/android/server/lights/MiuiLightsService$LightContentObserver;->this$0:Lcom/android/server/lights/MiuiLightsService;
 
     # getter for: Lcom/android/server/lights/MiuiLightsService;->mResolver:Landroid/content/ContentResolver;
@@ -260,7 +239,6 @@
 
     invoke-virtual {v0, v1, v2, p0, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 216
     :cond_2
     return-void
 .end method
@@ -271,10 +249,8 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 219
     const/4 v0, 0x0
 
-    .line 220
     .local v0, "light":Lcom/android/server/lights/MiuiLightsService$LightImpl;
     iget-object v1, p0, Lcom/android/server/lights/MiuiLightsService$LightContentObserver;->SCREEN_BUTTONS_STATE_URI:Landroid/net/Uri;
 
@@ -300,7 +276,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 222
     :cond_0
     iget-object v1, p0, Lcom/android/server/lights/MiuiLightsService$LightContentObserver;->this$0:Lcom/android/server/lights/MiuiLightsService;
 
@@ -313,16 +288,13 @@
     .end local v0    # "light":Lcom/android/server/lights/MiuiLightsService$LightImpl;
     check-cast v0, Lcom/android/server/lights/MiuiLightsService$LightImpl;
 
-    .line 223
     .restart local v0    # "light":Lcom/android/server/lights/MiuiLightsService$LightImpl;
     invoke-virtual {v0}, Lcom/android/server/lights/MiuiLightsService$LightImpl;->updateLight()V
 
-    .line 233
     :cond_1
     :goto_0
     return-void
 
-    .line 224
     :cond_2
     iget-object v1, p0, Lcom/android/server/lights/MiuiLightsService$LightContentObserver;->BREATHING_LIGHT_COLOR_URI:Landroid/net/Uri;
 
@@ -348,7 +320,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 227
     :cond_3
     iget-object v1, p0, Lcom/android/server/lights/MiuiLightsService$LightContentObserver;->this$0:Lcom/android/server/lights/MiuiLightsService;
 
@@ -361,7 +332,6 @@
     .end local v0    # "light":Lcom/android/server/lights/MiuiLightsService$LightImpl;
     check-cast v0, Lcom/android/server/lights/MiuiLightsService$LightImpl;
 
-    .line 228
     .restart local v0    # "light":Lcom/android/server/lights/MiuiLightsService$LightImpl;
     invoke-virtual {p2}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
 
@@ -373,7 +343,6 @@
 
     goto :goto_0
 
-    .line 229
     :cond_4
     iget-object v1, p0, Lcom/android/server/lights/MiuiLightsService$LightContentObserver;->BATTERY_LIGHT_TURN_ON_URI:Landroid/net/Uri;
 
@@ -383,7 +352,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 230
     iget-object v1, p0, Lcom/android/server/lights/MiuiLightsService$LightContentObserver;->this$0:Lcom/android/server/lights/MiuiLightsService;
 
     iget-object v1, v1, Lcom/android/server/lights/MiuiLightsService;->mLights:[Lcom/android/server/lights/LightsService$LightImpl;
@@ -395,7 +363,6 @@
     .end local v0    # "light":Lcom/android/server/lights/MiuiLightsService$LightImpl;
     check-cast v0, Lcom/android/server/lights/MiuiLightsService$LightImpl;
 
-    .line 231
     .restart local v0    # "light":Lcom/android/server/lights/MiuiLightsService$LightImpl;
     invoke-virtual {v0}, Lcom/android/server/lights/MiuiLightsService$LightImpl;->updateLight()V
 

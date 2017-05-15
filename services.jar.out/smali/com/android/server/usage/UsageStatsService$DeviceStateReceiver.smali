@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 252
     iput-object p1, p0, Lcom/android/server/usage/UsageStatsService$DeviceStateReceiver;->this$0:Lcom/android/server/usage/UsageStatsService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/usage/UsageStatsService$1;
 
     .prologue
-    .line 252
     invoke-direct {p0, p1}, Lcom/android/server/usage/UsageStatsService$DeviceStateReceiver;-><init>(Lcom/android/server/usage/UsageStatsService;)V
 
     return-void
@@ -51,12 +49,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 255
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 256
     .local v0, "action":Ljava/lang/String;
     const-string v1, "android.os.action.CHARGING"
 
@@ -74,7 +70,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 258
     :cond_0
     iget-object v1, p0, Lcom/android/server/usage/UsageStatsService$DeviceStateReceiver;->this$0:Lcom/android/server/usage/UsageStatsService;
 
@@ -86,12 +81,10 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/usage/UsageStatsService;->setAppIdleParoled(Z)V
 
-    .line 262
     :cond_1
     :goto_0
     return-void
 
-    .line 259
     :cond_2
     const-string v1, "android.os.action.DEVICE_IDLE_MODE_CHANGED"
 
@@ -101,7 +94,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 260
     iget-object v1, p0, Lcom/android/server/usage/UsageStatsService$DeviceStateReceiver;->this$0:Lcom/android/server/usage/UsageStatsService;
 
     invoke-virtual {v1}, Lcom/android/server/usage/UsageStatsService;->onDeviceIdleModeChanged()V

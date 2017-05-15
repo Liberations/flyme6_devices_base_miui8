@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 9707
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -46,14 +45,11 @@
     .param p2, "p2"    # Landroid/content/pm/ProviderInfo;
 
     .prologue
-    .line 9709
     iget v0, p1, Landroid/content/pm/ProviderInfo;->initOrder:I
 
-    .line 9710
     .local v0, "v1":I
     iget v1, p2, Landroid/content/pm/ProviderInfo;->initOrder:I
 
-    .line 9711
     .local v1, "v2":I
     if-le v0, v1, :cond_0
 
@@ -81,7 +77,6 @@
     .param p2, "x1"    # Ljava/lang/Object;
 
     .prologue
-    .line 9707
     check-cast p1, Landroid/content/pm/ProviderInfo;
 
     .end local p1    # "x0":Ljava/lang/Object;

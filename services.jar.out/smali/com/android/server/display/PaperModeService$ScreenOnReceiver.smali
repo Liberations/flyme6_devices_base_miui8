@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 143
     iput-object p1, p0, Lcom/android/server/display/PaperModeService$ScreenOnReceiver;->this$0:Lcom/android/server/display/PaperModeService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/display/PaperModeService$1;
 
     .prologue
-    .line 143
     invoke-direct {p0, p1}, Lcom/android/server/display/PaperModeService$ScreenOnReceiver;-><init>(Lcom/android/server/display/PaperModeService;)V
 
     return-void
@@ -51,7 +49,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 147
     iget-object v8, p0, Lcom/android/server/display/PaperModeService$ScreenOnReceiver;->this$0:Lcom/android/server/display/PaperModeService;
 
     # getter for: Lcom/android/server/display/PaperModeService;->mPaperModeTimeEnabled:Z
@@ -61,7 +58,6 @@
 
     if-eqz v8, :cond_0
 
-    .line 148
     iget-object v8, p0, Lcom/android/server/display/PaperModeService$ScreenOnReceiver;->this$0:Lcom/android/server/display/PaperModeService;
 
     # getter for: Lcom/android/server/display/PaperModeService;->mPaperModeEnabled:Z
@@ -71,7 +67,6 @@
 
     invoke-static {v8}, Landroid/provider/MiuiSettings$ScreenEffect;->setScreenPaperMode(Z)V
 
-    .line 152
     :cond_0
     iget-object v8, p0, Lcom/android/server/display/PaperModeService$ScreenOnReceiver;->this$0:Lcom/android/server/display/PaperModeService;
 
@@ -99,7 +94,6 @@
 
     if-eqz v8, :cond_3
 
-    .line 154
     const-string v8, "activity"
 
     invoke-virtual {p1, v8}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -108,13 +102,11 @@
 
     check-cast v0, Landroid/app/ActivityManager;
 
-    .line 155
     .local v0, "am":Landroid/app/ActivityManager;
     invoke-virtual {v0}, Landroid/app/ActivityManager;->getRunningAppProcesses()Ljava/util/List;
 
     move-result-object v7
 
-    .line 156
     .local v7, "processes":Ljava/util/List;, "Ljava/util/List<Landroid/app/ActivityManager$RunningAppProcessInfo;>;"
     invoke-interface {v7}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -134,7 +126,6 @@
 
     check-cast v6, Landroid/app/ActivityManager$RunningAppProcessInfo;
 
-    .line 157
     .local v6, "process":Landroid/app/ActivityManager$RunningAppProcessInfo;
     iget-object v1, v6, Landroid/app/ActivityManager$RunningAppProcessInfo;->pkgList:[Ljava/lang/String;
 
@@ -150,7 +141,6 @@
 
     aget-object v5, v1, v3
 
-    .line 158
     .local v5, "pkg":Ljava/lang/String;
     iget-object v8, p0, Lcom/android/server/display/PaperModeService$ScreenOnReceiver;->this$0:Lcom/android/server/display/PaperModeService;
 
@@ -171,20 +161,17 @@
 
     if-eq v8, v9, :cond_2
 
-    .line 160
     const/4 v8, 0x0
 
     invoke-static {v8}, Landroid/provider/MiuiSettings$ScreenEffect;->setScreenPaperMode(Z)V
 
     goto :goto_0
 
-    .line 157
     :cond_2
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 166
     .end local v0    # "am":Landroid/app/ActivityManager;
     .end local v1    # "arr$":[Ljava/lang/String;
     .end local v3    # "i$":I

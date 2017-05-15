@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 91
     iput-object p1, p0, Lcom/android/server/display/PaperModeService$1;->this$0:Lcom/android/server/display/PaperModeService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,13 +41,11 @@
     .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
-    .line 94
     iget-object v0, p0, Lcom/android/server/display/PaperModeService$1;->this$0:Lcom/android/server/display/PaperModeService;
 
     # invokes: Lcom/android/server/display/PaperModeService;->updatePaperMode()V
     invoke-static {v0}, Lcom/android/server/display/PaperModeService;->access$300(Lcom/android/server/display/PaperModeService;)V
 
-    .line 95
     return-void
 .end method
 
@@ -57,6 +54,5 @@
     .param p1, "name"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 99
     return-void
 .end method

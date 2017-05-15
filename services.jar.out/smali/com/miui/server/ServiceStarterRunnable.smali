@@ -29,21 +29,16 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 14
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/miui/server/ServiceStarterRunnable;->retryCount:I
 
-    .line 19
     iput-object p1, p0, Lcom/miui/server/ServiceStarterRunnable;->mContext:Landroid/content/Context;
 
-    .line 20
     iput-object p2, p0, Lcom/miui/server/ServiceStarterRunnable;->mIntent:Landroid/content/Intent;
 
-    .line 21
     return-void
 .end method
 
@@ -53,7 +48,6 @@
     .locals 4
 
     .prologue
-    .line 24
     iget-object v1, p0, Lcom/miui/server/ServiceStarterRunnable;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/miui/server/ServiceStarterRunnable;->mIntent:Landroid/content/Intent;
@@ -62,7 +56,6 @@
 
     move-result-object v0
 
-    .line 25
     .local v0, "ret":Landroid/content/ComponentName;
     :goto_0
     if-nez v0, :cond_0
@@ -73,7 +66,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 27
     const-wide/16 v2, 0x3e8
 
     :try_start_0
@@ -81,7 +73,6 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 31
     :goto_1
     const-string v1, "ServiceStarterRunnable"
 
@@ -119,14 +110,12 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 32
     iget v1, p0, Lcom/miui/server/ServiceStarterRunnable;->retryCount:I
 
     add-int/lit8 v1, v1, 0x1
 
     iput v1, p0, Lcom/miui/server/ServiceStarterRunnable;->retryCount:I
 
-    .line 33
     iget-object v1, p0, Lcom/miui/server/ServiceStarterRunnable;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/miui/server/ServiceStarterRunnable;->mIntent:Landroid/content/Intent;
@@ -137,13 +126,11 @@
 
     goto :goto_0
 
-    .line 28
     :catch_0
     move-exception v1
 
     goto :goto_1
 
-    .line 35
     :cond_0
     return-void
 .end method

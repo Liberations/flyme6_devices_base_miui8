@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 103
     iput-object p1, p0, Lcom/android/server/midi/MidiService$1;->this$0:Lcom/android/server/midi/MidiService;
 
     invoke-direct {p0}, Lcom/android/internal/content/PackageMonitor;-><init>()V
@@ -39,13 +38,11 @@
     .param p2, "uid"    # I
 
     .prologue
-    .line 106
     iget-object v0, p0, Lcom/android/server/midi/MidiService$1;->this$0:Lcom/android/server/midi/MidiService;
 
     # invokes: Lcom/android/server/midi/MidiService;->addPackageDeviceServers(Ljava/lang/String;)V
     invoke-static {v0, p1}, Lcom/android/server/midi/MidiService;->access$000(Lcom/android/server/midi/MidiService;Ljava/lang/String;)V
 
-    .line 107
     return-void
 .end method
 
@@ -54,19 +51,16 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 111
     iget-object v0, p0, Lcom/android/server/midi/MidiService$1;->this$0:Lcom/android/server/midi/MidiService;
 
     # invokes: Lcom/android/server/midi/MidiService;->removePackageDeviceServers(Ljava/lang/String;)V
     invoke-static {v0, p1}, Lcom/android/server/midi/MidiService;->access$100(Lcom/android/server/midi/MidiService;Ljava/lang/String;)V
 
-    .line 112
     iget-object v0, p0, Lcom/android/server/midi/MidiService$1;->this$0:Lcom/android/server/midi/MidiService;
 
     # invokes: Lcom/android/server/midi/MidiService;->addPackageDeviceServers(Ljava/lang/String;)V
     invoke-static {v0, p1}, Lcom/android/server/midi/MidiService;->access$000(Lcom/android/server/midi/MidiService;Ljava/lang/String;)V
 
-    .line 113
     return-void
 .end method
 
@@ -76,12 +70,10 @@
     .param p2, "uid"    # I
 
     .prologue
-    .line 117
     iget-object v0, p0, Lcom/android/server/midi/MidiService$1;->this$0:Lcom/android/server/midi/MidiService;
 
     # invokes: Lcom/android/server/midi/MidiService;->removePackageDeviceServers(Ljava/lang/String;)V
     invoke-static {v0, p1}, Lcom/android/server/midi/MidiService;->access$100(Lcom/android/server/midi/MidiService;Ljava/lang/String;)V
 
-    .line 118
     return-void
 .end method

@@ -31,7 +31,6 @@
     .locals 0
 
     .prologue
-    .line 3120
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -42,7 +41,6 @@
     .param p1, "x0"    # Lcom/android/server/accessibility/AccessibilityManagerService$1;
 
     .prologue
-    .line 3120
     invoke-direct {p0}, Lcom/android/server/accessibility/AccessibilityManagerService$PendingEvent;-><init>()V
 
     return-void
@@ -58,32 +56,24 @@
 
     const/4 v1, 0x0
 
-    .line 3129
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$PendingEvent;->event:Landroid/view/KeyEvent;
 
     if-eqz v0, :cond_0
 
-    .line 3130
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$PendingEvent;->event:Landroid/view/KeyEvent;
 
     invoke-virtual {v0}, Landroid/view/KeyEvent;->recycle()V
 
-    .line 3131
     iput-object v2, p0, Lcom/android/server/accessibility/AccessibilityManagerService$PendingEvent;->event:Landroid/view/KeyEvent;
 
-    .line 3133
     :cond_0
     iput-object v2, p0, Lcom/android/server/accessibility/AccessibilityManagerService$PendingEvent;->next:Lcom/android/server/accessibility/AccessibilityManagerService$PendingEvent;
 
-    .line 3134
     iput v1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$PendingEvent;->policyFlags:I
 
-    .line 3135
     iput v1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$PendingEvent;->sequence:I
 
-    .line 3136
     iput-boolean v1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$PendingEvent;->handled:Z
 
-    .line 3137
     return-void
 .end method

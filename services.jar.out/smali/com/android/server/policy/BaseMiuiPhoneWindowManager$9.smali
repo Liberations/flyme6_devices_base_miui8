@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1297
     iput-object p1, p0, Lcom/android/server/policy/BaseMiuiPhoneWindowManager$9;->this$0:Lcom/android/server/policy/BaseMiuiPhoneWindowManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1299
     iget-object v0, p0, Lcom/android/server/policy/BaseMiuiPhoneWindowManager$9;->this$0:Lcom/android/server/policy/BaseMiuiPhoneWindowManager;
 
     # getter for: Lcom/android/server/policy/BaseMiuiPhoneWindowManager;->mScreenKeyLongPress:Lcom/android/server/policy/BaseMiuiPhoneWindowManager$ScreenKeyLongPressRunnable;
@@ -52,6 +50,5 @@
     # setter for: Lcom/android/server/policy/BaseMiuiPhoneWindowManager$ScreenKeyLongPressRunnable;->mPackageSettingActivity:Ljava/util/HashMap;
     invoke-static {v0, v1}, Lcom/android/server/policy/BaseMiuiPhoneWindowManager$ScreenKeyLongPressRunnable;->access$1002(Lcom/android/server/policy/BaseMiuiPhoneWindowManager$ScreenKeyLongPressRunnable;Ljava/util/HashMap;)Ljava/util/HashMap;
 
-    .line 1300
     return-void
 .end method

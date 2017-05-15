@@ -12,7 +12,6 @@
     .locals 0
 
     .prologue
-    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -23,12 +22,10 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 44
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v2
 
-    .line 45
     .local v2, "packageManager":Landroid/content/pm/PackageManager;
     sget-object v4, Lmiui/securityspace/SecSpaceConstants;->GRAPHITE_APPS:Ljava/util/ArrayList;
 
@@ -51,7 +48,6 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 47
     .local v3, "packageName":Ljava/lang/String;
     const/16 v4, 0x2000
 
@@ -62,14 +58,12 @@
 
     if-eqz v4, :cond_0
 
-    .line 48
     const/4 v4, 0x2
 
     const/4 v5, 0x0
 
     invoke-virtual {v2, v3, v4, v5}, Landroid/content/pm/PackageManager;->setApplicationEnabledSetting(Ljava/lang/String;II)V
 
-    .line 49
     const-string v4, "SecSpaceManagerService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -102,11 +96,9 @@
 
     goto :goto_0
 
-    .line 51
     :catch_0
     move-exception v0
 
-    .line 52
     .local v0, "e":Ljava/lang/Exception;
     const-string v4, "SecSpaceManagerService"
 
@@ -138,7 +130,6 @@
 
     goto :goto_0
 
-    .line 55
     .end local v0    # "e":Ljava/lang/Exception;
     .end local v3    # "packageName":Ljava/lang/String;
     :cond_1
@@ -150,45 +141,37 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 20
     const-string v0, "SecSpaceManagerService"
 
     const-string v1, "init SecSpaceManagerService"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 21
     invoke-static {p0}, Lmiui/securityspace/CrossUserUtils;->hasSpace(Landroid/content/Context;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 22
     invoke-static {p0}, Lcom/miui/server/SecSpaceManagerService;->disableGraphiteApps(Landroid/content/Context;)V
 
-    .line 34
     :cond_0
     :goto_0
     return-void
 
-    .line 24
     :cond_1
     sget-boolean v0, Lmiui/util/OldmanUtil;->IS_ELDER_MODE:Z
 
     if-nez v0, :cond_0
 
-    .line 27
     invoke-static {p0}, Lmiui/securityspace/CrossUserUtils;->hasSecondSpace(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 28
     invoke-static {p0}, Lcom/miui/server/SecSpaceManagerService;->startSecSpace(Landroid/content/Context;)V
 
-    .line 30
     :cond_2
     invoke-static {p0}, Lmiui/securityspace/CrossUserUtils;->hasAirSpace(Landroid/content/Context;)Z
 
@@ -196,7 +179,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 31
     invoke-static {p0}, Lcom/miui/server/SecSpaceManagerService;->startAirSpaceService(Landroid/content/Context;)V
 
     goto :goto_0
@@ -208,7 +190,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 65
     invoke-virtual {p0, p1}, Lcom/android/server/pm/UserManagerService;->getUserInfo(I)Landroid/content/pm/UserInfo;
 
     move-result-object v0
@@ -225,12 +206,10 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 37
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 38
     .local v0, "intent":Landroid/content/Intent;
     new-instance v1, Landroid/content/ComponentName;
 
@@ -242,7 +221,6 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 40
     new-instance v1, Ljava/lang/Thread;
 
     new-instance v2, Lcom/miui/server/ServiceStarterRunnable;
@@ -253,7 +231,6 @@
 
     invoke-virtual {v1}, Ljava/lang/Thread;->start()V
 
-    .line 41
     return-void
 .end method
 
@@ -262,12 +239,10 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 58
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 59
     .local v0, "intent":Landroid/content/Intent;
     new-instance v1, Landroid/content/ComponentName;
 
@@ -279,7 +254,6 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 61
     new-instance v1, Ljava/lang/Thread;
 
     new-instance v2, Lcom/miui/server/ServiceStarterRunnable;
@@ -290,6 +264,5 @@
 
     invoke-virtual {v1}, Ljava/lang/Thread;->start()V
 
-    .line 62
     return-void
 .end method

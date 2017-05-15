@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 473
     iput-object p1, p0, Lcom/android/server/BatteryService$5;->this$0:Lcom/android/server/BatteryService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,14 +39,12 @@
     .locals 3
 
     .prologue
-    .line 476
     invoke-static {}, Landroid/app/ActivityManagerNative;->isSystemReady()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 477
     # getter for: Lcom/android/server/BatteryService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/BatteryService;->access$900()Ljava/lang/String;
 
@@ -57,12 +54,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 478
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 479
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "com.mediatek.batterywarning"
 
@@ -70,19 +65,16 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 480
     const/high16 v1, 0x10000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 481
     const-string v1, "ShutdownDialogType"
 
     const-string v2, "OverTemperature"
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 482
     iget-object v1, p0, Lcom/android/server/BatteryService$5;->this$0:Lcom/android/server/BatteryService;
 
     # getter for: Lcom/android/server/BatteryService;->mContext:Landroid/content/Context;
@@ -92,7 +84,6 @@
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-    .line 484
     .end local v0    # "intent":Landroid/content/Intent;
     :cond_0
     return-void

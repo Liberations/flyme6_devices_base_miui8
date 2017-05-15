@@ -49,12 +49,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 103
     new-array v0, v2, [Ljava/lang/String;
 
     sput-object v0, Lcom/android/server/content/SyncManagerAccountChangePolicy;->ADVANCED_STRATEGY_AUTHORITIES:[Ljava/lang/String;
 
-    .line 104
     const/4 v0, 0x6
 
     new-array v0, v0, [Ljava/lang/String;
@@ -102,10 +100,8 @@
     .locals 0
 
     .prologue
-    .line 17
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 138
     return-void
 .end method
 
@@ -114,12 +110,10 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 85
     sget-object v0, Lcom/android/server/content/SyncManagerAccountChangePolicy;->mConnectivityManager:Landroid/net/ConnectivityManager;
 
     if-nez v0, :cond_0
 
-    .line 86
     const-string v0, "connectivity"
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -130,7 +124,6 @@
 
     sput-object v0, Lcom/android/server/content/SyncManagerAccountChangePolicy;->mConnectivityManager:Landroid/net/ConnectivityManager;
 
-    .line 89
     :cond_0
     sget-object v0, Lcom/android/server/content/SyncManagerAccountChangePolicy;->mConnectivityManager:Landroid/net/ConnectivityManager;
 
@@ -142,7 +135,6 @@
     .param p0, "authority"    # Ljava/lang/String;
 
     .prologue
-    .line 107
     sget-object v0, Lcom/android/server/content/SyncManagerAccountChangePolicy;->ADVANCED_STRATEGY_AUTHORITIES:[Ljava/lang/String;
 
     invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
@@ -155,16 +147,13 @@
 
     if-eqz v0, :cond_0
 
-    .line 108
     new-instance v0, Lcom/android/server/content/SyncManagerAccountChangePolicy$AdvancedStrategy;
 
     invoke-direct {v0}, Lcom/android/server/content/SyncManagerAccountChangePolicy$AdvancedStrategy;-><init>()V
 
-    .line 112
     :goto_0
     return-object v0
 
-    .line 109
     :cond_0
     sget-object v0, Lcom/android/server/content/SyncManagerAccountChangePolicy;->NO_FORBIDDEN_STRATEGY_AUTHORITIES:[Ljava/lang/String;
 
@@ -178,14 +167,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 110
     new-instance v0, Lcom/android/server/content/SyncManagerAccountChangePolicy$NoForbiddenStrategy;
 
     invoke-direct {v0}, Lcom/android/server/content/SyncManagerAccountChangePolicy$NoForbiddenStrategy;-><init>()V
 
     goto :goto_0
 
-    .line 112
     :cond_1
     new-instance v0, Lcom/android/server/content/SyncManagerAccountChangePolicy$DefaultStrategy;
 
@@ -199,7 +186,6 @@
     .param p0, "status"    # I
 
     .prologue
-    .line 52
     const/4 v0, 0x2
 
     if-eq p0, v0, :cond_0
@@ -225,14 +211,12 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 56
     new-instance v1, Landroid/content/IntentFilter;
 
     const-string v3, "android.intent.action.BATTERY_CHANGED"
 
     invoke-direct {v1, v3}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 57
     .local v1, "ifilter":Landroid/content/IntentFilter;
     const/4 v3, 0x0
 
@@ -240,7 +224,6 @@
 
     move-result-object v0
 
-    .line 59
     .local v0, "batteryStatus":Landroid/content/Intent;
     const-string v3, "status"
 
@@ -250,7 +233,6 @@
 
     move-result v2
 
-    .line 60
     .local v2, "status":I
     invoke-static {v2}, Lcom/android/server/content/SyncManagerAccountChangePolicy;->isBatteryCharging(I)Z
 
@@ -265,7 +247,6 @@
     .param p1, "level"    # I
 
     .prologue
-    .line 66
     const/4 v0, 0x2
 
     if-eq p0, v0, :cond_0
@@ -290,14 +271,12 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 70
     new-instance v1, Landroid/content/IntentFilter;
 
     const-string v4, "android.intent.action.BATTERY_CHANGED"
 
     invoke-direct {v1, v4}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 71
     .local v1, "ifilter":Landroid/content/IntentFilter;
     const/4 v4, 0x0
 
@@ -305,7 +284,6 @@
 
     move-result-object v0
 
-    .line 73
     .local v0, "batteryStatus":Landroid/content/Intent;
     const-string v4, "status"
 
@@ -315,7 +293,6 @@
 
     move-result v3
 
-    .line 74
     .local v3, "status":I
     const-string v4, "level"
 
@@ -325,7 +302,6 @@
 
     move-result v2
 
-    .line 75
     .local v2, "level":I
     invoke-static {v3, v2}, Lcom/android/server/content/SyncManagerAccountChangePolicy;->isBatteryLow(II)Z
 
@@ -339,7 +315,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 79
     invoke-static {p0}, Lcom/android/server/content/SyncManagerAccountChangePolicy;->getConnectivityManager(Landroid/content/Context;)Landroid/net/ConnectivityManager;
 
     move-result-object v0
@@ -369,7 +344,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 166
     const-string v4, "activity"
 
     invoke-virtual {p0, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -378,7 +352,6 @@
 
     check-cast v0, Landroid/app/ActivityManager;
 
-    .line 167
     .local v0, "am":Landroid/app/ActivityManager;
     invoke-virtual {v0}, Landroid/app/ActivityManager;->getRunningAppProcesses()Ljava/util/List;
 
@@ -402,7 +375,6 @@
 
     check-cast v1, Landroid/app/ActivityManager$RunningAppProcessInfo;
 
-    .line 168
     .local v1, "appProcess":Landroid/app/ActivityManager$RunningAppProcessInfo;
     iget-object v4, v1, Landroid/app/ActivityManager$RunningAppProcessInfo;->processName:Ljava/lang/String;
 
@@ -412,7 +384,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 169
     iget v4, v1, Landroid/app/ActivityManager$RunningAppProcessInfo;->importance:I
 
     const/16 v5, 0x64
@@ -421,7 +392,6 @@
 
     const/4 v3, 0x1
 
-    .line 172
     .end local v1    # "appProcess":Landroid/app/ActivityManager$RunningAppProcessInfo;
     :cond_1
     return v3
@@ -432,23 +402,18 @@
     .param p0, "accounts"    # [Landroid/accounts/Account;
 
     .prologue
-    .line 149
     if-nez p0, :cond_1
 
-    .line 150
     const/4 v2, 0x0
 
-    .line 162
     :cond_0
     return-object v2
 
-    .line 152
     :cond_1
     array-length v5, p0
 
     new-array v2, v5, [Landroid/accounts/Account;
 
-    .line 153
     .local v2, "masked":[Landroid/accounts/Account;
     const/4 v0, 0x0
 
@@ -458,12 +423,10 @@
 
     if-ge v0, v5, :cond_0
 
-    .line 154
     aget-object v5, p0, v0
 
     iget-object v3, v5, Landroid/accounts/Account;->name:Ljava/lang/String;
 
-    .line 155
     .local v3, "name":Ljava/lang/String;
     if-eqz v3, :cond_2
 
@@ -473,14 +436,12 @@
 
     if-lez v5, :cond_2
 
-    .line 156
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
     move-result v5
 
     div-int/lit8 v1, v5, 0x2
 
-    .line 157
     .local v1, "m":I
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
@@ -488,7 +449,6 @@
 
     sub-int v4, v5, v1
 
-    .line 158
     .local v4, "r":I
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -526,7 +486,6 @@
 
     move-result-object v3
 
-    .line 160
     .end local v1    # "m":I
     .end local v4    # "r":I
     :cond_2
@@ -540,7 +499,6 @@
 
     aput-object v5, v2, v0
 
-    .line 153
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
@@ -553,7 +511,6 @@
     .param p2, "sendingUserId"    # I
 
     .prologue
-    .line 25
     const-string v2, "account_changed_action"
 
     move-object/from16 v0, p1
@@ -562,11 +519,9 @@
 
     move-result-object v14
 
-    .line 26
     .local v14, "action":Ljava/lang/String;
     const/4 v13, 0x0
 
-    .line 28
     .local v13, "accounts":[Landroid/accounts/Account;
     :try_start_0
     const-string v2, "accounts"
@@ -587,7 +542,6 @@
     :try_end_0
     .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 32
     :goto_0
     const-string v4, "SyncManager"
 
@@ -616,7 +570,6 @@
 
     invoke-static {v4, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 36
     const-string v2, "altered"
 
     invoke-virtual {v2, v14}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -633,11 +586,9 @@
 
     if-eqz v2, :cond_3
 
-    .line 38
     :cond_0
     if-eqz v13, :cond_3
 
-    .line 39
     move-object v15, v13
 
     .local v15, "arr$":[Landroid/accounts/Account;
@@ -658,11 +609,9 @@
 
     aget-object v3, v15, v17
 
-    .line 40
     .local v3, "account":Landroid/accounts/Account;
     if-eqz v3, :cond_1
 
-    .line 41
     const/4 v5, -0x2
 
     const/4 v6, 0x0
@@ -681,13 +630,11 @@
 
     invoke-virtual/range {v2 .. v12}, Lcom/android/server/content/SyncManager;->scheduleSync(Landroid/accounts/Account;IILjava/lang/String;Landroid/os/Bundle;JJZ)V
 
-    .line 39
     :cond_1
     add-int/lit8 v17, v17, 0x1
 
     goto :goto_2
 
-    .line 29
     .end local v3    # "account":Landroid/accounts/Account;
     .end local v15    # "arr$":[Landroid/accounts/Account;
     .end local v17    # "i$":I
@@ -695,7 +642,6 @@
     :catch_0
     move-exception v16
 
-    .line 30
     .local v16, "e":Ljava/lang/ClassCastException;
     const-string v2, "SyncManager"
 
@@ -729,7 +675,6 @@
 
     goto :goto_0
 
-    .line 32
     .end local v16    # "e":Ljava/lang/ClassCastException;
     :cond_2
     invoke-static {v13}, Lcom/android/server/content/SyncManagerAccountChangePolicy;->maskAccounts([Landroid/accounts/Account;)[Landroid/accounts/Account;
@@ -742,7 +687,6 @@
 
     goto :goto_1
 
-    .line 49
     :cond_3
     return-void
 .end method

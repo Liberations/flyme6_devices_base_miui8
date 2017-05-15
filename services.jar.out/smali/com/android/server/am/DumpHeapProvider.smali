@@ -14,7 +14,6 @@
     .locals 1
 
     .prologue
-    .line 30
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -28,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 29
     invoke-direct {p0}, Landroid/content/ContentProvider;-><init>()V
 
     return-void
@@ -38,12 +36,10 @@
     .locals 2
 
     .prologue
-    .line 34
     sget-object v1, Lcom/android/server/am/DumpHeapProvider;->sLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 35
     :try_start_0
     sget-object v0, Lcom/android/server/am/DumpHeapProvider;->sHeapDumpJavaFile:Ljava/io/File;
 
@@ -51,7 +47,6 @@
 
     return-object v0
 
-    .line 36
     :catchall_0
     move-exception v0
 
@@ -71,7 +66,6 @@
     .param p3, "selectionArgs"    # [Ljava/lang/String;
 
     .prologue
-    .line 68
     const/4 v0, 0x0
 
     return v0
@@ -82,7 +76,6 @@
     .param p1, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 58
     const-string v0, "application/octet-stream"
 
     return-object v0
@@ -94,7 +87,6 @@
     .param p2, "values"    # Landroid/content/ContentValues;
 
     .prologue
-    .line 63
     const/4 v0, 0x0
 
     return-object v0
@@ -104,18 +96,15 @@
     .locals 6
 
     .prologue
-    .line 41
     sget-object v4, Lcom/android/server/am/DumpHeapProvider;->sLock:Ljava/lang/Object;
 
     monitor-enter v4
 
-    .line 42
     :try_start_0
     invoke-static {}, Landroid/os/Environment;->getDataDirectory()Ljava/io/File;
 
     move-result-object v0
 
-    .line 43
     .local v0, "dataDir":Ljava/io/File;
     new-instance v2, Ljava/io/File;
 
@@ -123,7 +112,6 @@
 
     invoke-direct {v2, v0, v3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 44
     .local v2, "systemDir":Ljava/io/File;
     new-instance v1, Ljava/io/File;
 
@@ -131,11 +119,9 @@
 
     invoke-direct {v1, v2, v3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 45
     .local v1, "heapdumpDir":Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->mkdir()Z
 
-    .line 46
     new-instance v3, Ljava/io/File;
 
     const-string v5, "javaheap.bin"
@@ -144,15 +130,12 @@
 
     sput-object v3, Lcom/android/server/am/DumpHeapProvider;->sHeapDumpJavaFile:Ljava/io/File;
 
-    .line 47
     monitor-exit v4
 
-    .line 48
     const/4 v3, 0x1
 
     return v3
 
-    .line 47
     .end local v0    # "dataDir":Ljava/io/File;
     .end local v1    # "heapdumpDir":Ljava/io/File;
     .end local v2    # "systemDir":Ljava/io/File;
@@ -177,24 +160,20 @@
     .end annotation
 
     .prologue
-    .line 78
     sget-object v3, Lcom/android/server/am/DumpHeapProvider;->sLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 79
     :try_start_0
     invoke-virtual {p1}, Landroid/net/Uri;->getEncodedPath()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 80
     .local v0, "path":Ljava/lang/String;
     invoke-static {v0}, Landroid/net/Uri;->decode(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 81
     .local v1, "tag":Ljava/lang/String;
     const-string v2, "/java"
 
@@ -204,7 +183,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 82
     sget-object v2, Lcom/android/server/am/DumpHeapProvider;->sHeapDumpJavaFile:Ljava/io/File;
 
     const/high16 v4, 0x10000000
@@ -217,7 +195,6 @@
 
     return-object v2
 
-    .line 85
     :cond_0
     new-instance v2, Ljava/io/FileNotFoundException;
 
@@ -243,7 +220,6 @@
 
     throw v2
 
-    .line 87
     .end local v0    # "path":Ljava/lang/String;
     .end local v1    # "tag":Ljava/lang/String;
     :catchall_0
@@ -265,7 +241,6 @@
     .param p5, "sortOrder"    # Ljava/lang/String;
 
     .prologue
-    .line 53
     const/4 v0, 0x0
 
     return-object v0
@@ -279,7 +254,6 @@
     .param p4, "selectionArgs"    # [Ljava/lang/String;
 
     .prologue
-    .line 73
     const/4 v0, 0x0
 
     return v0

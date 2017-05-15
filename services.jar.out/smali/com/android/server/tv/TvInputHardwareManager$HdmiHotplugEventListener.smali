@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1099
     iput-object p1, p0, Lcom/android/server/tv/TvInputHardwareManager$HdmiHotplugEventListener;->this$0:Lcom/android/server/tv/TvInputHardwareManager;
 
     invoke-direct {p0}, Landroid/hardware/hdmi/IHdmiHotplugEventListener$Stub;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/tv/TvInputHardwareManager$1;
 
     .prologue
-    .line 1099
     invoke-direct {p0, p1}, Lcom/android/server/tv/TvInputHardwareManager$HdmiHotplugEventListener;-><init>(Lcom/android/server/tv/TvInputHardwareManager;)V
 
     return-void
@@ -50,7 +48,6 @@
     .param p1, "event"    # Landroid/hardware/hdmi/HdmiHotplugEvent;
 
     .prologue
-    .line 1102
     iget-object v2, p0, Lcom/android/server/tv/TvInputHardwareManager$HdmiHotplugEventListener;->this$0:Lcom/android/server/tv/TvInputHardwareManager;
 
     # getter for: Lcom/android/server/tv/TvInputHardwareManager;->mLock:Ljava/lang/Object;
@@ -60,7 +57,6 @@
 
     monitor-enter v3
 
-    .line 1103
     :try_start_0
     iget-object v2, p0, Lcom/android/server/tv/TvInputHardwareManager$HdmiHotplugEventListener;->this$0:Lcom/android/server/tv/TvInputHardwareManager;
 
@@ -79,7 +75,6 @@
 
     invoke-virtual {v2, v4, v5}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
-    .line 1104
     iget-object v2, p0, Lcom/android/server/tv/TvInputHardwareManager$HdmiHotplugEventListener;->this$0:Lcom/android/server/tv/TvInputHardwareManager;
 
     invoke-virtual {p1}, Landroid/hardware/hdmi/HdmiHotplugEvent;->getPort()I
@@ -91,18 +86,14 @@
 
     move-result-object v0
 
-    .line 1106
     .local v0, "hardwareInfo":Landroid/media/tv/TvInputHardwareInfo;
     if-nez v0, :cond_0
 
-    .line 1107
     monitor-exit v3
 
-    .line 1116
     :goto_0
     return-void
 
-    .line 1109
     :cond_0
     iget-object v2, p0, Lcom/android/server/tv/TvInputHardwareManager$HdmiHotplugEventListener;->this$0:Lcom/android/server/tv/TvInputHardwareManager;
 
@@ -121,16 +112,13 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 1110
     .local v1, "inputId":Ljava/lang/String;
     if-nez v1, :cond_1
 
-    .line 1111
     monitor-exit v3
 
     goto :goto_0
 
-    .line 1115
     .end local v0    # "hardwareInfo":Landroid/media/tv/TvInputHardwareInfo;
     .end local v1    # "inputId":Ljava/lang/String;
     :catchall_0
@@ -142,7 +130,6 @@
 
     throw v2
 
-    .line 1113
     .restart local v0    # "hardwareInfo":Landroid/media/tv/TvInputHardwareInfo;
     .restart local v1    # "inputId":Ljava/lang/String;
     :cond_1
@@ -175,7 +162,6 @@
 
     invoke-virtual {v2}, Landroid/os/Message;->sendToTarget()V
 
-    .line 1115
     monitor-exit v3
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0

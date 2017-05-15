@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 395
     iput-object p1, p0, Lcom/android/server/midi/MidiService$Device$1;->this$1:Lcom/android/server/midi/MidiService$Device;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,10 +41,8 @@
     .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
-    .line 398
     const/4 v3, 0x0
 
-    .line 399
     .local v3, "server":Landroid/media/midi/IMidiDeviceServer;
     iget-object v4, p0, Lcom/android/server/midi/MidiService$Device$1;->this$1:Lcom/android/server/midi/MidiService$Device;
 
@@ -56,12 +53,10 @@
 
     if-eqz v4, :cond_0
 
-    .line 400
     invoke-static {p2}, Landroid/media/midi/IBluetoothMidiService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/media/midi/IBluetoothMidiService;
 
     move-result-object v2
 
-    .line 404
     .local v2, "mBluetoothMidiService":Landroid/media/midi/IBluetoothMidiService;
     :try_start_0
     iget-object v4, p0, Lcom/android/server/midi/MidiService$Device$1;->this$1:Lcom/android/server/midi/MidiService$Device;
@@ -75,7 +70,6 @@
 
     move-result-object v0
 
-    .line 405
     .local v0, "deviceBinder":Landroid/os/IBinder;
     invoke-static {v0}, Landroid/media/midi/IMidiDeviceServer$Stub;->asInterface(Landroid/os/IBinder;)Landroid/media/midi/IMidiDeviceServer;
     :try_end_0
@@ -83,7 +77,6 @@
 
     move-result-object v3
 
-    .line 412
     .end local v0    # "deviceBinder":Landroid/os/IBinder;
     .end local v2    # "mBluetoothMidiService":Landroid/media/midi/IBluetoothMidiService;
     :goto_0
@@ -92,15 +85,12 @@
     # invokes: Lcom/android/server/midi/MidiService$Device;->setDeviceServer(Landroid/media/midi/IMidiDeviceServer;)V
     invoke-static {v4, v3}, Lcom/android/server/midi/MidiService$Device;->access$600(Lcom/android/server/midi/MidiService$Device;Landroid/media/midi/IMidiDeviceServer;)V
 
-    .line 413
     return-void
 
-    .line 406
     .restart local v2    # "mBluetoothMidiService":Landroid/media/midi/IBluetoothMidiService;
     :catch_0
     move-exception v1
 
-    .line 407
     .local v1, "e":Landroid/os/RemoteException;
     const-string v4, "MidiService"
 
@@ -110,7 +100,6 @@
 
     goto :goto_0
 
-    .line 410
     .end local v1    # "e":Landroid/os/RemoteException;
     .end local v2    # "mBluetoothMidiService":Landroid/media/midi/IBluetoothMidiService;
     :cond_0
@@ -128,18 +117,15 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 417
     iget-object v0, p0, Lcom/android/server/midi/MidiService$Device$1;->this$1:Lcom/android/server/midi/MidiService$Device;
 
     # invokes: Lcom/android/server/midi/MidiService$Device;->setDeviceServer(Landroid/media/midi/IMidiDeviceServer;)V
     invoke-static {v0, v1}, Lcom/android/server/midi/MidiService$Device;->access$600(Lcom/android/server/midi/MidiService$Device;Landroid/media/midi/IMidiDeviceServer;)V
 
-    .line 418
     iget-object v0, p0, Lcom/android/server/midi/MidiService$Device$1;->this$1:Lcom/android/server/midi/MidiService$Device;
 
     # setter for: Lcom/android/server/midi/MidiService$Device;->mServiceConnection:Landroid/content/ServiceConnection;
     invoke-static {v0, v1}, Lcom/android/server/midi/MidiService$Device;->access$702(Lcom/android/server/midi/MidiService$Device;Landroid/content/ServiceConnection;)Landroid/content/ServiceConnection;
 
-    .line 419
     return-void
 .end method

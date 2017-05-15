@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 177
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -33,10 +32,8 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 179
     # invokes: Lcom/android/server/HandyMode;->destroyBluredWallpaper()V
     invoke-static {}, Lcom/android/server/HandyMode;->access$200()V
 
-    .line 180
     return-void
 .end method

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 208
     iput-object p1, p0, Lcom/android/server/policy/MiuiGlobalActions$2;->this$0:Lcom/android/server/policy/MiuiGlobalActions;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +44,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 211
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
 
     move-result v1
@@ -60,7 +58,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 213
     iget-object v1, p0, Lcom/android/server/policy/MiuiGlobalActions$2;->this$0:Lcom/android/server/policy/MiuiGlobalActions;
 
     # getter for: Lcom/android/server/policy/MiuiGlobalActions;->mScreenElementRoot:Lmiui/maml/ScreenElementRoot;
@@ -72,12 +69,10 @@
 
     invoke-virtual {v1, v2}, Lmiui/maml/ScreenElementRoot;->onCommand(Ljava/lang/String;)V
 
-    .line 220
     :cond_0
     :goto_0
     return v0
 
-    .line 216
     :cond_1
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getKeyCode()I
 
@@ -95,7 +90,6 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 220
     const/4 v0, 0x0
 
     goto :goto_0

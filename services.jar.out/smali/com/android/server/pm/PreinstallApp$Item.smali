@@ -43,16 +43,12 @@
     .param p4, "pkg"    # Landroid/content/pm/PackageParser$Package;
 
     .prologue
-    .line 50
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 51
     iput-object p1, p0, Lcom/android/server/pm/PreinstallApp$Item;->packageName:Ljava/lang/String;
 
-    .line 52
     iput-object p2, p0, Lcom/android/server/pm/PreinstallApp$Item;->app:Ljava/io/File;
 
-    .line 53
     # invokes: Lcom/android/server/pm/PreinstallApp;->getApkFile(Ljava/io/File;)Ljava/io/File;
     invoke-static {p2}, Lcom/android/server/pm/PreinstallApp;->access$000(Ljava/io/File;)Ljava/io/File;
 
@@ -60,13 +56,10 @@
 
     iput-object v0, p0, Lcom/android/server/pm/PreinstallApp$Item;->apkFile:Ljava/io/File;
 
-    .line 54
     iput-object p3, p0, Lcom/android/server/pm/PreinstallApp$Item;->pkgLite:Landroid/content/pm/PackageParser$PackageLite;
 
-    .line 55
     iput-object p4, p0, Lcom/android/server/pm/PreinstallApp$Item;->pkg:Landroid/content/pm/PackageParser$Package;
 
-    .line 56
     invoke-virtual {p2}, Ljava/io/File;->isDirectory()Z
 
     move-result v0
@@ -78,10 +71,8 @@
     :goto_0
     iput v0, p0, Lcom/android/server/pm/PreinstallApp$Item;->type:I
 
-    .line 57
     return-void
 
-    .line 56
     :cond_0
     const/4 v0, 0x1
 
@@ -98,14 +89,12 @@
 
     const/4 v0, 0x1
 
-    .line 60
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v3, 0x15
 
     if-ge v2, v3, :cond_1
 
-    .line 63
     iget-object v2, p0, Lcom/android/server/pm/PreinstallApp$Item;->pkgLite:Landroid/content/pm/PackageParser$PackageLite;
 
     iget v2, v2, Landroid/content/pm/PackageParser$PackageLite;->versionCode:I
@@ -116,12 +105,10 @@
 
     if-le v2, v3, :cond_2
 
-    .line 75
     :cond_0
     :goto_0
     return v0
 
-    .line 67
     :cond_1
     iget v2, p0, Lcom/android/server/pm/PreinstallApp$Item;->type:I
 
@@ -129,14 +116,12 @@
 
     if-gt v2, v3, :cond_0
 
-    .line 70
     iget v2, p0, Lcom/android/server/pm/PreinstallApp$Item;->type:I
 
     iget v3, p1, Lcom/android/server/pm/PreinstallApp$Item;->type:I
 
     if-ne v2, v3, :cond_2
 
-    .line 72
     iget-object v2, p0, Lcom/android/server/pm/PreinstallApp$Item;->pkgLite:Landroid/content/pm/PackageParser$PackageLite;
 
     iget v2, v2, Landroid/content/pm/PackageParser$PackageLite;->versionCode:I
@@ -154,7 +139,6 @@
     :cond_2
     move v0, v1
 
-    .line 75
     goto :goto_0
 .end method
 
@@ -164,7 +148,6 @@
     .locals 2
 
     .prologue
-    .line 79
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

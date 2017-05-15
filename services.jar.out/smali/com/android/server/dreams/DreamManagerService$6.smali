@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 643
     iput-object p1, p0, Lcom/android/server/dreams/DreamManagerService$6;->this$0:Lcom/android/server/dreams/DreamManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 5
 
     .prologue
-    .line 647
     iget-object v0, p0, Lcom/android/server/dreams/DreamManagerService$6;->this$0:Lcom/android/server/dreams/DreamManagerService;
 
     # getter for: Lcom/android/server/dreams/DreamManagerService;->mLock:Ljava/lang/Object;
@@ -50,7 +48,6 @@
 
     monitor-enter v1
 
-    .line 648
     :try_start_0
     iget-object v0, p0, Lcom/android/server/dreams/DreamManagerService$6;->this$0:Lcom/android/server/dreams/DreamManagerService;
 
@@ -90,7 +87,6 @@
 
     if-nez v0, :cond_0
 
-    .line 651
     iget-object v0, p0, Lcom/android/server/dreams/DreamManagerService$6;->this$0:Lcom/android/server/dreams/DreamManagerService;
 
     # getter for: Lcom/android/server/dreams/DreamManagerService;->mPowerManager:Landroid/os/PowerManager;
@@ -106,14 +102,11 @@
 
     invoke-virtual {v0, v2, v3, v4}, Landroid/os/PowerManager;->wakeUp(JLjava/lang/String;)V
 
-    .line 654
     :cond_0
     monitor-exit v1
 
-    .line 655
     return-void
 
-    .line 654
     :catchall_0
     move-exception v0
 

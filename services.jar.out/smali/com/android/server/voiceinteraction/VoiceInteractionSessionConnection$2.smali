@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 113
     iput-object p1, p0, Lcom/android/server/voiceinteraction/VoiceInteractionSessionConnection$2;->this$0:Lcom/android/server/voiceinteraction/VoiceInteractionSessionConnection;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
-    .line 116
     return-void
 .end method
 
@@ -51,6 +49,5 @@
     .param p1, "name"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 119
     return-void
 .end method

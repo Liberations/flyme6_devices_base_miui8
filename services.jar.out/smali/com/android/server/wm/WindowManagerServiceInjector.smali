@@ -14,7 +14,6 @@
     .locals 3
 
     .prologue
-    .line 68
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljava/lang/String;
@@ -34,7 +33,6 @@
     .locals 0
 
     .prologue
-    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -48,15 +46,12 @@
     .param p3, "uid"    # I
 
     .prologue
-    .line 37
     if-nez p1, :cond_1
 
-    .line 48
     :cond_0
     :goto_0
     return-void
 
-    .line 40
     :cond_1
     iget v1, p1, Landroid/view/WindowManager$LayoutParams;->flags:I
 
@@ -74,7 +69,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 41
     :cond_2
     const/16 v1, 0x2724
 
@@ -82,11 +76,9 @@
 
     move-result v0
 
-    .line 42
     .local v0, "mode":I
     if-eqz v0, :cond_0
 
-    .line 43
     iget v1, p1, Landroid/view/WindowManager$LayoutParams;->flags:I
 
     const v2, -0x80001
@@ -95,7 +87,6 @@
 
     iput v1, p1, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    .line 44
     iget v1, p1, Landroid/view/WindowManager$LayoutParams;->flags:I
 
     const v2, -0x400001
@@ -104,7 +95,6 @@
 
     iput v1, p1, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    .line 45
     const-string v1, "WindowManagerService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -145,7 +135,6 @@
     .param p0, "atoken"    # Lcom/android/server/wm/AppWindowToken;
 
     .prologue
-    .line 71
     const-string v5, "lithium"
 
     sget-object v6, Landroid/os/Build;->DEVICE:Ljava/lang/String;
@@ -156,21 +145,17 @@
 
     if-eqz v5, :cond_1
 
-    .line 72
     invoke-virtual {p0}, Lcom/android/server/wm/AppWindowToken;->findMainWindow()Lcom/android/server/wm/WindowState;
 
     move-result-object v4
 
-    .line 73
     .local v4, "win":Lcom/android/server/wm/WindowState;
     if-eqz v4, :cond_1
 
-    .line 74
     sget-object v5, Lcom/android/server/wm/WindowManagerServiceInjector;->FORCE_ORI_LIST:[Ljava/lang/String;
 
     if-eqz v5, :cond_1
 
-    .line 75
     sget-object v0, Lcom/android/server/wm/WindowManagerServiceInjector;->FORCE_ORI_LIST:[Ljava/lang/String;
 
     .local v0, "arr$":[Ljava/lang/String;
@@ -185,7 +170,6 @@
 
     aget-object v3, v0, v1
 
-    .line 76
     .local v3, "name":Ljava/lang/String;
     invoke-virtual {v4}, Lcom/android/server/wm/WindowState;->getAttrs()Landroid/view/WindowManager$LayoutParams;
 
@@ -201,10 +185,8 @@
 
     if-eqz v5, :cond_0
 
-    .line 77
     const/4 v5, 0x7
 
-    .line 83
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v1    # "i$":I
     .end local v2    # "len$":I
@@ -213,7 +195,6 @@
     :goto_1
     return v5
 
-    .line 75
     .restart local v0    # "arr$":[Ljava/lang/String;
     .restart local v1    # "i$":I
     .restart local v2    # "len$":I
@@ -224,7 +205,6 @@
 
     goto :goto_0
 
-    .line 83
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v1    # "i$":I
     .end local v2    # "len$":I
@@ -246,10 +226,8 @@
 
     const/4 v3, 0x0
 
-    .line 51
     const/4 v1, 0x0
 
-    .line 53
     .local v1, "packages":[Ljava/lang/String;
     :try_start_0
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
@@ -262,7 +240,6 @@
 
     move-result-object v1
 
-    .line 57
     :goto_0
     if-eqz v1, :cond_0
 
@@ -270,12 +247,10 @@
 
     if-nez v4, :cond_1
 
-    .line 65
     :cond_0
     :goto_1
     return v2
 
-    .line 60
     :cond_1
     const/16 v4, 0x2724
 
@@ -285,11 +260,9 @@
 
     move-result v0
 
-    .line 61
     .local v0, "mode":I
     if-eqz v0, :cond_0
 
-    .line 64
     const-string v2, "WindowManagerService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -314,10 +287,8 @@
 
     move v2, v3
 
-    .line 65
     goto :goto_1
 
-    .line 54
     .end local v0    # "mode":I
     :catch_0
     move-exception v4
@@ -335,38 +306,30 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 20
     instance-of v0, p3, Landroid/os/DeadObjectException;
 
     if-eqz v0, :cond_0
 
-    .line 21
     const-string v0, "WindowState"
 
     const-string v1, "Error happens during resized "
 
     invoke-static {v0, v1, p3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 23
     iput-boolean v2, p1, Lcom/android/server/wm/WindowState;->mOverscanInsetsChanged:Z
 
-    .line 24
     iput-boolean v2, p1, Lcom/android/server/wm/WindowState;->mContentInsetsChanged:Z
 
-    .line 25
     iput-boolean v2, p1, Lcom/android/server/wm/WindowState;->mVisibleInsetsChanged:Z
 
-    .line 26
     iput-boolean v2, p2, Lcom/android/server/wm/WindowStateAnimator;->mSurfaceResized:Z
 
-    .line 29
     iget-object v0, p1, Lcom/android/server/wm/WindowState;->mAttrs:Landroid/view/WindowManager$LayoutParams;
 
     const/high16 v1, -0x40800000    # -1.0f
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->screenBrightness:F
 
-    .line 31
     :cond_0
     return-void
 .end method

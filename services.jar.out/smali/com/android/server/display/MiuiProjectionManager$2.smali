@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 118
     iput-object p1, p0, Lcom/android/server/display/MiuiProjectionManager$2;->this$0:Lcom/android/server/display/MiuiProjectionManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,12 +39,10 @@
     .locals 1
 
     .prologue
-    .line 121
     iget-object v0, p0, Lcom/android/server/display/MiuiProjectionManager$2;->this$0:Lcom/android/server/display/MiuiProjectionManager;
 
     # invokes: Lcom/android/server/display/MiuiProjectionManager;->stopProjectionInternal()V
     invoke-static {v0}, Lcom/android/server/display/MiuiProjectionManager;->access$200(Lcom/android/server/display/MiuiProjectionManager;)V
 
-    .line 122
     return-void
 .end method

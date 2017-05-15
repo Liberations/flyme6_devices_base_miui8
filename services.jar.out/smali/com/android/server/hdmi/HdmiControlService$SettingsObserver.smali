@@ -24,13 +24,10 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 500
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$SettingsObserver;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
-    .line 501
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 502
     return-void
 .end method
 
@@ -44,12 +41,10 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 507
     invoke-virtual {p2}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 508
     .local v3, "option":Ljava/lang/String;
     iget-object v5, p0, Lcom/android/server/hdmi/HdmiControlService$SettingsObserver;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
@@ -57,7 +52,6 @@
 
     move-result v0
 
-    .line 509
     .local v0, "enabled":Z
     const/4 v5, -0x1
 
@@ -71,12 +65,10 @@
     :goto_0
     packed-switch v5, :pswitch_data_0
 
-    .line 533
     :cond_1
     :goto_1
     return-void
 
-    .line 509
     :sswitch_0
     const-string v7, "hdmi_control_enabled"
 
@@ -142,7 +134,6 @@
 
     goto :goto_0
 
-    .line 511
     :pswitch_0
     iget-object v5, p0, Lcom/android/server/hdmi/HdmiControlService$SettingsObserver;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
@@ -150,7 +141,6 @@
 
     goto :goto_1
 
-    .line 514
     :pswitch_1
     iget-object v5, p0, Lcom/android/server/hdmi/HdmiControlService$SettingsObserver;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
@@ -160,7 +150,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 515
     iget-object v5, p0, Lcom/android/server/hdmi/HdmiControlService$SettingsObserver;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     # invokes: Lcom/android/server/hdmi/HdmiControlService;->tv()Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;
@@ -170,7 +159,6 @@
 
     invoke-virtual {v5, v0}, Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;->setAutoWakeup(Z)V
 
-    .line 517
     :cond_2
     iget-object v5, p0, Lcom/android/server/hdmi/HdmiControlService$SettingsObserver;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
@@ -183,7 +171,6 @@
 
     goto :goto_1
 
-    .line 520
     :pswitch_2
     iget-object v5, p0, Lcom/android/server/hdmi/HdmiControlService$SettingsObserver;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
@@ -214,7 +201,6 @@
 
     move-result v4
 
-    .line 521
     .local v4, "type":I
     iget-object v5, p0, Lcom/android/server/hdmi/HdmiControlService$SettingsObserver;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
@@ -227,13 +213,11 @@
 
     move-result-object v2
 
-    .line 522
     .local v2, "localDevice":Lcom/android/server/hdmi/HdmiCecLocalDevice;
     invoke-virtual {v2, v0}, Lcom/android/server/hdmi/HdmiCecLocalDevice;->setAutoDeviceOff(Z)V
 
     goto :goto_2
 
-    .line 527
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v2    # "localDevice":Lcom/android/server/hdmi/HdmiCecLocalDevice;
     .end local v4    # "type":I
@@ -244,7 +228,6 @@
 
     goto/16 :goto_1
 
-    .line 530
     :pswitch_4
     iget-object v5, p0, Lcom/android/server/hdmi/HdmiControlService$SettingsObserver;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
@@ -264,7 +247,6 @@
 
     goto/16 :goto_1
 
-    .line 509
     :sswitch_data_0
     .sparse-switch
         -0x77ca2448 -> :sswitch_0

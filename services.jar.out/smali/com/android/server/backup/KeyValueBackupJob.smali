@@ -26,7 +26,6 @@
     .locals 3
 
     .prologue
-    .line 37
     new-instance v0, Landroid/content/ComponentName;
 
     const-string v1, "android"
@@ -41,12 +40,10 @@
 
     sput-object v0, Lcom/android/server/backup/KeyValueBackupJob;->sKeyValueJobService:Landroid/content/ComponentName;
 
-    .line 53
     const/4 v0, 0x0
 
     sput-boolean v0, Lcom/android/server/backup/KeyValueBackupJob;->sScheduled:Z
 
-    .line 54
     const-wide/16 v0, 0x0
 
     sput-wide v0, Lcom/android/server/backup/KeyValueBackupJob;->sNextScheduled:J
@@ -58,7 +55,6 @@
     .locals 0
 
     .prologue
-    .line 35
     invoke-direct {p0}, Landroid/app/job/JobService;-><init>()V
 
     return-void
@@ -69,12 +65,10 @@
     .param p0, "ctx"    # Landroid/content/Context;
 
     .prologue
-    .line 85
     const-class v2, Lcom/android/server/backup/KeyValueBackupJob;
 
     monitor-enter v2
 
-    .line 86
     :try_start_0
     const-string v1, "jobscheduler"
 
@@ -84,29 +78,23 @@
 
     check-cast v0, Landroid/app/job/JobScheduler;
 
-    .line 87
     .local v0, "js":Landroid/app/job/JobScheduler;
     const/16 v1, 0x5039
 
     invoke-virtual {v0, v1}, Landroid/app/job/JobScheduler;->cancel(I)V
 
-    .line 88
     const-wide/16 v4, 0x0
 
     sput-wide v4, Lcom/android/server/backup/KeyValueBackupJob;->sNextScheduled:J
 
-    .line 89
     const/4 v1, 0x0
 
     sput-boolean v1, Lcom/android/server/backup/KeyValueBackupJob;->sScheduled:Z
 
-    .line 90
     monitor-exit v2
 
-    .line 91
     return-void
 
-    .line 90
     .end local v0    # "js":Landroid/app/job/JobScheduler;
     :catchall_0
     move-exception v1
@@ -122,12 +110,10 @@
     .locals 4
 
     .prologue
-    .line 94
     const-class v1, Lcom/android/server/backup/KeyValueBackupJob;
 
     monitor-enter v1
 
-    .line 95
     :try_start_0
     sget-wide v2, Lcom/android/server/backup/KeyValueBackupJob;->sNextScheduled:J
 
@@ -135,7 +121,6 @@
 
     return-wide v2
 
-    .line 96
     :catchall_0
     move-exception v0
 
@@ -151,12 +136,10 @@
     .param p0, "ctx"    # Landroid/content/Context;
 
     .prologue
-    .line 57
     const-wide/16 v0, 0x0
 
     invoke-static {p0, v0, v1}, Lcom/android/server/backup/KeyValueBackupJob;->schedule(Landroid/content/Context;J)V
 
-    .line 58
     return-void
 .end method
 
@@ -166,25 +149,21 @@
     .param p1, "delay"    # J
 
     .prologue
-    .line 61
     const-class v3, Lcom/android/server/backup/KeyValueBackupJob;
 
     monitor-enter v3
 
-    .line 62
     :try_start_0
     sget-boolean v2, Lcom/android/server/backup/KeyValueBackupJob;->sScheduled:Z
 
     if-nez v2, :cond_1
 
-    .line 63
     const-wide/16 v4, 0x0
 
     cmp-long v2, p1, v4
 
     if-gtz v2, :cond_0
 
-    .line 64
     const-wide/32 v4, 0xdbba00
 
     new-instance v2, Ljava/util/Random;
@@ -201,7 +180,6 @@
 
     add-long p1, v4, v6
 
-    .line 67
     :cond_0
     const-string v2, "KeyValueBackupJob"
 
@@ -239,7 +217,6 @@
 
     invoke-static {v2, v4}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 70
     const-string v2, "jobscheduler"
 
     invoke-virtual {p0, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -248,7 +225,6 @@
 
     check-cast v1, Landroid/app/job/JobScheduler;
 
-    .line 71
     .local v1, "js":Landroid/app/job/JobScheduler;
     new-instance v2, Landroid/app/job/JobInfo$Builder;
 
@@ -280,7 +256,6 @@
 
     move-result-object v0
 
-    .line 76
     .local v0, "builder":Landroid/app/job/JobInfo$Builder;
     invoke-virtual {v0}, Landroid/app/job/JobInfo$Builder;->build()Landroid/app/job/JobInfo;
 
@@ -288,7 +263,6 @@
 
     invoke-virtual {v1, v2}, Landroid/app/job/JobScheduler;->schedule(Landroid/app/job/JobInfo;)I
 
-    .line 78
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
@@ -297,21 +271,17 @@
 
     sput-wide v4, Lcom/android/server/backup/KeyValueBackupJob;->sNextScheduled:J
 
-    .line 79
     const/4 v2, 0x1
 
     sput-boolean v2, Lcom/android/server/backup/KeyValueBackupJob;->sScheduled:Z
 
-    .line 81
     .end local v0    # "builder":Landroid/app/job/JobInfo$Builder;
     .end local v1    # "js":Landroid/app/job/JobScheduler;
     :cond_1
     monitor-exit v3
 
-    .line 82
     return-void
 
-    .line 81
     :catchall_0
     move-exception v2
 
@@ -331,44 +301,36 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 101
     const-class v2, Lcom/android/server/backup/KeyValueBackupJob;
 
     monitor-enter v2
 
-    .line 102
     const-wide/16 v4, 0x0
 
     :try_start_0
     sput-wide v4, Lcom/android/server/backup/KeyValueBackupJob;->sNextScheduled:J
 
-    .line 103
     const/4 v1, 0x0
 
     sput-boolean v1, Lcom/android/server/backup/KeyValueBackupJob;->sScheduled:Z
 
-    .line 104
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 107
     invoke-static {}, Lcom/android/server/backup/BackupManagerService;->getInstance()Lcom/android/server/backup/Trampoline;
 
     move-result-object v0
 
-    .line 109
     .local v0, "service":Lcom/android/server/backup/Trampoline;
     :try_start_1
     invoke-virtual {v0}, Lcom/android/server/backup/Trampoline;->backupNow()V
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 114
     :goto_0
     return v3
 
-    .line 104
     .end local v0    # "service":Lcom/android/server/backup/Trampoline;
     :catchall_0
     move-exception v1
@@ -380,7 +342,6 @@
 
     throw v1
 
-    .line 110
     .restart local v0    # "service":Lcom/android/server/backup/Trampoline;
     :catch_0
     move-exception v1
@@ -393,7 +354,6 @@
     .param p1, "params"    # Landroid/app/job/JobParameters;
 
     .prologue
-    .line 120
     const/4 v0, 0x0
 
     return v0

@@ -75,22 +75,18 @@
     .param p3, "recentTasks"    # Lcom/android/server/am/RecentTasks;
 
     .prologue
-    .line 122
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 99
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/android/server/am/TaskPersister;->mNextWriteTime:J
 
-    .line 119
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/TaskPersister;->mWriteQueue:Ljava/util/ArrayList;
 
-    .line 123
     new-instance v0, Ljava/io/File;
 
     const-string v1, "recent_tasks"
@@ -99,7 +95,6 @@
 
     sput-object v0, Lcom/android/server/am/TaskPersister;->sTasksDir:Ljava/io/File;
 
-    .line 124
     sget-object v0, Lcom/android/server/am/TaskPersister;->sTasksDir:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
@@ -108,7 +103,6 @@
 
     if-nez v0, :cond_0
 
-    .line 126
     sget-object v0, Lcom/android/server/am/TaskPersister;->sTasksDir:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->mkdir()Z
@@ -117,7 +111,6 @@
 
     if-nez v0, :cond_0
 
-    .line 127
     const-string v0, "TaskPersister"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -142,7 +135,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 131
     :cond_0
     new-instance v0, Ljava/io/File;
 
@@ -152,7 +144,6 @@
 
     sput-object v0, Lcom/android/server/am/TaskPersister;->sImagesDir:Ljava/io/File;
 
-    .line 132
     sget-object v0, Lcom/android/server/am/TaskPersister;->sImagesDir:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
@@ -161,7 +152,6 @@
 
     if-nez v0, :cond_1
 
-    .line 134
     sget-object v0, Lcom/android/server/am/TaskPersister;->sImagesDir:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->mkdir()Z
@@ -170,7 +160,6 @@
 
     if-nez v0, :cond_1
 
-    .line 135
     const-string v0, "TaskPersister"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -195,19 +184,15 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 139
     :cond_1
     iput-object p2, p0, Lcom/android/server/am/TaskPersister;->mStackSupervisor:Lcom/android/server/am/ActivityStackSupervisor;
 
-    .line 140
     iget-object v0, p2, Lcom/android/server/am/ActivityStackSupervisor;->mService:Lcom/android/server/am/ActivityManagerService;
 
     iput-object v0, p0, Lcom/android/server/am/TaskPersister;->mService:Lcom/android/server/am/ActivityManagerService;
 
-    .line 141
     iput-object p3, p0, Lcom/android/server/am/TaskPersister;->mRecentTasks:Lcom/android/server/am/RecentTasks;
 
-    .line 142
     new-instance v0, Lcom/android/server/am/TaskPersister$LazyTaskWriterThread;
 
     const-string v1, "LazyTaskWriterThread"
@@ -216,7 +201,6 @@
 
     iput-object v0, p0, Lcom/android/server/am/TaskPersister;->mLazyTaskWriterThread:Lcom/android/server/am/TaskPersister$LazyTaskWriterThread;
 
-    .line 143
     return-void
 .end method
 
@@ -225,7 +209,6 @@
     .param p0, "x0"    # Lcom/android/server/am/TaskPersister;
 
     .prologue
-    .line 61
     iget-object v0, p0, Lcom/android/server/am/TaskPersister;->mService:Lcom/android/server/am/ActivityManagerService;
 
     return-object v0
@@ -236,7 +219,6 @@
     .param p0, "x0"    # Lcom/android/server/am/TaskPersister;
 
     .prologue
-    .line 61
     iget-object v0, p0, Lcom/android/server/am/TaskPersister;->mRecentTasks:Lcom/android/server/am/RecentTasks;
 
     return-object v0
@@ -248,7 +230,6 @@
     .param p1, "x1"    # Landroid/util/ArraySet;
 
     .prologue
-    .line 61
     invoke-direct {p0, p1}, Lcom/android/server/am/TaskPersister;->removeObsoleteFiles(Landroid/util/ArraySet;)V
 
     return-void
@@ -259,7 +240,6 @@
     .param p0, "x0"    # Lcom/android/server/am/TaskPersister;
 
     .prologue
-    .line 61
     iget-wide v0, p0, Lcom/android/server/am/TaskPersister;->mNextWriteTime:J
 
     return-wide v0
@@ -271,7 +251,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 61
     iput-wide p1, p0, Lcom/android/server/am/TaskPersister;->mNextWriteTime:J
 
     return-wide p1
@@ -289,7 +268,6 @@
     .end annotation
 
     .prologue
-    .line 61
     invoke-direct {p0, p1}, Lcom/android/server/am/TaskPersister;->saveToXml(Lcom/android/server/am/TaskRecord;)Ljava/io/StringWriter;
 
     move-result-object v0
@@ -302,12 +280,10 @@
     .param p1, "file"    # Ljava/io/File;
 
     .prologue
-    .line 303
     invoke-static {}, Ljava/lang/System;->lineSeparator()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 305
     .local v2, "newline":Ljava/lang/String;
     :try_start_0
     new-instance v3, Ljava/io/BufferedReader;
@@ -318,7 +294,6 @@
 
     invoke-direct {v3, v5}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
-    .line 306
     .local v3, "reader":Ljava/io/BufferedReader;
     new-instance v4, Ljava/lang/StringBuffer;
 
@@ -332,7 +307,6 @@
 
     invoke-direct {v4, v5}, Ljava/lang/StringBuffer;-><init>(I)V
 
-    .line 308
     .local v4, "sb":Ljava/lang/StringBuffer;
     :goto_0
     invoke-virtual {v3}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
@@ -342,7 +316,6 @@
     .local v1, "line":Ljava/lang/String;
     if-eqz v1, :cond_0
 
-    .line 309
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -365,14 +338,12 @@
 
     goto :goto_0
 
-    .line 313
     .end local v1    # "line":Ljava/lang/String;
     .end local v3    # "reader":Ljava/io/BufferedReader;
     .end local v4    # "sb":Ljava/lang/StringBuffer;
     :catch_0
     move-exception v0
 
-    .line 314
     .local v0, "ioe":Ljava/io/IOException;
     const-string v5, "TaskPersister"
 
@@ -400,14 +371,12 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 315
     const/4 v5, 0x0
 
     .end local v0    # "ioe":Ljava/io/IOException;
     :goto_1
     return-object v5
 
-    .line 311
     .restart local v1    # "line":Ljava/lang/String;
     .restart local v3    # "reader":Ljava/io/BufferedReader;
     .restart local v4    # "sb":Ljava/lang/StringBuffer;
@@ -415,7 +384,6 @@
     :try_start_1
     invoke-virtual {v3}, Ljava/io/BufferedReader;->close()V
 
-    .line 312
     invoke-virtual {v4}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
@@ -438,7 +406,6 @@
     .end annotation
 
     .prologue
-    .line 458
     .local p1, "persistentTaskIds":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Ljava/lang/Integer;>;"
     sget-object v0, Lcom/android/server/am/TaskPersister;->sTasksDir:Ljava/io/File;
 
@@ -448,7 +415,6 @@
 
     invoke-static {p1, v0}, Lcom/android/server/am/TaskPersister;->removeObsoleteFiles(Landroid/util/ArraySet;[Ljava/io/File;)V
 
-    .line 459
     sget-object v0, Lcom/android/server/am/TaskPersister;->sImagesDir:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->listFiles()[Ljava/io/File;
@@ -457,7 +423,6 @@
 
     invoke-static {p1, v0}, Lcom/android/server/am/TaskPersister;->removeObsoleteFiles(Landroid/util/ArraySet;[Ljava/io/File;)V
 
-    .line 460
     return-void
 .end method
 
@@ -477,22 +442,18 @@
     .end annotation
 
     .prologue
-    .line 431
     .local p0, "persistentTaskIds":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Ljava/lang/Integer;>;"
     if-nez p1, :cond_1
 
-    .line 432
     const-string v6, "TaskPersister"
 
     const-string v7, "File error accessing recents directory (too many files open?)."
 
     invoke-static {v6, v7}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 455
     :cond_0
     return-void
 
-    .line 435
     :cond_1
     const/4 v2, 0x0
 
@@ -502,16 +463,13 @@
 
     if-ge v2, v6, :cond_0
 
-    .line 436
     aget-object v1, p1, v2
 
-    .line 437
     .local v1, "file":Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 438
     .local v3, "filename":Ljava/lang/String;
     const/16 v6, 0x5f
 
@@ -519,11 +477,9 @@
 
     move-result v5
 
-    .line 439
     .local v5, "taskIdEnd":I
     if-lez v5, :cond_2
 
-    .line 442
     const/4 v6, 0x0
 
     :try_start_0
@@ -541,7 +497,6 @@
 
     move-result v4
 
-    .line 449
     .local v4, "taskId":I
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -553,10 +508,8 @@
 
     if-nez v6, :cond_2
 
-    .line 451
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
 
-    .line 435
     .end local v4    # "taskId":I
     :cond_2
     :goto_1
@@ -564,11 +517,9 @@
 
     goto :goto_0
 
-    .line 444
     :catch_0
     move-exception v0
 
-    .line 445
     .local v0, "e":Ljava/lang/Exception;
     const-string v6, "TaskPersister"
 
@@ -596,7 +547,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 446
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
 
     goto :goto_1
@@ -607,14 +557,12 @@
     .param p1, "task"    # Lcom/android/server/am/TaskRecord;
 
     .prologue
-    .line 152
     iget v3, p1, Lcom/android/server/am/TaskRecord;->taskId:I
 
     invoke-static {v3}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 153
     .local v2, "taskString":Ljava/lang/String;
     iget-object v3, p0, Lcom/android/server/am/TaskPersister;->mWriteQueue:Ljava/util/ArrayList;
 
@@ -628,7 +576,6 @@
     :goto_0
     if-ltz v1, :cond_1
 
-    .line 154
     iget-object v3, p0, Lcom/android/server/am/TaskPersister;->mWriteQueue:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -637,7 +584,6 @@
 
     check-cast v0, Lcom/android/server/am/TaskPersister$WriteQueueItem;
 
-    .line 155
     .local v0, "item":Lcom/android/server/am/TaskPersister$WriteQueueItem;
     instance-of v3, v0, Lcom/android/server/am/TaskPersister$ImageWriteQueueItem;
 
@@ -654,18 +600,15 @@
 
     if-eqz v3, :cond_0
 
-    .line 159
     iget-object v3, p0, Lcom/android/server/am/TaskPersister;->mWriteQueue:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 153
     :cond_0
     add-int/lit8 v1, v1, -0x1
 
     goto :goto_0
 
-    .line 162
     :cond_1
     return-void
 .end method
@@ -675,7 +618,6 @@
     .param p0, "filename"    # Ljava/lang/String;
 
     .prologue
-    .line 464
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -720,22 +662,18 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 282
     new-instance v1, Lcom/android/internal/util/FastXmlSerializer;
 
     invoke-direct {v1}, Lcom/android/internal/util/FastXmlSerializer;-><init>()V
 
-    .line 283
     .local v1, "xmlSerializer":Lorg/xmlpull/v1/XmlSerializer;
     new-instance v0, Ljava/io/StringWriter;
 
     invoke-direct {v0}, Ljava/io/StringWriter;-><init>()V
 
-    .line 284
     .local v0, "stringWriter":Ljava/io/StringWriter;
     invoke-interface {v1, v0}, Lorg/xmlpull/v1/XmlSerializer;->setOutput(Ljava/io/Writer;)V
 
-    .line 290
     const/4 v2, 0x1
 
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -744,26 +682,20 @@
 
     invoke-interface {v1, v3, v2}, Lorg/xmlpull/v1/XmlSerializer;->startDocument(Ljava/lang/String;Ljava/lang/Boolean;)V
 
-    .line 292
     const-string v2, "task"
 
     invoke-interface {v1, v3, v2}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 293
     invoke-virtual {p1, v1}, Lcom/android/server/am/TaskRecord;->saveToXml(Lorg/xmlpull/v1/XmlSerializer;)V
 
-    .line 294
     const-string v2, "task"
 
     invoke-interface {v1, v3, v2}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 296
     invoke-interface {v1}, Lorg/xmlpull/v1/XmlSerializer;->endDocument()V
 
-    .line 297
     invoke-interface {v1}, Lorg/xmlpull/v1/XmlSerializer;->flush()V
 
-    .line 299
     return-object v0
 .end method
 
@@ -785,17 +717,14 @@
     .local p2, "tasks":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/am/TaskRecord;>;"
     const/4 v2, 0x0
 
-    .line 320
     if-gez p1, :cond_1
 
     move-object v0, v2
 
-    .line 330
     :cond_0
     :goto_0
     return-object v0
 
-    .line 323
     :cond_1
     invoke-virtual {p2}, Ljava/util/ArrayList;->size()I
 
@@ -807,25 +736,21 @@
     :goto_1
     if-ltz v1, :cond_2
 
-    .line 324
     invoke-virtual {p2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/android/server/am/TaskRecord;
 
-    .line 325
     .local v0, "task":Lcom/android/server/am/TaskRecord;
     iget v3, v0, Lcom/android/server/am/TaskRecord;->taskId:I
 
     if-eq v3, p1, :cond_0
 
-    .line 323
     add-int/lit8 v1, v1, -0x1
 
     goto :goto_1
 
-    .line 329
     .end local v0    # "task":Lcom/android/server/am/TaskRecord;
     :cond_2
     const-string v3, "TaskPersister"
@@ -852,7 +777,6 @@
 
     move-object v0, v2
 
-    .line 330
     goto :goto_0
 .end method
 
@@ -860,14 +784,11 @@
     .locals 6
 
     .prologue
-    .line 165
     const/4 v0, 0x0
 
-    .line 166
     .local v0, "stall":Z
     monitor-enter p0
 
-    .line 167
     :try_start_0
     iget-wide v2, p0, Lcom/android/server/am/TaskPersister;->mNextWriteTime:J
 
@@ -877,26 +798,20 @@
 
     if-nez v1, :cond_0
 
-    .line 168
     const/4 v0, 0x1
 
-    .line 170
     :cond_0
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 171
     if-eqz v0, :cond_1
 
-    .line 172
     invoke-static {}, Ljava/lang/Thread;->yield()V
 
-    .line 174
     :cond_1
     return-void
 
-    .line 170
     :catchall_0
     move-exception v1
 
@@ -916,21 +831,17 @@
     .prologue
     const-wide/16 v2, -0x1
 
-    .line 213
     monitor-enter p0
 
-    .line 214
     const-wide/16 v0, -0x1
 
     :try_start_0
     iput-wide v0, p0, Lcom/android/server/am/TaskPersister;->mNextWriteTime:J
 
-    .line 215
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 218
     :cond_0
     :try_start_1
     invoke-virtual {p0}, Ljava/lang/Object;->wait()V
@@ -938,7 +849,6 @@
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 221
     :goto_0
     :try_start_2
     iget-wide v0, p0, Lcom/android/server/am/TaskPersister;->mNextWriteTime:J
@@ -947,13 +857,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 222
     monitor-exit p0
 
-    .line 223
     return-void
 
-    .line 222
     :catchall_0
     move-exception v0
 
@@ -963,7 +870,6 @@
 
     throw v0
 
-    .line 219
     :catch_0
     move-exception v0
 
@@ -975,10 +881,8 @@
     .param p1, "filename"    # Ljava/lang/String;
 
     .prologue
-    .line 266
     monitor-enter p0
 
-    .line 267
     :try_start_0
     iget-object v4, p0, Lcom/android/server/am/TaskPersister;->mWriteQueue:Ljava/util/ArrayList;
 
@@ -992,7 +896,6 @@
     :goto_0
     if-ltz v3, :cond_1
 
-    .line 268
     iget-object v4, p0, Lcom/android/server/am/TaskPersister;->mWriteQueue:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1001,20 +904,17 @@
 
     check-cast v2, Lcom/android/server/am/TaskPersister$WriteQueueItem;
 
-    .line 269
     .local v2, "item":Lcom/android/server/am/TaskPersister$WriteQueueItem;
     instance-of v4, v2, Lcom/android/server/am/TaskPersister$ImageWriteQueueItem;
 
     if-eqz v4, :cond_0
 
-    .line 270
     move-object v0, v2
 
     check-cast v0, Lcom/android/server/am/TaskPersister$ImageWriteQueueItem;
 
     move-object v1, v0
 
-    .line 271
     .local v1, "imageWriteQueueItem":Lcom/android/server/am/TaskPersister$ImageWriteQueueItem;
     iget-object v4, v1, Lcom/android/server/am/TaskPersister$ImageWriteQueueItem;->mFilename:Ljava/lang/String;
 
@@ -1024,25 +924,21 @@
 
     if-eqz v4, :cond_0
 
-    .line 272
     iget-object v4, v1, Lcom/android/server/am/TaskPersister$ImageWriteQueueItem;->mImage:Landroid/graphics/Bitmap;
 
     monitor-exit p0
 
-    .line 276
     .end local v1    # "imageWriteQueueItem":Lcom/android/server/am/TaskPersister$ImageWriteQueueItem;
     .end local v2    # "item":Lcom/android/server/am/TaskPersister$WriteQueueItem;
     :goto_1
     return-object v4
 
-    .line 267
     .restart local v2    # "item":Lcom/android/server/am/TaskPersister$WriteQueueItem;
     :cond_0
     add-int/lit8 v3, v3, -0x1
 
     goto :goto_0
 
-    .line 276
     .end local v2    # "item":Lcom/android/server/am/TaskPersister$WriteQueueItem;
     :cond_1
     const/4 v4, 0x0
@@ -1051,7 +947,6 @@
 
     goto :goto_1
 
-    .line 277
     .end local v3    # "queueNdx":I
     :catchall_0
     move-exception v4
@@ -1068,16 +963,13 @@
     .param p1, "filename"    # Ljava/lang/String;
 
     .prologue
-    .line 258
     invoke-virtual {p0, p1}, Lcom/android/server/am/TaskPersister;->getImageFromWriteQueue(Ljava/lang/String;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 259
     .local v0, "icon":Landroid/graphics/Bitmap;
     if-eqz v0, :cond_0
 
-    .line 262
     .end local v0    # "icon":Landroid/graphics/Bitmap;
     :goto_0
     return-object v0
@@ -1104,18 +996,15 @@
     .end annotation
 
     .prologue
-    .line 334
     new-instance v15, Ljava/util/ArrayList;
 
     invoke-direct {v15}, Ljava/util/ArrayList;-><init>()V
 
-    .line 335
     .local v15, "tasks":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/am/TaskRecord;>;"
     new-instance v10, Landroid/util/ArraySet;
 
     invoke-direct {v10}, Landroid/util/ArraySet;-><init>()V
 
-    .line 337
     .local v10, "recoveredTaskIds":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Ljava/lang/Integer;>;"
     sget-object v17, Lcom/android/server/am/TaskPersister;->sTasksDir:Ljava/io/File;
 
@@ -1123,11 +1012,9 @@
 
     move-result-object v9
 
-    .line 338
     .local v9, "recentFiles":[Ljava/io/File;
     if-nez v9, :cond_0
 
-    .line 339
     const-string v17, "TaskPersister"
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -1152,12 +1039,10 @@
 
     invoke-static/range {v17 .. v18}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 425
     .end local v15    # "tasks":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/am/TaskRecord;>;"
     :goto_0
     return-object v15
 
-    .line 343
     .restart local v15    # "tasks":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/am/TaskRecord;>;"
     :cond_0
     const/4 v14, 0x0
@@ -1172,18 +1057,14 @@
 
     if-ge v14, v0, :cond_7
 
-    .line 344
     aget-object v12, v9, v14
 
-    .line 346
     .local v12, "taskFile":Ljava/io/File;
     const/4 v7, 0x0
 
-    .line 347
     .local v7, "reader":Ljava/io/BufferedReader;
     const/4 v2, 0x0
 
-    .line 349
     .local v2, "deleteFile":Z
     :try_start_0
     new-instance v8, Ljava/io/BufferedReader;
@@ -1201,7 +1082,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 350
     .end local v7    # "reader":Ljava/io/BufferedReader;
     .local v8, "reader":Ljava/io/BufferedReader;
     :try_start_1
@@ -1209,11 +1089,9 @@
 
     move-result-object v5
 
-    .line 351
     .local v5, "in":Lorg/xmlpull/v1/XmlPullParser;
     invoke-interface {v5, v8}, Lorg/xmlpull/v1/XmlPullParser;->setInput(Ljava/io/Reader;)V
 
-    .line 354
     :goto_2
     invoke-interface {v5}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
@@ -1232,12 +1110,10 @@
 
     if-eq v4, v0, :cond_6
 
-    .line 356
     invoke-interface {v5}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 357
     .local v6, "name":Ljava/lang/String;
     const/16 v17, 0x2
 
@@ -1245,7 +1121,6 @@
 
     if-ne v4, v0, :cond_1
 
-    .line 359
     const-string v17, "task"
 
     move-object/from16 v0, v17
@@ -1256,7 +1131,6 @@
 
     if-eqz v17, :cond_5
 
-    .line 360
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/TaskPersister;->mStackSupervisor:Lcom/android/server/am/ActivityStackSupervisor;
@@ -1269,24 +1143,19 @@
 
     move-result-object v11
 
-    .line 364
     .local v11, "task":Lcom/android/server/am/TaskRecord;
     if-eqz v11, :cond_3
 
-    .line 365
     const/16 v17, 0x1
 
     move/from16 v0, v17
 
     iput-boolean v0, v11, Lcom/android/server/am/TaskRecord;->isPersistable:Z
 
-    .line 370
     invoke-virtual {v15, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 371
     iget v13, v11, Lcom/android/server/am/TaskRecord;->taskId:I
 
-    .line 372
     .local v13, "taskId":I
     invoke-static {v13}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1296,7 +1165,6 @@
 
     invoke-virtual {v10, v0}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 373
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/TaskPersister;->mStackSupervisor:Lcom/android/server/am/ActivityStackSupervisor;
@@ -1307,7 +1175,6 @@
 
     invoke-virtual {v0, v13}, Lcom/android/server/am/ActivityStackSupervisor;->setNextTaskId(I)V
 
-    .line 383
     .end local v11    # "task":Lcom/android/server/am/TaskRecord;
     .end local v13    # "taskId":I
     :cond_1
@@ -1319,7 +1186,6 @@
 
     goto :goto_2
 
-    .line 385
     .end local v4    # "event":I
     .end local v5    # "in":Lorg/xmlpull/v1/XmlPullParser;
     .end local v6    # "name":Ljava/lang/String;
@@ -1328,7 +1194,6 @@
 
     move-object v7, v8
 
-    .line 386
     .end local v8    # "reader":Ljava/io/BufferedReader;
     .local v3, "e":Ljava/lang/Exception;
     .restart local v7    # "reader":Ljava/io/BufferedReader;
@@ -1368,7 +1233,6 @@
 
     invoke-static {v0, v1, v3}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 387
     const-string v17, "TaskPersister"
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -1399,19 +1263,14 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 388
     const/4 v2, 0x1
 
-    .line 390
     invoke-static {v7}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 391
     if-eqz v2, :cond_2
 
-    .line 393
     invoke-virtual {v12}, Ljava/io/File;->delete()Z
 
-    .line 343
     .end local v3    # "e":Ljava/lang/Exception;
     :cond_2
     :goto_5
@@ -1419,7 +1278,6 @@
 
     goto/16 :goto_1
 
-    .line 375
     .end local v7    # "reader":Ljava/io/BufferedReader;
     .restart local v4    # "event":I
     .restart local v5    # "in":Lorg/xmlpull/v1/XmlPullParser;
@@ -1473,7 +1331,6 @@
 
     goto :goto_3
 
-    .line 390
     .end local v4    # "event":I
     .end local v5    # "in":Lorg/xmlpull/v1/XmlPullParser;
     .end local v6    # "name":Ljava/lang/String;
@@ -1488,16 +1345,13 @@
     :goto_6
     invoke-static {v7}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 391
     if-eqz v2, :cond_4
 
-    .line 393
     invoke-virtual {v12}, Ljava/io/File;->delete()Z
 
     :cond_4
     throw v17
 
-    .line 379
     .end local v7    # "reader":Ljava/io/BufferedReader;
     .restart local v4    # "event":I
     .restart local v5    # "in":Lorg/xmlpull/v1/XmlPullParser;
@@ -1546,15 +1400,12 @@
 
     goto/16 :goto_3
 
-    .line 390
     .end local v6    # "name":Ljava/lang/String;
     :cond_6
     invoke-static {v8}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 391
     if-eqz v2, :cond_9
 
-    .line 393
     invoke-virtual {v12}, Ljava/io/File;->delete()Z
 
     move-object v7, v8
@@ -1563,7 +1414,6 @@
     .restart local v7    # "reader":Ljava/io/BufferedReader;
     goto :goto_5
 
-    .line 399
     .end local v2    # "deleteFile":Z
     .end local v4    # "event":I
     .end local v5    # "in":Lorg/xmlpull/v1/XmlPullParser;
@@ -1574,7 +1424,6 @@
 
     invoke-direct {v0, v10}, Lcom/android/server/am/TaskPersister;->removeObsoleteFiles(Landroid/util/ArraySet;)V
 
-    .line 403
     invoke-virtual {v15}, Ljava/util/ArrayList;->size()I
 
     move-result v17
@@ -1584,14 +1433,12 @@
     :goto_7
     if-ltz v14, :cond_8
 
-    .line 404
     invoke-virtual {v15, v14}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v11
 
     check-cast v11, Lcom/android/server/am/TaskRecord;
 
-    .line 405
     .restart local v11    # "task":Lcom/android/server/am/TaskRecord;
     iget v0, v11, Lcom/android/server/am/TaskRecord;->mPrevAffiliateTaskId:I
 
@@ -1609,7 +1456,6 @@
 
     invoke-virtual {v11, v0}, Lcom/android/server/am/TaskRecord;->setPrevAffiliate(Lcom/android/server/am/TaskRecord;)V
 
-    .line 406
     iget v0, v11, Lcom/android/server/am/TaskRecord;->mNextAffiliateTaskId:I
 
     move/from16 v17, v0
@@ -1626,12 +1472,10 @@
 
     invoke-virtual {v11, v0}, Lcom/android/server/am/TaskRecord;->setNextAffiliate(Lcom/android/server/am/TaskRecord;)V
 
-    .line 403
     add-int/lit8 v14, v14, -0x1
 
     goto :goto_7
 
-    .line 409
     .end local v11    # "task":Lcom/android/server/am/TaskRecord;
     :cond_8
     invoke-virtual {v15}, Ljava/util/ArrayList;->size()I
@@ -1644,11 +1488,9 @@
 
     move-object/from16 v16, v0
 
-    .line 410
     .local v16, "tasksArray":[Lcom/android/server/am/TaskRecord;
     invoke-virtual/range {v15 .. v16}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
-    .line 411
     new-instance v17, Lcom/android/server/am/TaskPersister$1;
 
     move-object/from16 v0, v17
@@ -1659,7 +1501,6 @@
 
     invoke-static/range {v16 .. v17}, Ljava/util/Arrays;->sort([Ljava/lang/Object;Ljava/util/Comparator;)V
 
-    .line 425
     new-instance v15, Ljava/util/ArrayList;
 
     .end local v15    # "tasks":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/am/TaskRecord;>;"
@@ -1673,7 +1514,6 @@
 
     goto/16 :goto_0
 
-    .line 390
     .end local v16    # "tasksArray":[Lcom/android/server/am/TaskRecord;
     .restart local v2    # "deleteFile":Z
     .restart local v7    # "reader":Ljava/io/BufferedReader;
@@ -1684,7 +1524,6 @@
 
     goto/16 :goto_6
 
-    .line 385
     :catch_1
     move-exception v3
 
@@ -1708,10 +1547,8 @@
     .param p2, "filename"    # Ljava/lang/String;
 
     .prologue
-    .line 226
     monitor-enter p0
 
-    .line 228
     :try_start_0
     iget-object v5, p0, Lcom/android/server/am/TaskPersister;->mWriteQueue:Ljava/util/ArrayList;
 
@@ -1725,7 +1562,6 @@
     :goto_0
     if-ltz v4, :cond_0
 
-    .line 229
     iget-object v5, p0, Lcom/android/server/am/TaskPersister;->mWriteQueue:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1734,20 +1570,17 @@
 
     check-cast v3, Lcom/android/server/am/TaskPersister$WriteQueueItem;
 
-    .line 230
     .local v3, "item":Lcom/android/server/am/TaskPersister$WriteQueueItem;
     instance-of v5, v3, Lcom/android/server/am/TaskPersister$ImageWriteQueueItem;
 
     if-eqz v5, :cond_3
 
-    .line 231
     move-object v0, v3
 
     check-cast v0, Lcom/android/server/am/TaskPersister$ImageWriteQueueItem;
 
     move-object v2, v0
 
-    .line 232
     .local v2, "imageWriteQueueItem":Lcom/android/server/am/TaskPersister$ImageWriteQueueItem;
     iget-object v5, v2, Lcom/android/server/am/TaskPersister$ImageWriteQueueItem;->mFilename:Ljava/lang/String;
 
@@ -1757,16 +1590,13 @@
 
     if-eqz v5, :cond_3
 
-    .line 234
     iput-object p1, v2, Lcom/android/server/am/TaskPersister$ImageWriteQueueItem;->mImage:Landroid/graphics/Bitmap;
 
-    .line 239
     .end local v2    # "imageWriteQueueItem":Lcom/android/server/am/TaskPersister$ImageWriteQueueItem;
     .end local v3    # "item":Lcom/android/server/am/TaskPersister$WriteQueueItem;
     :cond_0
     if-gez v4, :cond_1
 
-    .line 240
     iget-object v5, p0, Lcom/android/server/am/TaskPersister;->mWriteQueue:Ljava/util/ArrayList;
 
     new-instance v6, Lcom/android/server/am/TaskPersister$ImageWriteQueueItem;
@@ -1775,7 +1605,6 @@
 
     invoke-virtual {v5, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 242
     :cond_1
     iget-object v5, p0, Lcom/android/server/am/TaskPersister;->mWriteQueue:Ljava/util/ArrayList;
 
@@ -1787,35 +1616,28 @@
 
     if-le v5, v6, :cond_4
 
-    .line 243
     const-wide/16 v6, -0x1
 
     iput-wide v6, p0, Lcom/android/server/am/TaskPersister;->mNextWriteTime:J
 
-    .line 250
     :cond_2
     :goto_1
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 251
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 253
     invoke-direct {p0}, Lcom/android/server/am/TaskPersister;->yieldIfQueueTooDeep()V
 
-    .line 254
     return-void
 
-    .line 228
     .restart local v3    # "item":Lcom/android/server/am/TaskPersister$WriteQueueItem;
     :cond_3
     add-int/lit8 v4, v4, -0x1
 
     goto :goto_0
 
-    .line 244
     .end local v3    # "item":Lcom/android/server/am/TaskPersister$WriteQueueItem;
     :cond_4
     :try_start_1
@@ -1827,7 +1649,6 @@
 
     if-nez v5, :cond_2
 
-    .line 245
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v6
@@ -1840,7 +1661,6 @@
 
     goto :goto_1
 
-    .line 251
     .end local v4    # "queueNdx":I
     :catchall_0
     move-exception v5
@@ -1856,7 +1676,6 @@
     .locals 1
 
     .prologue
-    .line 146
     iget-object v0, p0, Lcom/android/server/am/TaskPersister;->mLazyTaskWriterThread:Lcom/android/server/am/TaskPersister$LazyTaskWriterThread;
 
     invoke-virtual {v0}, Lcom/android/server/am/TaskPersister$LazyTaskWriterThread;->isAlive()Z
@@ -1865,12 +1684,10 @@
 
     if-nez v0, :cond_0
 
-    .line 147
     iget-object v0, p0, Lcom/android/server/am/TaskPersister;->mLazyTaskWriterThread:Lcom/android/server/am/TaskPersister$LazyTaskWriterThread;
 
     invoke-virtual {v0}, Lcom/android/server/am/TaskPersister$LazyTaskWriterThread;->start()V
 
-    .line 149
     :cond_0
     return-void
 .end method
@@ -1881,13 +1698,10 @@
     .param p2, "flush"    # Z
 
     .prologue
-    .line 177
     monitor-enter p0
 
-    .line 178
     if-eqz p1, :cond_5
 
-    .line 180
     :try_start_0
     iget-object v2, p0, Lcom/android/server/am/TaskPersister;->mWriteQueue:Ljava/util/ArrayList;
 
@@ -1901,7 +1715,6 @@
     :goto_0
     if-ltz v1, :cond_0
 
-    .line 181
     iget-object v2, p0, Lcom/android/server/am/TaskPersister;->mWriteQueue:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1910,7 +1723,6 @@
 
     check-cast v0, Lcom/android/server/am/TaskPersister$WriteQueueItem;
 
-    .line 182
     .local v0, "item":Lcom/android/server/am/TaskPersister$WriteQueueItem;
     instance-of v2, v0, Lcom/android/server/am/TaskPersister$TaskWriteQueueItem;
 
@@ -1923,15 +1735,12 @@
 
     if-ne v2, p1, :cond_4
 
-    .line 184
     iget-boolean v2, p1, Lcom/android/server/am/TaskRecord;->inRecents:Z
 
     if-nez v2, :cond_0
 
-    .line 186
     invoke-direct {p0, p1}, Lcom/android/server/am/TaskPersister;->removeThumbnails(Lcom/android/server/am/TaskRecord;)V
 
-    .line 191
     :cond_0
     if-gez v1, :cond_1
 
@@ -1939,7 +1748,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 192
     iget-object v2, p0, Lcom/android/server/am/TaskPersister;->mWriteQueue:Ljava/util/ArrayList;
 
     new-instance v3, Lcom/android/server/am/TaskPersister$TaskWriteQueueItem;
@@ -1948,7 +1756,6 @@
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 198
     .end local v1    # "queueNdx":I
     :cond_1
     :goto_1
@@ -1964,36 +1771,29 @@
 
     if-le v2, v3, :cond_6
 
-    .line 199
     :cond_2
     const-wide/16 v2, -0x1
 
     iput-wide v2, p0, Lcom/android/server/am/TaskPersister;->mNextWriteTime:J
 
-    .line 206
     :cond_3
     :goto_2
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 207
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 209
     invoke-direct {p0}, Lcom/android/server/am/TaskPersister;->yieldIfQueueTooDeep()V
 
-    .line 210
     return-void
 
-    .line 180
     .restart local v1    # "queueNdx":I
     :cond_4
     add-int/lit8 v1, v1, -0x1
 
     goto :goto_0
 
-    .line 196
     .end local v1    # "queueNdx":I
     :cond_5
     :try_start_1
@@ -2009,7 +1809,6 @@
 
     goto :goto_1
 
-    .line 207
     :catchall_0
     move-exception v2
 
@@ -2019,7 +1818,6 @@
 
     throw v2
 
-    .line 200
     :cond_6
     :try_start_2
     iget-wide v2, p0, Lcom/android/server/am/TaskPersister;->mNextWriteTime:J
@@ -2030,7 +1828,6 @@
 
     if-nez v2, :cond_3
 
-    .line 201
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2

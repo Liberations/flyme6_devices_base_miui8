@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 436
     iput-object p1, p0, Lcom/android/server/policy/MiuiPhoneWindowManager$2;->this$0:Lcom/android/server/policy/MiuiPhoneWindowManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,14 +41,12 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 438
     const/4 v1, -0x1
 
     if-ne p2, v1, :cond_0
 
     const/4 v0, 0x1
 
-    .line 441
     .local v0, "value":I
     :goto_0
     iget-object v1, p0, Lcom/android/server/policy/MiuiPhoneWindowManager$2;->this$0:Lcom/android/server/policy/MiuiPhoneWindowManager;
@@ -66,7 +63,6 @@
 
     invoke-static {v1, v2, v0, v3}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 443
     iget-object v1, p0, Lcom/android/server/policy/MiuiPhoneWindowManager$2;->this$0:Lcom/android/server/policy/MiuiPhoneWindowManager;
 
     # getter for: Lcom/android/server/policy/MiuiPhoneWindowManager;->mFpNavCenterActionChooseDialog:Lmiui/app/AlertDialog;
@@ -76,7 +72,6 @@
 
     invoke-virtual {v1}, Lmiui/app/AlertDialog;->dismiss()V
 
-    .line 444
     iget-object v1, p0, Lcom/android/server/policy/MiuiPhoneWindowManager$2;->this$0:Lcom/android/server/policy/MiuiPhoneWindowManager;
 
     const/4 v2, 0x0
@@ -84,10 +79,8 @@
     # setter for: Lcom/android/server/policy/MiuiPhoneWindowManager;->mFpNavCenterActionChooseDialog:Lmiui/app/AlertDialog;
     invoke-static {v1, v2}, Lcom/android/server/policy/MiuiPhoneWindowManager;->access$102(Lcom/android/server/policy/MiuiPhoneWindowManager;Lmiui/app/AlertDialog;)Lmiui/app/AlertDialog;
 
-    .line 445
     return-void
 
-    .line 438
     .end local v0    # "value":I
     :cond_0
     const/4 v0, 0x0

@@ -31,16 +31,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 64
     invoke-direct {p0, p1}, Lcom/android/server/hdmi/HdmiCecFeatureAction;-><init>(Lcom/android/server/hdmi/HdmiCecLocalDevice;)V
 
-    .line 50
     iput v0, p0, Lcom/android/server/hdmi/HotplugDetectionAction;->mTimeoutCount:I
 
-    .line 56
     iput v0, p0, Lcom/android/server/hdmi/HotplugDetectionAction;->mAvrStatusCount:I
 
-    .line 65
     return-void
 .end method
 
@@ -51,7 +47,6 @@
     .param p2, "x2"    # Z
 
     .prologue
-    .line 36
     invoke-direct {p0, p1, p2}, Lcom/android/server/hdmi/HotplugDetectionAction;->checkHotplug(Ljava/util/List;Z)V
 
     return-void
@@ -62,7 +57,6 @@
     .param p1, "addedAddress"    # I
 
     .prologue
-    .line 218
     invoke-virtual {p0}, Lcom/android/server/hdmi/HotplugDetectionAction;->getSourceAddress()I
 
     move-result v0
@@ -73,7 +67,6 @@
 
     invoke-virtual {p0, v0}, Lcom/android/server/hdmi/HotplugDetectionAction;->sendCommand(Lcom/android/server/hdmi/HdmiCecMessage;)V
 
-    .line 220
     return-void
 .end method
 
@@ -91,7 +84,6 @@
     .end annotation
 
     .prologue
-    .line 201
     .local p0, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     new-instance v1, Ljava/util/BitSet;
 
@@ -99,7 +91,6 @@
 
     invoke-direct {v1, v3}, Ljava/util/BitSet;-><init>(I)V
 
-    .line 202
     .local v1, "set":Ljava/util/BitSet;
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -119,7 +110,6 @@
 
     check-cast v2, Ljava/lang/Integer;
 
-    .line 203
     .local v2, "value":Ljava/lang/Integer;
     invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
 
@@ -129,7 +119,6 @@
 
     goto :goto_0
 
-    .line 205
     .end local v2    # "value":Ljava/lang/Integer;
     :cond_0
     return-object v1
@@ -156,7 +145,6 @@
 
     const/4 v9, -0x1
 
-    .line 151
     invoke-virtual {p0}, Lcom/android/server/hdmi/HotplugDetectionAction;->tv()Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;
 
     move-result-object v6
@@ -169,23 +157,19 @@
 
     move-result-object v2
 
-    .line 152
     .local v2, "currentInfos":Ljava/util/BitSet;
     invoke-static {p1}, Lcom/android/server/hdmi/HotplugDetectionAction;->addressListToBitSet(Ljava/util/List;)Ljava/util/BitSet;
 
     move-result-object v4
 
-    .line 155
     .local v4, "polledResult":Ljava/util/BitSet;
     invoke-static {v2, v4}, Lcom/android/server/hdmi/HotplugDetectionAction;->complement(Ljava/util/BitSet;Ljava/util/BitSet;)Ljava/util/BitSet;
 
     move-result-object v5
 
-    .line 156
     .local v5, "removed":Ljava/util/BitSet;
     const/4 v3, -0x1
 
-    .line 157
     .local v3, "index":I
     :cond_0
     :goto_0
@@ -197,10 +181,8 @@
 
     if-eq v3, v9, :cond_2
 
-    .line 158
     if-ne v3, v11, :cond_1
 
-    .line 159
     invoke-virtual {p0}, Lcom/android/server/hdmi/HotplugDetectionAction;->tv()Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;
 
     move-result-object v6
@@ -209,7 +191,6 @@
 
     move-result-object v1
 
-    .line 160
     .local v1, "avr":Landroid/hardware/hdmi/HdmiDeviceInfo;
     if-eqz v1, :cond_1
 
@@ -227,14 +208,12 @@
 
     if-eqz v6, :cond_1
 
-    .line 161
     iget v6, p0, Lcom/android/server/hdmi/HotplugDetectionAction;->mAvrStatusCount:I
 
     add-int/lit8 v6, v6, 0x1
 
     iput v6, p0, Lcom/android/server/hdmi/HotplugDetectionAction;->mAvrStatusCount:I
 
-    .line 162
     const-string v6, "HotPlugDetectionAction"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -259,14 +238,12 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 163
     iget v6, p0, Lcom/android/server/hdmi/HotplugDetectionAction;->mAvrStatusCount:I
 
     const/4 v7, 0x3
 
     if-lt v6, v7, :cond_0
 
-    .line 168
     .end local v1    # "avr":Landroid/hardware/hdmi/HdmiDeviceInfo;
     :cond_1
     const-string v6, "HotPlugDetectionAction"
@@ -291,12 +268,10 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 169
     invoke-direct {p0, v3}, Lcom/android/server/hdmi/HotplugDetectionAction;->removeDevice(I)V
 
     goto :goto_0
 
-    .line 173
     :cond_2
     invoke-virtual {v5, v11}, Ljava/util/BitSet;->get(I)Z
 
@@ -304,20 +279,16 @@
 
     if-nez v6, :cond_3
 
-    .line 174
     iput v10, p0, Lcom/android/server/hdmi/HotplugDetectionAction;->mAvrStatusCount:I
 
-    .line 178
     :cond_3
     invoke-static {v4, v2}, Lcom/android/server/hdmi/HotplugDetectionAction;->complement(Ljava/util/BitSet;Ljava/util/BitSet;)Ljava/util/BitSet;
 
     move-result-object v0
 
-    .line 179
     .local v0, "added":Ljava/util/BitSet;
     const/4 v3, -0x1
 
-    .line 180
     :goto_1
     add-int/lit8 v6, v3, 0x1
 
@@ -327,7 +298,6 @@
 
     if-eq v3, v9, :cond_4
 
-    .line 181
     const-string v6, "HotPlugDetectionAction"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -350,12 +320,10 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 182
     invoke-direct {p0, v3}, Lcom/android/server/hdmi/HotplugDetectionAction;->addDevice(I)V
 
     goto :goto_1
 
-    .line 184
     :cond_4
     return-void
 .end method
@@ -366,18 +334,15 @@
     .param p1, "second"    # Ljava/util/BitSet;
 
     .prologue
-    .line 211
     invoke-virtual {p0}, Ljava/util/BitSet;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/util/BitSet;
 
-    .line 212
     .local v0, "clone":Ljava/util/BitSet;
     invoke-virtual {v0, p1}, Ljava/util/BitSet;->andNot(Ljava/util/BitSet;)V
 
-    .line 213
     return-object v0
 .end method
 
@@ -396,7 +361,6 @@
     .end annotation
 
     .prologue
-    .line 187
     .local p0, "infoList":Ljava/util/List;, "Ljava/util/List<Landroid/hardware/hdmi/HdmiDeviceInfo;>;"
     new-instance v2, Ljava/util/BitSet;
 
@@ -404,7 +368,6 @@
 
     invoke-direct {v2, v3}, Ljava/util/BitSet;-><init>(I)V
 
-    .line 188
     .local v2, "set":Ljava/util/BitSet;
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -425,11 +388,9 @@
 
     check-cast v1, Landroid/hardware/hdmi/HdmiDeviceInfo;
 
-    .line 189
     .local v1, "info":Landroid/hardware/hdmi/HdmiDeviceInfo;
     if-eqz p1, :cond_1
 
-    .line 190
     invoke-virtual {v1}, Landroid/hardware/hdmi/HdmiDeviceInfo;->getDeviceType()I
 
     move-result v3
@@ -438,7 +399,6 @@
 
     if-ne v3, v4, :cond_0
 
-    .line 191
     invoke-virtual {v1}, Landroid/hardware/hdmi/HdmiDeviceInfo;->getLogicalAddress()I
 
     move-result v3
@@ -447,7 +407,6 @@
 
     goto :goto_0
 
-    .line 194
     :cond_1
     invoke-virtual {v1}, Landroid/hardware/hdmi/HdmiDeviceInfo;->getLogicalAddress()I
 
@@ -457,7 +416,6 @@
 
     goto :goto_0
 
-    .line 197
     .end local v1    # "info":Landroid/hardware/hdmi/HdmiDeviceInfo;
     :cond_2
     return-object v2
@@ -468,14 +426,12 @@
     .param p1, "address"    # I
 
     .prologue
-    .line 239
     const-class v2, Lcom/android/server/hdmi/DeviceSelectAction;
 
     invoke-virtual {p0, v2}, Lcom/android/server/hdmi/HotplugDetectionAction;->getActions(Ljava/lang/Class;)Ljava/util/List;
 
     move-result-object v1
 
-    .line 240
     .local v1, "actions":Ljava/util/List;, "Ljava/util/List<Lcom/android/server/hdmi/DeviceSelectAction;>;"
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
 
@@ -483,12 +439,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 249
     :cond_0
     :goto_0
     return-void
 
-    .line 245
     :cond_1
     const/4 v2, 0x0
 
@@ -498,7 +452,6 @@
 
     check-cast v0, Lcom/android/server/hdmi/DeviceSelectAction;
 
-    .line 246
     .local v0, "action":Lcom/android/server/hdmi/DeviceSelectAction;
     invoke-virtual {v0}, Lcom/android/server/hdmi/DeviceSelectAction;->getTargetAddress()I
 
@@ -506,7 +459,6 @@
 
     if-ne v2, p1, :cond_0
 
-    .line 247
     const-class v2, Lcom/android/server/hdmi/DeviceSelectAction;
 
     invoke-virtual {p0, v2}, Lcom/android/server/hdmi/HotplugDetectionAction;->removeAction(Ljava/lang/Class;)V
@@ -519,14 +471,12 @@
     .param p1, "address"    # I
 
     .prologue
-    .line 252
     const-class v3, Lcom/android/server/hdmi/OneTouchRecordAction;
 
     invoke-virtual {p0, v3}, Lcom/android/server/hdmi/HotplugDetectionAction;->getActions(Ljava/lang/Class;)Ljava/util/List;
 
     move-result-object v1
 
-    .line 253
     .local v1, "actions":Ljava/util/List;, "Ljava/util/List<Lcom/android/server/hdmi/OneTouchRecordAction;>;"
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -547,7 +497,6 @@
 
     check-cast v0, Lcom/android/server/hdmi/OneTouchRecordAction;
 
-    .line 254
     .local v0, "action":Lcom/android/server/hdmi/OneTouchRecordAction;
     invoke-virtual {v0}, Lcom/android/server/hdmi/OneTouchRecordAction;->getRecorderAddress()I
 
@@ -555,12 +504,10 @@
 
     if-ne v3, p1, :cond_0
 
-    .line 255
     invoke-virtual {p0, v0}, Lcom/android/server/hdmi/HotplugDetectionAction;->removeAction(Lcom/android/server/hdmi/HdmiCecFeatureAction;)V
 
     goto :goto_0
 
-    .line 258
     .end local v0    # "action":Lcom/android/server/hdmi/OneTouchRecordAction;
     :cond_1
     return-void
@@ -571,7 +518,6 @@
     .param p1, "address"    # I
 
     .prologue
-    .line 232
     invoke-virtual {p0}, Lcom/android/server/hdmi/HotplugDetectionAction;->tv()Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;
 
     move-result-object v1
@@ -580,11 +526,9 @@
 
     move-result-object v0
 
-    .line 233
     .local v0, "info":Landroid/hardware/hdmi/HdmiDeviceInfo;
     if-eqz v0, :cond_0
 
-    .line 234
     invoke-virtual {p0}, Lcom/android/server/hdmi/HotplugDetectionAction;->tv()Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;
 
     move-result-object v1
@@ -595,7 +539,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;->handleRemoveActiveRoutingPath(I)V
 
-    .line 236
     :cond_0
     return-void
 .end method
@@ -607,7 +550,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 261
     invoke-static {p1}, Lcom/android/server/hdmi/HdmiUtils;->getTypeFromAddress(I)I
 
     move-result v0
@@ -616,12 +558,10 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 271
     :cond_0
     :goto_0
     return-void
 
-    .line 266
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/hdmi/HotplugDetectionAction;->tv()Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;
 
@@ -631,7 +571,6 @@
 
     invoke-virtual {v0, v2, v1}, Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;->setSystemAudioMode(ZZ)V
 
-    .line 267
     invoke-virtual {p0}, Lcom/android/server/hdmi/HotplugDetectionAction;->tv()Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;
 
     move-result-object v0
@@ -642,14 +581,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 268
     invoke-virtual {p0}, Lcom/android/server/hdmi/HotplugDetectionAction;->tv()Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;
 
     move-result-object v0
 
     invoke-virtual {v0, v2}, Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;->setAudioReturnChannel(Z)V
 
-    .line 269
     new-instance v0, Lcom/android/server/hdmi/RequestArcTerminationAction;
 
     invoke-virtual {p0}, Lcom/android/server/hdmi/HotplugDetectionAction;->localDevice()Lcom/android/server/hdmi/HdmiCecLocalDevice;
@@ -667,14 +604,12 @@
     .locals 3
 
     .prologue
-    .line 127
     const-string v0, "HotPlugDetectionAction"
 
     const-string v1, "Poll all devices."
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 129
     new-instance v0, Lcom/android/server/hdmi/HotplugDetectionAction$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/hdmi/HotplugDetectionAction$1;-><init>(Lcom/android/server/hdmi/HotplugDetectionAction;)V
@@ -685,7 +620,6 @@
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/android/server/hdmi/HotplugDetectionAction;->pollDevices(Lcom/android/server/hdmi/HdmiControlService$DevicePollingCallback;II)V
 
-    .line 136
     return-void
 .end method
 
@@ -693,14 +627,12 @@
     .locals 3
 
     .prologue
-    .line 139
     const-string v0, "HotPlugDetectionAction"
 
     const-string v1, "Poll audio system."
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 141
     new-instance v0, Lcom/android/server/hdmi/HotplugDetectionAction$2;
 
     invoke-direct {v0, p0}, Lcom/android/server/hdmi/HotplugDetectionAction$2;-><init>(Lcom/android/server/hdmi/HotplugDetectionAction;)V
@@ -711,7 +643,6 @@
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/android/server/hdmi/HotplugDetectionAction;->pollDevices(Lcom/android/server/hdmi/HdmiControlService$DevicePollingCallback;II)V
 
-    .line 148
     return-void
 .end method
 
@@ -719,15 +650,12 @@
     .locals 2
 
     .prologue
-    .line 115
     iget v0, p0, Lcom/android/server/hdmi/HotplugDetectionAction;->mTimeoutCount:I
 
     if-nez v0, :cond_1
 
-    .line 116
     invoke-direct {p0}, Lcom/android/server/hdmi/HotplugDetectionAction;->pollAllDevices()V
 
-    .line 123
     :cond_0
     :goto_0
     iget v0, p0, Lcom/android/server/hdmi/HotplugDetectionAction;->mState:I
@@ -736,10 +664,8 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/hdmi/HotplugDetectionAction;->addTimer(II)V
 
-    .line 124
     return-void
 
-    .line 118
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/hdmi/HotplugDetectionAction;->tv()Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;
 
@@ -751,7 +677,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 119
     invoke-direct {p0}, Lcom/android/server/hdmi/HotplugDetectionAction;->pollAudioSystem()V
 
     goto :goto_0
@@ -762,26 +687,20 @@
     .param p1, "removedAddress"    # I
 
     .prologue
-    .line 223
     invoke-direct {p0, p1}, Lcom/android/server/hdmi/HotplugDetectionAction;->mayChangeRoutingPath(I)V
 
-    .line 224
     invoke-direct {p0, p1}, Lcom/android/server/hdmi/HotplugDetectionAction;->mayCancelDeviceSelect(I)V
 
-    .line 225
     invoke-direct {p0, p1}, Lcom/android/server/hdmi/HotplugDetectionAction;->mayCancelOneTouchRecord(I)V
 
-    .line 226
     invoke-direct {p0, p1}, Lcom/android/server/hdmi/HotplugDetectionAction;->mayDisableSystemAudioAndARC(I)V
 
-    .line 228
     invoke-virtual {p0}, Lcom/android/server/hdmi/HotplugDetectionAction;->tv()Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;
 
     move-result-object v0
 
     invoke-virtual {v0, p1}, Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;->removeCecDevice(I)V
 
-    .line 229
     return-void
 .end method
 
@@ -792,17 +711,14 @@
     .param p1, "state"    # I
 
     .prologue
-    .line 88
     iget v0, p0, Lcom/android/server/hdmi/HotplugDetectionAction;->mState:I
 
     if-eq v0, p1, :cond_1
 
-    .line 96
     :cond_0
     :goto_0
     return-void
 
-    .line 92
     :cond_1
     iget v0, p0, Lcom/android/server/hdmi/HotplugDetectionAction;->mState:I
 
@@ -810,7 +726,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 93
     iget v0, p0, Lcom/android/server/hdmi/HotplugDetectionAction;->mTimeoutCount:I
 
     add-int/lit8 v0, v0, 0x1
@@ -819,7 +734,6 @@
 
     iput v0, p0, Lcom/android/server/hdmi/HotplugDetectionAction;->mTimeoutCount:I
 
-    .line 94
     invoke-direct {p0}, Lcom/android/server/hdmi/HotplugDetectionAction;->pollDevices()V
 
     goto :goto_0
@@ -829,32 +743,26 @@
     .locals 2
 
     .prologue
-    .line 103
     iget-object v0, p0, Lcom/android/server/hdmi/HotplugDetectionAction;->mActionTimer:Lcom/android/server/hdmi/HdmiCecFeatureAction$ActionTimer;
 
     invoke-interface {v0}, Lcom/android/server/hdmi/HdmiCecFeatureAction$ActionTimer;->clearTimerMessage()V
 
-    .line 105
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/hdmi/HotplugDetectionAction;->mTimeoutCount:I
 
-    .line 106
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/android/server/hdmi/HotplugDetectionAction;->mState:I
 
-    .line 107
     invoke-direct {p0}, Lcom/android/server/hdmi/HotplugDetectionAction;->pollAllDevices()V
 
-    .line 109
     iget v0, p0, Lcom/android/server/hdmi/HotplugDetectionAction;->mState:I
 
     const/16 v1, 0x1388
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/hdmi/HotplugDetectionAction;->addTimer(II)V
 
-    .line 110
     return-void
 .end method
 
@@ -863,7 +771,6 @@
     .param p1, "cmd"    # Lcom/android/server/hdmi/HdmiCecMessage;
 
     .prologue
-    .line 83
     const/4 v0, 0x0
 
     return v0
@@ -875,28 +782,23 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 69
     const-string v0, "HotPlugDetectionAction"
 
     const-string v1, "Hot-plug dection started."
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 71
     iput v2, p0, Lcom/android/server/hdmi/HotplugDetectionAction;->mState:I
 
-    .line 72
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/hdmi/HotplugDetectionAction;->mTimeoutCount:I
 
-    .line 76
     iget v0, p0, Lcom/android/server/hdmi/HotplugDetectionAction;->mState:I
 
     const/16 v1, 0x1388
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/hdmi/HotplugDetectionAction;->addTimer(II)V
 
-    .line 77
     return v2
 .end method
