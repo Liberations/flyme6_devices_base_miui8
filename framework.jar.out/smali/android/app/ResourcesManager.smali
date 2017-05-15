@@ -314,9 +314,9 @@
 
     .line 288
     :cond_4
-    move-object/from16 v0, p1
+    #move-object/from16 v0, p1
 
-    invoke-static {v2, v0}, Landroid/app/MiuiThemeHelper;->handleExtraConfigurationChanges(ILandroid/content/res/Configuration;)V
+    #invoke-static {v2, v0}, Landroid/app/MiuiThemeHelper;->handleExtraConfigurationChanges(ILandroid/content/res/Configuration;)V
 
     .line 291
     move-object/from16 v0, p1
@@ -1287,14 +1287,14 @@
     .line 243
     :cond_b
     :goto_7
-    new-instance v16, Landroid/content/res/MiuiResources;
+    new-instance v16, Landroid/content/res/Resources;
 
     .end local v16    # "r":Landroid/content/res/Resources;
     move-object/from16 v0, v16
 
     move-object/from16 v1, p7
 
-    invoke-direct {v0, v4, v6, v5, v1}, Landroid/content/res/MiuiResources;-><init>(Landroid/content/res/AssetManager;Landroid/util/DisplayMetrics;Landroid/content/res/Configuration;Landroid/content/res/CompatibilityInfo;)V
+    invoke-direct {v0, v4, v6, v5, v1}, Landroid/content/res/Resources;-><init>(Landroid/content/res/AssetManager;Landroid/util/DisplayMetrics;Landroid/content/res/Configuration;Landroid/content/res/CompatibilityInfo;)V
 
     .line 247
     .restart local v16    # "r":Landroid/content/res/Resources;
