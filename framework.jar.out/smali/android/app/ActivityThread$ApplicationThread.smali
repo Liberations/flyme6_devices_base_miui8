@@ -3443,3 +3443,12 @@
     .line 873
     return-void
 .end method
+.method synthetic constructor <init>(Landroid/app/ActivityThread;Landroid/app/ActivityThread$ApplicationThread;)V
+    .locals 0
+    .param p1, "this$0"    # Landroid/app/ActivityThread;
+
+    .prologue
+    invoke-direct {p0, p1}, Landroid/app/ActivityThread$ApplicationThread;-><init>(Landroid/app/ActivityThread;)V
+
+    return-void
+.end method
